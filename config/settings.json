@@ -1,0 +1,27 @@
+{
+  "list_id": "",
+  "timezone": "America/New_York",
+  "caucuses": {
+    "progressive": "Progressive Caucus",
+    "newdem": "New Democrat Coalition",
+    "cbc": "Congressional Black Caucus"
+  },
+  "poll": {
+    "max_pages": 5,
+    "page_size": 100
+  },
+  "refresh": {
+    "second_pass_72h": false
+  },
+  "syntax": {
+    "min_members": 3,
+    "min_ngram": 2,
+    "max_ngram": 4,
+    "top_phrases": 25
+  },
+  "classify": {
+    "model": "claude-opus-5",
+    "tweets_per_request": 40,
+    "max_wait_minutes": 55
+  }
+}

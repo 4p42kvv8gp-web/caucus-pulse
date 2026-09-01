@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caucus Pulse</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #fafaf8; --muted: #6b6b6b; --line: #e2e2dd; --accent: #1d4ed8; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e8e8e4; --bg: #16161a; --muted: #9a9aa2; --line: #2e2e34; --accent: #7ea6ff; } }
+  body { margin: 0 auto; max-width: 1000px; padding: 24px 16px 64px; background: var(--bg); color: var(--fg);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 22px; margin: 0 0 4px; } h2 { font-size: 16px; margin: 28px 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  table { border-collapse: collapse; width: 100%; } .scroll { overflow-x: auto; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .sublabel { color: var(--muted); padding-left: 24px; }
+  .new { color: var(--accent); font-weight: 600; }
+  select { font: inherit; padding: 2px 6px; }
+  .empty { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Caucus Pulse</h1>
+<p class="sub">What the House Democratic caucus is talking about on X — <span id="asof"></span></p>
+
+<label>Day: <select id="day"></select></label>
+<label style="margin-left:12px">Caucus: <select id="caucus"><option value="all">All accounts</option></select></label>
+
+<h2>Topics</h2>
+<div class="scroll"><table id="topics">
+  <thead><tr><th>Topic</th><th class="num">Posts</th><th class="num">RTs</th><th class="num">Members</th><th class="num">Engagement</th></tr></thead>
+  <tbody></tbody>
+</table></div>
+
+<h2>Strategic syntax</h2>
+<div class="scroll"><table id="phrases">
+  <thead><tr><th>Phrase</th><th class="num">Members</th><th class="num">Tweets</th><th>First seen</th></tr></thead>
+  <tbody></tbody>
+</table></div>
+
+<script>
+async function j(url) { const r = await fetch(url); return r.ok ? r.json() : null; }
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+(async () => {
+  const roll = await j('../data/rollups/topic-days.json');
+  if (!roll || !roll.rows.length) {
+    document.getElementById('topics').tBodies[0].innerHTML = '<tr><td colspan="5" class="empty">No rollups yet — the first nightly run creates them.</td></tr>';
+    return;
+  }
+  document.getElementById('asof').textContent = 'rollups generated ' + roll.generatedAt.slice(0, 16).replace('T', ' ') + ' UTC';
+
+  const days = [...new Set(roll.rows.map((r) => r.date))].sort().reverse();
+  const daySel = document.getElementById('day');
+  daySel.innerHTML = days.map((d) => `<option>${d}</option>`).join('');
+  const caucusSel = document.getElementById('caucus');
+  for (const [tag, name] of Object.entries(roll.caucuses)) {
+    caucusSel.insertAdjacentHTML('beforeend', `<option value="${esc(tag)}">${esc(name)}</option>`);
+  }
+
+  async function render() {
+    const date = daySel.value, caucus = caucusSel.value;
+    const rows = roll.rows.filter((r) => r.date === date && r.caucus === caucus);
+    const macros = rows.filter((r) => !r.sub).sort((a, b) => (b.posts + b.retweets) - (a.posts + a.retweets));
+    const body = [];
+    for (const m of macros) {
+      const label = roll.labels[m.macro] || m.macro;
+      body.push(`<tr><td><strong>${esc(label)}</strong></td><td class="num">${m.posts}</td><td class="num">${m.retweets}</td><td class="num">${m.members}</td><td class="num">${m.engagement.toLocaleString()}</td></tr>`);
+      const subs = rows.filter((r) => r.macro === m.macro && r.sub).sort((a, b) => b.posts - a.posts);
+      for (const s of subs) {
+        body.push(`<tr><td class="sublabel">${esc(roll.labels[s.macro + '/' + s.sub] || s.sub)}</td><td class="num">${s.posts}</td><td class="num">${s.retweets}</td><td class="num">${s.members}</td><td class="num">${s.engagement.toLocaleString()}</td></tr>`);
+      }
+    }
+    document.getElementById('topics').tBodies[0].innerHTML =
+      body.join('') || '<tr><td colspan="5" class="empty">No classified activity for this selection.</td></tr>';
+
+    const syn = await j(`../data/syntax/${date}.json`);
+    document.getElementById('phrases').tBodies[0].innerHTML = (syn?.phrases || []).map((p) =>
+      `<tr><td>“${esc(p.phrase)}”</td><td class="num">${p.members}</td><td class="num">${p.tweets}</td><td>${p.isNew ? '<span class="new">new today</span>' : esc(p.firstSeen) + ' · @' + esc(p.firstAuthor)}</td></tr>`
+    ).join('') || '<tr><td colspan="4" class="empty">No phrases over the threshold.</td></tr>';
+  }
+  daySel.onchange = caucusSel.onchange = render;
+  render();
+})();
+</script>
+</body>
+</html>

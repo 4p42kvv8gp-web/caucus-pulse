@@ -1,0 +1,44 @@
+# Capture poller — every 20 minutes. Dependency-free (node stdlib only), so
+# each of the ~72 daily runs costs seconds, not an npm install.
+# NOTE: this file only runs once caucus-pulse/ contents sit at the ROOT of
+# its own repo (GitHub reads workflows from /.github/workflows only).
+name: poll
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+
+# One writer at a time — poll, nightly, and authors all commit to main.
+concurrency:
+  group: data-writes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pull new tweets
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_LIST_ID: ${{ vars.X_LIST_ID }}
+          X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
+        run: node src/poll.js
+      - name: Commit archive
+        run: |
+          git config user.name "caucus-pulse"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && { echo "no new tweets"; exit 0; }
+          git commit -m "poll: $(date -u +'%Y-%m-%d %H:%M') capture"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase
+          done
+          git push

@@ -1,0 +1,186 @@
+# Caucus Pulse topic taxonomy — two levels, multi-label.
+#
+# This file IS the intelligence layer: edit it in place and the nightly
+# classifier picks it up on its next run. A tweet can carry several
+# (macro, subtopic) assignments; a subtopic assignment always counts toward
+# its macro too, so "56 tweets about Dilley" rolls up into Immigration
+# without double-reading in reports (subtopics render nested under macros).
+#
+# Grow it from the daily report's "emerging clusters" section: the classifier
+# surfaces tweets that fit nothing, with a suggested subtopic label — add the
+# ones you approve here. It never silently invents categories.
+#
+# Fields per subtopic: label (required), aliases (optional hints for the
+# classifier — nicknames, hashtags, misspellings it should recognize).
+
+immigration:
+  label: Immigration
+  subtopics:
+    dilley-detention:
+      label: Dilley detention facility
+      aliases: ["Dilley", "South Texas Family Residential Center", "NJ detention"]
+    ice-enforcement:
+      label: ICE enforcement / raids
+      aliases: ["ICE raids", "deportation raids"]
+    border-policy:
+      label: Border policy
+    dreamers-daca:
+      label: Dreamers / DACA
+    asylum-refugees:
+      label: Asylum & refugees
+
+economy:
+  label: Economy & cost of living
+  subtopics:
+    prices-inflation:
+      label: Prices / inflation
+      aliases: ["cost of living", "grocery prices"]
+    tariffs-trade:
+      label: Tariffs & trade
+    housing:
+      label: Housing affordability
+    jobs-wages:
+      label: Jobs & wages
+      aliases: ["minimum wage", "unemployment"]
+    taxes:
+      label: Taxes
+      aliases: ["tax cuts for the wealthy", "billionaire tax"]
+
+healthcare:
+  label: Health care
+  subtopics:
+    medicaid:
+      label: Medicaid
+    medicare:
+      label: Medicare
+    aca:
+      label: ACA / marketplace coverage
+      aliases: ["Obamacare", "premium tax credits"]
+    drug-prices:
+      label: Prescription drug prices
+      aliases: ["insulin", "Big Pharma"]
+    public-health:
+      label: Public health & CDC/NIH
+      aliases: ["vaccines", "RFK Jr."]
+
+reproductive-rights:
+  label: Reproductive rights
+  subtopics:
+    abortion-access:
+      label: Abortion access & bans
+    ivf-contraception:
+      label: IVF & contraception
+
+democracy:
+  label: Democracy & rule of law
+  subtopics:
+    voting-rights:
+      label: Voting rights & elections
+      aliases: ["gerrymandering", "redistricting"]
+    courts-doj:
+      label: Courts & DOJ independence
+    executive-overreach:
+      label: Executive overreach
+      aliases: ["authoritarianism", "constitutional crisis"]
+    corruption-ethics:
+      label: Corruption & ethics
+      aliases: ["grift", "emoluments"]
+    press-speech:
+      label: Press freedom & speech
+
+public-safety:
+  label: Guns & public safety
+  subtopics:
+    gun-violence:
+      label: Gun violence & reform
+      aliases: ["assault weapons ban", "background checks"]
+    crime-policing:
+      label: Crime & policing
+
+labor:
+  label: Labor & workers
+  subtopics:
+    unions:
+      label: Unions & organizing
+    federal-workforce:
+      label: Federal workforce cuts
+      aliases: ["DOGE", "RIF"]
+
+climate:
+  label: Climate & environment
+  subtopics:
+    clean-energy:
+      label: Clean energy & IRA
+    disasters:
+      label: Extreme weather & disaster response
+      aliases: ["FEMA"]
+    epa-rollbacks:
+      label: EPA & environmental rollbacks
+
+education:
+  label: Education
+  subtopics:
+    public-schools:
+      label: Public K-12 schools
+      aliases: ["Department of Education"]
+    higher-ed:
+      label: Higher ed & student debt
+
+civil-rights:
+  label: Civil rights & equality
+  subtopics:
+    lgbtq:
+      label: LGBTQ+ rights
+    racial-justice:
+      label: Racial justice
+    disability:
+      label: Disability rights
+
+foreign-policy:
+  label: Foreign policy & national security
+  subtopics:
+    ukraine-russia:
+      label: Ukraine / Russia
+    middle-east:
+      label: Middle East
+      aliases: ["Gaza", "Israel", "Iran"]
+    china:
+      label: China
+    military-veterans:
+      label: Military & veterans
+      aliases: ["VA"]
+
+budget-appropriations:
+  label: Budget & appropriations
+  subtopics:
+    shutdown:
+      label: Government shutdown / funding deadlines
+      aliases: ["CR", "continuing resolution"]
+    social-security:
+      label: Social Security
+    snap-benefits:
+      label: SNAP & safety net
+      aliases: ["food stamps", "WIC"]
+
+tech:
+  label: Technology
+  subtopics:
+    ai-policy:
+      label: AI policy
+    big-tech:
+      label: Big Tech accountability
+      aliases: ["Section 230", "antitrust"]
+
+congress-politics:
+  label: Congress & campaign politics
+  subtopics:
+    house-floor:
+      label: House floor & procedure
+    elections-2026:
+      label: 2026 midterms
+    town-halls:
+      label: Town halls & district events
+
+constituent-services:
+  label: District & constituent services
+  subtopics: {}
