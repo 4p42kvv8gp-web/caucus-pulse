@@ -1,4 +1,6 @@
 import { exactOccurrences } from './normalize.js';
+import { createBudget } from './budget.js';
+import { collectionState } from './collect.js';
 
 export function dashboardData(store, filters, settings) {
   const allPosts = store.listPosts();
@@ -24,6 +26,13 @@ export function dashboardData(store, filters, settings) {
   }));
   const members = [...new Map(allPosts.map(p => [p.memberId, { id: p.memberId, name: p.memberName }])).values()]
     .sort((a, b) => a.name.localeCompare(b.name));
+  const budgetState = settings.budget.resourcePricesUsd ? createBudget(store.db, settings.budget).state() : null;
+  const operations = {
+    sources: collectionState(store.db),
+    awaitingRoster: store.db.prepare("SELECT COUNT(*) AS n FROM captured_posts WHERE status='awaiting-roster'").get().n,
+    analysisPending: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='pending'").get().n,
+    analysisFailed: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='failed'").get().n
+  };
   return {
     generatedAt: new Date().toISOString(), mode: settings.mode, filters,
     coverage: {
@@ -36,7 +45,10 @@ export function dashboardData(store, filters, settings) {
       reviewedPosts: allPosts.filter(p => p.reviewStatus === 'reviewed').length,
       pendingRuleProposals: allPosts.flatMap(p => p.feedback).filter(f => f.ruleProposal).length
     },
-    budget: { ...settings.budget, usageStatus: 'Provider balance and usage have not been verified; no collector requests made' },
+    budget: { ...settings.budget, verifiedBalance: budgetState?.balanceFresh ?? false, state: budgetState,
+      usageStatus: budgetState?.requestCount ? 'Conservative local accounting; provider charges may differ'
+        : 'No collector requests recorded; paid reads require a fresh provider balance check' },
+    operations,
     members, availableTopics: [...new Set(allPosts.flatMap(p => p.labels.map(l => l.topic)))].sort(),
     topics, posts
   };

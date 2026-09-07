@@ -24,7 +24,23 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 - Classification failure leaves source posts stored and visible. Failed jobs are recorded; scheduled provider retries are future work.
 - Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Semantic feedback retrieval and evaluation remain required work.
 - Removal clears current database records and prevents replay. Filesystem backup/WAL cleanup and provider removal handling must be completed before live deployment.
-- No paid service is called. Settings record the user's List and conservative budget policy; the collection budget enforcement module still needs implementation.
+- Live collection remains disabled. The resumable collector and budget enforcement modules now exist and are tested offline. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
+
+## Collection and spending foundation
+
+`src/collect.js` records an unfinished interval and pagination token before resuming later runs. It advances the confirmed checkpoint only after reaching the earlier boundary. First-time setup is explicitly a first-page sample, not a historical completeness claim. An exhausted feed without its previous boundary, partial errors, unexpected ordering, or stalled pagination creates a visible reconciliation requirement. `restartInterval` starts again at the feed head without clearing the old boundary. Source leases fence overlapping or expired workers.
+
+`src/budget.js` reserves each request's maximum resource cost transactionally. It enforces the configured daily and pilot limits and a protected prepaid reserve. Balances must be observed within five minutes. Failed/ambiguous requests keep their entire reservation, including after restart; there is no automatic refund or quota reset. Cross-midnight requests conservatively count in both days, and resource deduplication does not reduce this local spending guard. Unexpected response volume freezes paid reads for review. Account activity outside this app can still affect the provider balance; local accounting is not a billing guarantee.
+
+```sh
+node scripts/collection-status.js
+```
+
+This prints local readiness only. Once `CAUCUS_X_BEARER_TOKEN` is configured through a private environment, `--refresh-balance` makes one read-only call to X's credit endpoint. The status command never fetches posts. Never pass a secret as a command-line argument or reuse the single-post reader's private credential file for this collector. The adapter has no automatic request retries and sends credentials only to `https://api.x.com`, with redirects rejected.
+
+The List adapter supports explicit `tweet` or `post` field dialects because current generated documentation and observed single-post responses differ. The List dialect, full-text availability, and actual charges still need a bounded authenticated trial. No profile, media, or referenced-post expansions are requested in this initial adapter.
+
+References checked September 7, 2026: [X pricing](https://docs.x.com/x-api/getting-started/pricing), [credit balance endpoint](https://docs.x.com/x-api/usage/get-usage-credits), [List posts](https://docs.x.com/x-api/lists/get-list-posts).
 
 ## Provenance
 

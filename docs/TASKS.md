@@ -4,8 +4,8 @@
 
 - [ ] **M1: Complete the visual browser check** - Automated HTTP and persistence checks pass. Browser access could not verify the administrator policy; do not bypass that control. Retry only when the policy service is available. No Jacob review was created by testing.
 - [ ] **M2: Validate the supplied X List and House account roster** - List 1841177179872243858; stable member IDs, multiple-account mapping, eligibility dates, and unresolved account queue.
-- [ ] **M2: Repair collection correctness** - Durable pagination intervals, full available text and references, idempotent writes, resumable recovery, timeline reconciliation, and coverage diagnostics.
-- [ ] **M2: Enforce the prepaid budget before requests** - Verify balance; reserve at most $25 per UTC day and $350 total pilot use, preserving $50. No automatic top-up; prioritize new posts. Include context/user lookup costs and possible duplicate billing in conservative reservations.
+- [ ] **M2: Connect the tested collector to verified membership and recovery** - Durable List pagination, leases, and checkpoint protection are implemented. Next: verified account mapping, promotion from captured records to member posts, timeline reconciliation, bounded worker/CLI, and live coverage diagnostics.
+- [ ] **M2: Verify actual credit and price behavior before activation** - Transactional reservations and $25/day, $350/pilot, $50 reserve checks are implemented and tested. Product credential environment is not configured; provider balance and actual List billing remain unverified. Use the new read-only credit endpoint when private access is ready. Measure page size/duplicate overhead before selecting the live polling pattern.
 - [ ] **M2: Run a bounded live trial** - Validate fields, pagination, post types, observed cost, and recovery before enabling the 30-minute loop. Report any gap honestly.
 - [ ] **M3: Implement semantic classification and discovery** - Strict output schemas, source-span validation, replaceable model adapter, multi-topic labels, new entities/events within existing topics, and visible uncertainty.
 - [ ] **M3: Preserve language and measure observed spread** - Exact offsets and longer repeated spans, rolling windows across midnight, account-to-member deduplication, and separation of authored/quoted/amplified language.
@@ -27,6 +27,9 @@
 
 ## Done
 
+- [x] ~~Implement resumable collection and spending enforcement~~ (2026-09-07) - New collection module, atomic request ledger, fresh-balance gate, source leases, unfinished interval/cursor persistence, and raw capture awaiting roster validation. Initial collection is explicitly a first-page sample. Live collector remains disabled.
+- [x] ~~Verify 17 collection/budget scenarios alongside the eight foundation tests~~ (2026-09-07) - Includes restart, interrupted second page, storage rollback, budget exhaustion, midnight, concurrency, oversized responses, partial errors, cursor recovery, unknown authors, and deletion replay. No paid requests or actual user reviews created.
+- [x] ~~Publish the first development milestone for review~~ (2026-09-07) - Private repository, draft PR https://github.com/4p42kvv8gp-web/caucus-pulse/pull/1, commit 5fa8a16709a6a2bd3b519852e253e698065b8c91. No raw post content, credentials, database, merge, or live deployment included.
 - [x] ~~Build the first local product slice~~ (2026-09-07) - http://127.0.0.1:4317; post explorer, evidence explanations, teaching desk, exact phrase lookup, and coverage/budget view. Two historical examples imported privately. Live collection and semantic analysis remain pending.
 - [x] ~~Verify eight foundation behaviors~~ (2026-09-07) - Full text and offsets, separate facility labels, capture surviving analysis failure, account/member deduplication, midnight phrase search, persistent corrections and edit invalidation, removal/replay, and local HTTP validation all pass with synthetic test records.
 - [x] ~~Enable hourly development follow-ups in this task~~ (2026-09-07) - Automation `build-caucus-pulse` confirmed ACTIVE. Computer must remain on and app running.

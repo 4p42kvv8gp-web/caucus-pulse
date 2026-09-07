@@ -12,6 +12,10 @@
     "pilotCeilingUsd": 350,
     "reserveUsd": 50,
     "billingTimezone": "UTC",
+    "balanceMaxAgeSeconds": 300,
+    "resourcePricesUsd": { "post": 0.005, "user": 0.01 },
+    "priceReference": "https://docs.x.com/x-api/getting-started/pricing",
+    "pricesCheckedOn": "2026-09-07",
     "automaticTopUp": false,
     "historicalBackfillEnabled": false,
     "engagementRefreshEnabled": false

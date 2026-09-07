@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test",
-    "import:calibration": "node scripts/import-calibration.js"
+    "import:calibration": "node scripts/import-calibration.js",
+    "collection:status": "node scripts/collection-status.js"
   }
 }

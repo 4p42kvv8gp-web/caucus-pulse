@@ -3,6 +3,7 @@ import { mkdirSync, chmodSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { baselineClassify, validateFeedback } from './classify.js';
+import { atomic, migrateOperations } from './sqlite.js';
 
 export function openStore(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
@@ -41,11 +42,10 @@ export function openStore(path = ':memory:') {
     CREATE INDEX IF NOT EXISTS feedback_post ON feedback(post_id, sequence DESC);
     CREATE TABLE IF NOT EXISTS tombstones (post_id TEXT PRIMARY KEY, deleted_at TEXT NOT NULL);
   `);
+  migrateOperations(db);
 
   function transaction(fn) {
-    db.exec('BEGIN IMMEDIATE');
-    try { const result = fn(); db.exec('COMMIT'); return result; }
-    catch (error) { db.exec('ROLLBACK'); throw error; }
+    return atomic(db, fn);
   }
 
   function upsertAccount(account) {
@@ -136,6 +136,7 @@ export function openStore(path = ':memory:') {
     transaction(() => {
       db.prepare('INSERT OR IGNORE INTO tombstones(post_id, deleted_at) VALUES (?, ?)').run(id, new Date().toISOString());
       db.prepare('DELETE FROM posts WHERE id=?').run(id);
+      db.prepare('DELETE FROM captured_posts WHERE id=?').run(id);
     });
   }
   return { db, upsertAccount, ingest, analyzePending, getPost, listPosts, saveFeedback, removePost, close: () => db.close() };

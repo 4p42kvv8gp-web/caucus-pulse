@@ -18,6 +18,8 @@ function filterParams() {
 }
 function setOptions(element, options, first) {
   const previous = element.value;
+  // Keep a selected filter visible if a correction removes its last matching post.
+  if (previous && !options.some(o => o.id === previous)) options = [...options, { id: previous, name: previous }];
   element.innerHTML = `<option value="">${esc(first)}</option>` + options.map(o => `<option value="${esc(o.id)}">${esc(o.name)}</option>`).join('');
   if (options.some(o => o.id === previous)) element.value = previous;
 }
@@ -48,16 +50,25 @@ function renderExplore() {
 }
 function renderCoverage() {
   const c = state.data.coverage; const b = state.data.budget;
+  const ops = state.data.operations; const usage = b.state;
+  const dollars = micro => `$${((micro ?? 0) / 1_000_000).toFixed(3)}`;
   function rows(items) { return items.map(([label, value]) => `<div class="detail-row"><small>${esc(label)}</small>${esc(value)}</div>`).join(''); }
   $('coverage').innerHTML = `<div class="panel"><h3>Source coverage</h3>${rows([
     ['Collection', c.collectionStatus], ['Accounts', c.rosterStatus], ['Earliest archived post', date(c.firstPostAt)],
     ['Latest archived post', date(c.lastPostAt)], ['Last source retrieval', date(c.lastImportedAt)],
-    ['Context', 'Full API text for the imported examples; media and linked content are not reviewed.']
+    ['Context', 'Full API text for the imported examples; media and linked content are not reviewed.'],
+    ['Captured posts awaiting roster validation', String(ops.awaitingRoster)],
+    ['Analysis jobs', `${ops.analysisPending} pending / ${ops.analysisFailed} failed`],
+    ['Collection intervals', ops.sources.length ? ops.sources.map(s => `${s.status ?? 'Not started'}${s.reason ? `: ${s.reason}` : ''}`).join('; ') : 'No live interval has started']
   ])}<a href="https://x.com/i/lists/1841177179872243858" target="_blank" rel="noopener noreferrer">Open the supplied X List ↗</a></div>
   <div class="panel"><h3>Budget and analysis</h3>${rows([
     ['Reported prepaid credit', `$${b.reportedCreditUsd} — not yet verified against the account`],
     ['Configured limits', `$${b.dailyCeilingUsd} per UTC day / $${b.pilotCeilingUsd} total pilot / $${b.reserveUsd} reserve`],
-    ['Usage', b.usageStatus], ['Analysis', c.analysisStatus],
+    ['Usage', b.usageStatus],
+    ['Conservative spending recorded', `${dollars(usage?.dailyMicro)} today / ${dollars(usage?.totalMicro)} total`],
+    ['Provider balance', usage?.balanceVerifiedAt ? `${usage.balanceFresh ? 'Fresh' : 'Expired'} observation from ${date(usage.balanceVerifiedAt)}` : 'Not yet verified; paid requests are blocked'],
+    ['Uncertain or unfinished paid requests', String(usage?.unresolvedRequests ?? 0)],
+    ['Analysis', c.analysisStatus],
     ['General lessons awaiting review', String(c.pendingRuleProposals)], ['Optional paid work', 'Bulk history and repeated engagement checks are disabled.']
   ])}</div>`;
 }
