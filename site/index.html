@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caucus Pulse · Listening desk</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/"><span class="brand-mark">≋</span><span>Caucus<br><strong>Pulse</strong></span></a>
+    <div class="nav-label">LISTENING DESK</div>
+    <nav aria-label="Main navigation">
+      <button data-view="explore" class="nav-button active">Post explorer <span>↗</span></button>
+      <button data-view="teach" class="nav-button">Teaching desk <span>◇</span></button>
+      <button data-view="wording" class="nav-button">Exact wording <span>❞</span></button>
+      <button data-view="coverage" class="nav-button">Coverage & budget <span>◷</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="dot amber"></span> Local development<br><small>House Democratic Caucus<br>Historical calibration collection</small></div>
+  </aside>
+  <main>
+    <header class="masthead"><span class="eyebrow">HOUSE DEMOCRATIC CAUCUS</span><span id="updated" class="quiet">Opening workspace…</span></header>
+    <div class="heading-row"><div><h1 id="page-title">Listen. Trace. Understand.</h1><p id="page-description">Read the source. Explore the subjects. Teach the distinctions.</p></div><span class="status-pill"><span class="dot amber"></span> Historical preview</span></div>
+    <div class="notice"><strong>A small, real starting point.</strong> These are previously verified historical posts. Live collection, semantic analysis, and automatic trend discovery are still being built. The current labels are a transparent word-matching baseline.</div>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section class="stats" id="stats" aria-label="Collection summary"></section>
+    <section class="filters" aria-label="Post filters">
+      <label class="search-label">Search full text<input id="search" type="search" placeholder="A subject, facility, or exact words…"></label>
+      <label>Member<select id="member"><option value="">All members</option></select></label>
+      <label>Topic<select id="topic"><option value="">All topics</option></select></label>
+      <label>Post type<select id="post-type"><option value="">All types</option><option value="original">Original</option><option value="reply">Reply</option><option value="quote">Quote</option><option value="repost">Repost</option></select></label>
+      <label>Period<select id="period"><option value="all">All archived dates</option><option value="0.5">Last 30 minutes</option><option value="2">Last 2 hours</option><option value="24">Last 24 hours</option></select></label>
+    </section>
+    <section id="view-explore" class="view">
+      <div class="explore-grid"><div><div class="section-heading"><h2>Source posts</h2><span class="quiet" id="result-count"></span></div><div id="posts"></div></div>
+      <aside><div class="section-heading"><h2>Subjects in view</h2></div><div class="panel" id="topics"></div><div class="panel soft"><h3>From subject to event</h3><p>Immigration can contain a facility such as Dilley, and a specific development at that facility. Those are separate pieces of the story.</p><p class="quiet">Event discovery will appear here once connected to live analysis.</p></div></aside></div>
+    </section>
+    <section id="view-teach" class="view" hidden>
+      <div class="section-heading"><h2>One post. One useful lesson.</h2><span class="quiet">Corrections are saved locally</span></div>
+      <div class="teach-intro panel"><p>Choose a post, inspect the proposal, then explain your interpretation. A saved correction updates that post. A general lesson remains a proposal until it has been reviewed and tested.</p><label>Post to review<select id="review-select"></select></label></div>
+      <div id="review"></div>
+    </section>
+    <section id="view-wording" class="view" hidden>
+      <div class="section-heading"><h2>Follow the exact words</h2><span class="quiet">Uses the filters above</span></div>
+      <div class="panel"><p>Search a phrase of any practical length. Original punctuation, case, and negation are preserved. This view finds exact occurrences; automatic phrase discovery and paraphrase grouping are forthcoming.</p>
+      <form id="phrase-form" class="phrase-form"><label>Exact phrase<input id="phrase-input" placeholder="Paste wording from a post" maxlength="2000" required></label><button class="primary" type="submit">Find occurrences</button></form></div><div id="phrase-results"></div>
+    </section>
+    <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="coverage" class="coverage-grid"></div></section>
+    <footer>Every interpretation should lead back to its source. <span>Private local preview · v0.1</span></footer>
+  </main>
+</body>
+</html>

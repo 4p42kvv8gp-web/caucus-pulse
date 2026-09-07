@@ -1,0 +1,150 @@
+const $ = id => document.getElementById(id);
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
+const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0 };
+
+async function api(path, options) {
+  const response = await fetch(path, options);
+  const result = await response.json();
+  if (!response.ok) throw new Error(result.error || 'Request failed.');
+  return result;
+}
+function showError(message) { $('error').textContent = message; $('error').hidden = !message; }
+function filterParams() {
+  const params = new URLSearchParams({ query: $('search').value, memberId: $('member').value,
+    topic: $('topic').value, type: $('post-type').value });
+  if ($('period').value !== 'all') params.set('since', new Date(Date.now() - Number($('period').value) * 3_600_000).toISOString());
+  return params;
+}
+function setOptions(element, options, first) {
+  const previous = element.value;
+  element.innerHTML = `<option value="">${esc(first)}</option>` + options.map(o => `<option value="${esc(o.id)}">${esc(o.name)}</option>`).join('');
+  if (options.some(o => o.id === previous)) element.value = previous;
+}
+function tags(post) {
+  return `<div class="tags">${post.labels.length ? post.labels.map(l => `<span class="tag">${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</span>`).join('') : '<span class="tag">Awaiting subject classification</span>'}<span class="tag ${post.reviewStatus === 'reviewed' ? 'reviewed' : ''}">${post.reviewStatus === 'reviewed' ? 'Reviewed correction' : 'Provisional'}</span></div>`;
+}
+function sourceHeader(post) {
+  const initials = post.memberName.split(' ').map(s => s[0]).slice(0, 2).join('');
+  return `<div class="post-header"><div class="avatar" aria-hidden="true">${esc(initials)}</div><div><span class="author">${esc(post.memberName)}</span><span class="post-meta">@${esc(post.handle)} · ${esc(post.type)}<br>${esc(date(post.createdAt))}</span></div><a class="post-source" href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">View on X ↗</a></div>`;
+}
+function postCard(post) {
+  return `<article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}<div class="post-footer"><span class="quiet">Full API text · media not reviewed</span><button class="text-button" data-review="${esc(post.id)}">Review classification →</button></div></article>`;
+}
+function renderStats() {
+  const c = state.data.coverage;
+  $('stats').innerHTML = [
+    ['Historical source posts', c.postCount, 'Previously verified examples'],
+    ['Members represented', c.memberCount, 'Full List sync is pending'],
+    ['Posts reviewed', c.reviewedPosts, 'Your saved corrections'],
+    ['Daily X ceiling', `$${state.data.budget.dailyCeilingUsd}`, '$50 reserve · balance unverified']
+  ].map(([label, value, note]) => `<div class="stat"><label>${esc(label)}</label><strong>${esc(value)}</strong><small>${esc(note)}</small></div>`).join('');
+}
+function renderExplore() {
+  const { posts, topics } = state.data;
+  $('result-count').textContent = `${posts.length} posts · newest first`;
+  $('posts').innerHTML = posts.map(postCard).join('') || '<div class="empty">No archived posts match these filters. The preview contains historical examples; select “All archived dates” to see them.</div>';
+  $('topics').innerHTML = topics.map(t => `<div class="topic-row"><div class="topic-head"><strong>${esc(t.topic)}</strong><span>${t.posts} posts</span></div><span class="quiet">${t.members} distinct ${t.members === 1 ? 'member' : 'members'}</span>${t.subtopics.map(s => `<div class="subtopic">${esc(s.label)}<br><span class="quiet">${s.posts} ${s.posts === 1 ? 'post' : 'posts'}</span></div>`).join('')}</div>`).join('') || '<p class="quiet">No labeled subjects in this selection.</p>';
+}
+function renderCoverage() {
+  const c = state.data.coverage; const b = state.data.budget;
+  function rows(items) { return items.map(([label, value]) => `<div class="detail-row"><small>${esc(label)}</small>${esc(value)}</div>`).join(''); }
+  $('coverage').innerHTML = `<div class="panel"><h3>Source coverage</h3>${rows([
+    ['Collection', c.collectionStatus], ['Accounts', c.rosterStatus], ['Earliest archived post', date(c.firstPostAt)],
+    ['Latest archived post', date(c.lastPostAt)], ['Last source retrieval', date(c.lastImportedAt)],
+    ['Context', 'Full API text for the imported examples; media and linked content are not reviewed.']
+  ])}<a href="https://x.com/i/lists/1841177179872243858" target="_blank" rel="noopener noreferrer">Open the supplied X List ↗</a></div>
+  <div class="panel"><h3>Budget and analysis</h3>${rows([
+    ['Reported prepaid credit', `$${b.reportedCreditUsd} — not yet verified against the account`],
+    ['Configured limits', `$${b.dailyCeilingUsd} per UTC day / $${b.pilotCeilingUsd} total pilot / $${b.reserveUsd} reserve`],
+    ['Usage', b.usageStatus], ['Analysis', c.analysisStatus],
+    ['General lessons awaiting review', String(c.pendingRuleProposals)], ['Optional paid work', 'Bulk history and repeated engagement checks are disabled.']
+  ])}</div>`;
+}
+function labelRow(label = {}) {
+  return `<div class="label-entry"><label>Topic<input name="topic" maxlength="100" value="${esc(label.topic)}" placeholder="e.g. Immigration"></label><label>Subtopic (optional)<input name="subtopic" maxlength="160" value="${esc(label.subtopic)}" placeholder="e.g. Dilley detention facility"></label><button type="button" class="remove" aria-label="Remove label">×</button></div>`;
+}
+function renderReview() {
+  const posts = state.data.posts;
+  if (!posts.some(p => p.id === state.selected)) state.selected = posts[0]?.id ?? null;
+  $('review-select').innerHTML = posts.map(p => `<option value="${esc(p.id)}">${esc(p.memberName)} · ${esc(date(p.createdAt))}</option>`).join('');
+  $('review-select').value = state.selected ?? '';
+  const post = posts.find(p => p.id === state.selected);
+  if (!post) { $('review').innerHTML = '<div class="empty">No posts match the current filters. Broaden the selection to start a review.</div>'; return; }
+  const proposal = post.provenance.assistantProposal;
+  $('review').innerHTML = `<div class="review-grid"><div><article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}
+    <div class="explanation"><h3>Current baseline explanation</h3><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}</div>`).join('')}
+    ${proposal ? `<div class="explanation"><h3>Prepared discussion proposal</h3><p>${esc(proposal.justification)}</p><p class="quiet">${esc(proposal.uncertainty)}</p><p class="quiet">Prepared by the assistant for this exercise; not an accepted rule or an automated semantic result.</p></div>` : ''}
+    <div class="limits">Context limits<ul>${post.analysis.limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></div></article></div>
+    <div class="panel"><h3>Your interpretation</h3><p class="quiet">${esc(post.provenance.reviewPrompt ?? 'What should this post be classified as, and what wording supports that interpretation?')}</p>
+    <form id="feedback-form" class="feedback-form"><div id="label-rows">${(post.labels.length ? post.labels : [{}]).map(labelRow).join('')}</div><button type="button" class="secondary" id="add-label">+ Add another topic</button>
+    <label>Why is this the right interpretation?<textarea id="feedback-reason" rows="4" maxlength="2000" placeholder="Explain the distinction you want the product to learn…" required></textarea></label>
+    <label>Possible general lesson (optional)<textarea id="feedback-rule" rows="3" maxlength="2000" placeholder="A rule to test on other posts. This will be saved as a proposal."></textarea></label>
+    <p class="quiet">Leave all topic rows blank to mark this post as needing classification. The reason is still required.</p><div class="feedback-actions"><button class="primary" type="submit">Save correction</button><span id="save-state" class="success" role="status"></span></div></form>
+    ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
+  $('add-label').addEventListener('click', () => { $('label-rows').insertAdjacentHTML('beforeend', labelRow()); state.dirty = true; });
+  $('label-rows').addEventListener('click', event => { if (event.target.closest('.remove')) { event.target.closest('.label-entry').remove(); state.dirty = true; } });
+  $('feedback-form').addEventListener('input', () => { state.dirty = true; });
+  $('feedback-form').addEventListener('submit', async event => {
+    event.preventDefault();
+    const button = event.submitter; button.disabled = true; showError('');
+    const labels = [...document.querySelectorAll('.label-entry')].map(row => ({
+      topic: row.querySelector('[name=topic]').value.trim(), subtopic: row.querySelector('[name=subtopic]').value.trim() || null
+    })).filter(l => l.topic || l.subtopic);
+    try {
+      await api(`/api/posts/${post.id}/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ labels, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
+      state.dirty = false; await refresh();
+      if ($('save-state')) $('save-state').textContent = 'Saved. This post now uses your correction.';
+    } catch (error) { showError(error.message); button.disabled = false; }
+  });
+}
+async function refresh() {
+  const sequence = ++state.sequence;
+  try {
+    const data = await api(`/api/dashboard?${filterParams()}`);
+    if (sequence !== state.sequence) return;
+    state.data = data; showError(''); renderStats(); renderExplore(); renderCoverage();
+    setOptions($('member'), data.members, 'All members');
+    setOptions($('topic'), data.availableTopics.map(t => ({ id: t, name: t })), 'All topics');
+    if (!state.dirty) renderReview();
+    $('updated').textContent = `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
+    if (state.view === 'wording' && $('phrase-input').value) await loadPhrase();
+  } catch (error) { showError(`${error.message} Last successful data remains visible.`); }
+}
+const headings = {
+  explore: ['Listen. Trace. Understand.', 'Read the source. Explore the subjects. Teach the distinctions.'],
+  teach: ['Teach the distinctions.', 'Your judgment becomes a saved example the product can learn from.'],
+  wording: ['Keep every word.', 'Look closely at the language, with the complete source alongside it.'],
+  coverage: ['Trust starts with coverage.', 'See the boundaries of the archive and the state of the product.']
+};
+function setView(view) {
+  state.view = view;
+  for (const el of document.querySelectorAll('.view')) el.hidden = el.id !== `view-${view}`;
+  for (const el of document.querySelectorAll('[data-view]')) { el.classList.toggle('active', el.dataset.view === view); el.setAttribute('aria-current', el.dataset.view === view ? 'page' : 'false'); }
+  [$('page-title').textContent, $('page-description').textContent] = headings[view];
+}
+async function loadPhrase() {
+  const params = filterParams(); params.set('phrase', $('phrase-input').value);
+  try {
+    const result = await api(`/api/phrases?${params}`); showError('');
+    $('phrase-results').innerHTML = `<div class="panel"><h3>${result.matchingPosts} matching posts · ${result.distinctMembers} distinct members</h3><p class="quiet">${esc(result.note)}</p><p class="quiet">First occurrence within this selection: ${esc(date(result.firstObservedInSelection))}</p></div>` + result.occurrences.map(o => `<article class="post-card"><h3>${esc(o.memberName)} <span class="quiet">${esc(date(o.createdAt))}</span></h3><p class="post-text">${esc(o.text.slice(0, o.span.start))}<mark class="phrase-match">${esc(o.span.text)}</mark>${esc(o.text.slice(o.span.end))}</p><a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open source ↗</a></article>`).join('');
+  } catch (error) { showError(error.message); }
+}
+document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
+$('posts').addEventListener('click', event => {
+  const button = event.target.closest('[data-review]');
+  if (!button) return;
+  if (state.dirty && !confirm('Discard the unsaved review before switching posts?')) return;
+  state.dirty = false; state.selected = button.dataset.review; renderReview(); setView('teach');
+});
+$('review-select').addEventListener('change', event => {
+  if (state.dirty && !confirm('Discard the unsaved review before switching posts?')) { event.target.value = state.selected; return; }
+  state.dirty = false; state.selected = event.target.value; renderReview();
+});
+for (const id of ['member', 'topic', 'post-type', 'period']) $(id).addEventListener('change', refresh);
+let searchTimer;
+$('search').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(refresh, 200); });
+$('phrase-form').addEventListener('submit', event => { event.preventDefault(); loadPhrase(); });
+window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
+await refresh(); setInterval(refresh, 60_000);

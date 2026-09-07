@@ -1,0 +1,12 @@
+{
+  "name": "caucus-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.19.0 <25" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "import:calibration": "node scripts/import-calibration.js"
+  }
+}
