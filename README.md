@@ -22,7 +22,7 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 - Search currently scans the local dataset; indexed queries/pagination are required for the full roster.
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
 - Classification failure leaves source posts stored and visible. Failed jobs are recorded; scheduled provider retries are future work.
-- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval is implemented; real calibration, evaluation, and production provider integration remain required work.
+- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production provider integration remain required work.
 - Removal clears current database records and prevents replay. Filesystem backup/WAL cleanup and provider removal handling must be completed before live deployment.
 - Live collection remains disabled. The resumable collector and budget enforcement modules now exist and are tested offline. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
 
@@ -88,7 +88,9 @@ Local processing moves captured records into the explorer only after attribution
 
 These checks verify the output's structure and source references; they cannot prove that the interpretation is correct. Negation, quoted language, location meaning, and classification boundaries still require model evaluation and human calibration.
 
-Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text rejects late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use deterministic topic matching with explicit exclusions for the target and held-out posts; proposed general rules are excluded. This is retrieval-based adaptation, not model-weight training. Feedback influence/reclassification, a provider worker with cost limits, held-out evaluation, and cross-post discovery remain unfinished.
+Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text and changed teaching examples reject late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use deterministic topic matching with persisted exclusions for held-out sources, text copies, direct references, and edit siblings; proposed general rules and unresolved reviews are excluded. This is retrieval-based adaptation, not model-weight training. Scheduled reclassification, a provider worker with cost limits, and cross-post discovery remain unfinished.
+
+The [teaching and evaluation guide](docs/TEACHING_AND_EVALUATION.md) describes voice-session recording, explicit negative decisions, reserved test posts, and separate candidate runs. Evaluations freeze accepted subject labels and record missing/extra labels without changing dashboard output. They expose stale, failed, removed, and unfinished cases. The local baseline evaluation makes no requests; the provider callback still needs a cost-controlled adapter. Semantic run history shows which examples were supplied, without claiming causal influence.
 
 The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Current imported examples still use the literal baseline. Synthetic tests never count as real model output or user feedback.
 

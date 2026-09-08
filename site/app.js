@@ -124,7 +124,7 @@ function renderReview() {
     })).filter(l => l.topic || l.subtopic);
     try {
       await api(`/api/posts/${post.id}/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ labels, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
+        body: JSON.stringify({ sourceHash: post.contentHash, labels, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
       state.dirty = false; await refresh();
       if ($('save-state')) $('save-state').textContent = 'Saved. This post now uses your correction.';
     } catch (error) { showError(error.message); button.disabled = false; }

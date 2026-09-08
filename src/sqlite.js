@@ -18,7 +18,7 @@ export function atomic(db, fn) {
 
 export function migrateOperations(db) {
   const version = db.prepare('SELECT version FROM schema_version').get().version;
-  if (version > 4) throw new Error('This database requires a newer application version.');
+  if (version > 5) throw new Error('This database requires a newer application version.');
   if (version < 2) atomic(db, () => db.exec(`
     CREATE TABLE budget_requests (
       sequence INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT UNIQUE NOT NULL,
@@ -116,5 +116,42 @@ export function migrateOperations(db) {
     );
     CREATE TABLE list_inventory_leases (list_id TEXT PRIMARY KEY, owner TEXT NOT NULL, expires_ms INTEGER NOT NULL);
     UPDATE schema_version SET version=4;
+  `));
+  if (version < 5) atomic(db, () => db.exec(`
+    CREATE TABLE learning_holdouts (
+      post_id TEXT PRIMARY KEY REFERENCES posts(id) ON DELETE CASCADE,
+      reserved_at TEXT NOT NULL
+    );
+    CREATE TABLE learning_holdout_sources (
+      post_id TEXT NOT NULL REFERENCES learning_holdouts(post_id) ON DELETE CASCADE,
+      text_key TEXT NOT NULL, related_ids_json TEXT NOT NULL,
+      PRIMARY KEY(post_id,text_key)
+    );
+    CREATE TABLE evaluation_sets (
+      id TEXT PRIMARY KEY, name TEXT NOT NULL, created_at TEXT NOT NULL,
+      case_count INTEGER NOT NULL, contract_version TEXT NOT NULL
+    );
+    CREATE TABLE evaluation_cases (
+      set_id TEXT NOT NULL REFERENCES evaluation_sets(id) ON DELETE CASCADE,
+      post_id TEXT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+      source_hash TEXT NOT NULL, feedback_id TEXT NOT NULL,
+      expected_json TEXT NOT NULL,
+      PRIMARY KEY(set_id,post_id)
+    );
+    CREATE TABLE evaluation_runs (
+      id TEXT PRIMARY KEY, set_id TEXT NOT NULL REFERENCES evaluation_sets(id) ON DELETE CASCADE,
+      provider TEXT NOT NULL, model TEXT NOT NULL, started_at TEXT NOT NULL,
+      finished_at TEXT, status TEXT NOT NULL
+    );
+    CREATE TABLE evaluation_results (
+      run_id TEXT NOT NULL REFERENCES evaluation_runs(id) ON DELETE CASCADE,
+      post_id TEXT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+      status TEXT NOT NULL, source_hash TEXT NOT NULL, feedback_id TEXT NOT NULL,
+      input_hash TEXT NOT NULL, example_ids_json TEXT NOT NULL,
+      analysis_json TEXT, comparison_json TEXT,
+      PRIMARY KEY(run_id,post_id)
+    );
+    CREATE INDEX evaluation_results_post ON evaluation_results(post_id);
+    UPDATE schema_version SET version=5;
   `));
 }

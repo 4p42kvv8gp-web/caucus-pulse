@@ -112,11 +112,19 @@ test('local HTTP flow validates feedback and rejects cross-origin mutations', as
     const homepage = await fetch(url); assert.equal(homepage.status, 200);
     assert.match(homepage.headers.get('content-security-policy'), /frame-ancestors 'none'/);
     const dashboard = await (await fetch(`${url}/api/dashboard`)).json(); assert.equal(dashboard.posts.length, 1);
+    assert.equal(dashboard.operations.learning.reviewedPosts, 0);
+    assert.equal((await (await fetch(`${url}/api/learning`)).json()).evaluationRuns, 0);
+    assert.deepEqual((await (await fetch(`${url}/api/posts/1/learning`)).json()).runs, []);
+    assert.equal((await fetch(`${url}/api/posts/999/learning`)).status, 404);
     const hostile = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: 'https://unrelated.example' }, body: '{}' });
     assert.equal(hostile.status, 403);
     const invalid = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ labels: [], reason: '' }) });
     assert.equal(invalid.status, 400);
+    const stale = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sourceHash: 'outdated', labels: [], reason: 'Synthetic stale review.' }) });
+    assert.equal(stale.status, 400);
+    assert.equal((await (await fetch(`${url}/api/learning`)).json()).reviewedPosts, 0);
     const correction = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ labels: [], reason: 'Synthetic test only.' }) });
     assert.equal(correction.status, 200); assert.equal((await correction.json()).reviewStatus, 'reviewed');
+    assert.equal((await (await fetch(`${url}/api/learning`)).json()).reviewedPosts, 1);
   } finally { await new Promise(resolve => server.close(resolve)); store.close(); }
 });

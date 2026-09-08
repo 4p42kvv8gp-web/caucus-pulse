@@ -3,6 +3,7 @@ import { createBudget } from './budget.js';
 import { collectionState } from './collect.js';
 import { rosterStatus } from './roster.js';
 import { inventoryState } from './list-inventory.js';
+import { learningStatus } from './learning-context.js';
 
 export function dashboardData(store, filters, settings) {
   const allPosts = store.listPosts();
@@ -33,6 +34,7 @@ export function dashboardData(store, filters, settings) {
     sources: collectionState(store.db),
     roster: rosterStatus(store.db),
     inventory: settings.listId ? inventoryState(store.db, settings.listId) : null,
+    learning: learningStatus(store),
     awaitingRoster: store.db.prepare("SELECT COUNT(*) AS n FROM captured_posts WHERE status<>'promoted'").get().n,
     analysisPending: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='pending'").get().n,
     analysisFailed: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='failed'").get().n

@@ -1,5 +1,6 @@
 import { randomUUID, createHash } from 'node:crypto';
 import { atomic } from './sqlite.js';
+import { exampleExclusions, exampleValidity } from './learning-context.js';
 
 export const INTELLIGENCE_VERSION = 'source-evidence-v1';
 export const CLASSIFICATION_INSTRUCTIONS = `Classify the supplied public post using only available source evidence and reviewed examples.
@@ -91,16 +92,20 @@ export function validateSemanticResult(post, result) {
 
 export function reviewedExamples(store, post, { limit = 5, holdoutIds = [] } = {}) {
   if (!Number.isInteger(limit) || limit < 0 || limit > 10) throw new Error('Invalid example limit.');
-  const excluded = new Set([post.id, ...holdoutIds]);
+  const excluded = exampleExclusions(store, post, holdoutIds);
   const topics = new Set(post.analysis?.labels.map(l => l.topic) ?? []);
   const target = post.text.toLowerCase();
   // Deterministic topic matching, then existing source chronology; no member or political ranking.
-  return store.listPosts().filter(p => !excluded.has(p.id) && p.reviewStatus === 'reviewed' && p.labels.some(l =>
-    topics.has(l.topic) || target.includes(l.topic.toLowerCase()) || (l.subtopic && target.includes(l.subtopic.toLowerCase()))))
+  return store.listPosts().filter(p => {
+    const review = p.feedback.find(f => f.appliesToCurrentText);
+    if (excluded(p) || !review || review.decision === 'needs-context') return false;
+    const subjects = review.decision === 'no-supported-topic' ? review.predictionAtReview?.labels ?? [] : p.labels;
+    return subjects.some(l => topics.has(l.topic) || target.includes(l.topic.toLowerCase()) || (l.subtopic && target.includes(l.subtopic.toLowerCase())));
+  })
     .slice(0, limit).map(p => {
       const review = p.feedback.find(f => f.appliesToCurrentText);
       return { postId: p.id, sourceHash: p.contentHash, text: p.text, createdAt: p.createdAt,
-        labels: p.labels, correctionReason: review.reason, feedbackId: review.id,
+        labels: p.labels, decision: review.decision ?? 'classified', correctionReason: review.reason, feedbackId: review.id,
         contextCoverage: p.contextCoverage };
     });
 }
@@ -119,6 +124,7 @@ function saveRun(store, postId, sourceHash, analysis, now) {
   return atomic(store.db, () => {
     const current = store.db.prepare('SELECT content_hash FROM posts WHERE id=?').get(postId);
     if (!current || current.content_hash !== sourceHash) throw new Error('Source changed while analysis was running.');
+    if (!analysis.restoredFromRun && exampleValidity(store, analysis.reviewedExampleIds ?? []).some(e => e.status !== 'current')) throw new Error('Reviewed examples changed while analysis was running.');
     const id = randomUUID();
     store.db.prepare('INSERT INTO analysis_runs(id,post_id,source_hash,created_at,version,analysis_json) VALUES (?,?,?,?,?,?)')
       .run(id, postId, sourceHash, new Date(now).toISOString(), analysis.version, JSON.stringify(analysis));

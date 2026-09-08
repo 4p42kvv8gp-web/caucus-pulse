@@ -6,6 +6,8 @@ import { openStore } from './db.js';
 import { dashboardData, phraseData } from './dashboard.js';
 import { promoteCaptured } from './roster.js';
 import { createCredentialStore } from './credentials.js';
+import { learningStatus, postLearningHistory } from './learning-context.js';
+import { evaluationReport } from './evaluation.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -63,6 +65,14 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         return json(200, { ...credentials.save(value.bearerToken), accessVerified: false, collectionStarted: false });
       }
       if (req.method === 'GET' && url.pathname === '/api/phrases') return json(200, phraseData(store, url.searchParams.get('phrase'), filtersFrom(url)));
+      if (req.method === 'GET' && url.pathname === '/api/learning') return json(200, learningStatus(store));
+      const learningMatch = url.pathname.match(/^\/api\/posts\/(\d+)\/learning$/);
+      if (req.method === 'GET' && learningMatch) {
+        if (!store.getPost(learningMatch[1])) return json(404, { error: 'Post not found.' });
+        return json(200, postLearningHistory(store, learningMatch[1]));
+      }
+      const evaluationMatch = url.pathname.match(/^\/api\/evaluations\/([a-f0-9-]+)$/);
+      if (req.method === 'GET' && evaluationMatch) return json(200, evaluationReport(store, evaluationMatch[1]));
       const match = url.pathname.match(/^\/api\/posts\/(\d+)(\/feedback)?$/);
       if (match) {
         if (!store.getPost(match[1])) return json(404, { error: 'Post not found.' });

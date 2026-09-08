@@ -54,5 +54,8 @@ export function validateFeedback(value) {
   if (new Set(labels.map(l => JSON.stringify(l))).size !== labels.length) throw new Error('Remove duplicate labels.');
   const reason = clean(value.reason, 'reason', 2000);
   const ruleProposal = clean(value.ruleProposal, 'rule proposal', 2000, false);
-  return { labels, reason, ruleProposal };
+  const decision = value.decision ?? (labels.length ? 'classified' : 'needs-context');
+  if (!['classified','no-supported-topic','needs-context'].includes(decision) ||
+    (decision === 'classified' && !labels.length) || (decision === 'no-supported-topic' && labels.length)) throw new Error('Invalid review decision.');
+  return { labels, reason, ruleProposal, decision };
 }

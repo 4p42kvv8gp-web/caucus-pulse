@@ -4,6 +4,7 @@ import { dirname } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { baselineClassify, validateFeedback } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
+import { rememberHoldoutSource } from './learning-context.js';
 
 export function openStore(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
@@ -68,6 +69,7 @@ export function openStore(path = ':memory:') {
         text=excluded.text, type=excluded.type, content_hash=excluded.content_hash, normalized_json=excluded.normalized_json`).run(
         post.id, post.authorId, post.createdAt, post.capturedAt, post.text, post.type, post.contentHash, JSON.stringify(post));
       db.prepare('DELETE FROM analyses WHERE post_id=?').run(post.id);
+      rememberHoldoutSource(db, post);
       db.prepare(`INSERT INTO analysis_jobs(post_id, status) VALUES (?, 'pending')
         ON CONFLICT(post_id) DO UPDATE SET status='pending', attempts=0, last_error=NULL`).run(post.id);
       return { inserted: !current, updated: Boolean(current) };
@@ -132,13 +134,20 @@ export function openStore(path = ':memory:') {
       (!since || p.createdAt >= since) && (!until || p.createdAt < until));
   }
   function saveFeedback(postId, value, reviewer = 'local-user') {
-    const post = getPost(postId);
-    if (!post) throw new Error('Post not found.');
     const feedback = validateFeedback(value);
-    const id = randomUUID();
-    db.prepare(`INSERT INTO feedback(id, post_id, source_hash, created_at, reviewer, feedback_json)
-      VALUES (?, ?, ?, ?, ?, ?)`).run(id, postId, post.contentHash, new Date().toISOString(), reviewer, JSON.stringify(feedback));
-    return getPost(postId);
+    return transaction(() => {
+      const post = getPost(postId);
+      if (!post) throw new Error('Post not found.');
+      if (value.sourceHash !== undefined && value.sourceHash !== post.contentHash) throw new Error('Invalid source version: reload the post before saving this correction.');
+      const id = randomUUID();
+      const snapshot = { ...feedback, scope: 'post-specific', predictionAtReview: {
+        version: post.analysis.version, method: post.analysis.method,
+        labels: post.analysis.labels, entities: post.analysis.entities, events: post.analysis.events
+      }, previousAcceptedLabels: post.reviewStatus === 'reviewed' ? post.labels : null };
+      db.prepare(`INSERT INTO feedback(id, post_id, source_hash, created_at, reviewer, feedback_json)
+        VALUES (?, ?, ?, ?, ?, ?)`).run(id, postId, post.contentHash, new Date().toISOString(), reviewer, JSON.stringify(snapshot));
+      return getPost(postId);
+    });
   }
   function removePost(id) {
     transaction(() => {

@@ -11,7 +11,8 @@ Updated September 7, 2026. Development continues without waiting for the optiona
 ## Your useful product work, once the review screen is ready
 
 - [ ] **Teach the classification boundaries — about 20–30 minutes by voice.** We will bring real posts and proposed interpretations. You explain what is right, what is wrong, and why. Focus on what deserves its own subtopic/event, what is genuinely about a district, how to handle vague captions, and what makes a report useful to you. You do not need to write the taxonomy first.
-- [ ] **Try the first working dashboard — about 10 minutes.** Find a subject you care about, inspect its supporting posts, and correct one label. Tell us what you expected to see or could not find. We handle implementation details.
+- [ ] **Send Claude's redesign file when it is ready.** We will connect that design to the existing product. The agreed direction is a dense, crisp newsroom monitor with a light background.
+- [ ] **Try the integrated dashboard — about 10 minutes, after the redesign is connected.** Find a subject you care about and inspect its supporting posts. One local correction is already saved; the next voice session can build on it. We handle implementation details.
 
 ## Ready now: one setup step for live X access
 
