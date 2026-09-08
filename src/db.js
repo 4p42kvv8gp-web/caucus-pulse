@@ -81,6 +81,11 @@ export function openStore(path = ':memory:') {
       const post = JSON.parse(row.normalized_json);
       try {
         const analysis = classifier(post);
+        if (analysis && typeof analysis.then === 'function') {
+          // Consume a rejection without treating an unfinished asynchronous result as saved analysis.
+          Promise.resolve(analysis).catch(() => {});
+          throw new Error('Use the semantic runner for asynchronous providers.');
+        }
         transaction(() => {
           db.prepare(`INSERT INTO analyses(post_id, source_hash, analysis_json) VALUES (?, ?, ?)
             ON CONFLICT(post_id) DO UPDATE SET source_hash=excluded.source_hash, analysis_json=excluded.analysis_json`).run(
@@ -106,8 +111,11 @@ export function openStore(path = ':memory:') {
       ...JSON.parse(f.feedback_json)
     }));
     const accepted = history.find(f => f.appliesToCurrentText);
-    return { ...post, memberId: row.member_id, memberName: row.member_name, handle: row.handle,
-      identityNote: row.identity_note, accountType: row.account_type, analysis,
+    const attribution = row.attribution_json ? JSON.parse(row.attribution_json) : {
+      memberId: row.member_id, memberName: row.member_name, handle: row.handle,
+      identityNote: row.identity_note, accountType: row.account_type
+    };
+    return { ...post, ...attribution, analysis,
       labels: accepted?.labels ?? analysis.labels, reviewStatus: accepted ? 'reviewed' : 'awaiting-review', feedback: history };
   }
 

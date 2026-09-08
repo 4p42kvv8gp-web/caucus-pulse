@@ -113,7 +113,9 @@ export async function collectOnce({ db, sourceId, fetchPage, budget, pageSize = 
         for (const post of normalized) {
           if (db.prepare('SELECT 1 FROM tombstones WHERE post_id=?').get(post.id)) continue;
           db.prepare(`INSERT INTO captured_posts(id, author_id, created_at, captured_at, normalized_json) VALUES (?, ?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET captured_at=excluded.captured_at, normalized_json=excluded.normalized_json`).run(
+            ON CONFLICT(id) DO UPDATE SET captured_at=excluded.captured_at, normalized_json=excluded.normalized_json,
+            promotion_attempted_at=CASE WHEN json_extract(captured_posts.normalized_json,'$.contentHash')<>json_extract(excluded.normalized_json,'$.contentHash') THEN NULL ELSE captured_posts.promotion_attempted_at END,
+            status=CASE WHEN json_extract(captured_posts.normalized_json,'$.contentHash')<>json_extract(excluded.normalized_json,'$.contentHash') THEN 'awaiting-roster' ELSE captured_posts.status END`).run(
             post.id, post.authorId, post.createdAt, post.capturedAt, JSON.stringify(post));
           db.prepare('INSERT OR IGNORE INTO collection_deliveries(interval_id, post_id) VALUES (?, ?)').run(interval.id, post.id);
         }

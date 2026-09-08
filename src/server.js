@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { openStore } from './db.js';
 import { dashboardData, phraseData } from './dashboard.js';
+import { promoteCaptured } from './roster.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -73,11 +74,12 @@ export function createServer(store) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   process.umask(0o077);
   const store = openStore(process.env.CAUCUS_DB_PATH ?? resolve(root, 'data/pulse.sqlite'));
-  store.analyzePending();
+  function processLocalRecords() { promoteCaptured(store); store.analyzePending(); }
+  processLocalRecords();
   const server = createServer(store);
   const port = Number(process.env.PORT ?? 4317);
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
-  const interval = setInterval(() => store.analyzePending(), 60_000);
+  const interval = setInterval(processLocalRecords, 60_000);
   function shutdown() { clearInterval(interval); server.close(() => { store.close(); process.exit(0); }); }
   process.on('SIGINT', shutdown); process.on('SIGTERM', shutdown);
 }

@@ -18,9 +18,8 @@ export function atomic(db, fn) {
 
 export function migrateOperations(db) {
   const version = db.prepare('SELECT version FROM schema_version').get().version;
-  if (version > 2) throw new Error('This database requires a newer application version.');
-  if (version === 2) return;
-  atomic(db, () => db.exec(`
+  if (version > 3) throw new Error('This database requires a newer application version.');
+  if (version < 2) atomic(db, () => db.exec(`
     CREATE TABLE budget_requests (
       sequence INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT UNIQUE NOT NULL,
       kind TEXT NOT NULL, purpose TEXT NOT NULL, max_resources INTEGER NOT NULL,
@@ -64,5 +63,33 @@ export function migrateOperations(db) {
       PRIMARY KEY(interval_id, post_id)
     );
     UPDATE schema_version SET version=2;
+  `));
+  if (version < 3) atomic(db, () => db.exec(`
+    CREATE TABLE roster_snapshots (
+      id TEXT PRIMARY KEY, published_on TEXT NOT NULL, retrieved_at TEXT NOT NULL,
+      source_url TEXT NOT NULL, congress TEXT NOT NULL, member_count INTEGER NOT NULL,
+      valid_until TEXT NOT NULL
+    );
+    CREATE TABLE roster_members (
+      snapshot_id TEXT NOT NULL REFERENCES roster_snapshots(id), member_id TEXT NOT NULL,
+      member_name TEXT NOT NULL, state TEXT NOT NULL, district TEXT NOT NULL,
+      party TEXT NOT NULL, caucus TEXT NOT NULL, sworn_on TEXT,
+      PRIMARY KEY(snapshot_id, member_id)
+    );
+    CREATE TABLE account_bindings (
+      id TEXT PRIMARY KEY, author_id TEXT NOT NULL, member_id TEXT NOT NULL, handle TEXT NOT NULL,
+      account_type TEXT NOT NULL, valid_from TEXT NOT NULL, valid_until TEXT NOT NULL,
+      verified_at TEXT NOT NULL, evidence_json TEXT NOT NULL
+    );
+    CREATE INDEX account_bindings_author ON account_bindings(author_id, valid_from, valid_until);
+    ALTER TABLE posts ADD COLUMN attribution_json TEXT;
+    ALTER TABLE captured_posts ADD COLUMN promotion_attempted_at TEXT;
+    CREATE TABLE analysis_runs (
+      id TEXT PRIMARY KEY, post_id TEXT NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+      source_hash TEXT NOT NULL, created_at TEXT NOT NULL, version TEXT NOT NULL,
+      analysis_json TEXT NOT NULL
+    );
+    CREATE INDEX analysis_runs_post ON analysis_runs(post_id, created_at);
+    UPDATE schema_version SET version=3;
   `));
 }

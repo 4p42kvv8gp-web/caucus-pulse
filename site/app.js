@@ -26,6 +26,14 @@ function setOptions(element, options, first) {
 function tags(post) {
   return `<div class="tags">${post.labels.length ? post.labels.map(l => `<span class="tag">${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</span>`).join('') : '<span class="tag">Awaiting subject classification</span>'}<span class="tag ${post.reviewStatus === 'reviewed' ? 'reviewed' : ''}">${post.reviewStatus === 'reviewed' ? 'Reviewed correction' : 'Provisional'}</span></div>`;
 }
+function sourceEvidence(spans = []) {
+  return spans.map(span => `<blockquote class="post-text">${esc(span.text)}</blockquote>`).join('');
+}
+function semanticDetails(analysis) {
+  const entities = analysis.entities ?? []; const events = analysis.events ?? [];
+  return `${entities.length ? `<h3>Entities mentioned</h3>${entities.map(e => `<div class="evidence"><strong>${esc(e.name)} · ${esc(e.kind)}</strong>${sourceEvidence(e.evidence)}</div>`).join('')}` : ''}
+    ${events.length ? `<h3>Possible events</h3><p class="quiet">Descriptions of what the source reports. Whether an event is new has not been established.</p>${events.map(e => `<div class="evidence"><strong>${esc(e.development)}</strong><p>${esc(e.description)}</p>${sourceEvidence(e.evidence)}<p class="quiet">${e.location ? `Named location: ${esc(e.location.name)}` : 'Location not established'} · ${e.districtRelation === 'explicitly-stated' ? 'Source explicitly mentions the district' : 'District connection not established'}</p>${sourceEvidence(e.districtEvidence)}</div>`).join('')}` : ''}`;
+}
 function sourceHeader(post) {
   const initials = post.memberName.split(' ').map(s => s[0]).slice(0, 2).join('');
   return `<div class="post-header"><div class="avatar" aria-hidden="true">${esc(initials)}</div><div><span class="author">${esc(post.memberName)}</span><span class="post-meta">@${esc(post.handle)} · ${esc(post.type)}<br>${esc(date(post.createdAt))}</span></div><a class="post-source" href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">View on X ↗</a></div>`;
@@ -51,16 +59,19 @@ function renderExplore() {
 function renderCoverage() {
   const c = state.data.coverage; const b = state.data.budget;
   const ops = state.data.operations; const usage = b.state;
+  const roster = ops.roster.snapshot;
   const dollars = micro => `$${((micro ?? 0) / 1_000_000).toFixed(3)}`;
   function rows(items) { return items.map(([label, value]) => `<div class="detail-row"><small>${esc(label)}</small>${esc(value)}</div>`).join(''); }
   $('coverage').innerHTML = `<div class="panel"><h3>Source coverage</h3>${rows([
     ['Collection', c.collectionStatus], ['Accounts', c.rosterStatus], ['Earliest archived post', date(c.firstPostAt)],
+    ['House Clerk inventory', roster ? `${roster.memberCount} names / published ${roster.publishedOn} / ${roster.fresh ? 'within observation window' : 'refresh required'}` : 'Not imported'],
+    ['Roster last retrieved', date(roster?.retrievedAt)],
     ['Latest archived post', date(c.lastPostAt)], ['Last source retrieval', date(c.lastImportedAt)],
     ['Context', 'Full API text for the imported examples; media and linked content are not reviewed.'],
     ['Captured posts awaiting roster validation', String(ops.awaitingRoster)],
     ['Analysis jobs', `${ops.analysisPending} pending / ${ops.analysisFailed} failed`],
     ['Collection intervals', ops.sources.length ? ops.sources.map(s => `${s.status ?? 'Not started'}${s.reason ? `: ${s.reason}` : ''}`).join('; ') : 'No live interval has started']
-  ])}<a href="https://x.com/i/lists/1841177179872243858" target="_blank" rel="noopener noreferrer">Open the supplied X List ↗</a></div>
+  ])}<p class="quiet">A roster name does not establish X account ownership or historical membership before the source observation.</p><a href="https://x.com/i/lists/1841177179872243858" target="_blank" rel="noopener noreferrer">Open the supplied X List ↗</a> · <a href="https://clerk.house.gov/xml/lists/MemberData.xml" target="_blank" rel="noopener noreferrer">House Clerk source ↗</a></div>
   <div class="panel"><h3>Budget and analysis</h3>${rows([
     ['Reported prepaid credit', `$${b.reportedCreditUsd} — not yet verified against the account`],
     ['Configured limits', `$${b.dailyCeilingUsd} per UTC day / $${b.pilotCeilingUsd} total pilot / $${b.reserveUsd} reserve`],
@@ -84,7 +95,8 @@ function renderReview() {
   if (!post) { $('review').innerHTML = '<div class="empty">No posts match the current filters. Broaden the selection to start a review.</div>'; return; }
   const proposal = post.provenance.assistantProposal;
   $('review').innerHTML = `<div class="review-grid"><div><article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}
-    <div class="explanation"><h3>Current baseline explanation</h3><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}</div>`).join('')}
+    <div class="explanation"><h3>Current analysis explanation</h3><p class="quiet">${esc(post.analysis.method)} · ${esc(post.analysis.version ?? 'Awaiting analysis')}</p><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}${sourceEvidence(l.evidence)}</div>`).join('')}
+    ${semanticDetails(post.analysis)}
     ${proposal ? `<div class="explanation"><h3>Prepared discussion proposal</h3><p>${esc(proposal.justification)}</p><p class="quiet">${esc(proposal.uncertainty)}</p><p class="quiet">Prepared by the assistant for this exercise; not an accepted rule or an automated semantic result.</p></div>` : ''}
     <div class="limits">Context limits<ul>${post.analysis.limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></div></article></div>
     <div class="panel"><h3>Your interpretation</h3><p class="quiet">${esc(post.provenance.reviewPrompt ?? 'What should this post be classified as, and what wording supports that interpretation?')}</p>

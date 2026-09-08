@@ -61,7 +61,7 @@ Suggested first session: 20–30 minutes on 8–12 varied examples. Resolve boun
 | M4 — private deployment | Authentication, controlled storage, jobs, secrets, backups/removals, monitoring, launch instructions. | End-to-end trial, removal propagation and recovery verified, concrete operating cost and access reviewed. |
 | M5 — evolve | Event delivery, selective OCR/transcription, targeted history, quality monitoring and model improvements. | Each addition proves value and fits remaining budget; expand in small measured steps. |
 
-Work starts with M1 now. Build code and tests through available milestones while Jacob is away; publish meaningful progress through this task. A local preview can precede live coverage and semantic intelligence, and must say so clearly. Do not promise a deployment date before account and hosting access are verified.
+The local M1 slice exists, with its visual browser check still pending. M2 collection/roster foundations and M3 evidence/feedback contracts are implemented; live account verification and a semantic provider remain unconnected. Build through the remaining milestones while Jacob is away and publish meaningful progress through this task. The preview must distinguish historical examples from live coverage and actual semantic output. Do not promise a deployment date before account and hosting access are verified.
 
 ## Deferred from the first pilot
 

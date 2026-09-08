@@ -1,6 +1,7 @@
 import { exactOccurrences } from './normalize.js';
 import { createBudget } from './budget.js';
 import { collectionState } from './collect.js';
+import { rosterStatus } from './roster.js';
 
 export function dashboardData(store, filters, settings) {
   const allPosts = store.listPosts();
@@ -29,7 +30,8 @@ export function dashboardData(store, filters, settings) {
   const budgetState = settings.budget.resourcePricesUsd ? createBudget(store.db, settings.budget).state() : null;
   const operations = {
     sources: collectionState(store.db),
-    awaitingRoster: store.db.prepare("SELECT COUNT(*) AS n FROM captured_posts WHERE status='awaiting-roster'").get().n,
+    roster: rosterStatus(store.db),
+    awaitingRoster: store.db.prepare("SELECT COUNT(*) AS n FROM captured_posts WHERE status<>'promoted'").get().n,
     analysisPending: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='pending'").get().n,
     analysisFailed: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='failed'").get().n
   };
@@ -39,7 +41,8 @@ export function dashboardData(store, filters, settings) {
       postCount: allPosts.length, memberCount: members.length,
       firstPostAt: allPosts.at(-1)?.createdAt ?? null, lastPostAt: allPosts[0]?.createdAt ?? null,
       lastImportedAt: allPosts.map(p => p.capturedAt).sort().at(-1) ?? null,
-      rosterStatus: 'Calibration accounts only; supplied List not yet synchronized',
+      rosterStatus: operations.roster.snapshot ? `${operations.roster.snapshot.memberCount} names in dated Clerk inventory; ${operations.roster.activeAccountBindings} active X account bindings. Supplied List not yet synchronized.`
+        : 'Calibration accounts only; supplied List not yet synchronized',
       collectionStatus: 'Live collection is not enabled',
       analysisStatus: 'Literal evidence baseline; semantic analysis not connected',
       reviewedPosts: allPosts.filter(p => p.reviewStatus === 'reviewed').length,

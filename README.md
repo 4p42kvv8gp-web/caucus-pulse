@@ -2,7 +2,7 @@
 
 A private listening and classification workspace for public X posts by House Democratic members.
 
-This initial local slice implements durable source storage, complete available text, provisional subject labels with evidence, a post explorer, exact phrase lookup, and persistent post corrections. It has **no active live collector or semantic provider yet**. Imported calibration examples retain their historical dates. General lessons are saved as proposals and do not automatically alter other posts.
+This local foundation implements durable source storage, complete available text, provisional subject labels with evidence, a post explorer, exact phrase lookup, and persistent post corrections. It also provides resumable collection, budget enforcement, dated member attribution, and a provider-neutral semantic analysis contract. It has **no active live collector or semantic provider yet**. Imported calibration examples retain their historical dates. General lessons are saved as proposals and do not automatically alter other posts.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 - Search currently scans the local dataset; indexed queries/pagination are required for the full roster.
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
 - Classification failure leaves source posts stored and visible. Failed jobs are recorded; scheduled provider retries are future work.
-- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Semantic feedback retrieval and evaluation remain required work.
+- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval is implemented; real calibration, evaluation, and production provider integration remain required work.
 - Removal clears current database records and prevents replay. Filesystem backup/WAL cleanup and provider removal handling must be completed before live deployment.
 - Live collection remains disabled. The resumable collector and budget enforcement modules now exist and are tested offline. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
 
@@ -41,6 +41,31 @@ This prints local readiness only. Once `CAUCUS_X_BEARER_TOKEN` is configured thr
 The List adapter supports explicit `tweet` or `post` field dialects because current generated documentation and observed single-post responses differ. The List dialect, full-text availability, and actual charges still need a bounded authenticated trial. No profile, media, or referenced-post expansions are requested in this initial adapter.
 
 References checked September 7, 2026: [X pricing](https://docs.x.com/x-api/getting-started/pricing), [credit balance endpoint](https://docs.x.com/x-api/usage/get-usage-credits), [List posts](https://docs.x.com/x-api/lists/get-list-posts).
+
+## Roster and account attribution
+
+```sh
+python3 scripts/fetch-house-roster.py
+node scripts/import-roster.js data/reference/house-roster.json
+```
+
+The first command downloads the public [House Clerk roster](https://clerk.house.gov/xml/lists/MemberData.xml); it does not contact X. The second imports its minimal member inventory, publication/retrieval dates, and raw-source hash. The ignored JSON file is local reference material, not an account verification. Existing downloaded XML can instead be parsed with `--input` and its actual `--retrieved-at` time.
+
+`src/roster.js` treats a current roster as a dated observation. Its operational window starts at the publication date and ends 24 hours after retrieval; it does not establish caucus affiliation earlier in the term. Newer snapshots take precedence. Source observations cannot be silently rewritten under the same identifier.
+
+The account-binding function requires a record of an official House page linking the exact profile, a matching numeric X user ID/username response, explicit ownership dates, and a source explanation. **It validates the submitted evidence record; it does not fetch or verify those pages itself.** The synchronization/verification caller still needs to be built. No account should be bound from a List entry alone. Personal/campaign accounts lacking an official link remain unresolved pending another reviewed evidence path.
+
+Local processing moves captured records into the explorer only after attribution succeeds. Identity and district are saved on each post, so later edits to account mappings cannot relabel its history. Failed verification retains the source in the queue. The local server processes at most 100 queued captures and 100 baseline jobs per minute; this involves no network or model requests.
+
+## Evidence and learning framework
+
+`src/intelligence.js` prepares complete available text, source version, context limits, and relevant reviewed examples for an explicitly supplied provider callback. Its strict JSON contract separates subjects, entities, event descriptions, named locations, and district evidence. Supporting spans must match the source exactly, including UTF-16 offsets. Named entities/locations must appear in those spans; canonical entity resolution awaits a verified registry. Returned events remain provisional and do not assert novelty or independent verification.
+
+These checks verify the output's structure and source references; they cannot prove that the interpretation is correct. Negation, quoted language, location meaning, and classification boundaries still require model evaluation and human calibration.
+
+Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text rejects late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use deterministic topic matching with explicit exclusions for the target and held-out posts; proposed general rules are excluded. This is retrieval-based adaptation, not model-weight training. Feedback influence/reclassification, a provider worker with cost limits, held-out evaluation, and cross-post discovery remain unfinished.
+
+The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Current imported examples still use the literal baseline. Synthetic tests never count as real model output or user feedback.
 
 ## Provenance
 
