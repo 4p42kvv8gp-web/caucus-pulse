@@ -155,6 +155,15 @@ export function explorerPage(store, filters = {}, { limit = 50,cursor = '' } = {
   });
 }
 
+export function reviewQueue(store, filters = {}) {
+  const selection = searchSelection(filters);
+  return atomic(store.db,()=>({
+    total:store.db.prepare(`SELECT COUNT(*) AS n ${selection.from} AND s.reviewed=0`).get(...selection.values).n,
+    posts:store.db.prepare(`SELECT s.post_id AS id,s.member_name AS memberName,s.created_at AS createdAt ${selection.from} AND s.reviewed=0 ORDER BY s.created_at DESC,s.post_id DESC LIMIT 100`).all(...selection.values),
+    note:'Up to 100 newest posts without a saved topic review in this selection. Source event reviews are separate.'
+  }));
+}
+
 export function explorerSummary(store, filters = {}) {
   const db = store.db; const selection = searchSelection(filters);
   const coverage = db.prepare(`SELECT COUNT(*) AS postCount,COUNT(DISTINCT member_id) AS memberCount,
@@ -164,10 +173,11 @@ export function explorerSummary(store, filters = {}) {
     COALESCE(SUM(reviewed),0) AS reviewedPosts,COALESCE(SUM(rule_proposals),0) AS pendingRuleProposals FROM post_search`).get();
   const members = db.prepare(`SELECT member_id AS id,MIN(member_name) AS name FROM post_search GROUP BY member_id ORDER BY name COLLATE NOCASE,id`).all();
   const availableTopics = db.prepare('SELECT DISTINCT topic FROM post_search_labels ORDER BY topic').all().map(r => r.topic);
+  const availableSubtopics = db.prepare(`SELECT DISTINCT subtopic FROM post_search_labels WHERE subtopic<>''${selection.filters.topic?' AND topic=?':''} ORDER BY subtopic`).all(...(selection.filters.topic?[selection.filters.topic]:[])).map(r=>r.subtopic);
   const cte = `WITH selected AS (SELECT s.post_id,s.member_id ${selection.from})`;
   const topics = db.prepare(`${cte} SELECT l.topic,COUNT(DISTINCT p.post_id) AS posts,COUNT(DISTINCT p.member_id) AS members
     FROM selected p JOIN post_search_labels l ON l.post_id=p.post_id GROUP BY l.topic ORDER BY l.topic`).all(...selection.values);
   const subtopics = db.prepare(`${cte} SELECT l.topic,l.subtopic AS label,COUNT(DISTINCT p.post_id) AS posts
     FROM selected p JOIN post_search_labels l ON l.post_id=p.post_id WHERE l.subtopic<>'' GROUP BY l.topic,l.subtopic ORDER BY l.topic,l.subtopic`).all(...selection.values);
-  return { coverage,members,availableTopics,topics:topics.map(t => ({...t,subtopics:subtopics.filter(s => s.topic === t.topic).map(({topic,...s}) => s)})) };
+  return { coverage,members,availableTopics,availableSubtopics,topics:topics.map(t => ({...t,subtopics:subtopics.filter(s => s.topic === t.topic).map(({topic,...s}) => s)})) };
 }

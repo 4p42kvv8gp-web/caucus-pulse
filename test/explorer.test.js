@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { openStore } from '../src/db.js';
 import { normalizePost } from '../src/normalize.js';
 import { atomic } from '../src/sqlite.js';
-import { explorerPage,explorerSummary,searchSelection } from '../src/explorer.js';
+import { explorerPage,explorerSummary,searchSelection,reviewQueue } from '../src/explorer.js';
 import { dashboardData } from '../src/dashboard.js';
 import { createServer } from '../src/server.js';
 
@@ -151,11 +151,11 @@ test('persistent indexes reopen and migrate existing version-five source records
     add(store,'1','Preserved café wording.'); store.analyzePending();
     store.saveFeedback('1',{labels:[{topic:'Synthetic reviewed topic'}],reason:'Synthetic review.'},'synthetic-reviewer');
     // Reconstruct version five by removing subsequent disposable indexes and their triggers.
-    store.db.exec('DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models;');
+    store.db.exec('DROP TABLE incident_case_history; DROP TABLE incident_case_posts; DROP TABLE incident_cases; DROP TABLE incident_reviews; DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models;');
     for (const {name} of store.db.prepare("SELECT name FROM sqlite_schema WHERE type='trigger' AND name LIKE 'explorer_%'").all()) store.db.exec(`DROP TRIGGER "${name}"`);
     store.db.exec('DROP TABLE post_search_fts; DROP TABLE post_search_labels; DROP TABLE post_search; DROP VIEW post_search_source; DROP TABLE explorer_revision; DROP INDEX feedback_current_source; UPDATE schema_version SET version=5;');
     store.close(); store=openStore(file);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,8);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,9);
     assert.deepEqual(ids(explorerPage(store,{query:'CAFÉ',topic:'Synthetic reviewed topic'})),['1']);
     assert.equal(store.getPost('1').feedback.length,1);
     store.close(); store=openStore(file);
@@ -202,4 +202,18 @@ test('HTTP pages expose full-selection counts and return a recoverable conflict 
     assert.equal(store.db.prepare('SELECT COUNT(*) AS n FROM budget_requests').get().n,0);
     assert.equal(store.db.prepare('SELECT COUNT(*) AS n FROM feedback').get().n,0);
   } finally { await new Promise(resolve=>server.close(resolve)); store.close(); }
+});
+
+
+test('the teaching queue is bounded, filtered, and reopens reviews when source wording changes',()=>{
+  const store=setup();
+  try{
+    for(let i=0;i<105;i++)add(store,String(i+1),'Synthetic flooding source.');
+    assert.equal(reviewQueue(store).total,105);assert.equal(reviewQueue(store).posts.length,100);
+    store.saveFeedback('1',{labels:[],decision:'no-supported-topic',reason:'Synthetic negative teaching example.'},'synthetic-reviewer');
+    assert.equal(reviewQueue(store).total,104);assert.ok(!reviewQueue(store).posts.some(p=>p.id==='1'));
+    add(store,'1','Synthetic amended source.');
+    assert.equal(reviewQueue(store).total,105);assert.deepEqual(reviewQueue(store,{query:'amended'}).posts.map(p=>p.id),['1']);
+    store.removePost('1');assert.equal(reviewQueue(store,{query:'amended'}).total,0);
+  }finally{store.close();}
 });

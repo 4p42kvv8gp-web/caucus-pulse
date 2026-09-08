@@ -39,7 +39,7 @@ The public Political DEBATE download is about 1.75 GB. After setup, enable `inte
 ## Boundaries of this milestone
 
 - Loopback-only development service, no external access or hosted authentication. Do not expose it through a public proxy.
-- The dashboard now uses indexed selection and bounded pages with full-selection topic counts. Short text queries still scan the SQLite text projection; the exact-phrase caller still needs a larger-archive bound; reviewed-example retrieval is bounded. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
+- The light dashboard includes topic/subtopic drill-down, a recent source feed, bounded language/emerging cards, and a source-backed [incident desk](docs/INCIDENT_DESK.md). Indexed selection and bounded pages retain full-selection topic counts. Short text queries still scan the SQLite text projection; exact phrase search and reviewed-example retrieval are bounded. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
 - Classification failure leaves source posts and previous analysis visible. Durable jobs preserve failure status; explicit retries are bounded and tied to source versions.
 - Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production deployment remain required work.

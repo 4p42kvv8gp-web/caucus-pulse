@@ -123,8 +123,23 @@ test('local HTTP flow validates feedback and rejects cross-origin mutations', as
     const stale = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sourceHash: 'outdated', labels: [], reason: 'Synthetic stale review.' }) });
     assert.equal(stale.status, 400);
     assert.equal((await (await fetch(`${url}/api/learning`)).json()).reviewedPosts, 0);
-    const correction = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ labels: [], reason: 'Synthetic test only.' }) });
+    const correction = await fetch(`${url}/api/posts/1/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sourceHash:dashboard.posts[0].contentHash,predictionHash:dashboard.posts[0].analysisHash,reviewId:dashboard.posts[0].reviewId,labels: [], reason: 'Synthetic test only.' }) });
     assert.equal(correction.status, 200); assert.equal((await correction.json()).reviewStatus, 'reviewed');
     assert.equal((await (await fetch(`${url}/api/learning`)).json()).reviewedPosts, 1);
   } finally { await new Promise(resolve => server.close(resolve)); store.close(); }
+});
+
+test('concurrent topic reviews require the displayed review and bounded history retains the current decision',()=>{
+  const store=openStore();
+  store.upsertAccount({authorId:'1',memberId:'synthetic',memberName:'Synthetic',handle:'Synthetic'});
+  try{
+    store.ingest(normalizePost({id:'999',author_id:'1',created_at:'2026-09-08T00:00:00Z',text:'Synthetic source wording.'}));store.analyzePending();
+    const original=store.getPost('999');
+    const value={sourceHash:original.contentHash,predictionHash:original.analysisHash,reviewId:original.reviewId,labels:[],decision:'no-supported-topic',reason:'Synthetic isolated review.'};
+    store.saveFeedback('999',value);
+    assert.throws(()=>store.saveFeedback('999',value),e=>e.code==='REVIEW_CHANGED');
+    for(let i=0;i<55;i++)store.saveFeedback('999',{labels:[],decision:'needs-context',reason:`Synthetic history ${i}.`});
+    const current=store.getPost('999');assert.equal(current.feedback.length,50);assert.equal(current.feedbackCount,56);assert.equal(current.feedbackOmitted,6);
+    assert.equal(current.reviewId,current.feedback[0].id);assert.equal(current.feedback[0].decision,'needs-context');
+  }finally{store.close();}
 });

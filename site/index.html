@@ -7,44 +7,54 @@
   <script type="module" src="/app.js"></script>
 </head>
 <body>
-  <aside class="sidebar">
-    <a class="brand" href="/"><span class="brand-mark">≋</span><span>Caucus<br><strong>Pulse</strong></span></a>
-    <div class="nav-label">LISTENING DESK</div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="app-header"><div class="header-inner">
+    <a class="brand" href="/" aria-label="Caucus Pulse dashboard"><span class="brand-mark" aria-hidden="true">CP</span><span>CAUCUS <strong>PULSE</strong></span></a>
     <nav aria-label="Main navigation">
-      <button data-view="explore" class="nav-button active">Post explorer <span>↗</span></button>
-      <button data-view="teach" class="nav-button">Teaching desk <span>◇</span></button>
-      <button data-view="wording" class="nav-button">Exact wording <span>❞</span></button>
-      <button data-view="semantic" class="nav-button">Related subjects <span>⌕</span></button>
-      <button data-view="emerging" class="nav-button">Emerging candidates <span>↗</span></button>
-      <button data-view="coverage" class="nav-button">Coverage & budget <span>◷</span></button>
+      <button data-view="dashboard" class="nav-button active" aria-current="page">Dashboard</button>
+      <button data-view="incidents" class="nav-button">Incidents</button>
+      <button data-view="explore" class="nav-button">Explore</button>
+      <button data-view="teach" class="nav-button">Teach</button>
     </nav>
-    <div class="sidebar-note"><span class="dot amber"></span> Local development<br><small>House Democratic Caucus<br>Historical calibration collection</small></div>
-  </aside>
-  <main>
+    <span class="header-status"><span class="dot amber"></span>LOCAL WORKSPACE</span>
+  </div></header>
+  <main id="main-content">
     <header class="masthead"><span class="eyebrow">HOUSE DEMOCRATIC CAUCUS</span><span id="updated" class="quiet">Opening workspace…</span></header>
-    <div class="heading-row"><div><h1 id="page-title">Listen. Trace. Understand.</h1><p id="page-description">Read the source. Explore the subjects. Teach the distinctions.</p></div><span class="status-pill"><span class="dot amber"></span> Local preview</span></div>
-    <div id="archive-notice" class="notice">Opening the local source archive…</div>
+    <div class="heading-row"><div><h1 id="page-title">Caucus monitor</h1><p id="page-description">Subjects, source reports, and the language members are using.</p></div><button class="secondary" data-view="coverage">Coverage &amp; budget</button></div>
+    <details class="archive-details"><summary id="archive-summary">Opening the local source archive…</summary><div id="archive-notice" class="quiet">Checking source coverage…</div></details>
     <div id="error" class="error" role="alert" hidden></div>
     <section class="stats" id="stats" aria-label="Collection summary"></section>
     <section class="filters" aria-label="Post filters">
       <label class="search-label">Search full text<input id="search" type="search" placeholder="A subject, facility, or exact words…"></label>
       <label>Member<select id="member"><option value="">All members</option></select></label>
       <label>Topic<select id="topic"><option value="">All topics</option></select></label>
+      <label>Subtopic<select id="subtopic"><option value="">All subtopics</option></select></label>
       <label>Post type<select id="post-type"><option value="">All types</option><option value="original">Original</option><option value="reply">Reply</option><option value="quote">Quote</option><option value="repost">Repost</option></select></label>
-      <label>Period<select id="period"><option value="all">All archived dates</option><option value="0.5">Last 30 minutes</option><option value="2">Last 2 hours</option><option value="24">Last 24 hours</option></select></label>
+      <label>Period<select id="period"><option value="all">All archived dates</option><option value="0.5">Last 30 minutes</option><option value="2">Last 2 hours</option><option value="24" selected>Last 24 hours</option><option value="168">Last 7 days</option></select></label>
     </section>
-    <section id="view-explore" class="view">
+    <div class="analysis-tools" aria-label="Analysis tools"><span>LOOK CLOSER</span><button data-view="wording" class="text-button">Exact wording</button><button data-view="semantic" class="text-button">Related subjects</button><button data-view="emerging" class="text-button">Emerging groups</button></div>
+    <section id="view-dashboard" class="view">
+      <div class="dashboard-grid"><div><div class="section-heading"><h2>Subjects in the archive</h2><span id="dashboard-subject-count" class="quiet"></span><label class="compact-label">Order by<select id="dashboard-topic-sort"><option value="members">Members represented</option><option value="posts">Observed post count</option><option value="name">Topic name</option></select></label></div><div class="panel table-panel"><div class="table-scroll"><table class="subject-table"><thead><tr><th scope="col">Topic / subtopic</th><th scope="col">Posts</th><th scope="col">Members</th><th scope="col">Share of selection</th></tr></thead><tbody id="dashboard-topics"></tbody></table></div><p class="table-note quiet">Posts may have several topics. These shares overlap and describe the filtered archive.</p></div>
+        <div class="signal-grid"><article class="panel"><div class="section-heading"><h2>Repeated language</h2><button class="text-button" data-view="wording">Explore →</button></div><div id="dashboard-language"><p class="quiet">Checking source wording…</p></div></article><article class="panel"><div class="section-heading"><h2>Emerging subjects</h2><button class="text-button" data-view="emerging">Explore →</button></div><div id="dashboard-emerging"><p class="quiet">Checking related passages…</p></div></article></div>
+        <article class="panel"><div class="section-heading"><h2>Incident reports to review</h2><button class="text-button" data-view="incidents">Open desk →</button></div><div id="dashboard-incidents"><p class="quiet">Checking incoming source reports…</p></div></article>
+      </div><aside class="dashboard-feed"><div class="section-heading"><h2>Latest source posts</h2><button class="text-button" data-view="explore">All posts →</button></div><div id="dashboard-feed"></div></aside></div>
+    </section>
+    <section id="view-incidents" class="view" hidden>
+      <div class="section-heading"><h2>Incident desk</h2><span id="incident-count" class="quiet"></span><button id="incident-refresh" class="secondary">Refresh list</button></div>
+      <div class="incident-grid"><aside class="incident-rail"><div class="panel"><h3>Incoming source reports</h3><div id="incident-incoming"></div></div><div class="panel"><h3>Your tracked cases</h3><div id="incident-cases"></div></div><p id="incident-coverage" class="quiet"></p></aside><div id="incident-detail"></div></div>
+    </section>
+    <section id="view-explore" class="view" hidden>
       <div class="explore-grid"><div><div class="section-heading"><h2>Source posts</h2><span class="quiet" id="result-count"></span></div><div id="posts"></div></div>
-      <aside><div class="section-heading"><h2>Subjects in view</h2></div><div class="panel" id="topics"></div><div class="panel soft"><h3>From subject to event</h3><p>Immigration can contain a facility such as Dilley, and a specific development at that facility. Those are separate pieces of the story.</p><p class="quiet">Event discovery will appear here once connected to live analysis.</p></div></aside></div>
+      <aside><div class="section-heading"><h2>Subjects in view</h2></div><div class="panel" id="topics"></div><div class="panel soft"><h3>From subject to event</h3><p>Immigration can contain a facility such as Dilley, and a specific development at that facility. Those are separate pieces of the story.</p><button class="text-button" data-view="incidents">Review source reports in the incident desk →</button></div></aside></div>
     </section>
     <section id="view-teach" class="view" hidden>
-      <div class="section-heading"><h2>One post. One useful lesson.</h2><span class="quiet">Corrections are saved locally</span></div>
-      <div class="teach-intro panel"><p>Choose a post, inspect the proposal, then explain your interpretation. A saved correction updates that post. A general lesson remains a proposal until it has been reviewed and tested.</p><label>Post to review<select id="review-select"></select></label></div>
+      <div class="section-heading"><h2>Classification workshop</h2><button id="review-next" class="secondary" type="button">Next unreviewed post →</button></div>
+      <div class="teach-intro panel"><p>Choose a post, inspect the proposal, then explain your interpretation. A saved correction updates that post. Broader lessons remain proposals until tested; the automatic model does not retrain itself yet.</p><label>Post to review<select id="review-select"></select></label></div>
       <div id="review"></div>
     </section>
     <section id="view-wording" class="view" hidden>
       <div class="section-heading"><h2>Follow the exact words</h2><span class="quiet">Uses the filters above</span></div>
-      <div class="panel"><p>Search a phrase of any practical length. Original punctuation, case, and negation are preserved. This view finds exact occurrences; automatic phrase discovery and paraphrase grouping are forthcoming.</p>
+      <div class="panel"><p>Search a phrase of any practical length. Original punctuation, case, and negation are preserved. This view finds exact occurrences; the dashboard also discovers repeated passages and related subject groups. Related wording alone does not establish agreement or coordination.</p>
       <form id="phrase-form" class="phrase-form"><label>Exact phrase<input id="phrase-input" placeholder="Paste wording from a post" maxlength="2000" required></label><button class="primary" type="submit">Find occurrences</button></form></div><div id="phrase-results"></div>
     </section>
     <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="coverage" class="coverage-grid"></div>
@@ -66,7 +76,7 @@
       <div class="panel"><p>These provisional groups use related passages from at least two stored member identities. They include labeled and unlabeled posts. Similarity does not establish a shared incident, agreement, or coordination.</p><p class="quiet">Uses the filters above. When no period is selected, this view examines the last 24 hours. Groups can overlap; their counts must not be added together.</p></div>
       <div id="emerging-results" aria-live="polite"></div>
     </section>
-    <footer>Every interpretation should lead back to its source. <span>Private local preview · v0.1</span></footer>
+    <footer>Every interpretation should lead back to its source. <span>Private local workspace · source coverage is limited</span></footer>
   </main>
 </body>
 </html>

@@ -3,14 +3,14 @@
 ## Active — September 8, 2026
 
 - [ ] **Seven-hour autonomous development window** — Work through 11:57:54 UTC (7:57:54 AM Eastern), then update the handoff, pause the existing heartbeat and report verified outcomes. No new guidance requests during the window.
-- [ ] **M3: Validate and publish local classification** — Political DEBATE large is selected after local model comparisons. The source-passage contract, durable jobs and human-review precedence work on the three real development posts. Weather-advice and entity/location gaps remain explicit. Publish the source-only milestone and proceed with the incident desk; do not describe this as human-validated accuracy.
-- [ ] **M3: Complete the incident desk and learning workflow** — Connect source-backed incident candidates, separate locations from member districts, expose multiple communicative functions and concise reasons, and support explicit correction/unknown decisions. Real held-out calibration remains necessary.
+- [x] **M3: Validate and publish local classification** — Political DEBATE large is selected after local model comparisons. The source-passage contract, durable jobs and human-review precedence work on the three real development posts. Weather-advice and entity/location gaps remain explicit. Published in commit 1a6e849; proceed with real calibration and deployment preparation; do not describe this as human-validated accuracy.
+- [x] **M3: Implement the incident desk and teaching controls** — Source-backed incident review, exact location/district evidence, user-tracked cases, source timelines, local digest copying, concurrent review guards, independent post selection and a bounded unreviewed queue now work. Human held-out calibration remains separate required work.
 - [ ] **M2: Finish identity and coverage recovery** — A capped trial observed 300 List profiles and five posts. Official directory/office evidence established 120 current account bindings and promoted one capture. Four posts remain unresolved; the List inventory remains incomplete. Add honest coverage and recovery controls without further paid calls while credit is unverified.
 - [ ] **M2: Verify credit before normal polling** — Active token works for usage and paid source endpoints. Credits endpoint returned 404, so dollar balance remains unknown. The $3.025 one-time connection trial is exhausted. Normal collection stays off; no paid retries or new services. Preserve $25/day, $350/pilot and $50 reserve controls.
 - [ ] **M3: Prepare real voice calibration** — Use the three admitted source posts now available, with dates, original wording, predicted labels, concise reasons and one question per review. Do not fabricate acceptance or turn synthetic cases into human evaluation.
 - [ ] **M4: Prepare private deployment and operations** — Authentication, controlled storage, migrations, backup/restore, removal propagation and monitoring; write a concrete launch proposal with actual platform limitations and cost assumptions.
 - [ ] **M4: Complete the pilot acceptance trace** — Follow the newly captured verified post through analysis, dashboard and later human correction; verify recovery/removal. Human review cannot be simulated as a real user action.
-- [ ] **Design and visual verification** — Follow the received Claude Build Spec while preserving the selected dense, light newsroom direction. Exact screen HTML remains missing. Browser policy verification is unavailable and must not be bypassed; HTTP and data checks continue.
+- [ ] **Visual verification** — The interface now follows the received Claude Build Spec with a shared header, compact topic/subtopic table, feed and source-backed incident timeline. Exact screen HTML remains missing. Browser policy verification is unavailable and must not be bypassed; HTTP and data checks continue.
 
 ## Waiting on later user time
 
@@ -25,6 +25,8 @@
 - [ ] **Historical coverage and model training** — Bounded backfill, comparable trend baselines and training only after reviewed data supports a held-out evaluation.
 
 ## Done
+
+- [x] ~~Implement the topic overview, incident desk and bounded exact search~~ (September 8) — Light system-font layout, member/post sorting, subtopic drill-down, source review and case history, topic/incident concurrent-edit protection, bounded history and phrase results. All 152 Node tests pass. Real archive remains three posts and one authentic topic review; no test-created real incidents. Browser visual verification remains pending.
 
 - [x] ~~Implement emerging subject candidates~~ (September 8) - Bounded passage grouping across classified and unclassified sources, distinct-member counts, complete-link anti-chain checks, evidence excerpts, unknown comparison windows and source/review/removal invalidation. API and Emerging candidates view run locally; all 110 tests pass. BGE is the current default after a 17-post synthetic comparison. Current 24-hour coverage truthfully has no historical-example groups. See caucus-pulse/docs/SUBJECT_GROUPS.md.
 

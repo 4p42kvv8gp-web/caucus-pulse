@@ -9,19 +9,24 @@ import { createCredentialStore } from './credentials.js';
 import { learningStatus, postLearningHistory } from './learning-context.js';
 import { evaluationReport } from './evaluation.js';
 import { languageData } from './language.js';
-import { explorerPage,searchFilters } from './explorer.js';
+import { explorerPage,searchFilters,reviewQueue } from './explorer.js';
 import { embeddingStatus,processEmbeddingJobs } from './embedding-store.js';
 import { createEmbeddingClient } from './embedding-client.js';
 import { semanticSearch } from './semantic-search.js';
 import { createLocalClassifierClient } from './classifier-client.js';
 import { classificationStatus, queueClassification, processClassificationJobs } from './classifier-jobs.js';
 import { subjectGroups } from './subject-groups.js';
+import {incidentDesk,postIncidents,saveIncidentReview,createIncidentCase,incidentCase,updateIncidentCase} from './incidents.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
 const staticFiles = new Map([
   ['/', ['site/index.html', 'text/html; charset=utf-8']],
   ['/app.js', ['site/app.js', 'text/javascript; charset=utf-8']],
+  ['/incident-desk.js', ['site/incident-desk.js', 'text/javascript; charset=utf-8']],
+  ['/incident-helpers.js', ['site/incident-helpers.js', 'text/javascript; charset=utf-8']],
+  ['/overview.js', ['site/overview.js', 'text/javascript; charset=utf-8']],
+  ['/source-text.js', ['site/source-text.js', 'text/javascript; charset=utf-8']],
   ['/style.css', ['site/style.css', 'text/css; charset=utf-8']]
 ]);
 
@@ -78,6 +83,19 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       }
       if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status(), classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0} });
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
+      if (req.method === 'GET' && url.pathname === '/api/review-queue') return json(200, reviewQueue(store, filtersFrom(url)));
+      if(req.method==='GET'&&url.pathname==='/api/incidents')return json(200,incidentDesk(store,filtersFrom(url)));
+      if(req.method==='POST'&&url.pathname==='/api/incidents/cases')return json(201,createIncidentCase(store,await readJson(req)));
+      const incidentCaseMatch=url.pathname.match(/^\/api\/incidents\/cases\/([a-f0-9-]{36})$/);
+      if(incidentCaseMatch){
+        if(req.method==='GET')return json(200,incidentCase(store,incidentCaseMatch[1]));
+        if(req.method==='PATCH')return json(200,updateIncidentCase(store,incidentCaseMatch[1],await readJson(req)));
+      }
+      const incidentPostMatch=url.pathname.match(/^\/api\/posts\/(\d+)\/incidents$/);
+      if(incidentPostMatch){
+        if(req.method==='GET')return json(200,postIncidents(store,incidentPostMatch[1]));
+        if(req.method==='POST')return json(200,saveIncidentReview(store,incidentPostMatch[1],await readJson(req)));
+      }
       if (req.method === 'GET' && url.pathname === '/api/classification') return json(200, {
         ...classificationStatus(store), runtime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0}, state: classifier?.state ?? 'not-started'
       });
@@ -141,13 +159,21 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       if (match) {
         if (!store.getPost(match[1])) return json(404, { error: 'Post not found.' });
         if (req.method === 'GET' && !match[2]) return json(200, store.getPost(match[1]));
-        if (req.method === 'POST' && match[2]) return json(200, store.saveFeedback(match[1], await readJson(req)));
+        if (req.method === 'POST' && match[2]) {
+          const body=await readJson(req);
+          if(!body||Array.isArray(body)||Object.keys(body).some(k=>!['sourceHash','predictionHash','reviewId','labels','decision','reason','ruleProposal'].includes(k))||
+            !/^[a-f0-9]{64}$/.test(body.sourceHash??'')||!/^[a-f0-9]{64}$/.test(body.predictionHash??'')||
+            (body.reviewId!==null&&!/^[a-f0-9-]{36}$/.test(body.reviewId??'')))throw new Error('Invalid review versions: reload the post before saving.');
+          return json(200, store.saveFeedback(match[1],body));
+        }
       }
       return json(404, { error: 'Not found.' });
     } catch (error) {
       if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
-      if (error.code === 'CLASSIFIER_STALE' || error.code === 'PREDICTION_CHANGED') return json(409, {error:error.message,code:error.code});
+      if (error.code === 'CLASSIFIER_STALE' || error.code === 'PREDICTION_CHANGED' || error.code==='REVIEW_CHANGED') return json(409, {error:error.message,code:error.code});
       if (error.code === 'CLASSIFIER_NOT_FOUND') return json(404, {error:'Post not found.'});
+      if(error.code==='INCIDENT_CHANGED')return json(409,{error:error.message,code:error.code});
+      if(error.code==='INCIDENT_NOT_FOUND')return json(404,{error:error.message,code:error.code});
       if(error.code==='DISCOVERY_CHANGED')return json(409,{error:error.message,code:error.code});
       if(error.code==='DISCOVERY_UNAVAILABLE')return json(503,{error:error.message,code:error.code});
       if (['SEMANTIC_UNAVAILABLE','SEMANTIC_BUSY','SEMANTIC_INPUT_LIMIT'].includes(error.code)) return json(

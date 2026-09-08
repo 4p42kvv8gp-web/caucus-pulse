@@ -1,7 +1,16 @@
+import {highlightedText} from './source-text.js';
+import {createIncidentDesk} from './incident-desk.js';
+import {createOverview} from './overview.js';
+
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
-const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0,emergingSequence:0 };
+const state = { data: null, view: 'dashboard', selected: null, reviewPost:null, reviewSequence:0, dirty: false, incidentDirty:false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0,emergingSequence:0 };
+
+const incidentDesk=createIncidentDesk({api,esc,date,sourceHeader,filters:filterParams,error:showError,setDirty:value=>{state.incidentDirty=value;},onTeach:id=>void selectReview(id)});
+const overview=createOverview({api,esc,date,postCard,filters:filterParams,review:id=>void selectReview(id),
+  topic:(value,subtopic='')=>{$('topic').value=value;setOptions($('subtopic'),subtopic?[{id:subtopic,name:subtopic}]:[],'All subtopics');$('subtopic').value=subtopic;setView('explore');void refresh();},
+  wording:value=>{$('phrase-input').value=value;setView('wording');void loadPhrase();},incident:id=>void selectIncident(id)});
 
 async function api(path, options) {
   const response = await fetch(path, options);
@@ -12,7 +21,7 @@ async function api(path, options) {
 function showError(message) { $('error').textContent = message; $('error').hidden = !message; }
 function filterParams() {
   const params = new URLSearchParams({ query: $('search').value, memberId: $('member').value,
-    topic: $('topic').value, type: $('post-type').value });
+    topic: $('topic').value, subtopic:$('subtopic').value, type: $('post-type').value });
   if ($('period').value !== 'all') params.set('since', new Date(Date.now() - Number($('period').value) * 3_600_000).toISOString());
   return params;
 }
@@ -53,6 +62,7 @@ function renderStats() {
     ['Daily X ceiling', `$${state.data.budget.dailyCeilingUsd}`, `$50 reserve · ${state.data.budget.state?.balanceFresh ? 'recent balance check' : 'balance check required'}`]
   ].map(([label, value, note]) => `<div class="stat"><label>${esc(label)}</label><strong>${esc(value)}</strong><small>${esc(note)}</small></div>`).join('');
   const classifier=state.data.classification;
+  $('archive-summary').textContent = `Limited archive · ${c.postCount} admitted posts · ${c.collectionStatus}`;
   $('archive-notice').textContent = `${c.historicalPostCount} historical examples and ${c.collectedPostCount} posts admitted from collection. ${c.collectionStatus}. ${classifier?.completed??0} posts have a completed run of the current local classifier. Subject search and emerging candidates use the local passage index; coverage is limited to this archive.`;
 }
 function renderExplore() {
@@ -98,17 +108,28 @@ function renderCoverage() {
 function labelRow(label = {}) {
   return `<div class="label-entry"><label>Topic<input name="topic" maxlength="100" value="${esc(label.topic)}" placeholder="e.g. Immigration"></label><label>Subtopic (optional)<input name="subtopic" maxlength="160" value="${esc(label.subtopic)}" placeholder="e.g. Dilley detention facility"></label><button type="button" class="remove" aria-label="Remove label">×</button></div>`;
 }
+async function selectReview(id,{changeView=true,confirmDiscard=true}={}) {
+  if(confirmDiscard&&state.dirty&&!confirm('Discard the unsaved topic review?'))return false;
+  const sequence=++state.reviewSequence;
+  try{
+    const post=await api(`/api/posts/${id}`);
+    if(sequence!==state.reviewSequence)return false;
+    state.selected=id;state.reviewPost=post;state.dirty=false;renderReview();
+    if(changeView)setView('teach');showError('');return true;
+  }catch(error){if(sequence===state.reviewSequence)showError(error.message);return false;}
+}
+async function selectIncident(id){if(await incidentDesk.openSource(id))setView('incidents');}
 function renderReview() {
-  const posts = state.data.posts;
-  if (!posts.some(p => p.id === state.selected)) state.selected = posts[0]?.id ?? null;
-  $('review-select').innerHTML = posts.map(p => `<option value="${esc(p.id)}">${esc(p.memberName)} · ${esc(date(p.createdAt))}</option>`).join('');
-  $('review-select').value = state.selected ?? '';
-  const post = posts.find(p => p.id === state.selected);
-  if (!post) { $('review').innerHTML = '<div class="empty">No posts match the current filters. Broaden the selection to start a review.</div>'; return; }
+  const post=state.reviewPost;
+  const posts=[...state.data.posts];
+  if(post&&!posts.some(p=>p.id===post.id))posts.unshift(post);
+  $('review-select').innerHTML=posts.map(p=>`<option value="${esc(p.id)}">${esc(p.memberName)} · ${esc(date(p.createdAt))}</option>`).join('');
+  $('review-select').value=post?.id??'';
+  if (!post) { $('review').innerHTML = '<div class="empty">No post is selected. Open a source post or choose an unreviewed post from the current selection.</div>'; return; }
   const proposal = post.provenance.assistantProposal;
   const decision=post.feedback.find(f=>f.appliesToCurrentText)?.decision??(post.labels.length?'classified':'needs-context');
   $('review').innerHTML = `<div class="review-grid"><div><article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}
-    <div class="explanation"><h3>Current analysis explanation</h3><p class="quiet">${esc(post.analysis.method)} · ${esc(post.analysis.version ?? 'Awaiting analysis')}</p><button id="analyze-post" class="secondary" type="button" ${state.data.classifierRuntime?.ready?'':'disabled'}>Analyze with local model</button><span id="analyze-state" class="quiet" role="status">${state.data.classifierRuntime?.ready?'':' Local classifier is not ready.'}</span><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}${sourceEvidence(l.evidence)}</div>`).join('')}
+    <div class="post-footer"><button class="text-button" id="review-event-source" type="button">Review incident / location →</button><button class="text-button" id="review-reload" type="button">Reload latest source</button></div><div class="explanation"><h3>Current analysis explanation</h3><p class="quiet">${esc(post.analysis.method)} · ${esc(post.analysis.version ?? 'Awaiting analysis')}</p><button id="analyze-post" class="secondary" type="button" ${state.data.classifierRuntime?.ready?'':'disabled'}>Analyze with local model</button><span id="analyze-state" class="quiet" role="status">${state.data.classifierRuntime?.ready?'':' Local classifier is not ready.'}</span><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}${sourceEvidence(l.evidence)}</div>`).join('')}
     ${semanticDetails(post.analysis)}
     ${proposal ? `<div class="explanation"><h3>Prepared discussion proposal</h3><p>${esc(proposal.justification)}</p><p class="quiet">${esc(proposal.uncertainty)}</p><p class="quiet">Prepared by the assistant for this exercise; not an accepted rule or an automated semantic result.</p></div>` : ''}
     <div class="limits">Context limits<ul>${post.analysis.limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></div></article></div>
@@ -117,12 +138,14 @@ function renderReview() {
     <label>Why is this the right interpretation?<textarea id="feedback-reason" rows="4" maxlength="2000" placeholder="Explain the distinction you want the product to learn…" required></textarea></label>
     <label>Possible general lesson (optional)<textarea id="feedback-rule" rows="3" maxlength="2000" placeholder="A rule to test on other posts. This will be saved as a proposal."></textarea></label>
     <p class="quiet">“No topic is supported” saves an explicit empty answer. “Need more context” stays out of teaching examples. The reason is required for every decision.</p><div class="feedback-actions"><button class="primary" type="submit">Save correction</button><span id="save-state" class="success" role="status"></span></div></form>
-    ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
+    ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedbackOmitted?`<p class="quiet">${post.feedback.length} of ${post.feedbackCount} reviews displayed. The remaining history is retained privately.</p>`:''}${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
+  $('review-event-source').addEventListener('click',()=>void selectIncident(post.id));
+  $('review-reload').addEventListener('click',()=>void selectReview(post.id));
   $('add-label').addEventListener('click', () => { $('label-rows').insertAdjacentHTML('beforeend', labelRow()); state.dirty = true; });
   $('label-rows').addEventListener('click', event => { if (event.target.closest('.remove')) { event.target.closest('.label-entry').remove(); state.dirty = true; } });
-  $('feedback-form').addEventListener('input', () => { state.dirty = true; });
+  $('feedback-form').addEventListener('input', () => { state.dirty = true; state.reviewSequence++; });
   function updateDecision(){const empty=$('feedback-decision').value==='no-supported-topic';$('label-rows').hidden=empty;$('add-label').hidden=empty;}
-  $('feedback-decision').addEventListener('change',()=>{state.dirty=true;updateDecision();});updateDecision();
+  $('feedback-decision').addEventListener('change',()=>{state.dirty=true;state.reviewSequence++;updateDecision();});updateDecision();
   $('analyze-post').addEventListener('click',async()=>{
     $('analyze-post').disabled=true;
     try{const result=await api(`/api/posts/${post.id}/classification`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sourceHash:post.contentHash})});
@@ -137,7 +160,7 @@ function renderReview() {
     })).filter(l => l.topic || l.subtopic);
     try {
       await api(`/api/posts/${post.id}/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, labels:$('feedback-decision').value==='no-supported-topic'?[]:labels, decision:$('feedback-decision').value, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
+        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, labels:$('feedback-decision').value==='no-supported-topic'?[]:labels, decision:$('feedback-decision').value, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
       state.dirty = false; await refresh();
       if ($('save-state')) $('save-state').textContent = 'Saved. This post now uses your correction.';
     } catch (error) { showError(error.message); button.disabled = false; }
@@ -155,11 +178,19 @@ async function refresh({ cursor = '', params = null } = {}) {
     showError(''); renderStats(); renderExplore(); renderCoverage();
     setOptions($('member'), data.members, 'All members');
     setOptions($('topic'), data.availableTopics.map(t => ({ id: t, name: t })), 'All topics');
-    if (!state.dirty) renderReview();
+    setOptions($('subtopic'),(data.availableSubtopics??[]).map(t=>({id:t,name:t})),'All subtopics');
+    overview.render(data);
+    if(!state.dirty){
+      const id=state.selected??data.posts[0]?.id;
+      if(id){const reviewSequence=++state.reviewSequence;const post=await api(`/api/posts/${id}`);if(sequence!==state.sequence)return;if(reviewSequence===state.reviewSequence&&!state.dirty){state.selected=id;state.reviewPost=post;renderReview();}}
+      else renderReview();
+    }
     $('updated').textContent = cursor ? 'Reading older posts · return to newest to refresh' : `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
     if (state.view === 'wording' && $('phrase-input').value) await loadPhrase();
     if (state.view === 'semantic') { await semanticStatus(); if($('semantic-query').value) await loadSemantic(); }
     if (state.view === 'emerging') await loadEmerging();
+    if (state.view === 'dashboard') await overview.loadSignals();
+    if (state.view === 'incidents') await incidentDesk.load();
   } catch (error) {
     if (sequence !== state.sequence) return;
     if (error.code === 'EXPLORER_CHANGED') {
@@ -168,20 +199,25 @@ async function refresh({ cursor = '', params = null } = {}) {
   }
 }
 const headings = {
-  explore: ['Listen. Trace. Understand.', 'Read the source. Explore the subjects. Teach the distinctions.'],
-  teach: ['Teach the distinctions.', 'Your judgment becomes a saved example the product can learn from.'],
-  wording: ['Keep every word.', 'Look closely at the language, with the complete source alongside it.'],
-  semantic: ['Find related subjects.', 'Search ideas while keeping each source and its wording visible.'],
-  emerging: ['Watch subjects take shape.', 'Provisional passage groups, observed activity, and the source evidence.'],
-  coverage: ['Trust starts with coverage.', 'See the boundaries of the archive and the state of the product.']
+  dashboard:['Caucus monitor','Subjects, source reports, and the language members are using.'],
+  incidents:['Incident desk','Read the reports. Establish the location. Keep a source-backed case history.'],
+  explore: ['Post explorer', 'Full source wording, searchable by member, subject, and date.'],
+  teach: ['Classification workshop', 'Review real posts, explain the distinction, and build a tested teaching collection.'],
+  wording: ['Exact wording', 'Look closely at the language, with the complete source alongside it.'],
+  semantic: ['Related subjects', 'Search ideas while keeping each source and its wording visible.'],
+  emerging: ['Emerging subjects', 'Provisional passage groups, observed activity, and the source evidence.'],
+  coverage: ['Coverage & budget', 'See the boundaries of the archive and the state of the product.']
 };
 function setView(view) {
+  if(!headings[view])return;
   state.view = view;
   for (const el of document.querySelectorAll('.view')) el.hidden = el.id !== `view-${view}`;
   for (const el of document.querySelectorAll('[data-view]')) { el.classList.toggle('active', el.dataset.view === view); el.setAttribute('aria-current', el.dataset.view === view ? 'page' : 'false'); }
   [$('page-title').textContent, $('page-description').textContent] = headings[view];
   if(view==='semantic')void semanticStatus();
   if(view==='emerging')void loadEmerging();
+  if(view==='incidents')void incidentDesk.load();
+  if(view==='dashboard'&&state.data)void overview.loadSignals();
 }
 async function semanticStatus(){
   try{
@@ -235,7 +271,9 @@ async function loadPhrase() {
   const params = filterParams(); params.set('phrase', $('phrase-input').value);
   try {
     const result = await api(`/api/phrases?${params}`); showError('');
-    $('phrase-results').innerHTML = `<div class="panel"><h3>${result.matchingPosts} matching posts · ${result.distinctMembers} distinct members</h3><p class="quiet">${esc(result.note)}</p><p class="quiet">First occurrence within this selection: ${esc(date(result.firstObservedInSelection))}</p></div>` + result.occurrences.map(o => `<article class="post-card"><h3>${esc(o.memberName)} <span class="quiet">${esc(date(o.createdAt))}</span></h3><p class="post-text">${esc(o.text.slice(0, o.span.start))}<mark class="phrase-match">${esc(o.span.text)}</mark>${esc(o.text.slice(o.span.end))}</p><a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open source ↗</a></article>`).join('');
+    const c=result.coverage;
+    const byPost=new Map();for(const occurrence of result.occurrences){if(!byPost.has(occurrence.postId))byPost.set(occurrence.postId,[]);byPost.get(occurrence.postId).push(occurrence.span);}
+    $('phrase-results').innerHTML = `<div class="panel"><h3>${result.matchingPosts} matching posts · ${result.distinctMembers} distinct members</h3><p class="quiet">${esc(result.note)}</p><p class="quiet">First occurrence within this selection: ${esc(date(result.firstObservedInSelection))}</p><p class="quiet">${c.returnedPosts} full sources displayed with ${result.occurrences.length} highlighted occurrences.${c.partial?` Display is partial: ${c.unexaminedMatchingPosts} matching posts were outside the scan, ${c.omittedOversizedPosts} outside source limits, and ${c.omittedOccurrences} examined occurrences omitted.`:''}</p></div>` + result.sources.map(post => `<article class="post-card"><h3>${esc(post.memberName)} <span class="quiet">${esc(date(post.createdAt))} · ${esc(post.type)}</span></h3><p class="post-text">${highlightedText(post.text,byPost.get(post.id)||[],esc)}</p><div class="post-footer"><a href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">Open source ↗</a><button class="text-button" data-review="${esc(post.id)}">Review classification →</button></div></article>`).join('');
   } catch (error) { showError(error.message); }
 }
 document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
@@ -249,16 +287,21 @@ $('posts').addEventListener('click', event => {
   }
   const button = event.target.closest('[data-review]');
   if (!button) return;
-  if (state.dirty && !confirm('Discard the unsaved review before switching posts?')) return;
-  state.dirty = false; state.selected = button.dataset.review; renderReview(); setView('teach');
+  void selectReview(button.dataset.review);
 });
-$('review-select').addEventListener('change', event => {
-  if (state.dirty && !confirm('Discard the unsaved review before switching posts?')) { event.target.value = state.selected; return; }
-  state.dirty = false; state.selected = event.target.value; renderReview();
+$('review-select').addEventListener('change',async event=>{const id=event.target.value;if(!await selectReview(id))event.target.value=state.selected??'';});
+$('review-next').addEventListener('click',async()=>{
+  $('review-next').disabled=true;
+  try{const queue=await api(`/api/review-queue?${filterParams()}`);const next=queue.posts.find(p=>p.id!==state.selected)||queue.posts[0];
+    if(next)await selectReview(next.id);else showError('Every post in this selection already has a topic review. Broaden the date filter to find more posts.');
+  }catch(error){showError(error.message);}finally{$('review-next').disabled=false;}
 });
-for (const id of ['member', 'topic', 'post-type', 'period']) $(id).addEventListener('change', refresh);
+for (const id of ['member', 'subtopic', 'post-type', 'period']) $(id).addEventListener('change', refresh);
+$('topic').addEventListener('change',()=>{$('subtopic').value='';void refresh();});
+$('dashboard-topic-sort').addEventListener('change',()=>{if(state.data)overview.render(state.data);});
 let searchTimer;
 $('search').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(refresh, 200); });
+$('phrase-results').addEventListener('click',event=>{const button=event.target.closest('[data-review]');if(button)void selectReview(button.dataset.review);});
 $('phrase-form').addEventListener('submit', event => { event.preventDefault(); loadPhrase(); });
 $('connection-form').addEventListener('submit', async event => {
   event.preventDefault();
@@ -271,5 +314,5 @@ $('connection-form').addEventListener('submit', async event => {
   } catch (error) { showError(error.message); }
   finally { button.disabled = state.data?.connection?.source === 'environment'; }
 });
-window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
-await refresh(); setInterval(() => { if (!state.cursor && !state.dirty) refresh(); }, 60_000);
+window.addEventListener('beforeunload', event => { if (state.dirty||state.incidentDirty) { event.preventDefault(); event.returnValue = ''; } });
+await refresh(); setInterval(() => { if (!state.cursor && !state.dirty && !state.incidentDirty) refresh(); }, 60_000);
