@@ -106,8 +106,10 @@ def main():
     expected={'maxInputCharacters':60000,'maxWindows':24,'maxPassagesPerWindow':10,'maxPairs':600,'maxSequenceTokens':512,'batchSize':4,'threads':2,'deadlineSeconds':160,'threshold':0.95}
     if limits!=expected:
         raise ValueError('Unsupported NLI limits')
+    installed_runtime={package:importlib.metadata.version(package) for package in spec['runtime']}
     for package,version in spec['runtime'].items():
-        if importlib.metadata.version(package)!=version:
+        expected_version=version+'+cpu' if package=='torch' and sys.platform=='linux' else version
+        if installed_runtime[package]!=expected_version:
             raise ValueError('NLI runtime version mismatch')
     taxonomy=json.loads((ROOT/'config/taxonomy.json').read_text())
     if set(TOPICS)!={t['name'] for t in taxonomy['topics']}:
@@ -125,6 +127,12 @@ def main():
         model=AutoModelForSequenceClassification.from_pretrained(verifier.DEST,local_files_only=True,trust_remote_code=False,use_safetensors=True).eval()
     if model.config.id2label!={0:'entailment',1:'not_entailment'} or model.config.max_position_embeddings!=512:
         raise ValueError('Unexpected model label or context definition')
+    entity_extractor=None
+    if spec.get('entityModel',{}).get('enabled'):
+        loader=importlib.util.spec_from_file_location('entity_extractor',ROOT/'scripts/entity-extractor.py')
+        entity_module=importlib.util.module_from_spec(loader);loader.loader.exec_module(entity_module)
+        entity_extractor=entity_module.EntityExtractor()
+        if entity_extractor.spec['name']!=spec['entityModel']['profile']:raise ValueError('Entity model profile mismatch')
     emit({'ready':True})
     while True:
         line=sys.stdin.buffer.readline(512001)
@@ -222,26 +230,33 @@ def main():
                 if update:
                     events.append({'description':'Possible '+('correction of' if update['function']=='correction' else 'update on')+' an earlier public-safety or emergency report. Read the original passage for the facts and uncertainty.',
                         'development':'update','location':None,'districtRelation':'not-established','districtQuoteIds':[],'quoteIds':update['quoteIds']})
-            entities=[]
-            seen=set()
+            entity_result=entity_extractor.extract(source['text'],passages,deadline=started+limits['deadlineSeconds']) if entity_extractor else None
+            entities=entity_result['entities'] if entity_result else []
+            seen={e['name'] for e in entities}
             for p in passages:
                 for match in re.finditer(r'(?<![\w@])@[A-Za-z0-9_]{1,15}\b',p['text']):
                     name=match.group()
                     if name not in seen and p['text'].count(name)==1:
                         entities.append({'kind':'other','name':name,'contextId':p['id']});seen.add(name)
-            limitations=['Fixed hypotheses propose subjects and incident flags; scores are not calibrated accuracy. Named incident locations and detailed narratives are not inferred.',
+            omitted_entities=(entity_result['omitted'] if entity_result else 0)+max(0,len(entities)-12)
+            limitations=['Fixed hypotheses and named-mention models propose interpretations; scores are not calibrated accuracy. A named place is not automatically the incident location or a district connection.',
                          'Human corrections take precedence. This model is not trained from the saved reviews; reviewed examples remain available for comparison and future evaluated training.']
             if linked_short:
                 limitations.append('This short linked caption lacks reviewed link context. Topic assignment is deferred rather than inferred from an unseen story.')
             elif omitted_labels:
                 limitations.append(f'{omitted_labels} additional provisional labels were omitted at the display limit.')
+            if omitted_entities:
+                detail=f' {omitted_entities} named mentions were omitted because of the display limit or an ambiguous source context.'
+                limitations[-1]+=detail
             output={'labels':labels,'entities':entities[:12],'events':events,'functions':fn,
                 'summary':('Provisional subjects: '+', '.join(dict.fromkeys(l['topic'] for l in labels))+'. Read the original post for its claims and context.') if labels else 'No automatic subject was assigned with sufficient supported context under the current policy. Review the original post.',
                 'limitations':limitations}
             rss=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
             emit({'id':request_id,'output':json.dumps(output,ensure_ascii=False),'metrics':{'promptTokens':len(tokenizer.encode(source['text'],add_special_tokens=False)),
                 'outputTokens':0,'elapsedMs':round((time.monotonic()-started)*1000),'peakMemoryBytes':rss if sys.platform=='darwin' else rss*1024,
-                'finishReason':'stop','testedPairs':tested,'sourceWindows':len(windows),'omittedLabels':omitted_labels}})
+                'finishReason':'stop','testedPairs':tested,'sourceWindows':len(windows),'omittedLabels':omitted_labels,
+                'entityExtraction':{key:value for key,value in entity_result.items() if key!='entities'} if entity_result else None,
+                'runtime':{'platform':sys.platform,'python':sys.version.split()[0],'packages':installed_runtime}}})
         except InputLimit:
             emit({'id':request_id,'error':'input-limit'})
         except TimeoutError:

@@ -27,8 +27,8 @@ def digest(path, size, expected):
         raise ValueError("Model file digest does not match its pinned manifest")
 
 
-def verify(directory):
-    for name, size, expected in SPEC["files"]:
+def verify(directory, spec=None):
+    for name, size, expected in (spec or SPEC)["files"]:
         digest(directory / name, size, expected)
 
 
@@ -39,19 +39,21 @@ class PublicRedirects(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def main():
+def download(spec):
     os.umask(0o077)
+    destination=MODEL_ROOT/f'{spec["name"]}-{spec["revision"]}'
     MODEL_ROOT.mkdir(parents=True, exist_ok=True, mode=0o700)
-    if DEST.exists():
-        verify(DEST)
-        print(json.dumps({"status": "already-verified", "model": SPEC["name"]}), flush=True)
+    if destination.is_symlink():raise ValueError('Model directory must not be a symbolic link')
+    if destination.exists():
+        verify(destination,spec)
+        print(json.dumps({"status": "already-verified", "model": spec["name"]}), flush=True)
         return
-    staging = Path(tempfile.mkdtemp(prefix=DEST.name + ".partial-", dir=MODEL_ROOT))
+    staging = Path(tempfile.mkdtemp(prefix=destination.name + ".partial-", dir=MODEL_ROOT))
     # No proxies, cookies, credentials, or user configuration are inherited.
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), PublicRedirects())
     try:
-        for name, size, expected in SPEC["files"]:
-            url = f'https://huggingface.co/{SPEC["repository"]}/resolve/{SPEC["revision"]}/{name}'
+        for name, size, expected in spec["files"]:
+            url = f'https://huggingface.co/{spec["repository"]}/resolve/{spec["revision"]}/{name}'
             received = 0
             started = time.monotonic()
             report_at = 256 * 1024 * 1024
@@ -66,13 +68,17 @@ def main():
                         report_at += 256 * 1024 * 1024
             digest(staging / name, size, expected)
             print(json.dumps({"verifiedFile": name, "bytes": size}), flush=True)
-        (staging / "manifest.json").write_text(json.dumps(SPEC, indent=2) + "\n")
-        staging.rename(DEST)
-        print(json.dumps({"status": "downloaded-and-verified", "model": SPEC["name"], "bytes": sum(f[1] for f in SPEC["files"])}), flush=True)
+        (staging / "manifest.json").write_text(json.dumps(spec, indent=2) + "\n")
+        staging.rename(destination)
+        print(json.dumps({"status": "downloaded-and-verified", "model": spec["name"], "bytes": sum(f[1] for f in spec["files"])}), flush=True)
     finally:
         if staging.exists():
             shutil.rmtree(staging)
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if sys.argv[1:]==['--entities']:
+        download(json.loads((ROOT/'config/entity-model.json').read_text()))
+    elif not sys.argv[1:]:download(SPEC)
+    else:raise SystemExit('Use download-classifier-model.py with no arguments or --entities.')

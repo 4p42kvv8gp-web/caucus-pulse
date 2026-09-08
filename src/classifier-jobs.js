@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { atomic } from './sqlite.js';
-import { classifierFingerprint, localClassifierSpec, taxonomy, CLASSIFIER_PROMPT_VERSION } from './classifier-contract.js';
+import { classifierFingerprint, localClassifierSpec, entityModelSpec, taxonomy, CLASSIFIER_PROMPT_VERSION } from './classifier-contract.js';
 import { prepareAnalysis, commitSemanticAnalysis } from './intelligence.js';
 
 const states = ['pending', 'running', 'completed', 'failed', 'skipped'];
@@ -34,7 +34,7 @@ export function migrateClassifier(db) {
 }
 
 export function classifierProfile() {
-  return { fingerprint: classifierFingerprint, model: localClassifierSpec,
+  return { fingerprint: classifierFingerprint, model: localClassifierSpec,entityModel:entityModelSpec,
     taxonomyVersion: taxonomy.version, promptVersion: CLASSIFIER_PROMPT_VERSION, inferenceLocation: localClassifierSpec.inferenceLocation??'local-apple-gpu' };
 }
 
@@ -110,7 +110,7 @@ export function finishClassification(store, claim, request, output, now = Date.n
   return atomic(store.db, () => {
     const saved = commitSemanticAnalysis({ store, request, result: output.result, providerName: localClassifierSpec.engine==='political-debate-nli'?'Local Political DEBATE':'Local MLX', model: localClassifierSpec.name,
       provenance: { fingerprint: classifierFingerprint, modelRevision: localClassifierSpec.revision, taxonomyVersion: taxonomy.version,
-        promptVersion: CLASSIFIER_PROMPT_VERSION, runtime: localClassifierSpec.runtime, metrics: output.metrics, localOnly: true },
+        promptVersion: CLASSIFIER_PROMPT_VERSION, runtime: localClassifierSpec.runtime, entityModel:entityModelSpec?{name:entityModelSpec.name,repository:entityModelSpec.repository,revision:entityModelSpec.revision}:null, metrics: output.metrics, localOnly: true },
       now, guard: () => assertClaim(store, claim, now) });
     const at = new Date(now).toISOString();
     store.db.prepare(`UPDATE classifier_jobs SET status='completed',lease_owner=NULL,lease_expires_ms=NULL,updated_at=?,completed_at=?,last_error_code=NULL,run_id=?

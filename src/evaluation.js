@@ -88,8 +88,9 @@ export function evaluationReport(store, runId) {
     cases, note: 'Exact subject-label comparison only. Missing, failed, removed, or outdated cases are never counted as correct. Results do not change the dashboard or approve a model.' };
 }
 
-export async function runEvaluation({ store, setId, provider, providerName, model, now = () => Date.now() }) {
+export async function runEvaluation({ store, setId, provider, providerName, model, providerUsesExamples = true, now = () => Date.now() }) {
   if (typeof provider !== 'function') throw new Error('An evaluation provider must be explicitly connected.');
+  if(typeof providerUsesExamples!=='boolean')throw new Error('Invalid evaluation example policy.');
   name(providerName); name(model);
   const runId = randomUUID();
   // Snapshot every input in one transaction; held-out answers are not part of the provider input.
@@ -98,7 +99,7 @@ export async function runEvaluation({ store, setId, provider, providerName, mode
     if (set.removedCases || set.cases.some(c => c.state !== 'current')) throw new Error('Invalid evaluation set: source or correction changed; create a new version.');
     if (set.contractVersion !== INTELLIGENCE_VERSION) throw new Error('Invalid evaluation set: classification contract changed; create a new version.');
     const items = set.cases.map(c => {
-      const request = prepareAnalysis(store, c.postId, { holdoutIds: set.cases.map(c => c.postId) });
+      const request = prepareAnalysis(store, c.postId, { holdoutIds: set.cases.map(c => c.postId),providerUsesExamples });
       return { ...c, request, post: store.getPost(c.postId) };
     });
     store.db.prepare(`INSERT INTO evaluation_runs(id,set_id,provider,model,started_at,status) VALUES (?,?,?,?,?,'running')`)
@@ -141,7 +142,7 @@ export async function runEvaluation({ store, setId, provider, providerName, mode
 }
 
 export function evaluateBaseline(store, setId) {
-  return runEvaluation({ store, setId, providerName: 'Local literal baseline', model: BASELINE_VERSION,
+  return runEvaluation({ store, setId, providerName: 'Local literal baseline', model: BASELINE_VERSION,providerUsesExamples:false,
     provider: async request => {
       const value = baselineClassify({ text: request.input.text, type: request.input.postType, contextCoverage: request.input.contextCoverage });
       return { postId: request.input.postId, sourceHash: request.input.sourceHash, labels: value.labels,

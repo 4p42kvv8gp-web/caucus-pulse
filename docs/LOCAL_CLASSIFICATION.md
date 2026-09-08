@@ -11,7 +11,15 @@ The current first-pass provider is `mlburnham/Political_DEBATE_large_v1.0`, revi
 - Defers topic inference for brief linked reactions without a supported emergency flag. It does not fill in an unseen article or referenced post. A saved human interpretation can still supply the correct topic.
 - Preserves the full analysis history and model, taxonomy, policy, implementation and source versions. New sources queue automatically; changed or removed sources invalidate pending results. Leases and the previous-analysis check prevent late output from overwriting a newer run.
 
-The model tests hypotheses; the explanation shows the matched hypothesis and the supporting original passage. It does not generate narrative summaries that could invent family relationships, locations or events. Named incident locations remain unknown unless a separate supported analysis supplies them. Exact observed @handles are preserved without guessing expanded names or canonical identities.
+The model tests hypotheses; the explanation shows the matched hypothesis and the supporting original passage. It does not generate narrative summaries that could invent family relationships, locations or events. A separate named-mention model now proposes person, organization, location and other types; every name must be an exact source span. These are provisional types, not verified identities or incident locations. Exact observed @handles are also preserved without expanded names.
+
+## Named mentions
+
+`dslim/bert-base-NER`, revision `d1a3e8f13f8c3566299d95fcfc9a8d2382a9affc`, runs locally in the same CPU environment. Six pinned files total 433,513,302 bytes. Its MIT-licensed model was trained on CoNLL news text and has known social-media limitations. [Model documentation](https://huggingface.co/dslim/bert-base-NER)
+
+Explicit overlapping token windows reach the complete available source, including late details. Every non-whitespace source character must be represented in the tokenizer offsets. Missing coverage, excessive windows or the shared deadline fail visibly instead of truncating the source. Complete BIO groups retain original Unicode and spacing; partial wordpieces and cut-window groups are rejected. Ambiguous repeated names within a passage are omitted rather than assigned guessed offsets. Up to 12 mentions are returned with disclosed omissions; source coverage uses UTF-16 character counts.
+
+Nine synthetic development cases exercised place, agency, person, Unicode, repetition, denial and late-source details. Seven contained all expected names. The model missed some facility, road and school names, including Dilley and Delaney Hall in one fixture. On a real political caption it treated a rhetorical name as an organization. These observations are explicit limitations, not an accuracy estimate. The Teach desk shows suggested types and original context for review. No mention automatically fills an incident's location or verifies a district connection.
 
 ## Learning and review
 
@@ -25,22 +33,23 @@ The three real development posts produced valid source-linked suggestions. The b
 
 The first full NLI engineering run returned valid output on 18/18 synthetic cases; 9/18 met every richer generative-model expectation. Most misses were deliberately unimplemented named-entity/location outputs. Additional misses included the correction event, weather-advice function, and hazardous-road topic. The next narrow pass fixed the correction-event case; weather-advice and hazardous-road classification remain weaknesses. Keep these in the review/evaluation set rather than claiming a solved accuracy percentage.
 
-Observed NLI processing was roughly 2–4 seconds for short fixtures with about 1.9 GB peak process memory. A 1,568-token long fixture took about 81 seconds across 13 complete windows and 494 hypothesis pairs, with about 2.1 GB peak memory. These are measurements on this Mac, not a two-vCPU hosting throughput promise. A 0.95 entailment threshold is provisional and **not** a 95% probability of correctness; raw scores are not shown as user-facing confidence.
+Observed NLI processing was roughly 2–4 seconds for short fixtures with about 1.9 GB peak process memory. A 1,568-token long fixture took about 81 seconds across 13 complete windows and 494 hypothesis pairs, with about 2.1 GB peak memory. Adding named mentions produced source-valid output for all three real development posts in approximately 2.4–5.9 seconds each, with process peak memory around 2.3 GB. These are measurements on this Mac, not a two-vCPU hosting throughput promise. A 0.95 entailment threshold is provisional and **not** a 95% probability of correctness; raw scores are not shown as user-facing confidence.
 
 Earlier local Qwen 4B/9B experiments are not the selected provider. Qwen 9B passed an 18-case synthetic prompt check but made unsupported interpretations on real captions and mishandled copied punctuation. A reasoning-mode trial exceeded the time limit. Those observations motivated passage selection and the narrower NLI first pass. The optional Qwen profile remains an experimental comparison; it should not be described as production-ready.
 
 ## Setup and operations
 
-Use Python 3.12 on macOS ARM64 for the tested lock:
+Use Python 3.12 on macOS ARM64 for the exercised runtime, or Linux x86_64 for the prepared CPU lock:
 
 ```sh
 python3 scripts/setup-local-classifier.py
 python3 scripts/download-classifier-model.py
+python3 scripts/download-classifier-model.py --entities
 node scripts/classifier.js status
 node scripts/classifier.js run 5
 ```
 
-The public model download is approximately 1.75 GB, pinned to the revision and per-file digests in `config/local-classifier.json`. Source data and model assets are ignored by Git. The 35-package NLI environment has pinned public wheel hashes and had zero known OSV findings when checked September 8. Reusing the already installed environment passed dependency consistency checks; a fresh Linux installation has not been validated. Linux deployment needs a CPU-only PyTorch lock, not an assumed CUDA installation.
+The public topic model download is approximately 1.75 GB, pinned to the revision and per-file digests in `config/local-classifier.json`; named mentions use `config/entity-model.json`. Source data and model assets are ignored by Git. The 35-package NLI environment has pinned public wheel hashes and had zero known OSV findings when checked September 8. The separate Linux lock uses official Torch 2.14.0+cpu and has verified wheel hashes and dependency metadata closure. Its approximately 250 MB package set has been downloaded, but a Linux installation has not been executed. See [Private hosting](PRIVATE_HOSTING.md) for the target-host checks.
 
 Enable `intelligence.localClassifier.enabled` to process up to five jobs per minute pass after startup. A single process lock prevents the preview and CLI from loading duplicate large models. `CAUCUS_DISABLE_LOCAL_CLASSIFIER=1` starts the archive for maintenance without loading it. Failed model output is not retried indefinitely; `node scripts/classifier.js queue POST_ID` explicitly requests another source-bound attempt.
 

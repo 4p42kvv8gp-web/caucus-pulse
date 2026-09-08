@@ -4,8 +4,11 @@ import { validateSemanticResult, COMMUNICATIVE_FUNCTIONS } from './intelligence.
 
 export const taxonomy = Object.freeze(JSON.parse(readFileSync(new URL('../config/taxonomy.json', import.meta.url), 'utf8')));
 export const localClassifierSpec = Object.freeze(JSON.parse(readFileSync(new URL('../config/local-classifier.json', import.meta.url), 'utf8')));
+export const entityModelSpec=localClassifierSpec.entityModel?.enabled?Object.freeze(JSON.parse(readFileSync(new URL('../config/entity-model.json',import.meta.url),'utf8'))):null;
+if(entityModelSpec&&entityModelSpec.name!==localClassifierSpec.entityModel.profile)throw new Error('The configured entity model profile does not match.');
 export const CLASSIFIER_PROMPT_VERSION = localClassifierSpec.engine==='political-debate-nli' ? localClassifierSpec.policyVersion : 'source-passage-selection-v7';
 export const classifierFingerprint = createHash('sha256').update(JSON.stringify({ model: localClassifierSpec, taxonomy, promptVersion: CLASSIFIER_PROMPT_VERSION,
+  entityModel:entityModelSpec,entityImplementationHash:entityModelSpec?createHash('sha256').update(readFileSync(new URL('../scripts/entity-extractor.py',import.meta.url))).digest('hex'):null,
   engineImplementationHash:createHash('sha256').update(readFileSync(new URL(localClassifierSpec.engine==='political-debate-nli'?'../scripts/nli-classifier-worker.py':'../scripts/local-classifier-worker.py',import.meta.url))).digest('hex') })).digest('hex');
 
 const OUTPUT_SHAPE = {

@@ -5,7 +5,7 @@ import {createOverview} from './overview.js';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
-const state = { data: null, view: 'dashboard', selected: null, reviewPost:null, reviewSequence:0, dirty: false, incidentDirty:false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0,emergingSequence:0 };
+const state = { data: null, view: 'dashboard', selected: null, reviewPost:null, reviewSequence:0, savingReview:false, dirty: false, incidentDirty:false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0,emergingSequence:0 };
 
 const incidentDesk=createIncidentDesk({api,esc,date,sourceHeader,filters:filterParams,error:showError,setDirty:value=>{state.incidentDirty=value;},onTeach:id=>void selectReview(id)});
 const overview=createOverview({api,esc,date,postCard,filters:filterParams,review:id=>void selectReview(id),
@@ -41,7 +41,7 @@ function sourceEvidence(spans = []) {
 }
 function semanticDetails(analysis) {
   const entities = analysis.entities ?? []; const events = analysis.events ?? []; const functions=analysis.functions??[];
-  return `${entities.length ? `<h3>Entities mentioned</h3>${entities.map(e => `<div class="evidence"><strong>${esc(e.name)} · ${esc(e.kind)}</strong>${sourceEvidence(e.evidence)}</div>`).join('')}` : ''}
+  return `${entities.length ? `<h3>Suggested named mentions</h3><p class="quiet">Names are copied from the source. Their suggested types need review; rhetorical names can be mistaken for real organizations. A place mention does not establish where an incident occurred.</p>${entities.map(e => `<div class="evidence"><strong>${esc(e.name)} · possible ${esc(e.kind)}</strong>${sourceEvidence(e.evidence)}</div>`).join('')}` : ''}
     ${events.length ? `<h3>Possible events</h3><p class="quiet">Descriptions of what the source reports. Whether an event is new has not been established.</p>${events.map(e => `<div class="evidence"><strong>${esc(e.development)}</strong><p>${esc(e.description)}</p>${sourceEvidence(e.evidence)}<p class="quiet">${e.location ? `Named location: ${esc(e.location.name)}` : 'Location not established'} · ${e.districtRelation === 'explicitly-stated' ? 'Source explicitly places the incident in the district' : e.districtRelation === 'explicitly-outside' ? 'Source explicitly places the incident outside the district' : 'District connection not established'}</p>${sourceEvidence(e.districtEvidence)}</div>`).join('')}` : ''}
     ${functions.length?`<h3>What the post is doing</h3><p class="quiet">Provisional purposes, with supporting wording. These are not quality or sentiment scores.</p>${functions.map(f=>`<div class="evidence"><strong>${esc(f.function.replaceAll('-',' '))}</strong><p>${esc(f.explanation)}</p>${sourceEvidence(f.evidence)}</div>`).join('')}`:''}`;
 }
@@ -110,6 +110,7 @@ function labelRow(label = {}) {
   return `<div class="label-entry"><label>Topic<input name="topic" maxlength="100" value="${esc(label.topic)}" placeholder="e.g. Immigration"></label><label>Subtopic (optional)<input name="subtopic" maxlength="160" value="${esc(label.subtopic)}" placeholder="e.g. Dilley detention facility"></label><button type="button" class="remove" aria-label="Remove label">×</button></div>`;
 }
 async function selectReview(id,{changeView=true,confirmDiscard=true}={}) {
+  if(state.savingReview){showError('The current review is still saving. Please wait.');return false;}
   if(confirmDiscard&&state.dirty&&!confirm('Discard the unsaved topic review?'))return false;
   const sequence=++state.reviewSequence;
   try{
@@ -122,6 +123,10 @@ async function selectReview(id,{changeView=true,confirmDiscard=true}={}) {
 async function selectIncident(id){if(await incidentDesk.openSource(id))setView('incidents');}
 function renderReview() {
   const post=state.reviewPost;
+  const learning=state.data.operations.learning;
+  $('learning-overview').innerHTML=`<div class="section-heading"><h3>Learning record</h3><span class="quiet">${learning.reviewedPosts} reviewed source${learning.reviewedPosts===1?'':'s'}</span></div>
+    <p>${learning.classifiedReviews} with accepted topics · ${learning.explicitEmptyReviews} explicit empty answers · ${learning.unresolvedReviews} awaiting context · ${learning.heldOutPosts} reserved test posts</p>
+    <p class="quiet">${esc(learning.note)}</p><details><summary>Subjects taught and evaluation progress</summary><p>${learning.topicCoverage.map(t=>`${esc(t.topic)}: ${t.reviewedPosts}`).join(' · ')||'No current accepted topic decisions yet.'}${learning.topicsOmitted?` · ${learning.topicsOmitted} additional subjects omitted from this summary.`:''}</p><p class="quiet">${learning.proposedRules} broader lesson proposals · ${learning.evaluationSets} evaluation sets · ${learning.evaluationRuns} comparison runs (${learning.unfinishedEvaluationRuns} unfinished). No general lesson has been automatically promoted.</p></details>`;
   const posts=[...state.data.posts];
   if(post&&!posts.some(p=>p.id===post.id))posts.unshift(post);
   $('review-select').innerHTML=posts.map(p=>`<option value="${esc(p.id)}">${esc(p.memberName)} · ${esc(date(p.createdAt))}</option>`).join('');
@@ -142,8 +147,8 @@ function renderReview() {
     ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedbackOmitted?`<p class="quiet">${post.feedback.length} of ${post.feedbackCount} reviews displayed. The remaining history is retained privately.</p>`:''}${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
   $('review-event-source').addEventListener('click',()=>void selectIncident(post.id));
   $('review-reload').addEventListener('click',()=>void selectReview(post.id));
-  $('add-label').addEventListener('click', () => { $('label-rows').insertAdjacentHTML('beforeend', labelRow()); state.dirty = true; });
-  $('label-rows').addEventListener('click', event => { if (event.target.closest('.remove')) { event.target.closest('.label-entry').remove(); state.dirty = true; } });
+  $('add-label').addEventListener('click', () => { $('label-rows').insertAdjacentHTML('beforeend', labelRow()); state.dirty = true; state.reviewSequence++; });
+  $('label-rows').addEventListener('click', event => { if (event.target.closest('.remove')) { event.target.closest('.label-entry').remove(); state.dirty = true; state.reviewSequence++; } });
   $('feedback-form').addEventListener('input', () => { state.dirty = true; state.reviewSequence++; });
   function updateDecision(){const empty=$('feedback-decision').value==='no-supported-topic';$('label-rows').hidden=empty;$('add-label').hidden=empty;}
   $('feedback-decision').addEventListener('change',()=>{state.dirty=true;state.reviewSequence++;updateDecision();});updateDecision();
@@ -155,7 +160,11 @@ function renderReview() {
   });
   $('feedback-form').addEventListener('submit', async event => {
     event.preventDefault();
-    const button = event.submitter; button.disabled = true; showError('');
+    if(state.savingReview)return;
+    const button = event.submitter;
+    const controls=[...event.currentTarget.querySelectorAll('input,textarea,select,button'),$('review-select'),$('review-next'),$('review-reload'),$('analyze-post'),$('review-event-source')].map(element=>({element,disabled:element.disabled}));
+    state.savingReview=true;state.dirty=true;state.reviewSequence++;
+    controls.forEach(({element})=>{element.disabled=true;});showError('');
     const labels = [...document.querySelectorAll('.label-entry')].map(row => ({
       topic: row.querySelector('[name=topic]').value.trim(), subtopic: row.querySelector('[name=subtopic]').value.trim() || null
     })).filter(l => l.topic || l.subtopic);
@@ -164,7 +173,8 @@ function renderReview() {
         body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, labels:$('feedback-decision').value==='no-supported-topic'?[]:labels, decision:$('feedback-decision').value, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
       state.dirty = false; await refresh();
       if ($('save-state')) $('save-state').textContent = 'Saved. This post now uses your correction.';
-    } catch (error) { showError(error.message); button.disabled = false; }
+    } catch (error) { showError(error.message); }
+    finally{state.savingReview=false;controls.forEach(({element,disabled})=>{element.disabled=disabled;});if(button)button.disabled=false;}
   });
 }
 async function refresh({ cursor = '', params = null } = {}) {
@@ -281,6 +291,7 @@ document.querySelectorAll('[data-view]').forEach(button => button.addEventListen
 $('posts').addEventListener('click', event => {
   const page = event.target.closest('[data-page]');
   if (page) {
+    if(state.savingReview){showError('The current review is still saving. Please wait.');return;}
     if (state.dirty && !confirm('Discard the unsaved review before switching pages?')) return;
     state.dirty = false; page.disabled = true;
     const options = page.dataset.page === 'older' ? { cursor:state.data.page.nextCursor,params:state.pageParams } : {};

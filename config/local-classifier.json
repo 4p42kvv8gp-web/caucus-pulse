@@ -36,6 +36,7 @@
     ]
   ],
   "engine": "political-debate-nli",
+  "entityModel": {"enabled": true, "profile": "bert-base-ner-v1"},
   "runtime": {
     "torch": "2.14.0",
     "transformers": "5.16.1",

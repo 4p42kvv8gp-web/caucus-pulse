@@ -9,11 +9,11 @@ Updated September 8, 2026. Development continues without waiting for the optiona
 - [x] Authorize full development in this task.
 - [x] Supply Claude's Build Spec and request the Hugging Face intelligence path. Relevant development skills are installed.
 
-## Your useful product work, once the review screen is ready
+## Your useful product work
 
-- [ ] **Teach the classification boundaries — about 20–30 minutes by voice.** We will bring real posts and proposed interpretations. You explain what is right, what is wrong, and why. Focus on what deserves its own subtopic/event, what is genuinely about a district, how to handle vague captions, and what makes a report useful to you. You do not need to write the taxonomy first.
+- [ ] **Start with about 15 minutes of voice teaching.** The Teach desk and three real source examples are ready. We will read the proposal and ask one focused question at a time. You explain what is right, wrong or unknowable from the wording. Focus on subtopics, overlapping oversight, district incidents and missing context. Your existing review is preserved. A later, broader sample will be needed to test improvement; you do not need to write the taxonomy first.
 - [ ] **Provide the two reference screens when convenient:** DashboardV3.dc.html and Incidents.dc.html, ideally in the design ZIP. Build Spec.html has been received and read. This can wait; autonomous backend/intelligence work continues without guidance during the seven-hour window.
-- [ ] **Try the integrated dashboard — about 10 minutes, after the redesign is connected.** Find a subject you care about and inspect its supporting posts. One local correction is already saved; the next voice session can build on it. We handle implementation details.
+- [ ] **Try the local dashboard — about 10 minutes.** Open http://127.0.0.1:4317, choose “All archived dates” to include the historical examples, and inspect a subject's supporting posts. The current archive is a small pilot, not full caucus coverage. We handle implementation details.
 
 ## X setup already handled
 
@@ -22,7 +22,7 @@ Updated September 8, 2026. Development continues without waiting for the optiona
 
 ## Only if needed later
 
-- [ ] **Complete an account login or approve a specific hosting/AI expense if existing access is insufficient.** We will present the actual provider, cost, and prepared deployment. No provider shopping or infrastructure decisions are required from you now.
+- [ ] **Approve a concrete hosting total and complete the owner login when deployment is ready.** The prepared proposal is in `caucus-pulse/docs/PRIVATE_HOSTING.md`: one private 8 GiB Linux server, local models and owner access. No paid host has been started; the runtime still needs testing on the selected Linux machine.
 
 If development is to resume locally while you are away, keep this computer on and the Codex desktop app running. That development schedule does not by itself host the finished live product.
 

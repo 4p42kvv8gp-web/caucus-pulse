@@ -1,6 +1,6 @@
 # Hugging Face intelligence plan
 
-Reviewed September 8, 2026 against the user-supplied proposal and official model documentation. These are candidates for measured development, not deployed features or verified quality/cost claims.
+Reviewed and updated September 8, 2026 against the user-supplied proposal, official model documentation and local engineering results. The implementation section distinguishes connected local models from future candidates; no hosted deployment or verified accuracy/cost claim is implied.
 
 ## Skills ready
 
@@ -42,6 +42,8 @@ The selected first-pass classifier is now revision-pinned Political DEBATE **lar
 
 Qwen 4B/9B MLX experiments were evaluated but are not the selected automatic provider: real-caption overinterpretation and a reasoning timeout outweighed a favorable synthetic prompt result. The NLI provider uses fixed hypotheses and does not claim to train from saved reviews. Accepted examples remain available through the bounded semantic retrieval layer for comparison and later evaluated SetFit/DEBATE training.
 
+Pinned `dslim/bert-base-NER` now runs beside NLI, proposing exact named mentions with complete token windows and source passage references. Types remain provisional: synthetic checks missed some facilities/roads, and a real caption's rhetorical name was misclassified as an organization. It never automatically assigns incident location or district. Local candidate evaluation and private voice-session preparation are implemented; no new human judgments or held-out test sets were manufactured.
+
 No Hub data repository, cloud training job or paid model endpoint has been created. Runtime/model downloads are local development assets. The actual X connection trial is separately capped and documented in [Connection trial](CONNECTION_TRIAL.md).
 
-Next: real held-out calibration, reliable entity/location extraction, an evaluated training threshold, and measured hosted CPU throughput. Model agreement or a high NLI score must not be presented as calibrated accuracy or political coordination.
+Next: real held-out calibration, improved entity/location interpretation, an evaluated training threshold, and measured hosted CPU throughput. The Linux CPU lock and private service package are prepared but have not been executed on Linux. Model agreement or a high NLI score must not be presented as calibrated accuracy or political coordination.

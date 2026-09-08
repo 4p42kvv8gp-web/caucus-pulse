@@ -6,7 +6,7 @@ The application preserves available source text, supports indexed and semantic s
 
 **Current pilot:** a bounded X trial captured 300 List account profiles and five recent posts. Official House links established 120 current account bindings and admitted one captured post; four captures await verification. The archive also contains two historical examples and one authentic saved review. The List scan is incomplete. The $3.025 connection-trial ceiling is exhausted and automatic polling remains off because the provider's credits endpoint returned 404. No paid AI or hosted deployment is active.
 
-The selected local classifier is Political DEBATE large, used for provisional topic/subtopic and communicative-function suggestions. It returns source passage references, rather than rewriting quotations or generating unsupported narratives. It is an initial classifier, not a verified measure of truth. Your corrections take precedence; automatic weight training is not enabled. See [Local classification](docs/LOCAL_CLASSIFICATION.md).
+The selected local classifier is Political DEBATE large, used for provisional topic/subtopic and communicative-function suggestions. A separate BERT model proposes named mentions. Both attach original source evidence. These are initial interpretations; named types can be wrong and do not verify an incident or its location. Your corrections take precedence; automatic weight training is not enabled. See [Local classification](docs/LOCAL_CLASSIFICATION.md).
 
 ## Run locally
 
@@ -31,10 +31,13 @@ The tested classifier runtime uses Python 3.12 on macOS ARM64:
 ```sh
 python3 scripts/setup-local-classifier.py
 python3 scripts/download-classifier-model.py
+python3 scripts/download-classifier-model.py --entities
 node scripts/classifier.js status
 ```
 
-The public Political DEBATE download is about 1.75 GB. After setup, enable `intelligence.localClassifier.enabled` in `config/settings.json` and restart the preview. The server processes up to five local classification jobs per pass. `CAUCUS_DISABLE_LOCAL_CLASSIFIER=1` allows archive maintenance without loading the model. The current dependency lock was tested on this Mac; a Linux CPU lock must be validated before deployment. No model or source dataset is downloaded at application startup.
+The public Political DEBATE download is about 1.75 GB; the entity model adds about 434 MB. After setup, enable `intelligence.localClassifier.enabled` in `config/settings.json` and restart the preview. The server processes up to five local classification jobs per pass. `CAUCUS_DISABLE_LOCAL_CLASSIFIER=1` allows archive maintenance without loading the model. The Mac runtime has been exercised; a separate 35-package Linux CPU lock has verified wheel hashes and dependency closure but still needs execution on the host. No model or source dataset is downloaded at application startup.
+
+The [private hosting package](docs/PRIVATE_HOSTING.md) includes service templates, owner-access placeholders, a platform preflight and an actual-model smoke check. It targets one 8 GiB Linux x86_64 server with persistent storage. No host, paid plan or deployment is active.
 
 ## Boundaries of this milestone
 
@@ -110,7 +113,9 @@ These checks verify the output's structure and source references; they cannot pr
 
 Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text and changed teaching examples reject late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use bounded BGE passage retrieval with a topic fallback and persisted exclusions for held-out sources, text copies, direct references, and edit siblings; proposed general rules and unresolved reviews are excluded. The optional generative adapter can consume retrieved examples. The selected NLI classifier uses fixed hypotheses and records that it did not consume them; it does not pretend to learn weights from one review. Durable local reclassification and cross-post subject candidates are implemented.
 
-The [teaching and evaluation guide](docs/TEACHING_AND_EVALUATION.md) describes voice-session recording, explicit negative decisions, reserved test posts, and separate candidate runs. Evaluations freeze accepted subject labels and record missing/extra labels without changing dashboard output. They expose stale, failed, removed, and unfinished cases. The local baseline evaluation makes no requests; the provider callback still needs a cost-controlled adapter. Semantic run history shows which examples were supplied, without claiming causal influence.
+The [teaching and evaluation guide](docs/TEACHING_AND_EVALUATION.md) describes saved judgments, explicit negative decisions, reserved test posts, and separate candidate runs. Evaluations freeze accepted subject labels and record missing/extra labels without changing dashboard output. They expose stale, failed, removed, and unfinished cases. Both the literal baseline and the selected local model can be evaluated offline; paid model adapters remain unconnected. Semantic run history shows which examples were supplied, without claiming causal influence.
+
+The [voice calibration guide](docs/VOICE_CALIBRATION.md) explains a first session in Codex voice chat using the Teach desk. A private preparation command assembles current source text, predictions, review versions and discussion prompts without creating judgments or test answers. The dashboard itself does not record audio.
 
 The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Actual completed local runs replace the literal baseline, while current human labels retain precedence. Synthetic tests never count as real model output or user feedback.
 
@@ -124,7 +129,7 @@ The separate **Emerging candidates** view groups related subject passages across
 
 ## Provenance
 
-The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate classification models, evaluation requirements, and archive/cost decisions. MiniLM and BGE now have a verified local retrieval implementation; BGE is the preview default after bounded synthetic comparisons. This engineering choice still needs real-post calibration. Other proposed models remain candidates. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
+The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, model choices, evaluation requirements, and archive/cost decisions. MiniLM and BGE have a verified local retrieval implementation; BGE is the preview default after bounded synthetic comparisons. Political DEBATE and BERT named mentions also run locally, with known interpretation gaps. SetFit training and sentiment remain candidates. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
 
 Based on the reviewed [original Caucus Pulse project](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The new local foundation replaces file archives and nightly-only reports with a database-backed service. Broad subject structure is informed by the original taxonomy; facility identities are kept separate. See the workspace's PROJECT_SCOPE.md, TASKS.md, and DEVELOPMENT_HANDOFF.md for the complete build plan.
 
