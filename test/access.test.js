@@ -61,7 +61,7 @@ test('protected pages and APIs require the owner even through loopback, and revi
   const {access}=verifier(),server=createServer(store,{access});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const base=`http://127.0.0.1:${server.address().port}`,valid=await token();
   try{
-    for(const path of ['/','/app.js','/api/dashboard','/api/posts/1','/api/incidents','/api/operations'])assert.equal((await fetch(base+path)).status,401,path);
+    for(const path of ['/','/app.js','/api/dashboard','/api/posts/1','/api/incidents','/api/operations','/api/captures/unverified'])assert.equal((await fetch(base+path)).status,401,path);
     const health=await fetch(base+'/healthz');assert.equal(health.status,200);assert.deepEqual(await health.json(),{ok:true});
     const response=await fetch(base+'/api/posts/1',{headers:{'cf-access-jwt-assertion':valid,Host:'pulse.example.invalid',Origin:config.publicOrigin}});assert.equal(response.status,200);const post=await response.json();
     assert.equal((await fetch(base+'/api/posts/1',{headers:{'cf-access-jwt-assertion':valid,Origin:'https://attacker.invalid'}})).status,403);

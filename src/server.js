@@ -20,6 +20,7 @@ import {incidentDesk,postIncidents,saveIncidentReview,createIncidentCase,inciden
 import {accessFromEnvironment} from './access.js';
 import {operationalStatus} from './operational-status.js';
 import {drainLocalQueue} from './local-processing.js';
+import {inspectUnverifiedCaptures} from './capture-inspection.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -97,6 +98,7 @@ export function createServer(store, { credentials = createCredentialStore(resolv
           operationalStatus:operationalStatus(store,settings,{classifier,semantic,connection}) });
       }
       if(req.method==='GET'&&url.pathname==='/api/operations')return json(200,operationalStatus(store,settings,{classifier,semantic,connection:credentials.status()}));
+      if(req.method==='GET'&&url.pathname==='/api/captures/unverified')return json(200,inspectUnverifiedCaptures(store));
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
       if (req.method === 'GET' && url.pathname === '/api/review-queue') return json(200, reviewQueue(store, filtersFrom(url)));
       if(req.method==='GET'&&url.pathname==='/api/incidents')return json(200,incidentDesk(store,filtersFrom(url)));

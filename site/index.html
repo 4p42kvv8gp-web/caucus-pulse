@@ -59,6 +59,7 @@
       <form id="phrase-form" class="phrase-form"><label>Exact phrase<input id="phrase-input" placeholder="Paste wording from a post" maxlength="2000" required></label><button class="primary" type="submit">Find occurrences</button></form></div><div id="phrase-results"></div>
     </section>
     <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="operational-status" class="panel"></div><div id="coverage" class="coverage-grid"></div>
+      <div class="panel"><div class="section-heading"><h3>Captured sources awaiting account evidence</h3><button id="inspect-captures" class="secondary" type="button">Inspect saved captures</button></div><p class="quiet">Read the stored wording while ownership is being checked. These sources are outside the verified member archive and topic counts. This inspection makes no new X requests.</p><div id="capture-inspection" aria-live="polite"></div></div>
       <div class="panel"><h3>Private X connection</h3><p id="connection-status" class="quiet">Checking local setup…</p>
         <p>Save your existing active X bearer token here. It is stored in a private file in this workspace and is never sent back in dashboard responses. Saving does not start collection or spend credits.</p>
         <form id="connection-form" class="feedback-form" autocomplete="off"><label>Bearer token<input id="x-token" type="password" autocomplete="off" minlength="20" maxlength="4096" required spellcheck="false" autocapitalize="none"></label>

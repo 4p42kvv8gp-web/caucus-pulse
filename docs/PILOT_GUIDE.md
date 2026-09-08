@@ -39,4 +39,6 @@ As checked September 8, 2026, the pilot has three admitted posts: two historical
 
 **Coverage & budget** explains these gaps, model readiness and spending. Conservative trial accounting totals **$3.025**. Automatic collection is paused because provider credit verification has not succeeded. The workspace is local; a private hosted service has been prepared but not deployed.
 
+Choose **Inspect saved captures** in Coverage to read sources still awaiting account or membership evidence. This uses the saved wording across all dates, with any display limits reported. These sources receive no member identity or topic label in the inspection panel. Confirmed promotion or removal is reflected when the panel reloads; inspecting it does not make a provider request or save a judgment.
+
 Your useful next work is a short teaching session, confirming the X developer-console credit/access, and approving a concrete hosting option when ready. Deployment, collection recovery and model implementation remain development work.

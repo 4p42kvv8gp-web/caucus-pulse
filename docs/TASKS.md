@@ -26,6 +26,8 @@
 
 ## Done
 
+- [x] ~~Expose saved captures awaiting account evidence~~ (September 8) — Coverage now allows inspection of complete bounded source text without assigning caucus identities, labels or member counts. No provider requests, promotion or review writes occur. Four actual captures pass the read-only trace. Whole-source/page limits, removal/promotion exclusion and owner-access protection pass the 197-test Node suite.
+
 - [x] ~~Finish interrupted analysis, uncertain review and operator-status handling~~ (September 8) — Model shutdown returns still-current interrupted work to the queue without consuming a failure; queued batches continue promptly. Needs-context reviews preserve tentative proposals/history while removing their labels from counts and accepted examples. Schema11 migration and rollback pass. The Coverage view exposes collection, account, credit and local-model gaps. All 194 Node tests pass; actual Mac shutdown/restart and read-only pilot traces pass. Final schema11 backup is sealed and verified.
 
 - [x] ~~Add source-exact named mentions and offline model comparisons~~ (September 8) — Pinned BERT NER with complete manual token windows, Unicode coverage, bounded mentions and provisional types; real-source model runs preserve the existing review. Entity typing has observed rhetorical-name and facility-name weaknesses. 173 Node tests and 12 Python checks pass; actual combined models pass the Mac smoke check. Linux wheels are hash-verified with complete dependency closure but have not been executed on Linux.

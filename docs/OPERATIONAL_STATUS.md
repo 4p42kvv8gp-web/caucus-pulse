@@ -18,6 +18,10 @@ The Coverage & budget view now puts setup and processing status before detailed 
 
 Only issues that need operator action contribute to the attention count. Loading, ordinary processing, intentionally disabled collection and future classification review remain separately labeled. A zero attention count is not an approval to deploy or start paid collection.
 
+## Inspecting captures before attribution
+
+Coverage's **Inspect saved captures** control uses authenticated `GET /api/captures/unverified` to display the newest 25 stored sources awaiting account/membership evidence, across all dates. Full displayed wording is retained; the API omits whole sources beyond its 60,000-character per-post and 300,000-character response-source limits and reports omissions. It returns no provider payload, inferred member identity or topic labels. Promoted and removed sources are excluded. Viewing the panel does not promote a capture, save feedback or contact X. Once opened, it reloads during Coverage refreshes and when the view is reopened.
+
 ## Safe service restart
 
 Normal shutdown cancels model startup and active work, waits for workers to exit, and defers a still-current interrupted job. Its attempt is returned so a routine restart does not manufacture an analysis failure. A newer source, explicit analysis or worker lease prevents the old worker from changing that record. Unexpected process crashes still rely on durable lease expiry and existing bounded attempts.

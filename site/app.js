@@ -109,6 +109,17 @@ function renderCoverage() {
   $('connection-status').textContent = connection?.configured ? `Token present (${connection.source === 'environment' ? 'runtime environment' : 'private local file'}). Saving makes no access test; the balance and collection observations are shown above.` : 'No product token is configured yet.';
   $('save-connection').disabled = connection?.source === 'environment';
 }
+let captureSequence=0,captureLoaded=false;
+async function loadCaptures(){
+  const sequence=++captureSequence;$('inspect-captures').disabled=true;
+  try{const result=await api('/api/captures/unverified');if(sequence!==captureSequence)return;
+    captureLoaded=true;const c=result.coverage;
+    $('capture-inspection').innerHTML=`<p class="quiet">${c.returned} of ${c.total} saved captures shown across all dates. ${esc(result.note)}${c.partial?` ${c.unexamined} sources fall outside this page; ${c.omittedOversized} were too large for this bounded display.`:''}</p>`+
+      result.captures.map(post=>`<article class="post-card"><div class="post-header"><div><strong>Account ownership not established</strong><span class="post-meta">${esc(date(post.createdAt))} · ${esc(post.type)}</span></div><a class="post-source" href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">View source on X ↗</a></div><p class="post-text">${esc(post.text)}</p><p class="quiet">Available API wording · ${esc(post.contextCoverage)} · captured ${esc(date(post.capturedAt))}</p></article>`).join('');
+  }catch(error){if(sequence===captureSequence){$('capture-inspection').textContent='The latest capture inspection is unavailable. Try again.';showError(error.message);}}
+  finally{if(sequence===captureSequence)$('inspect-captures').disabled=false;}
+}
+$('inspect-captures').addEventListener('click',()=>void loadCaptures());
 function labelRow(label = {}) {
   return `<div class="label-entry"><label>Topic<input name="topic" maxlength="100" value="${esc(label.topic)}" placeholder="e.g. Immigration"></label><label>Subtopic (optional)<input name="subtopic" maxlength="160" value="${esc(label.subtopic)}" placeholder="e.g. Dilley detention facility"></label><button type="button" class="remove" aria-label="Remove label">×</button></div>`;
 }
@@ -208,6 +219,7 @@ async function refresh({ cursor = '', params = null } = {}) {
     if (state.view === 'emerging') await loadEmerging();
     if (state.view === 'dashboard') await overview.loadSignals();
     if (state.view === 'incidents') await incidentDesk.load();
+    if (state.view === 'coverage'&&captureLoaded) await loadCaptures();
   } catch (error) {
     if (sequence !== state.sequence) return;
     if (error.code === 'EXPLORER_CHANGED') {
@@ -235,6 +247,7 @@ function setView(view) {
   if(view==='emerging')void loadEmerging();
   if(view==='incidents')void incidentDesk.load();
   if(view==='dashboard'&&state.data)void overview.loadSignals();
+  if(view==='coverage'&&captureLoaded)void loadCaptures();
 }
 async function semanticStatus(){
   try{
