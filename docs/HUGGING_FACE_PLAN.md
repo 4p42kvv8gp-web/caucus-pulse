@@ -36,6 +36,8 @@ The proposed $60-to-$20 monthly reduction is unverified. Benchmark actual post v
 
 ## Next implementation pass
 
+September 8 update: pinned MiniLM/BGE assets and Transformers.js inference now work locally. MiniLM powers the preview's Related subjects view and durable source-versioned passage index; two actual historical posts have eight indexed passages. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) for the complete implementation, 102-test verification, synthetic comparison and limitations. Classification models, event grouping and human accuracy evaluation remain unfinished. The installed skills provide development guidance; they are not the runtime itself.
+
 - Build a private benchmark/export contract from real reviewed posts with protected held-out examples and synthetic safety checks kept separate.
 - Select a pinned, compatible embedding runtime and compare MiniLM/BGE on a bounded local run; record weights/license/version and hardware requirements.
 - Implement passage jobs, vector persistence, model-version invalidation and semantic retrieval before wiring provisional clusters into the design.

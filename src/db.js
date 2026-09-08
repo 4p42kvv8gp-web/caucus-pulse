@@ -6,6 +6,7 @@ import { baselineClassify, validateFeedback } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
 import { rememberHoldoutSource } from './learning-context.js';
 import { migrateExplorer, searchSelection } from './explorer.js';
+import { migrateEmbeddings } from './embedding-store.js';
 
 export function openStore(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
@@ -46,6 +47,7 @@ export function openStore(path = ':memory:') {
   `);
   migrateOperations(db);
   migrateExplorer(db);
+  migrateEmbeddings(db);
 
   function transaction(fn) {
     return atomic(db, fn);

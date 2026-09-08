@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
-const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '' };
+const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0 };
 
 async function api(path, options) {
   const response = await fetch(path, options);
@@ -146,6 +146,7 @@ async function refresh({ cursor = '', params = null } = {}) {
     if (!state.dirty) renderReview();
     $('updated').textContent = cursor ? 'Reading older posts · return to newest to refresh' : `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
     if (state.view === 'wording' && $('phrase-input').value) await loadPhrase();
+    if (state.view === 'semantic') { await semanticStatus(); if($('semantic-query').value) await loadSemantic(); }
   } catch (error) {
     if (sequence !== state.sequence) return;
     if (error.code === 'EXPLORER_CHANGED') {
@@ -157,6 +158,7 @@ const headings = {
   explore: ['Listen. Trace. Understand.', 'Read the source. Explore the subjects. Teach the distinctions.'],
   teach: ['Teach the distinctions.', 'Your judgment becomes a saved example the product can learn from.'],
   wording: ['Keep every word.', 'Look closely at the language, with the complete source alongside it.'],
+  semantic: ['Find related subjects.', 'Search ideas while keeping each source and its wording visible.'],
   coverage: ['Trust starts with coverage.', 'See the boundaries of the archive and the state of the product.']
 };
 function setView(view) {
@@ -164,7 +166,35 @@ function setView(view) {
   for (const el of document.querySelectorAll('.view')) el.hidden = el.id !== `view-${view}`;
   for (const el of document.querySelectorAll('[data-view]')) { el.classList.toggle('active', el.dataset.view === view); el.setAttribute('aria-current', el.dataset.view === view ? 'page' : 'false'); }
   [$('page-title').textContent, $('page-description').textContent] = headings[view];
+  if(view==='semantic')void semanticStatus();
 }
+async function semanticStatus(){
+  try{
+    const status=await api('/api/semantic');
+    $('semantic-status').textContent=`${status.indexedPosts} of ${status.archivePosts} archived posts indexed. ${status.runtime.ready?'Search runs privately on this computer.':'The local model is not ready.'} ${status.pending?`${status.pending} posts awaiting indexing. `:''}${status.failed||status.skipped?`${status.failed} failed / ${status.skipped} outside indexing limits.`:''}`;
+    $('semantic-submit').disabled=!status.runtime.ready;
+  }catch(error){$('semantic-status').textContent=error.message;$('semantic-submit').disabled=true;}
+}
+async function loadSemantic(){
+  const sequence=++state.semanticSequence;
+  const query=$('semantic-query').value;
+  if(!query.trim())return;
+  $('semantic-submit').disabled=true;
+  try{
+    const result=await api('/api/semantic/search',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({query,filters:Object.fromEntries(filterParams()),limit:20})});
+    if(sequence!==state.semanticSequence)return;
+    const c=result.coverage;
+    $('semantic-results').innerHTML=`<div class="panel"><h3>${c.returnedPosts} related-subject results</h3><p class="quiet">${esc(result.searchNote)}</p><p class="quiet">${c.indexedPosts} of ${c.totalPosts} filtered posts indexed; ${c.examinedPosts} examined for this search. ${c.complete?'The indexed selection was examined.':'Coverage is partial: some sources or passages were not examined.'}${c.omittedSentenceDetails?` ${c.omittedSentenceDetails} additional sentence details were omitted; full context windows remain indexed.`:''}</p></div>`+
+      (result.results.map(({post,evidence})=>{
+        const best=evidence[0];
+        return `<article class="post-card">${sourceHeader(post)}<p class="quiet">Highlighted passage matched the subject. Read the surrounding wording for context.</p><p class="post-text">${esc(post.text.slice(0,best.start))}<mark class="phrase-match">${esc(best.text)}</mark>${esc(post.text.slice(best.end))}</p>${tags(post)}<p class="quiet">${post.type==='repost'?'Amplified wording; authorship and agreement are not established.':post.type==='quote'?'Quotation context and agreement are not established.':'Media and linked context have not been reviewed.'}</p></article>`;
+      }).join('')||'<div class="empty">No indexed posts are available in this selection. Broaden the filters or check indexing status.</div>');
+    showError('');
+  }catch(error){if(sequence===state.semanticSequence)showError(error.message);}
+  finally{if(sequence===state.semanticSequence)$('semantic-submit').disabled=false;}
+}
+$('semantic-form').addEventListener('submit',event=>{event.preventDefault();void loadSemantic();});
 async function loadPhrase() {
   const params = filterParams(); params.set('phrase', $('phrase-input').value);
   try {

@@ -2,19 +2,23 @@
 
 A private listening and classification workspace for public X posts by House Democratic members.
 
-This local foundation implements durable source storage, complete available text, provisional subject labels with evidence, a post explorer, exact phrase lookup, and persistent post corrections. It also provides resumable collection, budget enforcement, dated member attribution, and a provider-neutral semantic analysis contract. It has **no active live collector or semantic provider yet**. Imported calibration examples retain their historical dates. General lessons are saved as proposals and do not automatically alter other posts.
+This private local application preserves available source text, supports indexed exploration and local semantic search, and records post corrections with evidence. It also provides resumable collection, budget enforcement, dated member attribution, and a provider-neutral classification contract. **Live X collection and semantic classification are not connected yet.** Semantic retrieval works after downloading the pinned local model. Imported calibration examples retain their historical dates. General lessons are saved as proposals and do not automatically alter other posts.
 
 ## Run locally
 
-Use Node 24.19.x. No package dependencies are required for this first slice. The runtime's built-in SQLite module may print an experimental warning on Node 24; evaluate the production database adapter before hosting.
+Use Node 24.19.x and pnpm 11.19.0. The inference dependency and transitive packages are pinned in the lockfile; keep the workspace override when installing. The runtime's built-in SQLite module may print an experimental warning on Node 24.
 
 ```sh
+pnpm install --frozen-lockfile --ignore-scripts
 node --test
+node scripts/download-embedding-model.js minilm
 node scripts/import-calibration.js /absolute/path/to/calibration/voice-session.json
 node src/server.js
 ```
 
 Open http://127.0.0.1:4317. Import is optional: without it the application shows an empty archive. Import makes no network requests. Source-post content is deliberately not bundled in the repository. `PORT` changes the local port; `CAUCUS_DB_PATH` selects the private database file.
+
+The model-download command retrieves about 24 MB of public, revision-pinned assets and verifies their digests. Application inference then runs locally with remote loading disabled. Without those assets, the archive still opens and semantic search explicitly reports unavailable. See [Local semantic search](docs/LOCAL_SEMANTIC_SEARCH.md) for model choices, limits, and the engineering benchmark.
 
 ## Boundaries of this milestone
 
@@ -80,7 +84,7 @@ The first command downloads the public [House Clerk roster](https://clerk.house.
 
 The account-binding function requires a record of an official House page linking the exact profile, a matching numeric X user ID/username response, explicit ownership dates, and a source explanation. **It validates the submitted evidence record; it does not fetch or verify those pages itself.** The synchronization/verification caller still needs to be built. No account should be bound from a List entry alone. Personal/campaign accounts lacking an official link remain unresolved pending another reviewed evidence path.
 
-Local processing moves captured records into the explorer only after attribution succeeds. Identity and district are saved on each post, so later edits to account mappings cannot relabel its history. Failed verification retains the source in the queue. The local server processes at most 100 queued captures and 100 baseline jobs per minute; this involves no network or model requests.
+Local processing moves captured records into the explorer only after attribution succeeds. Identity and district are saved on each post, so later edits to account mappings cannot relabel its history. Failed verification retains the source in the queue. The local server processes at most 100 queued captures and 100 baseline jobs per minute. A separate local CPU worker indexes at most 25 posts per pass when its verified model is available; none of this makes X or hosted-model requests.
 
 ## Evidence and learning framework
 
@@ -102,7 +106,7 @@ See [Language discovery](docs/LANGUAGE_DISCOVERY.md) for filters, coverage limit
 
 ## Provenance
 
-The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate embedding/classification models, evaluation requirements, and archive/cost decisions. These models are not deployed. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
+The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate classification models, evaluation requirements, and archive/cost decisions. MiniLM and BGE now have a verified local retrieval implementation; MiniLM is the preview default. Other proposed models remain candidates. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
 
 Based on the reviewed [original Caucus Pulse project](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The new local foundation replaces file archives and nightly-only reports with a database-backed service. Broad subject structure is informed by the original taxonomy; facility identities are kept separate. See the workspace's PROJECT_SCOPE.md, TASKS.md, and DEVELOPMENT_HANDOFF.md for the complete build plan.
 

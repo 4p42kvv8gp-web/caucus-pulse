@@ -14,6 +14,7 @@
       <button data-view="explore" class="nav-button active">Post explorer <span>↗</span></button>
       <button data-view="teach" class="nav-button">Teaching desk <span>◇</span></button>
       <button data-view="wording" class="nav-button">Exact wording <span>❞</span></button>
+      <button data-view="semantic" class="nav-button">Related subjects <span>⌕</span></button>
       <button data-view="coverage" class="nav-button">Coverage & budget <span>◷</span></button>
     </nav>
     <div class="sidebar-note"><span class="dot amber"></span> Local development<br><small>House Democratic Caucus<br>Historical calibration collection</small></div>
@@ -51,6 +52,13 @@
         <form id="connection-form" class="feedback-form" autocomplete="off"><label>Bearer token<input id="x-token" type="password" autocomplete="off" minlength="20" maxlength="4096" required spellcheck="false" autocapitalize="none"></label>
           <div class="feedback-actions"><button id="save-connection" class="primary" type="submit">Save privately</button><span id="connection-result" class="success" role="status"></span></div></form>
       </div>
+    </section>
+    <section id="view-semantic" class="view" hidden>
+      <div class="section-heading"><h2>Find the subject beyond exact words</h2></div>
+      <div class="panel"><p>Describe an idea or event to find related passages. The filters above still apply; clear the full-text filter to search beyond those literal words.</p>
+        <p id="semantic-status" class="quiet">Checking the local search index…</p>
+        <form id="semantic-form" class="phrase-form"><label>Subject or question<input id="semantic-query" type="search" maxlength="2000" placeholder="e.g. emergency shelter after flooding" required></label><button id="semantic-submit" class="primary" type="submit">Find related posts</button></form>
+      </div><div id="semantic-results" aria-live="polite"></div>
     </section>
     <footer>Every interpretation should lead back to its source. <span>Private local preview · v0.1</span></footer>
   </main>

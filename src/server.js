@@ -9,7 +9,10 @@ import { createCredentialStore } from './credentials.js';
 import { learningStatus, postLearningHistory } from './learning-context.js';
 import { evaluationReport } from './evaluation.js';
 import { languageData } from './language.js';
-import { explorerPage } from './explorer.js';
+import { explorerPage,searchFilters } from './explorer.js';
+import { embeddingStatus,processEmbeddingJobs } from './embedding-store.js';
+import { createEmbeddingClient } from './embedding-client.js';
+import { semanticSearch } from './semantic-search.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -52,7 +55,7 @@ async function readJson(req) {
   catch { throw new Error('Invalid JSON.'); }
 }
 
-export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')) } = {}) {
+export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null } = {}) {
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -71,6 +74,21 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       }
       if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status() });
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
+      if (req.method === 'GET' && url.pathname === '/api/semantic') return json(200, {
+        ...embeddingStatus(store,semantic?.name??'minilm'),runtime:semantic?.runtime?.status()??{ready:false,busy:false,queued:0},
+        state:semantic?.state??'not-started'
+      });
+      if (req.method === 'POST' && url.pathname === '/api/semantic/search') {
+        const body=await readJson(req);
+        if (!body || Array.isArray(body) || Object.keys(body).some(k=>!['query','filters','limit'].includes(k)) ||
+            typeof body.query!=='string' || !body.query.trim() || body.query.length>2000 || body.query.includes('\0') ||
+            (body.filters!==undefined && (!body.filters || typeof body.filters!=='object' || Array.isArray(body.filters)))) throw new Error('Invalid semantic search request.');
+        const filters=searchFilters(body.filters??{}),limit=body.limit??20;
+        if (!Number.isInteger(limit) || limit<1 || limit>50) throw new Error('Invalid semantic search result limit.');
+        if (!semantic?.runtime?.status().ready) return json(503,{error:'Local semantic search is not ready. Source posts remain available.',code:'SEMANTIC_UNAVAILABLE'});
+        const embedding=await semantic.runtime.embedQuery(body.query);
+        return json(200,semanticSearch(store,embedding,{name:semantic.name,filters,limit}));
+      }
       if (req.method === 'POST' && url.pathname === '/api/settings/x-credential') {
         if (!allowedHosts.some(host => req.headers.origin === `http://${host}`)) return json(403, { error: 'Save credentials from the local connection form.' });
         const value = await readJson(req);
@@ -104,6 +122,8 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       return json(404, { error: 'Not found.' });
     } catch (error) {
       if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
+      if (['SEMANTIC_UNAVAILABLE','SEMANTIC_BUSY','SEMANTIC_INPUT_LIMIT'].includes(error.code)) return json(
+        error.code==='SEMANTIC_INPUT_LIMIT'?400:error.code==='SEMANTIC_BUSY'?429:503,{error:error.message,code:error.code});
       const safe = /^(Invalid |Expected JSON|Request is too large|Provide up to|Remove duplicate|Enter an exact)/.test(error.message);
       return json(safe ? 400 : 500, { error: safe ? error.message : 'The request could not be completed. Source data is retained.' });
     }
@@ -116,10 +136,33 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const store = openStore(process.env.CAUCUS_DB_PATH ?? resolve(root, 'data/pulse.sqlite'));
   function processLocalRecords() { promoteCaptured(store); store.analyzePending(); }
   processLocalRecords();
-  const server = createServer(store);
+  const semantic={name:settings.intelligence?.localEmbeddings?.model??'minilm',runtime:null,state:'disabled'};
+  let embeddingPass=false,stopping=false;
+  async function processLocalEmbeddings() {
+    if (stopping || embeddingPass || !semantic.runtime?.status().ready) return;
+    embeddingPass=true;
+    try { await processEmbeddingJobs(store,semantic.runtime,{limit:settings.intelligence?.localEmbeddings?.postsPerPass??25}); }
+    catch { semantic.state='worker-needs-attention'; }
+    finally { embeddingPass=false; }
+  }
+  let warmup=Promise.resolve();
+  if (settings.intelligence?.localEmbeddings?.enabled) {
+    semantic.state='starting';
+    warmup=createEmbeddingClient({name:semantic.name,modelRoot:resolve(root,'data/models')})
+      .then(async runtime=>{semantic.runtime=runtime;semantic.state='ready';if(stopping)await runtime.close();else await processLocalEmbeddings();})
+      .catch(()=>{semantic.state='model-unavailable';});
+  }
+  const server = createServer(store,{semantic});
   const port = Number(process.env.PORT ?? 4317);
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
-  const interval = setInterval(processLocalRecords, 60_000);
-  function shutdown() { clearInterval(interval); server.close(() => { store.close(); process.exit(0); }); }
+  const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();},60_000);
+  async function shutdown() {
+    if(stopping)return;stopping=true;clearInterval(interval);
+    const closed=new Promise(resolve=>server.close(resolve));
+    await warmup;await semantic.runtime?.close();await closed;
+    // Let a cancelled inference finish its fenced bookkeeping before closing SQLite.
+    while(embeddingPass)await new Promise(resolve=>setImmediate(resolve));
+    store.close();process.exit(0);
+  }
   process.on('SIGINT', shutdown); process.on('SIGTERM', shutdown);
 }

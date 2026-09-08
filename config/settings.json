@@ -5,6 +5,9 @@
   "mode": "historical-calibration",
   "pollMinutes": 30,
   "dashboardRefreshSeconds": 60,
+  "intelligence": {
+    "localEmbeddings": { "enabled": true, "model": "minilm", "postsPerPass": 25 }
+  },
   "budget": {
     "reportedCreditUsd": 400,
     "verifiedBalance": false,
