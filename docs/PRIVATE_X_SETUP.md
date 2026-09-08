@@ -2,9 +2,9 @@
 
 This step is needed before real account scans and post collection can start. Development on the dashboard and intelligence can continue without it.
 
-1. Open the [X Developer Console](https://console.x.com), select the existing app associated with your credit balance, and open **Keys and tokens**. Replace the credentials previously shared in chat. The product itself needs only the app's **Bearer Token**. X documents this in its [token guide](https://docs.x.com/fundamentals/authentication/oauth-2-0/bearer-tokens) and [credential replacement instructions](https://docs.x.com/fundamentals/authentication/guides/authentication-best-practices).
+1. Use the existing active **Bearer Token** for the X app associated with your credit balance. Jacob confirmed he wants to use that token; generating a replacement is not a setup requirement. If you need to locate it, open the existing app in the [X Developer Console](https://console.x.com) under **Keys and tokens**. The product needs only the bearer token.
 2. Open the local [Caucus Pulse preview](http://127.0.0.1:4317), choose **Coverage & budget**, and find **Private X connection**.
-3. Paste the replacement bearer token into the password field and select **Save privately**. Do not send the token through chat. A saved message confirms local storage only; it does not start collection or spend credits.
+3. Paste the existing active bearer token into the password field and select **Save privately**. Do not send the token through chat. A saved message confirms local storage only; it does not start collection or spend credits.
 
 The token stays in an owner-readable file on this computer, outside Git. It is not returned by dashboard responses. If the form says a runtime environment supplies the token, that existing private environment must be updated instead.
 

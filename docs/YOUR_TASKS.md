@@ -16,7 +16,7 @@ Updated September 7, 2026. Development continues without waiting for the optiona
 
 ## Ready now: one setup step for live X access
 
-- [ ] **Save a replacement X bearer token privately — about 5 minutes.** In the [local dashboard](http://127.0.0.1:4317), open Coverage & budget → Private X connection. Follow the [setup steps](PRIVATE_X_SETUP.md) to replace the previously shared credentials and save only the bearer token there. Do not paste it into chat. Saving does not spend credits. Codex can then run the bounded access and collection checks; independent development continues meanwhile.
+- [ ] **Save the existing active X bearer token privately — about 2 minutes.** In the [local dashboard](http://127.0.0.1:4317), open Coverage & budget → Private X connection and select Save privately after entering the bearer token. Use the active token you already have. See the [setup steps](PRIVATE_X_SETUP.md). Saving does not spend credits. Codex can then run the bounded access and collection checks; independent development continues meanwhile.
 
 ## Only if needed later
 

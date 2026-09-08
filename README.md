@@ -94,6 +94,12 @@ The [teaching and evaluation guide](docs/TEACHING_AND_EVALUATION.md) describes v
 
 The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Current imported examples still use the literal baseline. Synthetic tests never count as real model output or user feedback.
 
+## Automatic language discovery
+
+`GET /api/language` and `node scripts/language.js` now detect exact repeated passages in a bounded rolling window. Longer wording, punctuation, spacing, negation, source offsets, and post chronology are preserved. Reposts are excluded, quote captions remain explicitly uninterpreted, and member counts deduplicate multiple accounts. Every limit is disclosed; no source text is truncated in storage.
+
+See [Language discovery](docs/LANGUAGE_DISCOVERY.md) for filters, coverage limits, full source evidence, and interpretation boundaries. This is a local analysis service ready for the pending dashboard redesign. It makes no X/model requests and does not yet group paraphrases or infer events, stance, novelty, or coordination.
+
 ## Provenance
 
 Based on the reviewed [original Caucus Pulse project](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The new local foundation replaces file archives and nightly-only reports with a database-backed service. Broad subject structure is informed by the original taxonomy; facility identities are kept separate. See the workspace's PROJECT_SCOPE.md, TASKS.md, and DEVELOPMENT_HANDOFF.md for the complete build plan.

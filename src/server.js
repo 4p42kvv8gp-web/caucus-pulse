@@ -8,6 +8,7 @@ import { promoteCaptured } from './roster.js';
 import { createCredentialStore } from './credentials.js';
 import { learningStatus, postLearningHistory } from './learning-context.js';
 import { evaluationReport } from './evaluation.js';
+import { languageData } from './language.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -66,6 +67,15 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       }
       if (req.method === 'GET' && url.pathname === '/api/phrases') return json(200, phraseData(store, url.searchParams.get('phrase'), filtersFrom(url)));
       if (req.method === 'GET' && url.pathname === '/api/learning') return json(200, learningStatus(store));
+      if (req.method === 'GET' && url.pathname === '/api/language') {
+        const options = {};
+        for (const key of ['minWords','minMembers','limit','windowHours']) if (url.searchParams.has(key)) {
+          const value = url.searchParams.get(key);
+          if (!/^\d+$/.test(value)) throw new Error('Invalid language option.');
+          options[key] = Number(value);
+        }
+        return json(200, languageData(store, { ...filtersFrom(url), subtopic: url.searchParams.get('subtopic') ?? '' }, options));
+      }
       const learningMatch = url.pathname.match(/^\/api\/posts\/(\d+)\/learning$/);
       if (req.method === 'GET' && learningMatch) {
         if (!store.getPost(learningMatch[1])) return json(404, { error: 'Post not found.' });
