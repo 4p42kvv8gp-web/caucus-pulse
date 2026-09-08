@@ -1,6 +1,6 @@
 # Caucus Pulse — product scope and development plan
 
-Updated September 7, 2026. Owner: Jacob. Implementation: Codex in this task.
+Updated September 8, 2026. Owner: Jacob. Implementation: Codex in this task.
 
 September 8 update: Jacob requested seven hours of autonomous work without guidance, ending at 11:57:54 UTC / 7:57:54 AM Eastern. Preserve existing private-data and spending limits; continue independent implementation when access is missing. Read the new Hugging Face intelligence plan and Claude design integration notes under caucus-pulse/docs/. The Build Spec is available; its two reference screen files remain pending. No hosting destination or paid service has been selected. At the deadline, pause the existing development heartbeat and provide a verified completion/status report.
 
@@ -44,13 +44,13 @@ Topic and event panels describe observed language and volume. They do not grade 
 5. **Learn from corrections.** Store the original prediction, corrected interpretation, reason, scope, reviewer, and version. A correction applies to that post immediately; broader changes become versioned examples or rules. Retrieve relevant reviewed examples for later classifications.
 6. **Test before broad promotion.** Keep separate reviewed examples for evaluation; compare candidate changes against the current version, especially on negation, quotes, emerging entities, overlapping topics, and local incidents. Preserve rollback and a change log. Do not claim that conversation alone retrains model weights.
 
-Initial implementation uses a transparent local classification baseline to exercise the interface and data contract. It must be visibly labeled as such. The semantic model adapter, discovery pipeline, and evaluated feedback retrieval are required before calling the intelligent pilot complete. Choose a hosted model through measured task performance and cost; keep the provider replaceable.
+The current pilot uses local Political DEBATE large for provisional subjects and communicative functions, BGE for semantic retrieval/discovery, and BERT NER for source-exact named mentions. A transparent literal baseline remains available when no semantic result exists. Human corrections take immediate precedence; a needs-context decision keeps tentative labels out of topic counts. The selected fixed-hypothesis model does not consume saved examples or train itself. Reviewed-example retrieval and isolated candidate evaluations are prepared for the next learning stage. Generalization and model promotion require varied real judgments and a separate held-out comparison. Keep providers replaceable and measure any proposed hosted model before paying for it.
 
 ## Jacob's voice exercises
 
 Use the existing verified historical examples in `calibration/voice-session.json` first. Present one full post with original date and context limits, then the proposed topic, subtopic, entities/event, and explanation. Ask one focused question. Record the answer faithfully; restate the lesson; test it on a different post. Evaluate novelty at publication time, not based on how old the example is today.
 
-Suggested first session: 20–30 minutes on 8–12 varied examples. Resolve boundaries through examples instead of asking Jacob to design a taxonomy from scratch. Include multi-topic posts, a specific facility, a district incident, a quote/repost, vague political language, negation, and media-dependent content. Session length and sample size are suggestions, not blockers to development. Voice conversations can happen in this task; browser review and durable feedback must also work without voice.
+Start with about 15 minutes on the three real posts currently available. Resolve boundaries through examples instead of asking Jacob to design a taxonomy from scratch. Then assemble a broader authorized sample with multi-topic posts, facilities, district incidents, quotes/reposts, vague political language, negation and media-dependent content. Keep some new examples independently reserved for testing before showing candidate predictions. Session length and sample size are suggestions, not blockers to development. Voice conversations can happen in this task; browser review and durable feedback also work without voice. The dashboard itself does not record audio.
 
 ## Delivery sequence
 
@@ -63,7 +63,7 @@ Suggested first session: 20–30 minutes on 8–12 varied examples. Resolve boun
 | M4 — private deployment | Authentication, controlled storage, jobs, secrets, backups/removals, monitoring, launch instructions. | End-to-end trial, removal propagation and recovery verified, concrete operating cost and access reviewed. |
 | M5 — evolve | Event delivery, selective OCR/transcription, targeted history, quality monitoring and model improvements. | Each addition proves value and fits remaining budget; expand in small measured steps. |
 
-The local M1 slice exists, with its visual browser check still pending. M2 collection/roster foundations and M3 evidence/feedback contracts are implemented. BGE now powers local semantic retrieval and bounded emerging-subject candidates with durable source-versioned passages; actual classification and live account verification remain unconnected. Build through the remaining milestones while Jacob is away and publish meaningful progress through this task. The preview must distinguish historical examples from live coverage and actual semantic output. Do not promise a deployment date before account and hosting access are verified.
+The local pilot runs with three admitted real posts, current local analysis/search results, and one authentic saved review. A capped X trial observed 300 List profiles and five posts; official House links support 120 current account bindings, with four captures still unresolved and the List scan incomplete. The $3.025 trial is exhausted. Provider credit verification returned 404, so automatic collection remains off. Schema 11, durable model queues, interruption recovery, private owner-access support, sealed backups and managed removal cleanup pass local tests. Linux package locks and service templates are prepared but have not run on a Linux host. Held-out classification quality, visual browser inspection, the complete roster/collection cadence, actual owner login and off-host recovery remain release gates. The preview must keep these distinctions visible; no live site replacement or hosted deployment has been made.
 
 ## Deferred from the first pilot
 

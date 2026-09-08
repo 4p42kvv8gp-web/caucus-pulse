@@ -58,9 +58,9 @@
       <div class="panel"><p>Search a phrase of any practical length. Original punctuation, case, and negation are preserved. This view finds exact occurrences; the dashboard also discovers repeated passages and related subject groups. Related wording alone does not establish agreement or coordination.</p>
       <form id="phrase-form" class="phrase-form"><label>Exact phrase<input id="phrase-input" placeholder="Paste wording from a post" maxlength="2000" required></label><button class="primary" type="submit">Find occurrences</button></form></div><div id="phrase-results"></div>
     </section>
-    <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="coverage" class="coverage-grid"></div>
+    <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="operational-status" class="panel"></div><div id="coverage" class="coverage-grid"></div>
       <div class="panel"><h3>Private X connection</h3><p id="connection-status" class="quiet">Checking local setup…</p>
-        <p>Save your existing active X bearer token here. It is stored in a private file on this computer and is never sent back in dashboard responses. Saving does not start collection or spend credits.</p>
+        <p>Save your existing active X bearer token here. It is stored in a private file in this workspace and is never sent back in dashboard responses. Saving does not start collection or spend credits.</p>
         <form id="connection-form" class="feedback-form" autocomplete="off"><label>Bearer token<input id="x-token" type="password" autocomplete="off" minlength="20" maxlength="4096" required spellcheck="false" autocapitalize="none"></label>
           <div class="feedback-actions"><button id="save-connection" class="primary" type="submit">Save privately</button><span id="connection-result" class="success" role="status"></span></div></form>
       </div>

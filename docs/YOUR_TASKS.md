@@ -12,13 +12,14 @@ Updated September 8, 2026. Development continues without waiting for the optiona
 ## Your useful product work
 
 - [ ] **Start with about 15 minutes of voice teaching.** The Teach desk and three real source examples are ready. We will read the proposal and ask one focused question at a time. You explain what is right, wrong or unknowable from the wording. Focus on subtopics, overlapping oversight, district incidents and missing context. Your existing review is preserved. A later, broader sample will be needed to test improvement; you do not need to write the taxonomy first.
-- [ ] **Provide the two reference screens when convenient:** DashboardV3.dc.html and Incidents.dc.html, ideally in the design ZIP. Build Spec.html has been received and read. This can wait; autonomous backend/intelligence work continues without guidance during the seven-hour window.
+- [ ] **Provide the two reference screens when convenient:** DashboardV3.dc.html and Incidents.dc.html, ideally in the design ZIP. Build Spec.html has been received and used. This is optional for backend work and needed only to match the exact reference screens.
 - [ ] **Try the local dashboard — about 10 minutes.** Open http://127.0.0.1:4317, choose “All archived dates” to include the historical examples, and inspect a subject's supporting posts. The current archive is a small pilot, not full caucus coverage. We handle implementation details.
 
 ## X setup already handled
 
 - [x] The existing active token is saved privately and worked for usage, List profiles and a five-post collection trial. No new token is needed.
-- The one-time connection trial used $3.025 in conservative local accounting. The provider's credit endpoint returned 404, so automatic polling remains off until the remaining balance can be verified. We are handling the integration and will present any concrete remaining requirement after the work window.
+- The one-time connection trial used $3.025 in conservative local accounting. The provider's credit endpoint returned 404, so automatic polling remains off until the remaining balance can be verified.
+- [ ] **Confirm the credit shown in the X developer console and the account's API access.** This is the remaining account-side check; no new token or credit purchase is requested. We handle the balance integration, roster reconciliation and polling setup. A manually reported figure alone does not make the current automated balance check pass.
 
 ## Only if needed later
 

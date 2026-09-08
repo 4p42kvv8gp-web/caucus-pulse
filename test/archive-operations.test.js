@@ -21,7 +21,7 @@ test('a live-WAL backup is consistent, private, verified and independent of cred
   const f=setup();try{
     add(f.store,1);add(f.store,2);f.store.saveFeedback('1',{labels:[],reason:'Synthetic review.'});
     mkdirSync(join(f.root,'secrets'),{mode:0o700});writeFileSync(join(f.root,'secrets','test-secret'),'synthetic-not-a-real-credential',{mode:0o600});
-    const backup=await createDatabaseBackup(f.path);assert.equal(backup.posts,2);assert.equal(backup.topicReviews,1);assert.equal(backup.schema,10);
+    const backup=await createDatabaseBackup(f.path);assert.equal(backup.posts,2);assert.equal(backup.topicReviews,1);assert.equal(backup.schema,11);
     assert.equal(statSync(backup.path).mode&0o077,0);assert.equal((await verifyDatabaseBackup(backup.path)).manifestVerified,true);
     assert.equal(readFileSync(backup.path).includes(Buffer.from('synthetic-not-a-real-credential')),false);
     add(f.store,3);assert.equal(inspectDatabase(backup.path).posts,2);assert.equal(f.store.getPost('3').id,'3');
@@ -135,7 +135,7 @@ test('schema-nine migration preserves gapped search identities and rolls back co
     assert.equal(store.db.prepare('PRAGMA table_info(post_search)').all().some(c=>c.name==='search_id'),false);
     assert.deepEqual(store.db.prepare('SELECT rowid AS search_rowid,post_id FROM post_search ORDER BY rowid').all(),before);
     store.db.exec('DROP TRIGGER synthetic_migration_failure');store.close();store=openStore(path);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,10);compactDatabase(store.db);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,11);compactDatabase(store.db);
     assert.deepEqual(store.db.prepare('SELECT rowid AS search_rowid,post_id FROM post_search ORDER BY rowid').all(),before);
     assert.equal(explorerPage(store,{query:'Third test wording'}).posts[0].id,'3');
     store.saveFeedback('3',{labels:[{topic:'Synthetic correction'}],reason:'Synthetic correction after migration.'});
@@ -146,7 +146,7 @@ test('schema-nine migration preserves gapped search identities and rolls back co
 test('backing up the older schema repairs any unstable FTS row mapping in the new snapshot only',async()=>{
   const f=setup();try{
     add(f.store,1,'First legacy test.');add(f.store,2,'Second legacy test.');add(f.store,3,'Third legacy test.');f.store.removePost('2');legacySearchFixture(f.store.db);
-    const copy=await createDatabaseBackup(f.path);assert.equal(copy.schema,10);assert.equal(f.store.db.prepare('SELECT version FROM schema_version').get().version,9);
+    const copy=await createDatabaseBackup(f.path);assert.equal(copy.schema,11);assert.equal(f.store.db.prepare('SELECT version FROM schema_version').get().version,9);
     const store=openStore(copy.path);try{assert.equal(explorerPage(store,{query:'Third legacy test'}).posts[0].id,'3');}finally{store.close();}
   }finally{f.close();}
 });

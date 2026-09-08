@@ -16,6 +16,8 @@ node scripts/archive.js verify --backup /absolute/path/to/data/backups/backup-TI
 
 Schema 10 gives the search projection an explicit integer primary key. This preserves its FTS document identities across compaction. The migration preserves existing search IDs transactionally and rebuilds the index; a failure rolls back the migration. Do not edit the schema version manually.
 
+Schema 11 keeps tentative labels from an unresolved human review out of topic counts and filters. It updates the disposable search projection while retaining source text, model proposals, all review history and stable search IDs. A failed migration rolls back the view and projected labels together. New backups migrate their copy to schema 11; an older application cannot open the upgraded live archive.
+
 Backups remain **plaintext private local files**. They protect against some accidental changes, but a lost or failed host can lose both archive and backups. Encrypted off-host storage, a separately protected removal ledger, backup retention and a restore drill on the chosen host are required before calling this disaster recovery. No off-host copy or retention scheduler is active. New backups intentionally have no automatic pruning; inspect disk usage and retain only the agreed recovery window.
 
 SQLite's [VACUUM INTO](https://www.sqlite.org/lang_vacuum.html) provides a consistent snapshot and may require substantial temporary space. Keep at least twice the live database size available for compaction, plus the additional backup and normal growth. Do not copy only a live `.sqlite` file while ignoring its write-ahead log.

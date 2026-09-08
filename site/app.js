@@ -34,6 +34,7 @@ function setOptions(element, options, first) {
 }
 function tags(post) {
   const decision=post.feedback?.find(f=>f.appliesToCurrentText)?.decision;
+  if(post.labelStatus==='needs-context'||decision==='needs-context')return '<div class="tags"><span class="tag">Needs more context</span><span class="tag reviewed">Review saved · classification unresolved</span></div>';
   return `<div class="tags">${post.labels.length ? post.labels.map(l => `<span class="tag">${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</span>`).join('') : `<span class="tag">${decision==='no-supported-topic'?'No supported topic':decision==='needs-context'?'Needs more context':'No proposed subject'}</span>`}<span class="tag ${post.reviewStatus === 'reviewed' ? 'reviewed' : ''}">${post.reviewStatus === 'reviewed' ? 'Topic review saved' : 'Provisional'}</span></div>`;
 }
 function sourceEvidence(spans = []) {
@@ -78,6 +79,8 @@ function renderCoverage() {
   const ops = state.data.operations; const usage = b.state;
   const roster = ops.roster.snapshot;
   const inventory = ops.inventory;
+  const status=state.data.operationalStatus;
+  $('operational-status').innerHTML=status?`<div class="section-heading"><h3>Setup and processing status</h3><span class="quiet">${status.needsAttention} checks need attention</span></div>${status.components.map(item=>`<div class="detail-row"><strong>${esc(item.title)}</strong><span class="quiet">${esc(item.detail)}</span></div>`).join('')}<p class="quiet">${esc(status.note)}</p>`:'<p class="quiet">Processing status is unavailable. Reload the workspace.</p>';
   const dollars = micro => `$${((micro ?? 0) / 1_000_000).toFixed(3)}`;
   function rows(items) { return items.map(([label, value]) => `<div class="detail-row"><small>${esc(label)}</small>${esc(value)}</div>`).join(''); }
   $('coverage').innerHTML = `<div class="panel"><h3>Source coverage</h3>${rows([
@@ -133,17 +136,19 @@ function renderReview() {
   $('review-select').value=post?.id??'';
   if (!post) { $('review').innerHTML = '<div class="empty">No post is selected. Open a source post or choose an unreviewed post from the current selection.</div>'; return; }
   const proposal = post.provenance.assistantProposal;
-  const decision=post.feedback.find(f=>f.appliesToCurrentText)?.decision??(post.labels.length?'classified':'needs-context');
+  const currentReview=post.feedback.find(f=>f.appliesToCurrentText);
+  const decision=currentReview?.decision??(post.labels.length?'classified':'needs-context');
+  const draftLabels=decision==='needs-context'&&currentReview?currentReview.labels:post.labels;
   $('review').innerHTML = `<div class="review-grid"><div><article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}
     <div class="post-footer"><button class="text-button" id="review-event-source" type="button">Review incident / location →</button><button class="text-button" id="review-reload" type="button">Reload latest source</button></div><div class="explanation"><h3>Current analysis explanation</h3><p class="quiet">${esc(post.analysis.method)} · ${esc(post.analysis.version ?? 'Awaiting analysis')}</p><button id="analyze-post" class="secondary" type="button" ${state.data.classifierRuntime?.ready?'':'disabled'}>Analyze with local model</button><span id="analyze-state" class="quiet" role="status">${state.data.classifierRuntime?.ready?'':' Local classifier is not ready.'}</span><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}${sourceEvidence(l.evidence)}</div>`).join('')}
     ${semanticDetails(post.analysis)}
     ${proposal ? `<div class="explanation"><h3>Prepared discussion proposal</h3><p>${esc(proposal.justification)}</p><p class="quiet">${esc(proposal.uncertainty)}</p><p class="quiet">Prepared by the assistant for this exercise; not an accepted rule or an automated semantic result.</p></div>` : ''}
     <div class="limits">Context limits<ul>${post.analysis.limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></div></article></div>
     <div class="panel"><h3>Your interpretation</h3><p class="quiet">${esc(post.provenance.reviewPrompt ?? 'What should this post be classified as, and what wording supports that interpretation?')}</p>
-    <form id="feedback-form" class="feedback-form"><label>Review decision<select id="feedback-decision"><option value="classified" ${decision==='classified'?'selected':''}>These topic labels are supported</option><option value="no-supported-topic" ${decision==='no-supported-topic'?'selected':''}>No topic is supported by the available text</option><option value="needs-context" ${decision==='needs-context'?'selected':''}>I need more context before deciding</option></select></label><div id="label-rows">${(post.labels.length ? post.labels : [{}]).map(labelRow).join('')}</div><button type="button" class="secondary" id="add-label">+ Add another topic</button>
+    <form id="feedback-form" class="feedback-form"><label>Review decision<select id="feedback-decision"><option value="classified" ${decision==='classified'?'selected':''}>These topic labels are supported</option><option value="no-supported-topic" ${decision==='no-supported-topic'?'selected':''}>No topic is supported by the available text</option><option value="needs-context" ${decision==='needs-context'?'selected':''}>I need more context before deciding</option></select></label><div id="label-rows">${(draftLabels.length ? draftLabels : [{}]).map(labelRow).join('')}</div><button type="button" class="secondary" id="add-label">+ Add another topic</button>
     <label>Why is this the right interpretation?<textarea id="feedback-reason" rows="4" maxlength="2000" placeholder="Explain the distinction you want the product to learn…" required></textarea></label>
     <label>Possible general lesson (optional)<textarea id="feedback-rule" rows="3" maxlength="2000" placeholder="A rule to test on other posts. This will be saved as a proposal."></textarea></label>
-    <p class="quiet">“No topic is supported” saves an explicit empty answer. “Need more context” stays out of teaching examples. The reason is required for every decision.</p><div class="feedback-actions"><button class="primary" type="submit">Save correction</button><span id="save-state" class="success" role="status"></span></div></form>
+    <p class="quiet">“No topic is supported” saves an explicit empty answer. “Need more context” keeps tentative labels in this review, outside topic counts and teaching examples. The reason is required for every decision.</p><div class="feedback-actions"><button class="primary" type="submit">Save correction</button><span id="save-state" class="success" role="status"></span></div></form>
     ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedbackOmitted?`<p class="quiet">${post.feedback.length} of ${post.feedbackCount} reviews displayed. The remaining history is retained privately.</p>`:''}${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
   $('review-event-source').addEventListener('click',()=>void selectIncident(post.id));
   $('review-reload').addEventListener('click',()=>void selectReview(post.id));
@@ -168,11 +173,12 @@ function renderReview() {
     const labels = [...document.querySelectorAll('.label-entry')].map(row => ({
       topic: row.querySelector('[name=topic]').value.trim(), subtopic: row.querySelector('[name=subtopic]').value.trim() || null
     })).filter(l => l.topic || l.subtopic);
+    const savedDecision=$('feedback-decision').value;
     try {
       await api(`/api/posts/${post.id}/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, labels:$('feedback-decision').value==='no-supported-topic'?[]:labels, decision:$('feedback-decision').value, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
+        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, labels:savedDecision==='no-supported-topic'?[]:labels, decision:savedDecision, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
       state.dirty = false; await refresh();
-      if ($('save-state')) $('save-state').textContent = 'Saved. This post now uses your correction.';
+      if ($('save-state')) $('save-state').textContent = savedDecision==='needs-context'?'Saved. Classification remains unresolved; tentative labels stay outside topic counts.':savedDecision==='no-supported-topic'?'Saved. This post has no accepted topic.':'Saved. This post now uses your correction.';
     } catch (error) { showError(error.message); }
     finally{state.savingReview=false;controls.forEach(({element,disabled})=>{element.disabled=disabled;});if(button)button.disabled=false;}
   });

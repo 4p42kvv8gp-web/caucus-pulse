@@ -136,11 +136,20 @@ export function failEmbeddingJob(store,claim,{now=Date.now(),limitExceeded=false
     claim.postId,claim.modelFingerprint,claim.owner,claim.sourceHash,now).changes;
 }
 
-export async function processEmbeddingJobs(store,runtime,{limit=25,now=()=>Date.now(),leaseMs=120000}={}) {
-  if (!Number.isInteger(limit) || limit<1 || limit>100) throw new Error('Invalid embedding worker limit.');
+export function deferEmbeddingJob(store,claim,now=Date.now()){
+  return store.db.prepare(`UPDATE embedding_jobs SET status='pending',attempts=MAX(0,attempts-1),lease_owner=NULL,
+    lease_expires_ms=NULL,updated_at=?,last_error=NULL WHERE post_id=? AND model_id=? AND status='running'
+    AND lease_owner=? AND source_hash=? AND lease_expires_ms>?
+    AND EXISTS(SELECT 1 FROM posts p WHERE p.id=embedding_jobs.post_id AND p.content_hash=embedding_jobs.source_hash)`)
+    .run(new Date(now).toISOString(),claim.postId,claim.modelFingerprint,claim.owner,claim.sourceHash,now).changes;
+}
+
+export async function processEmbeddingJobs(store,runtime,{limit=25,now=()=>Date.now(),leaseMs=120000,stopping=()=>false}={}) {
+  if (!Number.isInteger(limit) || limit<1 || limit>100 || typeof stopping!=='function') throw new Error('Invalid embedding worker configuration.');
   const model=registerEmbeddingModel(store,runtime.model,now());
-  const counts={completed:0,failed:0,skipped:0,stale:0};
-  for (let i=0;i<limit;i++) {
+  const counts={completed:0,failed:0,skipped:0,stale:0,deferred:0};
+  for (let i=0;i<limit&&!stopping();i++) {
+    if(typeof runtime.status==='function'&&!runtime.status().ready)break;
     const claim=claimEmbeddingJob(store,model,{now:now(),leaseMs});
     if (!claim) break;
     if (claim.skipped) { counts.skipped++; continue; }
@@ -149,6 +158,10 @@ export async function processEmbeddingJobs(store,runtime,{limit=25,now=()=>Date.
       const saved=finishEmbeddingJob(store,claim,result,model,now());
       if (saved.saved) counts.completed++; else counts.stale++;
     } catch (error) {
+      if(stopping()&&error.code==='SEMANTIC_CANCELLED'){
+        if(deferEmbeddingJob(store,claim,now()))counts.deferred++;else counts.stale++;
+        continue;
+      }
       const limitExceeded=/^Source exceeds the embedding (character|passage) limit\.$/.test(error.message);
       const changed=failEmbeddingJob(store,claim,{now:now(),limitExceeded});
       if (!changed) counts.stale++;

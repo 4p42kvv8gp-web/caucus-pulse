@@ -100,7 +100,7 @@ test('failed or oversized embedding jobs retain full sources and do not invent c
     add(store,'1');add(store,'2','a'.repeat(100001));store.analyzePending();
     const before=store.getPost('1').analysis;
     const counts=await processEmbeddingJobs(store,syntheticRuntime(()=>{throw new Error('Synthetic private payload: never persist this.');}));
-    assert.deepEqual(counts,{completed:0,failed:1,skipped:1,stale:0});
+    assert.deepEqual(counts,{completed:0,failed:1,skipped:1,stale:0,deferred:0});
     assert.equal(store.getPost('2').text.length,100001);
     assert.deepEqual(store.getPost('1').analysis,before);
     assert.equal(store.db.prepare('SELECT COUNT(*) AS n FROM feedback').get().n,0);
@@ -160,7 +160,7 @@ test('persisted vectors and jobs survive reopening and migration from version si
     add(store,'1');
     store.db.exec('DROP TABLE incident_case_history; DROP TABLE incident_case_posts; DROP TABLE incident_cases; DROP TABLE incident_reviews; DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models; UPDATE schema_version SET version=6;');
     store.close();store=openStore(path);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,10);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,11);
     await processEmbeddingJobs(store,syntheticRuntime());
     store.close();store=openStore(path);
     assert.equal(semanticSearch(store,query).results[0].post.id,'1');

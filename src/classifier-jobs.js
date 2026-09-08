@@ -126,11 +126,20 @@ export function failClassification(store, claim, code = 'CLASSIFIER_UNAVAILABLE'
     claim.postId, claim.profileId, claim.owner, claim.sourceHash, now).changes;
 }
 
+export function deferClassification(store,claim,now=Date.now()){
+  return atomic(store.db,()=>{
+    try{assertClaim(store,claim,now);}catch{return 0;}
+    return store.db.prepare(`UPDATE classifier_jobs SET status='pending',attempts=MAX(0,attempts-1),lease_owner=NULL,
+      lease_expires_ms=NULL,updated_at=?,last_error_code=NULL WHERE post_id=? AND profile_id=?`).run(new Date(now).toISOString(),claim.postId,claim.profileId).changes;
+  });
+}
+
 export async function processClassificationJobs(store, runtime, { limit = 5, now = () => Date.now(), leaseMs = 240000, stopping = () => false } = {}) {
-  if (!Number.isInteger(limit) || limit < 1 || limit > 25 || runtime.fingerprint !== classifierFingerprint) throw new Error('Invalid classifier worker configuration.');
+  if (!Number.isInteger(limit) || limit < 1 || limit > 25 || runtime.fingerprint !== classifierFingerprint || typeof stopping!=='function') throw new Error('Invalid classifier worker configuration.');
   registerClassifier(store, now());
-  const counts = { completed: 0, failed: 0, skipped: 0, stale: 0 };
+  const counts = { completed: 0, failed: 0, skipped: 0, stale: 0, deferred:0 };
   for (let i = 0; i < limit && !stopping(); i++) {
+    if(typeof runtime.status==='function'&&!runtime.status().ready)break;
     const claim = claimClassification(store, { now: now(), leaseMs });
     if (!claim) break;
     if (claim.skipped) { counts.skipped++; continue; }
@@ -140,6 +149,11 @@ export async function processClassificationJobs(store, runtime, { limit = 5, now
       finishClassification(store, claim, request, output, now());
       counts.completed++;
     } catch (error) {
+      if(stopping()&&error.code==='CLASSIFIER_CANCELLED'){
+        if(deferClassification(store,claim,now()))counts.deferred++;
+        else{failClassification(store,claim,'CLASSIFIER_STALE',now());counts.stale++;}
+        continue;
+      }
       const changed = failClassification(store, claim, error.code, now());
       if (!changed || error.code === 'CLASSIFIER_STALE') counts.stale++;
       else if (error.code === 'CLASSIFIER_INPUT_LIMIT') counts.skipped++; else counts.failed++;

@@ -1,8 +1,10 @@
 import { createHash } from 'node:crypto';
 import { atomic } from './sqlite.js';
 
-export const EXPLORER_VERSION = 'indexed-explorer-v1';
+export const EXPLORER_VERSION = 'indexed-explorer-v2';
 export const SEARCH_NOTE = 'Literal substring search with Unicode lowercase matching. Punctuation, spacing and accents are preserved; no stemming, word removal, or semantic interpretation.';
+const LEGACY_REVIEW_LABELS_SQL="COALESCE(json_extract(f.feedback_json,'$.labels'),json_extract(n.analysis_json,'$.labels'),'[]')";
+const REVIEW_LABELS_SQL="CASE WHEN f.sequence IS NULL THEN COALESCE(json_extract(n.analysis_json,'$.labels'),'[]') WHEN COALESCE(json_extract(f.feedback_json,'$.decision'),CASE WHEN json_array_length(f.feedback_json,'$.labels')>0 THEN 'classified' ELSE 'needs-context' END)='needs-context' THEN '[]' ELSE COALESCE(json_extract(f.feedback_json,'$.labels'),'[]') END";
 
 // These projections are disposable indexes. Source text and review history remain authoritative.
 export function migrateExplorer(db) {
@@ -22,7 +24,7 @@ export function migrateExplorer(db) {
         COALESCE(json_extract(p.attribution_json,'$.accountType'),a.account_type) AS account_type,
         p.type,COALESCE(json_extract(p.normalized_json,'$.provenance.kind'),'unresolved') AS provenance_kind,
         search_lower(p.text) AS search_text,
-        COALESCE(json_extract(f.feedback_json,'$.labels'),json_extract(n.analysis_json,'$.labels'),'[]') AS labels_json,
+        ${REVIEW_LABELS_SQL} AS labels_json,
         (f.sequence IS NOT NULL) AS reviewed,
         (SELECT COUNT(*) FROM feedback r WHERE r.post_id=p.id AND json_extract(r.feedback_json,'$.ruleProposal') IS NOT NULL) AS rule_proposals
       FROM posts p JOIN accounts a ON a.author_id=p.author_id
@@ -99,6 +101,22 @@ export function migrateStableExplorerRowids(db) {
       db.exec("INSERT INTO post_search_fts(post_search_fts) VALUES ('rebuild')");
     }
     db.exec('UPDATE explorer_revision SET revision=revision+1 WHERE id=1; UPDATE schema_version SET version=10');
+  });
+}
+
+export function migrateUnresolvedReviewLabels(db){
+  if(db.prepare('SELECT version FROM schema_version').get().version>=11)return;
+  atomic(db,()=>{
+    const view=db.prepare("SELECT sql FROM sqlite_schema WHERE type='view' AND name='post_search_source'").get();
+    if(!view?.sql)throw new Error('The source search projection is missing.');
+    if(!view.sql.includes(REVIEW_LABELS_SQL)){
+      if(!view.sql.includes(LEGACY_REVIEW_LABELS_SQL))throw new Error('The prior review-label projection is unsupported.');
+      db.exec('DROP VIEW post_search_source');db.exec(view.sql.replace(LEGACY_REVIEW_LABELS_SQL,REVIEW_LABELS_SQL));
+    }
+    db.exec(`UPDATE post_search SET labels_json=(SELECT labels_json FROM post_search_source s WHERE s.post_id=post_search.post_id)
+      WHERE labels_json IS NOT (SELECT labels_json FROM post_search_source s WHERE s.post_id=post_search.post_id);
+      UPDATE explorer_revision SET revision=revision+1 WHERE id=1;
+      UPDATE schema_version SET version=11;`);
   });
 }
 

@@ -6,8 +6,11 @@ import { classifierMessages, classifierEvidenceCatalog, parseClassifierOutput, c
 const root = fileURLToPath(new URL('../', import.meta.url));
 const failure = (message = 'Local classification is unavailable.', code = 'CLASSIFIER_UNAVAILABLE') => Object.assign(new Error(message), { code });
 
-export async function createLocalClassifierClient({ python = resolve(root, localClassifierSpec.engine==='political-debate-nli'?'data/nli-runtime/bin/python':'data/classifier-runtime/bin/python'), timeoutMs = 180000, onInvalidOutput = null } = {}) {
+export async function createLocalClassifierClient({ python = resolve(root, localClassifierSpec.engine==='political-debate-nli'?'data/nli-runtime/bin/python':'data/classifier-runtime/bin/python'), timeoutMs = 180000, onInvalidOutput = null, signal } = {}) {
   if (!Number.isInteger(timeoutMs) || timeoutMs < 1000 || timeoutMs > 180000) throw new Error('Invalid classifier timeout.');
+  if(signal!==undefined&&!(signal instanceof AbortSignal))throw new Error('Invalid classifier lifetime signal.');
+  const cancelled=()=>failure('Local classifier was stopped for shutdown.','CLASSIFIER_CANCELLED');
+  if(signal?.aborted)throw cancelled();
   const nli=localClassifierSpec.engine==='political-debate-nli';
   const child = spawn(python, [resolve(root, nli?'scripts/nli-classifier-worker.py':'scripts/local-classifier-worker.py')], {
     cwd: root, env: { PYTHONNOUSERSITE: '1', PYTHONUNBUFFERED: '1', HF_HUB_OFFLINE: '1', TRANSFORMERS_OFFLINE: '1', TOKENIZERS_PARALLELISM: 'false' },
@@ -21,7 +24,7 @@ export async function createLocalClassifierClient({ python = resolve(root, local
   const exited = new Promise(resolve => child.once('close', resolve));
   function stop(error = failure()) {
     if (closed) return exited;
-    closed = true; clearTimeout(startup); readyReject(error);
+    closed = true; clearTimeout(startup);signal?.removeEventListener('abort',onAbort); readyReject(error);
     if (active) { clearTimeout(active.timer); active.reject(error); active = null; }
     for (const item of queue.splice(0)) item.reject(error);
     child.stdin.destroy(); child.kill('SIGTERM');
@@ -40,6 +43,7 @@ export async function createLocalClassifierClient({ python = resolve(root, local
   child.on('close', () => { if (!closed) stop(); });
   child.stdout.setEncoding('utf8');
   child.stdout.on('data', data => {
+    if(closed)return;
     buffer += data;
     if (buffer.length > 200000) { stop(failure('Local classifier returned an invalid response.')); return; }
     let at;
@@ -72,7 +76,10 @@ export async function createLocalClassifierClient({ python = resolve(root, local
       next();
     }
   });
-  await ready;
+  const onAbort=()=>{void stop(cancelled());};
+  signal?.addEventListener('abort',onAbort,{once:true});
+  if(signal?.aborted)onAbort();
+  try{await ready;}catch(error){await stop(error);throw error;}
   function classify(request) {
     if (closed) return Promise.reject(failure());
     if (queue.length >= 4) return Promise.reject(failure('Local classification is busy.', 'CLASSIFIER_BUSY'));

@@ -19,7 +19,7 @@ export function inspectDatabase(path,{snapshot=false}={}) {
   regularFile(path,{privateOnly:false});const db=new DatabaseSync(snapshot?snapshotUrl(path):path,{readOnly:true});
   try{
     const version=db.prepare('SELECT version FROM schema_version').get()?.version;
-    if(!Number.isSafeInteger(version)||version<1||version>10)throw new Error('Backup schema is unsupported.');
+    if(!Number.isSafeInteger(version)||version<1||version>11)throw new Error('Backup schema is unsupported.');
     if(db.prepare('PRAGMA quick_check').all().some(row=>Object.values(row)[0]!=='ok')||db.prepare('PRAGMA foreign_key_check').all().length)throw inspectError();
     return {schema:version,integrity:'ok',posts:count(db,'posts'),capturedPosts:count(db,'captured_posts'),topicReviews:count(db,'feedback'),incidentReviews:count(db,'incident_reviews'),cases:count(db,'incident_cases'),tombstones:count(db,'tombstones'),requests:count(db,'budget_requests'),accountedMicro:tableExists(db,'budget_requests')?db.prepare('SELECT COALESCE(SUM(accounted_micro),0) AS n FROM budget_requests').get().n:0};
   }finally{db.close();}
@@ -94,7 +94,7 @@ export async function stageDatabaseRestore(backupPath,{currentPath,outputPath}={
   try{
     const backup=await verifyDatabaseBackup(backupPath);
     current=new DatabaseSync(currentPath,{readOnly:true});current.exec('PRAGMA busy_timeout=5000; BEGIN');
-    if(current.prepare('SELECT version FROM schema_version').get().version!==10)throw new Error('Current archive must use the current schema before reconciliation.');
+    if(current.prepare('SELECT version FROM schema_version').get().version!==11)throw new Error('Current archive must use the current schema before reconciliation.');
     copyFileSync(backupPath,temporary,constants.COPYFILE_EXCL);chmodSync(temporary,0o600);
     if(await fileHash(temporary)!==backup.sha256)throw new Error('Backup changed while staging the restore.');
     store=openStore(temporary);

@@ -2,10 +2,10 @@ import { DatabaseSync } from 'node:sqlite';
 import { chmodSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
-import { baselineClassify, validateFeedback } from './classify.js';
+import { baselineClassify, validateFeedback, feedbackDecision, effectiveLabels } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
 import { rememberHoldoutSource } from './learning-context.js';
-import { migrateExplorer, migrateStableExplorerRowids, searchSelection } from './explorer.js';
+import { migrateExplorer, migrateStableExplorerRowids, migrateUnresolvedReviewLabels, searchSelection } from './explorer.js';
 import { migrateEmbeddings } from './embedding-store.js';
 import { migrateClassifier } from './classifier-jobs.js';
 import { migrateIncidents } from './incidents.js';
@@ -59,6 +59,7 @@ export function openStore(path = ':memory:') {
   migrateClassifier(db);
   migrateIncidents(db);
   migrateStableExplorerRowids(db);
+  migrateUnresolvedReviewLabels(db);
   if(removalJournal?.entries.length)applyRemovalJournal(db,removalJournal);
   }catch(error){db.close();throw error;}
 
@@ -140,7 +141,8 @@ export function openStore(path = ':memory:') {
     const feedbackCount=db.prepare('SELECT COUNT(*) AS n FROM feedback WHERE post_id=?').get(post.id).n;
     return { ...post, ...attribution, analysis, analysisHash: createHash('sha256').update(JSON.stringify(analysis)).digest('hex'),reviewId:accepted?.id??null,
       feedbackCount,feedbackOmitted:feedbackCount-history.length,
-      labels: accepted?.labels ?? analysis.labels, reviewStatus: accepted ? 'reviewed' : 'awaiting-review', feedback: history };
+      labels: effectiveLabels(analysis,accepted), labelStatus:accepted?(feedbackDecision(accepted)==='needs-context'?'needs-context':'human-accepted'):'model-provisional',
+      reviewStatus: accepted ? 'reviewed' : 'awaiting-review', feedback: history };
   }
 
   const select = `SELECT json_remove(p.normalized_json,'$.raw') AS normalized_json,p.attribution_json,
@@ -165,7 +167,7 @@ export function openStore(path = ':memory:') {
       const snapshot = { ...feedback, scope: 'post-specific', predictionAtReview: {
         version: post.analysis.version, method: post.analysis.method,
         labels: post.analysis.labels, entities: post.analysis.entities, events: post.analysis.events, functions: post.analysis.functions ?? [], analysisHash: post.analysisHash
-      }, previousAcceptedLabels: post.reviewStatus === 'reviewed' ? post.labels : null };
+      }, previousAcceptedLabels: post.labelStatus === 'human-accepted' ? post.labels : null };
       db.prepare(`INSERT INTO feedback(id, post_id, source_hash, created_at, reviewer, feedback_json)
         VALUES (?, ?, ?, ?, ?, ?)`).run(id, postId, post.contentHash, new Date().toISOString(), reviewer, JSON.stringify(snapshot));
       return getPost(postId);

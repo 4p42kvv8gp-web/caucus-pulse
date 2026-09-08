@@ -8,6 +8,8 @@ The application preserves available source text, supports indexed and semantic s
 
 The selected local classifier is Political DEBATE large, used for provisional topic/subtopic and communicative-function suggestions. A separate BERT model proposes named mentions. Both attach original source evidence. These are initial interpretations; named types can be wrong and do not verify an incident or its location. Your corrections take precedence; automatic weight training is not enabled. See [Local classification](docs/LOCAL_CLASSIFICATION.md).
 
+Start with the [pilot guide](docs/PILOT_GUIDE.md) for the dashboard and a short voice-teaching session. The [acceptance record](docs/PILOT_ACCEPTANCE.md) separates verified local behavior from the remaining live-operation requirements.
+
 ## Run locally
 
 Use Node 24.19.x and pnpm 11.19.0. The inference dependency and transitive packages are pinned in the lockfile; keep the workspace override when installing. The runtime's built-in SQLite module may print an experimental warning on Node 24.

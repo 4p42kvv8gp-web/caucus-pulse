@@ -108,7 +108,7 @@ test('local worker saves validated provenance atomically while accepted human la
   try {
     add(store);
     store.saveFeedback('10', { labels: [{ topic: 'Synthetic human topic' }], reason: 'Synthetic review.' }, 'synthetic-reviewer');
-    assert.deepEqual(await processClassificationJobs(store, runtime(), { now: () => 1000 }), { completed: 1, failed: 0, skipped: 0, stale: 0 });
+    assert.deepEqual(await processClassificationJobs(store, runtime(), { now: () => 1000 }), { completed: 1, failed: 0, skipped: 0, stale: 0, deferred:0 });
     const post = store.getPost('10');
     assert.equal(post.labels[0].topic, 'Synthetic human topic');
     assert.equal(post.analysis.labels[0].topic, 'Disaster response');
@@ -181,7 +181,7 @@ test('classifier migration and unfinished jobs survive reopening without requiri
     add(store);
     store.db.exec('DROP TABLE incident_case_history; DROP TABLE incident_case_posts; DROP TABLE incident_cases; DROP TABLE incident_reviews; DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; UPDATE schema_version SET version=7;');
     store.close(); store = openStore(join(dir, 'test.sqlite'));
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version, 10);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version, 11);
     registerClassifier(store, 1000); claimClassification(store, { now: 1000 });
     store.close(); store = openStore(join(dir, 'test.sqlite'));
     assert.equal(classificationStatus(store).running, 1);

@@ -41,6 +41,15 @@ export function baselineClassify(post) {
   };
 }
 
+export function feedbackDecision(review){
+  return review?.decision??(review?.labels?.length?'classified':'needs-context');
+}
+
+export function effectiveLabels(analysis,review){
+  if(!review)return analysis.labels;
+  return feedbackDecision(review)==='needs-context'?[]:review.labels;
+}
+
 export function validateFeedback(value) {
   if (!value || !Array.isArray(value.labels) || value.labels.length > 12) throw new Error('Provide up to 12 topic labels.');
   function clean(value, field, max, required = true) {

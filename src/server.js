@@ -18,6 +18,8 @@ import { classificationStatus, queueClassification, processClassificationJobs } 
 import { subjectGroups } from './subject-groups.js';
 import {incidentDesk,postIncidents,saveIncidentReview,createIncidentCase,incidentCase,updateIncidentCase} from './incidents.js';
 import {accessFromEnvironment} from './access.js';
+import {operationalStatus} from './operational-status.js';
+import {drainLocalQueue} from './local-processing.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -89,7 +91,12 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         const [file, type] = staticFiles.get(url.pathname);
         res.writeHead(200, { 'Content-Type': type }); return res.end(readFileSync(resolve(root, file)));
       }
-      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)),access:{mode:access?'private-access':'local'}, connection: credentials.status(), classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0} });
+      if (req.method === 'GET' && url.pathname === '/api/dashboard') {
+        const connection=credentials.status();
+        return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)),access:{mode:access?'private-access':'local'}, connection, classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0},
+          operationalStatus:operationalStatus(store,settings,{classifier,semantic,connection}) });
+      }
+      if(req.method==='GET'&&url.pathname==='/api/operations')return json(200,operationalStatus(store,settings,{classifier,semantic,connection:credentials.status()}));
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
       if (req.method === 'GET' && url.pathname === '/api/review-queue') return json(200, reviewQueue(store, filtersFrom(url)));
       if(req.method==='GET'&&url.pathname==='/api/incidents')return json(200,incidentDesk(store,filtersFrom(url)));
@@ -202,32 +209,35 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   processLocalRecords();
   const semantic={name:settings.intelligence?.localEmbeddings?.model??'minilm',runtime:null,state:'disabled'};
   const classifier={runtime:null,state:'disabled',process:()=>void processLocalClassifications()};
+  const modelLifetime=new AbortController();
   let embeddingPass=false,classifierPass=false,stopping=false;
   async function processLocalClassifications() {
     if (stopping || classifierPass || !classifier.runtime?.status().ready) return;
     classifierPass=true;
-    try { await processClassificationJobs(store,classifier.runtime,{limit:settings.intelligence?.localClassifier?.postsPerPass??5,stopping:()=>stopping}); }
+    try { await drainLocalQueue({ready:()=>classifier.runtime.status().ready,stopping:()=>stopping,
+      runPass:()=>processClassificationJobs(store,classifier.runtime,{limit:settings.intelligence?.localClassifier?.postsPerPass??5,stopping:()=>stopping})}); }
     catch { classifier.state='worker-needs-attention'; }
     finally { classifierPass=false; }
   }
   async function processLocalEmbeddings() {
     if (stopping || embeddingPass || !semantic.runtime?.status().ready) return;
     embeddingPass=true;
-    try { await processEmbeddingJobs(store,semantic.runtime,{limit:settings.intelligence?.localEmbeddings?.postsPerPass??25}); }
+    try { await drainLocalQueue({ready:()=>semantic.runtime.status().ready,stopping:()=>stopping,
+      runPass:()=>processEmbeddingJobs(store,semantic.runtime,{limit:settings.intelligence?.localEmbeddings?.postsPerPass??25,stopping:()=>stopping})}); }
     catch { semantic.state='worker-needs-attention'; }
     finally { embeddingPass=false; }
   }
   let warmup=Promise.resolve();
   if (settings.intelligence?.localEmbeddings?.enabled) {
     semantic.state='starting';
-    warmup=createEmbeddingClient({name:semantic.name,modelRoot:resolve(root,'data/models')})
+    warmup=createEmbeddingClient({name:semantic.name,modelRoot:resolve(root,'data/models'),signal:modelLifetime.signal})
       .then(async runtime=>{semantic.runtime=runtime;semantic.state='ready';if(stopping)await runtime.close();else await processLocalEmbeddings();})
       .catch(()=>{semantic.state='model-unavailable';});
   }
   let classifierWarmup=Promise.resolve();
   if(settings.intelligence?.localClassifier?.enabled && process.env.CAUCUS_DISABLE_LOCAL_CLASSIFIER!=='1'){
     classifier.state='starting';
-    classifierWarmup=createLocalClassifierClient()
+    classifierWarmup=createLocalClassifierClient({signal:modelLifetime.signal})
       .then(async runtime=>{classifier.runtime=runtime;classifier.state='ready';if(stopping)await runtime.close();else await processLocalClassifications();})
       .catch(()=>{classifier.state='model-unavailable';});
   }
@@ -236,7 +246,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
   const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();void processLocalClassifications();},60_000);
   async function shutdown() {
-    if(stopping)return;stopping=true;clearInterval(interval);
+    if(stopping)return;stopping=true;clearInterval(interval);modelLifetime.abort();
     const closed=new Promise(resolve=>server.close(resolve));
     await Promise.all([warmup,classifierWarmup]);await Promise.all([semantic.runtime?.close(),classifier.runtime?.close()]);await closed;
     // Let a cancelled inference finish its fenced bookkeeping before closing SQLite.

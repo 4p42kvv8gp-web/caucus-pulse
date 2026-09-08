@@ -22,7 +22,7 @@ check('private-archive',()=>{
   need(directory.isDirectory()&&!directory.isSymbolicLink()&&!(directory.mode&0o077),'The database directory must be a private real directory.');
   need(file.isFile()&&!file.isSymbolicLink()&&file.nlink===1&&!(file.mode&0o077),'The database must be a private regular file with one link.');
   if(target==='hosted')need(database===resolve(data,'pulse.sqlite'),'The prepared service uses data/pulse.sqlite so model, diagnostic, backup and removal paths share one managed root.');
-  databaseBytes=file.size;const info=inspectDatabase(database);need(info.schema===10,'Apply and verify the current archive migration before launch.');
+  databaseBytes=file.size;const info=inspectDatabase(database);need(info.schema===11,'Apply and verify the current archive migration before launch.');
   need(!existsSync(resolve(dirname(database),'maintenance.lock')),'Inspect the existing maintenance operation before starting the service.');
   const journal=readRemovalJournal(removalJournalPath(database));return {schema:info.schema,integrity:info.integrity,removalJournalEntries:journal.entries.length};
 });

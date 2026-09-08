@@ -24,7 +24,9 @@ The feedback API accepts `decision` with these meanings:
 | `no-supported-topic` | The reviewer explicitly decided that no subject label is supported. Labels must be empty. | Yes. Previous predicted topics can locate relevant negative examples. |
 | `needs-context` | The interpretation is unresolved. | No. |
 
-The teaching form explicitly offers all three decisions and requires a reason. A supported empty answer is distinct from uncertainty. Older empty-label reviews are not treated as negative test answers. A new review stores the earlier prediction and previously accepted labels without replacing history. Save-in-progress controls protect the displayed form; concurrent source/prediction/review changes still require reloading.
+The teaching form explicitly offers all three decisions and requires a reason. A supported empty answer is distinct from uncertainty. “Need more context” preserves any tentative labels in the review but excludes them from topic counts, topic filters, teaching examples and test answers. The source and model proposal stay visible; the post is clearly marked unresolved. Older empty-label reviews are also unresolved. Schema 11 repairs earlier indexed tentative labels transactionally, without changing source text or review history.
+
+A new review stores the earlier prediction and previously accepted labels without replacing history. Save-in-progress controls protect the displayed form; concurrent source/prediction/review changes still require reloading.
 
 ## Reserved examples
 
