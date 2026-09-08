@@ -2,6 +2,8 @@
 
 Updated September 7, 2026. Owner: Jacob. Implementation: Codex in this task.
 
+September 8 update: Jacob requested seven hours of autonomous work without guidance, ending at 11:57:54 UTC / 7:57:54 AM Eastern. Preserve existing private-data and spending limits; continue independent implementation when access is missing. Read the new Hugging Face intelligence plan and Claude design integration notes under caucus-pulse/docs/. The Build Spec is available; its two reference screen files remain pending. No hosting destination or paid service has been selected. At the deadline, pause the existing development heartbeat and provide a verified completion/status report.
+
 ## Product outcome
 
 A private, continually updated workspace for understanding what House Democratic members say publicly on X. Capture comes before classification: a post must enter the archive even when its subject is new or unknown. Every label, event summary, and language pattern must lead back to the underlying posts.

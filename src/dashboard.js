@@ -4,31 +4,13 @@ import { collectionState } from './collect.js';
 import { rosterStatus } from './roster.js';
 import { inventoryState } from './list-inventory.js';
 import { learningStatus } from './learning-context.js';
+import { explorerPage, explorerSummary } from './explorer.js';
+import { atomic } from './sqlite.js';
 
-export function dashboardData(store, filters, settings) {
-  const allPosts = store.listPosts();
-  const posts = store.listPosts(filters);
-  const byTopic = new Map();
-  for (const post of posts) {
-    for (const label of post.labels) {
-      let bucket = byTopic.get(label.topic);
-      if (!bucket) {
-        bucket = { topic: label.topic, postIds: new Set(), memberIds: new Set(), subtopics: new Map() };
-        byTopic.set(label.topic, bucket);
-      }
-      bucket.postIds.add(post.id); bucket.memberIds.add(post.memberId);
-      if (label.subtopic) {
-        const ids = bucket.subtopics.get(label.subtopic) ?? new Set();
-        ids.add(post.id); bucket.subtopics.set(label.subtopic, ids);
-      }
-    }
-  }
-  const topics = [...byTopic.values()].sort((a, b) => a.topic.localeCompare(b.topic)).map(t => ({
-    topic: t.topic, posts: t.postIds.size, members: t.memberIds.size,
-    subtopics: [...t.subtopics.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([label, ids]) => ({ label, posts: ids.size }))
-  }));
-  const members = [...new Map(allPosts.map(p => [p.memberId, { id: p.memberId, name: p.memberName }])).values()]
-    .sort((a, b) => a.name.localeCompare(b.name));
+export function dashboardData(store, filters, settings, options = {}) {
+  return atomic(store.db, () => {
+  const result = explorerPage(store, filters, options);
+  const summary = explorerSummary(store, result.filters);
   const budgetState = settings.budget.resourcePricesUsd ? createBudget(store.db, settings.budget).state() : null;
   const operations = {
     sources: collectionState(store.db),
@@ -40,27 +22,22 @@ export function dashboardData(store, filters, settings) {
     analysisFailed: store.db.prepare("SELECT COUNT(*) AS n FROM analysis_jobs WHERE status='failed'").get().n
   };
   return {
-    generatedAt: new Date().toISOString(), mode: settings.mode, filters,
+    generatedAt: new Date().toISOString(), mode: settings.mode, filters: result.filters,
     coverage: {
-      postCount: allPosts.length, memberCount: members.length,
-      historicalPostCount: allPosts.filter(p => p.provenance.kind === 'historical-calibration').length,
-      collectedPostCount: allPosts.filter(p => p.provenance.kind === 'x-list-capture').length,
-      firstPostAt: allPosts.at(-1)?.createdAt ?? null, lastPostAt: allPosts[0]?.createdAt ?? null,
-      lastImportedAt: allPosts.map(p => p.capturedAt).sort().at(-1) ?? null,
+      ...summary.coverage,
       rosterStatus: operations.roster.snapshot ? `${operations.roster.snapshot.memberCount} names in dated Clerk inventory; ${operations.roster.activeAccountBindings} active X account bindings.`
         : 'Calibration accounts only; supplied List not yet synchronized',
       collectionStatus: operations.sources.length ? 'Bounded collection passes recorded; automatic polling is not configured' : 'No collection pass recorded; automatic polling is off',
-      analysisStatus: 'Literal evidence baseline; semantic analysis not connected',
-      reviewedPosts: allPosts.filter(p => p.reviewStatus === 'reviewed').length,
-      pendingRuleProposals: allPosts.flatMap(p => p.feedback).filter(f => f.ruleProposal).length
+      analysisStatus: 'Literal evidence baseline; semantic analysis not connected'
     },
     budget: { ...settings.budget, verifiedBalance: budgetState?.balanceFresh ?? false, state: budgetState,
       usageStatus: budgetState?.requestCount ? 'Conservative local accounting; provider charges may differ'
         : 'No collector requests recorded; paid reads require a fresh provider balance check' },
     operations,
-    members, availableTopics: [...new Set(allPosts.flatMap(p => p.labels.map(l => l.topic)))].sort(),
-    topics, posts
+    members:summary.members, availableTopics:summary.availableTopics,
+    topics:summary.topics, posts:result.posts, page:result.page, searchNote:result.searchNote
   };
+  });
 }
 
 export function phraseData(store, phrase, filters = {}) {

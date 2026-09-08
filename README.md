@@ -19,7 +19,7 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 ## Boundaries of this milestone
 
 - Loopback-only development service, no external access or hosted authentication. Do not expose it through a public proxy.
-- Search currently scans the local dataset; indexed queries/pagination are required for the full roster.
+- The dashboard now uses indexed selection and bounded pages with full-selection topic counts. Short text queries still scan the SQLite text projection; internal phrase/example callers still need bounds. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
 - Classification failure leaves source posts stored and visible. Failed jobs are recorded; scheduled provider retries are future work.
 - Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production provider integration remain required work.
@@ -101,6 +101,8 @@ The teaching desk can display semantic labels, source spans, entities, and event
 See [Language discovery](docs/LANGUAGE_DISCOVERY.md) for filters, coverage limits, full source evidence, and interpretation boundaries. This is a local analysis service ready for the pending dashboard redesign. It makes no X/model requests and does not yet group paraphrases or infer events, stance, novelty, or coordination.
 
 ## Provenance
+
+The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate embedding/classification models, evaluation requirements, and archive/cost decisions. These models are not deployed. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
 
 Based on the reviewed [original Caucus Pulse project](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The new local foundation replaces file archives and nightly-only reports with a database-backed service. Broad subject structure is informed by the original taxonomy; facility identities are kept separate. See the workspace's PROJECT_SCOPE.md, TASKS.md, and DEVELOPMENT_HANDOFF.md for the complete build plan.
 

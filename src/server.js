@@ -9,6 +9,7 @@ import { createCredentialStore } from './credentials.js';
 import { learningStatus, postLearningHistory } from './learning-context.js';
 import { evaluationReport } from './evaluation.js';
 import { languageData } from './language.js';
+import { explorerPage } from './explorer.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -19,7 +20,7 @@ const staticFiles = new Map([
 ]);
 
 function filtersFrom(url) {
-  const result = Object.fromEntries(['query', 'memberId', 'topic', 'type', 'since', 'until'].map(k => [k, url.searchParams.get(k) ?? '']));
+  const result = Object.fromEntries(['query', 'memberId', 'topic', 'subtopic', 'type', 'accountType', 'since', 'until'].map(k => [k, url.searchParams.get(k) ?? '']));
   for (const k of ['since', 'until']) {
     if (result[k]) {
       if (!Number.isFinite(Date.parse(result[k]))) throw new Error('Invalid date filter.');
@@ -27,6 +28,16 @@ function filtersFrom(url) {
     }
   }
   return result;
+}
+
+function pageOptions(url) {
+  const options = { cursor:url.searchParams.get('cursor') ?? '' };
+  if (url.searchParams.has('limit')) {
+    const value = url.searchParams.get('limit');
+    if (!/^\d+$/.test(value)) throw new Error('Invalid page size.');
+    options.limit = Number(value);
+  }
+  return options;
 }
 
 async function readJson(req) {
@@ -58,7 +69,8 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         const [file, type] = staticFiles.get(url.pathname);
         res.writeHead(200, { 'Content-Type': type }); return res.end(readFileSync(resolve(root, file)));
       }
-      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings), connection: credentials.status() });
+      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status() });
+      if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
       if (req.method === 'POST' && url.pathname === '/api/settings/x-credential') {
         if (!allowedHosts.some(host => req.headers.origin === `http://${host}`)) return json(403, { error: 'Save credentials from the local connection form.' });
         const value = await readJson(req);
@@ -91,6 +103,7 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       }
       return json(404, { error: 'Not found.' });
     } catch (error) {
+      if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
       const safe = /^(Invalid |Expected JSON|Request is too large|Provide up to|Remove duplicate|Enter an exact)/.test(error.message);
       return json(safe ? 400 : 500, { error: safe ? error.message : 'The request could not be completed. Source data is retained.' });
     }

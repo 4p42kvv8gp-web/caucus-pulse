@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { baselineClassify, validateFeedback } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
 import { rememberHoldoutSource } from './learning-context.js';
+import { migrateExplorer, searchSelection } from './explorer.js';
 
 export function openStore(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
@@ -44,6 +45,7 @@ export function openStore(path = ':memory:') {
     CREATE TABLE IF NOT EXISTS tombstones (post_id TEXT PRIMARY KEY, deleted_at TEXT NOT NULL);
   `);
   migrateOperations(db);
+  migrateExplorer(db);
 
   function transaction(fn) {
     return atomic(db, fn);
@@ -121,17 +123,15 @@ export function openStore(path = ':memory:') {
       labels: accepted?.labels ?? analysis.labels, reviewStatus: accepted ? 'reviewed' : 'awaiting-review', feedback: history };
   }
 
-  const select = `SELECT p.*, a.member_id, a.member_name, a.handle, a.identity_note, a.account_type, n.analysis_json
-    FROM posts p JOIN accounts a ON a.author_id=p.author_id LEFT JOIN analyses n ON n.post_id=p.id`;
+  const select = `SELECT json_remove(p.normalized_json,'$.raw') AS normalized_json,p.attribution_json,
+    a.member_id, a.member_name, a.handle, a.identity_note, a.account_type, n.analysis_json
+    FROM posts p JOIN accounts a ON a.author_id=p.author_id LEFT JOIN analyses n ON n.post_id=p.id AND n.source_hash=p.content_hash`;
   function getPost(id) { const row = db.prepare(`${select} WHERE p.id=?`).get(id); return row ? hydrate(row) : null; }
-  function listPosts({ query = '', memberId = '', topic = '', type = '', since = '', until = '' } = {}) {
-    // Local pilot dataset. Replace this bounded scan with indexed search/pagination before full-roster launch.
-    const posts = db.prepare(`${select} ORDER BY p.created_at DESC, p.id DESC`).all().map(hydrate);
-    const needle = query.toLocaleLowerCase();
-    return posts.filter(p => (!query || p.text.toLocaleLowerCase().includes(needle)) &&
-      (!memberId || p.memberId === memberId) && (!type || p.type === type) &&
-      (!topic || p.labels.some(l => l.topic === topic)) &&
-      (!since || p.createdAt >= since) && (!until || p.createdAt < until));
+  function listPosts(filters = {}) {
+    // Internal compatibility API. HTTP explorer responses use explorerPage's bounded hydration.
+    const selection = searchSelection(filters);
+    const ids = db.prepare(`SELECT s.post_id ${selection.from} ORDER BY s.created_at DESC,s.post_id DESC`).all(...selection.values);
+    return ids.map(row => getPost(row.post_id));
   }
   function saveFeedback(postId, value, reviewer = 'local-user') {
     const feedback = validateFeedback(value);

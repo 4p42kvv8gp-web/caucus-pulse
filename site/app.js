@@ -1,12 +1,12 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
-const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0 };
+const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '' };
 
 async function api(path, options) {
   const response = await fetch(path, options);
   const result = await response.json();
-  if (!response.ok) throw new Error(result.error || 'Request failed.');
+  if (!response.ok) { const error = new Error(result.error || 'Request failed.'); error.code = result.code; throw error; }
   return result;
 }
 function showError(message) { $('error').textContent = message; $('error').hidden = !message; }
@@ -53,9 +53,10 @@ function renderStats() {
   $('archive-notice').textContent = `${c.historicalPostCount} historical examples and ${c.collectedPostCount} posts admitted from collection. ${c.collectionStatus}. Semantic analysis and automatic trend discovery are still being built; current automatic labels use a word-matching baseline.`;
 }
 function renderExplore() {
-  const { posts, topics } = state.data;
-  $('result-count').textContent = `${posts.length} posts · newest first`;
+  const { posts, topics, page } = state.data;
+  $('result-count').textContent = `${posts.length} of ${page.totalPosts} matching posts · ${state.cursor ? 'older page' : 'newest first'}`;
   $('posts').innerHTML = posts.map(postCard).join('') || '<div class="empty">No archived posts match these filters. The preview contains historical examples; select “All archived dates” to see them.</div>';
+  if (state.cursor || page.hasMore) $('posts').insertAdjacentHTML('beforeend', `<div class="post-footer" aria-label="Post pages">${state.cursor ? '<button class="text-button" data-page="newest">Back to newest posts</button>' : '<span></span>'}${page.hasMore ? '<button class="text-button" data-page="older">Older posts →</button>' : ''}</div>`);
   $('topics').innerHTML = topics.map(t => `<div class="topic-row"><div class="topic-head"><strong>${esc(t.topic)}</strong><span>${t.posts} posts</span></div><span class="quiet">${t.members} distinct ${t.members === 1 ? 'member' : 'members'}</span>${t.subtopics.map(s => `<div class="subtopic">${esc(s.label)}<br><span class="quiet">${s.posts} ${s.posts === 1 ? 'post' : 'posts'}</span></div>`).join('')}</div>`).join('') || '<p class="quiet">No labeled subjects in this selection.</p>';
 }
 function renderCoverage() {
@@ -130,18 +131,27 @@ function renderReview() {
     } catch (error) { showError(error.message); button.disabled = false; }
   });
 }
-async function refresh() {
+async function refresh({ cursor = '', params = null } = {}) {
   const sequence = ++state.sequence;
   try {
-    const data = await api(`/api/dashboard?${filterParams()}`);
+    const query = new URLSearchParams(params ?? filterParams());
+    const pageParams = query.toString();
+    if (cursor) query.set('cursor',cursor);
+    const data = await api(`/api/dashboard?${query}`);
     if (sequence !== state.sequence) return;
-    state.data = data; showError(''); renderStats(); renderExplore(); renderCoverage();
+    state.data = data; state.cursor = cursor; state.pageParams = pageParams;
+    showError(''); renderStats(); renderExplore(); renderCoverage();
     setOptions($('member'), data.members, 'All members');
     setOptions($('topic'), data.availableTopics.map(t => ({ id: t, name: t })), 'All topics');
     if (!state.dirty) renderReview();
-    $('updated').textContent = `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
+    $('updated').textContent = cursor ? 'Reading older posts · return to newest to refresh' : `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
     if (state.view === 'wording' && $('phrase-input').value) await loadPhrase();
-  } catch (error) { showError(`${error.message} Last successful data remains visible.`); }
+  } catch (error) {
+    if (sequence !== state.sequence) return;
+    if (error.code === 'EXPLORER_CHANGED') {
+      await refresh(); showError('The archive changed. Showing the newest results so pages stay consistent.');
+    } else showError(`${error.message} Last successful data remains visible.`);
+  }
 }
 const headings = {
   explore: ['Listen. Trace. Understand.', 'Read the source. Explore the subjects. Teach the distinctions.'],
@@ -164,6 +174,13 @@ async function loadPhrase() {
 }
 document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
 $('posts').addEventListener('click', event => {
+  const page = event.target.closest('[data-page]');
+  if (page) {
+    if (state.dirty && !confirm('Discard the unsaved review before switching pages?')) return;
+    state.dirty = false; page.disabled = true;
+    const options = page.dataset.page === 'older' ? { cursor:state.data.page.nextCursor,params:state.pageParams } : {};
+    refresh(options).finally(() => { page.disabled = false; }); return;
+  }
   const button = event.target.closest('[data-review]');
   if (!button) return;
   if (state.dirty && !confirm('Discard the unsaved review before switching posts?')) return;
@@ -189,4 +206,4 @@ $('connection-form').addEventListener('submit', async event => {
   finally { button.disabled = state.data?.connection?.source === 'environment'; }
 });
 window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
-await refresh(); setInterval(refresh, 60_000);
+await refresh(); setInterval(() => { if (!state.cursor && !state.dirty) refresh(); }, 60_000);
