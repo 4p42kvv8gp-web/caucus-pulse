@@ -24,7 +24,8 @@ try {
   console.log(JSON.stringify({ connection: credentials.status(), inventory: inventoryState(store.db, settings.listId),
     collectionEnabled: settings.collectionEnabled, budget: budget.state(), sources: collectionState(store.db),
     note: 'Status makes no network request unless --refresh-balance is explicitly supplied. This command never collects posts.' }, null, 2));
-} catch {
-  console.error('The collection status check could not complete. Check private credential configuration and API access. No posts were requested.');
+} catch (error) {
+  const code=/^(http-\d{3}|transport-failed|invalid-json|invalid-credit-balance)$/.test(error.code??'')?error.code:'local-configuration-error';
+  console.error(JSON.stringify({status:'connection-check-failed',code,note:'No posts were requested. Credential and response content are withheld.'}));
   process.exitCode = 1;
 } finally { store.close(); }

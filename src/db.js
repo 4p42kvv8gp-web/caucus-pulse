@@ -1,12 +1,13 @@
 import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync, chmodSync } from 'node:fs';
 import { dirname } from 'node:path';
-import { randomUUID } from 'node:crypto';
+import { randomUUID, createHash } from 'node:crypto';
 import { baselineClassify, validateFeedback } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
 import { rememberHoldoutSource } from './learning-context.js';
 import { migrateExplorer, searchSelection } from './explorer.js';
 import { migrateEmbeddings } from './embedding-store.js';
+import { migrateClassifier } from './classifier-jobs.js';
 
 export function openStore(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
@@ -48,6 +49,7 @@ export function openStore(path = ':memory:') {
   migrateOperations(db);
   migrateExplorer(db);
   migrateEmbeddings(db);
+  migrateClassifier(db);
 
   function transaction(fn) {
     return atomic(db, fn);
@@ -121,7 +123,7 @@ export function openStore(path = ':memory:') {
       memberId: row.member_id, memberName: row.member_name, handle: row.handle,
       identityNote: row.identity_note, accountType: row.account_type
     };
-    return { ...post, ...attribution, analysis,
+    return { ...post, ...attribution, analysis, analysisHash: createHash('sha256').update(JSON.stringify(analysis)).digest('hex'),
       labels: accepted?.labels ?? analysis.labels, reviewStatus: accepted ? 'reviewed' : 'awaiting-review', feedback: history };
   }
 
@@ -141,10 +143,11 @@ export function openStore(path = ':memory:') {
       const post = getPost(postId);
       if (!post) throw new Error('Post not found.');
       if (value.sourceHash !== undefined && value.sourceHash !== post.contentHash) throw new Error('Invalid source version: reload the post before saving this correction.');
+      if (value.predictionHash !== undefined && value.predictionHash !== post.analysisHash) throw Object.assign(new Error('The analysis changed while you were reviewing. Reload its explanation before saving the correction.'), {code:'PREDICTION_CHANGED'});
       const id = randomUUID();
       const snapshot = { ...feedback, scope: 'post-specific', predictionAtReview: {
         version: post.analysis.version, method: post.analysis.method,
-        labels: post.analysis.labels, entities: post.analysis.entities, events: post.analysis.events
+        labels: post.analysis.labels, entities: post.analysis.entities, events: post.analysis.events, functions: post.analysis.functions ?? [], analysisHash: post.analysisHash
       }, previousAcceptedLabels: post.reviewStatus === 'reviewed' ? post.labels : null };
       db.prepare(`INSERT INTO feedback(id, post_id, source_hash, created_at, reviewer, feedback_json)
         VALUES (?, ?, ?, ?, ?, ?)`).run(id, postId, post.contentHash, new Date().toISOString(), reviewer, JSON.stringify(snapshot));

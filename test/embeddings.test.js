@@ -158,9 +158,9 @@ test('persisted vectors and jobs survive reopening and migration from version si
   const dir=mkdtempSync(join(tmpdir(),'pulse-embeddings-')),path=join(dir,'test.sqlite');let store=setup(path);
   try{
     add(store,'1');
-    store.db.exec('DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models; UPDATE schema_version SET version=6;');
+    store.db.exec('DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models; UPDATE schema_version SET version=6;');
     store.close();store=openStore(path);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,7);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,8);
     await processEmbeddingJobs(store,syntheticRuntime());
     store.close();store=openStore(path);
     assert.equal(semanticSearch(store,query).results[0].post.id,'1');

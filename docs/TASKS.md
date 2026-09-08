@@ -1,34 +1,28 @@
 # Tasks
 
-## Active
+## Active — September 8, 2026
 
-- [ ] **Seven-hour autonomous development window** - Jacob requested uninterrupted work without guidance through September 8, 2026 at 11:57:54 UTC (7:57:54 AM Eastern). Continue useful implementation while integrations are blocked, preserve current spending/privacy limits, then pause the existing automation and report results. The existing heartbeat now checks every 15 minutes; do not create another schedule.
-- [ ] **M3: Integrate a local evidence-based classifier** - BGE search and emerging-subject candidates are working. Implement a bounded, local provider with exact source quotations, taxonomy versions, durable jobs and retained failure status, then connect reviewed examples and teaching. Real-post calibration remains required; do not substitute synthetic benchmarks for human judgments.
+- [ ] **Seven-hour autonomous development window** — Work through 11:57:54 UTC (7:57:54 AM Eastern), then update the handoff, pause the existing heartbeat and report verified outcomes. No new guidance requests during the window.
+- [ ] **M3: Validate and publish local classification** — Political DEBATE large is selected after local model comparisons. The source-passage contract, durable jobs and human-review precedence work on the three real development posts. Weather-advice and entity/location gaps remain explicit. Publish the source-only milestone and proceed with the incident desk; do not describe this as human-validated accuracy.
+- [ ] **M3: Complete the incident desk and learning workflow** — Connect source-backed incident candidates, separate locations from member districts, expose multiple communicative functions and concise reasons, and support explicit correction/unknown decisions. Real held-out calibration remains necessary.
+- [ ] **M2: Finish identity and coverage recovery** — A capped trial observed 300 List profiles and five posts. Official directory/office evidence established 120 current account bindings and promoted one capture. Four posts remain unresolved; the List inventory remains incomplete. Add honest coverage and recovery controls without further paid calls while credit is unverified.
+- [ ] **M2: Verify credit before normal polling** — Active token works for usage and paid source endpoints. Credits endpoint returned 404, so dollar balance remains unknown. The $3.025 one-time connection trial is exhausted. Normal collection stays off; no paid retries or new services. Preserve $25/day, $350/pilot and $50 reserve controls.
+- [ ] **M3: Prepare real voice calibration** — Use the three admitted source posts now available, with dates, original wording, predicted labels, concise reasons and one question per review. Do not fabricate acceptance or turn synthetic cases into human evaluation.
+- [ ] **M4: Prepare private deployment and operations** — Authentication, controlled storage, migrations, backup/restore, removal propagation and monitoring; write a concrete launch proposal with actual platform limitations and cost assumptions.
+- [ ] **M4: Complete the pilot acceptance trace** — Follow the newly captured verified post through analysis, dashboard and later human correction; verify recovery/removal. Human review cannot be simulated as a real user action.
+- [ ] **Design and visual verification** — Follow the received Claude Build Spec while preserving the selected dense, light newsroom direction. Exact screen HTML remains missing. Browser policy verification is unavailable and must not be bypassed; HTTP and data checks continue.
 
-- [ ] **M1: Complete the visual browser check** - Automated HTTP and persistence checks pass. Browser access could not verify the administrator policy; do not bypass that control. Retry only when the policy service is available. No Jacob review was created by testing.
-- [ ] **M2: Validate the supplied X List and House account roster** - Dated Clerk import and resumable List account scans are implemented. The private snapshot has 217 Clerk names, published September 2; no actual X account scan or verified binding exists yet. Next: execute a bounded scan after private token setup, gather official-link/profile evidence, bind identities, and record ownership dates. Starting List: 1841177179872243858.
-- [ ] **M2: Connect the tested collector to verified membership and recovery** - Durable List pagination, leases, checkpoint protection, verified capture promotion, and bounded worker commands are implemented. Next: actual account verification, timeline reconciliation, measured polling cadence, and live coverage diagnostics. The local preview only processes stored records; collection is a separate explicit operation.
-- [ ] **M2: Verify actual credit and price behavior before activation** - Transactional reservations and $25/day, $350/pilot, $50 reserve checks are implemented and tested. Product credential environment is not configured; provider balance and actual List billing remain unverified. Use the new read-only credit endpoint when private access is ready. Measure page size/duplicate overhead before selecting the live polling pattern.
-- [ ] **M2: Run a bounded live trial** - Validate fields, pagination, post types, observed cost, and recovery before enabling the 30-minute loop. Report any gap honestly.
-- [ ] **M3: Implement semantic classification and discovery** - Provider-neutral contract, strict schema/evidence validation, multi-topic/entity/event fields, source-version checks, and UI explanations are implemented. Next: actual provider adapter with budget limits and durable jobs, real-post evaluations, entity registry, and cross-post discovery. No semantic provider is active.
-- [ ] **M3: Preserve language and measure observed spread** - Automatic exact passage discovery now preserves long wording and source offsets, spans midnight, deduplicates post/member counts, excludes reposts, and discloses bounded coverage. Local API and command are implemented. Next: connect to Claude's dashboard, paraphrase discovery, and semantic attribution of embedded quotations; no live trend coverage is claimed.
-- [ ] **M3: Connect teaching to future analysis** - Prediction snapshots, explicit uncertainty/negative decisions, persistent held-out examples, frozen label evaluation sets, separate candidate runs, and example exposure history are implemented. One existing local review is preserved. Next: scheduled reclassification, a cost-controlled provider worker, real held-out sessions, and broader event/location evaluations. No real evaluation or semantic request has been run.
-- [ ] **M3: Prepare Jacob's first voice session** - 8–12 real posts with dates, sources, proposed labels, short justifications, missing-context notes, and one question each. Start with the two verified examples already saved.
-- [ ] **M4: Prepare private deployment and operations** - Authentication, secret injection, controlled storage, durable jobs, migrations, backups/removal propagation, monitoring, and a concrete costed launch proposal.
-- [ ] **M4: Complete the live pilot acceptance run** - Trace a new source post through capture, analysis, dashboard, correction, and reanalysis; test recovery and data removal; publish setup/run instructions.
+## Waiting on later user time
 
-## Waiting On
+- [ ] **Classification calibration** — One authentic local review exists. Subjective classification decisions and event/location judgment need varied real examples and a separate test subset.
+- [ ] **Production balance/hosting decision** — The missing provider credit response prevents verifying remaining funds for automatic polling. Prepare the concrete options before asking after the work window.
+- [ ] **Reference screen files and original error details** — Build Spec was received; DashboardV3.dc.html and Incidents.dc.html and the prior error text were not. Do not repeat requests while autonomous work is active.
 
-- [ ] **Jacob: details of the reported error** - The dashboard/static files/API returned HTTP 200 and draft PR #1 was open without merge conflicts when checked. The error text and preceding action have not been supplied, so the issue is not reproduced or marked fixed. A clarification is already pending; do not repeatedly ask while independent work continues.
-- [ ] **Claude's reference screen files** - Build Spec.html was received and read on September 8. It describes DashboardV3.dc.html and Incidents.dc.html, which have not been supplied. Preserve the specified visual direction; see caucus-pulse/docs/DESIGN_INTEGRATION.md for data-rule differences. Do not repeat requests during the seven-hour work window. The old independent design draft remains parked; existing HTML/CSS are unchanged.
-- [ ] **Jacob: save the existing active X bearer token privately** - Jacob explicitly clarified that the current live token is good; do not require rotation or regeneration. The collector currently shows no product token saved. Use Coverage & budget → Private X connection; see caucus-pulse/docs/PRIVATE_X_SETUP.md. Saving makes no requests. Codex will verify balance and perform bounded trials after setup. Never copy chat credentials or reuse the single-post reader's separate secret file.
-- [ ] **Jacob's classification calibration** - One local review is saved. Continue with varied real examples and reserve a separate test subset; broader subjective rules remain provisional until reviewed. See YOUR_TASKS.md and caucus-pulse/docs/TEACHING_AND_EVALUATION.md.
+## Later
 
-## Someday
-
-- [ ] **M5: Add near-real-time delivery** - Trial public creation/deletion events with reconciliation and duplicate handling after polling is reliable.
-- [ ] **M5: Add selective media understanding** - OCR/transcription for missing substantive text, with provenance and budget controls.
-- [ ] **M5: Expand historical coverage and evaluation** - Bounded backfill, comparable trend baselines, better language discovery; train only after reviewed examples justify it.
+- [ ] **Near-real-time delivery** — Creation/deletion events with reconciliation after polling is reliable.
+- [ ] **Selective media understanding** — OCR/transcription with provenance and budget control.
+- [ ] **Historical coverage and model training** — Bounded backfill, comparable trend baselines and training only after reviewed data supports a held-out evaluation.
 
 ## Done
 

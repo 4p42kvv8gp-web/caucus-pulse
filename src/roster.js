@@ -85,7 +85,9 @@ export function resolveAttribution(db, post, { now = Date.now() } = {}) {
     accountType: binding.account_type, state: member.state, district: member.district,
     rosterSnapshotId: snapshot.id, rosterSource: snapshot.source_url,
     rosterPublishedOn: snapshot.published_on, accountBindingId: binding.id,
-    identityNote: 'Account binding verified against official-link and X profile evidence; membership follows the dated Clerk observation.'
+    identityNote: JSON.parse(binding.evidence_json).ownershipBasis === 'current-observation-window'
+      ? 'Current office-link and numeric X profile evidence support a limited operational ownership window; historical ownership is not established. Membership follows the dated Clerk observation.'
+      : 'Account binding verified against official-link and X profile evidence; membership follows the dated Clerk observation.'
   } };
 }
 

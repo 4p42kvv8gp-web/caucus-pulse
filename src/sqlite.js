@@ -18,7 +18,7 @@ export function atomic(db, fn) {
 
 export function migrateOperations(db) {
   const version = db.prepare('SELECT version FROM schema_version').get().version;
-  if (version > 7) throw new Error('This database requires a newer application version.');
+  if (version > 8) throw new Error('This database requires a newer application version.');
   if (version < 2) atomic(db, () => db.exec(`
     CREATE TABLE budget_requests (
       sequence INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT UNIQUE NOT NULL,

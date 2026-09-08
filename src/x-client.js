@@ -37,6 +37,11 @@ export function createXClient({ token = process.env.CAUCUS_X_BEARER_TOKEN, fetch
     if (response.errors?.length || typeof response.data?.prepaid_balance !== 'number' || !Number.isFinite(response.data.prepaid_balance)) throw new XReadError('invalid-credit-balance');
     return { prepaidUsd: response.data.prepaid_balance };
   }
+  async function usageAccess(){
+    const response=await read('/2/usage/tweets',{days:1});
+    if(response.errors?.length||!response.data||typeof response.data!=='object'||!Object.hasOwn(response.data,'project_usage'))throw new XReadError('invalid-usage-response');
+    return {available:true};
+  }
   async function listMembers({ listId, maxResults = 100, paginationToken = null }) {
     validateId(listId); validatePageSize(maxResults, 100); validateCursor(paginationToken);
     const response = await read(`/2/lists/${listId}/members`, { max_results: maxResults,
@@ -44,5 +49,5 @@ export function createXClient({ token = process.env.CAUCUS_X_BEARER_TOKEN, fetch
     if (response.data == null && response.meta?.result_count === 0 && !response.errors?.length) return { ...response, data: [] };
     return response;
   }
-  return { listPosts, listMembers, creditBalance };
+  return { listPosts, listMembers, creditBalance, usageAccess };
 }

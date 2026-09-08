@@ -1,5 +1,5 @@
 // A visible, deterministic baseline for exercising review. Semantic inference is a later adapter.
-export const BASELINE_VERSION = 'local-evidence-baseline-v1';
+export const BASELINE_VERSION = 'local-evidence-baseline-v2';
 
 const rules = [
   { topic: 'Immigration', subtopic: 'Dilley detention facility', terms: ['Dilley', 'South Texas Family Residential Center'] },
@@ -35,7 +35,7 @@ export function baselineClassify(post) {
     labels: usefulLabels, entities: [], events: [],
     explanation: usefulLabels.length ? 'Provisional subjects based on exact words in the available post.'
       : 'This baseline found no supported subject. Keep this post available for semantic analysis and human review.',
-    limitations: ['Semantic analysis and event discovery are not connected yet.', post.contextCoverage,
+    limitations: ['These labels use literal wording; this baseline does not interpret events or intent.', post.contextCoverage,
       ...(post.type === 'repost' ? ['These are amplified words; they must not be counted as newly authored wording.'] : []),
       ...(post.type === 'quote' ? ['Quoted context has not been analyzed.'] : [])]
   };

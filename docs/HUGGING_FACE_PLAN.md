@@ -34,13 +34,14 @@ Hugging Face currently lists 100 GB of private storage for free users/organizati
 
 The proposed $60-to-$20 monthly reduction is unverified. Benchmark actual post volume, passage counts, CPU memory/time, hosted-model token use, storage growth and any Actions charges. Free model weights do not make runtime, storage or hosted inference unlimited. No cost claim or two-vCPU throughput promise should appear in the dashboard until measured.
 
-## Current implementation and next pass
+## Current implementation — September 8
 
-September 8 update: pinned MiniLM/BGE assets and Transformers.js inference work locally. BGE is the preview default after a bounded synthetic comparison; two actual historical posts have eight indexed passages. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) and [Emerging subject candidates](SUBJECT_GROUPS.md). The grouping service covers both labeled and unlabeled sources, rejects changed evidence, and discloses incomplete windows. All 110 tests pass. This is engineering verification, not human accuracy evaluation.
+Pinned MiniLM/BGE assets and local Transformers.js inference work. BGE is the preview default and indexes complete available source passages. Semantic search and emerging subject candidates use bounded, versioned source data. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) and [Emerging subject candidates](SUBJECT_GROUPS.md).
 
-A local text-classification experiment is being prepared with revision-pinned `mlx-community/Qwen3.5-4B-MLX-4bit` and MLX on this Mac. Public files were downloaded and verified; classification has not yet been integrated into the product. This optional local runtime avoids starting a paid endpoint and is not a Linux-hosting solution. Political DEBATE and SetFit remain later comparison candidates, not automatically chosen replacements.
+The selected first-pass classifier is now revision-pinned Political DEBATE **large**, running locally on two CPU threads. It proposes broad subjects, suggested subtopics, communicative functions and possible physical-emergency flags. The author recommends large for general zero-shot use. Numbered source passages preserve exact original wording; short linked reactions can abstain, and model failures retain the source. The model remains provisional, with known weather-advice and location-extraction gaps. See [Local classification](LOCAL_CLASSIFICATION.md) for actual measurements and the limits of the engineering checks.
 
-- Connect a bounded semantic provider, exact-quotation evidence mapping, durable jobs and taxonomy versions.
-- Retrieve relevant accepted reviews semantically with held-out protection; expose concise explanations and explicit correction decisions.
-- Run separate synthetic engineering checks and real held-out calibration, including event identity, negation, quotation, overlapping topics and communicative function.
-- Measure actual processing costs and latency before choosing a hosted runtime or replacing a model. No new account setup is required solely to use the installed skills.
+Qwen 4B/9B MLX experiments were evaluated but are not the selected automatic provider: real-caption overinterpretation and a reasoning timeout outweighed a favorable synthetic prompt result. The NLI provider uses fixed hypotheses and does not claim to train from saved reviews. Accepted examples remain available through the bounded semantic retrieval layer for comparison and later evaluated SetFit/DEBATE training.
+
+No Hub data repository, cloud training job or paid model endpoint has been created. Runtime/model downloads are local development assets. The actual X connection trial is separately capped and documented in [Connection trial](CONNECTION_TRIAL.md).
+
+Next: real held-out calibration, reliable entity/location extraction, an evaluated training threshold, and measured hosted CPU throughput. Model agreement or a high NLI score must not be presented as calibrated accuracy or political coordination.

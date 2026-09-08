@@ -1,6 +1,6 @@
 # Jacob's list — only work that benefits from you
 
-Updated September 7, 2026. Development continues without waiting for the optional items below.
+Updated September 8, 2026. Development continues without waiting for the optional items below.
 
 ## Already handled
 
@@ -15,9 +15,10 @@ Updated September 7, 2026. Development continues without waiting for the optiona
 - [ ] **Provide the two reference screens when convenient:** DashboardV3.dc.html and Incidents.dc.html, ideally in the design ZIP. Build Spec.html has been received and read. This can wait; autonomous backend/intelligence work continues without guidance during the seven-hour window.
 - [ ] **Try the integrated dashboard — about 10 minutes, after the redesign is connected.** Find a subject you care about and inspect its supporting posts. One local correction is already saved; the next voice session can build on it. We handle implementation details.
 
-## Ready now: one setup step for live X access
+## X setup already handled
 
-- [ ] **Save the existing active X bearer token privately — about 2 minutes.** In the [local dashboard](http://127.0.0.1:4317), open Coverage & budget → Private X connection and select Save privately after entering the bearer token. Use the active token you already have. See the [setup steps](caucus-pulse/docs/PRIVATE_X_SETUP.md). Saving does not spend credits. Codex can then run the bounded access and collection checks; independent development continues meanwhile.
+- [x] The existing active token is saved privately and worked for usage, List profiles and a five-post collection trial. No new token is needed.
+- The one-time connection trial used $3.025 in conservative local accounting. The provider's credit endpoint returned 404, so automatic polling remains off until the remaining balance can be verified. We are handling the integration and will present any concrete remaining requirement after the work window.
 
 ## Only if needed later
 

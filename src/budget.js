@@ -12,7 +12,7 @@ export function microDollars(usd) {
 }
 const iso = value => new Date(value).toISOString();
 
-export function createBudget(db, policy, { clock = () => Date.now() } = {}) {
+export function createBudget(db, policy, { clock = () => Date.now(), connectionTrial = null } = {}) {
   const daily = microDollars(policy.dailyCeilingUsd);
   const total = microDollars(policy.pilotCeilingUsd);
   const reserve = microDollars(policy.reserveUsd);
@@ -23,6 +23,11 @@ export function createBudget(db, policy, { clock = () => Date.now() } = {}) {
   if (!prices.post || !prices.user) throw new Error('Post and user read prices must be configured.');
   const freshnessMs = Math.min(policy.balanceMaxAgeSeconds ?? 300, 300) * 1000;
   if (!(freshnessMs > 0)) throw new Error('Invalid balance freshness setting.');
+  // A separate, explicitly invoked connectivity trial can use at most $3.025 over
+  // the entire ledger when X's documented balance endpoint is unavailable.
+  // It never marks a balance verified, resets prior spending, or starts polling.
+  const trialDeadline=connectionTrial?Date.parse(connectionTrial.expiresAt):null;
+  if(connectionTrial&&(!Number.isFinite(trialDeadline)||trialDeadline-clock()>7*3600000||connectionTrial.reason!=='credit-endpoint-unavailable'))throw new Error('Invalid connection trial authorization.');
 
   function recordBalance({ prepaidUsd, readStartedAt, observedAt = iso(clock()) }) {
     // Free credits can expire; the guard uses verified prepaid credit only.
@@ -47,10 +52,14 @@ export function createBudget(db, policy, { clock = () => Date.now() } = {}) {
     const fresh = Boolean(observation && clock() - Date.parse(observation.read_started_at) <= freshnessMs && clock() >= Date.parse(observation.observed_at));
     const fault = db.prepare('SELECT code FROM operation_faults WHERE resolved_at IS NULL ORDER BY created_at LIMIT 1').get()?.code ?? null;
     const remainingWallet = observation ? Math.max(0, observation.available_micro - afterBalance - reserve) : 0;
-    return { day, totalMicro: all, dailyMicro: today, remainingMicro: fresh && !fault
-      ? Math.max(0, Math.min(total - all, daily - today, remainingWallet)) : 0,
+    const trialActive=Boolean(connectionTrial&&clock()<trialDeadline);
+    const trialRemaining=trialActive?Math.max(0,Math.min(3_025_000-all,total-all,daily-today,observation?remainingWallet:3_025_000)):0;
+    const normalRemaining=fresh&&!fault?Math.max(0,Math.min(total-all,daily-today,remainingWallet)):0;
+    return { day, totalMicro: all, dailyMicro: today, remainingMicro: !fault&&(fresh||trialActive)
+      ? connectionTrial?Math.min(trialRemaining,fresh?normalRemaining:trialRemaining):normalRemaining : 0,
       balanceFresh: fresh, balanceVerifiedAt: observation?.observed_at ?? null,
       verifiedPrepaidUsd: observation ? observation.available_micro / 1_000_000 : null,
+      connectionTrial:connectionTrial?{active:trialActive,expiresAt:iso(trialDeadline),lifetimeCeilingMicro:3_025_000,remainingMicro:trialRemaining,prepaidReserveVerified:fresh}:null,
       fault, requestCount: db.prepare('SELECT COUNT(*) AS n FROM budget_requests').get().n,
       unresolvedRequests: db.prepare("SELECT COUNT(*) AS n FROM budget_requests WHERE status<>'settled'").get().n };
   }
@@ -61,13 +70,13 @@ export function createBudget(db, policy, { clock = () => Date.now() } = {}) {
     return atomic(db, () => {
       const s = state();
       if (s.fault) throw new BudgetStop('billing-review-required', 'A billing discrepancy needs review before further requests.');
-      if (!s.balanceFresh) throw new BudgetStop('balance-verification-required', 'Refresh the prepaid credit balance before making paid requests.');
+      if (!s.balanceFresh&&!s.connectionTrial?.active) throw new BudgetStop('balance-verification-required', 'Refresh the prepaid credit balance before making paid requests.');
       const amount = prices[kind] * maxResources;
       if (amount > s.remainingMicro) throw new BudgetStop('budget-ceiling', 'This request would cross the daily limit, pilot limit, or protected credit reserve.');
       const id = randomUUID(); const now = iso(clock());
       db.prepare(`INSERT INTO budget_requests(id, kind, purpose, max_resources, unit_micro, reserved_micro,
         accounted_micro, status, started_at, billing_day) VALUES (?, ?, ?, ?, ?, ?, ?, 'reserved', ?, ?)`).run(
-        id, kind, purpose, maxResources, prices[kind], amount, amount, now, now.slice(0, 10));
+        id, kind, connectionTrial?`connection-trial:${purpose}`:purpose, maxResources, prices[kind], amount, amount, now, now.slice(0, 10));
       return { id, reservedMicro: amount };
     });
   }

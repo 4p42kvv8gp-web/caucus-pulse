@@ -1,0 +1,57 @@
+{
+  "name": "political-debate-large-v1",
+  "repository": "mlburnham/Political_DEBATE_large_v1.0",
+  "revision": "1a3aff1ecb97ad93a6de598f7414b1707de7e7c3",
+  "license": "MIT",
+  "files": [
+    [
+      "README.md",
+      4262,
+      "c4138a29881d61572138581dcdd057b5f82d131a"
+    ],
+    [
+      "config.json",
+      1068,
+      "31ae78271de7ac82b918a868092542093b249951"
+    ],
+    [
+      "model.safetensors",
+      1740304440,
+      "5f83396d09cb0b802eafbe1f33f0ca03632f8dc17115051624cc4ef85b9815d4"
+    ],
+    [
+      "special_tokens_map.json",
+      1021,
+      "faae4ea2db89c71f8755d32277b42df271c4d183"
+    ],
+    [
+      "tokenizer.json",
+      8649129,
+      "d00a9dc2bac02e9993d6d577d8ab60107260b390"
+    ],
+    [
+      "tokenizer_config.json",
+      1512,
+      "1c54c449b28bde22eb24d7e99e54a4b5fd9f91e8"
+    ]
+  ],
+  "engine": "political-debate-nli",
+  "runtime": {
+    "torch": "2.14.0",
+    "transformers": "5.16.1",
+    "tokenizers": "0.23.2"
+  },
+  "inferenceLocation": "local-cpu",
+  "policyVersion": "political-debate-passages-v2",
+  "limits": {
+    "maxInputCharacters": 60000,
+    "maxWindows": 24,
+    "maxPassagesPerWindow": 10,
+    "maxPairs": 600,
+    "maxSequenceTokens": 512,
+    "batchSize": 4,
+    "threads": 2,
+    "deadlineSeconds": 160,
+    "threshold": 0.95
+  }
+}

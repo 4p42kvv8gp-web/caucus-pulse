@@ -2,7 +2,11 @@
 
 A private listening and classification workspace for public X posts by House Democratic members.
 
-This private local application preserves available source text, supports indexed exploration and local semantic search, and records post corrections with evidence. It also provides resumable collection, budget enforcement, dated member attribution, and a provider-neutral classification contract. **Live X collection and semantic classification are not connected yet.** Semantic retrieval works after downloading the pinned local model. Imported calibration examples retain their historical dates. General lessons are saved as proposals and do not automatically alter other posts.
+The application preserves available source text, supports indexed and semantic search, proposes topics with a local model, and records corrections against the exact source and displayed prediction. Collection, account verification, analysis and review run as separate recoverable steps.
+
+**Current pilot:** a bounded X trial captured 300 List account profiles and five recent posts. Official House links established 120 current account bindings and admitted one captured post; four captures await verification. The archive also contains two historical examples and one authentic saved review. The List scan is incomplete. The $3.025 connection-trial ceiling is exhausted and automatic polling remains off because the provider's credits endpoint returned 404. No paid AI or hosted deployment is active.
+
+The selected local classifier is Political DEBATE large, used for provisional topic/subtopic and communicative-function suggestions. It returns source passage references, rather than rewriting quotations or generating unsupported narratives. It is an initial classifier, not a verified measure of truth. Your corrections take precedence; automatic weight training is not enabled. See [Local classification](docs/LOCAL_CLASSIFICATION.md).
 
 ## Run locally
 
@@ -20,15 +24,27 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 
 The model-download command retrieves about 35 MB of public, revision-pinned BGE assets and verifies their digests. Application inference then runs locally with remote loading disabled. Without those assets, the archive still opens and semantic search explicitly reports unavailable. See [Local semantic search](docs/LOCAL_SEMANTIC_SEARCH.md) for model choices, limits, and the engineering benchmark.
 
+## Local classification setup
+
+The tested classifier runtime uses Python 3.12 on macOS ARM64:
+
+```sh
+python3 scripts/setup-local-classifier.py
+python3 scripts/download-classifier-model.py
+node scripts/classifier.js status
+```
+
+The public Political DEBATE download is about 1.75 GB. After setup, enable `intelligence.localClassifier.enabled` in `config/settings.json` and restart the preview. The server processes up to five local classification jobs per pass. `CAUCUS_DISABLE_LOCAL_CLASSIFIER=1` allows archive maintenance without loading the model. The current dependency lock was tested on this Mac; a Linux CPU lock must be validated before deployment. No model or source dataset is downloaded at application startup.
+
 ## Boundaries of this milestone
 
 - Loopback-only development service, no external access or hosted authentication. Do not expose it through a public proxy.
-- The dashboard now uses indexed selection and bounded pages with full-selection topic counts. Short text queries still scan the SQLite text projection; internal phrase/example callers still need bounds. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
+- The dashboard now uses indexed selection and bounded pages with full-selection topic counts. Short text queries still scan the SQLite text projection; the exact-phrase caller still needs a larger-archive bound; reviewed-example retrieval is bounded. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
-- Classification failure leaves source posts stored and visible. Failed jobs are recorded; scheduled provider retries are future work.
-- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production provider integration remain required work.
+- Classification failure leaves source posts and previous analysis visible. Durable jobs preserve failure status; explicit retries are bounded and tied to source versions.
+- Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production deployment remain required work.
 - Removal clears current database records and prevents replay. Filesystem backup/WAL cleanup and provider removal handling must be completed before live deployment.
-- Live collection remains disabled. The resumable collector and budget enforcement modules now exist and are tested offline. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
+- Automatic collection remains disabled. The resumable collector passed a capped authenticated trial as well as offline recovery tests. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
 
 ## Collection and spending foundation
 
@@ -42,7 +58,7 @@ node scripts/collection-status.js
 
 This prints local readiness only. Configure the product token through the local Coverage & budget → Private X connection form, or through `CAUCUS_X_BEARER_TOKEN`. Then `--refresh-balance` makes one read-only call to X's credit endpoint. The status command never fetches posts. Never pass a secret as a command-line argument or reuse the single-post reader's private credential file for this collector. The adapter has no automatic request retries and sends credentials only to `https://api.x.com`, with redirects rejected.
 
-The List adapter supports explicit `tweet` or `post` field dialects because current generated documentation and observed single-post responses differ. The List dialect, full-text availability, and actual charges still need a bounded authenticated trial. No profile, media, or referenced-post expansions are requested in this initial adapter.
+The List adapter supports explicit `tweet` or `post` field dialects because current generated documentation and observed single-post responses differ. The capped trial succeeded with the `tweet` field dialect. Full-history coverage and provider dollar billing remain unverified. No profile, media, or referenced-post expansions are requested in this initial adapter.
 
 References checked September 7, 2026: [X pricing](https://docs.x.com/x-api/getting-started/pricing), [credit balance endpoint](https://docs.x.com/x-api/usage/get-usage-credits), [List posts](https://docs.x.com/x-api/lists/get-list-posts).
 
@@ -82,7 +98,7 @@ The first command downloads the public [House Clerk roster](https://clerk.house.
 
 `src/roster.js` treats a current roster as a dated observation. Its operational window starts at the publication date and ends 24 hours after retrieval; it does not establish caucus affiliation earlier in the term. Newer snapshots take precedence. Source observations cannot be silently rewritten under the same identifier.
 
-The account-binding function requires a record of an official House page linking the exact profile, a matching numeric X user ID/username response, explicit ownership dates, and a source explanation. **It validates the submitted evidence record; it does not fetch or verify those pages itself.** The synchronization/verification caller still needs to be built. No account should be bound from a List entry alone. Personal/campaign accounts lacking an official link remain unresolved pending another reviewed evidence path.
+The account-binding function requires a record of an official House page linking the exact profile, a matching numeric X user ID/username response, explicit ownership dates, and a source explanation. The public-source caller now fetches the official directory and member pages, records hashes and dates, and extracts exact profile anchors. A separate local import joins them to the previously observed numeric X profiles. See [Account evidence](docs/ACCOUNT_EVIDENCE.md). No account should be bound from a List entry alone. Personal/campaign accounts lacking an official link remain unresolved pending another reviewed evidence path.
 
 Local processing moves captured records into the explorer only after attribution succeeds. Identity and district are saved on each post, so later edits to account mappings cannot relabel its history. Failed verification retains the source in the queue. The local server processes at most 100 queued captures and 100 baseline jobs per minute. A separate local CPU worker indexes at most 25 posts per pass when its verified model is available; none of this makes X or hosted-model requests.
 
@@ -92,11 +108,11 @@ Local processing moves captured records into the explorer only after attribution
 
 These checks verify the output's structure and source references; they cannot prove that the interpretation is correct. Negation, quoted language, location meaning, and classification boundaries still require model evaluation and human calibration.
 
-Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text and changed teaching examples reject late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use deterministic topic matching with persisted exclusions for held-out sources, text copies, direct references, and edit siblings; proposed general rules and unresolved reviews are excluded. This is retrieval-based adaptation, not model-weight training. Scheduled reclassification, a provider worker with cost limits, and cross-post discovery remain unfinished.
+Each successful semantic run records the provider/model, input hash, reviewed-example IDs, source hash, and output. Changed or removed source text and changed teaching examples reject late output. Rollback creates another recorded run, and current human corrections retain precedence. Reviewed examples use bounded BGE passage retrieval with a topic fallback and persisted exclusions for held-out sources, text copies, direct references, and edit siblings; proposed general rules and unresolved reviews are excluded. The optional generative adapter can consume retrieved examples. The selected NLI classifier uses fixed hypotheses and records that it did not consume them; it does not pretend to learn weights from one review. Durable local reclassification and cross-post subject candidates are implemented.
 
 The [teaching and evaluation guide](docs/TEACHING_AND_EVALUATION.md) describes voice-session recording, explicit negative decisions, reserved test posts, and separate candidate runs. Evaluations freeze accepted subject labels and record missing/extra labels without changing dashboard output. They expose stale, failed, removed, and unfinished cases. The local baseline evaluation makes no requests; the provider callback still needs a cost-controlled adapter. Semantic run history shows which examples were supplied, without claiming causal influence.
 
-The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Current imported examples still use the literal baseline. Synthetic tests never count as real model output or user feedback.
+The teaching desk can display semantic labels, source spans, entities, and event candidates when an actual provider result exists. Actual completed local runs replace the literal baseline, while current human labels retain precedence. Synthetic tests never count as real model output or user feedback.
 
 ## Automatic language discovery
 

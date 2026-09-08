@@ -13,6 +13,8 @@ import { explorerPage,searchFilters } from './explorer.js';
 import { embeddingStatus,processEmbeddingJobs } from './embedding-store.js';
 import { createEmbeddingClient } from './embedding-client.js';
 import { semanticSearch } from './semantic-search.js';
+import { createLocalClassifierClient } from './classifier-client.js';
+import { classificationStatus, queueClassification, processClassificationJobs } from './classifier-jobs.js';
 import { subjectGroups } from './subject-groups.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -56,7 +58,7 @@ async function readJson(req) {
   catch { throw new Error('Invalid JSON.'); }
 }
 
-export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null } = {}) {
+export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null, classifier = null } = {}) {
   let grouping=false;
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
@@ -74,8 +76,20 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         const [file, type] = staticFiles.get(url.pathname);
         res.writeHead(200, { 'Content-Type': type }); return res.end(readFileSync(resolve(root, file)));
       }
-      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status() });
+      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status(), classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0} });
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
+      if (req.method === 'GET' && url.pathname === '/api/classification') return json(200, {
+        ...classificationStatus(store), runtime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0}, state: classifier?.state ?? 'not-started'
+      });
+      const classifierMatch = url.pathname.match(/^\/api\/posts\/(\d+)\/classification$/);
+      if (req.method === 'POST' && classifierMatch) {
+        const body = await readJson(req);
+        if (!body || Array.isArray(body) || Object.keys(body).length !== 1 || typeof body.sourceHash !== 'string' || !/^[a-f0-9]{64}$/.test(body.sourceHash)) throw new Error('Invalid classification request.');
+        if (!classifier?.runtime?.status().ready) return json(503, {error:'The local classifier is not ready. Source posts remain available.',code:'CLASSIFIER_UNAVAILABLE'});
+        const result = queueClassification(store, classifierMatch[1], body.sourceHash);
+        classifier.process?.();
+        return json(202, result);
+      }
       if (req.method === 'GET' && url.pathname === '/api/semantic') return json(200, {
         ...embeddingStatus(store,semantic?.name??'minilm'),runtime:semantic?.runtime?.status()??{ready:false,busy:false,queued:0},
         state:semantic?.state??'not-started'
@@ -132,6 +146,8 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       return json(404, { error: 'Not found.' });
     } catch (error) {
       if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
+      if (error.code === 'CLASSIFIER_STALE' || error.code === 'PREDICTION_CHANGED') return json(409, {error:error.message,code:error.code});
+      if (error.code === 'CLASSIFIER_NOT_FOUND') return json(404, {error:'Post not found.'});
       if(error.code==='DISCOVERY_CHANGED')return json(409,{error:error.message,code:error.code});
       if(error.code==='DISCOVERY_UNAVAILABLE')return json(503,{error:error.message,code:error.code});
       if (['SEMANTIC_UNAVAILABLE','SEMANTIC_BUSY','SEMANTIC_INPUT_LIMIT'].includes(error.code)) return json(
@@ -149,7 +165,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   function processLocalRecords() { promoteCaptured(store); store.analyzePending(); }
   processLocalRecords();
   const semantic={name:settings.intelligence?.localEmbeddings?.model??'minilm',runtime:null,state:'disabled'};
-  let embeddingPass=false,stopping=false;
+  const classifier={runtime:null,state:'disabled',process:()=>void processLocalClassifications()};
+  let embeddingPass=false,classifierPass=false,stopping=false;
+  async function processLocalClassifications() {
+    if (stopping || classifierPass || !classifier.runtime?.status().ready) return;
+    classifierPass=true;
+    try { await processClassificationJobs(store,classifier.runtime,{limit:settings.intelligence?.localClassifier?.postsPerPass??5,stopping:()=>stopping}); }
+    catch { classifier.state='worker-needs-attention'; }
+    finally { classifierPass=false; }
+  }
   async function processLocalEmbeddings() {
     if (stopping || embeddingPass || !semantic.runtime?.status().ready) return;
     embeddingPass=true;
@@ -164,16 +188,23 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       .then(async runtime=>{semantic.runtime=runtime;semantic.state='ready';if(stopping)await runtime.close();else await processLocalEmbeddings();})
       .catch(()=>{semantic.state='model-unavailable';});
   }
-  const server = createServer(store,{semantic});
+  let classifierWarmup=Promise.resolve();
+  if(settings.intelligence?.localClassifier?.enabled && process.env.CAUCUS_DISABLE_LOCAL_CLASSIFIER!=='1'){
+    classifier.state='starting';
+    classifierWarmup=createLocalClassifierClient()
+      .then(async runtime=>{classifier.runtime=runtime;classifier.state='ready';if(stopping)await runtime.close();else await processLocalClassifications();})
+      .catch(()=>{classifier.state='model-unavailable';});
+  }
+  const server = createServer(store,{semantic,classifier});
   const port = Number(process.env.PORT ?? 4317);
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
-  const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();},60_000);
+  const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();void processLocalClassifications();},60_000);
   async function shutdown() {
     if(stopping)return;stopping=true;clearInterval(interval);
     const closed=new Promise(resolve=>server.close(resolve));
-    await warmup;await semantic.runtime?.close();await closed;
+    await Promise.all([warmup,classifierWarmup]);await Promise.all([semantic.runtime?.close(),classifier.runtime?.close()]);await closed;
     // Let a cancelled inference finish its fenced bookkeeping before closing SQLite.
-    while(embeddingPass)await new Promise(resolve=>setImmediate(resolve));
+    while(embeddingPass||classifierPass)await new Promise(resolve=>setImmediate(resolve));
     store.close();process.exit(0);
   }
   process.on('SIGINT', shutdown); process.on('SIGTERM', shutdown);
