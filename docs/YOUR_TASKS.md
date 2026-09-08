@@ -1,6 +1,6 @@
 # Jacob's list — only work that benefits from you
 
-Updated September 8, 2026. Development continues without waiting for the optional items below.
+Updated September 8, 2026 after the seven-hour build. The development schedule is paused. Your useful next work is listed below; implementation does not depend on the optional design files.
 
 ## Already handled
 

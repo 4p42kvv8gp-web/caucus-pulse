@@ -1,8 +1,8 @@
 # Tasks
 
-## Active — September 8, 2026
+## Next development work — September 8, 2026
 
-- [ ] **Seven-hour autonomous development window** — Work through 11:57:54 UTC (7:57:54 AM Eastern), then update the handoff, pause the existing heartbeat and report verified outcomes. No new guidance requests during the window.
+- [x] **Seven-hour autonomous development window** — Completed at 11:57:54 UTC (7:57:54 AM Eastern). The development heartbeat is paused, the preview remains available, and BUILD_RESULT.md records the verified outcomes and launch requirements.
 - [x] **M3: Validate and publish local classification** — Political DEBATE large is selected after local model comparisons. The source-passage contract, durable jobs and human-review precedence work on the three real development posts. Weather-advice and entity/location gaps remain explicit. Published in commit 1a6e849; proceed with real calibration and deployment preparation; do not describe this as human-validated accuracy.
 - [x] **M3: Implement the incident desk and teaching controls** — Source-backed incident review, exact location/district evidence, user-tracked cases, source timelines, local digest copying, concurrent review guards, independent post selection and a bounded unreviewed queue now work. Human held-out calibration remains separate required work.
 - [ ] **M2: Finish identity and coverage recovery** — A capped trial observed 300 List profiles and five posts. Official directory/office evidence established 120 current account bindings and promoted one capture. Four posts remain unresolved; the List inventory remains incomplete. Add honest coverage and recovery controls without further paid calls while credit is unverified.
