@@ -8,7 +8,7 @@
 - [ ] **M2: Finish identity and coverage recovery** — A capped trial observed 300 List profiles and five posts. Official directory/office evidence established 120 current account bindings and promoted one capture. Four posts remain unresolved; the List inventory remains incomplete. Add honest coverage and recovery controls without further paid calls while credit is unverified.
 - [ ] **M2: Verify credit before normal polling** — Active token works for usage and paid source endpoints. Credits endpoint returned 404, so dollar balance remains unknown. The $3.025 one-time connection trial is exhausted. Normal collection stays off; no paid retries or new services. Preserve $25/day, $350/pilot and $50 reserve controls.
 - [ ] **M3: Prepare real voice calibration** — Use the three admitted source posts now available, with dates, original wording, predicted labels, concise reasons and one question per review. Do not fabricate acceptance or turn synthetic cases into human evaluation.
-- [ ] **M4: Prepare private deployment and operations** — Authentication, controlled storage, migrations, backup/restore, removal propagation and monitoring; write a concrete launch proposal with actual platform limitations and cost assumptions.
+- [ ] **M4: Prepare private deployment and operations** — Owner authentication, schema10 migration, verified backups, staged recovery and managed removal cleanup now pass tests. Finish target-host setup, Linux CPU validation, off-host backup protection, actual owner login, provider removal discovery and monitoring; document actual platform limitations and cost assumptions.
 - [ ] **M4: Complete the pilot acceptance trace** — Follow the newly captured verified post through analysis, dashboard and later human correction; verify recovery/removal. Human review cannot be simulated as a real user action.
 - [ ] **Visual verification** — The interface now follows the received Claude Build Spec with a shared header, compact topic/subtopic table, feed and source-backed incident timeline. Exact screen HTML remains missing. Browser policy verification is unavailable and must not be bypassed; HTTP and data checks continue.
 
@@ -25,6 +25,8 @@
 - [ ] **Historical coverage and model training** — Bounded backfill, comparable trend baselines and training only after reviewed data supports a held-out evaluation.
 
 ## Done
+
+- [x] ~~Implement private access and archive recovery~~ (September 8) — Optional Cloudflare owner verification, source-removal journal, conservative staged recovery, sealed integrity-checked backups, managed copy cleanup and stable search across compaction. All 167 Node tests pass; public dependency audit has zero known findings. Real archive/review and $3.025 spending ledger preserved. No host, tunnel, actual owner login, off-host backup, real removal or restore activation has been performed.
 
 - [x] ~~Implement the topic overview, incident desk and bounded exact search~~ (September 8) — Light system-font layout, member/post sorting, subtopic drill-down, source review and case history, topic/incident concurrent-edit protection, bounded history and phrase results. All 152 Node tests pass. Real archive remains three posts and one authentic topic review; no test-created real incidents. Browser visual verification remains pending.
 

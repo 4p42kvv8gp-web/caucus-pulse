@@ -20,6 +20,7 @@
     "embeddings:benchmark": "node scripts/benchmark-embeddings.js"
   },
   "dependencies": {
-    "@huggingface/transformers": "3.8.1"
+    "@huggingface/transformers": "3.8.1",
+    "jose": "6.2.12"
   }
 }

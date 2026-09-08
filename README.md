@@ -38,12 +38,12 @@ The public Political DEBATE download is about 1.75 GB. After setup, enable `inte
 
 ## Boundaries of this milestone
 
-- Loopback-only development service, no external access or hosted authentication. Do not expose it through a public proxy.
+- Current preview is loopback-only. Optional [private owner authentication](docs/PRIVATE_ACCESS.md) is implemented and tested with synthetic signed tokens; actual hosting, owner login and tunnel verification remain pending. Public configuration cannot fall back to unauthenticated local mode.
 - The light dashboard includes topic/subtopic drill-down, a recent source feed, bounded language/emerging cards, and a source-backed [incident desk](docs/INCIDENT_DESK.md). Indexed selection and bounded pages retain full-selection topic counts. Short text queries still scan the SQLite text projection; exact phrase search and reviewed-example retrieval are bounded. See [Indexed explorer](docs/INDEXED_EXPLORER.md).
 - Preserves full available API text, original payload, references, and provenance. It does not claim that absent long text, referenced posts, or media have been retrieved.
 - Classification failure leaves source posts and previous analysis visible. Durable jobs preserve failure status; explicit retries are bounded and tied to source versions.
 - Corrections are tied to the current source content. If text changes, old reviews remain visible but no longer apply. General lessons are proposals. Reviewed-example retrieval, held-out label evaluation, and learning provenance are implemented; real calibration and production deployment remain required work.
-- Removal clears current database records and prevents replay. Filesystem backup/WAL cleanup and provider removal handling must be completed before live deployment.
+- [Archive operations](docs/ARCHIVE_OPERATIONS.md) provide verified backups, staged recovery that preserves spending/removals, and cleanup of managed source copies. Off-host backup protection and automatic provider removal detection remain required before live deployment.
 - Automatic collection remains disabled. The resumable collector passed a capped authenticated trial as well as offline recovery tests. Captured records await verified roster mapping before appearing as member posts. No collection scheduler has been enabled.
 
 ## Collection and spending foundation
@@ -79,13 +79,13 @@ After private setup, add `--execute` to run the displayed pass. Execution makes 
 
 To recover after inspecting a problem, run `--mode inventory --restart` to abandon the incomplete scan while keeping its evidence, or `--mode posts --field-dialect tweet --restart` to restart the pending post interval from its head with the original boundaries. Recovery is local-only and cannot be combined with `--execute`; inspect the result before a separate pass. Do not repeatedly retry unresolved failures or reset spending reservations.
 
-Account observations request only public ID, username, display name, and protected status, with no metrics or expansions. Their local storage supports identity investigation; official-link verification and actual bindings remain separate unfinished integration work. Documentation checked: [List members](https://docs.x.com/x-api/lists/get-list-members).
+Account observations request only public ID, username, display name, and protected status, with no metrics or expansions. Their local storage supports identity investigation; official-link verification and actual bindings are separate steps. The current pilot has 120 current official-account bindings; unresolved accounts remain excluded. Documentation checked: [List members](https://docs.x.com/x-api/lists/get-list-members).
 
 ## Private local token setup
 
 See [Private X setup](docs/PRIVATE_X_SETUP.md). The local form writes only `data/secrets/x-bearer-token`, using an atomic replacement with owner-only file permissions and a private directory. It requires an allowed loopback Origin and never returns the token in API responses. Saving does not validate access or make a network request. An environment token takes precedence, and the form refuses to shadow it.
 
-This is private local file storage, not an encrypted managed vault. Hosting requires a production secret store and authentication; the development service remains loopback-only. Credential tests use temporary directories and synthetic tokens, never the real product credential location.
+This is private local file storage, not an encrypted managed vault. Hosting requires private host credential provisioning plus the owner authentication mode; the development service remains loopback-only. Credential tests use temporary directories and synthetic tokens, never the real product credential location.
 
 ## Roster and account attribution
 

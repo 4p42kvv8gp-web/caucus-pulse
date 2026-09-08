@@ -17,6 +17,7 @@ import { createLocalClassifierClient } from './classifier-client.js';
 import { classificationStatus, queueClassification, processClassificationJobs } from './classifier-jobs.js';
 import { subjectGroups } from './subject-groups.js';
 import {incidentDesk,postIncidents,saveIncidentReview,createIncidentCase,incidentCase,updateIncidentCase} from './incidents.js';
+import {accessFromEnvironment} from './access.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -63,25 +64,32 @@ async function readJson(req) {
   catch { throw new Error('Invalid JSON.'); }
 }
 
-export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null, classifier = null } = {}) {
+export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null, classifier = null,access=null } = {}) {
   let grouping=false;
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.setHeader('Referrer-Policy', 'no-referrer');
+    if(access)res.setHeader('Strict-Transport-Security','max-age=86400');
     res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
     const port = server.address()?.port;
-    const allowedHosts = [`127.0.0.1:${port}`, `localhost:${port}`];
+    const allowedHosts = [`127.0.0.1:${port}`, `localhost:${port}`,...(access?[access.publicHost]:[])];
+    const allowedOrigins=access?[access.publicOrigin]:allowedHosts.map(host=>`http://${host}`);
     function json(status, body) { res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' }); res.end(JSON.stringify(body)); }
-    if (!allowedHosts.includes(req.headers.host)) return json(403, { error: 'Local access only.' });
-    if (req.headers.origin && !allowedHosts.some(host => req.headers.origin === `http://${host}`)) return json(403, { error: 'Origin is not allowed.' });
-    const url = new URL(req.url, `http://127.0.0.1:${port}`);
+    if (!allowedHosts.includes(req.headers.host)) return json(403, { error: 'Workspace host is not allowed.' });
+    if (req.headers.origin && !allowedOrigins.includes(req.headers.origin)) return json(403, { error: 'Origin is not allowed.' });
+    if(access&&!['GET','HEAD'].includes(req.method)&&req.headers.origin!==access.publicOrigin)return json(403,{error:'Use the authorized workspace origin for changes.'});
+    if(typeof req.url!=='string'||req.url.length>8192)return json(414,{error:'Request URL is too long.'});
+    let url;try{url=new URL(req.url, `http://127.0.0.1:${port}`);}catch{return json(400,{error:'Invalid request URL.'});}
     try {
+      if(req.method==='GET'&&url.pathname==='/healthz')return json(200,{ok:true});
+      let identity={reviewer:'local-user'};
+      if(access){try{identity=await access.verifyRequest(req);}catch(error){return json(error.status===503?503:401,{error:error.status===503?'Private access verification is temporarily unavailable.':'Sign in with the authorized workspace account.',code:error.status===503?'ACCESS_UNAVAILABLE':'ACCESS_DENIED'});}}
       if (req.method === 'GET' && staticFiles.has(url.pathname)) {
         const [file, type] = staticFiles.get(url.pathname);
         res.writeHead(200, { 'Content-Type': type }); return res.end(readFileSync(resolve(root, file)));
       }
-      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)), connection: credentials.status(), classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0} });
+      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings, pageOptions(url)),access:{mode:access?'private-access':'local'}, connection: credentials.status(), classification: classificationStatus(store), classifierRuntime: classifier?.runtime?.status() ?? {ready:false,busy:false,queued:0} });
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
       if (req.method === 'GET' && url.pathname === '/api/review-queue') return json(200, reviewQueue(store, filtersFrom(url)));
       if(req.method==='GET'&&url.pathname==='/api/incidents')return json(200,incidentDesk(store,filtersFrom(url)));
@@ -124,7 +132,7 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         return json(200,semanticSearch(store,embedding,{name:semantic.name,filters,limit}));
       }
       if (req.method === 'POST' && url.pathname === '/api/settings/x-credential') {
-        if (!allowedHosts.some(host => req.headers.origin === `http://${host}`)) return json(403, { error: 'Save credentials from the local connection form.' });
+        if (!allowedOrigins.includes(req.headers.origin)) return json(403, { error: 'Save credentials from the authorized connection form.' });
         const value = await readJson(req);
         if (!value || Array.isArray(value) || Object.keys(value).length !== 1 || !Object.hasOwn(value, 'bearerToken')) throw new Error('Invalid credential request.');
         return json(200, { ...credentials.save(value.bearerToken), accessVerified: false, collectionStarted: false });
@@ -164,7 +172,7 @@ export function createServer(store, { credentials = createCredentialStore(resolv
           if(!body||Array.isArray(body)||Object.keys(body).some(k=>!['sourceHash','predictionHash','reviewId','labels','decision','reason','ruleProposal'].includes(k))||
             !/^[a-f0-9]{64}$/.test(body.sourceHash??'')||!/^[a-f0-9]{64}$/.test(body.predictionHash??'')||
             (body.reviewId!==null&&!/^[a-f0-9-]{36}$/.test(body.reviewId??'')))throw new Error('Invalid review versions: reload the post before saving.');
-          return json(200, store.saveFeedback(match[1],body));
+          return json(200, store.saveFeedback(match[1],body,identity.reviewer));
         }
       }
       return json(404, { error: 'Not found.' });
@@ -182,11 +190,13 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       return json(safe ? 400 : 500, { error: safe ? error.message : 'The request could not be completed. Source data is retained.' });
     }
   });
+  server.requestTimeout=15000;server.headersTimeout=10000;server.keepAliveTimeout=5000;server.maxHeadersCount=40;server.maxRequestsPerSocket=100;
   return server;
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   process.umask(0o077);
+  const access=accessFromEnvironment();
   const store = openStore(process.env.CAUCUS_DB_PATH ?? resolve(root, 'data/pulse.sqlite'));
   function processLocalRecords() { promoteCaptured(store); store.analyzePending(); }
   processLocalRecords();
@@ -221,7 +231,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       .then(async runtime=>{classifier.runtime=runtime;classifier.state='ready';if(stopping)await runtime.close();else await processLocalClassifications();})
       .catch(()=>{classifier.state='model-unavailable';});
   }
-  const server = createServer(store,{semantic,classifier});
+  const server = createServer(store,{semantic,classifier,access});
   const port = Number(process.env.PORT ?? 4317);
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
   const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();void processLocalClassifications();},60_000);

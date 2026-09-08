@@ -55,6 +55,7 @@ function postCard(post) {
 }
 function renderStats() {
   const c = state.data.coverage;
+  $('workspace-mode').textContent=state.data.access?.mode==='private-access'?'PRIVATE WORKSPACE':'LOCAL WORKSPACE';
   $('stats').innerHTML = [
     ['Archived source posts', c.postCount, `${c.historicalPostCount} historical examples / ${c.collectedPostCount} from collection`],
     ['Members represented', c.memberCount, 'Within this archive only'],

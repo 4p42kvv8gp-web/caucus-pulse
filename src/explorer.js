@@ -29,6 +29,7 @@ export function migrateExplorer(db) {
       LEFT JOIN analyses n ON n.post_id=p.id AND n.source_hash=p.content_hash
       LEFT JOIN feedback f ON f.sequence=(SELECT sequence FROM feedback WHERE post_id=p.id AND source_hash=p.content_hash ORDER BY sequence DESC LIMIT 1);
       CREATE TABLE post_search (
+        search_id INTEGER PRIMARY KEY,
         post_id TEXT UNIQUE NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
         created_at TEXT NOT NULL,captured_at TEXT NOT NULL,member_id TEXT NOT NULL,member_name TEXT NOT NULL,
         account_type TEXT NOT NULL,type TEXT NOT NULL,provenance_kind TEXT NOT NULL,search_text TEXT NOT NULL,
@@ -74,6 +75,30 @@ export function migrateExplorer(db) {
         ${refresh(`post_id=${row}.post_id`)} ${event === 'UPDATE' ? refresh('post_id=old.post_id AND old.post_id<>new.post_id') : ''} END;`);
     }
     db.exec(`${refresh('1=1')} UPDATE schema_version SET version=6;`);
+  });
+}
+
+export function migrateStableExplorerRowids(db) {
+  if(db.prepare('SELECT version FROM schema_version').get().version>=10)return;
+  atomic(db,()=>{
+    if(!db.prepare('PRAGMA table_info(post_search)').all().some(c=>c.name==='search_id'&&c.type==='INTEGER'&&c.pk===1)){
+      const columns=['post_id','created_at','captured_at','member_id','member_name','account_type','type','provenance_kind','search_text','labels_json','reviewed','rule_proposals'];
+      const triggers=db.prepare("SELECT name,sql FROM sqlite_schema WHERE type='trigger' AND name LIKE 'explorer_%'").all();
+      const indexes=db.prepare("SELECT sql FROM sqlite_schema WHERE type='index' AND tbl_name='post_search' AND sql IS NOT NULL").all();
+      for(const trigger of triggers)db.exec(`DROP TRIGGER "${trigger.name.replaceAll('"','""')}"`);
+      db.exec(`CREATE TABLE post_search_stable (
+        search_id INTEGER PRIMARY KEY,post_id TEXT UNIQUE NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+        created_at TEXT NOT NULL,captured_at TEXT NOT NULL,member_id TEXT NOT NULL,member_name TEXT NOT NULL,
+        account_type TEXT NOT NULL,type TEXT NOT NULL,provenance_kind TEXT NOT NULL,search_text TEXT NOT NULL,
+        labels_json TEXT NOT NULL,reviewed INTEGER NOT NULL,rule_proposals INTEGER NOT NULL);
+        INSERT INTO post_search_stable(search_id,${columns.join(',')}) SELECT rowid,${columns.join(',')} FROM post_search;
+        DROP TABLE post_search;
+        ALTER TABLE post_search_stable RENAME TO post_search;`);
+      for(const index of indexes)db.exec(index.sql);
+      for(const trigger of triggers)db.exec(trigger.sql);
+      db.exec("INSERT INTO post_search_fts(post_search_fts) VALUES ('rebuild')");
+    }
+    db.exec('UPDATE explorer_revision SET revision=revision+1 WHERE id=1; UPDATE schema_version SET version=10');
   });
 }
 

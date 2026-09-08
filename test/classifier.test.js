@@ -181,7 +181,7 @@ test('classifier migration and unfinished jobs survive reopening without requiri
     add(store);
     store.db.exec('DROP TABLE incident_case_history; DROP TABLE incident_case_posts; DROP TABLE incident_cases; DROP TABLE incident_reviews; DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; UPDATE schema_version SET version=7;');
     store.close(); store = openStore(join(dir, 'test.sqlite'));
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version, 9);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version, 10);
     registerClassifier(store, 1000); claimClassification(store, { now: 1000 });
     store.close(); store = openStore(join(dir, 'test.sqlite'));
     assert.equal(classificationStatus(store).running, 1);

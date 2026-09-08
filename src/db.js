@@ -1,23 +1,29 @@
 import { DatabaseSync } from 'node:sqlite';
-import { mkdirSync, chmodSync } from 'node:fs';
+import { chmodSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
 import { baselineClassify, validateFeedback } from './classify.js';
 import { atomic, migrateOperations } from './sqlite.js';
 import { rememberHoldoutSource } from './learning-context.js';
-import { migrateExplorer, searchSelection } from './explorer.js';
+import { migrateExplorer, migrateStableExplorerRowids, searchSelection } from './explorer.js';
 import { migrateEmbeddings } from './embedding-store.js';
 import { migrateClassifier } from './classifier-jobs.js';
 import { migrateIncidents } from './incidents.js';
+import {privateDirectory,regularFile} from './private-files.js';
+import {readRemovalJournal,removalJournalPath,applyRemovalJournal} from './removal-journal.js';
 
 export function openStore(path = ':memory:') {
-  if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true, mode: 0o700 });
+  if (path !== ':memory:') {privateDirectory(dirname(path));regularFile(path,{privateOnly:false,missing:true});}
+  const removalJournal=path===':memory:'?null:readRemovalJournal(removalJournalPath(path));
   const db = new DatabaseSync(path);
   if (path !== ':memory:') chmodSync(path, 0o600);
+  try {
   db.exec(`
     PRAGMA foreign_keys = ON;
     PRAGMA journal_mode = WAL;
     PRAGMA busy_timeout = 5000;
+    PRAGMA synchronous = FULL;
+    PRAGMA secure_delete = ON;
     CREATE TABLE IF NOT EXISTS schema_version (version INTEGER NOT NULL);
     INSERT INTO schema_version SELECT 1 WHERE NOT EXISTS (SELECT 1 FROM schema_version);
     CREATE TABLE IF NOT EXISTS accounts (
@@ -52,6 +58,9 @@ export function openStore(path = ':memory:') {
   migrateEmbeddings(db);
   migrateClassifier(db);
   migrateIncidents(db);
+  migrateStableExplorerRowids(db);
+  if(removalJournal?.entries.length)applyRemovalJournal(db,removalJournal);
+  }catch(error){db.close();throw error;}
 
   function transaction(fn) {
     return atomic(db, fn);

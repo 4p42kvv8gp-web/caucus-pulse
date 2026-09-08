@@ -155,7 +155,7 @@ test('persistent indexes reopen and migrate existing version-five source records
     for (const {name} of store.db.prepare("SELECT name FROM sqlite_schema WHERE type='trigger' AND name LIKE 'explorer_%'").all()) store.db.exec(`DROP TRIGGER "${name}"`);
     store.db.exec('DROP TABLE post_search_fts; DROP TABLE post_search_labels; DROP TABLE post_search; DROP VIEW post_search_source; DROP TABLE explorer_revision; DROP INDEX feedback_current_source; UPDATE schema_version SET version=5;');
     store.close(); store=openStore(file);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,9);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,10);
     assert.deepEqual(ids(explorerPage(store,{query:'CAFÉ',topic:'Synthetic reviewed topic'})),['1']);
     assert.equal(store.getPost('1').feedback.length,1);
     store.close(); store=openStore(file);

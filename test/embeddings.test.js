@@ -160,7 +160,7 @@ test('persisted vectors and jobs survive reopening and migration from version si
     add(store,'1');
     store.db.exec('DROP TABLE incident_case_history; DROP TABLE incident_case_posts; DROP TABLE incident_cases; DROP TABLE incident_reviews; DROP TRIGGER classifier_post_insert; DROP TRIGGER classifier_post_update; DROP TABLE classifier_jobs; DROP TABLE classifier_profiles; DROP TRIGGER embedding_post_insert; DROP TRIGGER embedding_post_update; DROP TABLE embedding_passages; DROP TABLE embedding_jobs; DROP TABLE embedding_models; UPDATE schema_version SET version=6;');
     store.close();store=openStore(path);
-    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,9);
+    assert.equal(store.db.prepare('SELECT version FROM schema_version').get().version,10);
     await processEmbeddingJobs(store,syntheticRuntime());
     store.close();store=openStore(path);
     assert.equal(semanticSearch(store,query).results[0].post.id,'1');
