@@ -13,6 +13,7 @@ import { explorerPage,searchFilters } from './explorer.js';
 import { embeddingStatus,processEmbeddingJobs } from './embedding-store.js';
 import { createEmbeddingClient } from './embedding-client.js';
 import { semanticSearch } from './semantic-search.js';
+import { subjectGroups } from './subject-groups.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -56,6 +57,7 @@ async function readJson(req) {
 }
 
 export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null } = {}) {
+  let grouping=false;
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -106,6 +108,14 @@ export function createServer(store, { credentials = createCredentialStore(resolv
         }
         return json(200, languageData(store, { ...filtersFrom(url), subtopic: url.searchParams.get('subtopic') ?? '' }, options));
       }
+      if(req.method==='GET'&&url.pathname==='/api/emerging'){
+        if(grouping)return json(429,{error:'Subject grouping is already running. Try again shortly.',code:'DISCOVERY_BUSY'});
+        const options={name:semantic?.name??'minilm'};
+        for(const key of ['threshold','minMembers','minPosts','limit','windowHours'])if(url.searchParams.has(key))options[key]=Number(url.searchParams.get(key));
+        grouping=true;
+        try{return json(200,await subjectGroups(store,filtersFrom(url),options));}
+        finally{grouping=false;}
+      }
       const learningMatch = url.pathname.match(/^\/api\/posts\/(\d+)\/learning$/);
       if (req.method === 'GET' && learningMatch) {
         if (!store.getPost(learningMatch[1])) return json(404, { error: 'Post not found.' });
@@ -122,6 +132,8 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       return json(404, { error: 'Not found.' });
     } catch (error) {
       if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
+      if(error.code==='DISCOVERY_CHANGED')return json(409,{error:error.message,code:error.code});
+      if(error.code==='DISCOVERY_UNAVAILABLE')return json(503,{error:error.message,code:error.code});
       if (['SEMANTIC_UNAVAILABLE','SEMANTIC_BUSY','SEMANTIC_INPUT_LIMIT'].includes(error.code)) return json(
         error.code==='SEMANTIC_INPUT_LIMIT'?400:error.code==='SEMANTIC_BUSY'?429:503,{error:error.message,code:error.code});
       const safe = /^(Invalid |Expected JSON|Request is too large|Provide up to|Remove duplicate|Enter an exact)/.test(error.message);

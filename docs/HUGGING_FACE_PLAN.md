@@ -34,12 +34,13 @@ Hugging Face currently lists 100 GB of private storage for free users/organizati
 
 The proposed $60-to-$20 monthly reduction is unverified. Benchmark actual post volume, passage counts, CPU memory/time, hosted-model token use, storage growth and any Actions charges. Free model weights do not make runtime, storage or hosted inference unlimited. No cost claim or two-vCPU throughput promise should appear in the dashboard until measured.
 
-## Next implementation pass
+## Current implementation and next pass
 
-September 8 update: pinned MiniLM/BGE assets and Transformers.js inference now work locally. MiniLM powers the preview's Related subjects view and durable source-versioned passage index; two actual historical posts have eight indexed passages. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) for the complete implementation, 102-test verification, synthetic comparison and limitations. Classification models, event grouping and human accuracy evaluation remain unfinished. The installed skills provide development guidance; they are not the runtime itself.
+September 8 update: pinned MiniLM/BGE assets and Transformers.js inference work locally. BGE is the preview default after a bounded synthetic comparison; two actual historical posts have eight indexed passages. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) and [Emerging subject candidates](SUBJECT_GROUPS.md). The grouping service covers both labeled and unlabeled sources, rejects changed evidence, and discloses incomplete windows. All 110 tests pass. This is engineering verification, not human accuracy evaluation.
 
-- Build a private benchmark/export contract from real reviewed posts with protected held-out examples and synthetic safety checks kept separate.
-- Select a pinned, compatible embedding runtime and compare MiniLM/BGE on a bounded local run; record weights/license/version and hardware requirements.
-- Implement passage jobs, vector persistence, model-version invalidation and semantic retrieval before wiring provisional clusters into the design.
-- Add cost-controlled semantic classification jobs and compare narrow DEBATE hypotheses before selecting the poll-time classifier.
-- Use Jacob's voice exercises to define event identity, quote/negation boundaries, subtopics and communicative function. No new account setup is required solely to use the installed skills.
+A local text-classification experiment is being prepared with revision-pinned `mlx-community/Qwen3.5-4B-MLX-4bit` and MLX on this Mac. Public files were downloaded and verified; classification has not yet been integrated into the product. This optional local runtime avoids starting a paid endpoint and is not a Linux-hosting solution. Political DEBATE and SetFit remain later comparison candidates, not automatically chosen replacements.
+
+- Connect a bounded semantic provider, exact-quotation evidence mapping, durable jobs and taxonomy versions.
+- Retrieve relevant accepted reviews semantically with held-out protection; expose concise explanations and explicit correction decisions.
+- Run separate synthetic engineering checks and real held-out calibration, including event identity, negation, quotation, overlapping topics and communicative function.
+- Measure actual processing costs and latency before choosing a hosted runtime or replacing a model. No new account setup is required solely to use the installed skills.

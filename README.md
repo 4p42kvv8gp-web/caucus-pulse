@@ -11,14 +11,14 @@ Use Node 24.19.x and pnpm 11.19.0. The inference dependency and transitive packa
 ```sh
 pnpm install --frozen-lockfile --ignore-scripts
 node --test
-node scripts/download-embedding-model.js minilm
+node scripts/download-embedding-model.js bge
 node scripts/import-calibration.js /absolute/path/to/calibration/voice-session.json
 node src/server.js
 ```
 
 Open http://127.0.0.1:4317. Import is optional: without it the application shows an empty archive. Import makes no network requests. Source-post content is deliberately not bundled in the repository. `PORT` changes the local port; `CAUCUS_DB_PATH` selects the private database file.
 
-The model-download command retrieves about 24 MB of public, revision-pinned assets and verifies their digests. Application inference then runs locally with remote loading disabled. Without those assets, the archive still opens and semantic search explicitly reports unavailable. See [Local semantic search](docs/LOCAL_SEMANTIC_SEARCH.md) for model choices, limits, and the engineering benchmark.
+The model-download command retrieves about 35 MB of public, revision-pinned BGE assets and verifies their digests. Application inference then runs locally with remote loading disabled. Without those assets, the archive still opens and semantic search explicitly reports unavailable. See [Local semantic search](docs/LOCAL_SEMANTIC_SEARCH.md) for model choices, limits, and the engineering benchmark.
 
 ## Boundaries of this milestone
 
@@ -102,11 +102,13 @@ The teaching desk can display semantic labels, source spans, entities, and event
 
 `GET /api/language` and `node scripts/language.js` now detect exact repeated passages in a bounded rolling window. Longer wording, punctuation, spacing, negation, source offsets, and post chronology are preserved. Reposts are excluded, quote captions remain explicitly uninterpreted, and member counts deduplicate multiple accounts. Every limit is disclosed; no source text is truncated in storage.
 
-See [Language discovery](docs/LANGUAGE_DISCOVERY.md) for filters, coverage limits, full source evidence, and interpretation boundaries. This is a local analysis service ready for the pending dashboard redesign. It makes no X/model requests and does not yet group paraphrases or infer events, stance, novelty, or coordination.
+See [Language discovery](docs/LANGUAGE_DISCOVERY.md) for filters, coverage limits, full source evidence, and interpretation boundaries. This exact-language service makes no X/model requests and does not infer events, stance, novelty, or coordination.
+
+The separate **Emerging candidates** view groups related subject passages across both classified and unclassified posts. It uses bounded local embedding comparisons, current labels and source versions, representative source wording, distinct-member counts, and explicitly incomplete comparison windows. Groups can overlap and remain provisional: similarity does not establish a shared event, agreement, novelty, or coordination. See [Emerging subject candidates](docs/SUBJECT_GROUPS.md).
 
 ## Provenance
 
-The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate classification models, evaluation requirements, and archive/cost decisions. MiniLM and BGE now have a verified local retrieval implementation; MiniLM is the preview default. Other proposed models remain candidates. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
+The [Hugging Face plan](docs/HUGGING_FACE_PLAN.md) records installed skills, candidate classification models, evaluation requirements, and archive/cost decisions. MiniLM and BGE now have a verified local retrieval implementation; BGE is the preview default after bounded synthetic comparisons. This engineering choice still needs real-post calibration. Other proposed models remain candidates. The [Claude design integration notes](docs/DESIGN_INTEGRATION.md) distinguish the supplied build specification from still-missing screen HTML and document the data rules to reconcile.
 
 Based on the reviewed [original Caucus Pulse project](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The new local foundation replaces file archives and nightly-only reports with a database-backed service. Broad subject structure is informed by the original taxonomy; facility identities are kept separate. See the workspace's PROJECT_SCOPE.md, TASKS.md, and DEVELOPMENT_HANDOFF.md for the complete build plan.
 

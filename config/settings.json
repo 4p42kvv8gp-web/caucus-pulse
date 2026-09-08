@@ -6,7 +6,7 @@
   "pollMinutes": 30,
   "dashboardRefreshSeconds": 60,
   "intelligence": {
-    "localEmbeddings": { "enabled": true, "model": "minilm", "postsPerPass": 25 }
+    "localEmbeddings": { "enabled": true, "model": "bge", "postsPerPass": 25 }
   },
   "budget": {
     "reportedCreditUsd": 400,

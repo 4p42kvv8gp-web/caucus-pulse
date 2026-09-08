@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const date = value => value ? new Date(value).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'Not available';
-const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0 };
+const state = { data: null, view: 'explore', selected: null, dirty: false, sequence: 0, cursor: '', pageParams: '', semanticSequence:0,emergingSequence:0 };
 
 async function api(path, options) {
   const response = await fetch(path, options);
@@ -147,6 +147,7 @@ async function refresh({ cursor = '', params = null } = {}) {
     $('updated').textContent = cursor ? 'Reading older posts · return to newest to refresh' : `View refreshed ${new Date(data.generatedAt).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}`;
     if (state.view === 'wording' && $('phrase-input').value) await loadPhrase();
     if (state.view === 'semantic') { await semanticStatus(); if($('semantic-query').value) await loadSemantic(); }
+    if (state.view === 'emerging') await loadEmerging();
   } catch (error) {
     if (sequence !== state.sequence) return;
     if (error.code === 'EXPLORER_CHANGED') {
@@ -159,6 +160,7 @@ const headings = {
   teach: ['Teach the distinctions.', 'Your judgment becomes a saved example the product can learn from.'],
   wording: ['Keep every word.', 'Look closely at the language, with the complete source alongside it.'],
   semantic: ['Find related subjects.', 'Search ideas while keeping each source and its wording visible.'],
+  emerging: ['Watch subjects take shape.', 'Provisional passage groups, observed activity, and the source evidence.'],
   coverage: ['Trust starts with coverage.', 'See the boundaries of the archive and the state of the product.']
 };
 function setView(view) {
@@ -167,6 +169,7 @@ function setView(view) {
   for (const el of document.querySelectorAll('[data-view]')) { el.classList.toggle('active', el.dataset.view === view); el.setAttribute('aria-current', el.dataset.view === view ? 'page' : 'false'); }
   [$('page-title').textContent, $('page-description').textContent] = headings[view];
   if(view==='semantic')void semanticStatus();
+  if(view==='emerging')void loadEmerging();
 }
 async function semanticStatus(){
   try{
@@ -195,6 +198,27 @@ async function loadSemantic(){
   finally{if(sequence===state.semanticSequence)$('semantic-submit').disabled=false;}
 }
 $('semantic-form').addEventListener('submit',event=>{event.preventDefault();void loadSemantic();});
+async function loadEmerging(){
+  const sequence=++state.emergingSequence;$('emerging-refresh').disabled=true;
+  try{
+    const result=await api(`/api/emerging?${filterParams()}`);
+    if(sequence!==state.emergingSequence)return;
+    const sources=new Map(result.sourcePosts.map(p=>[p.id,p])),c=result.coverage;
+    $('emerging-results').innerHTML=`<div class="panel"><h3>${result.groups.length} candidate groups</h3><p class="quiet">${esc(date(result.window.since))} — ${esc(date(result.window.until))}</p><p class="quiet">${c.admittedPosts} posts examined from ${c.indexedPosts} indexed, non-repost sources in the selection. ${c.unindexedPosts} posts await indexing. ${c.complete?'The selected indexed archive was covered.':'Coverage is partial because some sources were unindexed or outside processing limits.'}</p><p class="quiet">${esc(result.note)}</p></div>`+
+      (result.groups.map(group=>{
+        const short=group.title.text.length>180?group.title.text.slice(0,180)+'…':group.title.text;
+        return `<article class="panel"><p class="quiet">Representative source excerpt · provisional group</p><h3>${esc(short)}</h3><p>${group.posts} posts · ${group.members} distinct stored members</p><p class="quiet">Latest half-hour: ${group.recent.posts} observed posts. ${group.previous.completeWindow?`Previous half-hour: ${group.previous.posts} observed posts.`:'The previous half-hour is not fully covered by this indexed selection.'}</p><p class="quiet">First observed within this selection: ${esc(date(group.firstObservedInSelection))}</p>
+          ${group.sourceTopics.length?`<div class="tags">${group.sourceTopics.map(t=>`<span class="tag">${esc(t.topic)}${t.subtopic?' / '+esc(t.subtopic):''}</span>`).join('')}</div><p class="quiet">Topics assigned to the source posts; these are not confirmed group labels.</p>`:''}
+          <details><summary>Read the ${group.posts} source posts</summary>${group.evidence.map(e=>{
+            const post=sources.get(e.postId);
+            return `<div class="evidence"><strong>${esc(post.memberName)}</strong><p class="quiet">${esc(date(post.createdAt))} · ${esc(post.type)}${post.type==='quote'?' · Quotation context unresolved':''}</p><p class="post-text">${esc(post.text.slice(0,e.start))}<mark class="phrase-match">${esc(post.text.slice(e.start,e.end))}</mark>${esc(post.text.slice(e.end))}</p><a href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">View on X ↗</a></div>`;
+          }).join('')}</details></article>`;
+      }).join('')||'<div class="empty">No candidate group meets the current source and member requirements. This does not establish that no real-world trend exists.</div>');
+    showError('');
+  }catch(error){if(sequence===state.emergingSequence)showError(error.message);}
+  finally{if(sequence===state.emergingSequence)$('emerging-refresh').disabled=false;}
+}
+$('emerging-refresh').addEventListener('click',()=>void loadEmerging());
 async function loadPhrase() {
   const params = filterParams(); params.set('phrase', $('phrase-input').value);
   try {

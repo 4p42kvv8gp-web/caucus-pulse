@@ -3,7 +3,7 @@
 ## Active
 
 - [ ] **Seven-hour autonomous development window** - Jacob requested uninterrupted work without guidance through September 8, 2026 at 11:57:54 UTC (7:57:54 AM Eastern). Continue useful implementation while integrations are blocked, preserve current spending/privacy limits, then pause the existing automation and report results. The existing heartbeat now checks every 15 minutes; do not create another schedule.
-- [ ] **M3: Build emerging-subject groups on local embeddings** - MiniLM/BGE retrieval is implemented and MiniLM is active locally. Next: bounded incremental cross-post candidate grouping across classified and unclassified posts, representative evidence, source invalidation, explicit date/coverage limits, and real-post evaluation. Similarity does not establish agreement, coordination, incident identity, or factual truth. Later evaluate DEBATE and SetFit on actual held-out reviews.
+- [ ] **M3: Integrate a local evidence-based classifier** - BGE search and emerging-subject candidates are working. Implement a bounded, local provider with exact source quotations, taxonomy versions, durable jobs and retained failure status, then connect reviewed examples and teaching. Real-post calibration remains required; do not substitute synthetic benchmarks for human judgments.
 
 - [ ] **M1: Complete the visual browser check** - Automated HTTP and persistence checks pass. Browser access could not verify the administrator policy; do not bypass that control. Retry only when the policy service is available. No Jacob review was created by testing.
 - [ ] **M2: Validate the supplied X List and House account roster** - Dated Clerk import and resumable List account scans are implemented. The private snapshot has 217 Clerk names, published September 2; no actual X account scan or verified binding exists yet. Next: execute a bounded scan after private token setup, gather official-link/profile evidence, bind identities, and record ownership dates. Starting List: 1841177179872243858.
@@ -31,6 +31,8 @@
 - [ ] **M5: Expand historical coverage and evaluation** - Bounded backfill, comparable trend baselines, better language discovery; train only after reviewed examples justify it.
 
 ## Done
+
+- [x] ~~Implement emerging subject candidates~~ (September 8) - Bounded passage grouping across classified and unclassified sources, distinct-member counts, complete-link anti-chain checks, evidence excerpts, unknown comparison windows and source/review/removal invalidation. API and Emerging candidates view run locally; all 110 tests pass. BGE is the current default after a 17-post synthetic comparison. Current 24-hour coverage truthfully has no historical-example groups. See caucus-pulse/docs/SUBJECT_GROUPS.md.
 
 - [x] ~~Implement private local semantic search~~ (September 8) - Pinned MiniLM/BGE assets, verified local Transformers.js runtime, source-covering windows plus distinct sentence details, schema-7 durable jobs/vectors, source-edit/removal and lease fencing, bounded filtered semantic API and Related subjects view. All 102 tests pass; dependency audit reports zero known advisories with the sharp patch override. Actual preview: two historical posts indexed into eight passages, one existing review preserved, zero X/hosted-model spending. Browser visual check remains pending. See caucus-pulse/docs/LOCAL_SEMANTIC_SEARCH.md.
 
