@@ -85,8 +85,10 @@ export async function collectOnce({ db, sourceId, fetchPage, budget, pageSize = 
       }
       const rows = response?.data;
       if (!Array.isArray(rows) || rows.some(p => !isId(p?.id))) {
-        budget.uncertain(reservation.id); mark('invalid-response', 'reconciliation-required');
-        return { status: 'reconciliation-required', reason: 'invalid-response', pagesFetched };
+        const charge = budget.uncertain(reservation.id, { observedResources: Array.isArray(rows) ? rows.length : null });
+        const reason = charge.fault ?? 'invalid-response';
+        mark(reason, 'reconciliation-required');
+        return { status: 'reconciliation-required', reason, pagesFetched };
       }
       // Settlement is independent of page storage: a write failure cannot refund a completed provider read.
       const partial = Array.isArray(response.errors) && response.errors.length > 0;

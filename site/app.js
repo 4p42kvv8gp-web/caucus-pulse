@@ -39,16 +39,18 @@ function sourceHeader(post) {
   return `<div class="post-header"><div class="avatar" aria-hidden="true">${esc(initials)}</div><div><span class="author">${esc(post.memberName)}</span><span class="post-meta">@${esc(post.handle)} · ${esc(post.type)}<br>${esc(date(post.createdAt))}</span></div><a class="post-source" href="${esc(post.sourceUrl)}" target="_blank" rel="noopener noreferrer">View on X ↗</a></div>`;
 }
 function postCard(post) {
-  return `<article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}<div class="post-footer"><span class="quiet">Full API text · media not reviewed</span><button class="text-button" data-review="${esc(post.id)}">Review classification →</button></div></article>`;
+  const coverage = post.textCoverage === 'api-text-verified' ? 'API text verified' : post.textCoverage === 'extended-api-text' ? 'Extended API text returned' : 'Available API text; completeness unverified';
+  return `<article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}<div class="post-footer"><span class="quiet">${esc(coverage)} · media not reviewed</span><button class="text-button" data-review="${esc(post.id)}">Review classification →</button></div></article>`;
 }
 function renderStats() {
   const c = state.data.coverage;
   $('stats').innerHTML = [
-    ['Historical source posts', c.postCount, 'Previously verified examples'],
-    ['Members represented', c.memberCount, 'Full List sync is pending'],
+    ['Archived source posts', c.postCount, `${c.historicalPostCount} historical examples / ${c.collectedPostCount} from collection`],
+    ['Members represented', c.memberCount, 'Within this archive only'],
     ['Posts reviewed', c.reviewedPosts, 'Your saved corrections'],
-    ['Daily X ceiling', `$${state.data.budget.dailyCeilingUsd}`, '$50 reserve · balance unverified']
+    ['Daily X ceiling', `$${state.data.budget.dailyCeilingUsd}`, `$50 reserve · ${state.data.budget.state?.balanceFresh ? 'recent balance check' : 'balance check required'}`]
   ].map(([label, value, note]) => `<div class="stat"><label>${esc(label)}</label><strong>${esc(value)}</strong><small>${esc(note)}</small></div>`).join('');
+  $('archive-notice').textContent = `${c.historicalPostCount} historical examples and ${c.collectedPostCount} posts admitted from collection. ${c.collectionStatus}. Semantic analysis and automatic trend discovery are still being built; current automatic labels use a word-matching baseline.`;
 }
 function renderExplore() {
   const { posts, topics } = state.data;
@@ -60,14 +62,17 @@ function renderCoverage() {
   const c = state.data.coverage; const b = state.data.budget;
   const ops = state.data.operations; const usage = b.state;
   const roster = ops.roster.snapshot;
+  const inventory = ops.inventory;
   const dollars = micro => `$${((micro ?? 0) / 1_000_000).toFixed(3)}`;
   function rows(items) { return items.map(([label, value]) => `<div class="detail-row"><small>${esc(label)}</small>${esc(value)}</div>`).join(''); }
   $('coverage').innerHTML = `<div class="panel"><h3>Source coverage</h3>${rows([
     ['Collection', c.collectionStatus], ['Accounts', c.rosterStatus], ['Earliest archived post', date(c.firstPostAt)],
     ['House Clerk inventory', roster ? `${roster.memberCount} names / published ${roster.publishedOn} / ${roster.fresh ? 'within observation window' : 'refresh required'}` : 'Not imported'],
     ['Roster last retrieved', date(roster?.retrievedAt)],
+    ['Supplied List inventory', inventory?.current ? `${inventory.current.accounts} observed accounts / ${inventory.fresh ? 'current observation' : 'refresh required'} / completed ${date(inventory.current.completedAt)}` : 'No completed account scan'],
+    ['Account scan in progress', inventory?.active ? `${inventory.active.status} / ${inventory.active.pages} pages / ${inventory.active.reason ?? 'continuing'}` : 'None'],
     ['Latest archived post', date(c.lastPostAt)], ['Last source retrieval', date(c.lastImportedAt)],
-    ['Context', 'Full API text for the imported examples; media and linked content are not reviewed.'],
+    ['Context', 'Available source text is preserved; each post states its text coverage. Media and linked content are not reviewed.'],
     ['Captured posts awaiting roster validation', String(ops.awaitingRoster)],
     ['Analysis jobs', `${ops.analysisPending} pending / ${ops.analysisFailed} failed`],
     ['Collection intervals', ops.sources.length ? ops.sources.map(s => `${s.status ?? 'Not started'}${s.reason ? `: ${s.reason}` : ''}`).join('; ') : 'No live interval has started']
@@ -82,6 +87,9 @@ function renderCoverage() {
     ['Analysis', c.analysisStatus],
     ['General lessons awaiting review', String(c.pendingRuleProposals)], ['Optional paid work', 'Bulk history and repeated engagement checks are disabled.']
   ])}</div>`;
+  const connection = state.data.connection;
+  $('connection-status').textContent = connection?.configured ? `Token present (${connection.source === 'environment' ? 'runtime environment' : 'private local file'}). Saving makes no access test; the balance and collection observations are shown above.` : 'No product token is configured yet.';
+  $('save-connection').disabled = connection?.source === 'environment';
 }
 function labelRow(label = {}) {
   return `<div class="label-entry"><label>Topic<input name="topic" maxlength="100" value="${esc(label.topic)}" placeholder="e.g. Immigration"></label><label>Subtopic (optional)<input name="subtopic" maxlength="160" value="${esc(label.subtopic)}" placeholder="e.g. Dilley detention facility"></label><button type="button" class="remove" aria-label="Remove label">×</button></div>`;
@@ -169,5 +177,16 @@ for (const id of ['member', 'topic', 'post-type', 'period']) $(id).addEventListe
 let searchTimer;
 $('search').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(refresh, 200); });
 $('phrase-form').addEventListener('submit', event => { event.preventDefault(); loadPhrase(); });
+$('connection-form').addEventListener('submit', async event => {
+  event.preventDefault();
+  const button = $('save-connection'); button.disabled = true; $('connection-result').textContent = ''; showError('');
+  try {
+    await api('/api/settings/x-credential', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ bearerToken: $('x-token').value }) });
+    $('x-token').value = ''; $('connection-result').textContent = 'Saved privately. Collection remains off.';
+    await refresh();
+  } catch (error) { showError(error.message); }
+  finally { button.disabled = state.data?.connection?.source === 'environment'; }
+});
 window.addEventListener('beforeunload', event => { if (state.dirty) { event.preventDefault(); event.returnValue = ''; } });
 await refresh(); setInterval(refresh, 60_000);

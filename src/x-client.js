@@ -37,5 +37,12 @@ export function createXClient({ token = process.env.CAUCUS_X_BEARER_TOKEN, fetch
     if (response.errors?.length || typeof response.data?.prepaid_balance !== 'number' || !Number.isFinite(response.data.prepaid_balance)) throw new XReadError('invalid-credit-balance');
     return { prepaidUsd: response.data.prepaid_balance };
   }
-  return { listPosts, creditBalance };
+  async function listMembers({ listId, maxResults = 100, paginationToken = null }) {
+    validateId(listId); validatePageSize(maxResults, 100); validateCursor(paginationToken);
+    const response = await read(`/2/lists/${listId}/members`, { max_results: maxResults,
+      pagination_token: paginationToken, 'user.fields': 'id,username,name,protected' });
+    if (response.data == null && response.meta?.result_count === 0 && !response.errors?.length) return { ...response, data: [] };
+    return response;
+  }
+  return { listPosts, listMembers, creditBalance };
 }

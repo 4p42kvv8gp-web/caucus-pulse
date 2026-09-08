@@ -13,9 +13,12 @@ Updated September 7, 2026. Development continues without waiting for the optiona
 - [ ] **Teach the classification boundaries — about 20–30 minutes by voice.** We will bring real posts and proposed interpretations. You explain what is right, what is wrong, and why. Focus on what deserves its own subtopic/event, what is genuinely about a district, how to handle vague captions, and what makes a report useful to you. You do not need to write the taxonomy first.
 - [ ] **Try the first working dashboard — about 10 minutes.** Find a subject you care about, inspect its supporting posts, and correct one label. Tell us what you expected to see or could not find. We handle implementation details.
 
-## Only if needed to activate services
+## Ready now: one setup step for live X access
 
-- [ ] **Replace the credentials previously pasted into chat, using a private setup flow.** Do not paste the replacements here. Codex will prepare the integration and tell you the exact secret/setup screen when needed. No need to do this before local development proceeds.
+- [ ] **Save a replacement X bearer token privately — about 5 minutes.** In the [local dashboard](http://127.0.0.1:4317), open Coverage & budget → Private X connection. Follow the [setup steps](PRIVATE_X_SETUP.md) to replace the previously shared credentials and save only the bearer token there. Do not paste it into chat. Saving does not spend credits. Codex can then run the bounded access and collection checks; independent development continues meanwhile.
+
+## Only if needed later
+
 - [ ] **Complete an account login or approve a specific hosting/AI expense if existing access is insufficient.** We will present the actual provider, cost, and prepared deployment. No provider shopping or infrastructure decisions are required from you now.
 
 If development is to resume locally while you are away, keep this computer on and the Codex desktop app running. That development schedule does not by itself host the finished live product.

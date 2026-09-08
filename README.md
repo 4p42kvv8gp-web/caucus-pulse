@@ -36,11 +36,36 @@ Open http://127.0.0.1:4317. Import is optional: without it the application shows
 node scripts/collection-status.js
 ```
 
-This prints local readiness only. Once `CAUCUS_X_BEARER_TOKEN` is configured through a private environment, `--refresh-balance` makes one read-only call to X's credit endpoint. The status command never fetches posts. Never pass a secret as a command-line argument or reuse the single-post reader's private credential file for this collector. The adapter has no automatic request retries and sends credentials only to `https://api.x.com`, with redirects rejected.
+This prints local readiness only. Configure the product token through the local Coverage & budget → Private X connection form, or through `CAUCUS_X_BEARER_TOKEN`. Then `--refresh-balance` makes one read-only call to X's credit endpoint. The status command never fetches posts. Never pass a secret as a command-line argument or reuse the single-post reader's private credential file for this collector. The adapter has no automatic request retries and sends credentials only to `https://api.x.com`, with redirects rejected.
 
 The List adapter supports explicit `tweet` or `post` field dialects because current generated documentation and observed single-post responses differ. The List dialect, full-text availability, and actual charges still need a bounded authenticated trial. No profile, media, or referenced-post expansions are requested in this initial adapter.
 
 References checked September 7, 2026: [X pricing](https://docs.x.com/x-api/getting-started/pricing), [credit balance endpoint](https://docs.x.com/x-api/usage/get-usage-credits), [List posts](https://docs.x.com/x-api/lists/get-list-posts).
+
+## Bounded collection commands
+
+Preview a pass without making requests or reading a credential:
+
+```sh
+node scripts/worker.js --mode inventory
+node scripts/worker.js --mode posts --trial --field-dialect tweet
+```
+
+Inventory defaults to at most three pages of 100 user records: a configured maximum of $3 at the current user-read price. The post trial defaults to one page of five posts: $0.025 at the current post-read price. Those are request plans, not guarantees of actual provider billing. Daily/pilot limits, balance freshness, and the protected reserve still apply before each paid page. Confirm the actual account's prices/access and use the bounded trial to validate accepted fields and costs before choosing a polling pattern.
+
+After private setup, add `--execute` to run the displayed pass. Execution makes a fresh credit check, uses the fixed configured List, and processes stored captures separately. No repeating scheduler or paid subscription is started. Post trials require `--trial` while collection is disabled and cannot exceed 20 posts per page or two pages. Non-trial post passes require the live setting plus fresh inventory/roster observations and verified account bindings.
+
+`--page-size` and `--max-pages` narrow a pass. Interrupted inventory scans retain the original page size and cursor. The latest fully paginated scan remains current until a replacement finishes; malformed/partial responses, duplicate accounts, conflicting handles, cursor cycles, or an observation window over one hour require review. A completed pagination scan is not an atomic snapshot of a List that may change during retrieval. List membership never creates a member binding by itself.
+
+To recover after inspecting a problem, run `--mode inventory --restart` to abandon the incomplete scan while keeping its evidence, or `--mode posts --field-dialect tweet --restart` to restart the pending post interval from its head with the original boundaries. Recovery is local-only and cannot be combined with `--execute`; inspect the result before a separate pass. Do not repeatedly retry unresolved failures or reset spending reservations.
+
+Account observations request only public ID, username, display name, and protected status, with no metrics or expansions. Their local storage supports identity investigation; official-link verification and actual bindings remain separate unfinished integration work. Documentation checked: [List members](https://docs.x.com/x-api/lists/get-list-members).
+
+## Private local token setup
+
+See [Private X setup](docs/PRIVATE_X_SETUP.md). The local form writes only `data/secrets/x-bearer-token`, using an atomic replacement with owner-only file permissions and a private directory. It requires an allowed loopback Origin and never returns the token in API responses. Saving does not validate access or make a network request. An environment token takes precedence, and the form refuses to shadow it.
+
+This is private local file storage, not an encrypted managed vault. Hosting requires a production secret store and authentication; the development service remains loopback-only. Credential tests use temporary directories and synthetic tokens, never the real product credential location.
 
 ## Roster and account attribution
 

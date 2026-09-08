@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 import { openStore } from './db.js';
 import { dashboardData, phraseData } from './dashboard.js';
 import { promoteCaptured } from './roster.js';
+import { createCredentialStore } from './credentials.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -37,7 +38,7 @@ async function readJson(req) {
   catch { throw new Error('Invalid JSON.'); }
 }
 
-export function createServer(store) {
+export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')) } = {}) {
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -54,7 +55,13 @@ export function createServer(store) {
         const [file, type] = staticFiles.get(url.pathname);
         res.writeHead(200, { 'Content-Type': type }); return res.end(readFileSync(resolve(root, file)));
       }
-      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, dashboardData(store, filtersFrom(url), settings));
+      if (req.method === 'GET' && url.pathname === '/api/dashboard') return json(200, { ...dashboardData(store, filtersFrom(url), settings), connection: credentials.status() });
+      if (req.method === 'POST' && url.pathname === '/api/settings/x-credential') {
+        if (!allowedHosts.some(host => req.headers.origin === `http://${host}`)) return json(403, { error: 'Save credentials from the local connection form.' });
+        const value = await readJson(req);
+        if (!value || Array.isArray(value) || Object.keys(value).length !== 1 || !Object.hasOwn(value, 'bearerToken')) throw new Error('Invalid credential request.');
+        return json(200, { ...credentials.save(value.bearerToken), accessVerified: false, collectionStarted: false });
+      }
       if (req.method === 'GET' && url.pathname === '/api/phrases') return json(200, phraseData(store, url.searchParams.get('phrase'), filtersFrom(url)));
       const match = url.pathname.match(/^\/api\/posts\/(\d+)(\/feedback)?$/);
       if (match) {

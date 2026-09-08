@@ -18,7 +18,7 @@ export function atomic(db, fn) {
 
 export function migrateOperations(db) {
   const version = db.prepare('SELECT version FROM schema_version').get().version;
-  if (version > 3) throw new Error('This database requires a newer application version.');
+  if (version > 4) throw new Error('This database requires a newer application version.');
   if (version < 2) atomic(db, () => db.exec(`
     CREATE TABLE budget_requests (
       sequence INTEGER PRIMARY KEY AUTOINCREMENT, id TEXT UNIQUE NOT NULL,
@@ -91,5 +91,30 @@ export function migrateOperations(db) {
     );
     CREATE INDEX analysis_runs_post ON analysis_runs(post_id, created_at);
     UPDATE schema_version SET version=3;
+  `));
+  if (version < 4) atomic(db, () => db.exec(`
+    CREATE TABLE list_inventory_runs (
+      id TEXT PRIMARY KEY, list_id TEXT NOT NULL, status TEXT NOT NULL,
+      page_size INTEGER NOT NULL, next_token TEXT, pages INTEGER NOT NULL DEFAULT 0,
+      started_at TEXT NOT NULL, updated_at TEXT NOT NULL, completed_at TEXT, reason TEXT
+    );
+    CREATE UNIQUE INDEX one_active_inventory ON list_inventory_runs(list_id)
+      WHERE status IN ('pending','review-required');
+    CREATE TABLE list_inventory_accounts (
+      run_id TEXT NOT NULL REFERENCES list_inventory_runs(id), author_id TEXT NOT NULL,
+      username TEXT NOT NULL, display_name TEXT NOT NULL, protected INTEGER,
+      observed_at TEXT NOT NULL, profile_json TEXT NOT NULL,
+      PRIMARY KEY(run_id,author_id)
+    );
+    CREATE TABLE list_inventory_pages (
+      run_id TEXT NOT NULL REFERENCES list_inventory_runs(id), page_number INTEGER NOT NULL,
+      request_cursor TEXT, next_cursor TEXT, request_id TEXT NOT NULL REFERENCES budget_requests(id),
+      PRIMARY KEY(run_id,page_number)
+    );
+    CREATE TABLE list_inventories (
+      list_id TEXT PRIMARY KEY, current_run_id TEXT REFERENCES list_inventory_runs(id), completed_at TEXT
+    );
+    CREATE TABLE list_inventory_leases (list_id TEXT PRIMARY KEY, owner TEXT NOT NULL, expires_ms INTEGER NOT NULL);
+    UPDATE schema_version SET version=4;
   `));
 }

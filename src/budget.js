@@ -91,9 +91,21 @@ export function createBudget(db, policy, { clock = () => Date.now() } = {}) {
     });
   }
 
-  function uncertain(id) {
-    const now = iso(clock());
-    db.prepare(`UPDATE budget_requests SET status='uncertain', settled_at=?, settlement_day=? WHERE id=? AND status='reserved'`).run(now, now.slice(0, 10), id);
+  function uncertain(id, { observedResources = null } = {}) {
+    if (observedResources !== null && (!Number.isSafeInteger(observedResources) || observedResources < 0)) throw new Error('Invalid observed resource count.');
+    return atomic(db, () => {
+      const request = db.prepare('SELECT * FROM budget_requests WHERE id=?').get(id);
+      if (!request || request.status !== 'reserved') throw new Error('Reservation is not awaiting accounting.');
+      const now = iso(clock());
+      const accounted = Math.max(request.reserved_micro, (observedResources ?? 0) * request.unit_micro);
+      if (!Number.isSafeInteger(accounted)) throw new Error('Observed cost is outside accounting bounds.');
+      db.prepare(`UPDATE budget_requests SET status='uncertain', accounted_micro=?, settled_at=?, settlement_day=? WHERE id=?`).run(accounted, now, now.slice(0, 10), id);
+      if (accounted > request.reserved_micro) {
+        db.prepare('INSERT INTO operation_faults(id, code, created_at) VALUES (?, ?, ?)').run(randomUUID(), 'response-exceeded-reservation', now);
+        return { fault: 'response-exceeded-reservation' };
+      }
+      return {};
+    });
     // Ambiguous requests retain their entire reservation. There is no automatic quota reset/refund.
   }
   return { recordBalance, reserveRequest, settle, uncertain, state };

@@ -8,6 +8,7 @@
     "start": "node src/server.js",
     "test": "node --test",
     "import:calibration": "node scripts/import-calibration.js",
-    "collection:status": "node scripts/collection-status.js"
+    "collection:status": "node scripts/collection-status.js",
+    "collection:worker": "node scripts/worker.js"
   }
 }

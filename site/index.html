@@ -20,8 +20,8 @@
   </aside>
   <main>
     <header class="masthead"><span class="eyebrow">HOUSE DEMOCRATIC CAUCUS</span><span id="updated" class="quiet">Opening workspace…</span></header>
-    <div class="heading-row"><div><h1 id="page-title">Listen. Trace. Understand.</h1><p id="page-description">Read the source. Explore the subjects. Teach the distinctions.</p></div><span class="status-pill"><span class="dot amber"></span> Historical preview</span></div>
-    <div class="notice"><strong>A small, real starting point.</strong> These are previously verified historical posts. Live collection, semantic analysis, and automatic trend discovery are still being built. The current labels are a transparent word-matching baseline.</div>
+    <div class="heading-row"><div><h1 id="page-title">Listen. Trace. Understand.</h1><p id="page-description">Read the source. Explore the subjects. Teach the distinctions.</p></div><span class="status-pill"><span class="dot amber"></span> Local preview</span></div>
+    <div id="archive-notice" class="notice">Opening the local source archive…</div>
     <div id="error" class="error" role="alert" hidden></div>
     <section class="stats" id="stats" aria-label="Collection summary"></section>
     <section class="filters" aria-label="Post filters">
@@ -45,7 +45,13 @@
       <div class="panel"><p>Search a phrase of any practical length. Original punctuation, case, and negation are preserved. This view finds exact occurrences; automatic phrase discovery and paraphrase grouping are forthcoming.</p>
       <form id="phrase-form" class="phrase-form"><label>Exact phrase<input id="phrase-input" placeholder="Paste wording from a post" maxlength="2000" required></label><button class="primary" type="submit">Find occurrences</button></form></div><div id="phrase-results"></div>
     </section>
-    <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="coverage" class="coverage-grid"></div></section>
+    <section id="view-coverage" class="view" hidden><div class="section-heading"><h2>Know what is covered</h2></div><div id="coverage" class="coverage-grid"></div>
+      <div class="panel"><h3>Private X connection</h3><p id="connection-status" class="quiet">Checking local setup…</p>
+        <p>Use a replacement bearer token from your X developer account. Save it here instead of sending it in chat. It is stored in a private file on this computer and is never sent back in dashboard responses. Saving does not start collection or spend credits.</p>
+        <form id="connection-form" class="feedback-form" autocomplete="off"><label>Bearer token<input id="x-token" type="password" autocomplete="off" minlength="20" maxlength="4096" required spellcheck="false" autocapitalize="none"></label>
+          <div class="feedback-actions"><button id="save-connection" class="primary" type="submit">Save privately</button><span id="connection-result" class="success" role="status"></span></div></form>
+      </div>
+    </section>
     <footer>Every interpretation should lead back to its source. <span>Private local preview · v0.1</span></footer>
   </main>
 </body>
