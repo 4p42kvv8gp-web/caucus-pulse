@@ -19,6 +19,12 @@ function profilePage(value){
   if(url.protocol!=='https:'||!['x.com','www.x.com','twitter.com','www.twitter.com'].includes(url.hostname)||url.username||url.password||url.port||!/^[A-Za-z0-9_]{1,15}$/.test(handle)||/^(home|share|intent|search|i|hashtag|explore|settings|login)$/i.test(handle))throw new Error('Invalid X profile link.');
   return handle.toLowerCase();
 }
+function observedProfile(value,legacy){
+  if(!legacy)return profilePage(value);
+  const match=typeof value==='string'&&value.match(/^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/@?([A-Za-z0-9_]{1,15})\/?(?:[?#][^\s]*)?$/i);
+  if(!match)throw new Error('Invalid observed X profile link.');
+  return profilePage(`https://x.com/${match[1]}`);
+}
 function verifySource(source,loadSource,now){
   if(!source||!/^[A-Za-z0-9-]+\.html$/.test(source.file??'')||!Number.isInteger(source.bytes)||source.bytes<1||source.bytes>3_000_000||!/^[a-f0-9]{64}$/.test(source.sha256??''))throw new Error('Invalid source artifact.');
   housePage(source.sourceUrl);housePage(source.finalUrl);current(source.retrievedAt,now);
@@ -28,7 +34,8 @@ function verifySource(source,loadSource,now){
 
 /** Reads only local proof artifacts and previously observed numeric X profiles. */
 export function accountEvidenceCandidates(store,report,{loadSource,listId,now=Date.now()}={}){
-  if(!report||report.schemaVersion!==1||report.policy!=='house-directory-office-link-v1'||!Array.isArray(report.observations)||report.observations.length>441||typeof loadSource!=='function'||!/^\d+$/.test(listId??''))throw new Error('Invalid official account evidence report.');
+  if(!report||report.schemaVersion!==1||!['house-directory-office-link-v1','house-directory-office-link-v2'].includes(report.policy)||!Array.isArray(report.observations)||report.observations.length>441||typeof loadSource!=='function'||!/^\d+$/.test(listId??''))throw new Error('Invalid official account evidence report.');
+  const v2=report.policy==='house-directory-office-link-v2';
   current(report.createdAt,now);
   if(report.directory?.sourceUrl!=='https://www.house.gov/representatives'||report.directory?.finalUrl!=='https://www.house.gov/representatives')throw new Error('The House directory source does not match.');
   verifySource(report.directory,loadSource,now);
@@ -45,7 +52,11 @@ export function accountEvidenceCandidates(store,report,{loadSource,listId,now=Da
     if(!Array.isArray(observation.profiles)||observation.profiles.length>100)throw new Error('Invalid observed profiles.');
     if(observation.profiles.length!==1){items.push({...item,status:observation.profiles.length?'multiple-profile-links':'no-profile-link'});continue;}
     const profile=observation.profiles[0],handle=profilePage(profile.url);
-    if(profilePage(profile.observedHref)!==handle||profile.handle?.toLowerCase()!==handle)throw new Error('Observed profile links disagree.');
+    if(observedProfile(profile.observedHref,v2)!==handle||profile.handle?.toLowerCase()!==handle)throw new Error('Observed profile links disagree.');
+    if(v2&&!['anchor','drupal-social-settings'].includes(profile.sourceKind))throw new Error('Invalid office profile source kind.');
+    if(['housedemocrats','theblackcaucus','demcaucus'].includes(handle)){
+      items.push({...item,handle:profile.handle,status:'shared-organization-profile'});continue;
+    }
     const matches=store.db.prepare(`SELECT a.*,r.list_id FROM list_inventory_accounts a JOIN list_inventory_runs r ON r.id=a.run_id
       WHERE r.list_id=? AND a.username=? COLLATE NOCASE AND a.observed_at>=? AND a.observed_at<=? ORDER BY a.observed_at DESC LIMIT 100`)
       .all(listId,handle,normalized(now-DAY),normalized(now));
@@ -59,9 +70,10 @@ export function accountEvidenceCandidates(store,report,{loadSource,listId,now=Da
     const end=Math.min(Date.parse(roster.valid_until),Date.parse(observation.page.retrievedAt)+DAY,Date.parse(observed.observed_at)+DAY);
     const start=Math.max(Date.parse(`${roster.published_on}T00:00:00Z`),now-DAY);
     const binding={memberId:member.member_id,authorId:observed.author_id,handle:profile.handle,accountType:'official',validFrom:normalized(start),validUntil:normalized(end),
-      evidence:{officialPage:observation.page.finalUrl,linkedProfile:profile.observedHref,
+      evidence:{officialPage:observation.page.finalUrl,linkedProfile:v2?profile.url:profile.observedHref,
+        ...(v2?{observedProfileUrl:profile.observedHref,profileSourceKind:profile.sourceKind}:{}),
         xUser:{id:observed.author_id,username:observed.username,retrievedAt:observed.observed_at},
-        explanation:'The current House directory links this member and district to an office website; that page links one X profile, matched to a numeric author ID observed in the supplied List. A limited current observation window is used operationally; it does not establish historical ownership.',
+        explanation:'The current House directory links this member and district to an office website; that page identifies one X profile through a link or its social-icon settings, matched to a numeric author ID observed in the supplied List. The observed URL is preserved; older HTTP/profile formatting is normalized without following it. A limited current observation window is used operationally; it does not establish historical ownership.',
         policy:report.policy,ownershipBasis:'current-observation-window',directory:report.directory,officePage:observation.page,
         directoryName:observation.directoryName,rosterSnapshotId:roster.id,listId,listInventoryRunId:observed.run_id}};
     const overlaps=store.db.prepare('SELECT member_id,handle,account_type,valid_from,valid_until FROM account_bindings WHERE author_id=? AND valid_from<? AND valid_until>? ORDER BY valid_from').all(binding.authorId,binding.validUntil,binding.validFrom);

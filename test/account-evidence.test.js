@@ -22,6 +22,28 @@ function report(){return {schemaVersion:1,policy:'house-directory-office-link-v1
   directory:artifact('directory.html','https://www.house.gov/representatives'),observations:[{memberId:member.memberId,district:'XY01',directoryName:'Test Member, Synthetic',status:'observed',page:artifact('office.html','https://synthetic.house.gov/'),profiles:[{handle:'RepSynthetic',url:'https://x.com/RepSynthetic',observedHref:'https://twitter.com/RepSynthetic'}]}]};}
 function preview(s,value=report()){return accountEvidenceCandidates(s,value,{loadSource:name=>files[name],listId:'123',now});}
 
+test('v2 preserves legacy-link provenance while binding the canonical exact numeric account',()=>{
+  const s=setup();try{
+    const r=report();r.policy='house-directory-office-link-v2';
+    Object.assign(r.observations[0].profiles[0],{observedHref:'http://twitter.com/@RepSynthetic/',sourceKind:'drupal-social-settings'});
+    const p=preview(s,r);assert.equal(p.items[0].status,'ready');
+    assert.equal(p.items[0].binding.evidence.linkedProfile,'https://x.com/RepSynthetic');
+    assert.equal(p.items[0].binding.evidence.observedProfileUrl,'http://twitter.com/@RepSynthetic/');
+    assert.equal(applyAccountEvidence(s,p,{now}).bindingsAdded,1);
+    for(const href of ['http://x.com.evil.invalid/RepSynthetic','http://x.com:80/RepSynthetic','http://user@x.com/RepSynthetic','http://x.com/RepSynthetic/status/1','http://x.com/SomeoneElse']){
+      r.observations[0].profiles[0].observedHref=href;assert.throws(()=>preview(s,r));
+    }
+  }finally{s.close();}
+});
+
+test('an office page linking a shared caucus account cannot establish individual ownership',()=>{
+  const s=setup();try{
+    const r=report();r.observations[0].profiles=[{handle:'HouseDemocrats',url:'https://x.com/HouseDemocrats',observedHref:'https://x.com/HouseDemocrats'}];
+    s.db.prepare("UPDATE list_inventory_accounts SET username='HouseDemocrats',display_name='Representative Democrats'").run();
+    const p=preview(s,r);assert.equal(p.items[0].status,'shared-organization-profile');assert.equal(applyAccountEvidence(s,p,{now}).bindingsAdded,0);
+  }finally{s.close();}
+});
+
 test('official evidence joins a dated roster and observed numeric profile without claiming complete List inventory',()=>{
   const s=setup();try{
     const post=normalizePost({id:'99',author_id:'42',text:'A synthetic community announcement.',created_at:'2026-09-08T04:00:00Z'});

@@ -1,5 +1,6 @@
 """Offline checks for public identity evidence parsing; no real verification fixtures."""
 import importlib.util
+import json
 from pathlib import Path
 import unittest
 
@@ -9,6 +10,20 @@ spec.loader.exec_module(module)
 
 
 class EvidenceTests(unittest.TestCase):
+    def test_legacy_links_are_normalized_without_fetching(self):
+        p=module.Links()
+        p.feed('<a href="http://www.twitter.com/@RepSynthetic/">X</a><a href="hhttp://twitter.com/Someone">bad</a><a href="http://x.com:80/Someone">bad</a>')
+        self.assertEqual(p.links,[{'handle':'RepSynthetic','url':'https://x.com/RepSynthetic','observedHref':'http://www.twitter.com/@RepSynthetic/','sourceKind':'anchor'}])
+
+    def test_only_enabled_known_drupal_social_configuration(self):
+        config={'evo_social_icons':{'EvoSocialIconsJS':{'order':{'-1':{'X':{'checkbox':'1','url':'https://x.com/RepSynthetic'}},'0':{'X':{'checkbox':'0','url':'https://x.com/Disabled'}},'1':{'Facebook':{'checkbox':'1','url':'https://x.com/WrongPlatform'}}}}}}
+        p=module.Links()
+        p.feed('<script type="application/json" data-drupal-selector="drupal-settings-json">'+json.dumps(config)+'</script><script>"https://x.com/Someone"</script>')
+        self.assertEqual(len(p.links),1)
+        self.assertEqual(p.links[0]['sourceKind'],'drupal-social-settings')
+        q=module.Links();q.feed('<script type="application/json">'+json.dumps(config)+'</script>')
+        self.assertEqual(q.links,[])
+
     def test_only_profile_anchors(self):
         p=module.Links()
         p.feed('''<a href="https://twitter.com/RepSynthetic ">X</a><a href="https://x.com/RepSynthetic/status/12">post</a><a href="https://x.com/intent/tweet">share</a><a href="https://x.com.evil.invalid/RepSynthetic">bad</a><script>"https://x.com/Someone"</script>''')

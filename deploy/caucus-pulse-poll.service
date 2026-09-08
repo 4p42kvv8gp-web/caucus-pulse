@@ -1,0 +1,28 @@
+# Prepared only. Do not enable before the credit, coverage and host acceptance checks.
+[Unit]
+Description=Caucus Pulse bounded X collection pass
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=caucus-pulse
+Group=caucus-pulse
+WorkingDirectory=/opt/caucus-pulse
+EnvironmentFile=/etc/caucus-pulse/workspace.env
+ExecStart=/opt/node-v24.19.0/bin/node /opt/caucus-pulse/scripts/worker.js --mode posts --field-dialect tweet --page-size 25 --max-pages 10 --execute --require-complete
+TimeoutStartSec=360
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ReadWritePaths=/opt/caucus-pulse/data
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryMax=1G
+TasksMax=64
+

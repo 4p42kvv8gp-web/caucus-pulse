@@ -13,7 +13,9 @@ let store;
 try {
   const { values } = parseArgs({ options: { mode: { type: 'string' }, execute: { type: 'boolean', default: false },
     trial: { type: 'boolean', default: false }, 'page-size': { type: 'string' }, 'max-pages': { type: 'string' },
-    'field-dialect': { type: 'string' }, restart: { type: 'boolean', default: false } } });
+    'field-dialect': { type: 'string' }, restart: { type: 'boolean', default: false },
+    'require-complete': {type:'boolean',default:false} } });
+  if(values['require-complete']&&(!values.execute||values.restart||values.trial))throw new Error('Invalid command: --require-complete is for executed normal passes only.');
   const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
   const options = { mode: values.mode, trial: values.trial, fieldDialect: values['field-dialect'],
     pageSize: values['page-size'] === undefined ? undefined : Number(values['page-size']),
@@ -25,7 +27,9 @@ try {
     console.log(JSON.stringify(restartPass(store, settings, plan.mode), null, 2));
   } else {
     const client = values.execute ? createXClient({ token: createCredentialStore(resolve(root, 'data/secrets')).load(), fieldDialect: plan.fieldDialect ?? 'tweet' }) : null;
-    console.log(JSON.stringify(await runWorkerPass({ store, settings, options, client, execute: values.execute }), null, 2));
+    const result=await runWorkerPass({ store, settings, options, client, execute: values.execute });
+    console.log(JSON.stringify(result, null, 2));
+    if(values['require-complete']&&result.status!=='complete')process.exitCode=2;
   }
 } catch (error) {
   console.error(/^(Invalid |Live collection is disabled|Fresh inventory|Configure the product)/.test(error.message)

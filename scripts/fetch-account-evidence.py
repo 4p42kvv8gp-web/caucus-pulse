@@ -25,9 +25,13 @@ def official_url(value):
 def profile_url(value):
     try:
         url = urllib.parse.urlsplit(value.strip())
-        if url.scheme != 'https' or url.hostname not in ('x.com', 'www.x.com', 'twitter.com', 'www.twitter.com') or url.username or url.password or url.port not in (None, 443):
+        # These are links in a verified HTTPS office page, never fetch targets.
+        # Preserve the observed URL and canonicalize only the exact X host/handle.
+        if url.scheme not in ('http', 'https') or url.hostname not in ('x.com', 'www.x.com', 'twitter.com', 'www.twitter.com') or url.username or url.password or url.port is not None:
             return None
         handle = url.path.strip('/')
+        if handle.startswith('@'):
+            handle = handle[1:]
         if not re.fullmatch(r'[A-Za-z0-9_]{1,15}', handle) or handle.lower() in ('home', 'share', 'intent', 'search', 'i', 'hashtag', 'explore', 'settings', 'login'):
             return None
         return {'handle': handle, 'url': f'https://x.com/{handle}'}
@@ -39,13 +43,45 @@ class Links(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.links = []
+        self.settings = None
 
     def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'script' and attrs.get('type') == 'application/json' and attrs.get('data-drupal-selector') == 'drupal-settings-json':
+            self.settings = ''
         if tag == 'a':
-            value = dict(attrs).get('href', '')
+            value = attrs.get('href', '')
             profile = profile_url(value)
             if profile:
-                self.links.append({**profile, 'observedHref': value.strip()})
+                self.links.append({**profile, 'observedHref': value.strip(), 'sourceKind': 'anchor'})
+
+    def handle_data(self, value):
+        if self.settings is not None:
+            self.settings += value
+
+    def handle_endtag(self, tag):
+        if tag != 'script' or self.settings is None:
+            return
+        raw, self.settings = self.settings, None
+        try:
+            # Parse only the known social-icon configuration, never executable
+            # scripts or arbitrary quoted URLs from the rest of the page.
+            config = json.loads(raw)['evo_social_icons']['EvoSocialIconsJS']['order']
+            if not isinstance(config, dict) or len(config) > 100:
+                return
+            for entry in config.values():
+                if not isinstance(entry, dict):
+                    continue
+                for platform in ('X', 'Twitter'):
+                    value = entry.get(platform)
+                    if not isinstance(value, dict) or value.get('checkbox') not in ('1', 1):
+                        continue
+                    url = value.get('url')
+                    profile = profile_url(url) if isinstance(url, str) else None
+                    if profile:
+                        self.links.append({**profile, 'observedHref': url.strip(), 'sourceKind': 'drupal-social-settings'})
+        except (ValueError, KeyError, TypeError):
+            return
 
 
 class Directory(HTMLParser):
@@ -170,7 +206,7 @@ def main():
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         observations = list(executor.map(fetch_member, selected))
-    report = {'schemaVersion': 1, 'policy': 'house-directory-office-link-v1', 'createdAt': dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00', 'Z'), 'rosterHash': roster['id'], 'rosterRetrievedAt': roster['retrievedAt'], 'directory': directory, 'mappedMembers': len(mapped), 'rosterMembers': len(roster['members']), 'observations': observations, 'limitations': ['Office links are current observations, not historical ownership proof.', 'A profile anchor alone does not identify an X numeric author ID.', 'An unavailable page or missing link is not evidence that a member has no X account.']}
+    report = {'schemaVersion': 1, 'policy': 'house-directory-office-link-v2', 'createdAt': dt.datetime.now(dt.timezone.utc).isoformat().replace('+00:00', 'Z'), 'rosterHash': roster['id'], 'rosterRetrievedAt': roster['retrievedAt'], 'directory': directory, 'mappedMembers': len(mapped), 'rosterMembers': len(roster['members']), 'observations': observations, 'limitations': ['Office links are current observations, not historical ownership proof.', 'A profile anchor alone does not identify an X numeric author ID.', 'An unavailable page or missing link is not evidence that a member has no X account.']}
     path = output / f'account-evidence-{int(time.time() * 1000)}.json'
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'report': str(path), 'mappedMembers': len(mapped), 'attempted': len(selected), 'observed': sum(o['status'] == 'observed' for o in observations), 'profileLinks': sum(len(o.get('profiles', [])) for o in observations)}))

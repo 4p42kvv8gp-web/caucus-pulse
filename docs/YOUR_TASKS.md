@@ -1,6 +1,6 @@
 # Jacob's list — only work that benefits from you
 
-Updated September 8, 2026 after the seven-hour build. The development schedule is paused. Your useful next work is listed below; implementation does not depend on the optional design files.
+Updated September 8, 2026 after monitoring work resumed. The earlier development heartbeat remains paused. Your useful next work is listed below; implementation does not depend on the optional design files.
 
 ## Already handled
 
@@ -8,6 +8,11 @@ Updated September 8, 2026 after the seven-hour build. The development schedule i
 - [x] Set the initial funding constraint: $400 already available, lasting at least two weeks. We will use a $25 daily cap and keep $50 in reserve, subject to actual account verification.
 - [x] Authorize full development in this task.
 - [x] Supply Claude's Build Spec and request the Hugging Face intelligence path. Relevant development skills are installed.
+
+## Two inputs needed for monitoring now
+
+- [ ] Current prepaid balance shown in X Developer Console → Billing, and whether another app spends from that same wallet. The existing token works; no new token is requested.
+- [ ] Existing hosting provider/account, or “none.” We will prepare the exact approved host and handle installation; no server expense has started.
 
 ## Your useful product work
 
