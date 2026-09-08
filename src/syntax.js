@@ -84,15 +84,30 @@ async function main() {
   const authors = loadAuthors().byId;
   const phrases = minePhrases(tweets, cfg).slice(0, settings.syntax.top_phrases);
 
-  // Update the first-seen ledger (adoption curves).
+  // Update the first-seen ledger (adoption curves). memberFirst records the
+  // first day each member used the phrase — that's what "New 48h" counts.
   const ledger = readJSON(phrasesPath, {});
+  const authorsOf = new Map();
+  for (const t of tweets) {
+    if (t.type === 'retweet') continue;
+    const grams = new Set(ngrams(tokenize(t.text), cfg.minNgram, cfg.maxNgram));
+    for (const g of grams) {
+      if (!authorsOf.has(g)) authorsOf.set(g, new Set());
+      authorsOf.get(g).add(t.authorId);
+    }
+  }
   for (const ph of phrases) {
     const entry = ledger[ph.phrase] || {
       firstSeen: date,
       firstAuthorId: ph.earliest.authorId,
       firstAuthor: authors[ph.earliest.authorId]?.handle || ph.earliest.authorId,
-      byDay: {}
+      byDay: {},
+      memberFirst: {}
     };
+    entry.memberFirst ||= {};
+    for (const authorId of authorsOf.get(ph.phrase) || []) {
+      if (!entry.memberFirst[authorId] || entry.memberFirst[authorId] > date) entry.memberFirst[authorId] = date;
+    }
     entry.byDay[date] = { members: ph.members, tweets: ph.tweets };
     ledger[ph.phrase] = entry;
   }

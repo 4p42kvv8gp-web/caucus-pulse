@@ -59,13 +59,36 @@ starts. Every day before that is gone; turn it on early.
 
 | Stage (script) | Schedule | What it does | X / Claude cost |
 |---|---|---|---|
-| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe | $0.005/tweet — the floor |
+| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe; then live-tags the new posts and rebuilds site data | $0.005/tweet — the floor |
+| `src/classify-live.js` | with each poll | Tags the poll's new posts against the taxonomy (prompt-cached; skipped without `ANTHROPIC_API_KEY` or with `CLASSIFY_LIVE=false`) so the dashboard feed carries topics all day | ~$3–5/day at 2k tweets |
 | `src/authors.js` | weekly | `config/accounts.csv` → `data/authors.json` (no expansions ever) | $0.01/account/week |
 | `src/refresh.js` | nightly | 24h-old originals get one batched metrics re-read → `data/metrics/` | $0.005/original |
-| `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` and emerging clusters | ~50% batch rates |
-| `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` | free |
+| `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` (authoritative), emerging clusters, incident flags | ~50% batch rates |
+| `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
+| `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
+| `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
+
+## The dashboard
+
+`site/index.html` (dashboard) and `site/incidents.html` (incident desk) are a
+static, dependency-free recreation of the high-fidelity design handoff:
+caucus/window filters driving every number, four stat cards, the
+topics × caucus matrix with 7-day trends and **Momentum** (0–100, 50 = steady:
+40% volume lift · 20% acceleration · 20% member adoption · 10% caucus
+spread · 10% engagement lift, each against the topic's own 7-day baseline),
+a filterable live feed, the phrase table with caucus-split adoption bars,
+emerging clusters, breaking-in-district cards, and a **Compose** modal that
+builds paste-ready plain text for Signal. The incident desk shows each
+incident's timeline, intel panels, and a copy-brief button; its X-search
+panel is a stub until an X search connector is added. Serve via GitHub Pages
+(deploy from branch, path `/`) and open `/site/`.
+
+Real windows, no fakery: `rollups.json` carries separate Today and 7-day
+aggregates per caucus for every topic — the design's sample data scaled one
+window into the other; the pipeline computes both. Engagement lags ~one day
+by design (the 24h re-read is the only metrics read).
 
 The poller's cursor logic self-detects whether the list endpoint honors
 `since_id` (X's docs are ambiguous). If it doesn't, the poller falls back to

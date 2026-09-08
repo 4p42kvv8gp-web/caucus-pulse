@@ -5,67 +5,20 @@
 // and anything that fits nothing comes back as an "emerging cluster" with a
 // suggested subtopic for human review in the daily report.
 //
+// The same pass flags district emergencies (incident: {kind, place}) — the
+// raw material src/incidents.js groups into the incident desk.
+//
 // Retweets are never sent to the model: they inherit the original tweet's
 // assignment when the original is in the corpus, and only fall back to
-// classifying their truncated "RT @…" text when it isn't.
+// classifying their truncated "RT @…" text when it isn't. Posts already
+// tagged by the poll-time pass (data/topics-live/) are still re-classified
+// here — the nightly batch is authoritative and costs half as much.
 import Anthropic from '@anthropic-ai/sdk';
-import fs from 'node:fs';
-import yaml from 'js-yaml';
-import { p, settings, daysAgoEt, readJSON, writeJSON } from './util.js';
+import { settings, daysAgoEt, readJSON, writeJSON } from './util.js';
 import { loadState, saveState, loadDay, topicsPath } from './store.js';
+import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose } from './taxonomy.js';
 
-export function loadTaxonomy() {
-  return yaml.load(fs.readFileSync(p('config', 'taxonomy.yaml'), 'utf8')) || {};
-}
-
-// Render the taxonomy for the prompt: stable ordering so the cached system
-// block stays byte-identical between runs until the YAML actually changes.
-export function renderTaxonomy(tax) {
-  const lines = [];
-  for (const key of Object.keys(tax).sort()) {
-    const macro = tax[key];
-    lines.push(`- ${key}: ${macro.label}`);
-    for (const subKey of Object.keys(macro.subtopics || {}).sort()) {
-      const sub = macro.subtopics[subKey];
-      const aliases = sub.aliases?.length ? ` (also: ${sub.aliases.join(', ')})` : '';
-      lines.push(`  - ${key}/${subKey}: ${sub.label}${aliases}`);
-    }
-  }
-  return lines.join('\n');
-}
-
-export function validAssignments(topics, tax) {
-  const out = [];
-  for (const t of Array.isArray(topics) ? topics : []) {
-    const [macro, sub] = Array.isArray(t) ? t : [t, null];
-    if (!tax[macro]) continue;
-    out.push([macro, sub && tax[macro].subtopics?.[sub] ? sub : null]);
-  }
-  return out;
-}
-
-function systemPrompt(tax) {
-  return `You classify tweets from US House Democratic caucus members into a fixed two-level topic taxonomy.
-
-Taxonomy (id: label). A tweet can carry multiple topics. Assign the most
-specific level that fits: use "macro/sub" when a subtopic applies, bare
-"macro" when only the macro level fits.
-
-${renderTaxonomy(tax)}
-
-Rules:
-- Judge the tweet's substance, not incidental word matches.
-- Most tweets get 1-2 topics; never more than 4.
-- Pure scheduling/greeting/broadcast tweets with no policy content get [].
-- If a tweet is clearly about a coherent subject the taxonomy has no home
-  for, give it [] and add it to "emerging" with a short suggested subtopic
-  label (reuse the same label for tweets about the same subject).
-
-Reply with ONLY a JSON object, no prose:
-{"assignments": [{"id": "<tweet id>", "topics": [["macro-id", "sub-id or null"], ...]}, ...],
- "emerging": [{"label": "<suggested subtopic>", "ids": ["<tweet id>", ...]}]}
-Include every input tweet id exactly once in "assignments".`;
-}
+export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose } from './taxonomy.js';
 
 function chunkRequests(items, tax, model) {
   const per = settings.classify.tweets_per_request || 40;
@@ -89,37 +42,33 @@ function chunkRequests(items, tax, model) {
   return requests;
 }
 
-export function parseJsonLoose(text) {
-  try { return JSON.parse(text); } catch { /* fall through */ }
-  const start = text.indexOf('{');
-  const end = text.lastIndexOf('}');
-  if (start >= 0 && end > start) {
-    try { return JSON.parse(text.slice(start, end + 1)); } catch { /* fall through */ }
+export function mergeParsed(parsed, tax, out) {
+  for (const a of parsed.assignments || []) {
+    out.assignments[a.id] = validAssignments(a.topics, tax);
+    if (a.incident?.kind && a.incident?.place) {
+      out.incidents[a.id] = { kind: String(a.incident.kind).toLowerCase(), place: String(a.incident.place) };
+    }
   }
-  return null;
+  for (const e of parsed.emerging || []) {
+    const key = String(e.label || '').trim().toLowerCase();
+    if (!key) continue;
+    const entry = out.emergingMap.get(key) || { label: String(e.label).trim(), ids: [] };
+    entry.ids.push(...(e.ids || []));
+    out.emergingMap.set(key, entry);
+  }
 }
 
 async function collectResults(client, batchId, tax) {
-  const assignments = {};
-  const emerging = new Map();
+  const out = { assignments: {}, incidents: {}, emergingMap: new Map() };
   let failedChunks = 0;
   for await (const result of await client.messages.batches.results(batchId)) {
     if (result.result.type !== 'succeeded') { failedChunks++; continue; }
     const textBlock = result.result.message.content.find((b) => b.type === 'text');
     const parsed = textBlock && parseJsonLoose(textBlock.text);
     if (!parsed) { failedChunks++; continue; }
-    for (const a of parsed.assignments || []) {
-      assignments[a.id] = validAssignments(a.topics, tax);
-    }
-    for (const e of parsed.emerging || []) {
-      const key = String(e.label || '').trim().toLowerCase();
-      if (!key) continue;
-      const entry = emerging.get(key) || { label: e.label.trim(), ids: [] };
-      entry.ids.push(...(e.ids || []));
-      emerging.set(key, entry);
-    }
+    mergeParsed(parsed, tax, out);
   }
-  return { assignments, emerging: [...emerging.values()], failedChunks };
+  return { ...out, emerging: [...out.emergingMap.values()], failedChunks };
 }
 
 // Look up an original tweet's assignment for retweet inheritance — checks
@@ -179,7 +128,7 @@ async function main() {
     await new Promise((r) => setTimeout(r, 30_000));
   }
 
-  const { assignments, emerging, failedChunks } = await collectResults(client, batchId, tax);
+  const { assignments, incidents, emerging, failedChunks } = await collectResults(client, batchId, tax);
   // Retweets of originals classified in this very batch inherit now too.
   for (const t of tweets) {
     if (t.type === 'retweet' && !inherited[t.id] && assignments[t.refId]) {
@@ -193,13 +142,14 @@ async function main() {
     model,
     classifiedAt: new Date().toISOString(),
     assignments: { ...assignments, ...inherited },
+    incidents,
     emerging,
     unclassified,
     failedChunks
   });
   state.pendingBatch = null;
   saveState(state);
-  console.log(`[classify] ${date}: ${Object.keys(assignments).length} classified, ${Object.keys(inherited).length} inherited, ${emerging.length} emerging clusters, ${unclassified.length} unclassified${failedChunks ? `, ${failedChunks} chunk(s) failed` : ''}`);
+  console.log(`[classify] ${date}: ${Object.keys(assignments).length} classified, ${Object.keys(inherited).length} inherited, ${Object.keys(incidents).length} incident-flagged, ${emerging.length} emerging clusters, ${unclassified.length} unclassified${failedChunks ? `, ${failedChunks} chunk(s) failed` : ''}`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {

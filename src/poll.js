@@ -110,10 +110,32 @@ export async function pollOnce() {
 
   const dates = appendToArchive(records);
   state.recentNewCounts = [...state.recentNewCounts, records.length].slice(-30);
+  state.lastPollAt = capturedAt;
   saveState(state);
 
   const today = state.usage[etDate()] || { posts: 0, users: 0 };
   console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''}; today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
+
+  // Post-capture extras are best-effort: live topic tags for the dashboard
+  // feed, then a rollups.json rebuild. Dynamic imports keep the capture path
+  // dependency-free — if node_modules is absent these steps just skip.
+  if (records.length) {
+    try {
+      const { classifyLive } = await import('./classify-live.js');
+      const r = await classifyLive(records);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+    } catch (e) {
+      console.warn(`[poll] live classification skipped: ${e.message}`);
+    }
+  }
+  try {
+    const { buildIncidents } = await import('./incidents.js');
+    await buildIncidents({ withIntel: false }); // grouping only; intel is nightly
+    const { buildSiteData } = await import('./sitedata.js');
+    buildSiteData();
+  } catch (e) {
+    console.warn(`[poll] site data rebuild skipped: ${e.message}`);
+  }
   return { captured: records.length };
 }
 

@@ -1,5 +1,6 @@
-# Capture poller — every 20 minutes. Dependency-free (node stdlib only), so
-# each of the ~72 daily runs costs seconds, not an npm install.
+# Capture poller — every 20 minutes. Captures new tweets, live-tags them for
+# the dashboard feed (skipped automatically if ANTHROPIC_API_KEY is absent or
+# CLASSIFY_LIVE=false), regroups incidents, rebuilds site/data/rollups.json.
 # NOTE: this file only runs once caucus-pulse/ contents sit at the ROOT of
 # its own repo (GitHub reads workflows from /.github/workflows only).
 name: poll
@@ -24,17 +25,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Pull new tweets
+          cache: npm
+      - run: npm ci
+      - name: Pull, live-tag, rebuild site data
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
           X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
+          CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
         run: node src/poll.js
-      - name: Commit archive
+      - name: Commit archive + site data
         run: |
           git config user.name "caucus-pulse"
           git config user.email "actions@users.noreply.github.com"
-          git add data
+          git add data site/data
           git diff --cached --quiet && { echo "no new tweets"; exit 0; }
           git commit -m "poll: $(date -u +'%Y-%m-%d %H:%M') capture"
           for i in 1 2 3 4; do
