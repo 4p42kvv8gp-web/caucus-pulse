@@ -40,3 +40,13 @@ test('capture inspection is a source-bounded read-only API with no provider call
     const value=await response.json();assert.equal(value.captures.length,1);assert.equal(value.captures[0].text,'Synthetic API source.');assert.equal(store.db.prepare('SELECT COUNT(*) AS n FROM budget_requests').get().n,0);
   }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));store.close();}
 });
+
+test('capture selection limits payload inspection before extracting source text',()=>{
+  const store=openStore();try{
+    store.db.prepare('INSERT INTO captured_posts(id,author_id,created_at,captured_at,normalized_json) VALUES (?,?,?,?,?)')
+      .run('800','800','2026-09-01T00:00:00Z','2026-09-08T00:00:00Z','opaque unselected payload');
+    capture(store,'801','Synthetic latest source.');
+    const result=inspectUnverifiedCaptures(store,{limit:1});assert.equal(result.coverage.total,2);assert.equal(result.coverage.unexamined,1);
+    assert.equal(result.captures[0].text,'Synthetic latest source.');
+  }finally{store.close();}
+});

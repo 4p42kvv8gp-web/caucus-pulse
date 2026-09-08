@@ -7,9 +7,10 @@ export function inspectUnverifiedCaptures(store,{limit=25,maxPostCharacters=6000
     const where="FROM captured_posts c WHERE c.status<>'promoted' AND NOT EXISTS(SELECT 1 FROM tombstones t WHERE t.post_id=c.id)";
     const total=store.db.prepare(`SELECT COUNT(*) AS n ${where}`).get().n;
     // Measure before loading a whole source. Do not return the provider payload or infer a member identity.
-    const rows=store.db.prepare(`SELECT c.id,c.created_at,c.captured_at,c.status,
-      length(json_extract(c.normalized_json,'$.text')) AS characters ${where}
-      ORDER BY c.created_at DESC,c.id DESC LIMIT ?`).all(limit);
+    const rows=store.db.prepare(`WITH selected AS MATERIALIZED (
+      SELECT c.id,c.created_at,c.captured_at,c.status ${where} ORDER BY c.created_at DESC,c.id DESC LIMIT ?)
+      SELECT s.*,length(json_extract(c.normalized_json,'$.text')) AS characters FROM selected s
+      JOIN captured_posts c ON c.id=s.id ORDER BY s.created_at DESC,s.id DESC`).all(limit);
     const captures=[];let sourceCharacters=0,omittedOversized=0;
     for(const row of rows){
       if(row.characters>maxPostCharacters||row.characters>maxSourceCharacters-sourceCharacters){omittedOversized++;continue;}

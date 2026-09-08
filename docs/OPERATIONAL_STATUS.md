@@ -20,7 +20,7 @@ Only issues that need operator action contribute to the attention count. Loading
 
 ## Inspecting captures before attribution
 
-Coverage's **Inspect saved captures** control uses authenticated `GET /api/captures/unverified` to display the newest 25 stored sources awaiting account/membership evidence, across all dates. Full displayed wording is retained; the API omits whole sources beyond its 60,000-character per-post and 300,000-character response-source limits and reports omissions. It returns no provider payload, inferred member identity or topic labels. Promoted and removed sources are excluded. Viewing the panel does not promote a capture, save feedback or contact X. Once opened, it reloads during Coverage refreshes and when the view is reopened.
+Coverage's **Inspect saved captures** control uses authenticated `GET /api/captures/unverified` to display the newest 25 stored sources awaiting account/membership evidence, across all dates. Source text is inspected only after selecting that bounded page. Full displayed wording is retained; the API omits whole sources beyond its 60,000-character per-post and 300,000-character response-source limits and reports omissions. It returns no provider payload, inferred member identity or topic labels. Promoted and removed sources are excluded. Viewing the panel does not promote a capture, save feedback or contact X. Once opened, it reloads during Coverage refreshes and when the view is reopened.
 
 ## Safe service restart
 

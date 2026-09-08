@@ -4,7 +4,7 @@ This records observed local behavior, not release approval or measured classific
 
 ## Verified
 
-- All 197 Node tests pass. The 12 Python boundary checks and actual combined-model Mac smoke check passed earlier in this work window; no Python/model changes followed those checks.
+- All 198 Node tests pass. The 12 Python boundary checks and actual combined-model Mac smoke check passed earlier in this work window; no Python/model changes followed those checks.
 - Schema 11 migration preserves source and review history, removes unresolved tentative labels from indexed topic counts, and rolls back atomically on failure. The actual archive upgraded with three admitted posts, five captures, one authentic review and its existing spending ledger preserved.
 - A read-only HTTP trace checked delivery of the dashboard, source pages, teaching queue, incident desk, exact language, emerging candidates and operational status. All three available API texts match the stored/displayed wording. All 138 checked analysis evidence spans are exact source slices. No browser visual inspection was performed.
 - The current local classifier has three completed source jobs and no pending, running, failed or skipped jobs. BGE has three indexed posts and 12 passages. A conceptual detention-release query retrieves the expected historical source; exact phrase evidence matches its full source. These are development checks on a small known sample, not held-out accuracy.
@@ -12,7 +12,7 @@ This records observed local behavior, not release approval or measured classific
 - The final read-only trace also verifies four unverified captures in the new Coverage inspection panel: available wording and source hashes match storage, no member identity is assigned, no capture is promoted by inspection, and normal member-post lookup continues to exclude those four sources. Synthetic checks cover whole-source/page limits, Unicode, promoted/removed exclusion and signed-out denial.
 - Actual local-model shutdown checks use isolated synthetic archives. Stopping during startup and active inference exits cleanly, returns still-current interrupted work to pending without consuming a failed attempt, and resumes six sources exactly once across the five-job pass boundary. The resumed run completed in about 27 seconds on this Mac. This is a small fixture observation, not a throughput promise.
 - A schema11 snapshot was sealed and independently verified at 11:19 UTC. Its manifest checksum and integrity check pass. It contains three posts, five captures, one review, four settled trial requests and 3,025,000 microdollars of conservative accounting. Local snapshots still need off-host protection and removal handling.
-- Read-only local preflight passes: supported Node, macOS ARM64, private archive/schema, available disk space and all 16 selected model files. The interface's static HTML has no duplicate IDs; 144 literal ID references resolve to static/template declarations. Static inspection does not establish browser behavior or appearance.
+- Read-only local preflight passes: supported Node, macOS ARM64, private archive/schema, available disk space and all 16 selected model files. The interface's static HTML has no duplicate IDs; 148 literal ID references resolve to static/template declarations. Static inspection does not establish browser behavior or appearance.
 
 ## Still required before live operation
 
