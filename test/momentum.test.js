@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { momentum } from '../src/momentum.js';
 import { incidentKey, statusOf, groupIncidents } from '../src/incidents.js';
+import { oneTokenEdit, clusterFamilies } from '../src/sitedata.js';
 
-const steady = (c) => ({ c, trend: [10, 10, 10, 10, 10, 10, 10], d: 0, m: 5, mAvg: 5, eng: 100, epAvg: 100 / (c[0] + c[1] + c[2] || 1) });
+const steady = (c) => ({ c, trend: [10, 10, 10, 10, 10, 10, 10], d: 0, m: 5, mAvg: 5, eng: 100, epAvg: 100 / (c.reduce((a, b) => a + b, 0) || 1) });
 
 test('momentum: steady single-caucus topic scores 45 (spread drags below 50)', () => {
   // volume/accel/adoption/engLift all neutral (0.5); spread 0 for one caucus:
@@ -12,10 +13,27 @@ test('momentum: steady single-caucus topic scores 45 (spread drags below 50)', (
 });
 
 test('momentum: steady evenly-spread topic scores 55', () => {
-  // eff = 3 caucuses → spread 1 → +10 over the single-caucus case
-  const m = momentum(steady([10, 10, 10]));
-  assert.equal(m.score, 55);
-  assert.equal(m.eff, 3);
+  // eff = every caucus → spread 1 → +10 over the single-caucus case,
+  // whether the roster has 3 caucuses or 5 (spread = (eff-1)/(K-1))
+  const m3 = momentum(steady([10, 10, 10]));
+  assert.equal(m3.score, 55);
+  assert.equal(m3.eff, 3);
+  const m5 = momentum(steady([10, 10, 10, 10, 10]));
+  assert.equal(m5.score, 55);
+  assert.equal(Math.round(m5.eff * 1000) / 1000, 5);
+  assert.equal(momentum(steady([10, 0, 0, 0, 0])).score, 45);
+});
+
+test('phrase families: one-token edits and head-noun containment merge', () => {
+  assert.ok(oneTokenEdit(['premium', 'spikes'], ['premium', 'spike']));
+  assert.ok(oneTokenEdit(['keep', 'the', 'government', 'open'], ['keep', 'government', 'open']));
+  assert.ok(!oneTokenEdit(['big', 'ugly', 'bill'], ['tax', 'scam', 'bill']));
+  const fams = clusterFamilies(['premium spikes', 'premium spike', 'affordable care act', 'the affordable care act', 'billionaire giveaway']);
+  assert.equal(fams.length, 3);
+  const spikes = fams.find((f) => f.includes('premium spikes'));
+  assert.ok(spikes.includes('premium spike'));
+  const aca = fams.find((f) => f.includes('affordable care act'));
+  assert.ok(aca.includes('the affordable care act'), 'containment with same head noun merges');
 });
 
 test('momentum: surging topic saturates volume and beats steady', () => {

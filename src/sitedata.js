@@ -47,6 +47,46 @@ function engagementOf(m) {
   return (m.likes || 0) + (m.retweets || 0) + (m.replies || 0) + (m.quotes || 0);
 }
 
+// One token-level edit apart? (substitute, insert, or delete one token)
+export function oneTokenEdit(a, b) {
+  if (a.length === b.length) {
+    let d = 0;
+    for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++;
+    return d === 1;
+  }
+  const [s, l] = a.length < b.length ? [a, b] : [b, a];
+  if (l.length - s.length !== 1) return false;
+  let i = 0, j = 0, skipped = false;
+  while (i < s.length && j < l.length) {
+    if (s[i] === l[j]) { i++; j++; }
+    else if (!skipped) { skipped = true; j++; }
+    else return false;
+  }
+  return true;
+}
+
+// Group mined n-grams into phrase families: one token edit apart, or one
+// contains the other and they share the head noun (last token).
+export function clusterFamilies(phraseList) {
+  const parent = phraseList.map((_, i) => i);
+  const find = (i) => parent[i] === i ? i : (parent[i] = find(parent[i]));
+  for (let i = 0; i < phraseList.length; i++) {
+    for (let j = i + 1; j < phraseList.length; j++) {
+      const ta = phraseList[i].split(' '), tb = phraseList[j].split(' ');
+      const sameHead = ta[ta.length - 1] === tb[tb.length - 1];
+      const contains = phraseList[i].includes(phraseList[j]) || phraseList[j].includes(phraseList[i]);
+      if (oneTokenEdit(ta, tb) || (sameHead && contains)) parent[find(j)] = find(i);
+    }
+  }
+  const groups = new Map();
+  phraseList.forEach((ph, i) => {
+    const root = find(i);
+    if (!groups.has(root)) groups.set(root, []);
+    groups.get(root).push(ph);
+  });
+  return [...groups.values()];
+}
+
 function zeroScope() {
   return { n: 0, eng: 0, members: new Set() };
 }
@@ -171,6 +211,13 @@ export function buildSiteData() {
     };
   }).sort((a, b) => b.t.All.n - a.t.All.n || b.w.All.n - a.w.All.n);
 
+  // ── labels map (needed by phrases below) ──
+  const labels = {};
+  for (const [k, macro] of Object.entries(tax)) {
+    labels[k] = macro.label;
+    for (const [sk, sub] of Object.entries(macro.subtopics || {})) labels[`${k}/${sk}`] = sub.label;
+  }
+
   // ── stats per scope × window ──
   const stats = {};
   for (const scope of ['All', ...KEYS]) {
@@ -211,43 +258,76 @@ export function buildSiteData() {
     stats[scope].curve48 = curve;
   }
 
-  // ── phrases over the 7-day window ──
+  // ── phrases over the 7-day window: FAMILIES, not bare n-grams ──
+  // A phrase family = a canonical 2-4-gram plus its variants (one token edit,
+  // or containment with the same head noun), per the design spec. Reported
+  // per family: pillar (which core message it serves), origin (+leadership),
+  // cumulative adoption curve, unity inputs (cm per caucus), and discipline
+  // (share of uses in the exact canonical wording).
   const ledger = readJSON(p('data', 'phrases.json'), {});
   const nonRt = allPosts.filter((x) => x.type !== 'retweet');
   const mined = minePhrases(nonRt, {
     minMembers: settings.syntax.min_members,
     minNgram: settings.syntax.min_ngram,
     maxNgram: settings.syntax.max_ngram
-  }).slice(0, 12);
-  const phrases = mined.map(({ phrase }) => {
+  }).slice(0, 30);
+  const families = clusterFamilies(mined.map((m) => m.phrase));
+
+  const pillarOf = (macro) => Object.entries(settings.core_messages).find(([, keys]) => keys.includes(macro))?.[0] || null;
+  const dayIndex = new Map(days.map((d, i) => [d, i]));
+  const tokenized = nonRt.map((x) => ({ x, padded: ` ${tokenize(x.text).join(' ')} ` }));
+
+  const phrases = families.map((variants) => {
+    const hits = tokenized
+      .map(({ x, padded }) => ({ x, matched: variants.filter((v) => padded.includes(` ${v} `)) }))
+      .filter((h) => h.matched.length);
+    if (!hits.length) return null;
+    const useCount = new Map(variants.map((v) => [v, hits.filter((h) => h.matched.includes(v)).length]));
+    const canonical = variants.slice().sort((a, b) => useCount.get(b) - useCount.get(a))[0];
     const users = new Map(); // authorId → first date in window
     const topicCount = new Map();
-    let total = 0, eng = 0;
-    for (const x of nonRt) {
-      if (!(` ${tokenize(x.text).join(' ')} `).includes(` ${phrase} `)) continue;
-      total++; eng += x.engN;
+    const subCount = new Map();
+    for (const { x } of hits) {
       if (!users.has(x.authorId) || users.get(x.authorId) > x.date) users.set(x.authorId, x.date);
-      for (const [macro] of x.topics) topicCount.set(macro, (topicCount.get(macro) || 0) + 1);
+      for (const [macro, sub] of x.topics) {
+        topicCount.set(macro, (topicCount.get(macro) || 0) + 1);
+        if (sub) subCount.set(`${macro}/${sub}`, (subCount.get(`${macro}/${sub}`) || 0) + 1);
+      }
     }
-    const led = ledger[phrase];
-    const memberFirst = { ...Object.fromEntries(users), ...(led?.memberFirst || {}) };
-    const cm = KEYS.map((k) => [...users.keys()].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length);
+    // cumulative distinct adopters by day, honoring earlier first-use from the ledger
+    const memberFirst = { ...Object.fromEntries(users) };
+    for (const v of variants) {
+      for (const [a, d] of Object.entries(ledger[v]?.memberFirst || {})) {
+        if (!memberFirst[a] || memberFirst[a] > d) memberFirst[a] = d;
+      }
+    }
+    const adopt = days.map(() => 0);
+    for (const d of Object.values(memberFirst)) {
+      const idx = dayIndex.has(d) ? dayIndex.get(d) : (d < days[0] ? 0 : 6);
+      adopt[idx]++;
+    }
+    for (let i = 1; i < adopt.length; i++) adopt[i] += adopt[i - 1];
+    const led = variants.map((v) => ledger[v]).filter(Boolean).sort((a, b) => (a.firstSeen < b.firstSeen ? -1 : 1))[0];
     const firstSeen = led?.firstSeen && led.firstSeen < today ? led.firstSeen : [...users.values()].sort()[0] || today;
-    const topTopic = [...topicCount.entries()].sort((a, b) => b[1] - a[1])[0];
-    const cutoff48 = daysAgoEt(1);
+    const firstAuthorId = led?.firstAuthorId || [...users.entries()].sort((a, b) => (a[1] < b[1] ? -1 : 1))[0]?.[0];
+    const topMacro = [...topicCount.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+    const topSub = [...subCount.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || null;
     return {
-      text: phrase,
-      cm,
-      first: led?.firstAuthor ? `@${led.firstAuthor}` : handleOf([...users.entries()].sort((a, b) => a[1] < b[1] ? -1 : 1)[0]?.[0]),
+      text: canonical,
+      variants: variants.filter((v) => v !== canonical),
+      pillar: topMacro ? pillarOf(topMacro) : null,
+      topic: topSub ? (labels[topSub] || labelOf(topSub)) : topMacro ? (tax[topMacro]?.label || labelOf(topMacro)) : null,
+      first: firstAuthorId ? handleOf(firstAuthorId) : null,
       firstSeen,
+      leadership: Boolean((authorsById[firstAuthorId]?.caucuses || []).includes(settings.leadership_tag)),
       spread: users.size,
-      total,
-      eng,
-      emerging: firstSeen >= daysAgoEt(6),
-      topic: topTopic ? (tax[topTopic[0]]?.label || labelOf(topTopic[0])) : null,
-      delta: [...users.keys()].filter((a) => (memberFirst[a] || today) >= cutoff48).length
+      cm: KEYS.map((k) => [...users.keys()].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length),
+      adopt,
+      exact: hits.length ? Math.round(100 * hits.filter((h) => h.matched.includes(canonical)).length / hits.length) / 100 : 1,
+      total: hits.length,
+      eng: hits.reduce((a, h) => a + h.x.engN, 0)
     };
-  }).sort((a, b) => b.spread - a.spread);
+  }).filter(Boolean).sort((a, b) => b.spread - a.spread).slice(0, 12);
 
   // ── emerging clusters (latest nightly that produced any) ──
   let clusters = [];
@@ -313,12 +393,7 @@ export function buildSiteData() {
       };
     });
 
-  // ── labels + members maps ──
-  const labels = {};
-  for (const [k, macro] of Object.entries(tax)) {
-    labels[k] = macro.label;
-    for (const [sk, sub] of Object.entries(macro.subtopics || {})) labels[`${k}/${sk}`] = sub.label;
-  }
+  // ── members map + per-caucus active counts (posted in the 7-day window) ──
   const members = {};
   for (const a of Object.values(authorsById)) {
     if (a.handle) members[`@${a.handle}`] = [a.member || a.name || a.handle, a.stateDistrict || '', caucusKeysOf(a)];
@@ -328,14 +403,22 @@ export function buildSiteData() {
 
   const core = Object.entries(settings.core_messages).map(([name, keys]) => ({ name, topics: keys }));
 
+  // Active accounts per caucus in the window — the unity threshold's denominator.
+  const activeByCaucus = Object.fromEntries(KEYS.map((k) => [k, new Set()]));
+  for (const x of allPosts) {
+    for (const k of caucusKeysOf(authorsById[x.authorId])) activeByCaucus[k].add(x.authorId);
+  }
+
   writeJSON(rollupsJsonPath, {
     generatedAt: new Date().toISOString(),
     lastPollAt: state.lastPollAt || null,
     timezone: settings.timezone,
     today,
     days,
+    accounts: Object.keys(members).length,
     caucusKeys: KEYS,
     caucusNames: Object.fromEntries(Object.entries(settings.caucus_keys).map(([tag, k]) => [k, settings.caucuses[tag]])),
+    caucusActive: Object.fromEntries(KEYS.map((k) => [k, activeByCaucus[k].size])),
     core,
     labels,
     members,

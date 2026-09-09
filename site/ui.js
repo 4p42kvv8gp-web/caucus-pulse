@@ -2,10 +2,15 @@
 // runtime helpers (fmt, spark, seg, dot, chevron, segmented control, badge).
 // Vanilla: everything returns an HTML string; pages own state + render().
 
-export const C = { CPC: '#194292', NewDem: '#f9cc21', CBC: '#00af50' };   // fill tier (yellow carries ink text, never white)
-export const CT = { CPC: '#194292', NewDem: '#876d05', CBC: '#00823a' };  // text/badge tier
-export const KEYS = ['CPC', 'NewDem', 'CBC'];
-export const SHORT = { CPC: 'CPC', NewDem: 'New Dem', CBC: 'CBC' };
+// Fill tier: green / navy / red / orange / purple — orange (CHC) carries ink
+// text, the others white. Text tier ≥4.5:1 on white; no legible orange
+// exists, so CHC words are ink and take orange only as a fill behind ink.
+export const C = { CPC: '#00af50', NewDem: '#194292', CBC: '#d70015', CHC: '#ea580c', CAPAC: '#6f42c1' };
+export const CT = { CPC: '#00823a', NewDem: '#194292', CBC: '#d70015', CHC: '#1d1d1f', CAPAC: '#6f42c1' };
+export const KEYS = ['CPC', 'NewDem', 'CBC', 'CHC', 'CAPAC']; // ideological pair first (matrix columns), then identity caucuses (filters only)
+export const MATRIX = ['CPC', 'NewDem'];
+export const SHORT = { CPC: 'CPC', NewDem: 'New Dem', CBC: 'CBC', CHC: 'CHC', CAPAC: 'CAPAC' };
+export const MOMENTUM_FILL = 'linear-gradient(90deg, #194292, #a9c3ee)';
 
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -46,10 +51,11 @@ export function seg(list) {
 }
 
 // Catmull-Rom → cubic Bézier sparkline, stroke ink 1.25, 1.8 end dot.
-export function spark(arr, W = 64, H = 18) {
+// fromZero scales from the baseline (plateaus read flat, new lines climb).
+export function spark(arr, W = 64, H = 18, fromZero = false) {
   if (!arr || arr.length < 2) return '';
   const P = 2;
-  const max = Math.max(...arr), min = Math.min(...arr), span = max - min || 1;
+  const max = Math.max(...arr), min = fromZero ? 0 : Math.min(...arr), span = max - min || 1;
   const pts = arr.map((v, i) => [P + i * (W - 2 * P) / (arr.length - 1), P + (H - 2 * P) * (1 - (v - min) / span)]);
   const last = pts[pts.length - 1];
   let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
@@ -65,10 +71,13 @@ export function chevron(hasSub, open) {
   return `<span aria-hidden="true" style="width:14px;height:14px;flex:none;display:inline-flex;align-items:center;justify-content:center;color:#8e8e93;transform:${open ? 'rotate(90deg)' : 'none'};transition:transform .15s ease;opacity:${hasSub ? 1 : 0}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M3.5 1.5 L7 5 L3.5 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
 }
 
-// Segmented control: list of [value, label, dotColor|null]; data-set/data-val
-// handled by the page's event delegation.
+// Segmented control: list of [value, label, dotColor|null] — a null entry
+// renders a 1px group divider. data-set/data-val handled by the page's
+// event delegation.
 export function control(list, key, current) {
-  return `<div role="group" style="display:inline-flex;background:#e8e8ed;border-radius:10px;padding:2px">${list.map(([val, lab, color]) => {
+  return `<div role="group" style="display:inline-flex;background:#e8e8ed;border-radius:10px;padding:2px">${list.map((item, i) => {
+    if (!item) return `<span aria-hidden="true" style="width:1px;align-self:stretch;margin:4px 3px;background:#d2d2d7"></span>`;
+    const [val, lab, color] = item;
     const on = current === val;
     return `<button data-set="${esc(key)}" data-val="${esc(val)}" aria-pressed="${on}" style="border:0;cursor:pointer;font:inherit;font-size:12px;font-weight:600;padding:5px 12px;border-radius:8px;transition:background .12s ease,color .12s ease;display:inline-flex;align-items:center;gap:6px;background:${on ? '#fff' : 'transparent'};color:${on ? '#1d1d1f' : '#6e6e73'};box-shadow:${on ? '0 1px 3px rgba(0,0,0,.14)' : 'none'}">${color ? dot(color) : ''}${esc(lab)}</button>`;
   }).join('')}</div>`;
@@ -80,9 +89,12 @@ export function select(list, key, value) {
   return `<select data-sel="${esc(key)}" aria-label="${esc(key)}" style="${SELECT_CSS}">${list.map(([k, name, n]) => `<option value="${esc(k)}"${k === value ? ' selected' : ''}>${esc(name)}${n != null ? ` (${n})` : ''}</option>`).join('')}</select>`;
 }
 
-export function avatar(name, color) {
+// Ideological axis only: CPC green, New Dem navy, everyone else gray
+// (CPC wins a tie); identity caucuses show only as dot tags beside the handle.
+export function avatar(name, caucuses = []) {
+  const bg = caucuses.includes('CPC') ? CT.CPC : caucuses.includes('NewDem') ? CT.NewDem : '#8e8e93';
   const ini = String(name || '?').split(' · ')[0].replace(/^(Rep\.|Sen\.|Del\.|Leader)\s+/, '').split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
-  return `<div style="width:30px;height:30px;border-radius:50%;background:${color};color:${color === C.NewDem ? '#1d1d1f' : '#fff'};font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px">${esc(ini)}</div>`;
+  return `<div style="width:30px;height:30px;border-radius:50%;background:${bg};color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px">${esc(ini)}</div>`;
 }
 
 export function tag(text) {
@@ -96,7 +108,7 @@ export function badge(kind) {
 }
 
 export function statusDot(s) {
-  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#876d05' : '#8e8e93');
+  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : '#8e8e93');
 }
 
 export function copyText(text, done) {

@@ -5,7 +5,7 @@
 // spread · 10% engagement lift.
 //
 // Input shape (per topic): {
-//   c:     [cpc, newdem, cbc] posts today
+//   c:     posts today per caucus (one entry per configured caucus)
 //   trend: posts/day for the last 7 days (oldest first)
 //   d:     % vs 7-day average (today)
 //   m:     distinct members today
@@ -19,12 +19,12 @@ const half = (x) => 0.5 + 0.5 * clamp(x);
 export function momentum(t) {
   const tr = t.trend;
   const avg = tr.reduce((a, b) => a + b, 0) / tr.length;
-  const tot = t.c[0] + t.c[1] + t.c[2];
+  const tot = t.c.reduce((a, b) => a + b, 0);
   const volume = half(t.d / 50);                                                // today vs 7-day average (±50% saturates)
   const accel = half(((tr[6] - tr[4]) / 2 - (tr[4] - tr[0]) / 4) / ((avg || 1) * 0.1)); // is the slope steepening?
   const adoption = half((t.m - t.mAvg) / (t.mAvg || 1) / 0.5);                  // distinct members vs baseline
-  const eff = tot ? 1 / t.c.reduce((a, n) => a + Math.pow(n / tot, 2), 0) : 1;  // effective caucuses, 1-3
-  const spread = (eff - 1) / 2;
+  const eff = tot ? 1 / t.c.reduce((a, n) => a + Math.pow(n / tot, 2), 0) : 1;  // effective caucuses, 1..K
+  const spread = (eff - 1) / Math.max(1, t.c.length - 1);
   const engLift = half(((tot ? t.eng / tot : 0) / (t.epAvg || 1) - 1) / 0.5);   // engagement per post vs baseline
   const score = Math.round(100 * (0.4 * volume + 0.2 * accel + 0.2 * adoption + 0.1 * spread + 0.1 * engLift));
   return {

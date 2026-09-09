@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Dashboard v3" description="caucus-pulse operations dashboard, audited: neutral chrome with color reserved for caucus data, a topic × caucus matrix with trends, a filterable live feed, dense phrase table, and an operator health strip" -->
+<helmet><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2.6' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpath d='M1.5 13H7L10 5L12.13 13' stroke='%23194292'/%3E%3Cpath d='M12.13 13L14 20L17 13H22.5' stroke='%23d70015'/%3E%3C/svg%3E"><style>body{margin:0;background:#f5f5f7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;font-variant-numeric:tabular-nums}a{color:#1d1d1f;text-decoration:none;text-underline-offset:2px}a:hover{text-decoration:underline}th,td{vertical-align:middle}button{font:inherit;color:inherit}select:focus-visible,button:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+<header style="position:sticky;top:0;z-index:10;height:50px;display:flex;align-items:center;gap:28px;padding:0 max(20px,calc((100% - 1240px)/2 + 20px));background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)">
+<a href="./DashboardV3.dc.html" aria-label="caucus-pulse home" style="display:inline-flex;align-items:center;gap:.08em;font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1;white-space:nowrap;flex:none;color:#1d1d1f;text-decoration:none">Caucus<svg viewBox="0 0 28 24" fill="none" stroke-width="4.2" stroke-linecap="butt" stroke-linejoin="round" aria-hidden="true" style="height:.6em;width:.7em;overflow:visible;transform:translateY(.06em)"><path d="M2 13H8L11.5 4L13.75 13" stroke="#194292"></path><path d="M13.75 13L15.5 20L18.5 13H26" stroke="#d70015"></path></svg>Pulse</a>
+<nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a href="./DashboardV3.dc.html" style="color:#1d1d1f;font-weight:600">Dashboard</a><a href="./Incidents.dc.html" style="color:#6e6e73">Incidents</a></nav>
+<div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73" title="Next poll {{ nextPoll }}"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;display:inline-block"></span>{{ headerDate }} · updated {{ lastPoll }}</span><a href="#report" style="font-size:12px;font-weight:500;color:#6e6e73;white-space:nowrap" style-hover="color:#1d1d1f;text-decoration:none">Daily report</a><button onClick="{{ openClip }}" style="font-size:12px;font-weight:600;color:#fff;background:#1d1d1f;border:0;padding:6px 14px;border-radius:980px;white-space:nowrap;cursor:pointer" style-hover="background:#3a3a3c">Compose</button></div>
+</header>
+<sc-if value="{{ clipOpen }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeClip }}" style="position:fixed;inset:0;z-index:50;background:rgba(29,29,31,.38);display:flex;align-items:center;justify-content:center;padding:20px">
+<div role="dialog" aria-modal="true" aria-label="Compose for Signal" onClick="{{ stop }}" style="background:#fff;border-radius:16px;width:min(960px,100%);max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.28)">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Compose</h2><span style="font-size:12px;color:#6e6e73">plain text for Signal</span></div><button onClick="{{ closeClip }}" aria-label="Close" style="background:transparent;border:0;font-size:18px;line-height:1;color:#6e6e73;cursor:pointer;padding:2px 6px">×</button></div>
+<div style="display:flex;flex-wrap:wrap;gap:0;min-height:0;overflow:auto">
+<div style="flex:1 1 300px;min-width:0;padding:14px 18px;display:flex;flex-direction:column;gap:12px;border-right:1px solid #f0f0f2">
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Subject</span>{{ clipSubjectSelect }}</div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Scope</span><div style="display:flex;gap:6px;flex-wrap:wrap">{{ clipCaucusSelect }}{{ clipWindowSeg }}</div></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Include</span><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;font-size:13px">
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.handle }}" onChange="{{ tog.handle }}">@handle</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.district }}" onChange="{{ tog.district }}">District</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.caucus }}" onChange="{{ tog.caucus }}">Caucus</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.counts }}" onChange="{{ tog.counts }}">Posts &amp; engagement</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.quote }}" onChange="{{ tog.quote }}">Best quote</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.time }}" onChange="{{ tog.time }}">Time of last post</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.numbered }}" onChange="{{ tog.numbered }}">Numbered</label>
+<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" checked="{{ inc.footer }}" onChange="{{ tog.footer }}">Source line</label>
+</div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Order</span>{{ clipSortSeg }}</div>
+<div style="display:flex;flex-direction:column;gap:5px"><span style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Format</span>{{ clipFormatSeg }}</div>
+<label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;padding:10px 12px;background:#f7f7f9;border-radius:10px"><input type="checkbox" checked="{{ clipSearch }}" onChange="{{ togSearch }}" style="margin-top:2px"><span>Also run an X search<br><span style="font-size:11px;color:#6e6e73">adds officials outside the tracked list, marked “via search”</span></span></label>
+</div>
+<div style="flex:1.4 1 380px;min-width:0;padding:14px 18px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font-size:12px;color:#6e6e73">{{ clipStats }}</span><div style="display:flex;gap:6px"><button onClick="{{ copyClip }}" style="background:#1d1d1f;color:#fff;border:0;border-radius:980px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer" style-hover="background:#3a3a3c">{{ copyLabel }}</button></div></div>
+<textarea readOnly value="{{ clipText }}" spellCheck="{{ false }}" style="flex:1;min-height:360px;width:100%;box-sizing:border-box;resize:vertical;font:inherit;font-size:13px;line-height:1.45;padding:12px 14px;border:1px solid #e8e8ed;border-radius:10px;background:#f7f7f9;color:#1d1d1f"></textarea>
+
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+<main style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+<section id="today" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 0 2px">{{ caucusSeg }}{{ windowSeg }}</section>
+<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px">
+<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between"><div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div><div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">{{ postsValue }}</div>{{ postsTrend }}</div><div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">{{ postsMix }}</div><div style="font-size:11px;color:#6e6e73">{{ postsMeta }}</div></div>
+<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between"><div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages</span><span style="white-space:nowrap">{{ corePct }} of posts</span></div><div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">{{ coreTotal }}</div></div><div style="display:flex;flex-direction:column;gap:3px;margin-top:1px">
+<sc-for list="{{ core }}" as="c" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:0 7px;align-items:center;font-size:12px"><span style="width:5px;height:5px;border-radius:50%;background:#1d1d1f;display:inline-block"></span><span>{{ c.name }}</span><div style="width:44px;height:3px;background:#f0f0f2;border-radius:2px;overflow:hidden">{{ c.bar }}</div><span style="font-weight:600;min-width:3.2ch;text-align:right">{{ c.posts }}</span></div></sc-for>
+</div></div>
+<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between"><div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Engagement</span></div><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">{{ engValue }}</div><div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">{{ engMix }}</div><div style="font-size:11px;color:#6e6e73">{{ engPerPost }} per post · {{ engDelta }} vs 7-day avg · top 10 members {{ engTopShare }}</div></div>
+<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between"><div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum leader</span></div><div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">{{ risingScore }}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">{{ risingName }}</span></div>{{ risingSpark }}</div><div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">{{ risingBar }}</div><div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">{{ risingDrivers }}</span> · {{ risingDelta }} vs 7-day avg</div></div>
+</section>
+<section id="topics" style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+<div style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;flex:2 1 560px;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Topics</h2></div></div>
+<table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 0;border-bottom:1px solid #e8e8ed">Topic</th><sc-if value="{{ isAll }}" hint-placeholder-val="{{ true }}"><th style="text-align:right;font-size:11px;font-weight:600;color:#00823a;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">CPC</th><th style="text-align:right;font-size:11px;font-weight:600;color:#194292;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">New Dem</th></sc-if><th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed">Posts</th><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 12px;border-bottom:1px solid #e8e8ed;width:13%">7-day trend</th><th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%" title="0–100, 50 = steady. 40% volume lift · 20% acceleration · 20% member adoption · 10% caucus spread · 10% engagement lift, each against the topic's 7-day baseline">Momentum</th><th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed">Engagement</th><th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 8px;border-bottom:1px solid #e8e8ed">Members</th></tr></thead><tbody>
+<sc-for list="{{ topics }}" as="t" hint-placeholder-count="8">
+<tr onClick="{{ t.toggle }}" aria-expanded="{{ t.open }}" style="cursor:pointer;transition:background .12s ease" style-hover="background:#f7f7f9"><td style="padding:8px 8px 8px 0;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px">{{ t.caret }}<span style="font-weight:600;letter-spacing:-0.01em">{{ t.name }}</span></div></td>
+<sc-if value="{{ isAll }}" hint-placeholder-val="{{ true }}"><td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right"><div style="display:flex;justify-content:flex-end;align-items:center;gap:5px"><sc-if value="{{ t.cpcTop }}" hint-placeholder-val="{{ false }}"><span title="Top {{ t.cpcRank }} topic for CPC" style="width:15px;height:15px;border-radius:50%;background:#00823a;color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center">{{ t.cpcRank }}</span></sc-if><span>{{ t.cpc }}</span></div><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">{{ t.cpcBar }}</div></td><td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right"><div style="display:flex;justify-content:flex-end;align-items:center;gap:5px"><sc-if value="{{ t.ndTop }}" hint-placeholder-val="{{ false }}"><span title="Top {{ t.ndRank }} topic for New Dem" style="width:15px;height:15px;border-radius:50%;background:#194292;color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center">{{ t.ndRank }}</span></sc-if><span>{{ t.nd }}</span></div><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">{{ t.ndBar }}</div></td></sc-if>
+<td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right;font-weight:600">{{ t.posts }}<sc-if value="{{ isSingle }}" hint-placeholder-val="{{ false }}"><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">{{ t.postBar }}</div></sc-if></td>
+<td style="padding:8px 8px 8px 12px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">{{ t.spark }}<sc-if value="{{ t.up }}" hint-placeholder-val="{{ true }}"><span style="font-size:11px;color:#1d1d1f;font-weight:500;white-space:nowrap">{{ t.delta }}</span></sc-if><sc-if value="{{ t.down }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;color:#8e8e93;white-space:nowrap">{{ t.delta }}</span></sc-if></div></td><td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="{{ t.momentumTitle }}"><span style="font-weight:600">{{ t.momentum }}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">{{ t.momentumBar }}</div></td>
+<td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">{{ t.eng }}</td><td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">{{ t.members }}</td></tr>
+<sc-if value="{{ t.open }}" hint-placeholder-val="{{ false }}">
+<sc-for list="{{ t.subs }}" as="s" hint-placeholder-count="3">
+<tr style="background:#f7f7f9"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">{{ s.name }}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">{{ s.share }} · lead <span style="font-weight:500">{{ s.lead }}</span></span></td><sc-if value="{{ isAll }}" hint-placeholder-val="{{ true }}"><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">{{ s.cpc }}</td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">{{ s.nd }}</td></sc-if><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">{{ s.posts }}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">{{ s.eng }}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">{{ s.members }}</td></tr>
+</sc-for>
+</sc-if>
+</sc-for>
+</tbody></table>
+<sc-if value="{{ showExtras }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1;min-height:150px;margin-top:12px;padding-top:14px;border-top:1px solid #e8e8ed">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:9px"><h3 style="margin:0;font-size:13px;font-weight:700;letter-spacing:-0.01em">Volume by hour</h3><span style="font-size:12px;color:#6e6e73">{{ volumeNote }}</span></div><span style="font-size:11px;color:#6e6e73">peak {{ peakHour }} · {{ peakCount }} posts</span></div>
+<div style="display:flex;align-items:flex-end;gap:3px;flex:1;min-height:90px;border-bottom:1px solid #e8e8ed;padding-bottom:1px">{{ hourBars }}</div>
+<div style="display:flex;justify-content:space-between;font-size:10px;color:#6e6e73"><span>12 AM</span><span>3</span><span>6</span><span>9</span><span>12 PM</span><span>3</span><span>6</span><span>9</span><span>11 PM</span></div>
+</sc-if>
+</div>
+</div>
+<div style="flex:1 1 340px;min-width:0;position:relative;min-height:340px">
+<div id="feed" style="position:absolute;inset:0;background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:9px;min-width:0;box-sizing:border-box">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:9px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Feed</h2><span style="font-size:12px;color:#6e6e73;display:inline-flex;align-items:center;gap:5px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;display:inline-block"></span>{{ feedCount }} posts · {{ newInPoll }} new</span></div>{{ sortSeg }}</div>
+<div style="display:flex;gap:6px">{{ topicSelect }}</div>
+<div style="overflow:auto;flex:1;min-height:0;padding-right:6px;scrollbar-gutter:stable">
+<sc-for list="{{ feed }}" as="f" hint-placeholder-count="8">
+<div style="display:grid;grid-template-columns:30px 1fr;gap:4px 10px;padding:10px 0;border-top:1px solid #f0f0f2">{{ f.avatar }}<div style="display:flex;flex-direction:column;gap:3px;min-width:0"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;min-width:0"><sc-if value="{{ f.isNew }}" hint-placeholder-val="{{ false }}"><span title="Captured in the 2:37 PM poll" style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;display:inline-block;vertical-align:1px"></span></sc-if><span style="font-weight:600;font-size:13px">{{ f.handle }}</span><sc-for list="{{ f.caucusTags }}" as="c" hint-placeholder-count="1"><span style="display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#6e6e73">{{ c.dot }}{{ c.label }}</span></sc-for></div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ f.time }}</span></div><p style="margin:0;font-size:13px;line-height:1.45">{{ f.text }}</p><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div style="display:flex;gap:4px;flex-wrap:wrap"><sc-for list="{{ f.topics }}" as="t" hint-placeholder-count="1"><span style="font-size:11px;background:#f2f2f4;color:#3a3a3c;padding:1px 7px;border-radius:6px">{{ t }}</span></sc-for></div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ f.kindGlyph }}{{ f.eng }}</span></div></div></div>
+</sc-for>
+<sc-if value="{{ feedEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:40px 0;text-align:center;color:#6e6e73;font-size:13px">No posts match this caucus and topic.</div></sc-if>
+</div>
+</div>
+</div>
+</section>
+<section id="phrases" style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+<div style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;flex:2 1 560px;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Phrases</h2></div><span style="font-size:11px;color:#6e6e73">shared 2–4-word lines · gauged by adoption, unity across caucuses, and discipline of wording</span></div>
+<table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px 0;border-bottom:1px solid #e8e8ed">Phrase</th><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:21%" title="The core message the line serves — the same three pillars as the Core-messages card">Pillar</th><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed">Origin</th><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:20%" title="Members using the line · cumulative adopters over 7 days · members gained this week">Adoption</th><th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Caucuses with two or more members using the line">Unity</th><th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 6px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Share of uses in the exact wording — a low share means the line is drifting into variants">Discipline</th></tr></thead><tbody>
+<sc-for list="{{ phrases }}" as="p" hint-placeholder-count="10">
+<tr><td style="padding:7px 6px 7px 0;border-bottom:1px solid #f0f0f2"><span style="font-weight:600;letter-spacing:-0.01em">{{ p.text }}</span></td><td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px;white-space:nowrap"><sc-if value="{{ p.onPillar }}" hint-placeholder-val="{{ true }}"><span style="font-size:11px;background:#f2f2f4;color:#3a3a3c;padding:1px 7px;border-radius:6px;white-space:nowrap">{{ p.pillar }}</span></sc-if><sc-if value="{{ p.offPillar }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;color:#6e6e73;padding:0 6px;border:1px dashed #d2d2d7;border-radius:6px;white-space:nowrap">Off-pillar</span></sc-if><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ p.subTopic }}</span></div></td><td style="padding:7px 6px;border-bottom:1px solid #f0f0f2;font-size:12px"><span style="font-weight:500">{{ p.first }}</span><span style="color:#6e6e73"> · {{ p.when }}</span><sc-if value="{{ p.leadership }}" hint-placeholder-val="{{ false }}"><span style="color:#6e6e73"> · leadership</span></sc-if></td><td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px"><span style="font-weight:600;min-width:2ch;text-align:right">{{ p.spread }}</span>{{ p.curve }}<sc-if value="{{ p.gainStrong }}" hint-placeholder-val="{{ true }}"><span style="font-size:11px;color:#1d1d1f;font-weight:500;white-space:nowrap">{{ p.gain }}</span></sc-if><sc-if value="{{ p.gainWeak }}" hint-placeholder-val="{{ false }}"><span style="font-size:11px;color:#8e8e93;white-space:nowrap">{{ p.gain }}</span></sc-if></div></td><td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">{{ p.unity }}<span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ p.reachCount }}</span></div></td><td style="padding:7px 0 7px 6px;border-bottom:1px solid #f0f0f2;text-align:right;font-size:12px" title="{{ p.exactTitle }}"><sc-if value="{{ p.drift }}" hint-placeholder-val="{{ false }}"><span style="font-weight:600;color:#1d1d1f">{{ p.exactPct }}</span></sc-if><sc-if value="{{ p.tight }}" hint-placeholder-val="{{ true }}"><span style="color:#6e6e73">{{ p.exactPct }}</span></sc-if></td></tr>
+</sc-for>
+</tbody></table>
+</div>
+<div id="clusters" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:2px;min-width:0;flex:1 1 300px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging</h2><span style="font-size:12px;color:#6e6e73">outside the taxonomy</span></div>
+<sc-for list="{{ clusters }}" as="c" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:7px;padding:12px 0;border-top:1px solid #f0f0f2">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font-weight:600;font-size:13px;letter-spacing:-0.01em">{{ c.label }}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ c.since }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div style="font-size:12px;color:#6e6e73;display:flex;gap:12px;flex-wrap:wrap"><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">{{ c.posts }}</span> posts</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">{{ c.members }}</span> members</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">{{ c.engFmt }}</span> engagement</span></div>{{ c.spark }}</div>
+<div style="display:flex;height:5px;border-radius:3px;overflow:hidden;gap:1px" title="members by caucus">{{ c.caucusBar }}</div>
+<div style="font-size:12px;color:#6e6e73;line-height:1.4">“{{ c.sample }}”</div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font-size:11px;color:#6e6e73">{{ c.coherence }}% say “{{ c.phrase }}”</span><span style="font-size:11px;background:#f2f2f4;color:#3a3a3c;padding:1px 7px;border-radius:6px">{{ c.suggest }}</span><span style="margin-left:auto;display:flex;gap:10px"><button onClick="{{ c.compose }}" style="background:transparent;border:0;padding:0;font-size:12px;font-weight:500;cursor:pointer" style-hover="text-decoration:underline">Compose</button><a href="#taxonomy" style="font-size:12px;font-weight:500">Add ›</a></span></div>
+</div>
+</sc-for>
+</div>
+</section>
+<sc-if value="{{ showExtras }}" hint-placeholder-val="{{ false }}">
+<section id="cloud" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Cloud</h2><span style="font-size:12px;color:#6e6e73">{{ cloudNote }}</span></div>{{ cloudSeg }}</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 18px;padding:14px 8px 10px;line-height:1">{{ cloud }}</div>
+<div style="display:flex;justify-content:center;gap:16px;font-size:11px;color:#6e6e73"><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#00af50;display:inline-block"></span>CPC</span><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#194292;display:inline-block"></span>New Dem</span><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#d70015;display:inline-block"></span>CBC</span><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#ea580c;display:inline-block"></span>CHC</span><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#6f42c1;display:inline-block"></span>CAPAC</span><span style="display:inline-flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#1d1d1f;display:inline-block"></span>shared</span></div>
+</section>
+</sc-if>
+<section id="district" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:10px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">{{ incidentCount }} active</span></div><a href="./Incidents.dc.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px">
+<sc-for list="{{ incidents }}" as="n" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">{{ n.kind }}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ n.since }} → {{ n.last }}</span></div><div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">{{ n.place }}</span><span style="font-size:12px"><span style="font-weight:500">{{ n.handle }}</span><span style="color:#6e6e73"> · {{ n.member }}</span></span></div><p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">“{{ n.text }}”</p><div style="display:flex;justify-content:space-between;font-size:11px;color:#6e6e73"><span>{{ n.updates }} updates · {{ n.eng }} engagement</span><a href="./Incidents.dc.html">Thread ›</a></div></div>
+</sc-for>
+</div>
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;caucus&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All&quot;,&quot;CPC&quot;,&quot;NewDem&quot;,&quot;CBC&quot;,&quot;CHC&quot;,&quot;CAPAC&quot;],&quot;default&quot;:&quot;All&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Filters&quot;},&quot;window&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Today&quot;,&quot;7 days&quot;],&quot;default&quot;:&quot;Today&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Filters&quot;},&quot;includeReposts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Filters&quot;},&quot;showExtras&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { caucus: this.props.caucus ?? 'All', window: this.props.window ?? 'Today', open: { healthcare: true }, topic: 'all', feedCaucus: '', sort: 'Newest', sysOpen: false,
+    clipOpen: false, clipSubject: 'topic:healthcare', clipCaucus: 'All', clipWindow: 'Today', clipSort: 'Engagement', clipFormat: 'List', clipSearch: false, copied: false,
+    inc: { handle: true, district: true, caucus: true, counts: true, quote: true, time: false, numbered: true, footer: true } };
+  // member registry: handle → [display name, district, caucuses]
+  static M = { '@RepCasar': ['Rep. Greg Casar', 'TX-35', ['CPC', 'CHC']], '@RepSchneider': ['Rep. Brad Schneider', 'IL-10', ['NewDem']], '@RepYvetteClarke': ['Rep. Yvette Clarke', 'NY-09', ['CBC']], '@Ilhan': ['Rep. Ilhan Omar', 'MN-05', ['CPC', 'CBC']], '@RepGraceMeng': ['Rep. Grace Meng', 'NY-06', ['NewDem', 'CAPAC']], '@RepUnderwood': ['Rep. Lauren Underwood', 'IL-14', ['NewDem', 'CBC']], '@RepPressley': ['Rep. Ayanna Pressley', 'MA-07', ['CPC', 'CBC']], '@RepDelBene': ['Rep. Suzan DelBene', 'WA-01', ['NewDem']], '@RepSewell': ['Rep. Terri Sewell', 'AL-07', ['CBC']], '@RepBoyle': ['Rep. Brendan Boyle', 'PA-02', ['NewDem']], '@RepChuyGarcia': ['Rep. Chuy García', 'IL-04', ['CPC', 'CHC']], '@RepMaxineWaters': ['Rep. Maxine Waters', 'CA-43', ['CBC']], '@RepRoKhanna': ['Rep. Ro Khanna', 'CA-17', ['CPC', 'CAPAC']], '@RepKuster': ['Rep. Annie Kuster', 'NH-02', ['NewDem']], '@RepDoggett': ['Rep. Lloyd Doggett', 'TX-37', ['CPC']], '@RepCastro': ['Rep. Joaquin Castro', 'TX-20', ['CPC', 'CHC']], '@RepDavids': ['Rep. Sharice Davids', 'KS-03', ['NewDem']], '@RepBonamici': ['Rep. Suzanne Bonamici', 'OR-01', ['CPC']], '@RepMenendez': ['Rep. Rob Menendez', 'NJ-08', ['NewDem', 'CHC']], '@RepJeffries': ['Leader Hakeem Jeffries', 'NY-08', ['CBC']], '@RepMcGovern': ['Rep. Jim McGovern', 'MA-02', ['CPC']], '@RepNorton': ['Del. Eleanor Holmes Norton', 'DC', ['CBC']], '@RepJasonCrow': ['Rep. Jason Crow', 'CO-06', ['NewDem']], '@RepSylviaGarcia': ['Rep. Sylvia Garcia', 'TX-18', ['CPC', 'CHC']], '@RepRaulRuizMD': ['Rep. Raul Ruiz', 'CA-25', ['NewDem', 'CHC']], '@RepClarke': ['Rep. Yvette Clarke', 'NY-09', ['CBC']] };
+  // officials outside the tracked list that a fresh X search would surface, by subject key
+  static SEARCH = { 'topic:healthcare': [['@SenWarren', 'Sen. Elizabeth Warren', 'MA', 'Premium spikes are a policy choice Republicans made. Extend the tax credits now.', 41200, '1:58 PM'], ['@GovPritzker', 'Gov. JB Pritzker', 'IL', 'Illinois families will see premiums double if Congress does nothing by September 30.', 18300, '12:10 PM']], 'topic:immigration_ice': [['@GovNewsom', 'Gov. Gavin Newsom', 'CA', 'Masked agents grabbing people off the street is not law enforcement.', 88000, '11:40 AM']], 'topic:government_funding': [['@SenSchumer', 'Sen. Chuck Schumer', 'NY', 'Republicans control the House, the Senate and the White House. A shutdown is theirs to own.', 36500, '1:15 PM']], 'incident:aurora': [['@SenatorBennet', 'Sen. Michael Bennet', 'CO', 'Monitoring the situation in Aurora and in touch with local officials. Please follow @AuroraPD.', 7200, '1:02 PM'], ['@MayorCoffman', 'Mayor Mike Coffman', 'Aurora', 'Suspect in custody. Thank you to Aurora PD for a swift response.', 5400, '1:30 PM']] };
+  incidents() { return [['aurora', 'Aurora active shooter', '@RepJasonCrow', ['@RepJasonCrow', '@RepNorton', '@RepCastro'], '12:48 PM'], ['houston', 'Houston flooding', '@RepSylviaGarcia', ['@RepSylviaGarcia', '@RepDoggett'], '7:15 AM'], ['riverside', 'Banning Bench fire', '@RepRaulRuizMD', ['@RepRaulRuizMD', '@RepMaxineWaters', '@RepRoKhanna'], 'Sep 6, 7:30 PM']]; }
+  composeText() {
+    const { D, M, SEARCH, NAMES } = Component, { clipSubject: subj, clipCaucus: cc, clipWindow: cw, clipSort, clipFormat, clipSearch, inc } = this.state;
+    const [kind, key] = subj.split(':');
+    const wk = cw === 'Today' ? 1 : 6.6;
+    const trim = (t, n = 110) => t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t;
+    const people = new Map();
+    const add = (handle, post, extra) => { const m = M[handle]; if (!m) return; const p = people.get(handle) || { handle, name: m[0], district: m[1], caucus: m[2], posts: 0, eng: 0, quote: '', quoteEng: -1, last: '', via: '' }; p.posts += 1; if (post) { p.eng += post.engN; if (post.engN > p.quoteEng) { p.quoteEng = post.engN; p.quote = post.text; } p.last = p.last || post.time; } Object.assign(p, extra || {}); people.set(handle, p); };
+    let title = '', subjectTopic = null;
+    if (kind === 'topic') {
+      subjectTopic = D.topics.find(t => t.key === key); title = subjectTopic.name;
+      D.feed.filter(f => f.topics.includes(key) && f.kind !== 'repost').forEach(f => add(f.handle, f));
+      subjectTopic.subs.forEach(([sk, , se, sm, lead]) => add(lead, { engN: Math.round(se / Math.max(1, sm) * 3), text: '', time: '' }, { leadOf: this.label(sk) }));
+      if (cw !== 'Today') D.topics.find(t => t.key === key).subs.forEach(([, , , , lead]) => { const p = people.get(lead); if (p) { p.posts = Math.round(p.posts * wk); p.eng = Math.round(p.eng * wk); } });
+    } else if (kind === 'phrase') {
+      const ph = D.phrases.find(p => p.text === key); title = `“${ph.text}”`;
+      add(ph.first, { engN: Math.round(ph.total * 12 / Math.max(1, ph.spread)), text: '', time: ph.when }, { firstUse: ph.when });
+      D.feed.filter(f => f.text.toLowerCase().includes(key.toLowerCase())).forEach(f => add(f.handle, f));
+    } else if (kind === 'cluster') {
+      const cl = D.clusters.find(c => c.label === key); title = cl.label + ' (emerging)';
+      const who = { 'Fed governor removal': ['@RepBoyle', '@RepMaxineWaters', '@RepSchneider', '@RepRoKhanna'], 'FEMA storm response': ['@RepSylviaGarcia', '@RepSewell', '@RepCastro'], 'USPS facility closures': ['@RepSewell', '@RepClarke'] }[key] || [];
+      who.forEach((h, i) => add(h, { engN: Math.round(cl.posts * 480 / (i + 1)), text: i === 0 ? cl.sample : '', time: '' }));
+    } else {
+      const [, name, , handles] = this.incidents().find(i => i[0] === key); title = name;
+      handles.forEach((h, i) => add(h, { engN: [9700, 2100, 1400][i] || 900, text: i === 0 ? (D.incidents.find(n => n.handle === h) || {}).text || '' : '', time: '' }, i > 0 ? { via: 'amplified' } : {}));
+    }
+    let rows = [...people.values()].filter(p => cc === 'All' || p.caucus.includes(cc));
+    const extra = clipSearch ? (SEARCH[subj] || []).map(([handle, name, district, text, engN, time]) => ({ handle, name, district, caucus: [], posts: 1, eng: engN, quote: text, last: time, via: 'via search' })) : [];
+    rows = rows.concat(extra);
+    const cName = c => c === 'NewDem' ? 'New Dem' : c;
+    rows.sort((a, b) => clipSort === 'Engagement' ? b.eng - a.eng : clipSort === 'Caucus' ? (a.caucus[0] || 'zz').localeCompare(b.caucus[0] || 'zz') || b.eng - a.eng : a.name.split(' ').pop().localeCompare(b.name.split(' ').pop()));
+    const scope = (cc === 'All' ? 'all caucuses' : NAMES[cc]) + ' · ' + (cw === 'Today' ? 'today' : 'last 7 days');
+    const totalPosts = rows.reduce((a, p) => a + p.posts, 0);
+    const head = `${rows.length} ${rows.length === 1 ? 'official' : 'officials'} on ${title} · ${scope}` + (inc.counts ? ` · ${totalPosts} posts` : '');
+    const foot = inc.footer ? `\n—\ncaucus-pulse · 2:37 PM ET · ${clipSearch ? 'archive + X search' : 'archive'}` : '';
+    if (rows.length === 0) return `${head}\n\nNo one in scope has posted on this yet.${foot}`;
+    if (clipFormat === 'Handles') return rows.map(p => p.handle).join(' ') + foot;
+    if (clipFormat === 'Brief') {
+      const names = rows.map(p => p.name.replace(/^(Rep\.|Sen\.|Gov\.|Del\.|Leader) /, '') + (inc.district ? ` (${p.district})` : ''));
+      const list = names.length <= 4 ? names.join(', ') : names.slice(0, 3).join(', ') + ` and ${names.length - 3} others`;
+      const top = rows.find(p => p.quote);
+      return `${list} ${rows.length === 1 ? 'has' : 'have'} posted on ${title} (${scope}${inc.counts ? `, ${totalPosts} posts` : ''}).` + (inc.quote && top ? `\n\nStrongest post — ${top.name}${inc.handle ? ' ' + top.handle : ''}: “${trim(top.quote, 160)}”` : '') + foot;
+    }
+    const lines = rows.map((p, i) => {
+      const bits = [p.name];
+      const meta = [inc.district && p.district, inc.caucus && p.caucus.map(cName).join('/')].filter(Boolean).join(' · ');
+      if (meta) bits.push(`(${meta})`);
+      if (inc.handle) bits.push(p.handle);
+      const tail = [inc.counts && (p.posts + (p.posts === 1 ? ' post' : ' posts') + (p.eng ? ` · ${this.fmt(p.eng)} eng` : '')), inc.time && p.last && `last ${p.last}`, p.leadOf && `leads on ${p.leadOf}`, p.firstUse && `first use ${p.firstUse}`, p.via].filter(Boolean).join(' · ');
+      let line = (inc.numbered ? `${i + 1}. ` : '• ') + bits.join(' ') + (tail ? ` — ${tail}` : '');
+      if (inc.quote && p.quote) line += `\n   “${trim(p.quote)}”`;
+      return line;
+    });
+    return `${head}\n\n${lines.join('\n')}${foot}`;
+  }
+  static K = ['CPC', 'NewDem', 'CBC', 'CHC', 'CAPAC']; // the ideological pair first (matrix columns), then the identity caucuses (filters only)
+  static C = { CPC: '#00af50', NewDem: '#194292', CBC: '#d70015', CHC: '#ea580c', CAPAC: '#6f42c1' }; // fill tier: green / navy / red / orange / purple — orange carries ink text, the others white
+  static CT = { CPC: '#00823a', NewDem: '#194292', CBC: '#d70015', CHC: '#1d1d1f', CAPAC: '#6f42c1' }; // text tier (>=4.5:1 on white) — no legible orange exists, so CHC words are ink and take orange only as a fill behind ink
+  static NAMES = { CPC: 'Progressive Caucus', NewDem: 'New Democrat Coalition', CBC: 'Black Caucus', CHC: 'Hispanic Caucus', CAPAC: 'Asian Pacific American Caucus' };
+  static SHORT = { CPC: 'CPC', NewDem: 'New Dem', CBC: 'CBC', CHC: 'CHC', CAPAC: 'CAPAC' };
+  // Mirrors rollups.json: c = posts per caucus [CPC, NewDem, CBC, CHC, CAPAC]; trend = posts/day, last 7 days; d = % vs 7-day avg. Phrases: pillar null = off the three core messages; cm = members per caucus; adopt = cumulative adopters by day (7); exact = share of uses in the exact wording
+  static D = {
+    topics: [
+      { key: 'healthcare', name: 'Healthcare', c: [212, 188, 96, 70, 39], eng: 1840000, m: 141, mAvg: 108, epAvg: 3300, trend: [301, 318, 356, 402, 451, 470, 496], d: 18, phrase: 'premium spikes',
+        subs: [['aca_subsidies', [118, 141, 43, 34, 16], 1010000, 92, '@RepSchneider'], ['medicaid_cuts', [61, 38, 42, 34, 18], 520000, 58, '@RepUnderwood'], ['prescription_drugs', [17, 14, 7, 4, 4], 140000, 21, '@RepDoggett'], ['rural_hospitals', [6, 8, 1, 3, 1], 60000, 9, '@RepDavids']] },
+      { key: 'affordability_cost_of_living', name: 'Affordability & cost of living', c: [168, 241, 74, 58, 30], eng: 1210000, m: 152, mAvg: 149, epAvg: 2600, trend: [455, 470, 462, 480, 471, 490, 483], d: 3, phrase: 'Fighting for an Affordable America',
+        subs: [['groceries_food_prices', [58, 87, 26, 18, 9], 430000, 71, '@RepGraceMeng'], ['housing_costs', [52, 71, 25, 20, 11], 380000, 63, '@RepMaxineWaters'], ['utilities_energy_bills', [31, 49, 12, 7, 5], 210000, 40, '@RepKuster'], ['childcare_caregiving', [18, 20, 3, 3, 2], 90000, 19, '@RepBonamici']] },
+      { key: 'immigration_ice', name: 'Immigration & ICE', c: [246, 61, 88, 150, 44], eng: 2310000, m: 97, mAvg: 118, epAvg: 5100, trend: [520, 498, 470, 441, 430, 410, 395], d: -14, phrase: 'shut down Dilley',
+        subs: [['dilley_facility', [96, 22, 36, 62, 18], 980000, 47, '@RepCasar'], ['ice_tactics', [74, 18, 29, 49, 14], 720000, 39, '@RepChuyGarcia'], ['detention_conditions', [41, 12, 13, 23, 6], 310000, 24, '@RepPressley'], ['delaney_hall', [21, 6, 5, 9, 2], 140000, 11, '@RepMenendez']] },
+      { key: 'government_funding', name: 'Government funding', c: [121, 143, 57, 45, 24], eng: 640000, m: 118, mAvg: 82, epAvg: 1700, trend: [140, 172, 201, 240, 268, 290, 321], d: 41, phrase: 'keep the government open',
+        subs: [['funding_deadline', [63, 88, 31, 22, 12], 360000, 84, '@RepDelBene'], ['dem_priorities', [44, 41, 19, 12, 9], 210000, 52, '@RepJeffries']] },
+      { key: 'gop_reconciliation_law', name: 'GOP reconciliation law', c: [98, 117, 51, 36, 19], eng: 720000, m: 104, mAvg: 110, epAvg: 2900, trend: [300, 290, 281, 275, 270, 268, 266], d: -6, phrase: 'One Big Ugly Bill',
+        subs: [['tax_cuts_wealthy', [52, 61, 24, 19, 10], 390000, 66, '@RepBoyle'], ['program_cuts', [39, 44, 23, 18, 10], 280000, 51, '@RepMcGovern']] },
+      { key: 'national_guard_cities', name: 'National Guard in cities', c: [88, 19, 64, 48, 26], eng: 980000, m: 61, mAvg: 55, epAvg: 5200, trend: [120, 131, 150, 160, 171, 168, 171], d: 9, phrase: 'No troops on our streets',
+        subs: [['dc_deployment', [31, 9, 38, 27, 14], 420000, 33, '@RepNorton'], ['chicago_deployment', [46, 8, 19, 16, 9], 470000, 24, '@RepChuyGarcia']] },
+      { key: 'epstein_files', name: 'Epstein files', c: [73, 22, 31, 21, 12], eng: 1120000, m: 49, mAvg: 58, epAvg: 9800, trend: [180, 171, 160, 150, 140, 131, 126], d: -12, phrase: 'release the files', subs: [] },
+      { key: 'redistricting_voting', name: 'Redistricting & voting', c: [42, 38, 71, 51, 29], eng: 410000, m: 58, mAvg: 52, epAvg: 2500, trend: [120, 130, 135, 150, 151, 148, 151], d: 7, phrase: 'rig the maps',
+        subs: [['texas_maps', [22, 21, 33, 26, 12], 230000, 31, '@RepCastro'], ['voting_rights', [17, 14, 30, 22, 13], 150000, 26, '@RepSewell']] },
+    ],
+    phrases: [
+      { text: 'Fighting for an Affordable America', pillar: 'Affordability', topic: 'Affordability', first: '@RepJeffries', when: 'Aug 2025', leadership: true, spread: 71, cm: [24, 31, 14, 9, 4], adopt: [66, 67, 68, 69, 70, 70, 71], exact: 0.64, variants: ['Affordable America', 'an affordable America'], total: 2860 },
+      { text: 'clean three-year extension', pillar: 'Healthcare', topic: 'ACA subsidies', first: '@RepJeffries', when: 'Sep 6', leadership: true, spread: 63, cm: [22, 30, 11, 8, 1], adopt: [0, 0, 0, 0, 4, 29, 63], exact: 0.81, variants: ['clean extension', 'three-year extension'], total: 412 },
+      { text: 'One Big Ugly Bill', pillar: 'Corruption', topic: 'Reconciliation law', first: '@RepJeffries', when: 'Jun 2025', leadership: true, spread: 58, cm: [24, 20, 14, 8, 3], adopt: [57, 57, 58, 58, 58, 58, 58], exact: 0.93, variants: ['Big Ugly Bill'], total: 4120 },
+      { text: 'premium spikes', pillar: 'Healthcare', topic: 'ACA subsidies', first: '@RepSchneider', when: '9:12 AM', leadership: false, spread: 41, cm: [12, 22, 7, 2, 1], adopt: [0, 0, 0, 0, 0, 0, 41], exact: 0.88, variants: ['premium spike', 'spiking premiums'], total: 187 },
+      { text: 'keep the government open', pillar: null, topic: 'Funding deadline', first: '@RepDelBene', when: 'Sep 4', leadership: true, spread: 34, cm: [10, 18, 6, 2, 1], adopt: [0, 0, 0, 3, 12, 22, 34], exact: 0.72, variants: ['keep government open', 'keeping the government open'], total: 156 },
+      { text: 'shut down Dilley', pillar: null, topic: 'Dilley facility', first: '@RepCasar', when: 'Sep 5', leadership: false, spread: 27, cm: [20, 2, 3, 11, 1], adopt: [0, 0, 0, 0, 11, 21, 27], exact: 0.9, variants: ['close Dilley'], total: 203 },
+      { text: 'masked agents', pillar: null, topic: 'ICE tactics', first: '@RepChuyGarcia', when: 'Aug 29', leadership: false, spread: 22, cm: [15, 2, 2, 9, 1], adopt: [19, 20, 21, 21, 22, 22, 22], exact: 0.95, variants: ['masked ICE agents'], total: 341 },
+      { text: 'Republican-created healthcare crisis', pillar: 'Healthcare', topic: 'Healthcare', first: '@RepClarke', when: 'Sep 3', leadership: false, spread: 19, cm: [6, 5, 8, 2, 1], adopt: [0, 0, 2, 5, 10, 15, 19], exact: 0.61, variants: ['Republican healthcare crisis', 'GOP-created health care crisis'], total: 88 },
+      { text: 'No troops on our streets', pillar: null, topic: 'National Guard', first: '@Ilhan', when: 'Aug 26', leadership: false, spread: 17, cm: [11, 1, 5, 2, 1], adopt: [15, 16, 17, 17, 17, 17, 17], exact: 0.84, variants: ['no troops in our streets'], total: 264 },
+      { text: 'rig the 2026 election', pillar: null, topic: 'Texas maps', first: '@RepCastro', when: 'Aug 12', leadership: false, spread: 15, cm: [7, 2, 2, 6, 1], adopt: [11, 12, 12, 13, 14, 14, 15], exact: 0.58, variants: ['rig the election', 'rigging 2026'], total: 198 },
+      { text: 'release the files', pillar: 'Corruption', topic: 'Epstein files', first: '@RepRoKhanna', when: 'Jul 2025', leadership: false, spread: 14, cm: [9, 2, 2, 1, 2], adopt: [14, 14, 14, 14, 14, 14, 14], exact: 0.97, variants: ['release the Epstein files'], total: 1870 },
+    ],
+    clusters: [
+      { label: 'Fed governor removal', posts: 24, members: 17, cm: [6, 9, 2, 1, 1], eng: 312000, phrase: 'Fed independence', coherence: 58, since: 'since 10:05 AM today', shape: [0, 0, 0, 0, 0, 2, 9, 24], sample: 'Firing a Fed governor over a phone call is how you get a currency crisis.', suggest: 'federal_reserve / fed_independence' },
+      { label: 'FEMA storm response', posts: 18, members: 12, cm: [4, 3, 5, 4, 1], eng: 148000, phrase: 'skeleton staff', coherence: 44, since: 'since Sep 5', shape: [1, 2, 4, 6, 9, 12, 15, 18], sample: 'Gulf families are still waiting on FEMA while the agency runs on a skeleton staff.', suggest: 'new macro: disaster_response' },
+      { label: 'USPS facility closures', posts: 9, members: 7, cm: [2, 1, 4, 4, 2], eng: 61000, phrase: 'processing plant', coherence: 67, since: 'since Sep 3', shape: [5, 6, 6, 7, 7, 8, 9, 9], sample: 'Closing the Charleston processing plant means two-day mail becomes five.', suggest: 'new macro: postal_service' },
+    ],
+    incidents: [
+      { kind: 'active shooter', place: 'Aurora, CO · CO-06', handle: '@RepJasonCrow', member: 'Jason Crow', since: '12:48 PM', last: '2:10 PM', text: 'I am aware of reports of an active shooter near Town Center and am monitoring the situation closely. Please follow @AuroraPD for guidance and avoid the area.', updates: 3, eng: '9.7K' },
+      { kind: 'flooding', place: 'Houston, TX · TX-18', handle: '@RepSylviaGarcia', member: 'Sylvia Garcia', since: '7:15 AM', last: '1:40 PM', text: 'Flash flooding is closing roads across the east side. My office is open and coordinating with Harris County OEM — call us if you need help getting to a shelter.', updates: 6, eng: '4.2K' },
+      { kind: 'wildfire', place: 'Riverside County, CA · CA-25', handle: '@RepRaulRuizMD', member: 'Raul Ruiz', since: 'Sep 6, 7:30 PM', last: '11:55 AM', text: 'Evacuation orders are now in effect for Banning Bench. We are in contact with Cal Fire and FEMA. Check readyforwildfire.org for the latest zones.', updates: 8, eng: '12.1K' },
+    ],
+    feed: [
+      { handle: '@RepCasar', member: 'Greg Casar · TX-35', caucus: ['CPC', 'CHC'], text: 'Day 94 of Dilley Trailer Prison. Kids sleeping on concrete while the contractor bills $1,400 a night. Shut down Dilley.', topics: ['immigration_ice', 'dilley_facility'], time: '2:31 PM', engN: 18200, kind: 'original' },
+      { handle: '@RepSchneider', member: 'Brad Schneider · IL-10', caucus: ['NewDem'], text: 'Premium spikes hit mailboxes in three weeks. A clean three-year extension of the tax credits is on the table. Republicans have 23 days.', topics: ['healthcare', 'aca_subsidies', 'government_funding'], time: '2:19 PM', engN: 6400, kind: 'original' },
+      { handle: '@RepYvetteClarke', member: 'Yvette Clarke · NY-09', caucus: ['CBC'], text: 'RT @RepSchneider: Premium spikes hit mailboxes in three weeks…', topics: ['healthcare', 'aca_subsidies'], time: '2:08 PM', engN: 0, kind: 'repost' },
+      { handle: '@Ilhan', member: 'Ilhan Omar · MN-05', caucus: ['CPC', 'CBC'], text: 'National Guard trucks on Lake Street are not public safety. No troops on our streets.', topics: ['national_guard_cities'], time: '1:52 PM', engN: 24700, kind: 'original' },
+      { handle: '@RepGraceMeng', member: 'Grace Meng · NY-06', caucus: ['NewDem', 'CAPAC'], text: 'Grocery prices in Queens are up 11% since the tariffs. Fighting for an Affordable America means ending the tariff tax.', topics: ['affordability_cost_of_living', 'groceries_food_prices', 'tariffs_economy'], time: '1:47 PM', engN: 3100, kind: 'quote' },
+      { handle: '@RepUnderwood', member: 'Lauren Underwood · IL-14', caucus: ['NewDem', 'CBC'], text: 'The largest cut to Medicaid in history is already closing clinics in Kane County. This was a choice.', topics: ['healthcare', 'medicaid_cuts', 'gop_reconciliation_law'], time: '1:31 PM', engN: 7800, kind: 'original' },
+      { handle: '@RepPressley', member: 'Ayanna Pressley · MA-07', caucus: ['CPC', 'CBC'], text: 'Three people have died in ICE custody this month. Medical neglect is not a policy, it is a crime.', topics: ['immigration_ice', 'detention_conditions'], time: '1:12 PM', engN: 15400, kind: 'original' },
+      { handle: '@RepDelBene', member: 'Suzan DelBene · WA-01', caucus: ['NewDem'], text: 'September 30 is 23 days away. Keep the government open, extend the ACA subsidies, and stop manufacturing crises.', topics: ['government_funding', 'funding_deadline', 'healthcare'], time: '12:58 PM', engN: 2900, kind: 'original' },
+      { handle: '@RepSewell', member: 'Terri Sewell · AL-07', caucus: ['CBC'], text: 'SCOTUS gutting the Voting Rights Act again would be a betrayal of Selma. We will not go back.', topics: ['redistricting_voting', 'voting_rights'], time: '12:40 PM', engN: 5600, kind: 'original' },
+      { handle: '@RepBoyle', member: 'Brendan Boyle · PA-02', caucus: ['NewDem'], text: 'New CBO numbers: the billionaire tax scam adds $3.4 trillion to the debt while kicking 10 million people off coverage.', topics: ['gop_reconciliation_law', 'tax_cuts_wealthy'], time: '12:22 PM', engN: 4100, kind: 'original' },
+      { handle: '@RepChuyGarcia', member: 'Chuy García · IL-04', caucus: ['CPC', 'CHC'], text: 'RT @Ilhan: National Guard trucks on Lake Street are not public safety…', topics: ['national_guard_cities'], time: '12:05 PM', engN: 0, kind: 'repost' },
+      { handle: '@RepMaxineWaters', member: 'Maxine Waters · CA-43', caucus: ['CBC'], text: 'Rent in LA is up 9% this year. Housing costs are the affordability crisis, and this administration has no plan.', topics: ['affordability_cost_of_living', 'housing_costs'], time: '11:47 AM', engN: 6200, kind: 'original' },
+      { handle: '@RepRoKhanna', member: 'Ro Khanna · CA-17', caucus: ['CPC', 'CAPAC'], text: 'Release the Epstein files. All of them. No redactions for the powerful.', topics: ['epstein_files', 'transparency_demand'], time: '11:30 AM', engN: 31200, kind: 'original' },
+      { handle: '@RepKuster', member: 'Annie Kuster · NH-02', caucus: ['NewDem'], text: 'Granite Staters opened their electricity bills this week and saw a 22% jump. Energy costs are on the ballot.', topics: ['affordability_cost_of_living', 'utilities_energy_bills'], time: '11:02 AM', engN: 1900, kind: 'original' },
+      { handle: '@RepDoggett', member: 'Lloyd Doggett · TX-37', caucus: ['CPC'], text: 'Insulin should cost $35 for everyone, not just seniors. Republicans blocked that again today.', topics: ['healthcare', 'prescription_drugs'], time: '10:44 AM', engN: 3300, kind: 'original' },
+      { handle: '@RepCastro', member: 'Joaquin Castro · TX-20', caucus: ['CPC', 'CHC'], text: 'Abbott\'s map rigs the 2026 election before a single vote is cast. Texas Democrats are in court this morning.', topics: ['redistricting_voting', 'texas_maps'], time: '10:15 AM', engN: 8900, kind: 'quote' },
+    ],
+    jobs: [
+      { name: 'Poll', detail: 'lists/…/tweets · 2 pages · 38 new · rollups + Pages deploy', when: '2:37 PM', ok: true },
+      { name: 'Classify', detail: 'Haiku 4.5 at poll time · 22 originals · 1.8 s', when: '2:37 PM', ok: true },
+      { name: 'Batch collect', detail: 'msgbatch_01Hq… · Sep 6 · 1,912 results', when: '6:10 AM', ok: true },
+      { name: 'Nightly', detail: '24h metrics re-read · phrases · report 2026-09-06.md', when: '12:15 AM', ok: true },
+      { name: 'Roster refresh', detail: 'lists/…/members · 251 users · 2 handle changes need review', when: 'Sep 1', ok: false },
+    ],
+    spend: [
+      { name: 'X API · post reads', value: '$206.04', detail: '41,208 reads today · 612,940 of 3,000,000 monthly cap', pct: 20 },
+      { name: 'Anthropic · Haiku 4.5', value: '$12.31', detail: 'poll-time $8.74 · nightly batch $3.57', pct: 21 },
+      { name: 'GitHub Actions', value: '$0.00', detail: 'public repo · 1,466 minutes this month', pct: 0 },
+    ],
+    roster: [{ key: 'CPC', accounts: 96, active: 71 }, { key: 'NewDem', accounts: 116, active: 84 }, { key: 'CBC', accounts: 62, active: 48 }, { key: 'CHC', accounts: 43, active: 36 }, { key: 'CAPAC', accounts: 24, active: 19 }],
+    // cloud terms: uses per caucus [CPC, NewDem, CBC, CHC, CAPAC] in the window
+    words: [
+      ['health care', [180, 210, 96, 161, 47]], ['premiums', [90, 168, 40, 69, 19]], ['Medicaid', [120, 74, 88, 152, 45]], ['ICE', [240, 40, 70, 117, 35]], ['Dilley', [150, 20, 34, 56, 18]], ['tax credits', [60, 140, 30, 49, 16]],
+      ['shutdown', [110, 150, 50, 36, 19]], ['September 30', [40, 96, 22, 16, 8]], ['billionaires', [140, 90, 40, 28, 15]], ['groceries', [60, 130, 30, 21, 12]], ['rent', [70, 80, 40, 28, 17]], ['tariffs', [50, 120, 20, 13, 7]],
+      ['National Guard', [96, 18, 70, 55, 27]], ['Chicago', [60, 10, 30, 21, 12]], ['Epstein', [80, 24, 30, 25, 11]], ['Voting Rights Act', [30, 26, 80, 59, 33]], ['Texas', [50, 40, 60, 43, 24]], ['Selma', [4, 2, 40, 29, 17]],
+      ['due process', [110, 20, 44, 73, 23]], ['masked agents', [90, 12, 30, 51, 14]], ['insulin', [40, 30, 12, 18, 5]], ['clinics', [30, 44, 40, 70, 21]], ['kitchen table', [20, 70, 10, 15, 5]], ['working families', [90, 110, 60, 100, 31]],
+      ['Constitution', [70, 30, 30, 21, 11]], ['authoritarian', [88, 14, 28, 21, 12]], ['FEMA', [20, 30, 24, 16, 9]], ['Fed independence', [12, 40, 6, 5, 2]], ['Social Security', [40, 40, 30, 21, 12]], ['gas prices', [10, 50, 8, 4, 4]],
+      ['Big Ugly Bill', [140, 100, 60, 100, 30]], ['cover-up', [60, 20, 22, 35, 12]], ['deportation', [96, 14, 30, 49, 16]], ['electricity bills', [20, 60, 8, 12, 3]], ['child care', [30, 50, 14, 22, 8]], ['veterans', [20, 30, 24, 39, 11]],
+    ],
+  };
+  label(k) {
+    const M = { aca: 'ACA', ice: 'ICE', gop: 'GOP', dc: 'DC', usps: 'USPS', fema: 'FEMA' };
+    return String(k).replace(/^new macro: /, 'New macro · ').split(' / ').map(part => part.split(/[_\s]+/).map(w => M[w.toLowerCase()] || (w.charAt(0).toUpperCase() + w.slice(1))).join(' ')).join(' / ');
+  }
+  // Momentum 0–100: how hard a topic is moving relative to its own 7-day baseline. 50 = steady.
+  momentum(t) {
+    const clamp = x => Math.max(-1, Math.min(1, x)), half = x => 0.5 + 0.5 * clamp(x);
+    const tr = t.trend, avg = tr.reduce((a, b) => a + b, 0) / tr.length, tot = t.c.reduce((a, b) => a + b, 0);
+    const volume = half(t.d / 50);                                                   // today vs 7-day average
+    const accel = half(((tr[6] - tr[4]) / 2 - (tr[4] - tr[0]) / 4) / (avg * 0.1));      // is the slope steepening?
+    const adoption = half((t.m - t.mAvg) / t.mAvg / 0.5);                            // distinct members vs baseline
+    const eff = 1 / t.c.reduce((a, n) => a + Math.pow(n / tot, 2), 0);              // effective caucuses, 1–5
+    const spread = (eff - 1) / 4;
+    const engLift = half((t.eng / tot / t.epAvg - 1) / 0.5);                         // engagement per post vs baseline
+    const score = Math.round(100 * (0.4 * volume + 0.2 * accel + 0.2 * adoption + 0.1 * spread + 0.1 * engLift));
+    return { score, volume, accel, adoption, spread, engLift, eff, drivers: [['volume', volume], ['acceleration', accel], ['adoption', adoption], ['caucus spread', spread], ['engagement', engLift]].sort((a, b) => b[1] - a[1]) };
+  }
+  componentDidMount() { this._esc = e => { if (e.key === 'Escape' && this.state.clipOpen) this.setState({ clipOpen: false }); }; window.addEventListener('keydown', this._esc); }
+  componentWillUnmount() { window.removeEventListener('keydown', this._esc); clearTimeout(this._ct); }
+  fmt(n) { return n >= 1e7 ? (n / 1e6).toFixed(1) + 'M' : n >= 1e6 ? (n / 1e6).toFixed(2) + 'M' : n >= 1e5 ? Math.round(n / 1e3) + 'K' : n >= 1e4 ? (n / 1e3).toFixed(1) + 'K' : Math.round(n).toLocaleString(); }
+  arrow(d) { return (d >= 0 ? '▲ ' : '▼ ') + Math.abs(d) + '%'; }
+  // — small stateful/geometric elements the template can't express with literal styles —
+  fill(pct, color) { return React.createElement('div', { style: { height: '100%', width: Math.max(0, Math.min(100, pct)) + '%', background: color, borderRadius: 2 } }); }
+  seg(list, color) { return React.createElement('div', { style: { display: 'flex', width: '100%', gap: 1 } }, list.map(([w, c], i) => React.createElement('div', { key: i, style: { width: w + '%', background: c } }))); }
+  dot(color) { return React.createElement('span', { style: { width: 7, height: 7, borderRadius: '50%', background: color, display: 'inline-block', flex: 'none' } }); }
+  spark(arr, W = 64, H = 18, fromZero = false) {
+    const h = React.createElement, P = 2;
+    const max = Math.max(...arr), min = fromZero ? 0 : Math.min(...arr), span = max - min || 1;
+    const pts = arr.map((v, i) => [P + i * (W - 2 * P) / (arr.length - 1), P + (H - 2 * P) * (1 - (v - min) / span)]);
+    const last = pts[pts.length - 1];
+    // Catmull-Rom → cubic Bézier so the line arcs through the points instead of kinking
+    let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+      d += ` C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+    }
+    return h('svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}`, style: { display: 'block', flex: 'none' }, 'aria-hidden': true },
+      h('path', { d, fill: 'none', stroke: '#1d1d1f', strokeWidth: 1.25, strokeLinejoin: 'round', strokeLinecap: 'round' }),
+      h('circle', { cx: last[0], cy: last[1], r: 1.8, fill: '#1d1d1f' }));
+  }
+  chevron(hasSub, open) {
+    const h = React.createElement;
+    return h('span', { 'aria-hidden': true, style: { width: 14, height: 14, flex: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: '#8e8e93', transform: open ? 'rotate(90deg)' : 'none', transition: 'transform .15s ease', opacity: hasSub ? 1 : 0 } },
+      h('svg', { width: 10, height: 10, viewBox: '0 0 10 10' }, h('path', { d: 'M3.5 1.5 L7 5 L3.5 8.5', fill: 'none', stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' })));
+  }
+  cloud(terms, idx, wk, rp) {
+    const h = React.createElement, { C, CT } = Component, K = ['CPC', 'NewDem', 'CBC'];
+    const rows = terms.map(([text, c]) => { const tot = c.reduce((a, b) => a + b, 0), n = (idx < 0 ? tot : c[idx]) * wk * rp; const top = c.indexOf(Math.max(...c)); const share = c[top] / tot; return { text, n, c, lead: idx >= 0 ? K[idx] : (share >= 0.5 ? K[top] : null) }; }).filter(r => r.n > 0);
+    const max = Math.max(...rows.map(r => r.n)), min = Math.min(...rows.map(r => r.n));
+    const size = n => 12 + 30 * Math.sqrt((n - min) / Math.max(1, max - min));
+    // deterministic shuffle so big words don't cluster
+    const order = rows.map((r, i) => [((i * 7919) % 97), r]).sort((a, b) => a[0] - b[0]).map(x => x[1]);
+    return order.map(r => h('span', { key: r.text, title: `${r.text} · ${Math.round(r.n)} uses · ${K.map((k, i) => Component.SHORT[k] + ' ' + r.c[i]).join(' · ')}`, style: { fontSize: size(r.n).toFixed(1) + 'px', fontWeight: r.n > (max + min) / 2 ? 700 : 600, color: r.lead && r.lead !== 'CHC' ? CT[r.lead] : '#1d1d1f', background: r.lead === 'CHC' && idx < 0 ? C.CHC : 'transparent', padding: r.lead === 'CHC' && idx < 0 ? '0 0.14em' : 0, borderRadius: '0.12em', letterSpacing: '-0.02em', whiteSpace: 'nowrap', cursor: 'default' } }, r.text));
+  }
+  avatar(name, caucus) {
+    const { CT } = Component, bg = caucus.includes('CPC') ? CT.CPC : caucus.includes('NewDem') ? CT.NewDem : '#8e8e93'; // ideological axis only: CPC green, New Dem navy, everyone else gray
+    const ini = name.split(' · ')[0].split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    return React.createElement('div', { style: { width: 30, height: 30, borderRadius: '50%', background: bg, color: '#fff', fontSize: 11, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 1 } }, ini);
+  }
+  control(list, key) {
+    const h = React.createElement;
+    return h('div', { role: 'group', style: { display: 'inline-flex', background: '#e8e8ed', borderRadius: 10, padding: 2 } }, list.map((item, i) => {
+      if (!item) return h('span', { key: 'div' + i, 'aria-hidden': true, style: { width: 1, alignSelf: 'stretch', margin: '4px 3px', background: '#d2d2d7' } }); // group divider
+      const [val, lab, color] = item, on = this.state[key] === val;
+      return h('button', { key: val, onClick: () => this.setState({ [key]: val, copied: false, feedCaucus: key === 'caucus' ? '' : this.state.feedCaucus }), 'aria-pressed': on, style: { border: 0, cursor: 'pointer', fontSize: 12, fontWeight: 600, padding: '5px 12px', borderRadius: 8, transition: 'background .12s ease, color .12s ease', display: 'inline-flex', alignItems: 'center', gap: 6, background: on ? '#fff' : 'transparent', color: on ? '#1d1d1f' : '#6e6e73', boxShadow: on ? '0 1px 3px rgba(0,0,0,.14)' : 'none' } }, color ? this.dot(color) : null, lab);
+    }));
+  }
+  select(list, key, value) {
+    const h = React.createElement;
+    return h('select', { value, 'aria-label': key, onChange: e => this.setState({ [key]: e.target.value }), style: { font: 'inherit', fontSize: 12, fontWeight: 500, color: '#1d1d1f', background: '#f5f5f7', border: '1px solid #e0e0e4', borderRadius: 9, padding: '5px 28px 5px 10px', cursor: 'pointer', appearance: 'none', WebkitAppearance: 'none', backgroundImage: 'linear-gradient(45deg, transparent 50%, #6e6e73 50%), linear-gradient(135deg, #6e6e73 50%, transparent 50%)', backgroundPosition: 'calc(100% - 14px) 12px, calc(100% - 9px) 12px', backgroundSize: '5px 5px', backgroundRepeat: 'no-repeat', flex: 1, minWidth: 0 } },
+      list.map(([k, name, n]) => h('option', { key: k, value: k }, `${name} (${n})`)));
+  }
+  renderVals() {
+    const { K, C, CT, NAMES, D } = Component;
+    const { caucus, window: win, open, topic, sort, sysOpen } = this.state;
+    const reposts = this.props.includeReposts ?? true;
+    const wk = win === 'Today' ? 1 : 6.6, rp = reposts ? 1 : 0.58;
+    const idx = K.indexOf(caucus), isAll = idx < 0;
+    const sum = a => a.reduce((x, y) => x + y, 0);
+    const pick = a => (isAll ? sum(a) : a[idx]);
+    const colMax = [0, 1].map(i => Math.max(...D.topics.map(t => t.c[i]))); // matrix columns: CPC, New Dem
+    const top3 = [0, 1].map(i => D.topics.slice().sort((a, b) => b.c[i] - a.c[i]).slice(0, 3).map(t => t.key));
+    const maxPosts = Math.max(...D.topics.map(t => pick(t.c)));
+    const topics = D.topics.map(t => {
+      const posts = pick(t.c) * wk * rp, share = isAll ? 1 : t.c[idx] / sum(t.c);
+      const subs = t.subs.map(([k, sc, se, sm, lead]) => ({ name: this.label(k), cpc: this.fmt(sc[0] * wk * rp), nd: this.fmt(sc[1] * wk * rp), posts: this.fmt(pick(sc) * wk * rp), eng: this.fmt(se * wk * (isAll ? 1 : sc[idx] / sum(sc))), members: isAll ? sm : Math.round(sm * (sc[idx] / sum(sc)) * 1.4), share: Math.round(100 * pick(sc) / Math.max(1, pick(t.c))) + '%', lead }));
+      const subSum = t.subs.reduce((s, [, sc]) => s + pick(sc), 0);
+      const hasSub = t.subs.length > 0, isOpen = hasSub && !!open[t.key];
+      const rank = i => top3[i].indexOf(t.key), mo = this.momentum(t);
+      return { key: t.key, name: t.name, posts: this.fmt(posts), eng: this.fmt(t.eng * wk * share), members: isAll ? t.m : Math.round(t.m * share * 1.4), _n: posts,
+        cpc: this.fmt(t.c[0] * wk * rp), nd: this.fmt(t.c[1] * wk * rp),
+        cpcBar: this.fill(100 * t.c[0] / colMax[0], C.CPC), ndBar: this.fill(100 * t.c[1] / colMax[1], C.NewDem),
+        cpcTop: rank(0) >= 0, ndTop: rank(1) >= 0, cpcRank: String(rank(0) + 1), ndRank: String(rank(1) + 1),
+        postBar: isAll ? null : this.fill(100 * pick(t.c) / maxPosts, C[caucus]),
+        spark: this.spark(t.trend), delta: this.arrow(t.d), up: t.d >= 0, down: t.d < 0, momentum: String(mo.score), momentumBar: this.fill(mo.score, 'linear-gradient(90deg, #194292, #a9c3ee)'), momentumTitle: `Momentum ${mo.score} · volume ${Math.round(100 * mo.volume)} · acceleration ${Math.round(100 * mo.accel)} · adoption ${Math.round(100 * mo.adoption)} · spread ${mo.eff.toFixed(1)} caucuses · engagement ${Math.round(100 * mo.engLift)}`,
+        hasSub, subCount: t.subs.length, subs, open: isOpen, caret: this.chevron(hasSub, isOpen),
+        toggle: hasSub ? () => this.setState(s => ({ open: Object.assign({}, s.open, { [t.key]: !s.open[t.key] }) })) : undefined,
+        macroOnly: this.fmt(Math.max(0, pick(t.c) - subSum) * wk * rp), phrase: t.phrase };
+    }).sort((a, b) => b._n - a._n);
+    const scale = isAll ? 1 : [0.42, 0.38, 0.2, 0.17, 0.1][idx];
+    const postsN = 1786 * scale * rp * wk;
+    const mix = reposts ? [37, 21, 42] : [64, 36, 0];
+    const active = isAll ? 203 : [71, 84, 48, 36, 19][idx], total = isAll ? 251 : [96, 116, 62, 43, 24][idx];
+    const engN = 11400000 * scale * wk;
+    const feedCaucus = caucus;
+    const byC = f => feedCaucus === 'All' || f.caucus.includes(feedCaucus);
+    const byT = f => topic === 'all' || f.topics.includes(topic);
+    const posts = D.feed.map(f => Object.assign({}, f, { _topics: f.topics, topics: f.topics.slice(0, 2).map(t => this.label(t)).concat(f.topics.length > 2 ? ['+' + (f.topics.length - 2)] : []), eng: f.engN ? this.fmt(f.engN) : 'repost', kindGlyph: f.kind === 'repost' ? '↻ ' : f.kind === 'quote' ? '❝ ' : '', isNew: ['2:31 PM', '2:19 PM', '2:08 PM'].includes(f.time), member: f.member.split(' · ')[0], avatar: this.avatar(f.member, f.caucus), caucusTags: f.caucus.map(c => ({ label: c === 'NewDem' ? 'New Dem' : c, dot: this.dot(C[c] || '#c7c7cc') })) }));
+    let feed = posts.filter(f => byC(f) && (topic === 'all' || f._topics.includes(topic)));
+    if (sort === 'Top') feed = feed.slice().sort((a, b) => b.engN - a.engN);
+    const T2 = [['all', 'All topics']].concat(D.topics.map(t => [t.key, t.name]));
+    const topicOpts = T2.map(([k, name]) => [k, name, posts.filter(f => byC(f) && (k === 'all' || f._topics.includes(k))).length]);
+    const caucusOpts = [['All', 'All caucuses'], ['CPC', 'CPC'], ['NewDem', 'New Dem'], ['CBC', 'CBC'], ['CHC', 'CHC'], ['CAPAC', 'CAPAC']].map(([k, name]) => [k, name, posts.filter(f => (k === 'All' || f.caucus.includes(k)) && (topic === 'all' || f._topics.includes(topic))).length]);
+    const ACTIVE = { CPC: 71, NewDem: 84, CBC: 48, CHC: 36, CAPAC: 19 }, inC = (k, n) => n >= 3 && n >= 0.1 * ACTIVE[k]; // a caucus counts when the line reaches 3+ members and 10%+ of its active members
+    const phrases = D.phrases.map(p => { const gain = p.adopt[6] - p.adopt[0], pct = Math.round(100 * p.exact), reach = K.filter((k, i) => inC(k, p.cm[i])).length;
+      return Object.assign({}, p, { onPillar: !!p.pillar, offPillar: !p.pillar, curve: this.spark(p.adopt, 64, 18, true), gain: (gain >= 0 ? '+' : '') + gain, gainStrong: gain >= 5, gainWeak: gain < 5,
+        unity: React.createElement('div', { style: { display: 'flex', gap: 4 }, title: K.map((k, i) => `${Component.SHORT[k]} ${p.cm[i]}`).join(' · ') }, K.map((k, i) => React.createElement('span', { key: k, style: { width: 7, height: 7, borderRadius: '50%', background: inC(k, p.cm[i]) ? C[k] : '#e8e8ed', display: 'inline-block' } }))),
+        reachCount: `${reach}/${K.length}`, subTopic: p.topic.toLowerCase() === (p.pillar || '').toLowerCase() ? '' : p.topic, exactPct: pct + '%', drift: pct < 75, tight: pct >= 75, exactTitle: `${pct}% of uses are the exact wording · variants: ${p.variants.join(', ')}` }); });
+    const sumAll = D.topics.reduce((a, t) => a + pick(t.c), 0);
+    const byKey = k => D.topics.find(t => t.key === k);
+    const CORE = [['Affordability', ['affordability_cost_of_living']], ['Healthcare', ['healthcare']], ['Corruption', ['epstein_files', 'gop_reconciliation_law']]];
+    const coreRaw = CORE.map(([name, keys]) => ({ name, n: keys.reduce((a, k) => a + pick(byKey(k).c), 0) * wk * rp }));
+    const coreMax = Math.max(...coreRaw.map(c => c.n)), coreN = coreRaw.reduce((a, c) => a + c.n, 0);
+    const core = coreRaw.map(c => ({ name: c.name, posts: this.fmt(c.n), bar: this.fill(100 * c.n / coreMax, '#1d1d1f') }));
+    const rising = D.topics.map(t => Object.assign({}, t, { mo: this.momentum(t) })).sort((a, b) => b.mo.score - a.mo.score)[0];
+    const cloudMode = this.state.cloudMode || 'Words';
+    const cloudTerms = cloudMode === 'Words' ? D.words : D.phrases.map(p => [p.text, p.cm.map(n => Math.round(n * p.total / p.spread))]).concat([['billionaire tax scam', [140, 90, 50, 36, 19]], ['No Secret Police', [110, 10, 40, 28, 16]], ['Great Betrayal', [60, 70, 30, 21, 12]], ['gut the health care', [80, 60, 40, 28, 15]], ['they can\'t win without cheating', [40, 30, 70, 51, 27]], ['Republican-created crisis', [60, 90, 40, 28, 15]], ['trailer prison', [130, 10, 30, 21, 12]]]);
+    const warnJobs = D.jobs.filter(j => !j.ok);
+    const H = [12, 6, 4, 2, 2, 5, 18, 41, 66, 92, 108, 121, 117, 131, 124, 96, 0, 0, 0, 0, 0, 0, 0, 0];
+    const hourMax = Math.max(...H) * (isAll ? 1 : scale);
+    const hourBars = H.map((n, i) => {
+      const parts = isAll ? [[n * 0.34, C.CPC], [n * 0.31, C.NewDem], [n * 0.16, C.CBC], [n * 0.12, C.CHC], [n * 0.07, C.CAPAC]] : [[n * scale, C[caucus]]];
+      return React.createElement('div', { key: i, title: `${i % 12 || 12} ${i < 12 ? 'AM' : 'PM'} · ${Math.round(n * (isAll ? 1 : scale) * rp)} posts`, style: { flex: 1, display: 'flex', flexDirection: 'column-reverse', height: '100%', minWidth: 0 } },
+        parts.map(([v, color], k) => React.createElement('div', { key: k, style: { height: (100 * v * rp / hourMax) + '%', background: color, borderRadius: k === parts.length - 1 ? '2px 2px 0 0' : 0, opacity: n ? 1 : 0 } })));
+    });
+    const clipText = this.state.clipOpen ? this.composeText() : '';
+    const subjects = [['topic:' + D.topics[0].key, 'Topic · ' + D.topics[0].name]].concat(D.topics.slice(1).map(t => ['topic:' + t.key, 'Topic · ' + t.name]), D.phrases.slice(0, 6).map(p => ['phrase:' + p.text, 'Phrase · ' + p.text]), this.incidents().map(i => ['incident:' + i[0], 'Incident · ' + i[1]]), D.clusters.map(c => ['cluster:' + c.label, 'Emerging · ' + c.label]));
+    const tog = {}; Object.keys(this.state.inc).forEach(k => { tog[k] = () => this.setState(s => ({ inc: Object.assign({}, s.inc, { [k]: !s.inc[k] }), copied: false })); });
+    const plainSelect = (list, key, value) => React.createElement('select', { value, 'aria-label': key, onChange: e => this.setState({ [key]: e.target.value, copied: false }), style: { font: 'inherit', fontSize: 13, color: '#1d1d1f', background: '#f5f5f7', border: '1px solid #e0e0e4', borderRadius: 8, padding: '6px 28px 6px 10px', appearance: 'none', WebkitAppearance: 'none', backgroundImage: 'linear-gradient(45deg, transparent 50%, #6e6e73 50%), linear-gradient(135deg, #6e6e73 50%, transparent 50%)', backgroundPosition: 'calc(100% - 14px) 14px, calc(100% - 9px) 14px', backgroundSize: '5px 5px', backgroundRepeat: 'no-repeat', width: '100%', minWidth: 0 } }, list.map(([k, name]) => React.createElement('option', { key: k, value: k }, name)));
+    return {
+      clipOpen: this.state.clipOpen, openClip: () => this.setState({ clipOpen: true, copied: false, clipCaucus: caucus, clipWindow: win }), closeClip: () => this.setState({ clipOpen: false }), stop: e => e.stopPropagation(),
+      clipSubjectSelect: plainSelect(subjects, 'clipSubject', this.state.clipSubject),
+      clipCaucusSelect: plainSelect([['All', 'All caucuses'], ['CPC', 'Progressive Caucus'], ['NewDem', 'New Democrat Coalition'], ['CBC', 'Black Caucus'], ['CHC', 'Hispanic Caucus'], ['CAPAC', 'Asian Pacific American Caucus']], 'clipCaucus', this.state.clipCaucus),
+      clipWindowSeg: this.control([['Today', 'Today', null], ['7 days', '7 days', null]], 'clipWindow'),
+      clipSortSeg: this.control([['Engagement', 'Engagement', null], ['Caucus', 'Caucus', null], ['Name', 'Name', null]], 'clipSort'),
+      clipFormatSeg: this.control([['List', 'List', null], ['Brief', 'Brief', null], ['Handles', 'Handles only', null]], 'clipFormat'),
+      inc: this.state.inc, tog, clipSearch: this.state.clipSearch, togSearch: () => this.setState(s => ({ clipSearch: !s.clipSearch, copied: false })),
+      clipText, clipStats: clipText ? `${clipText.split('\n').filter(l => /^(\d+\.|•) /.test(l)).length || (this.state.clipFormat === 'Handles' ? clipText.split(' ').filter(w => w.startsWith('@')).length : 1)} entries · ${clipText.length} characters` : '',
+      copyLabel: this.state.copied ? 'Copied ✓' : 'Copy text',
+      copyClip: () => { const done = () => { this.setState({ copied: true }); clearTimeout(this._ct); this._ct = setTimeout(() => this.setState({ copied: false }), 1800); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(clipText).then(done, done); else { const ta = document.createElement('textarea'); ta.value = clipText; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done(); } },
+      showExtras: this.props.showExtras ?? false,
+      headerDate: win === 'Today' ? 'Sunday, September 7' : 'September 1 – 7', lastPoll: '2:37 PM', nextPoll: '3:07 PM', windowLabel: win === 'Today' ? 'Today' : 'Last 7 days',
+      scopeLine: `${win === 'Today' ? 'Sunday, September 7, 2026' : 'September 1 – 7, 2026'} · ${total} accounts on X`,
+      isAll, isSingle: !isAll, isCPC: caucus === 'CPC', isND: caucus === 'NewDem', isCBC: caucus === 'CBC',
+      caucusSeg: this.control([['All', 'All', null], ['CPC', 'CPC', C.CPC], ['NewDem', 'New Dem', C.NewDem], null, ['CBC', 'CBC', C.CBC], ['CHC', 'CHC', C.CHC], ['CAPAC', 'CAPAC', C.CAPAC]], 'caucus'),
+      windowSeg: this.control([['Today', 'Today', null], ['7 days', '7 days', null]], 'window'),
+      postsKicker: 'Posts', windowShort: win === 'Today' ? 'today' : 'last 7 days', postsValue: this.fmt(postsN),
+      postsMix: this.seg([[mix[0], '#194292'], [mix[1], '#a9c3ee'], [mix[2], '#e0e0e4']]), postsMeta: reposts ? `${mix[0]}% original · ${mix[1]}% replies · ${mix[2]}% reposts` : `${mix[0]}% original · ${mix[1]}% replies · reposts hidden`,
+      membersActive: String(active), membersTotal: String(total), membersPct: Math.round(100 * active / total) + '%', mCPC: '71', mND: '84', mCBC: '48',
+      // posts per 3-hour bucket, last 48h (16 buckets), scaled to the current scope
+      postsTrend: this.spark([48, 19, 8, 62, 171, 296, 340, 268, 121, 41, 12, 7, 74, 231, 371, 386].map(v => Math.round(v * scale * rp)), 108, 26),
+      // Core messages: the three pillars, tallied from the taxonomy (corruption = Epstein files + billionaire tax scam)
+      core, coreTotal: this.fmt(coreN), corePct: Math.round(100 * coreN / (sumAll * wk * rp)) + '%',
+      membersMix: isAll ? this.seg([[71, C.CPC], [84, C.NewDem], [48, C.CBC], [36, C.CHC], [19, C.CAPAC]].map(([n, c]) => [100 * n / 258, c])) : this.seg([[100 * active / total, C[caucus]], [100 - 100 * active / total, '#f0f0f2']]),
+      engValue: this.fmt(engN), engDelta: this.arrow(8), engTopShare: (isAll ? 46 : [52, 38, 61, 55, 49][idx]) + '%', engPerPost: this.fmt(engN / postsN), engLikes: this.fmt(engN * 0.71), engReposts: this.fmt(engN * 0.19), engReplies: this.fmt(engN * 0.1), engMix: this.seg([[isAll ? 46 : [52, 38, 61, 55, 49][idx], '#1d1d1f'], [isAll ? 54 : [48, 62, 39, 45, 51][idx], '#d2d2d7']]),
+      risingName: rising.name, risingScore: String(rising.mo.score), risingBar: this.fill(rising.mo.score, 'linear-gradient(90deg, #194292, #a9c3ee)'), risingDrivers: rising.mo.drivers.slice(0, 2).map(d => d[0]).join(' and '), risingDelta: this.arrow(rising.d), risingPosts: this.fmt(pick(rising.c) * wk * rp), risingMembers: String(isAll ? rising.m : Math.round(rising.m * rising.c[idx] / sum(rising.c) * 1.4)), risingPhrase: rising.phrase, risingSpark: this.spark(rising.trend),
+      topics, topicsNote: `${this.fmt(postsN * 0.961)} classified posts`,
+      hourBars, peakHour: '1 PM', peakCount: String(Math.round(131 * (isAll ? 1 : scale) * rp)), volumeNote: isAll ? 'stacked by caucus · ET' : 'ET',
+      classifiedNote: `${Math.round(postsN * 0.039)} unclassified → emerging clusters`,
+      feed, newInPoll: String(feed.filter(f => f.isNew).length), feedCount: String(feed.length), feedEmpty: feed.length === 0, feedNote: (topic === 'all' ? 'every topic' : this.label(topic)) + ' · ' + (feedCaucus === 'All' ? 'all caucuses' : feedCaucus === 'NewDem' ? 'New Dem' : feedCaucus) + ' · ' + (sort === 'Top' ? 'by engagement' : 'newest first'),
+      topicSelect: this.select(topicOpts, 'topic', topic), caucusSelect: this.select(caucusOpts, 'feedCaucus', feedCaucus),
+      sortSeg: this.control([['Newest', 'Newest', null], ['Top', 'Top', null]], 'sort'),
+      cloud: this.cloud(cloudTerms, idx, wk, rp), cloudSeg: this.control([['Words', 'Words', null], ['Phrases', 'Phrases', null]], 'cloudMode'),
+      cloudNote: `${cloudTerms.length} ${cloudMode.toLowerCase()} · sized by uses · colored by leading caucus`,
+      phrases, unclassified: '71', clusters: D.clusters.map(c => Object.assign({}, c, { suggest: this.label(c.suggest), spark: this.spark(c.shape, 72, 18), engFmt: this.fmt(c.eng), perPost: this.fmt(c.eng / c.posts), growth: c.shape[7] - c.shape[3], caucusBar: this.seg(c.cm.map((n, i) => [100 * n / c.members, C[K[i]]])), coherenceBar: this.fill(c.coherence, '#1d1d1f'), compose: () => this.setState({ clipOpen: true, copied: false, clipSubject: 'cluster:' + c.label, clipCaucus: caucus, clipWindow: win }) })),
+      incidentCount: String(D.incidents.length), incidents: D.incidents,
+      sysOpen, toggleSys: () => this.setState(s => ({ sysOpen: !s.sysOpen })), sysLabel: sysOpen ? 'Hide details' : 'Details',
+      sysDot: this.dot(warnJobs.length ? '#d70015' : '#1d1d1f'), newPosts: '38', coverage: '96.1%', batchDay: 'Sep 6', xReads: '612,940', spendTotal: '$218.35',
+      sysWarn: warnJobs.length ? `${warnJobs.length} warning · ${warnJobs[0].name.toLowerCase()}` : '',
+      jobs: D.jobs.map(j => Object.assign({}, j, { dot: this.dot(j.ok ? '#8e8e93' : '#d70015') })), highWater: '1964488201553371136', utcReset: '5h 23m',
+      spend: D.spend.map(s => Object.assign({}, s, { bar: this.fill(s.pct, '#1d1d1f') })),
+      roster: D.roster.map(r => ({ name: NAMES[r.key], accounts: r.accounts, active: r.active, dot: this.dot(C[r.key]) })), rosterNote: '251 accounts · 86 carry two or more caucus tags · next refresh Sep 8',
+    };
+  }
+}
+</script>
+</body>
+</html>

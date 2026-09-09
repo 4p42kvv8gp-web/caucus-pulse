@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2.6' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpath d='M1.5 13H7L10 5L12.13 13' stroke='%23194292'/%3E%3Cpath d='M12.13 13L14 20L17 13H22.5' stroke='%23d70015'/%3E%3C/svg%3E">
 <title>caucus-pulse</title>
 <style>
   body{margin:0;background:#f5f5f7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;font-variant-numeric:tabular-nums}
@@ -19,7 +20,7 @@
 <body>
 <div style="min-height:100vh;display:flex;flex-direction:column">
 <header style="position:sticky;top:0;z-index:10;height:50px;display:flex;align-items:center;gap:28px;padding:0 max(20px,calc((100% - 1240px)/2 + 20px));background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)">
-  <div style="font-size:17px;font-weight:700;letter-spacing:-0.02em;white-space:nowrap;flex:none">caucus-pulse</div>
+  <a href="./index.html" aria-label="caucus-pulse home" style="display:inline-flex;align-items:center;gap:.08em;font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1;white-space:nowrap;flex:none;color:#1d1d1f;text-decoration:none">Caucus<svg viewBox="0 0 28 24" fill="none" stroke-width="4.2" stroke-linecap="butt" stroke-linejoin="round" aria-hidden="true" style="height:.6em;width:.7em;overflow:visible;transform:translateY(.06em)"><path d="M2 13H8L11.5 4L13.75 13" stroke="#194292"></path><path d="M13.75 13L15.5 20L18.5 13H26" stroke="#d70015"></path></svg>Pulse</a>
   <nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a class="nav on" href="./index.html">Dashboard</a><a class="nav" href="./incidents.html">Incidents</a></nav>
   <div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span id="updated" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73"></span><a class="quiet" href="../reports/latest.md">Daily report</a><button class="pill" data-act="openClip">Compose</button></div>
 </header>
@@ -29,7 +30,7 @@
   <section id="cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px"></section>
   <section style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
     <div id="topics" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;flex:2 1 560px;min-width:0"></div>
-    <div style="flex:1 1 300px;min-width:0;position:relative;min-height:340px">
+    <div style="flex:1 1 340px;min-width:0;position:relative;min-height:340px">
       <div id="feed" style="position:absolute;inset:0;background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:9px;min-width:0;box-sizing:border-box"></div>
     </div>
   </section>
@@ -41,7 +42,7 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, SHORT, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups } from './ui.js';
 
 let D = null;
 const state = {
@@ -67,8 +68,9 @@ function render() {
   $('updated').innerHTML = `${dot('#1d1d1f', 6)}${esc(headerDate(D.today))} · updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
   $('updated').title = D.lastPollAt ? `Next poll ~${etTime(new Date(new Date(D.lastPollAt).getTime() + 20 * 60000).toISOString())}` : '';
 
+  // Ideological pair, a divider, then the identity caucuses.
   $('controls').innerHTML =
-    control([['All', 'All', null], ['CPC', 'CPC', C.CPC], ['NewDem', 'New Dem', C.NewDem], ['CBC', 'CBC', C.CBC]], 'caucus', scope) +
+    control([['All', 'All', null], ['CPC', 'CPC', C.CPC], ['NewDem', 'New Dem', C.NewDem], null, ['CBC', 'CBC', C.CBC], ['CHC', 'CHC', C.CHC], ['CAPAC', 'CAPAC', C.CAPAC]], 'caucus', scope) +
     control([['t', 'Today', null], ['w', '7 days', null]], 'window', win);
 
   // ── stat cards ──
@@ -81,7 +83,7 @@ function render() {
   $('cards').innerHTML = [
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.posts)}</div>${spark(curve, 108, 26)}</div>
-      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.mix[0], '#1d1d1f'], [S.mix[1], '#8e8e93'], [S.mix[2], '#d2d2d7']])}</div>
+      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.mix[0], '#194292'], [S.mix[1], '#a9c3ee'], [S.mix[2], '#e0e0e4']])}</div>
       <div style="font-size:11px;color:#6e6e73">${S.mix[0]}% original · ${S.mix[1]}% replies · ${S.mix[2]}% reposts</div>`),
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages</span><span style="white-space:nowrap">${classified ? Math.round(100 * coreN / classified) : 0}% of posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(coreN)}</div></div>
@@ -92,7 +94,7 @@ function render() {
       <div style="font-size:11px;color:#6e6e73">${fmt(S.perPost)} per post · ${win === 't' ? arrow(S.engDelta) + ' vs 7-day avg · ' : ''}top 10 members ${S.top10Share}%</div>`),
     leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum leader</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${leader.momentum.score}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(leader.name)}</span></div>${spark(leader.trend)}</div>
-      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, '#1d1d1f')}</div>
+      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, MOMENTUM_FILL)}</div>
       <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>`) : ''
   ].join('');
 
@@ -105,22 +107,25 @@ function render() {
 }
 
 function renderTopics(isAll, scope, win) {
+  // Only the ideological pair gets matrix columns; identity caucuses are
+  // filters in the caucus control, never columns.
   const th = (txt, extra = '') => `<th style="font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;${extra}">${txt}</th>`;
-  const colMax = KEYS.map((k) => Math.max(1, ...D.topics.map((t) => t[win][k].n)));
-  const top3 = KEYS.map((k) => D.topics.slice().sort((a, b) => b[win][k].n - a[win][k].n).slice(0, 3).map((t) => t.key));
+  const colMax = MATRIX.map((k) => Math.max(1, ...D.topics.map((t) => t[win][k].n)));
+  const top3 = MATRIX.map((k) => D.topics.slice().sort((a, b) => b[win][k].n - a[win][k].n).slice(0, 3).map((t) => t.key));
   const maxPosts = Math.max(1, ...D.topics.map((t) => val(t).n));
   const sorted = D.topics.slice().sort((a, b) => val(b).n - val(a).n);
   if (!Object.keys(state.open).length) {
     const first = sorted.find((t) => t.subs.length);
     if (first) state.open[first.key] = true;
   }
-  const rankBadge = (i, rank) => `<span title="Top ${rank} topic for ${SHORT[KEYS[i]]}" style="width:15px;height:15px;border-radius:50%;background:${C[KEYS[i]]};color:${KEYS[i] === 'NewDem' ? '#1d1d1f' : '#fff'};font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center">${rank}</span>`;
+  // Rank badges use the text tier so white digits stay legible (CPC #00823a).
+  const rankBadge = (i, rank) => `<span title="Top ${rank} topic for ${SHORT[MATRIX[i]]}" style="width:15px;height:15px;border-radius:50%;background:${CT[MATRIX[i]]};color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center">${rank}</span>`;
 
   const rows = sorted.map((t) => {
     const v = val(t);
     const isOpen = t.subs.length > 0 && !!state.open[t.key];
     const mo = t.momentum;
-    const caucusCells = isAll ? KEYS.map((k, i) => {
+    const caucusCells = isAll ? MATRIX.map((k, i) => {
       const n = t[win][k].n;
       const rank = top3[i].indexOf(t.key);
       return `<td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right"><div style="display:flex;justify-content:flex-end;align-items:center;gap:5px">${rank >= 0 ? rankBadge(i, rank + 1) : ''}<span>${fmt(n)}</span></div><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(100 * n / colMax[i], C[k])}</div></td>`;
@@ -129,7 +134,7 @@ function renderTopics(isAll, scope, win) {
     const subRows = isOpen ? t.subs.map((s) => {
       const sv = s[win][scope] || { n: 0, eng: 0, m: 0 };
       const share = v.n ? Math.round(100 * sv.n / v.n) : 0;
-      const subCells = isAll ? KEYS.map((k) => `<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">${fmt(s[win][k].n)}</td>`).join('') : '';
+      const subCells = isAll ? MATRIX.map((k) => `<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">${fmt(s[win][k].n)}</td>`).join('') : '';
       return `<tr style="background:#f7f7f9"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">${esc(label(`${t.key}/${s.key}`))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>`;
     }).join('') : '';
     return `<tr class="rowhover" data-toggle="${esc(t.key)}" aria-expanded="${isOpen}">
@@ -137,7 +142,7 @@ function renderTopics(isAll, scope, win) {
       ${caucusCells}
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right;font-weight:600">${fmt(v.n)}${!isAll ? `<div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(100 * v.n / maxPosts, C[scope])}</div>` : ''}</td>
       <td style="padding:8px 8px 8px 12px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${spark(t.trend)}<span style="font-size:11px;color:${t.d >= 0 ? '#1d1d1f' : '#8e8e93'};font-weight:${t.d >= 0 ? 500 : 400};white-space:nowrap">${arrow(t.d)}</span></div></td>
-      <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="${esc(momentumTitle)}"><span style="font-weight:600">${mo.score}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(mo.score, mo.score >= 60 ? '#1d1d1f' : '#8e8e93')}</div></td>
+      <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="${esc(momentumTitle)}"><span style="font-weight:600">${mo.score}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(mo.score, MOMENTUM_FILL)}</div></td>
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.eng)}</td>
       <td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.m)}</td></tr>${subRows}`;
   }).join('');
@@ -145,7 +150,7 @@ function renderTopics(isAll, scope, win) {
   $('topics').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Topics</h2></div>
   <table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>
     <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 0;border-bottom:1px solid #e8e8ed">Topic</th>
-    ${isAll ? KEYS.map((k) => `<th style="text-align:right;font-size:11px;font-weight:600;color:${CT[k]};padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">${SHORT[k]}</th>`).join('') : ''}
+    ${isAll ? MATRIX.map((k) => `<th style="text-align:right;font-size:11px;font-weight:600;color:${CT[k]};padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">${SHORT[k]}</th>`).join('') : ''}
     ${th('Posts', 'text-align:right')}
     <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 12px;border-bottom:1px solid #e8e8ed;width:13%">7-day trend</th>
     <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%" title="0–100, 50 = steady. 40% volume lift · 20% acceleration · 20% member adoption · 10% caucus spread · 10% engagement lift, each against the topic's 7-day baseline">Momentum</th>
@@ -165,8 +170,7 @@ function renderFeed(scope, win) {
   const items = feed.map((f) => {
     const chips = f.topics.filter((tk) => !tk.includes('/')).slice(0, 2).map((tk) => tag(label(tk))).join('');
     const extra = f.topics.filter((tk) => !tk.includes('/')).length > 2 ? tag('+' + (f.topics.filter((tk) => !tk.includes('/')).length - 2)) : '';
-    const color = CT[f.caucus.find((c) => CT[c])] || '#8e8e93';
-    return `<div style="display:grid;grid-template-columns:30px 1fr;gap:4px 10px;padding:10px 0;border-top:1px solid #f0f0f2">${avatar(f.member || f.handle, color)}
+    return `<div style="display:grid;grid-template-columns:30px 1fr;gap:4px 10px;padding:10px 0;border-top:1px solid #f0f0f2">${avatar(f.member || f.handle, f.caucus)}
     <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
       <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;min-width:0">${f.isNew ? `<span title="Captured in the latest poll">${dot('#1d1d1f', 6)}</span>` : ''}<span style="font-weight:600;font-size:13px">${esc(f.handle)}</span>${f.caucus.map((c) => `<span style="display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#6e6e73">${dot(C[c] || '#c7c7cc')}${SHORT[c] || esc(c)}</span>`).join('')}</div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(f.time, D.today))}</span></div>
       <p style="margin:0;font-size:13px;line-height:1.45">${esc(f.text)}</p>
@@ -179,23 +183,35 @@ function renderFeed(scope, win) {
 }
 
 function renderPhrases() {
+  // A caucus counts toward Unity when the line reaches 3+ of its members
+  // and 10%+ of its active accounts in the window.
+  const inC = (k, n) => n >= 3 && n >= 0.1 * (D.caucusActive?.[k] || Infinity);
   const rows = D.phrases.map((p) => {
-    const hot = p.spread && p.delta / p.spread >= 0.3;
+    const gain = p.adopt[p.adopt.length - 1] - p.adopt[0];
+    const pct = Math.round(100 * p.exact);
+    const reach = KEYS.filter((k, i) => inC(k, p.cm[i])).length;
     const firstStr = p.firstSeen === D.today ? 'today' : etDay(p.firstSeen);
-    return `<tr><td style="padding:7px 6px 7px 0;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px"><span style="flex:none;width:6px;height:6px;border-radius:50%;background:${p.emerging ? '#1d1d1f' : '#e8e8ed'}"${p.emerging ? ' title="New this week"' : ''}></span><span style="font-weight:600;letter-spacing:-0.01em">${esc(p.text)}</span></div></td>
-    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2">${p.topic ? tag(p.topic) : ''}</td>
-    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2;font-size:12px"><span style="font-weight:500">${esc(p.first || '')}</span><span style="color:#6e6e73"> · ${esc(firstStr)}</span></td>
-    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px"><span style="font-weight:600;min-width:2ch;text-align:right">${p.spread}</span><div style="flex:1;display:flex;height:5px;border-radius:3px;overflow:hidden;gap:1px" title="CPC ${p.cm[0]} · New Dem ${p.cm[1]} · CBC ${p.cm[2]}">${seg(p.cm.map((n, i) => [100 * n / Math.max(1, p.spread), C[KEYS[i]]]))}</div></div></td>
-    <td style="padding:7px 0 7px 6px;border-bottom:1px solid #f0f0f2;text-align:right;font-size:12px"><span style="${hot ? 'font-weight:700' : 'color:#6e6e73'}">+${p.delta}</span></td></tr>`;
+    const subTopic = p.topic && p.topic.toLowerCase() !== (p.pillar || '').toLowerCase() ? p.topic : '';
+    const pillarTag = p.pillar
+      ? tag(p.pillar)
+      : `<span style="font-size:11px;color:#6e6e73;padding:0 6px;border:1px dashed #d2d2d7;border-radius:6px;white-space:nowrap">Off-pillar</span>`;
+    const unity = `<div style="display:flex;gap:4px" title="${KEYS.map((k, i) => `${SHORT[k]} ${p.cm[i]}`).join(' · ')}">${KEYS.map((k, i) => `<span style="width:7px;height:7px;border-radius:50%;background:${inC(k, p.cm[i]) ? C[k] : '#e8e8ed'};display:inline-block"></span>`).join('')}</div>`;
+    return `<tr><td style="padding:7px 6px 7px 0;border-bottom:1px solid #f0f0f2"><span style="font-weight:600;letter-spacing:-0.01em">${esc(p.text)}</span></td>
+    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px;white-space:nowrap">${pillarTag}${subTopic ? `<span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(subTopic)}</span>` : ''}</div></td>
+    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2;font-size:12px"><span style="font-weight:500">${esc(p.first || '')}</span><span style="color:#6e6e73"> · ${esc(firstStr)}</span>${p.leadership ? '<span style="color:#6e6e73"> · leadership</span>' : ''}</td>
+    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px"><span style="font-weight:600;min-width:2ch;text-align:right">${p.spread}</span>${spark(p.adopt, 64, 18, true)}<span style="font-size:11px;color:${gain >= 5 ? '#1d1d1f' : '#8e8e93'};font-weight:${gain >= 5 ? 500 : 400};white-space:nowrap">${gain >= 0 ? '+' : ''}${gain}</span></div></td>
+    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${unity}<span style="font-size:11px;color:#6e6e73;white-space:nowrap">${reach}/${KEYS.length}</span></div></td>
+    <td style="padding:7px 0 7px 6px;border-bottom:1px solid #f0f0f2;text-align:right;font-size:12px" title="${pct}% of uses are the exact wording${p.variants?.length ? ` · variants: ${esc(p.variants.join(', '))}` : ''}"><span style="${pct < 75 ? 'font-weight:600;color:#1d1d1f' : 'color:#6e6e73'}">${pct}%</span></td></tr>`;
   }).join('');
-  $('phrases').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Phrases</h2></div><span style="font-size:11px;color:#6e6e73;display:inline-flex;align-items:center;gap:5px">${dot('#1d1d1f', 6)}new this week</span></div>
+  $('phrases').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Phrases</h2></div><span style="font-size:11px;color:#6e6e73">shared 2–4-word lines · gauged by adoption, unity across caucuses, and discipline of wording</span></div>
   <table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>
   <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px 0;border-bottom:1px solid #e8e8ed">Phrase</th>
-  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed">Topic</th>
-  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed">First use</th>
-  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:22%">Members</th>
-  <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 6px;border-bottom:1px solid #e8e8ed;white-space:nowrap">New 48h</th>
-  </tr></thead><tbody>${rows || '<tr><td colspan="5" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No phrases over the member-spread threshold yet.</td></tr>'}</tbody></table>`;
+  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:21%" title="The core message the line serves — the same three pillars as the Core-messages card">Pillar</th>
+  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed">Origin</th>
+  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:20%" title="Members using the line · cumulative adopters over 7 days · members gained this week">Adoption</th>
+  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Caucuses with three or more members using the line and 10%+ of their active accounts">Unity</th>
+  <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 6px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Share of uses in the exact wording — a low share means the line is drifting into variants">Discipline</th>
+  </tr></thead><tbody>${rows || '<tr><td colspan="6" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No phrases over the member-spread threshold yet.</td></tr>'}</tbody></table>`;
 }
 
 function renderClusters() {
