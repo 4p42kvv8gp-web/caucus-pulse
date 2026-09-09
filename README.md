@@ -4,11 +4,13 @@ A private listening and classification workspace for public X posts by House Dem
 
 The application preserves available source text, supports indexed and semantic search, proposes topics with a local model, and records corrections against the exact source and displayed prediction. Collection, account verification, analysis and review run as separate recoverable steps.
 
-**Current pilot:** a bounded X trial captured 300 List account profiles and five recent posts. Official House links established 120 current account bindings and admitted one captured post; four captures await verification. The archive also contains two historical examples and one authentic saved review. The List scan is incomplete. The $3.025 connection-trial ceiling is exhausted and automatic polling remains off because the provider's credits endpoint returned 404. No paid AI or hosted deployment is active.
+**Current pilot:** a bounded X trial captured 300 List account profiles and five recent posts. Official House links established 152 account bindings at the September 8 verification and admitted one captured post; binding freshness must be checked again before polling. Four captures await verification. The archive also contains two historical examples and two authentic saved reviews. The List scan is incomplete. The $3.025 connection-trial ceiling is exhausted and automatic polling remains off because the provider's credits endpoint returned 404. No paid AI or hosted deployment is active.
 
 The selected local classifier is Political DEBATE large, used for provisional topic/subtopic and communicative-function suggestions. A separate BERT model proposes named mentions. Both attach original source evidence. These are initial interpretations; named types can be wrong and do not verify an incident or its location. Your corrections take precedence; automatic weight training is not enabled. See [Local classification](docs/LOCAL_CLASSIFICATION.md).
 
 Start with the [pilot guide](docs/PILOT_GUIDE.md) for the dashboard and a short voice-teaching session. The [acceptance record](docs/PILOT_ACCEPTANCE.md) separates verified local behavior from the remaining live-operation requirements.
+
+[Story context and outside reporting](docs/STORY_CONTEXT.md) add researched named-story suggestions, dated background links, bounded news lookup and provisional titles for first incident reports. Outside leads remain unreviewed; your corrections retain precedence. The private researched examples are not bundled with the code.
 
 ## Run locally
 

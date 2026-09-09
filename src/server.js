@@ -21,6 +21,9 @@ import {accessFromEnvironment} from './access.js';
 import {operationalStatus} from './operational-status.js';
 import {drainLocalQueue} from './local-processing.js';
 import {inspectUnverifiedCaptures} from './capture-inspection.js';
+import {createHash} from 'node:crypto';
+import {createStoryContextProvider} from './story-context.js';
+import {createOutsideContextService} from './outside-context.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const settings = JSON.parse(readFileSync(resolve(root, 'config/settings.json'), 'utf8'));
@@ -31,6 +34,7 @@ const staticFiles = new Map([
   ['/incident-helpers.js', ['site/incident-helpers.js', 'text/javascript; charset=utf-8']],
   ['/overview.js', ['site/overview.js', 'text/javascript; charset=utf-8']],
   ['/source-text.js', ['site/source-text.js', 'text/javascript; charset=utf-8']],
+  ['/story-context.js', ['site/story-context.js', 'text/javascript; charset=utf-8']],
   ['/style.css', ['site/style.css', 'text/css; charset=utf-8']]
 ]);
 
@@ -67,8 +71,15 @@ async function readJson(req) {
   catch { throw new Error('Invalid JSON.'); }
 }
 
-export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null, classifier = null,access=null } = {}) {
+export function createServer(store, { credentials = createCredentialStore(resolve(root, 'data/secrets')),semantic = null, classifier = null,access=null,storyContext=null,outsideContext=null } = {}) {
   let grouping=false;
+  function contextFor(post){
+    if(!storyContext&&!outsideContext)return null;
+    const stories=storyContext?.(post)??null;
+    let outside;try{outside=outsideContext?.status(post)??null;}catch{outside={status:'unavailable',articles:[],canLookup:false,note:'Outside context is temporarily unavailable.'};}
+    return {stories,outside,hash:createHash('sha256').update(JSON.stringify({stories:stories?.hash??stories?.status,outside:outside?.hash??outside?.status})).digest('hex')};
+  }
+  const withContext=post=>({...post,context:contextFor(post)});
   const server = http.createServer(async (req, res) => {
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('X-Content-Type-Options', 'nosniff');
@@ -101,6 +112,13 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       if(req.method==='GET'&&url.pathname==='/api/captures/unverified')return json(200,inspectUnverifiedCaptures(store));
       if (req.method === 'GET' && url.pathname === '/api/posts') return json(200, explorerPage(store, filtersFrom(url), pageOptions(url)));
       if (req.method === 'GET' && url.pathname === '/api/review-queue') return json(200, reviewQueue(store, filtersFrom(url)));
+      const outsideMatch=url.pathname.match(/^\/api\/posts\/(\d+)\/outside-context$/);
+      if(req.method==='POST'&&outsideMatch){
+        const body=await readJson(req);
+        if(!body||Array.isArray(body)||Object.keys(body).length!==1||!/^[a-f0-9]{64}$/.test(body.sourceHash??''))throw new Error('Invalid outside context request.');
+        if(!outsideContext)return json(503,{error:'Outside news lookup is not configured.',code:'CONTEXT_UNAVAILABLE'});
+        return json(200,await outsideContext.lookup(outsideMatch[1],body.sourceHash));
+      }
       if(req.method==='GET'&&url.pathname==='/api/incidents')return json(200,incidentDesk(store,filtersFrom(url)));
       if(req.method==='POST'&&url.pathname==='/api/incidents/cases')return json(201,createIncidentCase(store,await readJson(req)));
       const incidentCaseMatch=url.pathname.match(/^\/api\/incidents\/cases\/([a-f0-9-]{36})$/);
@@ -175,17 +193,21 @@ export function createServer(store, { credentials = createCredentialStore(resolv
       const match = url.pathname.match(/^\/api\/posts\/(\d+)(\/feedback)?$/);
       if (match) {
         if (!store.getPost(match[1])) return json(404, { error: 'Post not found.' });
-        if (req.method === 'GET' && !match[2]) return json(200, store.getPost(match[1]));
+        if (req.method === 'GET' && !match[2]) return json(200, withContext(store.getPost(match[1])));
         if (req.method === 'POST' && match[2]) {
           const body=await readJson(req);
-          if(!body||Array.isArray(body)||Object.keys(body).some(k=>!['sourceHash','predictionHash','reviewId','labels','decision','reason','ruleProposal'].includes(k))||
+          if(!body||Array.isArray(body)||Object.keys(body).some(k=>!['sourceHash','predictionHash','reviewId','labels','decision','reason','ruleProposal','contextHash'].includes(k))||
             !/^[a-f0-9]{64}$/.test(body.sourceHash??'')||!/^[a-f0-9]{64}$/.test(body.predictionHash??'')||
             (body.reviewId!==null&&!/^[a-f0-9-]{36}$/.test(body.reviewId??'')))throw new Error('Invalid review versions: reload the post before saving.');
-          return json(200, store.saveFeedback(match[1],body,identity.reviewer));
+          const context=contextFor(store.getPost(match[1]));
+          if(context&&body.contextHash!==context.hash)return json(409,{error:'The story context changed. Reload it before saving your interpretation.',code:'CONTEXT_CHANGED'});
+          return json(200, withContext(store.saveFeedback(match[1],body,identity.reviewer,context)));
         }
       }
       return json(404, { error: 'Not found.' });
     } catch (error) {
+      if(error.code==='CONTEXT_CHANGED')return json(409,{error:'The source or its context changed. Reload before continuing.',code:error.code});
+      if(error.code==='CONTEXT_NOT_FOUND')return json(404,{error:'Post not found.'});
       if (error.code === 'EXPLORER_CHANGED') return json(409, { error:error.message,code:error.code });
       if (error.code === 'CLASSIFIER_STALE' || error.code === 'PREDICTION_CHANGED' || error.code==='REVIEW_CHANGED') return json(409, {error:error.message,code:error.code});
       if (error.code === 'CLASSIFIER_NOT_FOUND') return json(404, {error:'Post not found.'});
@@ -212,6 +234,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const semantic={name:settings.intelligence?.localEmbeddings?.model??'minilm',runtime:null,state:'disabled'};
   const classifier={runtime:null,state:'disabled',process:()=>void processLocalClassifications()};
   const modelLifetime=new AbortController();
+  const storyContext=createStoryContextProvider(resolve(root,'data/reports/story-memory.json'));
+  const outsideContext=settings.intelligence?.outsideContext?.enabled?createOutsideContextService({store,directory:resolve(root,'data'),storyContext,signal:modelLifetime.signal}):null;
+  let contextPass=null;
+  function processOutsideContext(){if(!stopping&&outsideContext&&!contextPass)contextPass=outsideContext.tick().catch(()=>{}).finally(()=>{contextPass=null;});}
   let embeddingPass=false,classifierPass=false,stopping=false;
   async function processLocalClassifications() {
     if (stopping || classifierPass || !classifier.runtime?.status().ready) return;
@@ -243,14 +269,15 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       .then(async runtime=>{classifier.runtime=runtime;classifier.state='ready';if(stopping)await runtime.close();else await processLocalClassifications();})
       .catch(()=>{classifier.state='model-unavailable';});
   }
-  const server = createServer(store,{semantic,classifier,access});
+  const server = createServer(store,{semantic,classifier,access,storyContext,outsideContext});
   const port = Number(process.env.PORT ?? 4317);
   server.listen(port, '127.0.0.1', () => console.log(`Caucus Pulse local preview: http://127.0.0.1:${server.address().port}`));
-  const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();void processLocalClassifications();},60_000);
+  processOutsideContext();
+  const interval = setInterval(()=>{processLocalRecords();void processLocalEmbeddings();void processLocalClassifications();processOutsideContext();},60_000);
   async function shutdown() {
     if(stopping)return;stopping=true;clearInterval(interval);modelLifetime.abort();
     const closed=new Promise(resolve=>server.close(resolve));
-    await Promise.all([warmup,classifierWarmup]);await Promise.all([semantic.runtime?.close(),classifier.runtime?.close()]);await closed;
+    await Promise.all([warmup,classifierWarmup,contextPass]);await Promise.all([semantic.runtime?.close(),classifier.runtime?.close()]);await closed;
     // Let a cancelled inference finish its fenced bookkeeping before closing SQLite.
     while(embeddingPass||classifierPass)await new Promise(resolve=>setImmediate(resolve));
     store.close();process.exit(0);

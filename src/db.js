@@ -155,7 +155,7 @@ export function openStore(path = ':memory:') {
     const ids = db.prepare(`SELECT s.post_id ${selection.from} ORDER BY s.created_at DESC,s.post_id DESC`).all(...selection.values);
     return ids.map(row => getPost(row.post_id));
   }
-  function saveFeedback(postId, value, reviewer = 'local-user') {
+  function saveFeedback(postId, value, reviewer = 'local-user', contextAtReview = null) {
     const feedback = validateFeedback(value);
     return transaction(() => {
       const post = getPost(postId);
@@ -167,7 +167,8 @@ export function openStore(path = ':memory:') {
       const snapshot = { ...feedback, scope: 'post-specific', predictionAtReview: {
         version: post.analysis.version, method: post.analysis.method,
         labels: post.analysis.labels, entities: post.analysis.entities, events: post.analysis.events, functions: post.analysis.functions ?? [], analysisHash: post.analysisHash
-      }, previousAcceptedLabels: post.labelStatus === 'human-accepted' ? post.labels : null };
+      }, previousAcceptedLabels: post.labelStatus === 'human-accepted' ? post.labels : null,
+      ...(contextAtReview?{contextAtReview}:{} ) };
       db.prepare(`INSERT INTO feedback(id, post_id, source_hash, created_at, reviewer, feedback_json)
         VALUES (?, ?, ?, ?, ?, ?)`).run(id, postId, post.contentHash, new Date().toISOString(), reviewer, JSON.stringify(snapshot));
       return getPost(postId);

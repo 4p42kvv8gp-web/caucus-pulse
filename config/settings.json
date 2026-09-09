@@ -6,6 +6,9 @@
   "pollMinutes": 30,
   "dashboardRefreshSeconds": 60,
   "intelligence": {
+    "outsideContext": {
+      "enabled": true
+    },
     "localEmbeddings": {
       "enabled": true,
       "model": "bge",

@@ -22,6 +22,8 @@ function review(s,id='10',decision='no-event',events=[]){const p=s.getPost(id);r
 test('the incident desk exposes candidate evidence, source dates and a separate human review decision',()=>{
   const s=setup();try{
     add(s);let data=incidentDesk(s,{}, {now});assert.equal(data.candidates.length,1);assert.equal(data.sources[0].text,wording);assert.equal(data.candidates[0].basis,'model-suggestion');
+    assert.equal(data.candidates[0].story.status,'provisional');assert.equal(data.candidates[0].story.memberCount,1);assert.equal(data.candidates[0].story.subtopic,'River Road · Flooding');
+    assert.equal(data.candidates[0].story.corroboration,'not-established');assert.equal(data.cases.length,0);
     assert.equal(data.sources[0].analysis,undefined,'The desk uses a bounded source projection rather than copying entire analysis histories');
     saveIncidentReview(s,'10',review(s));data=incidentDesk(s,{}, {now});assert.equal(data.candidates.length,0);assert.equal(data.decisions.noEvent,1);
     assert.equal(s.getPost('10').labels[0].topic,'Disaster response','An incident correction does not change topic labels');

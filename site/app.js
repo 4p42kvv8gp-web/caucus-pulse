@@ -1,6 +1,7 @@
 import {highlightedText} from './source-text.js';
 import {createIncidentDesk} from './incident-desk.js';
 import {createOverview} from './overview.js';
+import {storyContextHtml} from './story-context.js';
 
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -153,6 +154,7 @@ function renderReview() {
   $('review').innerHTML = `<div class="review-grid"><div><article class="post-card">${sourceHeader(post)}<p class="post-text">${esc(post.text)}</p>${tags(post)}
     <div class="post-footer"><button class="text-button" id="review-event-source" type="button">Review incident / location →</button><button class="text-button" id="review-reload" type="button">Reload latest source</button></div><div class="explanation"><h3>Current analysis explanation</h3><p class="quiet">${esc(post.analysis.method)} · ${esc(post.analysis.version ?? 'Awaiting analysis')}</p><button id="analyze-post" class="secondary" type="button" ${state.data.classifierRuntime?.ready?'':'disabled'}>Analyze with local model</button><span id="analyze-state" class="quiet" role="status">${state.data.classifierRuntime?.ready?'':' Local classifier is not ready.'}</span><p>${esc(post.analysis.explanation)}</p>${post.analysis.labels.map(l => `<div class="evidence"><strong>${esc(l.topic)}${l.subtopic ? ` / ${esc(l.subtopic)}` : ''}</strong>${esc(l.explanation)}${sourceEvidence(l.evidence)}</div>`).join('')}
     ${semanticDetails(post.analysis)}
+    ${storyContextHtml(post.context,{esc,date,sourceEvidence})}
     ${proposal ? `<div class="explanation"><h3>Prepared discussion proposal</h3><p>${esc(proposal.justification)}</p><p class="quiet">${esc(proposal.uncertainty)}</p><p class="quiet">Prepared by the assistant for this exercise; not an accepted rule or an automated semantic result.</p></div>` : ''}
     <div class="limits">Context limits<ul>${post.analysis.limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></div></article></div>
     <div class="panel"><h3>Your interpretation</h3><p class="quiet">${esc(post.provenance.reviewPrompt ?? 'What should this post be classified as, and what wording supports that interpretation?')}</p>
@@ -163,6 +165,16 @@ function renderReview() {
     ${post.feedback.length ? `<div class="history"><h3>Saved review history</h3>${post.feedbackOmitted?`<p class="quiet">${post.feedback.length} of ${post.feedbackCount} reviews displayed. The remaining history is retained privately.</p>`:''}${post.feedback.map(f => `<p><strong>${esc(date(f.createdAt))}</strong>${!f.appliesToCurrentText ? ' · Earlier source version' : ''}<br>${esc(f.reason)}${f.ruleProposal ? `<br><span class="quiet">Proposed general lesson: ${esc(f.ruleProposal)}</span>` : ''}</p>`).join('')}</div>` : ''}</div></div>`;
   $('review-event-source').addEventListener('click',()=>void selectIncident(post.id));
   $('review-reload').addEventListener('click',()=>void selectReview(post.id));
+  $('outside-lookup')?.addEventListener('click',async()=>{
+    if(state.dirty){showError('Save your draft or reload the source before checking new context.');return;}
+    const button=$('outside-lookup');button.disabled=true;
+    try{
+      const result=await api(`/api/posts/${post.id}/outside-context`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sourceHash:post.contentHash})});
+      if(state.selected!==post.id||state.dirty)return;
+      await selectReview(post.id,{changeView:false});
+      if($('outside-state'))$('outside-state').textContent=result.retryAt?` Next check available ${date(result.retryAt)}.`:` ${result.status.replaceAll('-',' ')}.`;
+    }catch(error){showError(error.message);}finally{if(button.isConnected)button.disabled=false;}
+  });
   $('add-label').addEventListener('click', () => { $('label-rows').insertAdjacentHTML('beforeend', labelRow()); state.dirty = true; state.reviewSequence++; });
   $('label-rows').addEventListener('click', event => { if (event.target.closest('.remove')) { event.target.closest('.label-entry').remove(); state.dirty = true; state.reviewSequence++; } });
   $('feedback-form').addEventListener('input', () => { state.dirty = true; state.reviewSequence++; });
@@ -187,7 +199,7 @@ function renderReview() {
     const savedDecision=$('feedback-decision').value;
     try {
       await api(`/api/posts/${post.id}/feedback`, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, labels:savedDecision==='no-supported-topic'?[]:labels, decision:savedDecision, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
+        body: JSON.stringify({ sourceHash: post.contentHash, predictionHash:post.analysisHash, reviewId:post.reviewId, contextHash:post.context?.hash, labels:savedDecision==='no-supported-topic'?[]:labels, decision:savedDecision, reason: $('feedback-reason').value, ruleProposal: $('feedback-rule').value || null }) });
       state.dirty = false; await refresh();
       if ($('save-state')) $('save-state').textContent = savedDecision==='needs-context'?'Saved. Classification remains unresolved; tentative labels stay outside topic counts.':savedDecision==='no-supported-topic'?'Saved. This post has no accepted topic.':'Saved. This post now uses your correction.';
     } catch (error) { showError(error.message); }

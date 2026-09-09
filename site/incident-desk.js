@@ -6,13 +6,13 @@ export function createIncidentDesk({api, esc, date, sourceHeader, filters, error
   const json = (method,value) => ({method,headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
   const markDirty = value => {dirty=value;if(value)detailSequence++;setDirty(value);};
   const mayLeave = () => !dirty || confirm('Discard the unsaved incident changes?');
-  const badge = candidate => `<span class="tag ${candidate.basis==='human-source-review'?'reviewed':''}">${candidate.needsContext?'Needs context':candidate.basis==='human-source-review'?'Source reviewed':'Suggested'}</span>`;
+  const badge = candidate => `<span class="tag ${candidate.basis==='human-source-review'?'reviewed':''}">${candidate.needsContext?'Needs context':candidate.basis==='human-source-review'?'Source reviewed':'Provisional · first report'}</span>`;
   const eventSummary = event => `<p>${esc(event.description)}</p><p class="quiet">${esc(event.development.replaceAll('-',' '))} · ${event.location?esc(event.location.name):'Location unresolved'} · ${event.districtRelation==='explicitly-stated'?'In-district wording':event.districtRelation==='explicitly-outside'?'Outside-district wording':'District connection unresolved'}</p>`;
   function renderList() {
     const sources = new Map(desk.sources.map(p=>[p.id,p]));
     $('incident-count').textContent = `${desk.candidates.length} suggestions · ${desk.cases.filter(c=>c.status==='watching').length} watched cases`;
     $('incident-incoming').innerHTML = desk.candidates.map(candidate=>{
-      const post=sources.get(candidate.postId), title=candidate.event.location?.name || candidate.event.description;
+      const post=sources.get(candidate.postId), title=candidate.story?.subtopic || candidate.event.location?.name || candidate.event.description;
       return `<button class="incident-item ${selected?.kind==='source'&&selected.id===post.id?'selected':''}" data-incident-post="${esc(post.id)}"><span class="incident-item-title">${esc(title)}</span><span class="quiet">${esc(post.memberName)} · ${esc(date(post.createdAt))}</span>${badge(candidate)}</button>`;
     }).join('') || '<div class="empty">No incident suggestions in this archive selection. Posts awaiting collection or review are not covered.</div>';
     $('incident-cases').innerHTML = desk.cases.map(c=>`<button class="incident-item ${selected?.kind==='case'&&selected.id===c.id?'selected':''}" data-incident-case="${esc(c.id)}"><span class="incident-item-title">${esc(c.title)}</span><span class="quiet">${esc(c.status)} · ${c.linkedSources} stored event links</span></button>`).join('') || '<p class="quiet">Track a report to start a case. You decide which sources belong together.</p>';

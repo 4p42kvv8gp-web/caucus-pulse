@@ -1,5 +1,13 @@
 # Tasks
 
+## Story context and outside reporting — September 9, 2026
+
+- [x] **Recognize researched named stories** — Private examples use nearby source wording and explicit date boundaries; the workshop shows supporting passages and dated citations. Suggestions preserve the two authentic topic reviews.
+- [x] **Look outside member accounts** — Bounded GDELT news lookup is connected to recent-source processing and the workshop. Lookup failures and rate limits remain visible; news leads are not verified article assessments.
+- [x] **Surface one-member reports** — Each extracted incident immediately receives a provisional title, with no multi-member threshold or automatic confirmation/merging.
+- [x] **Protect teaching context** — A correction records the source, prediction, prior review and displayed background; stale context requires reloading. All 216 Node checks pass; 14 private constructed story challenges pass separately. No weights were trained.
+- [ ] **Extend contextual intelligence** — Add reliable official-alert/search adapters, cited article assessment, conflict handling and automatic naming/merging of unfamiliar stories; evaluate with real held-out judgments before promotion.
+
 ## Resumed monitoring setup — September 8, 2026, 17:07 UTC
 
 - [x] **Repair missed official account links** — HTTP/@ links and enabled Drupal social settings now preserve source provenance and match exact observed numeric profiles. Added 32 bindings; 152 active. No new paid reads.

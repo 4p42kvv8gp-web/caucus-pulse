@@ -8,6 +8,14 @@ const fail=(message,code='INCIDENT_CHANGED')=>Object.assign(new Error(message),{
 const cleanEvent=e=>Object.fromEntries(['description','development','location','districtRelation','districtEvidence','evidence'].map(k=>[k,e[k]]));
 const text=(value,max,name)=>{if(typeof value!=='string'||!value.trim()||value.length>max||value.includes('\0'))throw new Error(`Invalid ${name}.`);return value.trim();};
 const validHash=value=>typeof value==='string'&&/^[a-f0-9]{64}$/.test(value);
+function provisionalStory(post,event,key){
+  const passage=(event.evidence??[]).map(s=>s.text).join(' ');
+  const incident=passage.match(/\b(flooding|flood|wildfire|shooting|shooter|fire|tornado|earthquake|explosion)\b/i)?.[0];
+  const title=[event.location?.name,incident].filter(Boolean).join(' · ')||event.description;
+  return {id:`report:${key}`,topic:event.districtRelation==='explicitly-stated'?'District incidents':'Incidents',subtopic:title.slice(0,160),status:'provisional',
+    firstReportAt:post.createdAt,sourceCount:1,memberCount:1,corroboration:'not-established',
+    note:'Surfaced from one source report. Related reports have not yet been merged or independently corroborated.'};
+}
 const sourcePost=post=>({...Object.fromEntries(['id','memberId','memberName','handle','type','createdAt','sourceUrl','contentHash','analysisHash','text','textCoverage','accountType','district','contextCoverage'].map(k=>[k,post[k]])),
   labels:post.labels.map(l=>({topic:l.topic,subtopic:l.subtopic})),functions:(post.analysis.functions??[]).map(f=>f.function)});
 
@@ -47,11 +55,12 @@ export function postIncidents(store,postId){
   const current=store.db.prepare('SELECT * FROM incident_reviews WHERE post_id=? AND source_hash=? ORDER BY sequence DESC LIMIT 1').get(postId,post.contentHash);
   const fromReview=current&&current.decision!=='needs-context';
   const events=fromReview?JSON.parse(current.events_json):post.analysis.events??[];
-  const candidates=events.slice(0,10).map((event,index)=>({
-    key:hash({postId:post.id,sourceHash:post.contentHash,event:cleanEvent(event)}),index,event:cleanEvent(event),
+  const candidates=events.slice(0,10).map((event,index)=>{
+    const key=hash({postId:post.id,sourceHash:post.contentHash,event:cleanEvent(event)});
+    return {key,index,event:cleanEvent(event),story:provisionalStory(post,event,key),
     basis:fromReview?'human-source-review':'model-suggestion',reviewId:fromReview?current.id:null,
     needsContext:current?.decision==='needs-context'
-  }));
+  };});
   return {post,candidates,decision:current?.decision??'unreviewed',revision:current?.sequence??0,reviewCount:store.db.prepare('SELECT COUNT(*) AS n FROM incident_reviews WHERE post_id=?').get(postId).n,
     history:rows.map(r=>({id:r.id,sourceHash:r.source_hash,predictionHash:r.prediction_hash,createdAt:r.created_at,decision:r.decision,events:JSON.parse(r.events_json),reason:r.reason,appliesToCurrentText:r.source_hash===post.contentHash})),
     note:'Review concerns what this source reports. It does not independently verify an incident occurred or establish its current real-world status.'};
