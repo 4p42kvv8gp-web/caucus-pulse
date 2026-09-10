@@ -4,11 +4,16 @@
 //   2. Top 3 topics per caucus (Progressive, New Dems, CBC)
 //   3. Top strategic-syntax phrases with adoption info
 //   4. Volume + spend stat line
-//   5. Emerging clusters awaiting a taxonomy decision
-import { readJSON, writeJSON, settings, daysAgoEt, p } from './util.js';
+//   5. Story candidates awaiting a taxonomy decision
+//   6. Stories promoted (and retired) tonight by src/stories.js, and every
+//      provisional story still awaiting review with its last-7-day counts —
+//      the owner prunes from here instead of approving one by one.
+import { readJSON, writeJSON, settings, daysAgoEt, addDays, p } from './util.js';
 import fs from 'node:fs';
 import { loadState, dailyBudget, estCost, topicsPath, syntaxPath, loadDay } from './store.js';
 import { rollupsPath } from './rollup.js';
+import { loadTaxonomy, ymd } from './taxonomy.js';
+import { storySettings } from './stories.js';
 
 function fmt(n) { return n.toLocaleString('en-US'); }
 
@@ -26,7 +31,36 @@ function subsUnder(rows, date, caucus, macro, n = 3) {
     .slice(0, n);
 }
 
-export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget }) {
+// One subtopic's activity over the 7 days ending at `date` (caucus 'all'):
+// posts and retweets summed, days with any activity, and the busiest day's
+// distinct members (members cannot be summed across days from rollups).
+export function weekOf(rows, date, macro, sub) {
+  const from = addDays(date, -6);
+  const days = rows.filter((r) => r.caucus === 'all' && r.macro === macro && r.sub === sub && r.date >= from && r.date <= date);
+  return {
+    posts: days.reduce((a, r) => a + r.posts, 0),
+    retweets: days.reduce((a, r) => a + r.retweets, 0),
+    days: days.filter((r) => r.posts + r.retweets > 0).length,
+    members: days.reduce((a, r) => Math.max(a, r.members), 0)
+  };
+}
+
+// Provisional (auto-promoted, unconfirmed) stories in the taxonomy, and how
+// many retired entries still sit in the YAML for history.
+export function provisionalStories(tax) {
+  const live = [], retired = [];
+  for (const [macro, m] of Object.entries(tax || {})) {
+    for (const [key, sub] of Object.entries(m.subtopics || {})) {
+      if (sub.retired) retired.push({ macro, key });
+      else if (sub.story && sub.provisional) live.push({ macro, key, label: sub.label, since: ymd(sub.since), promoted: ymd(sub.promoted) });
+    }
+  }
+  return { live, retired };
+}
+
+// `stories` (data/stories.json) and `tax` (config/taxonomy.yaml) are
+// injectable so tests render from fixtures; main() passes the real files.
+export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, stories = readJSON(p('data', 'stories.json'), null), tax = loadTaxonomy() }) {
   const rows = rollups?.rows || [];
   const labels = rollups?.labels || {};
   const label = (r) => labels[r.sub ? `${r.macro}/${r.sub}` : r.macro] || r.macro;
@@ -67,21 +101,28 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
   lines.push(`- X reads on ${date}: ${fmt(u.posts + u.users)} / ${fmt(budget)} budget (~$${estCost(u).toFixed(2)})`);
   if (topics?.model) lines.push(`- Classifier: ${topics.model}${topics.failedChunks ? ` — ⚠ ${topics.failedChunks} failed chunk(s)` : ''}${topics.unclassified?.length ? `, ${topics.unclassified.length} unclassified` : ''}`);
 
-  // Cross-day story candidates (src/stories.js) when built; else tonight's raw clusters.
-  const stories = readJSON(p('data', 'stories.json'), null);
-  const cands = (stories?.candidates || []).filter((c) => c.placement && c.placement.kind !== 'noise');
+  // Cross-day story candidates (src/stories.js) when built; else tonight's
+  // raw clusters. Candidates already promoted into the taxonomy are not
+  // repeated here — they appear under "promoted tonight" / "awaiting review".
+  const cfg = storySettings();
+  const promotedSet = new Set(stories?.promoted || []);
+  const cands = (stories?.candidates || []).filter((c) => c.placement && c.placement.kind !== 'noise' && !promotedSet.has(`${c.placement.macro}/${c.placement.key}`));
   if (cands.length) {
-    const show = (kind, title) => {
+    const show = (kind, title, hint) => {
       const list = cands.filter((c) => c.placement.kind === kind).slice(0, 8);
       if (!list.length) return;
       lines.push('', `## ${title}`, '');
       for (const c of list) {
         const where = c.placement.macro ? `${c.placement.macro}/${c.placement.key}` : `(no macro fits) ${c.placement.key}`;
-        lines.push(`- **${c.placement.label}** — ${c.posts} posts, ${c.members} members over ${c.days} day(s) (${c.firstSeen} → ${c.lastSeen}). Promote: \`npm run stories -- --promote=${c.placement.key}\` → ${where}`);
+        lines.push(`- **${c.placement.label}** — ${c.posts} posts, ${c.members} members over ${c.days} day(s) (${c.firstSeen} → ${c.lastSeen}). ${hint(c, where)}`);
       }
     };
-    show('story', 'Developing stories (not yet in the taxonomy)');
-    show('gap', 'Taxonomy gaps (durable subjects with no home)');
+    show('story', 'Developing stories (not yet in the taxonomy)', (c, where) => (c.placement.macro
+      ? `Auto-promotes once it clears ≥${cfg.min_posts} posts, ≥${cfg.min_members} members, ≥${cfg.min_days} days; now: \`npm run stories -- --promote=${c.placement.key}\` → ${where}`
+      : `No macro fits — add \`${c.placement.key}\` under a macro by hand in config/taxonomy.yaml`));
+    show('gap', 'Taxonomy gaps (durable subjects with no home — never auto-promoted)', (c, where) => (c.placement.macro
+      ? `Promote by hand: \`npm run stories -- --promote=${c.placement.key}\` → ${where}`
+      : `No macro fits — add \`${c.placement.key}\` under a macro by hand in config/taxonomy.yaml`));
   } else {
     const emerging = topics?.emerging || [];
     if (emerging.length) {
@@ -90,6 +131,41 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
         lines.push(`- **${e.label}** — ${e.ids.length} tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.`);
       }
     }
+  }
+
+  // ── Continuous promotion. The nightly for `date` runs early the next ET
+  // day, so "tonight" is either date stamp.
+  const night = addDays(date, 1);
+  const tonight = (log, field) => (log || []).filter((e) => e[field] === date || e[field] === night);
+  const promotedTonight = tonight(stories?.promotions, 'promoted');
+  const retiredTonight = tonight(stories?.retirements, 'retired');
+  if (promotedTonight.length || retiredTonight.length) {
+    lines.push('', '## Stories promoted tonight', '');
+    for (const e of promotedTonight) {
+      lines.push(`- **${e.label}** → ${e.macro}/${e.key} — ${fmt(e.posts)} posts, ${fmt(e.members)} members over ${e.days} day(s), since ${e.since}${e.how === 'manual' ? ' (approved by hand)' : ' (provisional)'}`);
+    }
+    if (promotedTonight.length) lines.push('', '_The classifier sees these from its next run. Keep one by deleting `provisional: true`; drop one by removing its entry or setting `retired: true` in config/taxonomy.yaml._');
+    if (retiredTonight.length) {
+      lines.push('', `### Retired tonight (no assignments for ${retiredTonight[0].quietDays} days)`, '');
+      for (const e of retiredTonight) lines.push(`- **${e.label}** (${e.macro}/${e.key}, since ${e.since}) — out of the classifier prompt; key kept for history`);
+    }
+  }
+
+  const { live, retired } = provisionalStories(tax);
+  if (live.length) {
+    lines.push('', '## Provisional stories awaiting review', '');
+    lines.push(`_${live.length} auto-promoted stor${live.length === 1 ? 'y' : 'ies'} in config/taxonomy.yaml with the last 7 days of assignments. Prune here: remove an entry or set \`retired: true\`; delete \`provisional: true\` to confirm one. Quiet ones retire on their own after ${cfg.retire_after_quiet_days} days._`, '');
+    const withWeek = live.map((s) => ({ ...s, week: weekOf(rows, date, s.macro, s.key) }))
+      .sort((a, b) => (b.week.posts + b.week.retweets) - (a.week.posts + a.week.retweets) || (a.key < b.key ? -1 : 1));
+    for (const s of withWeek) {
+      const w = s.week;
+      const when = `since ${s.since || '?'}${s.promoted ? `, promoted ${s.promoted}` : ''}`;
+      const activity = w.posts + w.retweets
+        ? `${fmt(w.posts)} posts + ${fmt(w.retweets)} RTs on ${w.days} of the last 7 days, up to ${fmt(w.members)} members/day`
+        : 'no assignments in the last 7 days';
+      lines.push(`- **${s.label}** (${s.macro}/${s.key}, ${when}) — ${activity}`);
+    }
+    if (retired.length) lines.push('', `_${retired.length} retired entr${retired.length === 1 ? 'y' : 'ies'} remain in the YAML for history (${retired.map((r) => `${r.macro}/${r.key}`).join(', ')}); delete them whenever convenient._`);
   }
   return lines.join('\n') + '\n';
 }
@@ -104,7 +180,9 @@ async function main() {
     topics: readJSON(topicsPath(date), null),
     tweets: loadDay(date),
     usage: state.usage[date],
-    budget: dailyBudget()
+    budget: dailyBudget(),
+    stories: readJSON(p('data', 'stories.json'), null),
+    tax: loadTaxonomy()
   });
   const out = p('reports', `${date}.md`);
   fs.mkdirSync(p('reports'), { recursive: true });

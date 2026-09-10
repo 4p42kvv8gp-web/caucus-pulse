@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import {
   labelTokens, similar, mergeClusters, promoteToTaxonomy, slug, scoreCandidates,
   kindsCompatible, sharedLabelTokens, mergeEvidence, applyMerges,
-  confirmInput, confirmDuplicates, mergeConfirmedGroups
+  confirmInput, confirmDuplicates, mergeConfirmedGroups,
+  autoPromote, properNounAliases, mergeAliases, existingSubtopic,
+  assignmentCounts, quietStories, markRetired
 } from '../src/stories.js';
 
 test('label tokens drop stopwords, plurals and punctuation', () => {
@@ -251,4 +253,173 @@ test('mergeConfirmedGroups unions earlier and new groups, dropping repeats and s
   const fresh = [{ keys: ['b', 'a'], reason: 'again' }, { keys: ['c', 'd'], reason: 'new' }];
   assert.deepEqual(mergeConfirmedGroups(prev, fresh), [{ keys: ['a', 'b'], reason: 'old' }, { keys: ['c', 'd'], reason: 'new' }]);
   assert.deepEqual(mergeConfirmedGroups(undefined, fresh), [{ keys: ['b', 'a'], reason: 'again' }, { keys: ['c', 'd'], reason: 'new' }]);
+});
+
+// ── continuous promotion ─────────────────────────────────────────────────
+
+const CFG = { auto_promote: true, min_posts: 5, min_members: 3, min_days: 2, max_per_night: 2, retire_after_quiet_days: 21 };
+// A scored candidate with a placement, as autoPromote reads it.
+const scored = (key, { posts, members, days, kind = 'story', macro = 'democracy', pkey = key, label = key, aliases = [], firstSeen = '2026-09-01', lastSeen = '2026-09-08', samples = [] }) => ({
+  key, label: key, posts, members, days, firstSeen, lastSeen, samples, ids: [],
+  placement: { kind, macro, key: pkey, label, aliases, mergeInto: null }
+});
+
+test('autoPromote: stories over every threshold are promoted by posts, capped per night; gaps and noise never', () => {
+  const candidates = [
+    scored('epstein', { posts: 12, members: 6, days: 4, pkey: 'epstein-files', label: 'Epstein files' }),
+    scored('lake', { posts: 10, members: 3, days: 3, pkey: 'lake-america', label: 'Lake America renaming' }),
+    scored('arch', { posts: 7, members: 4, days: 2, pkey: 'trump-arch', label: 'Trump Arch' }),
+    scored('one-voice', { posts: 9, members: 1, days: 5, pkey: 'one-voice' }),      // one member
+    scored('one-day', { posts: 9, members: 4, days: 1, pkey: 'one-day' }),          // one day
+    scored('thin', { posts: 4, members: 4, days: 4, pkey: 'thin' }),                // four posts
+    scored('farmers', { posts: 40, members: 20, days: 12, kind: 'gap', macro: 'economy', pkey: 'agriculture' }),
+    scored('tributes', { posts: 40, members: 20, days: 12, kind: 'noise', macro: null }),
+    scored('orphan', { posts: 20, members: 8, days: 3, macro: null, pkey: 'sept-11' }) // story with no macro
+  ];
+  const tax = { democracy: { label: 'D', subtopics: {} }, economy: { label: 'E', subtopics: {} } };
+  const { items, deferred, gaps, skipped } = autoPromote(candidates, CFG, { tax, night: '2026-09-10' });
+  assert.deepEqual(items.map((i) => i.key), ['epstein-files', 'lake-america']);
+  assert.deepEqual(deferred.map((c) => c.key), ['arch']);
+  assert.deepEqual(gaps.map((c) => c.key), ['farmers']);
+  assert.deepEqual(items[0], {
+    macro: 'democracy', key: 'epstein-files', label: 'Epstein files', aliases: [],
+    since: '2026-09-01', provisional: true, promoted: '2026-09-10',
+    candidate: 'epstein', posts: 12, members: 6, days: 4, lastSeen: '2026-09-08'
+  });
+  const why = Object.fromEntries(skipped.map((s) => [s.key, s.why]));
+  assert.match(why['one-voice'], /1\/3 members/);
+  assert.match(why['one-day'], /1\/2 days/);
+  assert.match(why.thin, /4\/5 posts/);
+  assert.match(why.orphan, /no macro/);
+  assert.ok(!('tributes' in why));
+  // no cap → everything eligible goes; the deferred list empties
+  const all = autoPromote(candidates, { ...CFG, max_per_night: 8 }, { tax });
+  assert.deepEqual(all.items.map((i) => i.key), ['epstein-files', 'lake-america', 'trump-arch']);
+  assert.deepEqual(all.deferred, []);
+  assert.equal(all.items[0].promoted, null);
+});
+
+test('autoPromote: already-promoted keys, keys the taxonomy already has (by key, label or alias), and duplicate placement keys are skipped', () => {
+  const candidates = [
+    scored('epstein-files', { posts: 12, members: 6, days: 4, pkey: 'epstein-files', label: 'Epstein files' }),
+    scored('epstein-investigation', { posts: 8, members: 5, days: 3, pkey: 'epstein-files', label: 'Epstein files & investigation' }),
+    scored('lake', { posts: 10, members: 3, days: 3, pkey: 'lake-america', label: 'Lake America renaming', aliases: ['Lake America'] }),
+    scored('arch', { posts: 7, members: 4, days: 2, pkey: 'trump-arch', label: 'Trump Arch', aliases: ['Trump Arch'] }),
+    scored('gone', { posts: 7, members: 4, days: 2, macro: 'vanished', pkey: 'gone' })
+  ];
+  const tax = { democracy: { label: 'D', subtopics: { 'lake-ontario': { label: 'Lake Ontario', aliases: ['Lake America'] }, monument: { label: 'Trump arch' } } } };
+  const { items, skipped } = autoPromote(candidates, { ...CFG, max_per_night: 8 }, { tax, promoted: ['democracy/epstein-files'] });
+  assert.deepEqual(items, []);
+  const why = Object.fromEntries(skipped.map((s) => [s.key, s.why]));
+  assert.match(why.lake, /already in the taxonomy as democracy\/lake-ontario/);
+  assert.match(why.arch, /already in the taxonomy as democracy\/monument/); // label match is case-insensitive
+  assert.match(why.gone, /macro "vanished" is no longer/);
+  assert.ok(!('epstein-files' in why) && !('epstein-investigation' in why)); // both already promoted: silent
+  // without the promoted list, the two Epstein candidates collapse to one entry (most posts wins)
+  const again = autoPromote(candidates.slice(0, 2), CFG, { tax });
+  assert.deepEqual(again.items.map((i) => [i.key, i.candidate]), [['epstein-files', 'epstein-files']]);
+  assert.match(again.skipped.find((s) => s.key === 'epstein-investigation').why, /same story as a larger candidate \(democracy\/epstein-files\)/);
+  // two keys for one story in the same night — a shared alias (or label) under the macro — also collapse
+  const twins = [
+    scored('lake-stunt', { posts: 10, members: 6, days: 4, pkey: 'lake-america-renaming', label: "Trump 'Lake America' renaming", aliases: ['Lake America', 'Burgum'] }),
+    scored('place-renaming', { posts: 7, members: 6, days: 4, pkey: 'lake-ontario-renaming', label: 'Trump renaming of Lake Ontario', aliases: ['Lake America', 'Dingell bill'] }),
+    scored('elsewhere', { posts: 6, members: 3, days: 2, macro: 'climate', pkey: 'great-lakes', label: 'Great Lakes', aliases: ['Lake America'] }) // other macro: not a twin
+  ];
+  const t = autoPromote(twins, { ...CFG, max_per_night: 8 }, { tax: { democracy: { label: 'D', subtopics: {} }, climate: { label: 'C', subtopics: {} } } });
+  assert.deepEqual(t.items.map((i) => `${i.macro}/${i.key}`), ['democracy/lake-america-renaming', 'climate/great-lakes']);
+  assert.match(t.skipped.find((s) => s.key === 'place-renaming').why, /same story as a larger candidate \(democracy\/lake-america-renaming\)/);
+});
+
+test('properNounAliases: frequent capitalized bigrams/trigrams, deterministic, not already covered', () => {
+  const texts = [
+    'Dear @SecretaryBurgum: renaming Lake Ontario "Lake America" is a stunt. Lake Ontario is not yours. https://t.co/abc',
+    'RT @tedlieu: Trump wants to rename Lake Ontario. The Great Lakes belong to everyone, Secretary Burgum.',
+    'Today Rep. Dingell introduced a bill to block the Lake Ontario renaming. The Great Lakes are not a Trump meme!',
+    'Lake Ontario again. She said it best: Great Lakes, not Lake America.'
+  ];
+  assert.deepEqual(properNounAliases(texts), ['Lake Ontario', 'Great Lakes', 'Lake America']);
+  assert.deepEqual(properNounAliases(texts, { existing: ['Lake Ontario renaming', 'Lake America'] }), ['Great Lakes']);
+  assert.deepEqual(properNounAliases(texts, { max: 1 }), ['Lake Ontario']);
+  assert.deepEqual(properNounAliases(texts.slice().reverse()), properNounAliases(texts)); // order-independent
+  // sentence ends close a run ("Parton. She" never glues); leading/trailing function words are trimmed
+  assert.deepEqual(properNounAliases(['Dolly Parton. She built The Imagination Library.', 'The Imagination Library was Dolly Parton at her best']), ['Imagination Library', 'Dolly Parton']);
+  // abbreviations do not end a sentence; possessives and hashes are stripped
+  assert.deepEqual(properNounAliases(['Dr. Acton\'s campaign', 'Dr. Acton was attacked #Ohio']), ['Dr Acton']);
+  assert.deepEqual(properNounAliases([]), []);
+  assert.deepEqual(properNounAliases(['one text only mentions Amy Acton once']), ['Amy Acton']); // single text: any name counts
+});
+
+test('mergeAliases keeps placement aliases first and dedupes case-insensitively', () => {
+  assert.deepEqual(mergeAliases(['Lake America', ' Burgum '], ['lake america', 'Great Lakes', '']), ['Lake America', 'Burgum', 'Great Lakes']);
+  assert.deepEqual(mergeAliases(null, ['a', 'b', 'c'], 2), ['a', 'b']);
+});
+
+test('existingSubtopic matches by key, label or alias under the same macro only', () => {
+  const tax = { democracy: { label: 'D', subtopics: { 'epstein-files': { label: 'Epstein files', aliases: ['Epstein'] } } }, tech: { label: 'T', subtopics: {} } };
+  assert.equal(existingSubtopic(tax, 'democracy', { key: 'epstein-files', label: 'x', aliases: [] }), 'epstein-files');
+  assert.equal(existingSubtopic(tax, 'democracy', { key: 'other', label: 'EPSTEIN FILES', aliases: [] }), 'epstein-files');
+  assert.equal(existingSubtopic(tax, 'democracy', { key: 'other', label: 'x', aliases: ['epstein'] }), 'epstein-files');
+  assert.equal(existingSubtopic(tax, 'tech', { key: 'epstein-files', label: 'Epstein files', aliases: [] }), null);
+  assert.equal(existingSubtopic(null, 'democracy', { key: 'a', label: 'b' }), null);
+});
+
+test('promoteToTaxonomy writes provisional/promoted flags for auto-promotions and skips a key already present', () => {
+  const yaml = `# comment stays\ndemocracy:\n  label: Democracy\n  subtopics:\n    courts-doj:\n      label: Courts\n\ntech:\n  label: Tech\n  subtopics: {}\n`;
+  const items = [
+    { macro: 'democracy', key: 'epstein-files', label: 'Epstein $files', aliases: ['Epstein', 'Massie'], since: '2026-08-31', provisional: true, promoted: '2026-09-10' },
+    { macro: 'tech', key: 'seaglider', label: 'Seaglider', aliases: [], since: new Date('2026-09-02T00:00:00Z'), provisional: true, promoted: '2026-09-10' }
+  ];
+  const out = promoteToTaxonomy(yaml, items);
+  assert.ok(out.startsWith('# comment stays\n'));
+  assert.match(out, /democracy:\n  label: Democracy\n  subtopics:\n    epstein-files:\n      label: "Epstein \$files"\n      aliases: \["Epstein", "Massie"\]\n      story: true\n      since: 2026-08-31\n      provisional: true\n      promoted: 2026-09-10\n    courts-doj:/);
+  assert.match(out, /tech:\n  label: Tech\n  subtopics:\n    seaglider:\n      label: "Seaglider"\n      story: true\n      since: 2026-09-02\n      provisional: true\n      promoted: 2026-09-10\n/);
+  assert.equal(promoteToTaxonomy(out, items), out); // replaying is a no-op
+});
+
+test('assignmentCounts sums subtopic assignments across days and remembers the last day seen', () => {
+  const files = {
+    '2026-09-08': { assignments: { a: [['democracy', 'epstein-files'], ['tech', null]], b: [['democracy', 'epstein-files']] } },
+    '2026-09-09': { assignments: { c: [['democracy', 'lake-america']], d: [] } },
+    '2026-09-10': null
+  };
+  const counts = assignmentCounts(Object.keys(files), (d) => files[d]);
+  assert.deepEqual([...counts.entries()], [
+    ['democracy/epstein-files', { posts: 2, lastSeen: '2026-09-08' }],
+    ['democracy/lake-america', { posts: 1, lastSeen: '2026-09-09' }]
+  ]);
+});
+
+test('quietStories retires only provisional stories in the taxonomy long enough with zero assignments', () => {
+  const tax = {
+    democracy: {
+      label: 'D',
+      subtopics: {
+        'lake-america': { label: 'Lake America', story: true, since: new Date('2026-08-25T00:00:00Z'), provisional: true, promoted: new Date('2026-08-30T00:00:00Z') },
+        'epstein-files': { label: 'Epstein', story: true, since: '2026-08-31', provisional: true, promoted: '2026-09-01' },
+        fresh: { label: 'Fresh', story: true, since: '2026-08-01', provisional: true, promoted: '2026-09-15' },      // promoted 6 days ago: too new to judge
+        confirmed: { label: 'Confirmed', story: true, since: '2026-08-01' },                                          // owner confirmed: never touched
+        'hand-added': { label: 'Hand added', story: true, since: '2026-08-20', provisional: true },                   // no promoted: since is the clock
+        done: { label: 'Done', story: true, since: '2026-08-01', provisional: true, retired: true },
+        'courts-doj': { label: 'Courts' }
+      }
+    }
+  };
+  const counts = new Map([['democracy/epstein-files', { posts: 3, lastSeen: '2026-09-18' }]]);
+  const quiet = quietStories(tax, counts, { quietDays: 21, today: '2026-09-21' });
+  assert.deepEqual(quiet, [
+    { macro: 'democracy', key: 'lake-america', label: 'Lake America', since: '2026-08-25', promoted: '2026-08-30', quietDays: 21 },
+    { macro: 'democracy', key: 'hand-added', label: 'Hand added', since: '2026-08-20', promoted: null, quietDays: 21 }
+  ]);
+  // the clock is exactly quietDays: promoted on the cutoff day qualifies, a day later does not
+  assert.equal(quietStories(tax, counts, { quietDays: 21, today: '2026-09-20' }).map((q) => q.key).includes('lake-america'), true);
+  assert.equal(quietStories(tax, counts, { quietDays: 21, today: '2026-09-19' }).map((q) => q.key).includes('lake-america'), false);
+});
+
+test('markRetired appends retired: true to the entry, keeps comments and neighbours, and is idempotent', () => {
+  const yaml = `# header\ndemocracy:\n  label: Democracy\n  # a note\n  subtopics:\n    lake-america:\n      label: "Lake America"\n      aliases: ["Lake America"]\n      story: true\n      since: 2026-08-25\n      provisional: true\n      promoted: 2026-08-30\n    courts-doj:\n      label: Courts\n\ntech:\n  label: Tech\n  subtopics: {}\n`;
+  const out = markRetired(yaml, [{ macro: 'democracy', key: 'lake-america' }]);
+  assert.equal(out, `# header\ndemocracy:\n  label: Democracy\n  # a note\n  subtopics:\n    lake-america:\n      label: "Lake America"\n      aliases: ["Lake America"]\n      story: true\n      since: 2026-08-25\n      provisional: true\n      promoted: 2026-08-30\n      retired: true\n    courts-doj:\n      label: Courts\n\ntech:\n  label: Tech\n  subtopics: {}\n`);
+  assert.equal(markRetired(out, [{ macro: 'democracy', key: 'lake-america' }]), out);
+  assert.throws(() => markRetired(yaml, [{ macro: 'democracy', key: 'nope' }]), /not found/);
+  assert.throws(() => markRetired(yaml, [{ macro: 'nope', key: 'lake-america' }]), /not found/);
 });
