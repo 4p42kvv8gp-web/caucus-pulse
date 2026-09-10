@@ -126,13 +126,20 @@ export function buildSiteData() {
 
   // ── topics: per-day, per-scope aggregation ──
   // acc[topicKey][scope] = today/week scopes; trends per day.
-  const topicAcc = new Map(); // key → {t: {All: scope, CPC..}, w: {...}, trend: number[7], mByDay: Set[7], engByDay: number[7], nByDay}
+  // Momentum's "current" window is the rolling last 24 hours (r24), not the
+  // calendar day: at 1am ET "today" holds a handful of posts and every topic
+  // would read as a 100% collapse against its own baseline. The baseline is
+  // the six full days before today, so the current window never dilutes it.
+  const topicAcc = new Map(); // key → {t: {All: scope, CPC..}, w: {...}, r24: {...}, trend: number[7], mByDay: Set[7]}
   const subAcc = new Map();   // 'macro/sub' → same-ish + leads
+  const nowMs = Date.now();
+  const inLast24h = (post) => nowMs - new Date(post.createdAt).getTime() < DAY;
   const ensure = (map, key) => {
     if (!map.has(key)) {
       map.set(key, {
         t: Object.fromEntries(['All', ...KEYS].map((k) => [k, zeroScope()])),
         w: Object.fromEntries(['All', ...KEYS].map((k) => [k, zeroScope()])),
+        r24: Object.fromEntries(['All', ...KEYS].map((k) => [k, zeroScope()])),
         trend: days.map(() => 0),
         mByDay: days.map(() => new Set()),
         leadEng: new Map() // authorId → eng (for sub lead)
@@ -145,6 +152,7 @@ export function buildSiteData() {
     for (const post of postsByDay.get(date)) {
       if (!post.topics.length) continue;
       const scopes = ['All', ...caucusKeysOf(authorsById[post.authorId])];
+      const recent = inLast24h(post);
       const seenMacro = new Set();
       const seenSub = new Set();
       for (const [macro, sub] of post.topics) {
@@ -156,6 +164,7 @@ export function buildSiteData() {
           for (const s of scopes) {
             const bucket = di === 6 ? acc.t[s] : null;
             if (bucket) { bucket.n++; bucket.eng += post.engN; bucket.members.add(post.authorId); }
+            if (recent) { acc.r24[s].n++; acc.r24[s].eng += post.engN; acc.r24[s].members.add(post.authorId); }
             acc.w[s].n++; acc.w[s].eng += post.engN; acc.w[s].members.add(post.authorId);
           }
         }
@@ -176,17 +185,18 @@ export function buildSiteData() {
   const handleOf = (authorId) => authorsById[authorId]?.handle ? `@${authorsById[authorId].handle}` : null;
   const topics = [...topicAcc.entries()].map(([key, acc]) => {
     const trend = acc.trend;
-    const avg7 = trend.reduce((a, b) => a + b, 0) / trend.length || 1;
-    const d = Math.round(100 * (trend[6] - avg7) / avg7);
-    const mAvg = acc.mByDay.reduce((a, s) => a + s.size, 0) / 7 || 1;
+    // Baseline = the six full days before today (trend[0..5]); current = last 24h.
+    const avg6 = trend.slice(0, 6).reduce((a, b) => a + b, 0) / 6 || 1;
+    const rAll = acc.r24.All;
+    const d = Math.round(100 * (rAll.n - avg6) / avg6);
+    const mAvg = acc.mByDay.slice(0, 6).reduce((a, s) => a + s.size, 0) / 6 || 1;
     const weekAll = acc.w.All;
     const epAvg = weekAll.n ? weekAll.eng / weekAll.n : 1;
-    const tAll = acc.t.All;
     const mo = momentum({
-      c: KEYS.map((k) => acc.t[k].n),
+      c: KEYS.map((k) => acc.r24[k].n),
       trend, d,
-      m: tAll.members.size, mAvg,
-      eng: tAll.eng, epAvg
+      m: rAll.members.size, mAvg,
+      eng: rAll.eng, epAvg
     });
     const subs = [...subAcc.entries()]
       .filter(([sk]) => sk.startsWith(`${key}/`))
