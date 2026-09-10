@@ -1,0 +1,89 @@
+{
+  "_comment": "Caucus Pulse classifier eval — build configuration. Pinned to the graded artifact; see the design brief §1-§3. Nothing here may change between builds or the package stops being byte-reproducible.",
+
+  "salt": "cp-eval-v1",
+
+  "artifact": {
+    "graded_commit": "3e74a86",
+    "classified_at_prefix": "2026-09-10T06:09:37",
+    "model": "claude-opus-5",
+    "taxonomy_source": "git:3e74a86:config/taxonomy.yaml",
+    "taxonomy_macros": 15,
+    "taxonomy_subtopics": 46,
+    "tweets_per_request": 40,
+    "days": [
+      "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24",
+      "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29",
+      "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03",
+      "2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08",
+      "2026-09-09"
+    ]
+  },
+
+  "frame": {
+    "expected_n": 10476,
+    "expected_chunks": 262,
+    "expected_sent": 10009,
+    "expected_deferred": 467,
+    "expected_assignment_keys": 10474,
+    "expected_unclassified": 4,
+    "expected_hallucinated_keys": 2,
+    "expected_macro_only_chunks": 228,
+    "expected_subtopic_chunks": 34
+  },
+
+  "screens": {
+    "aca": "\\bObamacare\\b|\\bAffordable Care Act\\b|premium tax credit|\\bACA\\b|open enrollment",
+    "repro": "\\babortion\\b|\\bIVF\\b|contracepti|\\bRoe\\b|Planned Parenthood|reproductive (health|rights|care)"
+  },
+
+  "alias_screen": {
+    "_comment": "§1.5 non-circular content-balance probe. Terms are each subtopic's own label and aliases, split on '/', kept when >= min_chars, matched case-insensitively at word boundaries with punctuation-insensitive whitespace. See build.py DEVIATIONS note A.",
+    "split_on": "/",
+    "min_chars": 4,
+    "case_insensitive": true,
+    "punctuation_insensitive": true,
+    "balance_tolerance_pp": 3.0
+  },
+
+  "strata": [
+    {"id": "S01", "name": "UNCLASSIFIED",               "design_N": 4,    "n_h": 4,   "census": true,  "cap": null},
+    {"id": "S02", "name": "CORRECTED",                  "design_N": 3,    "n_h": 3,   "census": true,  "cap": null},
+    {"id": "S03", "name": "WINDOW-CLIFF RT",            "design_N": 17,   "n_h": 17,  "census": true,  "cap": null},
+    {"id": "S04", "name": "EMERGING-BUT-LABELED",       "design_N": 35,   "n_h": 35,  "census": true,  "cap": null},
+    {"id": "S05", "name": "ACA SCREEN",                 "design_N": 20,   "n_h": 20,  "census": true,  "cap": null},
+    {"id": "S06", "name": "REPRO SCREEN",               "design_N": 1,    "n_h": 1,   "census": true,  "cap": null},
+    {"id": "S07", "name": "DECLINED SUBTOPIC",          "design_N": 180,  "n_h": 45,  "census": false, "cap": null},
+    {"id": "S08", "name": "MULTI-LABEL",                "design_N": 189,  "n_h": 45,  "census": false, "cap": null},
+    {"id": "S09", "name": "SUBTOPIC PRECISION",         "design_N": 886,  "n_h": 112, "census": false, "cap": null, "greedy_subtopic_coverage": true, "coverage_quota": 3},
+    {"id": "S10", "name": "RECALL PROBE (macro-mode)",  "design_N": 887,  "n_h": 60,  "census": false, "cap": 2},
+    {"id": "S11", "name": "DUPLICATE FOSSIL",           "design_N": 463,  "n_h": 40,  "census": false, "cap": null},
+    {"id": "S12", "name": "EMERGING",                   "design_N": 542,  "n_h": 50,  "census": false, "cap": null},
+    {"id": "S13", "name": "TRUNCATED RETWEET",          "design_N": 724,  "n_h": 45,  "census": false, "cap": null},
+    {"id": "S14", "name": "INHERITED RETWEET",          "design_N": 374,  "n_h": 25,  "census": false, "cap": null},
+    {"id": "S15", "name": "CONSTITUENT-SERVICES ALONE", "design_N": 257,  "n_h": 30,  "census": false, "cap": null},
+    {"id": "S16", "name": "DEGENERATE",                 "design_N": 307,  "n_h": 25,  "census": false, "cap": null},
+    {"id": "S17", "name": "EMPTY",                      "design_N": 855,  "n_h": 80,  "census": false, "cap": 3},
+    {"id": "S18", "name": "SINGLE PAIR",                "design_N": 3294, "n_h": 70,  "census": false, "cap": 3},
+    {"id": "S19", "name": "REMAINDER",                  "design_N": 1438, "n_h": 55,  "census": false, "cap": null}
+  ],
+
+  "macro_quota": {"floor": 18, "design_topup": 21},
+
+  "repeats": {"verbatim_twins": 28, "paraphrase_canaries": 12, "min_separation": 100},
+
+  "calibration": {"n": 40},
+
+  "expected": {
+    "nominal_draw": 762,
+    "distinct_posts": 783,
+    "items": 823,
+    "batch_size": 20
+  },
+
+  "package": {
+    "dir": "~/cp-eval-package",
+    "keys_dir": "eval/keys",
+    "brief_source": "/tmp/claude-0/-home-user-X-Decibel-Reader/aaea8ae9-0bf9-5c13-b055-7e4df757d8f3/scratchpad/codex-BRIEF.md"
+  }
+}

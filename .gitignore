@@ -4,3 +4,9 @@ data/models/
 .claude/settings.local.json
 data/backfill-progress.json
 .claude/worktrees/
+
+# eval — the crosswalk holds the answer key; never commit it
+eval/keys/
+eval/verdicts/
+eval/out/
+eval/__pycache__/
