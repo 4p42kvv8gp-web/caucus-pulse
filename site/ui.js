@@ -79,7 +79,7 @@ export function control(list, key, current) {
     if (!item) return `<span aria-hidden="true" style="width:1px;align-self:stretch;margin:4px 3px;background:#d2d2d7"></span>`;
     const [val, lab, color] = item;
     const on = current === val;
-    return `<button data-set="${esc(key)}" data-val="${esc(val)}" aria-pressed="${on}" style="border:0;cursor:pointer;font:inherit;font-size:12px;font-weight:600;padding:5px 12px;border-radius:8px;transition:background .12s ease,color .12s ease;display:inline-flex;align-items:center;gap:6px;background:${on ? '#fff' : 'transparent'};color:${on ? '#1d1d1f' : '#6e6e73'};box-shadow:${on ? '0 1px 3px rgba(0,0,0,.14)' : 'none'}">${color ? dot(color) : ''}${esc(lab)}</button>`;
+    return `<button class="seg" data-set="${esc(key)}" data-val="${esc(val)}" aria-pressed="${on}" style="border:0;cursor:pointer;font:inherit;font-size:12px;font-weight:600;padding:5px 12px;border-radius:8px;transition:background .12s ease,color .12s ease;display:inline-flex;align-items:center;gap:6px;background:${on ? '#fff' : 'transparent'};color:${on ? '#1d1d1f' : '#6e6e73'};box-shadow:${on ? '0 1px 3px rgba(0,0,0,.14)' : 'none'}">${color ? dot(color) : ''}${esc(lab)}</button>`;
   }).join('')}</div>`;
 }
 
@@ -119,6 +119,103 @@ export function copyText(text, done) {
     try { document.execCommand('copy'); } catch { /* best effort */ }
     ta.remove(); done();
   }
+}
+
+// ── Story drill-down (Feed "row mode") ──
+// A Topics row — macro ('immigration') or subtopic ('immigration/liam-ramos')
+// — opens to every post on it. Rows carry `postIds: {t, w}` (newest first);
+// posts live in `feedAll` (compact: authorId, resolved here through
+// `authorHandles` → `members`). Pure functions: no DOM, so they are testable.
+
+export function splitRowKey(key) {
+  const [macro, ...rest] = String(key || '').split('/');
+  return { macro: macro || null, sub: rest.length ? rest.join('/') : null };
+}
+
+// Resolve a row key to its row object, parent macro, and display label.
+export function findRow(data, key) {
+  const { macro, sub } = splitRowKey(key);
+  if (!macro) return null;
+  const topic = (data?.topics || []).find((t) => t.key === macro);
+  if (!topic) return null;
+  const labelOf = (k) => data.labels?.[k] || String(k).split('/').pop().split(/[_-]+/).map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+  if (sub == null) return { key: macro, row: topic, topic, sub: null, label: topic.name || labelOf(macro) };
+  const subRow = (topic.subs || []).find((s) => s.key === sub);
+  if (!subRow) return null;
+  return { key: `${macro}/${sub}`, row: subRow, topic, sub: subRow, label: labelOf(`${macro}/${sub}`) };
+}
+
+const KIND = { tweet: 'original', retweet: 'repost', reply: 'reply', quote: 'quote' };
+
+// A feedAll row → the shape the post card renders (same as `feed` entries).
+export function decoratePost(data, post) {
+  const handle = data?.authorHandles?.[post.authorId] || post.handle || post.authorId;
+  const m = data?.members?.[handle];
+  return {
+    ...post,
+    handle,
+    member: m?.[0] || '',
+    district: m?.[1] || '',
+    caucus: m?.[2] || [],
+    kind: KIND[post.type] || post.kind || 'original',
+    time: post.createdAt || post.time
+  };
+}
+
+const feedIndex = new WeakMap();
+function indexFeedAll(data) {
+  const list = data?.feedAll || [];
+  let idx = feedIndex.get(list);
+  if (!idx) { idx = new Map(list.map((x) => [x.id, x])); feedIndex.set(list, idx); }
+  return idx;
+}
+
+const newest = (a, b) => (a.createdAt === b.createdAt ? 0 : a.createdAt < b.createdAt ? 1 : -1);
+
+// Every post on a row in the window ('t' today / 'w' 7 days) and caucus
+// scope, sorted 'Newest' (default) or 'Top' (engagement, then newest).
+// Ids missing from feedAll (a truncated file) are skipped, never faked.
+export function rowPosts(data, key, win = 'w', scope = 'All', sort = 'Newest') {
+  const hit = findRow(data, key);
+  if (!hit) return [];
+  const ids = hit.row.postIds?.[win === 't' ? 't' : 'w'] || [];
+  const idx = indexFeedAll(data);
+  const posts = [];
+  for (const id of ids) {
+    const p = idx.get(id);
+    if (!p) continue;
+    const d = decoratePost(data, p);
+    if (scope !== 'All' && !d.caucus.includes(scope)) continue;
+    posts.push(d);
+  }
+  posts.sort(sort === 'Top' ? (a, b) => (b.engN || 0) - (a.engN || 0) || newest(a, b) : newest);
+  return posts;
+}
+
+// "Liam Ramos / Dilley · 15 posts · 9 members"
+export function rowHeader(label, n, m) {
+  const posts = `${Number(n) || 0} ${n === 1 ? 'post' : 'posts'}`;
+  const members = `${Number(m) || 0} ${m === 1 ? 'member' : 'members'}`;
+  return `${label} · ${posts} · ${members}`;
+}
+
+// URL hash ↔ selection. '#row=immigration/liam-ramos' opens straight to the
+// row; win / caucus ride along only when they differ from the defaults.
+export function parseRowHash(hash) {
+  const q = new URLSearchParams(String(hash || '').replace(/^#/, ''));
+  const row = q.get('row');
+  const win = q.get('win');
+  const caucus = q.get('caucus');
+  return { row: row || null, win: win === 't' || win === 'w' ? win : null, caucus: caucus || null };
+}
+
+export function rowHash({ row, win, caucus } = {}) {
+  if (!row) return '';
+  const q = new URLSearchParams();
+  q.set('row', row);
+  if (win && win !== 't') q.set('win', win);
+  if (caucus && caucus !== 'All') q.set('caucus', caucus);
+  return '#' + q.toString().replace(/%2F/gi, '/');
 }
 
 export async function loadRollups() {
