@@ -57,6 +57,34 @@
   },
   "narrative_lists": {
     "_comment": "Public X Lists the narrative layer may scan (owner: the credential account). role: who is on it; priority 1 = scan first (Democratic side and the press that covers it), 3 = counter-message only. Reads are billed per post returned and go through the daily ledger.",
+    "house-democrats": {
+      "id": "6136726",
+      "name": "House Democrats",
+      "owner": "HouseDemocrats",
+      "role": "official accounts of House Democrats in the 119th Congress (218) \u2014 the authoritative official-handle roster; cross-check for data/authors.json",
+      "priority": 1
+    },
+    "congressional-media": {
+      "id": "31717985",
+      "name": "Congressional Media",
+      "owner": "cspan",
+      "role": "journalists who cover Congress (142)",
+      "priority": 1
+    },
+    "cap-hill-reporters": {
+      "id": "821438778015436801",
+      "name": "Cap Hill Reporters",
+      "owner": "MattVerghese",
+      "role": "Capitol Hill reporters (372)",
+      "priority": 1
+    },
+    "members-of-congress": {
+      "id": "34179516",
+      "name": "Members of Congress",
+      "owner": "cspan",
+      "role": "all members incl. Republicans and senators (559) \u2014 reference only; the product stays focused on House Democrats",
+      "priority": 3
+    },
     "house-news": {
       "id": "1653395694990901254",
       "name": "House News",
