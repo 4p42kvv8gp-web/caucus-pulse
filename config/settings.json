@@ -56,7 +56,7 @@
   },
   "stories": {
     "_comment": "Continuous story promotion (src/stories.js --auto-promote / --retire, run nightly after classify). auto_promote: when false, --auto-promote only lists what would be promoted and writes nothing. min_posts, min_members, min_days: a story candidate (placement kind 'story' with a macro) must reach all three — posts, distinct members, distinct days — before it is written to config/taxonomy.yaml as a provisional developing story; taxonomy gaps are never auto-promoted. max_per_night: at most this many promotions per run, most posts first (the rest wait for the next night). retire_after_quiet_days: a provisional story that has been in the taxonomy at least this many days with zero assignments in data/topics over the window is marked retired: true — it leaves the classifier prompt but keeps its key so rollups and history still resolve.",
-    "auto_promote": true,
+    "auto_promote": false,
     "min_posts": 5,
     "min_members": 3,
     "min_days": 2,
@@ -79,7 +79,7 @@
     "elevate_factor": 3,
     "elevate_min_share": 0.25,
     "retire_days": 21,
-    "auto_apply": true,
+    "auto_apply": false,
     "auto_elevate": false,
     "max_per_night": 6,
     "max_calls": 40
