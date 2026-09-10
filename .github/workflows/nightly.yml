@@ -50,4 +50,10 @@ jobs:
       # report success. This step reads what actually landed on disk.
       - name: Health check
         if: always()
+        # Same environment as the pipeline it is judging: without the token
+        # the credentials check reports X as unresolvable and fails the run
+        # on nothing. (Anthropic needs no env here — federation reads the
+        # OIDC variables the job already carries.)
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: npm run health
