@@ -13,7 +13,7 @@
 // classifying their truncated "RT @…" text when it isn't. Posts already
 // tagged by the poll-time pass (data/topics-live/) are still re-classified
 // here — the nightly batch is authoritative and costs half as much.
-import Anthropic from '@anthropic-ai/sdk';
+import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
 import { settings, daysAgoEt, readJSON, writeJSON } from './util.js';
 import { loadState, saveState, loadDay, topicsPath } from './store.js';
 import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose } from './taxonomy.js';
@@ -101,7 +101,7 @@ async function main() {
     else toClassify.push(t);
   }
 
-  const client = new Anthropic();
+  const client = await anthropicClient();
   const state = loadState();
   let batchId = state.pendingBatch?.date === date ? state.pendingBatch.id : null;
 
@@ -119,6 +119,7 @@ async function main() {
   const deadline = Date.now() + (settings.classify.max_wait_minutes || 55) * 60_000;
   let batch;
   while (true) {
+    await refreshIdentityToken(); // federation: keep the OIDC file fresh across a long wait
     batch = await client.messages.batches.retrieve(batchId);
     if (batch.processing_status === 'ended') break;
     if (Date.now() > deadline) {

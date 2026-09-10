@@ -5,9 +5,10 @@
 // cache-read rate). The nightly batch re-classifies the whole day at half
 // price and its output is authoritative; these live tags only fill the gap.
 //
-// Skips silently when ANTHROPIC_API_KEY is missing or CLASSIFY_LIVE=false —
+// Skips silently when no Anthropic credential is configured (API key or
+// workload identity federation — see anthropic-auth.js) or CLASSIFY_LIVE=false —
 // capture must never fail because classification can't run.
-import Anthropic from '@anthropic-ai/sdk';
+import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, readJSON, writeJSON, p } from './util.js';
 import { loadTaxonomy, systemPrompt, parseJsonLoose } from './taxonomy.js';
 import { mergeParsed } from './classify.js';
@@ -15,12 +16,12 @@ import { mergeParsed } from './classify.js';
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
 
 export async function classifyLive(records) {
-  if (process.env.CLASSIFY_LIVE === 'false' || !process.env.ANTHROPIC_API_KEY) return null;
+  if (process.env.CLASSIFY_LIVE === 'false' || !anthropicConfigured()) return null;
   const items = records.filter((t) => t.type !== 'retweet');
   if (!items.length) return null;
   const tax = loadTaxonomy();
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
-  const client = new Anthropic();
+  const client = await anthropicClient();
 
   const out = { assignments: {}, incidents: {}, emergingMap: new Map() };
   const per = settings.classify.tweets_per_request || 40;

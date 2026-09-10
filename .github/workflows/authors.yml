@@ -24,7 +24,7 @@ jobs:
       - name: Refresh author table
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-        run: node src/authors.js
+        run: npm run authors
       - name: Commit author table
         run: |
           git config user.name "caucus-pulse"

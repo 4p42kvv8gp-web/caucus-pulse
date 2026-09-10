@@ -3,43 +3,58 @@
 A permanent, growing corpus of everything a curated X List of House Democratic
 caucus accounts posts — plus a nightly pipeline that turns it into topic
 rollups, "strategic syntax" phrase tracking, and a daily report. Full product
-rationale: [`docs/caucus-pulse-brief.md`](../docs/caucus-pulse-brief.md) in the
-X-Decibel-Reader repo where this scaffold was drafted.
+rationale: `docs/caucus-pulse-brief.md` in the
+[X-Decibel-Reader](https://github.com/4p42kvv8gp-web/X-Decibel-Reader) repo,
+where this project was first drafted as a subdirectory.
 
 The repo itself is the datastore: tweets land in append-only
 `data/archive/YYYY-MM-DD.jsonl` files committed by GitHub Actions, everything
 downstream (metrics, topics, rollups, reports) is derived and rebuildable.
 Zero servers, zero hosting cost.
 
-## One-time setup (≈15 minutes)
+## Setup
 
-This directory is designed to be lifted verbatim into its own repository:
+Everything runs from this repo's GitHub Actions; nothing is hosted. The
+scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
+07:30 UTC, `authors` weekly).
 
-1. **Create the new repo** (e.g. `caucus-pulse`) and copy the *contents* of
-   this `caucus-pulse/` directory to its root, so `.github/workflows/` sits at
-   the top level (GitHub only runs workflows from there — inside
-   X-Decibel-Reader they are intentionally inert).
-2. **Repo → Settings → Secrets and variables → Actions:**
-   - Secret `X_BEARER_TOKEN` — the same token X-Decibel-Reader uses.
-   - Secret `ANTHROPIC_API_KEY` — for the nightly classifier.
-   - Variable `X_LIST_ID` — the numeric id of your X List (from its URL:
-     `x.com/i/lists/<this number>`). Alternatively hardcode it in
-     `config/settings.json` as `list_id`.
+1. **Repo → Settings → Secrets and variables → Actions:**
+   - Secret `X_BEARER_TOKEN` — X API v2 bearer token (pay-per-use project).
+   - Variable `X_LIST_ID` — the numeric id of the X List (from its URL:
+     `x.com/i/lists/<this number>`). Alternatively set `list_id` in
+     `config/settings.json`.
    - Variable `X_DAILY_READ_BUDGET` (optional) — hard daily ceiling on billed
      X reads. Default 8000 (≈$40/day worst case; a 2,000-tweet day uses ~3,300).
-3. **Fill in `config/accounts.csv`** with every account on the List: handle,
+   - Variable `CLASSIFY_LIVE` — `false` to skip poll-time tagging until the
+     pipeline is trusted; `true` (or unset) to tag each poll's new posts.
+2. **Claude access needs no secret.** Workflows authenticate to the Anthropic
+   API with [workload identity federation](https://docs.anthropic.com): the
+   job's GitHub OIDC token is exchanged for a 10-minute access token
+   in-process (`src/anthropic-auth.js`), re-minted as needed during long batch
+   waits. The federation ids live in `config/settings.json` → `anthropic`
+   (public identifiers); the rule only trusts tokens from this repo's `main`.
+   `.github/workflows/anthropic-wif-test.yml` is a manual smoke test.
+   Locally, export `ANTHROPIC_API_KEY` instead.
+3. **Settings → Actions → General:** Workflow permissions "Read and write"
+   (the workflows commit data back to the repo).
+4. **Settings → Pages:** deploy from branch `main`, folder `/` (root). The
+   dashboard is `site/index.html`, reading the committed rollups directly.
+5. **Fill in `config/accounts.csv`** with every account on the List: handle,
    member name, official/personal/campaign, caucus tags separated by `|`
-   (`progressive`, `newdem`, `cbc`, `leadership` — overlap is normal and
-   expected), state/district. The checked-in rows are a hand-drafted starter —
+   (`progressive`, `newdem`, `cbc`, `chc`, `capac`, `leadership` — overlap is
+   normal), state/district. The checked-in rows are a hand-drafted starter —
    verify them; caucus tags drive the per-caucus report.
-4. **Settings → Actions → General:** allow Actions "Read and write
-   permissions" (the workflows commit data back to the repo).
-5. Run the **authors** workflow once by hand (Actions tab → authors → Run
-   workflow) to build the author table, then the **poll** workflow once to
-   verify capture. After that the crons take over: poll every 20 min,
-   nightly pipeline at 07:30 UTC, authors weekly.
-6. Optional dashboard: Settings → Pages → deploy from branch `main`, then
-   open `/site/` on the Pages URL. It reads the committed rollups directly.
+6. Run **check-x-access** by hand (Actions tab → Run workflow, probe = true)
+   to confirm the X credential, then **authors** once to build the author
+   table, then **poll** once to verify capture. The crons take over from there.
+
+### Running from a Claude Code cloud session
+
+Cloud sessions get X access through a proxy-injected credential registered
+for `api.x.com` (the token never reaches the session). Set `X_PROXY_AUTH=1`
+and the X client sends bare requests for the proxy to authenticate; the npm
+scripts already pass `--use-env-proxy` so Node's fetch honours `HTTPS_PROXY`.
+`npm run check-x -- --probe` reports which auth mode worked.
 
 ## First act: the 24-hour volume measurement
 
@@ -60,7 +75,7 @@ starts. Every day before that is gone; turn it on early.
 | Stage (script) | Schedule | What it does | X / Claude cost |
 |---|---|---|---|
 | `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe; then live-tags the new posts and rebuilds site data | $0.005/tweet — the floor |
-| `src/classify-live.js` | with each poll | Tags the poll's new posts against the taxonomy (prompt-cached; skipped without `ANTHROPIC_API_KEY` or with `CLASSIFY_LIVE=false`) so the dashboard feed carries topics all day | ~$3–5/day at 2k tweets |
+| `src/classify-live.js` | with each poll | Tags the poll's new posts against the taxonomy (prompt-cached; skipped without an Anthropic credential or with `CLASSIFY_LIVE=false`) so the dashboard feed carries topics all day | ~$3–5/day at 2k tweets |
 | `src/authors.js` | weekly | `config/accounts.csv` → `data/authors.json` (no expansions ever) | $0.01/account/week |
 | `src/refresh.js` | nightly | 24h-old originals get one batched metrics re-read → `data/metrics/` | $0.005/original |
 | `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` (authoritative), emerging clusters, incident flags | ~50% batch rates |
@@ -111,7 +126,7 @@ invents categories silently.
 ```bash
 npm install
 npm test                # pure-logic tests, no network
-X_BEARER_TOKEN=... X_LIST_ID=... npm run poll
+X_BEARER_TOKEN=... X_LIST_ID=... ANTHROPIC_API_KEY=... npm run poll
 npm run report -- --date=2026-09-01
 ```
 

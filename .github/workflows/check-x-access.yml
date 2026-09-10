@@ -22,4 +22,4 @@ jobs:
       - env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
-        run: node src/check-x-access.js ${{ inputs.probe && '--probe' || '' }}
+        run: npm run check-x -- ${{ inputs.probe && '--probe' || '' }}

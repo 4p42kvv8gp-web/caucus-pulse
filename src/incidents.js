@@ -11,6 +11,7 @@
 // connected, not before. Runs with withIntel:false at poll time (grouping
 // only, free) and withIntel:true in the nightly chain.
 import { p, readJSON, writeJSON, daysAgoEt, settings } from './util.js';
+import { anthropicConfigured } from './anthropic-auth.js';
 import { loadDay, topicsPath, loadState } from './store.js';
 import { liveTopicsPath } from './classify-live.js';
 import { loadAuthors } from './authors.js';
@@ -94,8 +95,8 @@ export function groupIncidents(flags, postsById, authorsById, { now = Date.now()
 }
 
 async function extractIntel(incident, model) {
-  const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  const client = new Anthropic();
+  const { anthropicClient } = await import('./anthropic-auth.js');
+  const client = await anthropicClient();
   const posts = incident.timeline.map((e) => `[${e.time}] ${e.who}: ${e.text}`).join('\n');
   const res = await client.messages.create({
     model,
@@ -153,7 +154,7 @@ export async function buildIncidents({ withIntel = false } = {}) {
     const old = prevById.get(incident.id);
     incident.intel = old?.intel || null;
     const stale = !incident.intel || incident.intel.posts < incident.updates;
-    if (withIntel && stale && process.env.ANTHROPIC_API_KEY) {
+    if (withIntel && stale && anthropicConfigured()) {
       try {
         incident.intel = await extractIntel(incident, model) || incident.intel;
       } catch (e) {
