@@ -2,18 +2,30 @@
 
 ## Top topics of the day
 
-1. **Economy & cost of living** — 102 posts + 10 RTs from 76 members, 0 engagement
+1. **Economy & cost of living** — 92 posts + 9 RTs from 71 members, 0 engagement
    - Prices / inflation: 14 posts, 13 members
    - Tariffs & trade: 4 posts, 4 members
-   - Jobs & wages: 3 posts, 3 members
-2. **Congress & campaign politics** — 84 posts + 15 RTs from 59 members, 0 engagement
-   - 2026 midterms: 3 posts, 4 members
+   - Jobs & wages: 2 posts, 2 members
+2. **Congress & campaign politics** — 81 posts + 15 RTs from 56 members, 0 engagement
+   - 2026 midterms: 2 posts, 3 members
    - Town halls & district events: 3 posts, 3 members
    - House floor & procedure: 1 posts, 1 members
-3. **Democracy & rule of law** — 67 posts + 12 RTs from 60 members, 0 engagement
+3. **Democracy & rule of law** — 65 posts + 12 RTs from 59 members, 0 engagement
    - Voting rights & elections: 4 posts, 3 members
    - Executive overreach: 4 posts, 4 members
    - Corruption & ethics: 2 posts, 2 members
+
+## Stories: what changed since yesterday
+
+- **9/11 25th anniversary remembrance** _(provisional)_ — 7 posts, 6 members (↑ from 2 on 2026-09-08) · new: @LauraAGillen @RepJahanaHayes @RepJasonCrow @RepScottPeters · framing: "25 years", "first responders" (was none) · press: Axios — "📱 Axios PM: New iPhone folds"; NYT — "N.Y. Today: The lethal dust of 9/11"
+  - Memory: Members are marking the 25th anniversary of 9/11.
+- **Smithsonian & history erasure** _(provisional)_ — 3 posts, 3 members (first day on record) · new: @RepBynum @RepJulieJohnson @RepKweisiMfume
+  - Memory: House Democrats are objecting to what they describe as an effort to rewrite or erase American history at the Smithsonian, centered on Lonnie Bunch and his apparent departure.
+- **Dolly Parton tribute** _(provisional)_ — 2 posts, 2 members (same as 2 on 2026-08-31) · new: @RepGregStanton
+  - Memory: Members are eulogizing Dolly Parton, centering her music and the Imagination Library.
+- Quiet today after posting yesterday: Gen Z & generational politics (1 post), Trump renaming of Lake Ontario (1 post)
+
+_From data/dossiers (docs/dossiers/ for the full ledgers). Counts are measured; the memory line is a judgment._
 
 ## Per caucus
 

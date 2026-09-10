@@ -94,6 +94,13 @@ export function groupIncidents(flags, postsById, authorsById, { now = Date.now()
   return incidents.sort((a, b) => (a.status === 'active' ? 0 : a.status === 'monitoring' ? 1 : 2) - (b.status === 'active' ? 0 : b.status === 'monitoring' ? 1 : 2) || (a.last < b.last ? 1 : -1));
 }
 
+// HOOK(night-incident-corroboration): when the corroboration pass lands
+// ("same event, different words/places"), give its prompt the dossiers'
+// Memory block — memoryForStories(keys of the stories these incidents are
+// tagged with) from src/memory.js — and write its verdicts to this file as
+//   merges: [{story?, from, into, reason}] and, per incident,
+//   corroboration: [{id, reason, story?}]
+// so src/dossiers.js records them as "corroboration" judgments.
 async function extractIntel(incident, model) {
   const { anthropicClient } = await import('./anthropic-auth.js');
   const client = await anthropicClient();

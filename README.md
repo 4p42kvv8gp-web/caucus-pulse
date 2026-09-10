@@ -116,7 +116,8 @@ starts. Every day before that is gone; turn it on early.
 | `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
 | `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
-| `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
+| `src/dossiers.js` | nightly | Long-term memory: one append-only ledger per developing story → `data/dossiers/`, `docs/dossiers/`; Claude rewrites each rolling summary only when its ledger changed (capped at 40 calls). `src/memory.js` feeds the summaries back into the judging prompts. See `docs/MEMORY.md`. | ≤ 40 short calls |
+| `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md`, including "Stories: what changed since yesterday" from the dossier diffs | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
 
 ## The dashboard
@@ -137,6 +138,12 @@ panel is a stub until an X search connector is added. Serve via GitHub Pages
 Emerging cards also carry an **In the news** list — newsletter hits for the
 story candidate from the owner's briefing inbox (`data/context.json`, see
 `docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification.
+
+The story layer remembers: every developing story has a dossier
+(`data/dossiers/<key>.json`, rendered to `docs/dossiers/`) whose daily
+entries are never rewritten once the day closes, plus a rolling summary
+Claude regenerates only when the ledger changes. `docs/MEMORY.md` lists what
+persists where, what is rebuilt, and what each judging prompt is shown.
 
 Real windows, no fakery: `rollups.json` carries separate Today and 7-day
 aggregates per caucus for every topic — the design's sample data scaled one

@@ -5,12 +5,49 @@
 //   3. Top strategic-syntax phrases with adoption info
 //   4. Volume + spend stat line
 //   5. Emerging clusters awaiting a taxonomy decision
+//   plus, right after the top topics: "Stories: what changed since
+//   yesterday", read from the story dossiers' ledgers (src/dossiers.js).
 import { readJSON, writeJSON, settings, daysAgoEt, p } from './util.js';
 import fs from 'node:fs';
 import { loadState, dailyBudget, estCost, topicsPath, syntaxPath, loadDay } from './store.js';
 import { rollupsPath } from './rollup.js';
+import { loadDossiers, diffDossiers } from './dossiers.js';
 
 function fmt(n) { return n.toLocaleString('en-US'); }
+
+const firstSentence = (s) => String(s || '').split(/(?<=[.!?])\s+/)[0];
+const quoted = (list) => list.map((f) => `"${f}"`).join(', ');
+
+// Story dossier diffs: what each tracked story did on `date` against its
+// previous posting day — new members, a framing shift, press — and which
+// stories went quiet. Numbers are measured; the one-line memory is Claude's
+// rolling summary (regenerated only when the ledger changed).
+export function renderStoryChanges(date, dossiers, n = 10) {
+  const lines = [];
+  if (!dossiers || !(dossiers instanceof Map ? dossiers.size : dossiers.length)) return lines;
+  const { changed, quiet } = diffDossiers(dossiers, date);
+  lines.push('', '## Stories: what changed since yesterday', '');
+  if (!changed.length && !quiet.length) {
+    lines.push('_No tracked story posted (data/dossiers)._');
+    return lines;
+  }
+  for (const c of changed.slice(0, n)) {
+    const e = c.entry, pv = c.prev;
+    const delta = pv ? ` (${e.posts > pv.posts ? '↑ from' : e.posts < pv.posts ? '↓ from' : 'same as'} ${fmt(pv.posts)} on ${pv.date})` : ' (first day on record)';
+    const bits = [`${fmt(e.posts)} posts, ${fmt(e.members)} members${delta}`];
+    if (c.newMembers.length) bits.push(`new: ${c.newMembers.slice(0, 6).map((h) => '@' + h).join(' ')}${c.newMembers.length > 6 ? ` +${c.newMembers.length - 6}` : ''}`);
+    if (e.framing.length) bits.push(`framing: ${quoted(e.framing)}${c.framingShift ? ` (was ${pv.framing.length ? quoted(pv.framing) : 'none'})` : ''}`);
+    if (c.press.length) bits.push(`press: ${c.press.slice(0, 2).map((x) => `${x.outlet} — "${x.subject}"`).join('; ')}`);
+    if (e.corrections.length) bits.push(`${e.corrections.length} correction(s)`);
+    if (e.judgments.length) bits.push(`${e.judgments.length} judgment(s)`);
+    lines.push(`- **${c.label}** _(${c.status})_ — ${bits.join(' · ')}`);
+    if (c.summary) lines.push(`  - Memory: ${firstSentence(c.summary)}`);
+  }
+  if (changed.length > n) lines.push(`- …and ${changed.length - n} more in docs/dossiers/`);
+  if (quiet.length) lines.push(`- Quiet today after posting yesterday: ${quiet.map((q) => `${q.label} (${fmt(q.last.posts)} post${q.last.posts === 1 ? '' : 's'})`).join(', ')}`);
+  lines.push('', '_From data/dossiers (docs/dossiers/ for the full ledgers). Counts are measured; the memory line is a judgment._');
+  return lines;
+}
 
 function topTopics(rows, date, caucus, n = 3) {
   return rows
@@ -26,7 +63,7 @@ function subsUnder(rows, date, caucus, macro, n = 3) {
     .slice(0, n);
 }
 
-export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget }) {
+export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, dossiers = null }) {
   const rows = rollups?.rows || [];
   const labels = rollups?.labels || {};
   const label = (r) => labels[r.sub ? `${r.macro}/${r.sub}` : r.macro] || r.macro;
@@ -41,6 +78,8 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
       lines.push(`   - ${label(s)}: ${fmt(s.posts)} posts, ${fmt(s.members)} members`);
     }
   }
+
+  lines.push(...renderStoryChanges(date, dossiers));
 
   lines.push('', '## Per caucus', '');
   for (const [tag, name] of Object.entries(settings.caucuses)) {
@@ -104,7 +143,8 @@ async function main() {
     topics: readJSON(topicsPath(date), null),
     tweets: loadDay(date),
     usage: state.usage[date],
-    budget: dailyBudget()
+    budget: dailyBudget(),
+    dossiers: loadDossiers()
   });
   const out = p('reports', `${date}.md`);
   fs.mkdirSync(p('reports'), { recursive: true });

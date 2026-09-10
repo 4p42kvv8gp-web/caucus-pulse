@@ -35,6 +35,7 @@ import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { p, settings, readJSON, writeJSON, daysAgoEt } from './util.js';
 import { loadDay, topicsPath } from './store.js';
 import { loadTaxonomy, renderTaxonomy, parseJsonLoose } from './taxonomy.js';
+import { memoryForStories } from './memory.js';
 
 export const storiesPath = p('data', 'stories.json');
 const arg = (name, dflt) => {
@@ -313,14 +314,17 @@ Reply with ONLY a JSON object: {"placements": [{"n": 1, "macro": "...", "key": "
 // because a mixed cluster betrays itself at the ends while a real story reads
 // the same throughout. Returns [{keys, reason}] for groups the model confirms.
 // `client` is injectable so tests feed a canned reply; nothing here touches
-// the network unless a real client is created.
+// the network unless a real client is created. `memory` is the dossiers'
+// Memory block (src/memory.js) for the stories being compared: what each
+// has been so far, so "same story under two labels" is judged against the
+// ledger and not only against two samples.
 export function confirmInput(c, postsById) {
   const text = (id) => postsById.get(id)?.text;
   const samples = [...new Set([text(c.ids[0]), text(c.ids.at(-1))])].filter(Boolean).map((t) => t.slice(0, 240));
   return { key: c.key, label: c.label, labels: c.labels, posts: c.posts, members: c.members, firstSeen: c.firstSeen, lastSeen: c.lastSeen, samples };
 }
 
-export async function confirmDuplicates(stories, { client, model } = {}) {
+export async function confirmDuplicates(stories, { client, model, memory = '' } = {}) {
   if (stories.length < 2) return [];
   client ||= await anthropicClient();
   model ||= process.env.CLASSIFY_MODEL || settings.classify.model;
@@ -328,6 +332,7 @@ export async function confirmDuplicates(stories, { client, model } = {}) {
     const labels = s.labels?.length > 1 ? `; daily labels: ${s.labels.slice(0, 6).join(', ')}` : '';
     return `${i + 1}. "${s.label}" (${s.posts} posts, ${s.members} members, ${s.firstSeen} → ${s.lastSeen}${labels})\n   samples: ${s.samples.map((t) => JSON.stringify(t)).join(' | ')}`;
   }).join('\n');
+  const memoryBlock = memory ? `\n${memory}\n` : '';
   const prompt = `Below are candidate developing stories built from tweets by US House Democrats: clusters the classifier could not place, merged across days by label. Some are the SAME specific story under different labels. Find those and nothing else.
 
 Rules:
@@ -335,7 +340,7 @@ Rules:
 - A generic or mixed cluster (tributes to several different people, assorted memorials, unrelated renamings) is NOT a duplicate of a specific story, even if a few of its tweets touch it. Leave it alone.
 - Sharing a broad theme is not enough: "9/11 remembrance" and "first responder health care" are different stories.
 - When in doubt, do not group.
-
+${memoryBlock}
 Clusters:
 ${list}
 
@@ -442,7 +447,12 @@ async function main() {
   const unchecked = storyCands.filter((c) => !confirmation.checked.includes(c.key));
   if (llm && storyCands.length >= 2 && (unchecked.length || reconfirm)) {
     console.log(`[stories] asking the model to confirm duplicates among ${storyCands.length} story candidate(s) (${unchecked.length} unchecked)`);
-    const groups = await confirmDuplicates(storyCands.map((c) => confirmInput(c, postsById)));
+    // Memory: the dossiers of the stories these candidates placed to
+    // (data/dossiers, src/memory.js). Missing dossiers contribute nothing.
+    let memory = '';
+    try { memory = memoryForStories(storyCands.map((c) => placements[c.key]?.key || c.key)); }
+    catch (e) { console.warn(`[stories] memory skipped: ${e.message}`); }
+    const groups = await confirmDuplicates(storyCands.map((c) => confirmInput(c, postsById)), { memory });
     for (const g of groups) console.log(`  confirmed: ${g.keys.join(' + ')} — ${g.reason}`);
     confirmation.groups = mergeConfirmedGroups(confirmation.groups, groups);
     confirmation.checked = storyCands.map((c) => c.key);

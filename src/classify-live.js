@@ -13,6 +13,7 @@ import { settings, etDate, readJSON, writeJSON, p } from './util.js';
 import { loadTaxonomy, systemPrompt, parseJsonLoose } from './taxonomy.js';
 import { mergeParsed } from './classify.js';
 import { correctionExamples } from './corrections.js';
+import { memoryForClassifier } from './memory.js';
 
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
 
@@ -31,12 +32,34 @@ function precedents(tax) {
   }
 }
 
+// Long-term memory: the story dossiers' rolling summaries (src/memory.js),
+// as a SECOND cached system block after the taxonomy. It changes only when
+// a dossier changed (nightly), so the taxonomy block's cache prefix is
+// untouched and the memory block itself is cached across the day's polls.
+// A broken dossier file must not stop live tagging — warn and go without.
+// TODO(memory): give classify.js chunkRequests the same second block; the
+// nightly batch classifies without memory until classify.js is opened up.
+function memory() {
+  try {
+    return memoryForClassifier();
+  } catch (e) {
+    console.warn(`[classify-live] memory skipped: ${e.message}`);
+    return '';
+  }
+}
+
+export function systemBlocks(tax, { examples = [], memoryText = '' } = {}) {
+  const blocks = [{ type: 'text', text: systemPrompt(tax, { examples }), cache_control: { type: 'ephemeral' } }];
+  if (memoryText) blocks.push({ type: 'text', text: memoryText, cache_control: { type: 'ephemeral' } });
+  return blocks;
+}
+
 export async function classifyLive(records) {
   if (process.env.CLASSIFY_LIVE === 'false' || !anthropicConfigured()) return null;
   const items = records.filter((t) => t.type !== 'retweet');
   if (!items.length) return null;
   const tax = loadTaxonomy();
-  const system = [{ type: 'text', text: systemPrompt(tax, { examples: precedents(tax) }), cache_control: { type: 'ephemeral' } }];
+  const system = systemBlocks(tax, { examples: precedents(tax), memoryText: memory() });
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const client = await anthropicClient();
 

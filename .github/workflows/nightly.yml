@@ -1,6 +1,7 @@
 # Nightly pipeline — 07:30 UTC (2:30/3:30am ET, after the ET day closes):
-# 24h engagement refresh → Claude batch classification → strategic-syntax
-# n-grams → rollups → daily report. Each stage reads the previous stage's
+# 24h engagement refresh → Claude batch classification → corrections →
+# strategic-syntax n-grams → incidents → rollups → story dossiers (long-term
+# memory) → daily report → site data. Each stage reads the previous stage's
 # committed files, so a failed stage can be re-run with workflow_dispatch.
 name: nightly
 on:
@@ -34,4 +35,4 @@ jobs:
         run: npm run nightly
       - name: Commit results
         run: |
-          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report" data reports site/data
+          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report" data reports site/data docs/dossiers
