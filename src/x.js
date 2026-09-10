@@ -123,6 +123,50 @@ export async function userTweetsPage(userId, { startTime, endTime, paginationTok
   };
 }
 
+// One page of recent search (last 7 days), newest first. This is the
+// narrative layer's off-roster probe: it finds posts about a story from
+// accounts we do not capture on the List. Billing is the same $0.005 per post
+// returned; the endpoint's floor is 10 per page, ceiling 100.
+//
+// expandAuthors=true adds expansions=author_id and returns the user objects
+// in `users` — each one is a $0.01 user read, reported separately in
+// usage.users so the caller can meter it. Default off: on-roster authors
+// resolve from data/authors.json and data/lists/*.json for free.
+//
+// Pagination uses next_token (search's name for it; the timeline endpoints
+// call it pagination_token). On 429 the reset time is returned like
+// userTweetsPage so the caller can wait instead of giving up.
+export async function searchRecent(query, { maxResults = 100, nextToken, startTime, endTime, expandAuthors = false } = {}) {
+  const params = new URLSearchParams({
+    query,
+    max_results: String(Math.min(100, Math.max(10, maxResults))),
+    'tweet.fields': TWEET_FIELDS.includes('public_metrics') ? TWEET_FIELDS : `${TWEET_FIELDS},public_metrics`
+  });
+  if (expandAuthors) {
+    params.set('expansions', 'author_id');
+    params.set('user.fields', 'username,name,verified,public_metrics');
+  }
+  if (startTime) params.set('start_time', startTime);
+  if (endTime) params.set('end_time', endTime);
+  if (nextToken) params.set('next_token', nextToken);
+  const res = await authFetch(`${API}/tweets/search/recent?${params}`);
+  const resetAt = Number(res.headers.get('x-rate-limit-reset') ?? NaN) * 1000 || null;
+  const empty = { tweets: [], users: [], nextToken: null, usage: { posts: 0, users: 0 } };
+  if (res.status === 429) return { rateLimited: true, resetAt, ...empty };
+  if (!res.ok) await fail(res, 'search recent');
+  const body = await res.json();
+  const tweets = body.data || [];
+  const users = body.includes?.users || [];
+  return {
+    rateLimited: false,
+    resetAt,
+    tweets,
+    users,
+    nextToken: body.meta?.next_token || null,
+    usage: { posts: tweets.length, users: users.length }
+  };
+}
+
 // Batched metrics re-read: up to 100 ids per request; each returned tweet is
 // one post read. Deleted/protected tweets simply don't come back.
 export async function lookupTweets(ids) {
