@@ -11,7 +11,7 @@
 import { p, settings, readJSON, writeJSON, daysAgoEt } from './util.js';
 import { loadDay, topicsPath, metricsPath, loadState } from './store.js';
 import { liveTopicsPath } from './classify-live.js';
-import { loadAuthors } from './authors.js';
+import { loadAuthors, isHouse, splitByRoster } from './authors.js';
 import { loadTaxonomy, labelOf } from './taxonomy.js';
 import { momentum } from './momentum.js';
 import { minePhrases, tokenize, ngrams } from './syntax.js';
@@ -103,8 +103,12 @@ export function buildSiteData() {
   const today = days[6];
 
   // ── load the window: posts with resolved engagement + topics ──
+  // Roster filter: senators, former members and stray non-member accounts
+  // on the List stay in the archive but count nowhere below. `excluded`
+  // is reported so the dashboard can say how much it is not showing.
   const postsByDay = new Map();
   const allPosts = [];
+  const excluded = { posts: 0, t: 0 };
   for (const date of days) {
     const metrics = readJSON(metricsPath(date), {});
     const { assignments } = dayAssignments(date);
@@ -120,8 +124,11 @@ export function buildSiteData() {
         date
       };
     });
-    postsByDay.set(date, posts);
-    allPosts.push(...posts);
+    const { house, excluded: out } = splitByRoster(posts, authorsById);
+    excluded.posts += out.length;
+    if (date === today) excluded.t += out.length;
+    postsByDay.set(date, house);
+    allPosts.push(...house);
   }
 
   // ── topics: per-day, per-scope aggregation ──
@@ -308,6 +315,7 @@ export function buildSiteData() {
     const memberFirst = { ...Object.fromEntries(users) };
     for (const v of variants) {
       for (const [a, d] of Object.entries(ledger[v]?.memberFirst || {})) {
+        if (!isHouse(authorsById[a])) continue; // ledger entries predating the roster filter
         if (!memberFirst[a] || memberFirst[a] > d) memberFirst[a] = d;
       }
     }
@@ -420,8 +428,11 @@ export function buildSiteData() {
     });
 
   // ── members map + per-caucus active counts (posted in the 7-day window) ──
+  // House accounts only, so `accounts` is the roster the numbers describe.
   const members = {};
+  let nonHouseAccounts = 0;
   for (const a of Object.values(authorsById)) {
+    if (!isHouse(a)) { if (a.onList !== false && !a.stale) nonHouseAccounts++; continue; }
     if (a.handle) members[`@${a.handle}`] = [a.member || a.name || a.handle, a.stateDistrict || '', caucusKeysOf(a)];
   }
 
@@ -442,6 +453,9 @@ export function buildSiteData() {
     today,
     days,
     accounts: Object.keys(members).length,
+    // What the roster filter left out: non-House accounts on the List, and
+    // their posts in the window (`posts`) and today (`t`).
+    excluded: { accounts: nonHouseAccounts, ...excluded },
     caucusKeys: KEYS,
     caucusNames: Object.fromEntries(Object.entries(settings.caucus_keys).map(([tag, k]) => [k, settings.caucuses[tag]])),
     caucusActive: Object.fromEntries(KEYS.map((k) => [k, activeByCaucus[k].size])),
@@ -455,7 +469,7 @@ export function buildSiteData() {
     incidents: incidentsFile.incidents,
     feed
   });
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters, ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts`);
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters, ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts; ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {

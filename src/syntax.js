@@ -6,7 +6,7 @@
 // "Trump Cartel: first used Aug 24 by @RepJeffries, 31 members within 48h".
 import { settings, daysAgoEt, readJSON, writeJSON, p } from './util.js';
 import { loadDay, syntaxPath } from './store.js';
-import { loadAuthors } from './authors.js';
+import { loadAuthors, splitByRoster } from './authors.js';
 
 export const phrasesPath = p('data', 'phrases.json');
 
@@ -89,8 +89,9 @@ async function main() {
     minNgram: settings.syntax.min_ngram,
     maxNgram: settings.syntax.max_ngram
   };
-  const tweets = loadDay(date);
   const authors = loadAuthors().byId;
+  // Roster filter: a senator repeating a line is not House message discipline.
+  const tweets = splitByRoster(loadDay(date), authors).house;
   const phrases = minePhrases(tweets, cfg).slice(0, settings.syntax.top_phrases);
 
   // Update the first-seen ledger (adoption curves). memberFirst records the

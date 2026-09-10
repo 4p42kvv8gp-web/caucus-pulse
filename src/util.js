@@ -79,16 +79,34 @@ export function parseCSV(text) {
   return rows;
 }
 
-// accounts.csv → [{handle, member, accountType, caucuses: [..], stateDistrict}]
-export function loadAccounts() {
-  const rows = parseCSV(fs.readFileSync(p('config', 'accounts.csv'), 'utf8'));
-  const [header, ...body] = rows;
+// Roster status, from the optional `status` column. Only `house` accounts
+// count toward the numbers; senators, former members and stray non-member
+// accounts stay on the List for context (docs/ROSTER_COVERAGE.md). Blank
+// means house — the column is optional and most rows never need it.
+export const ACCOUNT_STATUSES = ['house', 'senate', 'former', 'org'];
+
+// accounts.csv text → [{handle, member, accountType, caucuses: [..], stateDistrict, status}]
+export function parseAccounts(text) {
+  const [header, ...body] = parseCSV(text);
   const col = Object.fromEntries(header.map((h, i) => [h.trim(), i]));
-  return body.map((r) => ({
-    handle: (r[col.handle] || '').trim().replace(/^@/, ''),
-    member: (r[col.member] || '').trim(),
-    accountType: (r[col.account_type] || '').trim(),
-    caucuses: (r[col.caucuses] || '').split('|').map((c) => c.trim()).filter(Boolean),
-    stateDistrict: (r[col.state_district] || '').trim()
-  })).filter((a) => a.handle);
+  return body.map((r, i) => {
+    // A typo here would silently count a senator as a House member, so
+    // refuse the whole file rather than default it.
+    const status = (r[col.status] || '').trim().toLowerCase() || 'house';
+    if (!ACCOUNT_STATUSES.includes(status)) {
+      throw new Error(`accounts.csv row ${i + 2}: unknown status "${status}" (expected one of ${ACCOUNT_STATUSES.join(', ')})`);
+    }
+    return {
+      handle: (r[col.handle] || '').trim().replace(/^@/, ''),
+      member: (r[col.member] || '').trim(),
+      accountType: (r[col.account_type] || '').trim(),
+      caucuses: (r[col.caucuses] || '').split('|').map((c) => c.trim()).filter(Boolean),
+      stateDistrict: (r[col.state_district] || '').trim(),
+      status
+    };
+  }).filter((a) => a.handle);
+}
+
+export function loadAccounts() {
+  return parseAccounts(fs.readFileSync(p('config', 'accounts.csv'), 'utf8'));
 }
