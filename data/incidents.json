@@ -1,11 +1,23 @@
 {
- "generatedAt": "2026-09-10T07:19:35.352Z",
+ "generatedAt": "2026-09-10T07:41:44.090Z",
  "incidents": [
   {
    "id": "san-diego-ca--extreme-heat",
    "kind": "extreme heat",
+   "kinds": [
+    "extreme heat"
+   ],
    "status": "active",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 0 confirmed, 2 unverified item(s)"
+   },
    "place": "San Diego, CA · CA-50",
+   "placeRaw": "San Diego, CA",
+   "district": "CA-50",
+   "districtMatch": true,
    "handle": "@RepScottPeters",
    "member": "Scott H. Peters",
    "since": "2026-09-09T20:42:21.000Z",
@@ -15,6 +27,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Extreme heat · San Diego, CA",
+   "evidence": {
+    "span": "San Diego is experiencing an extreme heat wave expected to last through 8pm today and possibly into tomorrow.",
+    "exact": true,
+    "start": 0,
+    "end": 109,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-09T20:42:21.000Z",
@@ -22,7 +44,21 @@
      "tag": "member",
      "text": "San Diego is experiencing an extreme heat wave expected to last through 8pm today and possibly into tomorrow. Find a designated cool zone near you and other resources to protect yourself and your family ⬇️ https://t.co/rw1TBIjRrc",
      "engN": 5,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "extreme heat",
+      "place": "San Diego, CA"
+     },
+     "evidence": {
+      "span": "San Diego is experiencing an extreme heat wave expected to last through 8pm today and possibly into tomorrow.",
+      "exact": true,
+      "start": 0,
+      "end": 109,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -50,10 +86,22 @@
    }
   },
   {
-   "id": "kauai-hi--tropical-storm",
-   "kind": "tropical storm",
-   "status": "active",
+   "id": "kauai-hi--hurricane",
+   "kind": "hurricane",
+   "kinds": [
+    "tropical storm"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
    "place": "Kauai, HI · HI-01",
+   "placeRaw": "Kauai, HI",
+   "district": "HI-01",
+   "districtMatch": true,
    "handle": "@RepEdCase",
    "member": "Ed Case",
    "since": "2026-09-09T20:27:07.000Z",
@@ -62,7 +110,17 @@
    "engN": 4,
    "amplifiers": 0,
    "others": [],
-   "title": "Tropical storm · Kauai, HI",
+   "title": "Hurricane · Kauai, HI",
+   "evidence": {
+    "span": "Here’s updated info https://t.co/CCSiCRLWgm and https://t.co/4V0EQfV0QP, especially for Kaua’i/Ni’ihau, the link to report storm damage which will be used to request a presidential disaster declaration freeing up",
+    "exact": true,
+    "start": 63,
+    "end": 275,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-09T20:27:07.000Z",
@@ -70,82 +128,45 @@
      "tag": "member",
      "text": "Thinking of all our ‘ohana recovering from devastating Lowell. Here’s updated info https://t.co/CCSiCRLWgm and https://t.co/4V0EQfV0QP, especially for Kaua’i/Ni’ihau, the link to report storm damage which will be used to request a presidential disaster declaration freeing up https://t.co/I6PJNr7LSG",
      "engN": 4,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "tropical storm",
+      "place": "Kauai, HI"
+     },
+     "evidence": {
+      "span": "Here’s updated info https://t.co/CCSiCRLWgm and https://t.co/4V0EQfV0QP, especially for Kaua’i/Ni’ihau, the link to report storm damage which will be used to request a presidential disaster declaration freeing up",
+      "exact": true,
+      "start": 63,
+      "end": 275,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
     "2097783883286905197"
    ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [],
-    "whatsNew": [
-     "Member posted updated storm information links for those recovering from Lowell, which he describes as devastating (per @RepEdCase, 2026-09-09T20:27Z).",
-     "Post highlights a link for Kaua'i/Ni'ihau residents to report storm damage (per @RepEdCase, 2026-09-09T20:27Z).",
-     "Post states the damage reports will be used to request a presidential disaster declaration (per @RepEdCase, 2026-09-09T20:27Z)."
-    ],
-    "extractedAt": "2026-09-10T06:10:13.554Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "ka-hi--hurricane-damage",
-   "kind": "hurricane damage",
-   "status": "active",
-   "place": "Kaʻū, HI · HI-02",
-   "handle": "@RepJillTokuda",
-   "member": "Jill N. Tokuda",
-   "since": "2026-09-09T20:08:52.000Z",
-   "last": "2026-09-09T20:08:52.000Z",
-   "updates": 1,
-   "engN": 0,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Hurricane damage · Kaʻū, HI",
-   "timeline": [
-    {
-     "time": "2026-09-09T20:08:52.000Z",
-     "who": "@RepJillTokuda",
-     "tag": "member",
-     "text": "The destruction Hurricane Lala left behind on farms across Kaʻū is extensive. From ranch lands to coffee farms, cracks in the earth, flooding, downed trees, broken water lines and damaged roads will take significant resources.\n\nI’m working to urgently bring federal support to https://t.co/3PCjaDkX5n",
-     "engN": 0,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2097779291673248203"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "Member describes extensive destruction from Hurricane Lala on farms across Kaʻū, spanning ranch lands to coffee farms; no official source (police, OEM, fire) is cited in the post.",
-      "src": "per @RepJillTokuda, 2026-09-09T20:08:52Z"
-     },
-     {
-      "text": "Damage listed by the member includes cracks in the earth, flooding, downed trees, broken water lines and damaged roads; she says it will take significant resources — not attributed to any official agency.",
-      "src": "per @RepJillTokuda, 2026-09-09T20:08:52Z"
-     },
-     {
-      "text": "Member states she is working to urgently bring federal support (post links to additional content not quoted here).",
-      "src": "per @RepJillTokuda, 2026-09-09T20:08:52Z"
-     }
-    ],
-    "whatsNew": [
-     "Member says she is urgently working to bring federal support to the area (per @RepJillTokuda, 2026-09-09T20:08:52Z).",
-     "Member reports extensive Hurricane Lala damage to Kaʻū farms, from ranch lands to coffee farms (same post).",
-     "Damage cited by the member: earth cracks, flooding, downed trees, broken water lines, damaged roads (same post).",
-     "No official (police/OEM/fire) confirmations appear in the posts provided."
-    ],
-    "extractedAt": "2026-09-10T06:10:23.087Z",
-    "posts": 1
-   }
+   "intel": null
   },
   {
    "id": "napa-county-ca--wildfire",
    "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
    "status": "monitoring",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 2 confirmed, 0 unverified item(s)"
+   },
    "place": "Napa County, CA · CA-04",
+   "placeRaw": "Napa County, CA",
+   "district": "CA-04",
+   "districtMatch": true,
    "handle": "@RepThompson",
    "member": "Mike Thompson",
    "since": "2026-09-09T19:17:37.000Z",
@@ -155,6 +176,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Napa County, CA",
+   "evidence": {
+    "span": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008.",
+    "exact": true,
+    "start": 0,
+    "end": 69,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-09T19:17:37.000Z",
@@ -162,7 +193,21 @@
      "tag": "member",
      "text": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008. Please be vigilante and ready to evacuate when and if needed.\nLearn More: https://t.co/PFGosXomu7 https://t.co/aNoglJOIcC",
      "engN": 5,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Napa County, CA"
+     },
+     "evidence": {
+      "span": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008.",
+      "exact": true,
+      "start": 0,
+      "end": 69,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -190,151 +235,22 @@
    }
   },
   {
-   "id": "miami-fl--plane-crash",
-   "kind": "plane crash",
-   "status": "monitoring",
-   "place": "Miami, FL · FL-09",
-   "handle": "@RepDarrenSoto",
-   "member": "Darren Soto",
-   "since": "2026-09-06T23:13:46.000Z",
-   "last": "2026-09-09T18:56:06.000Z",
-   "updates": 4,
-   "engN": 115,
-   "amplifiers": 0,
-   "others": [
-    "@RepDWStweets",
-    "@RepWilson",
-    "@BettyMcCollum04"
-   ],
-   "title": "Plane crash · Miami, FL",
-   "timeline": [
-    {
-     "time": "2026-09-06T23:13:46.000Z",
-     "who": "@RepDarrenSoto",
-     "tag": "member",
-     "text": "What a tragedy. Praying for the families of those who perished at Miami Airport, and for a full recovery for those injured. FAA must perform a full review. \n\nThanks to brave first responders for their heroism. https://t.co/cl7NPGfKEK",
-     "engN": 25,
-     "isNew": false
-    },
-    {
-     "time": "2026-09-07T00:28:13.000Z",
-     "who": "@RepDWStweets",
-     "tag": "member",
-     "text": "Horrified to hear about the crash of 21 Air Flight 7598 in Miami. Thank you to the first responders for their quick and heroic work to respond.\n\nMy heart is with the victims of the crash and their families. May their memories be for a blessing. https://t.co/MOyyhb3dNe",
-     "engN": 12,
-     "isNew": false
-    },
-    {
-     "time": "2026-09-08T02:40:00.000Z",
-     "who": "@RepWilson",
-     "tag": "member",
-     "text": "I am heartbroken by the tragic Prime Air cargo plane crash at Miami International Airport. My prayers are with the families who lost loved ones, those injured, and our brave first responders. \n\nOur entire South Florida community mourns with you.",
-     "engN": 69,
-     "isNew": false
-    },
-    {
-     "time": "2026-09-09T18:56:06.000Z",
-     "who": "@BettyMcCollum04",
-     "tag": "member",
-     "text": "It is devastating to see the loss of five lives as a result of the Amazon plane that over ran the runway at the Miami International Airport. National Transportation Safety Board investigations will be critical to understand how a tragedy like this can be avoided in the future.",
-     "engN": 9,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2096738657470153210",
-    "2096757393291927573",
-    "2097152945695449421",
-    "2097760977533956208"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "A crash occurred at Miami Airport in which people were killed and others injured; the member calls for the FAA to perform a full review and thanks first responders. No official source is cited in the post.",
-      "src": "per @RepDarrenSoto, 2026-09-06T23:13:46Z"
-     },
-     {
-      "text": "The aircraft involved is identified as 21 Air Flight 7598, which crashed in Miami; the post refers to victims of the crash and their families and thanks first responders. No official source is cited in the post.",
-      "src": "per @RepDWStweets, 2026-09-07T00:28:13Z"
-     },
-     {
-      "text": "The incident is described as a Prime Air cargo plane crash at Miami International Airport, with families who lost loved ones and people injured. No official source is cited in the post.",
-      "src": "per @RepWilson, 2026-09-08T02:40:00Z"
-     },
-     {
-      "text": "Five lives were lost after an 'Amazon plane' overran the runway at Miami International Airport, and National Transportation Safety Board investigations are described as critical to preventing future tragedies. No official source is cited in the post.",
-      "src": "per @BettyMcCollum04, 2026-09-09T18:56:06Z"
-     },
-     {
-      "text": "Note for comms: the posts describe the aircraft differently — '21 Air Flight 7598' (per @RepDWStweets), a 'Prime Air cargo plane' (per @RepWilson), and an 'Amazon plane' (per @BettyMcCollum04); the posts do not reconcile these descriptions.",
-      "src": "per @RepDWStweets 2026-09-07T00:28:13Z; @RepWilson 2026-09-08T02:40:00Z; @BettyMcCollum04 2026-09-09T18:56:06Z"
-     }
-    ],
-    "whatsNew": [
-     "Per @BettyMcCollum04, 2026-09-09T18:56:06Z: five deaths cited; plane described as overrunning the MIA runway; NTSB investigation flagged as critical.",
-     "Per @RepWilson, 2026-09-08T02:40:00Z: incident described as a Prime Air cargo plane crash at Miami International Airport, with deaths and injuries.",
-     "Per @RepDWStweets, 2026-09-07T00:28:13Z: aircraft identified as 21 Air Flight 7598.",
-     "Per @RepDarrenSoto, 2026-09-06T23:13:46Z: first post on the crash at Miami Airport; deaths and injuries referenced and a full FAA review requested."
-    ],
-    "extractedAt": "2026-09-10T06:10:47.623Z",
-    "posts": 4
-   }
-  },
-  {
-   "id": "eastern-oregon-or--wildfire",
-   "kind": "wildfire",
-   "status": "monitoring",
-   "place": "Eastern Oregon, OR · OR-03",
-   "handle": "@RepDexterOR",
-   "member": "Maxine Dexter",
-   "since": "2026-09-09T14:49:53.000Z",
-   "last": "2026-09-09T14:49:53.000Z",
-   "updates": 1,
-   "engN": 9,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Wildfire · Eastern Oregon, OR",
-   "timeline": [
-    {
-     "time": "2026-09-09T14:49:53.000Z",
-     "who": "@RepDexterOR",
-     "tag": "member",
-     "text": "I visited the incident command posts servicing the Austin and Narrows fires with @SenJeffMerkley to learn how to better support our firefighters this wildfire season and beyond.\n\nIn Congress, I am working on legislation to get them the protection they deserve. They risk their https://t.co/Acd1xapH2Z",
-     "engN": 9,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2097699017979236377"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Rep. Dexter states she visited the incident command posts servicing the Austin and Narrows fires, along with Sen. Jeff Merkley, to learn how to better support firefighters this wildfire season and beyond.",
-      "src": "per @RepDexterOR, 2026-09-09 14:49 UTC"
-     },
-     {
-      "text": "Rep. Dexter says she is working on legislation in Congress to get firefighters \"the protection they deserve\" (post text is truncated at this point).",
-      "src": "per @RepDexterOR, 2026-09-09 14:49 UTC"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepDexterOR (Sep 9, 14:49 UTC): member visited incident command posts for the Austin and Narrows fires with Sen. Jeff Merkley.",
-     "Per @RepDexterOR (Sep 9, 14:49 UTC): stated purpose of the visit was learning how to better support firefighters this season and beyond.",
-     "Per @RepDexterOR (Sep 9, 14:49 UTC): member points to legislation she is working on to protect firefighters; post text cuts off.",
-     "No official figures on acreage, containment, evacuations or injuries appear in the posts reviewed."
-    ],
-    "extractedAt": "2026-09-10T06:10:57.944Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "monterey-county-ca--wildfire",
    "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
    "status": "monitoring",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": true,
+    "by": "second post",
+    "note": "@RepJimmyPanetta posted again 6d after the first report"
+   },
    "place": "Monterey County, CA · CA-19",
+   "placeRaw": "Monterey County, CA",
+   "district": "CA-19",
+   "districtMatch": true,
    "handle": "@RepJimmyPanetta",
    "member": "Jimmy Panetta",
    "since": "2026-09-03T14:04:32.000Z",
@@ -344,6 +260,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Monterey County, CA",
+   "evidence": {
+    "span": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
+    "exact": true,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-03T14:04:32.000Z",
@@ -351,7 +277,21 @@
      "tag": "member",
      "text": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
      "engN": 2,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
+      "exact": true,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     },
     {
      "time": "2026-09-03T16:15:17.000Z",
@@ -359,7 +299,21 @@
      "tag": "member",
      "text": "CAL FIRE and the U.S. Forest Service continue to work together in a strategic partnership to fully suppress these fires. They’ll continue doing their job in steep terrain and tough conditions to put out the Timber and Plaskett fires and keep our communities safe. https://t.co/Un6yFc5vem",
      "engN": 13,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "CAL FIRE and the U.S. Forest Service continue to work together in a strategic partnership to fully suppress these fires. They’ll continue do",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     },
     {
      "time": "2026-09-04T19:37:00.000Z",
@@ -367,7 +321,21 @@
      "tag": "member",
      "text": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for the firefighters and first responders working tirelessly to suppress both and protect our communities. \n\nhttps://t.co/lwwAcDhqky",
      "engN": 5,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     },
     {
      "time": "2026-09-09T13:40:09.000Z",
@@ -375,7 +343,21 @@
      "tag": "member",
      "text": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is now 61% contained and Timber is at 27%. More than 3,700 personnel, along with 23 helicopters, 210 engines, and 55 dozers, are supporting",
      "engN": 11,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -419,76 +401,42 @@
    }
   },
   {
-   "id": "la-habra-ca--chemical-leak",
-   "kind": "chemical leak",
-   "status": "monitoring",
-   "place": "La Habra, CA · CA-38",
-   "handle": "@RepLindaSanchez",
-   "member": "Linda T. Sánchez",
-   "since": "2026-09-08T23:20:04.000Z",
-   "last": "2026-09-08T23:20:07.000Z",
-   "updates": 2,
-   "engN": 10,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Chemical leak · La Habra, CA",
-   "timeline": [
-    {
-     "time": "2026-09-08T23:20:04.000Z",
-     "who": "@RepLindaSanchez",
-     "tag": "member",
-     "text": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra https://t.co/Al59GKHBAi",
-     "engN": 1,
-     "isNew": false
-    },
-    {
-     "time": "2026-09-08T23:20:07.000Z",
-     "who": "@RepLindaSanchez",
-     "tag": "member",
-     "text": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory\nhttps://t.co/QPLS1b2uuJ",
-     "engN": 9,
-     "isNew": false
-    }
+   "id": "la-habra-ca--hazmat",
+   "kind": "hazmat",
+   "kinds": [
+    "hazmat release",
+    "chemical leak"
    ],
-   "tweetIds": [
-    "2097465021995356640",
-    "2097465033416458372"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "Retweeted @ABC7 update: an all-clear was given after orange smoke was seen rising from a chemical leak at a La Habra factory (shared as a news report, no official source cited by the member).",
-      "src": "per @RepLindaSanchez, 2026-09-08 23:20:07 UTC (RT @ABC7)"
-     },
-     {
-      "text": "Retweeted @ocregister headline: a shelter-in-place order was lifted following a hazmat incident in La Habra (shared as a news report, no official source cited by the member).",
-      "src": "per @RepLindaSanchez, 2026-09-08 23:20:04 UTC (RT @ocregister)"
-     }
-    ],
-    "whatsNew": [
-     "23:20:07 UTC — Member RTs @ABC7: all-clear given after orange smoke from a La Habra factory chemical leak.",
-     "23:20:04 UTC — Member RTs @ocregister: shelter-in-place order lifted after the hazmat incident.",
-     "No original statements from the member and no official police/fire/OEM confirmations in the posts reviewed."
-    ],
-    "extractedAt": "2026-09-10T06:11:23.943Z",
-    "posts": 2
-   }
-  },
-  {
-   "id": "la-habra-ca--hazmat-release",
-   "kind": "hazmat release",
    "status": "monitoring",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": true,
+    "by": "second post",
+    "note": "@RepLindaSanchez posted again 2.4h after the first report"
+   },
    "place": "La Habra, CA · CA-38",
+   "placeRaw": "La Habra, CA",
+   "district": "CA-38",
+   "districtMatch": true,
    "handle": "@RepLindaSanchez",
    "member": "Linda T. Sánchez",
    "since": "2026-09-08T20:58:47.000Z",
-   "last": "2026-09-08T20:58:47.000Z",
-   "updates": 1,
-   "engN": 7,
+   "last": "2026-09-08T23:20:07.000Z",
+   "updates": 3,
+   "engN": 17,
    "amplifiers": 0,
    "others": [],
-   "title": "Hazmat release · La Habra, CA",
+   "title": "Hazmat · La Habra, CA",
+   "evidence": {
+    "span": "🚨 LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street.",
+    "exact": true,
+    "start": 0,
+    "end": 117,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-08T20:58:47.000Z",
@@ -496,47 +444,91 @@
      "tag": "member",
      "text": "🚨 LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street. Officials have ordered evacuations within a 1-mile radius as they investigate an unknown chemical release.\n\nPlease avoid the area and follow local authorities' https://t.co/JLpunVoOkC",
      "engN": 7,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "hazmat release",
+      "place": "La Habra, CA"
+     },
+     "evidence": {
+      "span": "🚨 LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street.",
+      "exact": true,
+      "start": 0,
+      "end": 117,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
+    },
+    {
+     "time": "2026-09-08T23:20:04.000Z",
+     "who": "@RepLindaSanchez",
+     "tag": "member",
+     "text": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra https://t.co/Al59GKHBAi",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "chemical leak",
+      "place": "La Habra, CA"
+     },
+     "evidence": {
+      "span": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra",
+      "exact": true,
+      "start": 0,
+      "end": 83,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
+    },
+    {
+     "time": "2026-09-08T23:20:07.000Z",
+     "who": "@RepLindaSanchez",
+     "tag": "member",
+     "text": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory\nhttps://t.co/QPLS1b2uuJ",
+     "engN": 9,
+     "isNew": false,
+     "flag": {
+      "kind": "chemical leak",
+      "place": "La Habra, CA"
+     },
+     "evidence": {
+      "span": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory",
+      "exact": true,
+      "start": 0,
+      "end": 103,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
-    "2097429464565108767"
+    "2097429464565108767",
+    "2097465021995356640",
+    "2097465033416458372"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Officials have ordered evacuations within a 1-mile radius while they investigate an unknown chemical release.",
-      "src": "per @RepLindaSanchez, 2026-09-08T20:58:47Z"
-     },
-     {
-      "text": "Residents are told to avoid the area and follow local authorities' guidance (link truncated in post).",
-      "src": "per @RepLindaSanchez, 2026-09-08T20:58:47Z"
-     }
-    ],
-    "unverified": [
-     {
-      "text": "A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street.",
-      "src": "per @RepLindaSanchez, 2026-09-08T20:58:47Z"
-     },
-     {
-      "text": "The substance involved is described as an unknown chemical release still under investigation; no identification, cause, or injury information is stated.",
-      "src": "per @RepLindaSanchez, 2026-09-08T20:58:47Z"
-     }
-    ],
-    "whatsNew": [
-     "Evacuations ordered within a 1-mile radius as officials investigate (per @RepLindaSanchez, 2026-09-08T20:58:47Z).",
-     "Reported hazmat incident near Cypress Street and South Cypress Street in La Habra (per @RepLindaSanchez, 2026-09-08T20:58:47Z).",
-     "Public urged to stay away from the area and follow local authorities (per @RepLindaSanchez, 2026-09-08T20:58:47Z)."
-    ],
-    "extractedAt": "2026-09-10T06:11:33.235Z",
-    "posts": 1
-   }
+   "intel": null
   },
   {
    "id": "orange-and-la-counties-ca--extreme-heat",
    "kind": "extreme heat",
+   "kinds": [
+    "extreme heat"
+   ],
    "status": "monitoring",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+   },
    "place": "Orange and LA counties, CA · CA-45",
+   "placeRaw": "Orange and LA counties, CA",
+   "district": "CA-45",
+   "districtMatch": true,
    "handle": "@RepDerekTranCA",
    "member": "Derek Tran",
    "since": "2026-09-08T20:58:32.000Z",
@@ -546,6 +538,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Extreme heat · Orange and LA counties, CA",
+   "evidence": {
+    "span": "Orange and L.A. counties are under an Extreme Heat Warning through Wednesday, September 9th with temperatures reaching the high 90s and some communities hitting over 100 degrees.",
+    "exact": true,
+    "start": 0,
+    "end": 178,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-08T20:58:32.000Z",
@@ -553,7 +555,21 @@
      "tag": "member",
      "text": "Orange and L.A. counties are under an Extreme Heat Warning through Wednesday, September 9th with temperatures reaching the high 90s and some communities hitting over 100 degrees. Be sure to check in on seniors and vulnerable neighbors to ensure that they are safe from the heat.",
      "engN": 4,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "extreme heat",
+      "place": "Orange and LA counties, CA"
+     },
+     "evidence": {
+      "span": "Orange and L.A. counties are under an Extreme Heat Warning through Wednesday, September 9th with temperatures reaching the high 90s and some communities hitting over 100 degrees.",
+      "exact": true,
+      "start": 0,
+      "end": 178,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -585,201 +601,22 @@
    }
   },
   {
-   "id": "gary-in--storm-damage",
-   "kind": "storm damage",
-   "status": "resolved",
-   "place": "Gary, IN · IN-01",
-   "handle": "@RepMrvan",
-   "member": "Frank J. Mrvan",
-   "since": "2026-09-08T15:48:01.000Z",
-   "last": "2026-09-08T15:48:01.000Z",
-   "updates": 1,
-   "engN": 1,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Storm damage · Gary, IN",
-   "timeline": [
-    {
-     "time": "2026-09-08T15:48:01.000Z",
-     "who": "@RepMrvan",
-     "tag": "member",
-     "text": "As we continue in the storm recovery, I wanted to share information today on certain assistance that is now available from the City of Gary.  For additional details, please click below for my daily update.\nhttps://t.co/X6TV5BKJ7O",
-     "engN": 1,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2097351259149701450"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Storm recovery in the district is ongoing, per @RepMrvan, 2026-09-08 15:48 UTC.",
-      "src": "@RepMrvan, 2026-09-08T15:48:01Z"
-     },
-     {
-      "text": "Certain assistance is now available from the City of Gary, per @RepMrvan, 2026-09-08 15:48 UTC.",
-      "src": "@RepMrvan, 2026-09-08T15:48:01Z"
-     },
-     {
-      "text": "The member points to a linked daily update for additional details on the available assistance, per @RepMrvan, 2026-09-08 15:48 UTC.",
-      "src": "@RepMrvan, 2026-09-08T15:48:01Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepMrvan, 2026-09-08 15:48 UTC: City of Gary assistance is now available to storm-affected residents.",
-     "Per @RepMrvan, 2026-09-08 15:48 UTC: a daily update with additional assistance details was posted via link.",
-     "Per @RepMrvan, 2026-09-08 15:48 UTC: storm recovery efforts are continuing."
-    ],
-    "extractedAt": "2026-09-10T06:11:47.281Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "lake-station-in--flooding",
-   "kind": "flooding",
-   "status": "resolved",
-   "place": "Lake Station, IN · IN-01",
-   "handle": "@RepMrvan",
-   "member": "Frank J. Mrvan",
-   "since": "2026-09-07T18:44:31.000Z",
-   "last": "2026-09-07T18:44:31.000Z",
-   "updates": 1,
-   "engN": 2,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Flooding · Lake Station, IN",
-   "timeline": [
-    {
-     "time": "2026-09-07T18:44:31.000Z",
-     "who": "@RepMrvan",
-     "tag": "member",
-     "text": "As we take a moment to stand in solidarity with all members of organized labor today, I also wanted to share this daily storm update with information on the Mobile Registration Intake Center in Lake Station happening this week. https://t.co/0hQRO49swc",
-     "engN": 2,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2097033286920860097"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Per @RepMrvan, 2026-09-07 18:44 UTC, the member shared a daily storm update that includes information on a Mobile Registration Intake Center in Lake Station taking place this week.",
-      "src": "@RepMrvan, 2026-09-07T18:44:31Z"
-     },
-     {
-      "text": "Per @RepMrvan, 2026-09-07 18:44 UTC, the update was posted alongside a message standing in solidarity with members of organized labor, and included a link to further details.",
-      "src": "@RepMrvan, 2026-09-07T18:44:31Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepMrvan, 2026-09-07 18:44 UTC: daily storm update posted.",
-     "Per @RepMrvan, 2026-09-07 18:44 UTC: Mobile Registration Intake Center in Lake Station this week.",
-     "Per @RepMrvan, 2026-09-07 18:44 UTC: link shared with additional information."
-    ],
-    "extractedAt": "2026-09-10T06:11:59.315Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "porter-county-in--storm-damage",
-   "kind": "storm damage",
-   "status": "resolved",
-   "place": "Porter County, IN · IN-01",
-   "handle": "@RepMrvan",
-   "member": "Frank J. Mrvan",
-   "since": "2026-09-06T17:02:56.000Z",
-   "last": "2026-09-06T17:02:56.000Z",
-   "updates": 1,
-   "engN": 0,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Storm damage · Porter County, IN",
-   "timeline": [
-    {
-     "time": "2026-09-06T17:02:56.000Z",
-     "who": "@RepMrvan",
-     "tag": "member",
-     "text": "As we continue in the storm recovery, I want to remind residents of the One-Stop-Shop in Porter County for storm assistance happening next week.  For additional information, please click below for my daily update. https://t.co/Ufca8QZyeK",
-     "engN": 0,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2096645336655700019"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepMrvan, Sep 6, 2026 5:02 PM UTC: a One-Stop-Shop for storm assistance is planned in Porter County next week.",
-     "Per @RepMrvan, Sep 6, 2026 5:02 PM UTC: storm recovery is ongoing, and residents are directed to the member's linked daily update for additional information."
-    ],
-    "extractedAt": "2026-09-10T06:12:09.808Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "indianapolis-in--flooding",
-   "kind": "flooding",
-   "status": "resolved",
-   "place": "Indianapolis, IN · IN-07",
-   "handle": "@RepAndreCarson",
-   "member": "André Carson",
-   "since": "2026-09-05T19:04:41.000Z",
-   "last": "2026-09-05T19:04:41.000Z",
-   "updates": 1,
-   "engN": 2,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Flooding · Indianapolis, IN",
-   "timeline": [
-    {
-     "time": "2026-09-05T19:04:41.000Z",
-     "who": "@RepAndreCarson",
-     "tag": "member",
-     "text": "If you were impacted by recent flooding in Indianapolis, federal assistance may be available. Here's what you need to know to apply by October 25, 2026. https://t.co/yfEkx2sNtu",
-     "engN": 2,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2096313588805783754"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "The deadline to apply for the federal assistance referenced is October 25, 2026.",
-      "src": "per @RepAndreCarson, 2026-09-05T19:04:41Z"
-     },
-     {
-      "text": "A link with information on how to apply was shared with constituents.",
-      "src": "per @RepAndreCarson, 2026-09-05T19:04:41Z"
-     }
-    ],
-    "unverified": [
-     {
-      "text": "Federal assistance 'may be available' to those impacted by recent flooding in Indianapolis — the post hedges availability and does not attribute it to a named agency or official.",
-      "src": "per @RepAndreCarson, 2026-09-05T19:04:41Z"
-     }
-    ],
-    "whatsNew": [
-     "Member points flood-impacted constituents to federal assistance that 'may be available,' with an October 25, 2026 application deadline (per @RepAndreCarson, 2026-09-05T19:04:41Z).",
-     "Application instructions shared via link in the post (per @RepAndreCarson, 2026-09-05T19:04:41Z).",
-     "No damage figures, casualty counts, or official police/OEM/fire statements included in the posts reviewed."
-    ],
-    "extractedAt": "2026-09-10T06:12:19.115Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "big-sur-ca--wildfire",
    "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
    "status": "resolved",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+   },
    "place": "Big Sur, CA · CA-19",
+   "placeRaw": "Big Sur, CA",
+   "district": "CA-19",
+   "districtMatch": true,
    "handle": "@RepJimmyPanetta",
    "member": "Jimmy Panetta",
    "since": "2026-09-05T16:27:00.000Z",
@@ -789,6 +626,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Big Sur, CA",
+   "evidence": {
+    "span": "Part of Highway 1 is reopen for Big Sur businesses and residents. We are grateful to the firefighters and first responders who are working around the clock to protect our communities and put out the fires.",
+    "exact": true,
+    "start": 0,
+    "end": 205,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-05T16:27:00.000Z",
@@ -796,7 +643,21 @@
      "tag": "member",
      "text": "Part of Highway 1 is reopen for Big Sur businesses and residents. We are grateful to the firefighters and first responders who are working around the clock to protect our communities and put out the fires. Please continue to use caution in the affected areas, follow all guidance",
      "engN": 4,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Big Sur, CA"
+     },
+     "evidence": {
+      "span": "Part of Highway 1 is reopen for Big Sur businesses and residents. We are grateful to the firefighters and first responders who are working around the clock to protect our communities and put out the fires.",
+      "exact": true,
+      "start": 0,
+      "end": 205,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -828,159 +689,22 @@
    }
   },
   {
-   "id": "detroit-mi--tornado",
-   "kind": "tornado",
-   "status": "resolved",
-   "place": "Detroit, MI",
-   "handle": "@SenatorSlotkin",
-   "member": "Sen. Elissa Slotkin",
-   "since": "2026-09-05T14:10:00.000Z",
-   "last": "2026-09-05T14:10:00.000Z",
-   "updates": 1,
-   "engN": 204,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Tornado · Detroit, MI",
-   "timeline": [
-    {
-     "time": "2026-09-05T14:10:00.000Z",
-     "who": "@SenatorSlotkin",
-     "tag": "member",
-     "text": "My thoughts are with the families across Detroit dealing with the aftermath of Thursday's severe storm. The National Weather Service has confirmed a tornado touched down on the city's east side — the first tornado to hit Detroit in nearly 30 years.\n\nFor families on the lower east",
-     "engN": 204,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2096239428687577412"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "The National Weather Service has confirmed a tornado touched down on Detroit's east side.",
-      "src": "per @SenatorSlotkin, 2026-09-05T14:10:00.000Z"
-     },
-     {
-      "text": "Per the post, this is the first tornado to hit Detroit in nearly 30 years.",
-      "src": "per @SenatorSlotkin, 2026-09-05T14:10:00.000Z"
-     },
-     {
-      "text": "The tornado occurred during Thursday's severe storm; families across Detroit are dealing with the aftermath.",
-      "src": "per @SenatorSlotkin, 2026-09-05T14:10:00.000Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "NWS confirms tornado touchdown on Detroit's east side (per @SenatorSlotkin, 2026-09-05T14:10:00.000Z).",
-     "Described as Detroit's first tornado in nearly 30 years.",
-     "Member statement addresses families in the aftermath of Thursday's storm; post text cuts off mid-sentence regarding families on the lower east side — no further details available."
-    ],
-    "extractedAt": "2026-09-10T06:12:40.159Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "detroit-mi--severe-storms",
-   "kind": "severe storms",
-   "status": "resolved",
-   "place": "Detroit, MI · MI-13",
-   "handle": "@RepShriThanedar",
-   "member": "Shri Thanedar",
-   "since": "2026-09-04T20:49:18.000Z",
-   "last": "2026-09-04T20:49:18.000Z",
-   "updates": 1,
-   "engN": 8,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe storms · Detroit, MI",
-   "timeline": [
-    {
-     "time": "2026-09-04T20:49:18.000Z",
-     "who": "@RepShriThanedar",
-     "tag": "member",
-     "text": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE customer who has a power outage, call 877-447-4747\n\nhttps://t.co/ZySrgKP037",
-     "engN": 8,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095977527172890978"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Severe storms hit the Detroit community on the afternoon of Wed., Sept. 3, 2026 (described as \"yesterday afternoon\"); stated directly by the member, with no official source (police/OEM/fire) cited in the post.",
-      "src": "@RepShriThanedar, 2026-09-04T20:49:18Z"
-     },
-     {
-      "text": "Emergency shelter hotline given as 866-313-2520 for anyone needing shelter; stated directly by the member, no official source cited in the post.",
-      "src": "@RepShriThanedar, 2026-09-04T20:49:18Z"
-     },
-     {
-      "text": "DTE customers with a power outage are directed to call 877-447-4747; stated directly by the member, no official source cited in the post.",
-      "src": "@RepShriThanedar, 2026-09-04T20:49:18Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Sept. 4, 8:49 PM UTC — Member posts response to severe storms that hit the district the prior afternoon (per @RepShriThanedar).",
-     "Emergency shelter line shared: 866-313-2520 (per @RepShriThanedar, Sept. 4).",
-     "Power outage line for DTE customers shared: 877-447-4747 (per @RepShriThanedar, Sept. 4).",
-     "No casualty, damage, or official-agency details stated in the posts available."
-    ],
-    "extractedAt": "2026-09-10T06:12:52.507Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "aspen-acres-gold-mountain-co--wildfire",
-   "kind": "wildfire",
-   "status": "resolved",
-   "place": "Aspen Acres & Gold Mountain, CO · CO-07",
-   "handle": "@RepPettersen",
-   "member": "Brittany Pettersen",
-   "since": "2026-09-04T20:25:24.000Z",
-   "last": "2026-09-04T20:25:24.000Z",
-   "updates": 1,
-   "engN": 27,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Wildfire · Aspen Acres & Gold Mountain, CO",
-   "timeline": [
-    {
-     "time": "2026-09-04T20:25:24.000Z",
-     "who": "@RepPettersen",
-     "tag": "member",
-     "text": "This disaster declaration is a critical step forward for every family affected by the Aspen Acres and Gold Mountain fires who have been desperately waiting for this moment. These communities have endured unimaginable loss &amp; spent months wondering whether help was coming. https://t.co/YTf0hDZbpT",
-     "engN": 27,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095971514361209296"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "A disaster declaration has been issued for the Aspen Acres and Gold Mountain fires, which the member describes as \"a critical step forward\" for affected families.",
-      "src": "per @RepPettersen, 2026-09-04T20:25Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepPettersen (2026-09-04T20:25Z): disaster declaration announced for the Aspen Acres and Gold Mountain fires; member calls it a critical step for affected families.",
-     "Per @RepPettersen (2026-09-04T20:25Z): member says affected communities have \"endured unimaginable loss\" and spent months waiting to learn whether help was coming (member's characterization; no official figures given).",
-     "Note for comms: only one post available on this incident; no damage, injury, containment, or evacuation details stated in the post."
-    ],
-    "extractedAt": "2026-09-10T06:13:05.347Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "lake-county-ca--wildfire",
    "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
    "status": "resolved",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 4 confirmed, 0 unverified item(s)"
+   },
    "place": "Lake County, CA · CA-04",
+   "placeRaw": "Lake County, CA",
+   "district": "CA-04",
+   "districtMatch": true,
    "handle": "@RepThompson",
    "member": "Mike Thompson",
    "since": "2026-09-04T20:06:01.000Z",
@@ -990,6 +714,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Lake County, CA",
+   "evidence": {
+    "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
+    "exact": true,
+    "start": 0,
+    "end": 141,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-04T20:06:01.000Z",
@@ -997,7 +731,21 @@
      "tag": "member",
      "text": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay. It is unsafe to stay and threatens the safety of you, your family, and emergency responders. Your life could be in great danger. Emergency https://t.co/RnWfThRDNu",
      "engN": 6,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Lake County, CA"
+     },
+     "evidence": {
+      "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
+      "exact": true,
+      "start": 0,
+      "end": 141,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -1033,106 +781,22 @@
    }
   },
   {
-   "id": "northwest-indiana-in--storm-damage",
-   "kind": "storm damage",
-   "status": "resolved",
-   "place": "Northwest Indiana, IN · IN-01",
-   "handle": "@RepMrvan",
-   "member": "Frank J. Mrvan",
-   "since": "2026-09-04T19:44:16.000Z",
-   "last": "2026-09-04T19:44:16.000Z",
-   "updates": 1,
-   "engN": 1,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Storm damage · Northwest Indiana, IN",
-   "timeline": [
-    {
-     "time": "2026-09-04T19:44:16.000Z",
-     "who": "@RepMrvan",
-     "tag": "member",
-     "text": "As Northwest Indiana continues to recover after the August storm, I wanted to share information on assistance from the U.S. Department of Agriculture for our farmers and agricultural producers who may have experienced damage or economic losses.  For additional information, please",
-     "engN": 1,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095961160432619692"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Assistance is available from the U.S. Department of Agriculture for Northwest Indiana farmers and agricultural producers who may have experienced damage or economic losses from the August storm.",
-      "src": "per @RepMrvan, 2026-09-04T19:44:16Z"
-     },
-     {
-      "text": "Northwest Indiana is continuing to recover after the August storm.",
-      "src": "per @RepMrvan, 2026-09-04T19:44:16Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepMrvan, 2026-09-04T19:44:16Z: member shared information on USDA assistance for farmers and agricultural producers hit by the August storm.",
-     "Per @RepMrvan, 2026-09-04T19:44:16Z: framing is recovery-stage — Northwest Indiana 'continues to recover' from the August storm.",
-     "Note: the post as provided cuts off mid-sentence ('For additional information, please'), so any referral link or contact details are not captured."
-    ],
-    "extractedAt": "2026-09-10T06:13:25.472Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "washington-wa--wildfire",
-   "kind": "wildfire",
-   "status": "resolved",
-   "place": "Washington, WA · WA-08",
-   "handle": "@RepKimSchrier",
-   "member": "Kim Schrier",
-   "since": "2026-09-04T19:43:17.000Z",
-   "last": "2026-09-04T19:43:17.000Z",
-   "updates": 1,
-   "engN": 4,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Wildfire · Washington, WA",
-   "timeline": [
-    {
-     "time": "2026-09-04T19:43:17.000Z",
-     "who": "@RepKimSchrier",
-     "tag": "member",
-     "text": "Here is this week’s Schrier Flyer - with another round of wildfire resources. \n\nPlease apply to Washington state’s Disaster Cash Assistance Program if you have been impacted by fires: https://t.co/aheSNzii1m https://t.co/m58puFxpKt",
-     "engN": 4,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095960913144693225"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Washington state's Disaster Cash Assistance Program is open to people impacted by the fires, and the member directs constituents to apply via a linked application.",
-      "src": "per @RepKimSchrier, 2026-09-04T19:43Z"
-     },
-     {
-      "text": "The member's weekly newsletter (\"Schrier Flyer\") was published and includes another round of wildfire resources.",
-      "src": "per @RepKimSchrier, 2026-09-04T19:43Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Member urges fire-impacted constituents to apply to WA's Disaster Cash Assistance Program (link provided) — per @RepKimSchrier, 2026-09-04T19:43Z.",
-     "This week's \"Schrier Flyer\" newsletter out with another round of wildfire resources — per @RepKimSchrier, 2026-09-04T19:43Z.",
-     "No fire size, containment, evacuation, or damage details stated in the posts."
-    ],
-    "extractedAt": "2026-09-10T06:13:34.500Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "orange-county-ca--wildfire",
    "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
    "status": "resolved",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 2 confirmed, 0 unverified item(s)"
+   },
    "place": "Orange County, CA · CA-25",
+   "placeRaw": "Orange County, CA",
+   "district": "CA-25",
+   "districtMatch": true,
    "handle": "@RepRaulRuizMD",
    "member": "Raul Ruiz",
    "since": "2026-09-04T18:34:51.000Z",
@@ -1142,6 +806,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Orange County, CA",
+   "evidence": {
+    "span": "Thank you to the firefighters, first responders, and emergency personnel putting in the hard work around the clock to keep our communities s",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-04T18:34:51.000Z",
@@ -1149,7 +823,21 @@
      "tag": "member",
      "text": "Thank you to the firefighters, first responders, and emergency personnel putting in the hard work around the clock to keep our communities safe. \n\nEmergency responders have successfully stopped the #AirportFire's forward spread across approximately 50 acres and will remain on",
      "engN": 1,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Orange County, CA"
+     },
+     "evidence": {
+      "span": "Thank you to the firefighters, first responders, and emergency personnel putting in the hard work around the clock to keep our communities s",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -1177,239 +865,22 @@
    }
   },
   {
-   "id": "illinois-il--severe-storms",
-   "kind": "severe storms",
-   "status": "resolved",
-   "place": "Illinois, IL · IL-02",
-   "handle": "@RepRobinKelly",
-   "member": "Robin L. Kelly",
-   "since": "2026-09-04T18:00:32.000Z",
-   "last": "2026-09-04T18:00:32.000Z",
-   "updates": 1,
-   "engN": 25,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe storms · Illinois, IL",
-   "timeline": [
-    {
-     "time": "2026-09-04T18:00:32.000Z",
-     "who": "@RepRobinKelly",
-     "tag": "member",
-     "text": "Our skilled laborers and first responders who are helping our communities recover after the July and August severe storms are a testament to the spirit of the people of Illinois.\n\nThank you for all that you have done; my gratitude is with you. https://t.co/Zr6h6wQmmt",
-     "engN": 25,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095935053721198956"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepRobinKelly, 2026-09-04 18:00 UTC: thanks skilled laborers and first responders helping communities recover after the July and August severe storms; post includes a link (https://t.co/Zr6h6wQmmt).",
-     "Per @RepRobinKelly, 2026-09-04 18:00 UTC: no official (police/OEM/fire) figures, damage details, or response actions are stated in the post — recovery framing only."
-    ],
-    "extractedAt": "2026-09-10T06:13:52.268Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "southeast-michigan-mi--severe-storms",
-   "kind": "severe storms",
-   "status": "resolved",
-   "place": "Southeast Michigan, MI",
-   "handle": "@SenatorSlotkin",
-   "member": "Sen. Elissa Slotkin",
-   "since": "2026-09-04T16:14:25.000Z",
-   "last": "2026-09-04T16:14:25.000Z",
-   "updates": 1,
-   "engN": 75,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe storms · Southeast Michigan, MI",
-   "timeline": [
-    {
-     "time": "2026-09-04T16:14:25.000Z",
-     "who": "@SenatorSlotkin",
-     "tag": "member",
-     "text": "Severe storms have devastated communities across Southeast Michigan, causing downed trees and power lines, property damage, flooding, and widespread power outages.\n\nMy team and I are in direct communication with local officials as they assess the damage and respond. We’ll",
-     "engN": 75,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095908349724291271"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Severe storms have devastated communities across Southeast Michigan, causing downed trees and power lines, property damage, flooding, and widespread power outages (stated directly by the member; no official agency cited in the post).",
-      "src": "per @SenatorSlotkin, Sep 4, 2026, 16:14 UTC"
-     },
-     {
-      "text": "The member and her team are in direct communication with local officials, who are assessing the damage and responding.",
-      "src": "per @SenatorSlotkin, Sep 4, 2026, 16:14 UTC"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Member says storms have hit Southeast Michigan with downed trees/power lines, property damage, flooding, and widespread outages (per @SenatorSlotkin, Sep 4, 16:14 UTC).",
-     "Member's office in direct contact with local officials, who are assessing damage and responding (per @SenatorSlotkin, Sep 4, 16:14 UTC).",
-     "Post text ends mid-sentence (\"We'll\"); no damage figures, outage counts, casualty information, or official agency statements provided in the available post."
-    ],
-    "extractedAt": "2026-09-10T06:14:04.243Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "burlingame-ca--train-collision",
-   "kind": "train collision",
-   "status": "resolved",
-   "place": "Burlingame, CA · CA-15",
-   "handle": "@RepKevinMullin",
-   "member": "Kevin Mullin",
-   "since": "2026-09-04T15:15:13.000Z",
-   "last": "2026-09-04T15:15:13.000Z",
-   "updates": 1,
-   "engN": 6,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Train collision · Burlingame, CA",
-   "timeline": [
-    {
-     "time": "2026-09-04T15:15:13.000Z",
-     "who": "@RepKevinMullin",
-     "tag": "member",
-     "text": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame, which is considered the deadliest crossing in California. Local communities need federal and state support for critical safety upgrades, which is why I secured $3 million for a grade",
-     "engN": 6,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095893453489992094"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "A train-vehicle collision occurred at the Broadway crossing in Burlingame; the member states this directly but does not attribute it to police, fire, OEM, or any other official source in the post.",
-      "src": "@RepKevinMullin, 2026-09-04T15:15:13Z"
-     },
-     {
-      "text": "The member describes the Broadway crossing as \"another\" such collision site and calls it \"considered the deadliest crossing in California\" — characterization stated by the member, no source or data cited in the post.",
-      "src": "@RepKevinMullin, 2026-09-04T15:15:13Z"
-     },
-     {
-      "text": "The member says he \"secured $3 million\" for a grade [separation] — the post text is cut off mid-sentence, so the full claim and its status are incomplete as posted.",
-      "src": "@RepKevinMullin, 2026-09-04T15:15:13Z"
-     }
-    ],
-    "whatsNew": [
-     "Per @RepKevinMullin, 2026-09-04T15:15:13Z: member posts about a train-vehicle collision at the Broadway crossing in Burlingame.",
-     "Per @RepKevinMullin, same post: renews call for federal and state support for crossing safety upgrades, citing $3 million he says he secured for a grade [separation]; post text ends mid-sentence.",
-     "No casualty figures, response details, or official (police/fire/OEM) statements appear in the available post."
-    ],
-    "extractedAt": "2026-09-10T06:14:15.580Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "hawaii-island-hi--hurricane-damage",
-   "kind": "hurricane damage",
-   "status": "resolved",
-   "place": "Hawaii Island, HI · HI-02",
-   "handle": "@RepJillTokuda",
-   "member": "Jill N. Tokuda",
-   "since": "2026-09-03T20:57:12.000Z",
-   "last": "2026-09-03T20:57:12.000Z",
-   "updates": 1,
-   "engN": 4,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Hurricane damage · Hawaii Island, HI",
-   "timeline": [
-    {
-     "time": "2026-09-03T20:57:12.000Z",
-     "who": "@RepJillTokuda",
-     "tag": "member",
-     "text": "Lala is gone, but for families across Hawaiʻi Island, the work is just beginning. I saw washed-out roads, damaged homes and schools, and communities still picking up the pieces.\n\nI’m fighting to bring the full weight of the federal government to this recovery so families get the https://t.co/hnl8rCI5ZX",
-     "engN": 4,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095617128992796887"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "Storm 'Lala' has passed ('Lala is gone'), with recovery just beginning for families across Hawaiʻi Island — stated by the member directly, not attributed to any official agency.",
-      "src": "@RepJillTokuda, 2026-09-03T20:57:12Z"
-     },
-     {
-      "text": "The member says she personally saw washed-out roads, damaged homes and schools, and communities 'still picking up the pieces' — a firsthand account with no police, OEM, or fire attribution and no locations, counts, or damage assessments given.",
-      "src": "@RepJillTokuda, 2026-09-03T20:57:12Z"
-     },
-     {
-      "text": "The member says she is 'fighting to bring the full weight of the federal government to this recovery'; the post does not state that any specific federal action, declaration, or assistance has been approved.",
-      "src": "@RepJillTokuda, 2026-09-03T20:57:12Z"
-     }
-    ],
-    "whatsNew": [
-     "Per @RepJillTokuda, 2026-09-03T20:57:12Z: storm has passed and the member is pressing for full federal engagement in recovery.",
-     "Per @RepJillTokuda, 2026-09-03T20:57:12Z: member reports completing a firsthand look at damage on Hawaiʻi Island.",
-     "Per @RepJillTokuda, 2026-09-03T20:57:12Z: damage described includes washed-out roads and damaged homes and schools; no official figures cited.",
-     "Post text is truncated at a link; no additional details available from the posts provided."
-    ],
-    "extractedAt": "2026-09-10T06:14:27.500Z",
-    "posts": 1
-   }
-  },
-  {
-   "id": "michigan-mi--severe-weather",
-   "kind": "severe weather",
-   "status": "resolved",
-   "place": "Michigan, MI · MI-06",
-   "handle": "@RepDebDingell",
-   "member": "Debbie Dingell",
-   "since": "2026-09-03T20:30:04.000Z",
-   "last": "2026-09-03T20:30:04.000Z",
-   "updates": 1,
-   "engN": 10,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe weather · Michigan, MI",
-   "timeline": [
-    {
-     "time": "2026-09-03T20:30:04.000Z",
-     "who": "@RepDebDingell",
-     "tag": "member",
-     "text": "Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials. https://t.co/2dLxFbhso3",
-     "engN": 10,
-     "isNew": false
-    }
-   ],
-   "tweetIds": [
-    "2095610298820383184"
-   ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepDebDingell, 2026-09-03 20:30 UTC: urges Michiganders to \"stay safe and stay alert,\" follow local news for the latest information, and heed warnings from public safety officials.",
-     "Per @RepDebDingell, 2026-09-03 20:30 UTC: post includes a link (t.co/2dLxFbhso3); no incident details, damage, injuries, or official findings stated in the post."
-    ],
-    "extractedAt": "2026-09-10T06:14:33.568Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "detroit-mi--power-outage",
    "kind": "power outage",
+   "kinds": [
+    "power outage"
+   ],
    "status": "resolved",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": true,
+    "by": "intel",
+    "note": "nightly intel pass: 0 confirmed, 5 unverified item(s)"
+   },
    "place": "Detroit, MI · MI-12",
+   "placeRaw": "Detroit, MI",
+   "district": "MI-12",
+   "districtMatch": true,
    "handle": "@RepRashida",
    "member": "Rashida Tlaib",
    "since": "2026-09-03T19:15:08.000Z",
@@ -1419,6 +890,16 @@
    "amplifiers": 0,
    "others": [],
    "title": "Power outage · Detroit, MI",
+   "evidence": {
+    "span": "Hundreds of my residents are experiencing DTE power outages during this heat wave. My office is working hard and urging DTE to be more proac",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    }
+   },
    "timeline": [
     {
      "time": "2026-09-03T19:15:08.000Z",
@@ -1426,7 +907,21 @@
      "tag": "member",
      "text": "Hundreds of my residents are experiencing DTE power outages during this heat wave. My office is working hard and urging DTE to be more proactive in restoring people’s power.\n\nIf your power is out, you can report it to DTE at 800-477-4747.",
      "engN": 249,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "power outage",
+      "place": "Detroit, MI"
+     },
+     "evidence": {
+      "span": "Hundreds of my residents are experiencing DTE power outages during this heat wave. My office is working hard and urging DTE to be more proac",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     },
     {
      "time": "2026-09-03T19:15:29.000Z",
@@ -1434,7 +929,21 @@
      "tag": "member",
      "text": "Power outages like this is why DTE does not deserve another utility rate hike. We can’t keep paying astronomical prices for unreliable services.\n\nExtreme heat, summer storms, and powerful winds are all part of climate change. DTE needs to be prepared for extreme weather.",
      "engN": 64,
-     "isNew": false
+     "isNew": false,
+     "flag": {
+      "kind": "power outage",
+      "place": "Detroit, MI"
+     },
+     "evidence": {
+      "span": "Power outages like this is why DTE does not deserve another utility rate hike. We can’t keep paying astronomical prices for unreliable servi",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     }
    ],
    "tweetIds": [
@@ -1476,56 +985,307 @@
    }
   },
   {
-   "id": "aspen-co--wildfire",
-   "kind": "wildfire",
-   "status": "resolved",
-   "place": "Aspen, CO · CO-06",
-   "handle": "@RepJasonCrow",
-   "member": "Jason Crow",
-   "since": "2026-09-03T14:31:22.000Z",
-   "last": "2026-09-03T14:31:22.000Z",
+   "id": "detroit-mi--severe-storm",
+   "kind": "severe storm",
+   "kinds": [
+    "severe storms"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Detroit, MI · MI-13",
+   "placeRaw": "Detroit, MI",
+   "district": "MI-13",
+   "districtMatch": true,
+   "handle": "@RepShriThanedar",
+   "member": "Shri Thanedar",
+   "since": "2026-09-04T20:49:18.000Z",
+   "last": "2026-09-04T20:49:18.000Z",
    "updates": 1,
-   "engN": 165,
+   "engN": 8,
    "amplifiers": 0,
    "others": [],
-   "title": "Wildfire · Aspen, CO",
+   "title": "Severe storm · Detroit, MI",
+   "evidence": {
+    "span": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE c",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    }
+   },
    "timeline": [
     {
-     "time": "2026-09-03T14:31:22.000Z",
-     "who": "@RepJasonCrow",
+     "time": "2026-09-04T20:49:18.000Z",
+     "who": "@RepShriThanedar",
      "tag": "member",
-     "text": "Helping our fellow citizens in need after wildfires shouldn’t be hard.\n\nEvery member of Colorado’s congressional delegation is calling on President Trump to do the right thing and support a major disaster declaration for the Aspen and Gold Mountain fires.\n\nhttps://t.co/Tvg9MZTygl https://t.co/s2zeAgl2Eu",
-     "engN": 165,
-     "isNew": false
+     "text": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE customer who has a power outage, call 877-447-4747\n\nhttps://t.co/ZySrgKP037",
+     "engN": 8,
+     "isNew": false,
+     "flag": {
+      "kind": "severe storms",
+      "place": "Detroit, MI"
+     },
+     "evidence": {
+      "span": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE c",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
     }
    ],
    "tweetIds": [
-    "2095520030834250131"
+    "2095977527172890978"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Per @RepJasonCrow, 2026-09-03 14:31 UTC: every member of Colorado's congressional delegation is calling on President Trump to support a major disaster declaration for the Aspen and Gold Mountain fires.",
-      "src": "@RepJasonCrow, 2026-09-03T14:31:22Z"
+   "intel": null
+  },
+  {
+   "id": "burlingame-ca--train-crash",
+   "kind": "train crash",
+   "kinds": [
+    "train collision"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Burlingame, CA · CA-15",
+   "placeRaw": "Burlingame, CA",
+   "district": "CA-15",
+   "districtMatch": true,
+   "handle": "@RepKevinMullin",
+   "member": "Kevin Mullin",
+   "since": "2026-09-04T15:15:13.000Z",
+   "last": "2026-09-04T15:15:13.000Z",
+   "updates": 1,
+   "engN": 6,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Train crash · Burlingame, CA",
+   "evidence": {
+    "span": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame, which is considered the deadliest crossing in California.",
+    "exact": true,
+    "start": 0,
+    "end": 146,
+    "matched": {
+     "kind": true,
+     "place": true
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-04T15:15:13.000Z",
+     "who": "@RepKevinMullin",
+     "tag": "member",
+     "text": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame, which is considered the deadliest crossing in California. Local communities need federal and state support for critical safety upgrades, which is why I secured $3 million for a grade",
+     "engN": 6,
+     "isNew": false,
+     "flag": {
+      "kind": "train collision",
+      "place": "Burlingame, CA"
      },
-     {
-      "text": "Per @RepJasonCrow, 2026-09-03 14:31 UTC: two named fires are referenced — the Aspen fire and the Gold Mountain fire — and wildfires have already occurred, with citizens described as in need of help afterward.",
-      "src": "@RepJasonCrow, 2026-09-03T14:31:22Z"
-     },
-     {
-      "text": "Per @RepJasonCrow, 2026-09-03 14:31 UTC: the post frames federal assistance as not yet granted, stating that helping citizens after wildfires 'shouldn't be hard' and urging the President to 'do the right thing.'",
-      "src": "@RepJasonCrow, 2026-09-03T14:31:22Z"
+     "evidence": {
+      "span": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame, which is considered the deadliest crossing in California.",
+      "exact": true,
+      "start": 0,
+      "end": 146,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
      }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Per @RepJasonCrow (Sep 3, 14:31 UTC): full Colorado delegation urging President Trump to back a major disaster declaration for the Aspen and Gold Mountain fires.",
-     "Per @RepJasonCrow (Sep 3, 14:31 UTC): post includes two attached links (contents not described in the post).",
-     "No posts in this set state containment figures, evacuation orders, injuries, or damage counts from police, OEM, or fire officials."
-    ],
-    "extractedAt": "2026-09-10T06:14:57.204Z",
-    "posts": 1
-   }
+    }
+   ],
+   "tweetIds": [
+    "2095893453489992094"
+   ],
+   "intel": null
+  }
+ ],
+ "filtered": [
+  {
+   "id": "2097779291673248203",
+   "kind": "hurricane damage",
+   "place": "Kaʻū, HI",
+   "who": "@RepJillTokuda",
+   "time": "2026-09-09T20:08:52.000Z",
+   "reason": "aftermath",
+   "cue": "left behind"
+  },
+  {
+   "id": "2097760977533956208",
+   "kind": "plane crash",
+   "place": "Miami, FL",
+   "who": "@BettyMcCollum04",
+   "time": "2026-09-09T18:56:06.000Z",
+   "reason": "reaction only",
+   "cue": "It is devastating"
+  },
+  {
+   "id": "2097699017979236377",
+   "kind": "wildfire",
+   "place": "Eastern Oregon, OR",
+   "who": "@RepDexterOR",
+   "time": "2026-09-09T14:49:53.000Z",
+   "reason": "seasonal or preparedness",
+   "cue": "wildfire season"
+  },
+  {
+   "id": "2097351259149701450",
+   "kind": "storm damage",
+   "place": "Gary, IN",
+   "who": "@RepMrvan",
+   "time": "2026-09-08T15:48:01.000Z",
+   "reason": "aftermath",
+   "cue": "storm recovery"
+  },
+  {
+   "id": "2097152945695449421",
+   "kind": "plane crash",
+   "place": "Miami, FL",
+   "who": "@RepWilson",
+   "time": "2026-09-08T02:40:00.000Z",
+   "reason": "reaction only",
+   "cue": "I am heartbroken"
+  },
+  {
+   "id": "2097033286920860097",
+   "kind": "flooding",
+   "place": "Lake Station, IN",
+   "who": "@RepMrvan",
+   "time": "2026-09-07T18:44:31.000Z",
+   "reason": "aftermath",
+   "cue": "Intake Center"
+  },
+  {
+   "id": "2096757393291927573",
+   "kind": "plane crash",
+   "place": "Miami, FL",
+   "who": "@RepDWStweets",
+   "time": "2026-09-07T00:28:13.000Z",
+   "reason": "reaction only",
+   "cue": "Horrified"
+  },
+  {
+   "id": "2096738657470153210",
+   "kind": "plane crash",
+   "place": "Miami, FL",
+   "who": "@RepDarrenSoto",
+   "time": "2026-09-06T23:13:46.000Z",
+   "reason": "reaction only",
+   "cue": "What a tragedy"
+  },
+  {
+   "id": "2096645336655700019",
+   "kind": "storm damage",
+   "place": "Porter County, IN",
+   "who": "@RepMrvan",
+   "time": "2026-09-06T17:02:56.000Z",
+   "reason": "aftermath",
+   "cue": "storm recovery"
+  },
+  {
+   "id": "2096313588805783754",
+   "kind": "flooding",
+   "place": "Indianapolis, IN",
+   "who": "@RepAndreCarson",
+   "time": "2026-09-05T19:04:41.000Z",
+   "reason": "dated past",
+   "cue": "apply by"
+  },
+  {
+   "id": "2096239428687577412",
+   "kind": "tornado",
+   "place": "Detroit, MI",
+   "who": "@SenatorSlotkin",
+   "time": "2026-09-05T14:10:00.000Z",
+   "reason": "non-House account",
+   "cue": null
+  },
+  {
+   "id": "2095971514361209296",
+   "kind": "wildfire",
+   "place": "Aspen Acres & Gold Mountain, CO",
+   "who": "@RepPettersen",
+   "time": "2026-09-04T20:25:24.000Z",
+   "reason": "dated past",
+   "cue": "spent months"
+  },
+  {
+   "id": "2095961160432619692",
+   "kind": "storm damage",
+   "place": "Northwest Indiana, IN",
+   "who": "@RepMrvan",
+   "time": "2026-09-04T19:44:16.000Z",
+   "reason": "dated past",
+   "cue": "the August storm"
+  },
+  {
+   "id": "2095960913144693225",
+   "kind": "wildfire",
+   "place": "Washington, WA",
+   "who": "@RepKimSchrier",
+   "time": "2026-09-04T19:43:17.000Z",
+   "reason": "place is a whole state",
+   "cue": "Washington, WA"
+  },
+  {
+   "id": "2095935053721198956",
+   "kind": "severe storms",
+   "place": "Illinois, IL",
+   "who": "@RepRobinKelly",
+   "time": "2026-09-04T18:00:32.000Z",
+   "reason": "place is a whole state",
+   "cue": "Illinois, IL"
+  },
+  {
+   "id": "2095908349724291271",
+   "kind": "severe storms",
+   "place": "Southeast Michigan, MI",
+   "who": "@SenatorSlotkin",
+   "time": "2026-09-04T16:14:25.000Z",
+   "reason": "non-House account",
+   "cue": null
+  },
+  {
+   "id": "2095617128992796887",
+   "kind": "hurricane damage",
+   "place": "Hawaii Island, HI",
+   "who": "@RepJillTokuda",
+   "time": "2026-09-03T20:57:12.000Z",
+   "reason": "aftermath",
+   "cue": "Lala is gone"
+  },
+  {
+   "id": "2095610298820383184",
+   "kind": "severe weather",
+   "place": "Michigan, MI",
+   "who": "@RepDebDingell",
+   "time": "2026-09-03T20:30:04.000Z",
+   "reason": "place is a whole state",
+   "cue": "Michigan, MI"
+  },
+  {
+   "id": "2095520030834250131",
+   "kind": "wildfire",
+   "place": "Aspen, CO",
+   "who": "@RepJasonCrow",
+   "time": "2026-09-03T14:31:22.000Z",
+   "reason": "aftermath",
+   "cue": "disaster declaration"
   }
  ]
 }
