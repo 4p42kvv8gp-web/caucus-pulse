@@ -25,12 +25,21 @@ export function renderTaxonomy(tax) {
   return lines.join('\n');
 }
 
+// Keeps only taxonomy-valid pairs, collapsing an unknown subtopic to its
+// macro, and dedupes the result: two invalid subtopics of one macro used to
+// yield [["economy",null],["economy",null]], which rollups tolerated but the
+// dashboard's topic chips repeated.
 export function validAssignments(topics, tax) {
   const out = [];
+  const seen = new Set();
   for (const t of Array.isArray(topics) ? topics : []) {
     const [macro, sub] = Array.isArray(t) ? t : [t, null];
     if (!tax[macro]) continue;
-    out.push([macro, sub && tax[macro].subtopics?.[sub] ? sub : null]);
+    const pair = [macro, sub && tax[macro].subtopics?.[sub] ? sub : null];
+    const key = `${pair[0]}/${pair[1] || ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(pair);
   }
   return out;
 }
