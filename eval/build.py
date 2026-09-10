@@ -461,7 +461,12 @@ def examples_lines():
 
 
 def build_brief(cfg, sub_map, macro_map):
+    # Relative paths resolve against eval/, so the source travels with the
+    # repo. It used to point at a session scratchpad, which meant the build
+    # stopped being reproducible the moment that session ended.
     src = cfg["package"]["brief_source"]
+    if not os.path.isabs(src):
+        src = os.path.join(EVAL_DIR, src)
     with open(src, encoding="utf-8") as fh:
         text = fh.read()
     applied = []
