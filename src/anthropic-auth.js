@@ -35,10 +35,16 @@ const IDENTITY_MAX_AGE_MS = 4 * 60_000;
 const inActions = () =>
   Boolean(process.env.ACTIONS_ID_TOKEN_REQUEST_URL && process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN);
 
-// The explicit API key, if any. Never logged; callers treat it as opaque.
+// The explicit API key, if any. Local runs (a laptop, a Claude Code cloud
+// session) carry a dedicated key under CLASSIFIER_ANTHROPIC_API_KEY so the
+// classifier's spend is its own line and never collides with whatever
+// ANTHROPIC_API_KEY the shell (or the hosting platform) has set — which is why
+// the CLASSIFIER_ name is checked first. Never logged; callers treat it as opaque.
 export function apiKey() {
   return process.env.CLASSIFIER_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY || null;
 }
+
+const explicitCredential = () => Boolean(apiKey() || process.env.ANTHROPIC_AUTH_TOKEN);
 
 // Which env var the key came from (for diagnostics), or null.
 export function apiKeySource() {
@@ -72,7 +78,7 @@ function applyFederationSettings() {
 // True when some credential path exists. Cheap and synchronous so callers can
 // gate optional stages ("skip live tagging when there is no way to auth").
 export function anthropicConfigured() {
-  if (apiKey() || process.env.ANTHROPIC_AUTH_TOKEN) return true;
+  if (explicitCredential()) return true;
   if (federationEnvSet()) return true;
   return inActions() && Boolean(settings.anthropic?.federation?.rule_id);
 }
@@ -100,7 +106,7 @@ async function mintGitHubOidcToken() {
 // Keep the identity file fresh. Safe to call often (cheap when fresh); call it
 // before constructing a client and inside any loop that outlives ~5 minutes.
 export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, force = false } = {}) {
-  if (apiKey() || process.env.ANTHROPIC_AUTH_TOKEN) return false;
+  if (explicitCredential()) return false;
   if (!inActions()) return false;
   applyFederationSettings();
   const file = process.env.ANTHROPIC_IDENTITY_TOKEN_FILE;
@@ -123,5 +129,7 @@ export async function anthropicClient(options = {}) {
   const key = apiKey();
   if (!key) await refreshIdentityToken();
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  return new Anthropic(key ? { apiKey: key, ...options } : options);
+  // The SDK only reads ANTHROPIC_API_KEY from the env; hand it the
+  // CLASSIFIER_ key explicitly so local runs work without re-exporting.
+  return new Anthropic(key && !options.apiKey ? { ...options, apiKey: key } : options);
 }

@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { anthropicConfigured, authMode, apiKey, apiKeySource, refreshIdentityToken } from '../src/anthropic-auth.js';
 
 const KEYS = [
-  'CLASSIFIER_ANTHROPIC_API_KEY', 'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN', 'ANTHROPIC_FEDERATION_RULE_ID',
-  'ANTHROPIC_ORGANIZATION_ID', 'ACTIONS_ID_TOKEN_REQUEST_URL', 'ACTIONS_ID_TOKEN_REQUEST_TOKEN'
+  'CLASSIFIER_ANTHROPIC_API_KEY', 'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN',
+  'ANTHROPIC_FEDERATION_RULE_ID', 'ANTHROPIC_ORGANIZATION_ID',
+  'ACTIONS_ID_TOKEN_REQUEST_URL', 'ACTIONS_ID_TOKEN_REQUEST_TOKEN'
 ];
 
 function withEnv(vars, fn) {
@@ -18,6 +19,10 @@ function withEnv(vars, fn) {
 
 test('authMode prefers an explicit key, then auth token, then federation', () => {
   withEnv({ ANTHROPIC_API_KEY: 'k' }, () => assert.equal(authMode(), 'api-key'));
+  withEnv({ CLASSIFIER_ANTHROPIC_API_KEY: 'k' }, () => {
+    assert.equal(authMode(), 'api-key');
+    assert.equal(anthropicConfigured(), true);
+  });
   withEnv({ ANTHROPIC_AUTH_TOKEN: 't' }, () => assert.equal(authMode(), 'auth-token'));
   withEnv({ ANTHROPIC_FEDERATION_RULE_ID: 'fdrl_x', ANTHROPIC_ORGANIZATION_ID: 'org' },
     () => assert.equal(authMode(), 'federation'));

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "poll": "node --use-env-proxy src/poll.js",
+    "backfill": "node --use-env-proxy src/backfill.js",
     "authors": "node --use-env-proxy src/authors.js",
     "refresh": "node --use-env-proxy src/refresh.js",
     "classify": "node --use-env-proxy src/classify.js",

@@ -20,7 +20,10 @@ export const syntaxPath = (date) => p('data', 'syntax', `${date}.json`);
 export function loadState() {
   return readJSON(statePath, {
     sinceId: null,          // newest tweet id ever captured
-    sinceIdSupported: null, // null = untested, true/false = discovered at runtime
+    // Probed 2026-09-10 against list 1841177179872243858: the list-tweets
+    // endpoint returns 400 for since_id, so boundary-stop is the real mode.
+    // Left runtime-detectable in case X changes it (set null to re-test).
+    sinceIdSupported: false,
     recentNewCounts: [],    // new tweets per poll (last 30) → adaptive page size
     pendingBatch: null,     // in-flight Anthropic batch {id, date}
     usage: {}               // {date: {posts, users}} — X reads, for budgeting

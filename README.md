@@ -34,10 +34,10 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    waits. The federation ids live in `config/settings.json` → `anthropic`
    (public identifiers); the rule only trusts tokens from this repo's `main`.
    `.github/workflows/anthropic-wif-test.yml` is a manual smoke test.
-   Outside Actions, export `CLASSIFIER_ANTHROPIC_API_KEY` (hosted sandboxes
-   such as claude.ai/code reserve the `ANTHROPIC_API_KEY` name, so the
-   classifier reads its own name first; plain `ANTHROPIC_API_KEY` also works
-   on a laptop). `npm run check-anthropic` confirms whichever credential
+   Outside Actions, export `CLASSIFIER_ANTHROPIC_API_KEY` instead (hosted
+   sandboxes such as claude.ai/code reserve the `ANTHROPIC_API_KEY` name, so
+   the classifier reads its own name first; a plain `ANTHROPIC_API_KEY` also
+   works on a laptop). `npm run check-anthropic` confirms whichever credential
    resolved without printing it.
 3. **Settings → Actions → General:** Workflow permissions "Read and write"
    (the workflows commit data back to the repo).
@@ -51,6 +51,10 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
 6. Run **check-x-access** by hand (Actions tab → Run workflow, probe = true)
    to confirm the X credential, then **authors** once to build the author
    table, then **poll** once to verify capture. The crons take over from there.
+   Optionally run `npm run backfill` once from a session: it pages past the
+   first poll's cap to the end of what the list endpoint still serves (about
+   800 posts — X's cap on this timeline, not a full 7 days) so the corpus
+   starts a day or two earlier.
 
 ### Running from a Claude Code cloud session
 
@@ -59,6 +63,17 @@ for `api.x.com` (the token never reaches the session). Set `X_PROXY_AUTH=1`
 and the X client sends bare requests for the proxy to authenticate; the npm
 scripts already pass `--use-env-proxy` so Node's fetch honours `HTTPS_PROXY`.
 `npm run check-x -- --probe` reports which auth mode worked.
+
+`.claude/settings.json` (committed) pre-approves the project's own commands
+for Claude Code sessions and sets `X_PROXY_AUTH=1` and the list id; put
+personal overrides in the gitignored `.claude/settings.local.json`. Claude
+classification in a session needs `CLASSIFIER_ANTHROPIC_API_KEY` in the
+session's environment variables (the platform reserves the plain
+`ANTHROPIC_API_KEY` name); the scripts read it directly, so nothing needs
+re-exporting. `npm run check-anthropic` confirms it resolved. Without it,
+capture still runs and the tagging stages skip. Every script that talks to
+X or Anthropic runs node with `--use-env-proxy` so fetch honours the
+session's `HTTPS_PROXY`; it is a no-op where no proxy is set.
 
 ## First act: the 24-hour volume measurement
 
@@ -109,12 +124,13 @@ aggregates per caucus for every topic — the design's sample data scaled one
 window into the other; the pipeline computes both. Engagement lags ~one day
 by design (the 24h re-read is the only metrics read).
 
-The poller's cursor logic self-detects whether the list endpoint honors
-`since_id` (X's docs are ambiguous). If it doesn't, the poller falls back to
-boundary-stop pagination with an adaptive page size — slightly above the
-per-tweet floor (one partial page of re-reads per non-empty poll), still far
-cheaper than search or per-account polling, and the archive stays exact
-either way thanks to local dedupe.
+The list endpoint rejects `since_id` (probed live, 2026-09-10: HTTP 400), so
+the poller runs boundary-stop pagination with an adaptive page size (floor 5,
+the endpoint minimum) — slightly above the per-tweet floor (one partial page
+of re-reads per non-empty poll), still far cheaper than search or per-account
+polling, and the archive stays exact thanks to local dedupe. The detection
+stays in code: set `sinceIdSupported` to `null` in `data/state.json` to
+re-test if X ever changes the endpoint.
 
 ## The taxonomy is the intelligence
 
@@ -134,13 +150,6 @@ npm run check-anthropic # one 5-token request; prints auth mode, never the key
 X_BEARER_TOKEN=... X_LIST_ID=... CLASSIFIER_ANTHROPIC_API_KEY=... npm run poll
 npm run report -- --date=2026-09-01
 ```
-
-In a claude.ai/code sandbox `CLASSIFIER_ANTHROPIC_API_KEY` is already in the
-environment (`test -n "$CLASSIFIER_ANTHROPIC_API_KEY" && echo set`); the
-scripts read it directly, so nothing needs re-exporting as `ANTHROPIC_API_KEY`.
-The `classify`, `incidents`, `poll`, and `check-*` scripts run node with
-`--use-env-proxy` so they honour the sandbox's `HTTPS_PROXY`; it is a no-op
-where no proxy is set.
 
 State (`data/state.json`) tracks the capture cursor, in-flight Claude
 batches, and a per-day X read ledger the budget guard enforces. Nothing else
