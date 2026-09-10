@@ -43,3 +43,11 @@ jobs:
         # write it; without it the night's promotions would die with the runner.
         run: |
           .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + stories + report" data reports site/data config/taxonomy.yaml
+      # Last, and after the commit so the night's work is saved either way:
+      # turn the run red if the pipeline only *looked* like it worked. Every
+      # Claude stage swallows its own errors to keep the rest of the night
+      # running, which on 2026-09-10 let a night with no Anthropic credit
+      # report success. This step reads what actually landed on disk.
+      - name: Health check
+        if: always()
+        run: npm run health
