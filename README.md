@@ -34,7 +34,11 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    waits. The federation ids live in `config/settings.json` → `anthropic`
    (public identifiers); the rule only trusts tokens from this repo's `main`.
    `.github/workflows/anthropic-wif-test.yml` is a manual smoke test.
-   Locally, export `ANTHROPIC_API_KEY` instead.
+   Outside Actions, export `CLASSIFIER_ANTHROPIC_API_KEY` (hosted sandboxes
+   such as claude.ai/code reserve the `ANTHROPIC_API_KEY` name, so the
+   classifier reads its own name first; plain `ANTHROPIC_API_KEY` also works
+   on a laptop). `npm run check-anthropic` confirms whichever credential
+   resolved without printing it.
 3. **Settings → Actions → General:** Workflow permissions "Read and write"
    (the workflows commit data back to the repo).
 4. **Settings → Pages:** deploy from branch `main`, folder `/` (root). The
@@ -126,9 +130,17 @@ invents categories silently.
 ```bash
 npm install
 npm test                # pure-logic tests, no network
-X_BEARER_TOKEN=... X_LIST_ID=... ANTHROPIC_API_KEY=... npm run poll
+npm run check-anthropic # one 5-token request; prints auth mode, never the key
+X_BEARER_TOKEN=... X_LIST_ID=... CLASSIFIER_ANTHROPIC_API_KEY=... npm run poll
 npm run report -- --date=2026-09-01
 ```
+
+In a claude.ai/code sandbox `CLASSIFIER_ANTHROPIC_API_KEY` is already in the
+environment (`test -n "$CLASSIFIER_ANTHROPIC_API_KEY" && echo set`); the
+scripts read it directly, so nothing needs re-exporting as `ANTHROPIC_API_KEY`.
+The `classify`, `incidents`, `poll`, and `check-*` scripts run node with
+`--use-env-proxy` so they honour the sandbox's `HTTPS_PROXY`; it is a no-op
+where no proxy is set.
 
 State (`data/state.json`) tracks the capture cursor, in-flight Claude
 batches, and a per-day X read ledger the budget guard enforces. Nothing else
