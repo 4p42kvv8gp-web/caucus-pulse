@@ -23,10 +23,12 @@ export function listId() {
 
 // Page size when we pay for boundary overlap: aim ~2× the recent per-poll
 // volume so bursts rarely need page 2, but quiet polls don't re-read 100.
+// Floor is the endpoint's minimum (5) — every row past the boundary is a
+// billed re-read, so overnight polls should ask for as little as possible.
 export function adaptivePageSize(recentNewCounts, max = 100) {
   if (!recentNewCounts.length) return max;
   const avg = recentNewCounts.reduce((a, b) => a + b, 0) / recentNewCounts.length;
-  return Math.min(max, Math.max(10, Math.ceil(avg * 2)));
+  return Math.min(max, Math.max(5, Math.ceil(avg * 2)));
 }
 
 // Split a newest-first page at the since-id boundary → the part we keep.

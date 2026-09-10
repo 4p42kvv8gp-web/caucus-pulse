@@ -10,9 +10,10 @@ test('newerThan keeps only tweets past the cursor', () => {
   assert.equal(newerThan(tweets, null).length, 3);
 });
 
-test('adaptivePageSize tracks recent volume within [10, 100]', () => {
+test('adaptivePageSize tracks recent volume within [5, 100]', () => {
   assert.equal(adaptivePageSize([]), 100);          // no history → full page
-  assert.equal(adaptivePageSize([2, 4, 3]), 10);    // quiet list → floor
+  assert.equal(adaptivePageSize([1, 2, 1]), 5);     // quiet list → endpoint minimum
+  assert.equal(adaptivePageSize([2, 4, 3]), 6);     // ~2× average
   assert.equal(adaptivePageSize([30, 40, 35]), 70); // ~2× average
   assert.equal(adaptivePageSize([90, 90, 90]), 100);
 });

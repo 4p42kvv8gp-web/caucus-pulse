@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { anthropicConfigured, authMode, refreshIdentityToken } from '../src/anthropic-auth.js';
 
 const KEYS = [
-  'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN', 'ANTHROPIC_FEDERATION_RULE_ID',
-  'ANTHROPIC_ORGANIZATION_ID', 'ACTIONS_ID_TOKEN_REQUEST_URL', 'ACTIONS_ID_TOKEN_REQUEST_TOKEN'
+  'ANTHROPIC_API_KEY', 'CLASSIFIER_ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN',
+  'ANTHROPIC_FEDERATION_RULE_ID', 'ANTHROPIC_ORGANIZATION_ID',
+  'ACTIONS_ID_TOKEN_REQUEST_URL', 'ACTIONS_ID_TOKEN_REQUEST_TOKEN'
 ];
 
 function withEnv(vars, fn) {
@@ -18,6 +19,10 @@ function withEnv(vars, fn) {
 
 test('authMode prefers an explicit key, then auth token, then federation', () => {
   withEnv({ ANTHROPIC_API_KEY: 'k' }, () => assert.equal(authMode(), 'api-key'));
+  withEnv({ CLASSIFIER_ANTHROPIC_API_KEY: 'k' }, () => {
+    assert.equal(authMode(), 'api-key');
+    assert.equal(anthropicConfigured(), true);
+  });
   withEnv({ ANTHROPIC_AUTH_TOKEN: 't' }, () => assert.equal(authMode(), 'auth-token'));
   withEnv({ ANTHROPIC_FEDERATION_RULE_ID: 'fdrl_x', ANTHROPIC_ORGANIZATION_ID: 'org' },
     () => assert.equal(authMode(), 'federation'));
@@ -40,5 +45,7 @@ test('outside Actions with nothing set, nothing is configured', () => {
 test('refreshIdentityToken is a no-op outside Actions or with an API key', async () => {
   assert.equal(await withEnv({}, () => refreshIdentityToken()), false);
   assert.equal(await withEnv({ ANTHROPIC_API_KEY: 'k', ACTIONS_ID_TOKEN_REQUEST_URL: 'u', ACTIONS_ID_TOKEN_REQUEST_TOKEN: 't' },
+    () => refreshIdentityToken()), false);
+  assert.equal(await withEnv({ CLASSIFIER_ANTHROPIC_API_KEY: 'k', ACTIONS_ID_TOKEN_REQUEST_URL: 'u', ACTIONS_ID_TOKEN_REQUEST_TOKEN: 't' },
     () => refreshIdentityToken()), false);
 });

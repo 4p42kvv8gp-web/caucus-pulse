@@ -26,6 +26,13 @@ import { settings } from './util.js';
 const AUDIENCE = 'https://api.anthropic.com';
 const IDENTITY_MAX_AGE_MS = 4 * 60_000;
 
+// Local runs (a laptop, a Claude Code cloud session) carry a dedicated key
+// under CLASSIFIER_ANTHROPIC_API_KEY so the classifier's spend is its own
+// line and never collides with whatever ANTHROPIC_API_KEY the shell has.
+// ANTHROPIC_API_KEY still wins if both are set, matching the SDK's own order.
+const explicitKey = () => process.env.ANTHROPIC_API_KEY || process.env.CLASSIFIER_ANTHROPIC_API_KEY || '';
+const explicitCredential = () => Boolean(explicitKey() || process.env.ANTHROPIC_AUTH_TOKEN);
+
 const inActions = () =>
   Boolean(process.env.ACTIONS_ID_TOKEN_REQUEST_URL && process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN);
 
@@ -54,13 +61,13 @@ function applyFederationSettings() {
 // True when some credential path exists. Cheap and synchronous so callers can
 // gate optional stages ("skip live tagging when there is no way to auth").
 export function anthropicConfigured() {
-  if (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN) return true;
+  if (explicitCredential()) return true;
   if (federationEnvSet()) return true;
   return inActions() && Boolean(settings.anthropic?.federation?.rule_id);
 }
 
 export function authMode() {
-  if (process.env.ANTHROPIC_API_KEY) return 'api-key';
+  if (explicitKey()) return 'api-key';
   if (process.env.ANTHROPIC_AUTH_TOKEN) return 'auth-token';
   if (federationEnvSet() || (inActions() && settings.anthropic?.federation?.rule_id)) return 'federation';
   return null;
@@ -82,7 +89,7 @@ async function mintGitHubOidcToken() {
 // Keep the identity file fresh. Safe to call often (cheap when fresh); call it
 // before constructing a client and inside any loop that outlives ~5 minutes.
 export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, force = false } = {}) {
-  if (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN) return false;
+  if (explicitCredential()) return false;
   if (!inActions()) return false;
   applyFederationSettings();
   const file = process.env.ANTHROPIC_IDENTITY_TOKEN_FILE;
@@ -102,5 +109,8 @@ export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, for
 export async function anthropicClient(options = {}) {
   await refreshIdentityToken();
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
-  return new Anthropic(options);
+  // The SDK only reads ANTHROPIC_API_KEY from the env; hand it the
+  // CLASSIFIER_ key explicitly so local runs work without re-exporting.
+  const apiKey = explicitKey();
+  return new Anthropic(apiKey && !options.apiKey ? { ...options, apiKey } : options);
 }

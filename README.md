@@ -34,7 +34,8 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    waits. The federation ids live in `config/settings.json` → `anthropic`
    (public identifiers); the rule only trusts tokens from this repo's `main`.
    `.github/workflows/anthropic-wif-test.yml` is a manual smoke test.
-   Locally, export `ANTHROPIC_API_KEY` instead.
+   Locally, export `CLASSIFIER_ANTHROPIC_API_KEY` instead (a plain
+   `ANTHROPIC_API_KEY` also works and takes precedence if both are set).
 3. **Settings → Actions → General:** Workflow permissions "Read and write"
    (the workflows commit data back to the repo).
 4. **Settings → Pages:** deploy from branch `main`, folder `/` (root). The
@@ -55,6 +56,13 @@ for `api.x.com` (the token never reaches the session). Set `X_PROXY_AUTH=1`
 and the X client sends bare requests for the proxy to authenticate; the npm
 scripts already pass `--use-env-proxy` so Node's fetch honours `HTTPS_PROXY`.
 `npm run check-x -- --probe` reports which auth mode worked.
+
+`.claude/settings.json` (committed) pre-approves the project's own commands
+for Claude Code sessions and sets `X_PROXY_AUTH=1` and the list id; put
+personal overrides in the gitignored `.claude/settings.local.json`. Claude
+classification in a session needs `CLASSIFIER_ANTHROPIC_API_KEY` in the
+session's environment variables; without it, capture still runs and the
+tagging stages skip.
 
 ## First act: the 24-hour volume measurement
 
@@ -105,12 +113,13 @@ aggregates per caucus for every topic — the design's sample data scaled one
 window into the other; the pipeline computes both. Engagement lags ~one day
 by design (the 24h re-read is the only metrics read).
 
-The poller's cursor logic self-detects whether the list endpoint honors
-`since_id` (X's docs are ambiguous). If it doesn't, the poller falls back to
-boundary-stop pagination with an adaptive page size — slightly above the
-per-tweet floor (one partial page of re-reads per non-empty poll), still far
-cheaper than search or per-account polling, and the archive stays exact
-either way thanks to local dedupe.
+The list endpoint rejects `since_id` (probed live, 2026-09-10: HTTP 400), so
+the poller runs boundary-stop pagination with an adaptive page size (floor 5,
+the endpoint minimum) — slightly above the per-tweet floor (one partial page
+of re-reads per non-empty poll), still far cheaper than search or per-account
+polling, and the archive stays exact thanks to local dedupe. The detection
+stays in code: set `sinceIdSupported` to `null` in `data/state.json` to
+re-test if X ever changes the endpoint.
 
 ## The taxonomy is the intelligence
 
@@ -126,7 +135,7 @@ invents categories silently.
 ```bash
 npm install
 npm test                # pure-logic tests, no network
-X_BEARER_TOKEN=... X_LIST_ID=... ANTHROPIC_API_KEY=... npm run poll
+X_BEARER_TOKEN=... X_LIST_ID=... CLASSIFIER_ANTHROPIC_API_KEY=... npm run poll
 npm run report -- --date=2026-09-01
 ```
 
