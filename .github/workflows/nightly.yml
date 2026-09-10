@@ -50,12 +50,18 @@ jobs:
       - name: Refresh, embed, classify, mine syntax, roll up, report
         # Claude auth: the job's OIDC token is exchanged for a short-lived
         # Anthropic access token in-process; no ANTHROPIC_API_KEY secret.
+        # Runs stage by stage (nightly.sh) rather than as one && chain, so a
+        # stage that needs Claude cannot take down the ones that do not. The
+        # script still exits non-zero if any stage failed.
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-        run: npm run nightly
+        run: .github/scripts/nightly.sh
       - name: Commit results
-        # config/taxonomy.yaml is in the list because --auto-promote/--retire
-        # write it; without it the night's promotions would die with the runner.
+        # always(): whatever stages did finish are worth keeping even when a
+        # later one failed. config/taxonomy.yaml is in the list because
+        # --auto-promote/--retire write it; without it the night's promotions
+        # would die with the runner.
+        if: always()
         run: |
           .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + stories + report" data reports site/data config/taxonomy.yaml
       # Last, and after the commit so the night's work is saved either way:
