@@ -42,7 +42,7 @@ test('searchRecent builds the recent-search query string without expansions by d
     assert.match(url.searchParams.get('tweet.fields'), /(^|,)public_metrics(,|$)/);
     assert.match(url.searchParams.get('tweet.fields'), /(^|,)referenced_tweets(,|$)/);
     assert.equal(init?.headers?.Authorization, undefined);                 // proxy mode: no header from this process
-    assert.deepEqual(out, { rateLimited: false, resetAt: null, tweets: [], users: [], nextToken: null, usage: { posts: 0, users: 0 } });
+    assert.deepEqual(out, { rateLimited: false, resetAt: null, tweets: [], users: [], includes: { tweets: [], users: [] }, nextToken: null, usage: { posts: 0, users: 0 } });
   });
 });
 

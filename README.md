@@ -106,7 +106,8 @@ starts. Every day before that is gone; turn it on early.
 
 | Stage (script) | Schedule | What it does | X / Claude cost |
 |---|---|---|---|
-| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe; then live-tags the new posts and rebuilds site data | $0.005/tweet — the floor |
+| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe, with the post each quote/reply points at (`quoted`, see `docs/QUOTED_CONTEXT.md`); then live-tags the new posts and rebuilds site data | $0.005/tweet + the referenced posts and authors it brings back |
+| `src/quotes-backfill.js` | once (re-run after a member backfill) | Fetches the posts that archived quotes/replies point at → `data/quoted.json`, so the classifier reads what a member reacted to | $0.005/quoted post + $0.01/author |
 | `src/classify-live.js` | with each poll | Tags the poll's new posts against the taxonomy (prompt-cached; skipped without an Anthropic credential or with `CLASSIFY_LIVE=false`) so the dashboard feed carries topics all day | ~$3–5/day at 2k tweets |
 | `src/authors.js` | weekly | `config/accounts.csv` → `data/authors.json` (no expansions ever) | $0.01/account/week |
 | `src/refresh.js` | nightly | 24h-old originals get one batched metrics re-read → `data/metrics/` | $0.005/original |

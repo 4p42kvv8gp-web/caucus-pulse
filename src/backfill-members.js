@@ -13,6 +13,11 @@
 // so the capture metrics are written straight into data/metrics/ for those
 // days (marked fromCapture) instead of paying for a second read.
 //
+// Pages are fetched with the referenced-post expansions (poll.js
+// includeReferenced; X_INCLUDE_REFERENCED=false turns it off) so quotes and
+// replies land with their quoted context. The included posts and authors
+// are billed reads and count toward --max-reads and the daily budget.
+//
 //   node --use-env-proxy src/backfill-members.js [--days=21] [--max-reads=N] [--dry-run] [--stop-at-limit]
 //
 // --stop-at-limit: on the first rate-limit hit, flush and exit (reporting when
@@ -25,6 +30,7 @@ import fs from 'node:fs';
 import * as x from './x.js';
 import { p, etDate, readJSON, writeJSON, readJSONL } from './util.js';
 import { loadAuthors } from './authors.js';
+import { includeReferenced } from './poll.js';
 import {
   loadState, saveState, addUsage, budgetExhausted, dailyBudget, estCost,
   appendToArchive, archivePath, metricsPath
@@ -137,7 +143,7 @@ export async function backfillMembers({
       if (budgetExhausted(state)) { stopped = `daily X read budget reached (${dailyBudget()})`; break outer; }
       if (reads >= maxReads) { stopped = `--max-reads=${maxReads} reached`; break outer; }
 
-      const res = await x.userTweetsPage(m.id, { startTime: windowStart, paginationToken: u.next, pageSize: 100 });
+      const res = await x.userTweetsPage(m.id, { startTime: windowStart, paginationToken: u.next, pageSize: 100, includeReferenced: includeReferenced() });
       if (res.rateLimited) {
         if (stopAtLimit) { stopped = `rate limited at @${m.handle}; window resets in ${resetIn(res.resetAt)}`; break outer; }
         const waitMs = Math.min(16 * 60_000, Math.max(5_000, (res.resetAt || Date.now() + 60_000) - Date.now() + 2_000));
@@ -146,8 +152,8 @@ export async function backfillMembers({
         await sleep(waitMs);
         continue;
       }
-      addUsage(state, { posts: res.usage });
-      reads += res.usage;
+      addUsage(state, { posts: res.usage, users: res.userReads || 0 });
+      reads += res.usage + (res.userReads || 0);
       u.pages++;
       saveState(state); // ledger first
 
@@ -155,7 +161,7 @@ export async function backfillMembers({
       for (const t of res.tweets) {
         if (seen.has(t.id)) continue;
         seen.add(t.id);
-        allRecords.push(x.toRecord(t, capturedAt));
+        allRecords.push(x.toRecord(t, capturedAt, res.includes));
         fresh++;
       }
       u.captured += fresh;
