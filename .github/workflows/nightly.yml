@@ -2,7 +2,10 @@
 # 24h engagement refresh → Claude batch classification → story candidates,
 # then continuous promotion/retirement (src/stories.js --auto-promote
 # --retire edits config/taxonomy.yaml in place; the classifier only sees
-# that change on the NEXT night's run) → corrections → strategic-syntax
+# that change on the NEXT night's run) → taxonomy learning
+# (src/taxonomy-learn.js --apply: reads each macro's posts, proposes
+# subtopics / elevations / merges / retirements with evidence, applies the
+# auto ones to the YAML) → corrections → strategic-syntax
 # n-grams → incidents → rollups → daily report → site data. Each stage reads
 # the previous stage's committed files, so a failed stage can be re-run with
 # workflow_dispatch. Claude auth for every stage is the same federation

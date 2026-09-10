@@ -114,6 +114,7 @@ starts. Every day before that is gone; turn it on early.
 | `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` (authoritative), emerging clusters, incident flags | ~50% batch rates |
 | `src/backfill-members.js` | once | Per-member timelines back N days → archive + seeded metrics (the List endpoint stops at ~800 posts) | $0.005/post |
 | `src/classify-range.js` | after a backfill | Every unclassified day in one Claude batch; retweets inherit across days | ~50% batch rates |
+| `src/taxonomy-learn.js` | nightly | Reads each macro's posts, clusters them by meaning, proposes subtopics / elevations / merges / retirements with evidence → `data/taxonomy-proposals.json`; `--apply` writes the auto ones into the YAML | ~2 Claude calls per macro per night (first night reads everything) |
 | `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
 | `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
@@ -183,6 +184,39 @@ the entry, or set `retired: true`) or confirms (delete `provisional: true`)
 rather than approving one by one. A taxonomy edit is only seen by the next
 classification run. Set `settings.stories.auto_promote` to `false` to make
 the nightly step list-only. The system never invents categories silently.
+
+**The taxonomy learns from the data.** Rows like "2026 midterms" mean
+nothing; rows must be what the caucus is actually talking about at the
+granularity the posts support. Every night after the stories step,
+`npm run taxonomy-learn -- --apply` (`src/taxonomy-learn.js`,
+`docs/TAXONOMY_LEARNING.md`):
+
+- reads the last 14 days of original posts under every macro (and the
+  posts left with no topic), clusters them by meaning — agglomerative on
+  embeddings when a semantic index exists, otherwise Claude reads them in
+  batches and groups them into subjects, cached per post so a later night
+  only reads what is new — and asks Claude once per macro to name each
+  cluster (label, key, aliases, kind: subtopic | story | noise), say whether
+  it duplicates an existing subtopic, and judge the existing rows (dead,
+  too coarse, duplicate, misnamed), with a reason for every verdict;
+- measures shape: each subtopic's share of its macro over 7 days, members,
+  days. A subject that draws `elevate_share` of its parent (or
+  `elevate_factor` × the median sibling while holding `elevate_min_share`)
+  is flagged **ELEVATE** — its own macro, dual-listed (`dual: true, of:`)
+  under the parent so history reads both ways; near-duplicates **MERGE**;
+  rows with zero assignments over `retire_days` **RETIRE**;
+- writes `data/taxonomy-proposals.json` with the evidence behind every
+  proposal, applies the `auto` ones (adds and retirements over the
+  thresholds, at most `max_per_night`) as text edits to the YAML with
+  `provisional: true` and `learned: <date>`, and lists everything in the
+  report's *Taxonomy learned tonight* section. Elevations and merges wait
+  for a human: `npm run taxonomy-learn -- --apply --elevate=key` /
+  `--merge=key` (or `settings.taxonomy_learn.auto_elevate: true`).
+
+`--dry-run` prints the plan and writes nothing; `--no-llm` uses cached
+clusters and the measured rules only; `--macro=economy,unassigned
+--scan=all` reads one pool completely. Hand edits to the YAML remain
+authoritative: a key, label or alias already present is never re-added.
 
 ## Local development
 
