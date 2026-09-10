@@ -15,6 +15,12 @@ test('chunkRequests prefixes custom_ids with the date and keeps them batch-legal
   assert.equal(chunkRequests(items.slice(0, 3), tax, 'm')[0].custom_id, 'chunk-0');
 });
 
+test('validAssignments dedupes pairs after collapsing unknown subtopics', async () => {
+  const { validAssignments } = await import('../src/taxonomy.js');
+  assert.deepEqual(validAssignments([['economy', 'bogus'], ['economy', 'other-bogus'], ['economy', null]], tax), [['economy', null]]);
+  assert.deepEqual(validAssignments([['economy', 'jobs'], ['economy', 'jobs'], ['economy', null]], tax), [['economy', 'jobs'], ['economy', null]]);
+});
+
 test('mergeParsed keeps only taxonomy-valid assignments and groups emerging labels', () => {
   const out = { assignments: {}, incidents: {}, emergingMap: new Map() };
   mergeParsed({

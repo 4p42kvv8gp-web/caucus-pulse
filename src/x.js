@@ -3,10 +3,16 @@
 // X bills pay-per-use: $0.005 per post object returned, $0.01 per user object
 // returned. Every function reports its usage so the budget guard in store.js
 // can meter spend. Design rules that keep cost at ~1 read per tweet captured:
-//   - no expansions anywhere (authors resolve against data/authors.json,
+//   - no author expansions (authors resolve against data/authors.json,
 //     refreshed weekly by src/authors.js)
 //   - one merged list timeline instead of per-account polling or search
 //   - engagement is re-read exactly once, batched, at the 24h mark
+//
+// The one deliberate exception is quoted context ({ includeReferenced: true }
+// on the timeline/search pagers): the post a quote or reply points at comes
+// back in `includes` — billed like any other post object, plus a user object
+// for its author — so the classifier can see what a member is reacting to.
+// docs/QUOTED_CONTEXT.md has the cost arithmetic.
 
 // api.x.com is the canonical host. It matters for proxy-injected credentials
 // (claude.ai/code "API credentials"), which the egress proxy attaches only to
@@ -57,6 +63,24 @@ export function isConfigured() {
 
 const TWEET_FIELDS = 'created_at,public_metrics,referenced_tweets,author_id,lang,conversation_id';
 
+// Quoted context: the referenced post itself and its author. tweet.fields
+// applies to included posts too, so they carry public_metrics (impressions).
+const REFERENCED_EXPANSIONS = 'referenced_tweets.id,referenced_tweets.id.author_id';
+const REFERENCED_USER_FIELDS = 'username';
+
+function withReferenced(params) {
+  params.set('expansions', REFERENCED_EXPANSIONS);
+  params.set('user.fields', REFERENCED_USER_FIELDS);
+}
+
+// What a page's includes cost: every included post is a post read, every
+// included user a user read. Returned alongside `usage` (which already
+// counts the included posts, so a caller cannot under-bill posts by
+// forgetting them) as `userReads` for the user-object side of the ledger.
+function includesOf(body) {
+  return { tweets: body.includes?.tweets || [], users: body.includes?.users || [] };
+}
+
 async function fail(res, label) {
   const text = await res.text();
   const err = new Error(`X ${label} ${res.status}: ${text.slice(0, 300)}`);
@@ -65,28 +89,39 @@ async function fail(res, label) {
   throw err;
 }
 
-// One page of the list timeline, newest first. No expansions.
+// One page of the list timeline, newest first. No author expansions.
+//
+// includeReferenced=true adds the referenced-post expansions: the response's
+// `includes` carries the posts this page's quotes/replies/retweets point at
+// (and their authors), and toRecord(t, capturedAt, includes) folds them into
+// the archive record as `quoted`. `usage` counts every billed post object
+// (page + included), `userReads` the included user objects.
 //
 // since_id: search and user-timeline endpoints support it; the list-tweets
 // endpoint has not consistently documented it. We send it when asked and let
 // the caller detect a 400 (err.status === 400) to fall back to boundary-stop
 // pagination — the poller records which mode works in state.sinceIdSupported.
-export async function listTweetsPage(listId, { sinceId, paginationToken, pageSize = 100 } = {}) {
+export async function listTweetsPage(listId, { sinceId, paginationToken, pageSize = 100, includeReferenced = false } = {}) {
   const params = new URLSearchParams({
     max_results: String(Math.min(100, Math.max(5, pageSize))),
     'tweet.fields': TWEET_FIELDS
   });
+  if (includeReferenced) withReferenced(params);
   if (sinceId) params.set('since_id', sinceId);
   if (paginationToken) params.set('pagination_token', paginationToken);
   const res = await authFetch(`${API}/lists/${listId}/tweets?${params}`);
-  if (res.status === 429) return { rateLimited: true, tweets: [], nextToken: null, usage: 0 };
+  const empty = { tweets: [], includes: { tweets: [], users: [] }, nextToken: null, usage: 0, userReads: 0 };
+  if (res.status === 429) return { rateLimited: true, ...empty };
   if (!res.ok) await fail(res, 'list tweets');
   const body = await res.json();
+  const includes = includesOf(body);
   return {
     rateLimited: false,
     tweets: body.data || [],
+    includes,
     nextToken: body.meta?.next_token || null,
-    usage: body.data?.length || 0
+    usage: (body.data?.length || 0) + includes.tweets.length,
+    userReads: includes.users.length
   };
 }
 
@@ -94,32 +129,38 @@ export async function listTweetsPage(listId, { sinceId, paginationToken, pageSiz
 // timeline (which stops at roughly its newest 800 posts), a user timeline
 // reaches back thousands of posts, so this is the historical-backfill path:
 // bounded by start_time, it walks each member back a few weeks. Same billing
-// ($0.005 per post returned), no expansions. Includes replies and retweets so
-// the backfilled corpus matches what the List poller captures.
+// ($0.005 per post returned), no author expansions; includeReferenced works
+// as on listTweetsPage. Includes replies and retweets so the backfilled
+// corpus matches what the List poller captures.
 //
 // On 429 the reset time (from x-rate-limit-reset, epoch seconds) is returned
 // so the caller can sleep exactly as long as needed instead of giving up.
-export async function userTweetsPage(userId, { startTime, endTime, paginationToken, pageSize = 100 } = {}) {
+export async function userTweetsPage(userId, { startTime, endTime, paginationToken, pageSize = 100, includeReferenced = false } = {}) {
   const params = new URLSearchParams({
     max_results: String(Math.min(100, Math.max(5, pageSize))),
     'tweet.fields': TWEET_FIELDS
   });
+  if (includeReferenced) withReferenced(params);
   if (startTime) params.set('start_time', startTime);
   if (endTime) params.set('end_time', endTime);
   if (paginationToken) params.set('pagination_token', paginationToken);
   const res = await authFetch(`${API}/users/${userId}/tweets?${params}`);
   const remaining = Number(res.headers.get('x-rate-limit-remaining') ?? NaN);
   const resetAt = Number(res.headers.get('x-rate-limit-reset') ?? NaN) * 1000 || null;
-  if (res.status === 429) return { rateLimited: true, resetAt, remaining: 0, tweets: [], nextToken: null, usage: 0 };
+  const empty = { tweets: [], includes: { tweets: [], users: [] }, nextToken: null, usage: 0, userReads: 0 };
+  if (res.status === 429) return { rateLimited: true, resetAt, remaining: 0, ...empty };
   if (!res.ok) await fail(res, `user ${userId} tweets`);
   const body = await res.json();
+  const includes = includesOf(body);
   return {
     rateLimited: false,
     resetAt,
     remaining: Number.isFinite(remaining) ? remaining : null,
     tweets: body.data || [],
+    includes,
     nextToken: body.meta?.next_token || null,
-    usage: body.data?.length || 0
+    usage: (body.data?.length || 0) + includes.tweets.length,
+    userReads: includes.users.length
   };
 }
 
@@ -133,61 +174,95 @@ export async function userTweetsPage(userId, { startTime, endTime, paginationTok
 // usage.users so the caller can meter it. Default off: on-roster authors
 // resolve from data/authors.json and data/lists/*.json for free.
 //
+// includeReferenced=true adds the referenced-post expansions as well; the
+// referenced posts land in `includes.tweets` (billed in usage.posts) and
+// their authors join `users` / `includes.users` (billed in usage.users).
+//
 // Pagination uses next_token (search's name for it; the timeline endpoints
 // call it pagination_token). On 429 the reset time is returned like
 // userTweetsPage so the caller can wait instead of giving up.
-export async function searchRecent(query, { maxResults = 100, nextToken, startTime, endTime, expandAuthors = false } = {}) {
+export async function searchRecent(query, { maxResults = 100, nextToken, startTime, endTime, expandAuthors = false, includeReferenced = false } = {}) {
   const params = new URLSearchParams({
     query,
     max_results: String(Math.min(100, Math.max(10, maxResults))),
     'tweet.fields': TWEET_FIELDS.includes('public_metrics') ? TWEET_FIELDS : `${TWEET_FIELDS},public_metrics`
   });
-  if (expandAuthors) {
-    params.set('expansions', 'author_id');
-    params.set('user.fields', 'username,name,verified,public_metrics');
+  const expansions = [];
+  if (expandAuthors) expansions.push('author_id');
+  if (includeReferenced) expansions.push(REFERENCED_EXPANSIONS);
+  if (expansions.length) {
+    params.set('expansions', expansions.join(','));
+    params.set('user.fields', expandAuthors ? 'username,name,verified,public_metrics' : REFERENCED_USER_FIELDS);
   }
   if (startTime) params.set('start_time', startTime);
   if (endTime) params.set('end_time', endTime);
   if (nextToken) params.set('next_token', nextToken);
   const res = await authFetch(`${API}/tweets/search/recent?${params}`);
   const resetAt = Number(res.headers.get('x-rate-limit-reset') ?? NaN) * 1000 || null;
-  const empty = { tweets: [], users: [], nextToken: null, usage: { posts: 0, users: 0 } };
+  const empty = { tweets: [], users: [], includes: { tweets: [], users: [] }, nextToken: null, usage: { posts: 0, users: 0 } };
   if (res.status === 429) return { rateLimited: true, resetAt, ...empty };
   if (!res.ok) await fail(res, 'search recent');
   const body = await res.json();
   const tweets = body.data || [];
-  const users = body.includes?.users || [];
+  const includes = includesOf(body);
   return {
     rateLimited: false,
     resetAt,
     tweets,
-    users,
+    users: includes.users,
+    includes,
     nextToken: body.meta?.next_token || null,
-    usage: { posts: tweets.length, users: users.length }
+    usage: { posts: tweets.length + includes.tweets.length, users: includes.users.length }
   };
 }
 
-// Batched metrics re-read: up to 100 ids per request; each returned tweet is
-// one post read. Deleted/protected tweets simply don't come back.
-export async function lookupTweets(ids) {
-  if (!ids.length) return { metricsById: new Map(), usage: 0 };
+// public_metrics → the archive's metrics shape (impressions included: X
+// exposes impression_count on any post, not just the credential's own).
+export function metricsOf(t) {
+  const m = t?.public_metrics || {};
+  return {
+    likes: m.like_count ?? 0, retweets: m.retweet_count ?? 0,
+    replies: m.reply_count ?? 0, quotes: m.quote_count ?? 0,
+    bookmarks: m.bookmark_count ?? 0, impressions: m.impression_count ?? 0
+  };
+}
+
+// Batched lookup: up to 100 ids per request; each returned tweet is one post
+// read. Deleted/protected tweets simply don't come back. The default asks for
+// metrics only (the 24h refresh). withText=true also fetches text, author and
+// created_at plus the author expansion — one user read per distinct author,
+// reported in `userReads` — and returns the full posts in `tweetsById` as
+// {id, authorId, handle, text, createdAt, metrics} (the quoted-context shape).
+export async function lookupTweets(ids, { withText = false } = {}) {
+  const empty = { metricsById: new Map(), tweetsById: new Map(), usage: 0, userReads: 0 };
+  if (!ids.length) return empty;
   const params = new URLSearchParams({
     ids: ids.slice(0, 100).join(','),
-    'tweet.fields': 'public_metrics'
+    'tweet.fields': withText ? 'public_metrics,author_id,created_at,text' : 'public_metrics'
   });
+  if (withText) {
+    params.set('expansions', 'author_id');
+    params.set('user.fields', REFERENCED_USER_FIELDS);
+  }
   const res = await authFetch(`${API}/tweets?${params}`);
-  if (res.status === 429) return { rateLimited: true, metricsById: new Map(), usage: 0 };
+  if (res.status === 429) return { rateLimited: true, ...empty };
   if (!res.ok) await fail(res, 'tweets lookup');
   const body = await res.json();
-  const metricsById = new Map((body.data || []).map((t) => {
-    const m = t.public_metrics || {};
-    return [t.id, {
-      likes: m.like_count ?? 0, retweets: m.retweet_count ?? 0,
-      replies: m.reply_count ?? 0, quotes: m.quote_count ?? 0,
-      bookmarks: m.bookmark_count ?? 0, impressions: m.impression_count ?? 0
-    }];
-  }));
-  return { metricsById, usage: body.data?.length || 0 };
+  const includes = includesOf(body);
+  const handleOf = new Map(includes.users.map((u) => [u.id, u.username]));
+  const metricsById = new Map();
+  const tweetsById = new Map();
+  for (const t of body.data || []) {
+    const metrics = metricsOf(t);
+    metricsById.set(t.id, metrics);
+    if (withText) {
+      tweetsById.set(t.id, {
+        id: t.id, authorId: t.author_id ?? null, handle: handleOf.get(t.author_id) ?? null,
+        text: t.text ?? '', createdAt: t.created_at ?? null, metrics
+      });
+    }
+  }
+  return { metricsById, tweetsById, usage: body.data?.length || 0, userReads: includes.users.length };
 }
 
 // Resolve handles → user objects, 100 per request ($0.01 per user returned —
@@ -238,16 +313,37 @@ export async function listMembers(listId) {
   return { users, usage, rateLimited: false };
 }
 
+// The referenced post `id` as quoted context, when the page's includes carry
+// it: {id, authorId, handle, text, metrics}. handle is null when the author
+// object was not included (the expansion was not asked for, or X withheld
+// a protected account).
+export function quotedFromIncludes(id, includes) {
+  const t = includes?.tweets?.find((x) => x.id === id);
+  if (!t) return null;
+  const author = includes.users?.find((u) => u.id === t.author_id);
+  const { bookmarks, ...metrics } = metricsOf(t); // the record keeps the five reach/engagement numbers
+  return {
+    id: t.id,
+    authorId: t.author_id ?? null,
+    handle: author?.username ?? null,
+    text: t.text ?? '',
+    metrics
+  };
+}
+
 // Normalize a raw API tweet into the archive record. Author enrichment
 // happens at read time from the local author table, never via expansions.
-export function toRecord(t, capturedAt) {
+// With `includes` (a page fetched with includeReferenced), a quote or reply
+// also carries the post it points at as `quoted` — the record's shape is
+// unchanged when the referenced post is not there.
+export function toRecord(t, capturedAt, includes) {
   const refs = t.referenced_tweets || [];
   const rt = refs.find((r) => r.type === 'retweeted');
   const quote = refs.find((r) => r.type === 'quoted');
   const reply = refs.find((r) => r.type === 'replied_to');
   const type = rt ? 'retweet' : quote ? 'quote' : reply ? 'reply' : 'tweet';
   const m = t.public_metrics || {};
-  return {
+  const rec = {
     id: t.id,
     authorId: t.author_id,
     createdAt: t.created_at,
@@ -263,4 +359,9 @@ export function toRecord(t, capturedAt) {
       replies: m.reply_count ?? 0, quotes: m.quote_count ?? 0
     }
   };
+  if ((type === 'quote' || type === 'reply') && includes) {
+    const quoted = quotedFromIncludes(rec.refId, includes);
+    if (quoted) rec.quoted = quoted;
+  }
+  return rec;
 }

@@ -106,7 +106,8 @@ starts. Every day before that is gone; turn it on early.
 
 | Stage (script) | Schedule | What it does | X / Claude cost |
 |---|---|---|---|
-| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe; then live-tags the new posts and rebuilds site data | $0.005/tweet — the floor |
+| `src/poll.js` | every 20 min | List timeline → `data/archive/*.jsonl`, cursor + dedupe, with the post each quote/reply points at (`quoted`, see `docs/QUOTED_CONTEXT.md`); then live-tags the new posts and rebuilds site data | $0.005/tweet + the referenced posts and authors it brings back |
+| `src/quotes-backfill.js` | once (re-run after a member backfill) | Fetches the posts that archived quotes/replies point at → `data/quoted.json`, so the classifier reads what a member reacted to | $0.005/quoted post + $0.01/author |
 | `src/classify-live.js` | with each poll | Tags the poll's new posts against the taxonomy (prompt-cached; skipped without an Anthropic credential or with `CLASSIFY_LIVE=false`) so the dashboard feed carries topics all day | ~$3–5/day at 2k tweets |
 | `src/authors.js` | weekly | `config/accounts.csv` → `data/authors.json` (no expansions ever) | $0.01/account/week |
 | `src/refresh.js` | nightly | 24h-old originals get one batched metrics re-read → `data/metrics/` | $0.005/original |
@@ -156,9 +157,32 @@ re-test if X ever changes the endpoint.
 `config/taxonomy.yaml` — two levels, multi-label. A Dilley tweet counts
 toward *Dilley detention facility* and *Immigration*; reports nest subtopics
 under macros so nothing double-reads. The nightly classifier surfaces tweets
-that fit nothing as **emerging clusters** in the daily report with a
-suggested label; approve one by adding it to the YAML. The system never
-invents categories silently.
+that fit nothing as **emerging clusters**; `src/stories.js` merges them
+across days into story candidates and asks Claude once to place each under
+a macro as a developing **story** (a named, dated event) or a generic
+taxonomy **gap**.
+
+**The story is the unit, so promotion is continuous.** Every night, after
+classification, `npm run stories -- --auto-promote --retire`:
+
+- writes each story candidate that clears `settings.stories` (`min_posts`,
+  `min_members`, `min_days`; at most `max_per_night`, most posts first) into
+  the YAML as a developing story with `provisional: true`, `since:` (first
+  post) and `promoted:` (the night it entered), aliases from the placement
+  plus the most frequent proper nouns in its posts;
+- marks a provisional story `retired: true` once it has had no assignments
+  for `retire_after_quiet_days` — it leaves the classifier prompt, but the
+  key stays so rollups and history still resolve;
+- never auto-promotes a taxonomy gap: where a generic subject lives is a
+  human call (`npm run stories -- --promote=key`, which writes a confirmed
+  entry).
+
+The daily report lists *Stories promoted tonight* and *Provisional stories
+awaiting review* with their last-7-day counts, so the owner prunes (delete
+the entry, or set `retired: true`) or confirms (delete `provisional: true`)
+rather than approving one by one. A taxonomy edit is only seen by the next
+classification run. Set `settings.stories.auto_promote` to `false` to make
+the nightly step list-only. The system never invents categories silently.
 
 ## Local development
 

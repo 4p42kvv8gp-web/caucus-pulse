@@ -1,7 +1,13 @@
 # Nightly pipeline — 07:30 UTC (2:30/3:30am ET, after the ET day closes):
-# 24h engagement refresh → Claude batch classification → strategic-syntax
-# n-grams → rollups → daily report. Each stage reads the previous stage's
-# committed files, so a failed stage can be re-run with workflow_dispatch.
+# 24h engagement refresh → Claude batch classification → story candidates,
+# then continuous promotion/retirement (src/stories.js --auto-promote
+# --retire edits config/taxonomy.yaml in place; the classifier only sees
+# that change on the NEXT night's run) → corrections → strategic-syntax
+# n-grams → incidents → rollups → daily report → site data. Each stage reads
+# the previous stage's committed files, so a failed stage can be re-run with
+# workflow_dispatch. Claude auth for every stage is the same federation
+# exchange (src/anthropic-auth.js); stories.js goes through anthropicClient
+# like classify.js, so no extra secret is involved.
 name: nightly
 on:
   schedule:
@@ -33,5 +39,7 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: npm run nightly
       - name: Commit results
+        # config/taxonomy.yaml is in the list because --auto-promote/--retire
+        # write it; without it the night's promotions would die with the runner.
         run: |
-          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report" data reports site/data
+          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + stories + report" data reports site/data config/taxonomy.yaml

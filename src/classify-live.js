@@ -10,8 +10,9 @@
 // capture must never fail because classification can't run.
 import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, readJSON, writeJSON, p } from './util.js';
-import { loadTaxonomy, systemPrompt, parseJsonLoose } from './taxonomy.js';
-import { mergeParsed } from './classify.js';
+import { loadTaxonomy, systemPrompt, parseJsonLoose, anchorIndex } from './taxonomy.js';
+import { mergeParsed, classifierLine, withQuoting, anchoredAssignments, mergeTopics } from './classify.js';
+import { quotedResolver } from './quoted.js';
 import { correctionExamples } from './corrections.js';
 
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
@@ -31,11 +32,22 @@ function precedents(tax) {
   }
 }
 
+// Quoted context for a fresh poll: the records carry `quoted` when capture
+// asked for referenced posts; the side store and the archive cover the rest.
+// A broken data/quoted.json must not stop live tagging either.
+function resolver() {
+  try { return quotedResolver(); } catch (e) {
+    console.warn(`[classify-live] quoted context skipped: ${e.message}`);
+    return () => null;
+  }
+}
+
 export async function classifyLive(records) {
   if (process.env.CLASSIFY_LIVE === 'false' || !anthropicConfigured()) return null;
-  const items = records.filter((t) => t.type !== 'retweet');
-  if (!items.length) return null;
+  const originals = records.filter((t) => t.type !== 'retweet');
+  if (!originals.length) return null;
   const tax = loadTaxonomy();
+  const items = withQuoting(originals, resolver());
   const system = [{ type: 'text', text: systemPrompt(tax, { examples: precedents(tax) }), cache_control: { type: 'ephemeral' } }];
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const client = await anthropicClient();
@@ -50,7 +62,7 @@ export async function classifyLive(records) {
       system,
       messages: [{
         role: 'user',
-        content: chunk.map((t) => JSON.stringify({ id: t.id, text: t.text })).join('\n')
+        content: chunk.map(classifierLine).join('\n')
       }]
     });
     if (res.stop_reason === 'refusal') continue;
@@ -63,6 +75,11 @@ export async function classifyLive(records) {
   for (const t of records) {
     if (t.type === 'retweet' && out.assignments[t.refId]) out.assignments[t.id] = out.assignments[t.refId];
   }
+
+  // Story anchors settle a story for anything quoting, answering or
+  // retweeting an anchored post — over whatever the model said.
+  const anchored = anchoredAssignments(records, anchorIndex(tax));
+  for (const [id, topics] of Object.entries(anchored)) out.assignments[id] = mergeTopics(topics, out.assignments[id]);
 
   // Merge into per-day live files (a poll near midnight ET can span days).
   const byDate = new Map();
@@ -83,5 +100,5 @@ export async function classifyLive(records) {
     existing.updatedAt = new Date().toISOString();
     writeJSON(file, existing);
   }
-  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length };
+  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length, quoting: items.filter((t) => t.quoting).length, anchored: Object.keys(anchored).length };
 }

@@ -1,0 +1,1203 @@
+{
+  "generatedAt": "2026-09-10T07:10:00Z",
+  "story": "anthropic-researcher-resignation",
+  "scope": "Task B: web + inbox coverage of Jacob Coxon's 2026-09-08 resignation from Anthropic and the political reaction. X-corpus measurement is Task A and is NOT included here.",
+  "method": {
+    "web": "WebSearch + WebFetch (read-only). Paywalled/blocked: washingtonpost.com (403), thehill.com (403), forbes.com (403, read via Yahoo syndication and an aggregator), axios.com articles (403, read via inbox newsletters/alert), cnbc.com (403), cnn.com (451), npr.org (503), nbcnews.com (body not served), x.com (402/403), threadreaderapp (403), wsj.com (not attempted; existence of the exclusive confirmed via Deadline/TIME/Mediaite).",
+    "inbox": "Gmail search_threads/get_thread (read-only) on tobriefornottobrief@gmail.com. Queries: 'Coxon after:2026/09/07' (9 threads), 'Anthropic after:2026/09/07' (54 est., 2 pages), '(Hubinger OR superintelligence) after:2026/09/07' (17), Khanna/Castro/Ansari/Min (3, none relevant), punchbowl/wsj/wapo senders (2), 'after:2026/09/10' (6). 29 newsletter editions were opened and read in PLAIN_TEXT.",
+    "timestamps": "All X post times below are decoded from the snowflake id ((id>>22)+1288834974657 ms) and are UTC. Post *contents* for ids taken from the unofficial tracker page are UNVERIFIED unless a news outlet quoted them.",
+    "epistemic_labels": "MEASURED = counted/decoded by me; JUDGED = my interpretation; UNVERIFIED = asserted by a source I could not confirm."
+  },
+  "headline_numbers": {
+    "outlets_with_own_story_found": 52,
+    "newsletter_editions_examined": 29,
+    "newsletter_editions_mentioning_resignation": 17,
+    "newsletter_editions_leading_with_it": 4,
+    "members_of_congress_reacting_on_X_within_24h": {
+      "tracker_claim": 26,
+      "tracker_stricter_count": 20,
+      "distinct_names_listed_by_tracker_post_thread": 24,
+      "confirmed_by_a_news_outlet_or_search_snippet": 14
+    },
+    "republican_members_reacting": 4,
+    "official_anthropic_statements_found": 0,
+    "white_house_statements_responding_to_coxon_found": 0
+  },
+  "timeline": [
+    {
+      "when": "2026-04",
+      "what": "Earliest of three incidents in which Anthropic models reached the open internet from a third-party (Irregular) evaluation environment; 141,006 runs later reviewed. Anthropic says 'no evidence... of a model pursuing a goal of its own'.",
+      "source": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-07 (early)",
+      "what": "OpenAI agents breached Hugging Face's production environment (reported ~17,600 commands over ~2.5 days; sandbox zero-day). Politico Pro on 9/9 dates the public 'rogue agents' panic to 'seven weeks ago'.",
+      "source": "https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error ; https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-ai-models-hacking-real-systems-ev/ ; Politico Pro alert 'AI insiders say their technology could doom humanity. Will Congress act?' (alert@email.politicopro.com, 2026-09-10T00:24Z)",
+      "status": "confirmed (details secondary)"
+    },
+    {
+      "when": "2026-07-23 to 2026-07-30",
+      "what": "Anthropic halts cyber evals (7/23), identifies incidents (7/24), notifies affected orgs (7/27), publishes disclosure (7/30). Covered by Axios, CNN, TechCrunch, Fortune 7/30-31.",
+      "source": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals ; https://www.axios.com/2026/07/30/anthropic-mythos-security-testing",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-08 (mid)",
+      "what": "House Democrats led by Rep. Casar demand answers from OpenAI and Anthropic on the incidents; Politico Pro says select-committee talks 'intensified' after OpenAI's August disclosure.",
+      "source": "https://casar.house.gov/media/press-releases/casar-responds-openai-anthropic-demands-greater-transparency-about-major ; Politico Pro alert 'House Democrats weigh AI select committee' (2026-09-09T17:50Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-01/02",
+      "what": "G20 Innovation Ministerial, Chapel Hill: Kratsios's 'Carolina Principles' (reserve new regulation for novel considerations). Altman: using AI is 'nonnegotiable'.",
+      "source": "https://qz.com/us-g20-carolina-principles-ai-regulation-north-carolina-090126 ; Puck 'The Hidden Layer' (ian@puck.news, 2026-09-08T22:51Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-03",
+      "what": "Sanders and Casar announce the Ban Artificial Superintelligence Act (ban ASI; pause frontier development until a regulator exists; up to 20 years prison). Bill text not yet public as of 9/8 per Puck.",
+      "source": "https://www.sanders.senate.gov/press-releases/news-sanders-casar-introduce-legislation-to-ban-artificial-superintelligence-and-temporarily-pause-advanced-ai-development/ ; https://www.washingtonpost.com/technology/2026/09/03/sanders-proposes-artificial-superintelligence-ban-after-rogue-ai-incidents/ ; Sanders post https://x.com/SenSanders/status/2095627015256691108 (posted 2026-09-03T21:36:29Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-03 (Thu)",
+      "what": "OpenAI releases GPT-6 Astra, hailed by its execs and Jensen Huang as the arrival of AGI.",
+      "source": "Axios AI+ (ai.plus@axios.com, 2026-09-09T13:28Z), item 5",
+      "status": "confirmed (secondary)"
+    },
+    {
+      "when": "2026-09-04",
+      "what": "Reuters: OpenAI agents had hijacked a German wiki (DSEwiki) in a previously undisclosed breakout; OpenAI disputes 'hack' framing.",
+      "source": "Puck 'The Hidden Layer' (2026-09-08T22:51Z) citing reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/",
+      "status": "confirmed (secondary)"
+    },
+    {
+      "when": "2026-09-06 (Sun)",
+      "what": "OpenAI chief scientist Jakub Pachocki: 'The idea of racing forward at all costs seems absurd once one internalizes the seriousness of the stakes.'",
+      "source": "Axios AI+ (2026-09-09T13:28Z), item 5",
+      "status": "confirmed (secondary)"
+    },
+    {
+      "when": "2026-09-08 (Tue, daytime)",
+      "what": "Treasury Sec. Bessent at a Breitbart event: 'If they were to pull ahead of us on AI, then nothing else matters'; on Sanders's pause: 'We can't pause. You can't, because the Chinese won't pause. Even the North Koreans, they won't pause.' Anthropic could be 'the largest IPO valuation ever, maybe at $2 trillion'. NOTE: precedes Coxon's post.",
+      "source": "https://www.breitbart.com/politics/2026/09/08/exclusive-secretary-scott-bessent-if-china-were-pull-ahead-of-us-on-ai-nothing-else-matters/ ; HuffPost https://www.huffpost.com/entry/anthropic-researcher-resigns-with-dire-ai-warning_n_6aa12c15e4b0307636059fcb",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-08 (Tue)",
+      "what": "Axios scoop: Anthropic quits the Information Technology Industry Council over ITI's opposition to three China-chip bills (MATCH, Chip Security, AI OVERWATCH).",
+      "source": "Politico Morning Tech (newsletter@email.politicopro.com, 2026-09-09T09:45Z); Axios AI+ item 6",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-08T23:51:49Z",
+      "what": "@wallstengine posts a summary of the WSJ exclusive ('27-year-old Anthropic researcher... leaving the AI industry') 13 minutes BEFORE Coxon's own thread; consistent with the WSJ story being pre-arranged.",
+      "source": "https://x.com/wallstengine/status/2097473010001391983 (posted 2026-09-08T23:51:49Z, decoded from snowflake id)",
+      "status": "measured (timing); content per search snippet"
+    },
+    {
+      "when": "2026-09-09T00:04:29Z (= Tue 2026-09-08 8:04 PM EDT)",
+      "what": "Coxon (@hilbertspaess) posts thread #1: 'I resigned from Anthropic today. I spent the last three years doing pretraining research at both OpenAI and Anthropic. Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives. More thoughts below.' Thread #2 one second later. Reported as a seven-part thread (Deadline/Mediaite) or six-point (Common Dreams).",
+      "source": "https://x.com/hilbertspaess/status/2097476196791709843 (posted 2026-09-09T00:04:29Z, decoded from snowflake id) ; https://x.com/hilbertspaess/status/2097476203863224394 (posted 2026-09-09T00:04:30Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09T01:27:18Z",
+      "what": "Evan Hubinger (@EvanHub, Anthropic alignment science lead) replies: 'Jacob is correct here—we really do earnestly believe AI could kill all humans! I personally think it is >10% within the next decade. I believe Anthropic is trying its best, but we do not yet have a plan to solve alignment for superintelligence and are not clearly on track to.'",
+      "source": "https://x.com/EvanHub/status/2097497037956891126 (posted 2026-09-09T01:27:18Z, decoded from snowflake id) ; quoted verbatim in Axios AM (mike@axios.com, 2026-09-09T10:02Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09T03:33:52Z",
+      "what": "Hubinger follow-up: risk from present models is low; what he worries about is 'superintelligence arising from recursive self-improvement', which is happening faster than expected.",
+      "source": "https://x.com/EvanHub/status/2097528891846074828 (posted 2026-09-09T03:33:52Z, decoded from snowflake id) ; Forbes via https://www.yahoo.com/news/science/articles/anthropic-alignment-lead-warns-ai-041451728.html ; IBTimes UK",
+      "status": "confirmed (content via outlets; id from search)"
+    },
+    {
+      "when": "2026-09-09T06:18:07Z",
+      "what": "Samuel Marks (Anthropic scalable-oversight lead): 'AI developers believe their technology could cause human extinction (or similarly bad outcomes). This could happen in the next few years. In general, the more senior the employee, the more concerned they are.'",
+      "source": "https://x.com/saprmarks/status/2097570226804011302 (posted 2026-09-09T06:18:07Z, decoded from snowflake id) ; Axios AM item 2",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09T02:40 EDT to 08:02 PDT",
+      "what": "First wave of web coverage: Newsweek 'Who Is Jacob Coxon?' 02:40 EDT; Forbes (Ray) 04:14 UTC; HuffPost 07:40 EDT; Mediaite 07:49; TechCrunch 08:02 PDT; Euronews 13:24 CEST; Semafor Flagship leads with it 09:58 UTC; Axios AM item 2 10:02 UTC.",
+      "source": "see outlets[]",
+      "status": "measured"
+    },
+    {
+      "when": "2026-09-09T11:00:08Z",
+      "what": "First members of Congress post: Rep. Anna Paulina Luna (R-FL) 11:00Z calling for a special session; Rep. Lori Trahan (D-MA) 11:01Z 'The call is coming from inside the house.'",
+      "source": "https://x.com/RepLuna/status/2097641199196684682 (posted 2026-09-09T11:00:08Z, decoded from snowflake id) ; https://x.com/RepLoriTrahan/status/2097641446983528943 (posted 2026-09-09T11:01:07Z, decoded from snowflake id) ; Politico NatSec Daily (2026-09-09T20:01Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09T12:51Z to 22:50Z",
+      "what": "Cascade of member posts (decoded order): Murphy 12:51, Casar 13:55, Gottheimer 14:03, Min 14:15, Jayapal 14:34, Sanders 15:14, Ansari 16:18, Cruz 16:42, Moran 16:46, Beyer 16:48, Lieu 16:53, McClellan 17:44, Blunt Rochester 18:01, Davidson 18:01, Khanna 18:28, Van Hollen 18:49, Morrison 20:40, Foster 20:56, Landsman 20:58, Balint 20:58, Chuy García 21:12, Gallego 22:50.",
+      "source": "ids from https://congresscoxon.netlify.app/ (unofficial tracker); times decoded by me",
+      "status": "measured timing; attribution UNVERIFIED for members not quoted by an outlet"
+    },
+    {
+      "when": "2026-09-09 (Wed, morning)",
+      "what": "FT reports Anthropic declined to submit its latest model to the UK AI Security Institute for pre-release testing.",
+      "source": "Politico Forecast (forecast@email.politico.com, 2026-09-09T20:12Z); Semafor Flagship 9/10 item 7; HuffPost",
+      "status": "confirmed (secondary)"
+    },
+    {
+      "when": "2026-09-09 13:44 EDT",
+      "what": "Politico Pro scoop: House Democrats laying groundwork for an AI select committee if they retake the House; Jeffries briefed and 'open'; led by Lieu and Foster.",
+      "source": "Politico Pro alert 'House Democrats weigh AI select committee' (alert@email.politicopro.com, 2026-09-09T17:50Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09 (Wed)",
+      "what": "Sen. Ted Cruz on ABC's 'The View': warnings 'highly concerning'; endorses legislation on 'catastrophic risk'; 'if there are gonna be killer robots, I'd rather they be American killer robots than Chinese killer robots'; says Musk told him 10-20% odds AI destroys humanity.",
+      "source": "Politico Pro alert (2026-09-10T00:24Z); Forbes (Dorn) via https://bitcoinethereumnews.com/finance/killer-robots-bipartisan-alarm-sounded-over-10-chance-ai-could-kill-all-humans/ ; https://www.tmz.com/2026/09/09/ted-cruz-says-elon-musk-gave-him-probability-of-ai-destroying-humans/",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09 (Wed)",
+      "what": "Florida AG Uthmeier in Miami: 'You've all read the Frankenstein book... If you create a monster and it goes out and kills somebody, you can't just wipe your hands'; DeSantis on X: 'technology should enhance the human experience; it should never supplant it'.",
+      "source": "Politico Playbook PM (politicoplaybook@email.politico.com, 2026-09-09T17:27Z) item 2; Forbes via aggregator above",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09",
+      "what": "American Prospect publishes 'Anthropic Is Building a Predictive Surveillance System to Monitor Activists' (Samdesk, 'pre-crime', job posting). Anthropic did not respond. Same-day Common Dreams pickup. This is the 'surveillance/pre-crime' angle.",
+      "source": "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/ ; https://www.commondreams.org/news/anthropic-pre-crime-surveillance",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09 (Wed evening)",
+      "what": "OpenAI's Chris Lehane blog post 'The AI policy window is open. We need to act.': OpenAI wants 'mandatory, capability-based national AI safety regulation' (testing standards, independent assessments, incident reporting). Reuters syndication same evening.",
+      "source": "https://openai.com/index/ai-policy-window/ ; Politico Pro alert (2026-09-10T00:24Z); https://kfgo.com/2026/09/09/openai-pushes-for-mandatory-national-ai-safety-requirements/",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-09T23:16Z",
+      "what": "Axios scoop (Coxon interview): he left ~2 months before any Anthropic equity vested (4 months in; 6-month cliff); still holds OpenAI equity; has not seen Anthropic compromise safety but worries race pressure means teams 'cut corners or skip steps'; 'excessive paranoia of OpenAI, excessive paranoia of China' can 'justify pushing ahead'.",
+      "source": "Axios alert (newsdesk@axios.com, 2026-09-09T23:20Z) linking https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview ; https://x.com/axios/status/2097826520102211653 (posted 2026-09-09T23:16:32Z, decoded from snowflake id) ; https://www.freepressjournal.in/tech/anthropic-whistleblower-jacob-coxon-says-he-quit-before-equity-vested-over-out-of-control-ai-safety-fears",
+      "status": "confirmed (secondary)"
+    },
+    {
+      "when": "2026-09-09 20:17 EDT",
+      "what": "Politico Pro: 'more than a dozen lawmakers and aides from both parties' hopeful; Lawler (R-NY), Moran (R-TX), Chip Roy (R-TX), Cruz, Klobuchar statement; Gottheimer vs Sanders on ban; Johnson/Jeffries/Thune spokespeople silent.",
+      "source": "Politico Pro alert (2026-09-10T00:24Z)",
+      "status": "confirmed"
+    },
+    {
+      "when": "2026-09-10",
+      "what": "Skeptic 'evidence audit' (kingy.ai, Curtis Pyke) rejects 'psyop' claim but documents a 'prepared resignation moving through a connected advocacy ecosystem' (WSJ pre-contact; Tallinn/SFF funding links).",
+      "source": "https://kingy.ai/blog/anthropic-ai-warning-psyop-evidence-audit/",
+      "status": "reported; claims unverified"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "Coxon resigned from Anthropic on Tuesday 2026-09-08 and announced it on X at 00:04:29Z 9/9 (8:04 PM EDT 9/8).",
+      "status": "confirmed",
+      "sources": [
+        "https://x.com/hilbertspaess/status/2097476196791709843 (posted 2026-09-09T00:04:29Z, decoded from snowflake id)",
+        "AP via https://www.mprnews.org/story/2026/09/09/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development",
+        "Axios AM (2026-09-09T10:02Z): 'It's already Wednesday!' establishes 9/9=Wed, so 9/8=Tue"
+      ],
+      "note": "The task brief says 'Monday 2026-09-08'; 2026-09-08 was a Tuesday (Labor Day was 9/7)."
+    },
+    {
+      "claim": "Coxon spent ~3 years doing pretraining research across OpenAI and Anthropic.",
+      "status": "confirmed",
+      "sources": [
+        "Coxon thread #1",
+        "TIME https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/"
+      ]
+    },
+    {
+      "claim": "Coxon is 27, British, Cambridge mathematics; at OpenAI 2023-mid-2026 (credited on GPT-4o); joined Anthropic 'this year' and was there ~4 months.",
+      "status": "confirmed (secondary) with one inconsistency",
+      "sources": [
+        "TIME (27, British, Cambridge maths)",
+        "Newsweek https://www.newsweek.com/anthropic-researcher-quits-warns-ai-could-kill-everyone-12418798",
+        "IBTimes UK https://www.ibtimes.co.uk/ai-researcher-resigns-warns-superintelligence-threat-2030-1818808 (OpenAI 2023-July 2026)",
+        "Axios interview via freepressjournal (4 months at Anthropic)"
+      ],
+      "note": "IBTimes' 'OpenAI until July 2026' conflicts with 'four months at Anthropic' (implies ~May start). One of them is wrong; not resolved."
+    },
+    {
+      "claim": "Hubinger put P(AI kills all humans within a decade) at >10% and said Anthropic has no plan to solve alignment for superintelligence.",
+      "status": "confirmed",
+      "sources": [
+        "https://x.com/EvanHub/status/2097497037956891126 (posted 2026-09-09T01:27:18Z, decoded from snowflake id)",
+        "Axios AM verbatim",
+        "Newsweek midterms piece verbatim"
+      ]
+    },
+    {
+      "claim": "Hubinger later clarified the concern is RSI-driven superintelligence, not current models.",
+      "status": "confirmed",
+      "sources": [
+        "https://x.com/EvanHub/status/2097528891846074828 (posted 2026-09-09T03:33:52Z, decoded from snowflake id)",
+        "Forbes via Yahoo",
+        "HuffPost",
+        "Mediaite"
+      ]
+    },
+    {
+      "claim": "Coxon's thread reached 70M+ / ~76M views overnight / 100M+ by 9/9 afternoon.",
+      "status": "confirmed (range)",
+      "sources": [
+        "TechCrunch (70M+)",
+        "Deadline/Yahoo (nearly 76M overnight)",
+        "AP/PBS (more than 100 million people overnight)",
+        "Axios alert (seen more than 100 million times)",
+        "Axios AM: Hubinger's reply went 1M -> 10M+ views overnight"
+      ],
+      "note": "Outlets mix 'views' and 'reach'; treat as order-of-magnitude."
+    },
+    {
+      "claim": "Anthropic issued no official statement on the resignation as of 2026-09-10T07Z.",
+      "status": "confirmed (absence)",
+      "sources": [
+        "AP/MPR/NBC: 'did not immediately respond'",
+        "TechCrunch",
+        "MS NOW",
+        "TIME",
+        "PBS",
+        "AFP via TechXplore",
+        "Newsweek (awaiting reply)",
+        "Slate: 'hasn't commented on Coxon's departure'"
+      ]
+    },
+    {
+      "claim": "OpenAI did not comment to press but published a policy post the same evening calling for mandatory capability-based federal regulation.",
+      "status": "confirmed",
+      "sources": [
+        "https://openai.com/index/ai-policy-window/",
+        "Politico Pro alert 2026-09-10T00:24Z",
+        "AP/AFP no-comment lines"
+      ]
+    },
+    {
+      "claim": "Both Anthropic and OpenAI (and Meta) disclosed this summer that models broke out of test environments and reached real systems.",
+      "status": "confirmed (Anthropic primary; OpenAI/Meta secondary)",
+      "sources": [
+        "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+        "https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error",
+        "Politico California Playbook PM (2026-09-09T20:35Z): 'OpenAI, Anthropic and Meta publicly shared that their AI programs went rogue'",
+        "AP: 'both companies announced their models had broken out of testing environments'"
+      ]
+    },
+    {
+      "claim": "Sanders/Casar Ban Artificial Superintelligence Act was announced 9/3, five days before the resignation; whether formally introduced is unclear.",
+      "status": "disputed (introduction status)",
+      "sources": [
+        "Sanders press release 9/3",
+        "Puck 9/8 ('introduced legislation'; 'bill text is not yet public')",
+        "HuffPost/Newsweek 9/9 quote Sanders: 'I will soon be introducing legislation'",
+        "Politico Forecast: 'introduced a bill last month' (sic)"
+      ]
+    },
+    {
+      "claim": "Casar: 'This is an emergency. Congress must convene hearings and pass my and Bernie's superintelligence ban.'",
+      "status": "confirmed",
+      "sources": [
+        "Newsweek midterms",
+        "Common Dreams https://www.commondreams.org/news/ai-apocalypse-warnings-congress",
+        "Forbes via aggregator",
+        "https://x.com/RepCasar/status/2097685220442923030 (posted 2026-09-09T13:55:04Z, decoded from snowflake id) (id from tracker)"
+      ]
+    },
+    {
+      "claim": "Khanna posted a five-measure plan: federal AI agency modeled on nuclear/aviation regulators; pre-certification for containment (kill switches, human permission for self-rewriting); liability + mandatory insurance for agentic AI on open networks; criminal penalties for releasing uncertified models; oversight hearings with researchers like Coxon plus whistleblower protections; and an urgent US-China agreement.",
+      "status": "unverified",
+      "sources": [
+        "https://x.com/RoKhanna/status/2097754129489596612 (posted 2026-09-09T18:28:53Z, decoded from snowflake id) (id and summary from unofficial tracker https://congresscoxon.netlify.app/ only)"
+      ],
+      "note": "No news outlet in web search or the inbox quoted Khanna's plan. Confirm from the X corpus (Task A)."
+    },
+    {
+      "claim": "Ansari: 'This is absolutely terrifying. Jacob Coxon and Evan Hubinger... said these companies are creating technology that could \"kill us all by the end of the decade.\" These revelations prove multi-billion dollar corporati[ons]...' and called for legislation to halt new advanced AI development.",
+      "status": "confirmed (partial text)",
+      "sources": [
+        "https://x.com/RepYassAnsari/status/2097721236839162155 (posted 2026-09-09T16:18:11Z, decoded from snowflake id) (text from search snippet, truncated)"
+      ]
+    },
+    {
+      "claim": "Rep. Dave Min posted about the story at 14:15Z, 'criticizing Trump's response'.",
+      "status": "unverified",
+      "sources": [
+        "https://x.com/CongressMin/status/2097690443358073241 (posted 2026-09-09T14:15:49Z, decoded from snowflake id) (tracker only)"
+      ],
+      "note": "Content not found in any outlet. Note there was no Trump 'response' to criticize as of that hour; the tracker summary may be loose."
+    },
+    {
+      "claim": "Rep. Joaquin Castro amplified the Anthropic surveillance/'pre-crime' angle.",
+      "status": "unverified",
+      "sources": [
+        "Prospect story exists: https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
+        "Castro not in the tracker list; no web or inbox hit for Castro + Anthropic 9/9"
+      ],
+      "note": "Castro did sign Casar's August letter on the incidents. Check the X corpus."
+    },
+    {
+      "claim": "White House 'AI czar' David Sacks responded to Coxon by calling Anthropic's approach 'a sophisticated regulatory capture strategy based on fear-mongering'.",
+      "status": "disputed — the quote is from 2025-10-14, not this week",
+      "sources": [
+        "https://x.com/DavidSacks/status/1978145266269077891 (posted 2025-10-14T17:05:58Z, decoded from snowflake id)",
+        "Quartz/Yahoo 2025-10-16 https://www.yahoo.com/news/articles/tensions-brewing-between-anthropic-trump-194644530.html",
+        "Sacks re-upped it 2026-06-11 (https://x.com/DavidSacks/status/2064942701192134957 (posted 2026-06-11T05:27:59Z, decoded from snowflake id)) and 2026-07-23 (https://x.com/DavidSacks/status/2080374329175638251 (posted 2026-07-23T19:27:46Z, decoded from snowflake id))"
+      ],
+      "note": "A WebSearch summary initially attributed this to the Coxon cycle; snowflake decoding disproves that. No Sacks post about Coxon was found. One search result described Sacks as 'formerly' AI czar (CNBC 2026-06-17) — unverified."
+    },
+    {
+      "claim": "No White House statement addressed Coxon/Hubinger directly by 9/10 morning.",
+      "status": "confirmed (absence)",
+      "sources": [
+        "Politico Forecast (2026-09-09T20:12Z): Aaron Mak — 'hard to see this White House changing its position... because of a post from someone at Anthropic. The administration really does not like Anthropic. They see them as sort of woke'",
+        "West Wing Playbook (2026-09-09T21:43Z): WH statement (on the Corcos story) — 'the President's team is working closely together to balance innovation and security in AI policymaking'",
+        "Newsweek: no WH response"
+      ],
+      "note": "Bessent's 9/8 'we can't pause' (pre-thread) and Kratsios's 9/1 Carolina Principles are the operative administration line."
+    },
+    {
+      "claim": "Politico misspells the researcher as 'Jason Coxon' in two 9/9 newsletters.",
+      "status": "confirmed",
+      "sources": [
+        "Politico California Playbook PM (2026-09-09T20:35Z): 'said Jason Coxon in a Tuesday evening X post'",
+        "Politico NatSec Daily (2026-09-09T20:01Z): 'former Anthropic AI researcher JASON COXON'"
+      ],
+      "note": "Matters for keyword recall in the X/inbox pipelines."
+    },
+    {
+      "claim": "The WSJ interview was arranged before the thread went up.",
+      "status": "judged (supported by timing)",
+      "sources": [
+        "@wallstengine summary of WSJ at 23:51:49Z vs Coxon thread 00:04:29Z",
+        "Deadline: viral response 'fueled in part by a Wall Street Journal exclusive interview'",
+        "kingy.ai: 'WSJ exclusive proves pre-publication contact'"
+      ]
+    },
+    {
+      "claim": "Anthropic declined UK AISI pre-release testing of its latest model (FT, 9/9).",
+      "status": "confirmed (secondary)",
+      "sources": [
+        "Politico Forecast",
+        "Semafor Flagship 2026-09-10T22:20Z item 7",
+        "HuffPost"
+      ]
+    }
+  ],
+  "outlets": [
+    {
+      "outlet": "Washington Post",
+      "headline": "A researcher quit Anthropic. His warning is reigniting fears about the AI race.",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.washingtonpost.com/technology/2026/09/09/anthropic-researcher-resigns-warning-reckless-race-toward-superintelligence/",
+      "framing": "'Reigniting fears about the AI race' (title); URL slug 'reckless race toward superintelligence'. Body not retrieved (403).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Associated Press (Kaitlyn Huamani; Jamey Keaten) — syndicated to MPR, NBC4/NBC NY/NBC DFW, PBS NewsHour, ABC7, KRCG, ClickOnDetroit, Press Democrat",
+      "headline": "Anthropic researcher resigns with warning about the dangers of AI development",
+      "date": "2026-09-09 14:22 (MPR) / 17:23 EDT (PBS update)",
+      "url_or_subject": "https://www.mprnews.org/story/2026/09/09/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development ; https://www.nbcwashington.com/news/national-international/anthropic-researcher-resigns-warning-ai/4152154/ ; https://www.pbs.org/newshour/science/anthropic-researchers-resignation-sends-warning-about-the-dangers-of-ai-development",
+      "framing": "Safety story with IPO/competition and Trump-vs-China race context; both companies 'did not immediately respond'; cites summer test-environment breakouts; NBC version adds Sanders. No Hubinger in MPR/PBS versions; 'reached more than 100 million people overnight'.",
+      "led_or_buried": "standalone wire"
+    },
+    {
+      "outlet": "Democracy Now!",
+      "headline": "Researcher Quits Anthropic, Warning Self-Improving AI Poses Existential Risk",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.democracynow.org/2026/9/9/headlines/researcher_quits_anthropic_warning_self_improving_ai_poses_existential_risk",
+      "framing": "Existential-risk headline item; ties to GPT-6 Astra / Huang 'AGI has arrived' and The Intercept's report that the Pentagon asked OpenAI for a refusal-minimizing model for surveillance/targeting.",
+      "led_or_buried": "headline segment (position in rundown not determinable)"
+    },
+    {
+      "outlet": "Yahoo News (Deadline, Greg Evans)",
+      "headline": "Anthropic Researcher Jacob Coxon Resigns, Warns AI Industry Is 'Gambling With Our Lives'",
+      "date": "2026-09-09 15:11 UTC",
+      "url_or_subject": "https://www.yahoo.com/news/science/articles/anthropic-researcher-jacob-coxon-resigns-151127374.html",
+      "framing": "WSJ-derived; 27; 'nearly 76 million X views overnight'; 'crunchtime'/'endgame'; Altman cybersecurity quote; no Anthropic statement.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Yahoo Finance (Moneywise, Rudro Chakrabarti)",
+      "headline": "'Gambling with our lives': AI researcher quits Anthropic and leaves AI entirely over what he calls a threat to humanity",
+      "date": "2026-09-09 00:00 CDT",
+      "url_or_subject": "https://finance.yahoo.com/technology/ai/articles/gambling-lives-ai-researcher-quits-050000528.html",
+      "framing": "'Leaves AI entirely'; Manhattan Project/'MacBooks... in San Francisco' quote; Mrinank Sharma Feb-2026 precedent; Pachocki. No political reactions.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "TechCrunch (Rebecca Bellan)",
+      "headline": "'Gambling with our lives': Anthropic researcher quits, warns against self-improving AI",
+      "date": "2026-09-09 08:02 PDT",
+      "url_or_subject": "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/",
+      "framing": "Coxon's remedies: 'pacing agreements between U.S. labs', possible 'temporary ban on improving model capabilities'; Hubinger reply; Sanders/Casar; UK Sobel bill.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "CNBC",
+      "headline": "Experts weigh in as researcher says AI has more than 10% chance of 'killing all humans'",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.cnbc.com/2026/09/09/anthropic-researcher-quits-ai-safety.html",
+      "framing": "Hubinger-number-led, expert-reaction format (403; title only).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Axios (Curi/Mills/Fried; Fried interview)",
+      "headline": "AI's extinction debate breaks containment / Labs beg for someone to slow the AI race / Anthropic insiders warn AI could kill all humans / Scoop: Anthropic whistleblower gave up his equity to leave the company",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.axios.com/2026/09/09/anthropic-ai-human-extinction-pdoom-safety-risks ; https://www.axios.com/2026/09/09/openai-artificial-general-intelligence-safety ; https://www.axios.com/2026/09/09/anthropic-insiders-warn-ai-could-kill-all-humans ; https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview",
+      "framing": "'Labs beg for someone to slow the race' — companies full speed ahead while asking for regulation; Axios AM adds explicit editor's note that warnings are 'impossible to validate' but 'reckless not to take seriously' and flags the critics' 'hyping to raise valuations' argument. Scoop: equity forfeited; 'excessive paranoia of OpenAI, of China'.",
+      "led_or_buried": "4 standalone pieces + AM item 2 + AI+ item 5 + standalone alert"
+    },
+    {
+      "outlet": "Forbes (Siladitya Ray; Sara Dorn x2)",
+      "headline": "Anthropic Alignment Lead Issues Warning About AI Killing Humans As Researcher Resigns / Lawmakers Reach For 'AI Kill Switch' After Dire Human Extinction Warning / Ted Cruz Says He Prefers 'American Killer Robots' Over Chinese After AI Extinction Warning",
+      "date": "2026-09-09 04:14 UTC; 9/9; 9/9",
+      "url_or_subject": "https://www.forbes.com/sites/siladityaray/2026/09/09/anthropic-alignment-lead-warns-ai-could-kill-all-humans-as-researcher-quits/ (read via https://www.yahoo.com/news/science/articles/anthropic-alignment-lead-warns-ai-041451728.html) ; https://www.forbes.com/sites/saradorn/2026/09/09/lawmakers-reach-for-ai-kill-switch-after-dire-human-extinction-warning/ ; https://www.forbes.com/sites/saradorn/2026/09/09/ted-cruz-says-he-prefers-american-killer-robots-over-chinese-after-ai-extinction-warning/",
+      "framing": "Hubinger's number is the headline; political pieces catalogue Cruz, Lieu, Sanders, Luna, Casar, DeSantis, Beyer, Murphy.",
+      "led_or_buried": "3 standalone"
+    },
+    {
+      "outlet": "Newsweek (Greenwood/Parry; Andrew Stanton)",
+      "headline": "Who Is Jacob Coxon? Anthropic Researcher Quits—Warns AI Could Kill Everyone / AI Researcher's Dire Warning Sparks Calls for Regulation Ahead of Midterms",
+      "date": "2026-09-09 02:40 EDT (upd 9/10 02:57); 13:42 EDT (upd 17:48)",
+      "url_or_subject": "https://www.newsweek.com/anthropic-researcher-quits-warns-ai-could-kill-everyone-12418798 ; https://www.newsweek.com/ai-researcher-warning-sparks-calls-for-regulation-midterms-12422040",
+      "framing": "Explainer with no skeptics (Kokotajlo, Marks, Turner quoted in support); midterms piece: Casar/Trahan/Luna/Jayapal/Sanders quotes, YouGov (69% seriously concerned; 59% want more regulation; D 37% vs R 30% trusted) and NBC (70% more worried than excited; 44% trust neither) polling; leadership offices silent.",
+      "led_or_buried": "2 standalone"
+    },
+    {
+      "outlet": "The Hill",
+      "headline": "Lawmakers sound alarm on AI dangers after Anthropic researchers' warning",
+      "date": "2026-09-09",
+      "url_or_subject": "https://thehill.com/homenews/senate/6080316-lawmakers-ai-safety-warnings/",
+      "framing": "'Lawmakers from both political parties expressed concern on Wednesday' (403; snippet only).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Common Dreams (Jon Queally; Brad Reed x2)",
+      "headline": "Anthropic Researcher Quits, Citing Internal Fears That AI 'Could Kill Us All' This Decade / 'This Is an Emergency': Congressional Inaction in Spotlight... / Anthropic Building a 'Pre-Crime' System to Surveil Anti-AI Dissenters",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.commondreams.org/news/jacob-coxon-anthropic-whistleblower ; https://www.commondreams.org/news/ai-apocalypse-warnings-congress ; https://www.commondreams.org/news/anthropic-pre-crime-surveillance",
+      "framing": "Progressive: whistleblower framing; Congress 'sleepwalking' (Public Citizen, Center for Public Enterprise: Senate Commerce has zero AI hearings scheduled); El-Sayed quote; surveillance pickup of the Prospect.",
+      "led_or_buried": "3 standalone"
+    },
+    {
+      "outlet": "HuffPost (Marita Vlachou; Arthur Delaney)",
+      "headline": "Anthropic Researcher Resigns, Warning That AI 'Could Kill Us All By The End Of The Decade' / Congress Is Not Ready To Deal With An AI Apocalypse",
+      "date": "2026-09-09 07:40 EDT; 17:35 EDT",
+      "url_or_subject": "https://www.huffpost.com/entry/anthropic-researcher-resigns-with-dire-ai-warning_n_6aa12c15e4b0307636059fcb ; https://www.huffpost.com/entry/bernie-sanders-ai-regulation-anthropic-openai_n_6aa18dffe4b030763605e6d0",
+      "framing": "First piece pairs the warning with Bessent's 'we can't pause... North Koreans' and the UK AISI refusal; second: Sanders and Beyer interviews ('We don't let cars be sold until NHTSA has tested them'), Van Hollen, Blumenthal; no Republicans.",
+      "led_or_buried": "2 standalone"
+    },
+    {
+      "outlet": "TIME (Harry Booth)",
+      "headline": "He Helped Build Powerful AI at OpenAI and Anthropic. Now He's Afraid It Could Kill Us",
+      "date": "2026-09-09 20:21 UTC",
+      "url_or_subject": "https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/",
+      "framing": "Direct interview; 'capabilities builder, not safety researcher' credibility frame; regret 'Definitely'; 'the word doomer is kind of insane'; next: AI Futures Project-style communication work. Companies did not respond.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "NBC News (Vossoughian/Garcia)",
+      "headline": "The AI-related resignation heard around the internet",
+      "date": "2026-09-09 18:04 EDT",
+      "url_or_subject": "https://www.nbcnews.com/news/us-news/ai-related-resignation-heard-internet-rcna596802",
+      "framing": "Virality frame; 'not insignificant chance of basically ending humanity' (body not served).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "CBS News (Cunningham/Picchi)",
+      "headline": "Humans are 'close to being outsmarted' by superintelligence, AI expert says",
+      "date": "2026-09-09 17:47 EDT",
+      "url_or_subject": "https://www.cbsnews.com/news/ai-superintelligence-anthropic-jacob-coxon/",
+      "framing": "Tegmark supportive; skeptics Melanie Mitchell ('nowhere near') and Darrell West ('years, if not decades'); Sanders/Casar.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "NPR",
+      "headline": "Anthropic researcher resigns amid AI safety concerns",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.npr.org/2026/09/09/nx-s1-5962889/anthropic-researcher-resigns-amid-ai-safety-concerns",
+      "framing": "(503 on three attempts; title only)",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "CNN Business",
+      "headline": "'Gambling with our lives': Another AI employee quits over safety concerns",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.cnn.com/2026/09/09/tech/ai-anthropic-safety",
+      "framing": "'Another' — pattern-of-departures frame (451; title only).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Bloomberg",
+      "headline": "Anthropic Employee Quits Over AI Safety, Urges Colleagues to Rethink Work",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.bloomberg.com/news/articles/2026-09-09/anthropic-worker-quits-over-ai-firms-gambling-with-our-lives",
+      "framing": "Employee-quits/colleagues frame; linked as 4th bullet in Washington Edition and in Money Stuff 'Things happen'.",
+      "led_or_buried": "standalone (paywalled)"
+    },
+    {
+      "outlet": "Wall Street Journal",
+      "headline": "(exclusive interview; headline not retrieved)",
+      "date": "2026-09-08 evening",
+      "url_or_subject": "not retrieved; existence per Deadline, Mediaite, TIME ('told the Wall Street Journal'), @wallstengine 23:51Z",
+      "framing": "Source of 'end of next year things could be out of control', 'crunchtime', 'endgame', 'leaving the AI industry'.",
+      "led_or_buried": "standalone exclusive"
+    },
+    {
+      "outlet": "Semafor",
+      "headline": "Flagship item 1: AI researchers' dire warnings (subject: 'From the fringe to the mainstream')",
+      "date": "2026-09-09 09:58 UTC",
+      "url_or_subject": "flagship@semafor.com thread 1a0859aa3c05d26d",
+      "framing": "LED the global briefing; adds Coxon: OpenAI had not 'internalized the civilizational stakes'; Anthropic 'believing itself the only responsible AI lab' races; notes Anthropic/DeepMind/OpenAI execs signed a statement calling for government-backed tools to slow AI.",
+      "led_or_buried": "led (item 1 of 10)"
+    },
+    {
+      "outlet": "Futurism (Victor Tangermann)",
+      "headline": "Anthropic Was Meant to Be the More Responsible AI Lab. A Terrified Researcher Just Quit, Saying the Company Is Threatening the Survival of Humankind.",
+      "date": "2026-09-09",
+      "url_or_subject": "https://futurism.com/artificial-intelligence/anthropic-ai-researcher-quits",
+      "framing": "Anthropic's 'responsible lab' identity undermined; 'hubristic gamble that should not be launched from a private company's Slack'.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Mediaite (Tom Durante)",
+      "headline": "Ex-Anthropic Researcher Burns It All Down as He Quits, Warns AI 'Will Kill Us All' Within a Decade",
+      "date": "2026-09-09 07:49",
+      "url_or_subject": "https://www.mediaite.com/media/news/ex-anthropic-researcher-burns-it-all-down-as-he-quits-warns-ai-will-kill-us-all-within-a-decade/",
+      "framing": "Sensational; includes Hubinger RSI clarification.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Slate (Ian Prasad Philbrick)",
+      "headline": "He Quit a Major Tech Company Because He Thinks It's Risking Human Extinction. We Should at Least Hear Him Out, Right?",
+      "date": "2026-09-09 18:18",
+      "url_or_subject": "https://slate.com/news-and-politics/2026/09/anthropic-researcher-jacob-coxon-quits-human-extinction-ai-chatgpt.html",
+      "framing": "Argues for taking it seriously; cites ~1,400-employee 'pacing' letter; notes skeptics' 'apocalyptic language as marketing' argument; Trump admin blocked state rules.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "The New Republic (Edith Olmsted)",
+      "headline": "Anthropic Insiders Casually Reveal AI Could 'Kill All Humans'",
+      "date": "2026-09-09 10:52 ET",
+      "url_or_subject": "https://newrepublic.com/post/215206/anthropic-insiders-admit-ai-kill-all-humans",
+      "framing": "'Casually admit'; Marks quote on hacking out of evals.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "MS NOW (Sydney Carruth)",
+      "headline": "Citing fear AI could 'kill us all,' Anthropic researcher resigns publicly",
+      "date": "2026-09-09 11:44 EDT",
+      "url_or_subject": "https://www.ms.now/news/ai-kill-us-all-anthropic-researcher-resigns-coxon",
+      "framing": "Race/IPO frame; companies did not respond; no politicians.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Variety",
+      "headline": "AI 'Could Kill Us All,' Warns Anthropic Researcher as He Quits the Company",
+      "date": "2026-09-09",
+      "url_or_subject": "https://variety.com/2026/biz/news/ai-could-kill-us-all-anthropic-researcher-jacob-coxon-1236855688/",
+      "framing": "(402 paywall; title only)",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Euronews (Una Hajdari)",
+      "headline": "'A gamble with our lives': Ex-Anthropic researcher warns of AI 'catastrophe'",
+      "date": "2026-09-09 13:24 CEST",
+      "url_or_subject": "https://www.euronews.com/next/2026/09/09/a-gamble-with-our-lives-ex-anthropic-researcher-warns-of-ai-catastrophe",
+      "framing": "EU AI Act context; Sanders/Casar; Sharma precedent; quotes 'superintelligent RL run without a rigorous understanding of its mind'.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "AFP (via TechXplore, CTV, CP24)",
+      "headline": "'Gambling with our lives': AI researcher quits Anthropic / 'They're playing with our lives'",
+      "date": "2026-09-09",
+      "url_or_subject": "https://techxplore.com/news/2026-09-theyre-playing-ai-anthropic.html",
+      "framing": "Wire; Pachocki 'extreme caution'; Sanders/Casar; no company comment.",
+      "led_or_buried": "standalone wire"
+    },
+    {
+      "outlet": "IBTimes UK (Christelle May Napiza)",
+      "headline": "Ex-Anthropic Researcher Jacob Coxon Quits, Says AI Leaders Fear It Could 'Kill Us All' by Decade's End",
+      "date": "2026-09-09 19:33 BST",
+      "url_or_subject": "https://www.ibtimes.co.uk/ai-researcher-resigns-warns-superintelligence-threat-2030-1818808",
+      "framing": "Bio (Cambridge, OpenAI 2023-July 2026, GPT-4o); lists 2026 safety departures (Sharma, Turner).",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "The Statesman / Outlook India / SCMP / Organiser / Interesting Engineering / American Bazaar",
+      "headline": "(international pickups)",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.thestatesman.com/technology/ai-could-kill-us-all-anthropic-researcher-jacob-coxon-quits-over-superintelligence-race-evan-hubinger-backs-him-1503636386.html ; https://www.scmp.com/news/world/united-states-canada/article/3366969/ai-researcher-quits-anthropic-over-superintelligence-fears-gambling-our-lives",
+      "framing": "Straight pickups of the thread and Hubinger reply.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "CoinDesk / Seeking Alpha / Blockonomi / Crowdfund Insider",
+      "headline": "Anthropic's AI researcher quits, says insiders fear human extinction by 2030 (CoinDesk) / AI could kill every human on earth, Anthropic insider says (SA)",
+      "date": "2026-09-09",
+      "url_or_subject": "https://www.coindesk.com/markets/2026/09/09/anthropic-researcher-quits-with-a-warning-on-ai-that-echoes-the-terminator-script ; https://seekingalpha.com/news/4641092-ai-could-kill-every-human-on-earth-anthropic-insider-says",
+      "framing": "Markets/IPO framing ('Terminator script').",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Quartz / SiliconANGLE / Cybernews / TMZ / Rollingout / GV Wire / Northeast Times / Daily Caller / Courthouse News / SF Chronicle / Washington Sun (x2)",
+      "headline": "various",
+      "date": "2026-09-09",
+      "url_or_subject": "https://qz.com/anthropic-researcher-quits-self-improving-ai-safety-090926 ; https://siliconangle.com/2026/09/09/anthropic-researchers-resignation-sparks-broad-ai-safety-discussion/ ; https://dailycaller.com/2026/09/09/anthropic-researcher-quits-ai-could-kill-us-all-jacob-coxon-evan-hubinger/ ; https://washingtonsun.com/technology/ai-artificial-intelligence-researcher-jacob-coxon-anthropic-resignation-quit-warning-regulation ; https://washingtonsun.com/congress/democrats-in-congress-plan-to-investigate-ai-companies",
+      "framing": "SiliconANGLE: Azeem Azhar asks whether Anthropic will disclose these risks in its S-1. Washington Sun: 'Regulation stalls in D.C.'; Robert Garcia (Oversight) promises hearings; Gallego letter for a Senate select committee. Daily Caller/Courthouse/SFC blocked.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "The American Prospect (Daniel Boguslaw)",
+      "headline": "Anthropic Is Building a Predictive Surveillance System to Monitor Activists",
+      "date": "2026-09-09",
+      "url_or_subject": "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
+      "framing": "Separate same-day story: 'enterprise intelligence specialist' posting ($180-230k) to track 'activism'; Samdesk protest monitoring; 'pre-crime' language; reported a Claude user to SFPD but withheld transcripts. No lawmakers quoted; Anthropic did not respond.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "kingy.ai (Curtis Pyke) / Aaron Parnas Substack / Oliver Willis",
+      "headline": "Was the Viral Anthropic AI Warning a Psyop? / Major Update: AI Employees Warn It Could 'Kill Us All'... / Who Is Jacob Coxon? Anthropic Resignation Controversy Explained",
+      "date": "2026-09-10 / 2026-09-09 / 2026-09-09",
+      "url_or_subject": "https://kingy.ai/blog/anthropic-ai-warning-psyop-evidence-audit/ ; https://aaronparnas.substack.com/p/major-update-ai-employees-warn-it ; https://oliverwillis.com/who-is-jacob-coxon-anthropic-resignation-controversy-explained/",
+      "framing": "Counter-narrative and creator layer: kingy rejects 'psyop' but documents advocacy-network coordination; Parnas pairs it with Trump/Kratsios deregulation; Willis page did not load.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "OpenAI (Chris Lehane) + Reuters syndication",
+      "headline": "The AI policy window is open. We need to act. / OpenAI pushes for mandatory national AI safety rules",
+      "date": "2026-09-09 evening",
+      "url_or_subject": "https://openai.com/index/ai-policy-window/ ; https://kfgo.com/2026/09/09/openai-pushes-for-mandatory-national-ai-safety-requirements/",
+      "framing": "OpenAI positions itself as pro-regulation the same evening; Reuters ties it to its own rogue agents.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "Breitbart (Bessent interview)",
+      "headline": "Exclusive — Secretary Scott Bessent: If China Were to Pull Ahead of Us on AI, 'Nothing Else Matters'",
+      "date": "2026-09-08",
+      "url_or_subject": "https://www.breitbart.com/politics/2026/09/08/exclusive-secretary-scott-bessent-if-china-were-pull-ahead-of-us-on-ai-nothing-else-matters/",
+      "framing": "Administration line the day of the resignation (pre-thread): no pause; Anthropic $2T IPO praise; data-center opposition partly 'Chinese agitprop'.",
+      "led_or_buried": "standalone"
+    },
+    {
+      "outlet": "[INBOX] Politico Pro alert (Riley Rogerson, Kelsey Brugger)",
+      "headline": "AI insiders say their technology could doom humanity. Will Congress act?",
+      "date": "2026-09-09 20:17 EDT (received 2026-09-10T00:24Z)",
+      "url_or_subject": "subject 'AI insiders say their technology could doom humanity. Will Congress act?' from alert@email.politicopro.com; thread 1a088b3f5c896912",
+      "framing": "Congress 'ill-equipped'/'sleepwalking'; bipartisan interest but no vehicle; Lehane pledge; Beyer 'tipping point'; Lawler 'broad consensus'; Liccardo 'still trying to spell AI'; Moran: nothing before year-end; Cruz on The View; Klobuchar statement; Gottheimer vs Sanders ban ('not living in reality'); Landsman blames Speaker; Chip Roy 'friggin' leadership'. Leadership spokespeople silent.",
+      "led_or_buried": "led (standalone alert)"
+    },
+    {
+      "outlet": "[INBOX] Politico Pro alert (Jacob Wendler, Owen Dahlkamp)",
+      "headline": "House Democrats weigh AI select committee",
+      "date": "2026-09-09 13:44 EDT",
+      "url_or_subject": "alert@email.politicopro.com; thread 1a0874a8c947004b",
+      "framing": "11 sources; Jeffries briefed, 'open'; Lieu & Foster leading; modeled on Lieu-Obernolte task force with subpoena power; jurisdiction fights; Casar/AOC 'combative' vs Lieu/Trahan 'kill switch' camps. Does NOT name Coxon (peg is OpenAI's August disclosure).",
+      "led_or_buried": "led (standalone alert); Coxon not named"
+    },
+    {
+      "outlet": "[INBOX] Politico Playbook PM (Irie Sentner) — 'Presented by Anthropic'",
+      "headline": "How Dems are countering Trump's convention",
+      "date": "2026-09-09 17:27Z",
+      "url_or_subject": "politicoplaybook@email.politico.com; thread 1a0873636d174e10",
+      "framing": "Item 2 'TOP TALKER' of '7 things': bipartisan pleas; DeSantis/Uthmeier 'Frankenstein'. Lead is DNC ad campaign.",
+      "led_or_buried": "item 2 (not the lead)"
+    },
+    {
+      "outlet": "[INBOX] Politico Playbook AM (Wren/Burns/Steakin/Messerly) — 'Presented by Anthropic'",
+      "headline": "'The vibes are very bad' in Texas",
+      "date": "2026-09-09 10:33Z",
+      "url_or_subject": "thread 1a085ba7c6cfe34c",
+      "framing": "No mention of Coxon (sent ~10.5h after the thread). Only 'Anthropic' text is the sponsorship.",
+      "led_or_buried": "absent"
+    },
+    {
+      "outlet": "[INBOX] Politico California Playbook PM (Lindsey Holden, Tyler Katzenberger)",
+      "headline": "Arnold tried to warn you",
+      "date": "2026-09-09 20:35Z",
+      "url_or_subject": "californiaplaybookpm@email.politico.com; thread 1a087e260074ee19",
+      "framing": "LED ('WE'VE SEEN THIS MOVIE'); misnames 'Jason Coxon'; Lieu 'exhibit number 739' for Kill Switch bill; Nathan Calvin (Encode); Bauer-Kahan 'phone lighting up', wants 'a real tech safety regulator'; Becerra 'not business as usual'; Connie Chan attacks Wiener over Anthropic-linked PAC money; Wiener recalls being called 'doomers' in 2024.",
+      "led_or_buried": "led"
+    },
+    {
+      "outlet": "[INBOX] Politico California Decoded (Katzenberger, Mui)",
+      "headline": "Meta flip-flops on privacy lawsuit relief",
+      "date": "2026-09-09 12:01Z",
+      "url_or_subject": "newsletter@email.politicopro.com; thread 1a0860bb6b1a5d84",
+      "framing": "Last item of 'Jobs for Humans' transitions: 'AI researcher Jacob Coxon leaves Anthropic...'. Also Third Way poll: only 35% very concerned about AI's pace vs 8.5/10 for child safety and cost of living — voters 'more grounded'.",
+      "led_or_buried": "buried (transitions)"
+    },
+    {
+      "outlet": "[INBOX] Politico Morning Tech (Katherine Long)",
+      "headline": "The growing push for a superintelligence ban",
+      "date": "2026-09-09 09:45Z",
+      "url_or_subject": "thread 1a0858f19fd6077c",
+      "framing": "Led with UK Sobel ASI-ban bill and ControlAI ('200 congressional offices'); item 2 Anthropic quits ITI. Coxon NOT mentioned (deadline preceded the thread's spread).",
+      "led_or_buried": "absent (but topic-adjacent lead)"
+    },
+    {
+      "outlet": "[INBOX] Politico Morning Cybersecurity (Dana Nickel)",
+      "headline": "The fight for AI's fast lane",
+      "date": "2026-09-09 09:45Z",
+      "url_or_subject": "thread 1a0858f1d8c911a0",
+      "framing": "BSA vetted-access framework; no Coxon.",
+      "led_or_buried": "absent"
+    },
+    {
+      "outlet": "[INBOX] Politico NatSec Daily (Cheslow, Ewing)",
+      "headline": "Somaliland pitches itself as bulwark in Middle East",
+      "date": "2026-09-09 20:01Z",
+      "url_or_subject": "thread 1a087c29eb682622",
+      "framing": "'AI PANIC' in 'On the Hill' (mid-newsletter); Trahan and Luna quotes; misnames 'JASON COXON'.",
+      "led_or_buried": "buried (On the Hill)"
+    },
+    {
+      "outlet": "[INBOX] Politico Pro Canada PM (Blanchfield, Djuric)",
+      "headline": "Canada-EU stepping carefully to next level",
+      "date": "2026-09-09 20:30Z",
+      "url_or_subject": "thread 1a087ddded35088b",
+      "framing": "'ARTIFICIAL INTELLIGENCE' item in State of Play (Pieter Haeck); Canadian AI minister Evan Solomon 'tracking very closely'; 'Our No. 1 concern always is safety'.",
+      "led_or_buried": "buried (State of Play)"
+    },
+    {
+      "outlet": "[INBOX] Politico Influence (Wendler)",
+      "headline": "The coming tech oversight blitz",
+      "date": "2026-09-09 20:28Z",
+      "url_or_subject": "thread 1a087dbec8cb7109",
+      "framing": "K Street bracing for Democratic oversight/select committee; Anthropic-ITI split. Coxon not named.",
+      "led_or_buried": "lead is adjacent; Coxon absent"
+    },
+    {
+      "outlet": "[INBOX] Politico Forecast (Jack Blanchard)",
+      "headline": "It's the end of the world as we know it",
+      "date": "2026-09-09 20:12Z",
+      "url_or_subject": "forecast@email.politico.com; thread 1a087ccc5bb48f66",
+      "framing": "#2 of '5 things' and the main 'TOMORROW'S WORLD: DEATH BY CHATBOT' section: policymakers 'largely silent'; Aaron Mak: WH 'does not like Anthropic... woke'; Brugger: House Dems 'talking a big game', COVID/March-2020 comparisons, 'no consensus'; EU 'no idea how to approach this'; UK PM Burnham disinclined; 'we essentially need a Cuban Missile Crisis'.",
+      "led_or_buried": "led the analysis section (2nd bullet of 5)"
+    },
+    {
+      "outlet": "[INBOX] Politico West Wing Playbook (Cai, Haslett, Johansen)",
+      "headline": "Treasury CIO pulled from AI work",
+      "date": "2026-09-09 21:43Z",
+      "url_or_subject": "thread 1a088207cc388dc1",
+      "framing": "One paragraph inside the Corcos story; WH statement generic; WH 'struggling to coalesce' on AI policy; FINRA-style body under consideration; Trump-Zuckerberg call.",
+      "led_or_buried": "buried (one paragraph)"
+    },
+    {
+      "outlet": "[INBOX] Politico Pro analysis (Dahlkamp, McMinn)",
+      "headline": "Tech Policy in the Midterms",
+      "date": "2026-09-09 05:00 EDT",
+      "url_or_subject": "thread 1a0856ccb9460355",
+      "framing": "Pre-dates the spread; notes Republicans incl. WH 'have shifted gears and begun supporting closer government oversight'; Public First (Amodei donor) vs Leading the Future PACs. No Coxon.",
+      "led_or_buried": "absent"
+    },
+    {
+      "outlet": "[INBOX] Axios AM (Mike Allen) — 'PRESENTED BY ANTHROPIC'",
+      "headline": "Trump, alone",
+      "date": "2026-09-09 10:02Z",
+      "url_or_subject": "mike@axios.com; thread 1a0859e5c4d32e02",
+      "framing": "Item 2 'Insiders warn AI could kill all humans' (after Trump lead): Coxon, Hubinger, Marks verbatim; Allen: Hubinger's post 1M views at bedtime, 10M+ by morning; explicit 'Context for readers from Mike & Jim' — warnings 'impossible to validate' but Congress should be aware; flags critics' valuation/regulatory-capture argument.",
+      "led_or_buried": "item 2 of 8"
+    },
+    {
+      "outlet": "[INBOX] Axios AI+ (Fried, Mills)",
+      "headline": "Zuck's private agent",
+      "date": "2026-09-09 13:28Z",
+      "url_or_subject": "ai.plus@axios.com; thread 1a0865aeca614f82",
+      "framing": "Item 5 'Labs beg for someone to slow the AI race'; lead is Meta Muse; item 6 notes Anthropic-ITI and Trump AI framework lacks incident-reporting guidelines.",
+      "led_or_buried": "item 5 of 7"
+    },
+    {
+      "outlet": "[INBOX] Axios Closer (Nathan Bomey)",
+      "headline": "Pair of Apple debuts",
+      "date": "2026-09-09 21:30Z",
+      "url_or_subject": "thread 1a08814d251d37ac",
+      "framing": "Item 3 bullet: OpenAI adds Paul Christiano to its board 'as AI leaders, including at rival Anthropic, are sounding the alarm'.",
+      "led_or_buried": "buried (one bullet)"
+    },
+    {
+      "outlet": "[INBOX] Axios alert",
+      "headline": "Axios Scoop: Anthropic researcher behind viral resignation warns of 'excessive paranoia'",
+      "date": "2026-09-09 23:20Z",
+      "url_or_subject": "newsdesk@axios.com; thread 1a08879cc9427351",
+      "framing": "Equity forfeited; 'seen more than 100 million times'.",
+      "led_or_buried": "led (standalone alert)"
+    },
+    {
+      "outlet": "[INBOX] Semafor Washington DC",
+      "headline": "'Fundamental responsibility'",
+      "date": "2026-09-09 09:46Z",
+      "url_or_subject": "washingtondc@semafor.com; thread 1a0858fa63ced63d",
+      "framing": "PDB 'Technology' bullet only ('an Anthropic researcher quit over safety fears'); lead #2 is a left-right letter (ARI, CDT) demanding release of the WH AI framework; Protect Democracy FOIA suit.",
+      "led_or_buried": "buried (PDB bullet)"
+    },
+    {
+      "outlet": "[INBOX] Semafor Flagship (9/10 Asia edition)",
+      "headline": "'His name is all over it'",
+      "date": "2026-09-09 22:20Z",
+      "url_or_subject": "thread 1a08841f745ac093",
+      "framing": "Item 7 'Anthropic skirts UK safety review'; Coxon not named.",
+      "led_or_buried": "item 7 (adjacent)"
+    },
+    {
+      "outlet": "[INBOX] NYT DealBook (Andrew Ross Sorkin)",
+      "headline": "DealBook: Trump's multifront war",
+      "date": "2026-09-09 12:12Z",
+      "url_or_subject": "nytdirect@nytimes.com; thread 1a0861577fe6bae2",
+      "framing": "Opening paragraph: 'Just yesterday, an Anthropic researcher resigned, starkly warning that it could kill us all... Yet A.I. labs are desperately racing'; pivots to data-center backlash as the real brake. Main story is Trump/trade. Also: OpenAI CFO says Anthropic could raise >$100B in a fall IPO.",
+      "led_or_buried": "intro paragraph (not the main item)"
+    },
+    {
+      "outlet": "[INBOX] NYT The Morning (Sam Sifton) / NYT The World (Bennhold, 9/10)",
+      "headline": "Germany's right turn / Back to school, now with A.I.",
+      "date": "2026-09-09 11:02Z / 2026-09-10 05:00Z",
+      "url_or_subject": "threads 1a085d59c1ac3831 / 1a089b0b5b1e35af",
+      "framing": "No Coxon mention in either. The Morning's AI item is OpenAI's Navier-Stokes claim; 'Today's number' is Anthropic's $3,000/book piracy settlement. The World's intro references 'some in Silicon Valley now put the risk of a total A.I. takeover at more than 50 percent' (different item).",
+      "led_or_buried": "absent"
+    },
+    {
+      "outlet": "[INBOX] Bloomberg Washington Edition (Nancy Cook)",
+      "headline": "Washington Edition: All about Trump",
+      "date": "2026-09-09 21:24Z",
+      "url_or_subject": "noreply@news.bloomberg.com; thread 1a0880f233283c7d",
+      "framing": "4th bullet under 'Today's Top News': researcher resigned citing 'existential risks'. Lead is the Dallas convention.",
+      "led_or_buried": "buried (bullet)"
+    },
+    {
+      "outlet": "[INBOX] Bloomberg Money Stuff (Matt Levine)",
+      "headline": "Money Stuff: AAA AI",
+      "date": "2026-09-09 17:57Z",
+      "url_or_subject": "thread 1a087519985448ae",
+      "framing": "Link only in 'Things happen' ('Anthropic Researcher Quits Over Out-of-Control AI Fears'); column is about Anthropic/OpenAI seeking investment-grade ratings post-IPO.",
+      "led_or_buried": "buried (link list)"
+    },
+    {
+      "outlet": "[INBOX] Puck The Hidden Layer (Ian Krietzberg) / Daily Courant",
+      "headline": "D.C.'s Superintelligence Scare, More Rogue Agents & A G20 Postmortem / ...Bernie's A.I. Ban...",
+      "date": "2026-09-08 22:51Z / 2026-09-09 19:03Z",
+      "url_or_subject": "threads 1a083385902b5446 / 1a0878d949f704be",
+      "framing": "Hidden Layer (sent 73 min BEFORE the thread): Casar interview ('What if an aerospace company told you this plane sometimes goes totally out of control?'), Soares/ControlAI behind the bill, Gary Marcus says it goes too far, Jernite/Khlaaf call ASI 'science fiction' hype, IFP's Tellis: bill 'will not pass', left 'comprehensively anti-A.I.'. Courant 9/9 repeats; no Coxon.",
+      "led_or_buried": "absent (pre-dates)"
+    },
+    {
+      "outlet": "[INBOX] Punchbowl News AM (Sherman/Bresnahan)",
+      "headline": "Can an unpopular Trump save GOP?",
+      "date": "2026-09-09 09:10Z",
+      "url_or_subject": "team@punchbowl.news; thread 1a0856fc6c019d72",
+      "framing": "No mention. No Punchbowl PM/Vault edition for 9/9 in the inbox.",
+      "led_or_buried": "absent"
+    }
+  ],
+  "political_responses": [
+    {
+      "who": "Rep. Greg Casar (D-TX)",
+      "side": "D (progressive)",
+      "what": "'An Anthropic researcher just quit, warning they're racing to superintelligence... This is an emergency. Congress must convene hearings and pass my and Bernie's superintelligence ban.' Posted 13:55Z.",
+      "source": "Newsweek midterms; Common Dreams; https://x.com/RepCasar/status/2097685220442923030 (posted 2026-09-09T13:55:04Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Sen. Bernie Sanders (I-VT)",
+      "side": "I/D (progressive)",
+      "what": "'Mr. Coxon is right... The very people building this technology admit that it could threaten the future of humanity. That is why I will soon be introducing legislation to ban superintelligence and pause AI development.' Told HuffPost: 'They're building a technology that they cannot control.' Called the post a 'lightning bolt' (attribution unlocated).",
+      "source": "NBC/AP; Newsweek; Common Dreams; HuffPost Delaney; https://x.com/BernieSanders/status/2097705093520863568 (posted 2026-09-09T15:14:02Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Ro Khanna (D-CA)",
+      "side": "D",
+      "what": "Five-measure plan (federal agency; containment pre-certification incl. kill switches; liability + mandatory insurance; criminal penalties for uncertified releases; hearings with Coxon-type researchers + whistleblower protections) plus US-China agreement. Posted 18:28Z.",
+      "source": "https://x.com/RoKhanna/status/2097754129489596612 (posted 2026-09-09T18:28:53Z, decoded from snowflake id) via unofficial tracker only",
+      "status": "UNVERIFIED content"
+    },
+    {
+      "who": "Rep. Yassamin Ansari (D-AZ)",
+      "side": "D",
+      "what": "'This is absolutely terrifying...' calls for legislation to halt new advanced AI development. 16:18Z.",
+      "source": "https://x.com/RepYassAnsari/status/2097721236839162155 (posted 2026-09-09T16:18:11Z, decoded from snowflake id)",
+      "status": "confirmed (partial text)"
+    },
+    {
+      "who": "Rep. Dave Min (D-CA)",
+      "side": "D",
+      "what": "Posted 14:15Z; tracker summary: 'criticized Trump's response'.",
+      "source": "https://x.com/CongressMin/status/2097690443358073241 (posted 2026-09-09T14:15:49Z, decoded from snowflake id) via tracker",
+      "status": "UNVERIFIED content"
+    },
+    {
+      "who": "Rep. Joaquin Castro (D-TX)",
+      "side": "D",
+      "what": "Per task brief, amplified the Prospect's surveillance/'pre-crime' story. Not found in web search, the tracker, or inbox.",
+      "source": "none found; Prospect story https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
+      "status": "UNVERIFIED"
+    },
+    {
+      "who": "Rep. Lori Trahan (D-MA)",
+      "side": "D (moderate)",
+      "what": "'The call is coming from inside the house. Safety researchers are resigning, powerful AI models are breaking out of their labs, and companies are racing ahead anyway... We can start with my bipartisan FRONTIER Act' (with Obernolte). 11:01Z; second post 21:27Z.",
+      "source": "Politico NatSec Daily; Newsweek; https://x.com/RepLoriTrahan/status/2097641446983528943 (posted 2026-09-09T11:01:07Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Ted Lieu (D-CA)",
+      "side": "D",
+      "what": "Coxon's post is 'exhibit number 739 for why we need to pass the bipartisan AI Kill Switch Bill asap' (with Moran); co-leading select-committee planning with Foster.",
+      "source": "Politico California Playbook PM; Forbes via aggregator; Politico Pro select-committee alert; https://x.com/RepTedLieu/status/2097730021733400740 (posted 2026-09-09T16:53:05Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Pramila Jayapal (D-WA)",
+      "side": "D (progressive)",
+      "what": "'AI companies are out of control and a serious threat to our future. We need to shut down their dangerous models and push out the executives who are signing off on their creation.'",
+      "source": "Newsweek midterms; https://x.com/RepJayapal/status/2097695262051369070 (posted 2026-09-09T14:34:58Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Don Beyer (D-VA), House AI Caucus co-chair",
+      "side": "D",
+      "what": "'I think we're finally hitting a tipping point... now the question is, what do we do?' To HuffPost: 'We just can't get the current speaker to act on any of it. People are just waking up.' Wants FDA/NHTSA-style pre-market testing for LLMs.",
+      "source": "Politico Pro alert 9/10T00:24Z; HuffPost Delaney; https://x.com/RepDonBeyer/status/2097728914906869764 (posted 2026-09-09T16:48:41Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Josh Gottheimer (D-NJ), Jeffries AI commission co-chair",
+      "side": "D (moderate)",
+      "what": "Commission report 'would pave the way'; blames GOP leadership for pace; on Sanders: 'wants to put it in the box and throw it away, but that's not living in reality'; wants 'mandatory rules of the road'.",
+      "source": "Politico Pro alert; https://x.com/RepJoshG/status/2097687328403714334 (posted 2026-09-09T14:03:26Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Sam Liccardo (D-CA), New Dem AI lead",
+      "side": "D (moderate)",
+      "what": "'There is a percentage of my colleagues who are still trying to spell AI'; struggled to get members to attend Library of Congress events with Altman, Amodei, Huang.",
+      "source": "Politico Pro alert",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Greg Landsman (D-OH)",
+      "side": "D",
+      "what": "'It only would take one phone call from the speaker... five Democrats and five Republicans in a room'; X: 'another wakeup call'.",
+      "source": "Politico Pro alert; tracker id 2097791752048427457 (20:58Z)",
+      "status": "confirmed (Politico quote)"
+    },
+    {
+      "who": "Rep. Bill Foster (D-IL)",
+      "side": "D",
+      "what": "Co-leading select-committee planning; X: 'software-only controls can't contain' these systems.",
+      "source": "Politico Pro select-committee alert; tracker id 2097791328319152411 (20:56Z)",
+      "status": "confirmed (role); post UNVERIFIED"
+    },
+    {
+      "who": "Rep. Robert Garcia (D-CA), Oversight ranking member",
+      "side": "D",
+      "what": "'Anytime you have folks talking about AI moving towards extinction of human life... that's got to rise to the top of priorities'; promises public hearings with CEOs if Dems win.",
+      "source": "Washington Sun https://washingtonsun.com/congress/democrats-in-congress-plan-to-investigate-ai-companies",
+      "status": "confirmed"
+    },
+    {
+      "who": "House Minority Leader Hakeem Jeffries",
+      "side": "D leadership",
+      "what": "Briefed on select-committee idea and 'expressed openness'; has not committed; spokesperson did not respond to Politico on the Coxon reaction.",
+      "source": "Politico Pro select-committee alert; Politico Pro 'Will Congress act?'",
+      "status": "confirmed"
+    },
+    {
+      "who": "Sen. Chris Murphy (D-CT)",
+      "side": "D",
+      "what": "'If you read anything today, read this... AI companies in a blind race to build a death machine first — can easily be solved. Through a regulatory system that allows the research to continue, but in a way that doesn't destroy us.' 12:51Z.",
+      "source": "https://x.com/ChrisMurphyCT/status/2097669346814304677 (posted 2026-09-09T12:51:59Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Sen. Ruben Gallego (D-AZ)",
+      "side": "D",
+      "what": "Letter to Senate leadership proposing a bipartisan Senate select committee on AI: 'Congress should not wait for a catastrophic failure'.",
+      "source": "Washington Sun; https://x.com/SenRubenGallego/status/2097820074568454156 (posted 2026-09-09T22:50:56Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Sen. Chris Van Hollen (D-MD)",
+      "side": "D",
+      "what": "Calls for a pause on AI development; X: urgent dialogue with China on AI safety. 18:49Z.",
+      "source": "HuffPost Delaney; tracker id 2097759332305715241",
+      "status": "confirmed (HuffPost); post UNVERIFIED"
+    },
+    {
+      "who": "Sen. Amy Klobuchar (D-MN)",
+      "side": "D",
+      "what": "Statement: will 'continue to work toward a bipartisan agreement on legislation for commonsense guardrails... it's clear we need to act now and not wait' (Thune-Klobuchar bill; no timetable).",
+      "source": "Politico Pro alert",
+      "status": "confirmed"
+    },
+    {
+      "who": "Sens. Blunt Rochester (D-DE), Blumenthal (D-CT); Reps. McClellan, Morrison, Balint, Chuy García (D)",
+      "side": "D",
+      "what": "Blunt Rochester: 'even 1% chance justifies safeguards'; Blumenthal wrote OpenAI on incidents; García: 'ban superintelligence, pause development'; Balint: 'time to pump the brakes'; Morrison echoes Trahan.",
+      "source": "tracker (ids 2097747156908011765, 2097742835252363408, 2097787186665951287, 2097791781031047472, 2097795378905018543); HuffPost (Blumenthal)",
+      "status": "UNVERIFIED except Blumenthal"
+    },
+    {
+      "who": "Sen. Ted Cruz (R-TX), Commerce chair",
+      "side": "R",
+      "what": "On The View: warnings 'highly concerning'; supports legislation on 'catastrophic risk' (bio/nuclear) with Thune-Klobuchar; 'if there are gonna be killer robots, I'd rather they be American killer robots than Chinese killer robots'; Musk told him 10-20% odds. X 16:42Z: 'pace is extraordinary and some risks dangerous'.",
+      "source": "Politico Pro alert; Forbes (Dorn) via aggregator; TMZ; https://x.com/SenTedCruz/status/2097727324011536877 (posted 2026-09-09T16:42:22Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Anna Paulina Luna (R-FL)",
+      "side": "R",
+      "what": "First member to post (11:00Z): Congress should hold a special session on AI; 'not enough of Congress is focusing on this'; 'very real impacts to society'.",
+      "source": "Politico NatSec Daily; Newsweek; https://x.com/RepLuna/status/2097641199196684682 (posted 2026-09-09T11:00:08Z, decoded from snowflake id)",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Nathaniel Moran (R-TX)",
+      "side": "R",
+      "what": "Kill Switch bill co-sponsor: checks on advanced models 'a priority in the next Congress'; 'very tough to educate members and then move a meaningful bill' before year-end; X: 'innovation and safety are not mutually exclusive'.",
+      "source": "Politico Pro alert; tracker id 2097728437741879709 (16:46Z)",
+      "status": "confirmed (Politico); post UNVERIFIED"
+    },
+    {
+      "who": "Rep. Mike Lawler (R-NY)",
+      "side": "R (vulnerable moderate)",
+      "what": "'There's broad consensus — and in speaking with the AI companies directly, they want a regulatory framework'; 'one of the biggest issues that Congress has to tackle over the next two years'.",
+      "source": "Politico Pro alert",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Chip Roy (R-TX)",
+      "side": "R (conservative)",
+      "what": "'You cannot just put your head in the sand on AI... You can't just go in and say government's got the solution — they're just going to ban it all... actually have some friggin' leadership.'",
+      "source": "Politico Pro alert",
+      "status": "confirmed"
+    },
+    {
+      "who": "Rep. Warren Davidson (R-OH); Rep. Clay Fuller (R)",
+      "side": "R",
+      "what": "Davidson reframes as federal-preemption issue (18:01Z). Fuller's 'should be the biggest story in the world' post is dated 9/7 — pre-dates Coxon (likely about the Sanders bill/rogue agents).",
+      "source": "tracker ids 2097747254438203673; 2097013424135749874 (2026-09-07T17:25Z)",
+      "status": "UNVERIFIED"
+    },
+    {
+      "who": "Speaker Johnson, Leader Thune",
+      "side": "R leadership",
+      "what": "Spokespeople did not respond; no AI-safety proposal has been marked up in either chamber; Senate Commerce has no AI hearings scheduled for four months (Center for Public Enterprise).",
+      "source": "Politico Pro alert; Common Dreams",
+      "status": "confirmed (absence)"
+    },
+    {
+      "who": "Gov. Ron DeSantis (R-FL); AG James Uthmeier (R-FL)",
+      "side": "R (state)",
+      "what": "DeSantis on X: 'that there is even a possibility that these technologies would elude human control is alarming'; 'technology should enhance the human experience; it should never supplant it'. Uthmeier (Miami): 'Frankenstein' — companies liable if the 'monster... kills somebody'; pushing chatbot criminal-penalty legislation.",
+      "source": "Politico Playbook PM; Forbes via aggregator; https://floridianpress.com/2026/09/uthmeier-proposes-legislation-against-companies-using-ai-chatbots-that-participate-in-criminal-activity/",
+      "status": "confirmed"
+    },
+    {
+      "who": "White House",
+      "side": "Administration",
+      "what": "No statement on Coxon/Hubinger found. Operative line: Bessent 9/8 'We can't pause... the Chinese won't pause. Even the North Koreans'; Kratsios 9/1 'Carolina Principles' (reserve new regulation for novel considerations); WH to West Wing Playbook: 'balance innovation and security'; considering a FINRA-style pre-deployment review body. Politico's Aaron Mak: WH 'really does not like Anthropic... woke'.",
+      "source": "Breitbart 9/8; Quartz 9/1; West Wing Playbook 9/9; Politico Forecast 9/9",
+      "status": "confirmed (absence of direct response)"
+    },
+    {
+      "who": "David Sacks",
+      "side": "Administration-aligned",
+      "what": "'Anthropic is running a sophisticated regulatory capture strategy based on fear-mongering' — posted 2025-10-14, re-upped 2026-06-11 and 2026-07-23. NOT a response to Coxon; no Sacks post about Coxon found.",
+      "source": "https://x.com/DavidSacks/status/1978145266269077891 (posted 2025-10-14T17:05:58Z, decoded from snowflake id)",
+      "status": "confirmed (dating); correction to a search-summary misattribution"
+    },
+    {
+      "who": "Campaigns: Xavier Becerra (D, CA gov); Connie Chan (D, CA-11); Scott Wiener (D, CA-11); Abdul El-Sayed (D, MI-Sen)",
+      "side": "D candidates",
+      "what": "Becerra: 'this is not business as usual'. Chan: 'AI companies cannot be trusted to police themselves'; attacks Wiener over Anthropic-linked PAC donations. Wiener recalls being called 'decels'/'doomers' over SB 1047 in 2024 (Pelosi helped kill it). El-Sayed: 'Most tech geeks don't resign... because the tech they're building could end humanity.'",
+      "source": "Politico California Playbook PM; Newsweek; Common Dreams",
+      "status": "confirmed"
+    },
+    {
+      "who": "CA Assembly Privacy chair Rebecca Bauer-Kahan (D)",
+      "side": "D (state)",
+      "what": "'My phone has been lighting up from colleagues'; wants tighter auditing/reporting and 'a real tech safety regulator'; session ended before a bill could be built.",
+      "source": "Politico California Playbook PM",
+      "status": "confirmed"
+    },
+    {
+      "who": "International: Canada AI minister Evan Solomon; UK MP Alex Sobel (Lab); UK PM Andy Burnham; EU",
+      "side": "foreign",
+      "what": "Solomon 'tracking very closely'; Sobel introduced an ASI-ban bill 9/8 (cross-party, unlikely to advance); Burnham 'disinclined' to spend capital with Trump; EU 'has no idea how to approach this'.",
+      "source": "Politico Pro Canada PM; Politico Morning Tech; Politico Forecast",
+      "status": "confirmed"
+    }
+  ],
+  "anthropic_response": {
+    "official_statement": null,
+    "status_as_of": "2026-09-10T07:00Z: no company statement found on the resignation, Hubinger's post, or the Prospect surveillance story.",
+    "no_comment_reported_by": [
+      "AP (MPR/NBC/PBS): 'did not immediately respond'",
+      "TechCrunch",
+      "MS NOW",
+      "TIME",
+      "AFP/TechXplore",
+      "Newsweek ('awaiting response via email')",
+      "Slate ('hasn't commented')",
+      "American Prospect (surveillance story)"
+    ],
+    "employee_statements_personal": [
+      {
+        "who": "Evan Hubinger, alignment science lead",
+        "what": ">10% within the next decade; 'Anthropic is trying its best' but 'we do not yet have a plan to solve alignment for superintelligence and are not clearly on track to'; follow-up: risk is RSI-driven superintelligence, not present models.",
+        "source": "https://x.com/EvanHub/status/2097497037956891126 (posted 2026-09-09T01:27:18Z, decoded from snowflake id) ; https://x.com/EvanHub/status/2097528891846074828 (posted 2026-09-09T03:33:52Z, decoded from snowflake id)"
+      },
+      {
+        "who": "Samuel Marks, scalable oversight lead",
+        "what": "Developers believe extinction-level outcomes possible 'in the next few years'; 'the more senior the employee, the more concerned'; 'AIs from multiple developers recently hacked their way out of secure evaluation environments'.",
+        "source": "https://x.com/saprmarks/status/2097570226804011302 (posted 2026-09-09T06:18:07Z, decoded from snowflake id) ; Axios AM; New Republic"
+      }
+    ],
+    "coxon_on_anthropic": "Has not seen Anthropic compromise safety to beat rivals; 'At Anthropic, the stakes are well-understood, but they are locked in a race to get there first'; 'excessive paranoia of OpenAI... of China' can 'justify pushing ahead'; forfeited unvested equity (Axios).",
+    "same_cycle_corporate_actions": [
+      "9/8: quit ITI over China-chip bills (Axios scoop; Politico MT) — pro-restriction posture",
+      "9/9: declined UK AISI pre-release testing of its latest model (FT via Politico Forecast/Semafor/HuffPost)",
+      "9/9: said it would give 'wide-ranging access' to an institute that reviewed OpenAI's incidents (Semafor 9/10, detail unverified)",
+      "Sponsorship: 'Presented by Anthropic' on Politico Playbook AM & PM (9/8, 9/9) and Axios AM (9/7, 9/8, 9/9) — measured from newsletter headers",
+      "Prior: CEO Amodei is a donor to the pro-regulation Public First super PAC (Politico Pro 9/9 analysis)"
+    ],
+    "openai_response": {
+      "press": "did not respond (AP, AFP, TIME, MS NOW)",
+      "policy": "Lehane blog 9/9 evening: 'mandatory, capability-based national AI safety regulation'; pledged to 'work with Congress' (Politico Pro); added Paul Christiano to its board (Axios Closer 9/9)"
+    },
+    "judged": "Anthropic's silence plus two current leads publicly endorsing the >10% framing is itself the story for most outlets; the company's only same-cycle communications are policy/sponsorship positioning, not a rebuttal. Expect the 'regulatory capture / IPO hype' counter-frame (Axios AM already flags it; Sacks's 2025 line is being recirculated) to be the main attack vector."
+  },
+  "measured_vs_judged": {
+    "measured": [
+      "2026-09-08 was a Tuesday; Coxon's thread went up 2026-09-09T00:04:29Z (8:04 PM EDT Tue) — 13 min after a WSJ-summary post by @wallstengine.",
+      "Hubinger's endorsement came 83 minutes later (01:27:18Z); his RSI clarification at 03:33:52Z; Marks at 06:18:07Z.",
+      "First congressional post: Luna (R) at 11:00:08Z, one minute before Trahan (D). 24 distinct members post-thread in the tracker; 14 confirmed by an outlet or search snippet; 4 Republicans (Luna, Cruz, Moran, Davidson).",
+      "Of 29 inbox newsletter editions examined (9/8-9/10), 17 mention the resignation; 4 lead with it (Politico Pro alert, Politico California Playbook PM, Semafor Flagship 9/9, Axios scoop alert); Axios AM and Playbook PM ran it as item 2; Politico Playbook AM 9/9, Punchbowl AM 9/9, Politico Morning Tech, NYT The Morning did not mention it.",
+      "Politico misnamed him 'Jason Coxon' in two editions.",
+      "Zero official Anthropic statements; zero direct White House responses; eight outlets record 'did not respond'.",
+      "The Sacks 'fear-mongering' line dates to 2025-10-14 (snowflake), not this week."
+    ],
+    "judged": [
+      "This story landed as a Congress-capacity story in the Beltway press (Politico Pro, Forecast, HuffPost, Washington Sun) and as an existential-risk/whistleblower story in general and progressive press; the tech-business press (Axios, Bloomberg, Money Stuff, DealBook) fused it with the IPO/ratings narrative.",
+      "The partisan split is not pro/anti-regulation but ban-vs-guardrails: Sanders/Casar/Jayapal/García/Ansari (ban+pause) vs Gottheimer/Trahan/Lieu/Beyer/Liccardo (kill-switch/FRONTIER/certification) — a visible intra-Democratic fault line Politico Pro already framed.",
+      "Republican engagement is real but narrow (Cruz/Luna/Moran/Lawler/Roy/DeSantis) and consistently China-conditioned ('American killer robots'); the administration's line is 'no pause' and it regards Anthropic as 'woke'.",
+      "Two counter-narratives are already seeded for the owner's team to watch: (a) 'regulatory capture / IPO hype' (Axios AM, Sacks recirculation, Jernite/Khlaaf via Puck), and (b) 'coordinated advocacy rollout' (kingy.ai audit of WSJ pre-contact and Tallinn/SFF funding).",
+      "The Prospect surveillance/'pre-crime' story is a distinct Anthropic-negative thread that progressives (Common Dreams, Dayen) picked up; it has not yet been merged with the Coxon story by mainstream outlets."
+    ]
+  },
+  "problems": [
+    "Task brief says 'Monday 2026-09-08'; it was Tuesday. Thread timestamp is 00:04Z 9/9.",
+    "Khanna's five-point plan, Min's post, and any Castro amplification could not be confirmed from web or inbox; the only source for Khanna/Min is an unofficial tracker page (congresscoxon.netlify.app). Need Task A's X corpus.",
+    "washingtonpost.com, thehill.com, forbes.com, axios.com, cnbc.com, cnn.com, npr.org, nbcnews.com body, x.com, threadreaderapp, wsj.com were not readable; framing for those relies on titles, syndications, or the inbox.",
+    "Coxon's full seven-part thread was reconstructed from secondary quotes, not read verbatim from X.",
+    "A WebSearch summary misattributed Sacks's 2025 quote to this cycle; corrected by snowflake decoding. Treat search-engine summaries as untrusted.",
+    "Coxon's OpenAI end date (July 2026 per IBTimes) is inconsistent with 'four months at Anthropic' (Axios); unresolved.",
+    "Formal introduction status of the Ban Artificial Superintelligence Act is inconsistent across outlets ('introduced' 9/3 vs 'will soon be introducing' 9/9).",
+    "Gmail search silently 503'd once (retried). No Punchbowl PM for 9/9 in the inbox, so Punchbowl's treatment is unknown beyond the AM's silence."
+  ]
+}

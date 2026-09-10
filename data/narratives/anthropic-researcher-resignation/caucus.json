@@ -1,0 +1,3315 @@
+{
+ "generatedAt": "2026-09-10T07:20:43.578Z",
+ "story": "anthropic-researcher-resignation",
+ "layer": "caucus-corpus",
+ "window": {
+  "archiveDays": [
+   "2026-09-07",
+   "2026-09-08",
+   "2026-09-09",
+   "2026-09-10"
+  ],
+  "dayBoundary": "ET calendar day (America/New_York), the archive's own convention (src/util.js:14 etDate); 2026-09-09.jsonl spans 2026-09-09T04:00Z..2026-09-10T04:00Z",
+  "storyBroke": "2026-09-09T00:04:29.195Z (Coxon's post, Mon 20:04 ET) — snowflake timestamp"
+ },
+ "method": {
+  "inclusion": "Every post in data/archive/2026-09-07..10.jsonl was swept twice: (1) a case-insensitive keyword pass for Anthropic/Coxon/Hubinger/superintelligence/AI safety/kill us/pre-crime/OpenAI/existential/AGI/frontier model; (2) a regex pass over the text field for AI-adjacent language (AI, artificial intelligence, superhuman, extinction, METR, Hugging Face, recess, select committee, surveillance, Big Tech, data center, kill switch, guardrails, models, oligarch...) plus a refId pass for every quote/retweet of the story's source tweets and of every curated post. Each hit was read and tiered by hand (JUDGED).",
+  "tiers": {
+   "core": "clearly about the Coxon resignation / Hubinger odds story (explicit reference, or a quote/RT of a story source); linkage=inferred marks the four posts tied only by timing and wording",
+   "adjacent": "same news cycle, AI policy, but no reference to the story (rogue-agent bill, data centers, Pope Leo, OpenAI lobbying, CA-vs-federal standards)",
+   "precursor": "before the story broke (Sun 09-07 / Mon 09-08 daytime), about the model-breakout background it grew out of"
+  },
+  "framing": {
+   "taxonomy": [
+    "existential-risk",
+    "hearings-oversight",
+    "regulation-plan",
+    "surveillance-pre-crime",
+    "labor-economy",
+    "other"
+   ],
+   "rule": "one primary framing per post from the post's own text (retweets inherit the retweeted text); secondaries listed when the text carries them. existential-risk = amplifies the warning itself; hearings-oversight = hearings, investigations, oversight, select committee, keep Congress in session; regulation-plan = a named bill, plan, ban, agency, safeguards, or a generic \"Congress must act/pass\"; surveillance-pre-crime = the American Prospect activist-monitoring angle; labor-economy = jobs/economy/energy-cost framing; other = corporate greed, electoral, Trump attacks. Counts are given as primary-only and any-mention, all posts and originals only."
+  },
+  "engagement": "metricsAtCapture at the 2026-09-10 05:26-05:59Z backfill capture (data/metrics/2026-09-09.json has no re-read yet). Retweet rows carry the ORIGINAL's counts and are excluded from sums.",
+  "members": "distinct members dedupe by authors.json member name after stripping a leading \"Senator\"/\"Rep.\" (authors.json lists Gallego's Senate account as \"Senator Ruben Gallego\" and his personal one as \"Ruben Gallego\"); Khanna's @RepRoKhanna did not post on the story.",
+  "sources": {
+   "archive": {
+    "2026-09-07": {
+     "file": "data/archive/2026-09-07.jsonl",
+     "posts": 439,
+     "originals": 400,
+     "retweets": 39
+    },
+    "2026-09-08": {
+     "file": "data/archive/2026-09-08.jsonl",
+     "posts": 528,
+     "originals": 445,
+     "retweets": 83
+    },
+    "2026-09-09": {
+     "file": "data/archive/2026-09-09.jsonl",
+     "posts": 625,
+     "originals": 532,
+     "retweets": 93
+    },
+    "2026-09-10": {
+     "file": "data/archive/2026-09-10.jsonl",
+     "posts": 6,
+     "originals": 5,
+     "retweets": 1
+    }
+   },
+   "authors": {
+    "file": "data/authors.json",
+    "fetchedAt": "2026-09-10T05:29:40.223Z",
+    "overlayAt": "2026-09-10T06:46:24.338Z",
+    "accounts": 448
+   },
+   "topics": {
+    "2026-09-07": {
+     "file": "data/topics/2026-09-07.json",
+     "model": "claude-opus-5",
+     "classifiedAt": "2026-09-10T06:09:37.759Z"
+    },
+    "2026-09-08": {
+     "file": "data/topics/2026-09-08.json",
+     "model": "claude-opus-5",
+     "classifiedAt": "2026-09-10T06:09:37.762Z"
+    },
+    "2026-09-09": {
+     "file": "data/topics/2026-09-09.json",
+     "model": "claude-opus-5",
+     "classifiedAt": "2026-09-10T06:09:37.765Z"
+    },
+    "2026-09-10": null
+   },
+   "stories": {
+    "file": "data/stories.json",
+    "generatedAt": "2026-09-10T06:26:35.672Z",
+    "candidates": 125
+   },
+   "rollups": {
+    "file": "data/rollups/topic-days.json",
+    "generatedAt": "2026-09-10T07:03:19.488Z"
+   },
+   "report": "reports/2026-09-09.md",
+   "crossReference": "data/narratives/anthropic-researcher-resignation/x-search.json (Task A/B sibling; used only to date/identify quoted source ids and to confirm the Lieu linkage)"
+  }
+ },
+ "measured": {
+  "core": {
+   "posts": 34,
+   "originals": 23,
+   "retweets": 11,
+   "byType": {
+    "quote": 19,
+    "retweet": 11,
+    "tweet": 4
+   },
+   "distinctAccounts": 26,
+   "distinctMembers": 21,
+   "members": [
+    "Becca Balint",
+    "Bill Foster",
+    "Christopher R. Deluzio",
+    "Dave Min",
+    "Delia C. Ramirez",
+    "Donald S. Beyer, Jr.",
+    "Greg Casar",
+    "Greg Landsman",
+    "Jennifer L. McClellan",
+    "Jesús G. \"Chuy\" García",
+    "Joaquin Castro",
+    "Kelly Morrison",
+    "Lori Trahan",
+    "Patrick Ryan",
+    "Pramila Jayapal",
+    "Ro Khanna",
+    "Ruben Gallego",
+    "Sara Jacobs",
+    "Seth Magaziner",
+    "Ted Lieu",
+    "Yassamin Ansari"
+   ],
+   "caucusesTouched": [
+    "capac",
+    "cbc",
+    "chc",
+    "leadership",
+    "newdem",
+    "progressive"
+   ],
+   "byCaucus": {
+    "progressive": {
+     "posts": 24,
+     "originals": 17,
+     "accounts": 18,
+     "members": 15
+    },
+    "capac": {
+     "posts": 11,
+     "originals": 7,
+     "accounts": 6,
+     "members": 4
+    },
+    "leadership": {
+     "posts": 5,
+     "originals": 3,
+     "accounts": 3,
+     "members": 2
+    },
+    "(none)": {
+     "posts": 4,
+     "originals": 1,
+     "accounts": 2,
+     "members": 1
+    },
+    "newdem": {
+     "posts": 11,
+     "originals": 9,
+     "accounts": 11,
+     "members": 10
+    },
+    "chc": {
+     "posts": 5,
+     "originals": 4,
+     "accounts": 5,
+     "members": 5
+    },
+    "cbc": {
+     "posts": 1,
+     "originals": 1,
+     "accounts": 1,
+     "members": 1
+    }
+   },
+   "byAccountType": {
+    "personal": 15,
+    "official": 19
+   },
+   "byStatus": {
+    "house": 30,
+    "senate": 4
+   },
+   "byDay": {
+    "2026-09-08": {
+     "posts": 1,
+     "originals": 1,
+     "retweets": 0,
+     "accounts": 1,
+     "members": 1
+    },
+    "2026-09-09": {
+     "posts": 33,
+     "originals": 22,
+     "retweets": 11,
+     "accounts": 26,
+     "members": 21
+    }
+   },
+   "byHourET": {
+    "2026-09-08T22": {
+     "posts": 1,
+     "originals": 1
+    },
+    "2026-09-09T01": {
+     "posts": 1,
+     "originals": 0
+    },
+    "2026-09-09T07": {
+     "posts": 1,
+     "originals": 1
+    },
+    "2026-09-09T09": {
+     "posts": 5,
+     "originals": 2
+    },
+    "2026-09-09T10": {
+     "posts": 4,
+     "originals": 4
+    },
+    "2026-09-09T11": {
+     "posts": 1,
+     "originals": 0
+    },
+    "2026-09-09T12": {
+     "posts": 3,
+     "originals": 3
+    },
+    "2026-09-09T13": {
+     "posts": 3,
+     "originals": 1
+    },
+    "2026-09-09T14": {
+     "posts": 2,
+     "originals": 1
+    },
+    "2026-09-09T16": {
+     "posts": 4,
+     "originals": 4
+    },
+    "2026-09-09T17": {
+     "posts": 1,
+     "originals": 1
+    },
+    "2026-09-09T18": {
+     "posts": 5,
+     "originals": 3
+    },
+    "2026-09-09T19": {
+     "posts": 2,
+     "originals": 1
+    },
+    "2026-09-09T23": {
+     "posts": 1,
+     "originals": 1
+    }
+   },
+   "framingPrimary": {
+    "regulation-plan": 13,
+    "existential-risk": 10,
+    "hearings-oversight": 10,
+    "surveillance-pre-crime": 1
+   },
+   "framingPrimaryOriginals": {
+    "regulation-plan": 11,
+    "hearings-oversight": 7,
+    "existential-risk": 5
+   },
+   "framingAnyMention": {
+    "regulation-plan": 19,
+    "existential-risk": 19,
+    "hearings-oversight": 11,
+    "other": 5,
+    "surveillance-pre-crime": 1,
+    "labor-economy": 1
+   },
+   "framingAnyMentionOriginals": {
+    "regulation-plan": 17,
+    "existential-risk": 13,
+    "hearings-oversight": 8,
+    "other": 4,
+    "labor-economy": 1
+   },
+   "engagementOriginalsSum": 34427,
+   "topOriginalsByEngagement": [
+    {
+     "id": "2097519390480891976",
+     "handle": "tedlieu",
+     "member": "Ted Lieu",
+     "likes": 8007,
+     "retweets": 1437,
+     "total": 9759,
+     "framing": "regulation-plan"
+    },
+    {
+     "id": "2097685220442923030",
+     "handle": "RepCasar",
+     "member": "Greg Casar",
+     "likes": 6991,
+     "retweets": 1033,
+     "total": 8559,
+     "framing": "hearings-oversight"
+    },
+    {
+     "id": "2097754129489596612",
+     "handle": "RoKhanna",
+     "member": "Ro Khanna",
+     "likes": 2225,
+     "retweets": 570,
+     "total": 3198,
+     "framing": "regulation-plan"
+    },
+    {
+     "id": "2097721236839162155",
+     "handle": "RepYassAnsari",
+     "member": "Yassamin Ansari",
+     "likes": 2130,
+     "retweets": 396,
+     "total": 2846,
+     "framing": "existential-risk"
+    },
+    {
+     "id": "2097730021733400740",
+     "handle": "RepTedLieu",
+     "member": "Ted Lieu",
+     "likes": 1276,
+     "retweets": 177,
+     "total": 1588,
+     "framing": "regulation-plan"
+    },
+    {
+     "id": "2097675180231319915",
+     "handle": "PatRyanUC",
+     "member": "Patrick Ryan",
+     "likes": 961,
+     "retweets": 209,
+     "total": 1264,
+     "framing": "hearings-oversight"
+    },
+    {
+     "id": "2097641446983528943",
+     "handle": "RepLoriTrahan",
+     "member": "Lori Trahan",
+     "likes": 897,
+     "retweets": 110,
+     "total": 1101,
+     "framing": "regulation-plan"
+    },
+    {
+     "id": "2097728914906869764",
+     "handle": "RepDonBeyer",
+     "member": "Donald S. Beyer, Jr.",
+     "likes": 734,
+     "retweets": 144,
+     "total": 988,
+     "framing": "regulation-plan"
+    }
+   ],
+   "sourcesReferenced": {
+    "2097476196791709843": {
+     "count": 14,
+     "who": "@hilbertspaess (Jacob Coxon) — resignation post",
+     "when": "2026-09-09T00:04:29.195Z",
+     "how": "handle from the RT prefix in 2097674476767084579; posted 2026-09-09T00:04:29Z = Mon 20:04 ET"
+    },
+    "2097556042573816094": {
+     "count": 2,
+     "who": "@hadip — \"Wild statement from Anthropic's leader in charge of keeping AI safe: more than 10% chance it kills everybody within 10 years\"",
+     "when": "2026-09-09T05:21:45.913Z",
+     "how": "RT prefix"
+    },
+    "2097497037956891126": {
+     "count": 2,
+     "who": "UNVERIFIED — posted 2026-09-09T01:27Z; non-English quotes of it in x-search.json describe Hubinger confirming Coxon",
+     "when": "2026-09-09T01:27:18.116Z",
+     "how": "snowflake + x-search.json refs"
+    },
+    "2097476203863224394": {
+     "count": 2,
+     "who": "UNVERIFIED — 1.7s after Coxon's post; quoted by Khanna and Gallego as the Hubinger >10% line",
+     "when": "2026-09-09T00:04:30.881Z",
+     "how": "snowflake timestamp only"
+    },
+    "2097474365163999402": {
+     "count": 1,
+     "who": "UNVERIFIED — posted 2026-09-08T23:57:12Z, 7 min before Coxon; quoted by @tedlieu as \"exhibit number 739\"",
+     "when": "2026-09-08T23:57:12.501Z",
+     "how": "snowflake only"
+    },
+    "2097542341670359082": {
+     "count": 1,
+     "who": "@yashar — news summary of the resignation",
+     "when": "2026-09-09T04:27:19.363Z",
+     "how": "RT prefix"
+    },
+    "2097675318978842764": {
+     "count": 1,
+     "who": "@MorePerfectUS — Anthropic \"pre-crime\" activist-surveillance story",
+     "when": "2026-09-09T13:15:43.624Z",
+     "how": "RT prefix"
+    },
+    "2097519390480891976": {
+     "count": 1,
+     "who": "caucus post by @tedlieu (in this file)",
+     "when": "2026-09-09T02:56:07.000Z",
+     "how": "archive record"
+    },
+    "2097721236839162155": {
+     "count": 1,
+     "who": "caucus post by @RepYassAnsari (in this file)",
+     "when": "2026-09-09T16:18:11.000Z",
+     "how": "archive record"
+    },
+    "2097684240356049178": {
+     "count": 1,
+     "who": "@politico — \"Lawmakers urge Congress to act after AI researcher's dire warning\"",
+     "when": "2026-09-09T13:51:10.646Z",
+     "how": "RT prefix"
+    },
+    "2097820074568454156": {
+     "count": 1,
+     "who": "caucus post by @SenRubenGallego (in this file)",
+     "when": "2026-09-09T22:50:56.000Z",
+     "how": "archive record"
+    },
+    "2097818430032257216": {
+     "count": 1,
+     "who": "@igorbobic — \"Democrats are gearing up for action on AI\" (Robert Garcia / Oversight investigations)",
+     "when": "2026-09-09T22:44:23.958Z",
+     "how": "RT prefix"
+    },
+    "2097807998429130876": {
+     "count": 1,
+     "who": "caucus post by @Rep_Magaziner (in this file)",
+     "when": "2026-09-09T22:02:56.000Z",
+     "how": "archive record"
+    },
+    "2097754129489596612": {
+     "count": 1,
+     "who": "caucus post by @RoKhanna (in this file)",
+     "when": "2026-09-09T18:28:53.000Z",
+     "how": "archive record"
+    }
+   },
+   "classifier": {
+    "classified": 33,
+    "unclassified": 1,
+    "noTopicsFile": 0,
+    "bareTech": 28,
+    "techAiPolicy": 5,
+    "withCongressPolitics": 3,
+    "withDemocracy": 1,
+    "emergingCluster": 0,
+    "topicSets": {
+     "tech": 25,
+     "unclassified": 1,
+     "congress-politics + tech": 2,
+     "democracy + tech": 1,
+     "climate + foreign-policy/middle-east + tech/ai-policy": 1,
+     "tech/ai-policy": 3,
+     "congress-politics/house-floor + tech/ai-policy": 1
+    }
+   }
+  },
+  "shareOfDay": {
+   "2026-09-08": {
+    "corePosts": 1,
+    "dayPosts": 528,
+    "sharePosts": 0.0019,
+    "coreOriginals": 1,
+    "dayOriginals": 445,
+    "shareOriginals": 0.0022,
+    "coreMembers": 1,
+    "dayMembersPosting": 172,
+    "shareMembers": 0.0058
+   },
+   "2026-09-09": {
+    "corePosts": 33,
+    "dayPosts": 625,
+    "sharePosts": 0.0528,
+    "coreOriginals": 22,
+    "dayOriginals": 532,
+    "shareOriginals": 0.0414,
+    "coreMembers": 21,
+    "dayMembersPosting": 186,
+    "shareMembers": 0.1129
+   }
+  },
+  "hourTable0909": [
+   {
+    "hourET": "00",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 2
+   },
+   {
+    "hourET": "01",
+    "corePosts": 1,
+    "coreOriginals": 0,
+    "allCaucusPosts": 11
+   },
+   {
+    "hourET": "02",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 0
+   },
+   {
+    "hourET": "03",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 0
+   },
+   {
+    "hourET": "04",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 0
+   },
+   {
+    "hourET": "05",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 0
+   },
+   {
+    "hourET": "06",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 2
+   },
+   {
+    "hourET": "07",
+    "corePosts": 1,
+    "coreOriginals": 1,
+    "allCaucusPosts": 2
+   },
+   {
+    "hourET": "08",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 10
+   },
+   {
+    "hourET": "09",
+    "corePosts": 5,
+    "coreOriginals": 2,
+    "allCaucusPosts": 34
+   },
+   {
+    "hourET": "10",
+    "corePosts": 4,
+    "coreOriginals": 4,
+    "allCaucusPosts": 45
+   },
+   {
+    "hourET": "11",
+    "corePosts": 1,
+    "coreOriginals": 0,
+    "allCaucusPosts": 42
+   },
+   {
+    "hourET": "12",
+    "corePosts": 3,
+    "coreOriginals": 3,
+    "allCaucusPosts": 54
+   },
+   {
+    "hourET": "13",
+    "corePosts": 3,
+    "coreOriginals": 1,
+    "allCaucusPosts": 52
+   },
+   {
+    "hourET": "14",
+    "corePosts": 2,
+    "coreOriginals": 1,
+    "allCaucusPosts": 58
+   },
+   {
+    "hourET": "15",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 62
+   },
+   {
+    "hourET": "16",
+    "corePosts": 4,
+    "coreOriginals": 4,
+    "allCaucusPosts": 77
+   },
+   {
+    "hourET": "17",
+    "corePosts": 1,
+    "coreOriginals": 1,
+    "allCaucusPosts": 50
+   },
+   {
+    "hourET": "18",
+    "corePosts": 5,
+    "coreOriginals": 3,
+    "allCaucusPosts": 37
+   },
+   {
+    "hourET": "19",
+    "corePosts": 2,
+    "coreOriginals": 1,
+    "allCaucusPosts": 30
+   },
+   {
+    "hourET": "20",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 20
+   },
+   {
+    "hourET": "21",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 17
+   },
+   {
+    "hourET": "22",
+    "corePosts": 0,
+    "coreOriginals": 0,
+    "allCaucusPosts": 9
+   },
+   {
+    "hourET": "23",
+    "corePosts": 1,
+    "coreOriginals": 1,
+    "allCaucusPosts": 11
+   }
+  ],
+  "adjacent": {
+   "posts": 8,
+   "originals": 6,
+   "retweets": 2,
+   "members": [
+    "Bennie G. Thompson",
+    "Henry Cuellar",
+    "Josh Gottheimer",
+    "Lori Trahan",
+    "Sarah McBride",
+    "Suhas Subramanyam",
+    "Ted Lieu",
+    "Yassamin Ansari"
+   ],
+   "framingPrimary": {
+    "regulation-plan": 2,
+    "other": 3,
+    "labor-economy": 3
+   },
+   "classifier": {
+    "classified": 7,
+    "unclassified": 0,
+    "noTopicsFile": 1,
+    "bareTech": 4,
+    "techAiPolicy": 2,
+    "withCongressPolitics": 0,
+    "withDemocracy": 0,
+    "emergingCluster": 1,
+    "topicSets": {
+     "tech": 3,
+     "tech/ai-policy": 1,
+     "climate + tech/ai-policy": 1,
+     "economy + tech": 1,
+     "[] (no policy content)": 1,
+     "no-topics-file": 1
+    }
+   }
+  },
+  "precursor": {
+   "posts": 3,
+   "originals": 2,
+   "retweets": 1,
+   "members": [
+    "Patrick Ryan",
+    "Ted Lieu"
+   ],
+   "framingPrimary": {
+    "hearings-oversight": 1,
+    "regulation-plan": 2
+   },
+   "classifier": {
+    "classified": 3,
+    "unclassified": 0,
+    "noTopicsFile": 0,
+    "bareTech": 1,
+    "techAiPolicy": 2,
+    "withCongressPolitics": 0,
+    "withDemocracy": 0,
+    "emergingCluster": 0,
+    "topicSets": {
+     "tech": 1,
+     "tech/ai-policy": 2
+    }
+   }
+  },
+  "classifierContext": {
+   "techPerDay": {
+    "2026-09-07": {
+     "classified": 439,
+     "tech": 4,
+     "tech/ai-policy": 1,
+     "unclassified": 0,
+     "emergingLabels": [
+      "september-11-remembrance",
+      "place-renaming",
+      "child performer workplace protections",
+      "crypto-regulation",
+      "local-business-recognition"
+     ]
+    },
+    "2026-09-08": {
+     "classified": 528,
+     "tech": 8,
+     "tech/ai-policy": 1,
+     "unclassified": 0,
+     "emergingLabels": [
+      "transportation-safety",
+      "child-care-affordability",
+      "postal-service",
+      "mental-health-crisis-services",
+      "substance-use-recovery",
+      "consumer-fraud-scams",
+      "smithsonian-institution",
+      "mental-health-988-crisis-line",
+      "consumer-scams-fraud",
+      "tributes-condolences",
+      "presidential-falsehoods",
+      "presidential fitness / 25th Amendment",
+      "symbolic renaming of places",
+      "childcare affordability & assistance",
+      "generational-politics",
+      "9/11-remembrance",
+      "parental-rights-child-welfare",
+      "public-lands",
+      "agriculture-farm-bill",
+      "9-11-remembrance",
+      "tributes-recognitions",
+      "arts-cultural-institutions",
+      "industrial-policy"
+     ]
+    },
+    "2026-09-09": {
+     "classified": 624,
+     "tech": 40,
+     "tech/ai-policy": 7,
+     "unclassified": 1,
+     "emergingLabels": [
+      "agriculture-rural",
+      "9/11 anniversary commemoration",
+      "small-business-support",
+      "9-11-remembrance",
+      "smithsonian-arts-culture",
+      "agriculture & farm bill",
+      "9/11 remembrance & first responders",
+      "data-centers-utility-costs",
+      "foster-care",
+      "september-11-remembrance",
+      "9/11 commemoration",
+      "animal welfare",
+      "9/11 records & survivor care",
+      "smithsonian-history-erasure",
+      "postal-service",
+      "christian-nationalism",
+      "memorial-tributes",
+      "agriculture-farmers",
+      "cultural-institutions",
+      "9/11 remembrance & misinformation",
+      "america250-local-history",
+      "child-care-affordability",
+      "hemp-regulation",
+      "obituaries-tributes",
+      "history-commemoration"
+     ]
+    }
+   },
+   "rollupMacroRank0909": [
+    {
+     "rank": 1,
+     "macro": "economy",
+     "posts": 92,
+     "retweets": 9,
+     "members": 71
+    },
+    {
+     "rank": 2,
+     "macro": "congress-politics",
+     "posts": 81,
+     "retweets": 15,
+     "members": 56
+    },
+    {
+     "rank": 3,
+     "macro": "democracy",
+     "posts": 65,
+     "retweets": 12,
+     "members": 59
+    },
+    {
+     "rank": 4,
+     "macro": "foreign-policy",
+     "posts": 60,
+     "retweets": 11,
+     "members": 54
+    },
+    {
+     "rank": 5,
+     "macro": "constituent-services",
+     "posts": 55,
+     "retweets": 3,
+     "members": 42
+    },
+    {
+     "rank": 6,
+     "macro": "immigration",
+     "posts": 43,
+     "retweets": 10,
+     "members": 34
+    },
+    {
+     "rank": 7,
+     "macro": "healthcare",
+     "posts": 40,
+     "retweets": 3,
+     "members": 35
+    },
+    {
+     "rank": 8,
+     "macro": "tech",
+     "posts": 26,
+     "retweets": 10,
+     "members": 25
+    },
+    {
+     "rank": 9,
+     "macro": "climate",
+     "posts": 23,
+     "retweets": 2,
+     "members": 25
+    },
+    {
+     "rank": 10,
+     "macro": "education",
+     "posts": 24,
+     "retweets": 0,
+     "members": 21
+    },
+    {
+     "rank": 11,
+     "macro": "civil-rights",
+     "posts": 20,
+     "retweets": 2,
+     "members": 19
+    },
+    {
+     "rank": 12,
+     "macro": "labor",
+     "posts": 16,
+     "retweets": 3,
+     "members": 16
+    },
+    {
+     "rank": 13,
+     "macro": "budget-appropriations",
+     "posts": 12,
+     "retweets": 1,
+     "members": 13
+    },
+    {
+     "rank": 14,
+     "macro": "public-safety",
+     "posts": 6,
+     "retweets": 2,
+     "members": 6
+    },
+    {
+     "rank": 15,
+     "macro": "reproductive-rights",
+     "posts": 3,
+     "retweets": 0,
+     "members": 2
+    }
+   ],
+   "reportMention": "reports/2026-09-09.md: Technology absent from the all-caucus top 3 (economy 102, congress-politics 84, democracy 67); appears only as CAPAC #3 \"Technology — 6 posts + 4 RTs, 4 members, 0 engagement\" (line 43). No developing-story line for the story."
+  },
+  "storyCandidate": {
+   "storiesJsonHits": [],
+   "sampleTextFalsePositives": [
+    "bridge-naming-honorary-designations (sample text matches \"anthropist\" — not this story)"
+   ],
+   "verdict": "NONE — no candidate key/label/alias in data/stories.json mentions Anthropic/Coxon/Hubinger/superintelligence/AI safety/existential/kill switch/frontier (only false positive: bridge-naming-honorary-designations (sample text matches \"anthropist\" — not this story))",
+   "emergingClusters0909": "NONE about the story — the 25 emerging labels on 2026-09-09 are 9/11 remembrance, Smithsonian, agriculture, data-centers-utility-costs, etc. (data/topics/2026-09-09.json emerging[])",
+   "contextJson": "data/context.json: 0 hits for Anthropic/Coxon/Hubinger/superintelligence/AI safety/artificial intelligence",
+   "incidentsJson": "data/incidents.json: 0 hits",
+   "neighborCandidates": [
+    {
+     "key": "data-centers",
+     "posts": 21,
+     "members": 19,
+     "days": 12,
+     "firstSeen": "2026-08-20",
+     "lastSeen": "2026-09-09",
+     "placement": {
+      "macro": "tech",
+      "key": "data-centers",
+      "kind": "gap"
+     }
+    },
+    {
+     "key": "surveillance-privacy",
+     "posts": 6,
+     "members": 6,
+     "days": 4,
+     "firstSeen": "2026-08-21",
+     "lastSeen": "2026-09-04",
+     "placement": {
+      "macro": "tech",
+      "key": "surveillance-privacy",
+      "kind": "gap"
+     }
+    }
+   ]
+  },
+  "sanityMissedReferences": []
+ },
+ "judged": {
+  "leadingFraming": {
+   "byPrimaryAllPosts": [
+    [
+     "regulation-plan",
+     13
+    ],
+    [
+     "existential-risk",
+     10
+    ],
+    [
+     "hearings-oversight",
+     10
+    ],
+    [
+     "surveillance-pre-crime",
+     1
+    ]
+   ],
+   "byPrimaryOriginals": [
+    [
+     "regulation-plan",
+     11
+    ],
+    [
+     "hearings-oversight",
+     7
+    ],
+    [
+     "existential-risk",
+     5
+    ]
+   ],
+   "byAnyMention": [
+    [
+     "regulation-plan",
+     19
+    ],
+    [
+     "existential-risk",
+     19
+    ],
+    [
+     "hearings-oversight",
+     11
+    ],
+    [
+     "other",
+     5
+    ],
+    [
+     "surveillance-pre-crime",
+     1
+    ],
+    [
+     "labor-economy",
+     1
+    ]
+   ],
+   "reading": "regulation-plan leads by primary framing (13 of 34 posts; 11 of 23 originals), hearings-oversight and existential-risk are close behind; but existential-risk is the most-mentioned framing when secondaries count (19 of 34) — the caucus quotes the warning and pivots to a remedy in the same post. surveillance-pre-crime is one retweet (Castro); labor-economy appears only as a secondary (García)."
+  },
+  "shape": [
+   "Volume is concentrated in one ET day: every core post but Lieu's Monday-night kill-switch post lands on 2026-09-09, from 01:27 ET (Gallego RT) to 23:22 ET (Khanna).",
+   "Two bursts: 09:00-10:59 ET (9 posts, 6 originals: Dave Min, Patrick Ryan, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal) and 16:00-19:59 ET (12 posts, 9 originals: Kelly Morrison, Bill Foster, Greg Landsman, Becca Balint, Jesús G. \"Chuy\" García, Seth Magaziner, Ruben Gallego, Delia C. Ramirez, Sara Jacobs); the 11:00-14:59 block is 9 posts (Ted Lieu, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna), then nothing from 15:00 until Morrison at 16:40, and Khanna alone after 20:00.",
+   "Progressive Caucus members carry most of the originals; New Dems are the second block and supply the institutional/technical voices (Beyer, Foster, Landsman, Morrison, Ryan). CBC is one post (McClellan, 0 likes at capture). No dedicated CAPAC or leadership-only voice beyond members who also hold progressive tags.",
+   "The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No bill name or plan is echoed by a second member anywhere in the corpus; the only cross-member sharing is language (next bullet).",
+   "Shared language that does cross members: \"the call is coming from inside the house\" (Trahan 07:01 ET, Morrison 16:40 ET); \"pump the brakes\" (Deluzio, Balint); \"burying heads in the sand\" (Deluzio, Balint — both quoting the same source 2097497037956891126); \"gamble/gambling\" (Balint echoing Coxon).",
+   "Engagement is top-heavy: @tedlieu 8,007 likes and @RepCasar 6,991 likes hold 53% of the originals' engagement; @RoKhanna 2,225, @RepYassAnsari 2,130, @RepTedLieu 1,276, @PatRyanUC 961, @RepLoriTrahan 897, @RepDonBeyer 734 form the second tier. 9 of 23 originals are under 200 likes at capture (@DaveMinCA 1, @CongressMin 134, @RepMcClellan 0, @RepGregLandsman 110, @RepBeccaB 173, @RepChuyGarcia 122, @Rep_Magaziner 22, @repdeliaramirez 116, @RepSaraJacobs 123).",
+   "The surveillance/\"pre-crime\" angle the owner flagged reached the corpus once (Castro RT of @MorePerfectUS at 09:32 ET) and did not spread inside the caucus, though x-search.json shows it as the second-largest retweet wave in the wider stream."
+  ],
+  "tierCaveats": "Four core posts (Lieu's exhibit-739 post and its self-RT, Min's official post, Jacobs) are linked by timing/wording rather than an explicit reference; removing them leaves 30 core posts / 20 originals and does not change the leading framing."
+ },
+ "unverified": [
+  "What 2097474365163999402 (quoted by @tedlieu as \"exhibit number 739\", posted 7 minutes before Coxon's post) shows — not in the corpus, no lookup bought.",
+  "Whether 2097476203863224394 is the second post of Coxon's thread carrying Hubinger's odds (Khanna and Gallego quote it as such; 1.7s after the first post).",
+  "Author of 2097497037956891126 (quoted by Deluzio and Balint); x-search.json non-English quotes describe it as Hubinger confirming Coxon.",
+  "The full text of 11 truncated core originals (@RepLoriTrahan, @CongressMin, @RepJayapal, @RepYassAnsari, @RepDonBeyer, @RoKhanna, @RepBillFoster, @RepChuyGarcia, @SenRubenGallego, @repdeliaramirez, @RoKhanna): the archive stores the 280-char capture only, so Khanna's points 2-5, Trahan's bill name, García's remaining demands, Beyer's bill list and Foster's containment methods are cut.",
+  "Links in Magaziner's and Jacobs' posts (\"here is what Congress can do\") — unread; the linked content is what would confirm their framing.",
+  "Whether @AlexBores' post and @tedlieu's 09-10 CA-standards post are responses to this story or to a separate OpenAI/White House development."
+ ],
+ "problems": [
+  "Classifier granularity: 28 of 34 core posts got bare \"tech\" with a null subtopic although config/taxonomy.yaml has tech/ai-policy; only 5 got tech/ai-policy. The story is therefore indistinguishable in data/topics from Gottheimer's AI LABS Act or data-center posts.",
+  "Classifier miss: 2097641446983528943 (@RepLoriTrahan, 897 likes, quotes Coxon, names her FRONTIER bill) is the only unclassified post of 2026-09-09 (data/topics/2026-09-09.json unclassified[0]).",
+  "Inconsistent subtopic use: @RepCuellar's Pope Leo post got tech/ai-policy while Casar, Khanna, Ansari, Beyer, Lieu, Foster, García got bare tech.",
+  "No story surfaced: because every post fit an existing macro, none went to emerging clusters, so data/stories.json has no candidate, data/context.json was never searched for it, and reports/2026-09-09.md does not mention it (tech ranks 8th of 15 macros for the day in data/rollups/topic-days.json: 26 posts + 10 RTs, 25 members). The \"emerging = fits nothing\" rule cannot see a burst inside an existing macro.",
+  "Engagement in derived layers is 0 for 2026-09-09 (report and rollup) because the 24h metrics re-read has not run; metricsAtCapture is available in the archive but retweet rows carry the original's counts (e.g. 141,266 on Min's RT of Coxon), so any naive sum is wrong.",
+  "Capture timing: every 2026-09-09 post has capturedAt 2026-09-10T05:26-05:59Z (backfill), i.e. the corpus had none of Tuesday's posts until ~01:30 ET Wednesday; a live narrative layer would have been blind through the whole day.",
+  "Roster: the list includes Senate accounts (Gallego, status=senate); \"House Democrats\" counts should filter on status.",
+  "Account duplication: 5 members post from two listed accounts each (Ted Lieu, Ruben Gallego, Dave Min, Yassamin Ansari, Seth Magaziner), so 26 accounts are 21 members; 4 of the 11 retweets are a member re-posting his or her own other account (@tedlieu, @yassaminansari, @RubenGallego, @SethMagaziner). authors.json also spells the same member two ways (\"Senator Ruben Gallego\" / \"Ruben Gallego\"), which breaks a naive member dedupe.",
+  "Truncation: 280-char capture without note_tweet expansion cuts 11 of 23 core originals mid-sentence, including the plan posts the owner would most want to read (Khanna's 5 points).",
+  "Neighboring candidate not merged: stories.json has a surveillance-privacy gap candidate (6 posts, 08-21..09-04) that Castro's pre-crime RT would extend; the classifier filed the RT as tech + democracy instead."
+ ],
+ "posts": [
+  {
+   "id": "2096977395563606449",
+   "tier": "precursor",
+   "linkage": "explicit",
+   "etDay": "2026-09-07",
+   "createdAt": "2026-09-07T15:02:25.000Z",
+   "etTime": "Mon 11:02",
+   "etHour": "11",
+   "authorId": "172377413",
+   "handle": "PatRyanUC",
+   "member": "Patrick Ryan",
+   "memberAsListed": "Patrick Ryan",
+   "accountType": "personal",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "NY-18",
+   "followers": 78141,
+   "type": "quote",
+   "refId": "2095853824934330386",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-04T12:37Z; quoted by @PatRyanUC as a new OpenAI incident",
+   "text": "When I wrote a letter with @GregCasar to OpenAI last month (post Hugging Face), we asked whether other similar incidents had occurred. \n\nThey refused to tell us. Then this comes out. \n\nThe House Democratic Majority arrives in January. \n\nI look forward to the public hearings. https://t.co/TNr8N1AKbf",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 304,
+    "retweets": 50,
+    "replies": 13,
+    "quotes": 6,
+    "total": 373,
+    "note": "metricsAtCapture at 2026-09-10T05:59:14.108Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": []
+   },
+   "framingNote": "Sun 09-07. Quotes a 09-04 post (2095853824934330386, unread) about a new OpenAI incident \"post Hugging Face\"; cites the Ryan/Casar letter to OpenAI and promises public hearings under a Democratic majority. The breakout background the resignation story sits on.",
+   "classifier": {
+    "file": "data/topics/2026-09-07.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-07.jsonl:132",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097122191842173074",
+   "tier": "precursor",
+   "linkage": "explicit",
+   "etDay": "2026-09-07",
+   "createdAt": "2026-09-08T00:37:47.000Z",
+   "etTime": "Mon 20:37",
+   "etHour": "20",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "quote",
+   "refId": "2096896288201564481",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-07T09:40Z; quoted by @tedlieu for the kill-switch post",
+   "text": "Society has a long-standing solution for machines that pose catastrophic risks. It’s called a kill switch.\n\nLook it up. They are everywhere. AI advanced models should not be exempt.\n \nTime for Congress to pass the bipartisan AI Kill Switch Act by Rep Nathaniel Moran and me. https://t.co/ico80SftMH",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 2978,
+    "retweets": 766,
+    "replies": 102,
+    "quotes": 17,
+    "total": 3863,
+    "note": "metricsAtCapture at 2026-09-10T05:59:14.108Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Sun 09-07 evening. Kill-switch framing for \"machines that pose catastrophic risks\"; quotes 2096896288201564481 (posted 2026-09-07T09:40Z, unread). Pre-dates the resignation by ~28h.",
+   "classifier": {
+    "file": "data/topics/2026-09-07.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-07.jsonl:422",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097409987761021047",
+   "tier": "precursor",
+   "linkage": "explicit",
+   "etDay": "2026-09-08",
+   "createdAt": "2026-09-08T19:41:23.000Z",
+   "etTime": "Tue 15:41",
+   "etHour": "15",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "retweet",
+   "refId": "2097122191842173074",
+   "refHandle": "tedlieu",
+   "refSource": "caucus post 2097122191842173074 (@tedlieu)",
+   "text": "RT @tedlieu: Society has a long-standing solution for machines that pose catastrophic risks. It’s called a kill switch.\n\nLook it up. They a…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 766,
+    "replies": 0,
+    "quotes": 0,
+    "total": 766,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Mon 09-08 afternoon self-retweet of the kill-switch post above.",
+   "classifier": {
+    "file": "data/topics/2026-09-08.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-08.jsonl:515",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097519390480891976",
+   "tier": "core",
+   "linkage": "inferred",
+   "etDay": "2026-09-08",
+   "createdAt": "2026-09-09T02:56:07.000Z",
+   "etTime": "Tue 22:56",
+   "etHour": "22",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "quote",
+   "refId": "2097474365163999402",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-08T23:57:12Z, 7 min before Coxon; quoted by @tedlieu as \"exhibit number 739\"",
+   "text": "Below is exhibit number 739 for why we need to pass the bipartisan AI Kill Switch Bill asap. https://t.co/i8C1FhruXe",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 8007,
+    "retweets": 1437,
+    "replies": 283,
+    "quotes": 32,
+    "total": 9759,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Mon 09-08 22:56 ET, ~3h after Coxon posted. Quotes 2097474365163999402 (posted 2026-09-08T23:57:12Z, 7 min BEFORE Coxon's 00:04:29Z post; not in the corpus, so what it shows is UNVERIFIED). Tied to the story by a viral critic's quote-tweet of it in x-search.json (2097807856003326444: \"Ted Lieu has reached Exhibit 739... A researcher quit\"). Largest engagement of any caucus post in the window.",
+   "classifier": {
+    "file": "data/topics/2026-09-08.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-08.jsonl:170",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097557415713530337",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T05:27:13.000Z",
+   "etTime": "Wed 01:27",
+   "etHour": "01",
+   "authorId": "49217025",
+   "handle": "RubenGallego",
+   "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
+   "accountType": "personal",
+   "caucuses": [],
+   "status": "senate",
+   "stateDistrict": null,
+   "followers": 211468,
+   "type": "retweet",
+   "refId": "2097556042573816094",
+   "refHandle": "hadip",
+   "refSource": "@hadip — \"Wild statement from Anthropic's leader in charge of keeping AI safe: more than 10% chance it kills everybody within 10 years\"",
+   "text": "RT @hadip: Wild statement from Anthropic’s leader in charge of keeping AI safe: more than 10% chance it kills everybody within 10 years. 🤯",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 22,
+    "replies": 0,
+    "quotes": 0,
+    "total": 22,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": []
+   },
+   "framingNote": "RT of @hadip on the Hubinger >10% line. Earliest caucus post on the Tuesday ET day (01:27 ET).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:472",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097641446983528943",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T11:01:07.000Z",
+   "etTime": "Wed 07:01",
+   "etHour": "07",
+   "authorId": "1079802482640019456",
+   "handle": "RepLoriTrahan",
+   "member": "Lori Trahan",
+   "memberAsListed": "Lori Trahan",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem",
+    "chc",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "MA-03",
+   "followers": 39774,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "The call is coming from inside the house.\n\nSafety researchers are resigning, powerful AI models are breaking out of their labs, and companies are racing ahead anyway.\n\nIt's past time for Congress to get off the sidelines and do its job. We can start with my bipartisan FRONTIER https://t.co/P32aesPI8V",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 897,
+    "retweets": 110,
+    "replies": 83,
+    "quotes": 11,
+    "total": 1101,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": [
+     "existential-risk",
+     "hearings-oversight"
+    ]
+   },
+   "framingNote": "Quotes Coxon directly; \"safety researchers are resigning, powerful AI models are breaking out of their labs\"; pivots to her bipartisan FRONTIER bill (name truncated by the 280-char capture). Classifier left it UNCLASSIFIED.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "unclassified",
+    "topics": [],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:474",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097674453148991504",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T13:12:17.000Z",
+   "etTime": "Wed 09:12",
+   "etHour": "09",
+   "authorId": "48219458",
+   "handle": "DaveMinCA",
+   "member": "Dave Min",
+   "memberAsListed": "Dave Min",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-47",
+   "followers": 12031,
+   "type": "retweet",
+   "refId": "2097542341670359082",
+   "refHandle": "yashar",
+   "refSource": "@yashar — news summary of the resignation",
+   "text": "RT @yashar: Earlier today, AI researcher Jacob Coxon, who spent the past three years working at OpenAI and Anthropic, publicly resigned fro…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 2398,
+    "replies": 0,
+    "quotes": 0,
+    "total": 2398,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": []
+   },
+   "framingNote": "RT of @yashar's news summary of the resignation.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:489",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097674476767084579",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T13:12:22.000Z",
+   "etTime": "Wed 09:12",
+   "etHour": "09",
+   "authorId": "48219458",
+   "handle": "DaveMinCA",
+   "member": "Dave Min",
+   "memberAsListed": "Dave Min",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-47",
+   "followers": 12031,
+   "type": "retweet",
+   "refId": "2097476196791709843",
+   "refHandle": "hilbertspaess",
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "RT @hilbertspaess: I resigned from Anthropic today. I spent the last three years doing pretraining research at both OpenAI and Anthropic. N…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 141266,
+    "replies": 0,
+    "quotes": 0,
+    "total": 141266,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": []
+   },
+   "framingNote": "RT of Coxon's own resignation post (@hilbertspaess per the RT prefix). The metricsAtCapture retweet count (141,266) is the original's, not this RT's.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:490",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097675180231319915",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T13:15:10.000Z",
+   "etTime": "Wed 09:15",
+   "etHour": "09",
+   "authorId": "172377413",
+   "handle": "PatRyanUC",
+   "member": "Patrick Ryan",
+   "memberAsListed": "Patrick Ryan",
+   "accountType": "personal",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "NY-18",
+   "followers": 78141,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "1) We need emergency hearings on pacing the frontier – NOW!!\n\n2) This November, we need to elect leaders willing to stand up to AI oligarchs and fight for the American people. \n\nTrump wants to let billionaires who only care about ego &amp; profit run our country. \n\nWe will stop them. https://t.co/4iF0MbcyU4",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 961,
+    "retweets": 209,
+    "replies": 77,
+    "quotes": 17,
+    "total": 1264,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "other"
+    ]
+   },
+   "framingNote": "\"Emergency hearings on pacing the frontier\"; second half is electoral (\"elect leaders willing to stand up to AI oligarchs\").",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "congress-politics"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:491",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097679646187741663",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T13:32:55.000Z",
+   "etTime": "Wed 09:32",
+   "etHour": "09",
+   "authorId": "231510077",
+   "handle": "JoaquinCastrotx",
+   "member": "Joaquin Castro",
+   "memberAsListed": "Joaquin Castro",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem",
+    "chc"
+   ],
+   "status": "house",
+   "stateDistrict": "TX-20",
+   "followers": 254117,
+   "type": "retweet",
+   "refId": "2097675318978842764",
+   "refHandle": "MorePerfectUS",
+   "refSource": "@MorePerfectUS — Anthropic \"pre-crime\" activist-surveillance story",
+   "text": "RT @MorePerfectUS: Anthropic Is building a surveillance system to monitor activists using a “pre-crime” approach that tries to predict inci…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 2833,
+    "replies": 0,
+    "quotes": 0,
+    "total": 2833,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "surveillance-pre-crime",
+    "secondary": []
+   },
+   "framingNote": "RT of @MorePerfectUS on Anthropic building a \"pre-crime\" activist-surveillance system (American Prospect angle). The only surveillance-framed caucus post; classifier tagged it tech + democracy.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "democracy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:498",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097685220442923030",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T13:55:04.000Z",
+   "etTime": "Wed 09:55",
+   "etHour": "09",
+   "authorId": "1499512178013057032",
+   "handle": "RepCasar",
+   "member": "Greg Casar",
+   "memberAsListed": "Greg Casar",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "chc"
+   ],
+   "status": "house",
+   "stateDistrict": "TX-35",
+   "followers": 85334,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "An Anthropic researcher just quit, warning they're racing to superintelligence.\n\nAn employee still there agreed, and put the odds of AI killing all humans above 10%.\n\nThis is an emergency. Congress must convene hearings and pass my and Bernie’s superintelligence ban. https://t.co/pztLNoY1yk",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 6991,
+    "retweets": 1033,
+    "replies": 481,
+    "quotes": 54,
+    "total": 8559,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "regulation-plan",
+     "existential-risk"
+    ]
+   },
+   "framingNote": "\"Congress must convene hearings and pass my and Bernie's superintelligence ban.\" Most-engaged original caucus post on the story (6,991 likes); x-search.json shows it as the most-retweeted caucus source in the wider stream (27 RTs in sample, 1,068 on the original).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:513",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097687328403714334",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:03:26.000Z",
+   "etTime": "Wed 10:03",
+   "etHour": "10",
+   "authorId": "815310506596691968",
+   "handle": "RepJoshG",
+   "member": "Josh Gottheimer",
+   "memberAsListed": "Josh Gottheimer",
+   "accountType": "official",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "NJ-05",
+   "followers": 35394,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "AI agents are running loose in our networks. Right now, it’s becoming harder to see them, verify who built them, or shut them off.\n\nThat's a five-alarm security risk.\n\nThat's why I introduced the bipartisan Stop Rogue AI Act with @RepMikeLawler to put people back in the driver's",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 14,
+    "retweets": 0,
+    "replies": 3,
+    "quotes": 1,
+    "total": 18,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Stop Rogue AI Act (with Lawler): \"AI agents are running loose in our networks... shut them off\". Thematically next to the breakout background but does not mention the story.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:523",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097688889573998751",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:09:39.000Z",
+   "etTime": "Wed 10:09",
+   "etHour": "10",
+   "authorId": "210926192",
+   "handle": "RepCuellar",
+   "member": "Henry Cuellar",
+   "memberAsListed": "Henry Cuellar",
+   "accountType": "official",
+   "caucuses": [
+    "newdem",
+    "chc"
+   ],
+   "status": "house",
+   "stateDistrict": "TX-28",
+   "followers": 33193,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "I was honored to participate in the International Catholic Legislators Network’s annual meeting in Rome, where I met with Pope Leo XIV alongside my daughter, Catherine, and heard his address on the challenges and opportunities presented by artificial intelligence.\n\nPope Leo XIV https://t.co/l8VqtVFMqA",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 18,
+    "retweets": 3,
+    "replies": 3,
+    "quotes": 0,
+    "total": 24,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "other",
+    "secondary": []
+   },
+   "framingNote": "Pope Leo XIV address on AI at a Rome legislators' meeting. Not the story; included because the classifier gave it tech/ai-policy while most story posts got bare tech.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:526",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097689533072519362",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:12:12.000Z",
+   "etTime": "Wed 10:12",
+   "etHour": "10",
+   "authorId": "48219458",
+   "handle": "DaveMinCA",
+   "member": "Dave Min",
+   "memberAsListed": "Dave Min",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-47",
+   "followers": 12031,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "Waking up to see news that:\n- AI estimated to pose 10% chance of killing all humanity in next 10 years\n- Iran launched new wave of missiles at US bases and is \"surging\" construction of nuclear weapons\n- Orange County hitting 100+ degrees today. https://t.co/LyXPfaNKGt",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 1,
+    "retweets": 2,
+    "replies": 0,
+    "quotes": 0,
+    "total": 3,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": []
+   },
+   "framingNote": "Personal-account \"waking up to see news\" list; the 10%-chance line is item one.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy",
+     "foreign-policy/middle-east",
+     "climate"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:531",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097690443358073241",
+   "tier": "core",
+   "linkage": "inferred",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:15:49.000Z",
+   "etTime": "Wed 10:15",
+   "etHour": "10",
+   "authorId": "1858680194112065536",
+   "handle": "CongressMin",
+   "member": "Dave Min",
+   "memberAsListed": "Dave Min",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-47",
+   "followers": 6080,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "If we had a government that was actually even a tiny bit concerned about its citizens, it would be actively be pushing forward a framework to try to protect us against the risks of AI. \n\nInstead, Trump is focused on picking out the wallpaper and lighting fixtures for his illegal",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 134,
+    "retweets": 27,
+    "replies": 53,
+    "quotes": 5,
+    "total": 219,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": [
+     "other"
+    ]
+   },
+   "framingNote": "Official account, three minutes after the personal-account post above; \"framework to try to protect us against the risks of AI\" then a Trump-ballroom attack. No explicit reference to Coxon/Anthropic; tied by timing and author.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:537",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097690483497578605",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:15:59.000Z",
+   "etTime": "Wed 10:15",
+   "etHour": "10",
+   "authorId": "1608934316779921408",
+   "handle": "RepDeluzio",
+   "member": "Christopher R. Deluzio",
+   "memberAsListed": "Christopher R. Deluzio",
+   "accountType": "official",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "PA-17",
+   "followers": 18768,
+   "type": "quote",
+   "refId": "2097497037956891126",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-09T01:27Z; non-English quotes of it in x-search.json describe Hubinger confirming Coxon",
+   "text": "For those still burying their heads in the sand about the risks of superintelligence to humanity: wake up!\n\nWe need to pump the brakes and get national action on superintelligence. This is an emergency and our government should act like it. https://t.co/F0Leu7iBqw",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 632,
+    "retweets": 118,
+    "replies": 94,
+    "quotes": 10,
+    "total": 854,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": [
+     "regulation-plan"
+    ]
+   },
+   "framingNote": "Quotes 2097497037956891126 (01:27Z, unread; non-English quotes of it in x-search.json describe it as Hubinger confirming Coxon). \"Risks of superintelligence to humanity... pump the brakes.\"",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:538",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097695262051369070",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T14:34:58.000Z",
+   "etTime": "Wed 10:34",
+   "etHour": "10",
+   "authorId": "815733290955112448",
+   "handle": "RepJayapal",
+   "member": "Pramila Jayapal",
+   "memberAsListed": "Pramila Jayapal",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "WA-07",
+   "followers": 563181,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "Researchers for AI companies are sounding the alarm about rapid development of superintelligent systems that could hack anything and “kill us all.”\n\nThese AI companies are out of control and a serious threat to our future. We need to shut down their dangerous models and push out https://t.co/vqEqgVHb3X",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 546,
+    "retweets": 99,
+    "replies": 143,
+    "quotes": 15,
+    "total": 803,
+    "note": "metricsAtCapture at 2026-09-10T05:27:57.414Z"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": [
+     "regulation-plan"
+    ]
+   },
+   "framingNote": "\"Kill us all\"; \"shut down their dangerous models\" (rest truncated).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:546",
+   "capturedAt": "2026-09-10T05:27:57.414Z"
+  },
+  {
+   "id": "2097716482394534393",
+   "tier": "core",
+   "linkage": "inferred",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T15:59:17.000Z",
+   "etTime": "Wed 11:59",
+   "etHour": "11",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "retweet",
+   "refId": "2097519390480891976",
+   "refHandle": "tedlieu",
+   "refSource": "caucus post 2097519390480891976 (@tedlieu)",
+   "text": "RT @tedlieu: Below is exhibit number 739 for why we need to pass the bipartisan AI Kill Switch Bill asap.",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 1438,
+    "replies": 0,
+    "quotes": 0,
+    "total": 1438,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Self-RT of the Monday-night \"exhibit 739\" post; same linkage caveat.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:616",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097721236839162155",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T16:18:11.000Z",
+   "etTime": "Wed 12:18",
+   "etHour": "12",
+   "authorId": "1871623075822772224",
+   "handle": "RepYassAnsari",
+   "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
+   "accountType": "official",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "AZ-03",
+   "followers": 67729,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "This is absolutely terrifying. Jacob Coxon and Evan Hubinger, top researchers at Anthropic and formerly OpenAI, said these companies are creating technology that could \"kill us all by the end of the decade.\" These revelations prove multi-billion dollar corporations are putting https://t.co/E05fBAHjxu",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 2130,
+    "retweets": 396,
+    "replies": 289,
+    "quotes": 31,
+    "total": 2846,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": [
+     "other"
+    ]
+   },
+   "framingNote": "Names Coxon and Hubinger; \"kill us all by the end of the decade\"; corporate-greed turn (truncated). Second-most-retweeted caucus source in the wider stream per x-search.json (15 RTs in sample, 407 on the original).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:30",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097728914906869764",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T16:48:41.000Z",
+   "etTime": "Wed 12:48",
+   "etHour": "12",
+   "authorId": "2962868158",
+   "handle": "RepDonBeyer",
+   "member": "Donald S. Beyer, Jr.",
+   "memberAsListed": "Donald S. Beyer, Jr.",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "VA-08",
+   "followers": 123918,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "I have been working for years to educate my colleagues in Congress about AI, including potential systemic and civilizational risks.\n\nConversations about responses are happening here, and bills are being written to address these risks (I have introduced several myself and am https://t.co/tsFCvGp3ft",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 734,
+    "retweets": 144,
+    "replies": 93,
+    "quotes": 17,
+    "total": 988,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Institutional response: \"bills are being written to address these risks (I have introduced several myself\" (truncated). Beyer is the House Democrats' longtime AI-literacy voice.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:55",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097730021733400740",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T16:53:05.000Z",
+   "etTime": "Wed 12:53",
+   "etHour": "12",
+   "authorId": "3044993235",
+   "handle": "RepTedLieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 184121,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "Republican leadership should take up the bipartisan AI Kill Switch Bill NOW. https://t.co/YjK5TRd5Ws",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 1276,
+    "retweets": 177,
+    "replies": 126,
+    "quotes": 9,
+    "total": 1588,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Official-account quote of Coxon: \"Republican leadership should take up the bipartisan AI Kill Switch Bill NOW.\"",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:59",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097736459298201935",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T17:18:40.000Z",
+   "etTime": "Wed 13:18",
+   "etHour": "13",
+   "authorId": "174332143",
+   "handle": "yassaminansari",
+   "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "AZ-03",
+   "followers": 22313,
+   "type": "retweet",
+   "refId": "2097721236839162155",
+   "refHandle": "RepYassAnsari",
+   "refSource": "caucus post 2097721236839162155 (@RepYassAnsari)",
+   "text": "RT @RepYassAnsari: This is absolutely terrifying. Jacob Coxon and Evan Hubinger, top researchers at Anthropic and formerly OpenAI, said the…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 402,
+    "replies": 0,
+    "quotes": 0,
+    "total": 402,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": [
+     "other"
+    ]
+   },
+   "framingNote": "Personal-account RT of her own official-account post.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:622",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097738325876687234",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T17:26:05.000Z",
+   "etTime": "Wed 13:26",
+   "etHour": "13",
+   "authorId": "174332143",
+   "handle": "yassaminansari",
+   "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "AZ-03",
+   "followers": 22313,
+   "type": "retweet",
+   "refId": "2097556042573816094",
+   "refHandle": "hadip",
+   "refSource": "@hadip — \"Wild statement from Anthropic's leader in charge of keeping AI safe: more than 10% chance it kills everybody within 10 years\"",
+   "text": "RT @hadip: Wild statement from Anthropic’s leader in charge of keeping AI safe: more than 10% chance it kills everybody within 10 years. 🤯",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 22,
+    "replies": 0,
+    "quotes": 0,
+    "total": 22,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": []
+   },
+   "framingNote": "RT of @hadip on the Hubinger line (same source Gallego retweeted 12h earlier).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:623",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097742835252363408",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T17:44:00.000Z",
+   "etTime": "Wed 13:44",
+   "etHour": "13",
+   "authorId": "1633610542584659970",
+   "handle": "RepMcClellan",
+   "member": "Jennifer L. McClellan",
+   "memberAsListed": "Jennifer L. McClellan",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem",
+    "cbc"
+   ],
+   "status": "house",
+   "stateDistrict": "VA-04",
+   "followers": 7815,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "This is deeply alarming. \n\nIt’s past time we demand greater government oversight of AI before the quest for profit ends humanity. https://t.co/UAzsvW2ItR",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 2,
+    "quotes": 0,
+    "total": 2,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "existential-risk"
+    ]
+   },
+   "framingNote": "\"Greater government oversight of AI before the quest for profit ends humanity.\" Zero likes at capture.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:94",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097747342602752498",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T18:01:55.000Z",
+   "etTime": "Wed 14:01",
+   "etHour": "14",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "retweet",
+   "refId": "2097684240356049178",
+   "refHandle": "politico",
+   "refSource": "@politico — \"Lawmakers urge Congress to act after AI researcher's dire warning\"",
+   "text": "RT @politico: Lawmakers urge Congress to act after AI researcher’s dire warning https://t.co/bL4lQAJVNe",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 245,
+    "replies": 0,
+    "quotes": 0,
+    "total": 245,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": []
+   },
+   "framingNote": "RT of @politico \"Lawmakers urge Congress to act after AI researcher's dire warning\" (original 2097684240356049178, 09:51 ET).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:110",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097754129489596612",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T18:28:53.000Z",
+   "etTime": "Wed 14:28",
+   "etHour": "14",
+   "authorId": "771152516",
+   "handle": "RoKhanna",
+   "member": "Ro Khanna",
+   "memberAsListed": "Ro Khanna",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-17",
+   "followers": 476131,
+   "type": "quote",
+   "refId": "2097476203863224394",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — 1.7s after Coxon's post; quoted by Khanna and Gallego as the Hubinger >10% line",
+   "text": "Anthropic's alignment lead says there’s a 10% chance of AI causing human extinction. The problem is not just misuse, but lack of control. Bluntly, our government has been asleep and is out of touch. Here are 5 things we must do: \n\n✅ Establish a federal agency like we have for https://t.co/GuwTaTfixf https://t.co/BqdFPmDqa7",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 2225,
+    "retweets": 570,
+    "replies": 324,
+    "quotes": 79,
+    "total": 3198,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": [
+     "existential-risk"
+    ]
+   },
+   "framingNote": "The 5-point plan; quotes 2097476203863224394 (1.7s after Coxon's post; presumably the thread's second post carrying the Hubinger odds, UNVERIFIED). Only point 1 (\"establish a federal agency\") survives the 280-char capture. Highest-engaged plan post (2,225 likes, 570 RTs).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:137",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097774140497244388",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T19:48:24.000Z",
+   "etTime": "Wed 15:48",
+   "etHour": "15",
+   "authorId": "272191896",
+   "handle": "SarahEMcBride",
+   "member": "Sarah McBride",
+   "memberAsListed": "Sarah McBride",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "DE-AL",
+   "followers": 128989,
+   "type": "retweet",
+   "refId": "2097763150200447033",
+   "refHandle": "tracewoodgrains",
+   "refSource": "unread",
+   "text": "RT @tracewoodgrains: On @TheArgumentMag, @SarahEMcBride shares her thoughts on AI: likely the most significant transformation of society si…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 9,
+    "replies": 0,
+    "quotes": 0,
+    "total": 9,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "other",
+    "secondary": []
+   },
+   "framingNote": "RT about her Argument Magazine interview on AI as a societal transformation.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:215",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097784608788283532",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T20:30:00.000Z",
+   "etTime": "Wed 16:30",
+   "etHour": "16",
+   "authorId": "82453460",
+   "handle": "BennieGThompson",
+   "member": "Bennie G. Thompson",
+   "memberAsListed": "Bennie G. Thompson",
+   "accountType": "official",
+   "caucuses": [
+    "cbc"
+   ],
+   "status": "house",
+   "stateDistrict": "MS-02",
+   "followers": 106484,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "Data centers are being promoted as a source of economic growth, but that growth comes with important questions. \n\nHow will they affect our water supply, electricity costs, air quality, and quality of life? \n\nPeople deserve to know what is coming into their communities and how it https://t.co/b0UZarFKCX",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 32,
+    "retweets": 9,
+    "replies": 5,
+    "quotes": 1,
+    "total": 47,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "labor-economy",
+    "secondary": []
+   },
+   "framingNote": "Data centers: water, electricity costs, air quality. Belongs to the existing stories.json candidate `data-centers` (21 posts, 19 members, 08-20 to 09-09).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy",
+     "climate"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:258",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097787186665951287",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T20:40:14.000Z",
+   "etTime": "Wed 16:40",
+   "etHour": "16",
+   "authorId": "1863695408653889536",
+   "handle": "KellyMorrisonMN",
+   "member": "Kelly Morrison",
+   "memberAsListed": "Kelly Morrison",
+   "accountType": "official",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "MN-03",
+   "followers": 5084,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "The call is coming from inside the house. AI researchers themselves are warning of an existential threat to humanity.\n\nCongress can’t wait. Mike Johnson needs to cancel recess so we can get to work immediately – hearings, investigations, and comprehensive regulation. https://t.co/9ovsX3V3SA",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 212,
+    "retweets": 25,
+    "replies": 46,
+    "quotes": 4,
+    "total": 287,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "regulation-plan",
+     "existential-risk"
+    ]
+   },
+   "framingNote": "\"Mike Johnson needs to cancel recess... hearings, investigations, and comprehensive regulation.\" The one core post the classifier gave both tech/ai-policy and congress-politics/house-floor.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech/ai-policy",
+     "congress-politics/house-floor"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:269",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097791328319152411",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T20:56:42.000Z",
+   "etTime": "Wed 16:56",
+   "etHour": "16",
+   "authorId": "1080509366",
+   "handle": "RepBillFoster",
+   "member": "Bill Foster",
+   "memberAsListed": "Bill Foster",
+   "accountType": "official",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "IL-11",
+   "followers": 50174,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "Anyone who has read METR's Technical Report on the OpenAI/Hugging Face incident will understand that software-only controls will not be sufficient to contain superhuman AI.\n\nAny continuing work on adversarial superhuman intelligence must rely on the physical containment methods https://t.co/QdZOVU6FXi",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 754,
+    "retweets": 77,
+    "replies": 106,
+    "quotes": 24,
+    "total": 961,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": [
+     "existential-risk"
+    ]
+   },
+   "framingNote": "Technical containment argument citing METR's report on the OpenAI/Hugging Face incident; \"physical containment methods\" (truncated). Foster is the House's physicist.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:294",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097791752048427457",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T20:58:23.000Z",
+   "etTime": "Wed 16:58",
+   "etHour": "16",
+   "authorId": "1613637172346642432",
+   "handle": "RepGregLandsman",
+   "member": "Greg Landsman",
+   "memberAsListed": "Greg Landsman",
+   "accountType": "official",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "OH-01",
+   "followers": 21806,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "Another AI wakeup call for Congress…\n\nWe need to pass safeguards and protect our communities. https://t.co/NkLkUomaUx",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 110,
+    "retweets": 9,
+    "replies": 28,
+    "quotes": 2,
+    "total": 149,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "\"Another AI wakeup call for Congress... pass safeguards.\"",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:296",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097791781031047472",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T20:58:30.000Z",
+   "etTime": "Wed 16:58",
+   "etHour": "16",
+   "authorId": "1606115178210365448",
+   "handle": "RepBeccaB",
+   "member": "Becca Balint",
+   "memberAsListed": "Becca Balint",
+   "accountType": "official",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "VT-AL",
+   "followers": 32297,
+   "type": "quote",
+   "refId": "2097497037956891126",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-09T01:27Z; non-English quotes of it in x-search.json describe Hubinger confirming Coxon",
+   "text": "The time for burying our heads in the sand is over. If the people working directly on these technologies are saying this, it’s time to pump the brakes.\n\nWe can’t let these massive AI companies literally gamble with the future of humanity. https://t.co/O6lGmg793U",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 173,
+    "retweets": 27,
+    "replies": 30,
+    "quotes": 1,
+    "total": 231,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "existential-risk",
+    "secondary": [
+     "regulation-plan"
+    ]
+   },
+   "framingNote": "Quotes 2097497037956891126 (same source as Deluzio); \"literally gamble with the future of humanity\" echoes Coxon's \"gambling with our lives\".",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:297",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097795378905018543",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T21:12:48.000Z",
+   "etTime": "Wed 17:12",
+   "etHour": "17",
+   "authorId": "1082427779583541248",
+   "handle": "RepChuyGarcia",
+   "member": "Jesús G. \"Chuy\" García",
+   "memberAsListed": "Jesús G. \"Chuy\" García",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "chc"
+   ],
+   "status": "house",
+   "stateDistrict": "IL-04",
+   "followers": 43762,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "The unchecked development of AI by reckless, for-profit corporations and Big Tech oligarchs threatens our economy, democracy, and humanity itself.\n\nCongress must act to ban AI superintelligence, pause data center construction and advanced AI development, mandate independent https://t.co/YhIzyJdNQs",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 122,
+    "retweets": 18,
+    "replies": 10,
+    "quotes": 1,
+    "total": 151,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": [
+     "labor-economy",
+     "existential-risk"
+    ]
+   },
+   "framingNote": "\"Ban AI superintelligence, pause data center construction and advanced AI development, mandate independent\" (truncated); \"threatens our economy, democracy, and humanity\". Bridges to the data-centers thread.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:310",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097799028108910903",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T21:27:18.000Z",
+   "etTime": "Wed 17:27",
+   "etHour": "17",
+   "authorId": "1079802482640019456",
+   "handle": "RepLoriTrahan",
+   "member": "Lori Trahan",
+   "memberAsListed": "Lori Trahan",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem",
+    "chc",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "MA-03",
+   "followers": 39774,
+   "type": "quote",
+   "refId": "2097756596080168991",
+   "refHandle": null,
+   "refSource": "unread",
+   "text": "This is a big win for Massachusetts families!\n \n@MassGovernor just signed an executive order declaring that no data center can be built without local approval, and the tech companies pay for their own energy instead of passing the buck to residents.\n \nNow, Congress should pass https://t.co/Jxj1rWRAHe",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 5,
+    "retweets": 0,
+    "replies": 7,
+    "quotes": 0,
+    "total": 12,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "labor-economy",
+    "secondary": []
+   },
+   "framingNote": "Massachusetts data-center executive order; same `data-centers` candidate.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "economy"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:324",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097807998429130876",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:02:56.000Z",
+   "etTime": "Wed 18:02",
+   "etHour": "18",
+   "authorId": "1615455207713808384",
+   "handle": "Rep_Magaziner",
+   "member": "Seth Magaziner",
+   "memberAsListed": "Seth Magaziner",
+   "accountType": "official",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "RI-02",
+   "followers": 17864,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "Everyone is talking about AI insiders saying their technology is a threat to humanity. Here is what Congress can do about it. https://t.co/sTFvQ2WVmq",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 22,
+    "retweets": 5,
+    "replies": 4,
+    "quotes": 1,
+    "total": 32,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "\"Everyone is talking about AI insiders saying their technology is a threat to humanity. Here is what Congress can do about it\" + link (unread).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:351",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097813799470276818",
+   "tier": "adjacent",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:25:59.000Z",
+   "etTime": "Wed 18:25",
+   "etHour": "18",
+   "authorId": "1861930573733986305",
+   "handle": "RepSuhas",
+   "member": "Suhas Subramanyam",
+   "memberAsListed": "Suhas Subramanyam",
+   "accountType": "official",
+   "caucuses": [
+    "newdem",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "VA-10",
+   "followers": 10172,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "Data centers should not be built on the backs of communities and their utility bills. \n\nWe need a real national plan that gives Americans a voice. https://t.co/Wrh9e7qGDk",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 7,
+    "retweets": 1,
+    "replies": 3,
+    "quotes": 0,
+    "total": 11,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "labor-economy",
+    "secondary": []
+   },
+   "framingNote": "Data centers on utility bills; the 09-09 classifier filed it as emerging cluster `data-centers-utility-costs`.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [],
+    "emerging": [
+     "data-centers-utility-costs"
+    ]
+   },
+   "source": "data/archive/2026-09-09.jsonl:364",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097820074568454156",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:50:56.000Z",
+   "etTime": "Wed 18:50",
+   "etHour": "18",
+   "authorId": "2966570782",
+   "handle": "SenRubenGallego",
+   "member": "Ruben Gallego",
+   "memberAsListed": "Senator Ruben Gallego",
+   "accountType": "official",
+   "caucuses": [],
+   "status": "senate",
+   "stateDistrict": null,
+   "followers": 119713,
+   "type": "quote",
+   "refId": "2097476203863224394",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — 1.7s after Coxon's post; quoted by Khanna and Gallego as the Hubinger >10% line",
+   "text": "Mitigating the risk of extinction from AI should be a global priority on par with pandemics and nuclear war.\n\nThat's why I'm urging Senate leadership to move immediately to establish a bipartisan Senate Select Committee on Artificial Intelligence.\n\nWe can’t wait for a https://t.co/4nnm1JXeLZ",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 568,
+    "retweets": 105,
+    "replies": 85,
+    "quotes": 7,
+    "total": 765,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "existential-risk"
+    ]
+   },
+   "framingNote": "Senate account (on the list; status=senate). CAIS-statement language (\"on par with pandemics and nuclear war\"); asks for a bipartisan Senate Select Committee on AI. Quotes 2097476203863224394.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:375",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097821329063833969",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:55:55.000Z",
+   "etTime": "Wed 18:55",
+   "etHour": "18",
+   "authorId": "49217025",
+   "handle": "RubenGallego",
+   "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
+   "accountType": "personal",
+   "caucuses": [],
+   "status": "senate",
+   "stateDistrict": null,
+   "followers": 211468,
+   "type": "retweet",
+   "refId": "2097820074568454156",
+   "refHandle": "SenRubenGallego",
+   "refSource": "caucus post 2097820074568454156 (@SenRubenGallego)",
+   "text": "RT @SenRubenGallego: Mitigating the risk of extinction from AI should be a global priority on par with pandemics and nuclear war.\n\nThat's w…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 108,
+    "replies": 0,
+    "quotes": 0,
+    "total": 108,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "existential-risk"
+    ]
+   },
+   "framingNote": "Personal-account RT of the Senate-account post above.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:611",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097821641623437464",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:57:09.000Z",
+   "etTime": "Wed 18:57",
+   "etHour": "18",
+   "authorId": "49217025",
+   "handle": "RubenGallego",
+   "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
+   "accountType": "personal",
+   "caucuses": [],
+   "status": "senate",
+   "stateDistrict": null,
+   "followers": 211468,
+   "type": "retweet",
+   "refId": "2097818430032257216",
+   "refHandle": "igorbobic",
+   "refSource": "@igorbobic — \"Democrats are gearing up for action on AI\" (Robert Garcia / Oversight investigations)",
+   "text": "RT @igorbobic: News: Democrats are gearing up for action on AI \n\nRep. Robert Garcia, top Dem on the House Oversight, says investigations wi…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 23,
+    "replies": 0,
+    "quotes": 0,
+    "total": 23,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": []
+   },
+   "framingNote": "RT of @igorbobic: \"Democrats are gearing up for action on AI... Rep. Robert Garcia, top Dem on House Oversight, says investigations wi…\" (original 2097818430032257216, 18:44 ET). The Oversight-investigations signal enters the corpus only via this RT; Garcia's own account did not post it in-window.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:380",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097822197821661436",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T22:59:22.000Z",
+   "etTime": "Wed 18:59",
+   "etHour": "18",
+   "authorId": "1074354529787895808",
+   "handle": "repdeliaramirez",
+   "member": "Delia C. Ramirez",
+   "memberAsListed": "Delia C. Ramirez",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "chc"
+   ],
+   "status": "house",
+   "stateDistrict": "IL-03",
+   "followers": 31010,
+   "type": "quote",
+   "refId": "2097476196791709843",
+   "refHandle": null,
+   "refSource": "@hilbertspaess (Jacob Coxon) — resignation post",
+   "text": "Employees are sounding the alarms: Big Tech doesn't care about protecting us from AI as long as they profit. \n \nAI tools are being recklessly accelerated by big tech without guardrails, oversight, or accountability.\n \nWe must demand Congressional oversight and action to protect https://t.co/tfB4zzidCh",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 116,
+    "retweets": 26,
+    "replies": 25,
+    "quotes": 3,
+    "total": 170,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "other"
+    ]
+   },
+   "framingNote": "\"Employees are sounding the alarms: Big Tech doesn't care... We must demand Congressional oversight and action\" (truncated).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:383",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097833789049233477",
+   "tier": "core",
+   "linkage": "inferred",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T23:45:25.000Z",
+   "etTime": "Wed 19:45",
+   "etHour": "19",
+   "authorId": "1345103905869455361",
+   "handle": "RepSaraJacobs",
+   "member": "Sara Jacobs",
+   "memberAsListed": "Sara Jacobs",
+   "accountType": "official",
+   "caucuses": [
+    "progressive",
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-51",
+   "followers": 68518,
+   "type": "tweet",
+   "refId": null,
+   "refHandle": null,
+   "refSource": null,
+   "text": "We don’t have time to wait. The massive threats posed by AI are here and now, and Congress needs to act. https://t.co/AEh3WcXJII",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 123,
+    "retweets": 10,
+    "replies": 28,
+    "quotes": 2,
+    "total": 163,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "\"The massive threats posed by AI are here and now, and Congress needs to act\" + link (unread). No explicit reference; tied by same-day timing and wording.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:405",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097835829670428919",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-09T23:53:32.000Z",
+   "etTime": "Wed 19:53",
+   "etHour": "19",
+   "authorId": "1434052620",
+   "handle": "SethMagaziner",
+   "member": "Seth Magaziner",
+   "memberAsListed": "Seth Magaziner",
+   "accountType": "personal",
+   "caucuses": [
+    "newdem"
+   ],
+   "status": "house",
+   "stateDistrict": "RI-02",
+   "followers": 19058,
+   "type": "retweet",
+   "refId": "2097807998429130876",
+   "refHandle": "Rep_Magaziner",
+   "refSource": "caucus post 2097807998429130876 (@Rep_Magaziner)",
+   "text": "RT @Rep_Magaziner: Everyone is talking about AI insiders saying their technology is a threat to humanity. Here is what Congress can do abou…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 5,
+    "replies": 0,
+    "quotes": 0,
+    "total": 5,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Personal-account RT of his official-account post.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:620",
+   "capturedAt": "2026-09-10T05:59:14.108Z"
+  },
+  {
+   "id": "2097854564930310161",
+   "tier": "adjacent",
+   "linkage": "unverified",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-10T01:07:59.000Z",
+   "etTime": "Wed 21:07",
+   "etHour": "21",
+   "authorId": "174332143",
+   "handle": "yassaminansari",
+   "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive"
+   ],
+   "status": "house",
+   "stateDistrict": "AZ-03",
+   "followers": 22313,
+   "type": "retweet",
+   "refId": "2097846545408262403",
+   "refHandle": "AlexBores",
+   "refSource": "@AlexBores — OpenAI gov-affairs lobbying claim",
+   "text": "RT @AlexBores: Never thought I'd live to see the day when OpenAI gov affairs claims to have supported all the bills they lobbied against.…",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 0,
+    "retweets": 65,
+    "replies": 0,
+    "quotes": 0,
+    "total": 65,
+    "note": "metricsAtCapture on a retweet carries the ORIGINAL post's counts; not summed"
+   },
+   "framing": {
+    "primary": "other",
+    "secondary": []
+   },
+   "framingNote": "RT of @AlexBores (NY Assembly, RAISE Act author) on OpenAI government-affairs claiming to have supported bills it lobbied against. Plausibly part of the OpenAI response to the cycle; the original (2097846545408262403, 20:36 ET) is unread.",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:432",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097888523562913941",
+   "tier": "core",
+   "linkage": "explicit",
+   "etDay": "2026-09-09",
+   "createdAt": "2026-09-10T03:22:55.000Z",
+   "etTime": "Wed 23:22",
+   "etHour": "23",
+   "authorId": "771152516",
+   "handle": "RoKhanna",
+   "member": "Ro Khanna",
+   "memberAsListed": "Ro Khanna",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-17",
+   "followers": 476131,
+   "type": "quote",
+   "refId": "2097754129489596612",
+   "refHandle": null,
+   "refSource": "caucus post 2097754129489596612 (@RoKhanna)",
+   "text": "Speaker Mike Johnson has a moral and practical duty to keep Congress in session until we have taken meaningful action to regulate AI. When members of the House and Senate return to Washington next week, they should fully investigate the threat — and they should not leave DC until https://t.co/mfCSjPceqV",
+   "textTruncated": true,
+   "engagement": {
+    "likes": 236,
+    "retweets": 54,
+    "replies": 34,
+    "quotes": 10,
+    "total": 334,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "hearings-oversight",
+    "secondary": [
+     "regulation-plan"
+    ]
+   },
+   "framingNote": "Quotes his own 5-point plan: Johnson must \"keep Congress in session until we have taken meaningful action to regulate AI... fully investigate the threat\". The one caucus post x-search.json's sampled windows caught (its byAccountType caucus-member=1).",
+   "classifier": {
+    "file": "data/topics/2026-09-09.json",
+    "status": "classified",
+    "topics": [
+     "tech",
+     "congress-politics"
+    ],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-09.jsonl:458",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  },
+  {
+   "id": "2097918991327252661",
+   "tier": "adjacent",
+   "linkage": "unverified",
+   "etDay": "2026-09-10",
+   "createdAt": "2026-09-10T05:23:59.000Z",
+   "etTime": "Thu 01:23",
+   "etHour": "01",
+   "authorId": "21059255",
+   "handle": "tedlieu",
+   "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
+   "accountType": "personal",
+   "caucuses": [
+    "progressive",
+    "capac",
+    "leadership"
+   ],
+   "status": "house",
+   "stateDistrict": "CA-36",
+   "followers": 1504521,
+   "type": "quote",
+   "refId": "2097852614486511626",
+   "refHandle": null,
+   "refSource": "UNVERIFIED — posted 2026-09-10T01:00Z; quoted by @tedlieu on CA vs national AI standards",
+   "text": "Dear @WhiteHouse and AI companies: California is the 4th largest economy in the world. I’m happy to let CA dictate AI laws that AI companies will obey.\n\nOr you can work with Dems in DC to set strong national standards.\n\nThe trump Administration’s do nothing approach has failed. https://t.co/qXamVIb2LH",
+   "textTruncated": false,
+   "engagement": {
+    "likes": 7,
+    "retweets": 2,
+    "replies": 1,
+    "quotes": 0,
+    "total": 10,
+    "note": "metricsAtCapture at 2026-09-10T05:26:40.847Z"
+   },
+   "framing": {
+    "primary": "regulation-plan",
+    "secondary": []
+   },
+   "framingNote": "Wed 09-10 01:23 ET. \"Dear @WhiteHouse and AI companies... let CA dictate AI laws... or work with Dems in DC to set strong national standards.\" Quotes 2097852614486511626 (2026-09-10T01:00Z, unread). Reads as the preemption fight reopening in the wake of the story; no data/topics/2026-09-10.json yet.",
+   "classifier": {
+    "file": null,
+    "status": "no-topics-file",
+    "topics": [],
+    "emerging": []
+   },
+   "source": "data/archive/2026-09-10.jsonl:3",
+   "capturedAt": "2026-09-10T05:26:40.847Z"
+  }
+ ]
+}

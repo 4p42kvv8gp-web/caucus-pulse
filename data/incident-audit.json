@@ -1,0 +1,1065 @@
+{
+  "generatedAt": "2026-09-10T07:18:34.873Z",
+  "source": {
+    "incidents_file": "data/incidents.json",
+    "incidents_generated_at": "2026-09-10T06:40:32.563Z",
+    "classifier_model": "claude-opus-5",
+    "prompt": "src/taxonomy.js systemPrompt() INCIDENTS rule"
+  },
+  "method": "Each incident’s source posts were read from data/archive (full text, type, quoted/retweeted id), the author from data/authors.json (handle, stateDistrict, house/senate), and the classifier’s kind/place from data/topics/<date>.json. Verdicts follow the prompt’s own definition: a breaking district emergency the member is personally handling, correctly located. External facts used only to settle dates and places the corpus cannot: Hurricane Lala landfall 15-16 Aug (weather.com), Hurricane Lowell over Kauaʻi/Niʻihau 7-8 Sept (Honolulu Civil Beat, Star-Advertiser), 21 Air Flight 7598 runway overrun at MIA 6 Sept (Wikipedia, NPR), the 3-4 Sept Airport Fire in Thermal, Riverside County (KESQ, CAL FIRE), the Austin/Narrows fires in Mt. Hood National Forest (InciWeb, NWCC), the Aspen Acres and Gold Mountain fires and their 4 Sept declaration (CPR), and CA-38 including La Habra (lindasanchez.house.gov).",
+  "counts": {
+    "incidents": 29,
+    "TRUE": 9,
+    "FALSE POSITIVE": 16,
+    "AMBIGUOUS": 4,
+    "active_cards": 5,
+    "active_true": 1,
+    "active_false_positive": 2,
+    "active_ambiguous": 2
+  },
+  "precision": 0.36,
+  "precision_detail": {
+    "TRUE / (TRUE + FALSE POSITIVE)": 0.36,
+    "TRUE / all 29 (ambiguous counted as wrong)": 0.31,
+    "House members only, TRUE / (TRUE + FALSE POSITIVE) (drops the Senator incidents)": 0.333
+  },
+  "corpus_context": {
+    "flags_in_topics_files": 174,
+    "distinct_incident_keys": 102,
+    "distinct_kind_strings": 41,
+    "flags_from_non_house_accounts": 14,
+    "flags_with_state_or_unspecified_place": 18,
+    "days": "2026-08-20 .. 2026-09-09",
+    "note": "incidents.json keeps only groups with a member post in the last 7 days; the older flags were used to check grouping and to find repeated failure modes."
+  },
+  "verdicts": [
+    {
+      "id": "san-diego-ca--extreme-heat",
+      "title": "Extreme heat · San Diego, CA",
+      "status": "active",
+      "verdict": "AMBIGUOUS",
+      "reason": "In-district (CA-50) and current, but an NWS heat advisory with cool-zone guidance is a public-safety PSA, not a breaking emergency the member is handling; the prompt does not say whether advisories qualify. Same 8-9 Sept Southern California heat warning as orange-and-la-counties-ca--extreme-heat.",
+      "evidence": "San Diego is experiencing an extreme heat wave expected to last through 8pm today and possibly into tomorrow. Find a designated cool zone near you",
+      "correct_kind": "extreme heat (advisory; below incident threshold)",
+      "correct_place": "San Diego, CA",
+      "classifier_kind": "extreme heat",
+      "classifier_place": "San Diego, CA · CA-50",
+      "member": "Scott H. Peters",
+      "handle": "@RepScottPeters",
+      "district": "CA-50",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097787715458675057"
+      ],
+      "failure_modes": [
+        "advisory"
+      ]
+    },
+    {
+      "id": "kauai-hi--tropical-storm",
+      "title": "Tropical storm · Kauai, HI",
+      "status": "active",
+      "verdict": "AMBIGUOUS",
+      "reason": "Hurricane Lowell (Category 2) hit Kauaʻi and Niʻihau on 7-8 Sept and knocked out ~90% of Kauaʻi’s power, so the event is real and current and the member is relaying the state’s damage-report link. But Kauaʻi/Niʻihau are in HI-02, not Ed Case’s HI-01 (the desk shows “Kauai, HI · HI-01”), the post is framed as recovery, and the kind should be hurricane, not tropical storm.",
+      "evidence": "Thinking of all our ‘ohana recovering from devastating Lowell. […] especially for Kaua’i/Ni’ihau, the link to report storm damage which will be used to request a presidential disaster declaration",
+      "correct_kind": "hurricane (Lowell)",
+      "correct_place": "Kauaʻi & Niʻihau, HI (HI-02)",
+      "classifier_kind": "tropical storm",
+      "classifier_place": "Kauai, HI · HI-01",
+      "member": "Ed Case",
+      "handle": "@RepEdCase",
+      "district": "HI-01",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097783883286905197"
+      ],
+      "failure_modes": [
+        "recovery",
+        "district-suffix"
+      ]
+    },
+    {
+      "id": "ka-hi--hurricane-damage",
+      "title": "Hurricane damage · Kaʻū, HI",
+      "status": "active",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Past event: Lala struck Hawaiʻi Island on 15-16 Aug, three and a half weeks before this post. The post is recovery advocacy (“working to urgently bring federal support”), not a breaking emergency. In-district (Kaʻū is on Hawaiʻi Island, HI-02). Also split from hawaii-island-hi--hurricane-damage (same storm, same member).",
+      "evidence": "The destruction Hurricane Lala left behind on farms across Kaʻū is extensive.",
+      "correct_kind": "hurricane recovery (Lala) — not an incident",
+      "correct_place": "Kaʻū, Hawaiʻi Island, HI",
+      "classifier_kind": "hurricane damage",
+      "classifier_place": "Kaʻū, HI · HI-02",
+      "member": "Jill N. Tokuda",
+      "handle": "@RepJillTokuda",
+      "district": "HI-02",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097779291673248203"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split"
+      ]
+    },
+    {
+      "id": "napa-county-ca--wildfire",
+      "title": "Wildfire · Napa County, CA",
+      "status": "active",
+      "verdict": "TRUE",
+      "reason": "Live evacuation warning relayed by the member for a fire in his district (Napa County is in CA-04). Exactly what the desk is for.",
+      "evidence": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008. Please be vigilante and ready to evacuate when and if needed.",
+      "correct_kind": "wildfire",
+      "correct_place": "Steele Fire, Napa County, CA",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Napa County, CA · CA-04",
+      "member": "Mike Thompson",
+      "handle": "@RepThompson",
+      "district": "CA-04",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097766395152933115"
+      ],
+      "failure_modes": []
+    },
+    {
+      "id": "miami-fl--plane-crash",
+      "title": "Plane crash · Miami, FL",
+      "status": "active",
+      "verdict": "FALSE POSITIVE",
+      "reason": "21 Air Flight 7598 overran a runway at MIA on 6 Sept (five dead) — a real major accident, but all four flagged posts are condolence/reaction posts and no member is handling anything. MIA is in Miami-Dade County: not in FL-09 (Kissimmee/Orlando, the lead author) and not in MN-04 (Betty McCollum, Minnesota); FL-24/FL-25 are neighbouring South Florida districts. The desk labels it “Miami, FL · FL-09”. This is national news the caucus reacted to — an emerging story, not a district incident.",
+      "evidence": "What a tragedy. Praying for the families of those who perished at Miami Airport […] / It is devastating to see the loss of five lives as a result of the Amazon plane that over ran the runway at the Miami International Airport.",
+      "correct_kind": "plane crash (caucus reaction — not a district incident)",
+      "correct_place": "Miami International Airport, Miami-Dade County, FL",
+      "classifier_kind": "plane crash",
+      "classifier_place": "Miami, FL · FL-09",
+      "member": "Darren Soto",
+      "handle": "@RepDarrenSoto",
+      "district": "FL-09",
+      "house_member": true,
+      "others": [
+        "@RepDWStweets",
+        "@RepWilson",
+        "@BettyMcCollum04"
+      ],
+      "post_ids": [
+        "2096738657470153210",
+        "2096757393291927573",
+        "2097152945695449421",
+        "2097760977533956208"
+      ],
+      "failure_modes": [
+        "reaction",
+        "district-suffix"
+      ]
+    },
+    {
+      "id": "eastern-oregon-or--wildfire",
+      "title": "Wildfire · Eastern Oregon, OR",
+      "status": "monitoring",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Wrong place: the Austin and Narrows fires are in Mt. Hood National Forest southeast of Estacada (Clackamas/Marion/Wasco counties, northwest Oregon), not “Eastern Oregon”. The post names no place; the classifier guessed. The substance is a site visit framed around legislation (“In Congress, I am working on legislation”), not incident handling.",
+      "evidence": "I visited the incident command posts servicing the Austin and Narrows fires with @SenJeffMerkley to learn how to better support our firefighters this wildfire season and beyond.",
+      "correct_kind": "wildfire (site visit / legislation — not an incident)",
+      "correct_place": "Austin & Narrows fires, Mt. Hood National Forest (Clackamas County), OR",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Eastern Oregon, OR · OR-03",
+      "member": "Maxine Dexter",
+      "handle": "@RepDexterOR",
+      "district": "OR-03",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097699017979236377"
+      ],
+      "failure_modes": [
+        "place-hallucination",
+        "policy"
+      ]
+    },
+    {
+      "id": "monterey-county-ca--wildfire",
+      "title": "Wildfire · Monterey County, CA",
+      "status": "monitoring",
+      "verdict": "TRUE",
+      "reason": "Ongoing Timber and Plaskett fires in CA-19 with sheriff evacuation updates and containment figures relayed by the member. Correct. But the same fires also live under big-sur-ca--wildfire (and, earlier in the corpus, one Timber Fire RT was keyed as mariposa-county-ca--wildfire): 23 + 4 + 1 flags over three keys.",
+      "evidence": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update *** […] Plaskett is now 61% contained and Timber is at 27%.",
+      "correct_kind": "wildfire",
+      "correct_place": "Timber & Plaskett fires, Monterey County (Big Sur), CA",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Monterey County, CA · CA-19",
+      "member": "Jimmy Panetta",
+      "handle": "@RepJimmyPanetta",
+      "district": "CA-19",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095513274666115365",
+        "2095546180369330381",
+        "2095959332437279110",
+        "2097681465265795466"
+      ],
+      "failure_modes": [
+        "split"
+      ]
+    },
+    {
+      "id": "la-habra-ca--chemical-leak",
+      "title": "Chemical leak · La Habra, CA",
+      "status": "monitoring",
+      "verdict": "TRUE",
+      "reason": "Same-day all-clear relayed for the 8 Sept La Habra hazmat evacuation; La Habra is in CA-38. Correct event, but split from la-habra-ca--hazmat-release (same event, same member, 2.5 hours apart) because the kind string changed from “hazmat release” to “chemical leak”.",
+      "evidence": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra",
+      "correct_kind": "hazmat",
+      "correct_place": "La Habra, CA",
+      "classifier_kind": "chemical leak",
+      "classifier_place": "La Habra, CA · CA-38",
+      "member": "Linda T. Sánchez",
+      "handle": "@RepLindaSanchez",
+      "district": "CA-38",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097465021995356640",
+        "2097465033416458372"
+      ],
+      "failure_modes": [
+        "split"
+      ]
+    },
+    {
+      "id": "la-habra-ca--hazmat-release",
+      "title": "Hazmat release · La Habra, CA",
+      "status": "monitoring",
+      "verdict": "TRUE",
+      "reason": "Live evacuation order relayed to constituents in the member’s district. Correct. Should be one incident with la-habra-ca--chemical-leak.",
+      "evidence": "🚨 LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street. Officials have ordered evacuations within a 1-mile radius",
+      "correct_kind": "hazmat",
+      "correct_place": "La Habra, CA",
+      "classifier_kind": "hazmat release",
+      "classifier_place": "La Habra, CA · CA-38",
+      "member": "Linda T. Sánchez",
+      "handle": "@RepLindaSanchez",
+      "district": "CA-38",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097429464565108767"
+      ],
+      "failure_modes": [
+        "split"
+      ]
+    },
+    {
+      "id": "orange-and-la-counties-ca--extreme-heat",
+      "title": "Extreme heat · Orange and LA counties, CA",
+      "status": "monitoring",
+      "verdict": "AMBIGUOUS",
+      "reason": "In-district (CA-45 straddles Orange and LA counties) and current, but a forecast-style Extreme Heat Warning with “check in on seniors” advice reports no impact and involves no member action beyond the PSA. Same regional heat event as san-diego-ca--extreme-heat.",
+      "evidence": "Orange and L.A. counties are under an Extreme Heat Warning through Wednesday, September 9th",
+      "correct_kind": "extreme heat (advisory; below incident threshold)",
+      "correct_place": "Orange & Los Angeles counties, CA",
+      "classifier_kind": "extreme heat",
+      "classifier_place": "Orange and LA counties, CA · CA-45",
+      "member": "Derek Tran",
+      "handle": "@RepDerekTranCA",
+      "district": "CA-45",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097429404288720922"
+      ],
+      "failure_modes": [
+        "advisory"
+      ]
+    },
+    {
+      "id": "gary-in--storm-damage",
+      "title": "Storm damage · Gary, IN",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Recovery administration for the 11 Aug Northwest Indiana storms, four weeks earlier (the member’s own 22 Aug post: “the devastating storms of August 11th”). The kind “storm damage” is not in the post. One of four keys in the window (nine across the corpus) for the same event from the same member’s daily updates.",
+      "evidence": "As we continue in the storm recovery, I wanted to share information today on certain assistance that is now available from the City of Gary.",
+      "correct_kind": "storm recovery (11 Aug storm) — not an incident",
+      "correct_place": "Gary / Northwest Indiana, IN",
+      "classifier_kind": "storm damage",
+      "classifier_place": "Gary, IN · IN-01",
+      "member": "Frank J. Mrvan",
+      "handle": "@RepMrvan",
+      "district": "IN-01",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097351259149701450"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split"
+      ]
+    },
+    {
+      "id": "lake-station-in--flooding",
+      "title": "Flooding · Lake Station, IN",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Same 11 Aug storm recovery (a Labor Day post that also mentions the intake-centre schedule). The kind “flooding” does not appear in the post; it was inferred. Split from the other three Mrvan keys.",
+      "evidence": "I also wanted to share this daily storm update with information on the Mobile Registration Intake Center in Lake Station happening this week.",
+      "correct_kind": "storm recovery (11 Aug storm) — not an incident",
+      "correct_place": "Lake Station / Northwest Indiana, IN",
+      "classifier_kind": "flooding",
+      "classifier_place": "Lake Station, IN · IN-01",
+      "member": "Frank J. Mrvan",
+      "handle": "@RepMrvan",
+      "district": "IN-01",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2097033286920860097"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split",
+        "kind-guess"
+      ]
+    },
+    {
+      "id": "porter-county-in--storm-damage",
+      "title": "Storm damage · Porter County, IN",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "A reminder about an assistance event “next week” for a storm three and a half weeks earlier. Recovery administration, not a breaking emergency. Split from the other Mrvan keys.",
+      "evidence": "I want to remind residents of the One-Stop-Shop in Porter County for storm assistance happening next week.",
+      "correct_kind": "storm recovery (11 Aug storm) — not an incident",
+      "correct_place": "Porter County / Northwest Indiana, IN",
+      "classifier_kind": "storm damage",
+      "classifier_place": "Porter County, IN · IN-01",
+      "member": "Frank J. Mrvan",
+      "handle": "@RepMrvan",
+      "district": "IN-01",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2096645336655700019"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split"
+      ]
+    },
+    {
+      "id": "indianapolis-in--flooding",
+      "title": "Flooding · Indianapolis, IN",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "FEMA application-deadline PSA for flooding that hit in mid-August (his 21 Aug post: “Indianapolis is recovering from record-breaking flooding”; the federal declaration was approved 26 Aug). In-district (IN-07) but a past event.",
+      "evidence": "If you were impacted by recent flooding in Indianapolis, federal assistance may be available. Here’s what you need to know to apply by October 25, 2026.",
+      "correct_kind": "flood recovery — not an incident",
+      "correct_place": "Indianapolis, IN",
+      "classifier_kind": "flooding",
+      "classifier_place": "Indianapolis, IN · IN-07",
+      "member": "André Carson",
+      "handle": "@RepAndreCarson",
+      "district": "IN-07",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2096313588805783754"
+      ],
+      "failure_modes": [
+        "recovery"
+      ]
+    },
+    {
+      "id": "big-sur-ca--wildfire",
+      "title": "Wildfire · Big Sur, CA",
+      "status": "resolved",
+      "verdict": "TRUE",
+      "reason": "Road-status update on the ongoing Timber/Plaskett fires in the member’s district. Correct, but Big Sur is in Monterey County and these are the same fires as monterey-county-ca--wildfire — one event under two keys because the place granularity changed.",
+      "evidence": "Part of Highway 1 is reopen for Big Sur businesses and residents. We are grateful to the firefighters and first responders who are working around the clock to protect our communities and put out the fires.",
+      "correct_kind": "wildfire",
+      "correct_place": "Timber & Plaskett fires, Monterey County (Big Sur), CA",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Big Sur, CA · CA-19",
+      "member": "Jimmy Panetta",
+      "handle": "@RepJimmyPanetta",
+      "district": "CA-19",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2096273905619013985"
+      ],
+      "failure_modes": [
+        "split"
+      ]
+    },
+    {
+      "id": "detroit-mi--tornado",
+      "title": "Tornado · Detroit, MI",
+      "status": "resolved",
+      "verdict": "AMBIGUOUS",
+      "reason": "Re-check: the visible text is a reaction post about a past event — “My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm” — posted two days after the storm; “aftermath” is one of the audit’s own past-event cues. The NWS sentence is news, not handling. The original TRUE rested on “resources for the lower east side”, but the post is truncated at “For families on the lower east” in every copy in the repo (data/archive, data/topics, data/metrics, site/data/rollups.json), so any handling content is unverified. Author is a US Senator, not a House member. Real event, but the corpus does not show the member handling it.",
+      "evidence": "My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm. […] For families on the lower east",
+      "correct_kind": "severe storm / tornado",
+      "correct_place": "Detroit (east side), MI",
+      "classifier_kind": "tornado",
+      "classifier_place": "Detroit, MI",
+      "member": "Sen. Elissa Slotkin",
+      "handle": "@SenatorSlotkin",
+      "district": "US Senate",
+      "house_member": false,
+      "others": [],
+      "post_ids": [
+        "2096239428687577412"
+      ],
+      "failure_modes": [
+        "split",
+        "roster",
+        "reaction"
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "TRUE",
+        "to": "AMBIGUOUS",
+        "at": "2026-09-10"
+      }
+    },
+    {
+      "id": "detroit-mi--severe-storms",
+      "title": "Severe storms · Detroit, MI",
+      "status": "resolved",
+      "verdict": "TRUE",
+      "reason": "Next-day shelter and outage hotlines for the 3 Sept storm in the member’s district (Detroit’s east side is MI-13). Correct. Split from the three other Michigan keys for the same storm.",
+      "evidence": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE customer who has a power outage, call 877-447-4747",
+      "correct_kind": "severe storm / tornado",
+      "correct_place": "Detroit, MI",
+      "classifier_kind": "severe storms",
+      "classifier_place": "Detroit, MI · MI-13",
+      "member": "Shri Thanedar",
+      "handle": "@RepShriThanedar",
+      "district": "MI-13",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095977527172890978"
+      ],
+      "failure_modes": [
+        "split"
+      ]
+    },
+    {
+      "id": "aspen-acres-gold-mountain-co--wildfire",
+      "title": "Wildfire · Aspen Acres & Gold Mountain, CO",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Federal disaster-declaration news for fires that started in late June (Aspen Acres: Pueblo/Custer/Dolores counties; Gold Mountain: Ouray County). “Spent months” is in the post itself. Recovery/policy, not breaking. Split from aspen-co--wildfire (same fires, different member, different place string).",
+      "evidence": "This disaster declaration is a critical step forward for every family affected by the Aspen Acres and Gold Mountain fires who have been desperately waiting for this moment. These communities have endured unimaginable loss &amp; spent months wondering whether help was coming.",
+      "correct_kind": "wildfire recovery / disaster declaration — not an incident",
+      "correct_place": "Aspen Acres Fire (Custer/Pueblo counties) & Gold Mountain Fire (Ouray County), CO",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Aspen Acres & Gold Mountain, CO · CO-07",
+      "member": "Brittany Pettersen",
+      "handle": "@RepPettersen",
+      "district": "CO-07",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095971514361209296"
+      ],
+      "failure_modes": [
+        "recovery",
+        "policy",
+        "split"
+      ]
+    },
+    {
+      "id": "lake-county-ca--wildfire",
+      "title": "Wildfire · Lake County, CA",
+      "status": "resolved",
+      "verdict": "TRUE",
+      "reason": "Live evacuation order relayed by the member; Lake County is in CA-04. Correctly kept separate from the Steele Fire (napa-county-ca--wildfire) — a different fire five days later.",
+      "evidence": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
+      "correct_kind": "wildfire",
+      "correct_place": "Scott Fire, Lake County, CA",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Lake County, CA · CA-04",
+      "member": "Mike Thompson",
+      "handle": "@RepThompson",
+      "district": "CA-04",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095966636222144688"
+      ],
+      "failure_modes": []
+    },
+    {
+      "id": "northwest-indiana-in--storm-damage",
+      "title": "Storm damage · Northwest Indiana, IN",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "USDA assistance information for “the August storm” (11 Aug), stated as past in the post. Recovery administration. Split from the other Mrvan keys.",
+      "evidence": "As Northwest Indiana continues to recover after the August storm, I wanted to share information on assistance from the U.S. Department of Agriculture for our farmers and agricultural producers",
+      "correct_kind": "storm recovery (11 Aug storm) — not an incident",
+      "correct_place": "Northwest Indiana, IN",
+      "classifier_kind": "storm damage",
+      "classifier_place": "Northwest Indiana, IN · IN-01",
+      "member": "Frank J. Mrvan",
+      "handle": "@RepMrvan",
+      "district": "IN-01",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095961160432619692"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split"
+      ]
+    },
+    {
+      "id": "washington-wa--wildfire",
+      "title": "Wildfire · Washington, WA",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "A weekly newsletter with a state cash-assistance link for fires “on or after June 14” (her 25 Aug RT). No specific fire, no live event; “Washington, WA” is a state, not a place. The same newsletter was also flagged on 21 Aug (wa--wildfire).",
+      "evidence": "Here is this week’s Schrier Flyer - with another round of wildfire resources.",
+      "correct_kind": "wildfire recovery resources (newsletter) — not an incident",
+      "correct_place": "n/a (statewide newsletter)",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Washington, WA · WA-08",
+      "member": "Kim Schrier",
+      "handle": "@RepKimSchrier",
+      "district": "WA-08",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095960913144693225"
+      ],
+      "failure_modes": [
+        "recovery",
+        "state-place"
+      ]
+    },
+    {
+      "id": "orange-county-ca--wildfire",
+      "title": "Wildfire · Orange County, CA",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Wrong place: this Airport Fire burned about 50 acres beside Jacqueline Cochran Regional Airport in Thermal (Riverside County, inside CA-25) on the night of 3-4 Sept with no evacuations; the classifier put it in Orange County — the site of the unrelated 2024 Airport Fire — which is not in CA-25. The post is a thank-you after forward progress was stopped: a contained brush fire, not a community-scale emergency.",
+      "evidence": "Emergency responders have successfully stopped the #AirportFire’s forward spread across approximately 50 acres",
+      "correct_kind": "brush fire (contained, no evacuations — below threshold)",
+      "correct_place": "Thermal (Riverside County), CA",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Orange County, CA · CA-25",
+      "member": "Raul Ruiz",
+      "handle": "@RepRaulRuizMD",
+      "district": "CA-25",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095943690560675855"
+      ],
+      "failure_modes": [
+        "place-hallucination",
+        "threshold"
+      ]
+    },
+    {
+      "id": "illinois-il--severe-storms",
+      "title": "Severe storms · Illinois, IL",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "A Labor Day-week thank-you for past storms. Commemoration, state-level place, no live event.",
+      "evidence": "Our skilled laborers and first responders who are helping our communities recover after the July and August severe storms are a testament to the spirit of the people of Illinois.",
+      "correct_kind": "commemoration / thank-you — not an incident",
+      "correct_place": "n/a (statewide)",
+      "classifier_kind": "severe storms",
+      "classifier_place": "Illinois, IL · IL-02",
+      "member": "Robin L. Kelly",
+      "handle": "@RepRobinKelly",
+      "district": "IL-02",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095935053721198956"
+      ],
+      "failure_modes": [
+        "recovery",
+        "state-place"
+      ]
+    },
+    {
+      "id": "southeast-michigan-mi--severe-storms",
+      "title": "Severe storms · Southeast Michigan, MI",
+      "status": "resolved",
+      "verdict": "TRUE",
+      "reason": "Next-day post on the 3 Sept storm with the office engaged with local officials. Correct on content; same two caveats as detroit-mi--tornado: non-House author (US Senator) and a split of the same storm across four keys.",
+      "evidence": "Severe storms have devastated communities across Southeast Michigan, causing downed trees and power lines, property damage, flooding, and widespread power outages. My team and I are in direct communication with local officials",
+      "correct_kind": "severe storm / tornado",
+      "correct_place": "Southeast Michigan (Detroit area), MI",
+      "classifier_kind": "severe storms",
+      "classifier_place": "Southeast Michigan, MI",
+      "member": "Sen. Elissa Slotkin",
+      "handle": "@SenatorSlotkin",
+      "district": "US Senate",
+      "house_member": false,
+      "others": [],
+      "post_ids": [
+        "2095908349724291271"
+      ],
+      "failure_modes": [
+        "split",
+        "roster"
+      ]
+    },
+    {
+      "id": "hawaii-island-hi--hurricane-damage",
+      "title": "Hurricane damage · Hawaii Island, HI",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Lala made landfall on 15-16 Aug, 18 days before this post; the post itself says the storm “is gone” and frames recovery and federal advocacy. In-district (HI-02). Split from ka-hi--hurricane-damage.",
+      "evidence": "Lala is gone, but for families across Hawaiʻi Island, the work is just beginning. I saw washed-out roads, damaged homes and schools, and communities still picking up the pieces.",
+      "correct_kind": "hurricane recovery (Lala) — not an incident",
+      "correct_place": "Hawaiʻi Island, HI",
+      "classifier_kind": "hurricane damage",
+      "classifier_place": "Hawaii Island, HI · HI-02",
+      "member": "Jill N. Tokuda",
+      "handle": "@RepJillTokuda",
+      "district": "HI-02",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095617128992796887"
+      ],
+      "failure_modes": [
+        "recovery",
+        "split"
+      ]
+    },
+    {
+      "id": "burlingame-ca--train-collision",
+      "title": "Train collision · Burlingame, CA",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Re-check: the prompt’s own text resolves this. It asks for a “major accident” the member is “personally handling” and excludes policy news; the post is “Difficult to see another train-vehicle collision … which is why I secured $3 million for a grade [separation]” — a reaction (“Difficult to see”) plus a funding claim, with no instructions, resources or office engagement. A single train-vehicle collision is not a major accident and the member is not handling anything; the original reason already said so (“the member is not handling an emergency”), which is dispositive under the definition, so a hedge was not warranted.",
+      "evidence": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame […] which is why I secured $3 million for a grade",
+      "correct_kind": "train-vehicle collision (policy post; below threshold)",
+      "correct_place": "Burlingame, CA",
+      "classifier_kind": "train collision",
+      "classifier_place": "Burlingame, CA · CA-15",
+      "member": "Kevin Mullin",
+      "handle": "@RepKevinMullin",
+      "district": "CA-15",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095893453489992094"
+      ],
+      "failure_modes": [
+        "policy",
+        "threshold"
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "at": "2026-09-10"
+      }
+    },
+    {
+      "id": "michigan-mi--severe-weather",
+      "title": "Severe weather · Michigan, MI",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Re-check: the whole post is “Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials.” It names no emergency, no impact, no place below the state and no action by the member; the kind (“severe weather”) was inferred from a quoted post (2095575532146475038) that is not in data/archive, and the place is a state. Nothing in the source post supports the incident record “Severe weather · Michigan, MI”, and the audit itself says a state cannot be an incident location. That the 3 Sept storm was arriving at that hour is outside the tweet; judged on its text, this is a generic stay-alert PSA, not a breaking district emergency the member is handling.",
+      "evidence": "Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials.",
+      "correct_kind": "severe storm (advisory)",
+      "correct_place": "Southeast Michigan, MI",
+      "classifier_kind": "severe weather",
+      "classifier_place": "Michigan, MI · MI-06",
+      "member": "Debbie Dingell",
+      "handle": "@RepDebDingell",
+      "district": "MI-06",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095610298820383184"
+      ],
+      "failure_modes": [
+        "advisory",
+        "state-place",
+        "split",
+        "kind-guess"
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "at": "2026-09-10"
+      }
+    },
+    {
+      "id": "detroit-mi--power-outage",
+      "title": "Power outage · Detroit, MI",
+      "status": "resolved",
+      "verdict": "TRUE",
+      "reason": "Infrastructure failure in the member’s district (MI-12) with the office engaged and a reporting hotline. The threaded reply is a policy post (DTE rate hike) that rides along, which is acceptable. Posted the afternoon of the 3 Sept storm but attributed to the heat wave, so leaving it separate from the storm cluster is defensible.",
+      "evidence": "Hundreds of my residents are experiencing DTE power outages during this heat wave. My office is working hard and urging DTE to be more proactive in restoring people’s power.",
+      "correct_kind": "power outage",
+      "correct_place": "Detroit, MI",
+      "classifier_kind": "power outage",
+      "classifier_place": "Detroit, MI · MI-12",
+      "member": "Rashida Tlaib",
+      "handle": "@RepRashida",
+      "district": "MI-12",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095591439627407586",
+        "2095591529049923598"
+      ],
+      "failure_modes": []
+    },
+    {
+      "id": "aspen-co--wildfire",
+      "title": "Wildfire · Aspen, CO",
+      "status": "resolved",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Delegation-wide policy advocacy for a disaster declaration covering June fires; out of district (CO-06 is Aurora); and wrong place — “Aspen, CO” is the resort town in Pitkin County, while the Aspen Acres Fire burned in Custer/Pueblo/Dolores counties. Split from aspen-acres-gold-mountain-co--wildfire.",
+      "evidence": "Every member of Colorado’s congressional delegation is calling on President Trump to do the right thing and support a major disaster declaration for the Aspen and Gold Mountain fires.",
+      "correct_kind": "disaster-declaration advocacy — not an incident",
+      "correct_place": "Aspen Acres Fire (Custer/Pueblo counties) & Gold Mountain Fire (Ouray County), CO",
+      "classifier_kind": "wildfire",
+      "classifier_place": "Aspen, CO · CO-06",
+      "member": "Jason Crow",
+      "handle": "@RepJasonCrow",
+      "district": "CO-06",
+      "house_member": true,
+      "others": [],
+      "post_ids": [
+        "2095520030834250131"
+      ],
+      "failure_modes": [
+        "policy",
+        "recovery",
+        "place-hallucination",
+        "district-suffix",
+        "split"
+      ]
+    }
+  ],
+  "grouping_issues": [
+    {
+      "type": "split",
+      "incidents": [
+        "la-habra-ca--hazmat-release",
+        "la-habra-ca--chemical-leak"
+      ],
+      "event": "8 Sept La Habra hazmat evacuation (one member, three posts in 2.5 hours)",
+      "cause": "kind synonym: \"hazmat release\" vs \"chemical leak\""
+    },
+    {
+      "type": "split",
+      "incidents": [
+        "monterey-county-ca--wildfire",
+        "big-sur-ca--wildfire"
+      ],
+      "event": "Timber & Plaskett fires, Monterey County (one member, 28 flags across the corpus; a third key, mariposa-county-ca--wildfire, held a Timber Fire RT with a hallucinated county)",
+      "cause": "place granularity: county vs locality"
+    },
+    {
+      "type": "split",
+      "incidents": [
+        "detroit-mi--tornado",
+        "detroit-mi--severe-storms",
+        "southeast-michigan-mi--severe-storms",
+        "michigan-mi--severe-weather"
+      ],
+      "event": "3 Sept Southeast Michigan storm / Detroit east-side tornado (four members)",
+      "cause": "place granularity (city / region / state) and kind synonyms (tornado / severe storms / severe weather); detroit-mi--power-outage (same afternoon, DTE outages attributed to the heat wave) is possibly the same event"
+    },
+    {
+      "type": "split",
+      "incidents": [
+        "gary-in--storm-damage",
+        "lake-station-in--flooding",
+        "porter-county-in--storm-damage",
+        "northwest-indiana-in--storm-damage"
+      ],
+      "event": "11 Aug Northwest Indiana storm recovery (one member’s daily updates; nine keys across the corpus including calumet-township-in--severe-storms, district--storm-recovery, gary-in--power-outage, lake-county-in--disaster-recovery, northwest-indiana-in--flooding, northwest-indiana-in--severe-storms and a Mrvan post keyed to passaic-county-nj--power-outage)",
+      "cause": "place taken from whichever town the day’s update mentioned; kind varies between storm damage / flooding / power outage / disaster recovery; one place hallucinated into New Jersey"
+    },
+    {
+      "type": "split",
+      "incidents": [
+        "ka-hi--hurricane-damage",
+        "hawaii-island-hi--hurricane-damage"
+      ],
+      "event": "Hurricane Lala aftermath, Hawaiʻi Island (one member)",
+      "cause": "place granularity: district (Kaʻū) vs island"
+    },
+    {
+      "type": "split",
+      "incidents": [
+        "aspen-acres-gold-mountain-co--wildfire",
+        "aspen-co--wildfire"
+      ],
+      "event": "Aspen Acres & Gold Mountain fires disaster declaration (two members)",
+      "cause": "fire name truncated to \"Aspen\" (which is also a different place) by one classification"
+    },
+    {
+      "type": "possible-split",
+      "incidents": [
+        "san-diego-ca--extreme-heat",
+        "orange-and-la-counties-ca--extreme-heat"
+      ],
+      "event": "8-9 Sept Southern California Extreme Heat Warning",
+      "cause": "regional advisory keyed by each member’s own area; moot if advisories are excluded"
+    },
+    {
+      "type": "no-merge-errors",
+      "incidents": [],
+      "event": "No two different events were merged into one incident in the current file. napa-county-ca--wildfire (Steele Fire) and lake-county-ca--wildfire (Scott Fire) are correctly separate; monterey-county-ca--wildfire covers two fires (Timber, Plaskett) that the member reports jointly, which is acceptable.",
+      "cause": ""
+    },
+    {
+      "type": "cross-member-merge-with-wrong-lead",
+      "incidents": [
+        "miami-fl--plane-crash"
+      ],
+      "event": "Four members’ reaction posts to the MIA crash grouped correctly by kind+place, but the incident takes the first poster’s district (FL-09, Central Florida) as its location suffix and lead; one poster is from Minnesota",
+      "cause": "incidents.js appends the lead author’s stateDistrict to the place without checking that the place is in it"
+    }
+  ],
+  "pipeline_issues": [
+    {
+      "id": "roster",
+      "text": "Non-House accounts produce incidents: two of the 29 (detroit-mi--tornado, southeast-michigan-mi--severe-storms) are from @SenatorSlotkin; across the corpus 14 of 174 flags come from @SenatorSlotkin, @SenAdamSchiff, @RubenGallego/@SenRubenGallego and @GovSherrillNJ. sitedata.js filters non-House accounts out of the feed and member counts but incidents.js applies no such filter."
+    },
+    {
+      "id": "district-suffix",
+      "text": "incidents.js sets place = flag.place + \" · \" + leadAuthor.stateDistrict. When the flagged place is outside the lead’s district the card is wrong: \"Kauai, HI · HI-01\" (Kauaʻi is HI-02), \"Miami, FL · FL-09\" (Central Florida), \"Aspen, CO · CO-06\" (Aurora), \"Orange County, CA · CA-25\" (Coachella Valley), \"Eastern Oregon, OR · OR-03\" (Portland). In the wider corpus gary-in--power-outage would have led with IL-03 (Delia Ramirez) for Gary, Indiana."
+    },
+    {
+      "id": "lifecycle",
+      "text": "The active/monitoring/resolved lifecycle keys off the last member post, so a member who posts daily recovery updates (Mrvan, 11 Aug storm) keeps a four-week-old event alive indefinitely, and a slow-burn fire with a weekly update (Panetta) oscillates between resolved and active. There is no cap on incident age."
+    },
+    {
+      "id": "no-author-context",
+      "text": "chunkRequests sends only {id, text}; the model never sees the author’s handle, state or district, so it cannot tell in-district from out-of-district and cannot supply a state when the tweet omits one. It also sees one 40-tweet chunk at a time, so \"reuse identical kind+place strings\" cannot work across chunks or days."
+    },
+    {
+      "id": "kind-vocabulary",
+      "text": "41 distinct kind strings across 174 flags (\"flooding\", \"flash flooding\", \"heavy rain flooding\", \"heavy rain\"; \"shooting\", \"mass shooting\", \"active shooter\", \"shooting attack\", \"hate crime shooting\"; \"hazmat incident\", \"hazmat release\", \"chemical leak\"; \"power outage\", \"storm power outage\"). incidentKey() only lower-cases and strips punctuation, so every synonym is a new incident."
+    }
+  ],
+  "failure_modes": [
+    {
+      "id": "recovery",
+      "name": "Aftermath and recovery posts flagged as breaking",
+      "count": 12,
+      "text": "The largest failure. Eleven of the sixteen false positives are posts about the recovery from an event weeks old: FEMA/USDA assistance information, application deadlines, disaster-declaration requests and approvals, intake-centre schedules, daily \"storm update\" newsletters, thank-you messages and site visits. The prompt says \"breaking\" but gives no test for it, and the posts carry unmistakable cues the model ignored: \"recovering\", \"storm recovery\", \"the August storm\", \"recover after the July and August severe storms\", \"apply by October 25\", \"Lala is gone\", \"left behind\", \"spent months wondering\".",
+      "examples": [
+        "gary-in--storm-damage",
+        "indianapolis-in--flooding",
+        "hawaii-island-hi--hurricane-damage",
+        "aspen-acres-gold-mountain-co--wildfire",
+        "washington-wa--wildfire"
+      ]
+    },
+    {
+      "id": "reaction",
+      "name": "Reaction and condolence posts from members who are not handling the event",
+      "count": 2,
+      "text": "A real emergency somewhere in the country draws \"heartbroken\", \"praying for\", \"horrified to hear\" posts from members far from it. The prompt says \"the member is personally handling\" but gives no test for handling, so the model flags any member who mentions the event. In the current file this is the MIA crash (four members, one in Minnesota) and, after the re-check, the Senator’s “my thoughts are with … the aftermath” tornado post whose handling content is truncated out of the corpus; in the wider corpus the 2 Sept Minneapolis shooting drew a flagged reaction from NY-25, the Grand Canyon flooding from NV-01, and the Gary, Indiana outage from IL-03 and MI-12.",
+      "examples": [
+        "miami-fl--plane-crash",
+        "detroit-mi--tornado"
+      ]
+    },
+    {
+      "id": "advisory",
+      "name": "Weather advisories and PSAs treated as emergencies",
+      "count": 3,
+      "text": "Heat advisories with cooling-centre links, flood watches, \"stay safe and stay alert\" posts and travel advisories are flagged with kinds like \"extreme heat\", \"heat advisory\", \"heat wave\", \"severe weather\". Twelve of the 174 corpus flags are heat PSAs alone (LA County x4, Chicago/Cook County x4, Orange County, Southern California, St. Louis, San Diego). They report no impact and involve no member action beyond a link; the prompt’s examples are all impact events.",
+      "examples": [
+        "san-diego-ca--extreme-heat",
+        "orange-and-la-counties-ca--extreme-heat",
+        "michigan-mi--severe-weather"
+      ]
+    },
+    {
+      "id": "place-hallucination",
+      "name": "Place invented when the tweet names none",
+      "count": 3,
+      "text": "When the tweet names a fire but not a location, the model fills in a place from its own associations: \"#AirportFire\" became Orange County (the 2024 fire of that name) although this one was in Thermal, Riverside County; the Austin and Narrows fires became \"Eastern Oregon\" although they are in Mt. Hood National Forest; the Aspen Acres Fire became \"Aspen, CO\", a different place 200 miles away. In the wider corpus a Mrvan storm-recovery post was placed in \"Passaic County, NJ\" and a Timber Fire RT in \"Mariposa County\". The card then carries the wrong county and a wrong district suffix.",
+      "examples": [
+        "orange-county-ca--wildfire",
+        "eastern-oregon-or--wildfire",
+        "aspen-co--wildfire"
+      ]
+    },
+    {
+      "id": "split",
+      "name": "One event split across several incidents",
+      "count": 16,
+      "text": "The desk keys incidents on the exact normalised kind+place string, and the model has no memory across chunks or days, so the same event lands under several keys: city vs county vs region vs state (\"Detroit\" / \"Southeast Michigan\" / \"Michigan\"; \"Big Sur\" / \"Monterey County\"; \"Kaʻū\" / \"Hawaii Island\"), kind synonyms (\"hazmat release\" / \"chemical leak\"; \"tornado\" / \"severe storms\" / \"severe weather\"), and whichever town a daily update happened to mention (Gary / Lake Station / Porter County / Northwest Indiana). Sixteen of the 29 incidents are fragments of six events.",
+      "examples": [
+        "la-habra-ca--chemical-leak",
+        "big-sur-ca--wildfire",
+        "detroit-mi--tornado",
+        "ka-hi--hurricane-damage"
+      ]
+    },
+    {
+      "id": "policy",
+      "name": "Policy and advocacy posts hung on a local incident",
+      "count": 4,
+      "text": "Posts that use an incident to argue for a disaster declaration, a grade-separation grant or firefighter legislation are policy posts. The prompt excludes \"national policy news\" but says nothing about local policy, so a post whose only incident content is the hook gets flagged.",
+      "examples": [
+        "aspen-co--wildfire",
+        "burlingame-ca--train-collision",
+        "eastern-oregon-or--wildfire"
+      ]
+    },
+    {
+      "id": "threshold",
+      "name": "Minor, contained events",
+      "count": 2,
+      "text": "A 50-acre brush fire with no evacuations whose forward progress was already stopped, and a single train-vehicle collision, were flagged. The prompt lists \"major accident\" but sets no scale.",
+      "examples": [
+        "orange-county-ca--wildfire",
+        "burlingame-ca--train-collision"
+      ]
+    },
+    {
+      "id": "state-place",
+      "name": "State or \"unspecified\" used as the place",
+      "count": 3,
+      "text": "\"Washington, WA\", \"Illinois, IL\", \"Michigan, MI\" and, in the wider corpus, \"district-unspecified\", \"unspecified-district\", \"district\" and \"GKN plant area unknown\" (18 of 174 flags). A place that is a whole state cannot be an incident location and can never match another post’s key.",
+      "examples": [
+        "washington-wa--wildfire",
+        "illinois-il--severe-storms",
+        "michigan-mi--severe-weather"
+      ]
+    },
+    {
+      "id": "kind-guess",
+      "name": "Kind not supported by the post",
+      "count": 2,
+      "text": "lake-station-in--flooding says nothing about flooding; gary-in--storm-damage says nothing about damage. michigan-mi--severe-weather says nothing about weather at all (kind taken from a quoted post that is not in the corpus). The kind was inferred from the member’s earlier posts, a missing quoted post or general knowledge, which then keys a new incident.",
+      "examples": [
+        "lake-station-in--flooding",
+        "michigan-mi--severe-weather"
+      ]
+    },
+    {
+      "id": "roster",
+      "name": "Non-House accounts on the desk",
+      "count": 2,
+      "text": "Not a prompt failure: the classifier never sees the author. incidents.js needs the same isHouse filter sitedata.js uses.",
+      "examples": [
+        "detroit-mi--tornado",
+        "southeast-michigan-mi--severe-storms"
+      ]
+    },
+    {
+      "id": "district-suffix",
+      "name": "Location labelled with the lead poster’s district",
+      "count": 3,
+      "text": "Not a prompt failure: incidents.js appends the lead author’s stateDistrict to any place.",
+      "examples": [
+        "kauai-hi--tropical-storm",
+        "miami-fl--plane-crash",
+        "aspen-co--wildfire"
+      ]
+    }
+  ],
+  "proposed_prompt_rule": "- INCIDENTS: flag a tweet as an incident only when ALL of the following hold.\n  (a) Community-scale emergency. The tweet is about a specific emergency\n      affecting many people: active shooter or mass shooting, wildfire with\n      evacuations, flooding, tornado or severe-storm damage, hurricane or\n      tropical storm impact, hazmat release, major crash or explosion,\n      widespread power or water outage, infrastructure failure. A single\n      vehicle or rail collision, a contained brush fire with no evacuations,\n      or a single house fire is not community-scale.\n  (b) Happening now. As the tweet describes it, the emergency is under way\n      or struck within the last three days: evacuation orders or warnings,\n      shelter-in-place, rescues or searches, outages being restored, damage\n      being assessed, shelters or hotlines being announced. Aftermath and\n      recovery posts are NOT incidents: FEMA/SBA/USDA assistance\n      information, application deadlines, disaster-declaration requests or\n      approvals, intake-center schedules, \"daily storm update\" newsletters,\n      thank-you messages to responders, and site visits or damage tours\n      weeks later. Wording such as \"recovering\", \"recovery\", \"aftermath\",\n      \"left behind\", \"is gone\", \"the August storm\", \"spent months\",\n      \"apply by <date>\" means the event is past: give the tweet its normal\n      topics (usually climate/disasters or constituent-services) instead.\n  (c) The member is acting, not reacting. The tweet relays official\n      instructions or resources (\"evacuate zone ...\", \"call 866-...\",\n      \"avoid the area\", \"report damage here\"), says the member's office is\n      in contact with officials or on scene, or gives constituents a way\n      to get help. \"Thoughts and prayers\", \"heartbroken\", \"horrified to\n      hear\", \"grateful to first responders\" posts are reactions, even\n      when the event is nearby: classify them normally and do not flag\n      them. A tweet that uses an incident to argue for legislation,\n      funding or a policy position is a policy tweet, not an incident,\n      unless it also relays live instructions.\n  (d) The place is in the tweet. Take \"place\" only from the tweet: the\n      city or county named in it plus the state (\"Napa County, CA\",\n      \"La Habra, CA\", \"Kauaʻi, HI\"). If the tweet names the event\n      (\"#SteeleFire\", \"Hurricane Lowell\", \"Timber Fire\") put that in\n      \"name\". Never infer the location from a similarly named past event\n      or from what you know about the member; a bare state (\"Michigan,\n      MI\") is not a place. If the tweet gives neither a place nor a named\n      event, do not flag it.\n  Not incidents: routine weather advisories and public-safety PSAs (heat\n  advisories or warnings, cooling-center lists, flood watches, travel\n  advisories, \"stay safe and stay alert\") unless the tweet reports an\n  actual impact — an emergency declaration, evacuations, shelters open,\n  outages, closures, injuries or deaths.\n  Format: {\"kind\": \"<one of: active shooter, shooting, wildfire,\n  flooding, severe storm, tornado, hurricane, extreme heat, power outage,\n  water outage, hazmat, structure fire, explosion, plane crash, train\n  crash, industrial accident, infrastructure failure, missing persons,\n  other>\", \"place\": \"<city or county, state abbr>\", \"name\": \"<official\n  event name from the tweet, or null>\"}. Use exactly the same kind, place\n  and name for every tweet about the same event, and do not switch\n  between city, county and region for one event; when the tweet only\n  names the event, reuse the place from the open-incident list below.\n  Incident tweets still get topics [] unless they also carry policy\n  content.",
+  "proposed_open_incident_block": "Open incidents (reuse these exact kind, place and name strings for any\ntweet about the same event; do not create a variant):\n- wildfire | Napa County, CA | Steele Fire\n- wildfire | Monterey County, CA | Timber & Plaskett fires\n- hazmat | La Habra, CA | null\n- severe storm | Detroit, MI | null\n- hurricane | Kauaʻi, HI | Hurricane Lowell",
+  "proposed_phase_variant": "  (b') If the editors want recovery threads kept on the desk rather than\n      dropped, replace the exclusion in (b) with a field: add \"phase\":\n      \"breaking\" when (b) holds and \"phase\": \"recovery\" for assistance,\n      declaration, intake-center and site-visit posts about an event that\n      struck within the last 30 days; the desk shows only \"breaking\"\n      incidents on the dashboard and lists \"recovery\" threads separately.\n      Posts about events older than 30 days are never incidents.",
+  "recheck": {
+    "at": "2026-09-10",
+    "method": "Adversarial pass over every verdict against the prompt’s definition (breaking; district emergency; member personally handling; the listed kinds) and against the incident record’s own kind/place. Every source post re-read in full from data/archive; the repo searched for fuller copies of truncated posts and for missing quoted posts. Verdicts changed only where the prompt’s text or the corpus resolves what the first pass hedged or assumed.",
+    "changes": [
+      {
+        "id": "detroit-mi--tornado",
+        "from": "TRUE",
+        "to": "AMBIGUOUS",
+        "evidence": "My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm. […] For families on the lower east"
+      },
+      {
+        "id": "burlingame-ca--train-collision",
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "evidence": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame […] which is why I secured $3 million for a grade"
+      },
+      {
+        "id": "michigan-mi--severe-weather",
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "evidence": "Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials."
+      }
+    ],
+    "challenged_and_kept": [
+      {
+        "id": "kauai-hi--tropical-storm",
+        "verdict": "AMBIGUOUS",
+        "note": "Out of district (HI-02, not HI-01) and framed as “recovering”, which strictly fails “district emergency”; but Lowell struck the day before, damage is being assessed, and the member gives constituents a damage-report link, which is action. The prompt’s “district” is aimed at excluding national news, and this is a live disaster in the member’s state. Hedge kept."
+      },
+      {
+        "id": "san-diego-ca--extreme-heat",
+        "verdict": "AMBIGUOUS",
+        "note": "Kind and place are in the text (“extreme heat wave … through 8pm today”, San Diego) and a resource is relayed (cool zones). The only open question is whether an NWS heat warning is a “breaking emergency”; the prompt is silent. Hedge kept."
+      },
+      {
+        "id": "orange-and-la-counties-ca--extreme-heat",
+        "verdict": "AMBIGUOUS",
+        "note": "Same regional warning, in district, kind and place in the text; “check in on seniors” is advice rather than a resource. Same open question as San Diego. Hedge kept for consistency."
+      },
+      {
+        "id": "eastern-oregon-or--wildfire",
+        "verdict": "FALSE POSITIVE",
+        "note": "The closest false positive to a live event: the Austin/Narrows fires were active and the member visited the incident command posts. But the post’s substance is “to learn how to better support our firefighters this wildfire season and beyond … I am working on legislation”, and the record’s place (“Eastern Oregon”) is invented. Not a tweet responding to an emergency the member is handling."
+      },
+      {
+        "id": "orange-county-ca--wildfire",
+        "verdict": "FALSE POSITIVE",
+        "note": "Same-day, in-district status post on a real (small) fire — comparable to Panetta’s containment updates — but the record’s place is wrong (Orange County; the fire was in Thermal, Riverside County), so the incident as built is incorrect regardless of the threshold argument."
+      },
+      {
+        "id": "big-sur-ca--wildfire",
+        "verdict": "TRUE",
+        "note": "Partly a thank-you, but it relays a road reopening and “continue to use caution in the affected areas, follow all guidance” while the Timber/Plaskett fires were still burning (27%/61% contained five days later)."
+      },
+      {
+        "id": "monterey-county-ca--wildfire",
+        "verdict": "TRUE",
+        "note": "Three of the four posts are gratitude/status; the RT of the sheriff’s evacuation update and the live containment figures carry it."
+      },
+      {
+        "id": "la-habra-ca--chemical-leak",
+        "verdict": "TRUE",
+        "note": "Two news RTs, but they relay the official all-clear for an evacuation the member had relayed 2.5 hours earlier — the resolution of a live in-district event."
+      },
+      {
+        "id": "detroit-mi--power-outage",
+        "verdict": "TRUE",
+        "note": "“Hundreds” of residents is small-scale and the reply is a rate-hike policy post, but the lead post has the office engaged and a reporting number for an in-district infrastructure failure."
+      },
+      {
+        "id": "southeast-michigan-mi--severe-storms",
+        "verdict": "TRUE",
+        "note": "Next-day, impact stated, “My team and I are in direct communication with local officials” is explicit handling. Author is a Senator (roster issue, not a content issue)."
+      },
+      {
+        "id": "miami-fl--plane-crash",
+        "verdict": "FALSE POSITIVE",
+        "note": "Re-read all four posts: “Praying for”, “Horrified to hear”, “heartbroken”, “devastating to see” — reactions from FL-09, FL-25, FL-24 and MN-04; no instructions, resources or office engagement in any of them."
+      }
+    ]
+  }
+}

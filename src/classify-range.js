@@ -50,15 +50,17 @@ async function main() {
   let batchId;
   if (pending?.batchId) {
     batchId = pending.batchId;
-    plans = todo.map((d) => planDay(d, { deferInCorpus: true }));
+    plans = todo.map((d) => planDay(d, { deferInCorpus: true, tax }));
     console.log(`[classify-range] resuming batch ${batchId} for ${todo.length} day(s)`);
   } else {
-    plans = todo.map((d) => planDay(d, { deferInCorpus: true }));
+    plans = todo.map((d) => planDay(d, { deferInCorpus: true, tax }));
     const requests = plans.flatMap((pl) => chunkRequests(pl.toClassify, tax, model, `${pl.date}_`));
     const sent = plans.reduce((n, pl) => n + pl.toClassify.length, 0);
+    const quoting = plans.reduce((n, pl) => n + pl.toClassify.filter((t) => t.quoting).length, 0);
     const held = plans.reduce((n, pl) => n + Object.keys(pl.inherited).length + pl.deferred.length, 0);
-    console.log(`[classify-range] ${todo.length} day(s) ${todo[0]}..${todo.at(-1)}: ${sent} tweets in ${requests.length} requests (${held} retweets inherit), model ${model}`);
-    if (dryRun) { for (const pl of plans) console.log(`  ${pl.date}: ${pl.tweets.length} archived, ${pl.toClassify.length} to model, ${Object.keys(pl.inherited).length} inherit, ${pl.deferred.length} deferred`); return; }
+    const anchored = plans.reduce((n, pl) => n + Object.keys(pl.anchored).length, 0);
+    console.log(`[classify-range] ${todo.length} day(s) ${todo[0]}..${todo.at(-1)}: ${sent} tweets in ${requests.length} requests (${quoting} with quoted context, ${held} retweets inherit, ${anchored} anchored), model ${model}`);
+    if (dryRun) { for (const pl of plans) console.log(`  ${pl.date}: ${pl.tweets.length} archived, ${pl.toClassify.length} to model (${pl.toClassify.filter((t) => t.quoting).length} with quoted context), ${Object.keys(pl.inherited).length} inherit, ${pl.deferred.length} deferred, ${Object.keys(pl.anchored).length} anchored`); return; }
     if (!requests.length) { for (const pl of plans) writeDay(pl, { assignments: {}, incidents: {}, emerging: [], failedChunks: 0 }, model); return; }
     const batch = await client.messages.batches.create({ requests });
     batchId = batch.id;
