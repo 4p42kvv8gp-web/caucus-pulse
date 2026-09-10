@@ -67,11 +67,28 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
   lines.push(`- X reads on ${date}: ${fmt(u.posts + u.users)} / ${fmt(budget)} budget (~$${estCost(u).toFixed(2)})`);
   if (topics?.model) lines.push(`- Classifier: ${topics.model}${topics.failedChunks ? ` — ⚠ ${topics.failedChunks} failed chunk(s)` : ''}${topics.unclassified?.length ? `, ${topics.unclassified.length} unclassified` : ''}`);
 
-  const emerging = topics?.emerging || [];
-  if (emerging.length) {
-    lines.push('', '## Emerging clusters (taxonomy decisions needed)', '');
-    for (const e of emerging.sort((a, b) => b.ids.length - a.ids.length).slice(0, 8)) {
-      lines.push(`- **${e.label}** — ${e.ids.length} tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.`);
+  // Cross-day story candidates (src/stories.js) when built; else tonight's raw clusters.
+  const stories = readJSON(p('data', 'stories.json'), null);
+  const cands = (stories?.candidates || []).filter((c) => c.placement && c.placement.kind !== 'noise');
+  if (cands.length) {
+    const show = (kind, title) => {
+      const list = cands.filter((c) => c.placement.kind === kind).slice(0, 8);
+      if (!list.length) return;
+      lines.push('', `## ${title}`, '');
+      for (const c of list) {
+        const where = c.placement.macro ? `${c.placement.macro}/${c.placement.key}` : `(no macro fits) ${c.placement.key}`;
+        lines.push(`- **${c.placement.label}** — ${c.posts} posts, ${c.members} members over ${c.days} day(s) (${c.firstSeen} → ${c.lastSeen}). Promote: \`npm run stories -- --promote=${c.placement.key}\` → ${where}`);
+      }
+    };
+    show('story', 'Developing stories (not yet in the taxonomy)');
+    show('gap', 'Taxonomy gaps (durable subjects with no home)');
+  } else {
+    const emerging = topics?.emerging || [];
+    if (emerging.length) {
+      lines.push('', '## Emerging clusters (taxonomy decisions needed)', '');
+      for (const e of emerging.sort((a, b) => b.ids.length - a.ids.length).slice(0, 8)) {
+        lines.push(`- **${e.label}** — ${e.ids.length} tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.`);
+      }
     }
   }
   return lines.join('\n') + '\n';
