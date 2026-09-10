@@ -1,0 +1,45 @@
+# Nightly pipeline — 07:30 UTC (2:30/3:30am ET, after the ET day closes):
+# 24h engagement refresh → Claude batch classification → strategic-syntax
+# n-grams → rollups → daily report. Each stage reads the previous stage's
+# committed files, so a failed stage can be re-run with workflow_dispatch.
+name: nightly
+on:
+  schedule:
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: data-writes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Refresh, classify, mine syntax, roll up, report
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
+        run: npm run nightly
+      - name: Commit results
+        run: |
+          git config user.name "caucus-pulse"
+          git config user.email "actions@users.noreply.github.com"
+          git add data reports site/data
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -m "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase
+          done
+          git push

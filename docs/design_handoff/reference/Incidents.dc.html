@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2.6' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpath d='M1.5 13H7L10 5L12.13 13' stroke='%23194292'/%3E%3Cpath d='M12.13 13L14 20L17 13H22.5' stroke='%23d70015'/%3E%3C/svg%3E"><style>body{margin:0;background:#f5f5f7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;font-variant-numeric:tabular-nums}a{color:#1d1d1f;text-decoration:none;text-underline-offset:2px}a:hover{text-decoration:underline}button{font:inherit;color:inherit}input:focus-visible,button:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+<header style="position:sticky;top:0;z-index:10;height:50px;display:flex;align-items:center;gap:28px;padding:0 max(20px,calc((100% - 1240px)/2 + 20px));background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)">
+<a href="./DashboardV3.dc.html" aria-label="caucus-pulse home" style="display:inline-flex;align-items:center;gap:.08em;font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1;white-space:nowrap;flex:none;color:#1d1d1f;text-decoration:none">Caucus<svg viewBox="0 0 28 24" fill="none" stroke-width="4.2" stroke-linecap="butt" stroke-linejoin="round" aria-hidden="true" style="height:.6em;width:.7em;overflow:visible;transform:translateY(.06em)"><path d="M2 13H8L11.5 4L13.75 13" stroke="#194292"></path><path d="M13.75 13L15.5 20L18.5 13H26" stroke="#d70015"></path></svg>Pulse</a>
+<nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a href="./DashboardV3.dc.html" style="color:#6e6e73">Dashboard</a><a href="./Incidents.dc.html" style="color:#1d1d1f;font-weight:600">Incidents</a></nav>
+<div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;display:inline-block"></span>Sunday, September 7 · updated {{ lastPoll }}</span></div>
+</header>
+<main id="desk" style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+<section style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:4px 0 6px">
+<div style="display:flex;flex-direction:column;gap:5px"><h1 style="margin:0;font-size:24px;line-height:1;font-weight:700;letter-spacing:0.01em;text-transform:uppercase;white-space:nowrap">Incident desk</h1><div style="font-size:12px;color:#6e6e73">{{ activeCount }} active · {{ watchCount }} monitoring · {{ resolvedCount }} resolved this week</div></div>
+<div style="display:flex;gap:8px;align-items:center">{{ statusSeg }}</div>
+</section>
+<sc-if value="{{ isDesk }}" hint-placeholder-val="{{ true }}">
+<section style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+<div style="display:flex;flex-direction:column;gap:12px;flex:1 1 280px;min-width:0">
+<div style="display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{ list }}" as="i" hint-placeholder-count="4">
+<button onClick="{{ i.pick }}" style="text-align:left;background:#fff;border:1px solid transparent;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:5px;cursor:pointer;width:100%;box-sizing:border-box" style-hover="border-color:#d2d2d7"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px">{{ i.statusDot }}<span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">{{ i.kind }}</span></span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ i.last }}</span></div><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">{{ i.place }}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">{{ i.updates }} posts</span></div><div style="font-size:12px;color:#6e6e73">{{ i.handle }} · {{ i.member }}<sc-if value="{{ i.selected }}" hint-placeholder-val="{{ false }}"><span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span></sc-if></div></button>
+</sc-for>
+<sc-if value="{{ listEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div></sc-if>
+</div>
+<div id="search" style="background:#fff;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;flex:1 1 auto">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Search</h2><span style="font-size:11px;color:#6e6e73">{{ searchStatus }}</span></div>
+<div style="display:flex;gap:6px"><input value="{{ query }}" onChange="{{ setQuery }}" placeholder="e.g. (shooting OR &quot;shots fired&quot;) Aurora -is:retweet" style="flex:1;min-width:0;font:inherit;font-size:12px;padding:7px 10px;border:1px solid #d2d2d7;border-radius:9px;background:#f5f5f7"><button style="background:#1d1d1f;color:#fff;border:0;border-radius:9px;padding:7px 12px;font-size:12px;font-weight:600;cursor:pointer" style-hover="background:#3a3a3c">Run</button></div>
+<div style="display:flex;gap:5px;flex-wrap:wrap"><sc-for list="{{ saved }}" as="q" hint-placeholder-count="4"><button onClick="{{ q.use }}" style="background:#f2f2f4;border:0;border-radius:6px;padding:3px 9px;font-size:11px;cursor:pointer" style-hover="background:#e8e8ed">{{ q.label }}</button></sc-for></div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<sc-for list="{{ results }}" as="r" hint-placeholder-count="3">
+<div style="padding:9px 0;border-top:1px solid #f0f0f2;display:flex;flex-direction:column;gap:3px"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:12px">{{ r.who }}</span><span style="font-size:11px;color:#6e6e73">{{ r.time }}</span></div><p style="margin:0;font-size:12px;line-height:1.4">{{ r.text }}</p><div style="display:flex;gap:6px;align-items:center;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase">{{ r.badge }}<span style="font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;color:#6e6e73">{{ r.meta }}</span></div></div>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px;flex:3 1 620px;min-width:0">
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">{{ sel.kind }}</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">{{ sel.statusDot }}{{ sel.status }}</span><span style="font-size:11px;color:#6e6e73">{{ sel.since }} → {{ sel.last }}</span></div><h2 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">{{ sel.title }}</h2><div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">{{ sel.handle }}</span> · {{ sel.member }} · {{ sel.place }}</div></div>
+<div style="display:grid;grid-template-columns:repeat(4,auto);gap:14px;font-size:11px;color:#6e6e73;text-align:right"><div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">{{ sel.updates }}</div>member posts</div><div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">{{ sel.eng }}</div>engagement</div><div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">{{ sel.amplifiers }}</div>amplifying</div><div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">{{ sel.officialCount }}</div>official sources</div></div></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+<div style="flex:3 1 380px;min-width:0;display:flex;flex-direction:column;gap:2px"><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px"><h3 style="margin:0;font-size:13px;font-weight:700">Timeline</h3><span style="font-size:11px;color:#6e6e73;display:inline-flex;align-items:center;gap:5px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#1d1d1f"></span>{{ sel.newCount }} new since your last visit · {{ sourceNote }}</span></div>
+<sc-for list="{{ sel.timeline }}" as="e" hint-placeholder-count="5">
+<div style="display:grid;grid-template-columns:max-content 10px 1fr;gap:0 10px;padding:8px 0;border-top:1px solid #f0f0f2"><span style="font-size:11px;color:#6e6e73;padding-top:2px;white-space:nowrap;min-width:58px">{{ e.time }}</span><div style="display:flex;justify-content:center;padding-top:5px">{{ e.dot }}</div><div style="display:flex;flex-direction:column;gap:4px;min-width:0"><div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">{{ e.who }}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">{{ e.tag }}</span><sc-if value="{{ e.official }}" hint-placeholder-val="{{ false }}"><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#00823a;background:#e6f7ea;padding:1px 6px;border-radius:5px">official</span></sc-if><sc-if value="{{ e.unverified }}" hint-placeholder-val="{{ false }}"><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#d70015;background:#ffebe9;padding:1px 6px;border-radius:5px">unverified</span></sc-if></div><p style="margin:0;font-size:13px;line-height:1.4">{{ e.text }}</p><div style="font-size:11px;color:#6e6e73">{{ e.meta }}</div></div></div>
+</sc-for>
+</div>
+<div style="flex:2 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:13px;font-weight:700">Intel</h3>
+<div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#00823a">Confirmed</div><sc-for list="{{ sel.confirmed }}" as="c" hint-placeholder-count="2"><div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#00823a;font-weight:700">✓</span><span>{{ c.text }} <span style="color:#6e6e73">· {{ c.src }}</span></span></div></sc-for></div>
+<sc-if value="{{ showUnverified }}" hint-placeholder-val="{{ true }}"><div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#d70015">Circulating, unverified</div><sc-for list="{{ sel.unverified }}" as="u" hint-placeholder-count="2"><div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#d70015;font-weight:700">?</span><span>{{ u.text }} <span style="color:#6e6e73">· {{ u.src }}</span></span></div></sc-for></div></sc-if>
+<div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">What's new</div><sc-for list="{{ sel.whatsNew }}" as="n" hint-placeholder-count="2"><div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;margin-top:5px"></span><span>{{ n }}</span></div></sc-for></div>
+<div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#6e6e73">Who else is on it</div><div style="display:flex;flex-wrap:wrap;gap:4px"><sc-for list="{{ sel.others }}" as="o" hint-placeholder-count="3"><span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">{{ o }}</span></sc-for></div></div>
+<button onClick="{{ copyBrief }}" style="margin-top:auto;background:#1d1d1f;color:#fff;border:0;border-radius:980px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;align-self:flex-start" style-hover="background:#3a3a3c">{{ briefLabel }}</button>
+</div>
+</div>
+</div>
+</section>
+</sc-if>
+<sc-if value="{{ isBoard }}" hint-placeholder-val="{{ false }}">
+<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;align-items:start">
+<sc-for list="{{ board }}" as="b" hint-placeholder-count="3">
+<div style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px">{{ b.statusDot }}<span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">{{ b.kind }}</span></span><span style="font-size:11px;color:#6e6e73">{{ b.since }} → {{ b.last }}</span></div><div style="font-weight:700;font-size:16px;letter-spacing:-0.015em;line-height:1.15">{{ b.title }}</div><div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">{{ b.handle }}</span> · {{ b.place }} · {{ b.updates }} posts · {{ b.eng }}</div>
+<sc-for list="{{ b.timeline }}" as="e" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:max-content 1fr;gap:0 8px;padding:6px 0;border-top:1px solid #f0f0f2"><span style="font-size:11px;color:#6e6e73;white-space:nowrap;min-width:52px">{{ e.time }}</span><div style="min-width:0"><span style="font-weight:600;font-size:12px">{{ e.who }}</span><sc-if value="{{ e.official }}" hint-placeholder-val="{{ false }}"><span style="margin-left:5px;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#00823a;background:#e6f7ea;padding:1px 5px;border-radius:4px">official</span></sc-if><sc-if value="{{ e.unverified }}" hint-placeholder-val="{{ false }}"><span style="margin-left:5px;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#d70015;background:#ffebe9;padding:1px 5px;border-radius:4px">unverified</span></sc-if><p style="margin:2px 0 0;font-size:12px;line-height:1.4;color:#3a3a3c">{{ e.text }}</p></div></div></sc-for>
+<button onClick="{{ b.pick }}" style="align-self:flex-start;background:transparent;border:1px solid #d2d2d7;border-radius:8px;padding:3px 10px;font-size:12px;cursor:pointer;margin-top:2px" style-hover="background:#f5f5f7">Open in desk ›</button></div>
+</sc-for>
+</section>
+</sc-if>
+</main>
+</div>
+<div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 12px; padding: 16px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); position: absolute; left: 16px; top: 250px; width: 200px; height: 96px"></div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;view&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Desk&quot;,&quot;Board&quot;],&quot;default&quot;:&quot;Desk&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;sources&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;All sources&quot;,&quot;Members + official&quot;,&quot;Members only&quot;],&quot;default&quot;:&quot;All sources&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Intel&quot;},&quot;showUnverified&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Intel&quot;}}">
+class Component extends DCLogic {
+  state = { status: 'All', selected: 'aurora', query: '(shooting OR "shots fired") Aurora -is:retweet' };
+  static D = [
+    { id: 'aurora', kind: 'active shooter', status: 'active', title: 'Active shooter reported near Aurora Town Center', place: 'Aurora, CO · CO-06', handle: '@RepJasonCrow', member: 'Jason Crow', since: '12:48 PM', last: '2:10 PM', updates: 3, engN: 9700, amplifiers: 6, others: ['@RepDianaDeGette', '@RepNeguse', '@SenatorHick'],
+      timeline: [
+        { time: '12:31 PM', who: '@AuroraPD', tag: 'police', official: true, text: 'Officers responding to reports of shots fired near Town Center. Avoid the area. Updates to follow.', meta: '4.1K reposts', isNew: false },
+        { time: '12:48 PM', who: '@RepJasonCrow', tag: 'member', text: 'I am aware of reports of an active shooter near Town Center and am monitoring the situation closely. Please follow @AuroraPD for guidance and avoid the area.', meta: '9.7K engagement · first member post', isNew: false },
+        { time: '1:05 PM', who: 'local account', tag: 'eyewitness', unverified: true, text: 'Hearing there are multiple victims at the food court entrance.', meta: '312 reposts · no corroboration', isNew: false },
+        { time: '1:22 PM', who: '@AuroraPD', tag: 'police', official: true, text: 'One suspect in custody. Two people transported with non-life-threatening injuries. No ongoing threat.', meta: '11.2K reposts', isNew: true },
+        { time: '1:40 PM', who: '@RepJasonCrow', tag: 'member', text: 'Grateful to Aurora officers for a fast response. Two neighbors are being treated and are expected to recover. My office is in touch with the families.', meta: '6.2K engagement', isNew: true },
+        { time: '2:10 PM', who: '@DenverPost', tag: 'press', text: 'Suspect identified as a 24-year-old Aurora resident; police say the shooting followed a dispute.', meta: '2.8K reposts', isNew: true },
+      ],
+      confirmed: [{ text: 'One suspect in custody, no ongoing threat', src: 'Aurora PD 1:22 PM' }, { text: 'Two injured, non-life-threatening', src: 'Aurora PD 1:22 PM' }],
+      unverified: [{ text: 'Multiple victims at the food court', src: 'local account, 312 reposts' }, { text: 'Second shooter', src: 'reply threads only' }],
+      whatsNew: ['Police say no ongoing threat as of 1:22 PM', 'Member posted a follow-up thanking officers at 1:40 PM', 'Suspect identified by Denver Post at 2:10 PM'] },
+    { id: 'houston', kind: 'flooding', status: 'monitoring', title: 'Flash flooding across east Houston', place: 'Houston, TX · TX-18', handle: '@RepSylviaGarcia', member: 'Sylvia Garcia', since: '7:15 AM', last: '1:40 PM', updates: 6, engN: 4200, amplifiers: 4, others: ['@RepAlGreen', '@RepLizzie'],
+      timeline: [
+        { time: '6:50 AM', who: '@NWSHouston', tag: 'weather', official: true, text: 'Flash Flood Warning for Harris County until 1 PM. 3–5 inches have fallen; more expected.', meta: '2.2K reposts', isNew: false },
+        { time: '7:15 AM', who: '@RepSylviaGarcia', tag: 'member', text: 'Flash flooding is closing roads across the east side. My office is open and coordinating with Harris County OEM — call us if you need help getting to a shelter.', meta: '4.2K engagement · first member post', isNew: false },
+        { time: '11:05 AM', who: '@HCOEM', tag: 'emergency mgmt', official: true, text: 'Two shelters open: Denver Harbor and Galena Park community centers.', meta: '1.1K reposts', isNew: true },
+        { time: '1:40 PM', who: '@RepSylviaGarcia', tag: 'member', text: 'Water is receding on Market Street. Shelters stay open tonight. Thank you to HCOEM and the neighbors who checked on each other.', meta: '1.9K engagement', isNew: true },
+      ],
+      confirmed: [{ text: 'Two shelters open', src: 'Harris County OEM 11:05 AM' }, { text: 'Warning expired 1 PM', src: 'NWS Houston' }],
+      unverified: [{ text: 'Bayou levee breach near Channelview', src: 'one account, since deleted' }],
+      whatsNew: ['Shelters staying open overnight', 'Water receding on Market Street'] },
+    { id: 'riverside', kind: 'wildfire', status: 'active', title: 'Banning Bench fire · evacuation orders', place: 'Riverside County, CA · CA-25', handle: '@RepRaulRuizMD', member: 'Raul Ruiz', since: 'Sep 6, 7:30 PM', last: '11:55 AM', updates: 8, engN: 12100, amplifiers: 9, others: ['@RepMarkTakano', '@RepPeteAguilar', '@SenAlexPadilla'],
+      timeline: [
+        { time: 'Sep 6 7:10 PM', who: '@CAL_FIRE', tag: 'fire', official: true, text: 'Banning Bench Fire: 400 acres, 0% contained. Evacuation orders issued for zones RVC-E012, E013.', meta: '5.4K reposts', isNew: false },
+        { time: 'Sep 6 7:30 PM', who: '@RepRaulRuizMD', tag: 'member', text: 'Evacuation orders are now in effect for Banning Bench. We are in contact with Cal Fire and FEMA. Check readyforwildfire.org for the latest zones.', meta: '12.1K engagement · first member post', isNew: false },
+        { time: '6:30 AM', who: '@CAL_FIRE', tag: 'fire', official: true, text: '2,100 acres, 10% contained. Additional evacuation warnings for Cabazon.', meta: '3.9K reposts', isNew: true },
+        { time: '9:15 AM', who: 'local account', tag: 'eyewitness', unverified: true, text: 'Homes lost on Bluff Street.', meta: '870 reposts · Cal Fire has not confirmed structure loss', isNew: true },
+        { time: '11:55 AM', who: '@RepRaulRuizMD', tag: 'member', text: 'Air support is up and containment is growing. If you are under a warning, pack now. Shelter at Beaumont High is open and pet-friendly.', meta: '4.4K engagement', isNew: true },
+      ],
+      confirmed: [{ text: '2,100 acres, 10% contained', src: 'Cal Fire 6:30 AM' }, { text: 'Shelter open at Beaumont High', src: 'Riverside County' }],
+      unverified: [{ text: 'Structures lost on Bluff Street', src: 'eyewitness, 870 reposts' }],
+      whatsNew: ['Containment reported at 10%', 'Evacuation warnings extended to Cabazon', 'Unconfirmed structure-loss claim spreading'] },
+    { id: 'detroit', kind: 'water main', status: 'resolved', title: 'Water main break, southwest Detroit', place: 'Detroit, MI · MI-13', handle: '@RepShriThanedar', member: 'Shri Thanedar', since: 'Sep 4, 8:20 AM', last: 'Sep 5, 6:00 PM', updates: 4, engN: 1800, amplifiers: 1, others: ['@RepDebDingell'],
+      timeline: [
+        { time: 'Sep 4 8:20 AM', who: '@RepShriThanedar', tag: 'member', text: 'A major water main break has shut Vernor Highway. DWSD crews are on site; boil-water advisory for the surrounding blocks.', meta: '1.8K engagement · first member post', isNew: false },
+        { time: 'Sep 5 6:00 PM', who: '@DetroitWater', tag: 'utility', official: true, text: 'Repairs complete. Boil-water advisory lifted.', meta: '640 reposts', isNew: false },
+      ],
+      confirmed: [{ text: 'Advisory lifted', src: 'DWSD Sep 5' }], unverified: [], whatsNew: ['Closed — no member posts in 36 hours'] },
+  ];
+  fmt(n) { return n >= 1e7 ? (n / 1e6).toFixed(1) + 'M' : n >= 1e6 ? (n / 1e6).toFixed(2) + 'M' : n >= 1e5 ? Math.round(n / 1e3) + 'K' : n >= 1e4 ? (n / 1e3).toFixed(1) + 'K' : Math.round(n).toLocaleString(); }
+  dot(color) { return React.createElement('span', { style: { width: 7, height: 7, borderRadius: '50%', background: color, display: 'inline-block', flex: 'none' } }); }
+  statusDot(s) { return this.dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : '#8e8e93'); }
+  seg(list, key) {
+    const h = React.createElement;
+    return h('div', { role: 'group', style: { display: 'inline-flex', background: '#e8e8ed', borderRadius: 10, padding: 2 } }, list.map(l => { const on = this.state[key] === l; return h('button', { key: l, onClick: () => this.setState({ [key]: l }), 'aria-pressed': on, style: { border: 0, cursor: 'pointer', fontSize: 12, fontWeight: 600, padding: '5px 12px', borderRadius: 8, transition: 'background .12s ease, color .12s ease', background: on ? '#fff' : 'transparent', color: on ? '#1d1d1f' : '#6e6e73', boxShadow: on ? '0 1px 3px rgba(0,0,0,.14)' : 'none' } }, l); }));
+  }
+  badge(kind) {
+    const map = { official: ['official', '#00823a', '#e6f7ea'], member: ['member', '#194292', '#e8eefb'], unverified: ['unverified', '#d70015', '#ffebe9'], press: ['press', '#3a3a3c', '#f2f2f4'] };
+    const [t, c, bg] = map[kind]; return React.createElement('span', { style: { color: c, background: bg, padding: '1px 6px', borderRadius: 5 } }, t);
+  }
+  renderVals() {
+    const D = Component.D, view = this.props.view ?? 'Desk', sources = this.props.sources ?? 'All sources', showUnverified = this.props.showUnverified ?? true;
+    const { status, selected, query } = this.state;
+    const keep = e => (sources === 'All sources' || (sources === 'Members only' ? e.tag === 'member' : e.official || e.tag === 'member')) && (showUnverified || !e.unverified);
+    const prep = i => Object.assign({}, i, { eng: this.fmt(i.engN), statusDot: this.statusDot(i.status), officialCount: i.timeline.filter(e => e.official).length,
+      timeline: i.timeline.filter(keep).map(e => Object.assign({}, e, { official: !!e.official, unverified: !!e.unverified, dot: this.dot(e.isNew ? '#1d1d1f' : '#d2d2d7') })),
+      newCount: i.timeline.filter(keep).filter(e => e.isNew).length, unverified: showUnverified ? i.unverified : [], pick: () => this.setState({ selected: i.id, status: 'All' }), selected: i.id === selected });
+    const all = D.map(prep);
+    const list = all.filter(i => status === 'All' ? i.status !== 'resolved' : status === 'Resolved' ? i.status === 'resolved' : i.status === status.toLowerCase());
+    const sel = all.find(i => i.id === selected) || all[0];
+    const saved = [['Aurora · shots fired', '(shooting OR "shots fired") Aurora -is:retweet'], ['Banning Bench fire', '("Banning Bench" OR #BanningBenchFire) (evacuat* OR contain*)'], ['Houston flooding', '(flood OR flooding) (Houston OR "Harris County") from:list'], ['Any district emergency', '(shelter OR evacuation OR "active shooter" OR "shelter in place") from:list -is:retweet']].map(([label, q]) => ({ label, use: () => this.setState({ query: q }) }));
+    const results = [
+      { who: '@AuroraPD', time: '1:22 PM', text: 'One suspect in custody. Two people transported with non-life-threatening injuries. No ongoing threat.', badge: this.badge('official'), meta: 'matches "shots fired" · 11.2K reposts' },
+      { who: '@RepJasonCrow', time: '1:40 PM', text: 'Grateful to Aurora officers for a fast response. Two neighbors are being treated and are expected to recover.', badge: this.badge('member'), meta: 'on the tracked list · 6.2K engagement' },
+      { who: 'local account', time: '1:05 PM', text: 'Hearing there are multiple victims at the food court entrance.', badge: this.badge('unverified'), meta: 'not corroborated by any official source' },
+    ];
+    const brief = [`${sel.title} — ${sel.place} · ${sel.status} · ${sel.since} → ${sel.last}`, '', 'Confirmed', ...sel.confirmed.map(c => `• ${c.text} (${c.src})`), ...(showUnverified && sel.unverified.length ? ['', 'Circulating, unverified', ...sel.unverified.map(u => `• ${u.text} (${u.src})`)] : []), '', "What's new", ...sel.whatsNew.map(n => `• ${n}`), '', `${sel.handle} has posted ${sel.updates} times · ${sel.eng} engagement · also on it: ${sel.others.join(', ')}`, '—', 'caucus-pulse · 2:37 PM ET'].join('\n');
+    const copyBrief = () => { const done = () => { this.setState({ copied: true }); clearTimeout(this._ct); this._ct = setTimeout(() => this.setState({ copied: false }), 1800); }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(brief).then(done, done); else done(); };
+    return {
+      copyBrief, briefLabel: this.state.copied ? 'Copied ✓' : 'Copy brief for Signal',
+      lastPoll: '2:37 PM', isDesk: view === 'Desk', isBoard: view === 'Board',
+      activeCount: String(all.filter(i => i.status === 'active').length), watchCount: String(all.filter(i => i.status === 'monitoring').length), resolvedCount: String(all.filter(i => i.status === 'resolved').length),
+      statusSeg: this.seg(['All', 'Active', 'Monitoring', 'Resolved'], 'status'), list, listEmpty: list.length === 0, sel, board: all.filter(i => i.status !== 'resolved'),
+      sourceNote: sources === 'All sources' ? 'all sources' : sources.toLowerCase(), showUnverified,
+      query, setQuery: e => this.setState({ query: e.target.value }), saved, results, searchStatus: 'sample results until X search is connected',
+    };
+  }
+}
+</script>
+</body>
+</html>
