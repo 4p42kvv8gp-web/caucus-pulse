@@ -53,5 +53,62 @@
       "service_account_id": "svac_01JEdFDBYcdR49gw6cf14hwh",
       "workspace_id": "wrkspc_011YNxhjEtK5CWK2AmBBQ7hq"
     }
+  },
+  "narrative_lists": {
+    "_comment": "Public X Lists the narrative layer may scan (owner: the credential account). role: who is on it; priority 1 = scan first (Democratic side and the press that covers it), 3 = counter-message only. Reads are billed per post returned and go through the daily ledger.",
+    "house-news": {
+      "id": "1653395694990901254",
+      "name": "House News",
+      "role": "reporters covering the House",
+      "priority": 1
+    },
+    "labor-reporters": {
+      "id": "1678832953365786635",
+      "name": "Labor Reporters",
+      "role": "reporters",
+      "priority": 1
+    },
+    "ny-news": {
+      "id": "1653421597959569408",
+      "name": "New York News",
+      "role": "NY press",
+      "priority": 2
+    },
+    "ny-members": {
+      "id": "2028897932611580052",
+      "name": "NY Members",
+      "role": "NY delegation",
+      "priority": 2
+    },
+    "overlapping-electeds": {
+      "id": "1682462975750176768",
+      "name": "Overlapping Electeds",
+      "role": "NY-08 electeds (the Leader's district)",
+      "priority": 2
+    },
+    "economists": {
+      "id": "1666515728168525824",
+      "name": "Economists",
+      "role": "expert voices",
+      "priority": 2
+    },
+    "international-news": {
+      "id": "2028900367082148207",
+      "name": "International News",
+      "role": "foreign press",
+      "priority": 3
+    },
+    "house-gop": {
+      "id": "1844074661119717599",
+      "name": "HR Officials/Campaigns",
+      "role": "House Republicans (counter-message only)",
+      "priority": 3
+    },
+    "biden-administration": {
+      "id": "1666515827682582531",
+      "name": "Biden Administration",
+      "role": "stale; not scanned by default",
+      "priority": 4
+    }
   }
 }
