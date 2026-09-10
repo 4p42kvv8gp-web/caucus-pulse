@@ -14,15 +14,38 @@
 // tagged by the poll-time pass (data/topics-live/) are still re-classified
 // here — the nightly batch is authoritative and costs half as much.
 //
+// Quotes and replies go to the model with the post they point at
+// (`quoting`, resolved by src/quoted.js) — a member reacting to Coxon's
+// resignation rarely names it. Story anchors (taxonomy `anchors:`) assign a
+// story deterministically to any post that quotes, replies to or retweets
+// an anchored post; the model still runs for the post's own topics and the
+// two are merged at write time.
+//
 // The building blocks (planDay → chunkRequests → collectResults → writeDay)
 // are exported so classify-range.js can put many days into one batch.
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
 import { settings, daysAgoEt, readJSON, writeJSON } from './util.js';
 import { loadState, saveState, loadDay, topicsPath, archivePath } from './store.js';
 import { readJSONL } from './util.js';
-import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose } from './taxonomy.js';
+import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
+import { quotedResolver, quotingFor } from './quoted.js';
 
-export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose } from './taxonomy.js';
+export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
+
+// One input line for the model. Exactly {id, text} unless the item carries
+// quoted context — the line is what the prompt's "quoting" rule refers to.
+export function classifierLine(t) {
+  return JSON.stringify(t.quoting ? { id: t.id, text: t.text, quoting: t.quoting } : { id: t.id, text: t.text });
+}
+
+// Items with their quoted context attached (a copy per item that has one;
+// the rest pass through untouched). `resolve` is post → context.
+export function withQuoting(items, resolve) {
+  return items.map((t) => {
+    const quoting = quotingFor(resolve(t));
+    return quoting ? { ...t, quoting } : t;
+  });
+}
 
 // custom_id must match ^[a-zA-Z0-9_-]{1,64}$ — a date prefix keeps multi-day
 // batches separable ("2026-08-20_chunk-3").
@@ -40,12 +63,42 @@ export function chunkRequests(items, tax, model, prefix = '') {
         system,
         messages: [{
           role: 'user',
-          content: chunk.map((t) => JSON.stringify({ id: t.id, text: t.text })).join('\n')
+          content: chunk.map(classifierLine).join('\n')
         }]
       }
     });
   }
   return requests;
+}
+
+// ── Story anchors ────────────────────────────────────────────────────────
+
+// Union of topic lists, first occurrence wins, deduped by macro/sub.
+export function mergeTopics(...lists) {
+  const seen = new Set();
+  const out = [];
+  for (const list of lists) {
+    for (const t of list || []) {
+      const [macro, sub = null] = t;
+      const key = `${macro}/${sub ?? ''}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push([macro, sub]);
+    }
+  }
+  return out;
+}
+
+// {id → [[macro, sub], ...]} for every post that IS an anchor or points at
+// one (quote, reply or retweet refId). Deterministic — no model involved.
+export function anchoredAssignments(tweets, anchors) {
+  const out = {};
+  if (!anchors?.size) return out;
+  for (const t of tweets) {
+    const topics = mergeTopics(anchors.get(t.id), t.refId ? anchors.get(t.refId) : null);
+    if (topics.length) out[t.id] = topics;
+  }
+  return out;
 }
 
 export function mergeParsed(parsed, tax, out) {
@@ -113,9 +166,17 @@ function corpusIds(date) {
 // whose original is archived nearby but not classified yet is held back and
 // resolved at writeDay time (after the earlier day lands) instead of being
 // classified from its truncated "RT @…" text.
-export function planDay(date, { deferInCorpus = false } = {}) {
-  const tweets = loadDay(date);
-  const prior = priorAssignments(date);
+//
+// Quotes and replies leave with their quoted context attached (`quoting`);
+// `anchored` holds the story assignments the taxonomy's anchors settle
+// before the model runs. deps (tests): tax, tweets, prior, resolve.
+export function planDay(date, {
+  deferInCorpus = false,
+  tax = loadTaxonomy(),
+  tweets = loadDay(date),
+  prior = priorAssignments(date),
+  resolve = quotedResolver()
+} = {}) {
   const corpus = deferInCorpus ? corpusIds(date) : null;
   const inherited = {};
   const deferred = [];
@@ -125,39 +186,66 @@ export function planDay(date, { deferInCorpus = false } = {}) {
     else if (t.type === 'retweet' && corpus?.has(t.refId)) deferred.push(t);
     else toClassify.push(t);
   }
-  return { date, tweets, toClassify, inherited, deferred };
+  const anchored = anchoredAssignments(tweets, anchorIndex(tax));
+  return { date, tweets, toClassify: withQuoting(toClassify, resolve), inherited, deferred, anchored };
 }
 
-// Write data/topics/<date>.json from a plan and its batch result. Re-reads
-// prior days' assignments so deferred retweets inherit from days written
-// earlier in the same run.
-export function writeDay(plan, result, model) {
-  const { date, tweets, toClassify, deferred } = plan;
-  const { assignments, incidents, emerging, failedChunks } = result;
+// The day file's content from a plan and its batch result: retweets inherit
+// (from this batch, then from prior days), anchors merge over whatever the
+// model said, and an anchored post is classified by definition — it leaves
+// "unclassified" and the emerging clusters. `prior` is injectable (tests);
+// by default prior days are re-read so deferred retweets inherit from days
+// written earlier in the same run.
+export function mergeDay(plan, result, { prior } = {}) {
+  const { date, tweets, toClassify, deferred, anchored = {} } = plan;
+  const { assignments, incidents, failedChunks } = result;
   const inherited = { ...plan.inherited };
-  const prior = deferred.length ? priorAssignments(date) : {};
+  const priorMap = prior ?? (deferred.length ? priorAssignments(date) : {});
   for (const t of tweets) {
     if (t.type !== 'retweet' || inherited[t.id]) continue;
     if (assignments[t.refId]) inherited[t.id] = assignments[t.refId];
-    else if (prior[t.refId]) inherited[t.id] = prior[t.refId];
+    else if (priorMap[t.refId]) inherited[t.id] = priorMap[t.refId];
   }
-  const unclassified = [...toClassify, ...deferred].filter((t) => !(t.id in assignments) && !(t.id in inherited)).map((t) => t.id);
+  const merged = { ...assignments, ...inherited };
+  for (const [id, topics] of Object.entries(anchored)) merged[id] = mergeTopics(topics, merged[id]);
+  const anchoredIds = new Set(Object.keys(anchored));
+  const emerging = (result.emerging || [])
+    .map((e) => ({ ...e, ids: (e.ids || []).filter((id) => !anchoredIds.has(id)) }))
+    .filter((e) => e.ids.length);
+  const unclassified = [...toClassify, ...deferred].filter((t) => !(t.id in merged)).map((t) => t.id);
+  return {
+    day: { date, assignments: merged, incidents, emerging, unclassified, anchored, failedChunks },
+    stats: {
+      classified: Object.keys(assignments).length,
+      inherited: Object.keys(inherited).length,
+      anchored: anchoredIds.size,
+      incidents: Object.keys(incidents).length,
+      emerging: emerging.length,
+      unclassified: unclassified.length,
+      failedChunks
+    }
+  };
+}
 
-  writeJSON(topicsPath(date), {
-    date,
+// Write data/topics/<date>.json from a plan and its batch result.
+export function writeDay(plan, result, model) {
+  const { day, stats } = mergeDay(plan, result);
+  writeJSON(topicsPath(plan.date), {
+    date: day.date,
     model,
     classifiedAt: new Date().toISOString(),
-    assignments: { ...assignments, ...inherited },
-    incidents,
-    emerging,
-    unclassified,
-    failedChunks
+    assignments: day.assignments,
+    incidents: day.incidents,
+    emerging: day.emerging,
+    unclassified: day.unclassified,
+    anchored: day.anchored,
+    failedChunks: day.failedChunks
   });
-  return { classified: Object.keys(assignments).length, inherited: Object.keys(inherited).length, incidents: Object.keys(incidents).length, emerging: emerging.length, unclassified: unclassified.length, failedChunks };
+  return stats;
 }
 
 export function summarize(date, s) {
-  return `[classify] ${date}: ${s.classified} classified, ${s.inherited} inherited, ${s.incidents} incident-flagged, ${s.emerging} emerging clusters, ${s.unclassified} unclassified${s.failedChunks ? `, ${s.failedChunks} chunk(s) failed` : ''}`;
+  return `[classify] ${date}: ${s.classified} classified, ${s.inherited} inherited, ${s.anchored ? `${s.anchored} anchored, ` : ''}${s.incidents} incident-flagged, ${s.emerging} emerging clusters, ${s.unclassified} unclassified${s.failedChunks ? `, ${s.failedChunks} chunk(s) failed` : ''}`;
 }
 
 async function main() {
@@ -165,7 +253,7 @@ async function main() {
   const date = dateArg ? dateArg.split('=')[1] : daysAgoEt(1);
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const tax = loadTaxonomy();
-  const plan = planDay(date);
+  const plan = planDay(date, { tax });
   if (!plan.tweets.length) { console.log(`[classify] no tweets archived for ${date} — nothing to do`); return; }
   if (readJSON(topicsPath(date), null)) { console.log(`[classify] ${date} already classified — skipping`); return; }
 
@@ -179,7 +267,8 @@ async function main() {
     batchId = batch.id;
     state.pendingBatch = { id: batchId, date };
     saveState(state);
-    console.log(`[classify] submitted batch ${batchId}: ${plan.toClassify.length} tweets in ${requests.length} requests (${Object.keys(plan.inherited).length} retweets inherit)`);
+    const quoting = plan.toClassify.filter((t) => t.quoting).length;
+    console.log(`[classify] submitted batch ${batchId}: ${plan.toClassify.length} tweets in ${requests.length} requests (${quoting} with quoted context, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
   } else {
     console.log(`[classify] resuming pending batch ${batchId} for ${date}`);
   }

@@ -9,6 +9,7 @@
 //   data/authors.json               author table (weekly refresh)
 //   data/rollups/topic-days.json    topic × day × caucus aggregates
 //   data/state.json                 cursor + usage metering (this file)
+import fs from 'node:fs';
 import { p, settings, readJSON, writeJSON, readJSONL, appendJSONL, etDate, daysAgoEt } from './util.js';
 
 export const statePath = p('data', 'state.json');
@@ -65,6 +66,13 @@ export function budgetExhausted(state) {
 
 export function estCost({ posts = 0, users = 0 }) {
   return posts * 0.005 + users * 0.01;
+}
+
+// Every archive day on disk, oldest first.
+export function archiveDates() {
+  const dir = p('data', 'archive');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.jsonl')).map((f) => f.slice(0, -6)).sort();
 }
 
 // Ids captured in the last `days` archive files — the dedupe set for the

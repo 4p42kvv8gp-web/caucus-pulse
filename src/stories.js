@@ -124,6 +124,20 @@ function loadPosts(days) {
   return byId;
 }
 
+// The posts a candidate's posts point at (quote, reply or retweet refId),
+// most-referenced first: [{id, n}]. A story that is many members reacting
+// to one post shows it here — the auto-promotion pass can write those ids
+// as the story's `anchors:` (taxonomy.js anchorIndex) so later quotes,
+// replies and retweets of it are assigned deterministically.
+export function topQuoted(posts, limit = 5) {
+  const counts = new Map();
+  for (const t of posts) if (t.refId) counts.set(t.refId, (counts.get(t.refId) || 0) + 1);
+  return [...counts]
+    .map(([id, n]) => ({ id, n }))
+    .sort((a, b) => b.n - a.n || (BigInt(a.id) < BigInt(b.id) ? -1 : 1))
+    .slice(0, limit);
+}
+
 export function scoreCandidates(merged, postsById, authorsById, caucusKeys) {
   return merged.map((g) => {
     const posts = g.ids.map((id) => postsById.get(id)).filter(Boolean);
@@ -151,6 +165,7 @@ export function scoreCandidates(merged, postsById, authorsById, caucusKeys) {
       cm: caucusKeys.map((k) => [...members].filter((a) => (authorsById[a]?.caucuses || []).includes(k)).length),
       who: [...members].map((a) => authorsById[a]?.handle).filter(Boolean).slice(0, 12),
       ids: posts.map((x) => x.id),
+      topQuoted: topQuoted(posts),
       sample: best.text,
       samples: posts.slice(0, 3).map((x) => x.text.slice(0, 200)),
       sources: g.sources || [],

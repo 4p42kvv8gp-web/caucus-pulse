@@ -21,6 +21,18 @@ export function listId() {
   return process.env.X_LIST_ID || settings.list_id;
 }
 
+// Capture the post a quote/reply points at with the post (x.js
+// includeReferenced) — on by default; X_INCLUDE_REFERENCED=false is the kill
+// switch. The included posts and their authors are billed reads on top of
+// the page: with ~22% of caucus posts being quotes or replies and ~16%
+// retweets (whose originals X returns too), a 100-post page brings back
+// roughly 35-40 extra post objects and ~30 user objects — about +18% in
+// post reads for the quotes and replies alone, up to ~2× the page's dollar
+// cost in all. docs/QUOTED_CONTEXT.md has the arithmetic.
+export function includeReferenced() {
+  return !/^(0|false|no|off)$/i.test(process.env.X_INCLUDE_REFERENCED || '');
+}
+
 // Page size when we pay for boundary overlap: aim ~2× the recent per-poll
 // volume so bursts rarely need page 2, but quiet polls don't re-read 100.
 // Floor is the endpoint's minimum (5) — every row past the boundary is a
@@ -49,6 +61,7 @@ async function pull(state) {
     : settings.poll.page_size;
 
   const raw = [];
+  const includes = { tweets: [], users: [] }; // referenced posts + their authors, all pages
   let paginationToken = null;
   let hitBoundary = false;
 
@@ -59,7 +72,8 @@ async function pull(state) {
         sinceId: useSinceId ? state.sinceId : undefined,
         paginationToken,
         // after page 1 we're inside a burst — full pages are cheapest
-        pageSize: page === 0 ? pageSize : 100
+        pageSize: page === 0 ? pageSize : 100,
+        includeReferenced: includeReferenced()
       });
     } catch (e) {
       if (e.status === 400 && useSinceId && state.sinceIdSupported === null) {
@@ -77,7 +91,9 @@ async function pull(state) {
     if (useSinceId && state.sinceIdSupported === null && res.tweets.length >= 0) {
       state.sinceIdSupported = true; // the param was accepted
     }
-    addUsage(state, { posts: res.usage });
+    addUsage(state, { posts: res.usage, users: res.userReads || 0 });
+    includes.tweets.push(...(res.includes?.tweets || []));
+    includes.users.push(...(res.includes?.users || []));
 
     const fresh = newerThan(res.tweets, state.sinceId);
     raw.push(...fresh);
@@ -88,7 +104,7 @@ async function pull(state) {
       console.warn(`[poll] burst exceeded ${maxPages} pages — older tweets will be caught by dedupe next cycle only if still on page 1..${maxPages}; raise X_MAX_PAGES if this repeats`);
     }
   }
-  return raw;
+  return { raw, includes };
 }
 
 export async function pollOnce() {
@@ -103,14 +119,14 @@ export async function pollOnce() {
   }
 
   const capturedAt = new Date().toISOString();
-  const raw = await pull(state);
+  const { raw, includes } = await pull(state);
 
   const seen = recentIds();
   const records = [];
   for (const t of raw) {
     if (seen.has(t.id)) continue;
     seen.add(t.id);
-    records.push(x.toRecord(t, capturedAt));
+    records.push(x.toRecord(t, capturedAt, includes));
     state.sinceId = maxId(state.sinceId, t.id);
   }
 
@@ -120,7 +136,8 @@ export async function pollOnce() {
   saveState(state);
 
   const today = state.usage[etDate()] || { posts: 0, users: 0 };
-  console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''}; today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
+  const quoted = records.filter((r) => r.quoted).length;
+  console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''} (${quoted} with quoted context; ${includes.tweets.length} referenced post(s) + ${includes.users.length} author(s) read); today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
 
   // Post-capture extras are best-effort: live topic tags for the dashboard
   // feed, then a rollups.json rebuild. Dynamic imports keep the capture path
@@ -129,7 +146,7 @@ export async function pollOnce() {
     try {
       const { classifyLive } = await import('./classify-live.js');
       const r = await classifyLive(records);
-      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
     } catch (e) {
       console.warn(`[poll] live classification skipped: ${e.message}`);
     }
