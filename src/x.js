@@ -136,6 +136,31 @@ export async function lookupUsersByHandles(handles) {
   return { users, usage };
 }
 
+// Every member of the List, 100 per page ($0.01 per user returned). The List
+// is the roster's source of truth: whoever is on it gets captured, so the
+// author table is built from it rather than from a hand-typed handle list.
+export async function listMembers(listId) {
+  const users = [];
+  let usage = 0;
+  let token = null;
+  for (let page = 0; page < 20; page++) {
+    const params = new URLSearchParams({
+      max_results: '100',
+      'user.fields': 'username,name,verified,verified_type,public_metrics,created_at'
+    });
+    if (token) params.set('pagination_token', token);
+    const res = await authFetch(`${API}/lists/${listId}/members?${params}`);
+    if (res.status === 429) return { users, usage, rateLimited: true };
+    if (!res.ok) await fail(res, 'list members');
+    const body = await res.json();
+    users.push(...(body.data || []));
+    usage += body.data?.length || 0;
+    token = body.meta?.next_token || null;
+    if (!token) break;
+  }
+  return { users, usage, rateLimited: false };
+}
+
 // Normalize a raw API tweet into the archive record. Author enrichment
 // happens at read time from the local author table, never via expansions.
 export function toRecord(t, capturedAt) {
