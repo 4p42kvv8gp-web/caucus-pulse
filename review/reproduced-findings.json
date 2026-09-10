@@ -1,0 +1,52 @@
+{
+  "sourceCommit": "a93d72349104418ca59c9845eb9b949d7f9c77e1",
+  "mode": "offline mock responses",
+  "findings": [
+    {
+      "finding": "page-limit",
+      "checkpoint": "500",
+      "nextPollCaptured": 0,
+      "permanentlySkipped": [
+        "200",
+        "300"
+      ]
+    },
+    {
+      "finding": "partial-http-failure",
+      "checkpoint": "500",
+      "nextPollCaptured": 0,
+      "permanentlySkipped": [
+        "200",
+        "300"
+      ]
+    },
+    {
+      "finding": "full-content-discarded",
+      "savedText": "short preview",
+      "fullLongTextSaved": false,
+      "entitiesSaved": false
+    },
+    {
+      "finding": "accounts-counted-as-members",
+      "actualMembers": 2,
+      "reportedMembers": 3
+    },
+    {
+      "finding": "meaningful-phrases-excluded",
+      "missing": [
+        "not a crime",
+        "we will not be silent"
+      ]
+    },
+    {
+      "finding": "daily-windows-miss-cross-midnight-spread",
+      "distinctMembersWithin15Minutes": 3,
+      "phrasesDetectedByCurrentDailyRuns": 0
+    },
+    {
+      "finding": "daily-budget-not-a-hard-cap",
+      "configuredReadBudget": 1,
+      "readsReturned": 2
+    }
+  ]
+}

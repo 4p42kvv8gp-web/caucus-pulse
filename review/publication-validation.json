@@ -1,0 +1,39 @@
+{
+  "publishedAt": "2026-09-10T03:35:10.231Z",
+  "reviewedSourceCommit": "a93d72349104418ca59c9845eb9b949d7f9c77e1",
+  "originalArtifacts": [
+    {
+      "path": "caucus-pulse-assessment.md",
+      "bytes": 22225,
+      "sha256": "6f611d3fee84ca6832c81bb4479b159592d942b767abcf28b35970a09ef60d36"
+    },
+    {
+      "path": "reproduce-findings.mjs",
+      "bytes": 6016,
+      "sha256": "209b8500bae47094731383049158d8890c0993bddd60b57aa8ba88a82c264e1d"
+    },
+    {
+      "path": "reproduced-findings.json",
+      "bytes": 1158,
+      "sha256": "6ed33e8d70355bc91155d43747984ff23823669a6b4530bf3942b0d85628d55b"
+    },
+    {
+      "path": "existing-tests.txt",
+      "bytes": 1007,
+      "sha256": "d1349965307b7a48baaacc72bda940d33546f18b31815c9808eabd33b539e395"
+    },
+    {
+      "path": "bundle-comparison.json",
+      "bytes": 1545,
+      "sha256": "7bd3f292c890b0b921f34e105df99fc6d93e30eb4a2f3692d68c3fd270848466"
+    }
+  ],
+  "validation": {
+    "mode": "offline synthetic responses in a temporary source copy",
+    "reproducedScenarios": 7,
+    "matchedOriginalResults": true,
+    "liveProviderRequests": 0,
+    "applicationCodeChanged": false,
+    "originalTests": "Historical transcript: 12 passed. Not rerun during publication."
+  }
+}

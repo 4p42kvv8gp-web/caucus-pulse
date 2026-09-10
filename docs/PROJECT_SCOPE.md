@@ -77,7 +77,7 @@ The first collector uses bounded polling with explicit incomplete intervals, fol
 
 ## References and provenance
 
-- Local assessment: `review/caucus-pulse-assessment.md` in the original workspace, including seven reproduced failures and the original test results. This local reference is not part of the application repository.
-- [Reviewed original source](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The reference copy remains under `review/reference/`.
+- [Original implementation assessment](../review/caucus-pulse-assessment.md), published unchanged with [offline evidence and reproduction instructions](../review/README.md). It reviews the September 7 original build; all 12 existing tests passed, while seven additional scenarios exposed failures.
+- [Reviewed original source](https://github.com/4p42kvv8gp-web/X-Decibel-Reader/tree/a93d72349104418ca59c9845eb9b949d7f9c77e1/caucus-pulse). The local reference snapshot is not bundled in this repository; the review instructions retrieve the pinned source.
 - [X List endpoint](https://docs.x.com/x-api/lists/get-list-posts), [X pricing](https://docs.x.com/x-api/getting-started/pricing), [X Activity](https://docs.x.com/x-api/activity/introduction), [X Developer Policy](https://docs.x.com/developer-terms/policy).
 - [Local scheduled work](https://learn.chatgpt.com/docs/automations?surface=app) requires the computer on and the desktop app running. Development continuation is separate from a deployed product collector.

@@ -1,0 +1,20 @@
+✔ newerThan keeps only tweets past the cursor (0.7505ms)
+✔ adaptivePageSize tracks recent volume within [10, 100] (0.153209ms)
+✔ validAssignments drops unknown macros and unknown subs (0.09675ms)
+✔ renderTaxonomy is deterministic (stable prompt cache prefix) (0.162708ms)
+✔ rollupDay counts a subtopic tweet toward macro and sub without double-counting the macro (0.246125ms)
+✔ tokenize strips links, mentions, and hashes but keeps slogan words (0.586209ms)
+✔ ngrams reject stopword-edged grams but allow interior stopwords (0.256083ms)
+✔ minePhrases counts distinct members, not tweet volume (0.299167ms)
+✔ minePhrases drops fragments contained in an equally-spread longer phrase (0.177333ms)
+✔ parseCSV handles quotes, commas, and CRLF (1.554792ms)
+✔ snowflake id comparison uses BigInt, not Number (0.18275ms)
+✔ etDate buckets by Eastern calendar day (36.5105ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.729375
