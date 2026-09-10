@@ -12,7 +12,9 @@ test('tokenize strips links, mentions, and hashes but keeps slogan words', () =>
 test('tokenize handles curly and straight apostrophes: possessives drop, contractions collapse', () => {
   assert.deepEqual(tokenize('Trump’s tariffs'), ['trump', 'tariffs']);
   assert.deepEqual(tokenize("Trump's tariffs"), ['trump', 'tariffs']);
-  assert.deepEqual(tokenize('We don’t back down'), ['we', 'dont', 'back', 'down']);
+  assert.deepEqual(tokenize('We don’t back down'), ['we', 'do', 'not', 'back', 'down']);
+  assert.deepEqual(tokenize("I'll keep fighting; we won't quit"), ['i', 'keep', 'fighting', 'we', 'will', 'not', 'quit']);
+  assert.deepEqual(tokenize('the U.S. Capitol in D.C.'), ['the', 'us', 'capitol', 'in', 'dc']);
 });
 
 test('ngrams reject stopword-edged grams but allow interior stopwords', () => {

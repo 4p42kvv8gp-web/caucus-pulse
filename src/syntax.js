@@ -10,7 +10,7 @@ import { loadAuthors } from './authors.js';
 
 export const phrasesPath = p('data', 'phrases.json');
 
-const STOP = new Set(`a an and are as at be been but by for from had has have he her his i if in is it its me my not of on or our so that the their them they this to was we were will with you your today just amp rt via more all can out now new one get make than about what when who how why up down over under after before during their there here going day says said join watch live tune proud great thank thanks happy im dont its lets us
+const STOP = new Set(`a an and are as at be been but by for from had has have he her his i if in is it its me my not of on or our so that the their them they this to was we were will with you your today just amp rt via more all can out now new one get make than about what when who how why up down over under after before during their there here going day says said join watch live tune proud great thank thanks happy im dont its lets us do does did done shall would could should might must
 `.trim().split(/\s+/));
 
 // Tokenize tweet text for phrase mining: strip links, mentions, and
@@ -25,8 +25,11 @@ export function tokenize(text) {
     // Possessives drop to the bare noun; other apostrophes collapse so
     // "don't" → "dont" (a stopword) instead of "don" + "t".
     .replace(/[‘’`]/g, "'")
-    .replace(/'s\b/g, '')
+    .replace(/\b(won't|can't|shan't)\b/g, (m) => ({ "won't": 'will not', "can't": 'can not', "shan't": 'shall not' })[m])
+    .replace(/n't\b/g, ' not')            // don't → do not (both stopwords)
+    .replace(/'(s|ll|re|ve|d|m)\b/g, '')  // Trump's → trump, I'll → i, we're → we
     .replace(/'/g, '')
+    .replace(/\b([a-z])\.([a-z])\.?/g, '$1$2') // U.S. → us, D.C. → dc
     .replace(/[^a-z0-9\s-]/g, ' ')
     .split(/\s+/)
     .filter(Boolean);
