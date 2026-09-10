@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-10T07:19:50.586Z",
+ "generatedAt": "2026-09-10T07:20:43.578Z",
  "story": "anthropic-researcher-resignation",
  "layer": "caucus-corpus",
  "window": {
@@ -411,11 +411,15 @@
     },
     "2097519390480891976": {
      "count": 1,
-     "who": "caucus post by @tedlieu"
+     "who": "caucus post by @tedlieu (in this file)",
+     "when": "2026-09-09T02:56:07.000Z",
+     "how": "archive record"
     },
     "2097721236839162155": {
      "count": 1,
-     "who": "caucus post by @RepYassAnsari"
+     "who": "caucus post by @RepYassAnsari (in this file)",
+     "when": "2026-09-09T16:18:11.000Z",
+     "how": "archive record"
     },
     "2097684240356049178": {
      "count": 1,
@@ -425,7 +429,9 @@
     },
     "2097820074568454156": {
      "count": 1,
-     "who": "caucus post by @SenRubenGallego"
+     "who": "caucus post by @SenRubenGallego (in this file)",
+     "when": "2026-09-09T22:50:56.000Z",
+     "how": "archive record"
     },
     "2097818430032257216": {
      "count": 1,
@@ -435,11 +441,15 @@
     },
     "2097807998429130876": {
      "count": 1,
-     "who": "caucus post by @Rep_Magaziner"
+     "who": "caucus post by @Rep_Magaziner (in this file)",
+     "when": "2026-09-09T22:02:56.000Z",
+     "how": "archive record"
     },
     "2097754129489596612": {
      "count": 1,
-     "who": "caucus post by @RoKhanna"
+     "who": "caucus post by @RoKhanna (in this file)",
+     "when": "2026-09-09T18:28:53.000Z",
+     "how": "archive record"
     }
    },
    "classifier": {
@@ -887,10 +897,11 @@
    "reportMention": "reports/2026-09-09.md: Technology absent from the all-caucus top 3 (economy 102, congress-politics 84, democracy 67); appears only as CAPAC #3 \"Technology — 6 posts + 4 RTs, 4 members, 0 engagement\" (line 43). No developing-story line for the story."
   },
   "storyCandidate": {
-   "storiesJsonHits": [
-    "bridge-naming-honorary-designations"
+   "storiesJsonHits": [],
+   "sampleTextFalsePositives": [
+    "bridge-naming-honorary-designations (sample text matches \"anthropist\" — not this story)"
    ],
-   "verdict": "see hits",
+   "verdict": "NONE — no candidate key/label/alias in data/stories.json mentions Anthropic/Coxon/Hubinger/superintelligence/AI safety/existential/kill switch/frontier (only false positive: bridge-naming-honorary-designations (sample text matches \"anthropist\" — not this story))",
    "emergingClusters0909": "NONE about the story — the 25 emerging labels on 2026-09-09 are 9/11 remembrance, Smithsonian, agriculture, data-centers-utility-costs, etc. (data/topics/2026-09-09.json emerging[])",
    "contextJson": "data/context.json: 0 hits for Anthropic/Coxon/Hubinger/superintelligence/AI safety/artificial intelligence",
    "incidentsJson": "data/incidents.json: 0 hits",
@@ -991,7 +1002,7 @@
    "Volume is concentrated in one ET day: every core post but Lieu's Monday-night kill-switch post lands on 2026-09-09, from 01:27 ET (Gallego RT) to 23:22 ET (Khanna).",
    "Two bursts: 09:00-10:59 ET (9 posts, 6 originals: Dave Min, Patrick Ryan, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal) and 16:00-19:59 ET (12 posts, 9 originals: Kelly Morrison, Bill Foster, Greg Landsman, Becca Balint, Jesús G. \"Chuy\" García, Seth Magaziner, Ruben Gallego, Delia C. Ramirez, Sara Jacobs); the 11:00-14:59 block is 9 posts (Ted Lieu, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna), then nothing from 15:00 until Morrison at 16:40, and Khanna alone after 20:00.",
    "Progressive Caucus members carry most of the originals; New Dems are the second block and supply the institutional/technical voices (Beyer, Foster, Landsman, Morrison, Ryan). CBC is one post (McClellan, 0 likes at capture). No dedicated CAPAC or leadership-only voice beyond members who also hold progressive tags.",
-   "The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No shared bill name or phrase crosses more than one member in the corpus.",
+   "The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No bill name or plan is echoed by a second member anywhere in the corpus; the only cross-member sharing is language (next bullet).",
    "Shared language that does cross members: \"the call is coming from inside the house\" (Trahan 07:01 ET, Morrison 16:40 ET); \"pump the brakes\" (Deluzio, Balint); \"burying heads in the sand\" (Deluzio, Balint — both quoting the same source 2097497037956891126); \"gamble/gambling\" (Balint echoing Coxon).",
    "Engagement is top-heavy: @tedlieu 8,007 likes and @RepCasar 6,991 likes hold 53% of the originals' engagement; @RoKhanna 2,225, @RepYassAnsari 2,130, @RepTedLieu 1,276, @PatRyanUC 961, @RepLoriTrahan 897, @RepDonBeyer 734 form the second tier. 9 of 23 originals are under 200 likes at capture (@DaveMinCA 1, @CongressMin 134, @RepMcClellan 0, @RepGregLandsman 110, @RepBeccaB 173, @RepChuyGarcia 122, @Rep_Magaziner 22, @repdeliaramirez 116, @RepSaraJacobs 123).",
    "The surveillance/\"pre-crime\" angle the owner flagged reached the corpus once (Castro RT of @MorePerfectUS at 09:32 ET) and did not spread inside the caucus, though x-search.json shows it as the second-largest retweet wave in the wider stream."

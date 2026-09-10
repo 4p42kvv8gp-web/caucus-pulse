@@ -1,6 +1,6 @@
 # Anthropic researcher resignation — the caucus corpus (Task C)
 
-Generated 2026-09-10T07:19:50.586Z from `data/archive/2026-09-07..10.jsonl`, `data/authors.json`, `data/topics/*.json`, `data/stories.json`, `data/rollups/topic-days.json`. Machine-readable twin: `caucus.json` (same directory). Every number below is MEASURED from those files unless marked JUDGED or UNVERIFIED.
+Generated 2026-09-10T07:20:43.578Z from `data/archive/2026-09-07..10.jsonl`, `data/authors.json`, `data/topics/*.json`, `data/stories.json`, `data/rollups/topic-days.json`. Machine-readable twin: `caucus.json` (same directory). Every number below is MEASURED from those files unless marked JUDGED or UNVERIFIED.
 
 ## Headline numbers (MEASURED)
 
@@ -13,7 +13,7 @@ Generated 2026-09-10T07:19:50.586Z from `data/archive/2026-09-07..10.jsonl`, `da
 
 ## Core posts (34) — every post clearly about the story, ET order
 
-Engagement is `metricsAtCapture` at the 2026-09-10 05:26–05:59Z capture; retweet rows show the original's retweet count only. `[inferred]` marks a post tied to the story by timing and wording rather than an explicit reference. Text is the archive's 280-char capture (12 originals are cut mid-sentence).
+Engagement is `metricsAtCapture` at the 2026-09-10 05:26–05:59Z capture; retweet rows show the original's retweet count only. `[inferred]` marks a post tied to the story by timing and wording rather than an explicit reference. Text is the archive's 280-char capture (11 of the 23 originals are cut mid-sentence).
 
 | # | ET | account (member) | acct | caucuses | type | framing | classifier | likes / RT / replies / quotes | text | source |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -131,7 +131,7 @@ Shape of the day (JUDGED):
 - Volume is concentrated in one ET day: every core post but Lieu's Monday-night kill-switch post lands on 2026-09-09, from 01:27 ET (Gallego RT) to 23:22 ET (Khanna).
 - Two bursts: 09:00-10:59 ET (9 posts, 6 originals: Dave Min, Patrick Ryan, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal) and 16:00-19:59 ET (12 posts, 9 originals: Kelly Morrison, Bill Foster, Greg Landsman, Becca Balint, Jesús G. "Chuy" García, Seth Magaziner, Ruben Gallego, Delia C. Ramirez, Sara Jacobs); the 11:00-14:59 block is 9 posts (Ted Lieu, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna), then nothing from 15:00 until Morrison at 16:40, and Khanna alone after 20:00.
 - Progressive Caucus members carry most of the originals; New Dems are the second block and supply the institutional/technical voices (Beyer, Foster, Landsman, Morrison, Ryan). CBC is one post (McClellan, 0 likes at capture). No dedicated CAPAC or leadership-only voice beyond members who also hold progressive tags.
-- The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No shared bill name or phrase crosses more than one member in the corpus.
+- The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No bill name or plan is echoed by a second member anywhere in the corpus; the only cross-member sharing is language (next bullet).
 - Shared language that does cross members: "the call is coming from inside the house" (Trahan 07:01 ET, Morrison 16:40 ET); "pump the brakes" (Deluzio, Balint); "burying heads in the sand" (Deluzio, Balint — both quoting the same source 2097497037956891126); "gamble/gambling" (Balint echoing Coxon).
 - Engagement is top-heavy: @tedlieu 8,007 likes and @RepCasar 6,991 likes hold 53% of the originals' engagement; @RoKhanna 2,225, @RepYassAnsari 2,130, @RepTedLieu 1,276, @PatRyanUC 961, @RepLoriTrahan 897, @RepDonBeyer 734 form the second tier. 9 of 23 originals are under 200 likes at capture (@DaveMinCA 1, @CongressMin 134, @RepMcClellan 0, @RepGregLandsman 110, @RepBeccaB 173, @RepChuyGarcia 122, @Rep_Magaziner 22, @repdeliaramirez 116, @RepSaraJacobs 123).
 - The surveillance/"pre-crime" angle the owner flagged reached the corpus once (Castro RT of @MorePerfectUS at 09:32 ET) and did not spread inside the caucus, though x-search.json shows it as the second-largest retweet wave in the wider stream.
@@ -149,13 +149,13 @@ Four core posts (Lieu's exhibit-739 post and its self-RT, Min's official post, J
 | 2097474365163999402 | 1 | UNVERIFIED — posted 2026-09-08T23:57:12Z, 7 min before Coxon; quoted by @tedlieu as "exhibit number 739" | 2026-09-08T23:57:12.501Z |
 | 2097542341670359082 | 1 | @yashar — news summary of the resignation | 2026-09-09T04:27:19.363Z |
 | 2097675318978842764 | 1 | @MorePerfectUS — Anthropic "pre-crime" activist-surveillance story | 2026-09-09T13:15:43.624Z |
-| 2097519390480891976 | 1 | caucus post by @tedlieu |  |
-| 2097721236839162155 | 1 | caucus post by @RepYassAnsari |  |
+| 2097519390480891976 | 1 | caucus post by @tedlieu (in this file) | 2026-09-09T02:56:07.000Z |
+| 2097721236839162155 | 1 | caucus post by @RepYassAnsari (in this file) | 2026-09-09T16:18:11.000Z |
 | 2097684240356049178 | 1 | @politico — "Lawmakers urge Congress to act after AI researcher's dire warning" | 2026-09-09T13:51:10.646Z |
-| 2097820074568454156 | 1 | caucus post by @SenRubenGallego |  |
+| 2097820074568454156 | 1 | caucus post by @SenRubenGallego (in this file) | 2026-09-09T22:50:56.000Z |
 | 2097818430032257216 | 1 | @igorbobic — "Democrats are gearing up for action on AI" (Robert Garcia / Oversight investigations) | 2026-09-09T22:44:23.958Z |
-| 2097807998429130876 | 1 | caucus post by @Rep_Magaziner |  |
-| 2097754129489596612 | 1 | caucus post by @RoKhanna |  |
+| 2097807998429130876 | 1 | caucus post by @Rep_Magaziner (in this file) | 2026-09-09T22:02:56.000Z |
+| 2097754129489596612 | 1 | caucus post by @RoKhanna (in this file) | 2026-09-09T18:28:53.000Z |
 
 Top originals by engagement at capture: @tedlieu 8007 likes / 1437 RTs (regulation-plan); @RepCasar 6991 likes / 1033 RTs (hearings-oversight); @RoKhanna 2225 likes / 570 RTs (regulation-plan); @RepYassAnsari 2130 likes / 396 RTs (existential-risk); @RepTedLieu 1276 likes / 177 RTs (regulation-plan); @PatRyanUC 961 likes / 209 RTs (hearings-oversight); @RepLoriTrahan 897 likes / 110 RTs (regulation-plan); @RepDonBeyer 734 likes / 144 RTs (regulation-plan). Sum over the 23 originals: 34,427 likes+RTs+replies+quotes.
 
@@ -164,7 +164,7 @@ Top originals by engagement at capture: @tedlieu 8007 likes / 1437 RTs (regulati
 - `data/topics` tech assignments per day: 09-07: 4 tech (1 ai-policy) of 439 · 09-08: 8 tech (1 ai-policy) of 528 · 09-09: 40 tech (7 ai-policy) of 624. The 09-09 jump (8 → 40) is the story, but it never left the `tech` macro.
 - `data/rollups/topic-days.json` 2026-09-09, all caucuses: tech ranks 8 of 15 macros (26 posts + 10 RTs, 25 members) behind economy 92, congress-politics 81, democracy 65.
 - reports/2026-09-09.md: Technology absent from the all-caucus top 3 (economy 102, congress-politics 84, democracy 67); appears only as CAPAC #3 "Technology — 6 posts + 4 RTs, 4 members, 0 engagement" (line 43). No developing-story line for the story.
-- `data/stories.json` (125 candidates, generated 2026-09-10T06:26:35.672Z): see hits. Nearest candidates: `data-centers` (21 posts, 19 members, 2026-08-20→2026-09-09), `surveillance-privacy` (6 posts, 6 members, 2026-08-21→2026-09-04).
+- `data/stories.json` (125 candidates, generated 2026-09-10T06:26:35.672Z): NONE — no candidate key/label/alias in data/stories.json mentions Anthropic/Coxon/Hubinger/superintelligence/AI safety/existential/kill switch/frontier (only false positive: bridge-naming-honorary-designations (sample text matches "anthropist" — not this story)). Nearest candidates: `data-centers` (21 posts, 19 members, 2026-08-20→2026-09-09), `surveillance-privacy` (6 posts, 6 members, 2026-08-21→2026-09-04).
 - `data/topics/2026-09-09.json` emerging clusters: NONE about the story — the 25 emerging labels on 2026-09-09 are 9/11 remembrance, Smithsonian, agriculture, data-centers-utility-costs, etc. (data/topics/2026-09-09.json emerging[])
 - `data/context.json` and `data/incidents.json`: 0 hits.
 - Sanity sweep for archive posts quoting/retweeting a curated post that were not themselves curated: none.
