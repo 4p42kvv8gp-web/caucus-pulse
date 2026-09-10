@@ -25,9 +25,13 @@ export function listId() {
 // volume so bursts rarely need page 2, but quiet polls don't re-read 100.
 // Floor is the endpoint's minimum (5) — every row past the boundary is a
 // billed re-read, so overnight polls should ask for as little as possible.
+// Only the last six polls (~2h) count: a one-off burst (the 465-post first
+// capture) must not keep overnight polls paying for 30-row pages all night,
+// and a real evening surge should lift the page size within an hour.
 export function adaptivePageSize(recentNewCounts, max = 100) {
-  if (!recentNewCounts.length) return max;
-  const avg = recentNewCounts.reduce((a, b) => a + b, 0) / recentNewCounts.length;
+  const recent = recentNewCounts.slice(-6);
+  if (!recent.length) return max;
+  const avg = recent.reduce((a, b) => a + b, 0) / recent.length;
   return Math.min(max, Math.max(5, Math.ceil(avg * 2)));
 }
 

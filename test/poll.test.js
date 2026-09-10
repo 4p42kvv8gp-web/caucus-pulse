@@ -16,6 +16,7 @@ test('adaptivePageSize tracks recent volume within [5, 100]', () => {
   assert.equal(adaptivePageSize([2, 4, 3]), 6);     // ~2× average
   assert.equal(adaptivePageSize([30, 40, 35]), 70); // ~2× average
   assert.equal(adaptivePageSize([90, 90, 90]), 100);
+  assert.equal(adaptivePageSize([465, 0, 0, 0, 0, 0, 0]), 5); // old burst ages out of the window
 });
 
 test('validAssignments drops unknown macros and unknown subs', () => {
