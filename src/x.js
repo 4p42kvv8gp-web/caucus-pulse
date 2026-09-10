@@ -90,6 +90,39 @@ export async function listTweetsPage(listId, { sinceId, paginationToken, pageSiz
   };
 }
 
+// One page of a single user's timeline, newest first. Unlike the List
+// timeline (which stops at roughly its newest 800 posts), a user timeline
+// reaches back thousands of posts, so this is the historical-backfill path:
+// bounded by start_time, it walks each member back a few weeks. Same billing
+// ($0.005 per post returned), no expansions. Includes replies and retweets so
+// the backfilled corpus matches what the List poller captures.
+//
+// On 429 the reset time (from x-rate-limit-reset, epoch seconds) is returned
+// so the caller can sleep exactly as long as needed instead of giving up.
+export async function userTweetsPage(userId, { startTime, endTime, paginationToken, pageSize = 100 } = {}) {
+  const params = new URLSearchParams({
+    max_results: String(Math.min(100, Math.max(5, pageSize))),
+    'tweet.fields': TWEET_FIELDS
+  });
+  if (startTime) params.set('start_time', startTime);
+  if (endTime) params.set('end_time', endTime);
+  if (paginationToken) params.set('pagination_token', paginationToken);
+  const res = await authFetch(`${API}/users/${userId}/tweets?${params}`);
+  const remaining = Number(res.headers.get('x-rate-limit-remaining') ?? NaN);
+  const resetAt = Number(res.headers.get('x-rate-limit-reset') ?? NaN) * 1000 || null;
+  if (res.status === 429) return { rateLimited: true, resetAt, remaining: 0, tweets: [], nextToken: null, usage: 0 };
+  if (!res.ok) await fail(res, `user ${userId} tweets`);
+  const body = await res.json();
+  return {
+    rateLimited: false,
+    resetAt,
+    remaining: Number.isFinite(remaining) ? remaining : null,
+    tweets: body.data || [],
+    nextToken: body.meta?.next_token || null,
+    usage: body.data?.length || 0
+  };
+}
+
 // Batched metrics re-read: up to 100 ids per request; each returned tweet is
 // one post read. Deleted/protected tweets simply don't come back.
 export async function lookupTweets(ids) {

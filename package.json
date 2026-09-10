@@ -9,9 +9,11 @@
   "scripts": {
     "poll": "node --use-env-proxy src/poll.js",
     "backfill": "node --use-env-proxy src/backfill.js",
+    "backfill-members": "node --use-env-proxy src/backfill-members.js",
     "authors": "node --use-env-proxy src/authors.js",
     "refresh": "node --use-env-proxy src/refresh.js",
     "classify": "node --use-env-proxy src/classify.js",
+    "classify-range": "node --use-env-proxy src/classify-range.js",
     "syntax": "node src/syntax.js",
     "incidents": "node --use-env-proxy src/incidents.js",
     "rollup": "node src/rollup.js",
