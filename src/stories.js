@@ -11,13 +11,23 @@
 //   3. asks Claude once to place each candidate under a macro topic, give it
 //      a stable key/label/aliases, and say whether it is a developing story
 //      (a specific named event) or a generic taxonomy gap,
-//   4. writes data/stories.json — the dashboard's Emerging panel and the
+//   4. folds candidates that are one subject under different labels. A merge
+//      needs evidence: shared post ids, a placement merge hint corroborated by
+//      a shared label token, or a second small Claude pass that sees EVERY
+//      story candidate at once (placement runs in batches of 20, so true
+//      duplicates in different batches never met) and confirms duplicate
+//      groups with a reason. Unsupported hints are dropped — the model once
+//      folded generic "celebrity tribute" clusters into a Dolly Parton story —
+//      and a gap never folds into a story.
+//   5. writes data/stories.json — the dashboard's Emerging panel and the
 //      daily report read it — and, with --promote, appends approved
 //      candidates to config/taxonomy.yaml so the next classification run
 //      assigns them directly.
 //
 //   node --use-env-proxy src/stories.js                 # rebuild candidates (+1 small Claude call for new ones)
 //   node --use-env-proxy src/stories.js --no-llm        # merge + score only
+//   node --use-env-proxy src/stories.js --explain       # per candidate: daily clusters + merges behind it
+//   node --use-env-proxy src/stories.js --confirm       # re-run the duplicate confirmation over all stories
 //   node --use-env-proxy src/stories.js --promote=key1,key2
 //   node --use-env-proxy src/stories.js --days=30       # look-back window (default 30)
 import fs from 'node:fs';
@@ -48,6 +58,8 @@ export function similar(a, b) {
 }
 
 // Union-find merge of {label, ids, date} clusters by label similarity.
+// `sources` keeps the daily clusters behind each group so --explain can show
+// where a candidate's posts came from.
 export function mergeClusters(clusters) {
   const toks = clusters.map((c) => labelTokens(c.label));
   const parent = clusters.map((_, i) => i);
@@ -60,17 +72,19 @@ export function mergeClusters(clusters) {
   const groups = new Map();
   clusters.forEach((c, i) => {
     const r = find(i);
-    if (!groups.has(r)) groups.set(r, { labels: new Map(), ids: new Set(), dates: new Set() });
+    if (!groups.has(r)) groups.set(r, { labels: new Map(), ids: new Set(), dates: new Set(), sources: [] });
     const g = groups.get(r);
     g.labels.set(c.label, (g.labels.get(c.label) || 0) + c.ids.length);
     for (const id of c.ids) g.ids.add(id);
     g.dates.add(c.date);
+    g.sources.push({ date: c.date, label: c.label, n: c.ids.length });
   });
   return [...groups.values()].map((g) => ({
     label: [...g.labels.entries()].sort((a, b) => b[1] - a[1])[0][0],
     labels: [...g.labels.keys()],
     ids: [...g.ids],
-    dates: [...g.dates].sort()
+    dates: [...g.dates].sort(),
+    sources: g.sources.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
   }));
 }
 
@@ -109,12 +123,15 @@ export function scoreCandidates(merged, postsById, authorsById, caucusKeys) {
       return e(b) - e(a);
     })[0];
     return {
-      key: slug(g.label),
+      // A merged group keeps the surviving candidate's key so its cached
+      // placement still applies; a fresh group is keyed by its label.
+      key: g.key || slug(g.label),
       label: g.label,
       labels: g.labels,
       posts: posts.length,
       members: members.size,
       days: g.dates.length,
+      dates: g.dates,
       firstSeen: posts[0].date,
       lastSeen: posts.at(-1).date,
       eng,
@@ -122,9 +139,117 @@ export function scoreCandidates(merged, postsById, authorsById, caucusKeys) {
       who: [...members].map((a) => authorsById[a]?.handle).filter(Boolean).slice(0, 12),
       ids: posts.map((x) => x.id),
       sample: best.text,
-      samples: posts.slice(0, 3).map((x) => x.text.slice(0, 200))
+      samples: posts.slice(0, 3).map((x) => x.text.slice(0, 200)),
+      sources: g.sources || [],
+      mergedFrom: g.mergedFrom || []
     };
   }).filter(Boolean).sort((a, b) => b.posts - a.posts || b.members - a.members);
+}
+
+// ── Candidate merging ────────────────────────────────────────────────────
+// Two candidates may be one subject under labels the union-find could not
+// relate ("lake-renaming-stunt" / "place-renaming"). A merge is applied only
+// with evidence, strongest first:
+//   overlap   — the candidates share post ids
+//   confirmed — the confirmation pass (confirmDuplicates, or its cache in
+//               stories.json) grouped them
+//   hint      — the placement pass said merge_into AND some daily label of
+//               each shares a content token. The hint alone is not enough:
+//               it is what folded "celebrity-tribute" (no shared token, mixed
+//               samples) into a Dolly Parton story.
+// Placement kinds must agree: a gap never folds into a story, noise never
+// merges; an unplaced candidate may fold into a placed one.
+
+export function kindsCompatible(pa, pb) {
+  const ka = pa?.kind || null, kb = pb?.kind || null;
+  if (ka === 'noise' || kb === 'noise') return false;
+  return !ka || !kb || ka === kb;
+}
+
+// Content tokens any daily label of `a` shares with any daily label of `b`.
+export function sharedLabelTokens(a, b) {
+  const ta = new Set(), tb = new Set();
+  for (const l of a.labels || [a.label]) for (const t of labelTokens(l)) ta.add(t);
+  for (const l of b.labels || [b.label]) for (const t of labelTokens(l)) tb.add(t);
+  return [...ta].filter((t) => tb.has(t));
+}
+
+// → { edges: [{a, b, by, reason}], dropped: [{a, b, why}] } over candidate keys.
+export function mergeEvidence(candidates, placements = {}, confirmedGroups = []) {
+  const byKey = new Map(candidates.map((c) => [c.key, c]));
+  const edges = [], dropped = [];
+  const pairKey = (a, b) => [a, b].sort().join(' ');
+  const linked = new Set();
+  const consider = (a, b, by, reason) => {
+    if (a === b || !byKey.has(a) || !byKey.has(b)) return;
+    if (!kindsCompatible(placements[a], placements[b])) {
+      dropped.push({ a, b, why: `${by}, but placement kinds differ (${placements[a]?.kind || 'unplaced'} vs ${placements[b]?.kind || 'unplaced'})` });
+      return;
+    }
+    edges.push({ a, b, by, reason });
+    linked.add(pairKey(a, b));
+  };
+
+  for (let i = 0; i < candidates.length; i++) {
+    const ids = new Set(candidates[i].ids);
+    for (let j = i + 1; j < candidates.length; j++) {
+      const shared = candidates[j].ids.filter((id) => ids.has(id)).length;
+      if (shared) consider(candidates[i].key, candidates[j].key, 'overlap', `${shared} shared post(s)`);
+    }
+  }
+  for (const g of confirmedGroups) {
+    const keys = [...new Set((g.keys || []).filter((k) => byKey.has(k)))];
+    for (let i = 1; i < keys.length; i++) consider(keys[0], keys[i], 'confirmed', g.reason || 'model confirmed the same story');
+  }
+  for (const c of candidates) {
+    const into = placements[c.key]?.mergeInto;
+    if (!into || into === c.key || !byKey.has(into)) continue;
+    const shared = sharedLabelTokens(c, byKey.get(into));
+    if (shared.length) consider(c.key, into, 'hint', `placement hint; labels share "${shared.join('", "')}"`);
+    else if (!linked.has(pairKey(c.key, into))) dropped.push({ a: c.key, b: into, why: 'placement hint only: no shared label token, no post overlap, not confirmed' });
+  }
+  return { edges, dropped };
+}
+
+// Fold candidates along the evidence edges. Candidates arrive sorted by
+// posts, and the earliest member of each component survives (its key, label
+// and cached placement); the rest are recorded in `mergedFrom`. The result is
+// re-scored by scoreCandidates, so members/dates/first/last are recomputed
+// from the union of posts rather than patched.
+export function applyMerges(candidates, edges) {
+  const index = new Map(candidates.map((c, i) => [c.key, i]));
+  const parent = candidates.map((_, i) => i);
+  const find = (i) => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  for (const e of edges) {
+    const i = index.get(e.a), j = index.get(e.b);
+    if (i == null || j == null) continue;
+    const ri = find(i), rj = find(j);
+    if (ri !== rj) parent[Math.max(ri, rj)] = Math.min(ri, rj);
+  }
+  const groups = new Map();
+  candidates.forEach((c, i) => {
+    const r = find(i);
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(c);
+  });
+  return [...groups.values()].map((members) => {
+    const [root, ...rest] = members;
+    if (!rest.length) return root;
+    const why = (key) => edges.find((e) => e.a === key || e.b === key);
+    return {
+      key: root.key,
+      label: root.label,
+      labels: [...new Set(members.flatMap((m) => m.labels))],
+      ids: [...new Set(members.flatMap((m) => m.ids))],
+      dates: [...new Set(members.flatMap((m) => m.dates || []))].sort(),
+      sources: members.flatMap((m) => (m.sources || []).map((s) => (m === root ? s : { ...s, via: m.key })))
+        .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)),
+      mergedFrom: [
+        ...(root.mergedFrom || []),
+        ...rest.map((m) => ({ key: m.key, label: m.label, posts: m.posts, by: why(m.key)?.by, reason: why(m.key)?.reason }))
+      ]
+    };
+  });
 }
 
 // One Claude call: place each candidate under a macro, name it, and say
@@ -182,6 +307,72 @@ Reply with ONLY a JSON object: {"placements": [{"n": 1, "macro": "...", "key": "
   return out;
 }
 
+// Second, smaller call: every story candidate at once (placement batches of
+// 20 never let "lake-america-renaming" meet "lake-ontario-renaming"), each
+// with its label, daily labels and two samples — the earliest and latest post,
+// because a mixed cluster betrays itself at the ends while a real story reads
+// the same throughout. Returns [{keys, reason}] for groups the model confirms.
+// `client` is injectable so tests feed a canned reply; nothing here touches
+// the network unless a real client is created.
+export function confirmInput(c, postsById) {
+  const text = (id) => postsById.get(id)?.text;
+  const samples = [...new Set([text(c.ids[0]), text(c.ids.at(-1))])].filter(Boolean).map((t) => t.slice(0, 240));
+  return { key: c.key, label: c.label, labels: c.labels, posts: c.posts, members: c.members, firstSeen: c.firstSeen, lastSeen: c.lastSeen, samples };
+}
+
+export async function confirmDuplicates(stories, { client, model } = {}) {
+  if (stories.length < 2) return [];
+  client ||= await anthropicClient();
+  model ||= process.env.CLASSIFY_MODEL || settings.classify.model;
+  const list = stories.map((s, i) => {
+    const labels = s.labels?.length > 1 ? `; daily labels: ${s.labels.slice(0, 6).join(', ')}` : '';
+    return `${i + 1}. "${s.label}" (${s.posts} posts, ${s.members} members, ${s.firstSeen} → ${s.lastSeen}${labels})\n   samples: ${s.samples.map((t) => JSON.stringify(t)).join(' | ')}`;
+  }).join('\n');
+  const prompt = `Below are candidate developing stories built from tweets by US House Democrats: clusters the classifier could not place, merged across days by label. Some are the SAME specific story under different labels. Find those and nothing else.
+
+Rules:
+- A duplicate group is two or more clusters about the same specific named event, person or place (e.g. two clusters both reacting to Trump's order renaming Lake Ontario "Lake America").
+- A generic or mixed cluster (tributes to several different people, assorted memorials, unrelated renamings) is NOT a duplicate of a specific story, even if a few of its tweets touch it. Leave it alone.
+- Sharing a broad theme is not enough: "9/11 remembrance" and "first responder health care" are different stories.
+- When in doubt, do not group.
+
+Clusters:
+${list}
+
+Reply with ONLY a JSON object: {"groups": [{"members": [1, 4], "reason": "<one line: what the shared story is>"}, ...]} — an empty list if nothing is a duplicate.`;
+  const res = await client.messages.create({ model, max_tokens: 8000, messages: [{ role: 'user', content: prompt }] });
+  const text = res.content.find((b) => b.type === 'text')?.text || '';
+  const parsed = parseJsonLoose(text);
+  if (!parsed?.groups) {
+    console.warn(`[stories] confirmation reply did not parse (stop_reason=${res.stop_reason}, ${text.length} chars): ${text.slice(0, 300).replace(/\s+/g, ' ')}`);
+    return [];
+  }
+  const out = [];
+  for (const g of Array.isArray(parsed.groups) ? parsed.groups : []) {
+    const keys = [...new Set((Array.isArray(g.members) ? g.members : []).map((n) => stories[Number(n) - 1]?.key).filter(Boolean))];
+    if (keys.length < 2) continue;
+    out.push({ keys, reason: String(g.reason || '').replace(/\s+/g, ' ').trim().slice(0, 200) });
+  }
+  return out;
+}
+
+// Cache of confirmed groups: union with what earlier runs confirmed (a
+// placement-style cache — the model is not asked twice about the same keys),
+// deduplicated by key set.
+export function mergeConfirmedGroups(prev, fresh) {
+  const seen = new Set();
+  const out = [];
+  for (const g of [...(prev || []), ...(fresh || [])]) {
+    const keys = [...new Set(g.keys || [])].sort();
+    if (keys.length < 2) continue;
+    const sig = keys.join(' ');
+    if (seen.has(sig)) continue;
+    seen.add(sig);
+    out.push({ keys: g.keys, reason: g.reason });
+  }
+  return out;
+}
+
 // Append promoted candidates to config/taxonomy.yaml as text (js-yaml dump
 // would strip the file's comments). Inserts under the macro's subtopics.
 export function promoteToTaxonomy(yamlText, items) {
@@ -201,9 +392,28 @@ export function promoteToTaxonomy(yamlText, items) {
   return text;
 }
 
+// --explain: for each final candidate, the daily clusters behind it (with the
+// folded candidate each came through) and the evidence for every merge; then
+// the placement hints that were not applied and why.
+function printExplain(final, dropped) {
+  console.log('\n[stories] explain — daily clusters and merges behind each candidate');
+  for (const c of final) {
+    const pl = c.placement;
+    console.log(`\n${c.key}  ${pl ? `[${pl.kind}] ${pl.macro || '-'}/${pl.key} "${pl.label}"` : '(unplaced)'}  ${c.posts} posts, ${c.members} members, ${c.days} day(s), ${c.firstSeen} → ${c.lastSeen}`);
+    for (const s of c.sources) console.log(`    ${s.date}  ${s.label} (${s.n})${s.via ? `  via ${s.via}` : ''}`);
+    for (const m of c.mergedFrom) console.log(`  + ${m.key} (${m.posts} posts) — ${m.by}: ${m.reason}`);
+  }
+  if (dropped.length) {
+    console.log('\nmerge hints not applied:');
+    for (const d of dropped) console.log(`  ${d.a} → ${d.b}: ${d.why}`);
+  }
+}
+
 async function main() {
   const days = Number(arg('days', 30));
   const noLlm = process.argv.includes('--no-llm');
+  const explain = process.argv.includes('--explain');
+  const reconfirm = process.argv.includes('--confirm');
   const promote = arg('promote', '').split(',').map((s) => s.trim()).filter(Boolean);
   const tax = loadTaxonomy();
   const authorsById = readJSON(p('data', 'authors.json'), { byId: {} }).byId;
@@ -215,45 +425,63 @@ async function main() {
   const candidates = scoreCandidates(merged, postsById, authorsById, caucusKeys);
   const prev = readJSON(storiesPath, { placements: {} });
   const placements = { ...(prev.placements || {}) };
+  const llm = !noLlm && anthropicConfigured();
 
   const fresh = candidates.filter((c) => !placements[c.key]);
-  if (fresh.length && !noLlm && anthropicConfigured()) {
+  if (fresh.length && llm) {
     const top = fresh.slice(0, 60);
     console.log(`[stories] asking the model to place ${top.length} new candidate(s)`);
     Object.assign(placements, await placeCandidates(top, tax));
   }
 
-  // Apply model merges (a later cluster judged to be the same subject as an earlier one).
-  const byKey = new Map(candidates.map((c) => [c.key, c]));
-  for (const c of candidates) {
-    const into = placements[c.key]?.mergeInto;
-    if (into && byKey.has(into) && into !== c.key) {
-      const t = byKey.get(into);
-      const ids = new Set([...t.ids, ...c.ids]);
-      t.ids = [...ids]; t.posts = ids.size;
-      t.labels = [...new Set([...t.labels, ...c.labels])];
-      t.days = new Set([...(t._dates || [t.firstSeen, t.lastSeen]), c.firstSeen, c.lastSeen]).size;
-      byKey.delete(c.key);
-    }
+  // Duplicate confirmation over ALL story candidates. Cached like placements:
+  // it re-runs only when a story key it has not seen appears (or --confirm),
+  // and confirmed groups accumulate so a merge survives later runs.
+  const confirmation = { checked: [], groups: [], ...(prev.confirmation || {}) };
+  const storyCands = candidates.filter((c) => placements[c.key]?.kind === 'story');
+  const unchecked = storyCands.filter((c) => !confirmation.checked.includes(c.key));
+  if (llm && storyCands.length >= 2 && (unchecked.length || reconfirm)) {
+    console.log(`[stories] asking the model to confirm duplicates among ${storyCands.length} story candidate(s) (${unchecked.length} unchecked)`);
+    const groups = await confirmDuplicates(storyCands.map((c) => confirmInput(c, postsById)));
+    for (const g of groups) console.log(`  confirmed: ${g.keys.join(' + ')} — ${g.reason}`);
+    confirmation.groups = mergeConfirmedGroups(confirmation.groups, groups);
+    confirmation.checked = storyCands.map((c) => c.key);
+    confirmation.checkedAt = new Date().toISOString();
+  } else if (reconfirm && !llm) {
+    console.warn('[stories] --confirm needs the model (drop --no-llm / configure Anthropic credentials); using cached confirmations only');
   }
-  const final = [...byKey.values()].map((c) => ({ ...c, placement: placements[c.key] || null }))
-    .sort((a, b) => b.posts - a.posts || b.members - a.members);
 
+  const { edges, dropped } = mergeEvidence(candidates, placements, confirmation.groups);
+  const final = scoreCandidates(applyMerges(candidates, edges), postsById, authorsById, caucusKeys)
+    .map((c) => ({ ...c, placement: placements[c.key] || null }));
+  const mergesApplied = final.reduce((a, c) => a + c.mergedFrom.length, 0);
+
+  // Drop confirmed groups that no longer name two current candidates (keys
+  // drift when a cluster's dominant label changes, or slide out of the window).
+  const current = new Set(candidates.map((c) => c.key));
+  confirmation.groups = confirmation.groups
+    .map((g) => ({ ...g, keys: g.keys.filter((k) => current.has(k)) }))
+    .filter((g) => g.keys.length >= 2);
+
+  // `sources` (every daily cluster behind a candidate) is for --explain; it
+  // would add ~40% to the file, so only `dates` and `mergedFrom` are kept.
   writeJSON(storiesPath, {
     generatedAt: new Date().toISOString(),
     windowDays: days,
     promoted: prev.promoted || [],
     placements,
-    candidates: final.map(({ samples, ...c }) => c)
+    confirmation,
+    candidates: final.map(({ samples, sources, ...c }) => c)
   });
 
   const stories = final.filter((c) => c.placement?.kind === 'story');
   const gaps = final.filter((c) => c.placement?.kind === 'gap');
-  console.log(`[stories] ${clusters.length} daily clusters → ${final.length} candidates (${stories.length} stories, ${gaps.length} taxonomy gaps, ${final.length - stories.length - gaps.length} unplaced/noise)`);
+  console.log(`[stories] ${clusters.length} daily clusters → ${final.length} candidates (${stories.length} stories, ${gaps.length} taxonomy gaps, ${final.length - stories.length - gaps.length} unplaced/noise); ${mergesApplied} merge(s) applied, ${dropped.length} hint(s) not applied`);
   for (const c of final.slice(0, 20)) {
     const pl = c.placement;
     console.log(`  ${String(c.posts).padStart(3)} posts ${String(c.members).padStart(3)} members ${c.days}d  ${pl ? `[${pl.kind}] ${pl.macro || '-'}/${pl.key} "${pl.label}"` : c.label}`);
   }
+  if (explain) printExplain(final, dropped);
 
   if (promote.length) {
     const items = promote.map((k) => {
