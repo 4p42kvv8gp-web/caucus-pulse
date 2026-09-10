@@ -9,19 +9,19 @@
   "method": "Each incident’s source posts were read from data/archive (full text, type, quoted/retweeted id), the author from data/authors.json (handle, stateDistrict, house/senate), and the classifier’s kind/place from data/topics/<date>.json. Verdicts follow the prompt’s own definition: a breaking district emergency the member is personally handling, correctly located. External facts used only to settle dates and places the corpus cannot: Hurricane Lala landfall 15-16 Aug (weather.com), Hurricane Lowell over Kauaʻi/Niʻihau 7-8 Sept (Honolulu Civil Beat, Star-Advertiser), 21 Air Flight 7598 runway overrun at MIA 6 Sept (Wikipedia, NPR), the 3-4 Sept Airport Fire in Thermal, Riverside County (KESQ, CAL FIRE), the Austin/Narrows fires in Mt. Hood National Forest (InciWeb, NWCC), the Aspen Acres and Gold Mountain fires and their 4 Sept declaration (CPR), and CA-38 including La Habra (lindasanchez.house.gov).",
   "counts": {
     "incidents": 29,
-    "TRUE": 10,
-    "FALSE POSITIVE": 14,
-    "AMBIGUOUS": 5,
+    "TRUE": 9,
+    "FALSE POSITIVE": 16,
+    "AMBIGUOUS": 4,
     "active_cards": 5,
     "active_true": 1,
     "active_false_positive": 2,
     "active_ambiguous": 2
   },
-  "precision": 0.417,
+  "precision": 0.36,
   "precision_detail": {
-    "TRUE / (TRUE + FALSE POSITIVE)": 0.417,
-    "TRUE / all 29 (ambiguous counted as wrong)": 0.345,
-    "House members only, TRUE / (TRUE + FALSE POSITIVE) (drops the two Senator incidents)": 0.364
+    "TRUE / (TRUE + FALSE POSITIVE)": 0.36,
+    "TRUE / all 29 (ambiguous counted as wrong)": 0.31,
+    "House members only, TRUE / (TRUE + FALSE POSITIVE) (drops the Senator incidents)": 0.333
   },
   "corpus_context": {
     "flags_in_topics_files": 174,
@@ -399,9 +399,9 @@
       "id": "detroit-mi--tornado",
       "title": "Tornado · Detroit, MI",
       "status": "resolved",
-      "verdict": "TRUE",
-      "reason": "Real 3 Sept storm/tornado in Detroit, posted two days later with resources for the lower east side (text truncated at capture). Two caveats: the author is a US Senator, not a House member (sitedata.js drops non-House accounts from the feed; incidents.js does not), and this is one of four keys for the same 3 Sept Southeast Michigan storm (detroit-mi--severe-storms, southeast-michigan-mi--severe-storms, michigan-mi--severe-weather).",
-      "evidence": "The National Weather Service has confirmed a tornado touched down on the city’s east side — the first tornado to hit Detroit in nearly 30 years.",
+      "verdict": "AMBIGUOUS",
+      "reason": "Re-check: the visible text is a reaction post about a past event — “My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm” — posted two days after the storm; “aftermath” is one of the audit’s own past-event cues. The NWS sentence is news, not handling. The original TRUE rested on “resources for the lower east side”, but the post is truncated at “For families on the lower east” in every copy in the repo (data/archive, data/topics, data/metrics, site/data/rollups.json), so any handling content is unverified. Author is a US Senator, not a House member. Real event, but the corpus does not show the member handling it.",
+      "evidence": "My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm. […] For families on the lower east",
       "correct_kind": "severe storm / tornado",
       "correct_place": "Detroit (east side), MI",
       "classifier_kind": "tornado",
@@ -416,8 +416,15 @@
       ],
       "failure_modes": [
         "split",
-        "roster"
-      ]
+        "roster",
+        "reaction"
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "TRUE",
+        "to": "AMBIGUOUS",
+        "at": "2026-09-10"
+      }
     },
     {
       "id": "detroit-mi--severe-storms",
@@ -636,9 +643,9 @@
       "id": "burlingame-ca--train-collision",
       "title": "Train collision · Burlingame, CA",
       "status": "resolved",
-      "verdict": "AMBIGUOUS",
-      "reason": "A real, recent, in-district (CA-15) accident, but the post’s substance is infrastructure advocacy (“which is why I secured $3 million for a grade [separation]”) and a single train-vehicle collision is below the “major accident” bar; the member is not handling an emergency.",
-      "evidence": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame, which is considered the deadliest crossing in California.",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Re-check: the prompt’s own text resolves this. It asks for a “major accident” the member is “personally handling” and excludes policy news; the post is “Difficult to see another train-vehicle collision … which is why I secured $3 million for a grade [separation]” — a reaction (“Difficult to see”) plus a funding claim, with no instructions, resources or office engagement. A single train-vehicle collision is not a major accident and the member is not handling anything; the original reason already said so (“the member is not handling an emergency”), which is dispositive under the definition, so a hedge was not warranted.",
+      "evidence": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame […] which is why I secured $3 million for a grade",
       "correct_kind": "train-vehicle collision (policy post; below threshold)",
       "correct_place": "Burlingame, CA",
       "classifier_kind": "train collision",
@@ -654,14 +661,20 @@
       "failure_modes": [
         "policy",
         "threshold"
-      ]
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "at": "2026-09-10"
+      }
     },
     {
       "id": "michigan-mi--severe-weather",
       "title": "Severe weather · Michigan, MI",
       "status": "resolved",
-      "verdict": "AMBIGUOUS",
-      "reason": "A generic stay-alert quote-post as the 3 Sept storm arrived. The quoted post (2095575532146475038) is not in the corpus, so kind and place were inferred, and “Michigan, MI” is a state. If kept at all it belongs in the Southeast Michigan storm cluster, not on its own.",
+      "verdict": "FALSE POSITIVE",
+      "reason": "Re-check: the whole post is “Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials.” It names no emergency, no impact, no place below the state and no action by the member; the kind (“severe weather”) was inferred from a quoted post (2095575532146475038) that is not in data/archive, and the place is a state. Nothing in the source post supports the incident record “Severe weather · Michigan, MI”, and the audit itself says a state cannot be an incident location. That the 3 Sept storm was arriving at that hour is outside the tweet; judged on its text, this is a generic stay-alert PSA, not a breaking district emergency the member is handling.",
       "evidence": "Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials.",
       "correct_kind": "severe storm (advisory)",
       "correct_place": "Southeast Michigan, MI",
@@ -678,8 +691,15 @@
       "failure_modes": [
         "advisory",
         "state-place",
-        "split"
-      ]
+        "split",
+        "kind-guess"
+      ],
+      "rechecked": true,
+      "recheck": {
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "at": "2026-09-10"
+      }
     },
     {
       "id": "detroit-mi--power-outage",
@@ -841,7 +861,7 @@
       "id": "recovery",
       "name": "Aftermath and recovery posts flagged as breaking",
       "count": 12,
-      "text": "The largest failure. Eleven of the fourteen false positives are posts about the recovery from an event weeks old: FEMA/USDA assistance information, application deadlines, disaster-declaration requests and approvals, intake-centre schedules, daily \"storm update\" newsletters, thank-you messages and site visits. The prompt says \"breaking\" but gives no test for it, and the posts carry unmistakable cues the model ignored: \"recovering\", \"storm recovery\", \"the August storm\", \"recover after the July and August severe storms\", \"apply by October 25\", \"Lala is gone\", \"left behind\", \"spent months wondering\".",
+      "text": "The largest failure. Eleven of the sixteen false positives are posts about the recovery from an event weeks old: FEMA/USDA assistance information, application deadlines, disaster-declaration requests and approvals, intake-centre schedules, daily \"storm update\" newsletters, thank-you messages and site visits. The prompt says \"breaking\" but gives no test for it, and the posts carry unmistakable cues the model ignored: \"recovering\", \"storm recovery\", \"the August storm\", \"recover after the July and August severe storms\", \"apply by October 25\", \"Lala is gone\", \"left behind\", \"spent months wondering\".",
       "examples": [
         "gary-in--storm-damage",
         "indianapolis-in--flooding",
@@ -853,10 +873,11 @@
     {
       "id": "reaction",
       "name": "Reaction and condolence posts from members who are not handling the event",
-      "count": 1,
-      "text": "A real emergency somewhere in the country draws \"heartbroken\", \"praying for\", \"horrified to hear\" posts from members far from it. The prompt says \"the member is personally handling\" but gives no test for handling, so the model flags any member who mentions the event. In the current file this is the MIA crash (four members, one in Minnesota); in the wider corpus the 2 Sept Minneapolis shooting drew a flagged reaction from NY-25, the Grand Canyon flooding from NV-01, and the Gary, Indiana outage from IL-03 and MI-12.",
+      "count": 2,
+      "text": "A real emergency somewhere in the country draws \"heartbroken\", \"praying for\", \"horrified to hear\" posts from members far from it. The prompt says \"the member is personally handling\" but gives no test for handling, so the model flags any member who mentions the event. In the current file this is the MIA crash (four members, one in Minnesota) and, after the re-check, the Senator’s “my thoughts are with … the aftermath” tornado post whose handling content is truncated out of the corpus; in the wider corpus the 2 Sept Minneapolis shooting drew a flagged reaction from NY-25, the Grand Canyon flooding from NV-01, and the Gary, Indiana outage from IL-03 and MI-12.",
       "examples": [
-        "miami-fl--plane-crash"
+        "miami-fl--plane-crash",
+        "detroit-mi--tornado"
       ]
     },
     {
@@ -928,10 +949,11 @@
     {
       "id": "kind-guess",
       "name": "Kind not supported by the post",
-      "count": 1,
-      "text": "lake-station-in--flooding says nothing about flooding; gary-in--storm-damage says nothing about damage. The kind was inferred from the member’s earlier posts or general knowledge, which then keys a new incident.",
+      "count": 2,
+      "text": "lake-station-in--flooding says nothing about flooding; gary-in--storm-damage says nothing about damage. michigan-mi--severe-weather says nothing about weather at all (kind taken from a quoted post that is not in the corpus). The kind was inferred from the member’s earlier posts, a missing quoted post or general knowledge, which then keys a new incident.",
       "examples": [
-        "lake-station-in--flooding"
+        "lake-station-in--flooding",
+        "michigan-mi--severe-weather"
       ]
     },
     {
@@ -958,5 +980,86 @@
   ],
   "proposed_prompt_rule": "- INCIDENTS: flag a tweet as an incident only when ALL of the following hold.\n  (a) Community-scale emergency. The tweet is about a specific emergency\n      affecting many people: active shooter or mass shooting, wildfire with\n      evacuations, flooding, tornado or severe-storm damage, hurricane or\n      tropical storm impact, hazmat release, major crash or explosion,\n      widespread power or water outage, infrastructure failure. A single\n      vehicle or rail collision, a contained brush fire with no evacuations,\n      or a single house fire is not community-scale.\n  (b) Happening now. As the tweet describes it, the emergency is under way\n      or struck within the last three days: evacuation orders or warnings,\n      shelter-in-place, rescues or searches, outages being restored, damage\n      being assessed, shelters or hotlines being announced. Aftermath and\n      recovery posts are NOT incidents: FEMA/SBA/USDA assistance\n      information, application deadlines, disaster-declaration requests or\n      approvals, intake-center schedules, \"daily storm update\" newsletters,\n      thank-you messages to responders, and site visits or damage tours\n      weeks later. Wording such as \"recovering\", \"recovery\", \"aftermath\",\n      \"left behind\", \"is gone\", \"the August storm\", \"spent months\",\n      \"apply by <date>\" means the event is past: give the tweet its normal\n      topics (usually climate/disasters or constituent-services) instead.\n  (c) The member is acting, not reacting. The tweet relays official\n      instructions or resources (\"evacuate zone ...\", \"call 866-...\",\n      \"avoid the area\", \"report damage here\"), says the member's office is\n      in contact with officials or on scene, or gives constituents a way\n      to get help. \"Thoughts and prayers\", \"heartbroken\", \"horrified to\n      hear\", \"grateful to first responders\" posts are reactions, even\n      when the event is nearby: classify them normally and do not flag\n      them. A tweet that uses an incident to argue for legislation,\n      funding or a policy position is a policy tweet, not an incident,\n      unless it also relays live instructions.\n  (d) The place is in the tweet. Take \"place\" only from the tweet: the\n      city or county named in it plus the state (\"Napa County, CA\",\n      \"La Habra, CA\", \"Kauaʻi, HI\"). If the tweet names the event\n      (\"#SteeleFire\", \"Hurricane Lowell\", \"Timber Fire\") put that in\n      \"name\". Never infer the location from a similarly named past event\n      or from what you know about the member; a bare state (\"Michigan,\n      MI\") is not a place. If the tweet gives neither a place nor a named\n      event, do not flag it.\n  Not incidents: routine weather advisories and public-safety PSAs (heat\n  advisories or warnings, cooling-center lists, flood watches, travel\n  advisories, \"stay safe and stay alert\") unless the tweet reports an\n  actual impact — an emergency declaration, evacuations, shelters open,\n  outages, closures, injuries or deaths.\n  Format: {\"kind\": \"<one of: active shooter, shooting, wildfire,\n  flooding, severe storm, tornado, hurricane, extreme heat, power outage,\n  water outage, hazmat, structure fire, explosion, plane crash, train\n  crash, industrial accident, infrastructure failure, missing persons,\n  other>\", \"place\": \"<city or county, state abbr>\", \"name\": \"<official\n  event name from the tweet, or null>\"}. Use exactly the same kind, place\n  and name for every tweet about the same event, and do not switch\n  between city, county and region for one event; when the tweet only\n  names the event, reuse the place from the open-incident list below.\n  Incident tweets still get topics [] unless they also carry policy\n  content.",
   "proposed_open_incident_block": "Open incidents (reuse these exact kind, place and name strings for any\ntweet about the same event; do not create a variant):\n- wildfire | Napa County, CA | Steele Fire\n- wildfire | Monterey County, CA | Timber & Plaskett fires\n- hazmat | La Habra, CA | null\n- severe storm | Detroit, MI | null\n- hurricane | Kauaʻi, HI | Hurricane Lowell",
-  "proposed_phase_variant": "  (b') If the editors want recovery threads kept on the desk rather than\n      dropped, replace the exclusion in (b) with a field: add \"phase\":\n      \"breaking\" when (b) holds and \"phase\": \"recovery\" for assistance,\n      declaration, intake-center and site-visit posts about an event that\n      struck within the last 30 days; the desk shows only \"breaking\"\n      incidents on the dashboard and lists \"recovery\" threads separately.\n      Posts about events older than 30 days are never incidents."
+  "proposed_phase_variant": "  (b') If the editors want recovery threads kept on the desk rather than\n      dropped, replace the exclusion in (b) with a field: add \"phase\":\n      \"breaking\" when (b) holds and \"phase\": \"recovery\" for assistance,\n      declaration, intake-center and site-visit posts about an event that\n      struck within the last 30 days; the desk shows only \"breaking\"\n      incidents on the dashboard and lists \"recovery\" threads separately.\n      Posts about events older than 30 days are never incidents.",
+  "recheck": {
+    "at": "2026-09-10",
+    "method": "Adversarial pass over every verdict against the prompt’s definition (breaking; district emergency; member personally handling; the listed kinds) and against the incident record’s own kind/place. Every source post re-read in full from data/archive; the repo searched for fuller copies of truncated posts and for missing quoted posts. Verdicts changed only where the prompt’s text or the corpus resolves what the first pass hedged or assumed.",
+    "changes": [
+      {
+        "id": "detroit-mi--tornado",
+        "from": "TRUE",
+        "to": "AMBIGUOUS",
+        "evidence": "My thoughts are with the families across Detroit dealing with the aftermath of Thursday’s severe storm. […] For families on the lower east"
+      },
+      {
+        "id": "burlingame-ca--train-collision",
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "evidence": "Difficult to see another train-vehicle collision at the Broadway crossing in Burlingame […] which is why I secured $3 million for a grade"
+      },
+      {
+        "id": "michigan-mi--severe-weather",
+        "from": "AMBIGUOUS",
+        "to": "FALSE POSITIVE",
+        "evidence": "Stay safe and stay alert, Michigan. Follow local news for the latest information and heed warnings from public safety officials."
+      }
+    ],
+    "challenged_and_kept": [
+      {
+        "id": "kauai-hi--tropical-storm",
+        "verdict": "AMBIGUOUS",
+        "note": "Out of district (HI-02, not HI-01) and framed as “recovering”, which strictly fails “district emergency”; but Lowell struck the day before, damage is being assessed, and the member gives constituents a damage-report link, which is action. The prompt’s “district” is aimed at excluding national news, and this is a live disaster in the member’s state. Hedge kept."
+      },
+      {
+        "id": "san-diego-ca--extreme-heat",
+        "verdict": "AMBIGUOUS",
+        "note": "Kind and place are in the text (“extreme heat wave … through 8pm today”, San Diego) and a resource is relayed (cool zones). The only open question is whether an NWS heat warning is a “breaking emergency”; the prompt is silent. Hedge kept."
+      },
+      {
+        "id": "orange-and-la-counties-ca--extreme-heat",
+        "verdict": "AMBIGUOUS",
+        "note": "Same regional warning, in district, kind and place in the text; “check in on seniors” is advice rather than a resource. Same open question as San Diego. Hedge kept for consistency."
+      },
+      {
+        "id": "eastern-oregon-or--wildfire",
+        "verdict": "FALSE POSITIVE",
+        "note": "The closest false positive to a live event: the Austin/Narrows fires were active and the member visited the incident command posts. But the post’s substance is “to learn how to better support our firefighters this wildfire season and beyond … I am working on legislation”, and the record’s place (“Eastern Oregon”) is invented. Not a tweet responding to an emergency the member is handling."
+      },
+      {
+        "id": "orange-county-ca--wildfire",
+        "verdict": "FALSE POSITIVE",
+        "note": "Same-day, in-district status post on a real (small) fire — comparable to Panetta’s containment updates — but the record’s place is wrong (Orange County; the fire was in Thermal, Riverside County), so the incident as built is incorrect regardless of the threshold argument."
+      },
+      {
+        "id": "big-sur-ca--wildfire",
+        "verdict": "TRUE",
+        "note": "Partly a thank-you, but it relays a road reopening and “continue to use caution in the affected areas, follow all guidance” while the Timber/Plaskett fires were still burning (27%/61% contained five days later)."
+      },
+      {
+        "id": "monterey-county-ca--wildfire",
+        "verdict": "TRUE",
+        "note": "Three of the four posts are gratitude/status; the RT of the sheriff’s evacuation update and the live containment figures carry it."
+      },
+      {
+        "id": "la-habra-ca--chemical-leak",
+        "verdict": "TRUE",
+        "note": "Two news RTs, but they relay the official all-clear for an evacuation the member had relayed 2.5 hours earlier — the resolution of a live in-district event."
+      },
+      {
+        "id": "detroit-mi--power-outage",
+        "verdict": "TRUE",
+        "note": "“Hundreds” of residents is small-scale and the reply is a rate-hike policy post, but the lead post has the office engaged and a reporting number for an in-district infrastructure failure."
+      },
+      {
+        "id": "southeast-michigan-mi--severe-storms",
+        "verdict": "TRUE",
+        "note": "Next-day, impact stated, “My team and I are in direct communication with local officials” is explicit handling. Author is a Senator (roster issue, not a content issue)."
+      },
+      {
+        "id": "miami-fl--plane-crash",
+        "verdict": "FALSE POSITIVE",
+        "note": "Re-read all four posts: “Praying for”, “Horrified to hear”, “heartbroken”, “devastating to see” — reactions from FL-09, FL-25, FL-24 and MN-04; no instructions, resources or office engagement in any of them."
+      }
+    ]
+  }
 }
