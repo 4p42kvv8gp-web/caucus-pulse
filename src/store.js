@@ -109,3 +109,25 @@ export function loadDay(date) {
   const seen = new Set();
   return readJSONL(archivePath(date)).filter((t) => !seen.has(t.id) && seen.add(t.id));
 }
+
+// Every archived post, oldest file first, deduped by id across files (a
+// post captured near midnight ET can land in two day files). Dates in the
+// archive directory are the source of truth for what exists.
+export function archiveDates() {
+  let names;
+  try { names = fs.readdirSync(p('data', 'archive')); } catch { return []; }
+  return names.filter((n) => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n)).map((n) => n.slice(0, 10)).sort();
+}
+
+export function loadArchive() {
+  const seen = new Set();
+  const out = [];
+  for (const date of archiveDates()) {
+    for (const t of readJSONL(archivePath(date))) {
+      if (seen.has(t.id)) continue;
+      seen.add(t.id);
+      out.push(t);
+    }
+  }
+  return out;
+}

@@ -27,10 +27,17 @@
     "volume": "node src/volume.js",
     "check-x": "node --use-env-proxy src/check-x-access.js",
     "check-anthropic": "node --use-env-proxy src/check-anthropic-access.js",
+    "download-model": "node --use-env-proxy scripts/download-embedding-model.js",
+    "embed": "node src/embed-archive.js",
+    "semantic-proof": "node --use-env-proxy scripts/semantic-proof.js",
     "test": "node --test"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.122.0",
+    "@huggingface/transformers": "3.8.1",
     "js-yaml": "^4.1.0"
+  },
+  "overrides": {
+    "sharp": "0.35.4"
   }
 }
