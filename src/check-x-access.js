@@ -1,5 +1,8 @@
 // Sanitized X credential check. Prints status codes and counts only — never
-// the token, never post text. Free calls by default; --probe spends at most
+// the token, never post text. Works in both auth modes: with X_BEARER_TOKEN
+// set it sends the header itself; without one it sends bare requests and
+// relies on a proxy-injected credential (claude.ai/code "API credentials"
+// registered for api.x.com), reporting which mode authenticated. Free calls by default; --probe spends at most
 // ~$0.03 (one 5-post list page) to confirm paid access and to settle whether
 // the list-tweets endpoint accepts since_id.
 //
@@ -19,7 +22,7 @@ function candidates() {
 
 async function call(path, tok) {
   const res = await fetch(`${API}${path}`, {
-    headers: { Authorization: `Bearer ${tok}` },
+    headers: tok ? { Authorization: `Bearer ${tok}` } : {},
     redirect: 'error',
     signal: AbortSignal.timeout(30_000)
   });
@@ -42,8 +45,14 @@ function summarize(body) {
 
 async function main() {
   const toks = candidates();
-  if (!toks.length) { console.log('X_BEARER_TOKEN: absent'); process.exit(2); }
-  console.log(`X_BEARER_TOKEN: present (${toks[0].length} chars, ${toks.length} form(s) to try)`);
+  // '' = bare request, authenticated (if at all) by the egress proxy.
+  const proxyMode = !toks.length;
+  if (proxyMode) {
+    console.log('X_BEARER_TOKEN: absent — trying a bare request for a proxy-injected credential (api.x.com)');
+    toks.push('');
+  } else {
+    console.log(`X_BEARER_TOKEN: present (${toks[0].length} chars, ${toks.length} form(s) to try)`);
+  }
 
   // Which token form authenticates? Free usage endpoint.
   let tok = null;
@@ -52,7 +61,13 @@ async function main() {
     console.log(`GET /2/usage/tweets?days=1 → ${r.status}`, JSON.stringify(summarize(r.body)));
     if (r.status === 200) { tok = t; break; }
   }
-  if (!tok) { console.log('RESULT: token rejected on the free usage endpoint (401/403) — check the key'); process.exit(1); }
+  if (tok === null) {
+    console.log(proxyMode
+      ? 'RESULT: no credential — X_BEARER_TOKEN is unset and the proxy did not authenticate the bare request'
+      : 'RESULT: token rejected on the free usage endpoint (401/403) — check the key');
+    process.exit(proxyMode ? 2 : 1);
+  }
+  console.log(`AUTH MODE: ${proxyMode ? 'proxy-injected credential (set X_PROXY_AUTH=1 for the poller)' : 'X_BEARER_TOKEN'}`);
 
   const credits = await call('/usage/credits', tok);
   console.log(`GET /2/usage/credits → ${credits.status}`, JSON.stringify(summarize(credits.body)));

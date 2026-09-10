@@ -54,7 +54,7 @@ async function refreshDate(state, date, pass) {
 }
 
 async function main() {
-  if (!x.isConfigured()) throw new Error('X_BEARER_TOKEN is not set');
+  if (!x.isConfigured()) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
   const state = loadState();
   for (const { date, pass } of duePasses()) {
     await refreshDate(state, date, pass);

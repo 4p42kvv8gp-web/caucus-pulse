@@ -86,7 +86,7 @@ async function pull(state) {
 }
 
 export async function pollOnce() {
-  if (!x.isConfigured()) throw new Error('X_BEARER_TOKEN is not set');
+  if (!x.isConfigured()) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
   if (!listId()) throw new Error('No list id: set X_LIST_ID or config/settings.json "list_id"');
 
   const state = loadState();

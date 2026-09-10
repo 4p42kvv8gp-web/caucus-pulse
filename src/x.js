@@ -8,7 +8,22 @@
 //   - one merged list timeline instead of per-account polling or search
 //   - engagement is re-read exactly once, batched, at the 24h mark
 
-const API = 'https://api.twitter.com/2';
+// api.x.com is the canonical host. It matters for proxy-injected credentials
+// (claude.ai/code "API credentials"), which the egress proxy attaches only to
+// requests bound for the host the credential was registered on.
+const API = 'https://api.x.com/2';
+
+// Two auth modes:
+//   token — X_BEARER_TOKEN is set; we send the Authorization header ourselves.
+//   proxy — X_PROXY_AUTH=1 and no token; requests go out without a header and
+//           the environment's egress proxy attaches the credential. The token
+//           never reaches this process. Opt-in, so a misconfigured Actions job
+//           fails loudly instead of silently sending unauthenticated requests.
+export function authMode() {
+  if (process.env.X_BEARER_TOKEN) return 'token';
+  if (/^(1|true|yes)$/i.test(process.env.X_PROXY_AUTH || '')) return 'proxy';
+  return null;
+}
 
 // The developer portal displays bearer tokens URL-encoded (%2F, %3D). Which
 // form authenticates depends on how it was copied — try as-is first, fall
@@ -24,6 +39,7 @@ function tokenCandidates() {
 }
 
 async function authFetch(url) {
+  if (authMode() === 'proxy') return fetch(url);
   const candidates = tokenCandidates();
   let res;
   for (const tok of candidates) {
@@ -36,7 +52,7 @@ async function authFetch(url) {
 }
 
 export function isConfigured() {
-  return Boolean(process.env.X_BEARER_TOKEN);
+  return authMode() !== null;
 }
 
 const TWEET_FIELDS = 'created_at,public_metrics,referenced_tweets,author_id,lang,conversation_id';
