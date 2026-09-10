@@ -48,6 +48,10 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
 6. Run **check-x-access** by hand (Actions tab → Run workflow, probe = true)
    to confirm the X credential, then **authors** once to build the author
    table, then **poll** once to verify capture. The crons take over from there.
+   Optionally run `npm run backfill` once from a session: it pages past the
+   first poll's cap to the end of what the list endpoint still serves (about
+   800 posts — X's cap on this timeline, not a full 7 days) so the corpus
+   starts a day or two earlier.
 
 ### Running from a Claude Code cloud session
 
