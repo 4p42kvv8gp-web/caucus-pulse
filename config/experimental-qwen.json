@@ -1,0 +1,69 @@
+{
+  "name": "qwen3.5-9b-mlx-4bit",
+  "repository": "mlx-community/Qwen3.5-9B-MLX-4bit",
+  "revision": "938d8919941c6e7efd3c7150eff7fe9d12afa631",
+  "license": "Apache-2.0",
+  "runtime": {
+    "mlx-lm": "0.31.3",
+    "mlx": "0.32.2",
+    "transformers": "5.16.1"
+  },
+  "generation": {
+    "enableThinking": false,
+    "maxPromptTokens": 8192,
+    "maxOutputTokens": 2400,
+    "temperature": 0,
+    "topP": 1.0,
+    "topK": 0,
+    "seed": 42,
+    "deadlineSeconds": 170
+  },
+  "files": [
+    [
+      "README.md",
+      1954,
+      "5d6f034671bacd78f078cbdce33e9d1218074b22"
+    ],
+    [
+      "chat_template.jinja",
+      7756,
+      "a585dec894e63da457d9440ec6aa7caa16d20860"
+    ],
+    [
+      "config.json",
+      3331,
+      "0435ae3f4b3c8b907f7359a2f8f7150d316f3435"
+    ],
+    [
+      "model-00001-of-00002.safetensors",
+      5349771222,
+      "a68b87558c6ef43f74c2bd63ce7e9092ceddc3101f3def0030774bae5f42aadd"
+    ],
+    [
+      "model-00002-of-00002.safetensors",
+      600449850,
+      "b0a770bf8469c7f3f18756a0e0283f1c1174344a83e059a4e483f6af4907352d"
+    ],
+    [
+      "model.safetensors.index.json",
+      123592,
+      "d366fa524ccd8f4ed93a67c7857597dc56172b92"
+    ],
+    [
+      "tokenizer.json",
+      19989343,
+      "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4"
+    ],
+    [
+      "tokenizer_config.json",
+      1139,
+      "a068e2468cff426a9b105006e74e044030a6faf4"
+    ],
+    [
+      "vocab.json",
+      6722759,
+      "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176"
+    ]
+  ],
+  "engine": "mlx-generative"
+}

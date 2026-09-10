@@ -1,0 +1,49 @@
+# Hugging Face intelligence plan
+
+Reviewed and updated September 8, 2026 against the user-supplied proposal, official model documentation and local engineering results. The implementation section distinguishes connected local models from future candidates; no hosted deployment or verified accuracy/cost claim is implied.
+
+## Skills ready
+
+The installed Hugging Face plugin already provides CLI/model access, datasets, Transformers.js, community evaluations, Trackio, and training guidance. Three additional official skills were installed from `huggingface/skills`: `train-sentence-transformers`, `hf-mem`, and `huggingface-tool-builder`. They become discoverable on the next task turn. Installing skills does not download model weights, train a model, or activate a cloud endpoint.
+
+The product remains private. Any skill's default public Hub publishing or cloud training is overridden by this project's private-data scope and spending controls. Run local experiments first; do not upload source posts, feedback, or trained artifacts to a public repository. No Hub data repository, paid job, model download, or provider subscription was created during this review.
+
+## Model decisions
+
+| Candidate | Planned role | Evaluation boundary |
+| --- | --- | --- |
+| `sentence-transformers/all-MiniLM-L6-v2` and `BAAI/bge-small-en-v1.5` | Compare semantic retrieval and provisional cross-post grouping. Cache source-versioned passage embeddings and reuse them for search and discovery. | MiniLM defaults to truncation after 256 word pieces; BGE small supports 512 tokens. Split long posts into overlapping, source-offset passages, preserve full text, and record passage coverage. Compare on paraphrases, negation, quotations, and late-post details. |
+| `mlburnham/Political_DEBATE_base_v1.0` | Candidate for narrow topic/event hypotheses; compare with the evidence-grounded semantic provider. | Its author recommends the large variant for general zero/few-shot use unless the use case appears in training. Base is not assumed best for our incident classes. Measure recall, precision, abstention, latency and memory on actual reviewed posts. |
+| SetFit | Later small classifier trained on reviewed examples, potentially assisted by clearly marked teacher labels. | The eight-example result is a benchmark example, not a guarantee for our taxonomy. Keep training, development and final tests separate by event/text family and time. Promote only after held-out evaluation; model-generated labels are not human truth. |
+| `dslim/bert-base-NER` and embedding/keyphrase extraction | Propose observed people, organizations, locations, and concise cluster titles. | This NER model was trained on news and can miss or split social-media entities. A named place does not establish the event's location or district. Ground names/titles in exact evidence and maintain provisional/canonical identity separation. |
+| `cardiffnlp/twitter-roberta-base-sentiment-latest` | Optional sentiment experiment if it proves useful. | Its outputs are negative, neutral, and positive. They do not directly distinguish constituent service, emergency reporting, criticism, quotation, or advocacy. Those require separate reviewed communicative-function labels. Do not call sentiment a quality judgment. |
+
+Sources: [MiniLM model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), [BGE model card](https://huggingface.co/BAAI/bge-small-en-v1.5), [Political DEBATE recommendations](https://huggingface.co/mlburnham/Political_DEBATE_base_v1.0), [SetFit documentation](https://huggingface.co/docs/setfit/index), [NER model card](https://huggingface.co/dslim/bert-base-NER), [Cardiff model card](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest).
+
+## Product behavior
+
+1. Embed newly saved source passages after each collection pass, independently of classification. Examine both labeled and unlabeled posts so an emerging event inside an established topic remains discoverable. Incremental discovery should follow each 30-minute collection pass; a nightly consolidation can supplement it.
+2. Present exact wording counts separately from semantic similarity. A cosine neighbor is a candidate related passage, not proof of paraphrase, endorsement, shared meaning, or coordination. A percentage about exact quoted wording must count literal occurrences; a semantic percentage needs a separately defined, evaluated relation and explicit denominator.
+3. Use similarity for candidate retrieval, then check the target claim, negation, attribution and event identity. Preserve single-post incident candidates and uncertainty. Do not infer an incident ended merely because a member stopped posting.
+4. Store model revision, tokenizer/chunking version, source hash, passage offsets, vector dimensions, job status and exclusions. Invalidate derived vectors/groups on edits/removals; reject late results for superseded sources. Evaluate group purity and missed related posts, not just attractive example clusters.
+5. Apply the user's accepted correction to that post immediately. Broader lessons become versioned examples and evaluation cases. Train only after examples justify it; do not automatically replace the semantic provider after a calendar interval.
+
+## Archive and operating cost
+
+Hugging Face currently lists 100 GB of private storage for free users/organizations. That can be useful for controlled datasets, but a versioned Parquet repository does not replace the transactional application database for corrections, jobs, concurrency, source edits and removals. Keep the live archive in the application database; evaluate private Parquet snapshots only after removal/history handling and access requirements are concrete. [HF storage limits](https://huggingface.co/docs/hub/en/storage-limits)
+
+The proposed $60-to-$20 monthly reduction is unverified. Benchmark actual post volume, passage counts, CPU memory/time, hosted-model token use, storage growth and any Actions charges. Free model weights do not make runtime, storage or hosted inference unlimited. No cost claim or two-vCPU throughput promise should appear in the dashboard until measured.
+
+## Current implementation — September 8
+
+Pinned MiniLM/BGE assets and local Transformers.js inference work. BGE is the preview default and indexes complete available source passages. Semantic search and emerging subject candidates use bounded, versioned source data. See [Local semantic search](LOCAL_SEMANTIC_SEARCH.md) and [Emerging subject candidates](SUBJECT_GROUPS.md).
+
+The selected first-pass classifier is now revision-pinned Political DEBATE **large**, running locally on two CPU threads. It proposes broad subjects, suggested subtopics, communicative functions and possible physical-emergency flags. The author recommends large for general zero-shot use. Numbered source passages preserve exact original wording; short linked reactions can abstain, and model failures retain the source. The model remains provisional, with known weather-advice and location-extraction gaps. See [Local classification](LOCAL_CLASSIFICATION.md) for actual measurements and the limits of the engineering checks.
+
+Qwen 4B/9B MLX experiments were evaluated but are not the selected automatic provider: real-caption overinterpretation and a reasoning timeout outweighed a favorable synthetic prompt result. The NLI provider uses fixed hypotheses and does not claim to train from saved reviews. Accepted examples remain available through the bounded semantic retrieval layer for comparison and later evaluated SetFit/DEBATE training.
+
+Pinned `dslim/bert-base-NER` now runs beside NLI, proposing exact named mentions with complete token windows and source passage references. Types remain provisional: synthetic checks missed some facilities/roads, and a real caption's rhetorical name was misclassified as an organization. It never automatically assigns incident location or district. Local candidate evaluation and private voice-session preparation are implemented; no new human judgments or held-out test sets were manufactured.
+
+No Hub data repository, cloud training job or paid model endpoint has been created. Runtime/model downloads are local development assets. The actual X connection trial is separately capped and documented in [Connection trial](CONNECTION_TRIAL.md).
+
+Next: real held-out calibration, improved entity/location interpretation, an evaluated training threshold, and measured hosted CPU throughput. The Linux CPU lock and private service package are prepared but have not been executed on Linux. Model agreement or a high NLI score must not be presented as calibrated accuracy or political coordination.

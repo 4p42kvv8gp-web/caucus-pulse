@@ -1,0 +1,26 @@
+{
+  "name": "caucus-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "import:calibration": "node scripts/import-calibration.js",
+    "collection:status": "node scripts/collection-status.js",
+    "collection:worker": "node scripts/worker.js",
+    "learning:status": "node scripts/learning.js status",
+    "language:status": "node scripts/language.js",
+    "embeddings:status": "node scripts/embeddings.js status",
+    "embeddings:index": "node scripts/embeddings.js index",
+    "embeddings:benchmark": "node scripts/benchmark-embeddings.js"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "jose": "6.2.12"
+  }
+}

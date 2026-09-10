@@ -1,0 +1,13 @@
+# Prepared only; no timer has been installed or enabled.
+[Unit]
+Description=Check for new caucus posts every 30 minutes
+
+[Timer]
+OnCalendar=*-*-* *:00,30:00 UTC
+AccuracySec=30s
+RandomizedDelaySec=15s
+Persistent=true
+Unit=caucus-pulse-poll.service
+
+[Install]
+WantedBy=timers.target

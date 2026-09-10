@@ -1,0 +1,16 @@
+{
+  "name": "bert-base-ner-v1",
+  "repository": "dslim/bert-base-NER",
+  "revision": "d1a3e8f13f8c3566299d95fcfc9a8d2382a9affc",
+  "license": "MIT",
+  "files": [
+    ["README.md", 6558, "79e17be6ce6132747f665546f8c069ee1a010f50"],
+    ["config.json", 829, "5ba43fd83a747fd40b3934d74f658ab2661a4c75"],
+    ["model.safetensors", 433292294, "b04492186cfb45a64908487a17a9f8d6ddec3a403ef39db5bca688f0fa702a34"],
+    ["special_tokens_map.json", 112, "e7b0375001f109a6b8873d756ad4f7bbb15fbaa5"],
+    ["tokenizer_config.json", 59, "55eff66c65a207adf4c141ab9426580d6d12102a"],
+    ["vocab.txt", 213450, "2ea941cc79a6f3d7985ca6991ef4f67dad62af04"]
+  ],
+  "limits": {"maxCharacters": 60000, "maxWindows": 64, "maxTokens": 512, "overlapTokens": 64, "batchSize": 4, "minimumTokenScore": 0.9},
+  "note": "Named mentions only. CoNLL news-domain labels are provisional; they do not identify incident locations, district boundaries or canonical entities."
+}

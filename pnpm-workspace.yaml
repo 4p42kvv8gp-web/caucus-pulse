@@ -1,0 +1,9 @@
+# Patch the optional image-processing path brought in by Transformers.js.
+# GHSA-f88m-g3jw-g9cj affects sharp <0.35.0; embeddings process text only.
+overrides:
+  sharp: 0.35.3
+
+# CPU binaries are bundled. Do not download CUDA runtimes during installation.
+ignoredBuiltDependencies:
+  - onnxruntime-node
+  - sharp

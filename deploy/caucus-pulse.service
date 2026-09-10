@@ -1,0 +1,43 @@
+# Prepared template. Validate on the selected Linux host before enabling.
+[Unit]
+Description=Caucus Pulse private workspace
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=exec
+User=caucus-pulse
+Group=caucus-pulse
+WorkingDirectory=/opt/caucus-pulse
+EnvironmentFile=/etc/caucus-pulse/workspace.env
+ExecStart=/opt/node-v24.19.0/bin/node /opt/caucus-pulse/src/server.js
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ReadWritePaths=/opt/caucus-pulse/data
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryHigh=5G
+MemoryMax=6G
+CPUQuota=200%
+TasksMax=128
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

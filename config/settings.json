@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "listId": "1841177179872243858",
+  "collectionEnabled": false,
+  "mode": "historical-calibration",
+  "pollMinutes": 30,
+  "dashboardRefreshSeconds": 60,
+  "intelligence": {
+    "outsideContext": {
+      "enabled": true
+    },
+    "localEmbeddings": {
+      "enabled": true,
+      "model": "bge",
+      "postsPerPass": 25
+    },
+    "localClassifier": {
+      "enabled": true,
+      "postsPerPass": 5
+    }
+  },
+  "budget": {
+    "reportedCreditUsd": 400,
+    "verifiedBalance": false,
+    "dailyCeilingUsd": 25,
+    "pilotCeilingUsd": 350,
+    "reserveUsd": 50,
+    "billingTimezone": "UTC",
+    "balanceMaxAgeSeconds": 300,
+    "resourcePricesUsd": {
+      "post": 0.005,
+      "user": 0.01
+    },
+    "priceReference": "https://docs.x.com/x-api/getting-started/pricing",
+    "pricesCheckedOn": "2026-09-07",
+    "automaticTopUp": false,
+    "historicalBackfillEnabled": false,
+    "engagementRefreshEnabled": false
+  }
+}

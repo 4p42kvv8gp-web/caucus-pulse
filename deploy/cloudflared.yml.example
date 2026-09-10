@@ -1,0 +1,8 @@
+# A named tunnel and an Access application must already exist.
+# Replace all example values; never commit the actual credentials JSON.
+tunnel: REPLACE_WITH_TUNNEL_UUID
+credentials-file: /etc/cloudflared/caucus-pulse-tunnel.json
+ingress:
+  - hostname: pulse.example.com
+    service: http://127.0.0.1:4317
+  - service: http_status:404
