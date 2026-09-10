@@ -28,6 +28,20 @@
   `settings.stories` are promoted nightly as provisional stories; the owner
   prunes rather than approves one by one.
 
+## Product principle: the taxonomy learns from the data (owner, 2026-09-10)
+
+- Rows like "2026 midterms" mean nothing; rows must be what the caucus is
+  actually talking about at the granularity the posts support. Subtopics
+  are discovered from the posts (semantic clusters inside a macro, named
+  by reading them), not authored from a list of policy areas.
+- Volume decides shape: a subtopic that draws as much attention as its
+  parent (settings.taxonomy_learn.elevate_share of the macro over 7 days)
+  becomes its own bucket — dual-listed for continuity when that keeps
+  history readable, single when it does not. Posts may carry both.
+- The pipeline proposes and applies these changes nightly within
+  thresholds (`npm run taxonomy-learn`), the report lists them, and the
+  owner prunes. Hand edits to config/taxonomy.yaml remain authoritative.
+
 ## Product principle: intelligence everywhere (owner, 2026-09-10)
 
 - "Keyword searches and numerical data are not enough." Every layer that
