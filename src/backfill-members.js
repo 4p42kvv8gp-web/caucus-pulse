@@ -18,7 +18,8 @@
 // --stop-at-limit: on the first rate-limit hit, flush and exit (reporting when
 // the window resets) instead of sleeping through it — for a bounded run.
 //
-// Env: X_DAILY_READ_BUDGET applies (default 8000). X_BACKFILL_MIN_REMAINING
+// The daily read budget (settings.daily_read_budget, or X_DAILY_READ_BUDGET
+// as a one-off override) applies. X_BACKFILL_MIN_REMAINING
 // (default 2) leaves that many rate-limit calls unused per window.
 import fs from 'node:fs';
 import * as x from './x.js';

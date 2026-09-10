@@ -9,7 +9,7 @@
 //   data/authors.json               author table (weekly refresh)
 //   data/rollups/topic-days.json    topic × day × caucus aggregates
 //   data/state.json                 cursor + usage metering (this file)
-import { p, readJSON, writeJSON, readJSONL, appendJSONL, etDate, daysAgoEt } from './util.js';
+import { p, settings, readJSON, writeJSON, readJSONL, appendJSONL, etDate, daysAgoEt } from './util.js';
 
 export const statePath = p('data', 'state.json');
 export const archivePath = (date) => p('data', 'archive', `${date}.jsonl`);
@@ -41,8 +41,12 @@ export function addUsage(state, { posts = 0, users = 0 }) {
   u.users += users;
 }
 
+// Daily X read ceiling. config/settings.json "daily_read_budget" is the
+// source of truth (git-controlled, so it can be raised without touching repo
+// settings); X_DAILY_READ_BUDGET in the environment overrides it for a
+// one-off run. 8000 reads ≈ $40 is the fallback if neither is set.
 export function dailyBudget() {
-  return Number(process.env.X_DAILY_READ_BUDGET || 8000); // reads/day ≈ $40 ceiling
+  return Number(process.env.X_DAILY_READ_BUDGET || settings.daily_read_budget || 8000);
 }
 
 export function budgetExhausted(state) {

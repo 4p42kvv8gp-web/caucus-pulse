@@ -5,9 +5,10 @@
 - **Merge your own pull requests** once `npm test` passes and the branch
   merges cleanly. Do not wait for a human click. Draft → ready → merge.
 - **Spend within the configured ceilings** without asking: the X read
-  budget is the `X_DAILY_READ_BUDGET` repo variable (15,000/day as of
-  2026-09-10); Claude classification runs on `settings.classify.model` at
-  batch rates. Ask before anything that would exceed a day's ceiling.
+  budget is `config/settings.json` → `daily_read_budget` (50,000/day as of
+  2026-09-10, set by the owner); Claude classification runs on
+  `settings.classify.model` at batch rates. Ask before anything that would
+  exceed a day's ceiling.
 - **main is the spine.** The Codex-built branch `codex/caucus-pulse-foundation`
   (PR #1) is a separate, self-hosted design; borrow ideas from it (story-level
   subtopics, provisional incidents, correction loop, outside context), do not
