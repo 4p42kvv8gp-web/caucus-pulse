@@ -1,0 +1,60 @@
+# Caucus Pulse — human corrections to the classifier (the editors' precedents).
+#
+# The nightly classifier is authoritative but not infallible. When a post is
+# mislabeled, add an entry here instead of editing data/topics/ by hand:
+#
+#   npm run corrections -- --dry-run    # show what would change
+#   npm run corrections                 # overwrite the assignment in data/topics/<date>.json
+#
+# Each entry names ONE post — either by tweet id:
+#
+#   - id: "2091258978613318141"
+#     topics: [[immigration, dilley-detention], [immigration, ice-enforcement]]
+#     note: why the stored label was wrong (one sentence; the classifier reads it)
+#     by: who
+#     on: 2026-09-10
+#
+# or, so nobody has to look an id up, by handle + archive day (ET) + a
+# distinctive excerpt of the text (case-insensitive; must match exactly one
+# original post by that account that day — retweets follow their original):
+#
+#   - handle: BettyMcCollum04
+#     date: 2026-09-02
+#     match: "senseless gun violence today in Minneapolis"
+#     topics: [[public-safety, gun-violence]]
+#     note: ...
+#     by: ...
+#     on: 2026-09-10
+#
+# topics are [macro, subtopic] pairs from config/taxonomy.yaml (use null or
+# just [macro] for macro-only; "macro/sub" strings work too; [] means "no
+# policy content"). Applying is idempotent and the nightly re-applies the whole
+# file after classification, so corrections survive a re-classify. The most
+# recent entries (settings.classify.correction_examples) are also shown to the
+# live classifier as precedents, so a good `note` teaches it the pattern.
+#
+# The first three entries were drafted by the 2026-09-10 night build as worked
+# examples from real posts; keep, edit, or delete them.
+
+- id: "2091258978613318141"
+  # @RepBarragan 2026-08-22: "Release the kids and shut down Dilley. ICE is out of control…"
+  topics: [[immigration, dilley-detention], [immigration, ice-enforcement]]
+  note: Stored as bare Immigration twice. Dilley is named outright and has its own subtopic (alias "Dilley"); the ICE half belongs under ICE enforcement. Assign the specific subtopic whenever a post names the facility.
+  by: claude-night-build
+  on: 2026-09-10
+
+- handle: BettyMcCollum04
+  date: 2026-09-02
+  match: "senseless gun violence today in Minneapolis"
+  topics: [[public-safety, gun-violence]]
+  note: Stored as [] (treated as a condolence with no policy content). A member reacting to a shooting in her city is Guns & public safety / gun violence even when the post is a condolence — that is how the caucus's gun-violence volume is measured.
+  by: claude-night-build
+  on: 2026-09-10
+
+- handle: RepJahanaHayes
+  date: 2026-09-01
+  match: "keeps the government funded through Dec. 11"
+  topics: [[budget-appropriations, shutdown], [immigration, ice-enforcement]]
+  note: Stored as bare Budget & appropriations plus Congress & campaign politics. A CR vote is the shutdown/funding-deadline subtopic (aliases "CR", "continuing resolution"), and the post's substance about denying ICE/CBP money is ICE enforcement, not floor procedure.
+  by: claude-night-build
+  on: 2026-09-10
