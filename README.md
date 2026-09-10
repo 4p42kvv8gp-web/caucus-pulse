@@ -134,6 +134,10 @@ incident's timeline, intel panels, and a copy-brief button; its X-search
 panel is a stub until an X search connector is added. Serve via GitHub Pages
 (deploy from branch, path `/`) and open `/site/`.
 
+Emerging cards also carry an **In the news** list — newsletter hits for the
+story candidate from the owner's briefing inbox (`data/context.json`, see
+`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification.
+
 Real windows, no fakery: `rollups.json` carries separate Today and 7-day
 aggregates per caucus for every topic — the design's sample data scaled one
 window into the other; the pipeline computes both. Engagement lags ~one day
