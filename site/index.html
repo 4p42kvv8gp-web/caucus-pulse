@@ -42,7 +42,7 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote } from './ui.js';
 
 let D = null;
 const state = {
@@ -246,14 +246,25 @@ function renderClusters() {
 }
 
 function renderDistrict() {
-  const active = D.incidents.filter((n) => n.status === 'active');
-  const cards = active.map((n) => `<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(n.kind)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(n.since, D.today))} → ${esc(etWhen(n.last, D.today))}</span></div>
+  // Corroborated-and-active incidents plus provisional ones that are still
+  // fresh (a single member's report within the last 12h): those surface
+  // here immediately, badged, with the evidence span instead of the whole
+  // post. A provisional report that has gone quiet stays on the desk only.
+  const live = D.incidents.filter((n) => n.status === 'active' || (n.status === 'provisional' && n.lifecycle === 'active'));
+  const nActive = live.filter((n) => n.status === 'active').length;
+  const nProv = live.length - nActive;
+  const cards = live.map((n) => {
+    const prov = n.status === 'provisional';
+    const corr = n.corroboration || {};
+    return `<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9${prov ? ';border:1px dashed #c7d2ea' : ''}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(n.kind)}</span>${prov ? provisionalBadge(corr.note) : ''}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(n.since, D.today))} → ${esc(etWhen(n.last, D.today))}</span></div>
     <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(n.place)}</span><span style="font-size:12px"><span style="font-weight:500">${esc(n.handle)}</span><span style="color:#6e6e73"> · ${esc(n.member)}</span></span></div>
-    <p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">“${esc(n.timeline[0]?.text || '')}”</p>
+    ${evidenceQuote(n.evidence, n.timeline[0]?.text)}
+    <div style="font-size:11px;color:#6e6e73">${prov ? `Single-member report · ${esc(corr.note || 'not yet corroborated')}` : `Corroborated by ${esc(corr.by || 'grouping')}${corr.note ? ` · ${esc(corr.note)}` : ''}`}</div>
     <div style="display:flex;justify-content:space-between;font-size:11px;color:#6e6e73"><span>${n.updates} updates · ${fmt(n.engN)} engagement</span><a href="./incidents.html">Thread ›</a></div>
-  </div>`).join('');
-  $('district').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">${active.length} active</span></div><a href="./incidents.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
+  </div>`;
+  }).join('');
+  $('district').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">${nActive} active${nProv ? ` · ${nProv} provisional` : ''}</span></div><a href="./incidents.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px">${cards || '<div style="padding:16px 0;color:#6e6e73;font-size:13px">No active district incidents.</div>'}</div>`;
 }
 

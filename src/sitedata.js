@@ -534,7 +534,11 @@ export function buildSiteData() {
     if (a.handle) members[`@${a.handle}`] = [a.member || a.name || a.handle, a.stateDistrict || '', caucusKeysOf(a)];
   }
 
-  const incidentsFile = readJSON(incidentsPath, { incidents: [] });
+  // Incidents pass through whole: status (provisional | active | monitoring |
+  // resolved), lifecycle, corroboration, per-post evidence spans and flags,
+  // intel. `incidentsFiltered` is how many classifier flags the desk's
+  // deterministic post-filter dropped this build (src/incidents.js).
+  const incidentsFile = readJSON(incidentsPath, { incidents: [], filtered: [] });
 
   const core = Object.entries(settings.core_messages).map(([name, keys]) => ({ name, topics: keys }));
 
@@ -565,9 +569,11 @@ export function buildSiteData() {
     phrases,
     clusters,
     incidents: incidentsFile.incidents,
+    incidentsFiltered: (incidentsFile.filtered || []).length,
     feed
   });
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
+  const provisional = incidentsFile.incidents.filter((i) => i.status === 'provisional').length;
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents (${provisional} provisional, ${(incidentsFile.filtered || []).length} flags filtered), ${feed.length} feed posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
