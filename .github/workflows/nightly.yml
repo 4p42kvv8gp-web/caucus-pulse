@@ -32,7 +32,19 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Refresh, classify, mine syntax, roll up, report
+      # The local embedding model (35 MB, digests pinned in src/embeddings.js;
+      # the cache key is its revision). Without it `npm run embed` prints a
+      # one-line skip and the chain continues: the classifier just gets no
+      # similarity hints and the dashboard no "similar, unlabeled" lists.
+      - name: Embedding model cache
+        uses: actions/cache@v4
+        with:
+          path: data/models
+          key: embedding-model-bge-small-en-v1.5-ea104dacec62
+      - name: Download embedding model (verified; no-op when cached)
+        continue-on-error: true
+        run: npm run download-model
+      - name: Refresh, embed, classify, mine syntax, roll up, report
         # Claude auth: the job's OIDC token is exchanged for a short-lived
         # Anthropic access token in-process; no ANTHROPIC_API_KEY secret.
         env:

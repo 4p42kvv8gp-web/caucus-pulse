@@ -68,6 +68,13 @@ export function estCost({ posts = 0, users = 0 }) {
   return posts * 0.005 + users * 0.01;
 }
 
+// Every archive day on disk (YYYY-MM-DD.jsonl only), oldest first.
+export function archiveDates() {
+  let names;
+  try { names = fs.readdirSync(p('data', 'archive')); } catch { return []; }
+  return names.filter((n) => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n)).map((n) => n.slice(0, 10)).sort();
+}
+
 // Ids captured in the last `days` archive files — the dedupe set for the
 // poller (covers boundary-page overlap re-reads and clock skew).
 export function recentIds(days = 3) {
@@ -104,14 +111,8 @@ export function loadDay(date) {
 }
 
 // Every archived post, oldest file first, deduped by id across files (a
-// post captured near midnight ET can land in two day files). Dates in the
-// archive directory are the source of truth for what exists.
-export function archiveDates() {
-  let names;
-  try { names = fs.readdirSync(p('data', 'archive')); } catch { return []; }
-  return names.filter((n) => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n)).map((n) => n.slice(0, 10)).sort();
-}
-
+// post captured near midnight ET can land in two day files). archiveDates()
+// above is the source of truth for what exists.
 export function loadArchive() {
   const seen = new Set();
   const out = [];

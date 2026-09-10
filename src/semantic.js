@@ -21,7 +21,7 @@
 // Similarity is a retrieval signal, not a judgment: a neighbour is a
 // candidate for a reader (human or Claude) to confirm. docs/SEMANTIC_MATCHING.md
 // has the measured precision that the default thresholds rest on.
-import { p, readJSON } from './util.js';
+import { p, readJSON, settings } from './util.js';
 import { loadTaxonomy } from './taxonomy.js';
 import { loadArchive, archiveDates, topicsPath } from './store.js';
 import { load as loadIndex } from './embedding-index.js';
@@ -37,6 +37,29 @@ export const storiesPath = p('data', 'stories.json');
 // "worth reading", not a verdict: above it a reader (or the judge in
 // scripts/semantic-proof.js) still decides.
 export const DEFAULT_MIN_SIM = 0.8;
+
+// The floor the pipeline actually uses: config/settings.json → semantic.min_sim
+// when it is a sane number, else the calibrated default.
+export function configuredMinSim() {
+  const v = Number(settings.semantic?.min_sim);
+  return Number.isFinite(v) && v > 0 && v < 1 ? v : DEFAULT_MIN_SIM;
+}
+
+// The taxonomy row behind a story — {id: "macro/sub", def} — or null when
+// the YAML has none (a stories.json candidate awaiting promotion, a key the
+// YAML no longer carries). Retired rows are returned; callers decide.
+export function storyRow(story, tax) {
+  if (!story?.macro || !story.key) return null;
+  const sub = story.key.startsWith(`${story.macro}/`) ? story.key.slice(story.macro.length + 1) : story.key;
+  const def = tax?.[story.macro]?.subtopics?.[sub];
+  return def ? { id: `${story.macro}/${sub}`, def } : null;
+}
+
+// The taxonomy id the classifier may assign for a story: a live row only.
+export function storyTopic(story, tax) {
+  const row = storyRow(story, tax);
+  return row && !row.def.retired ? row.id : null;
+}
 
 export function centroid(vectors) {
   const rows = vectors.filter(Boolean);
@@ -166,6 +189,13 @@ export function createSemantic({ index, stories, posts = [], embed = sharedEmbed
       }));
     },
     story: (key) => stories.get(key) || null,
+    // The story key behind a taxonomy row (buildStories keys a row by its
+    // subtopic, or "macro/sub" when two macros share a subtopic key).
+    storyKeyFor(macro, sub) {
+      if (stories.has(`${macro}/${sub}`)) return `${macro}/${sub}`;
+      const s = stories.get(sub);
+      return s && s.macro === macro ? sub : null;
+    },
     centroidOf: (key) => storyCentroid(key).vector,
     nearSeed,
     async relatedStories(query, { k = 5, minSim = DEFAULT_MIN_SIM } = {}) {
@@ -180,14 +210,29 @@ export function createSemantic({ index, stories, posts = [], embed = sharedEmbed
       }
       return hits.sort((a, b) => b.sim - a.sim).slice(0, k);
     },
-    relatedPosts(storyKey, { k = 20, minSim = DEFAULT_MIN_SIM, excludeAssigned = true } = {}) {
+    // `exclude` (a Set of ids or a predicate) narrows the candidates further
+    // — the dashboard passes "not in the 7-day window, or a retweet".
+    relatedPosts(storyKey, { k = 20, minSim = DEFAULT_MIN_SIM, excludeAssigned = true, exclude = null } = {}) {
       const s = stories.get(storyKey);
       if (!s) throw new Error(`unknown story: ${storyKey}`);
       const { vector } = storyCentroid(storyKey);
       if (!vector) return [];
-      return decorate(index.neighbors(vector, k, { exclude: excludeAssigned ? s.ids : null, minSim }));
+      const extra = exclude instanceof Set ? (id) => exclude.has(id) : (typeof exclude === 'function' ? exclude : null);
+      const assigned = excludeAssigned ? s.ids : null;
+      const skip = assigned && extra ? (id) => assigned.has(id) || extra(id) : (assigned || extra);
+      return decorate(index.neighbors(vector, k, { exclude: skip, minSim }));
     }
   };
+}
+
+// loadSemantic for callers that must keep going without the layer (the
+// poller, the classifiers, the site builder): null and one warning line when
+// there is no index yet or it cannot be read, never a throw.
+export function loadSemanticOrNull({ warn = console.warn, ...opts } = {}) {
+  try { return loadSemantic(opts); } catch (e) {
+    warn(`[semantic] unavailable: ${e.message}`);
+    return null;
+  }
 }
 
 // Everything from disk: the committed index, the archive, the taxonomy, the

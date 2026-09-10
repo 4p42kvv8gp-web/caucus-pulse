@@ -10,9 +10,9 @@ judgments; unverified claims say so.
 
 | Layer | Counted / matched today | Reads and judges (target) | Status |
 |---|---|---|---|
-| Topic classification | Claude reads every post against the taxonomy | story-first taxonomy; quoted-post context; anchors (a viral post defines a story); similarity candidates as hints; editors' corrections as precedents | taxonomy v2, quoted context, anchors, semantic hints: in progress tonight |
+| Topic classification | Claude reads every post against the taxonomy | story-first taxonomy; quoted-post context; anchors (a viral post defines a story); similarity candidates as hints; editors' corrections as precedents | quoted context + anchors merged (#12); semantic hints built (`withCandidates`, night-semantic-integration); taxonomy v2 in progress tonight |
 | Emerging → stories | label-token merge; placement call | evidence-backed merges; duplicate confirmation across batches; continuous promotion with retirement | merged (#11) / promotion in progress |
-| Semantic matching | none | local embedding index; centroid per story; neighbors judged by Claude with a reason ("similar, unlabeled" on every story) | in progress |
+| Semantic matching | local embedding index (every post, incremental per poll); centroid per story; "similar, unlabeled" on every emerging card and story row; hints to the classifier | neighbors judged by Claude with a reason, in the nightly loop (today: on demand via `npm run semantic-proof`) | index, dashboard lists and hints built (night-semantic-index + night-semantic-integration); nightly judge queued |
 | Strategic syntax (phrases) | 2–4-gram counts by distinct members | message families by meaning: paraphrases of one line grouped and named, adoption measured on the family; n-grams remain one signal | queued (chain step 3) |
 | Momentum / trends | formula over counts | "why it moved": for each top mover, Claude reads the driving posts and writes the reason with example posts | queued (chain step 1) |
 | Incidents | kind+place string grouping; nightly intel | semantic corroboration (same event, different words/places); provisional single-post cards with evidence spans; audit-driven prompt rules | audit + provisional build in progress; corroboration queued (chain step 2) |
