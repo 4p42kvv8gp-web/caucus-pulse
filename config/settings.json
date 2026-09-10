@@ -44,7 +44,8 @@
   "classify": {
     "model": "claude-opus-5",
     "tweets_per_request": 40,
-    "max_wait_minutes": 55
+    "max_wait_minutes": 55,
+    "correction_examples": 8
   },
   "anthropic": {
     "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Outside Actions, set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY) instead.",

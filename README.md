@@ -134,6 +134,10 @@ incident's timeline, intel panels, and a copy-brief button; its X-search
 panel is a stub until an X search connector is added. Serve via GitHub Pages
 (deploy from branch, path `/`) and open `/site/`.
 
+Emerging cards also carry an **In the news** list — newsletter hits for the
+story candidate from the owner's briefing inbox (`data/context.json`, see
+`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification.
+
 Real windows, no fakery: `rollups.json` carries separate Today and 7-day
 aggregates per caucus for every topic — the design's sample data scaled one
 window into the other; the pipeline computes both. Engagement lags ~one day
@@ -170,3 +174,27 @@ State (`data/state.json`) tracks the capture cursor, in-flight Claude
 batches, and a per-day X read ledger the budget guard enforces. Nothing else
 is stateful; delete any derived file and the nightly rebuild recreates it
 from the archive.
+
+### Correcting the classifier
+
+`config/corrections.yaml` is the editors' override list — one entry per
+mislabeled post, by tweet id or by `handle` + `date` (the ET archive day) +
+`match` (a distinctive excerpt of the text), with the right `topics`
+(`[macro, subtopic]` pairs from the taxonomy), a `note` saying why, `by`,
+and `on`. Never edit `data/topics/` by hand.
+
+```bash
+npm run corrections -- --dry-run   # what would change, nothing written
+npm run corrections                # overwrite the assignment in data/topics/<date>.json
+node src/corrections.js examples   # the precedents block the live classifier sees
+```
+
+Applying marks the post under `corrected` (with the note), drops it from
+`unclassified` and emerging clusters, and gives its retweets the same topics.
+It is idempotent and the nightly re-runs it right after classification, so a
+correction filed for a day the nightly hasn't reached yet lands the next
+morning, and corrections survive a re-classify. The most recent entries
+(`settings.classify.correction_examples`, default 8; 0 disables) are rendered
+into the poll-time classifier's prompt as few-shot precedents — the block is
+sorted and timestamp-free so the prompt cache only turns over when the YAML
+changes. Commit the YAML (and the topics files, if you applied locally).

@@ -34,6 +34,7 @@ export function mergeAuthors({ users, accounts, prev = {} }) {
       accountType: meta.accountType || '',
       caucuses: meta.caucuses || [],
       stateDistrict: meta.stateDistrict || '',
+      status: meta.status || 'house',
       followers: u.public_metrics?.followers_count ?? 0,
       verifiedType: u.verified_type || (u.verified ? 'legacy' : ''),
       onList: u.onList !== false
@@ -50,6 +51,22 @@ export function mergeAuthors({ users, accounts, prev = {} }) {
   return { byId, untagged, missing };
 }
 
+// Only sitting House members count toward the numbers. Senators, former
+// members and stray non-member accounts stay on the List (their posts are
+// still captured and archived) but leave every stat, topic, phrase and
+// feed. An author the table doesn't know counts as House: the List is a
+// House Democrats list, so that is the safe default — and so are author
+// tables written before the status column existed.
+export function isHouse(author) {
+  return (author?.status || 'house') === 'house';
+}
+
+export function splitByRoster(posts, authorsById) {
+  const house = [], excluded = [];
+  for (const t of posts) (isHouse(authorsById[t.authorId]) ? house : excluded).push(t);
+  return { house, excluded };
+}
+
 // `npm run authors -- --overlay`: re-apply config/accounts.csv to the saved
 // author table without touching X (free). Use after editing caucus tags;
 // the weekly refresh still re-reads the List for membership changes.
@@ -63,7 +80,8 @@ function overlayOnly() {
   const { byId, untagged, missing } = mergeAuthors({ users, accounts, prev: {} });
   for (const [id, a] of Object.entries(prev.byId)) if (a.stale) byId[id] = { ...byId[id], stale: true };
   writeJSON(authorsPath, { ...prev, byId, overlayAt: new Date().toISOString() });
-  console.log(`[authors] overlay applied to ${users.length} saved authors: ${Object.values(byId).filter((a) => a.caucuses.length).length} tagged, ${untagged.length} untagged, ${missing.length} CSV handle(s) not in the saved table`);
+  const nonHouse = Object.values(byId).filter((a) => !isHouse(a)).length;
+  console.log(`[authors] overlay applied to ${users.length} saved authors: ${Object.values(byId).filter((a) => a.caucuses.length).length} tagged, ${untagged.length} untagged, ${nonHouse} non-House (senate/former/org), ${missing.length} CSV handle(s) not in the saved table`);
 }
 
 async function main() {

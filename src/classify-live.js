@@ -12,14 +12,31 @@ import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, readJSON, writeJSON, p } from './util.js';
 import { loadTaxonomy, systemPrompt, parseJsonLoose } from './taxonomy.js';
 import { mergeParsed } from './classify.js';
+import { correctionExamples } from './corrections.js';
 
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
+
+// The editors' most recent corrections, rendered into the system prompt as
+// precedents. A broken corrections.yaml must not stop live tagging — warn
+// and classify without them.
+// TODO(corrections): give classify.js chunkRequests the same
+// systemPrompt(tax, { examples }) so the nightly batch learns from the
+// precedents too; classify.js is off-limits tonight (2026-09-10).
+function precedents(tax) {
+  try {
+    return correctionExamples(settings.classify.correction_examples ?? 8, { tax });
+  } catch (e) {
+    console.warn(`[classify-live] corrections skipped: ${e.message}`);
+    return [];
+  }
+}
 
 export async function classifyLive(records) {
   if (process.env.CLASSIFY_LIVE === 'false' || !anthropicConfigured()) return null;
   const items = records.filter((t) => t.type !== 'retweet');
   if (!items.length) return null;
   const tax = loadTaxonomy();
+  const system = [{ type: 'text', text: systemPrompt(tax, { examples: precedents(tax) }), cache_control: { type: 'ephemeral' } }];
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const client = await anthropicClient();
 
@@ -30,7 +47,7 @@ export async function classifyLive(records) {
     const res = await client.messages.create({
       model,
       max_tokens: 8000,
-      system: [{ type: 'text', text: systemPrompt(tax), cache_control: { type: 'ephemeral' } }],
+      system,
       messages: [{
         role: 'user',
         content: chunk.map((t) => JSON.stringify({ id: t.id, text: t.text })).join('\n')
