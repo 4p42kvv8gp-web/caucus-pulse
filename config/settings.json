@@ -47,6 +47,12 @@
     "max_wait_minutes": 55,
     "correction_examples": 8
   },
+  "semantic": {
+    "_comment": "Local embedding layer (src/embeddings.js, src/semantic.js; docs/SEMANTIC_MATCHING.md). min_sim: cosine floor for a post to count as near a story; 0.8 was calibrated on the 2026-09-10 probes (nothing Claude judged on-story fell below it) and is a reading floor, not a verdict. candidates: how many nearby stories the classifier is shown per post as similarity hints (it still decides from the text). related_posts: how many unlabeled neighbours the dashboard lists under each emerging card and story row.",
+    "min_sim": 0.8,
+    "candidates": 3,
+    "related_posts": 5
+  },
   "stories": {
     "_comment": "Continuous story promotion (src/stories.js --auto-promote / --retire, run nightly after classify). auto_promote: when false, --auto-promote only lists what would be promoted and writes nothing. min_posts, min_members, min_days: a story candidate (placement kind 'story' with a macro) must reach all three — posts, distinct members, distinct days — before it is written to config/taxonomy.yaml as a provisional developing story; taxonomy gaps are never auto-promoted. max_per_night: at most this many promotions per run, most posts first (the rest wait for the next night). retire_after_quiet_days: a provisional story that has been in the taxonomy at least this many days with zero assignments in data/topics over the window is marked retired: true — it leaves the classifier prompt but keeps its key so rollups and history still resolve.",
     "auto_promote": true,

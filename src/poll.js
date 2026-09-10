@@ -139,14 +139,25 @@ export async function pollOnce() {
   const quoted = records.filter((r) => r.quoted).length;
   console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''} (${quoted} with quoted context; ${includes.tweets.length} referenced post(s) + ${includes.users.length} author(s) read); today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
 
-  // Post-capture extras are best-effort: live topic tags for the dashboard
-  // feed, then a rollups.json rebuild. Dynamic imports keep the capture path
+  // Post-capture extras are best-effort: the new posts into the embedding
+  // index (seconds on the CPU; a one-line skip when the 35 MB model was never
+  // downloaded on this checkout), live topic tags for the dashboard feed —
+  // which read those vectors for their similarity hints — then a
+  // rollups.json rebuild. Dynamic imports keep the capture path
   // dependency-free — if node_modules is absent these steps just skip.
   if (records.length) {
     try {
+      const { embedArchive } = await import('./embed-archive.js');
+      const r = await embedArchive();
+      if (r.skipped) console.log(`[poll] embedding skipped: ${r.skipped} (${r.pending} post(s) not in the index)`);
+      else if (r.embedded) console.log(`[poll] embedded ${r.embedded} new post(s) in ${r.seconds}s (index now ${r.total} rows)`);
+    } catch (e) {
+      console.warn(`[poll] embedding skipped: ${e.message}`);
+    }
+    try {
       const { classifyLive } = await import('./classify-live.js');
       const r = await classifyLive(records);
-      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.hinted ? `, ${r.hinted} with similarity hints` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
     } catch (e) {
       console.warn(`[poll] live classification skipped: ${e.message}`);
     }

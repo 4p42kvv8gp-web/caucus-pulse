@@ -83,8 +83,8 @@ approximate structure to keep consistent.
 `npm run embed` (`src/embed-archive.js`) is incremental: it embeds only ids
 the index lacks and rewrites the two files; a run with nothing new touches
 nothing. A changed model id forces a rebuild rather than mixing spaces. The
-poller is not wired yet — that is one call to `embedArchive()` after
-`appendToArchive`.
+poller calls the same `embedArchive()` right after `appendToArchive`, and
+the nightly chain runs it before `classify` (see Integration below).
 
 ### Stories and centroids
 
@@ -250,12 +250,71 @@ to expect before reading, not after.
   change and after the taxonomy's story rows land; the JSON outputs are the
   regression record.
 
+## Integration
+
+Status, 2026-09-10 (night build, branch `claude/night-semantic-integration`).
+The layer above is now in the pipeline in three places, each guarded so a
+checkout without the model or the index keeps working:
+
+- **Embedding keeps up with capture.** `npm run nightly` is
+  `refresh → embed → classify → …`; `src/poll.js` calls `embedArchive()`
+  after `appendToArchive`, before live tagging, so a poll's vectors are on
+  disk when the tagger asks for them (measured: 2 new posts in 0.6 s, model
+  load included). Without the model, `embedArchive()` returns `skipped`
+  (`modelAvailable()` in `src/embeddings.js`), the CLI prints one line and
+  exits 0 (`--require-model` makes it an error), and the poller logs the
+  skip. The `poll` and `nightly` workflows restore `data/models/` from the
+  Actions cache (key = the model revision) and fall back to
+  `npm run download-model`, both `continue-on-error`.
+- **Similarity hints for the classifier.** `withCandidates()` in
+  `src/classify.js` attaches `candidates` to each post before
+  `chunkRequests` — nightly, `classify-range` and `classify-live` all go
+  through it. Vectors come from the index; posts the index lacks are
+  embedded in one batch, or skipped with one warning when the model is
+  absent. The top `settings.semantic.candidates` (3) stories within
+  `settings.semantic.min_sim` (0.8) of the post become
+  `{"story": "macro/sub", "sim"}` when the story is a live taxonomy row,
+  `{"emerging": "<label>", "sim"}` when it is a stories.json candidate the
+  taxonomy has not promoted (retired rows produce nothing). One rule in the
+  system prompt says what they are: hints from wording similarity, to be
+  assigned only when the text or quoted context supports it. A post with no
+  candidates serialises exactly as before, and the cached system block does
+  not depend on the items, so the prompt cache is unaffected. Dry run on
+  2026-09-09 (603 posts to the model): 39 hinted, 42 ms, no model call; all
+  hints were emerging labels because the taxonomy carried no `story: true`
+  rows yet that night.
+- **"Similar, unlabeled" on the dashboard.** `attachRelated()` in
+  `src/sitedata.js` gives every Emerging card and every story row up to
+  `settings.semantic.related_posts` (5) posts from the 7-day window whose
+  vector sits near the story's posts and that carry no label for it —
+  `relatedPosts()` for a story the map knows, `nearSeed()` over the
+  cluster's own posts for a gap. Excluded: posts outside the window,
+  retweets, and posts already labelled with the story by the live tagger.
+  Each entry carries id, similarity, handle, trimmed text, time and the
+  labels it does have; `site/index.html` renders them as a compact list
+  under the card / row with a title that says "measured similarity, not a
+  judgment". Rebuild on 2026-09-10: 9 of 11 clusters got lists, rollups.json
+  grew 293 → 310 KB (13 KB of lists).
+
+Observed while wiring, not fixed tonight: with only 11 posts the
+`epstein-files` candidate's centroid pulls generic congressional-oversight
+retweets (truncated "RT @…" fallbacks whose originals are not archived) in
+at 0.81–0.84, so hints from small candidate stories are noisier than the
+0.8 floor suggests. Options: a higher floor for hints than for the dashboard
+lists (`settings.semantic` already separates the counts, not the floors),
+skipping hints for truncated retweet fallbacks, or requiring a minimum seed
+size before a candidate story hints at all.
+
 ## Files
 
-- `src/embeddings.js` — model pin, verification, `loadEmbedder()`, `embed()`, `prepareText()`
+- `src/embeddings.js` — model pin, verification, `modelAvailable()`, `loadEmbedder()`, `embed()`, `prepareText()`
 - `src/embedding-index.js` — int8 index: `createIndex`, `load`, `upsert`, `neighbors`, `save`
-- `src/embed-archive.js` — `npm run embed`, incremental
-- `src/semantic.js` — `buildStories`, `centroid`, `createSemantic` → `relatedStories`, `relatedPosts`, `nearSeed`; `loadSemantic()`
+- `src/embed-archive.js` — `npm run embed`, incremental; the poller's post-capture step
+- `src/semantic.js` — `buildStories`, `centroid`, `createSemantic` → `relatedStories`, `relatedPosts`, `nearSeed`, `storyKeyFor`; `loadSemantic()`, `loadSemanticOrNull()`, `configuredMinSim()`, `storyRow()` / `storyTopic()`
+- `src/classify.js` — `withCandidates()`, `candidateHint()`; `src/taxonomy.js` — the "candidates" prompt rule
+- `src/sitedata.js` — `attachRelated()`; `site/index.html` — the "Similar, unlabeled" lists
+- `config/settings.json` → `semantic` — `min_sim`, `candidates`, `related_posts`
+- `test/classify-candidates.test.js`, `test/sitedata-related.test.js` — hint wiring, prompt stability, dashboard attachment (semantic layer stubbed)
 - `scripts/download-embedding-model.js` — `npm run download-model`
 - `scripts/semantic-proof.js` — `npm run semantic-proof`; outputs in `docs/semantic-proof/`
 - `data/embeddings/index.bin`, `index.json` — the committed index

@@ -74,6 +74,14 @@ export function verifyModelFiles(dir = modelDir()) {
   return total;
 }
 
+// Is the model on disk and intact? The poller, the nightly embed step and the
+// classifier's similarity hints ask this before doing any work, so a checkout
+// that never ran `npm run download-model` skips with one line instead of a
+// stack trace. Costs one read + digest of the 34 MB weights (~0.1 s).
+export function modelAvailable(dir = modelDir()) {
+  try { verifyModelFiles(dir); return true; } catch { return false; }
+}
+
 // What actually gets embedded. Post text minus the link tokens X appends
 // (t.co stubs carry no meaning and a post that is only a card link would
 // otherwise embed as noise); HTML entities decoded; whitespace folded.

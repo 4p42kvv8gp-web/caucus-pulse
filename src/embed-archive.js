@@ -5,8 +5,11 @@
 //   node src/embed-archive.js --rebuild     # start from an empty index
 //   node src/embed-archive.js --limit=500   # cap this run (smoke test)
 //
-// Needs the model on disk (npm run download-model). No network.
-import { loadEmbedder, modelId, MODEL } from './embeddings.js';
+// Needs the model on disk (npm run download-model). No network. Without the
+// model, a run that has posts to embed reports `skipped` and exits 0 — the
+// nightly chain and the poller must not fail because the 35 MB download
+// never happened on this checkout (`--require-model` makes it an error).
+import { loadEmbedder, modelId, modelAvailable, MODEL } from './embeddings.js';
 import { createIndex, load, indexDir } from './embedding-index.js';
 import { loadArchive } from './store.js';
 
@@ -16,7 +19,7 @@ const arg = (name, dflt) => {
 };
 const flag = (name) => process.argv.includes(`--${name}`);
 
-export async function embedArchive({ rebuild = false, limit = Infinity, log = () => {}, embedder = null } = {}) {
+export async function embedArchive({ rebuild = false, limit = Infinity, log = () => {}, embedder = null, requireModel = false } = {}) {
   const posts = loadArchive();
   let index = rebuild ? null : load();
   if (index && index.model !== modelId()) {
@@ -29,6 +32,9 @@ export async function embedArchive({ rebuild = false, limit = Infinity, log = ()
   if (!todo.length && !fresh) {
     // Nothing new: leave the committed files untouched (no manifest churn).
     return { embedded: 0, total: index.count, seconds: 0, postsPerSecond: null, bytes: null, dir: indexDir() };
+  }
+  if (todo.length && !embedder && !requireModel && !modelAvailable()) {
+    return { embedded: 0, pending: todo.length, total: index.count, skipped: 'embedding model not downloaded (run: npm run download-model)', dir: indexDir() };
   }
   const started = Date.now();
   let seconds = 0;
@@ -54,7 +60,9 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop()
   const result = await embedArchive({
     rebuild: flag('rebuild'),
     limit: Number(arg('limit', Infinity)),
+    requireModel: flag('require-model'),
     log: (m) => console.error(m)
   });
-  console.log(JSON.stringify(result));
+  if (result.skipped) console.log(`[embed] skipped: ${result.skipped}; ${result.pending} post(s) not in the index`);
+  else console.log(JSON.stringify(result));
 }

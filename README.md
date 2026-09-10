@@ -119,7 +119,7 @@ starts. Every day before that is gone; turn it on early.
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
-| `src/embed-archive.js` | on demand (poller wiring pending) | Local BGE-small embeddings for every archived post → `data/embeddings/` (4 MB, incremental); `src/semantic.js` turns them into story centroids and "posts near this story that aren't assigned to it" | free (CPU, ~1 min for 10k posts) |
+| `src/embed-archive.js` | every poll (new posts) + nightly (`embed`, before `classify`) | Local BGE-small embeddings for every archived post → `data/embeddings/` (4 MB, incremental); `src/semantic.js` turns them into story centroids, similarity hints for the classifier and the dashboard's "similar, unlabeled" lists (see *Semantic matching*) | free (CPU, ~1 min for 10k posts, ~1 s per poll) |
 
 ## The dashboard
 
@@ -138,7 +138,10 @@ panel is a stub until an X search connector is added. Serve via GitHub Pages
 
 Emerging cards also carry an **In the news** list — newsletter hits for the
 story candidate from the owner's briefing inbox (`data/context.json`, see
-`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification.
+`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification — and,
+like every story row in the topics table, a **Similar, unlabeled** list: the
+posts in the window whose wording sits near the story's posts but that carry
+no label for it (see *Semantic matching* below).
 
 Real windows, no fakery: `rollups.json` carries separate Today and 7-day
 aggregates per caucus for every topic — the design's sample data scaled one
@@ -186,11 +189,66 @@ classification run. Set `settings.stories.auto_promote` to `false` to make
 the nightly step list-only. The system never invents categories silently.
 
 Keywords are not enough to find a story's posts — "Another AI wakeup call
-for Congress" never says Coxon. `npm run download-model` (once, 35 MB) then
-`npm run embed` builds a local semantic index of the archive; `src/semantic.js`
-ranks the corpus against each tracked story and `npm run semantic-proof` has
-Claude read the nearest posts and say why. Method, measured precision and
-limits: `docs/SEMANTIC_MATCHING.md`.
+for Congress" never says Coxon. The next section is the layer that reads
+for similarity instead.
+
+## Semantic matching
+
+Every archived post is embedded with a small sentence model on the CPU
+(`bge-small-en-v1.5`, ONNX int8, 384 dimensions); every tracked story — a
+`story: true` taxonomy row, or a `data/stories.json` candidate the placement
+pass called a story — gets a centroid from the posts already tied to it
+(assignments plus anchors, so a quote of Coxon's post that never names him
+counts); the corpus is ranked against it. Method, measured precision and the
+calibration behind the thresholds: `docs/SEMANTIC_MATCHING.md`.
+
+**Getting the model.** `npm run download-model` fetches the four pinned files
+(35 MB, sizes and digests in `src/embeddings.js`) into git-ignored
+`data/models/`; it is the only network step, refuses anything that does not
+verify, and is a no-op once the files are there. The `poll` and `nightly`
+workflows restore it from the Actions cache (key = the model revision) and
+fall back to the download, best-effort. Then `npm run embed` embeds whatever
+the committed index (`data/embeddings/`, 4.3 MB int8 for 10.5k posts) lacks;
+`--rebuild` starts over, `--require-model` turns the missing-model skip into
+an error.
+
+**What it costs.** CPU time only — no GPU, no API spend. Measured on the
+4-core host: the whole archive (10,482 posts) in 60 s, a poll's worth of new
+posts in about a second including model load, the index loaded in well under
+a second, a nearest-neighbour pass over the whole corpus in a few
+milliseconds. Verifying the model on disk reads the 34 MB weights once per
+process (~0.1 s). Without the model every step prints one skip line and the
+pipeline continues; without the index the classifier's requests are
+byte-identical to what they were.
+
+**What it does.**
+
+- The nightly chain is `refresh → embed → classify → …`, and the poller
+  embeds each poll's new posts right after capture, so vectors exist before
+  anything asks for them.
+- Every post sent to Claude — nightly batch, `classify-range`, poll-time
+  tagging — carries `candidates`: up to `settings.semantic.candidates`
+  stories whose centroid its vector sits within `settings.semantic.min_sim`
+  of. A live taxonomy row arrives as `{"story": "macro/sub", "sim": 0.87}`;
+  a story candidate the taxonomy has not promoted yet as `{"emerging":
+  "<label>", …}` so the model reuses the label the story pipeline already
+  merges on. The prompt calls them hints: the model assigns a candidate only
+  when the text or quoted context supports it.
+- The dashboard's Emerging cards and story rows each carry **Similar,
+  unlabeled**: up to `settings.semantic.related_posts` posts from the 7-day
+  window whose wording sits near the story's posts but that carry no label
+  for it (retweets left out; the original speaks for itself), with the
+  similarity number beside each.
+
+**What it does not claim.** Similarity is a retrieval signal, not a
+judgment: above the floor a reader — or Claude, via `npm run semantic-proof`,
+which reads the nearest posts and gives a reason per post — still decides.
+Adjacent subjects inside a dense macro overlap a story in similarity (the
+top neighbour of the Coxon story was a data-centre post), a post attacking a
+bill sits next to one supporting it, small candidate stories pull in their
+genre, retweets embed as the retweeted text, replies and quotes embed as
+their own words without the parent, and non-English posts are noise. The
+dashboard labels the lists as measured similarity for that reason.
 
 ## Local development
 

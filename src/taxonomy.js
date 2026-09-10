@@ -120,6 +120,11 @@ Rules:
   post it quotes/answers (assign that subject and its story) in addition to
   whatever its own text adds; a quoted post with very high reach is a strong
   signal the story is live.
+- Some inputs carry "candidates": stories whose posts this one resembles by
+  wording similarity — hints, not labels. One with "story" names a taxonomy
+  id you may assign; one with "emerging" is a subject seen before, with the
+  label to reuse in "emerging". Assign a candidate only when the tweet's
+  text (or its quoted context) supports it; otherwise ignore it.
 - Most tweets get 1-2 topics; never more than 4.
 - Pure scheduling/greeting/broadcast tweets with no policy content get [].
 - If a tweet is clearly about a coherent subject the taxonomy has no home
