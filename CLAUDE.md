@@ -28,6 +28,17 @@
   `settings.stories` are promoted nightly as provisional stories; the owner
   prunes rather than approves one by one.
 
+## Product principle: intelligence everywhere (owner, 2026-09-10)
+
+- "Keyword searches and numerical data are not enough." Every layer that
+  counts, matches strings, or ranks by a formula must also READ the posts
+  and JUDGE, with a stated reason and the evidence it used: what is this
+  post about, is it the same story as that one, why is this topic moving,
+  is this the same message in different words, is this the same incident.
+- Numbers stay (they are measured); judgments sit next to them and are
+  labelled as judgments; anything unverified says so. See
+  docs/INTELLIGENCE_EVERYWHERE.md for the layer-by-layer map and status.
+
 ## How things run
 
 - GitHub Actions on `main` do the capture (`poll` every 20 min), the nightly
