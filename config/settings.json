@@ -29,7 +29,8 @@
     ]
   },
   "poll": {
-    "max_pages": 5,
+    "_comment": "max_pages 10 covers the whole window the list-tweets endpoint will serve (it ran dry after ~800 posts in the 2026-09-10 backfill), so no gap the endpoint can still answer for is lost when GitHub's cron skips hours — as it did between 07:19 and 09:47 UTC that day. Pages past the boundary are never requested, so an on-cadence poll still costs one partial page.",
+    "max_pages": 10,
     "page_size": 100
   },
   "refresh": {

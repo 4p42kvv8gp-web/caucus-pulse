@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { newerThan, adaptivePageSize } from '../src/poll.js';
+import { newerThan, adaptivePageSize, minutesSince } from '../src/poll.js';
 import { validAssignments, renderTaxonomy } from '../src/classify.js';
 import { rollupDay } from '../src/rollup.js';
 
@@ -17,6 +17,21 @@ test('adaptivePageSize tracks recent volume within [5, 100]', () => {
   assert.equal(adaptivePageSize([30, 40, 35]), 70); // ~2× average
   assert.equal(adaptivePageSize([90, 90, 90]), 100);
   assert.equal(adaptivePageSize([465, 0, 0, 0, 0, 0, 0]), 5); // old burst ages out of the window
+});
+
+test('a missed cadence overrides the quiet-poll page size', () => {
+  const quiet = [1, 2, 1];
+  assert.equal(adaptivePageSize(quiet, 100, { minutesSinceLastPoll: 20 }), 5);  // on time
+  assert.equal(adaptivePageSize(quiet, 100, { minutesSinceLastPoll: 39 }), 5);  // one skipped run
+  assert.equal(adaptivePageSize(quiet, 100, { minutesSinceLastPoll: 148 }), 100); // GitHub skipped hours
+  assert.equal(adaptivePageSize(quiet, 100, { minutesSinceLastPoll: null }), 5);  // unknown → unchanged
+});
+
+test('minutesSince reads the cursor timestamp and tolerates a missing one', () => {
+  assert.equal(minutesSince(null), null);
+  assert.equal(minutesSince('not a date'), null);
+  const t = minutesSince(new Date(Date.now() - 90 * 60_000).toISOString());
+  assert.ok(t > 89 && t < 91, `expected ~90, got ${t}`);
 });
 
 test('validAssignments drops unknown macros and unknown subs', () => {
