@@ -35,7 +35,23 @@ export function validAssignments(topics, tax) {
   return out;
 }
 
-export function systemPrompt(tax) {
+// Editors' corrections as few-shot precedents, one JSON line each in the
+// same shape the model answers with. The caller (corrections.js) hands them
+// over already sorted and without timestamps: this block sits inside the
+// cached system prompt, so it must be byte-identical between runs until
+// config/corrections.yaml itself changes.
+export function renderExamples(examples) {
+  return (examples || [])
+    .map((e) => JSON.stringify({ text: e.text, topics: e.topics, ...(e.why ? { why: e.why } : {}) }))
+    .join('\n');
+}
+
+export function systemPrompt(tax, { examples = [] } = {}) {
+  const corrections = examples.length ? `
+Corrections from the editors (follow these precedents). These posts were
+re-labeled by hand; classify the same subjects the same way:
+${renderExamples(examples)}
+` : '';
   return `You classify tweets from US House Democratic caucus members into a fixed two-level topic taxonomy, and you flag district emergencies.
 
 Taxonomy (id: label). A tweet can carry multiple topics. Assign the most
@@ -63,7 +79,7 @@ Rules:
   abbr>"}. Reuse identical kind+place strings for tweets about the same
   event. Incident tweets still get topics [] unless they also carry policy
   content.
-
+${corrections}
 Reply with ONLY a JSON object, no prose:
 {"assignments": [{"id": "<tweet id>", "topics": [["macro-id", "sub-id or null"], ...], "incident": {"kind": "...", "place": "..."} (omit unless it is one)}, ...],
  "emerging": [{"label": "<suggested subtopic>", "ids": ["<tweet id>", ...]}]}
