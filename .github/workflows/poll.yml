@@ -35,13 +35,4 @@ jobs:
         run: npm run poll
       - name: Commit archive + site data
         run: |
-          git config user.name "caucus-pulse"
-          git config user.email "actions@users.noreply.github.com"
-          git add data site/data
-          git diff --cached --quiet && { echo "no new tweets"; exit 0; }
-          git commit -m "poll: $(date -u +'%Y-%m-%d %H:%M') capture"
-          for i in 1 2 3 4; do
-            git push && exit 0
-            git pull --rebase
-          done
-          git push
+          .github/scripts/commit-data.sh "poll: $(date -u +'%Y-%m-%d %H:%M') capture" data site/data

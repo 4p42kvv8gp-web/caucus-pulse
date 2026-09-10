@@ -80,6 +80,11 @@ export function appendToArchive(records) {
   return [...byDate.keys()];
 }
 
+// A day's archive, deduped by id. Two writers appending the same tweet to
+// the same file (a session poll racing an Actions poll, then a union merge)
+// leave a duplicate line; the first occurrence wins here so nothing
+// downstream double-counts.
 export function loadDay(date) {
-  return readJSONL(archivePath(date));
+  const seen = new Set();
+  return readJSONL(archivePath(date)).filter((t) => !seen.has(t.id) && seen.add(t.id));
 }

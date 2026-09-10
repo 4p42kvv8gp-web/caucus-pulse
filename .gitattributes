@@ -1,0 +1,4 @@
+# Concurrent writers (Actions jobs, Claude Code sessions) all commit under
+# data/. See .github/scripts/commit-data.sh for how each class merges.
+data/archive/*.jsonl merge=union
+data/state.json merge=state

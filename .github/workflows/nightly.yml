@@ -35,13 +35,4 @@ jobs:
         run: npm run nightly
       - name: Commit results
         run: |
-          git config user.name "caucus-pulse"
-          git config user.email "actions@users.noreply.github.com"
-          git add data reports site/data
-          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
-          git commit -m "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report"
-          for i in 1 2 3 4; do
-            git push && exit 0
-            git pull --rebase
-          done
-          git push
+          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') refresh + classify + report" data reports site/data
