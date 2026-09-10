@@ -1,0 +1,25 @@
+# Manual credential check from Actions secrets — output is sanitized (status
+# codes and counts only). Run with probe=true to spend ~$0.03 confirming paid
+# list access and since_id support.
+name: check-x-access
+on:
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: 'Spend ~$0.03 on one 5-post list page + since_id probe'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          X_LIST_ID: ${{ vars.X_LIST_ID }}
+        run: node src/check-x-access.js ${{ inputs.probe && '--probe' || '' }}
