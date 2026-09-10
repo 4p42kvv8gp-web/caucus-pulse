@@ -798,11 +798,11 @@
   "2091258978613318141": [
    [
     "immigration",
-    null
+    "dilley-detention"
    ],
    [
     "immigration",
-    null
+    "ice-enforcement"
    ]
   ],
   "2091261449280889151": [
@@ -1707,5 +1707,12 @@
   }
  ],
  "unclassified": [],
- "failedChunks": 0
+ "failedChunks": 0,
+ "corrected": {
+  "2091258978613318141": {
+   "note": "Stored as bare Immigration twice. Dilley is named outright and has its own subtopic (alias \"Dilley\"); the ICE half belongs under ICE enforcement. Assign the specific subtopic whenever a post names the facility.",
+   "by": "claude-night-build",
+   "on": "2026-09-10"
+  }
+ }
 }

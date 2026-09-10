@@ -3778,7 +3778,12 @@
     null
    ]
   ],
-  "2095338461855191088": [],
+  "2095338461855191088": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
   "2095359005258375307": [
    [
     "foreign-policy",
@@ -4805,5 +4810,12 @@
   }
  ],
  "unclassified": [],
- "failedChunks": 0
+ "failedChunks": 0,
+ "corrected": {
+  "2095338461855191088": {
+   "note": "Stored as [] (treated as a condolence with no policy content). A member reacting to a shooting in her city is Guns & public safety / gun violence even when the post is a condolence — that is how the caucus's gun-violence volume is measured.",
+   "by": "claude-night-build",
+   "on": "2026-09-10"
+  }
+ }
 }

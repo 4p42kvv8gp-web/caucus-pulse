@@ -1364,11 +1364,11 @@
   "2094891807276757143": [
    [
     "budget-appropriations",
-    null
+    "shutdown"
    ],
    [
-    "congress-politics",
-    null
+    "immigration",
+    "ice-enforcement"
    ]
   ],
   "2094902525954580605": [
@@ -4954,5 +4954,12 @@
  "unclassified": [
   "2094928010310729780"
  ],
- "failedChunks": 0
+ "failedChunks": 0,
+ "corrected": {
+  "2094891807276757143": {
+   "note": "Stored as bare Budget & appropriations plus Congress & campaign politics. A CR vote is the shutdown/funding-deadline subtopic (aliases \"CR\", \"continuing resolution\"), and the post's substance about denying ICE/CBP money is ICE enforcement, not floor procedure.",
+   "by": "claude-night-build",
+   "on": "2026-09-10"
+  }
+ }
 }
