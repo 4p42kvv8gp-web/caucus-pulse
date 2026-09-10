@@ -118,6 +118,7 @@ starts. Every day before that is gone; turn it on early.
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
+| `src/embed-archive.js` | on demand (poller wiring pending) | Local BGE-small embeddings for every archived post → `data/embeddings/` (4 MB, incremental); `src/semantic.js` turns them into story centroids and "posts near this story that aren't assigned to it" | free (CPU, ~1 min for 10k posts) |
 
 ## The dashboard
 
@@ -159,6 +160,13 @@ under macros so nothing double-reads. The nightly classifier surfaces tweets
 that fit nothing as **emerging clusters** in the daily report with a
 suggested label; approve one by adding it to the YAML. The system never
 invents categories silently.
+
+Keywords are not enough to find a story's posts — "Another AI wakeup call
+for Congress" never says Coxon. `npm run download-model` (once, 35 MB) then
+`npm run embed` builds a local semantic index of the archive; `src/semantic.js`
+ranks the corpus against each tracked story and `npm run semantic-proof` has
+Claude read the nearest posts and say why. Method, measured precision and
+limits: `docs/SEMANTIC_MATCHING.md`.
 
 ## Local development
 

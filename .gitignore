@@ -1,4 +1,6 @@
 node_modules/
+# local ONNX embedding model (35 MB, fetched by `npm run download-model`)
+data/models/
 .claude/settings.local.json
 data/backfill-progress.json
 .claude/worktrees/
