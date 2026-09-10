@@ -65,6 +65,17 @@
     "min_posts": 3,
     "daily_calls": 150
   },
+  "incidents": {
+    "_comment": "Incident corroboration (src/incidents.js → corroborate(), after the kind+place string grouping). corroborate: when false no judge call is made (earlier merges and drops are still re-applied from data/incidents.json). candidate_days: incident-flagged posts of the last N days that sit on no open card are offered to the judge as candidates. batch_incidents / batch_candidates: at most this many open cards and candidate posts per call; cards are batched by state. posts_per_incident: posts shown per card (first three + latest when longer). neighbors_per_incident: unflagged posts the semantic index may add per card, marked 'unflagged neighbor' (nothing until src/semantic.js lands). daily_calls: ceiling per ET day, ledgered in data/incident-judgments.json, where every judgment is cached by the content it was asked about. cache_days: how long a cached judgment is kept. Model falls back to classify.model.",
+    "corroborate": true,
+    "candidate_days": 3,
+    "batch_incidents": 15,
+    "batch_candidates": 40,
+    "posts_per_incident": 8,
+    "neighbors_per_incident": 5,
+    "daily_calls": 100,
+    "cache_days": 14
+  },
   "anthropic": {
     "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Outside Actions, set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY) instead.",
     "federation": {

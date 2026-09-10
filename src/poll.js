@@ -153,7 +153,7 @@ export async function pollOnce() {
   }
   try {
     const { buildIncidents } = await import('./incidents.js');
-    await buildIncidents({ withIntel: false }); // grouping only; intel is nightly
+    await buildIncidents({ withIntel: false }); // grouping + corroboration (cached by content, capped per day); intel is nightly
     const { buildSiteData } = await import('./sitedata.js');
     buildSiteData();
   } catch (e) {

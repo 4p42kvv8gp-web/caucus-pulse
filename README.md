@@ -115,7 +115,7 @@ starts. Every day before that is gone; turn it on early.
 | `src/backfill-members.js` | once | Per-member timelines back N days → archive + seeded metrics (the List endpoint stops at ~800 posts) | $0.005/post |
 | `src/classify-range.js` | after a backfill | Every unclassified day in one Claude batch; retweets inherit across days | ~50% batch rates |
 | `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
-| `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
+| `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle, then the corroboration judge reads the open cards and loose flagged posts and merges the same event / sets aside non-incidents with a reason and span (cached by content in `data/incident-judgments.json`, `settings.incidents`); nightly runs also extract intel panels | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |

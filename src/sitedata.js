@@ -579,6 +579,9 @@ export function buildSiteData() {
     phrases,
     clusters: clusters.map(({ ids, ...c }) => c), // ids are for why.js, not the page
     incidents: incidentsFile.incidents,
+    // The corroboration judge's trace beside the cards: posts it set aside
+    // (with category, reason and span) and the run's counts.
+    incidentJudge: { dropped: incidentsFile.dropped || [], ...(incidentsFile.judge || {}) },
     feed
   });
   console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts, ${whyAttached} row(s) with a "why"; ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);

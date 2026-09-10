@@ -108,7 +108,7 @@ export function badge(kind) {
 }
 
 export function statusDot(s) {
-  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : '#8e8e93');
+  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : s === 'provisional' ? '#6f42c1' : '#8e8e93');
 }
 
 export function copyText(text, done) {

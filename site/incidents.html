@@ -69,10 +69,31 @@ function kindTag(kind, small = false) {
   return `<span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(kind)}</span>`;
 }
 
+// Corroboration beside the measured counts: members and posts are measured;
+// the status word and the one-line reason are the judge's (labelled so).
+function corroOf(i) {
+  const c = i.corroboration;
+  if (!c) return { count: `${i.others.length + 1} member${i.others.length ? 's' : ''}`, reason: null, judged: false, status: null, merged: 0 };
+  return { count: `${c.members} member${c.members === 1 ? '' : 's'} · ${c.posts} post${c.posts === 1 ? '' : 's'}`, reason: c.reason, judged: c.judged, status: c.status, merged: c.merged, advanced: c.advanced };
+}
+function corroLine(i) {
+  const c = corroOf(i);
+  const word = c.status === 'corroborated' ? '<span style="color:#00823a;font-weight:600">corroborated</span>' : c.status === 'single-source' ? 'single source' : '';
+  return `${word ? `${word} · ` : ''}${esc(c.count)}${c.merged ? ` · ${c.merged} merged` : ''}${c.judged ? '' : ' · <span title="The corroboration judge has not read this card yet (no credential, over the daily ceiling, or a failed call).">not judged</span>'}`;
+}
+function sourceLabel(s) {
+  return s.id ? `${esc(s.kind ? s.kind.charAt(0).toUpperCase() + s.kind.slice(1) : s.id)} · ${esc(s.place || '')}` : s.via === 'neighbor' ? 'unflagged neighbor (semantic index)' : 'loose flagged post';
+}
+function droppedFor(id) {
+  return (D.incidentJudge?.dropped || []).filter((d) => d.incidentId === id);
+}
+
 function briefOf(sel) {
   const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  const c = corroOf(sel);
   return [
     `${sel.title} — ${sel.place} · ${sel.status} · ${etWhen(sel.since, D.today)} → ${etWhen(sel.last, D.today)}`,
+    `Corroboration: ${c.status || 'not judged'} · ${c.count}${c.merged ? ` · ${c.merged} merged` : ''}${c.reason ? ` — ${c.reason} (judged by Claude)` : ''}`,
     '',
     'Confirmed', ...(intel.confirmed.length ? intel.confirmed.map((c) => `• ${c.text} (${c.src})`) : ['• nothing extracted yet']),
     ...(intel.unverified.length ? ['', 'Circulating, unverified', ...intel.unverified.map((u) => `• ${u.text} (${u.src})`)] : []),
@@ -88,7 +109,9 @@ function render() {
   const all = incidents();
   $('updated').innerHTML = `${dot('#1d1d1f', 6)}${esc(headerDate(D.today))} · updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
   const count = (s) => all.filter((i) => i.status === s).length;
-  $('counts').textContent = `${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week`;
+  const setAside = (D.incidentJudge?.dropped || []).length;
+  const merged = all.reduce((a, i) => a + (i.corroboration?.merged || 0), 0);
+  $('counts').innerHTML = `${count('active')} active · ${count('monitoring')} monitoring${count('provisional') ? ` · ${count('provisional')} provisional` : ''} · ${count('resolved')} resolved this week${merged || setAside ? ` · <span title="The corroboration judge reads the open cards and the loose flagged posts, merges what describes the same event and sets aside what is not a breaking district emergency — each with a reason and an exact span on the card.">judge: ${merged} merged, ${setAside} set aside</span>` : ''}`;
   $('statusseg').innerHTML = seg(['All', 'Active', 'Monitoring', 'Resolved'], 'status');
 
   const list = all.filter((i) => state.status === 'All' ? i.status !== 'resolved' : i.status === state.status.toLowerCase());
@@ -99,6 +122,8 @@ function render() {
     <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px">${statusDot(i.status)}${kindTag(i.kind)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(i.last, D.today))}</span></div>
     <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(i.place)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${i.updates} posts</span></div>
     <div style="font-size:12px;color:#6e6e73">${esc(i.handle)} · ${esc(i.member)}${i.id === state.selected ? '<span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span>' : ''}</div>
+    <div style="font-size:11px;color:#6e6e73">${corroLine(i)}</div>
+    ${i.corroboration?.reason ? `<div style="font-size:11px;color:#3a3a3c;line-height:1.35" title="Judged by Claude from the posts; the span is the evidence it quoted.">${esc(i.corroboration.reason)}</div>` : ''}
   </button>`).join('') || '<div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div>';
 
   $('saved').innerHTML = SAVED.map(([label, q], i) => `<button class="chip" data-q="${i}">${esc(label)}</button>`).join('');
@@ -117,6 +142,7 @@ function render() {
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${kindTag(sel.kind)}<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">${statusDot(sel.status)}${sel.status}</span><span style="font-size:11px;color:#6e6e73">${esc(etWhen(sel.since, D.today))} → ${esc(etWhen(sel.last, D.today))}</span></div>
       <h2 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(sel.title)}</h2>
       <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${esc(sel.handle)}</span> · ${esc(sel.member)} · ${esc(sel.place)}</div>
+      <div style="font-size:12px;color:#6e6e73;line-height:1.4"><span style="font-weight:600;color:#1d1d1f">Corroboration</span> · ${corroLine(sel)}${sel.corroboration?.advanced ? ` · <span style="color:#00823a">${esc(sel.corroboration.advanced)}</span>` : ''}${sel.corroboration?.reason ? `<br><span style="color:#3a3a3c">${esc(sel.corroboration.reason)}</span> <span style="font-size:11px" title="${esc(sel.corroboration.evidence?.span ? `Evidence: “${sel.corroboration.evidence.span}”${sel.corroboration.evidence.verified === false ? ' (span not found verbatim in the post)' : ''}` : 'No span quoted')}">· judged by Claude</span>` : ''}</div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,auto);gap:14px;font-size:11px;color:#6e6e73;text-align:right">
       <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${sel.updates}</div>member posts</div>
@@ -132,7 +158,7 @@ function render() {
         <span style="font-size:11px;color:#6e6e73;padding-top:2px;white-space:nowrap;min-width:58px">${esc(etWhen(e.time, D.today))}</span>
         <div style="display:flex;justify-content:center;padding-top:5px">${dot(e.isNew ? '#1d1d1f' : '#d2d2d7')}</div>
         <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-          <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${esc(e.who)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span></div>
+          <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${esc(e.who)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span>${e.from ? `<span style="font-size:10px;font-weight:600;color:#194292;background:#e8eefb;padding:1px 6px;border-radius:5px" title="Merged in by the corroboration judge — see Merged sources.">via ${esc(e.from)}</span>` : ''}</div>
           <p style="margin:0;font-size:13px;line-height:1.4">${esc(e.text)}</p>
           <div style="font-size:11px;color:#6e6e73">${fmt(e.engN)} engagement</div>
         </div></div>`).join('')}
@@ -142,6 +168,8 @@ function render() {
       ${intel.unverified.length ? panel('Circulating, unverified', '#d70015', intel.unverified.map((u) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#d70015;font-weight:700">?</span><span>${esc(u.text)} <span style="color:#6e6e73">· ${esc(u.src)}</span></span></div>`).join('')) : ''}
       ${panel("What's new", '#6e6e73', (intel.whatsNew.length ? intel.whatsNew : sel.timeline.slice(-2).reverse().map((e) => e.text.slice(0, 90))).map((n) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;margin-top:5px"></span><span>${esc(n)}</span></div>`).join(''))}
       ${panel('Who else is on it', '#6e6e73', `<div style="display:flex;flex-wrap:wrap;gap:4px">${sel.others.length ? sel.others.map((o) => `<span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">${esc(o)}</span>`).join('') : '<span style="font-size:12px;color:#6e6e73">Only the lead member so far.</span>'}</div>`)}
+      ${sel.sources?.length ? panel('Merged sources · judged by Claude', '#194292', sel.sources.map((s) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#194292;font-weight:700">∪</span><span><span style="font-weight:500">${sourceLabel(s)}</span> <span style="color:#6e6e73">· ${s.posts} post${s.posts === 1 ? '' : 's'}${s.id ? ` · was ${esc(s.id)}` : ''}</span>${s.reason ? `<br><span style="color:#3a3a3c">${esc(s.reason)}</span>` : ''}</span></div>`).join('')) : ''}
+      ${droppedFor(sel.id).length ? panel('Set aside by the judge', '#6e6e73', droppedFor(sel.id).map((d) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px" title="${esc(d.evidence?.span ? `Evidence: “${d.evidence.span}”` : '')}"><span style="color:#6e6e73;font-weight:700">−</span><span><span style="font-weight:500">${esc(d.handle || d.tweetId)}</span> <span style="color:#6e6e73">· ${esc(String(d.category || '').replace('_', ' '))}</span><br><span style="color:#3a3a3c">${esc(d.reason || '')}</span></span></div>`).join('')) : ''}
       <button class="pill" data-brief style="margin-top:auto;align-self:flex-start">${state.copied ? 'Copied ✓' : 'Copy brief for Signal'}</button>
     </div>
   </div>`;
