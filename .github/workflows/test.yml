@@ -1,0 +1,31 @@
+# The test suite, on every push to main and every pull request.
+#
+# Until now nothing ran it automatically: the other four workflows are all
+# schedule- or dispatch-only, so a pull request showed no checks at all and
+# "green" meant nothing. The suite is pure logic plus the config files —
+# no network, no secrets, a couple of seconds.
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  # A new push supersedes an in-flight run on the same ref.
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
