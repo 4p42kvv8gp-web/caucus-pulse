@@ -2,3 +2,8 @@ node_modules/
 .claude/settings.local.json
 data/backfill-progress.json
 .claude/worktrees/
+# narrative-intelligence scratch (src/intel.js): tool-result cache, torn
+# writes in flight, Claude transcripts — all rebuildable, never committed
+data/narratives/cache/
+data/narratives/tmp/
+data/narratives/transcripts/

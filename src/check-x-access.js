@@ -9,6 +9,7 @@
 //   node src/check-x-access.js            # free: /2/usage/tweets, /2/usage/credits
 //   node src/check-x-access.js --probe    # + one 5-post list page + since_id probe
 import { settings } from './util.js';
+import { usageTweets } from './x.js';
 
 const API = 'https://api.x.com/2';
 const probe = process.argv.includes('--probe');
@@ -54,12 +55,25 @@ async function main() {
     console.log(`X_BEARER_TOKEN: present (${toks[0].length} chars, ${toks.length} form(s) to try)`);
   }
 
-  // Which token form authenticates? Free usage endpoint.
+  // Which token form authenticates? Free usage endpoint, through the shared
+  // client (x.usageTweets) so the same code path the narrative layer's
+  // reconcile step uses is what gets checked here.
   let tok = null;
   for (const t of toks) {
-    const r = await call('/usage/tweets?days=1', t);
-    console.log(`GET /2/usage/tweets?days=1 → ${r.status}`, JSON.stringify(summarize(r.body)));
-    if (r.status === 200) { tok = t; break; }
+    const saved = process.env.X_BEARER_TOKEN;
+    if (t) process.env.X_BEARER_TOKEN = t; else { delete process.env.X_BEARER_TOKEN; process.env.X_PROXY_AUTH = '1'; }
+    try {
+      const u = await usageTweets(1);
+      console.log('GET /2/usage/tweets?days=1 → 200', JSON.stringify({
+        projectUsage: u.projectUsage, projectCap: u.projectCap, capResetDay: u.capResetDay, dailyRows: u.days.length
+      }));
+      tok = t;
+    } catch (e) {
+      console.log(`GET /2/usage/tweets?days=1 → ${e.status || 'error'} ${String(e.message).slice(0, 120)}`);
+    } finally {
+      if (saved === undefined) delete process.env.X_BEARER_TOKEN; else process.env.X_BEARER_TOKEN = saved;
+    }
+    if (tok !== null) break;
   }
   if (tok === null) {
     console.log(proxyMode

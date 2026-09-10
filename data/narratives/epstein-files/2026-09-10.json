@@ -1,0 +1,5109 @@
+{
+ "story": "epstein-files",
+ "label": "Epstein files transparency",
+ "date": "2026-09-10",
+ "generatedAt": "2026-09-10T08:04:22.865Z",
+ "queries": {
+  "organic": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en",
+  "originals": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet",
+  "sample": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+  "control": "(Congress OR \"House Democrats\") -is:retweet lang:en",
+  "aliases": [
+   "Epstein files",
+   "Epstein Files Transparency Act",
+   "Massie",
+   "discharge petition",
+   "Epstein",
+   "Leon Black",
+   "Oversight Epstein subpoena",
+   "Epstein files transparency"
+  ],
+  "dropped": []
+ },
+ "counts": [
+  {
+   "q": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en",
+   "kind": "organic",
+   "granularity": "day",
+   "buckets": [
+    {
+     "start": "2026-09-03T08:00:27.000Z",
+     "end": "2026-09-04T00:00:00.000Z",
+     "count": 141894
+    },
+    {
+     "start": "2026-09-04T00:00:00.000Z",
+     "end": "2026-09-05T00:00:00.000Z",
+     "count": 186004
+    },
+    {
+     "start": "2026-09-05T00:00:00.000Z",
+     "end": "2026-09-06T00:00:00.000Z",
+     "count": 123130
+    },
+    {
+     "start": "2026-09-06T00:00:00.000Z",
+     "end": "2026-09-07T00:00:00.000Z",
+     "count": 157483
+    },
+    {
+     "start": "2026-09-07T00:00:00.000Z",
+     "end": "2026-09-08T00:00:00.000Z",
+     "count": 126403
+    },
+    {
+     "start": "2026-09-08T00:00:00.000Z",
+     "end": "2026-09-09T00:00:00.000Z",
+     "count": 105238
+    },
+    {
+     "start": "2026-09-09T00:00:00.000Z",
+     "end": "2026-09-10T00:00:00.000Z",
+     "count": 105091
+    },
+    {
+     "start": "2026-09-10T00:00:00.000Z",
+     "end": "2026-09-10T08:00:27.000Z",
+     "count": 55312
+    }
+   ],
+   "total": 1000555,
+   "fetchedAt": "2026-09-10T08:00:37.369Z",
+   "cacheHit": true,
+   "units": 0
+  },
+  {
+   "q": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet",
+   "kind": "originals",
+   "granularity": "day",
+   "buckets": [
+    {
+     "start": "2026-09-03T08:00:27.000Z",
+     "end": "2026-09-04T00:00:00.000Z",
+     "count": 24746
+    },
+    {
+     "start": "2026-09-04T00:00:00.000Z",
+     "end": "2026-09-05T00:00:00.000Z",
+     "count": 30496
+    },
+    {
+     "start": "2026-09-05T00:00:00.000Z",
+     "end": "2026-09-06T00:00:00.000Z",
+     "count": 24539
+    },
+    {
+     "start": "2026-09-06T00:00:00.000Z",
+     "end": "2026-09-07T00:00:00.000Z",
+     "count": 23456
+    },
+    {
+     "start": "2026-09-07T00:00:00.000Z",
+     "end": "2026-09-08T00:00:00.000Z",
+     "count": 24521
+    },
+    {
+     "start": "2026-09-08T00:00:00.000Z",
+     "end": "2026-09-09T00:00:00.000Z",
+     "count": 26127
+    },
+    {
+     "start": "2026-09-09T00:00:00.000Z",
+     "end": "2026-09-10T00:00:00.000Z",
+     "count": 25423
+    },
+    {
+     "start": "2026-09-10T00:00:00.000Z",
+     "end": "2026-09-10T08:00:27.000Z",
+     "count": 8193
+    }
+   ],
+   "total": 187501,
+   "fetchedAt": "2026-09-10T08:00:37.658Z",
+   "cacheHit": true,
+   "units": 0
+  },
+  {
+   "q": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet",
+   "kind": "hourly",
+   "granularity": "hour",
+   "buckets": [
+    {
+     "start": "2026-09-07T08:04:22.000Z",
+     "end": "2026-09-07T09:00:00.000Z",
+     "count": 515
+    },
+    {
+     "start": "2026-09-07T09:00:00.000Z",
+     "end": "2026-09-07T10:00:00.000Z",
+     "count": 504
+    },
+    {
+     "start": "2026-09-07T10:00:00.000Z",
+     "end": "2026-09-07T11:00:00.000Z",
+     "count": 570
+    },
+    {
+     "start": "2026-09-07T11:00:00.000Z",
+     "end": "2026-09-07T12:00:00.000Z",
+     "count": 888
+    },
+    {
+     "start": "2026-09-07T12:00:00.000Z",
+     "end": "2026-09-07T13:00:00.000Z",
+     "count": 1093
+    },
+    {
+     "start": "2026-09-07T13:00:00.000Z",
+     "end": "2026-09-07T14:00:00.000Z",
+     "count": 1134
+    },
+    {
+     "start": "2026-09-07T14:00:00.000Z",
+     "end": "2026-09-07T15:00:00.000Z",
+     "count": 1332
+    },
+    {
+     "start": "2026-09-07T15:00:00.000Z",
+     "end": "2026-09-07T16:00:00.000Z",
+     "count": 1249
+    },
+    {
+     "start": "2026-09-07T16:00:00.000Z",
+     "end": "2026-09-07T17:00:00.000Z",
+     "count": 1434
+    },
+    {
+     "start": "2026-09-07T17:00:00.000Z",
+     "end": "2026-09-07T18:00:00.000Z",
+     "count": 1398
+    },
+    {
+     "start": "2026-09-07T18:00:00.000Z",
+     "end": "2026-09-07T19:00:00.000Z",
+     "count": 1266
+    },
+    {
+     "start": "2026-09-07T19:00:00.000Z",
+     "end": "2026-09-07T20:00:00.000Z",
+     "count": 1520
+    },
+    {
+     "start": "2026-09-07T20:00:00.000Z",
+     "end": "2026-09-07T21:00:00.000Z",
+     "count": 1219
+    },
+    {
+     "start": "2026-09-07T21:00:00.000Z",
+     "end": "2026-09-07T22:00:00.000Z",
+     "count": 1390
+    },
+    {
+     "start": "2026-09-07T22:00:00.000Z",
+     "end": "2026-09-07T23:00:00.000Z",
+     "count": 1420
+    },
+    {
+     "start": "2026-09-07T23:00:00.000Z",
+     "end": "2026-09-08T00:00:00.000Z",
+     "count": 1085
+    },
+    {
+     "start": "2026-09-08T00:00:00.000Z",
+     "end": "2026-09-08T01:00:00.000Z",
+     "count": 1154
+    },
+    {
+     "start": "2026-09-08T01:00:00.000Z",
+     "end": "2026-09-08T02:00:00.000Z",
+     "count": 1062
+    },
+    {
+     "start": "2026-09-08T02:00:00.000Z",
+     "end": "2026-09-08T03:00:00.000Z",
+     "count": 944
+    },
+    {
+     "start": "2026-09-08T03:00:00.000Z",
+     "end": "2026-09-08T04:00:00.000Z",
+     "count": 889
+    },
+    {
+     "start": "2026-09-08T04:00:00.000Z",
+     "end": "2026-09-08T05:00:00.000Z",
+     "count": 785
+    },
+    {
+     "start": "2026-09-08T05:00:00.000Z",
+     "end": "2026-09-08T06:00:00.000Z",
+     "count": 702
+    },
+    {
+     "start": "2026-09-08T06:00:00.000Z",
+     "end": "2026-09-08T07:00:00.000Z",
+     "count": 627
+    },
+    {
+     "start": "2026-09-08T07:00:00.000Z",
+     "end": "2026-09-08T08:00:00.000Z",
+     "count": 530
+    },
+    {
+     "start": "2026-09-08T08:00:00.000Z",
+     "end": "2026-09-08T09:00:00.000Z",
+     "count": 410
+    },
+    {
+     "start": "2026-09-08T09:00:00.000Z",
+     "end": "2026-09-08T10:00:00.000Z",
+     "count": 460
+    },
+    {
+     "start": "2026-09-08T10:00:00.000Z",
+     "end": "2026-09-08T11:00:00.000Z",
+     "count": 609
+    },
+    {
+     "start": "2026-09-08T11:00:00.000Z",
+     "end": "2026-09-08T12:00:00.000Z",
+     "count": 878
+    },
+    {
+     "start": "2026-09-08T12:00:00.000Z",
+     "end": "2026-09-08T13:00:00.000Z",
+     "count": 1117
+    },
+    {
+     "start": "2026-09-08T13:00:00.000Z",
+     "end": "2026-09-08T14:00:00.000Z",
+     "count": 1356
+    },
+    {
+     "start": "2026-09-08T14:00:00.000Z",
+     "end": "2026-09-08T15:00:00.000Z",
+     "count": 1502
+    },
+    {
+     "start": "2026-09-08T15:00:00.000Z",
+     "end": "2026-09-08T16:00:00.000Z",
+     "count": 1530
+    },
+    {
+     "start": "2026-09-08T16:00:00.000Z",
+     "end": "2026-09-08T17:00:00.000Z",
+     "count": 1680
+    },
+    {
+     "start": "2026-09-08T17:00:00.000Z",
+     "end": "2026-09-08T18:00:00.000Z",
+     "count": 1421
+    },
+    {
+     "start": "2026-09-08T18:00:00.000Z",
+     "end": "2026-09-08T19:00:00.000Z",
+     "count": 1433
+    },
+    {
+     "start": "2026-09-08T19:00:00.000Z",
+     "end": "2026-09-08T20:00:00.000Z",
+     "count": 1385
+    },
+    {
+     "start": "2026-09-08T20:00:00.000Z",
+     "end": "2026-09-08T21:00:00.000Z",
+     "count": 1444
+    },
+    {
+     "start": "2026-09-08T21:00:00.000Z",
+     "end": "2026-09-08T22:00:00.000Z",
+     "count": 1619
+    },
+    {
+     "start": "2026-09-08T22:00:00.000Z",
+     "end": "2026-09-08T23:00:00.000Z",
+     "count": 1339
+    },
+    {
+     "start": "2026-09-08T23:00:00.000Z",
+     "end": "2026-09-09T00:00:00.000Z",
+     "count": 1251
+    },
+    {
+     "start": "2026-09-09T00:00:00.000Z",
+     "end": "2026-09-09T01:00:00.000Z",
+     "count": 1231
+    },
+    {
+     "start": "2026-09-09T01:00:00.000Z",
+     "end": "2026-09-09T02:00:00.000Z",
+     "count": 1268
+    },
+    {
+     "start": "2026-09-09T02:00:00.000Z",
+     "end": "2026-09-09T03:00:00.000Z",
+     "count": 1020
+    },
+    {
+     "start": "2026-09-09T03:00:00.000Z",
+     "end": "2026-09-09T04:00:00.000Z",
+     "count": 920
+    },
+    {
+     "start": "2026-09-09T04:00:00.000Z",
+     "end": "2026-09-09T05:00:00.000Z",
+     "count": 765
+    },
+    {
+     "start": "2026-09-09T05:00:00.000Z",
+     "end": "2026-09-09T06:00:00.000Z",
+     "count": 631
+    },
+    {
+     "start": "2026-09-09T06:00:00.000Z",
+     "end": "2026-09-09T07:00:00.000Z",
+     "count": 601
+    },
+    {
+     "start": "2026-09-09T07:00:00.000Z",
+     "end": "2026-09-09T08:00:00.000Z",
+     "count": 489
+    },
+    {
+     "start": "2026-09-09T08:00:00.000Z",
+     "end": "2026-09-09T09:00:00.000Z",
+     "count": 451
+    },
+    {
+     "start": "2026-09-09T09:00:00.000Z",
+     "end": "2026-09-09T10:00:00.000Z",
+     "count": 518
+    },
+    {
+     "start": "2026-09-09T10:00:00.000Z",
+     "end": "2026-09-09T11:00:00.000Z",
+     "count": 715
+    },
+    {
+     "start": "2026-09-09T11:00:00.000Z",
+     "end": "2026-09-09T12:00:00.000Z",
+     "count": 806
+    },
+    {
+     "start": "2026-09-09T12:00:00.000Z",
+     "end": "2026-09-09T13:00:00.000Z",
+     "count": 1033
+    },
+    {
+     "start": "2026-09-09T13:00:00.000Z",
+     "end": "2026-09-09T14:00:00.000Z",
+     "count": 1226
+    },
+    {
+     "start": "2026-09-09T14:00:00.000Z",
+     "end": "2026-09-09T15:00:00.000Z",
+     "count": 1401
+    },
+    {
+     "start": "2026-09-09T15:00:00.000Z",
+     "end": "2026-09-09T16:00:00.000Z",
+     "count": 1335
+    },
+    {
+     "start": "2026-09-09T16:00:00.000Z",
+     "end": "2026-09-09T17:00:00.000Z",
+     "count": 1449
+    },
+    {
+     "start": "2026-09-09T17:00:00.000Z",
+     "end": "2026-09-09T18:00:00.000Z",
+     "count": 1502
+    },
+    {
+     "start": "2026-09-09T18:00:00.000Z",
+     "end": "2026-09-09T19:00:00.000Z",
+     "count": 1298
+    },
+    {
+     "start": "2026-09-09T19:00:00.000Z",
+     "end": "2026-09-09T20:00:00.000Z",
+     "count": 1449
+    },
+    {
+     "start": "2026-09-09T20:00:00.000Z",
+     "end": "2026-09-09T21:00:00.000Z",
+     "count": 1302
+    },
+    {
+     "start": "2026-09-09T21:00:00.000Z",
+     "end": "2026-09-09T22:00:00.000Z",
+     "count": 1274
+    },
+    {
+     "start": "2026-09-09T22:00:00.000Z",
+     "end": "2026-09-09T23:00:00.000Z",
+     "count": 1436
+    },
+    {
+     "start": "2026-09-09T23:00:00.000Z",
+     "end": "2026-09-10T00:00:00.000Z",
+     "count": 1303
+    },
+    {
+     "start": "2026-09-10T00:00:00.000Z",
+     "end": "2026-09-10T01:00:00.000Z",
+     "count": 1210
+    },
+    {
+     "start": "2026-09-10T01:00:00.000Z",
+     "end": "2026-09-10T02:00:00.000Z",
+     "count": 1307
+    },
+    {
+     "start": "2026-09-10T02:00:00.000Z",
+     "end": "2026-09-10T03:00:00.000Z",
+     "count": 1248
+    },
+    {
+     "start": "2026-09-10T03:00:00.000Z",
+     "end": "2026-09-10T04:00:00.000Z",
+     "count": 1176
+    },
+    {
+     "start": "2026-09-10T04:00:00.000Z",
+     "end": "2026-09-10T05:00:00.000Z",
+     "count": 1028
+    },
+    {
+     "start": "2026-09-10T05:00:00.000Z",
+     "end": "2026-09-10T06:00:00.000Z",
+     "count": 733
+    },
+    {
+     "start": "2026-09-10T06:00:00.000Z",
+     "end": "2026-09-10T07:00:00.000Z",
+     "count": 837
+    },
+    {
+     "start": "2026-09-10T07:00:00.000Z",
+     "end": "2026-09-10T08:00:00.000Z",
+     "count": 643
+    },
+    {
+     "start": "2026-09-10T08:00:00.000Z",
+     "end": "2026-09-10T08:04:13.000Z",
+     "count": 50
+    }
+   ],
+   "total": 77799,
+   "fetchedAt": "2026-09-10T08:04:23.965Z",
+   "cacheHit": false,
+   "units": 1
+  }
+ ],
+ "control": {
+  "q": "(Congress OR \"House Democrats\") -is:retweet lang:en",
+  "kind": "control",
+  "granularity": "day",
+  "buckets": [
+   {
+    "start": "2026-09-03T08:00:27.000Z",
+    "end": "2026-09-04T00:00:00.000Z",
+    "count": 25128
+   },
+   {
+    "start": "2026-09-04T00:00:00.000Z",
+    "end": "2026-09-05T00:00:00.000Z",
+    "count": 30729
+   },
+   {
+    "start": "2026-09-05T00:00:00.000Z",
+    "end": "2026-09-06T00:00:00.000Z",
+    "count": 25952
+   },
+   {
+    "start": "2026-09-06T00:00:00.000Z",
+    "end": "2026-09-07T00:00:00.000Z",
+    "count": 25206
+   },
+   {
+    "start": "2026-09-07T00:00:00.000Z",
+    "end": "2026-09-08T00:00:00.000Z",
+    "count": 28189
+   },
+   {
+    "start": "2026-09-08T00:00:00.000Z",
+    "end": "2026-09-09T00:00:00.000Z",
+    "count": 28411
+   },
+   {
+    "start": "2026-09-09T00:00:00.000Z",
+    "end": "2026-09-10T00:00:00.000Z",
+    "count": 29552
+   },
+   {
+    "start": "2026-09-10T00:00:00.000Z",
+    "end": "2026-09-10T08:00:27.000Z",
+    "count": 11749
+   }
+  ],
+  "total": 204916,
+  "fetchedAt": "2026-09-10T08:00:37.176Z",
+  "cacheHit": true,
+  "units": 0
+ },
+ "pages": [
+  {
+   "q": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+   "sort": "relevancy",
+   "maxResults": 100,
+   "fetchedAt": "2026-09-10T08:00:38.262Z",
+   "oldest": "2026-09-03T12:00:03.000Z",
+   "newest": "2026-09-10T02:03:26.000Z",
+   "n": 97,
+   "ids": [
+    "2096269595602469253",
+    "2095700878556537010",
+    "2097278061733404794",
+    "2097467357597778120",
+    "2096756073969672484",
+    "2097332153524908109",
+    "2097233744088236337",
+    "2096116564575584379",
+    "2096098582654779685",
+    "2097130325558083823",
+    "2096797588901294158",
+    "2096225986132226319",
+    "2096787302060376517",
+    "2096665441792114819",
+    "2096322023190339930",
+    "2097475051830350315",
+    "2096018029834313887",
+    "2097416799461548217",
+    "2097497167975842061",
+    "2097792786296664110",
+    "2096291125774393444",
+    "2096147745639657532",
+    "2095602719859830897",
+    "2097148802171801669",
+    "2097390905703448860",
+    "2096004775800398014",
+    "2096713853165793373",
+    "2095744410902479082",
+    "2095709691938533438",
+    "2095744667573010458",
+    "2095745516177129490",
+    "2097281731413885185",
+    "2095997791197966562",
+    "2096622920411799567",
+    "2095647781486473229",
+    "2095901120056975631",
+    "2095868518646612438",
+    "2097868520654795108",
+    "2095935127654219868",
+    "2097497030096572786",
+    "2096275548758560857",
+    "2095607384844472408",
+    "2095573495778349496",
+    "2095490229784264956",
+    "2095481948277764447",
+    "2095995325114957916",
+    "2095578931412005190",
+    "2095606082823447002",
+    "2095893455754953115",
+    "2095597743825732057",
+    "2095547884619841736",
+    "2095545933756870673",
+    "2095663130323939638",
+    "2095560793265692971",
+    "2096942615354659036",
+    "2095636173700174323",
+    "2095857309708865864",
+    "2095587682894373081",
+    "2095957922081865875",
+    "2096245320598630690",
+    "2095564545049718947",
+    "2097519863837430108",
+    "2097271005961945093",
+    "2097226751659135392",
+    "2095645399524528414",
+    "2097174522382471532",
+    "2097328038103126358",
+    "2097729998400737398",
+    "2097807749962670428",
+    "2095759387012805102",
+    "2096623254412591435",
+    "2096712005600313649",
+    "2095906396789416082",
+    "2095584517759357133",
+    "2095653773721129070",
+    "2095558572192956556",
+    "2096750954964275531",
+    "2095498293652705378",
+    "2096081366987178368",
+    "2096677682364694583",
+    "2096677666417955145",
+    "2096677803609522522",
+    "2096675861021745194",
+    "2096621778877415718",
+    "2095726773648425316",
+    "2096047660146753712",
+    "2095899605552845205",
+    "2095576019855925447",
+    "2096677277983543495",
+    "2096367937208590631",
+    "2095495213489811597",
+    "2096366662664548563",
+    "2096364282854195659",
+    "2095524655951974464",
+    "2096369361816531199",
+    "2096369160057962988",
+    "2096368915370606708"
+   ],
+   "cacheHit": true,
+   "units": 0
+  },
+  {
+   "q": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+   "sort": "recency",
+   "maxResults": 50,
+   "fetchedAt": "2026-09-10T08:04:24.320Z",
+   "oldest": "2026-09-10T07:59:15.000Z",
+   "newest": "2026-09-10T08:04:13.000Z",
+   "n": 50,
+   "ids": [
+    "2097959312819712271",
+    "2097959273875542522",
+    "2097959262299267560",
+    "2097959260156211232",
+    "2097959236164788468",
+    "2097959150831464546",
+    "2097959141457187013",
+    "2097959133823570023",
+    "2097959122360836284",
+    "2097959094883876997",
+    "2097959045113971198",
+    "2097959031931351373",
+    "2097959011023036880",
+    "2097958959009120525",
+    "2097958931259691300",
+    "2097958910044835865",
+    "2097958908958793759",
+    "2097958882303779318",
+    "2097958822929162383",
+    "2097958788732993767",
+    "2097958758773047405",
+    "2097958755849707649",
+    "2097958728922538375",
+    "2097958709766885837",
+    "2097958690351702233",
+    "2097958665936593248",
+    "2097958648324538842",
+    "2097958588660560006",
+    "2097958571585441818",
+    "2097958556649795678",
+    "2097958550785904826",
+    "2097958503830712620",
+    "2097958486881518022",
+    "2097958462936264807",
+    "2097958434171699349",
+    "2097958413124669734",
+    "2097958389196169503",
+    "2097958348096462992",
+    "2097958318920581579",
+    "2097958317356195918",
+    "2097958315082891428",
+    "2097958284569268701",
+    "2097958278223315347",
+    "2097958252382474610",
+    "2097958246636003393",
+    "2097958230655738121",
+    "2097958135873122743",
+    "2097958086963003893",
+    "2097958083808973293",
+    "2097958064284471559"
+   ],
+   "cacheHit": false,
+   "units": 50
+  }
+ ],
+ "quotes": {
+  "ofId": "2096709759143485691",
+  "via": "search",
+  "ids": [
+   "2097234233127215394",
+   "2097002482673098792",
+   "2096924254461984909",
+   "2096905168193204325",
+   "2096818031296917619",
+   "2096754407325004184",
+   "2096731580119077251",
+   "2096721116433957340"
+  ],
+  "n": 8,
+  "cacheHit": false,
+  "units": 8
+ },
+ "resolution": {
+  "wanted": 7,
+  "resolved": 7,
+  "unresolved": 0,
+  "units": 14
+ },
+ "skipped": [],
+ "posts": [
+  {
+   "id": "2096269595602469253",
+   "authorId": "1518913948732559362",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T16:09:53.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Corrupt Republicans NEVER surprise us...\n\nHouse Republicans Cancel Sessions as Epstein Files Vote Looms\n\nHouse Republicans have canceled the final two weeks of September sessions, drawing accusations of avoiding a vote on the bipartisan Epstein Files Transparency Act II led by",
+   "metrics": {
+    "likes": 19,
+    "retweets": 9,
+    "replies": 2,
+    "quotes": 0,
+    "impressions": 440
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095700878556537010",
+   "authorId": "1491804316830552070",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T02:30:00.000Z",
+   "type": "quote",
+   "refId": "2095585468616417470",
+   "lang": "en",
+   "text": "HOUSE SPEAKER JOHNSON CANCELS SEPTEMBER WORK WEEKS AS MASSIE'S EPSTEIN FILES DISCHARGE PETITION GAINS MOMENTUM\n\nRepresentative Thomas Massie (R-KY) has accused House Speaker Mike Johnson of deliberately canceling two of three scheduled September workweeks to block the Epstein htt",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 114
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097278061733404794",
+   "authorId": "1965862849156161536",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T10:57:10.000Z",
+   "type": "quote",
+   "refId": "2096619295262326952",
+   "lang": "en",
+   "text": "Ah yes, the discharge petition for the #Epstein Files Transparency Act I which is less than a year old, yes Thomas Massie could’ve filed the discharge petition for that 4 and a half years ago https://t.co/Ypk5GIs6Rw",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 22
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097467357597778120",
+   "authorId": "1969189539030708224",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T23:29:21.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "This Lindsay Clancey public trial makes me wonder if it has been purposefully widely broadcast and reported as a distraction.\n\nThe murders happened in 2023. Hardly anyone was familiar with the case. Fast forward to 2026, ahead of the midterms, and people are fighting and",
+   "metrics": {
+    "likes": 8,
+    "retweets": 0,
+    "replies": 3,
+    "quotes": 0,
+    "impressions": 261
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096756073969672484",
+   "authorId": "2040671631987589120",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T00:22:58.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "🗞️ The Blackout Rebellion: Inside the Bipartisan Congressional Showdown over the Epstein Files and the Withheld Evidence of MCC Tier 9 South\n\nA bipartisan rebellion is escalating on Capitol Hill as Reps. Thomas Massie and Ro Khanna push a discharge petition for H.R. 9694, the",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 83
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097332153524908109",
+   "authorId": "1149158841885446145",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T14:32:06.000Z",
+   "type": "reply",
+   "refId": "2097198274901950916",
+   "lang": "en",
+   "text": "@sarrah_bellus Massie recently introduced Epstein Files Transparency Act II and named 14 alleged Epstein associates on the House floor, using a discharge petition to force a vote after the 2025 law left over 3 million documents unreleased!",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 84
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097233744088236337",
+   "authorId": "1095110310850117632",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T08:01:03.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "08/31 Massie \n\nOn the House floor tonight, I read the names of several Epstein coconspirators who should be investigated and prosecuted.\n\nI also began collecting 218 signatures for the discharge petition to force a vote on Epstein Files Transparency Act II. https://t.co/XwEjqE1KS",
+   "metrics": {
+    "likes": 13,
+    "retweets": 1,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 4611
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096116564575584379",
+   "authorId": "1499174471181250562",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T06:01:47.000Z",
+   "type": "reply",
+   "refId": "2096110817204658312",
+   "lang": "en",
+   "text": "H.R.9694 — Epstein Files Transparency Act II\nIntroduced 7/15/26 by Massie (R-KY), Khanna (D-CA), Leger Fernández (D-NM)\n\nAmends the 2025 Epstein Files Transparency Act (PL 119-38).\n\nGives state AGs, DAs, victims, and members of Congress the right to sue DOJ in federal court for",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 38
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096098582654779685",
+   "authorId": "2078281289422229504",
+   "handle": "AnitaM2u",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T04:50:20.000Z",
+   "type": "reply",
+   "refId": "2096098308284686797",
+   "lang": "en",
+   "text": "@GBC_Press At the same time, other Republicans (notably Rep. Thomas Massie) have been the ones naming specific Epstein associates on the House floor and pushing a new discharge petition (“Epstein Files Transparency Act II”) to force more releases.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 22
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097130325558083823",
+   "authorId": "2042787795849154560",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T01:10:07.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie introduces discharge petition for Epstein Files Transparency Act II.\nCongress decides to go on a multi month long recess before the midterms during a war.\nIf you support the GOP its never been more clear you support people who are or protect pedophiles. Enjoy Hell.",
+   "metrics": {
+    "likes": 3,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 67
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096797588901294158",
+   "authorId": "942540106744832000",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T03:07:56.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "“(Thomas Massie introduced [2nd] Epstein Files Transparency Act (New discharge petition — needs 218 yeas) Massie is whipping up votes — rumors Mike Johnson going to recess the House till after Midterms to avoid a vote)—” https://t.co/xQHKM3WIru https://t.co/AhqJAPYjIQ",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 17
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096225986132226319",
+   "authorId": "2010540987597365248",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T13:16:35.000Z",
+   "type": "reply",
+   "refId": "2096214543915491726",
+   "lang": "en",
+   "text": "@FeistyLibLady Massie began collecting 218 signatures for the discharge petition to force a vote on Epstein Files Transparency Act II.\n\nThen @SpeakerJohnson recessed the House until AFTER Election Day.\n\nVOTE BLUE! Take away Trump's GOP House &amp; Senate majorities. MAKE TRUMP'S ",
+   "metrics": {
+    "likes": 10,
+    "retweets": 6,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 91
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096787302060376517",
+   "authorId": "2078281289422229504",
+   "handle": "AnitaM2u",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T02:27:03.000Z",
+   "type": "reply",
+   "refId": "2096787162893254910",
+   "lang": "en",
+   "text": "@Rusia_HD in the last 24 hours.\nWhat is confirmed right now:\nRep. Thomas Massie (R‑KY) launched a discharge petition for the Epstein Files Transparency Act II to force a House vote on releasing more Epstein‑related records and to let survivors/state AGs sue over withheld/redacted",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 16
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096665441792114819",
+   "authorId": "2086693190346911744",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T18:22:50.000Z",
+   "type": "reply",
+   "refId": "2096665063184802193",
+   "lang": "en",
+   "text": "@Acyn Johnson canceled the final two weeks of September votes, not just a day. That killed the War Powers resolution meant to rein in the Iran strikes AND stalled the Epstein Files Transparency Act discharge petition Massie and Khanna are pushing toward 218 signatures. Both got b",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 51
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096322023190339930",
+   "authorId": "22937667",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T19:38:12.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "A wild timeline from the House this week:\n• Aug 31: Massie files a discharge petition for the Epstein Files Transparency Act II\n• Sept 2: 32 more sign on (now 49); Trump hosts House Rs for dinner\n• Sept 3: Speaker Johnson cuts the session 2 weeks short and sends Congress home",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 34
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097475051830350315",
+   "authorId": "1737147392699293696",
+   "handle": "bgetsbetter",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T23:59:56.000Z",
+   "type": "reply",
+   "refId": "2097468190338990168",
+   "lang": "en",
+   "text": "@timburchett Why won't you sign the Epstein Files Transparency Act II discharge petition, you pedophile protector?",
+   "metrics": {
+    "likes": 15,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 97
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096018029834313887",
+   "authorId": "1343597700542038017",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T23:30:15.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Rep. Thomas Massie opened a new discharge petition for the Epstein Files Transparency Act II. We signed it with 100% support.\n\nIt’s been nearly a year since the original Epstein Files Transparency Act became law, yet the Justice Department is still withholding millions of files h",
+   "metrics": {
+    "likes": 424,
+    "retweets": 100,
+    "replies": 88,
+    "quotes": 9,
+    "impressions": 22265
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097416799461548217",
+   "authorId": "838187814",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T20:08:27.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Congressman Latimer Signs Discharge Petition on Epstein Files Transparency Act https://t.co/DApeHEt7BL via @Yonkers Times",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 9
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097497167975842061",
+   "authorId": "1594033655797661696",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T01:27:49.000Z",
+   "type": "reply",
+   "refId": "2097489146646495437",
+   "lang": "en",
+   "text": "@GoodLionTV Now….To prevent a shutdown so Thomas Massie’s discharge petition can pass the Epstein Files Transparency Act II.",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 50
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097792786296664110",
+   "authorId": "914815520842616834",
+   "handle": "NancyMace",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T21:02:30.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "We signed the discharge petition for the Second Epstein Files Transparency Act.\n\nI support the release of the files 1000%.\n\nThe American people have waited long enough. https://t.co/4731DZWZlG",
+   "metrics": {
+    "likes": 2303,
+    "retweets": 212,
+    "replies": 203,
+    "quotes": 10,
+    "impressions": 34262
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096291125774393444",
+   "authorId": "51852114",
+   "handle": "PrezSeaward",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T17:35:26.000Z",
+   "type": "reply",
+   "refId": "2096270064605389075",
+   "lang": "en",
+   "text": "@SelfForCongress That’s great to hear, you sign the discharge petition for the Epstein Files Transparency Act II yet?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 18
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096147745639657532",
+   "authorId": "1737147392699293696",
+   "handle": "bgetsbetter",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T08:05:41.000Z",
+   "type": "quote",
+   "refId": "2095959853713805807",
+   "lang": "en",
+   "text": "When you refuse to sign the Epstein Files Transparency Act II discharge petition but still want to talk tough online.\n\nYou owe @RepThomasMassie another apology. https://t.co/pgRYhzxT7Y",
+   "metrics": {
+    "likes": 5,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 132
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095602719859830897",
+   "authorId": "1718851298",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T19:59:57.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie is responding after Speaker Mike Johnson called his comments “stupid” and “nonsensical.”\n\nJohnson was dismissing Massie’s effort to force a House vote on releasing more Epstein files. Massie is using a discharge petition — he needs 218 signatures (a majority) to",
+   "metrics": {
+    "likes": 111,
+    "retweets": 39,
+    "replies": 8,
+    "quotes": 2,
+    "impressions": 1746
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097148802171801669",
+   "authorId": "28682727",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T02:23:32.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "@RepDeborahRoss\nPlease sign the discharge petition for the Epstein Files Transparency Act II. The government is still withholding more than three million files a year after the first bill passed and survivors still can’t get their own records",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097390905703448860",
+   "authorId": "794995621",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T18:25:34.000Z",
+   "type": "quote",
+   "refId": "2096619295262326952",
+   "lang": "en",
+   "text": "@colorisoseph @SkylineReport House Speaker Mike Johnson is shortening September 2026 legislative calendar (paid vacation) to stall discharge petition for the Epstein Files Transparency Act II to placate rapist Donald Trump.\nhttps://t.co/bl5Wua1FQT\n\nhttps://t.co/zAp3UaDZE9\n\nhttps:",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 9
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096004775800398014",
+   "authorId": "1417308784578367507",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T22:37:35.000Z",
+   "type": "reply",
+   "refId": "2096004773493211505",
+   "lang": "en",
+   "text": "Thomas Massie posted that Speaker Mike Johnson would recess the House until after the midterms to stall a discharge petition on Epstein Files Transparency Act II. Johnson went on television and called that prediction stupid, saying members would work. He then announced a recess",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 39
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096713853165793373",
+   "authorId": "1458647487766577160",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T21:35:12.000Z",
+   "type": "quote",
+   "refId": "2095157175278505986",
+   "lang": "en",
+   "text": "@timburchett Americans are awaiting your signature.\nI’m sure you wouldn’t let us down by siding with the Epstein class.\nJustice for victims and consequences for criminals.\n#EpsteinFiles \nEpstein Files Transparency Act II\n\nWill you be signing the discharge petition?\n\n https://t.co",
+   "metrics": {
+    "likes": 3,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 97
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095744410902479082",
+   "authorId": "1348876199372546049",
+   "handle": "Margaret9027578",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T05:22:59.000Z",
+   "type": "reply",
+   "refId": "2095733805059620968",
+   "lang": "en",
+   "text": "@tedlieu Ted (Lie)u make sure our reps are signing the discharge petition for the Epstein Files Transparency Act II.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 30
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095709691938533438",
+   "authorId": "311857483",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T03:05:01.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Speaker Mike with no Johnson is a bitch. \n\nHe announces a recess for the 17th. Johnson even called Massie stupid for suggesting an early recess would happen. He will claim it is because of a light legislative session and the midterms need all members campaigning as much as",
+   "metrics": {
+    "likes": 47,
+    "retweets": 6,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 1146
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095744667573010458",
+   "authorId": "1348876199372546049",
+   "handle": "Margaret9027578",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T05:24:00.000Z",
+   "type": "reply",
+   "refId": "2095660565310111754",
+   "lang": "en",
+   "text": "@tedlieu Ted (Lie)u make sure our reps are signing the discharge petition for the Epstein Files Transparency Act II.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 9
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095745516177129490",
+   "authorId": "1348876199372546049",
+   "handle": "Margaret9027578",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T05:27:22.000Z",
+   "type": "reply",
+   "refId": "2095644330946117985",
+   "lang": "en",
+   "text": "@tedlieu @WhiteHouse Ted (Lie)u make sure our lawmakers are signing the discharge petition for the Epstein Files Transparency Act II.",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 6
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097281731413885185",
+   "authorId": "95438026",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T11:11:45.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "MAGA Mike PANICS Over NEW Epstein Files Transparency Act \nRep. Thomas Massie unveils a new Epstein Files Transparency Act, and Speaker Mike Johnson may try to recess Congress in order to avoid voting on it!! \nhttps://t.co/XHN7iTzbKR via @KatiePhang",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 24
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095997791197966562",
+   "authorId": "1943488554534862848",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T22:09:49.000Z",
+   "type": "reply",
+   "refId": "2095953856345616434",
+   "lang": "en",
+   "text": "@RepKeithSelf You're also not allowed to molest children with you billionaire friends. Sign the discharge petition for the epstein files transparency act 2 please.",
+   "metrics": {
+    "likes": 3,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 774
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096622920411799567",
+   "authorId": "1740854691221606400",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T15:33:52.000Z",
+   "type": "reply",
+   "refId": "2096567984110100563",
+   "lang": "en",
+   "text": "@Republicans Speaking of working, according to @grok:\n\nAfter Rep. Thomas Massie publicly predicted that Speaker Mike Johnson would send the House home until after the midterms to stall a discharge petition on the Epstein Files Transparency Act II, Johnson dismissed the claim as “",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 38
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095647781486473229",
+   "authorId": "51852114",
+   "handle": "PrezSeaward",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T22:59:01.000Z",
+   "type": "reply",
+   "refId": "2095610058835120454",
+   "lang": "en",
+   "text": "@SelfForCongress We also don’t want pedophiles running the government and getting us into unnecessary wars, have you signed the discharge petition on the Epstein Files Transparency Act II yet?",
+   "metrics": {
+    "likes": 5,
+    "retweets": 0,
+    "replies": 2,
+    "quotes": 0,
+    "impressions": 205
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095901120056975631",
+   "authorId": "1346506933268836353",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T15:45:41.000Z",
+   "type": "quote",
+   "refId": "2095153284755452326",
+   "lang": "en",
+   "text": "The discharge petition for the Epstein Files Transparency Act II currently has 106 signatures -- two from @RepThomasMassie &amp; @RepNancyMace and the rest from Democrats. House members return Sept. 14. https://t.co/cu623lvDql",
+   "metrics": {
+    "likes": 2,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 147
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095868518646612438",
+   "authorId": "19777099",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T13:36:08.000Z",
+   "type": "reply",
+   "refId": "2095865079380254764",
+   "lang": "en",
+   "text": "@OcrazioCornPop So conveniently in time to  dodge a discharge petition by #Thomasmassie for Epstein Files Transparency Act II, which would enable state AGs, victims, and lawmakers to sue the DOJ over withheld Epstein documents.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 42
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097868520654795108",
+   "authorId": "1181937089572556800",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T02:03:26.000Z",
+   "type": "reply",
+   "refId": "2097865391263326637",
+   "lang": "en",
+   "text": "@EricLDaugh Mike Johnson actively protecting pedophiles. Running from a vote. Lawmakers are currently gathering signatures on a House Discharge Petition to force a vote on the Epstein Files Transparency Act II (H.R. 9694).",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 45
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095935127654219868",
+   "authorId": "413397361",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T18:00:49.000Z",
+   "type": "quote",
+   "refId": "2095284730069496003",
+   "lang": "en",
+   "text": "@TXRandy14 I'm a constituent in your district.  When can I expect that you will be signing the discharge petition for the Epstein Files Transparency Act II?\nhttps://t.co/9dSZwfudUn",
+   "metrics": {
+    "likes": 8,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 302
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097497030096572786",
+   "authorId": "1333057279197913089",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T01:27:16.000Z",
+   "type": "reply",
+   "refId": "2097489410849718436",
+   "lang": "en",
+   "text": "@Unknown62937803 @RandomHvacGuy Per DOJ guidelines, administration cannot just release confidential sealed files. It was Trump and other influencers promising to release them.\nEven when trump got in, Bondi did the influencer spectacle and gave them the same files that were releas",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 13
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096275548758560857",
+   "authorId": "2039808733585231872",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T16:33:32.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie just dropped a bombshell on the House floor.\n\nHe named 14 Epstein co-conspirators.\n\nAnd he’s demanding immediate prosecutions.\n\n“Jes Staley.”\n\n“Leon Black.”\n\n“Les Wexner.”\n\n“David Copperfield.”\n\n“Lapo Elkann.”\n\n“Tom Pritzker.”\n\n“Glenn Dubin.”\n\n“Frédéric Fekkai.” htt",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 202
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095607384844472408",
+   "authorId": "35550239",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T20:18:29.000Z",
+   "type": "quote",
+   "refId": "2094569449370050892",
+   "lang": "en",
+   "text": "House Speaker Mike Johnson is closing down the House of Representatives due to Thomas Massie's discharge petition, which threatens to force a vote on the Epstein Files Transparency Act II   👇🏽 👇🏽 👇🏽...  -DW https://t.co/u0WFXeFfel",
+   "metrics": {
+    "likes": 4,
+    "retweets": 2,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 174
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095573495778349496",
+   "authorId": "1447260243109597191",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T18:03:49.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "#AgendaWatch Who's signing the Discharge Petition? Check your Reps. Release out of committee. \n‘This Act may be cited as the “ ‘Epstein Files Transparency Act II’ #Redactions #Debate https://t.co/3Ujb4WIHTV\n==Petition==\n@HouseGOP @HouseDemocrats  ⬇️https://t.co/xxJTr5Xsjw",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 18
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095490229784264956",
+   "authorId": "1843444995006537728",
+   "handle": "BRICSvictory",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T12:32:57.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "@TheDemocrats @HouseDemocrats @GOP @HouseGOP Sign @RepThomasMassie’s bipartisan discharge petition for Epstein Files Transparency Act II. 218 signatures force a vote. End the DOJ redactions. Survivors deserve the truth!  More importantly, Messiah awaits you...#ReleaseTheFiles htt",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 58
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095481948277764447",
+   "authorId": "1843444995006537728",
+   "handle": "BRICSvictory",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T12:00:03.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "@RepBarragan Please ensure your name is on @RepThomasMassie's discharge petition for the Epstein Files Transparency Act II. 3+ million files are still being withheld or redacted. Your constituents in 90732 want accountability and justice for survivors. Sign the petition!",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 27
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095995325114957916",
+   "authorId": "914815520842616834",
+   "handle": "NancyMace",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T22:00:01.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Congress should not need a procedural scavenger hunt to access records the public was already promised. But here we are.\n\nI signed the discharge petition to force the Epstein Files Transparency Act II to a vote. https://t.co/3d6HtkxIOA",
+   "metrics": {
+    "likes": 1006,
+    "retweets": 93,
+    "replies": 100,
+    "quotes": 7,
+    "impressions": 22808
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095578931412005190",
+   "authorId": "1439921882707464202",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T18:25:25.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "@MarkPocan I am a big fan of yours even though I don't live in your district. But you owe us an explanation as to why you haven't signed the discharge petition for the Epstein Files Transparency Act II.",
+   "metrics": {
+    "likes": 3,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 50
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095606082823447002",
+   "authorId": "1480932271154683905",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T20:13:19.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Hey @RepDustyJohnson ... why haven't you signed the discharge petition for Epstein Files Transparency Act II? Don't you think it's important to hold rapists &amp; pedophiles accountable &amp; that the victims/survivors of those rapists &amp; pedophiles get the justice they deserv",
+   "metrics": {
+    "likes": 2,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 35
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095893455754953115",
+   "authorId": "1339931490",
+   "handle": "RepRobinKelly",
+   "rosters": [
+    "house-democrats"
+   ],
+   "status": "house",
+   "createdAt": "2026-09-04T15:15:14.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "This week, I signed the discharge petition introduced by @repthomasmassie, @reprokhanna &amp; @RepTeresaLF to force a vote on the Epstein Files Transparency Act II.\n\nEpstein’s survivors deserve a real chance at justice, and this administration must stop protecting anyone who was",
+   "metrics": {
+    "likes": 8,
+    "retweets": 5,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 504
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095597743825732057",
+   "authorId": "1843444995006537728",
+   "handle": "BRICSvictory",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T19:40:11.000Z",
+   "type": "reply",
+   "refId": "2095563523216584819",
+   "lang": "en",
+   "text": "@RepThomasMassie @RepRoKhanna @Phil_Mattingly @TheDemocrats @HouseDemocrats @GOP @HouseGOP Sign @RepThomasMassie bipartisan discharge petition for Epstein Files Transparency Act II. 218 signatures force a vote. End the DOJ redactions. Survivors deserve the truth!  More importantl",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 2,
+    "quotes": 0,
+    "impressions": 24
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095547884619841736",
+   "authorId": "1932603653698764800",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T16:22:03.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "\"House Republicans announced on Sept. 3 they will wrap up votes by Sept. 14 and not return until mid-November unless the Senate advances a spending package. The shift follows Massie's discharge petition for the Epstein Files Transparency Act II.\"\nhttps://t.co/gFrRWR2JoV",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 44
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095545933756870673",
+   "authorId": "417262550",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T16:14:18.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Massie’s bipartisan effort to force a House vote on the Epstein Files Transparency Act II has gained 32 additional signatures bringing the total number of House members on the discharge petition to 49. The petition now has 47 Democrats and two Republicans! https://t.co/Z06ovJ5yqg",
+   "metrics": {
+    "likes": 26,
+    "retweets": 11,
+    "replies": 2,
+    "quotes": 1,
+    "impressions": 1291
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095663130323939638",
+   "authorId": "914815520842616834",
+   "handle": "NancyMace",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T00:00:00.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "I signed the discharge petition for the Epstein Files Transparency Act II to force a vote and demand the transparency the American people were promised.\n\nAND I broke the internet because I called liberal white women racist. If Lindsay Clancy were black, they wouldn't be standing ",
+   "metrics": {
+    "likes": 1019,
+    "retweets": 108,
+    "replies": 84,
+    "quotes": 6,
+    "impressions": 19037
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095560793265692971",
+   "authorId": "1075517806551154689",
+   "handle": "RepEscobar",
+   "rosters": [
+    "house-democrats"
+   ],
+   "status": "house",
+   "createdAt": "2026-09-03T17:13:21.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Our nation has begged its government to do the right thing and release every document in the Epstein Files. The President's DOJ has withheld more than 3 million pages.\n \nI joined the discharge petition for the Epstein Files Transparency Act II to force a vote on allowing state ht",
+   "metrics": {
+    "likes": 28,
+    "retweets": 4,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1259
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096942615354659036",
+   "authorId": "1695337148",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T12:44:13.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Feb 2, 2026, the DOJ complied with the Epstein Files Transparency Act by publishing 3 million new documents, incl emails, photos, and investigative records. That was part 1 of an ongoing effort to provide transparency.\nLeon Black &amp; friends are thumbing their noses.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 37
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095636173700174323",
+   "authorId": "1067748650485497862",
+   "handle": "RepChrisPappas",
+   "rosters": [
+    "house-democrats"
+   ],
+   "status": "house",
+   "createdAt": "2026-09-03T22:12:53.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "I signed the discharge petition to force a vote on the Epstein Files Transparency Act II.\n\nThe Trump administration's blatant cover up is an insult to the survivors and an attempt to protect the rich and powerful. This version of the legislation has stronger accountability",
+   "metrics": {
+    "likes": 29,
+    "retweets": 7,
+    "replies": 42,
+    "quotes": 1,
+    "impressions": 1466
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095857309708865864",
+   "authorId": "2078281289422229504",
+   "handle": "AnitaM2u",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T12:51:36.000Z",
+   "type": "reply",
+   "refId": "2095576019855925447",
+   "lang": "en",
+   "text": "@FranceRsistanc1 What’s actually happening\nRep. Thomas Massie (R‑KY) has introduced a new bill called the Epstein Files Transparency Act II (EFTA II) in August/September 2026.\nHe argues that, despite the original Epstein Files Transparency Act (2025), the DOJ is still withholding",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 26
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095587682894373081",
+   "authorId": "1600489281784537091",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T19:00:12.000Z",
+   "type": "reply",
+   "refId": "2095284730069496003",
+   "lang": "en",
+   "text": "@RepThomasMassie @RepNancyMace @RepAnnWagner @BobOnderMO @markalfordkc @EricBurlison @JasonSmithMO \n\nThis isn’t red vs. blue. It’s whether the law applies to everyone.\nCongress already passed a transparency law. DOJ still hasn’t fully complied. Survivors and state AGs still can’t",
+   "metrics": {
+    "likes": 6,
+    "retweets": 2,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 282
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095957922081865875",
+   "authorId": "1863611233230024704",
+   "handle": "RepGLatimer",
+   "rosters": [
+    "house-democrats"
+   ],
+   "status": "house",
+   "createdAt": "2026-09-04T19:31:24.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "I signed the discharge petition to force a vote on a bill to authorize state attorneys general, victims of Jeffrey Epstein and his co-conspirators, and members of Congress to challenge the DOJ in court for its failure to comply with the disclosure requirements of the Epstein http",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 152
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096245320598630690",
+   "authorId": "1976646862347399168",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T14:33:25.000Z",
+   "type": "reply",
+   "refId": "2096081366987178368",
+   "lang": "en",
+   "text": "@Suzierizzo1 Absolute kudos to Thomas Massie for exposing the utter rot in the House leadership. He just launched a discharge petition for the Epstein Files Transparency Act ll so survivors can finally get Justice and the public can see the unredacted truth. And what does \"deeply",
+   "metrics": {
+    "likes": 14,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 510
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095564545049718947",
+   "authorId": "2081241064157933568",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T17:28:15.000Z",
+   "type": "quote",
+   "refId": "2095284730069496003",
+   "lang": "en",
+   "text": "🚨GEORGIA🚨\n\nWho has @RepThomasMassie’s courage to do the right thing and fight against global tyranny?\n\nEpstein’s victims matter.\n\nDo YOU matter to your representative in Congress?\n\nCheck who has signed the discharge petition for the Epstein Files Transparency Act: https://t.co/",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 24
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097519863837430108",
+   "authorId": "1200616796295847936",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T02:58:00.000Z",
+   "type": "reply",
+   "refId": "2097052534523527242",
+   "lang": "en",
+   "text": "The fight centers on the Epstein Files Transparency Act II. Massie says over three million files are still being withheld a year after the original act was signed.\n\nRead more: https://t.co/f2OTVFif6M",
+   "metrics": {
+    "likes": 76,
+    "retweets": 8,
+    "replies": 7,
+    "quotes": 1,
+    "impressions": 46764
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097271005961945093",
+   "authorId": "2031294748607303680",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T10:29:07.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie, on the House floor August 31: “It's been a year since the President signed the Epstein Files Transparency Act\n\nHe said the government still withheld over 3 million files\n\nWe want perpetrators of these crimes to be investigated and prosecuted https://t.co/DyYB30nVl7",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 175
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097226751659135392",
+   "authorId": "2022761821044719618",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T07:33:16.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie, on the House floor August 31: It's been a year since the President signed the Epstein Files Transparency Act.\n\nHe said the government still withheld over 3 million files\n\nWe want perpetrators of these crimes to be investigated and prosecuted https://t.co/NZu2BZqIgk",
+   "metrics": {
+    "likes": 2,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 145
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095645399524528414",
+   "authorId": "1461847617357418503",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T22:49:33.000Z",
+   "type": "reply",
+   "refId": "2095373955532312967",
+   "lang": "en",
+   "text": "@TannerBoyle247 @RepThomasMassie 🤣🤣🤣\n\nThomas Massie just dropped a bombshell on the House floor.\nHe named 14 Epstein co-conspirators.\nAnd he’s demanding immediate prosecutions.\n“Jes Staley.”\n“Leon Black.”\n“Les Wexner.”\n“David Copperfield.”\n“Lapo Elkann.”\n“Tom Pritzker.”\n“Glenn",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 72
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097174522382471532",
+   "authorId": "1454341392801488902",
+   "handle": "epsteinsearchin",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T04:05:44.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thomas Massie, on the House floor August 31: “It's been a year since the President signed the Epstein Files Transparency Act.”\n\nHe said the government still withheld over 3 million files.\n\n“We want perpetrators of these crimes to be investigated and prosecuted.” https://t.co/KgcI",
+   "metrics": {
+    "likes": 1146,
+    "retweets": 441,
+    "replies": 21,
+    "quotes": 6,
+    "impressions": 7897
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097328038103126358",
+   "authorId": "1989683381576368129",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T14:15:45.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "On August 31, Thomas Massie read fourteen names on the House floor and called them Epstein's co-conspirators. Among them: Prince Andrew, Les Wexner, Leon Black, Jes Staley, David Copperfield, Tom Pritzker. Two are dead.\n \nHe could say it there and nowhere else. The speech or http",
+   "metrics": {
+    "likes": 2,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 114
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097729998400737398",
+   "authorId": "1742454883528155136",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T16:53:00.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Massie and Khanna just dropped Epstein Files Transparency Act II.\n\nFirst law got signed. They say DOJ still sat on files and over-redacted the rest.\n\nNow victims, state AGs, and Congress can take the Attorney General to court.\nRelease the files. No more stalling. https://t.co/7Wg",
+   "metrics": {
+    "likes": 5,
+    "retweets": 2,
+    "replies": 7,
+    "quotes": 2,
+    "impressions": 355
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097807749962670428",
+   "authorId": "1893273838009356289",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-09T22:01:57.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Massie and Khanna just dropped Epstein Files Transparency Act II.\n\nFirst law got signed. They say DOJ still sat on files and over-redacted the rest.\n\nNow victims, state AGs, and Congress can take the Attorney General to court.\nRelease the files. No more stalling. https://t.co/41J",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 45
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095759387012805102",
+   "authorId": "1823237255995043841",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T06:22:29.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "\"Thomas Massie just dropped a bombshell on the House floor.\n\nHe named 14 Epstein co-conspirators.\n\nAnd he’s demanding immediate prosecutions.\n\n“Jes Staley.”\n\n“Leon Black.”\n\n“Les Wexner.”\n\n“David Copperfield.”\n\n“Lapo Elkann.”\n\n“Tom Pritzker.”\n\n“Glenn Dubin.”\n\n“Frédéric Fekkai.” ht",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 97
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096623254412591435",
+   "authorId": "15922214",
+   "handle": "rollcall",
+   "rosters": [
+    "congressional-media",
+    "cap-hill-reporters"
+   ],
+   "status": null,
+   "createdAt": "2026-09-06T15:35:11.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Rep. Thomas Massie, R-Ky., is leading a push to sidestep House leaders and bring another bill to the floor, dubbing it the Epstein Files Transparency Act II. \nhttps://t.co/Gk87ElZS8P",
+   "metrics": {
+    "likes": 8,
+    "retweets": 3,
+    "replies": 0,
+    "quotes": 1,
+    "impressions": 4608
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096712005600313649",
+   "authorId": "2041881190706380801",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T21:27:51.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Epstein scandal 3:\n“This scam, perpetuated by the Democrats…” \n07/31/2025 Trump says he wants “everything” shown, but only if he considers it “fair and reasonable.”\n07/2025 Massie and Ro khanna introduced the Epstein files transparency act",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 7
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095906396789416082",
+   "authorId": "398515142",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T16:06:39.000Z",
+   "type": "reply",
+   "refId": "2095902203059843261",
+   "lang": "en",
+   "text": "@RepThomasMassie Epstein Files Transparency Act\n\n2 Epstein 2 Transparent\n\nThe Epstein Files: D.C. Drift\n\nEpstein &amp; Files\n\nEpstein Five\n\nEpstein Files 6\n\nFiles 7\n\nThe Fate of the Files\n\nEpstein X\n\nEpstein Presents: Massie &amp; Khanna\n\nAnything but mentioning Reid Hoffman or t",
+   "metrics": {
+    "likes": 3,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 184
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095584517759357133",
+   "authorId": "2052402572120453125",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T18:47:37.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "🔴 House GOP leadership cancels 8 voting days as Massie pushes Epstein Files transparency bill\n\nU.S. House Republican leadership shortened the chamber's work calendar by canceling all votes scheduled for the weeks of September 21 and 28.\nThe decision came days after Rep. Thomas h",
+   "metrics": {
+    "likes": 0,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 25
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095653773721129070",
+   "authorId": "1702839934611312640",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T23:22:49.000Z",
+   "type": "reply",
+   "refId": "2095585468616417470",
+   "lang": "en",
+   "text": "@BigBlueWaveUSA SuperGrok disagrees with you:\n\n\"The tweet is mostly false or unsubstantiated speculation. It mixes a real new Massie bill and a real House schedule change with an unsupported claim that Trump ordered Speaker Mike Johnson to shut the House specifically to block 218",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 44
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095558572192956556",
+   "authorId": "1346267767159353345",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T17:04:31.000Z",
+   "type": "reply",
+   "refId": "2095547012024500339",
+   "lang": "en",
+   "text": "@Real_A_R_ @SirBylHolte The original Epstein Files Transparency Act was introduced BY MASSIE. Signed by Trump. This is a new bill BY MASSIE to expand on the first bill. PASS IT.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 16
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096750954964275531",
+   "authorId": "2905089344",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T00:02:38.000Z",
+   "type": "reply",
+   "refId": "2096455884335370336",
+   "lang": "en",
+   "text": "@Specialk186 @dvp031 @JamieBonkiewicz Now let’s go back to July 2026, Thomas Massie introduces the Epstein Files Transparency Act II with bipartisanship. Can you dust off the cobwebs inside your skull and fire up those two brain cells and have a conversation about that without ha",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 13
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095498293652705378",
+   "authorId": "2060891747689922564",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T13:05:00.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "(VIDEO)(LINK)(PDF) Government Corruption: Senator Massie Brings the H.R.9694 – Epstein Files Transparency Act II\nhttps://t.co/suhNpmsPZ2\n#BreakingNewstoday #RekkrNationUglyTruthFiles #GovernmentCorruptionPolitics #SenatorMassieEpsteinFiles #HR9694EpsteinFilesTransparencyActII htt",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 13
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096081366987178368",
+   "authorId": "770373873036500992",
+   "handle": "Suzierizzo1",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T03:41:55.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Imagine being Mike Johnson &amp; having to shut down the House of Representatives again after they just had a seven week paid summer vacation because you know that Rep.Thomas Massie &amp; Rep. Ro Khanna are about to introduce the Epstein files Transparency Act II.",
+   "metrics": {
+    "likes": 9375,
+    "retweets": 3750,
+    "replies": 360,
+    "quotes": 157,
+    "impressions": 113182
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096677682364694583",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T19:11:28.000Z",
+   "type": "reply",
+   "refId": "2087501982676525100",
+   "lang": "en",
+   "text": "@allivesplatter The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 3
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096677666417955145",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T19:11:24.000Z",
+   "type": "reply",
+   "refId": "2087504520410791938",
+   "lang": "en",
+   "text": "@allivesplatter The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 6
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096677803609522522",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T19:11:57.000Z",
+   "type": "reply",
+   "refId": "2087152454081380552",
+   "lang": "en",
+   "text": "@allivesplatter The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 4
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096675861021745194",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T19:04:14.000Z",
+   "type": "reply",
+   "refId": "2096618482569736623",
+   "lang": "en",
+   "text": "@raefejenkins The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act. https://t.co/dUthEvuQXf",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 47
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096621778877415718",
+   "authorId": "776833027708104708",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T15:29:20.000Z",
+   "type": "quote",
+   "refId": "2096604314395385952",
+   "lang": "en",
+   "text": "recess after the prediction. check the calendar.\n\nmassie says he predicted they'd call off congress until the election to stop the epstein files transparency act ii (discharge with khanna). johnson called that 'stupid'/'nonsensical' on tv — then recessed from mid-september to the",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 32
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095726773648425316",
+   "authorId": "899044056",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T04:12:54.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "If Mike Johnson thinks that closing up shop 2 weeks in advance to avoid dealing with Thomas Massie &amp; Ro Khanna’s next gen more punitive Epstein Files Transparency Act, will make us forget about the Epstein files - he’s in for a rude awakening. https://t.co/TSGlS1ifn4",
+   "metrics": {
+    "likes": 6,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 486
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096047660146753712",
+   "authorId": "1855357147506528256",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T01:27:59.000Z",
+   "type": "quote",
+   "refId": "2095522646830264820",
+   "lang": "en",
+   "text": "A Couple Days Ago, Mike Johnson Mocked Thomas Massie For Suggesting House Leadership Could Keep Congress Out To Avoid The New Epstein Files Transparency Act, Calling The Idea \"Stupid” And\"Nonsensical.”\n\nNow he has canceled the final two weeks of September.  \n\n🔗SOURCE ➡️ https://",
+   "metrics": {
+    "likes": 65,
+    "retweets": 14,
+    "replies": 3,
+    "quotes": 1,
+    "impressions": 2605
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095899605552845205",
+   "authorId": "1962916620374097920",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-04T15:39:40.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "The US House of Representatives is not going to vote on anything until after the November 3rd election. The obvious reason is the Epstein Files Transparency Act II that sets penalties for not complying with the release of the Epstein files and how it was supposed to be done.\n1/2 ",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 23
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095576019855925447",
+   "authorId": "1132002680996597762",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T18:13:51.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "🚨EPSTEIN'S FILES ARE STILL SEALED. MASSIE WANTS THE DOJ IN COURT. Thomas Massie has launched the next phase of his fight for transparency: the Epstein Files Transparency Act II. \n\nSurvivors could obtain their own unredacted files.💥 https://t.co/BszVAcDtPC",
+   "metrics": {
+    "likes": 30,
+    "retweets": 17,
+    "replies": 3,
+    "quotes": 1,
+    "impressions": 1547
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096677277983543495",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T19:09:52.000Z",
+   "type": "reply",
+   "refId": "2096015038863835179",
+   "lang": "en",
+   "text": "@allivesplatter The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.\nWTF is wrong with you?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 12
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096367937208590631",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:40:39.000Z",
+   "type": "reply",
+   "refId": "2096318841223557459",
+   "lang": "en",
+   "text": "@JRD349208 @RossKneeDeep The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act. https://t.co/",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 7
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095495213489811597",
+   "authorId": "1918419803951259648",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T12:52:45.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Fitzpatrick would be the third Republican behind Massie and Mace to back the Epstein Files Transparency Act II — said he's fine with it as long as it doesn't interfere with an ongoing investigation. https://t.co/lGwrACbMrt",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 12
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096366662664548563",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:35:35.000Z",
+   "type": "reply",
+   "refId": "2096002610457194616",
+   "lang": "en",
+   "text": "@Melinda00744507 @RossKneeDeep Google this:\nThe Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 8
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096364282854195659",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:26:08.000Z",
+   "type": "quote",
+   "refId": "2095975681326825732",
+   "lang": "en",
+   "text": "The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.  \n\nWhy are you lying............ https",
+   "metrics": {
+    "likes": 2,
+    "retweets": 2,
+    "replies": 1,
+    "quotes": 0,
+    "impressions": 163
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2095524655951974464",
+   "authorId": "1337068002215415808",
+   "handle": "Rockydvkr",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-03T14:49:45.000Z",
+   "type": "reply",
+   "refId": "2095522646830264820",
+   "lang": "en",
+   "text": "@MeidasTouch @AntiToxicPeople Mike Johnson called Massie’s warning “STUPID”—then did exactly what Massie predicted. No more excuses, no more delays. Pass the Epstein Files Transparency Act and release the files in full. The public deserves the truth. 👊",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 35
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096369361816531199",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:46:19.000Z",
+   "type": "reply",
+   "refId": "2096223546942816440",
+   "lang": "en",
+   "text": "@jancampbell55 @RossKneeDeep The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.  \nWhy are",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 5
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096369160057962988",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:45:31.000Z",
+   "type": "reply",
+   "refId": "2096156418575368467",
+   "lang": "en",
+   "text": "@LTM_LTM_LT @RossKneeDeep The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.  Why are you",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 6
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2096368915370606708",
+   "authorId": "792862490350661633",
+   "handle": "JayChpJones",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-05T22:44:32.000Z",
+   "type": "reply",
+   "refId": "2096048091916861527",
+   "lang": "en",
+   "text": "@PenelopeKJones @RossKneeDeep The Epstein Files Transparency Act was signed into law by President Trump in November 2025. As of early 2026, over 3 million pages, including documents, images, and videos, were released in compliance with the Epstein Files Transparency Act.  Why are",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 8
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "relevancy",
+     "fetchedAt": "2026-09-10T08:00:38.262Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959312819712271",
+   "authorId": "1476933109438468107",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:04:13.000Z",
+   "type": "reply",
+   "refId": "2097757206296817684",
+   "lang": "en",
+   "text": "@EricLDaugh Agent Orange just feeding a line. How many times has he said the war is already won?\nAnd where are the Epstein files?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959273875542522",
+   "authorId": "1952422004",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:04:03.000Z",
+   "type": "reply",
+   "refId": "2097878647059124385",
+   "lang": "en",
+   "text": "@BossBlunts1 @KobeissiLetter $5000 to make you forget about the Epstein Files. Not a cult!",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959262299267560",
+   "authorId": "1637389923924815874",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:04:00.000Z",
+   "type": "reply",
+   "refId": "2097884934442520883",
+   "lang": "en",
+   "text": "@e2dot7182818284 @MalcolmNance It corroborates what we - the general public who actually paid attention and looked where they SHOULD have from the moment this catastrophy went down - instead of getting all huffy, puffy - poor Jews! and worked up over \"evil terrorist Hamas\" - all ",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959260156211232",
+   "authorId": "1677829031281176577",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:04:00.000Z",
+   "type": "quote",
+   "refId": "2097882005694288014",
+   "lang": "en",
+   "text": "This dude having fantasies about MeToo and Epstein mashups. https://t.co/TaKWrAMNjl https://t.co/Ty967dwhUE",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959236164788468",
+   "authorId": "744339007",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:54.000Z",
+   "type": "reply",
+   "refId": "2097768933197484236",
+   "lang": "en",
+   "text": "@GodandCountryy @grok how many times is that Grandpa mentioned in the epstein files?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959150831464546",
+   "authorId": "1338077964425113600",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:34.000Z",
+   "type": "reply",
+   "refId": "2097908146174062964",
+   "lang": "en",
+   "text": "@destroyedthee @SaysMissy @realDonaldTrump can't do it.\nCongress must approve it and @SpeakerJohnson sent congress on leave again. Afraid of the Epstein release vote.\n\nAlso the US are 40 trillion in debt. Trump doesn't have 1,35 TRILLION (that's what he's talking about) to give a",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959141457187013",
+   "authorId": "1660385924520329219",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:32.000Z",
+   "type": "reply",
+   "refId": "2097872149486686262",
+   "lang": "en",
+   "text": "@bennyjohnson Yeah and he will release the epstein files and drain the swamp. Thought you were going to sue @Nero?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959133823570023",
+   "authorId": "1636755165666476032",
+   "handle": "TrailerTal84676",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:30.000Z",
+   "type": "reply",
+   "refId": "2097806123319407069",
+   "lang": "en",
+   "text": "@TheTorontoSun @brianlilley Say goodbye to your children \n\nEpstein trash is going to take them \n\nEU needs product \n\nYou have the items parents - he needs",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959122360836284",
+   "authorId": "915430586398978049",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:27.000Z",
+   "type": "reply",
+   "refId": "2097877482397438195",
+   "lang": "en",
+   "text": "@patrickbetdavid The Apetite of Jeffrey Epstein\nThe Foreign Policy of Benjamin Netanyahu\nThe surveillance state of George Bush\nThe corruption of Joe Biden\n\nDonald Mcdonald what a guy!",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 3
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959094883876997",
+   "authorId": "4891002035",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:21.000Z",
+   "type": "reply",
+   "refId": "2097764141515866435",
+   "lang": "en",
+   "text": "@mannmera__ American epstein culture",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959045113971198",
+   "authorId": "2037404574776983552",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:09.000Z",
+   "type": "reply",
+   "refId": "2097847499574665248",
+   "lang": "en",
+   "text": "@fluffybuttfarms I certainly do hope that the world realizes that the majority of Americans do not support our P.O.S. president. Why won't he release the Epstein files? Because he, his wealthy cohorts and diplomatic dignitaries will be convicted as sex offenders.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959031931351373",
+   "authorId": "956737500281737216",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:06.000Z",
+   "type": "reply",
+   "refId": "2097746207758066141",
+   "lang": "en",
+   "text": "@historyoarmani2 Yet everyone on the epstein list walks free. #fuckthegovernment",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 6
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097959011023036880",
+   "authorId": "1726910001170825216",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:03:01.000Z",
+   "type": "reply",
+   "refId": "2097888325512089943",
+   "lang": "en",
+   "text": "@RyanRozbiani Trump said Iran has no nuclear weapons.\nSo did the U.S. start a war for Israel and the Epstein files?\nAnd are Americans suffering because of it?\n\nAmericans, boycott the Israel-first GOP and vote for candidates who will work for you and your community. 🇺🇸",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958959009120525",
+   "authorId": "931178012464373761",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:48.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Thursday 10 September 2026.🔺⚙️🛠️🔺🌐\nThe World Clock — Worldwide https://t.co/JkGHBGMFZQ\nSource: presstv*ir\nUS warplanes damaged in Iranian strikes on military base in Jordan: Report\nThursday, 10 September 2026 5:39 AM  [ Last Update: Thursday, 10 September 2026 7:12 AM ]\nThe h",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 10
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958931259691300",
+   "authorId": "1499100688583839747",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:42.000Z",
+   "type": "reply",
+   "refId": "2097770175307415693",
+   "lang": "en",
+   "text": "@lampolitical LOOK IT'S THE EPSTEIN ISLAND RAPIST...OR SHOULD I SAY THE NEW BABY EATING PRESIDENT 🤔??? ANYWAY THE UNELECTED WEF PUPPETS ARE A REAL PROBLEM AND WE NEED TO GET RID OF THEM FOR GOOD ??? THEY STOLE 100'S OF BILLIONS AND THE BILL IS DUE ?? ENJOY PAYING THE GENERATIONA",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958910044835865",
+   "authorId": "165422512",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:37.000Z",
+   "type": "quote",
+   "refId": "2097837255381631423",
+   "lang": "en",
+   "text": "… and the Epstein files will be released ? https://t.co/W3BI31EXQE",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958908958793759",
+   "authorId": "3064032131",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:36.000Z",
+   "type": "reply",
+   "refId": "2097658336980394253",
+   "lang": "en",
+   "text": "@ludywig1 Meanwhile Epstein was avid yuri fan and sponsored some trans research.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958882303779318",
+   "authorId": "1886090792302731264",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:30.000Z",
+   "type": "reply",
+   "refId": "2097956699034284261",
+   "lang": "en",
+   "text": "@shahbzadvocate2 @KR3Wmatic Epstein isn’t hearing from the creator of the universe and he’s not a standard of morality but Muhammad heard from your creator the greatest atrocities that my dog would be ashamed of.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958822929162383",
+   "authorId": "1636755165666476032",
+   "handle": "TrailerTal84676",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:16.000Z",
+   "type": "reply",
+   "refId": "2097822368102043783",
+   "lang": "en",
+   "text": "@RollingStone Epstein child rapist pm of 🇨🇦\n\nGet it right \n\nHe is a fkung monster",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958788732993767",
+   "authorId": "36925507",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:08.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "….. and that reminded me what is happening over the Epstein Files ? Why is there no mention, Trump is in them- we have seen that, but they are STILL not published as he promised! #EpsteinFiles #Trump https://t.co/wUvWsaygTo",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 3
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958758773047405",
+   "authorId": "1606069501564538880",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:00.000Z",
+   "type": "reply",
+   "refId": "2097502440832541183",
+   "lang": "en",
+   "text": "@Chicago1Ray Trump is a rapist of a 13 year old girl. \nRead the Epstein files.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958755849707649",
+   "authorId": "21746427",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:02:00.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "You are fucking with the smartest group of people in the world, they all have a strong faith and none are in the Epstein files.   Iran, Russia and China will dominate. The cowards of the west only have one option nukes…..but the resistance have been planning for nuke warfare.  A",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 4
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958728922538375",
+   "authorId": "2069699988385632256",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:53.000Z",
+   "type": "reply",
+   "refId": "2097958547812405278",
+   "lang": "en",
+   "text": "@beffjezos I am just quoting that spawn of Epstein",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 5
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958709766885837",
+   "authorId": "1791179825035583488",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:49.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "PREK A BOO DONALD TRUMP &amp; EPSTEIN WE SEE YOU AGAIN AGAIN  &amp; AGAIN https://t.co/olks9oTquT",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958690351702233",
+   "authorId": "2789258239",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:44.000Z",
+   "type": "quote",
+   "refId": "2097744412457717934",
+   "lang": "en",
+   "text": "APPARENTLY the World IS revolving AROUND HIM. Not 🚫 IN A GOOD Way though BECAUSE HE'S NOT ONLY SCREWED America BUT The world 🌎 WHY DID REPUBLICANS give HIM SO MUCH power. I'LL Guess. THEY'RE IN THE EPSTEIN FILES TOO. IF TRUMP GOES down they go down. WHY ARE THEY PROTECTING HIM?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958665936593248",
+   "authorId": "2055338624036835328",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:38.000Z",
+   "type": "quote",
+   "refId": "2097773511175459264",
+   "lang": "en",
+   "text": "3+ billion a year is taken from us, HARD WORKING AMERICANS, sent to @Israel, so they could receive free healthcare &amp; nearly free university. I’m not happy with this current administration &amp; I want the change I voted for. #FREEtheUSA #NoMoreWars #Epstein #fuckisrael https:",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958648324538842",
+   "authorId": "1454014789445947392",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:34.000Z",
+   "type": "reply",
+   "refId": "2097678827698757659",
+   "lang": "en",
+   "text": "@WhiteHouse What lies is the Fat Orange Idiot going to spew today?\nWe have seen and heard it all. \n\n\"They eating the cats, they eating the dogs\". \n\"I will release the Epstein files\". \n\"You will get a $2000 Doge Cheque\". \n\"You will get a $5000 divident\"\n\"Private investors paying f",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958588660560006",
+   "authorId": "19538252",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:20.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "So @realDonaldTrump is active on Twitter after being silent since July?\n\nHe's putting his account to good use by posting videos of a known paedophile\n\nSomeone who raped minors, trafficked them from his Mar-A-Lago resort to Epstein Island, so he could rape them again\n\nThanks Donny",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958571585441818",
+   "authorId": "1943136670301184000",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:16.000Z",
+   "type": "quote",
+   "refId": "2097815062857555999",
+   "lang": "en",
+   "text": "The Epstein Elites are afraid.\n\nGood.\n\nKeep pushing. https://t.co/POqPKNAjpy",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958556649795678",
+   "authorId": "721567374705471488",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:12.000Z",
+   "type": "quote",
+   "refId": "2097745672682475952",
+   "lang": "en",
+   "text": "\"club Epstein\" https://t.co/Jwee9xhsNr",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958550785904826",
+   "authorId": "1984007069352251392",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:11.000Z",
+   "type": "reply",
+   "refId": "2097958456422535465",
+   "lang": "en",
+   "text": "@patrickbetdavid The trillions added to the U.S. national debt.\nThe numerous mentions in the Jeffrey\nEpstein files.\nThe crude and vulgar language of a locker-room talker.\nThe multiple extramarital affairs.\nThe apparent Israel-first attitude.\nThe new wars he's started.\nAll rolled ",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958503830712620",
+   "authorId": "1626146112",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:01:00.000Z",
+   "type": "reply",
+   "refId": "2097880041937867074",
+   "lang": "en",
+   "text": "@atrupar He could have just gone to jail - best place for the convicted felon.\n\nRelease the full Epstein files.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958486881518022",
+   "authorId": "91489964",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:56.000Z",
+   "type": "reply",
+   "refId": "2097868950293955048",
+   "lang": "en",
+   "text": "@WhiteHouse Because you're afraid of the Epstein  Trials",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958462936264807",
+   "authorId": "1668487872008077314",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:50.000Z",
+   "type": "reply",
+   "refId": "2097138533433569664",
+   "lang": "en",
+   "text": "@BlushandChaos You don’t hate them enough. They have done nothing but lie and stab us in the back. They deserve to lose so bad. They are literally all traitors and liars besides Massie.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958434171699349",
+   "authorId": "1775580558619262976",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:43.000Z",
+   "type": "reply",
+   "refId": "2097957942620250171",
+   "lang": "en",
+   "text": "@MMcgowan77077 Obama's lawyer guided Epstein before and after his conviction for child prostitution.\n\nShe tried to distance herself from his crimes by taking gift cards and luxury items as payments.\n\nShe knew exactly what he was doing. They all did. https://t.co/GyBGrP9pAY",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958413124669734",
+   "authorId": "1728162599965958144",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:38.000Z",
+   "type": "reply",
+   "refId": "2097877777739321742",
+   "lang": "en",
+   "text": "@atrupar Your comrade Epstein knew https://t.co/LMzzfaZgqg",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 3
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958389196169503",
+   "authorId": "1162256421020426240",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:32.000Z",
+   "type": "reply",
+   "refId": "2097837478832976245",
+   "lang": "en",
+   "text": "@barcelona_39468 @MediaSOI @Faith2068 Britain’s political class is under the control of the Epstein class neocon elites. Labour is the only party that used to be honest with regard to foreign affairs. Terrible collapse!",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958348096462992",
+   "authorId": "1371003205",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:23.000Z",
+   "type": "quote",
+   "refId": "2097872619517472788",
+   "lang": "en",
+   "text": "We know\n\nIts mentioned thousands of times in the Epstein files https://t.co/uaMshICF7A",
+   "metrics": {
+    "likes": 1,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 10
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958318920581579",
+   "authorId": "1557282578981347333",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:16.000Z",
+   "type": "reply",
+   "refId": "2097862762143666592",
+   "lang": "en",
+   "text": "@DonaldJTrumpJr Brandon Gill might be the most closeted gay and Epstein pedophile enthusiast in Congress.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958317356195918",
+   "authorId": "2705471701",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:15.000Z",
+   "type": "reply",
+   "refId": "2097911629593858451",
+   "lang": "en",
+   "text": "@tylerbowyer Do you think he will actually do it?  How are those Epstein files going?",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958315082891428",
+   "authorId": "829418341",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:15.000Z",
+   "type": "reply",
+   "refId": "2097772944743137672",
+   "lang": "en",
+   "text": "@WomenBeingAwful And young Muslim boys how to kidnap the girls and form pdfile rings. 🙄 Yeah 250.000 rapes and nothing happened. Another region, another epstein. In the end nobody cared for the victims",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 9
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958284569268701",
+   "authorId": "749396672585748480",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:07.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "Tell Congress to end the Epstein files coverup! - FreedomUnited https://t.co/TCkZXgvi5F",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 6
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958278223315347",
+   "authorId": "2036841514966384640",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:06.000Z",
+   "type": "reply",
+   "refId": "2097877482397438195",
+   "lang": "en",
+   "text": "@patrickbetdavid Do it Patrick, go meet your daddy’s daddy Epstein https://t.co/taRHBi5cCk",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958252382474610",
+   "authorId": "1684417080265949184",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T08:00:00.000Z",
+   "type": "reply",
+   "refId": "2097848350695366972",
+   "lang": "en",
+   "text": "@Nguyen_anime3 And this grandpa is mentioned thousands of times in the Epstein files https://t.co/t2CmdMSza4",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958246636003393",
+   "authorId": "2006176563914809344",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:58.000Z",
+   "type": "tweet",
+   "refId": null,
+   "lang": "en",
+   "text": "@POTUS YOY ARE “TAKING IN TRILLIONS IN TARIFFS FROM US! YOUR TARIFFS ARE A TAX ON US! ALL YOUR BS vanity projs have INCREASED OUR DEBT by THIRTY PERCENT! “We’re taking in trillions” &lt;~TARIFFS=TAKING THAT $ fr US! WE CANNOT AFFORD FOOD fr YOUR TARIFFS 2 BUILD DAMN EPSTEIN BALLR",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958230655738121",
+   "authorId": "12624252",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:55.000Z",
+   "type": "reply",
+   "refId": "2097315663362560425",
+   "lang": "en",
+   "text": "@RepThomasMassie @dbongino Massie is the slimiest of the slimy dumocrats.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958135873122743",
+   "authorId": "1440510020009947269",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:32.000Z",
+   "type": "reply",
+   "refId": "2097933144657662220",
+   "lang": "en",
+   "text": "@louiss2121 @AF_Deplorables Ur just proving that it takes very little to call someone a fed. Massie is basically a liberal who  is based on israel. The winning ticket is being anti israel and willing to execute mass deportations. Wtf is the point of being anti israel if ur terrib",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 2
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958086963003893",
+   "authorId": "1588439113543434240",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:20.000Z",
+   "type": "reply",
+   "refId": "2097930632542237081",
+   "lang": "en",
+   "text": "@PolitRealist There is enough evidence on the laptop to put him behind bars for life.\nHis memecoin is just another example of the Epstein class rubbing it in your face that they can do whatever they want without even prosecution.\nFollow @MarcoPolo501c3 and read his \"Report on the",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 0
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958083808973293",
+   "authorId": "1337068002215415808",
+   "handle": "Rockydvkr",
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:20.000Z",
+   "type": "reply",
+   "refId": "2097954482395185622",
+   "lang": "en",
+   "text": "@Heccles94 @DOGE Release the Epstein files. No cover-ups. No excuses. The truth matters.",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 5
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097958064284471559",
+   "authorId": "1788154946497507328",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-10T07:59:15.000Z",
+   "type": "reply",
+   "refId": "2097945638394569207",
+   "lang": "en",
+   "text": "@QLoTII haz is Epstein and Andy's best friend, these two know each other well. https://t.co/owIYKi45fU",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 7
+   },
+   "sources": [
+    {
+     "kind": "search",
+     "key": "epstein-files",
+     "query": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.320Z"
+    }
+   ]
+  },
+  {
+   "id": "2097234233127215394",
+   "authorId": "1184229014",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-08T08:03:00.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "art",
+   "text": "👏👏👏👏👏 https://t.co/Yk3Gc3B5I2",
+   "metrics": {
+    "likes": 1,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 5
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2097002482673098792",
+   "authorId": "39631099",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T16:42:06.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "fr",
+   "text": "@UNHumanRights @UN_Women investigate our administration. @CBCNews @euronews @Europe1 https://t.co/5IeMJKUwmM",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 1
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096924254461984909",
+   "authorId": "223710359",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T11:31:15.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "qht",
+   "text": "#ReleaseTheEpsteinFlies https://t.co/SGTOwyLsro",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 30
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096905168193204325",
+   "authorId": "739890270460858372",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T10:15:25.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "en",
+   "text": "I have no respect for men who put DICKS IN THEIR MOUTH THE UP THEIR ASSES. https://t.co/A2eRO8IdMd",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 5
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096818031296917619",
+   "authorId": "1520325324457787393",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T04:29:10.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "en",
+   "text": "Here is the EVIDENCE that Elon Musk rigged the 2024 election for Trump and some GOP members of Congress!  DEMAND that our Democratic lawmakers immediately EXPOSE this!  The Trump Regime is ILLEGITIMATE and ILLEGALLY wielding power!  They are ACTIVELY attempting to rig the https:/",
+   "metrics": {
+    "likes": 0,
+    "retweets": 0,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 35
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096754407325004184",
+   "authorId": "809235361033424897",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-07T00:16:21.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "en",
+   "text": "Black can't have NDA's with minors.\nChildren can't sign contracts https://t.co/Dey9tspkfP",
+   "metrics": {
+    "likes": 0,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 24
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096731580119077251",
+   "authorId": "54455998",
+   "handle": null,
+   "rosters": [],
+   "status": null,
+   "createdAt": "2026-09-06T22:45:38.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "en",
+   "text": "We need you to go back to Peru https://t.co/QhAzbgpFEm",
+   "metrics": {
+    "likes": 3,
+    "retweets": 1,
+    "replies": 0,
+    "quotes": 0,
+    "impressions": 45
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  },
+  {
+   "id": "2096721116433957340",
+   "authorId": "18120497",
+   "handle": "RobertGarcia",
+   "rosters": [],
+   "status": "house",
+   "createdAt": "2026-09-06T22:04:04.000Z",
+   "type": "quote",
+   "refId": "2096709759143485691",
+   "lang": "en",
+   "text": "When we flip the house and I lead the oversight committee, anyone who abused women and children with or through Epstein can expect us to come for you - HARD. https://t.co/xnjPL7RpTn",
+   "metrics": {
+    "likes": 489,
+    "retweets": 111,
+    "replies": 111,
+    "quotes": 10,
+    "impressions": 14244
+   },
+   "sources": [
+    {
+     "kind": "quotes",
+     "key": "epstein-files",
+     "query": "quotes_of_tweet_id:2096709759143485691 -is:retweet",
+     "sort": "recency",
+     "fetchedAt": "2026-09-10T08:04:24.600Z"
+    }
+   ]
+  }
+ ],
+ "units": 73,
+ "usd": 0.365,
+ "cacheHits": 3
+}

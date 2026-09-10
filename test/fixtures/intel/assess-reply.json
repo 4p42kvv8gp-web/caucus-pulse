@@ -1,0 +1,100 @@
+{
+ "id": "msg_fixture",
+ "type": "message",
+ "role": "assistant",
+ "model": "claude-opus-5",
+ "stop_reason": "end_turn",
+ "usage": {
+  "input_tokens": 11800,
+  "cache_read_input_tokens": 2100,
+  "cache_creation_input_tokens": 0,
+  "output_tokens": 1900,
+  "server_tool_use": {
+   "web_search_requests": 1,
+   "web_fetch_requests": 1
+  }
+ },
+ "content": [
+  {
+   "type": "text",
+   "text": "I will check the primary source."
+  },
+  {
+   "type": "server_tool_use",
+   "id": "srvtoolu_1",
+   "name": "web_search",
+   "input": {
+    "query": "Epstein files discharge petition Massie"
+   }
+  },
+  {
+   "type": "web_search_tool_result",
+   "tool_use_id": "srvtoolu_1",
+   "content": [
+    {
+     "type": "web_search_result",
+     "url": "https://www.politico.com/news/2026/09/05/epstein-files-discharge-petition",
+     "title": "Discharge petition on Epstein files nears 218",
+     "encrypted_content": "x",
+     "page_age": "September 5, 2026"
+    },
+    {
+     "type": "web_search_result",
+     "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
+     "title": "H.R.4405 - Epstein Files Transparency Act",
+     "encrypted_content": "y",
+     "page_age": null
+    }
+   ]
+  },
+  {
+   "type": "server_tool_use",
+   "id": "srvtoolu_2",
+   "name": "web_fetch",
+   "input": {
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405"
+   }
+  },
+  {
+   "type": "web_fetch_tool_result",
+   "tool_use_id": "srvtoolu_2",
+   "content": {
+    "type": "web_fetch_result",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405",
+    "content": {
+     "type": "document",
+     "source": {
+      "type": "text",
+      "media_type": "text/plain",
+      "data": "H.R.4405 ..."
+     },
+     "title": "H.R.4405 - Epstein Files Transparency Act",
+     "citations": {
+      "enabled": true
+     }
+    },
+    "retrieved_at": "2026-09-10T07:40:00Z"
+   }
+  },
+  {
+   "type": "server_tool_use",
+   "id": "srvtoolu_3",
+   "name": "web_fetch",
+   "input": {
+    "url": "https://www.politico.com/news/2026/09/05/epstein-files-discharge-petition"
+   }
+  },
+  {
+   "type": "web_fetch_tool_result",
+   "tool_use_id": "srvtoolu_3",
+   "content": {
+    "type": "web_fetch_tool_result_error",
+    "error_code": "url_not_accessible"
+   }
+  },
+  {
+   "type": "text",
+   "text": "{\"oneLiner\":\"Democrats are pushing the Epstein files discharge petition while the GOP stays quiet in the sample.\",\"frames\":{\"ours\":\"Transparency: release the files.\",\"theirs\":null,\"third\":\"Procedural horse race over the petition count.\"},\"gopAnswering\":[{\"id\":\"999999\",\"answersCaucusPostId\":\"2094905288625446994\",\"why\":\"not in pack\"}],\"claims\":[{\"text\":\"The Epstein Files Transparency Act is H.R.4405.\",\"status\":\"confirmed\",\"source\":{\"kind\":\"document\",\"url\":\"https://www.congress.gov/bill/119th-congress/house-bill/4405\",\"postId\":null,\"quote\":\"H.R.4405\"},\"assertedBy\":[\"@RoKhanna\"]},{\"text\":\"The discharge petition is close to 218 signatures.\",\"status\":\"confirmed\",\"source\":{\"kind\":\"article\",\"url\":\"https://www.politico.com/news/2026/09/05/epstein-files-discharge-petition\",\"postId\":null,\"quote\":null},\"assertedBy\":[\"@RoKhanna\"]},{\"text\":\"A reporter says leadership is whipping against it.\",\"status\":\"confirmed\",\"source\":{\"kind\":\"press-post\",\"url\":null,\"postId\":\"2097939847776534961\",\"quote\":null},\"assertedBy\":[]},{\"text\":\"Members say the files will be released this month.\",\"status\":\"reported\",\"source\":{\"kind\":\"member-post\",\"url\":null,\"postId\":\"2094905288625446994\",\"quote\":null},\"assertedBy\":[\"@SeanCasten\"]},{\"text\":\"Something with a made-up id.\",\"status\":\"reported\",\"source\":{\"kind\":\"press-post\",\"url\":null,\"postId\":\"424242\",\"quote\":null},\"assertedBy\":[]},{\"text\":\"Turnout was 45 percent.\",\"status\":\"circulating-unverified\",\"source\":{\"kind\":\"none\",\"url\":null,\"postId\":null,\"quote\":null},\"assertedBy\":[],\"count\":45}],\"hole\":{\"unansweredGopClaim\":null,\"unaddressedPressQuestion\":\"Will leadership schedule a vote?\"},\"suggestedLine\":{\"postId\":\"2097939847776534961\",\"handle\":\"@reporter\",\"text\":\"not a caucus post\"},\"whatsNew\":[\"Petition count moved.\"],\"couldNotVerify\":[\"Whether the vote is scheduled.\"],\"citedIds\":[\"2094905288625446994\",\"2097939847776534961\",\"31337\"],\"confidence\":\"high\",\"score\":0.9}"
+  }
+ ]
+}

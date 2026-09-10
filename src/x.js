@@ -136,7 +136,12 @@ export async function userTweetsPage(userId, { startTime, endTime, paginationTok
 // Pagination uses next_token (search's name for it; the timeline endpoints
 // call it pagination_token). On 429 the reset time is returned like
 // userTweetsPage so the caller can wait instead of giving up.
-export async function searchRecent(query, { maxResults = 100, nextToken, startTime, endTime, expandAuthors = false } = {}) {
+//
+// sortOrder ('recency' | 'relevancy') is sent only when given: the narrative
+// layer's relevancy page reaches across the whole 7-day window instead of
+// the newest minutes. Omitted, the endpoint's default (recency) applies and
+// the request is byte-identical to what it always was.
+export async function searchRecent(query, { maxResults = 100, nextToken, startTime, endTime, expandAuthors = false, sortOrder } = {}) {
   const params = new URLSearchParams({
     query,
     max_results: String(Math.min(100, Math.max(10, maxResults))),
@@ -145,6 +150,10 @@ export async function searchRecent(query, { maxResults = 100, nextToken, startTi
   if (expandAuthors) {
     params.set('expansions', 'author_id');
     params.set('user.fields', 'username,name,verified,public_metrics');
+  }
+  if (sortOrder) {
+    if (!['recency', 'relevancy'].includes(sortOrder)) throw new Error(`searchRecent: sortOrder "${sortOrder}" is not recency|relevancy`);
+    params.set('sort_order', sortOrder);
   }
   if (startTime) params.set('start_time', startTime);
   if (endTime) params.set('end_time', endTime);
@@ -169,14 +178,19 @@ export async function searchRecent(query, { maxResults = 100, nextToken, startTi
 
 // Batched metrics re-read: up to 100 ids per request; each returned tweet is
 // one post read. Deleted/protected tweets simply don't come back.
-export async function lookupTweets(ids) {
-  if (!ids.length) return { metricsById: new Map(), usage: 0 };
+//
+// `fields` widens tweet.fields for callers that need the text too (the
+// narrative layer re-reading a post a newsletter cited); the default stays
+// the metrics-only read the nightly refresh has always made, and the raw
+// objects come back in `tweets` either way.
+export async function lookupTweets(ids, { fields = 'public_metrics' } = {}) {
+  if (!ids.length) return { metricsById: new Map(), tweets: [], usage: 0 };
   const params = new URLSearchParams({
     ids: ids.slice(0, 100).join(','),
-    'tweet.fields': 'public_metrics'
+    'tweet.fields': fields
   });
   const res = await authFetch(`${API}/tweets?${params}`);
-  if (res.status === 429) return { rateLimited: true, metricsById: new Map(), usage: 0 };
+  if (res.status === 429) return { rateLimited: true, metricsById: new Map(), tweets: [], usage: 0 };
   if (!res.ok) await fail(res, 'tweets lookup');
   const body = await res.json();
   const metricsById = new Map((body.data || []).map((t) => {
@@ -187,7 +201,106 @@ export async function lookupTweets(ids) {
       bookmarks: m.bookmark_count ?? 0, impressions: m.impression_count ?? 0
     }];
   }));
-  return { metricsById, usage: body.data?.length || 0 };
+  return { metricsById, tweets: body.data || [], usage: body.data?.length || 0 };
+}
+
+function rateHeaders(res) {
+  const remaining = Number(res.headers.get('x-rate-limit-remaining') ?? NaN);
+  const resetAt = Number(res.headers.get('x-rate-limit-reset') ?? NaN) * 1000 || null;
+  return { remaining: Number.isFinite(remaining) ? remaining : null, resetAt };
+}
+
+// ── Narrative-layer endpoints (docs/NARRATIVE_INTELLIGENCE.md §5) ──────────
+// Each reports `usage` so src/intel-budget.js can meter it; none adds
+// expansions; every one sets max_results explicitly; none follows a page
+// token on its own — the caller decides whether a second page is worth paying for.
+
+// GET /2/tweets/counts/recent — volume matching a query over the last 7
+// days, no posts returned. Billed like one post read PER REQUEST, which is
+// why next_token is never followed here and `minute` granularity (a 7-day
+// minute query pages through many billed requests) is refused outright.
+// Hour granularity is meant to be called with startTime = now-72h.
+export async function countsRecent(query, { granularity = 'day', startTime, endTime } = {}) {
+  if (!['day', 'hour'].includes(granularity)) {
+    throw new Error(`countsRecent: granularity "${granularity}" refused (day or hour only — minute pages through billed requests)`);
+  }
+  const params = new URLSearchParams({ query, granularity });
+  if (startTime) params.set('start_time', startTime);
+  if (endTime) params.set('end_time', endTime);
+  const res = await authFetch(`${API}/tweets/counts/recent?${params}`);
+  const { resetAt } = rateHeaders(res);
+  if (res.status === 429) return { rateLimited: true, resetAt, buckets: [], total: 0, usage: { requests: 0 } };
+  if (!res.ok) await fail(res, 'counts recent');
+  const body = await res.json();
+  const buckets = (body.data || []).map((b) => ({ start: b.start, end: b.end, count: b.tweet_count ?? 0 }));
+  const total = body.meta?.total_tweet_count ?? buckets.reduce((a, b) => a + b.count, 0);
+  return { rateLimited: false, resetAt, buckets, total, usage: { requests: 1 } };
+}
+
+// GET /2/users?ids= — $0.01 per user returned, 100 ids per request. Same
+// user.fields as lookupUsersByHandles (verified_type carries `government`,
+// which the claim validator treats as official).
+export async function lookupUsersByIds(ids) {
+  const valid = [...new Set(ids.filter((id) => /^[0-9]{1,25}$/.test(String(id))))];
+  const users = [];
+  let n = 0;
+  for (let i = 0; i < valid.length; i += 100) {
+    const params = new URLSearchParams({
+      ids: valid.slice(i, i + 100).join(','),
+      'user.fields': 'username,name,verified,verified_type,public_metrics,created_at'
+    });
+    const res = await authFetch(`${API}/users?${params}`);
+    if (res.status === 429) return { rateLimited: true, resetAt: rateHeaders(res).resetAt, users, usage: { users: n } };
+    if (!res.ok) await fail(res, 'users lookup');
+    const body = await res.json();
+    users.push(...(body.data || []));
+    n += body.data?.length || 0;
+  }
+  return { rateLimited: false, resetAt: null, users, usage: { users: n } };
+}
+
+// GET /2/usage/tweets — free. X's own view of the project's post reads.
+// Pay-per-use projects currently return only the cumulative counter since
+// the cap reset day (`project_usage`); `days[]` fills in when the endpoint
+// returns daily_project_usage. Both shapes are handled so the reconcile step
+// (intel-budget.reconcile) can compare whichever is available to the ledger.
+export async function usageTweets(days = 2) {
+  const res = await authFetch(`${API}/usage/tweets?days=${Math.max(1, Math.min(90, Number(days) || 2))}`);
+  if (!res.ok) await fail(res, 'usage tweets');
+  const body = await res.json();
+  const d = body.data || {};
+  const daily = [];
+  for (const proj of d.daily_project_usage || []) {
+    for (const u of proj.usage || []) daily.push({ date: String(u.date).slice(0, 10), posts: Number(u.usage) || 0 });
+  }
+  return {
+    days: daily,
+    projectUsage: d.project_usage != null ? Number(d.project_usage) : null,
+    projectCap: d.project_cap != null ? Number(d.project_cap) : null,
+    capResetDay: d.cap_reset_day != null ? Number(d.cap_reset_day) : null
+  };
+}
+
+// GET /2/tweets/:id/quote_tweets — $0.005 per post; used only when the
+// `quotes_of_tweet_id:` search operator probe failed (data/narratives/probes.json).
+export async function quoteTweetsPage(id, { maxResults = 50, paginationToken } = {}) {
+  const params = new URLSearchParams({
+    max_results: String(Math.min(100, Math.max(10, maxResults))),
+    'tweet.fields': TWEET_FIELDS
+  });
+  if (paginationToken) params.set('pagination_token', paginationToken);
+  const res = await authFetch(`${API}/tweets/${id}/quote_tweets?${params}`);
+  const { resetAt } = rateHeaders(res);
+  if (res.status === 429) return { rateLimited: true, resetAt, tweets: [], nextToken: null, usage: 0 };
+  if (!res.ok) await fail(res, `quote tweets ${id}`);
+  const body = await res.json();
+  return {
+    rateLimited: false,
+    resetAt,
+    tweets: body.data || [],
+    nextToken: body.meta?.next_token || null,
+    usage: body.data?.length || 0
+  };
 }
 
 // Resolve handles → user objects, 100 per request ($0.01 per user returned —

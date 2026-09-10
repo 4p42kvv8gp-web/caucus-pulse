@@ -56,89 +56,201 @@
       "workspace_id": "wrkspc_011YNxhjEtK5CWK2AmBBQ7hq"
     }
   },
+  "intel": {
+    "_comment": "Narrative intelligence caps (docs/NARRATIVE_INTELLIGENCE.md §11, §13.1). Units are $0.005 post-read equivalents (a user read = 2, a counts request = 1). Env overrides: X_INTEL_NIGHTLY_CAP (0 = kill switch), X_INTEL_ONDEMAND_CAP, INTEL_MODEL. Never runs inside poll.js.",
+    "nightly_cap": 2500,
+    "ondemand_cap": 1000,
+    "per_question_cap": 300,
+    "story": {
+      "counts": 6,
+      "search_posts": 200,
+      "quotes": 50,
+      "user_lookups": 20,
+      "ceiling": 300,
+      "week_ceiling": 1000
+    },
+    "counts_stories": 30,
+    "sample_stories": 5,
+    "phrases_outside": 12,
+    "lists_cap": 1400,
+    "list_pages": {
+      "house-gop": 3,
+      "cap-hill-reporters": 3,
+      "congressional-media": 2,
+      "house-news": 2,
+      "labor-reporters": 1,
+      "ny-members": 1,
+      "overlapping-electeds": 1,
+      "ny-news": 1,
+      "economists": 0,
+      "international-news": 0,
+      "gop-leadership": 0,
+      "national-press": 0,
+      "influencers": 0
+    },
+    "user_lookups_per_night": 50,
+    "incidents": {
+      "search_posts": 50,
+      "user_lookups": 10,
+      "cap": 200
+    },
+    "control_query": "(Congress OR \"House Democrats\") -is:retweet lang:en",
+    "exclude_from": [
+      "grok"
+    ],
+    "exclude": [
+      "dolly-parton-tribute",
+      "sept-11-anniversary"
+    ],
+    "context_exclude_senders": [
+      "press@mail.whitehouse.gov"
+    ],
+    "web_tools": true,
+    "web_uses": {
+      "search": 3,
+      "fetch": 4
+    },
+    "ladder": {
+      "full": 0.7,
+      "counts_only": 0.85,
+      "off": 0.95
+    },
+    "list_keep_days": 14,
+    "evidence_keep_days": 14
+  },
   "narrative_lists": {
-    "_comment": "Public X Lists the narrative layer may scan (owner: the credential account). role: who is on it; priority 1 = scan first (Democratic side and the press that covers it), 3 = counter-message only. Reads are billed per post returned and go through the daily ledger.",
+    "_comment": "Public X Lists the narrative layer may scan (owner: the credential account). role: who is on it; priority 1 = scan first (Democratic side and the press that covers it), 3 = counter-message only. Reads are billed per post returned and go through the daily ledger. voice: which narrative voice the List's authors speak for (caucus | gop | press | delegation | expert | organic). scan: whether the nightly intel run captures the List's timeline (pages per List in intel.list_pages).",
     "house-democrats": {
       "id": "6136726",
       "name": "House Democrats",
       "owner": "HouseDemocrats",
-      "role": "official accounts of House Democrats in the 119th Congress (218) \u2014 the authoritative official-handle roster; cross-check for data/authors.json",
-      "priority": 1
+      "role": "official accounts of House Democrats in the 119th Congress (218) — the authoritative official-handle roster; cross-check for data/authors.json",
+      "priority": 1,
+      "voice": "caucus",
+      "scan": false
     },
     "congressional-media": {
       "id": "31717985",
       "name": "Congressional Media",
       "owner": "cspan",
       "role": "journalists who cover Congress (142)",
-      "priority": 1
+      "priority": 1,
+      "voice": "press",
+      "scan": true
     },
     "cap-hill-reporters": {
       "id": "821438778015436801",
       "name": "Cap Hill Reporters",
       "owner": "MattVerghese",
       "role": "Capitol Hill reporters (372)",
-      "priority": 1
+      "priority": 1,
+      "voice": "press",
+      "scan": true
     },
     "members-of-congress": {
       "id": "34179516",
       "name": "Members of Congress",
       "owner": "cspan",
-      "role": "all members incl. Republicans and senators (559) \u2014 reference only; the product stays focused on House Democrats",
-      "priority": 3
+      "role": "all members incl. Republicans and senators (559) — reference only; the product stays focused on House Democrats",
+      "priority": 3,
+      "voice": null,
+      "scan": false
     },
     "house-news": {
       "id": "1653395694990901254",
       "name": "House News",
       "role": "reporters covering the House",
-      "priority": 1
+      "priority": 1,
+      "voice": "press",
+      "scan": true
     },
     "labor-reporters": {
       "id": "1678832953365786635",
       "name": "Labor Reporters",
       "role": "reporters",
-      "priority": 1
+      "priority": 1,
+      "voice": "press",
+      "scan": true
     },
     "ny-news": {
       "id": "1653421597959569408",
       "name": "New York News",
       "role": "NY press",
-      "priority": 2
+      "priority": 2,
+      "voice": "press",
+      "scan": true
     },
     "ny-members": {
       "id": "2028897932611580052",
       "name": "NY Members",
       "role": "NY delegation",
-      "priority": 2
+      "priority": 2,
+      "voice": "delegation",
+      "scan": true
     },
     "overlapping-electeds": {
       "id": "1682462975750176768",
       "name": "Overlapping Electeds",
       "role": "NY-08 electeds (the Leader's district)",
-      "priority": 2
+      "priority": 2,
+      "voice": "delegation",
+      "scan": true
     },
     "economists": {
       "id": "1666515728168525824",
       "name": "Economists",
       "role": "expert voices",
-      "priority": 2
+      "priority": 2,
+      "voice": "expert",
+      "scan": false
     },
     "international-news": {
       "id": "2028900367082148207",
       "name": "International News",
       "role": "foreign press",
-      "priority": 3
+      "priority": 3,
+      "voice": "press",
+      "scan": false
     },
     "house-gop": {
       "id": "1844074661119717599",
       "name": "HR Officials/Campaigns",
       "role": "House Republicans (counter-message only)",
-      "priority": 3
+      "priority": 3,
+      "voice": "gop",
+      "scan": true
     },
     "biden-administration": {
       "id": "1666515827682582531",
       "name": "Biden Administration",
       "role": "stale; not scanned by default",
-      "priority": 4
+      "priority": 4,
+      "voice": null,
+      "scan": false
+    },
+    "gop-leadership": {
+      "id": "",
+      "name": "GOP leadership & committees",
+      "role": "Speaker, Majority Leader, Whip, NRCC/RNC, committee GOP accounts — OWNER: create a public List and paste its id",
+      "priority": 1,
+      "voice": "gop",
+      "scan": false
+    },
+    "national-press": {
+      "id": "",
+      "name": "National press",
+      "role": "national outlets, White House and Hill reporters not on Cap Hill Reporters — OWNER: public List id",
+      "priority": 2,
+      "voice": "press",
+      "scan": false
+    },
+    "influencers": {
+      "id": "",
+      "name": "Influencers",
+      "role": "high-reach commentators the office tracks — OWNER: public List id (one entry per List is fine: influencers-left, influencers-right)",
+      "priority": 2,
+      "voice": "organic",
+      "scan": false
     }
   }
 }

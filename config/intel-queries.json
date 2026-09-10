@@ -1,0 +1,39 @@
+{
+  "_comment": "Owner-editable inputs for the narrative-intelligence layer (src/intel.js, docs/NARRATIVE_INTELLIGENCE.md §13.3). pin: stories.json placement keys always sampled. exclude: placement keys never probed (also settings.intel.exclude). stories: stories the cluster pipeline never surfaced, probed like a placed story. queries: saved recent-search queries with REAL X operators only (no from:list pseudo-operator), one recency page each per night. from_sets: from: handle sets used when a List is missing or private (≤28 handles per query).",
+  "pin": [],
+  "exclude": [],
+  "stories": [
+    {
+      "key": "anthropic-researcher-resignation",
+      "label": "Coxon / Anthropic resignation",
+      "macro": "tech",
+      "aliases": ["Coxon", "Hubinger", "Anthropic resignation", "Anthropic superintelligence"]
+    }
+  ],
+  "queries": [
+    {
+      "key": "district-emergency",
+      "label": "Any district emergency",
+      "scope": "incidents",
+      "query": "(shelter OR evacuation OR \"active shooter\" OR \"shelter in place\") -is:retweet lang:en",
+      "max_results": 50
+    },
+    {
+      "key": "flooding",
+      "label": "Flooding",
+      "scope": "incidents",
+      "query": "(flood OR flooding) (shelter OR OEM OR evacuate OR evacuation OR evacuations) -is:retweet lang:en",
+      "max_results": 50
+    },
+    {
+      "key": "wildfire",
+      "label": "Wildfire",
+      "scope": "incidents",
+      "query": "(wildfire OR \"brush fire\") (evacuate OR evacuation OR evacuations OR contained OR containment) -is:retweet lang:en",
+      "max_results": 50
+    }
+  ],
+  "from_sets": {
+    "gop-leadership": ["SpeakerJohnson", "SteveScalise", "GOPLeader", "NRCC", "GOP"]
+  }
+}

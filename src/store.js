@@ -34,11 +34,31 @@ export function saveState(state) {
   writeJSON(statePath, state);
 }
 
-export function addUsage(state, { posts = 0, users = 0 }) {
+// Every X read lands here before any output is written. `requests` meters
+// endpoints billed per request rather than per object (counts). All fields
+// stay flat numbers on the day object so src/merge-state.js keeps summing
+// them field by field — a nested object there would merge to NaN. When
+// purpose is 'intel' the narrative layer's share is also tracked flat, so
+// the report can split capture from intelligence spend.
+export function addUsage(state, { posts = 0, users = 0, requests = 0, purpose } = {}) {
   const day = etDate();
   const u = (state.usage[day] ||= { posts: 0, users: 0 });
   u.posts += posts;
   u.users += users;
+  if (requests) u.requests = (u.requests || 0) + requests;
+  if (purpose === 'intel') {
+    if (posts) u.intelPosts = (u.intelPosts || 0) + posts;
+    if (users) u.intelUsers = (u.intelUsers || 0) + users;
+    if (requests) u.intelRequests = (u.intelRequests || 0) + requests;
+  }
+}
+
+// Objects read today: posts + users + per-request calls (one object each in
+// the ledger; the dollar view — a user is 2×, a counts request 1× — lives in
+// estCost and the intel spend files).
+export function usedToday(state, day = etDate()) {
+  const u = state.usage?.[day] || {};
+  return (u.posts || 0) + (u.users || 0) + (u.requests || 0);
 }
 
 // Daily X read ceiling. config/settings.json "daily_read_budget" is the
@@ -59,12 +79,19 @@ export function dailyBudget() {
 }
 
 export function budgetExhausted(state) {
-  const u = state.usage[etDate()] || { posts: 0, users: 0 };
-  return u.posts + u.users >= dailyBudget();
+  return usedToday(state) >= dailyBudget();
 }
 
-export function estCost({ posts = 0, users = 0 }) {
-  return posts * 0.005 + users * 0.01;
+export function estCost({ posts = 0, users = 0, requests = 0 }) {
+  return posts * 0.005 + users * 0.01 + requests * 0.005;
+}
+
+// What is left of today's ceiling — the number the narrative layer plans
+// against (src/intel-budget.js) before it reserves anything.
+export function headroom(state) {
+  const used = usedToday(state);
+  const budget = dailyBudget();
+  return { used, budget, remaining: Math.max(0, budget - used) };
 }
 
 // Ids captured in the last `days` archive files — the dedupe set for the

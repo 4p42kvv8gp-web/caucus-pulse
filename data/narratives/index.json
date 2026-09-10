@@ -1,0 +1,66 @@
+{
+ "generatedAt": "2026-09-10T08:04:22.865Z",
+ "date": "2026-09-10",
+ "mode": "full",
+ "reason": "(14351 used + 9939 reserve + 2500 cap) / 50000 = 0.536 < 0.7",
+ "reconcile": {
+  "ledger": 14351,
+  "xUtcDay": null,
+  "xProjectUsage": 12700,
+  "basis": "project-usage-since-reset",
+  "used": 14351,
+  "deltaPct": -1.5,
+  "warn": false
+ },
+ "reserve": 9939,
+ "cap": 2500,
+ "stories": [
+  {
+   "key": "epstein-files",
+   "label": "Epstein files transparency",
+   "macro": "democracy",
+   "status": "steady",
+   "flags": [
+    "manufactured?",
+    "origin-beyond-window"
+   ],
+   "lift": 0.32,
+   "gopPosts": 0,
+   "pressPosts": 1,
+   "newsletterHits": 2,
+   "confirmed": 0,
+   "reported": 0,
+   "unverified": 0,
+   "spendUnits": 73,
+   "updatedAt": "2026-09-10T08:04:22.865Z",
+   "date": "2026-09-10",
+   "assessmentSkipped": "api-error-400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+  }
+ ],
+ "phrasesOutside": {},
+ "incidents": [],
+ "skipped": [],
+ "totals": {
+  "units": 73,
+  "usd": 0.365,
+  "byPurpose": {
+   "intel": 73
+  },
+  "byList": {},
+  "byStory": {
+   "epstein-files": 73
+  },
+  "byStage": {
+   "stories": 59,
+   "users": 14
+  },
+  "cacheHits": 10,
+  "refusals": 0,
+  "claude": {
+   "calls": 0,
+   "cacheRead": 0,
+   "input": 0,
+   "output": 0
+  }
+ }
+}

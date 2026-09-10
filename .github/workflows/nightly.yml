@@ -1,7 +1,11 @@
 # Nightly pipeline — 07:30 UTC (2:30/3:30am ET, after the ET day closes):
-# 24h engagement refresh → Claude batch classification → strategic-syntax
-# n-grams → rollups → daily report. Each stage reads the previous stage's
-# committed files, so a failed stage can be re-run with workflow_dispatch.
+# 24h engagement refresh → Claude batch classification → corrections →
+# strategic-syntax n-grams → story candidates → narrative intelligence
+# (src/intel.js: List scans, X counts/samples, one Claude assessment per
+# sampled story, all under settings.intel caps; X_INTEL_NIGHTLY_CAP=0 turns
+# it off) → incidents → rollups → daily report → site data. Each stage reads
+# the previous stage's committed files, so a failed stage can be re-run with
+# workflow_dispatch.
 name: nightly
 on:
   schedule:
@@ -26,7 +30,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Refresh, classify, mine syntax, roll up, report
+      - name: Refresh, classify, mine syntax, stories, intel, roll up, report
         # Claude auth: the job's OIDC token is exchanged for a short-lived
         # Anthropic access token in-process; no ANTHROPIC_API_KEY secret.
         env:

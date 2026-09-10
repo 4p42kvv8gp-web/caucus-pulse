@@ -1,0 +1,946 @@
+{
+ "key": "epstein-files",
+ "label": "Epstein files transparency",
+ "macro": "democracy",
+ "kind": "story",
+ "candidateKey": "epstein-files",
+ "candidateKeys": [
+  "epstein-files",
+  "epstein-investigation"
+ ],
+ "aliases": [
+  "Epstein files",
+  "Epstein Files Transparency Act",
+  "Massie",
+  "discharge petition",
+  "Epstein",
+  "Leon Black",
+  "Oversight Epstein subpoena"
+ ],
+ "queries": {
+  "organic": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en",
+  "originals": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet",
+  "sample": "(\"Epstein files\" OR \"Epstein Files Transparency Act\" OR \"Massie\" OR \"discharge petition\" OR \"Epstein\" OR \"Leon Black\" OR \"Oversight Epstein subpoena\" OR \"Epstein files transparency\") lang:en -is:retweet -from:grok",
+  "control": "(Congress OR \"House Democrats\") -is:retweet lang:en",
+  "aliases": [
+   "Epstein files",
+   "Epstein Files Transparency Act",
+   "Massie",
+   "discharge petition",
+   "Epstein",
+   "Leon Black",
+   "Oversight Epstein subpoena",
+   "Epstein files transparency"
+  ],
+  "dropped": []
+ },
+ "generatedAt": "2026-09-10T08:04:22.865Z",
+ "date": "2026-09-10",
+ "mode": "full",
+ "inputsHash": "7af5c76c004cb1dd5bb243c173d2d812fa5956a6",
+ "status": "steady",
+ "flags": [
+  "manufactured?",
+  "origin-beyond-window"
+ ],
+ "windows": {
+  "archive": [
+   "2026-09-04",
+   "2026-09-10"
+  ],
+  "lists": null,
+  "search": [
+   "2026-09-03",
+   "2026-09-10"
+  ],
+  "newsletter": "2026-09-10T07:01:36.820Z"
+ },
+ "measured": {
+  "caucus": {
+   "posts": {
+    "value": 15,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "originals": {
+    "value": 12,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "reposts": {
+    "value": 3,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "quotes": {
+    "value": 2,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "replies": {
+    "value": 0,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "accounts": {
+    "value": 12,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "originals48h": {
+    "value": 2,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "accounts48h": {
+    "value": 2,
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "carriers": {
+    "value": [
+     {
+      "id": "771152516",
+      "handle": "RoKhanna",
+      "posts": 3,
+      "originals": 1,
+      "engN": 11115,
+      "followers": 476131,
+      "roster": "caucus"
+     },
+     {
+      "id": "1602792195878047744",
+      "handle": "RepRobertGarcia",
+      "posts": 1,
+      "originals": 1,
+      "engN": 1884,
+      "followers": 77203,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "18120497",
+      "handle": "RobertGarcia",
+      "posts": 2,
+      "originals": 1,
+      "engN": 721,
+      "followers": 124127,
+      "roster": "caucus"
+     },
+     {
+      "id": "814179031956488192",
+      "handle": "CongressmanRaja",
+      "posts": 1,
+      "originals": 1,
+      "engN": 209,
+      "followers": 157759,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "851477335052140544",
+      "handle": "JasonCrowCO",
+      "posts": 1,
+      "originals": 1,
+      "engN": 155,
+      "followers": 35135,
+      "roster": "caucus"
+     },
+     {
+      "id": "1080584229510172678",
+      "handle": "RepPressley",
+      "posts": 1,
+      "originals": 1,
+      "engN": 150,
+      "followers": 496816,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "1067748650485497862",
+      "handle": "RepChrisPappas",
+      "posts": 1,
+      "originals": 1,
+      "engN": 79,
+      "followers": 18017,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "1075517806551154689",
+      "handle": "RepEscobar",
+      "posts": 1,
+      "originals": 1,
+      "engN": 32,
+      "followers": 82846,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "1052896620797460481",
+      "handle": "RepHoulahan",
+      "posts": 1,
+      "originals": 1,
+      "engN": 21,
+      "followers": 40333,
+      "roster": "house-democrats"
+     },
+     {
+      "id": "1339931490",
+      "handle": "RepRobinKelly",
+      "posts": 1,
+      "originals": 1,
+      "engN": 14,
+      "followers": 39002,
+      "roster": "house-democrats"
+     }
+    ],
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "topPost": {
+    "value": {
+     "id": "2095956575051506037",
+     "handle": "RoKhanna",
+     "engN": 11115
+    },
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "samples": {
+    "value": [
+     {
+      "id": "2095956575051506037",
+      "handle": "RoKhanna",
+      "at": "2026-09-04T19:26:03.000Z",
+      "text": "Leon Black is one of the most odious of the Epstein class. A lot of survivors have talked about the alleged abuse and trafficking that he’s undertaken. Todd Blanche refuses to take action.\n\nIt is time"
+     },
+     {
+      "id": "2096709759143485691",
+      "handle": "RepRobertGarcia",
+      "at": "2026-09-06T21:18:56.000Z",
+      "text": "When Oversight subpoenaed Leon Black for our Epstein investigation, he skipped the hearing and sued instead.\n\nMr. Black used NDAs to silence women. We need answers, and survivors need justice. https:/"
+     },
+     {
+      "id": "2096721116433957340",
+      "handle": "RobertGarcia",
+      "at": "2026-09-06T22:04:04.000Z",
+      "text": "When we flip the house and I lead the oversight committee, anyone who abused women and children with or through Epstein can expect us to come for you - HARD. https://t.co/xnjPL7RpTn"
+     }
+    ],
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "first": {
+    "value": {
+     "id": "2095560793265692971",
+     "handle": "RepEscobar",
+     "at": "2026-09-03T17:13:21.000Z"
+    },
+    "source": "archive (paid at capture)",
+    "units": 0
+   },
+   "members": {
+    "value": 12,
+    "source": "archive + authors.json",
+    "units": 0
+   },
+   "members48h": {
+    "value": 2,
+    "source": "archive + authors.json",
+    "units": 0
+   },
+   "cm": {
+    "value": [
+     5,
+     7,
+     2,
+     3,
+     2
+    ],
+    "source": "archive + authors.json",
+    "units": 0
+   },
+   "leadership": {
+    "value": 3,
+    "source": "archive + authors.json",
+    "units": 0
+   },
+   "unity": {
+    "value": {
+     "spread": 12,
+     "reach": 0.036,
+     "activeAccounts": 329
+    },
+    "source": "archive (members using a story alias ÷ active accounts in window)",
+    "units": 0
+   },
+   "dayOverDay": {
+    "value": -2,
+    "source": "archive (UTC days)",
+    "units": 0
+   }
+  },
+  "gop": {
+   "posts": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "originals": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "reposts": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "quotes": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "replies": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "accounts": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "originals48h": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "accounts48h": {
+    "value": 0,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "carriers": {
+    "value": [],
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "topPost": {
+    "value": null,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "samples": {
+    "value": [],
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "first": {
+    "value": null,
+    "source": "lists capture (house-gop)",
+    "units": 0
+   },
+   "sampleSize": {
+    "value": 0,
+    "source": "house-gop capture (all posts in window, any wording)",
+    "units": 0
+   },
+   "complete": {
+    "value": null,
+    "source": "data/lists/cursors.json",
+    "units": 0
+   },
+   "lagHours": {
+    "value": null,
+    "source": "first alias-matched GOP post − first caucus post",
+    "units": 0
+   },
+   "silent": {
+    "value": true,
+    "source": "no alias match in 0 captured GOP posts (sample complete: unknown)",
+    "units": 0
+   },
+   "quotesOfTop": {
+    "value": {
+     "posts": 1,
+     "accounts": 1,
+     "ofId": "2096709759143485691"
+    },
+    "source": "quotes of 2096709759143485691 via search",
+    "units": 8
+   }
+  },
+  "press": {
+   "posts": {
+    "value": 1,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "originals": {
+    "value": 1,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "reposts": {
+    "value": 0,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "quotes": {
+    "value": 0,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "replies": {
+    "value": 0,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "accounts": {
+    "value": 1,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "originals48h": {
+    "value": 0,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "accounts48h": {
+    "value": 0,
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "carriers": {
+    "value": [
+     {
+      "id": "15922214",
+      "handle": "rollcall",
+      "posts": 1,
+      "originals": 1,
+      "engN": 12,
+      "followers": 349188,
+      "roster": "congressional-media"
+     }
+    ],
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "topPost": {
+    "value": {
+     "id": "2096623254412591435",
+     "handle": "rollcall",
+     "engN": 12
+    },
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "samples": {
+    "value": [
+     {
+      "id": "2096623254412591435",
+      "handle": "rollcall",
+      "at": "2026-09-06T15:35:11.000Z",
+      "text": "Rep. Thomas Massie, R-Ky., is leading a push to sidestep House leaders and bring another bill to the floor, dubbing it the Epstein Files Transparency Act II. \nhttps://t.co/Gk87ElZS8P"
+     }
+    ],
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "first": {
+    "value": {
+     "id": "2096623254412591435",
+     "handle": "rollcall",
+     "at": "2026-09-06T15:35:11.000Z"
+    },
+    "source": "lists capture (none)",
+    "units": 0
+   },
+   "lists": {
+    "value": {},
+    "source": "lists capture",
+    "units": 0
+   },
+   "complete": {
+    "value": null,
+    "source": "data/lists/cursors.json",
+    "units": 0
+   },
+   "newsletterHits": {
+    "value": [
+     {
+      "sender": "Bloomberg",
+      "subject": "FOIA Files: Ghislaine Maxwell's prison transfer form released",
+      "date": "2026-08-31T18:00:18Z",
+      "why": "Maxwell records — the Epstein transparency thread",
+      "threadId": "1a058fabd02d6053"
+     },
+     {
+      "sender": "Bloomberg",
+      "subject": "Money Stuff: The Clippers Got Some Consulting",
+      "date": "2026-09-03T18:25:50Z",
+      "why": "Epstein item in Money Stuff",
+      "threadId": "1a068853102abde3"
+     }
+    ],
+    "source": "data/context.json (2026-09-10T07:01:36.820Z)",
+    "units": 0
+   },
+   "articles": {
+    "value": [],
+    "source": "web_fetch (filled by the assess step)",
+    "units": 0
+   }
+  },
+  "organic": {
+   "posts": {
+    "value": 137,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "originals": {
+    "value": 64,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "reposts": {
+    "value": 0,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "quotes": {
+    "value": 19,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "replies": {
+    "value": 73,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "accounts": {
+    "value": 115,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "originals48h": {
+    "value": 22,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "accounts48h": {
+    "value": 61,
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "carriers": {
+    "value": [
+     {
+      "id": "770373873036500992",
+      "handle": "Suzierizzo1",
+      "posts": 1,
+      "originals": 1,
+      "engN": 13642,
+      "followers": 234751,
+      "roster": null
+     },
+     {
+      "id": "914815520842616834",
+      "handle": "NancyMace",
+      "posts": 3,
+      "originals": 3,
+      "engN": 5151,
+      "followers": 565143,
+      "roster": null
+     },
+     {
+      "id": "1454341392801488902",
+      "handle": "epsteinsearchin",
+      "posts": 1,
+      "originals": 1,
+      "engN": 1614,
+      "followers": 96248,
+      "roster": null
+     },
+     {
+      "id": "1343597700542038017",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 621,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "1718851298",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 160,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "1200616796295847936",
+      "handle": null,
+      "posts": 1,
+      "originals": 0,
+      "engN": 92,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "1855357147506528256",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 83,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "311857483",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 54,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "1132002680996597762",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 51,
+      "followers": null,
+      "roster": null
+     },
+     {
+      "id": "417262550",
+      "handle": null,
+      "posts": 1,
+      "originals": 1,
+      "engN": 40,
+      "followers": null,
+      "roster": null
+     }
+    ],
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "topPost": {
+    "value": {
+     "id": "2096081366987178368",
+     "handle": "Suzierizzo1",
+     "engN": 13642
+    },
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "samples": {
+    "value": [
+     {
+      "id": "2096081366987178368",
+      "handle": "Suzierizzo1",
+      "at": "2026-09-05T03:41:55.000Z",
+      "text": "Imagine being Mike Johnson &amp; having to shut down the House of Representatives again after they just had a seven week paid summer vacation because you know that Rep.Thomas Massie &amp; Rep. Ro Khan"
+     },
+     {
+      "id": "2097792786296664110",
+      "handle": "NancyMace",
+      "at": "2026-09-09T21:02:30.000Z",
+      "text": "We signed the discharge petition for the Second Epstein Files Transparency Act.\n\nI support the release of the files 1000%.\n\nThe American people have waited long enough. https://t.co/4731DZWZlG"
+     },
+     {
+      "id": "2097174522382471532",
+      "handle": "epsteinsearchin",
+      "at": "2026-09-08T04:05:44.000Z",
+      "text": "Thomas Massie, on the House floor August 31: “It's been a year since the President signed the Epstein Files Transparency Act.”\n\nHe said the government still withheld over 3 million files.\n\n“We want pe"
+     }
+    ],
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "first": {
+    "value": {
+     "id": "2095481948277764447",
+     "handle": "BRICSvictory",
+     "at": "2026-09-03T12:00:03.000Z"
+    },
+    "source": "search sample (relevancy + recency pages, originals only)",
+    "units": 50
+   },
+   "countsToday": {
+    "value": 8193,
+    "source": "counts:originals:day",
+    "units": 0
+   },
+   "todayHours": {
+    "value": 8,
+    "source": "counts:originals:day (hours into the UTC day)",
+    "units": 0
+   },
+   "mean6d": {
+    "value": 25760.33,
+    "source": "counts:originals:day (mean of 6 full prior days)",
+    "units": 0
+   },
+   "lift": {
+    "value": 0.32,
+    "source": "counts:originals:day today ÷ mean6d",
+    "units": 0
+   },
+   "controlLift": {
+    "value": 0.42,
+    "source": "counts:control:day today ÷ mean6d",
+    "units": 0
+   },
+   "total7d": {
+    "value": 187501,
+    "source": "counts:originals:day",
+    "units": 0
+   },
+   "organicTotal7d": {
+    "value": 1000555,
+    "source": "counts:organic:day (retweets included)",
+    "units": 0
+   },
+   "buckets7d": {
+    "value": [
+     24746,
+     30496,
+     24539,
+     23456,
+     24521,
+     26127,
+     25423,
+     8193
+    ],
+    "source": "counts:originals:day",
+    "units": 0
+   },
+   "hourly72": {
+    "value": [
+     504,
+     570,
+     888,
+     1093,
+     1134,
+     1332,
+     1249,
+     1434,
+     1398,
+     1266,
+     1520,
+     1219,
+     1390,
+     1420,
+     1085,
+     1154,
+     1062,
+     944,
+     889,
+     785,
+     702,
+     627,
+     530,
+     410,
+     460,
+     609,
+     878,
+     1117,
+     1356,
+     1502,
+     1530,
+     1680,
+     1421,
+     1433,
+     1385,
+     1444,
+     1619,
+     1339,
+     1251,
+     1231,
+     1268,
+     1020,
+     920,
+     765,
+     631,
+     601,
+     489,
+     451,
+     518,
+     715,
+     806,
+     1033,
+     1226,
+     1401,
+     1335,
+     1449,
+     1502,
+     1298,
+     1449,
+     1302,
+     1274,
+     1436,
+     1303,
+     1210,
+     1307,
+     1248,
+     1176,
+     1028,
+     733,
+     837,
+     643,
+     50
+    ],
+    "source": "counts:originals:hour (72h)",
+    "units": 1
+   },
+   "hourAccel": {
+    "value": 0.61,
+    "source": "counts:originals:hour last 6h ÷ prior 18h per-6h rate",
+    "units": 1
+   },
+   "fadingDays": {
+    "value": 1,
+    "source": "counts:originals:day consecutive full days below mean6d",
+    "units": 0
+   },
+   "originalsShare": {
+    "value": 0.187,
+    "source": "counts originals ÷ organic (7d)",
+    "units": 0
+   },
+   "concentrationTop5": {
+    "value": 0.168,
+    "source": "search sample: top-5 accounts’ share of sampled posts",
+    "units": 50
+   },
+   "assistantShare": {
+    "value": 0,
+    "source": "search sample (@grok accounts excluded by query, so normally 0)",
+    "units": 50
+   },
+   "sampledOriginals": {
+    "value": 64,
+    "source": "search sample",
+    "units": 50
+   },
+   "carriersOffList": {
+    "value": 10,
+    "source": "search sample carriers with no roster",
+    "units": 50
+   },
+   "unresolvedAccounts": {
+    "value": 104,
+    "source": "search sample rows whose author no roster or lookup resolved",
+    "units": 14
+   },
+   "sampleWindows": {
+    "value": [
+     {
+      "sort": "relevancy",
+      "oldest": "2026-09-03T12:00:03.000Z",
+      "newest": "2026-09-10T02:03:26.000Z",
+      "n": 97
+     },
+     {
+      "sort": "recency",
+      "oldest": "2026-09-10T07:59:15.000Z",
+      "newest": "2026-09-10T08:04:13.000Z",
+      "n": 50
+     }
+    ],
+    "source": "search sample page spans",
+    "units": 50
+   }
+  },
+  "delegation": {
+   "posts": {
+    "value": 0,
+    "source": "lists capture (ny-members, overlapping-electeds)",
+    "units": 0
+   },
+   "accounts": {
+    "value": 0,
+    "source": "lists capture (ny-members, overlapping-electeds)",
+    "units": 0
+   },
+   "samples": {
+    "value": [],
+    "source": "lists capture",
+    "units": 0
+   }
+  },
+  "origin": {
+   "value": {
+    "voice": "organic",
+    "at": "2026-09-03T12:00:03.000Z",
+    "id": "2095481948277764447",
+    "handle": "BRICSvictory",
+    "byVoice": {
+     "organic": {
+      "at": "2026-09-03T12:00:03.000Z",
+      "id": "2095481948277764447",
+      "handle": "BRICSvictory"
+     },
+     "caucus": {
+      "at": "2026-09-03T17:13:21.000Z",
+      "id": "2095560793265692971",
+      "handle": "RepEscobar"
+     },
+     "press": {
+      "at": "2026-09-06T15:35:11.000Z",
+      "id": "2096623254412591435",
+      "handle": "rollcall"
+     }
+    },
+    "newsletterBeforeFirstMember": true,
+    "earliestNewsletter": "2026-08-31T18:00:18Z"
+   },
+   "source": "earliest row per voice inside that voice’s window (windows differ: archive 3 weeks, Lists ~800 posts, search 7 days)",
+   "units": 0
+  },
+  "windows": {
+   "archive": [
+    "2026-09-04",
+    "2026-09-10"
+   ],
+   "lists": null,
+   "search": [
+    "2026-09-03",
+    "2026-09-10"
+   ],
+   "newsletter": "2026-09-10T07:01:36.820Z"
+  }
+ },
+ "judged": null,
+ "assessmentSkipped": "api-error-400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
+ "claims": {
+  "confirmed": [],
+  "reported": [],
+  "unverified": [],
+  "false": []
+ },
+ "couldNotVerify": [],
+ "provenance": {
+  "ids": [],
+  "urls": [],
+  "evidenceFile": "data/narratives/epstein-files/2026-09-10.json",
+  "spend": {
+   "posts": 155,
+   "users": 7,
+   "requests": 3,
+   "units": 73,
+   "usd": 0.365
+  },
+  "cacheHits": 3,
+  "claude": {
+   "input": 0,
+   "cacheRead": 0,
+   "cacheWrite": 0,
+   "output": 0,
+   "calls": 0
+  },
+  "dropped": []
+ }
+}
