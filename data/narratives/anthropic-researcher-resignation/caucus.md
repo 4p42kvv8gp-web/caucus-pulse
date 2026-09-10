@@ -1,11 +1,11 @@
 # Anthropic researcher resignation — the caucus corpus (Task C)
 
-Generated 2026-09-10T07:18:11.167Z from `data/archive/2026-09-07..10.jsonl`, `data/authors.json`, `data/topics/*.json`, `data/stories.json`, `data/rollups/topic-days.json`. Machine-readable twin: `caucus.json` (same directory). Every number below is MEASURED from those files unless marked JUDGED or UNVERIFIED.
+Generated 2026-09-10T07:19:50.586Z from `data/archive/2026-09-07..10.jsonl`, `data/authors.json`, `data/topics/*.json`, `data/stories.json`, `data/rollups/topic-days.json`. Machine-readable twin: `caucus.json` (same directory). Every number below is MEASURED from those files unless marked JUDGED or UNVERIFIED.
 
 ## Headline numbers (MEASURED)
 
-- **Core posts: 34** (23 originals — 19 quotes, 4 tweets — and 11 retweets) from **26 accounts / 22 members**; 33 of them on the Tuesday ET day, 1 on Monday night (Lieu).
-- **Share of Tuesday 2026-09-09:** 33 / 625 caucus posts = **5.3%**; 22 / 532 originals = 4.1%; 22 / 187 members who posted that day = 11.8%.
+- **Core posts: 34** (23 originals — 19 quotes, 4 tweets — and 11 retweets) from **26 accounts / 21 members**; 33 of them on the Tuesday ET day, 1 on Monday night (Lieu).
+- **Share of Tuesday 2026-09-09:** 33 / 625 caucus posts = **5.3%**; 22 / 532 originals = 4.1%; 21 / 186 members who posted that day = 11.3%.
 - **Caucuses touched:** capac, cbc, chc, leadership, newdem, progressive — by posts: progressive 24 · capac 11 · newdem 11 · leadership 5 · chc 5 · (none) 4 · cbc 1 (members overlap; a member counts in every caucus tagged).
 - **Leading framing (JUDGED):** primary — regulation-plan 13 · existential-risk 10 · hearings-oversight 10 · surveillance-pre-crime 1; originals only — regulation-plan 11 · hearings-oversight 7 · existential-risk 5; any mention — regulation-plan 19 · existential-risk 19 · hearings-oversight 11 · other 5 · surveillance-pre-crime 1 · labor-economy 1.
 - **Classifier coverage:** 33 / 34 classified, 1 unclassified, 0 without a topics file; topic sets: tech 25 · tech/ai-policy 3 · congress-politics + tech 2 · unclassified 1 · democracy + tech 1 · climate + foreign-policy/middle-east + tech/ai-policy 1 · congress-politics/house-floor + tech/ai-policy 1. Only 5 carry `tech/ai-policy`; 28 are bare `tech`. **No emerging cluster, no stories.json candidate, no context.json hit, no line in reports/2026-09-09.md.**
@@ -44,7 +44,7 @@ Engagement is `metricsAtCapture` at the 2026-09-10 05:26–05:59Z capture; retwe
 | 25 | 09-09 16:58 | @RepBeccaB (Becca Balint) | official | progressive | quote of 2097497037956891126 | existential-risk (+regulation-plan) | tech | 173 / 27 / 30 / 1 | The time for burying our heads in the sand is over. If the people working directly on these technologies are saying this, it’s time to pump the brakes. We can’t let these massive AI companies literally gamble with the future of humanity. https://t.co/O6lGmg793U | `data/archive/2026-09-09.jsonl:297` |
 | 26 | 09-09 17:12 | @RepChuyGarcia (Jesús G. "Chuy" García) | official | progressive, chc | quote of 2097476196791709843 | regulation-plan (+labor-economy, existential-risk) | tech | 122 / 18 / 10 / 1 | The unchecked development of AI by reckless, for-profit corporations and Big Tech oligarchs threatens our economy, democracy, and humanity itself. Congress must act to ban AI superintelligence, pause data center construction and advanced AI development, mandate independent https://t.co/YhIzyJdNQs | `data/archive/2026-09-09.jsonl:310` |
 | 27 | 09-09 18:02 | @Rep_Magaziner (Seth Magaziner) | official | newdem | tweet | regulation-plan | tech | 22 / 5 / 4 / 1 | Everyone is talking about AI insiders saying their technology is a threat to humanity. Here is what Congress can do about it. https://t.co/sTFvQ2WVmq | `data/archive/2026-09-09.jsonl:351` |
-| 28 | 09-09 18:50 | @SenRubenGallego (Senator Ruben Gallego, Sen.) | official | — | quote of 2097476203863224394 | hearings-oversight (+existential-risk) | tech | 568 / 105 / 85 / 7 | Mitigating the risk of extinction from AI should be a global priority on par with pandemics and nuclear war. That's why I'm urging Senate leadership to move immediately to establish a bipartisan Senate Select Committee on Artificial Intelligence. We can’t wait for a https://t.co/4nnm1JXeLZ | `data/archive/2026-09-09.jsonl:375` |
+| 28 | 09-09 18:50 | @SenRubenGallego (Ruben Gallego, Sen.) | official | — | quote of 2097476203863224394 | hearings-oversight (+existential-risk) | tech | 568 / 105 / 85 / 7 | Mitigating the risk of extinction from AI should be a global priority on par with pandemics and nuclear war. That's why I'm urging Senate leadership to move immediately to establish a bipartisan Senate Select Committee on Artificial Intelligence. We can’t wait for a https://t.co/4nnm1JXeLZ | `data/archive/2026-09-09.jsonl:375` |
 | 29 | 09-09 18:55 | @RubenGallego (Ruben Gallego, Sen.) | personal | — | retweet of @SenRubenGallego | hearings-oversight (+existential-risk) | tech | (orig: 108 RT) | RT @SenRubenGallego: Mitigating the risk of extinction from AI should be a global priority on par with pandemics and nuclear war. That's w… | `data/archive/2026-09-09.jsonl:611` |
 | 30 | 09-09 18:57 | @RubenGallego (Ruben Gallego, Sen.) | personal | — | retweet of @igorbobic | hearings-oversight | tech | (orig: 23 RT) | RT @igorbobic: News: Democrats are gearing up for action on AI  Rep. Robert Garcia, top Dem on the House Oversight, says investigations wi… | `data/archive/2026-09-09.jsonl:380` |
 | 31 | 09-09 18:59 | @repdeliaramirez (Delia C. Ramirez) | official | progressive, chc | quote of 2097476196791709843 | hearings-oversight (+other) | tech | 116 / 26 / 25 / 3 | Employees are sounding the alarms: Big Tech doesn't care about protecting us from AI as long as they profit.    AI tools are being recklessly accelerated by big tech without guardrails, oversight, or accountability.   We must demand Congressional oversight and action to protect https://t.co/tfB4zzidCh | `data/archive/2026-09-09.jsonl:383` |
@@ -102,17 +102,17 @@ Monday 2026-09-08 ET: 1 core post at 22:56 (Lieu). Wednesday 2026-09-10 ET (6 po
 
 ## By caucus (MEASURED; members overlap)
 
-| caucus | posts | originals | accounts | members | members |
+| caucus | posts | originals | accounts | members | who |
 |---|---|---|---|---|---|
 | progressive | 24 | 17 | 18 | 15 | Ted Lieu, Lori Trahan, Dave Min, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna, Becca Balint, Jesús G. "Chuy" García, Delia C. Ramirez, Sara Jacobs |
 | capac | 11 | 7 | 6 | 4 | Ted Lieu, Dave Min, Pramila Jayapal, Ro Khanna |
 | newdem | 11 | 9 | 11 | 10 | Lori Trahan, Patrick Ryan, Joaquin Castro, Donald S. Beyer, Jr., Jennifer L. McClellan, Kelly Morrison, Bill Foster, Greg Landsman, Seth Magaziner, Sara Jacobs |
 | leadership | 5 | 3 | 3 | 2 | Ted Lieu, Lori Trahan |
 | chc | 5 | 4 | 5 | 5 | Lori Trahan, Joaquin Castro, Greg Casar, Jesús G. "Chuy" García, Delia C. Ramirez |
-| (none) | 4 | 1 | 2 | 2 | Ruben Gallego, Senator Ruben Gallego |
+| (none) | 4 | 1 | 2 | 1 | Ruben Gallego |
 | cbc | 1 | 1 | 1 | 1 | Jennifer L. McClellan |
 
-Account type: official 19 · personal 15. Chamber: house 30 · senate 4. Members (22): Becca Balint; Bill Foster; Christopher R. Deluzio; Dave Min; Delia C. Ramirez; Donald S. Beyer, Jr.; Greg Casar; Greg Landsman; Jennifer L. McClellan; Jesús G. "Chuy" García; Joaquin Castro; Kelly Morrison; Lori Trahan; Patrick Ryan; Pramila Jayapal; Ro Khanna; Ruben Gallego; Sara Jacobs; Senator Ruben Gallego; Seth Magaziner; Ted Lieu; Yassamin Ansari.
+Account type: official 19 · personal 15. Chamber: house 30 · senate 4. Members (21): Becca Balint; Bill Foster; Christopher R. Deluzio; Dave Min; Delia C. Ramirez; Donald S. Beyer, Jr.; Greg Casar; Greg Landsman; Jennifer L. McClellan; Jesús G. "Chuy" García; Joaquin Castro; Kelly Morrison; Lori Trahan; Patrick Ryan; Pramila Jayapal; Ro Khanna; Ruben Gallego; Sara Jacobs; Seth Magaziner; Ted Lieu; Yassamin Ansari.
 
 ## Framing (JUDGED)
 
@@ -129,11 +129,11 @@ regulation-plan leads by primary framing (13 of 34 posts; 11 of 23 originals), h
 
 Shape of the day (JUDGED):
 - Volume is concentrated in one ET day: every core post but Lieu's Monday-night kill-switch post lands on 2026-09-09, from 01:27 ET (Gallego RT) to 23:22 ET (Khanna).
-- Two bursts: 09:12-10:34 ET (Min x3, Ryan, Castro, Casar, Deluzio, Jayapal, official Min) and 16:40-19:53 ET (Morrison, Foster, Landsman, Balint, García, Magaziner, Gallego x3, Ramírez, Jacobs); the midday block (12:18-14:28) is Ansari, Beyer, Lieu, McClellan, Khanna.
+- Two bursts: 09:00-10:59 ET (9 posts, 6 originals: Dave Min, Patrick Ryan, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal) and 16:00-19:59 ET (12 posts, 9 originals: Kelly Morrison, Bill Foster, Greg Landsman, Becca Balint, Jesús G. "Chuy" García, Seth Magaziner, Ruben Gallego, Delia C. Ramirez, Sara Jacobs); the 11:00-14:59 block is 9 posts (Ted Lieu, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna), then nothing from 15:00 until Morrison at 16:40, and Khanna alone after 20:00.
 - Progressive Caucus members carry most of the originals; New Dems are the second block and supply the institutional/technical voices (Beyer, Foster, Landsman, Morrison, Ryan). CBC is one post (McClellan, 0 likes at capture). No dedicated CAPAC or leadership-only voice beyond members who also hold progressive tags.
 - The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No shared bill name or phrase crosses more than one member in the corpus.
 - Shared language that does cross members: "the call is coming from inside the house" (Trahan 07:01 ET, Morrison 16:40 ET); "pump the brakes" (Deluzio, Balint); "burying heads in the sand" (Deluzio, Balint — both quoting the same source 2097497037956891126); "gamble/gambling" (Balint echoing Coxon).
-- Engagement is top-heavy: Lieu's Monday post (8,007 likes) and Casar (6,991) hold most of it; Khanna (2,225), Ansari (2,130), Lieu official (1,276), Ryan (961), Trahan (897), Foster (754), Beyer (734) form the second tier. Ten originals are under 200 likes.
+- Engagement is top-heavy: @tedlieu 8,007 likes and @RepCasar 6,991 likes hold 53% of the originals' engagement; @RoKhanna 2,225, @RepYassAnsari 2,130, @RepTedLieu 1,276, @PatRyanUC 961, @RepLoriTrahan 897, @RepDonBeyer 734 form the second tier. 9 of 23 originals are under 200 likes at capture (@DaveMinCA 1, @CongressMin 134, @RepMcClellan 0, @RepGregLandsman 110, @RepBeccaB 173, @RepChuyGarcia 122, @Rep_Magaziner 22, @repdeliaramirez 116, @RepSaraJacobs 123).
 - The surveillance/"pre-crime" angle the owner flagged reached the corpus once (Castro RT of @MorePerfectUS at 09:32 ET) and did not spread inside the caucus, though x-search.json shows it as the second-largest retweet wave in the wider stream.
 
 Four core posts (Lieu's exhibit-739 post and its self-RT, Min's official post, Jacobs) are linked by timing/wording rather than an explicit reference; removing them leaves 30 core posts / 20 originals and does not change the leading framing.
@@ -174,7 +174,7 @@ Top originals by engagement at capture: @tedlieu 8007 likes / 1437 RTs (regulati
 - What 2097474365163999402 (quoted by @tedlieu as "exhibit number 739", posted 7 minutes before Coxon's post) shows — not in the corpus, no lookup bought.
 - Whether 2097476203863224394 is the second post of Coxon's thread carrying Hubinger's odds (Khanna and Gallego quote it as such; 1.7s after the first post).
 - Author of 2097497037956891126 (quoted by Deluzio and Balint); x-search.json non-English quotes describe it as Hubinger confirming Coxon.
-- The full text of 12 truncated originals (Khanna's points 2-5, Trahan's bill name, García's remaining demands, Beyer's bill list, Ansari's ending, Foster's containment methods, Jayapal's "push out...", Ramírez, Min official, Gottheimer): the archive stores the 280-char capture only.
+- The full text of 11 truncated core originals (@RepLoriTrahan, @CongressMin, @RepJayapal, @RepYassAnsari, @RepDonBeyer, @RoKhanna, @RepBillFoster, @RepChuyGarcia, @SenRubenGallego, @repdeliaramirez, @RoKhanna): the archive stores the 280-char capture only, so Khanna's points 2-5, Trahan's bill name, García's remaining demands, Beyer's bill list and Foster's containment methods are cut.
 - Links in Magaziner's and Jacobs' posts ("here is what Congress can do") — unread; the linked content is what would confirm their framing.
 - Whether @AlexBores' post and @tedlieu's 09-10 CA-standards post are responses to this story or to a separate OpenAI/White House development.
 
@@ -187,6 +187,6 @@ Top originals by engagement at capture: @tedlieu 8007 likes / 1437 RTs (regulati
 5. Engagement in derived layers is 0 for 2026-09-09 (report and rollup) because the 24h metrics re-read has not run; metricsAtCapture is available in the archive but retweet rows carry the original's counts (e.g. 141,266 on Min's RT of Coxon), so any naive sum is wrong.
 6. Capture timing: every 2026-09-09 post has capturedAt 2026-09-10T05:26-05:59Z (backfill), i.e. the corpus had none of Tuesday's posts until ~01:30 ET Wednesday; a live narrative layer would have been blind through the whole day.
 7. Roster: the list includes Senate accounts (Gallego, status=senate); "House Democrats" counts should filter on status.
-8. Account duplication: five members post from two listed accounts (official + personal), so account counts overstate members by 6 posts / 5 members here.
-9. Truncation: 280-char capture without note_tweet expansion cuts 12 originals mid-sentence, including the plan posts the owner would most want to read (Khanna's 5 points).
+8. Account duplication: 5 members post from two listed accounts each (Ted Lieu, Ruben Gallego, Dave Min, Yassamin Ansari, Seth Magaziner), so 26 accounts are 21 members; 4 of the 11 retweets are a member re-posting his or her own other account (@tedlieu, @yassaminansari, @RubenGallego, @SethMagaziner). authors.json also spells the same member two ways ("Senator Ruben Gallego" / "Ruben Gallego"), which breaks a naive member dedupe.
+9. Truncation: 280-char capture without note_tweet expansion cuts 11 of 23 core originals mid-sentence, including the plan posts the owner would most want to read (Khanna's 5 points).
 10. Neighboring candidate not merged: stories.json has a surveillance-privacy gap candidate (6 posts, 08-21..09-04) that Castro's pre-crime RT would extend; the classifier filed the RT as tech + democracy instead.

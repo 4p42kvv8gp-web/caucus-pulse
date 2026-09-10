@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-10T07:18:11.167Z",
+ "generatedAt": "2026-09-10T07:19:50.586Z",
  "story": "anthropic-researcher-resignation",
  "layer": "caucus-corpus",
  "window": {
@@ -31,7 +31,7 @@
    "rule": "one primary framing per post from the post's own text (retweets inherit the retweeted text); secondaries listed when the text carries them. existential-risk = amplifies the warning itself; hearings-oversight = hearings, investigations, oversight, select committee, keep Congress in session; regulation-plan = a named bill, plan, ban, agency, safeguards, or a generic \"Congress must act/pass\"; surveillance-pre-crime = the American Prospect activist-monitoring angle; labor-economy = jobs/economy/energy-cost framing; other = corporate greed, electoral, Trump attacks. Counts are given as primary-only and any-mention, all posts and originals only."
   },
   "engagement": "metricsAtCapture at the 2026-09-10 05:26-05:59Z backfill capture (data/metrics/2026-09-09.json has no re-read yet). Retweet rows carry the ORIGINAL's counts and are excluded from sums.",
-  "members": "distinct members dedupe by authors.json member name; six members post from two listed accounts each (Ansari, Gallego, Min, Lieu, Magaziner; Khanna's @RepRoKhanna did not post on the story).",
+  "members": "distinct members dedupe by authors.json member name after stripping a leading \"Senator\"/\"Rep.\" (authors.json lists Gallego's Senate account as \"Senator Ruben Gallego\" and his personal one as \"Ruben Gallego\"); Khanna's @RepRoKhanna did not post on the story.",
   "sources": {
    "archive": {
     "2026-09-07": {
@@ -107,7 +107,7 @@
     "tweet": 4
    },
    "distinctAccounts": 26,
-   "distinctMembers": 22,
+   "distinctMembers": 21,
    "members": [
     "Becca Balint",
     "Bill Foster",
@@ -127,7 +127,6 @@
     "Ro Khanna",
     "Ruben Gallego",
     "Sara Jacobs",
-    "Senator Ruben Gallego",
     "Seth Magaziner",
     "Ted Lieu",
     "Yassamin Ansari"
@@ -163,7 +162,7 @@
      "posts": 4,
      "originals": 1,
      "accounts": 2,
-     "members": 2
+     "members": 1
     },
     "newdem": {
      "posts": 11,
@@ -205,7 +204,7 @@
      "originals": 22,
      "retweets": 11,
      "accounts": 26,
-     "members": 22
+     "members": 21
     }
    },
    "byHourET": {
@@ -472,7 +471,7 @@
     "dayOriginals": 445,
     "shareOriginals": 0.0022,
     "coreMembers": 1,
-    "dayMembersPosting": 173,
+    "dayMembersPosting": 172,
     "shareMembers": 0.0058
    },
    "2026-09-09": {
@@ -482,9 +481,9 @@
     "coreOriginals": 22,
     "dayOriginals": 532,
     "shareOriginals": 0.0414,
-    "coreMembers": 22,
-    "dayMembersPosting": 187,
-    "shareMembers": 0.1176
+    "coreMembers": 21,
+    "dayMembersPosting": 186,
+    "shareMembers": 0.1129
    }
   },
   "hourTable0909": [
@@ -990,11 +989,11 @@
   },
   "shape": [
    "Volume is concentrated in one ET day: every core post but Lieu's Monday-night kill-switch post lands on 2026-09-09, from 01:27 ET (Gallego RT) to 23:22 ET (Khanna).",
-   "Two bursts: 09:12-10:34 ET (Min x3, Ryan, Castro, Casar, Deluzio, Jayapal, official Min) and 16:40-19:53 ET (Morrison, Foster, Landsman, Balint, García, Magaziner, Gallego x3, Ramírez, Jacobs); the midday block (12:18-14:28) is Ansari, Beyer, Lieu, McClellan, Khanna.",
+   "Two bursts: 09:00-10:59 ET (9 posts, 6 originals: Dave Min, Patrick Ryan, Joaquin Castro, Greg Casar, Christopher R. Deluzio, Pramila Jayapal) and 16:00-19:59 ET (12 posts, 9 originals: Kelly Morrison, Bill Foster, Greg Landsman, Becca Balint, Jesús G. \"Chuy\" García, Seth Magaziner, Ruben Gallego, Delia C. Ramirez, Sara Jacobs); the 11:00-14:59 block is 9 posts (Ted Lieu, Yassamin Ansari, Donald S. Beyer, Jr., Jennifer L. McClellan, Ro Khanna), then nothing from 15:00 until Morrison at 16:40, and Khanna alone after 20:00.",
    "Progressive Caucus members carry most of the originals; New Dems are the second block and supply the institutional/technical voices (Beyer, Foster, Landsman, Morrison, Ryan). CBC is one post (McClellan, 0 likes at capture). No dedicated CAPAC or leadership-only voice beyond members who also hold progressive tags.",
    "The remedy menu is fragmented: Casar/Sanders superintelligence ban, Lieu/Moran AI Kill Switch, Trahan FRONTIER bill, Khanna 5-point plan + federal agency, Gallego Senate select committee, Morrison cancel recess, Foster physical containment, García ban + data-center pause, Ryan emergency hearings. No shared bill name or phrase crosses more than one member in the corpus.",
    "Shared language that does cross members: \"the call is coming from inside the house\" (Trahan 07:01 ET, Morrison 16:40 ET); \"pump the brakes\" (Deluzio, Balint); \"burying heads in the sand\" (Deluzio, Balint — both quoting the same source 2097497037956891126); \"gamble/gambling\" (Balint echoing Coxon).",
-   "Engagement is top-heavy: Lieu's Monday post (8,007 likes) and Casar (6,991) hold most of it; Khanna (2,225), Ansari (2,130), Lieu official (1,276), Ryan (961), Trahan (897), Foster (754), Beyer (734) form the second tier. Ten originals are under 200 likes.",
+   "Engagement is top-heavy: @tedlieu 8,007 likes and @RepCasar 6,991 likes hold 53% of the originals' engagement; @RoKhanna 2,225, @RepYassAnsari 2,130, @RepTedLieu 1,276, @PatRyanUC 961, @RepLoriTrahan 897, @RepDonBeyer 734 form the second tier. 9 of 23 originals are under 200 likes at capture (@DaveMinCA 1, @CongressMin 134, @RepMcClellan 0, @RepGregLandsman 110, @RepBeccaB 173, @RepChuyGarcia 122, @Rep_Magaziner 22, @repdeliaramirez 116, @RepSaraJacobs 123).",
    "The surveillance/\"pre-crime\" angle the owner flagged reached the corpus once (Castro RT of @MorePerfectUS at 09:32 ET) and did not spread inside the caucus, though x-search.json shows it as the second-largest retweet wave in the wider stream."
   ],
   "tierCaveats": "Four core posts (Lieu's exhibit-739 post and its self-RT, Min's official post, Jacobs) are linked by timing/wording rather than an explicit reference; removing them leaves 30 core posts / 20 originals and does not change the leading framing."
@@ -1003,7 +1002,7 @@
   "What 2097474365163999402 (quoted by @tedlieu as \"exhibit number 739\", posted 7 minutes before Coxon's post) shows — not in the corpus, no lookup bought.",
   "Whether 2097476203863224394 is the second post of Coxon's thread carrying Hubinger's odds (Khanna and Gallego quote it as such; 1.7s after the first post).",
   "Author of 2097497037956891126 (quoted by Deluzio and Balint); x-search.json non-English quotes describe it as Hubinger confirming Coxon.",
-  "The full text of 12 truncated originals (Khanna's points 2-5, Trahan's bill name, García's remaining demands, Beyer's bill list, Ansari's ending, Foster's containment methods, Jayapal's \"push out...\", Ramírez, Min official, Gottheimer): the archive stores the 280-char capture only.",
+  "The full text of 11 truncated core originals (@RepLoriTrahan, @CongressMin, @RepJayapal, @RepYassAnsari, @RepDonBeyer, @RoKhanna, @RepBillFoster, @RepChuyGarcia, @SenRubenGallego, @repdeliaramirez, @RoKhanna): the archive stores the 280-char capture only, so Khanna's points 2-5, Trahan's bill name, García's remaining demands, Beyer's bill list and Foster's containment methods are cut.",
   "Links in Magaziner's and Jacobs' posts (\"here is what Congress can do\") — unread; the linked content is what would confirm their framing.",
   "Whether @AlexBores' post and @tedlieu's 09-10 CA-standards post are responses to this story or to a separate OpenAI/White House development."
  ],
@@ -1015,8 +1014,8 @@
   "Engagement in derived layers is 0 for 2026-09-09 (report and rollup) because the 24h metrics re-read has not run; metricsAtCapture is available in the archive but retweet rows carry the original's counts (e.g. 141,266 on Min's RT of Coxon), so any naive sum is wrong.",
   "Capture timing: every 2026-09-09 post has capturedAt 2026-09-10T05:26-05:59Z (backfill), i.e. the corpus had none of Tuesday's posts until ~01:30 ET Wednesday; a live narrative layer would have been blind through the whole day.",
   "Roster: the list includes Senate accounts (Gallego, status=senate); \"House Democrats\" counts should filter on status.",
-  "Account duplication: five members post from two listed accounts (official + personal), so account counts overstate members by 6 posts / 5 members here.",
-  "Truncation: 280-char capture without note_tweet expansion cuts 12 originals mid-sentence, including the plan posts the owner would most want to read (Khanna's 5 points).",
+  "Account duplication: 5 members post from two listed accounts each (Ted Lieu, Ruben Gallego, Dave Min, Yassamin Ansari, Seth Magaziner), so 26 accounts are 21 members; 4 of the 11 retweets are a member re-posting his or her own other account (@tedlieu, @yassaminansari, @RubenGallego, @SethMagaziner). authors.json also spells the same member two ways (\"Senator Ruben Gallego\" / \"Ruben Gallego\"), which breaks a naive member dedupe.",
+  "Truncation: 280-char capture without note_tweet expansion cuts 11 of 23 core originals mid-sentence, including the plan posts the owner would most want to read (Khanna's 5 points).",
   "Neighboring candidate not merged: stories.json has a surveillance-privacy gap candidate (6 posts, 08-21..09-04) that Castro's pre-crime RT would extend; the classifier filed the RT as tech + democracy instead."
  ],
  "posts": [
@@ -1031,6 +1030,7 @@
    "authorId": "172377413",
    "handle": "PatRyanUC",
    "member": "Patrick Ryan",
+   "memberAsListed": "Patrick Ryan",
    "accountType": "personal",
    "caucuses": [
     "newdem"
@@ -1079,6 +1079,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1129,6 +1130,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1179,6 +1181,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1229,6 +1232,7 @@
    "authorId": "49217025",
    "handle": "RubenGallego",
    "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
    "accountType": "personal",
    "caucuses": [],
    "status": "senate",
@@ -1275,6 +1279,7 @@
    "authorId": "1079802482640019456",
    "handle": "RepLoriTrahan",
    "member": "Lori Trahan",
+   "memberAsListed": "Lori Trahan",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -1327,6 +1332,7 @@
    "authorId": "48219458",
    "handle": "DaveMinCA",
    "member": "Dave Min",
+   "memberAsListed": "Dave Min",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1376,6 +1382,7 @@
    "authorId": "48219458",
    "handle": "DaveMinCA",
    "member": "Dave Min",
+   "memberAsListed": "Dave Min",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1425,6 +1432,7 @@
    "authorId": "172377413",
    "handle": "PatRyanUC",
    "member": "Patrick Ryan",
+   "memberAsListed": "Patrick Ryan",
    "accountType": "personal",
    "caucuses": [
     "newdem"
@@ -1476,6 +1484,7 @@
    "authorId": "231510077",
    "handle": "JoaquinCastrotx",
    "member": "Joaquin Castro",
+   "memberAsListed": "Joaquin Castro",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -1527,6 +1536,7 @@
    "authorId": "1499512178013057032",
    "handle": "RepCasar",
    "member": "Greg Casar",
+   "memberAsListed": "Greg Casar",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -1579,6 +1589,7 @@
    "authorId": "815310506596691968",
    "handle": "RepJoshG",
    "member": "Josh Gottheimer",
+   "memberAsListed": "Josh Gottheimer",
    "accountType": "official",
    "caucuses": [
     "newdem"
@@ -1591,7 +1602,7 @@
    "refHandle": null,
    "refSource": null,
    "text": "AI agents are running loose in our networks. Right now, it’s becoming harder to see them, verify who built them, or shut them off.\n\nThat's a five-alarm security risk.\n\nThat's why I introduced the bipartisan Stop Rogue AI Act with @RepMikeLawler to put people back in the driver's",
-   "textTruncated": false,
+   "textTruncated": true,
    "engagement": {
     "likes": 14,
     "retweets": 0,
@@ -1627,6 +1638,7 @@
    "authorId": "210926192",
    "handle": "RepCuellar",
    "member": "Henry Cuellar",
+   "memberAsListed": "Henry Cuellar",
    "accountType": "official",
    "caucuses": [
     "newdem",
@@ -1676,6 +1688,7 @@
    "authorId": "48219458",
    "handle": "DaveMinCA",
    "member": "Dave Min",
+   "memberAsListed": "Dave Min",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1727,6 +1740,7 @@
    "authorId": "1858680194112065536",
    "handle": "CongressMin",
    "member": "Dave Min",
+   "memberAsListed": "Dave Min",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -1740,7 +1754,7 @@
    "refHandle": null,
    "refSource": null,
    "text": "If we had a government that was actually even a tiny bit concerned about its citizens, it would be actively be pushing forward a framework to try to protect us against the risks of AI. \n\nInstead, Trump is focused on picking out the wallpaper and lighting fixtures for his illegal",
-   "textTruncated": false,
+   "textTruncated": true,
    "engagement": {
     "likes": 134,
     "retweets": 27,
@@ -1778,6 +1792,7 @@
    "authorId": "1608934316779921408",
    "handle": "RepDeluzio",
    "member": "Christopher R. Deluzio",
+   "memberAsListed": "Christopher R. Deluzio",
    "accountType": "official",
    "caucuses": [
     "progressive"
@@ -1828,6 +1843,7 @@
    "authorId": "815733290955112448",
    "handle": "RepJayapal",
    "member": "Pramila Jayapal",
+   "memberAsListed": "Pramila Jayapal",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -1879,6 +1895,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -1929,6 +1946,7 @@
    "authorId": "1871623075822772224",
    "handle": "RepYassAnsari",
    "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
    "accountType": "official",
    "caucuses": [
     "progressive"
@@ -1979,6 +1997,7 @@
    "authorId": "2962868158",
    "handle": "RepDonBeyer",
    "member": "Donald S. Beyer, Jr.",
+   "memberAsListed": "Donald S. Beyer, Jr.",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -2028,6 +2047,7 @@
    "authorId": "3044993235",
    "handle": "RepTedLieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -2078,6 +2098,7 @@
    "authorId": "174332143",
    "handle": "yassaminansari",
    "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
    "accountType": "personal",
    "caucuses": [
     "progressive"
@@ -2128,6 +2149,7 @@
    "authorId": "174332143",
    "handle": "yassaminansari",
    "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
    "accountType": "personal",
    "caucuses": [
     "progressive"
@@ -2176,6 +2198,7 @@
    "authorId": "1633610542584659970",
    "handle": "RepMcClellan",
    "member": "Jennifer L. McClellan",
+   "memberAsListed": "Jennifer L. McClellan",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -2228,6 +2251,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -2278,6 +2302,7 @@
    "authorId": "771152516",
    "handle": "RoKhanna",
    "member": "Ro Khanna",
+   "memberAsListed": "Ro Khanna",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -2329,6 +2354,7 @@
    "authorId": "272191896",
    "handle": "SarahEMcBride",
    "member": "Sarah McBride",
+   "memberAsListed": "Sarah McBride",
    "accountType": "personal",
    "caucuses": [
     "progressive"
@@ -2377,6 +2403,7 @@
    "authorId": "82453460",
    "handle": "BennieGThompson",
    "member": "Bennie G. Thompson",
+   "memberAsListed": "Bennie G. Thompson",
    "accountType": "official",
    "caucuses": [
     "cbc"
@@ -2426,6 +2453,7 @@
    "authorId": "1863695408653889536",
    "handle": "KellyMorrisonMN",
    "member": "Kelly Morrison",
+   "memberAsListed": "Kelly Morrison",
    "accountType": "official",
    "caucuses": [
     "newdem"
@@ -2478,6 +2506,7 @@
    "authorId": "1080509366",
    "handle": "RepBillFoster",
    "member": "Bill Foster",
+   "memberAsListed": "Bill Foster",
    "accountType": "official",
    "caucuses": [
     "newdem"
@@ -2528,6 +2557,7 @@
    "authorId": "1613637172346642432",
    "handle": "RepGregLandsman",
    "member": "Greg Landsman",
+   "memberAsListed": "Greg Landsman",
    "accountType": "official",
    "caucuses": [
     "newdem"
@@ -2576,6 +2606,7 @@
    "authorId": "1606115178210365448",
    "handle": "RepBeccaB",
    "member": "Becca Balint",
+   "memberAsListed": "Becca Balint",
    "accountType": "official",
    "caucuses": [
     "progressive"
@@ -2626,6 +2657,7 @@
    "authorId": "1082427779583541248",
    "handle": "RepChuyGarcia",
    "member": "Jesús G. \"Chuy\" García",
+   "memberAsListed": "Jesús G. \"Chuy\" García",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -2679,6 +2711,7 @@
    "authorId": "1079802482640019456",
    "handle": "RepLoriTrahan",
    "member": "Lori Trahan",
+   "memberAsListed": "Lori Trahan",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -2731,6 +2764,7 @@
    "authorId": "1615455207713808384",
    "handle": "Rep_Magaziner",
    "member": "Seth Magaziner",
+   "memberAsListed": "Seth Magaziner",
    "accountType": "official",
    "caucuses": [
     "newdem"
@@ -2779,6 +2813,7 @@
    "authorId": "1861930573733986305",
    "handle": "RepSuhas",
    "member": "Suhas Subramanyam",
+   "memberAsListed": "Suhas Subramanyam",
    "accountType": "official",
    "caucuses": [
     "newdem",
@@ -2827,7 +2862,8 @@
    "etHour": "18",
    "authorId": "2966570782",
    "handle": "SenRubenGallego",
-   "member": "Senator Ruben Gallego",
+   "member": "Ruben Gallego",
+   "memberAsListed": "Senator Ruben Gallego",
    "accountType": "official",
    "caucuses": [],
    "status": "senate",
@@ -2876,6 +2912,7 @@
    "authorId": "49217025",
    "handle": "RubenGallego",
    "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
    "accountType": "personal",
    "caucuses": [],
    "status": "senate",
@@ -2924,6 +2961,7 @@
    "authorId": "49217025",
    "handle": "RubenGallego",
    "member": "Ruben Gallego",
+   "memberAsListed": "Ruben Gallego",
    "accountType": "personal",
    "caucuses": [],
    "status": "senate",
@@ -2970,6 +3008,7 @@
    "authorId": "1074354529787895808",
    "handle": "repdeliaramirez",
    "member": "Delia C. Ramirez",
+   "memberAsListed": "Delia C. Ramirez",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -3022,6 +3061,7 @@
    "authorId": "1345103905869455361",
    "handle": "RepSaraJacobs",
    "member": "Sara Jacobs",
+   "memberAsListed": "Sara Jacobs",
    "accountType": "official",
    "caucuses": [
     "progressive",
@@ -3071,6 +3111,7 @@
    "authorId": "1434052620",
    "handle": "SethMagaziner",
    "member": "Seth Magaziner",
+   "memberAsListed": "Seth Magaziner",
    "accountType": "personal",
    "caucuses": [
     "newdem"
@@ -3119,6 +3160,7 @@
    "authorId": "174332143",
    "handle": "yassaminansari",
    "member": "Yassamin Ansari",
+   "memberAsListed": "Yassamin Ansari",
    "accountType": "personal",
    "caucuses": [
     "progressive"
@@ -3167,6 +3209,7 @@
    "authorId": "771152516",
    "handle": "RoKhanna",
    "member": "Ro Khanna",
+   "memberAsListed": "Ro Khanna",
    "accountType": "personal",
    "caucuses": [
     "progressive",
@@ -3219,6 +3262,7 @@
    "authorId": "21059255",
    "handle": "tedlieu",
    "member": "Ted Lieu",
+   "memberAsListed": "Ted Lieu",
    "accountType": "personal",
    "caucuses": [
     "progressive",
