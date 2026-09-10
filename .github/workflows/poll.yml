@@ -1,6 +1,7 @@
 # Capture poller — every 20 minutes. Captures new tweets, live-tags them for
-# the dashboard feed (skipped automatically if no Anthropic credential can be
-# resolved or CLASSIFY_LIVE=false), regroups incidents, rebuilds site/data/rollups.json.
+# the dashboard feed (on by default; skipped automatically if no Anthropic
+# credential can be resolved, or paused with the repo variable
+# CLASSIFY_LIVE_PAUSED=true), regroups incidents, rebuilds site/data/rollups.json.
 name: poll
 on:
   schedule:
@@ -31,7 +32,9 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
           X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
-          CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
+          # Live tagging defaults on. Set the repo variable CLASSIFY_LIVE_PAUSED
+          # to "true" to pause it; the older CLASSIFY_LIVE variable is no longer read.
+          CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE_PAUSED == 'true' && 'false' || 'true' }}
         run: npm run poll
       - name: Commit archive + site data
         run: |
