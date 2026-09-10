@@ -25,10 +25,8 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
      `config/settings.json`.
    - Variable `X_DAILY_READ_BUDGET` (optional) — hard daily ceiling on billed
      X reads. Default 8000 (≈$40/day worst case; a 2,000-tweet day uses ~3,300).
-   - Variable `CLASSIFY_LIVE_PAUSED` (optional) — `true` to pause poll-time
-     tagging; unset (or anything else) tags each poll's new posts. The
-     workflow maps this to `CLASSIFY_LIVE=false` for the scripts; an older
-     `CLASSIFY_LIVE` repo variable is ignored and can be deleted.
+   - Variable `CLASSIFY_LIVE` — `false` to skip poll-time tagging until the
+     pipeline is trusted; `true` (or unset) to tag each poll's new posts.
 2. **Claude access needs no secret.** Workflows authenticate to the Anthropic
    API with [workload identity federation](https://docs.anthropic.com): the
    job's GitHub OIDC token is exchanged for a 10-minute access token
