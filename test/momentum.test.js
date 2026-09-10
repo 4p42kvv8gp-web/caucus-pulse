@@ -76,8 +76,11 @@ test('groupIncidents merges same-event flags and builds the timeline', () => {
   assert.equal(flood.handle, '@RepA'); // earliest poster leads
   assert.equal(flood.place, 'Aurora, CO · CO-06');
   assert.deepEqual(flood.others, ['@RepB']);
-  assert.equal(flood.status, 'active');
+  assert.equal(flood.status, 'active'); // two members: corroborated, so the lifecycle status shows
+  assert.equal(flood.lifecycle, 'active');
+  assert.equal(flood.corroboration.by, 'second member');
   assert.equal(flood.timeline[1].isNew, true); // captured in the latest poll
   const fire = out.find((i) => i.kind === 'wildfire');
-  assert.equal(fire.status, 'resolved');
+  assert.equal(fire.status, 'provisional'); // one post from one member, nothing else behind it
+  assert.equal(fire.lifecycle, 'resolved'); // ...and stale by age; it is never called "resolved"
 });

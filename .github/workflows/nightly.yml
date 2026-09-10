@@ -2,7 +2,10 @@
 # 24h engagement refresh → Claude batch classification → story candidates,
 # then continuous promotion/retirement (src/stories.js --auto-promote
 # --retire edits config/taxonomy.yaml in place; the classifier only sees
-# that change on the NEXT night's run) → corrections → strategic-syntax
+# that change on the NEXT night's run) → taxonomy learning
+# (src/taxonomy-learn.js --apply: reads each macro's posts, proposes
+# subtopics / elevations / merges / retirements with evidence, applies the
+# auto ones to the YAML) → corrections → strategic-syntax
 # n-grams → incidents → rollups → daily report → site data. Each stage reads
 # the previous stage's committed files, so a failed stage can be re-run with
 # workflow_dispatch. Claude auth for every stage is the same federation
@@ -32,7 +35,19 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Refresh, classify, mine syntax, roll up, report
+      # The local embedding model (35 MB, digests pinned in src/embeddings.js;
+      # the cache key is its revision). Without it `npm run embed` prints a
+      # one-line skip and the chain continues: the classifier just gets no
+      # similarity hints and the dashboard no "similar, unlabeled" lists.
+      - name: Embedding model cache
+        uses: actions/cache@v4
+        with:
+          path: data/models
+          key: embedding-model-bge-small-en-v1.5-ea104dacec62
+      - name: Download embedding model (verified; no-op when cached)
+        continue-on-error: true
+        run: npm run download-model
+      - name: Refresh, embed, classify, mine syntax, roll up, report
         # Claude auth: the job's OIDC token is exchanged for a short-lived
         # Anthropic access token in-process; no ANTHROPIC_API_KEY secret.
         env:

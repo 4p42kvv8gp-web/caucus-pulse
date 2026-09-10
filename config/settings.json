@@ -48,6 +48,12 @@
     "max_wait_minutes": 55,
     "correction_examples": 8
   },
+  "semantic": {
+    "_comment": "Local embedding layer (src/embeddings.js, src/semantic.js; docs/SEMANTIC_MATCHING.md). min_sim: cosine floor for a post to count as near a story; 0.8 was calibrated on the 2026-09-10 probes (nothing Claude judged on-story fell below it) and is a reading floor, not a verdict. candidates: how many nearby stories the classifier is shown per post as similarity hints (it still decides from the text). related_posts: how many unlabeled neighbours the dashboard lists under each emerging card and story row.",
+    "min_sim": 0.8,
+    "candidates": 3,
+    "related_posts": 5
+  },
   "stories": {
     "_comment": "Continuous story promotion (src/stories.js --auto-promote / --retire, run nightly after classify). auto_promote: when false, --auto-promote only lists what would be promoted and writes nothing. min_posts, min_members, min_days: a story candidate (placement kind 'story' with a macro) must reach all three — posts, distinct members, distinct days — before it is written to config/taxonomy.yaml as a provisional developing story; taxonomy gaps are never auto-promoted. max_per_night: at most this many promotions per run, most posts first (the rest wait for the next night). retire_after_quiet_days: a provisional story that has been in the taxonomy at least this many days with zero assignments in data/topics over the window is marked retired: true — it leaves the classifier prompt but keeps its key so rollups and history still resolve.",
     "auto_promote": true,
@@ -56,6 +62,27 @@
     "min_days": 2,
     "max_per_night": 8,
     "retire_after_quiet_days": 21
+  },
+  "taxonomy_learn": {
+    "_comment": "The taxonomy learns from the data (src/taxonomy-learn.js, nightly after classify + stories). window_days: posts read per macro (originals only, retweets excluded). share_days: the window the elevate rule measures share over. sample_posts / batch_posts: posts per Claude call when no semantic index exists (first call discovers subjects, later calls assign against them); scan_posts: at most this many not-yet-read posts per pool per night (the rest wait, counts are extrapolated and marked estimated). cluster_sim: cosine threshold for agglomerative clustering when data/embeddings exists. min_posts / min_members: a cluster must reach both (measured, not estimated) to be proposed. elevate_share: a subtopic drawing this share of its macro over share_days is proposed as its own macro, dual-listed under the parent; elevate_factor: or when its posts reach the macro's median live-subtopic count times this (siblings measured on the same basis) while holding at least elevate_min_share of the macro. merge_sim: semantic similarity at which two subtopics are proposed as one. retire_days: a subtopic with zero assignments over this many classified days is proposed for retirement. auto_apply: `--apply` writes proposals flagged auto (adds and retirements only, most posts first, at most max_per_night); auto_elevate: when true, elevations and merges over the thresholds are auto too (off: a human names them, `--apply --elevate=key`). max_calls: Claude calls per run; pools that do not fit wait for the next night. model: null = settings.classify.model.",
+    "model": null,
+    "window_days": 14,
+    "share_days": 7,
+    "sample_posts": 60,
+    "batch_posts": 100,
+    "scan_posts": 360,
+    "cluster_sim": 0.82,
+    "merge_sim": 0.9,
+    "min_posts": 8,
+    "min_members": 3,
+    "elevate_share": 0.6,
+    "elevate_factor": 3,
+    "elevate_min_share": 0.25,
+    "retire_days": 21,
+    "auto_apply": true,
+    "auto_elevate": false,
+    "max_per_night": 6,
+    "max_calls": 40
   },
   "anthropic": {
     "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Outside Actions, set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY) instead.",

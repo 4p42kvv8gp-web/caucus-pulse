@@ -8,12 +8,16 @@
 //   6. Stories promoted (and retired) tonight by src/stories.js, and every
 //      provisional story still awaiting review with its last-7-day counts —
 //      the owner prunes from here instead of approving one by one.
+//   7. Taxonomy learned tonight (src/taxonomy-learn.js): every subtopic /
+//      macro change the posts support, with its evidence, and which were
+//      applied to config/taxonomy.yaml.
 import { readJSON, writeJSON, settings, daysAgoEt, addDays, p } from './util.js';
 import fs from 'node:fs';
 import { loadState, dailyBudget, estCost, topicsPath, syntaxPath, loadDay } from './store.js';
 import { rollupsPath } from './rollup.js';
 import { loadTaxonomy, ymd } from './taxonomy.js';
 import { storySettings } from './stories.js';
+import { learnedSection, proposalsPath } from './taxonomy-learn.js';
 
 function fmt(n) { return n.toLocaleString('en-US'); }
 
@@ -60,7 +64,7 @@ export function provisionalStories(tax) {
 
 // `stories` (data/stories.json) and `tax` (config/taxonomy.yaml) are
 // injectable so tests render from fixtures; main() passes the real files.
-export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, stories = readJSON(p('data', 'stories.json'), null), tax = loadTaxonomy() }) {
+export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, stories = readJSON(p('data', 'stories.json'), null), tax = loadTaxonomy(), learned = readJSON(proposalsPath, null) }) {
   const rows = rollups?.rows || [];
   const labels = rollups?.labels || {};
   const label = (r) => labels[r.sub ? `${r.macro}/${r.sub}` : r.macro] || r.macro;
@@ -167,6 +171,9 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
     }
     if (retired.length) lines.push('', `_${retired.length} retired entr${retired.length === 1 ? 'y' : 'ies'} remain in the YAML for history (${retired.map((r) => `${r.macro}/${r.key}`).join(', ')}); delete them whenever convenient._`);
   }
+
+  // ── The taxonomy learns from the data (src/taxonomy-learn.js).
+  lines.push(...learnedSection(learned, date));
   return lines.join('\n') + '\n';
 }
 
@@ -182,7 +189,8 @@ async function main() {
     usage: state.usage[date],
     budget: dailyBudget(),
     stories: readJSON(p('data', 'stories.json'), null),
-    tax: loadTaxonomy()
+    tax: loadTaxonomy(),
+    learned: readJSON(proposalsPath, null)
   });
   const out = p('reports', `${date}.md`);
   fs.mkdirSync(p('reports'), { recursive: true });

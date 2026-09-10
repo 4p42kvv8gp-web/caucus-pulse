@@ -21,6 +21,12 @@
 // an anchored post; the model still runs for the post's own topics and the
 // two are merged at write time.
 //
+// Similarity hints (`candidates`, src/semantic.js): when the embedding index
+// is on disk, each post also carries the tracked stories its wording sits
+// near — a taxonomy id the model may assign, or the label of an emerging
+// subject seen before. The prompt calls them hints; the model still decides
+// from the text. Without the index the request is byte-identical to before.
+//
 // The building blocks (planDay → chunkRequests → collectResults → writeDay)
 // are exported so classify-range.js can put many days into one batch.
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
@@ -29,13 +35,20 @@ import { loadState, saveState, loadDay, topicsPath, archivePath } from './store.
 import { readJSONL } from './util.js';
 import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
 import { quotedResolver, quotingFor } from './quoted.js';
+import { configuredMinSim, storyRow, loadSemanticOrNull } from './semantic.js';
+import { embed as sharedEmbed } from './embeddings.js';
 
 export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
 
 // One input line for the model. Exactly {id, text} unless the item carries
-// quoted context — the line is what the prompt's "quoting" rule refers to.
+// quoted context and/or similarity candidates — the line is what the
+// prompt's "quoting" and "candidates" rules refer to. Key order is fixed so
+// a post without extras serialises exactly as it always has.
 export function classifierLine(t) {
-  return JSON.stringify(t.quoting ? { id: t.id, text: t.text, quoting: t.quoting } : { id: t.id, text: t.text });
+  const line = { id: t.id, text: t.text };
+  if (t.quoting) line.quoting = t.quoting;
+  if (t.candidates?.length) line.candidates = t.candidates;
+  return JSON.stringify(line);
 }
 
 // Items with their quoted context attached (a copy per item that has one;
@@ -46,6 +59,61 @@ export function withQuoting(items, resolve) {
     return quoting ? { ...t, quoting } : t;
   });
 }
+
+// ── Similarity candidates ────────────────────────────────────────────────
+
+// One hint from a story the post's vector is near: a live taxonomy row
+// becomes {story: "macro/sub"}; a retired row becomes nothing (it left the
+// prompt on purpose); a story the taxonomy has no row for (a stories.json
+// candidate) becomes {emerging: label} so the model reuses the label the
+// story pipeline already merges on.
+export function candidateHint(story, tax, sim) {
+  if (!story) return null;
+  const rounded = +Number(sim).toFixed(2);
+  const row = storyRow(story, tax);
+  if (row) return row.def.retired ? null : { story: row.id, sim: rounded };
+  const label = story.label && story.label !== story.key ? story.label : null;
+  return label ? { emerging: label, sim: rounded } : null;
+}
+
+// Items with `candidates` attached: the top `k` stories within `minSim` of
+// each post. Vectors come from the index when the post is embedded; the
+// rest are embedded in one batch, or skipped (one warning) when the model is
+// not on disk. No semantic layer → the same array back, untouched.
+export async function withCandidates(items, semantic, {
+  tax = loadTaxonomy(),
+  k = settings.semantic?.candidates ?? 3,
+  minSim = configuredMinSim(),
+  embed = sharedEmbed,
+  warn = console.warn
+} = {}) {
+  if (!semantic || !items.length || !(k > 0)) return items;
+  const vectors = new Map();
+  const missing = [];
+  for (const t of items) {
+    const v = semantic.index.get(t.id);
+    if (v) vectors.set(t.id, v); else missing.push(t);
+  }
+  if (missing.length) {
+    try {
+      const vs = await embed(missing.map((t) => t.text));
+      missing.forEach((t, i) => vectors.set(t.id, vs[i]));
+    } catch (e) {
+      warn(`[classify] similarity hints: ${missing.length} unindexed post(s) skipped (${e.message})`);
+    }
+  }
+  const out = [];
+  for (const t of items) {
+    const v = vectors.get(t.id);
+    if (!v) { out.push(t); continue; }
+    const hits = await semantic.relatedStories(v, { k: k * 2, minSim });
+    const candidates = hits.map((h) => candidateHint(semantic.story(h.story), tax, h.sim)).filter(Boolean).slice(0, k);
+    out.push(candidates.length ? { ...t, candidates } : t);
+  }
+  return out;
+}
+
+export const hintedCount = (items) => items.filter((t) => t.candidates?.length).length;
 
 // custom_id must match ^[a-zA-Z0-9_-]{1,64}$ — a date prefix keeps multi-day
 // batches separable ("2026-08-20_chunk-3").
@@ -262,13 +330,17 @@ async function main() {
   let batchId = state.pendingBatch?.date === date ? state.pendingBatch.id : null;
 
   if (!batchId) {
+    // Similarity hints need the index (nightly chain: `npm run embed` runs
+    // first, so every archived post is already a row); posts it lacks are
+    // embedded on the fly when the model is present.
+    plan.toClassify = await withCandidates(plan.toClassify, loadSemanticOrNull({ warn: (m) => console.warn(`[classify] ${m}`) }), { tax });
     const requests = chunkRequests(plan.toClassify, tax, model);
     const batch = await client.messages.batches.create({ requests });
     batchId = batch.id;
     state.pendingBatch = { id: batchId, date };
     saveState(state);
     const quoting = plan.toClassify.filter((t) => t.quoting).length;
-    console.log(`[classify] submitted batch ${batchId}: ${plan.toClassify.length} tweets in ${requests.length} requests (${quoting} with quoted context, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
+    console.log(`[classify] submitted batch ${batchId}: ${plan.toClassify.length} tweets in ${requests.length} requests (${quoting} with quoted context, ${hintedCount(plan.toClassify)} with similarity hints, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
   } else {
     console.log(`[classify] resuming pending batch ${batchId} for ${date}`);
   }

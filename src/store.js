@@ -68,11 +68,11 @@ export function estCost({ posts = 0, users = 0 }) {
   return posts * 0.005 + users * 0.01;
 }
 
-// Every archive day on disk, oldest first.
+// Every archive day on disk (YYYY-MM-DD.jsonl only), oldest first.
 export function archiveDates() {
-  const dir = p('data', 'archive');
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter((f) => f.endsWith('.jsonl')).map((f) => f.slice(0, -6)).sort();
+  let names;
+  try { names = fs.readdirSync(p('data', 'archive')); } catch { return []; }
+  return names.filter((n) => /^\d{4}-\d{2}-\d{2}\.jsonl$/.test(n)).map((n) => n.slice(0, 10)).sort();
 }
 
 // Ids captured in the last `days` archive files — the dedupe set for the
@@ -108,4 +108,20 @@ export function appendToArchive(records) {
 export function loadDay(date) {
   const seen = new Set();
   return readJSONL(archivePath(date)).filter((t) => !seen.has(t.id) && seen.add(t.id));
+}
+
+// Every archived post, oldest file first, deduped by id across files (a
+// post captured near midnight ET can land in two day files). archiveDates()
+// above is the source of truth for what exists.
+export function loadArchive() {
+  const seen = new Set();
+  const out = [];
+  for (const date of archiveDates()) {
+    for (const t of readJSONL(archivePath(date))) {
+      if (seen.has(t.id)) continue;
+      seen.add(t.id);
+      out.push(t);
+    }
+  }
+  return out;
 }

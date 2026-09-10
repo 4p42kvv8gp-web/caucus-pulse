@@ -26,7 +26,17 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Pull, live-tag, rebuild site data
+      # Local embedding model for the poll's incremental embed + similarity
+      # hints (see nightly.yml). Best-effort: capture must never wait on it.
+      - name: Embedding model cache
+        uses: actions/cache@v4
+        with:
+          path: data/models
+          key: embedding-model-bge-small-en-v1.5-ea104dacec62
+      - name: Download embedding model (verified; no-op when cached)
+        continue-on-error: true
+        run: npm run download-model
+      - name: Pull, embed, live-tag, rebuild site data
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
