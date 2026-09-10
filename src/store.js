@@ -45,8 +45,17 @@ export function addUsage(state, { posts = 0, users = 0 }) {
 // source of truth (git-controlled, so it can be raised without touching repo
 // settings); X_DAILY_READ_BUDGET in the environment overrides it for a
 // one-off run. 8000 reads ≈ $40 is the fallback if neither is set.
+// Tolerates "15,000" / "15_000" (a repo variable typed with separators once
+// produced NaN, which silently disabled the guard); anything that still is
+// not a positive number falls through to the next source.
+export function parseBudget(value) {
+  if (value == null || value === '') return null;
+  const n = Number(String(value).replace(/[,_\s]/g, ''));
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
 export function dailyBudget() {
-  return Number(process.env.X_DAILY_READ_BUDGET || settings.daily_read_budget || 8000);
+  return parseBudget(process.env.X_DAILY_READ_BUDGET) ?? parseBudget(settings.daily_read_budget) ?? 8000;
 }
 
 export function budgetExhausted(state) {
