@@ -21,6 +21,11 @@ export function daysAgoEt(n) {
   return etDate(new Date(Date.now() - n * 86_400_000));
 }
 
+// YYYY-MM-DD ± n days, pure calendar arithmetic (no timezone involved).
+export function addDays(date, n) {
+  return new Date(new Date(`${date}T00:00:00Z`).getTime() + n * 86_400_000).toISOString().slice(0, 10);
+}
+
 export function readJSON(file, fallback = null) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
 }

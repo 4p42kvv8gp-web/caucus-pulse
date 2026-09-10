@@ -23,18 +23,31 @@
 //      daily report read it — and, with --promote, appends approved
 //      candidates to config/taxonomy.yaml so the next classification run
 //      assigns them directly.
+//   6. --auto-promote: the story is the unit, so promotion is continuous —
+//      every story candidate with a macro that clears settings.stories
+//      (posts, members, days) is written to the taxonomy the same night as a
+//      PROVISIONAL developing story (capped per night); the owner prunes from
+//      the daily report instead of approving one by one. Taxonomy gaps are
+//      listed, never auto-promoted: where a generic subject lives is a call
+//      for a human.
+//   7. --retire: a provisional story with no assignments for
+//      settings.stories.retire_after_quiet_days is marked retired: true in
+//      the YAML — it leaves the classifier prompt, its key stays for history.
+//   A taxonomy edit made here is only seen by the NEXT classification run.
 //
 //   node --use-env-proxy src/stories.js                 # rebuild candidates (+1 small Claude call for new ones)
 //   node --use-env-proxy src/stories.js --no-llm        # merge + score only
 //   node --use-env-proxy src/stories.js --explain       # per candidate: daily clusters + merges behind it
 //   node --use-env-proxy src/stories.js --confirm       # re-run the duplicate confirmation over all stories
 //   node --use-env-proxy src/stories.js --promote=key1,key2
+//   node --use-env-proxy src/stories.js --auto-promote  # promote everything over the thresholds (nightly)
+//   node --use-env-proxy src/stories.js --retire        # retire quiet provisional stories (nightly)
 //   node --use-env-proxy src/stories.js --days=30       # look-back window (default 30)
 import fs from 'node:fs';
 import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
-import { p, settings, readJSON, writeJSON, daysAgoEt } from './util.js';
+import { p, settings, readJSON, writeJSON, daysAgoEt, etDate, addDays } from './util.js';
 import { loadDay, topicsPath } from './store.js';
-import { loadTaxonomy, renderTaxonomy, parseJsonLoose } from './taxonomy.js';
+import { loadTaxonomy, renderTaxonomy, parseJsonLoose, ymd } from './taxonomy.js';
 
 export const storiesPath = p('data', 'stories.json');
 const arg = (name, dflt) => {
@@ -373,23 +386,259 @@ export function mergeConfirmedGroups(prev, fresh) {
   return out;
 }
 
-// Append promoted candidates to config/taxonomy.yaml as text (js-yaml dump
-// would strip the file's comments). Inserts under the macro's subtopics.
+// The YAML is edited as text so its comments survive (js-yaml dump would
+// strip them). A macro block is the column-0 key and every indented line
+// after it; a subtopic block is the 4-space key and every line indented
+// deeper. Replacements are functions so a "$" in a label is literal.
+const escapeRe = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const macroBlockRe = (macro) => new RegExp(`^${escapeRe(macro)}:\\n((?:  .*\\n)*)`, 'm');
+const subBlockRe = (key) => new RegExp(`^    ${escapeRe(key)}:\\n((?:      .*\\n)*)`, 'm');
+
+// Append promoted candidates to config/taxonomy.yaml. Inserts under the
+// macro's subtopics; a key already present under that macro is left alone,
+// so replaying a promotion is harmless. Auto-promoted stories also carry
+// `provisional: true` (the owner has not confirmed it) and `promoted: <date>`
+// (when it entered the taxonomy — the retirement clock starts there, not at
+// `since`, which is the story's first post and can be weeks earlier).
 export function promoteToTaxonomy(yamlText, items) {
   let text = yamlText;
   for (const it of items) {
-    const macroRe = new RegExp(`^${it.macro}:\\n((?:  .*\\n)*)`, 'm');
+    const macroRe = macroBlockRe(it.macro);
     const m = text.match(macroRe);
     if (!m) throw new Error(`macro "${it.macro}" not found in taxonomy.yaml`);
     let block = m[1];
+    if (subBlockRe(it.key).test(block)) continue;
     const aliases = it.aliases?.length ? `\n      aliases: [${it.aliases.map((a) => JSON.stringify(a)).join(', ')}]` : '';
-    const entry = `    ${it.key}:\n      label: ${JSON.stringify(it.label)}${aliases}\n      story: true\n      since: ${it.since}\n`;
-    if (/^  subtopics: \{\}\n/m.test(block)) block = block.replace(/^  subtopics: \{\}\n/m, `  subtopics:\n${entry}`);
-    else if (/^  subtopics:\n/m.test(block)) block = block.replace(/^  subtopics:\n/m, `  subtopics:\n${entry}`);
+    const flags = (it.provisional ? '\n      provisional: true' : '') + (it.promoted ? `\n      promoted: ${ymd(it.promoted)}` : '');
+    const entry = `    ${it.key}:\n      label: ${JSON.stringify(it.label)}${aliases}\n      story: true\n      since: ${ymd(it.since)}${flags}\n`;
+    if (/^  subtopics: \{\}\n/m.test(block)) block = block.replace(/^  subtopics: \{\}\n/m, () => `  subtopics:\n${entry}`);
+    else if (/^  subtopics:\n/m.test(block)) block = block.replace(/^  subtopics:\n/m, () => `  subtopics:\n${entry}`);
     else block = block + `  subtopics:\n${entry}`;
-    text = text.replace(macroRe, `${it.macro}:\n${block}`);
+    text = text.replace(macroRe, () => `${it.macro}:\n${block}`);
   }
   return text;
+}
+
+// ── Continuous promotion ─────────────────────────────────────────────────
+// A macro like "Congress & campaign politics" means nothing to the Leader's
+// office on its own; the rows that matter are named, dated stories. So a
+// candidate the placement pass called a story, under a macro, that clears
+// settings.stories becomes a provisional developing story the same night,
+// most posts first, capped per night. Gaps (durable generic subjects) are
+// never promoted here — they are returned separately for a human --promote.
+
+export const STORY_DEFAULTS = { auto_promote: true, min_posts: 5, min_members: 3, min_days: 2, max_per_night: 8, retire_after_quiet_days: 21 };
+export const storySettings = (s = settings.stories) => ({ ...STORY_DEFAULTS, ...(s || {}) });
+
+// Capitalized function words that are never part of a name: they break a
+// run ("The White House" → "White House", "Today Dolly Parton" → "Dolly
+// Parton", "CNN The Source" → nothing). "New" is deliberately absent: New
+// Mexico, New York.
+const CAP_STOP = new Set(['the', 'a', 'an', 'and', 'but', 'or', 'of', 'in', 'on', 'at', 'to', 'for', 'with', 'from', 'by', 'as',
+  'is', 'are', 'was', 'were', 'be', 'it', 'its', 'this', 'that', 'these', 'those', 'i', 'we', 'you', 'he', 'she', 'they',
+  'my', 'our', 'your', 'his', 'her', 'their', 'rt', 'today', 'tonight', 'yesterday', 'tomorrow', 'thank', 'thanks', 'happy',
+  'proud', 'just', 'now', 'here', 'what', 'when', 'where', 'why', 'how', 'who', 'which', 'if', 'so', 'no', 'yes', 'every',
+  'all', 'more', 'please', 'join', 'watch', 'read', 'live', 'breaking', 'via', 'dear', 'rip', 'congrats', 'congratulations']);
+const ABBREV = /^(Dr|Mr|Mrs|Ms|Rep|Sen|Gov|Sec|St|Jr|Sr|Lt|Gen|Col)\.$/;
+
+// The proper nouns a story is about, as extra classifier aliases: the most
+// frequent capitalized bigrams/trigrams across `texts` ("Lake Ontario",
+// "Imagination Library"). Deterministic — ranked by how many texts contain
+// the name, then longer, then alphabetical — and skips names already covered
+// by `existing` (or by an earlier pick). URLs and @handles are stripped; a
+// sentence-ending token or a capitalized function word closes a run, so the
+// next sentence's first word never glues on ("...Parton. She").
+export function properNounAliases(texts, { existing = [], max = 3 } = {}) {
+  const df = new Map();
+  for (const raw of texts || []) {
+    const seen = new Set();
+    const runs = [];
+    let run = [];
+    const flush = () => { if (run.length) runs.push(run); run = []; };
+    for (const tok of String(raw).replace(/https?:\/\/\S+/g, ' ').replace(/@\w+/g, ' ').split(/\s+/)) {
+      const ends = /[.!?…]["'”’)]*$/.test(tok) && !ABBREV.test(tok);
+      const w = tok.replace(/^[#"'“‘(\[]+/, '').replace(/[.,;:!?"'”’)\]…]+$/, '').replace(/['’]s$/, '');
+      if (w.length > 1 && /^[A-Z][A-Za-z0-9'’.-]*$/.test(w) && !CAP_STOP.has(w.toLowerCase())) run.push(w); else flush();
+      if (ends) flush();
+    }
+    flush();
+    for (const words of runs) {
+      for (let n = 2; n <= 3; n++) for (let i = 0; i + n <= words.length; i++) seen.add(words.slice(i, i + n).join(' '));
+    }
+    for (const g of seen) df.set(g, (df.get(g) || 0) + 1);
+  }
+  const need = Math.min(2, (texts || []).length);
+  const ranked = [...df.entries()].filter(([, n]) => n >= need)
+    .sort((x, y) => y[1] - x[1] || y[0].length - x[0].length || (x[0] < y[0] ? -1 : 1))
+    .map(([g]) => g);
+  const out = [];
+  const covered = (g) => [...existing, ...out].some((e) => {
+    const a = String(e).toLowerCase(), b = g.toLowerCase();
+    return a.includes(b) || b.includes(a);
+  });
+  for (const g of ranked) {
+    if (out.length >= max) break;
+    if (!covered(g)) out.push(g);
+  }
+  return out;
+}
+
+// Placement aliases first, derived names after; case-insensitive dedupe.
+export function mergeAliases(placementAliases, derived, max = 8) {
+  const out = [], seen = new Set();
+  for (const a of [...(placementAliases || []), ...(derived || [])]) {
+    const s = String(a).trim();
+    const k = s.toLowerCase();
+    if (!k || seen.has(k)) continue;
+    seen.add(k);
+    out.push(s);
+    if (out.length >= max) break;
+  }
+  return out;
+}
+
+// An existing subtopic under the macro that already names this story: same
+// key, same label, or a shared alias (case-insensitive). Guards against a
+// second key for a story the owner (or an earlier night) already added.
+export function existingSubtopic(tax, macro, pl) {
+  const subs = tax?.[macro]?.subtopics || {};
+  if (subs[pl.key]) return pl.key;
+  const norm = (s) => String(s).trim().toLowerCase();
+  const mine = new Set([pl.label, ...(pl.aliases || [])].filter(Boolean).map(norm));
+  for (const [k, sub] of Object.entries(subs)) {
+    if ([sub.label, ...(sub.aliases || [])].filter(Boolean).map(norm).some((s) => mine.has(s))) return k;
+  }
+  return null;
+}
+
+// Pure selection: scored candidates (with .placement) in, promotion items
+// out — what promoteToTaxonomy writes plus the counts the report shows.
+//   items     promoted tonight, by posts desc, at most max_per_night
+//   deferred  cleared the thresholds but wait for another night
+//   gaps      kind 'gap' candidates (a human decides these)
+//   skipped   stories not promoted, with the reason
+// `textsOf(c)` supplies the post texts alias derivation reads (defaults to
+// the candidate's three samples); `night` is the date written as `promoted`.
+export function autoPromote(candidates, storyCfg, { promoted = [], tax = null, textsOf = (c) => c.samples || [], night = null } = {}) {
+  const cfg = storySettings(storyCfg);
+  const done = new Set(promoted || []);
+  const gaps = [], eligible = [], skipped = [];
+  const skip = (c, why) => skipped.push({ key: c.key, label: c.placement?.label || c.label, why });
+  for (const c of candidates) {
+    const pl = c.placement;
+    if (!pl || pl.kind === 'noise') continue;
+    if (pl.kind === 'gap') { gaps.push(c); continue; }
+    if (pl.kind !== 'story') continue;
+    if (!pl.macro) { skip(c, 'no macro fits — needs a hand placement'); continue; }
+    if (done.has(`${pl.macro}/${pl.key}`)) continue;
+    if (tax && !tax[pl.macro]) { skip(c, `macro "${pl.macro}" is no longer in the taxonomy`); continue; }
+    const dup = existingSubtopic(tax, pl.macro, pl);
+    if (dup) { skip(c, `already in the taxonomy as ${pl.macro}/${dup}`); continue; }
+    const short = [];
+    if (c.posts < cfg.min_posts) short.push(`${c.posts}/${cfg.min_posts} posts`);
+    if (c.members < cfg.min_members) short.push(`${c.members}/${cfg.min_members} members`);
+    if (c.days < cfg.min_days) short.push(`${c.days}/${cfg.min_days} days`);
+    if (short.length) { skip(c, `below threshold: ${short.join(', ')}`); continue; }
+    eligible.push(c);
+  }
+  eligible.sort((a, b) => b.posts - a.posts || b.members - a.members || b.days - a.days || (a.key < b.key ? -1 : 1));
+  // The model can name one story from two candidates — the same placement
+  // key, or two keys sharing a label or alias under the macro ("Lake
+  // America" on both lake-america-renaming and lake-ontario-renaming). The
+  // one with more posts carries it; the other is skipped, and once the first
+  // is in the YAML, existingSubtopic keeps skipping it on later nights.
+  const namesOf = (pl) => [pl.label, ...(pl.aliases || [])].filter(Boolean).map((s) => String(s).trim().toLowerCase());
+  const unique = [];
+  for (const c of eligible) {
+    const pl = c.placement;
+    const names = namesOf(pl);
+    const twin = unique.find((o) => o.placement.macro === pl.macro && (o.placement.key === pl.key || namesOf(o.placement).some((n) => names.includes(n))));
+    if (twin) { skip(c, `same story as a larger candidate (${twin.placement.macro}/${twin.placement.key})`); continue; }
+    unique.push(c);
+  }
+  const items = unique.slice(0, cfg.max_per_night).map((c) => {
+    const pl = c.placement;
+    return {
+      macro: pl.macro, key: pl.key, label: pl.label,
+      aliases: mergeAliases(pl.aliases, properNounAliases(textsOf(c), { existing: pl.aliases || [] })),
+      since: c.firstSeen, provisional: true, promoted: night,
+      candidate: c.key, posts: c.posts, members: c.members, days: c.days, lastSeen: c.lastSeen
+    };
+  });
+  return { items, deferred: unique.slice(cfg.max_per_night), gaps, skipped };
+}
+
+// ── Retirement ───────────────────────────────────────────────────────────
+
+// Subtopic assignments across classified days: "macro/sub" → {posts,
+// lastSeen}. `topicsFor(date)` returns the data/topics file (or null), so
+// tests feed fixtures and missing days are simply empty.
+export function assignmentCounts(dates, topicsFor) {
+  const out = new Map();
+  for (const date of dates) {
+    const file = topicsFor(date);
+    for (const topics of Object.values(file?.assignments || {})) {
+      for (const [macro, sub] of Array.isArray(topics) ? topics : []) {
+        if (!sub) continue;
+        const k = `${macro}/${sub}`;
+        const e = out.get(k) || { posts: 0, lastSeen: null };
+        e.posts++;
+        if (!e.lastSeen || date > e.lastSeen) e.lastSeen = date;
+        out.set(k, e);
+      }
+    }
+  }
+  return out;
+}
+
+// Provisional stories to retire: in the taxonomy for at least `quietDays`
+// (by `promoted`, else `since`) with zero assignments over that window.
+// A story the owner confirmed (provisional removed) is never touched, nor is
+// one promoted too recently to have been classified for the whole window.
+export function quietStories(tax, counts, { quietDays, today }) {
+  const cutoff = addDays(today, -quietDays);
+  const out = [];
+  for (const [macro, m] of Object.entries(tax || {})) {
+    for (const [key, sub] of Object.entries(m.subtopics || {})) {
+      if (!sub.story || !sub.provisional || sub.retired) continue;
+      const entered = ymd(sub.promoted || sub.since);
+      if (!entered || entered > cutoff) continue;
+      if (counts.get(`${macro}/${key}`)?.posts) continue;
+      out.push({ macro, key, label: sub.label, since: ymd(sub.since), promoted: ymd(sub.promoted), quietDays });
+    }
+  }
+  return out;
+}
+
+// Mark subtopics retired in the YAML text, preserving comments and order:
+// `retired: true` is appended to each entry's block. renderTaxonomy then
+// drops it from the prompt; rollups and history still resolve the key.
+export function markRetired(yamlText, items) {
+  let text = yamlText;
+  for (const it of items) {
+    const macroRe = macroBlockRe(it.macro);
+    const m = text.match(macroRe);
+    if (!m) throw new Error(`macro "${it.macro}" not found in taxonomy.yaml`);
+    const subRe = subBlockRe(it.key);
+    const s = m[1].match(subRe);
+    if (!s) throw new Error(`subtopic "${it.macro}/${it.key}" not found in taxonomy.yaml`);
+    if (/^      retired: true\n/m.test(s[1])) continue;
+    const block = m[1].replace(subRe, () => `    ${it.key}:\n${s[1]}      retired: true\n`);
+    text = text.replace(macroRe, () => `${it.macro}:\n${block}`);
+  }
+  return text;
+}
+
+// Write promotions: the YAML entry, then data/stories.json — `promoted`
+// (macro/key strings the dashboard hides from Emerging) and `promotions`
+// (the log the daily report reads for "promoted tonight").
+function recordPromotions(items, how, night) {
+  const file = p('config', 'taxonomy.yaml');
+  fs.writeFileSync(file, promoteToTaxonomy(fs.readFileSync(file, 'utf8'), items));
+  const data = readJSON(storiesPath);
+  data.promoted = [...new Set([...(data.promoted || []), ...items.map((i) => `${i.macro}/${i.key}`)])];
+  data.promotions = [...(data.promotions || []), ...items.map((i) => ({ ...i, promoted: night, how }))];
+  writeJSON(storiesPath, data);
 }
 
 // --explain: for each final candidate, the daily clusters behind it (with the
@@ -414,7 +663,10 @@ async function main() {
   const noLlm = process.argv.includes('--no-llm');
   const explain = process.argv.includes('--explain');
   const reconfirm = process.argv.includes('--confirm');
+  const autoFlag = process.argv.includes('--auto-promote');
+  const retireFlag = process.argv.includes('--retire');
   const promote = arg('promote', '').split(',').map((s) => s.trim()).filter(Boolean);
+  const night = etDate(); // the ET date this run happens on (the nightly runs after the day closes)
   const tax = loadTaxonomy();
   const authorsById = readJSON(p('data', 'authors.json'), { byId: {} }).byId;
   const caucusKeys = [...new Set(Object.values(settings.caucus_keys))]; // same order as sitedata's KEYS
@@ -431,7 +683,11 @@ async function main() {
   if (fresh.length && llm) {
     const top = fresh.slice(0, 60);
     console.log(`[stories] asking the model to place ${top.length} new candidate(s)`);
-    Object.assign(placements, await placeCandidates(top, tax));
+    // A failed call degrades to "no placement tonight" rather than aborting:
+    // this runs inside the nightly chain, and the stages after it (rollups,
+    // report, site data) must not wait on a transient API error.
+    try { Object.assign(placements, await placeCandidates(top, tax)); }
+    catch (e) { console.warn(`[stories] placement call failed (${e.message}); continuing with cached placements`); }
   }
 
   // Duplicate confirmation over ALL story candidates. Cached like placements:
@@ -442,11 +698,15 @@ async function main() {
   const unchecked = storyCands.filter((c) => !confirmation.checked.includes(c.key));
   if (llm && storyCands.length >= 2 && (unchecked.length || reconfirm)) {
     console.log(`[stories] asking the model to confirm duplicates among ${storyCands.length} story candidate(s) (${unchecked.length} unchecked)`);
-    const groups = await confirmDuplicates(storyCands.map((c) => confirmInput(c, postsById)));
-    for (const g of groups) console.log(`  confirmed: ${g.keys.join(' + ')} — ${g.reason}`);
-    confirmation.groups = mergeConfirmedGroups(confirmation.groups, groups);
-    confirmation.checked = storyCands.map((c) => c.key);
-    confirmation.checkedAt = new Date().toISOString();
+    try {
+      const groups = await confirmDuplicates(storyCands.map((c) => confirmInput(c, postsById)));
+      for (const g of groups) console.log(`  confirmed: ${g.keys.join(' + ')} — ${g.reason}`);
+      confirmation.groups = mergeConfirmedGroups(confirmation.groups, groups);
+      confirmation.checked = storyCands.map((c) => c.key);
+      confirmation.checkedAt = new Date().toISOString();
+    } catch (e) {
+      console.warn(`[stories] confirmation call failed (${e.message}); using cached confirmations only`);
+    }
   } else if (reconfirm && !llm) {
     console.warn('[stories] --confirm needs the model (drop --no-llm / configure Anthropic credentials); using cached confirmations only');
   }
@@ -468,7 +728,9 @@ async function main() {
   writeJSON(storiesPath, {
     generatedAt: new Date().toISOString(),
     windowDays: days,
-    promoted: prev.promoted || [],
+    promoted: prev.promoted || [],          // "macro/key" — hidden from the Emerging panel
+    promotions: prev.promotions || [],      // log: what was promoted which night (the report reads it)
+    retirements: prev.retirements || [],    // log: provisional stories retired for going quiet
     placements,
     confirmation,
     candidates: final.map(({ samples, sources, ...c }) => c)
@@ -483,18 +745,66 @@ async function main() {
   }
   if (explain) printExplain(final, dropped);
 
+  // --promote=key: an explicit approval by hand, so the entry is written
+  // confirmed (no provisional flag) and never retired automatically.
   if (promote.length) {
     const items = promote.map((k) => {
       const c = final.find((x) => x.placement?.key === k || x.key === k);
       if (!c?.placement?.macro) throw new Error(`cannot promote "${k}": no candidate with a macro placement`);
-      return { macro: c.placement.macro, key: c.placement.key, label: c.placement.label, aliases: c.placement.aliases, since: c.firstSeen };
+      return {
+        macro: c.placement.macro, key: c.placement.key, label: c.placement.label, aliases: c.placement.aliases, since: c.firstSeen,
+        candidate: c.key, posts: c.posts, members: c.members, days: c.days, lastSeen: c.lastSeen
+      };
     });
-    const file = p('config', 'taxonomy.yaml');
-    fs.writeFileSync(file, promoteToTaxonomy(fs.readFileSync(file, 'utf8'), items));
-    const data = readJSON(storiesPath);
-    data.promoted = [...new Set([...(data.promoted || []), ...items.map((i) => `${i.macro}/${i.key}`)])];
-    writeJSON(storiesPath, data);
+    recordPromotions(items, 'manual', night);
     console.log(`[stories] promoted ${items.map((i) => `${i.macro}/${i.key}`).join(', ')} → config/taxonomy.yaml (re-run classification to apply)`);
+  }
+
+  // --auto-promote: continuous promotion. The taxonomy change is only seen
+  // by the NEXT classification run (tonight's batch already ran).
+  if (autoFlag) {
+    const cfg = storySettings();
+    const data = readJSON(storiesPath);
+    const { items, deferred, gaps, skipped } = autoPromote(final, cfg, {
+      promoted: data.promoted, tax, night,
+      textsOf: (c) => c.ids.map((id) => postsById.get(id)?.text).filter(Boolean)
+    });
+    const show = (i) => `${i.macro}/${i.key} "${i.label}" — ${i.posts} posts, ${i.members} members, ${i.days} day(s), since ${i.since}`;
+    if (!items.length) {
+      console.log(`[stories] auto-promote: no story cleared the thresholds (≥${cfg.min_posts} posts, ≥${cfg.min_members} members, ≥${cfg.min_days} days)`);
+    } else if (!cfg.auto_promote) {
+      console.log(`[stories] auto-promote is off (settings.stories.auto_promote); would promote ${items.length}:`);
+      for (const i of items) console.log(`  ${show(i)}`);
+    } else {
+      recordPromotions(items, 'auto', night);
+      console.log(`[stories] auto-promoted ${items.length} provisional stor${items.length === 1 ? 'y' : 'ies'} → config/taxonomy.yaml (applies from the next classification run):`);
+      for (const i of items) console.log(`  ${show(i)}; aliases: ${i.aliases.join(', ')}`);
+    }
+    if (deferred.length) console.log(`[stories] ${deferred.length} more cleared the thresholds and wait for another night (max_per_night=${cfg.max_per_night})`);
+    for (const s of skipped.filter((x) => !/^below threshold/.test(x.why))) console.log(`  not promoted ${s.key}: ${s.why}`);
+    if (gaps.length) {
+      console.log(`[stories] ${gaps.length} taxonomy gap(s) need a human (never auto-promoted): ${gaps.slice(0, 8).map((c) => `${c.placement.macro || '-'}/${c.placement.key} (${c.posts} posts)`).join(', ')}`);
+    }
+  }
+
+  // --retire: provisional stories that went quiet leave the prompt. Reads
+  // the YAML again so a story promoted moments ago is judged from the file.
+  if (retireFlag) {
+    const cfg = storySettings();
+    const quietDays = cfg.retire_after_quiet_days;
+    const dates = Array.from({ length: quietDays + 1 }, (_, d) => daysAgoEt(d));
+    const counts = assignmentCounts(dates, (date) => readJSON(topicsPath(date), null));
+    const quiet = quietStories(loadTaxonomy(), counts, { quietDays, today: night });
+    if (!quiet.length) {
+      console.log(`[stories] retire: no provisional story has been quiet for ${quietDays} days`);
+    } else {
+      const file = p('config', 'taxonomy.yaml');
+      fs.writeFileSync(file, markRetired(fs.readFileSync(file, 'utf8'), quiet));
+      const data = readJSON(storiesPath);
+      data.retirements = [...(data.retirements || []), ...quiet.map((q) => ({ ...q, retired: night }))];
+      writeJSON(storiesPath, data);
+      console.log(`[stories] retired ${quiet.length} quiet provisional stor${quiet.length === 1 ? 'y' : 'ies'}: ${quiet.map((q) => `${q.macro}/${q.key}`).join(', ')} (retired: true in config/taxonomy.yaml; out of the prompt from the next classification run, keys kept for history)`);
+    }
   }
 }
 
