@@ -55,6 +55,17 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    first poll's cap to the end of what the list endpoint still serves (about
    800 posts — X's cap on this timeline, not a full 7 days) so the corpus
    starts a day or two earlier.
+7. **Historical backfill (recommended once).** The List endpoint can't reach
+   further back, but each member's own timeline can. `npm run backfill-members
+   -- --days=21` walks every on-List account back three weeks (one request per
+   100 posts, ~10k posts ≈ $50–65, X's limit on this endpoint is 10,000 calls
+   per 15 min so the daily read budget is the only ceiling), seeds
+   `data/metrics/` from capture metrics for posts already older than 24h, and
+   is resumable. Then `npm run classify-range` classifies every unclassified
+   day in one Claude batch, and `npm run syntax -- --date=…` per day (oldest
+   first), `npm run rollup`, `npm run report`, `npm run sitedata` rebuild the
+   derived layers. Without this, Momentum's 7-day baselines are empty for the
+   first week.
 
 ### Running from a Claude Code cloud session
 
@@ -98,6 +109,8 @@ starts. Every day before that is gone; turn it on early.
 | `src/authors.js` | weekly | `config/accounts.csv` → `data/authors.json` (no expansions ever) | $0.01/account/week |
 | `src/refresh.js` | nightly | 24h-old originals get one batched metrics re-read → `data/metrics/` | $0.005/original |
 | `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` (authoritative), emerging clusters, incident flags | ~50% batch rates |
+| `src/backfill-members.js` | once | Per-member timelines back N days → archive + seeded metrics (the List endpoint stops at ~800 posts) | $0.005/post |
+| `src/classify-range.js` | after a backfill | Every unclassified day in one Claude batch; retweets inherit across days | ~50% batch rates |
 | `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
 | `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
