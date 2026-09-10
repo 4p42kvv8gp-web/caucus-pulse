@@ -16,9 +16,12 @@ jobs:
             const token = await core.getIDToken('https://api.anthropic.com');
             core.setSecret(token);
             core.exportVariable('JWT', token);
+      - name: Show OIDC claims (payload only)
+        run: |
+          echo "$JWT" | cut -d. -f2 | tr '_-' '/+' | awk '{ l=length($0)%4; if (l==2) print $0"=="; else if (l==3) print $0"="; else print $0 }' | base64 -d | jq '{iss, sub, aud, repository, repository_owner, repository_owner_id, ref, event_name, workflow_ref}'
       - name: Exchange for an Anthropic access token
         run: |
-          curl -sS https://api.anthropic.com/v1/oauth/token \
+          curl -sS --fail-with-body https://api.anthropic.com/v1/oauth/token \
             -H "content-type: application/json" \
             --data @- <<JSON | jq 'with_entries(if (.key | test("token$")) then .value = "<redacted>" else . end)'
           {
