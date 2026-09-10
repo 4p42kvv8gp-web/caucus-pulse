@@ -50,7 +50,24 @@ export function mergeAuthors({ users, accounts, prev = {} }) {
   return { byId, untagged, missing };
 }
 
+// `npm run authors -- --overlay`: re-apply config/accounts.csv to the saved
+// author table without touching X (free). Use after editing caucus tags;
+// the weekly refresh still re-reads the List for membership changes.
+function overlayOnly() {
+  const accounts = loadAccounts();
+  const prev = loadAuthors();
+  const users = Object.entries(prev.byId).map(([id, a]) => ({
+    id, username: a.handle, name: a.name, onList: a.onList !== false && !a.stale,
+    public_metrics: { followers_count: a.followers }, verified_type: a.verifiedType
+  }));
+  const { byId, untagged, missing } = mergeAuthors({ users, accounts, prev: {} });
+  for (const [id, a] of Object.entries(prev.byId)) if (a.stale) byId[id] = { ...byId[id], stale: true };
+  writeJSON(authorsPath, { ...prev, byId, overlayAt: new Date().toISOString() });
+  console.log(`[authors] overlay applied to ${users.length} saved authors: ${Object.values(byId).filter((a) => a.caucuses.length).length} tagged, ${untagged.length} untagged, ${missing.length} CSV handle(s) not in the saved table`);
+}
+
 async function main() {
+  if (process.argv.includes('--overlay')) return overlayOnly();
   if (!x.isConfigured()) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
   const accounts = loadAccounts();
   const state = loadState();
