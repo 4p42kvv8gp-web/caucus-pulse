@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-10T07:39:44.931Z",
- "lastPollAt": "2026-09-10T07:19:31.513Z",
+ "generatedAt": "2026-09-10T09:47:44.491Z",
+ "lastPollAt": "2026-09-10T09:47:43.704Z",
  "timezone": "America/New_York",
  "today": "2026-09-10",
  "days": [
@@ -3328,22 +3328,22 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    36,
-    110,
-    145,
-    120,
-    72,
-    23,
-    10,
-    2,
-    27,
-    129,
-    165,
-    167,
-    68,
-    24,
-    6
+    18,
+    86,
+    140,
+    144,
+    83,
+    34,
+    12,
+    0,
+    11,
+    108,
+    155,
+    181,
+    89,
+    35,
+    7,
+    2
    ]
   },
   "CPC": {
@@ -3374,22 +3374,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    19,
-    55,
-    72,
-    55,
-    27,
-    12,
-    6,
-    1,
-    11,
+    9,
+    45,
+    70,
     66,
+    31,
+    18,
+    7,
+    0,
+    6,
+    51,
     77,
-    80,
-    38,
-    16,
-    5
+    81,
+    51,
+    20,
+    6,
+    2
    ]
   },
   "NewDem": {
@@ -3420,22 +3420,22 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    22,
-    64,
-    86,
-    57,
-    37,
     11,
-    4,
-    1,
+    49,
+    83,
+    75,
+    45,
+    13,
+    6,
+    0,
+    5,
+    68,
+    80,
+    97,
+    45,
     16,
-    76,
-    88,
-    87,
-    33,
-    11,
-    1
+    2,
+    0
    ]
   },
   "CBC": {
@@ -3466,22 +3466,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    4,
-    24,
-    31,
-    20,
-    12,
-    4,
-    6,
     1,
-    6,
+    17,
     31,
-    33,
     27,
-    12,
+    14,
+    5,
     6,
-    1
+    0,
+    3,
+    23,
+    34,
+    35,
+    12,
+    8,
+    2,
+    0
    ]
   },
   "CHC": {
@@ -3512,21 +3512,21 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    4,
+    2,
+    13,
+    27,
     21,
-    28,
     16,
-    14,
-    5,
-    3,
-    0,
+    8,
     4,
-    24,
-    28,
+    0,
+    1,
+    17,
+    32,
     25,
-    10,
-    5,
+    11,
+    9,
+    1,
     0
    ]
   },
@@ -3558,22 +3558,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    4,
-    11,
-    11,
-    14,
-    10,
-    6,
-    0,
     1,
-    4,
     10,
-    16,
-    19,
-    7,
+    12,
+    14,
+    11,
+    8,
+    0,
+    0,
+    2,
+    12,
+    14,
+    18,
+    10,
+    4,
     3,
-    5
+    2
    ]
   }
  },
@@ -8296,7 +8296,7 @@
    "since": "2026-09-07T01:53:17.000Z",
    "shape": [
     2,
-    2,
+    3,
     3,
     3,
     6,
@@ -8527,7 +8527,7 @@
   {
    "id": "san-diego-ca--extreme-heat",
    "kind": "extreme heat",
-   "status": "active",
+   "status": "monitoring",
    "place": "San Diego, CA · CA-50",
    "handle": "@RepScottPeters",
    "member": "Scott H. Peters",
@@ -8575,7 +8575,7 @@
   {
    "id": "kauai-hi--tropical-storm",
    "kind": "tropical storm",
-   "status": "active",
+   "status": "monitoring",
    "place": "Kauai, HI · HI-01",
    "handle": "@RepEdCase",
    "member": "Ed Case",
@@ -8614,7 +8614,7 @@
   {
    "id": "ka-hi--hurricane-damage",
    "kind": "hurricane damage",
-   "status": "active",
+   "status": "monitoring",
    "place": "Kaʻū, HI · HI-02",
    "handle": "@RepJillTokuda",
    "member": "Jill N. Tokuda",
@@ -9001,7 +9001,7 @@
   {
    "id": "la-habra-ca--hazmat-release",
    "kind": "hazmat release",
-   "status": "monitoring",
+   "status": "resolved",
    "place": "La Habra, CA · CA-38",
    "handle": "@RepLindaSanchez",
    "member": "Linda T. Sánchez",
@@ -9058,7 +9058,7 @@
   {
    "id": "orange-and-la-counties-ca--extreme-heat",
    "kind": "extreme heat",
-   "status": "monitoring",
+   "status": "resolved",
    "place": "Orange and LA counties, CA · CA-45",
    "handle": "@RepDerekTranCA",
    "member": "Derek Tran",
@@ -10070,7 +10070,7 @@
    "date": "2026-09-10",
    "engN": 0,
    "kind": "quote",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2097943348736835957",
@@ -10090,7 +10090,7 @@
    "date": "2026-09-10",
    "engN": 73,
    "kind": "quote",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2097926996215103602",
