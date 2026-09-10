@@ -1,0 +1,849 @@
+{
+ "generatedAt": "2026-09-10T07:34:12.586Z",
+ "model": "claude-opus-5",
+ "settings": {
+  "top": 8,
+  "min_story_posts_24h": 5,
+  "max_posts": 25,
+  "baseline_posts": 6,
+  "daily_calls": 150
+ },
+ "movers": [
+  {
+   "key": "topic:labor",
+   "kind": "topic",
+   "label": "Labor & workers",
+   "by": "momentum",
+   "score": 5,
+   "d": -70,
+   "r24": 19,
+   "sha": "a63c7688fbd692a2"
+  },
+  {
+   "key": "topic:reproductive-rights",
+   "kind": "topic",
+   "label": "Reproductive rights",
+   "by": "momentum",
+   "score": 84,
+   "d": 157,
+   "r24": 3,
+   "sha": "507c5afeb7f80418"
+  },
+  {
+   "key": "topic:education",
+   "kind": "topic",
+   "label": "Education",
+   "by": "momentum",
+   "score": 68,
+   "d": 52,
+   "r24": 23,
+   "sha": "51e48c871e0e0a31"
+  },
+  {
+   "key": "topic:foreign-policy",
+   "kind": "topic",
+   "label": "Foreign policy & national security",
+   "by": "momentum",
+   "score": 67,
+   "d": 57,
+   "r24": 69,
+   "sha": "94ebc5c608ea966f"
+  },
+  {
+   "key": "topic:tech",
+   "kind": "topic",
+   "label": "Technology",
+   "by": "momentum",
+   "score": 67,
+   "d": 222,
+   "r24": 36,
+   "sha": "2b4b86c995c62232"
+  },
+  {
+   "key": "topic:immigration",
+   "kind": "topic",
+   "label": "Immigration",
+   "by": "momentum",
+   "score": 66,
+   "d": 131,
+   "r24": 52,
+   "sha": "fa0c0249e457daf8"
+  },
+  {
+   "key": "topic:healthcare",
+   "kind": "topic",
+   "label": "Health care",
+   "by": "momentum",
+   "score": 66,
+   "d": 49,
+   "r24": 43,
+   "sha": "b12cb4111c04464a"
+  },
+  {
+   "key": "topic:constituent-services",
+   "kind": "topic",
+   "label": "District & constituent services",
+   "by": "momentum",
+   "score": 65,
+   "d": 134,
+   "r24": 57,
+   "sha": "11401059bbee65ec"
+  },
+  {
+   "key": "cluster:sept-11-anniversary",
+   "kind": "cluster",
+   "label": "9/11 25th anniversary remembrance",
+   "by": "story",
+   "score": null,
+   "d": null,
+   "r24": 8,
+   "sha": "cb5cefd736cff953"
+  }
+ ],
+ "entries": {
+  "topic:labor": {
+   "key": "topic:labor",
+   "kind": "topic",
+   "label": "Labor & workers",
+   "macro": "labor",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 5,
+    "d": -70,
+    "r24": 19,
+    "members24": 17,
+    "week": 383,
+    "by": "momentum"
+   },
+   "sha": "a63c7688fbd692a2",
+   "postIds": [
+    "2097768120215576778",
+    "2097822362402206106",
+    "2097741813754855670",
+    "2097809330674499700",
+    "2097733596052377643",
+    "2097798504735223914",
+    "2097821976928596100",
+    "2097667617880260819",
+    "2097872164049350806",
+    "2097680320833212521",
+    "2097796384657137953",
+    "2097778795692319211",
+    "2097758231326056460",
+    "2097699569039536563",
+    "2097851099432530292",
+    "2097778975569317951"
+   ],
+   "baselineIds": [
+    "2096943980969656765",
+    "2096634948492960190",
+    "2097010775474766304",
+    "2095915459291775145",
+    "2097026110387335350",
+    "2096979285583991157"
+   ],
+   "reason": "Post-Labor Day fade. Last week's high-engagement holiday messaging from @IlhanMN, @RepJeffries and @TeamPelosi has passed; yesterday's 19 posts are scattered local union solidarity items from @AyannaPressley, @RepBonamici, @RepHorsford and others.",
+   "framing": "standing with unions for fair contracts and the right to organize",
+   "evidence": [
+    {
+     "id": "2096943980969656765",
+     "handle": "@IlhanMN",
+     "quote": "America is only as strong as the labor that builds it every day. Happy Labor Day.",
+     "verified": true,
+     "window": "baseline"
+    },
+    {
+     "id": "2097768120215576778",
+     "handle": "@AyannaPressley",
+     "quote": "Solidarity with @unitehere26 and @teamsters25 today and every day.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097733596052377643",
+     "handle": "@RepHorsford",
+     "quote": "waited far too long for what every worker deserves: the right to organize and negotiate a fair contract",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "Baseline posts are clearly Labor Day-driven with huge engagement, while the last 24 hours are low-engagement, unrelated local labor events."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 3920,
+    "output": 351
+   }
+  },
+  "topic:reproductive-rights": {
+   "key": "topic:reproductive-rights",
+   "kind": "topic",
+   "label": "Reproductive rights",
+   "macro": "reproductive-rights",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 84,
+    "d": 157,
+    "r24": 3,
+    "members24": 3,
+    "week": 7,
+    "by": "momentum"
+   },
+   "sha": "507c5afeb7f80418",
+   "postIds": [
+    "2097772667394838642",
+    "2097867768833913323",
+    "2097837205284651329"
+   ],
+   "baselineIds": [
+    "2096240730993823841",
+    "2095925353411666391",
+    "2095939153439392031",
+    "2095957569625788700"
+   ],
+   "reason": "Three unrelated posts in one day: @RepJudyChu marked a Planned Parenthood clinic opening, @JudyChuCampaign pushed her Women's Health Protection Act against Louisiana's medication abortion limits, and @larsenrick touted a Pro-Choice Washington endorsement. Scattered, not coordinated.",
+   "framing": "defending abortion access and touting pro-choice credentials",
+   "evidence": [
+    {
+     "id": "2097772667394838642",
+     "handle": "@RepJudyChu",
+     "quote": "I was thrilled to celebrate the grand opening of Planned Parenthood's new flagship health center in Pasadena!",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097867768833913323",
+     "handle": "@larsenrick",
+     "quote": "I am honored to be endorsed by the Pro-Choice Washington PAC. I will always fight for the right to choose reproductive",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097837205284651329",
+     "handle": "@JudyChuCampaign",
+     "quote": "Louisiana is attempting to limit access to medication abortion nationwide.",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "medium",
+    "why": "Posts clearly show the volume lift and its sources, but they are separate occasions with no single triggering event."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 1732,
+    "output": 370
+   }
+  },
+  "topic:education": {
+   "key": "topic:education",
+   "kind": "topic",
+   "label": "Education",
+   "macro": "education",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 68,
+    "d": 52,
+    "r24": 23,
+    "members24": 21,
+    "week": 91,
+    "by": "momentum"
+   },
+   "sha": "51e48c871e0e0a31",
+   "postIds": [
+    "2097815314469707884",
+    "2097737414408122683",
+    "2097671362953507074",
+    "2097829155945463912",
+    "2097756092252008599",
+    "2097699147918786946",
+    "2097771811689631983",
+    "2097756725168202097",
+    "2097748353538818399",
+    "2097764230065799535",
+    "2097785821579620831",
+    "2097687124392681946",
+    "2097822432413237603",
+    "2097771621390139449",
+    "2097806888255529273",
+    "2097751718528184792",
+    "2097837505085092314",
+    "2097790837799149777",
+    "2097741957325783111",
+    "2097882782470897879",
+    "2097753661271117842",
+    "2097807707537285198",
+    "2097799226793357735"
+   ],
+   "baselineIds": [
+    "2095910651218505883",
+    "2097062023867637981",
+    "2097490301703106954",
+    "2097550853980790857",
+    "2095880938349531163",
+    "2096719357778755920"
+   ],
+   "reason": "Volume lift is mostly scattered back-to-school and local grant posts from 21 different members (@RepDavids, @RepNikema, @RepVindman, @RepTerriSewell). Two smaller threads: @RepRoKhanna on the campus-funding vote, and @BobbyScott/@sliccardo on Trump's IRS rule targeting colleges.",
+   "framing": "no shared framing — mostly district education wins, with a secondary 'Trump is a",
+   "evidence": [
+    {
+     "id": "2097756092252008599",
+     "handle": "@RepDavids",
+     "quote": "I’m proud to work with both parties to secure $8.3M to support and recruit the teachers who help students across #KS03",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097815314469707884",
+     "handle": "@RepRoKhanna",
+     "quote": "237 House members, including 33 Democrats, voted to strip federal funding from universities where students speak out",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097748353538818399",
+     "handle": "@BobbyScott",
+     "quote": "Trump’s proposed IRS rule is the latest attack on diversity, threatening the tax-exempt status of private colleges",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "The 23 posts are visible and clearly show broad member adoption of unrelated local education items rather than one event."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5067,
+    "output": 472
+   }
+  },
+  "topic:foreign-policy": {
+   "key": "topic:foreign-policy",
+   "kind": "topic",
+   "label": "Foreign policy & national security",
+   "macro": "foreign-policy",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 67,
+    "d": 57,
+    "r24": 69,
+    "members24": 56,
+    "week": 264,
+    "by": "momentum"
+   },
+   "sha": "94ebc5c608ea966f",
+   "postIds": [
+    "2097839020474593285",
+    "2097727611061608763",
+    "2097815314469707884",
+    "2097710393200099651",
+    "2097790566444519817",
+    "2097774732074725472",
+    "2097672271691162046",
+    "2097675858907369908",
+    "2097674119496061406",
+    "2097705403031138493",
+    "2097718219008020625",
+    "2097735162494603334",
+    "2097677478865048009",
+    "2097691182541210045",
+    "2097689234861707742",
+    "2097805986841108486",
+    "2097817034084020237",
+    "2097718200439800238",
+    "2097745474337817050",
+    "2097782936837763539",
+    "2097759879570059667",
+    "2097698749707440162",
+    "2097749890554101887",
+    "2097772662625820796",
+    "2097737438340747372"
+   ],
+   "baselineIds": [
+    "2095910651218505883",
+    "2097354560415105354",
+    "2096614482453664060",
+    "2097377004811166040",
+    "2097443704986300919",
+    "2097308839687143898"
+   ],
+   "reason": "A broad, coordinated caucus push tying Trump's unauthorized Iran war to $100 oil and gas prices — @WhipKClark, @RepJamesClyburn, @sharicedavids, @repdinatitus, @MikeLevin — alongside separate Gaza/free-speech posts from @RashidaTlaib and @RepRoKhanna.",
+   "framing": "Trump's reckless, unauthorized war is raising your gas prices and costing servic",
+   "evidence": [
+    {
+     "id": "2097675858907369908",
+     "handle": "@WhipKClark",
+     "quote": "No one asked for Trump’s reckless war, and it needs to end now.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097677478865048009",
+     "handle": "@sharicedavids",
+     "quote": "Oil is back over $100 a barrel. This war in Iran is putting our service members’ lives at risk and driving up costs",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097815314469707884",
+     "handle": "@RepRoKhanna",
+     "quote": "This is an assault on the First Amendment. We need to stand with students with the courage to call out the genocide",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "Dozens of members repeat the same Iran war/gas price line within one day, matching the measured volume and adoption lift."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5377,
+    "output": 390
+   }
+  },
+  "topic:tech": {
+   "key": "topic:tech",
+   "kind": "topic",
+   "label": "Technology",
+   "macro": "tech",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 67,
+    "d": 222,
+    "r24": 36,
+    "members24": 29,
+    "week": 67,
+    "by": "momentum"
+   },
+   "sha": "2b4b86c995c62232",
+   "postIds": [
+    "2097685220442923030",
+    "2097754129489596612",
+    "2097721236839162155",
+    "2097730021733400740",
+    "2097675180231319915",
+    "2097728914906869764",
+    "2097791328319152411",
+    "2097690483497578605",
+    "2097695262051369070",
+    "2097888523562913941",
+    "2097787186665951287",
+    "2097791781031047472",
+    "2097690443358073241",
+    "2097822197821661436",
+    "2097833789049233477",
+    "2097795378905018543",
+    "2097791752048427457",
+    "2097784608788283532",
+    "2097807998429130876",
+    "2097688889573998751",
+    "2097687328403714334",
+    "2097785956791120096",
+    "2097799028108910903",
+    "2097689533072519362",
+    "2097742835252363408"
+   ],
+   "baselineIds": [
+    "2097519390480891976",
+    "2095921753595785390",
+    "2097408130078437634",
+    "2096977395563606449",
+    "2095978504382714365",
+    "2095970962499899781"
+   ],
+   "reason": "News that Anthropic researchers put AI extinction odds above 10% triggered a near-caucus-wide reaction, led by @RepCasar, @RoKhanna, @RepYassAnsari and @RepTedLieu — a coordinated demand for emergency hearings, a superintelligence ban and canceling recess.",
+   "framing": "AI insiders are warning of an existential emergency — Congress must hold hearing",
+   "evidence": [
+    {
+     "id": "2097685220442923030",
+     "handle": "@RepCasar",
+     "quote": "This is an emergency. Congress must convene hearings and pass my and Bernie’s superintelligence ban.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097754129489596612",
+     "handle": "@RoKhanna",
+     "quote": "Anthropic's alignment lead says there’s a 10% chance of AI causing human extinction.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097787186665951287",
+     "handle": "@KellyMorrisonMN",
+     "quote": "Mike Johnson needs to cancel recess so we can get to work immediately – hearings, investigations, and comprehensive",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "Nearly all 24-hour posts cite the same researcher warnings and push the same hearings/ban demand."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5864,
+    "output": 390
+   }
+  },
+  "topic:immigration": {
+   "key": "topic:immigration",
+   "kind": "topic",
+   "label": "Immigration",
+   "macro": "immigration",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 66,
+    "d": 131,
+    "r24": 52,
+    "members24": 36,
+    "week": 135,
+    "by": "momentum"
+   },
+   "sha": "fa0c0249e457daf8",
+   "postIds": [
+    "2097791805270130816",
+    "2097779536670990818",
+    "2097743802169471181",
+    "2097823045171687630",
+    "2097722011350933642",
+    "2097713070080487446",
+    "2097747007557231027",
+    "2097742244975382688",
+    "2097741780259123520",
+    "2097781038189830176",
+    "2097771439462232163",
+    "2097775914981486963",
+    "2097764677438615728",
+    "2097768312507666529",
+    "2097882779501695337",
+    "2097750224785621176",
+    "2097860117316219245",
+    "2097805986841108486",
+    "2097685539793125822",
+    "2097793759371031027",
+    "2097729191462551996",
+    "2097739397525348439",
+    "2097710980549550181",
+    "2097806366513705180",
+    "2097771245961957553"
+   ],
+   "baselineIds": [
+    "2095950791865749603",
+    "2096388259026739279",
+    "2096412811316392426",
+    "2095965743149879563",
+    "2097436104517353575",
+    "2096319183927541895"
+   ],
+   "reason": "The Sept 9 TPS expiration deadline for ~200,000 Salvadorans drove a coordinated surge: @RepPressley, @RepSylviaGarcia, @RepMcGovern, @JoaquinCastrotx, @RepLuzRivas, @RepHorsford and others demanded DHS extend TPS, alongside separate ICE-facility oversight visits (@RepGwenMoore, @RepYassAnsari).",
+   "framing": "Salvadoran TPS holders are longtime neighbors — DHS is leaving families in limbo",
+   "evidence": [
+    {
+     "id": "2097747007557231027",
+     "handle": "@RepMcGovern",
+     "quote": "200,000 Salvadorans were set to lose TPS today—and while it remains in effect for now, @DHSgov still hasn’t said what",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097741780259123520",
+     "handle": "@RepLuzRivas",
+     "quote": "TODAY is the deadline for the Trump Administration to extend TPS for El Salvador.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097791805270130816",
+     "handle": "@RepGwenMoore",
+     "quote": "I just left the ICE detention facility in Leavenworth, Kansas to check on my constituents who are being detained.",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "A large share of the 24-hour posts explicitly cite the same-day TPS deadline, explaining both the volume lift and broad member adoption."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5942,
+    "output": 445
+   }
+  },
+  "topic:healthcare": {
+   "key": "topic:healthcare",
+   "kind": "topic",
+   "label": "Health care",
+   "macro": "healthcare",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 66,
+    "d": 49,
+    "r24": 43,
+    "members24": 37,
+    "week": 173,
+    "by": "momentum"
+   },
+   "sha": "b12cb4111c04464a",
+   "postIds": [
+    "2097732607224013102",
+    "2097782716976832850",
+    "2097762866594267368",
+    "2097722131995939098",
+    "2097689493029433701",
+    "2097726362651955561",
+    "2097741476398559236",
+    "2097867476558090494",
+    "2097730484608651349",
+    "2097734738505265373",
+    "2097686312107078083",
+    "2097750395116503214",
+    "2097672839671210042",
+    "2097781059383431378",
+    "2097626321262170329",
+    "2097738337641447634",
+    "2097784645039325288",
+    "2097727853953520076",
+    "2097793859577065850",
+    "2097800275390009745",
+    "2097719782866850049",
+    "2097797109986603480",
+    "2097777084659621959",
+    "2097830952575930847",
+    "2097789389971849644"
+   ],
+   "baselineIds": [
+    "2096240088220897483",
+    "2097098632449409064",
+    "2096638403592737047",
+    "2096703736173445265",
+    "2097493088671347198",
+    "2096377841709420935"
+   ],
+   "reason": "Broad, decentralized volume surge: 37 members posting local health events, Suicide Prevention Month notes, and attacks on Medicaid/ACA cuts. No single event — @repcleaver, @RepNikkiB, @RepRobinKelly on cuts; @PramilaJayapal, @DerekTranCA45 on Medicare for All.",
+   "framing": "Republican Medicaid/ACA cuts raise costs while health care should be a right, no",
+   "evidence": [
+    {
+     "id": "2097726362651955561",
+     "handle": "@repcleaver",
+     "quote": "As Republican cuts to Medicaid and the Affordable Care Act go into effect, millions of our fellow Americans are losing",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097750395116503214",
+     "handle": "@DerekTranCA45",
+     "quote": "Healthcare is on the ballot this November. Republicans are gutting healthcare for all Americans.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097738337641447634",
+     "handle": "@RepValHoyle",
+     "quote": "September is Suicide Prevention Month. No one should have to face a mental health crisis alone.",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "medium",
+    "why": "Posts clearly show wide member adoption, but they span several unrelated threads rather than one driving event."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5344,
+    "output": 385
+   }
+  },
+  "topic:constituent-services": {
+   "key": "topic:constituent-services",
+   "kind": "topic",
+   "label": "District & constituent services",
+   "macro": "constituent-services",
+   "sub": null,
+   "cluster": null,
+   "by": "momentum",
+   "measured": {
+    "score": 65,
+    "d": 134,
+    "r24": 57,
+    "members24": 43,
+    "week": 146,
+    "by": "momentum"
+   },
+   "sha": "11401059bbee65ec",
+   "postIds": [
+    "2097764838537592857",
+    "2097656523992248384",
+    "2097792530729386346",
+    "2097756092252008599",
+    "2097741476398559236",
+    "2097867476558090494",
+    "2097748282088800429",
+    "2097778853556961788",
+    "2097771811689631983",
+    "2097697827501596854",
+    "2097699507454521647",
+    "2097798504735223914",
+    "2097740510366478534",
+    "2097781059383431378",
+    "2097757932406309076",
+    "2097760937960759556",
+    "2097727853953520076",
+    "2097702220695228866",
+    "2097746213336735996",
+    "2097742581325050288",
+    "2097716223320486271",
+    "2097822432413237603",
+    "2097771621390139449",
+    "2097702548220051674",
+    "2097819070775308420"
+   ],
+   "baselineIds": [
+    "2097436104517353575",
+    "2095997322115289233",
+    "2097523538064502848",
+    "2096374887044550904",
+    "2096616911761014935",
+    "2095982372298895589"
+   ],
+   "reason": "No single event: 43 members posted district-week deliverables in parallel — @RepDanGoldman, @CongressmanRaja, @RepDavids, @RepTerriSewell, @RepLauraGillen touting secured federal dollars, while @RepLaMonica, @RepAlGreen, @RepDelBene pushed casework and passport events.",
+   "framing": "Democrats deliver federal dollars and hands-on help back home",
+   "evidence": [
+    {
+     "id": "2097656523992248384",
+     "handle": "@CongressmanRaja",
+     "quote": "I secured $1 million for Kane County to give investigators and prosecutors the tools they need to find the digital",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097792530729386346",
+     "handle": "@RepLaMonica",
+     "quote": "My team brought $101,979 back to the pockets of NJ-10 in just two weeks!",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097742581325050288",
+     "handle": "@RepNikkiB",
+     "quote": "I’m proud to be among the Democrats leading the way in bringing federal dollars back home to our district.",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "The 24-hour posts are overwhelmingly grant-announcement and constituent-service items from many different members, matching the volume and adoption drivers."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 5731,
+    "output": 452
+   }
+  },
+  "cluster:sept-11-anniversary": {
+   "key": "cluster:sept-11-anniversary",
+   "kind": "cluster",
+   "label": "9/11 25th anniversary remembrance",
+   "macro": null,
+   "sub": null,
+   "cluster": "sept-11-anniversary",
+   "by": "story",
+   "measured": {
+    "score": null,
+    "d": null,
+    "r24": 8,
+    "members24": 7,
+    "week": 14,
+    "by": "story"
+   },
+   "sha": "cb5cefd736cff953",
+   "postIds": [
+    "2097689736588443915",
+    "2097690602905219541",
+    "2097782574102012170",
+    "2097834903295479922",
+    "2097782878998343782",
+    "2097737969545195713",
+    "2097723872766271915"
+   ],
+   "baselineIds": [
+    "2097449606955040805",
+    "2097400261153051057",
+    "2096778802735268073",
+    "2096778808808579514"
+   ],
+   "reason": "Ahead of the 25th anniversary, seven members posted commemorations, but the volume spike is driven by two political flashpoints: @RepJerryNadler defending Mayor Mamdani's attendance against Giuliani, and @RepJasonCrow and @RepScottPeters rebutting Trump's 9/11 claims.",
+   "framing": "Honor the victims and first responders; don't let Trump or Giuliani politicize a",
+   "evidence": [
+    {
+     "id": "2097689736588443915",
+     "handle": "@RepJerryNadler",
+     "quote": "Rudy Giuliani is a hypocrite trying to distract the public from his role in hurting New Yorkers after 9/11",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097690602905219541",
+     "handle": "@RepJasonCrow",
+     "quote": "This solemn day is not about Trump. It never was, and it never will be.",
+     "verified": true,
+     "window": "driving"
+    },
+    {
+     "id": "2097737969545195713",
+     "handle": "@RepScottPeters",
+     "quote": "This is a shameful lie. Donald Trump was not at Ground Zero on 9/11 and he did not get pulled from the rubble.",
+     "verified": true,
+     "window": "driving"
+    }
+   ],
+   "confidence": {
+    "level": "high",
+    "why": "Posts directly show both the anniversary commemorations and the Mamdani/Trump disputes driving engagement."
+   },
+   "generatedAt": "2026-09-10T07:32:47.418Z",
+   "model": "claude-opus-5",
+   "usage": {
+    "input": 2510,
+    "output": 384
+   }
+  }
+ },
+ "ledger": {
+  "2026-09-10": {
+   "calls": 9,
+   "inputTokens": 41487,
+   "outputTokens": 3639
+  }
+ }
+}

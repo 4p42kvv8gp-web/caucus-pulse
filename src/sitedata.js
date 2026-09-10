@@ -111,17 +111,62 @@ function finishScope(s) {
   return { n: s.n, eng: s.eng, m: s.members.size };
 }
 
-export function buildSiteData() {
+// ── "why it moved" keys (src/why.js writes data/why.json under these) ──
+// One key per row the dashboard can explain: a macro topic, a story
+// subtopic, or an emerging story candidate (by its placement key).
+export function whyKey(kind, ...parts) {
+  if (kind === 'story') return `story:${parts[0]}/${parts[1]}`;
+  return `${kind}:${parts[0]}`;
+}
+
+// Attach Claude's reading to the rows it explains. Measured numbers stay
+// untouched; `why` sits beside them as a labelled judgment (reason, the
+// evidence it quoted, framing, confidence and when it was written). Rows
+// without an entry get `why: null` so the dashboard can tell "not judged"
+// from "judged: nothing". Returns the rows it touched for the caller's log.
+export function attachWhy({ topics = [], clusters = [] }, whyFile) {
+  const entries = whyFile?.entries || {};
+  const pick = (key) => {
+    const e = entries[key];
+    if (!e?.reason) return null;
+    return {
+      reason: e.reason,
+      framing: e.framing || null,
+      evidence: e.evidence || [],
+      confidence: e.confidence || null,
+      generatedAt: e.generatedAt || whyFile.generatedAt || null,
+      posts: e.postIds?.length ?? null,
+      model: e.model || whyFile.model || null
+    };
+  };
+  let attached = 0;
+  for (const t of topics) {
+    t.why = pick(whyKey('topic', t.key));
+    if (t.why) attached++;
+    for (const s of t.subs || []) {
+      s.why = pick(whyKey('story', t.key, s.key));
+      if (s.why) attached++;
+    }
+  }
+  for (const c of clusters) {
+    c.why = pick(whyKey('cluster', c.suggest));
+    if (c.why) attached++;
+  }
+  return attached;
+}
+
+// ── the 7-day window: posts with resolved engagement + topics ──
+// Roster filter: senators, former members and stray non-member accounts
+// on the List stay in the archive but count nowhere below. `excluded`
+// is reported so the dashboard can say how much it is not showing.
+// Exported so src/why.js reads the same posts the numbers were built from.
+export function loadWindow() {
   const state = loadState();
   const authorsById = loadAuthors().byId;
   const tax = loadTaxonomy();
   const days = Array.from({ length: 7 }, (_, i) => daysAgoEt(6 - i)); // oldest → today
   const today = days[6];
 
-  // ── load the window: posts with resolved engagement + topics ──
-  // Roster filter: senators, former members and stray non-member accounts
-  // on the List stay in the archive but count nowhere below. `excluded`
-  // is reported so the dashboard can say how much it is not showing.
   const postsByDay = new Map();
   const allPosts = [];
   const excluded = { posts: 0, t: 0 };
@@ -146,17 +191,43 @@ export function buildSiteData() {
     postsByDay.set(date, house);
     allPosts.push(...house);
   }
+  return { state, authorsById, tax, days, today, postsByDay, allPosts, excluded };
+}
 
-  // ── topics: per-day, per-scope aggregation ──
-  // acc[topicKey][scope] = today/week scopes; trends per day.
-  // Momentum's "current" window is the rolling last 24 hours (r24), not the
-  // calendar day: at 1am ET "today" holds a handful of posts and every topic
-  // would read as a 100% collapse against its own baseline. The baseline is
-  // the six full days before today, so the current window never dilutes it.
+// Momentum inputs from an accumulator — one derivation for macro topics and
+// story subtopics alike, so a story's score is the same formula as its macro's.
+// Baseline = the six full days before today (trend[0..5]); current = last 24h.
+function momentumOf(acc) {
+  const trend = acc.trend;
+  const avg6 = trend.slice(0, 6).reduce((a, b) => a + b, 0) / 6 || 1;
+  const rAll = acc.r24.All;
+  const d = Math.round(100 * (rAll.n - avg6) / avg6);
+  const mAvg = acc.mByDay.slice(0, 6).reduce((a, s) => a + s.size, 0) / 6 || 1;
+  const weekAll = acc.w.All;
+  const epAvg = weekAll.n ? weekAll.eng / weekAll.n : 1;
+  const mo = momentum({
+    c: KEYS.map((k) => acc.r24[k].n),
+    trend, d,
+    m: rAll.members.size, mAvg,
+    eng: rAll.eng, epAvg
+  });
+  return {
+    trend, d, mAvg: Math.round(mAvg * 10) / 10, epAvg: Math.round(epAvg),
+    r24: finishScope(rAll), // measured: the rolling last-24h window momentum scores
+    momentum: { score: mo.score, drivers: mo.drivers.slice(0, 2).map(([n]) => n), volume: mo.volume, accel: mo.accel, adoption: mo.adoption, eff: Math.round(mo.eff * 10) / 10, engLift: mo.engLift }
+  };
+}
+
+// ── topics: per-day, per-scope aggregation ──
+// acc[topicKey][scope] = today/week scopes; trends per day.
+// Momentum's "current" window is the rolling last 24 hours (r24), not the
+// calendar day: at 1am ET "today" holds a handful of posts and every topic
+// would read as a 100% collapse against its own baseline. The baseline is
+// the six full days before today, so the current window never dilutes it.
+export function aggregateTopics({ days, postsByDay, authorsById, tax, now = Date.now() }) {
   const topicAcc = new Map(); // key → {t: {All: scope, CPC..}, w: {...}, r24: {...}, trend: number[7], mByDay: Set[7]}
-  const subAcc = new Map();   // 'macro/sub' → same-ish + leads
-  const nowMs = Date.now();
-  const inLast24h = (post) => nowMs - new Date(post.createdAt).getTime() < DAY;
+  const subAcc = new Map();   // 'macro/sub' → same + leads
+  const inLast24h = (post) => now - new Date(post.createdAt).getTime() < DAY;
   const ensure = (map, key) => {
     if (!map.has(key)) {
       map.set(key, {
@@ -172,7 +243,7 @@ export function buildSiteData() {
   };
 
   for (const [di, date] of days.entries()) {
-    for (const post of postsByDay.get(date)) {
+    for (const post of postsByDay.get(date) || []) {
       if (!post.topics.length) continue;
       const scopes = ['All', ...caucusKeysOf(authorsById[post.authorId])];
       const recent = inLast24h(post);
@@ -195,9 +266,11 @@ export function buildSiteData() {
           seenSub.add(`${macro}/${sub}`);
           const acc = ensure(subAcc, `${macro}/${sub}`);
           acc.trend[di]++;
+          acc.mByDay[di].add(post.authorId);
           if (post.type !== 'retweet') acc.leadEng.set(post.authorId, (acc.leadEng.get(post.authorId) || 0) + post.engN);
           for (const s of scopes) {
             if (di === 6) { acc.t[s].n++; acc.t[s].eng += post.engN; acc.t[s].members.add(post.authorId); }
+            if (recent) { acc.r24[s].n++; acc.r24[s].eng += post.engN; acc.r24[s].members.add(post.authorId); }
             acc.w[s].n++; acc.w[s].eng += post.engN; acc.w[s].members.add(post.authorId);
           }
         }
@@ -206,30 +279,20 @@ export function buildSiteData() {
   }
 
   const handleOf = (authorId) => authorsById[authorId]?.handle ? `@${authorsById[authorId].handle}` : null;
-  const topics = [...topicAcc.entries()].map(([key, acc]) => {
-    const trend = acc.trend;
-    // Baseline = the six full days before today (trend[0..5]); current = last 24h.
-    const avg6 = trend.slice(0, 6).reduce((a, b) => a + b, 0) / 6 || 1;
-    const rAll = acc.r24.All;
-    const d = Math.round(100 * (rAll.n - avg6) / avg6);
-    const mAvg = acc.mByDay.slice(0, 6).reduce((a, s) => a + s.size, 0) / 6 || 1;
-    const weekAll = acc.w.All;
-    const epAvg = weekAll.n ? weekAll.eng / weekAll.n : 1;
-    const mo = momentum({
-      c: KEYS.map((k) => acc.r24[k].n),
-      trend, d,
-      m: rAll.members.size, mAvg,
-      eng: rAll.eng, epAvg
-    });
+  return [...topicAcc.entries()].map(([key, acc]) => {
     const subs = [...subAcc.entries()]
       .filter(([sk]) => sk.startsWith(`${key}/`))
       .map(([sk, sa]) => {
         const lead = [...sa.leadEng.entries()].sort((a, b) => b[1] - a[1])[0];
+        const subKey = sk.split('/')[1];
         return {
-          key: sk.split('/')[1],
+          key: subKey,
+          name: tax[key]?.subtopics?.[subKey]?.label || labelOf(subKey),
+          story: Boolean(tax[key]?.subtopics?.[subKey]?.story), // a named developing story, not a generic shelf
           t: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.t[k])])),
           w: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.w[k])])),
-          lead: lead ? handleOf(lead[0]) : null
+          lead: lead ? handleOf(lead[0]) : null,
+          ...momentumOf(sa)
         };
       })
       .sort((a, b) => b.t.All.n - a.t.All.n || b.w.All.n - a.w.All.n);
@@ -238,11 +301,85 @@ export function buildSiteData() {
       name: tax[key]?.label || labelOf(key),
       t: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(acc.t[k])])),
       w: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(acc.w[k])])),
-      trend, d, mAvg: Math.round(mAvg * 10) / 10, epAvg: Math.round(epAvg),
-      momentum: { score: mo.score, drivers: mo.drivers.slice(0, 2).map(([n]) => n), volume: mo.volume, accel: mo.accel, adoption: mo.adoption, eff: Math.round(mo.eff * 10) / 10, engLift: mo.engLift },
+      ...momentumOf(acc),
       subs
     };
   }).sort((a, b) => b.t.All.n - a.t.All.n || b.w.All.n - a.w.All.n);
+}
+
+// ── emerging: cross-day story candidates (data/stories.json, built by
+// src/stories.js) — falls back to the latest nightly's raw clusters when
+// the story file has not been built yet. Only candidates the placement
+// pass called a story or a taxonomy gap are shown; noise stays out.
+// Rows carry `ids` (the candidate's posts) for src/why.js; buildSiteData
+// strips them before writing rollups.json.
+export function buildClusters({ allPosts, authorsById, now = Date.now() }) {
+  const handleOf = (authorId) => authorsById[authorId]?.handle ? `@${authorsById[authorId].handle}` : null;
+  const storyFile = readJSON(p('data', 'stories.json'), null);
+  const storyCands = (storyFile?.candidates || [])
+    .filter((c) => c.placement && c.placement.kind !== 'noise' && !(storyFile.promoted || []).includes(`${c.placement.macro}/${c.placement.key}`))
+    .slice(0, 12)
+    .map((c) => ({ label: c.placement.label, ids: c.ids, kind: c.placement.kind, macro: c.placement.macro, key: c.placement.key, days: c.days }));
+  const raw = storyCands.length ? [] : (() => {
+    for (let d = 0; d < 3; d++) {
+      const file = readJSON(topicsPath(daysAgoEt(d)), null);
+      if (file?.emerging?.length) return file.emerging;
+    }
+    return [];
+  })();
+  const byId = new Map(allPosts.map((x) => [x.id, x]));
+  return (storyCands.length ? storyCands : raw).map((e) => {
+    const posts = e.ids.map((id) => byId.get(id)).filter(Boolean);
+    if (!posts.length) return null;
+    posts.sort((a, b) => a.createdAt < b.createdAt ? -1 : 1);
+    const since = posts[0].createdAt;
+    const spanMs = Math.max(1, now - new Date(since).getTime());
+    const shape = Array.from({ length: 8 }, () => 0);
+    for (const x of posts) {
+      shape[Math.min(7, Math.floor(8 * (new Date(x.createdAt).getTime() - new Date(since).getTime()) / spanMs))]++;
+    }
+    for (let i = 1; i < 8; i++) shape[i] += shape[i - 1]; // cumulative growth curve
+    const gramCount = new Map();
+    for (const x of posts) {
+      for (const g of new Set(ngrams(tokenize(x.text), 2, 3))) gramCount.set(g, (gramCount.get(g) || 0) + 1);
+    }
+    const topGram = [...gramCount.entries()].sort((a, b) => b[1] - a[1])[0];
+    const members = new Set(posts.map((x) => x.authorId));
+    const best = posts.slice().sort((a, b) => b.engN - a.engN)[0];
+    const recent = posts.filter((x) => now - new Date(x.createdAt).getTime() < DAY);
+    return {
+      label: e.label,
+      posts: posts.length,
+      members: members.size,
+      r24: { n: recent.length, m: new Set(recent.map((x) => x.authorId)).size }, // measured: the rolling last 24h
+      who: [...members].map(handleOf).filter(Boolean),
+      cm: KEYS.map((k) => [...members].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length),
+      eng: posts.reduce((a, x) => a + x.engN, 0),
+      phrase: topGram?.[0] || null,
+      coherence: topGram ? Math.round(100 * topGram[1] / posts.length) : 0,
+      since,
+      shape,
+      sample: best.text.length > 160 ? best.text.slice(0, 159).replace(/\s+\S*$/, '') + '…' : best.text,
+      suggest: e.key || e.label.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, ''),
+      kind: e.kind || null,      // 'story' | 'gap' | null (raw nightly cluster)
+      macro: e.macro || null,    // suggested parent macro id
+      days: e.days || null,      // distinct days the subject surfaced
+      ids: posts.map((x) => x.id)
+    };
+  }).filter(Boolean);
+}
+
+// The window plus everything derived from it that another stage may need
+// to reason about the same numbers (src/why.js): topic rows with momentum,
+// story subtopics, emerging clusters with their post ids.
+export function aggregate({ now = Date.now() } = {}) {
+  const window = loadWindow();
+  return { ...window, now, topics: aggregateTopics({ ...window, now }), clusters: buildClusters({ ...window, now }) };
+}
+
+export function buildSiteData() {
+  const { state, authorsById, tax, days, today, postsByDay, allPosts, excluded, topics, clusters } = aggregate();
+  const handleOf = (authorId) => authorsById[authorId]?.handle ? `@${authorsById[authorId].handle}` : null;
 
   // ── labels map (needed by phrases below) ──
   const labels = {};
@@ -363,63 +500,6 @@ export function buildSiteData() {
     };
   }).filter(Boolean).sort((a, b) => b.spread - a.spread).slice(0, 12);
 
-  // ── emerging: cross-day story candidates (data/stories.json, built by
-  // src/stories.js) — falls back to the latest nightly's raw clusters when
-  // the story file has not been built yet. Only candidates the placement
-  // pass called a story or a taxonomy gap are shown; noise stays out.
-  let clusters = [];
-  const storyFile = readJSON(p('data', 'stories.json'), null);
-  const storyCands = (storyFile?.candidates || [])
-    .filter((c) => c.placement && c.placement.kind !== 'noise' && !(storyFile.promoted || []).includes(`${c.placement.macro}/${c.placement.key}`))
-    .slice(0, 12)
-    .map((c) => ({ label: c.placement.label, ids: c.ids, kind: c.placement.kind, macro: c.placement.macro, key: c.placement.key, days: c.days }));
-  const raw = storyCands.length ? [] : (() => {
-    for (let d = 0; d < 3; d++) {
-      const file = readJSON(topicsPath(daysAgoEt(d)), null);
-      if (file?.emerging?.length) return file.emerging;
-    }
-    return [];
-  })();
-  {
-    const byId = new Map(allPosts.map((x) => [x.id, x]));
-    clusters = (storyCands.length ? storyCands : raw).map((e) => {
-      const posts = e.ids.map((id) => byId.get(id)).filter(Boolean);
-      if (!posts.length) return null;
-      posts.sort((a, b) => a.createdAt < b.createdAt ? -1 : 1);
-      const since = posts[0].createdAt;
-      const spanMs = Math.max(1, Date.now() - new Date(since).getTime());
-      const shape = Array.from({ length: 8 }, () => 0);
-      for (const x of posts) {
-        shape[Math.min(7, Math.floor(8 * (new Date(x.createdAt).getTime() - new Date(since).getTime()) / spanMs))]++;
-      }
-      for (let i = 1; i < 8; i++) shape[i] += shape[i - 1]; // cumulative growth curve
-      const gramCount = new Map();
-      for (const x of posts) {
-        for (const g of new Set(ngrams(tokenize(x.text), 2, 3))) gramCount.set(g, (gramCount.get(g) || 0) + 1);
-      }
-      const topGram = [...gramCount.entries()].sort((a, b) => b[1] - a[1])[0];
-      const members = new Set(posts.map((x) => x.authorId));
-      const best = posts.slice().sort((a, b) => b.engN - a.engN)[0];
-      return {
-        label: e.label,
-        posts: posts.length,
-        members: members.size,
-        who: [...members].map(handleOf).filter(Boolean),
-        cm: KEYS.map((k) => [...members].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length),
-        eng: posts.reduce((a, x) => a + x.engN, 0),
-        phrase: topGram?.[0] || null,
-        coherence: topGram ? Math.round(100 * topGram[1] / posts.length) : 0,
-        since,
-        shape,
-        sample: best.text.length > 160 ? best.text.slice(0, 159).replace(/\s+\S*$/, '') + '…' : best.text,
-        suggest: e.key || e.label.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, ''),
-        kind: e.kind || null,      // 'story' | 'gap' | null (raw nightly cluster)
-        macro: e.macro || null,    // suggested parent macro id
-        days: e.days || null       // distinct days the subject surfaced
-      };
-    }).filter(Boolean);
-  }
-
   // ── outside context: newsletter hits per story candidate (data/context.json,
   // hand-searched from the owner's inbox — unreviewed context, not
   // verification). Top 3 per cluster; clusters without an entry get [].
@@ -429,6 +509,12 @@ export function buildSiteData() {
     c.context = (k ? context.stories[k].matches : []).slice(0, 3)
       .map(({ sender, subject, date, why }) => ({ sender, subject, date, why: why || null }));
   }
+
+  // ── why it moved: Claude's reading of each top mover's driving posts
+  // (data/why.json, written by src/why.js after this rebuild). A judgment
+  // beside the measured momentum, never a replacement for it.
+  const whyFile = readJSON(p('data', 'why.json'), null);
+  const whyAttached = attachWhy({ topics, clusters }, whyFile);
 
   // ── feed: window posts, newest first ──
   const feed = allPosts
@@ -491,11 +577,11 @@ export function buildSiteData() {
     stats,
     topics,
     phrases,
-    clusters,
+    clusters: clusters.map(({ ids, ...c }) => c), // ids are for why.js, not the page
     incidents: incidentsFile.incidents,
     feed
   });
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts; ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts, ${whyAttached} row(s) with a "why"; ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {

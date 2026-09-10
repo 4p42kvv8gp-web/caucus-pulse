@@ -15,6 +15,8 @@
   .pill{font-size:12px;font-weight:600;color:#fff;background:#1d1d1f;border:0;padding:6px 14px;border-radius:980px;white-space:nowrap;cursor:pointer}.pill:hover{background:#3a3a3c}
   .textbtn{background:transparent;border:0;padding:0;font-size:12px;font-weight:500;cursor:pointer}.textbtn:hover{text-decoration:underline}
   header a.nav{color:#6e6e73}header a.nav.on{color:#1d1d1f;font-weight:600}
+  /* "why it moved": the judgment row sits directly under the row it explains */
+  .haswhy td{border-bottom:0!important}.whyrow{cursor:pointer}.whyrow:hover .whytext{color:#1d1d1f}
 </style>
 </head>
 <body>
@@ -46,7 +48,7 @@ import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etD
 
 let D = null;
 const state = {
-  caucus: 'All', window: 't', open: {}, topic: 'all', sort: 'Newest',
+  caucus: 'All', window: 't', open: {}, whyOpen: {}, topic: 'all', sort: 'Newest',
   clipOpen: false, clipSubject: '', clipCaucus: 'All', clipWindow: 't', clipSort: 'Engagement', clipFormat: 'List', copied: false,
   inc: { handle: true, district: true, caucus: true, counts: true, quote: true, time: false, numbered: true, footer: true }
 };
@@ -59,6 +61,31 @@ const val = (t, win = state.window, scope = state.caucus) => t[win][scope] || { 
 const caucusName = (k) => k === 'All' ? 'all caucuses' : (D.caucusNames[k] || k);
 const inTopic = (f, key) => f.topics.some((tk) => tk === key || tk.startsWith(key + '/'));
 const winPosts = (f) => state.window === 't' ? f.date === D.today : true;
+
+// ── "why it moved" — Claude's reading of a mover's driving posts. Rendered
+// beside the measured momentum and labelled as a judgment: one line (the
+// reason) with the confidence; hover for the quotes, click to expand them.
+const CONF_COLOR = { high: '#00823a', medium: '#1d1d1f', low: '#8e8e93' };
+const whyQuotes = (why) => (why.evidence || []).map((e) => `“${e.quote}” — ${e.handle}${e.verified ? '' : ' (not found verbatim)'}${e.window === 'baseline' ? ' (earlier)' : ''}`);
+function whyTitle(why) {
+  const conf = why.confidence?.level || 'low';
+  return `Claude's reading of the ${why.posts ?? '?'} driving posts — a judgment beside the measured momentum, not a measurement. ${conf} confidence${why.confidence?.why ? `: ${why.confidence.why.replace(/\.$/, '')}` : ''}. As of ${etWhen(why.generatedAt, D.today)}.${whyQuotes(why).length ? '\n\n' + whyQuotes(why).join('\n') : ''}`;
+}
+function whyBlock(id, why, { open = false, compact = false } = {}) {
+  const conf = why.confidence?.level || 'low';
+  const line = `<div style="display:flex;align-items:baseline;gap:7px;min-width:0;font-size:12px;line-height:1.4">
+    <span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#194292;white-space:nowrap">Why</span>
+    <span class="whytext" style="min-width:0;flex:1;color:#3a3a3c;${open ? '' : 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap'}">${esc(why.reason)}</span>
+    <span style="font-size:11px;color:${CONF_COLOR[conf] || '#8e8e93'};white-space:nowrap">${esc(conf)} confidence</span>
+    <span aria-hidden="true" style="font-size:11px;color:#8e8e93;transform:${open ? 'rotate(90deg)' : 'none'};transition:transform .15s ease">›</span>
+  </div>`;
+  const detail = open ? `<div style="display:flex;flex-direction:column;gap:3px;margin-top:5px;padding-left:${compact ? 0 : 34}px;font-size:12px;color:#3a3a3c;line-height:1.4">
+    ${(why.evidence || []).map((e) => `<div>“${esc(e.quote)}” <span style="color:#6e6e73">— ${esc(e.handle)}${e.verified ? '' : ' · quote not found verbatim'}${e.window === 'baseline' ? ' · earlier' : ''}</span></div>`).join('') || '<div style="color:#6e6e73">no quotes given</div>'}
+    ${why.framing ? `<div style="color:#6e6e73">framing · <span style="color:#1d1d1f">${esc(why.framing)}</span></div>` : ''}
+    <div style="font-size:11px;color:#6e6e73">judged by Claude from ${why.posts ?? '?'} posts · ${esc(etWhen(why.generatedAt, D.today))}${why.confidence?.why ? ` · ${esc(why.confidence.why)}` : ''}</div>
+  </div>` : '';
+  return line + detail;
+}
 
 function render() {
   const scope = state.caucus, win = state.window, isAll = scope === 'All';
@@ -95,7 +122,8 @@ function render() {
     leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum leader</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${leader.momentum.score}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(leader.name)}</span></div>${spark(leader.trend)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, MOMENTUM_FILL)}</div>
-      <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>`) : ''
+      <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>
+      ${leader.why ? `<div title="${esc(whyTitle(leader.why))}" style="font-size:11px;color:#3a3a3c;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical"><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#194292">Why</span> ${esc(leader.why.reason)}</div>` : ''}`) : ''
   ].join('');
 
   renderTopics(isAll, scope, win);
@@ -120,6 +148,10 @@ function renderTopics(isAll, scope, win) {
   }
   // Rank badges use the text tier so white digits stay legible (CPC #00823a).
   const rankBadge = (i, rank) => `<span title="Top ${rank} topic for ${SHORT[MATRIX[i]]}" style="width:15px;height:15px;border-radius:50%;background:${CT[MATRIX[i]]};color:#fff;font-size:9px;font-weight:700;display:inline-flex;align-items:center;justify-content:center">${rank}</span>`;
+  // The "why" row spans the table under the row it explains (the momentum
+  // column is too narrow for a sentence); `sub` rows take the sub-row tint.
+  const cols = 6 + (isAll ? MATRIX.length : 0);
+  const whyRow = (id, why, sub) => why ? `<tr class="whyrow" data-why="${esc(id)}" style="background:${sub ? '#f7f7f9' : '#fff'}"><td colspan="${cols}" style="padding:0 8px ${sub ? 6 : 8}px ${sub ? 22 : 20}px;border-bottom:1px solid ${sub ? '#fff' : '#f0f0f2'}" title="${esc(whyTitle(why))}">${whyBlock(id, why, { open: !!state.whyOpen[id] })}</td></tr>` : '';
 
   const rows = sorted.map((t) => {
     const v = val(t);
@@ -135,16 +167,17 @@ function renderTopics(isAll, scope, win) {
       const sv = s[win][scope] || { n: 0, eng: 0, m: 0 };
       const share = v.n ? Math.round(100 * sv.n / v.n) : 0;
       const subCells = isAll ? MATRIX.map((k) => `<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">${fmt(s[win][k].n)}</td>`).join('') : '';
-      return `<tr style="background:#f7f7f9"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">${esc(label(`${t.key}/${s.key}`))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>`;
+      const subId = `story:${t.key}/${s.key}`;
+      return `<tr style="background:#f7f7f9"${s.why ? ' class="haswhy"' : ''}><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">${esc(label(`${t.key}/${s.key}`))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>${whyRow(subId, s.why, true)}`;
     }).join('') : '';
-    return `<tr class="rowhover" data-toggle="${esc(t.key)}" aria-expanded="${isOpen}">
+    return `<tr class="rowhover${t.why ? ' haswhy' : ''}" data-toggle="${esc(t.key)}" aria-expanded="${isOpen}">
       <td style="padding:8px 8px 8px 0;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px">${chevron(t.subs.length > 0, isOpen)}<span style="font-weight:600;letter-spacing:-0.01em">${esc(t.name)}</span></div></td>
       ${caucusCells}
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right;font-weight:600">${fmt(v.n)}${!isAll ? `<div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(100 * v.n / maxPosts, C[scope])}</div>` : ''}</td>
       <td style="padding:8px 8px 8px 12px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${spark(t.trend)}<span style="font-size:11px;color:${t.d >= 0 ? '#1d1d1f' : '#8e8e93'};font-weight:${t.d >= 0 ? 500 : 400};white-space:nowrap">${arrow(t.d)}</span></div></td>
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="${esc(momentumTitle)}"><span style="font-weight:600">${mo.score}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(mo.score, MOMENTUM_FILL)}</div></td>
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.eng)}</td>
-      <td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.m)}</td></tr>${subRows}`;
+      <td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.m)}</td></tr>${whyRow(`topic:${t.key}`, t.why, false)}${subRows}`;
   }).join('');
 
   $('topics').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Topics</h2></div>
@@ -220,6 +253,7 @@ function renderClusters() {
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div style="font-size:12px;color:#6e6e73;display:flex;gap:12px;flex-wrap:wrap"><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${c.posts}</span> posts</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${c.members}</span> members</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${fmt(c.eng)}</span> engagement</span></div>${spark(c.shape, 72, 18)}</div>
     <div style="display:flex;height:5px;border-radius:3px;overflow:hidden;gap:1px" title="members by caucus">${seg(c.cm.map((n, i) => [100 * n / Math.max(1, c.members), C[KEYS[i]]]))}</div>
     <div style="font-size:12px;color:#6e6e73;line-height:1.4">“${esc(c.sample)}”</div>
+    ${c.why ? `<div class="whyrow" data-why="cluster:${esc(c.suggest)}" title="${esc(whyTitle(c.why))}">${whyBlock(`cluster:${c.suggest}`, c.why, { open: !!state.whyOpen[`cluster:${c.suggest}`], compact: true })}</div>` : ''}
     ${c.context?.length ? `<div style="display:flex;flex-direction:column;gap:2px" title="Newsletter hits from the owner's inbox — unreviewed context, not verification (docs/OUTSIDE_CONTEXT.md)"><span style="font-size:11px;font-weight:500;color:#6e6e73">In the news</span>${c.context.map((n) => `<div style="font-size:12px;line-height:1.35;color:#3a3a3c" title="${esc(n.why || '')}"><span style="font-weight:500;color:#1d1d1f">${esc(n.sender)}</span> · ${esc(n.subject)} <span style="color:#6e6e73;white-space:nowrap">· ${esc(etDay(n.date))}</span></div>`).join('')}</div>` : ''}
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${c.phrase ? `<span style="font-size:11px;color:#6e6e73">${c.coherence}% say “${esc(c.phrase)}”</span>` : ''}${tag(c.suggest)}<span style="margin-left:auto;display:flex;gap:10px"><button class="textbtn" data-compose="cluster:${esc(c.label)}">Compose</button><a href="../config/taxonomy.yaml" style="font-size:12px;font-weight:500" title="Approve by adding this subtopic to config/taxonomy.yaml">Add ›</a></span></div>
   </div>`).join('');
@@ -353,6 +387,8 @@ document.addEventListener('click', (e) => {
   }
   // click on the backdrop itself (outside the dialog) closes the modal
   if (e.target.closest('[data-act="closeClip"]') && !e.target.closest('[data-stop]')) { state.clipOpen = false; render(); return; }
+  const why = e.target.closest('[data-why]');
+  if (why) { state.whyOpen[why.dataset.why] = !state.whyOpen[why.dataset.why]; render(); return; }
   const row = e.target.closest('[data-toggle]');
   if (row) { state.open[row.dataset.toggle] = !state.open[row.dataset.toggle]; render(); }
 });

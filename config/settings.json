@@ -47,6 +47,15 @@
     "max_wait_minutes": 55,
     "correction_examples": 8
   },
+  "why": {
+    "_comment": "Why it moved (src/why.js): Claude reads each top mover's driving posts and writes the reason beside the momentum number. top = movers by |momentum - 50| among macro topics and story subtopics; every story (story: true subtopic, or emerging story candidate) with >= min_story_posts_24h posts in the last 24h is added. Per mover: max_posts driving posts from the last 24h plus baseline_posts from the prior six days; a mover with fewer than min_posts readable posts is skipped. One call per mover, cached in data/why.json by the hash of the post ids read; daily_calls caps spend per ET day. Model falls back to classify.model.",
+    "top": 8,
+    "min_story_posts_24h": 5,
+    "max_posts": 25,
+    "baseline_posts": 6,
+    "min_posts": 3,
+    "daily_calls": 150
+  },
   "anthropic": {
     "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Outside Actions, set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY) instead.",
     "federation": {
