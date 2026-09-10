@@ -35,3 +35,34 @@ test('renderTaxonomy skips retired subtopics and renders provisional stories exa
   // the retired key still validates: rollups and re-classified history keep it
   assert.deepEqual(validAssignments([['democracy', 'old-story']], tax), [['democracy', 'old-story']]);
 });
+
+// The 2026-09-10 eval found the shipped classifier assigning a subtopic on 9%
+// of the corpus, with three days at exactly zero across 219, 585 and 273 posts
+// and failedChunks 0 — a shape a per-post rate cannot produce. The suspect is
+// this: renderTaxonomy prints subtopics as `macro/sub`, the response schema
+// asks for a bare `sub-id`, and the lookup is by bare key. A response echoing
+// what it was shown therefore loses every subtopic in the chunk, silently.
+// These pin the collapse (which must stay — a bad sub key must not cost the
+// macro) while making it countable.
+test('validAssignments reports a subtopic key it could not resolve', () => {
+  const tax = { economy: { label: 'Economy', subtopics: { jobs: { label: 'Jobs' } } } };
+  const dropped = [];
+  assert.deepEqual(validAssignments([['economy', 'jobs']], tax, dropped), [['economy', 'jobs']]);
+  assert.deepEqual(dropped, [], 'a resolvable subtopic is not a drop');
+
+  // the suspected failure: the model echoes the rendered `macro/sub` form
+  assert.deepEqual(validAssignments([['economy', 'economy/jobs']], tax, dropped), [['economy', null]]);
+  assert.deepEqual(dropped, ['economy\u2192economy/jobs']);
+});
+
+test('validAssignments does not count a deliberate macro-only answer as a drop', () => {
+  const tax = { economy: { label: 'Economy', subtopics: { jobs: { label: 'Jobs' } } } };
+  const dropped = [];
+  validAssignments([['economy', null]], tax, dropped);
+  assert.deepEqual(dropped, [], 'macro-only is a judgement, not a parse failure');
+});
+
+test('validAssignments still works with no collector (existing callers)', () => {
+  const tax = { economy: { label: 'Economy', subtopics: { jobs: { label: 'Jobs' } } } };
+  assert.deepEqual(validAssignments([['economy', 'bogus']], tax), [['economy', null]]);
+});

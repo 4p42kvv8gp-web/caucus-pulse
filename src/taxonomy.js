@@ -69,13 +69,26 @@ export function renderTaxonomy(tax) {
 // macro, and dedupes the result: two invalid subtopics of one macro used to
 // yield [["economy",null],["economy",null]], which rollups tolerated but the
 // dashboard's topic chips repeated.
-export function validAssignments(topics, tax) {
+// `dropped`, when passed, collects every subtopic key the model returned that
+// the taxonomy could not resolve. The collapse below is silent by design — a
+// bad sub key must not cost the macro — but silence meant nobody could tell a
+// day the model genuinely saw no subtopic from a day its subtopics were all
+// thrown away. Three days in the 2026-08/09 corpus carry 0 subtopics across
+// 219, 585 and 273 posts with failedChunks 0, which a per-post rate cannot
+// explain; this counter is what tells the two cases apart on the next run.
+// The prime suspect is a format mismatch: renderTaxonomy prints subtopics as
+// `macro/sub` while the response schema asks for a bare `sub-id`, and the
+// lookup below is by bare key, so a response echoing the rendered form loses
+// every subtopic in that chunk.
+export function validAssignments(topics, tax, dropped) {
   const out = [];
   const seen = new Set();
   for (const t of Array.isArray(topics) ? topics : []) {
     const [macro, sub] = Array.isArray(t) ? t : [t, null];
     if (!tax[macro]) continue;
-    const pair = [macro, sub && tax[macro].subtopics?.[sub] ? sub : null];
+    const known = sub && tax[macro].subtopics?.[sub];
+    if (sub && !known && Array.isArray(dropped)) dropped.push(`${macro}\u2192${sub}`);
+    const pair = [macro, known ? sub : null];
     const key = `${pair[0]}/${pair[1] || ''}`;
     if (seen.has(key)) continue;
     seen.add(key);
