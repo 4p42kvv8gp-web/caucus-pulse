@@ -30,7 +30,8 @@ jobs:
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
-          X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
+          # Read budget comes from config/settings.json "daily_read_budget"
+          # (git-controlled); the X_DAILY_READ_BUDGET repo variable is no longer read.
           CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
         run: npm run poll
       - name: Commit archive + site data

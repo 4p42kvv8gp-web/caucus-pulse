@@ -93,7 +93,7 @@ export async function pollOnce() {
 
   const state = loadState();
   if (budgetExhausted(state)) {
-    console.warn(`[poll] daily X read budget reached (${dailyBudget()}) — skipping until tomorrow (raise X_DAILY_READ_BUDGET to change)`);
+    console.warn(`[poll] daily X read budget reached (${dailyBudget()}) — skipping until tomorrow (raise daily_read_budget in config/settings.json to change)`);
     saveState(state);
     return { captured: 0 };
   }

@@ -31,7 +31,6 @@ jobs:
         # Anthropic access token in-process; no ANTHROPIC_API_KEY secret.
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-          X_DAILY_READ_BUDGET: ${{ vars.X_DAILY_READ_BUDGET }}
         run: npm run nightly
       - name: Commit results
         run: |

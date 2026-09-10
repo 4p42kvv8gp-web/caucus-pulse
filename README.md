@@ -23,8 +23,10 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    - Variable `X_LIST_ID` — the numeric id of the X List (from its URL:
      `x.com/i/lists/<this number>`). Alternatively set `list_id` in
      `config/settings.json`.
-   - Variable `X_DAILY_READ_BUDGET` (optional) — hard daily ceiling on billed
-     X reads. Default 8000 (≈$40/day worst case; a 2,000-tweet day uses ~3,300).
+   - Daily X read ceiling: `config/settings.json` → `daily_read_budget`
+     (50,000 as of 2026-09-10; $0.005 per post read). Git-controlled so it can
+     be changed in a PR. `X_DAILY_READ_BUDGET` in the environment overrides it
+     for a one-off local run; the old repo variable of that name is no longer read.
    - Variable `CLASSIFY_LIVE` — `false` to skip poll-time tagging until the
      pipeline is trusted; `true` (or unset) to tag each poll's new posts.
 2. **Claude access needs no secret.** Workflows authenticate to the Anthropic
