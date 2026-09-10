@@ -8,8 +8,20 @@ export function loadTaxonomy() {
   return yaml.load(fs.readFileSync(p('config', 'taxonomy.yaml'), 'utf8')) || {};
 }
 
+// YYYY-MM-DD from a taxonomy date field. js-yaml parses an unquoted
+// `since: 2026-09-01` as a Date (UTC midnight); a quoted one stays a string.
+export function ymd(v) {
+  if (v instanceof Date) return v.toISOString().slice(0, 10);
+  return v == null ? null : String(v).slice(0, 10);
+}
+
 // Render the taxonomy for the prompt: stable ordering so the cached system
 // block stays byte-identical between runs until the YAML actually changes.
+// A retired subtopic (retired: true — a provisional story that went quiet,
+// see stories.js --retire) stays in the YAML so rollups and history keep its
+// key and label, but leaves the prompt so the classifier stops seeing it.
+// A provisional story renders exactly like a confirmed one: the flag is for
+// the owner's review, the model does not need it.
 export function renderTaxonomy(tax) {
   const lines = [];
   for (const key of Object.keys(tax).sort()) {
@@ -17,8 +29,9 @@ export function renderTaxonomy(tax) {
     lines.push(`- ${key}: ${macro.label}`);
     for (const subKey of Object.keys(macro.subtopics || {}).sort()) {
       const sub = macro.subtopics[subKey];
+      if (sub.retired) continue;
       const aliases = sub.aliases?.length ? ` (also: ${sub.aliases.join(', ')})` : '';
-      const story = sub.story ? ` [developing story${sub.since ? ` since ${sub.since}` : ''}]` : '';
+      const story = sub.story ? ` [developing story${sub.since ? ` since ${ymd(sub.since)}` : ''}]` : '';
       lines.push(`  - ${key}/${subKey}: ${sub.label}${story}${aliases}`);
     }
   }

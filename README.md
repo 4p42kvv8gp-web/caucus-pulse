@@ -156,9 +156,32 @@ re-test if X ever changes the endpoint.
 `config/taxonomy.yaml` — two levels, multi-label. A Dilley tweet counts
 toward *Dilley detention facility* and *Immigration*; reports nest subtopics
 under macros so nothing double-reads. The nightly classifier surfaces tweets
-that fit nothing as **emerging clusters** in the daily report with a
-suggested label; approve one by adding it to the YAML. The system never
-invents categories silently.
+that fit nothing as **emerging clusters**; `src/stories.js` merges them
+across days into story candidates and asks Claude once to place each under
+a macro as a developing **story** (a named, dated event) or a generic
+taxonomy **gap**.
+
+**The story is the unit, so promotion is continuous.** Every night, after
+classification, `npm run stories -- --auto-promote --retire`:
+
+- writes each story candidate that clears `settings.stories` (`min_posts`,
+  `min_members`, `min_days`; at most `max_per_night`, most posts first) into
+  the YAML as a developing story with `provisional: true`, `since:` (first
+  post) and `promoted:` (the night it entered), aliases from the placement
+  plus the most frequent proper nouns in its posts;
+- marks a provisional story `retired: true` once it has had no assignments
+  for `retire_after_quiet_days` — it leaves the classifier prompt, but the
+  key stays so rollups and history still resolve;
+- never auto-promotes a taxonomy gap: where a generic subject lives is a
+  human call (`npm run stories -- --promote=key`, which writes a confirmed
+  entry).
+
+The daily report lists *Stories promoted tonight* and *Provisional stories
+awaiting review* with their last-7-day counts, so the owner prunes (delete
+the entry, or set `retired: true`) or confirms (delete `provisional: true`)
+rather than approving one by one. A taxonomy edit is only seen by the next
+classification run. Set `settings.stories.auto_promote` to `false` to make
+the nightly step list-only. The system never invents categories silently.
 
 ## Local development
 
