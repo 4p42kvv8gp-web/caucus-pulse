@@ -119,6 +119,7 @@ starts. Every day before that is gone; turn it on early.
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
+| `src/why.js` | polls that captured posts + nightly | **Why it moved**: for the top movers (`settings.why.top` topics/stories by \|momentum − 50\|, plus every story with 5+ posts in the last 24h) Claude reads the driving posts and writes the reason, 2–3 quoted posts as evidence, the framing and a confidence with its why → `data/why.json`, attached to the rows in `rollups.json`. One call per mover, re-asked only when the posts it would read change; capped by `settings.why.daily_calls`; skipped without a Claude credential | ~$0.03/mover |
 
 ## The dashboard
 

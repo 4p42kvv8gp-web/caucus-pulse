@@ -159,6 +159,19 @@ export async function pollOnce() {
   } catch (e) {
     console.warn(`[poll] site data rebuild skipped: ${e.message}`);
   }
+  // "Why it moved" only when this poll brought new posts: the movers'
+  // driving posts cannot have changed otherwise. Cached per mover by the
+  // posts it would read, capped per day, silent without a Claude credential;
+  // it rebuilds rollups.json itself when an explanation changed.
+  if (records.length) {
+    try {
+      const { runWhy } = await import('./why.js');
+      const r = await runWhy();
+      if (r) console.log(`[poll] why: ${r.movers.length} mover(s), ${r.asked} explained, ${r.cached} unchanged${r.failed.length ? `, ${r.failed.length} failed` : ''}${r.skipped.length ? `, ${r.skipped.length} skipped` : ''}`);
+    } catch (e) {
+      console.warn(`[poll] why skipped: ${e.message}`);
+    }
+  }
   return { captured: records.length };
 }
 
