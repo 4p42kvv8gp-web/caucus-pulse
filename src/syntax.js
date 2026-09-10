@@ -21,7 +21,13 @@ export function tokenize(text) {
     .replace(/https?:\/\/\S+/g, ' ')
     .replace(/@\w+/g, ' ')
     .replace(/#/g, '')
-    .replace(/[^a-z0-9'\s-]/g, ' ')
+    // X text carries curly quotes: "Trump’s" must not become "trump s".
+    // Possessives drop to the bare noun; other apostrophes collapse so
+    // "don't" → "dont" (a stopword) instead of "don" + "t".
+    .replace(/[‘’`]/g, "'")
+    .replace(/'s\b/g, '')
+    .replace(/'/g, '')
+    .replace(/[^a-z0-9\s-]/g, ' ')
     .split(/\s+/)
     .filter(Boolean);
 }
