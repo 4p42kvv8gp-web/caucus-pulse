@@ -46,7 +46,7 @@
     "max_wait_minutes": 55
   },
   "anthropic": {
-    "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Locally, set ANTHROPIC_API_KEY instead.",
+    "_comment": "Workload identity federation ids for GitHub Actions (public identifiers, not secrets). The rule only accepts OIDC tokens from this repo's main branch. Outside Actions, set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY) instead.",
     "federation": {
       "rule_id": "fdrl_011gEXn9XGBiTzgxQBmf6Vay",
       "organization_id": "554a72f1-6a10-4aca-9027-1642b4a66ab4",

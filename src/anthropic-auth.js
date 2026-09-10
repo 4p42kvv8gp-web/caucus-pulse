@@ -7,6 +7,12 @@
 // exchanges the identity JWT at /v1/oauth/token, caches the access token, and
 // re-exchanges when it nears expiry — re-reading the identity file each time.
 //
+// Explicit key: CLASSIFIER_ANTHROPIC_API_KEY is read first and handed to the
+// SDK directly. Hosted sandboxes (claude.ai/code) reserve the ANTHROPIC_API_KEY
+// name for their own use, so the classifier's key travels under its own name
+// there; plain ANTHROPIC_API_KEY still works for local development. Neither
+// is expected in GitHub Actions, where federation below does the work.
+//
 // What this module adds, for GitHub Actions (permissions: id-token: write):
 //   - fills the federation env vars from config/settings.json → anthropic.federation
 //   - mints the GitHub OIDC token itself (audience https://api.anthropic.com)
@@ -26,15 +32,26 @@ import { settings } from './util.js';
 const AUDIENCE = 'https://api.anthropic.com';
 const IDENTITY_MAX_AGE_MS = 4 * 60_000;
 
-// Local runs (a laptop, a Claude Code cloud session) carry a dedicated key
-// under CLASSIFIER_ANTHROPIC_API_KEY so the classifier's spend is its own
-// line and never collides with whatever ANTHROPIC_API_KEY the shell has.
-// ANTHROPIC_API_KEY still wins if both are set, matching the SDK's own order.
-const explicitKey = () => process.env.ANTHROPIC_API_KEY || process.env.CLASSIFIER_ANTHROPIC_API_KEY || '';
-const explicitCredential = () => Boolean(explicitKey() || process.env.ANTHROPIC_AUTH_TOKEN);
-
 const inActions = () =>
   Boolean(process.env.ACTIONS_ID_TOKEN_REQUEST_URL && process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN);
+
+// The explicit API key, if any. Local runs (a laptop, a Claude Code cloud
+// session) carry a dedicated key under CLASSIFIER_ANTHROPIC_API_KEY so the
+// classifier's spend is its own line and never collides with whatever
+// ANTHROPIC_API_KEY the shell (or the hosting platform) has set — which is why
+// the CLASSIFIER_ name is checked first. Never logged; callers treat it as opaque.
+export function apiKey() {
+  return process.env.CLASSIFIER_ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY || null;
+}
+
+const explicitCredential = () => Boolean(apiKey() || process.env.ANTHROPIC_AUTH_TOKEN);
+
+// Which env var the key came from (for diagnostics), or null.
+export function apiKeySource() {
+  if (process.env.CLASSIFIER_ANTHROPIC_API_KEY) return 'CLASSIFIER_ANTHROPIC_API_KEY';
+  if (process.env.ANTHROPIC_API_KEY) return 'ANTHROPIC_API_KEY';
+  return null;
+}
 
 const federationEnvSet = () =>
   Boolean(process.env.ANTHROPIC_FEDERATION_RULE_ID && process.env.ANTHROPIC_ORGANIZATION_ID);
@@ -67,7 +84,7 @@ export function anthropicConfigured() {
 }
 
 export function authMode() {
-  if (explicitKey()) return 'api-key';
+  if (apiKey()) return 'api-key';
   if (process.env.ANTHROPIC_AUTH_TOKEN) return 'auth-token';
   if (federationEnvSet() || (inActions() && settings.anthropic?.federation?.rule_id)) return 'federation';
   return null;
@@ -104,13 +121,15 @@ export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, for
   return true;
 }
 
-// The one way scripts should get a client. Federation env is applied and the
-// identity token is fresh by the time the SDK reads them.
+// The one way scripts should get a client. An explicit key is passed to the
+// SDK directly (so CLASSIFIER_ANTHROPIC_API_KEY works without ever touching
+// ANTHROPIC_API_KEY); otherwise federation env is applied and the identity
+// token is fresh by the time the SDK reads them.
 export async function anthropicClient(options = {}) {
-  await refreshIdentityToken();
+  const key = apiKey();
+  if (!key) await refreshIdentityToken();
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   // The SDK only reads ANTHROPIC_API_KEY from the env; hand it the
   // CLASSIFIER_ key explicitly so local runs work without re-exporting.
-  const apiKey = explicitKey();
-  return new Anthropic(apiKey && !options.apiKey ? { ...options, apiKey } : options);
+  return new Anthropic(key && !options.apiKey ? { ...options, apiKey: key } : options);
 }

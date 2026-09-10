@@ -34,8 +34,11 @@ scheduled workflows only run from `main` (`poll` every 20 min, `nightly` at
    waits. The federation ids live in `config/settings.json` → `anthropic`
    (public identifiers); the rule only trusts tokens from this repo's `main`.
    `.github/workflows/anthropic-wif-test.yml` is a manual smoke test.
-   Locally, export `CLASSIFIER_ANTHROPIC_API_KEY` instead (a plain
-   `ANTHROPIC_API_KEY` also works and takes precedence if both are set).
+   Outside Actions, export `CLASSIFIER_ANTHROPIC_API_KEY` instead (hosted
+   sandboxes such as claude.ai/code reserve the `ANTHROPIC_API_KEY` name, so
+   the classifier reads its own name first; a plain `ANTHROPIC_API_KEY` also
+   works on a laptop). `npm run check-anthropic` confirms whichever credential
+   resolved without printing it.
 3. **Settings → Actions → General:** Workflow permissions "Read and write"
    (the workflows commit data back to the repo).
 4. **Settings → Pages:** deploy from branch `main`, folder `/` (root). The
@@ -65,8 +68,12 @@ scripts already pass `--use-env-proxy` so Node's fetch honours `HTTPS_PROXY`.
 for Claude Code sessions and sets `X_PROXY_AUTH=1` and the list id; put
 personal overrides in the gitignored `.claude/settings.local.json`. Claude
 classification in a session needs `CLASSIFIER_ANTHROPIC_API_KEY` in the
-session's environment variables; without it, capture still runs and the
-tagging stages skip.
+session's environment variables (the platform reserves the plain
+`ANTHROPIC_API_KEY` name); the scripts read it directly, so nothing needs
+re-exporting. `npm run check-anthropic` confirms it resolved. Without it,
+capture still runs and the tagging stages skip. Every script that talks to
+X or Anthropic runs node with `--use-env-proxy` so fetch honours the
+session's `HTTPS_PROXY`; it is a no-op where no proxy is set.
 
 ## First act: the 24-hour volume measurement
 
@@ -139,6 +146,7 @@ invents categories silently.
 ```bash
 npm install
 npm test                # pure-logic tests, no network
+npm run check-anthropic # one 5-token request; prints auth mode, never the key
 X_BEARER_TOKEN=... X_LIST_ID=... CLASSIFIER_ANTHROPIC_API_KEY=... npm run poll
 npm run report -- --date=2026-09-01
 ```
