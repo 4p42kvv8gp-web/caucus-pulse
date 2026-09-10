@@ -15,6 +15,32 @@ export function ymd(v) {
   return v == null ? null : String(v).slice(0, 10);
 }
 
+// Story anchors: a subtopic may carry `anchors: [tweet ids]` — the posts a
+// story is built around (Coxon's resignation post; the announcement the
+// caucus is quoting). Any post that quotes, replies to or retweets an anchor
+// is assigned that story before the model runs (classify.js planDay,
+// classify-live.js); the model still adds the post's own topics. Ids never
+// reach the prompt — renderTaxonomy prints "[anchored]" instead.
+//
+// Pending anchor (taxonomy owner: add when the story key exists; the file
+// is being rewritten tonight, 2026-09-10, so it is not edited here):
+//   coxon-resignation → anchors: ["2097476196791709843"]   (139M impressions)
+// See docs/QUOTED_CONTEXT.md.
+export function anchorIndex(tax) {
+  const index = new Map(); // tweet id → [[macro, sub], ...]
+  for (const key of Object.keys(tax || {}).sort()) {
+    for (const subKey of Object.keys(tax[key]?.subtopics || {}).sort()) {
+      for (const id of tax[key].subtopics[subKey]?.anchors || []) {
+        const sid = String(id);
+        if (!/^\d+$/.test(sid)) continue;
+        if (!index.has(sid)) index.set(sid, []);
+        index.get(sid).push([key, subKey]);
+      }
+    }
+  }
+  return index;
+}
+
 // Render the taxonomy for the prompt: stable ordering so the cached system
 // block stays byte-identical between runs until the YAML actually changes.
 // A retired subtopic (retired: true — a provisional story that went quiet,
@@ -32,7 +58,8 @@ export function renderTaxonomy(tax) {
       if (sub.retired) continue;
       const aliases = sub.aliases?.length ? ` (also: ${sub.aliases.join(', ')})` : '';
       const story = sub.story ? ` [developing story${sub.since ? ` since ${ymd(sub.since)}` : ''}]` : '';
-      lines.push(`  - ${key}/${subKey}: ${sub.label}${story}${aliases}`);
+      const anchored = sub.anchors?.length ? ' [anchored]' : '';
+      lines.push(`  - ${key}/${subKey}: ${sub.label}${story}${anchored}${aliases}`);
     }
   }
   return lines.join('\n');
@@ -79,6 +106,11 @@ Rules:
   places the caucus is reacting to. When a tweet is about that story, assign
   the story (it still counts toward its macro) rather than the generic
   sibling subtopic.
+- Some inputs carry "quoting": the post this one quotes or replies to
+  (handle, text, impressions). A quote or reply is about the subject of the
+  post it quotes/answers (assign that subject and its story) in addition to
+  whatever its own text adds; a quoted post with very high reach is a strong
+  signal the story is live.
 - Most tweets get 1-2 topics; never more than 4.
 - Pure scheduling/greeting/broadcast tweets with no policy content get [].
 - If a tweet is clearly about a coherent subject the taxonomy has no home
