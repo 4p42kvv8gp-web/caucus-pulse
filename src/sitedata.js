@@ -87,6 +87,22 @@ export function clusterFamilies(phraseList) {
   return [...groups.values()];
 }
 
+// Which outside-context entry (data/context.json, see docs/OUTSIDE_CONTEXT.md)
+// belongs to an emerging cluster? Entries are keyed by the story candidate's
+// key, but the dashboard cluster only carries the placement key (`suggest`)
+// and the display label — and a re-run of stories.js can re-key a placement.
+// So accept the candidate key, the placement key, or the label, all
+// slug-normalised, and return the entry's key (null when nothing matches).
+export function contextKeyFor(cluster, entries) {
+  const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const want = new Set([cluster?.suggest, cluster?.key, cluster?.label].map(norm).filter(Boolean));
+  if (!want.size) return null;
+  for (const [k, e] of Object.entries(entries || {})) {
+    if (want.has(norm(k)) || want.has(norm(e?.key)) || want.has(norm(e?.label))) return k;
+  }
+  return null;
+}
+
 function zeroScope() {
   return { n: 0, eng: 0, members: new Set() };
 }
@@ -396,6 +412,16 @@ export function buildSiteData() {
     }).filter(Boolean);
   }
 
+  // ── outside context: newsletter hits per story candidate (data/context.json,
+  // hand-searched from the owner's inbox — unreviewed context, not
+  // verification). Top 3 per cluster; clusters without an entry get [].
+  const context = readJSON(p('data', 'context.json'), null);
+  for (const c of clusters) {
+    const k = contextKeyFor(c, context?.stories);
+    c.context = (k ? context.stories[k].matches : []).slice(0, 3)
+      .map(({ sender, subject, date, why }) => ({ sender, subject, date, why: why || null }));
+  }
+
   // ── feed: window posts, newest first ──
   const feed = allPosts
     .slice()
@@ -455,7 +481,7 @@ export function buildSiteData() {
     incidents: incidentsFile.incidents,
     feed
   });
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters, ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts`);
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
