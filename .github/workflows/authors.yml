@@ -1,0 +1,39 @@
+# Weekly author-table refresh (user objects bill $0.01 each — hence weekly,
+# not per poll). Also run it manually after editing config/accounts.csv.
+name: authors
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: data-writes
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  authors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Refresh author table
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: npm run authors
+      - name: Commit author table
+        run: |
+          git config user.name "caucus-pulse"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/authors.json data/state.json
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "authors: weekly refresh"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            git pull --rebase
+          done
+          git push

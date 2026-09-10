@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2.6' stroke-linecap='butt' stroke-linejoin='round'%3E%3Cpath d='M1.5 13H7L10 5L12.13 13' stroke='%23194292'/%3E%3Cpath d='M12.13 13L14 20L17 13H22.5' stroke='%23d70015'/%3E%3C/svg%3E">
+<title>caucus-pulse · Incident desk</title>
+<style>
+  body{margin:0;background:#f5f5f7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;font-variant-numeric:tabular-nums}
+  a{color:#1d1d1f;text-decoration:none;text-underline-offset:2px}a:hover{text-decoration:underline}
+  button{font:inherit;color:inherit}
+  input:focus-visible,button:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}
+  .card{text-align:left;background:#fff;border:1px solid transparent;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:5px;cursor:pointer;width:100%;box-sizing:border-box}.card:hover{border-color:#d2d2d7}
+  .pill{background:#1d1d1f;color:#fff;border:0;border-radius:980px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer}.pill:hover{background:#3a3a3c}
+  .chip{background:#f2f2f4;border:0;border-radius:6px;padding:3px 9px;font-size:11px;cursor:pointer}.chip:hover{background:#e8e8ed}
+  header a.nav{color:#6e6e73}header a.nav.on{color:#1d1d1f;font-weight:600}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+<header style="position:sticky;top:0;z-index:10;height:50px;display:flex;align-items:center;gap:28px;padding:0 max(20px,calc((100% - 1240px)/2 + 20px));background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)">
+  <a href="./index.html" aria-label="caucus-pulse home" style="display:inline-flex;align-items:center;gap:.08em;font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1;white-space:nowrap;flex:none;color:#1d1d1f;text-decoration:none">Caucus<svg viewBox="0 0 28 24" fill="none" stroke-width="4.2" stroke-linecap="butt" stroke-linejoin="round" aria-hidden="true" style="height:.6em;width:.7em;overflow:visible;transform:translateY(.06em)"><path d="M2 13H8L11.5 4L13.75 13" stroke="#194292"></path><path d="M13.75 13L15.5 20L18.5 13H26" stroke="#d70015"></path></svg>Pulse</a>
+  <nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a class="nav" href="./index.html">Dashboard</a><a class="nav on" href="./incidents.html">Incidents</a></nav>
+  <div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span id="updated" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73"></span></div>
+</header>
+<main style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+  <section style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:4px 0 6px">
+    <div style="display:flex;flex-direction:column;gap:5px"><h1 style="margin:0;font-size:24px;line-height:1;font-weight:700;letter-spacing:0.01em;text-transform:uppercase;white-space:nowrap">Incident desk</h1><div id="counts" style="font-size:12px;color:#6e6e73"></div></div>
+    <div id="statusseg" style="display:flex;gap:8px;align-items:center"></div>
+  </section>
+  <section style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+    <div style="display:flex;flex-direction:column;gap:12px;flex:1 1 280px;min-width:0">
+      <div id="list" style="display:flex;flex-direction:column;gap:6px"></div>
+      <div style="background:#fff;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;flex:1 1 auto">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Search</h2><span style="font-size:11px;color:#6e6e73">sample results until X search is connected</span></div>
+        <div style="display:flex;gap:6px"><input id="query" placeholder='e.g. (shooting OR "shots fired") Aurora -is:retweet' style="flex:1;min-width:0;font:inherit;font-size:12px;padding:7px 10px;border:1px solid #d2d2d7;border-radius:9px;background:#f5f5f7"><button class="pill" style="border-radius:9px" title="X search is not connected yet">Run</button></div>
+        <div id="saved" style="display:flex;gap:5px;flex-wrap:wrap"></div>
+        <div id="results" style="display:flex;flex-direction:column;gap:2px"></div>
+      </div>
+    </div>
+    <div id="detail" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:12px;flex:3 1 620px;min-width:0"></div>
+  </section>
+</main>
+</div>
+<script type="module">
+import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups } from './ui.js';
+
+let D = null;
+const state = { status: 'All', selected: null, copied: false };
+let copyTimer = null;
+const $ = (id) => document.getElementById(id);
+
+const SAVED = [
+  ['Any district emergency', '(shelter OR evacuation OR "active shooter" OR "shelter in place") from:list -is:retweet'],
+  ['Flooding', '(flood OR flooding) (shelter OR OEM) from:list'],
+  ['Wildfire', '(fire OR wildfire) (evacuat* OR contain*) from:list']
+];
+
+function incidents() { return D.incidents || []; }
+
+function seg(list, key) {
+  return `<div role="group" style="display:inline-flex;background:#e8e8ed;border-radius:10px;padding:2px">${list.map((l) => {
+    const on = state[key] === l;
+    return `<button data-status="${l}" aria-pressed="${on}" style="border:0;cursor:pointer;font-size:12px;font-weight:600;padding:5px 12px;border-radius:8px;transition:background .12s ease,color .12s ease;background:${on ? '#fff' : 'transparent'};color:${on ? '#1d1d1f' : '#6e6e73'};box-shadow:${on ? '0 1px 3px rgba(0,0,0,.14)' : 'none'}">${l}</button>`;
+  }).join('')}</div>`;
+}
+
+function kindTag(kind, small = false) {
+  return `<span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(kind)}</span>`;
+}
+
+function briefOf(sel) {
+  const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  return [
+    `${sel.title} — ${sel.place} · ${sel.status} · ${etWhen(sel.since, D.today)} → ${etWhen(sel.last, D.today)}`,
+    '',
+    'Confirmed', ...(intel.confirmed.length ? intel.confirmed.map((c) => `• ${c.text} (${c.src})`) : ['• nothing extracted yet']),
+    ...(intel.unverified.length ? ['', 'Circulating, unverified', ...intel.unverified.map((u) => `• ${u.text} (${u.src})`)] : []),
+    '', "What's new", ...(intel.whatsNew.length ? intel.whatsNew.map((n) => `• ${n}`) : sel.timeline.slice(-2).map((e) => `• ${e.text.slice(0, 100)}`)),
+    '',
+    `${sel.handle} has posted ${sel.updates} times · ${fmt(sel.engN)} engagement${sel.others.length ? ` · also on it: ${sel.others.join(', ')}` : ''}`,
+    '—',
+    `caucus-pulse · ${D.lastPollAt ? etTime(D.lastPollAt) : ''} ET`
+  ].join('\n');
+}
+
+function render() {
+  const all = incidents();
+  $('updated').innerHTML = `${dot('#1d1d1f', 6)}${esc(headerDate(D.today))} · updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
+  const count = (s) => all.filter((i) => i.status === s).length;
+  $('counts').textContent = `${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week`;
+  $('statusseg').innerHTML = seg(['All', 'Active', 'Monitoring', 'Resolved'], 'status');
+
+  const list = all.filter((i) => state.status === 'All' ? i.status !== 'resolved' : i.status === state.status.toLowerCase());
+  if (!state.selected || !all.some((i) => i.id === state.selected)) state.selected = (list[0] || all[0])?.id || null;
+  const sel = all.find((i) => i.id === state.selected);
+
+  $('list').innerHTML = list.map((i) => `<button class="card" data-pick="${esc(i.id)}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px">${statusDot(i.status)}${kindTag(i.kind)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(i.last, D.today))}</span></div>
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(i.place)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${i.updates} posts</span></div>
+    <div style="font-size:12px;color:#6e6e73">${esc(i.handle)} · ${esc(i.member)}${i.id === state.selected ? '<span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span>' : ''}</div>
+  </button>`).join('') || '<div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div>';
+
+  $('saved').innerHTML = SAVED.map(([label, q], i) => `<button class="chip" data-q="${i}">${esc(label)}</button>`).join('');
+  $('results').innerHTML = `<div style="padding:14px 0;font-size:12px;color:#6e6e73;border-top:1px solid #f0f0f2">X search runs against accounts beyond the tracked list (police, local press, officials). It lights up when an X search connector is added — queries and saved chips are ready.</div>`;
+
+  if (!sel) {
+    $('detail').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:13px">No incidents on the board. When a member responds to a breaking district emergency, the classifier opens a thread here.</div>';
+    return;
+  }
+  const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  const newCount = sel.timeline.filter((e) => e.isNew).length;
+  const panel = (title, color, rows) => `<div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:${color}">${title}</div>${rows}</div>`;
+  $('detail').innerHTML = `
+  <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${kindTag(sel.kind)}<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">${statusDot(sel.status)}${sel.status}</span><span style="font-size:11px;color:#6e6e73">${esc(etWhen(sel.since, D.today))} → ${esc(etWhen(sel.last, D.today))}</span></div>
+      <h2 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(sel.title)}</h2>
+      <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${esc(sel.handle)}</span> · ${esc(sel.member)} · ${esc(sel.place)}</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,auto);gap:14px;font-size:11px;color:#6e6e73;text-align:right">
+      <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${sel.updates}</div>member posts</div>
+      <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${fmt(sel.engN)}</div>engagement</div>
+      <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${sel.amplifiers}</div>amplifying</div>
+      <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">0</div>official sources</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
+    <div style="flex:3 1 380px;min-width:0;display:flex;flex-direction:column;gap:2px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px"><h3 style="margin:0;font-size:13px;font-weight:700">Timeline</h3><span style="font-size:11px;color:#6e6e73;display:inline-flex;align-items:center;gap:5px">${dot('#1d1d1f', 6)}${newCount} new in the latest poll · members only</span></div>
+      ${sel.timeline.map((e) => `<div style="display:grid;grid-template-columns:max-content 10px 1fr;gap:0 10px;padding:8px 0;border-top:1px solid #f0f0f2">
+        <span style="font-size:11px;color:#6e6e73;padding-top:2px;white-space:nowrap;min-width:58px">${esc(etWhen(e.time, D.today))}</span>
+        <div style="display:flex;justify-content:center;padding-top:5px">${dot(e.isNew ? '#1d1d1f' : '#d2d2d7')}</div>
+        <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+          <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${esc(e.who)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span></div>
+          <p style="margin:0;font-size:13px;line-height:1.4">${esc(e.text)}</p>
+          <div style="font-size:11px;color:#6e6e73">${fmt(e.engN)} engagement</div>
+        </div></div>`).join('')}
+    </div>
+    <div style="flex:2 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:13px;font-weight:700">Intel</h3>
+      ${panel('Confirmed', '#00823a', intel.confirmed.length ? intel.confirmed.map((c) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#00823a;font-weight:700">✓</span><span>${esc(c.text)} <span style="color:#6e6e73">· ${esc(c.src)}</span></span></div>`).join('') : '<div style="font-size:12px;color:#6e6e73">Nothing extracted yet — intel updates on the nightly run.</div>')}
+      ${intel.unverified.length ? panel('Circulating, unverified', '#d70015', intel.unverified.map((u) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#d70015;font-weight:700">?</span><span>${esc(u.text)} <span style="color:#6e6e73">· ${esc(u.src)}</span></span></div>`).join('')) : ''}
+      ${panel("What's new", '#6e6e73', (intel.whatsNew.length ? intel.whatsNew : sel.timeline.slice(-2).reverse().map((e) => e.text.slice(0, 90))).map((n) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;margin-top:5px"></span><span>${esc(n)}</span></div>`).join(''))}
+      ${panel('Who else is on it', '#6e6e73', `<div style="display:flex;flex-wrap:wrap;gap:4px">${sel.others.length ? sel.others.map((o) => `<span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">${esc(o)}</span>`).join('') : '<span style="font-size:12px;color:#6e6e73">Only the lead member so far.</span>'}</div>`)}
+      <button class="pill" data-brief style="margin-top:auto;align-self:flex-start">${state.copied ? 'Copied ✓' : 'Copy brief for Signal'}</button>
+    </div>
+  </div>`;
+}
+
+document.addEventListener('click', (e) => {
+  const st = e.target.closest('[data-status]');
+  if (st) { state.status = st.dataset.status; render(); return; }
+  const pick = e.target.closest('[data-pick]');
+  if (pick) { state.selected = pick.dataset.pick; state.status = 'All'; render(); return; }
+  const chip = e.target.closest('[data-q]');
+  if (chip) { $('query').value = SAVED[Number(chip.dataset.q)][1]; return; }
+  const brief = e.target.closest('[data-brief]');
+  if (brief) {
+    const sel = incidents().find((i) => i.id === state.selected);
+    if (sel) copyText(briefOf(sel), () => { state.copied = true; render(); clearTimeout(copyTimer); copyTimer = setTimeout(() => { state.copied = false; render(); }, 1800); });
+  }
+});
+
+loadRollups().then((data) => {
+  if (!data) {
+    document.querySelector('main').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:14px">No data yet — the first poll and nightly run create <code>site/data/rollups.json</code>.</div>';
+    return;
+  }
+  D = data;
+  render();
+});
+</script>
+</body>
+</html>

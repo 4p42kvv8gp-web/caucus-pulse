@@ -1,0 +1,144 @@
+// The poller: pull everything new from the X List timeline, append to the
+// archive, advance the cursor. Runs every 20 minutes from GitHub Actions.
+//
+// Cursor strategy — the list endpoint may or may not honor since_id (search
+// and user timelines do; list tweets has not consistently documented it):
+//   1. First run tries since_id. If the API rejects it (400), we remember
+//      that (state.sinceIdSupported=false) and never send it again.
+//   2. Without since_id we paginate newest-first and stop at the first page
+//      that crosses the last-seen id (boundary stop). The tail of that page
+//      is a re-read we already have — billed but bounded by one page — so we
+//      shrink the page size adaptively toward recent per-poll volume.
+// Either way local dedupe (recentIds) keeps the archive exact.
+import * as x from './x.js';
+import { settings, etDate, idGt, maxId } from './util.js';
+import {
+  loadState, saveState, addUsage, budgetExhausted, dailyBudget, estCost,
+  recentIds, appendToArchive
+} from './store.js';
+
+export function listId() {
+  return process.env.X_LIST_ID || settings.list_id;
+}
+
+// Page size when we pay for boundary overlap: aim ~2× the recent per-poll
+// volume so bursts rarely need page 2, but quiet polls don't re-read 100.
+export function adaptivePageSize(recentNewCounts, max = 100) {
+  if (!recentNewCounts.length) return max;
+  const avg = recentNewCounts.reduce((a, b) => a + b, 0) / recentNewCounts.length;
+  return Math.min(max, Math.max(10, Math.ceil(avg * 2)));
+}
+
+// Split a newest-first page at the since-id boundary → the part we keep.
+export function newerThan(tweets, sinceId) {
+  return sinceId ? tweets.filter((t) => idGt(t.id, sinceId)) : tweets;
+}
+
+async function pull(state) {
+  const id = listId();
+  const maxPages = Number(process.env.X_MAX_PAGES || settings.poll.max_pages || 5);
+  const useSinceId = state.sinceIdSupported !== false && Boolean(state.sinceId);
+  const pageSize = state.sinceIdSupported === false
+    ? adaptivePageSize(state.recentNewCounts, settings.poll.page_size)
+    : settings.poll.page_size;
+
+  const raw = [];
+  let paginationToken = null;
+  let hitBoundary = false;
+
+  for (let page = 0; page < maxPages && !hitBoundary; page++) {
+    let res;
+    try {
+      res = await x.listTweetsPage(id, {
+        sinceId: useSinceId ? state.sinceId : undefined,
+        paginationToken,
+        // after page 1 we're inside a burst — full pages are cheapest
+        pageSize: page === 0 ? pageSize : 100
+      });
+    } catch (e) {
+      if (e.status === 400 && useSinceId && state.sinceIdSupported === null) {
+        console.warn('[poll] list endpoint rejected since_id — switching to boundary-stop mode');
+        state.sinceIdSupported = false;
+        saveState(state);
+        return pull(state); // retry once in the discovered mode
+      }
+      // A failure past page 0 must not discard already-billed pages.
+      if (page === 0) throw e;
+      console.warn(`[poll] page ${page + 1} failed (${e.message}) — keeping earlier pages`);
+      break;
+    }
+    if (res.rateLimited) { console.warn('[poll] rate limited — backing off this cycle'); break; }
+    if (useSinceId && state.sinceIdSupported === null && res.tweets.length >= 0) {
+      state.sinceIdSupported = true; // the param was accepted
+    }
+    addUsage(state, { posts: res.usage });
+
+    const fresh = newerThan(res.tweets, state.sinceId);
+    raw.push(...fresh);
+    hitBoundary = fresh.length < res.tweets.length; // page crossed the cursor
+    paginationToken = res.nextToken;
+    if (!paginationToken) break;
+    if (page === maxPages - 1 && !hitBoundary && res.tweets.length) {
+      console.warn(`[poll] burst exceeded ${maxPages} pages — older tweets will be caught by dedupe next cycle only if still on page 1..${maxPages}; raise X_MAX_PAGES if this repeats`);
+    }
+  }
+  return raw;
+}
+
+export async function pollOnce() {
+  if (!x.isConfigured()) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
+  if (!listId()) throw new Error('No list id: set X_LIST_ID or config/settings.json "list_id"');
+
+  const state = loadState();
+  if (budgetExhausted(state)) {
+    console.warn(`[poll] daily X read budget reached (${dailyBudget()}) — skipping until tomorrow (raise X_DAILY_READ_BUDGET to change)`);
+    saveState(state);
+    return { captured: 0 };
+  }
+
+  const capturedAt = new Date().toISOString();
+  const raw = await pull(state);
+
+  const seen = recentIds();
+  const records = [];
+  for (const t of raw) {
+    if (seen.has(t.id)) continue;
+    seen.add(t.id);
+    records.push(x.toRecord(t, capturedAt));
+    state.sinceId = maxId(state.sinceId, t.id);
+  }
+
+  const dates = appendToArchive(records);
+  state.recentNewCounts = [...state.recentNewCounts, records.length].slice(-30);
+  state.lastPollAt = capturedAt;
+  saveState(state);
+
+  const today = state.usage[etDate()] || { posts: 0, users: 0 };
+  console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''}; today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
+
+  // Post-capture extras are best-effort: live topic tags for the dashboard
+  // feed, then a rollups.json rebuild. Dynamic imports keep the capture path
+  // dependency-free — if node_modules is absent these steps just skip.
+  if (records.length) {
+    try {
+      const { classifyLive } = await import('./classify-live.js');
+      const r = await classifyLive(records);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+    } catch (e) {
+      console.warn(`[poll] live classification skipped: ${e.message}`);
+    }
+  }
+  try {
+    const { buildIncidents } = await import('./incidents.js');
+    await buildIncidents({ withIntel: false }); // grouping only; intel is nightly
+    const { buildSiteData } = await import('./sitedata.js');
+    buildSiteData();
+  } catch (e) {
+    console.warn(`[poll] site data rebuild skipped: ${e.message}`);
+  }
+  return { captured: records.length };
+}
+
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
+  pollOnce().catch((e) => { console.error(e); process.exit(1); });
+}
