@@ -18,7 +18,8 @@ export function renderTaxonomy(tax) {
     for (const subKey of Object.keys(macro.subtopics || {}).sort()) {
       const sub = macro.subtopics[subKey];
       const aliases = sub.aliases?.length ? ` (also: ${sub.aliases.join(', ')})` : '';
-      lines.push(`  - ${key}/${subKey}: ${sub.label}${aliases}`);
+      const story = sub.story ? ` [developing story${sub.since ? ` since ${sub.since}` : ''}]` : '';
+      lines.push(`  - ${key}/${subKey}: ${sub.label}${story}${aliases}`);
     }
   }
   return lines.join('\n');
@@ -45,6 +46,10 @@ ${renderTaxonomy(tax)}
 
 Rules:
 - Judge the tweet's substance, not incidental word matches.
+- Subtopics marked [developing story] are specific named events, people or
+  places the caucus is reacting to. When a tweet is about that story, assign
+  the story (it still counts toward its macro) rather than the generic
+  sibling subtopic.
 - Most tweets get 1-2 topics; never more than 4.
 - Pure scheduling/greeting/broadcast tweets with no policy content get [].
 - If a tweet is clearly about a coherent subject the taxonomy has no home

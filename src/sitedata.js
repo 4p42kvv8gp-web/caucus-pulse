@@ -339,13 +339,26 @@ export function buildSiteData() {
     };
   }).filter(Boolean).sort((a, b) => b.spread - a.spread).slice(0, 12);
 
-  // ── emerging clusters (latest nightly that produced any) ──
+  // ── emerging: cross-day story candidates (data/stories.json, built by
+  // src/stories.js) — falls back to the latest nightly's raw clusters when
+  // the story file has not been built yet. Only candidates the placement
+  // pass called a story or a taxonomy gap are shown; noise stays out.
   let clusters = [];
-  for (let d = 0; d < 3 && !clusters.length; d++) {
-    const file = readJSON(topicsPath(daysAgoEt(d)), null);
-    if (!file?.emerging?.length) continue;
+  const storyFile = readJSON(p('data', 'stories.json'), null);
+  const storyCands = (storyFile?.candidates || [])
+    .filter((c) => c.placement && c.placement.kind !== 'noise' && !(storyFile.promoted || []).includes(`${c.placement.macro}/${c.placement.key}`))
+    .slice(0, 12)
+    .map((c) => ({ label: c.placement.label, ids: c.ids, kind: c.placement.kind, macro: c.placement.macro, key: c.placement.key, days: c.days }));
+  const raw = storyCands.length ? [] : (() => {
+    for (let d = 0; d < 3; d++) {
+      const file = readJSON(topicsPath(daysAgoEt(d)), null);
+      if (file?.emerging?.length) return file.emerging;
+    }
+    return [];
+  })();
+  {
     const byId = new Map(allPosts.map((x) => [x.id, x]));
-    clusters = file.emerging.map((e) => {
+    clusters = (storyCands.length ? storyCands : raw).map((e) => {
       const posts = e.ids.map((id) => byId.get(id)).filter(Boolean);
       if (!posts.length) return null;
       posts.sort((a, b) => a.createdAt < b.createdAt ? -1 : 1);
@@ -375,7 +388,10 @@ export function buildSiteData() {
         since,
         shape,
         sample: best.text.length > 160 ? best.text.slice(0, 159).replace(/\s+\S*$/, '') + '…' : best.text,
-        suggest: e.label.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
+        suggest: e.key || e.label.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, ''),
+        kind: e.kind || null,      // 'story' | 'gap' | null (raw nightly cluster)
+        macro: e.macro || null,    // suggested parent macro id
+        days: e.days || null       // distinct days the subject surfaced
       };
     }).filter(Boolean);
   }

@@ -1,0 +1,5747 @@
+{
+ "generatedAt": "2026-09-10T06:26:35.672Z",
+ "windowDays": 30,
+ "promoted": [],
+ "placements": {
+  "agriculture-farmers": {
+   "macro": "economy",
+   "key": "agriculture-farmers",
+   "label": "Agriculture & farmers",
+   "kind": "gap",
+   "aliases": [
+    "farmers",
+    "farm bill",
+    "ranchers",
+    "food safety",
+    "USDA"
+   ],
+   "mergeInto": null
+  },
+  "transit-infrastructure": {
+   "macro": "economy",
+   "key": "transit-infrastructure",
+   "label": "Transit & infrastructure",
+   "kind": "gap",
+   "aliases": [
+    "public transit",
+    "Bipartisan Infrastructure Law",
+    "roads and bridges",
+    "rail",
+    "Amtrak"
+   ],
+   "mergeInto": null
+  },
+  "celebrity-tribute": {
+   "macro": null,
+   "key": "dolly-parton-tribute",
+   "label": "Dolly Parton tribute",
+   "kind": "story",
+   "aliases": [
+    "Dolly Parton",
+    "Imagination Library",
+    "RIP Dolly",
+    "country music icon"
+   ],
+   "mergeInto": null
+  },
+  "space-nasa": {
+   "macro": "tech",
+   "key": "space-science-research",
+   "label": "Space, NASA & science research",
+   "kind": "gap",
+   "aliases": [
+    "NASA",
+    "Artemis",
+    "NSF",
+    "quantum",
+    "national labs"
+   ],
+   "mergeInto": null
+  },
+  "dolly-parton-tribute": {
+   "macro": null,
+   "key": "dolly-parton-tribute",
+   "label": "Dolly Parton tribute",
+   "kind": "story",
+   "aliases": [
+    "Dolly Parton",
+    "Imagination Library",
+    "RIP Dolly"
+   ],
+   "mergeInto": "celebrity-tribute"
+  },
+  "mental-health-crisis-services": {
+   "macro": "healthcare",
+   "key": "mental-health",
+   "label": "Mental health & suicide prevention",
+   "kind": "gap",
+   "aliases": [
+    "988",
+    "Suicide Prevention Month",
+    "mental health",
+    "crisis lifeline"
+   ],
+   "mergeInto": null
+  },
+  "data-centers": {
+   "macro": "tech",
+   "key": "data-centers",
+   "label": "Data centers & energy costs",
+   "kind": "gap",
+   "aliases": [
+    "data center",
+    "data center moratorium",
+    "AI data centers",
+    "utility bills"
+   ],
+   "mergeInto": null
+  },
+  "public-figure-tributes": {
+   "macro": null,
+   "key": "dolly-parton-tribute",
+   "label": "Dolly Parton tribute",
+   "kind": "story",
+   "aliases": [
+    "Dolly Parton",
+    "Imagination Library",
+    "Appalachia"
+   ],
+   "mergeInto": "celebrity-tribute"
+  },
+  "child-care-affordability": {
+   "macro": "economy",
+   "key": "child-care",
+   "label": "Child care & caregiving costs",
+   "kind": "gap",
+   "aliases": [
+    "child care",
+    "childcare costs",
+    "early childhood",
+    "elder care",
+    "caregiving"
+   ],
+   "mergeInto": null
+  },
+  "small-business-support": {
+   "macro": "economy",
+   "key": "small-business",
+   "label": "Small business & SBA",
+   "kind": "gap",
+   "aliases": [
+    "small business",
+    "SBA",
+    "entrepreneurs",
+    "credit unions",
+    "Main Street"
+   ],
+   "mergeInto": null
+  },
+  "arts-culture-institutions": {
+   "macro": "civil-rights",
+   "key": "arts-culture",
+   "label": "Arts, museums & cultural institutions",
+   "kind": "gap",
+   "aliases": [
+    "museums",
+    "Smithsonian",
+    "Kennedy Center",
+    "NEA",
+    "arts funding"
+   ],
+   "mergeInto": null
+  },
+  "public-lands": {
+   "macro": "climate",
+   "key": "public-lands",
+   "label": "Public lands & national parks",
+   "kind": "gap",
+   "aliases": [
+    "National Park Week",
+    "national parks",
+    "public lands",
+    "Park Service",
+    "BLM"
+   ],
+   "mergeInto": null
+  },
+  "9-11-remembrance": {
+   "macro": null,
+   "key": "sept-11-anniversary",
+   "label": "9/11 25th anniversary remembrance",
+   "kind": "story",
+   "aliases": [
+    "9/11",
+    "September 11",
+    "Pentagon Memorial",
+    "Flight 93",
+    "never forget"
+   ],
+   "mergeInto": null
+  },
+  "christian-nationalism": {
+   "macro": "democracy",
+   "key": "christian-nationalism",
+   "label": "Christian nationalism",
+   "kind": "gap",
+   "aliases": [
+    "Christian nationalism",
+    "Jared Huffman",
+    "church and state",
+    "religious right"
+   ],
+   "mergeInto": null
+  },
+  "animal-welfare": {
+   "macro": null,
+   "key": "animal-welfare",
+   "label": "Animal welfare",
+   "kind": "gap",
+   "aliases": [
+    "animal cruelty",
+    "National Dog Day",
+    "ASPCA",
+    "Dog Lovers Caucus",
+    "shelters"
+   ],
+   "mergeInto": null
+  },
+  "epstein-files": {
+   "macro": "democracy",
+   "key": "epstein-files",
+   "label": "Epstein files transparency",
+   "kind": "story",
+   "aliases": [
+    "Epstein files",
+    "Epstein Files Transparency Act",
+    "Massie",
+    "discharge petition"
+   ],
+   "mergeInto": null
+  },
+  "trump-arch-monument-project": {
+   "macro": "democracy",
+   "key": "trump-arch-monument",
+   "label": "Trump Arch monument project",
+   "kind": "story",
+   "aliases": [
+    "Trump Arch",
+    "Arlington monument",
+    "DCA flight risk",
+    "White House construction"
+   ],
+   "mergeInto": null
+  },
+  "postal-service": {
+   "macro": "labor",
+   "key": "postal-service",
+   "label": "USPS & postal service",
+   "kind": "gap",
+   "aliases": [
+    "USPS",
+    "Postal Service",
+    "Postmaster General",
+    "mail delays"
+   ],
+   "mergeInto": null
+  },
+  "place-renaming": {
+   "macro": "democracy",
+   "key": "lake-ontario-renaming",
+   "label": "Trump renaming of Lake Ontario",
+   "kind": "story",
+   "aliases": [
+    "Lake America",
+    "Lake Ontario renaming",
+    "Dingell bill",
+    "Gulf of America"
+   ],
+   "mergeInto": null
+  },
+  "9-11-commemoration": {
+   "macro": null,
+   "key": "sept-11-anniversary",
+   "label": "9/11 25th anniversary remembrance",
+   "kind": "story",
+   "aliases": [
+    "9/11",
+    "Pentagon 9/11 Memorial",
+    "Flight 93",
+    "September 11 anniversary"
+   ],
+   "mergeInto": "9-11-remembrance"
+  },
+  "surveillance-privacy": {
+   "macro": "tech",
+   "key": "surveillance-privacy",
+   "label": "Surveillance & data privacy",
+   "kind": "gap",
+   "aliases": [
+    "surveillance",
+    "Patriot Act",
+    "data privacy",
+    "NDO Fairness Act",
+    "warrantless"
+   ],
+   "mergeInto": null
+  },
+  "infrastructure-transportation": {
+   "macro": "economy",
+   "key": "infrastructure-transit",
+   "label": "Infrastructure & transportation",
+   "kind": "gap",
+   "aliases": [
+    "highway",
+    "transit",
+    "Amtrak",
+    "bridges",
+    "infrastructure funding"
+   ],
+   "mergeInto": null
+  },
+  "lake-renaming-stunt": {
+   "macro": "democracy",
+   "key": "lake-america-renaming",
+   "label": "Trump 'Lake America' renaming",
+   "kind": "story",
+   "aliases": [
+    "Lake America",
+    "Lake Michigan",
+    "Burgum",
+    "Great Lakes renaming"
+   ],
+   "mergeInto": null
+  },
+  "america250-history": {
+   "macro": null,
+   "key": "america250-history",
+   "label": "America 250 history series",
+   "kind": "gap",
+   "aliases": [
+    "ROAD TO 250",
+    "America250",
+    "semiquincentennial",
+    "1776"
+   ],
+   "mergeInto": null
+  },
+  "political-violence": {
+   "macro": "public-safety",
+   "key": "amy-acton-attack",
+   "label": "Amy Acton campaign attack",
+   "kind": "story",
+   "aliases": [
+    "Amy Acton",
+    "Dr. Acton",
+    "Ohio governor race",
+    "political violence"
+   ],
+   "mergeInto": null
+  },
+  "traffic-safety": {
+   "macro": "public-safety",
+   "key": "transportation-safety",
+   "label": "Road & rail safety",
+   "kind": "gap",
+   "aliases": [
+    "cyclist safety",
+    "underride",
+    "rail crossing",
+    "Railway Safety Act",
+    "traffic deaths"
+   ],
+   "mergeInto": null
+  },
+  "opioid-overdose-crisis": {
+   "macro": "healthcare",
+   "key": "opioids-overdose",
+   "label": "Opioids & overdose crisis",
+   "kind": "gap",
+   "aliases": [
+    "overdose",
+    "fentanyl",
+    "opioid addiction",
+    "recovery",
+    "naloxone"
+   ],
+   "mergeInto": null
+  },
+  "congressional-youth-programs": {
+   "macro": "constituent-services",
+   "key": "youth-programs",
+   "label": "Congressional youth programs",
+   "kind": "gap",
+   "aliases": [
+    "Congressional App Challenge",
+    "Congressional Award",
+    "youth sports",
+    "student programs"
+   ],
+   "mergeInto": null
+  },
+  "gambling-prediction-markets": {
+   "macro": "economy",
+   "key": "prediction-markets-gambling",
+   "label": "Prediction markets & gambling",
+   "kind": "gap",
+   "aliases": [
+    "Prediction Markets Are Gambling Act",
+    "sports betting",
+    "gaming",
+    "Kalshi",
+    "tribal gaming"
+   ],
+   "mergeInto": null
+  },
+  "historical-records-archives": {
+   "macro": "democracy",
+   "key": "national-archives-sanbruno",
+   "label": "National Archives San Bruno closure",
+   "kind": "story",
+   "aliases": [
+    "National Archives",
+    "San Bruno",
+    "historical records",
+    "NARA"
+   ],
+   "mergeInto": null
+  },
+  "consumer-fraud-scams": {
+   "macro": "economy",
+   "key": "consumer-scams-fraud",
+   "label": "Consumer scams & fraud",
+   "kind": "gap",
+   "aliases": [
+    "scams",
+    "fraud",
+    "senior fraud",
+    "Stop Scamming Truckers Act",
+    "robocalls"
+   ],
+   "mergeInto": null
+  },
+  "tributes-recognitions": {
+   "macro": null,
+   "key": "local-recognitions",
+   "label": "Local honors & recognitions",
+   "kind": "noise",
+   "aliases": [
+    "congratulations",
+    "recognition",
+    "honoring",
+    "tribute"
+   ],
+   "mergeInto": null
+  },
+  "antisemitism": {
+   "macro": "civil-rights",
+   "key": "antisemitism",
+   "label": "Antisemitism",
+   "kind": "gap",
+   "aliases": [
+    "antisemitism",
+    "Hasan Piker",
+    "swastika",
+    "American Jews"
+   ],
+   "mergeInto": null
+  },
+  "rail-crossing-safety": {
+   "macro": "public-safety",
+   "key": "transportation-safety",
+   "label": "Road & rail safety",
+   "kind": "gap",
+   "aliases": [
+    "rail crossing",
+    "Railway Safety Act",
+    "trucker safety",
+    "train collision"
+   ],
+   "mergeInto": "traffic-safety"
+  },
+  "sports-betting-gambling": {
+   "macro": "economy",
+   "key": "prediction-markets-gambling",
+   "label": "Prediction markets & gambling",
+   "kind": "gap",
+   "aliases": [
+    "sports betting",
+    "Prediction Markets Are Gambling Act",
+    "Nevada gaming",
+    "9th Circuit"
+   ],
+   "mergeInto": "gambling-prediction-markets"
+  },
+  "tribal-affairs": {
+   "macro": "civil-rights",
+   "key": "tribal-affairs",
+   "label": "Tribal & Native American affairs",
+   "kind": "gap",
+   "aliases": [
+    "tribal sovereignty",
+    "Native American",
+    "tribes",
+    "Indian Health Service"
+   ],
+   "mergeInto": null
+  },
+  "tributes-condolences": {
+   "macro": null,
+   "key": "condolences-passings",
+   "label": "Condolences & passings",
+   "kind": "noise",
+   "aliases": [
+    "condolences",
+    "passing",
+    "prayers",
+    "rest in peace"
+   ],
+   "mergeInto": null
+  },
+  "aviation-safety": {
+   "macro": "public-safety",
+   "key": "aviation-safety",
+   "label": "Aviation & FAA safety",
+   "kind": "gap",
+   "aliases": [
+    "FAA",
+    "air traffic controllers",
+    "helicopter tours",
+    "flight safety"
+   ],
+   "mergeInto": null
+  },
+  "geographic-renaming": {
+   "macro": "democracy",
+   "key": "lake-america-renaming",
+   "label": "Trump 'Lake America' renaming",
+   "kind": "story",
+   "aliases": [
+    "Lake America",
+    "Lake Ontario",
+    "Great Lakes",
+    "renaming order"
+   ],
+   "mergeInto": "lake-renaming-stunt"
+  },
+  "water-infrastructure": {
+   "macro": "climate",
+   "key": "water-infrastructure",
+   "label": "Water infrastructure & quality",
+   "kind": "gap",
+   "aliases": [
+    "water crisis",
+    "crisis de agua",
+    "water filtration",
+    "drinking water",
+    "Puerto Rico water"
+   ],
+   "mergeInto": null
+  },
+  "national-museum-of-the-american-latino": {
+   "macro": "civil-rights",
+   "key": "latino-museum",
+   "label": "National Museum of the American Latino",
+   "kind": "story",
+   "aliases": [
+    "Museo Nacional del Latino",
+    "Arts and Industries Building",
+    "Smithsonian Latino museum",
+    "American Latino Museum"
+   ],
+   "mergeInto": null
+  },
+  "smithsonian-history-erasure": {
+   "macro": "democracy",
+   "key": "smithsonian-history",
+   "label": "Smithsonian & history erasure",
+   "kind": "story",
+   "aliases": [
+    "Lonnie Bunch",
+    "Smithsonian",
+    "rewriting history",
+    "Bunch resignation"
+   ],
+   "mergeInto": null
+  },
+  "hemp-regulation": {
+   "macro": null,
+   "key": "hemp-regulation",
+   "label": "Hemp ban & regulation",
+   "kind": "gap",
+   "aliases": [
+    "hemp ban",
+    "THC beverages",
+    "hemp farmers",
+    "federal hemp framework"
+   ],
+   "mergeInto": null
+  },
+  "childcare-affordability-assistance": {
+   "macro": "economy",
+   "key": "childcare",
+   "label": "Child care affordability",
+   "kind": "gap",
+   "aliases": [
+    "childcare",
+    "child care costs",
+    "daycare",
+    "preschool"
+   ],
+   "mergeInto": null
+  },
+  "epstein-investigation": {
+   "macro": "democracy",
+   "key": "epstein-files",
+   "label": "Epstein files & investigation",
+   "kind": "story",
+   "aliases": [
+    "Epstein",
+    "Epstein files",
+    "Leon Black",
+    "Oversight Epstein subpoena"
+   ],
+   "mergeInto": null
+  },
+  "notable-deaths-tributes": {
+   "macro": null,
+   "key": "dolly-parton-death",
+   "label": "Dolly Parton death tributes",
+   "kind": "story",
+   "aliases": [
+    "Dolly Parton",
+    "Dollywood",
+    "Imagination Library",
+    "country music icon"
+   ],
+   "mergeInto": null
+  },
+  "cybersecurity-critical-infrastructure": {
+   "macro": "tech",
+   "key": "cybersecurity",
+   "label": "Cybersecurity & critical infrastructure",
+   "kind": "gap",
+   "aliases": [
+    "cyberattack",
+    "cybersecurity",
+    "water systems hack",
+    "Connected Vehicle Security Act"
+   ],
+   "mergeInto": null
+  },
+  "history-commemoration": {
+   "macro": null,
+   "key": "america-250",
+   "label": "America 250 / Road to 250 history",
+   "kind": "gap",
+   "aliases": [
+    "ROAD TO 250",
+    "Battle of Long Island",
+    "semiquincentennial",
+    "Revolutionary War history"
+   ],
+   "mergeInto": null
+  },
+  "state-renaming": {
+   "macro": "democracy",
+   "key": "new-mexico-renaming",
+   "label": "New Mexico renaming push",
+   "kind": "story",
+   "aliases": [
+    "New Mexico name",
+    "rename New Mexico",
+    "We're New Mexicans",
+    "Trump meme"
+   ],
+   "mergeInto": null
+  },
+  "maternal-health": {
+   "macro": "healthcare",
+   "key": "maternal-health",
+   "label": "Maternal & infant health",
+   "kind": "gap",
+   "aliases": [
+    "maternal mortality",
+    "breastfeeding",
+    "birth center",
+    "infant mortality"
+   ],
+   "mergeInto": null
+  },
+  "generational-politics": {
+   "macro": "congress-politics",
+   "key": "generational-politics",
+   "label": "Gen Z & generational politics",
+   "kind": "story",
+   "aliases": [
+    "Gen Z",
+    "Boomers",
+    "Surrounded",
+    "Jubilee Media"
+   ],
+   "mergeInto": null
+  },
+  "sports-culture": {
+   "macro": null,
+   "key": "sports",
+   "label": "Sports & teams",
+   "kind": "gap",
+   "aliases": [
+    "NFL",
+    "college football",
+    "Eagles",
+    "rivalry game"
+   ],
+   "mergeInto": null
+  },
+  "ted-cruz-pressler-allegations": {
+   "macro": null,
+   "key": "cruz-pressler",
+   "label": "Ted Cruz & Paul Pressler allegations",
+   "kind": "story",
+   "aliases": [
+    "Ted Cruz",
+    "Paul Pressler",
+    "Pressler abuse allegations"
+   ],
+   "mergeInto": null
+  },
+  "foster-care": {
+   "macro": null,
+   "key": "foster-care-youth",
+   "label": "Foster care & youth services",
+   "kind": "gap",
+   "aliases": [
+    "foster care",
+    "foster youth",
+    "Together California",
+    "youth housing"
+   ],
+   "mergeInto": null
+  },
+  "transportation-safety": {
+   "macro": null,
+   "key": "transportation-safety",
+   "label": "Transportation & aviation safety",
+   "kind": "gap",
+   "aliases": [
+    "REVOKE Act",
+    "trucking safety",
+    "air traffic controllers",
+    "FLIGHT DECK Act"
+   ],
+   "mergeInto": null
+  },
+  "semiconductor-manufacturing": {
+   "macro": "economy",
+   "key": "semiconductors-chips",
+   "label": "Semiconductors & CHIPS manufacturing",
+   "kind": "gap",
+   "aliases": [
+    "Intel",
+    "CHIPS Act",
+    "semiconductor fab",
+    "chip manufacturing"
+   ],
+   "mergeInto": null
+  },
+  "america-250-history": {
+   "macro": null,
+   "key": "america-250",
+   "label": "America 250 / Road to 250 history",
+   "kind": "gap",
+   "aliases": [
+    "ROAD TO 250",
+    "Battle of Long Island",
+    "Revolutionary War",
+    "semiquincentennial"
+   ],
+   "mergeInto": "history-commemoration"
+  },
+  "patent-policy": {
+   "macro": "tech",
+   "key": "patents-innovation",
+   "label": "Patents & USPTO policy",
+   "kind": "gap",
+   "aliases": [
+    "USPTO",
+    "patent law",
+    "patent quality",
+    "innovation policy"
+   ],
+   "mergeInto": null
+  },
+  "aviation-aerospace-innovation": {
+   "macro": null,
+   "key": "aviation-aerospace",
+   "label": "Aerospace innovation (Seaglider)",
+   "kind": "story",
+   "aliases": [
+    "Seaglider",
+    "REGENT",
+    "Viceroy",
+    "first flight"
+   ],
+   "mergeInto": null
+  },
+  "consumer-protection-enforcement": {
+   "macro": "economy",
+   "key": "consumer-protection",
+   "label": "Consumer protection & CFPB",
+   "kind": "gap",
+   "aliases": [
+    "CFPB",
+    "consumer complaints",
+    "debt collectors",
+    "consumer protection"
+   ],
+   "mergeInto": null
+  }
+ },
+ "candidates": [
+  {
+   "key": "celebrity-tribute",
+   "label": "celebrity-tribute",
+   "labels": [
+    "memorial-tributes",
+    "first-responder-memorial",
+    "celebrity-tributes",
+    "celebrity-tribute",
+    "celebrity memorial tributes",
+    "first-responder-appreciation",
+    "memorials-tributes",
+    "dolly-parton-tribute",
+    "obituaries-tributes",
+    "public figure tributes & obituaries",
+    "public-figure-tributes",
+    "public-figure-tribute"
+   ],
+   "posts": 67,
+   "members": 26,
+   "days": 3,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-09-09",
+   "eng": 5293,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "bell4mo",
+    "RoKhanna",
+    "RepDonBeyer",
+    "CongressmanRaja",
+    "RepTroyCarter",
+    "rosadelauro",
+    "ChrisForPA",
+    "FrankPallone",
+    "RepCuellar",
+    "RepChuyGarcia",
+    "BradSherman",
+    "RepEspaillat"
+   ],
+   "ids": [
+    "2090919165595152891",
+    "2092319019680358798",
+    "2092323017200165032",
+    "2092325014900977696",
+    "2092329062769263072",
+    "2092332231461101802",
+    "2092337180433690858",
+    "2092340620933161087",
+    "2092343824123408654",
+    "2092348106436477356",
+    "2092352779272491221",
+    "2092361071390593035",
+    "2092364753855246620",
+    "2092365007761629602",
+    "2092368072413733203",
+    "2092369705101099033",
+    "2092374690157203917",
+    "2092380780794085470",
+    "2092405004304871883",
+    "2092411367894421980",
+    "2092602571274043597",
+    "2092602897242681852",
+    "2092623487231836500",
+    "2092655441801089418",
+    "2092741221361832307",
+    "2093499390375706794",
+    "2094529108747440291",
+    "2094588422388097279",
+    "2097747353746776196",
+    "2092316415961272334",
+    "2092321487294234756",
+    "2092328093289529358",
+    "2092328897383719169",
+    "2092329077659107367",
+    "2092329154553258010",
+    "2092330414106988975",
+    "2092332952839663818",
+    "2092335860523933892",
+    "2092337744504668608",
+    "2092338001775149277",
+    "2092338252179017834",
+    "2092338824676331988",
+    "2092342875757346939",
+    "2092369462209233146",
+    "2092375544104988813",
+    "2092380476753248379",
+    "2092381269728358823",
+    "2092406602443669518",
+    "2092421815826317745",
+    "2092422045409718308",
+    "2092429569512948198",
+    "2092450986782552192",
+    "2092319020049481837",
+    "2092321317051617341",
+    "2092323941968699746",
+    "2092334531789418804",
+    "2092337785814315241",
+    "2092342761479352335",
+    "2092361514158031050",
+    "2092392585734013383",
+    "2092397997451509947",
+    "2092415249269838322",
+    "2092429532867317915",
+    "2092475076809732443",
+    "2092599209127981177",
+    "2092661001250574594",
+    "2097755982185009654"
+   ],
+   "sample": "Dolly Parton could have retired long ago having achieved greatness. She chose to continue her life pursuing the arts, and pushing boundaries to advocate for inclusion, women’s rights, children’s literacy and more.\n\nDolly touched countless hearts and will forever be remembered. https://t.co/qAmR2RaOWy",
+   "placement": {
+    "macro": null,
+    "key": "dolly-parton-tribute",
+    "label": "Dolly Parton tribute",
+    "kind": "story",
+    "aliases": [
+     "Dolly Parton",
+     "Imagination Library",
+     "RIP Dolly",
+     "country music icon"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "agriculture-farmers",
+   "label": "agriculture-farmers",
+   "labels": [
+    "agriculture-rural",
+    "agriculture & farm bill",
+    "agriculture-farmers",
+    "agriculture-farm-bill",
+    "agriculture-food-labeling",
+    "agriculture-farming",
+    "food-safety",
+    "agriculture & local farms",
+    "agriculture-farm-policy",
+    "agriculture",
+    "food-safety-recalls",
+    "agriculture-farm-economy",
+    "food-safety-agriculture",
+    "agriculture-local-farmers",
+    "agriculture & farmers",
+    "food safety recalls"
+   ],
+   "posts": 59,
+   "members": 30,
+   "days": 16,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-09",
+   "eng": 20195,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGoodlander",
+    "RepSchneider",
+    "RepJoeNeguse",
+    "RepJimmyPanetta",
+    "RepShontelBrown",
+    "RepEricSorensen",
+    "RepSalinas",
+    "RepGabeVasquez",
+    "Rep_Stansbury",
+    "repkmr",
+    "RepDonDavis",
+    "RepNikkiB"
+   ],
+   "ids": [
+    "2090430045571440954",
+    "2090462835344097457",
+    "2090463786574487571",
+    "2090471679881363694",
+    "2090819455672549719",
+    "2090855989645840684",
+    "2090885724119724127",
+    "2090944934157111581",
+    "2091974476523094295",
+    "2091994527988932843",
+    "2092034256071426081",
+    "2092035319180739035",
+    "2092058582841778592",
+    "2092601958842716607",
+    "2092630542533693786",
+    "2092653699399032936",
+    "2092661235799978448",
+    "2092666540856324098",
+    "2092711920239342010",
+    "2092729504091271510",
+    "2092983021557186728",
+    "2092983865157529605",
+    "2093086726881202645",
+    "2093134913998368972",
+    "2093399651940433962",
+    "2093420677877375167",
+    "2093452465991761967",
+    "2093452988048196033",
+    "2093454368519721149",
+    "2093486267715694861",
+    "2093509194141896958",
+    "2093515815974752420",
+    "2093676353061060814",
+    "2094096049530904884",
+    "2094137828703936792",
+    "2094468196891865514",
+    "2094468199064494175",
+    "2094532478350336140",
+    "2094603978117960175",
+    "2094917738644849112",
+    "2094943328055792000",
+    "2095203748226224221",
+    "2095204104662614235",
+    "2095211512600088888",
+    "2095536771459109184",
+    "2095546141093834934",
+    "2095548848777183306",
+    "2095560087465001381",
+    "2095567035409313810",
+    "2095620531353755826",
+    "2095653419608691187",
+    "2095653644649861487",
+    "2095947503317418355",
+    "2096226853774115255",
+    "2096284221803524226",
+    "2097399913092935818",
+    "2097684288934211918",
+    "2097716942987563113",
+    "2097747927036834274"
+   ],
+   "sample": "RT @factpostnews: The USDA has issues a recall of frozen buffalo chicken products at the highest risk level, indicating a reasonable chance…",
+   "placement": {
+    "macro": "economy",
+    "key": "agriculture-farmers",
+    "label": "Agriculture & farmers",
+    "kind": "gap",
+    "aliases": [
+     "farmers",
+     "farm bill",
+     "ranchers",
+     "food safety",
+     "USDA"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "transit-infrastructure",
+   "label": "transit-infrastructure",
+   "labels": [
+    "infrastructure-transit",
+    "infrastructure & transit projects",
+    "rail-transit-infrastructure",
+    "infrastructure-transit-investment",
+    "public-transit",
+    "transit-infrastructure",
+    "public-transit-infrastructure",
+    "public transit investment",
+    "infrastructure-investment"
+   ],
+   "posts": 32,
+   "members": 22,
+   "days": 13,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-04",
+   "eng": 2646,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPatRyanNY",
+    "sethmoulton",
+    "RepJoeCourtney",
+    "SenAdamSchiff",
+    "RepMoulton",
+    "RepMGS",
+    "RepNikkiB",
+    "RepBynum",
+    "SeanCasten",
+    "RepRobertGarcia",
+    "RepCasten",
+    "SenatorAndyKim"
+   ],
+   "ids": [
+    "2090466534359506948",
+    "2090475011526074449",
+    "2090804033623617571",
+    "2090836628663054790",
+    "2091296690166788380",
+    "2091916161671733567",
+    "2091986404142415901",
+    "2091991906255515906",
+    "2092237947655327855",
+    "2092330016931512761",
+    "2092401968165605758",
+    "2092664370002051095",
+    "2093435998713639311",
+    "2093462094775468450",
+    "2093677337548104105",
+    "2093705979686801636",
+    "2093716844448186456",
+    "2093815293415948588",
+    "2094074009855865094",
+    "2094455171254554642",
+    "2094565313811468726",
+    "2095164654599159963",
+    "2095165609952608531",
+    "2095194469846933766",
+    "2095194819672912021",
+    "2095250478447861821",
+    "2095590911254147574",
+    "2095941945117814873",
+    "2095941947198222508",
+    "2095941954051674191",
+    "2095941957344166150",
+    "2095941960649322693"
+   ],
+   "sample": "Proud to join @SenAlexPadilla to announce over $42 million in new safety and modernization upgrades across our Amtrak Gold Runner route to improve the passenger experience and expand accessibility.\n\nThis federal funding will ensure safety between the rail route and pedestrian and",
+   "placement": {
+    "macro": "economy",
+    "key": "transit-infrastructure",
+    "label": "Transit & infrastructure",
+    "kind": "gap",
+    "aliases": [
+     "public transit",
+     "Bipartisan Infrastructure Law",
+     "roads and bridges",
+     "rail",
+     "Amtrak"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "space-nasa",
+   "label": "space-nasa",
+   "labels": [
+    "space-nasa-industry",
+    "space-nasa",
+    "space-science-nasa",
+    "science-research-funding",
+    "space program & NASA",
+    "space-science-research",
+    "space-program-nasa",
+    "space-policy",
+    "space-policy-nasa",
+    "science-research",
+    "federal-research-funding",
+    "science-research-labs"
+   ],
+   "posts": 25,
+   "members": 17,
+   "days": 12,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-04",
+   "eng": 2185,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepKevinMullin",
+    "NormaJTorres",
+    "SenatorAndyKim",
+    "RepZoeLofgren",
+    "gtwhitesides",
+    "RepSuhas",
+    "RepGraceMeng",
+    "RepDonBeyer",
+    "RepDarrenSoto",
+    "RepGlennIvey",
+    "Rep_Whitesides",
+    "RepStenyHoyer"
+   ],
+   "ids": [
+    "2090478024462328130",
+    "2092073892575625453",
+    "2092308139261518007",
+    "2092766182143123939",
+    "2093017451164266941",
+    "2093535260575494272",
+    "2094061108252328309",
+    "2094064189090177051",
+    "2094065550687183190",
+    "2094065634304831857",
+    "2094065684674203657",
+    "2094079025572397541",
+    "2094101412586131634",
+    "2094145337372115212",
+    "2094562418756059484",
+    "2094814330814337083",
+    "2094857510947840415",
+    "2094918352380813656",
+    "2095152745716314441",
+    "2095220306453430769",
+    "2095558086786154897",
+    "2095561764205121691",
+    "2095874525074514173",
+    "2095883402918445501",
+    "2095909994830975001"
+   ],
+   "sample": "RT @NASARoman: The Nancy Grace Roman Space Telescope has officially launched and is heading to its forever home at L2!\n\nOver the next three…",
+   "placement": {
+    "macro": "tech",
+    "key": "space-science-research",
+    "label": "Space, NASA & science research",
+    "kind": "gap",
+    "aliases": [
+     "NASA",
+     "Artemis",
+     "NSF",
+     "quantum",
+     "national labs"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "mental-health-crisis-services",
+   "label": "mental-health-crisis-services",
+   "labels": [
+    "mental-health-crisis-services",
+    "mental-health-988-crisis-line",
+    "mental-health-addiction",
+    "mental-health",
+    "mental health crisis support",
+    "mental health & suicide prevention"
+   ],
+   "posts": 21,
+   "members": 20,
+   "days": 5,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-08",
+   "eng": 295,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepSalinas",
+    "RepRobinKelly",
+    "ERICSORENSEN",
+    "RepAngieCraig",
+    "RepBeccaB",
+    "RepAdamSmith",
+    "RepMikeQuigley",
+    "RepPressley",
+    "RepThompson",
+    "RepJahanaHayes",
+    "RepLauraGillen",
+    "RepTroyCarter"
+   ],
+   "ids": [
+    "2094842705822331192",
+    "2094895580128395339",
+    "2095117979050541234",
+    "2095582532855345594",
+    "2095594812674077152",
+    "2095622906051166693",
+    "2096274761831583921",
+    "2096299600336351431",
+    "2096306323574968772",
+    "2096308366863650951",
+    "2096366002950766716",
+    "2097350751462765045",
+    "2097390738963108285",
+    "2097397106784805054",
+    "2097398351859704112",
+    "2097399566282665988",
+    "2097406768125268330",
+    "2097416576353931376",
+    "2097416577868025863",
+    "2097422359934222553",
+    "2097431975665533084"
+   ],
+   "sample": "RT @NAMICommunicate: Today is #988Day\n\n@988Lifeline provides support to anyone in crisis, anytime. :Whatever you are facing, whatever your…",
+   "placement": {
+    "macro": "healthcare",
+    "key": "mental-health",
+    "label": "Mental health & suicide prevention",
+    "kind": "gap",
+    "aliases": [
+     "988",
+     "Suicide Prevention Month",
+     "mental health",
+     "crisis lifeline"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "data-centers",
+   "label": "data-centers",
+   "labels": [
+    "data-centers-utility-costs",
+    "data center siting",
+    "data centers",
+    "data-centers",
+    "data-centers-siting",
+    "data centers siting",
+    "data-center-regulation",
+    "data-center-development",
+    "data-center-energy-costs"
+   ],
+   "posts": 21,
+   "members": 19,
+   "days": 12,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-09",
+   "eng": 12174,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "juliejohnsonTX",
+    "MarkPocan",
+    "JoshRileyUE",
+    "RepCuellar",
+    "RepGabeVasquez",
+    "GovSherrillNJ",
+    "RepEscobar",
+    "RepMcGarvey",
+    "repdinatitus",
+    "RepMcGovern",
+    "SuhasforVA",
+    "RepGregLandsman"
+   ],
+   "ids": [
+    "2090445704728633470",
+    "2091595221729521888",
+    "2091953606287052914",
+    "2092399430817161487",
+    "2092762859893621048",
+    "2093000206178476405",
+    "2093051934034874833",
+    "2094783637933662347",
+    "2094837530831016037",
+    "2094859741453332538",
+    "2094876615666741428",
+    "2094924421437780141",
+    "2094928010310729780",
+    "2095152852628820143",
+    "2095209554929680509",
+    "2095250353386111005",
+    "2095295359090094119",
+    "2095622603209671060",
+    "2096282485881438591",
+    "2096563365103501549",
+    "2097813799470276818"
+   ],
+   "sample": "I’m calling on Congress to ban data centers in residential communities and to ban federal funding for Flock cameras.\n\nWe the people should call the shots. https://t.co/eBREylptLB",
+   "placement": {
+    "macro": "tech",
+    "key": "data-centers",
+    "label": "Data centers & energy costs",
+    "kind": "gap",
+    "aliases": [
+     "data center",
+     "data center moratorium",
+     "AI data centers",
+     "utility bills"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "9-11-remembrance",
+   "label": "9-11-remembrance",
+   "labels": [
+    "9-11-remembrance",
+    "9/11 remembrance & first responders",
+    "september-11-remembrance",
+    "9/11 remembrance & misinformation",
+    "9/11-remembrance",
+    "9/11 remembrance",
+    "9/11 anniversary commemoration",
+    "9/11 commemoration",
+    "9-11-commemoration"
+   ],
+   "posts": 20,
+   "members": 8,
+   "days": 3,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-09",
+   "eng": 9981,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJoshG",
+    "GovSherrillNJ",
+    "RepJerryNadler",
+    "RepBrendanBoyle",
+    "RepDanGoldman",
+    "RepGregoryMeeks",
+    "LauraAGillen",
+    "RepScottPeters"
+   ],
+   "ids": [
+    "2095134655154393460",
+    "2095512897447236049",
+    "2095551223273263239",
+    "2097079990344966318",
+    "2097400261153051057",
+    "2097414477306098174",
+    "2097446764634624191",
+    "2097449606955040805",
+    "2097723872766271915",
+    "2097737969545195713",
+    "2097782574102012170",
+    "2097782878998343782",
+    "2097863919972777995",
+    "2094771163377307941",
+    "2094817944442196196",
+    "2096778802735268073",
+    "2096778808808579514",
+    "2097689736588443915",
+    "2097690602905219541",
+    "2097834903295479922"
+   ],
+   "sample": "RT @BarnabyHistory: 🇺🇸 The Boatlift That Was Bigger Than Dunkirk\n\nAt 10:45 a.m. on September 11, 2001, a Coast Guard lieutenant named Mike…",
+   "placement": {
+    "macro": null,
+    "key": "sept-11-anniversary",
+    "label": "9/11 25th anniversary remembrance",
+    "kind": "story",
+    "aliases": [
+     "9/11",
+     "September 11",
+     "Pentagon Memorial",
+     "Flight 93",
+     "never forget"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "child-care-affordability",
+   "label": "child-care-affordability",
+   "labels": [
+    "child-care-affordability",
+    "child-care",
+    "child-care-access"
+   ],
+   "posts": 14,
+   "members": 10,
+   "days": 8,
+   "firstSeen": "2026-08-23",
+   "lastSeen": "2026-09-09",
+   "eng": 213,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDeborahRoss",
+    "RepNikema",
+    "RepNikkiB",
+    "BobbyScott",
+    "RepJahanaHayes",
+    "RepTimKennedy",
+    "RepBonamici",
+    "RepLoisFrankel",
+    "RepScholten",
+    "RepRichardNeal"
+   ],
+   "ids": [
+    "2091547307774734350",
+    "2092989686021050627",
+    "2093025499312251345",
+    "2094793743601709533",
+    "2094865924889199034",
+    "2095493227650371970",
+    "2095570898153779356",
+    "2095644266655875177",
+    "2095988864649470203",
+    "2096403680803127349",
+    "2097308997594362158",
+    "2097346723094147342",
+    "2097384930888319298",
+    "2097763850875699389"
+   ],
+   "sample": "Trump is taking his war on child care one step further, making it even harder for parents to find child care while keeping their jobs.\n\nHis latest move will strain resources, limit access to benefits for workers, and threaten the funding that providers rely on to keep their doors https://t.co/wehzKsVFnO",
+   "placement": {
+    "macro": "economy",
+    "key": "child-care",
+    "label": "Child care & caregiving costs",
+    "kind": "gap",
+    "aliases": [
+     "child care",
+     "childcare costs",
+     "early childhood",
+     "elder care",
+     "caregiving"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "small-business-support",
+   "label": "small-business-support",
+   "labels": [
+    "small-business-support",
+    "small-business",
+    "small-business-alcohol-regulation"
+   ],
+   "posts": 13,
+   "members": 13,
+   "days": 7,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-09",
+   "eng": 851,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDerekTranCA",
+    "RepFriedmanCA",
+    "RepGilCisneros",
+    "RepDonDavis",
+    "RepJoshG",
+    "RepDexterOR",
+    "RepDwightEvans",
+    "RepJimmyPanetta",
+    "repdinatitus",
+    "GovSherrillNJ",
+    "MarcVeasey",
+    "RepHoulahan"
+   ],
+   "ids": [
+    "2090539119113797970",
+    "2090546821185843706",
+    "2090856422166745183",
+    "2090921792512635255",
+    "2092975546053378271",
+    "2093014659351679229",
+    "2093072134448767484",
+    "2093082643759772023",
+    "2093155302665310649",
+    "2093436696016638291",
+    "2094944764688843092",
+    "2095863238021837188",
+    "2097781999310184769"
+   ],
+   "sample": "Cocktails to-go are here to stay, New Jersey!\n\nCocktails to-go has worked since it was established during COVID, customers liked it, and businesses told us it was another way to bring in revenue. Now, it’s permanent. https://t.co/NHVV5ORjFy",
+   "placement": {
+    "macro": "economy",
+    "key": "small-business",
+    "label": "Small business & SBA",
+    "kind": "gap",
+    "aliases": [
+     "small business",
+     "SBA",
+     "entrepreneurs",
+     "credit unions",
+     "Main Street"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "arts-culture-institutions",
+   "label": "arts-culture-institutions",
+   "labels": [
+    "smithsonian-arts-culture",
+    "cultural-institutions",
+    "arts-cultural-institutions",
+    "arts-culture-kennedy-center",
+    "arts-culture-museums",
+    "arts-culture-institutions",
+    "arts-culture-heritage",
+    "arts-culture-funding",
+    "arts-culture",
+    "arts-museums-culture"
+   ],
+   "posts": 13,
+   "members": 12,
+   "days": 10,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-09-09",
+   "eng": 8140,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepMikeQuigley",
+    "Mfume4Congress",
+    "RepRichardNeal",
+    "RepPabloJose",
+    "RepKamlagerDove",
+    "RepTeresaLF",
+    "JaredEMoskowitz",
+    "EspaillatNY",
+    "RepBeatty",
+    "RepTerriSewell",
+    "RepHankJohnson",
+    "RepYvetteClarke"
+   ],
+   "ids": [
+    "2090819492804739210",
+    "2092657655890301100",
+    "2093091551450648585",
+    "2093091638797054045",
+    "2093768223305125933",
+    "2094456140218204536",
+    "2094531795186598066",
+    "2094832156296036595",
+    "2095224251225706846",
+    "2095569023127736602",
+    "2097374604981346739",
+    "2097784398405878091",
+    "2097790636510372289"
+   ],
+   "sample": "RT @AdamParkhomenko: The iconic weeping willow trees outside the Kennedy Center have been cut down by Trump. https://t.co/5bZ0AnaPDx",
+   "placement": {
+    "macro": "civil-rights",
+    "key": "arts-culture",
+    "label": "Arts, museums & cultural institutions",
+    "kind": "gap",
+    "aliases": [
+     "museums",
+     "Smithsonian",
+     "Kennedy Center",
+     "NEA",
+     "arts funding"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "public-lands",
+   "label": "public-lands",
+   "labels": [
+    "public-lands",
+    "public-lands-parks",
+    "public-lands-national-parks",
+    "national-parks-public-lands"
+   ],
+   "posts": 13,
+   "members": 11,
+   "days": 8,
+   "firstSeen": "2026-08-22",
+   "lastSeen": "2026-09-08",
+   "eng": 14572,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepScholten",
+    "RepSusieLee",
+    "RepZoeLofgren",
+    "RepHuffman",
+    "RepJasonCrow",
+    "Tom_Suozzi",
+    "RepDonBeyer",
+    "RepDeSaulnier",
+    "RepGonzalez",
+    "SenatorSlotkin",
+    "vgescobar"
+   ],
+   "ids": [
+    "2091208811562319996",
+    "2091233255873826940",
+    "2091919731750060414",
+    "2092222593155645474",
+    "2092235617987879366",
+    "2092332383223562332",
+    "2092616723719397543",
+    "2093422267372118435",
+    "2093434253329711484",
+    "2095199482749104353",
+    "2095713411409527055",
+    "2097309453796155661",
+    "2097376806877774091"
+   ],
+   "sample": "Trump has wrecked many iconic D.C. sites, and now he’s taking an axe to trees in East Potomac Park, including historic cherry trees. \n\nI’ve heard from so many locals who hate this, but all Trump's people care about is appeasing his massive ego. This is awful.",
+   "placement": {
+    "macro": "climate",
+    "key": "public-lands",
+    "label": "Public lands & national parks",
+    "kind": "gap",
+    "aliases": [
+     "National Park Week",
+     "national parks",
+     "public lands",
+     "Park Service",
+     "BLM"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "christian-nationalism",
+   "label": "christian-nationalism",
+   "labels": [
+    "christian-nationalism",
+    "christian nationalism"
+   ],
+   "posts": 12,
+   "members": 1,
+   "days": 7,
+   "firstSeen": "2026-08-22",
+   "lastSeen": "2026-09-09",
+   "eng": 124,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "JaredHuffman"
+   ],
+   "ids": [
+    "2091258120823783551",
+    "2092271551412646337",
+    "2092410824094576817",
+    "2092591788145992170",
+    "2092649076961497246",
+    "2094138286524530756",
+    "2095319175677800658",
+    "2095319324353524102",
+    "2095640741355884839",
+    "2095717773909328235",
+    "2097743753649999887",
+    "2097746617101377637"
+   ],
+   "sample": "For anyone who wonders what Christian nationalism actually looks like, there are thousands of unhinged MAGA pastors just like this guy radicalizing their followers every day across this country.  And many of them are VIPs in Washington these days. https://t.co/t9TAKsCIHf",
+   "placement": {
+    "macro": "democracy",
+    "key": "christian-nationalism",
+    "label": "Christian nationalism",
+    "kind": "gap",
+    "aliases": [
+     "Christian nationalism",
+     "Jared Huffman",
+     "church and state",
+     "religious right"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "animal-welfare",
+   "label": "animal-welfare",
+   "labels": [
+    "animal welfare",
+    "animal-welfare"
+   ],
+   "posts": 10,
+   "members": 7,
+   "days": 8,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-09-09",
+   "eng": 5086,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "vgescobar",
+    "RepMoskowitz",
+    "RepBera",
+    "RepCohen",
+    "MarkPocan",
+    "RepEscobar",
+    "RepMarkPocan"
+   ],
+   "ids": [
+    "2092361571536175435",
+    "2092668454029414509",
+    "2092778607575785916",
+    "2093702990754369946",
+    "2094137028606677475",
+    "2094906937263395057",
+    "2094907614593175829",
+    "2095252195436368273",
+    "2095671050210251232",
+    "2097691558518665582"
+   ],
+   "sample": "Pigs are sentient beings that feel pain and suffering. They are sensitive, gentle, and smart creatures that are treated with incredible cruelty before they are sent to be slaughtered.\n\nI have a bill to ban these use of these crates. Tell your member of Congress to sign on. https://t.co/puWPb96gNv",
+   "placement": {
+    "macro": null,
+    "key": "animal-welfare",
+    "label": "Animal welfare",
+    "kind": "gap",
+    "aliases": [
+     "animal cruelty",
+     "National Dog Day",
+     "ASPCA",
+     "Dog Lovers Caucus",
+     "shelters"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "lake-renaming-stunt",
+   "label": "lake-renaming-stunt",
+   "labels": [
+    "lake-renaming-stunt",
+    "trump-renaming-stunts",
+    "geographic-renaming"
+   ],
+   "posts": 10,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-09-03",
+   "eng": 14496,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "tedlieu",
+    "SeanCasten",
+    "RepSaraJacobs"
+   ],
+   "ids": [
+    "2092408289606984085",
+    "2092412389950181832",
+    "2093086478859432387",
+    "2093155449629528167",
+    "2093176136058765462",
+    "2095624484900184534",
+    "2092614816959525309",
+    "2093095855834169587",
+    "2093152558281871791",
+    "2095650445234692213"
+   ],
+   "sample": "Dear @SecretaryBurgum: There are 1,397 more important things you can be working on.\n\nNovember is coming. https://t.co/ZKMA8KJjYl",
+   "placement": {
+    "macro": "democracy",
+    "key": "lake-america-renaming",
+    "label": "Trump 'Lake America' renaming",
+    "kind": "story",
+    "aliases": [
+     "Lake America",
+     "Lake Michigan",
+     "Burgum",
+     "Great Lakes renaming"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "traffic-safety",
+   "label": "traffic-safety",
+   "labels": [
+    "street-safety-traffic",
+    "traffic-safety",
+    "road-traffic-safety",
+    "road-and-cyclist-safety",
+    "rail-crossing-safety",
+    "trucking-safety",
+    "trucking safety regulation",
+    "rail safety regulation"
+   ],
+   "posts": 9,
+   "members": 4,
+   "days": 4,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-02",
+   "eng": 157,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepThompson",
+    "RepDeborahRoss",
+    "RepDanGoldman",
+    "RepSalinas"
+   ],
+   "ids": [
+    "2090479473955115033",
+    "2093485152253215058",
+    "2094494155569328569",
+    "2095221977632121007",
+    "2095266401887907933",
+    "2092286372505682358",
+    "2094812704733278527",
+    "2095893453489992094",
+    "2095941715609743383"
+   ],
+   "sample": "This weekend, Jiayi Zheng was killed by a speeding vehicle on 3rd Ave in Sunset Park. My office is aware of an ongoing investigation into this incident, and my thoughts are with the victims family.\n\nTragedies on this stretch of 3rd Ave are all too common, which is exactly why I https://t.co/RSfbznKZF4",
+   "placement": {
+    "macro": "public-safety",
+    "key": "transportation-safety",
+    "label": "Road & rail safety",
+    "kind": "gap",
+    "aliases": [
+     "cyclist safety",
+     "underride",
+     "rail crossing",
+     "Railway Safety Act",
+     "traffic deaths"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "gambling-prediction-markets",
+   "label": "gambling-prediction-markets",
+   "labels": [
+    "prediction markets gambling",
+    "gambling-prediction-markets",
+    "sports-betting-gambling",
+    "gambling-gaming-regulation",
+    "gaming-gambling-regulation",
+    "gambling-betting-regulation"
+   ],
+   "posts": 9,
+   "members": 2,
+   "days": 4,
+   "firstSeen": "2026-08-22",
+   "lastSeen": "2026-09-01",
+   "eng": 528,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepHorsford",
+    "MikeLevin"
+   ],
+   "ids": [
+    "2091291857363886560",
+    "2093031006454325322",
+    "2093430697327317051",
+    "2093446312331034811",
+    "2094965788608520643",
+    "2090925670339613087",
+    "2093442932145537332",
+    "2093460313412866535",
+    "2095540513017368738"
+   ],
+   "sample": "Betting on wildfires needs to be prohibited, full stop. \n\nWe should never provide an incentive for traders to root for disaster. This is despicable.\nhttps://t.co/MI69IMu0EP",
+   "placement": {
+    "macro": "economy",
+    "key": "prediction-markets-gambling",
+    "label": "Prediction markets & gambling",
+    "kind": "gap",
+    "aliases": [
+     "Prediction Markets Are Gambling Act",
+     "sports betting",
+     "gaming",
+     "Kalshi",
+     "tribal gaming"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "epstein-files",
+   "label": "epstein-files",
+   "labels": [
+    "epstein-files"
+   ],
+   "posts": 8,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-09-02",
+   "eng": 77210,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RubenGallego",
+    "RoKhanna",
+    "SeanCasten"
+   ],
+   "ids": [
+    "2094574822659396082",
+    "2094600704140746932",
+    "2094616969790034092",
+    "2094762711858958707",
+    "2094789773420269621",
+    "2094847422249803999",
+    "2094882657960149441",
+    "2095215868598702167"
+   ],
+   "sample": "RT @Holden_Culotta: Thomas Massie just dropped a bombshell on the House floor.\n\nHe named 14 Epstein co-conspirators.\n\nAnd he’s demanding im…",
+   "placement": {
+    "macro": "democracy",
+    "key": "epstein-files",
+    "label": "Epstein files transparency",
+    "kind": "story",
+    "aliases": [
+     "Epstein files",
+     "Epstein Files Transparency Act",
+     "Massie",
+     "discharge petition"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "trump-arch-monument-project",
+   "label": "trump-arch-monument-project",
+   "labels": [
+    "trump-arch-demolition",
+    "trump-arch-monument",
+    "trump-arch-monument-project"
+   ],
+   "posts": 8,
+   "members": 2,
+   "days": 3,
+   "firstSeen": "2026-09-03",
+   "lastSeen": "2026-09-05",
+   "eng": 2549,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDonBeyer",
+    "RubenGallego"
+   ],
+   "ids": [
+    "2095624590525436187",
+    "2095624728467681327",
+    "2095625337115693380",
+    "2095625627428655242",
+    "2095930406809837997",
+    "2096402821751144661",
+    "2096424328909017178",
+    "2096425623065600037"
+   ],
+   "sample": "100%. We should make it a raffle who gets to do it.  Donations go to Veteran causes. https://t.co/s970uJAuZ6",
+   "placement": {
+    "macro": "democracy",
+    "key": "trump-arch-monument",
+    "label": "Trump Arch monument project",
+    "kind": "story",
+    "aliases": [
+     "Trump Arch",
+     "Arlington monument",
+     "DCA flight risk",
+     "White House construction"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "postal-service",
+   "label": "postal-service",
+   "labels": [
+    "postal-service",
+    "postal-service-usps"
+   ],
+   "posts": 7,
+   "members": 6,
+   "days": 5,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-09-09",
+   "eng": 1717,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepNikkiB",
+    "RoKhanna",
+    "RobertGarcia",
+    "RepYassAnsari",
+    "jamie_raskin",
+    "RepWesleyBellMO"
+   ],
+   "ids": [
+    "2090878604695519497",
+    "2095317689732305347",
+    "2095347982082122024",
+    "2095354540237164985",
+    "2096563381029269974",
+    "2097379941998588298",
+    "2097708736680739156"
+   ],
+   "sample": "Trump is attacking the Postal Service because he’s betrayed his central promises and is in a panic to save the midterms.\n\nIt won’t work. The Democrats are going to win the House of Representatives. https://t.co/UAF7nkQy6Y",
+   "placement": {
+    "macro": "labor",
+    "key": "postal-service",
+    "label": "USPS & postal service",
+    "kind": "gap",
+    "aliases": [
+     "USPS",
+     "Postal Service",
+     "Postmaster General",
+     "mail delays"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "place-renaming",
+   "label": "place-renaming",
+   "labels": [
+    "symbolic renaming of places",
+    "place-renaming",
+    "place-renaming-lake-america"
+   ],
+   "posts": 7,
+   "members": 6,
+   "days": 4,
+   "firstSeen": "2026-08-28",
+   "lastSeen": "2026-09-08",
+   "eng": 4599,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDebDingell",
+    "tedlieu",
+    "MarkPocan",
+    "KatieS",
+    "Rep_Stansbury",
+    "FrankPallone"
+   ],
+   "ids": [
+    "2093390088830910663",
+    "2093399818186150127",
+    "2093406308221210765",
+    "2095126278525362330",
+    "2095225304264368452",
+    "2097084773261066337",
+    "2097382095320408376"
+   ],
+   "sample": "Wait but trump instructed federal agencies to call Lake Ontario by the name of Lake America. https://t.co/0ne8PxXiEa",
+   "placement": {
+    "macro": "democracy",
+    "key": "lake-ontario-renaming",
+    "label": "Trump renaming of Lake Ontario",
+    "kind": "story",
+    "aliases": [
+     "Lake America",
+     "Lake Ontario renaming",
+     "Dingell bill",
+     "Gulf of America"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "surveillance-privacy",
+   "label": "surveillance-privacy",
+   "labels": [
+    "surveillance-privacy",
+    "health-data-privacy",
+    "data-privacy-surveillance"
+   ],
+   "posts": 6,
+   "members": 6,
+   "days": 4,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-09-04",
+   "eng": 2300,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RashidaTlaib",
+    "RepShontelBrown",
+    "RepJerryNadler",
+    "janschakowsky",
+    "RepRoKhanna",
+    "JoaquinCastrotx"
+   ],
+   "ids": [
+    "2090938489013436788",
+    "2093128984875696416",
+    "2094550620975898883",
+    "2095922008043209205",
+    "2095991399703269539",
+    "2096075157538238860"
+   ],
+   "sample": "RT @AbdulElSayed: Mass Surveillance Mike is so deeply proud of his work on the Patriot Act, which expanded the government's ability to spy…",
+   "placement": {
+    "macro": "tech",
+    "key": "surveillance-privacy",
+    "label": "Surveillance & data privacy",
+    "kind": "gap",
+    "aliases": [
+     "surveillance",
+     "Patriot Act",
+     "data privacy",
+     "NDO Fairness Act",
+     "warrantless"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "infrastructure-transportation",
+   "label": "infrastructure-transportation",
+   "labels": [
+    "infrastructure-transportation",
+    "transportation-infrastructure"
+   ],
+   "posts": 6,
+   "members": 6,
+   "days": 5,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-09-04",
+   "eng": 130,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepThompson",
+    "RepDeluzio",
+    "RepJoeNeguse",
+    "RepDarrenSoto",
+    "RepKamlagerDove",
+    "RepGregStanton"
+   ],
+   "ids": [
+    "2091987533156504049",
+    "2091990652460335415",
+    "2093727458059297138",
+    "2094061449098273157",
+    "2094578493464191195",
+    "2096019276100509979"
+   ],
+   "sample": "Love to see more train service coming to PA. Proud to help secure federal funding to make this expansion possible! https://t.co/NZ3nZvTCci",
+   "placement": {
+    "macro": "economy",
+    "key": "infrastructure-transit",
+    "label": "Infrastructure & transportation",
+    "kind": "gap",
+    "aliases": [
+     "highway",
+     "transit",
+     "Amtrak",
+     "bridges",
+     "infrastructure funding"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "america250-history",
+   "label": "america250-history",
+   "labels": [
+    "america250-local-history",
+    "local-history-america250",
+    "america250-history"
+   ],
+   "posts": 6,
+   "members": 2,
+   "days": 6,
+   "firstSeen": "2026-08-22",
+   "lastSeen": "2026-09-09",
+   "eng": 77,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepTomSuozzi",
+    "Tom_Suozzi"
+   ],
+   "ids": [
+    "2091200373226652141",
+    "2092613038188683690",
+    "2092960331220066718",
+    "2094087248073368006",
+    "2096312408428228823",
+    "2097761566145794495"
+   ],
+   "sample": "ROAD TO 250: The Road to Independence\n\nOn August 22, 1776, the fight for American independence came to Long Island.\n\nJust weeks after the Declaration of Independence was adopted, some 15,000 British and Hessian troops crossed the Narrows from Staten Island and landed at Gravesend https://t.co/dNQFlzloRj",
+   "placement": {
+    "macro": null,
+    "key": "america250-history",
+    "label": "America 250 history series",
+    "kind": "gap",
+    "aliases": [
+     "ROAD TO 250",
+     "America250",
+     "semiquincentennial",
+     "1776"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "political-violence",
+   "label": "political-violence",
+   "labels": [
+    "political-violence"
+   ],
+   "posts": 5,
+   "members": 5,
+   "days": 1,
+   "firstSeen": "2026-09-06",
+   "lastSeen": "2026-09-06",
+   "eng": 6885,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGregLandsman",
+    "RepShontelBrown",
+    "RepRaskin",
+    "RoKhanna",
+    "RepScholten"
+   ],
+   "ids": [
+    "2096716098666201501",
+    "2096719845576351873",
+    "2096774196982317188",
+    "2096775566200373330",
+    "2096796117325295993"
+   ],
+   "sample": "Sending solidarity and concern for the Democratic nominee for Governor of Ohio, Dr. Amy Acton, who escaped harm from an armed attacker while campaigning today. We are wishing safety and peace for everyone there and call on all public officials to categorically denounce and oppose",
+   "placement": {
+    "macro": "public-safety",
+    "key": "amy-acton-attack",
+    "label": "Amy Acton campaign attack",
+    "kind": "story",
+    "aliases": [
+     "Amy Acton",
+     "Dr. Acton",
+     "Ohio governor race",
+     "political violence"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "opioid-overdose-crisis",
+   "label": "opioid-overdose-crisis",
+   "labels": [
+    "opioid-overdose-crisis"
+   ],
+   "posts": 5,
+   "members": 3,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 748,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepSalinas",
+    "RepPettersen",
+    "RepRashida"
+   ],
+   "ids": [
+    "2094485253104849209",
+    "2094491051721367562",
+    "2094499329864343559",
+    "2094511312189391238",
+    "2094519264929829341"
+   ],
+   "sample": "This is my mom, Stacey. This month, she celebrated her 9th year in recovery after struggling with an opioid addiction for 30 years. She overdosed 20 times in one year until I was finally able to connect her to the critical medical care she needed. \n\nMy mom continues to be there https://t.co/Zo4TxcsvvR",
+   "placement": {
+    "macro": "healthcare",
+    "key": "opioids-overdose",
+    "label": "Opioids & overdose crisis",
+    "kind": "gap",
+    "aliases": [
+     "overdose",
+     "fentanyl",
+     "opioid addiction",
+     "recovery",
+     "naloxone"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "congressional-youth-programs",
+   "label": "congressional-youth-programs",
+   "labels": [
+    "youth-sports-programs",
+    "youth-sports-costs",
+    "youth-sports-access",
+    "congressional-youth-programs"
+   ],
+   "posts": 5,
+   "members": 3,
+   "days": 4,
+   "firstSeen": "2026-08-23",
+   "lastSeen": "2026-08-27",
+   "eng": 183,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepScholten",
+    "RepDeluzio",
+    "RepNikema"
+   ],
+   "ids": [
+    "2091556207894888734",
+    "2091578749137342817",
+    "2092395994881155355",
+    "2092643247503901059",
+    "2093097129728229602"
+   ],
+   "sample": "RT @MorePerfectUS: Youth sports have become a for-profit mess. We talked to families paying up to $25,000 every year.\n https://t.co/r9MqUqb…",
+   "placement": {
+    "macro": "constituent-services",
+    "key": "youth-programs",
+    "label": "Congressional youth programs",
+    "kind": "gap",
+    "aliases": [
+     "Congressional App Challenge",
+     "Congressional Award",
+     "youth sports",
+     "student programs"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "historical-records-archives",
+   "label": "historical-records-archives",
+   "labels": [
+    "historical-records-archives",
+    "national-archives-preservation",
+    "historic-preservation",
+    "archives-historic-preservation",
+    "national-archives-records"
+   ],
+   "posts": 5,
+   "members": 2,
+   "days": 5,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-30",
+   "eng": 16,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "kevinmullin",
+    "RepKevinMullin"
+   ],
+   "ids": [
+    "2090632937096315105",
+    "2091987504224518588",
+    "2092108173947937141",
+    "2092760896611463367",
+    "2094122985229541566"
+   ],
+   "sample": "RT @nbcbayarea: Tens of thousands of historical records that tell the story of the United States, including immigration records, may no lon…",
+   "placement": {
+    "macro": "democracy",
+    "key": "national-archives-sanbruno",
+    "label": "National Archives San Bruno closure",
+    "kind": "story",
+    "aliases": [
+     "National Archives",
+     "San Bruno",
+     "historical records",
+     "NARA"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "history-commemoration",
+   "label": "history-commemoration",
+   "labels": [
+    "history-commemoration",
+    "american-history-commemoration",
+    "america-250-history",
+    "america-250-commemoration"
+   ],
+   "posts": 5,
+   "members": 2,
+   "days": 4,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-09-09",
+   "eng": 38,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Tom_Suozzi",
+    "RepTomSuozzi"
+   ],
+   "ids": [
+    "2092975424695640333",
+    "2094089148617445512",
+    "2097759942530978296",
+    "2091202905139257642",
+    "2096297311332978725"
+   ],
+   "sample": "ROAD TO 250: America’s Road to Independence\n\nOn August 27, 1776, the fight for American independence faced one of its earliest—and greatest—tests.\n\nAt the Battle of Long Island, British and Hessian forces dealt George Washington’s Continental Army a devastating defeat in the https://t.co/dvd7VJA8ui",
+   "placement": {
+    "macro": null,
+    "key": "america-250",
+    "label": "America 250 / Road to 250 history",
+    "kind": "gap",
+    "aliases": [
+     "ROAD TO 250",
+     "Battle of Long Island",
+     "semiquincentennial",
+     "Revolutionary War history"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "consumer-fraud-scams",
+   "label": "consumer-fraud-scams",
+   "labels": [
+    "consumer-fraud-scams",
+    "consumer-scams-fraud",
+    "consumer scams & fraud protection"
+   ],
+   "posts": 4,
+   "members": 4,
+   "days": 3,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-09-08",
+   "eng": 130,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MGPforCongress",
+    "RepMenendez",
+    "RepGonzalez",
+    "RepGabeAmo"
+   ],
+   "ids": [
+    "2093112516784308482",
+    "2095577105224421648",
+    "2097336656483258835",
+    "2097428321977958829"
+   ],
+   "sample": "Truckers and small business owners just trying to do their job are being flooded with fake government notices that demand money. I'm working to stop that with my Stop Scamming Truckers Act which requires this type of fake mail to be labeled as such. #cdl https://t.co/OFY3URIB5T",
+   "placement": {
+    "macro": "economy",
+    "key": "consumer-scams-fraud",
+    "label": "Consumer scams & fraud",
+    "kind": "gap",
+    "aliases": [
+     "scams",
+     "fraud",
+     "senior fraud",
+     "Stop Scamming Truckers Act",
+     "robocalls"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "tributes-recognitions",
+   "label": "tributes-recognitions",
+   "labels": [
+    "tributes-recognitions",
+    "local-business-recognition",
+    "ceremonial-recognition"
+   ],
+   "posts": 4,
+   "members": 4,
+   "days": 3,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-08",
+   "eng": 257,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPressley",
+    "RepYassAnsari",
+    "RepRichardNeal",
+    "RepChuyGarcia"
+   ],
+   "ids": [
+    "2095988150321434830",
+    "2097130872776327320",
+    "2097439333305217061",
+    "2097451307892162607"
+   ],
+   "sample": "I rose to celebrate the contributions of NBA Finals MVP Jaylen Brown to Boston on and off the court.\n\nHis legacy as an advocate, truth-teller, community builder, justice-seeker, and champion will endure.\n\nJob well done, @FCHWPO. Thank you for shifting the energy in Boston. https://t.co/mToOYORZuF",
+   "placement": {
+    "macro": null,
+    "key": "local-recognitions",
+    "label": "Local honors & recognitions",
+    "kind": "noise",
+    "aliases": [
+     "congratulations",
+     "recognition",
+     "honoring",
+     "tribute"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "antisemitism",
+   "label": "antisemitism",
+   "labels": [
+    "antisemitism",
+    "extremism-antisemitism"
+   ],
+   "posts": 4,
+   "members": 4,
+   "days": 3,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-09-06",
+   "eng": 4291,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "danielsgoldman",
+    "BradSherman",
+    "JaredEMoskowitz",
+    "RepBrendanBoyle"
+   ],
+   "ids": [
+    "2092102866341175786",
+    "2092393142653792652",
+    "2093012058224660959",
+    "2096599587465072798"
+   ],
+   "sample": "Hasan Piker is trying to encourage and justify violence against American Jews. \n\nAnd he’s saying that if violence does occur, it’s the fault of those in the Jewish community who publicly support Israel. \n\nWe faced tougher threats than those of Mr. Piker, who’s literally a piker.",
+   "placement": {
+    "macro": "civil-rights",
+    "key": "antisemitism",
+    "label": "Antisemitism",
+    "kind": "gap",
+    "aliases": [
+     "antisemitism",
+     "Hasan Piker",
+     "swastika",
+     "American Jews"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "tribal-affairs",
+   "label": "tribal-affairs",
+   "labels": [
+    "tribal-affairs",
+    "tribal affairs & sovereignty",
+    "tribal-native-affairs"
+   ],
+   "posts": 4,
+   "members": 4,
+   "days": 4,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-09-01",
+   "eng": 50,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGregStanton",
+    "JaredHuffman",
+    "RepValHoyle",
+    "RepDavids"
+   ],
+   "ids": [
+    "2090933411204743569",
+    "2092652262816444866",
+    "2093190602901065820",
+    "2094841050783195408"
+   ],
+   "sample": "A thousand Tribal leaders and health directors from across the country came to Arizona this week for @nihb1's National Tribal Health Conference.\n\nI joined @GRIC_Official Governor Lewis on stage to discuss what Congress owes Native communities and my bipartisan bill to elevate and https://t.co/JSo8pFi4FC",
+   "placement": {
+    "macro": "civil-rights",
+    "key": "tribal-affairs",
+    "label": "Tribal & Native American affairs",
+    "kind": "gap",
+    "aliases": [
+     "tribal sovereignty",
+     "Native American",
+     "tribes",
+     "Indian Health Service"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "tributes-condolences",
+   "label": "tributes-condolences",
+   "labels": [
+    "tributes-condolences",
+    "condolences-tributes",
+    "international-disaster-condolences"
+   ],
+   "posts": 4,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-09-08",
+   "eng": 2001,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SpeakerPelosi",
+    "RepSusieLee",
+    "RubenGallego"
+   ],
+   "ids": [
+    "2093046256507539901",
+    "2093891746581356635",
+    "2097456385898242353",
+    "2097462869688504323"
+   ],
+   "sample": "The catastrophic devastation across Nepal and Tibet is a heartbreaking tragedy.\n\nOur prayers are with the families throughout the Himalayan region who have lost loved ones, those still awaiting news and the brave rescuers working tirelessly to find survivors. https://t.co/EI4Vsr9t6k",
+   "placement": {
+    "macro": null,
+    "key": "condolences-passings",
+    "label": "Condolences & passings",
+    "kind": "noise",
+    "aliases": [
+     "condolences",
+     "passing",
+     "prayers",
+     "rest in peace"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "aviation-safety",
+   "label": "aviation-safety",
+   "labels": [
+    "aviation-safety",
+    "aviation-safety-tour-operators"
+   ],
+   "posts": 4,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-06",
+   "eng": 40,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepEdCase",
+    "RepNellie",
+    "RepDarrenSoto"
+   ],
+   "ids": [
+    "2095210148872495209",
+    "2095953257122185325",
+    "2095954166371745902",
+    "2096738657470153210"
+   ],
+   "sample": "What a tragedy. Praying for the families of those who perished at Miami Airport, and for a full recovery for those injured. FAA must perform a full review. \n\nThanks to brave first responders for their heroism. https://t.co/cl7NPGfKEK",
+   "placement": {
+    "macro": "public-safety",
+    "key": "aviation-safety",
+    "label": "Aviation & FAA safety",
+    "kind": "gap",
+    "aliases": [
+     "FAA",
+     "air traffic controllers",
+     "helicopter tours",
+     "flight safety"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "water-infrastructure",
+   "label": "water-infrastructure",
+   "labels": [
+    "water-infrastructure"
+   ],
+   "posts": 4,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-23",
+   "lastSeen": "2026-08-31",
+   "eng": 137,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPabloJose",
+    "RepPeteAguilar",
+    "RepGoodlander"
+   ],
+   "ids": [
+    "2091582040990728615",
+    "2092693344497402237",
+    "2092697259439710581",
+    "2094429485235863674"
+   ],
+   "sample": "La Gobernadora se equivoca. 💧🇵🇷 https://t.co/3PJGubViCH",
+   "placement": {
+    "macro": "climate",
+    "key": "water-infrastructure",
+    "label": "Water infrastructure & quality",
+    "kind": "gap",
+    "aliases": [
+     "water crisis",
+     "crisis de agua",
+     "water filtration",
+     "drinking water",
+     "Puerto Rico water"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "national-museum-of-the-american-latino",
+   "label": "national-museum-of-the-american-latino",
+   "labels": [
+    "national-museum-of-the-american-latino"
+   ],
+   "posts": 4,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 45,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepEspaillat"
+   ],
+   "ids": [
+    "2094817610277769344",
+    "2094818568428822883",
+    "2094834673822158975",
+    "2094859886920171994"
+   ],
+   "sample": "Our stories. Our heritage. Our impact. \n\nI’ve seen firsthand the power of our community and the generations of Latinos who have helped shape this country.\n\nThe National Museum of the American Latino will make sure those stories are preserved, celebrated, and shared for https://t.co/i9hJwZqIQQ",
+   "placement": {
+    "macro": "civil-rights",
+    "key": "latino-museum",
+    "label": "National Museum of the American Latino",
+    "kind": "story",
+    "aliases": [
+     "Museo Nacional del Latino",
+     "Arts and Industries Building",
+     "Smithsonian Latino museum",
+     "American Latino Museum"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "smithsonian-history-erasure",
+   "label": "smithsonian-history-erasure",
+   "labels": [
+    "smithsonian-history-erasure"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 1,
+   "firstSeen": "2026-09-09",
+   "lastSeen": "2026-09-09",
+   "eng": 7,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepBynum",
+    "RepJulieJohnson",
+    "RepKweisiMfume"
+   ],
+   "ids": [
+    "2097703720200904717",
+    "2097710540671844655",
+    "2097756941296578679"
+   ],
+   "sample": "@smithsonian Secretary Bunch has dedicated nearly four decades to ensuring our country tells its whole, unvarnished story.\n\nSee my full statement on his resignation as Secretary. https://t.co/bl5jrxjza2",
+   "placement": {
+    "macro": "democracy",
+    "key": "smithsonian-history",
+    "label": "Smithsonian & history erasure",
+    "kind": "story",
+    "aliases": [
+     "Lonnie Bunch",
+     "Smithsonian",
+     "rewriting history",
+     "Bunch resignation"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "hemp-regulation",
+   "label": "hemp-regulation",
+   "labels": [
+    "hemp-regulation",
+    "hemp-industry-regulation",
+    "auto-industry-regulation"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-09-09",
+   "eng": 262,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SeanCasten",
+    "RepAngieCraig",
+    "VoteBetty"
+   ],
+   "ids": [
+    "2094515230856388849",
+    "2095177660171252142",
+    "2097765191278542943"
+   ],
+   "sample": "\"First they came for hand cranks, and I said nothing.  Then they integrated starter/alternators and I said nothing.  Then they put remote start on keyfobs and I said nothing.\" - Sean Duffy https://t.co/obr27gOZbs",
+   "placement": {
+    "macro": null,
+    "key": "hemp-regulation",
+    "label": "Hemp ban & regulation",
+    "kind": "gap",
+    "aliases": [
+     "hemp ban",
+     "THC beverages",
+     "hemp farmers",
+     "federal hemp framework"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "childcare-affordability-assistance",
+   "label": "childcare affordability & assistance",
+   "labels": [
+    "childcare affordability & assistance",
+    "childcare-caregiving",
+    "childcare"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 3,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-08",
+   "eng": 50,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPaulTonko",
+    "Rep_McBride",
+    "FrankPallone"
+   ],
+   "ids": [
+    "2090462397781680241",
+    "2093139040996381092",
+    "2097400033679397165"
+   ],
+   "sample": "Today, @LGKyleEvansGay &amp; I hosted a discussion with providers, advocates, and local leaders to talk about what it will take to lower costs for families, expand access to care, and recruit and retain the childcare workers our communities need. \n\nAs we develop a caregiving agenda https://t.co/em1bi7H1kL",
+   "placement": {
+    "macro": "economy",
+    "key": "childcare",
+    "label": "Child care affordability",
+    "kind": "gap",
+    "aliases": [
+     "childcare",
+     "child care costs",
+     "daycare",
+     "preschool"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "epstein-investigation",
+   "label": "epstein-investigation",
+   "labels": [
+    "epstein-investigation"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 1,
+   "firstSeen": "2026-09-06",
+   "lastSeen": "2026-09-06",
+   "eng": 4444,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RoKhanna",
+    "RepRobertGarcia",
+    "RobertGarcia"
+   ],
+   "ids": [
+    "2096708147662520376",
+    "2096709759143485691",
+    "2096721116433957340"
+   ],
+   "sample": "RT @Acyn: Ro Khanna on why Speaker Johnson sent the House home early: He doesn’t want Epstein to become the issue before the midterms, and…",
+   "placement": {
+    "macro": "democracy",
+    "key": "epstein-files",
+    "label": "Epstein files & investigation",
+    "kind": "story",
+    "aliases": [
+     "Epstein",
+     "Epstein files",
+     "Leon Black",
+     "Oversight Epstein subpoena"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "notable-deaths-tributes",
+   "label": "notable-deaths-tributes",
+   "labels": [
+    "notable-deaths-tributes"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 1,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 88,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJulieJohnson",
+    "RepJoshG",
+    "RepKamlagerDove"
+   ],
+   "ids": [
+    "2092325288315101568",
+    "2092326892472877285",
+    "2092372195670688167"
+   ],
+   "sample": "I’m deeply saddened to hear that Dolly Parton, an American legend, has passed. From a one-room cabin in the Smoky Mountains to the heights of global stardom, she lived the American dream and never forgot where she came from.\n\nHer songs became part of our national soundtrack, and",
+   "placement": {
+    "macro": null,
+    "key": "dolly-parton-death",
+    "label": "Dolly Parton death tributes",
+    "kind": "story",
+    "aliases": [
+     "Dolly Parton",
+     "Dollywood",
+     "Imagination Library",
+     "country music icon"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "cybersecurity-critical-infrastructure",
+   "label": "cybersecurity & critical infrastructure",
+   "labels": [
+    "cybersecurity & critical infrastructure"
+   ],
+   "posts": 3,
+   "members": 3,
+   "days": 1,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-20",
+   "eng": 24,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJoshG",
+    "RepJulieJohnson",
+    "RepJoeMorelle"
+   ],
+   "ids": [
+    "2090514203454959712",
+    "2090514338473759181",
+    "2090532701119848875"
+   ],
+   "sample": "All signs point to Iranian-affiliated groups being responsible for a recent cyberattack against American water systems — and New Jersey systems were hit.\n\nI'm fighting back with @RepDonBacon, @RepGregLandsman, @ZachNunn, and @RepScholten with three federal actions to defend our",
+   "placement": {
+    "macro": "tech",
+    "key": "cybersecurity",
+    "label": "Cybersecurity & critical infrastructure",
+    "kind": "gap",
+    "aliases": [
+     "cyberattack",
+     "cybersecurity",
+     "water systems hack",
+     "Connected Vehicle Security Act"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "state-renaming",
+   "label": "state renaming",
+   "labels": [
+    "state renaming"
+   ],
+   "posts": 3,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-09-06",
+   "lastSeen": "2026-09-06",
+   "eng": 43246,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Rep_Stansbury",
+    "MelanieforNM"
+   ],
+   "ids": [
+    "2096681276019523747",
+    "2096719413064163430",
+    "2096775756424872221"
+   ],
+   "sample": "Oh hell no!\n\nOur state’s name carries generations of history, culture, and family—and it belongs to us. \n\nWe’re New Mexicans. Period. https://t.co/wkABUYyIqq",
+   "placement": {
+    "macro": "democracy",
+    "key": "new-mexico-renaming",
+    "label": "New Mexico renaming push",
+    "kind": "story",
+    "aliases": [
+     "New Mexico name",
+     "rename New Mexico",
+     "We're New Mexicans",
+     "Trump meme"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "maternal-health",
+   "label": "maternal-health",
+   "labels": [
+    "maternal-health"
+   ],
+   "posts": 3,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 18,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepNikema",
+    "RepMcClellan"
+   ],
+   "ids": [
+    "2094503916197073177",
+    "2094596229674291645",
+    "2094596707472310761"
+   ],
+   "sample": "I toured the Atlanta Birth Center — a place directly fighting maternal and infant mortality rates one birth at a time in the #FightingFifth. Between meeting their phenomenal staff and a days-old baby, I got to see their facilities and the mama- and baby-centered care they https://t.co/DzPNO4mu9h",
+   "placement": {
+    "macro": "healthcare",
+    "key": "maternal-health",
+    "label": "Maternal & infant health",
+    "kind": "gap",
+    "aliases": [
+     "maternal mortality",
+     "breastfeeding",
+     "birth center",
+     "infant mortality"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "generational-politics",
+   "label": "generational-politics",
+   "labels": [
+    "generational-politics"
+   ],
+   "posts": 3,
+   "members": 1,
+   "days": 2,
+   "firstSeen": "2026-08-30",
+   "lastSeen": "2026-09-08",
+   "eng": 2332,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepMaxwellFrost"
+   ],
+   "ids": [
+    "2094093451524530196",
+    "2094100698975617170",
+    "2097400174867779590"
+   ],
+   "sample": "Boomers were called the “Me Generation.” Now they’re calling Gen Z lazy.\n\nOlder generations looking down on young people isn’t new — but the world they’re growing up in is. @jubileemedia https://t.co/0by5nvGmHU",
+   "placement": {
+    "macro": "congress-politics",
+    "key": "generational-politics",
+    "label": "Gen Z & generational politics",
+    "kind": "story",
+    "aliases": [
+     "Gen Z",
+     "Boomers",
+     "Surrounded",
+     "Jubilee Media"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "sports-culture",
+   "label": "sports-culture",
+   "labels": [
+    "sports-culture"
+   ],
+   "posts": 3,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-29",
+   "lastSeen": "2026-08-29",
+   "eng": 810,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepBrendanBoyle"
+   ],
+   "ids": [
+    "2093781697015767144",
+    "2093787997581779038",
+    "2093788676270526658"
+   ],
+   "sample": "RT @CooperDeJawn3: The city of Philadelphia has been named the best NFL city in America for the second year in a row per (USA Today )\n\nWe r…",
+   "placement": {
+    "macro": null,
+    "key": "sports",
+    "label": "Sports & teams",
+    "kind": "gap",
+    "aliases": [
+     "NFL",
+     "college football",
+     "Eagles",
+     "rivalry game"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "ted-cruz-pressler-allegations",
+   "label": "ted-cruz-pressler-allegations",
+   "labels": [
+    "ted-cruz-pressler-allegations"
+   ],
+   "posts": 3,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 698,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SeanCasten"
+   ],
+   "ids": [
+    "2091873920173424824",
+    "2091874139942293991",
+    "2091874367219069064"
+   ],
+   "sample": "A lot of young people don't know that Ted Cruz was good friends with Paul Pressler as a teenager, who would later be accused of molesting children in hot tubs, a relationship Ted Cruz would brag about as an adult. https://t.co/Esgls9AytU",
+   "placement": {
+    "macro": null,
+    "key": "cruz-pressler",
+    "label": "Ted Cruz & Paul Pressler allegations",
+    "kind": "story",
+    "aliases": [
+     "Ted Cruz",
+     "Paul Pressler",
+     "Pressler abuse allegations"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "foster-care",
+   "label": "foster-care",
+   "labels": [
+    "foster-care",
+    "youth-foster-care"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 2,
+   "firstSeen": "2026-08-30",
+   "lastSeen": "2026-09-09",
+   "eng": 18,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepFriedmanCA",
+    "Rep_Whitesides"
+   ],
+   "ids": [
+    "2094111447819358512",
+    "2097820251660693959"
+   ],
+   "sample": "I just joined Together California in Palmdale to celebrate the opening of a new community designed to give children in foster care something every child deserves: a safe, stable place to call home! Together California is building 12 homes where siblings in foster care can stay https://t.co/gZk69mRggX",
+   "placement": {
+    "macro": null,
+    "key": "foster-care-youth",
+    "label": "Foster care & youth services",
+    "kind": "gap",
+    "aliases": [
+     "foster care",
+     "foster youth",
+     "Together California",
+     "youth housing"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "transportation-safety",
+   "label": "transportation-safety",
+   "labels": [
+    "transportation-safety"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 6,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "repscfigures",
+    "RepNellie"
+   ],
+   "ids": [
+    "2097320088269447494",
+    "2097326176259670032"
+   ],
+   "sample": "RT @ALReporter: The REVOKE Act seeks to close federal enforcement gaps that let unsafe trucking firms rebrand and return to U.S. roads.\n\n#a…",
+   "placement": {
+    "macro": null,
+    "key": "transportation-safety",
+    "label": "Transportation & aviation safety",
+    "kind": "gap",
+    "aliases": [
+     "REVOKE Act",
+     "trucking safety",
+     "air traffic controllers",
+     "FLIGHT DECK Act"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "semiconductor-manufacturing",
+   "label": "semiconductor-manufacturing",
+   "labels": [
+    "semiconductor-manufacturing"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-09-06",
+   "lastSeen": "2026-09-06",
+   "eng": 69,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SenRubenGallego",
+    "RubenGallego"
+   ],
+   "ids": [
+    "2096708185650499654",
+    "2096807606409212116"
+   ],
+   "sample": "Right here at @intel's Ocotillo campus, some of the most precise, high-stakes manufacturing on the planet is happening. Intel is building the chips that power our computers, our hospitals, and our national defense.\n\nArizona has become the center of American semiconductor https://t.co/k8TYqZHfUn",
+   "placement": {
+    "macro": "economy",
+    "key": "semiconductors-chips",
+    "label": "Semiconductors & CHIPS manufacturing",
+    "kind": "gap",
+    "aliases": [
+     "Intel",
+     "CHIPS Act",
+     "semiconductor fab",
+     "chip manufacturing"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "patent-policy",
+   "label": "patent-policy",
+   "labels": [
+    "patent-policy"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 2,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-04",
+   "eng": 20,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepHankJohnson",
+    "RepZoeLofgren"
+   ],
+   "ids": [
+    "2095165168506245388",
+    "2095913182573236666"
+   ],
+   "sample": "RT @HouseJudiciary: American innovation can thrive only when opportunity to participate is accessible to all.\n\nRM @RepHankJohnson explains…",
+   "placement": {
+    "macro": "tech",
+    "key": "patents-innovation",
+    "label": "Patents & USPTO policy",
+    "kind": "gap",
+    "aliases": [
+     "USPTO",
+     "patent law",
+     "patent quality",
+     "innovation policy"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "aviation-aerospace-innovation",
+   "label": "aviation-aerospace-innovation",
+   "labels": [
+    "aviation-aerospace-innovation",
+    "aviation-innovation"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 294,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Rep_Magaziner",
+    "SethMagaziner"
+   ],
+   "ids": [
+    "2095172140861378811",
+    "2095219169352364251"
+   ],
+   "sample": "RT @billythalheimer: Today marks the start of the Seaglider era - WE FLEW!!\n\nOur 15,000 lb, human-crewed Viceroy Seaglider prototype took f…",
+   "placement": {
+    "macro": null,
+    "key": "aviation-aerospace",
+    "label": "Aerospace innovation (Seaglider)",
+    "kind": "story",
+    "aliases": [
+     "Seaglider",
+     "REGENT",
+     "Viceroy",
+     "first flight"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "consumer-protection-enforcement",
+   "label": "consumer-protection-enforcement",
+   "labels": [
+    "consumer-protection-enforcement",
+    "consumer-protection-cfpb"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 2,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-09-02",
+   "eng": 2592,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepRashida",
+    "JeffJacksonNC"
+   ],
+   "ids": [
+    "2090509274770542686",
+    "2095251749606944851"
+   ],
+   "sample": "As a wedding photographer, you really have to screw up to get the attention of your Attorney General.\n\nWell, here we are.\n\nToday, we’re asking a judge to rule against Holly Christina Photography after the company failed to comply with a court order requiring it to turn over",
+   "placement": {
+    "macro": "economy",
+    "key": "consumer-protection",
+    "label": "Consumer protection & CFPB",
+    "kind": "gap",
+    "aliases": [
+     "CFPB",
+     "consumer complaints",
+     "debt collectors",
+     "consumer protection"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "local-sports-teams",
+   "label": "local sports teams",
+   "labels": [
+    "local sports teams"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 14,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "DaveMinCA",
+    "BradSherman"
+   ],
+   "ids": [
+    "2095203057004941312",
+    "2095244111007695269"
+   ],
+   "sample": "Hallelujah! Maybe the Angels can start winning again, with the putrid rot of Arte Moreno now behind them. https://t.co/Whj27yjS1V",
+   "placement": null
+  },
+  {
+   "key": "broadband-access",
+   "label": "broadband-access",
+   "labels": [
+    "broadband-access"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 2,
+   "firstSeen": "2026-08-26",
+   "lastSeen": "2026-09-02",
+   "eng": 31,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepRobinKelly",
+    "RepScottPeters"
+   ],
+   "ids": [
+    "2092684797004886385",
+    "2095208462250582168"
+   ],
+   "sample": "Great news for millions of Americans still waiting for high-speed internet: My bipartisan PLAN for Broadband Act passed a critical subcommittee yesterday. The Bipartisan Infrastructure Law gave us the funding to expand broadband access nationwide, but the money can’t just sit in",
+   "placement": null
+  },
+  {
+   "key": "college-sports-scandal",
+   "label": "college-sports-scandal",
+   "labels": [
+    "college-sports-scandal",
+    "ncaa-college-sports"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 2,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-29",
+   "eng": 45,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepBrendanBoyle",
+    "MarcVeasey"
+   ],
+   "ids": [
+    "2091943387452616985",
+    "2093847434078179662"
+   ],
+   "sample": "RT @startelegram: Coach Dykes’ childish stunt on news coverage can’t fix TCU cover up | Opinion https://t.co/nMmoSo4WLv",
+   "placement": null
+  },
+  {
+   "key": "local-institution-preservation",
+   "label": "local-institution-preservation",
+   "labels": [
+    "local-institution-preservation"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 19,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJudyChu",
+    "RepJerryNadler"
+   ],
+   "ids": [
+    "2092972677363306583",
+    "2093078403263930624"
+   ],
+   "sample": "RT @KeithPowersNYC: Today, we sent a letter to NYU Langone asking for them to work with us to save the AMC movie theater in Kips Bay. \n\nGra…",
+   "placement": null
+  },
+  {
+   "key": "olympics-la28",
+   "label": "olympics-la28",
+   "labels": [
+    "olympics-la28"
+   ],
+   "posts": 2,
+   "members": 2,
+   "days": 1,
+   "firstSeen": "2026-08-26",
+   "lastSeen": "2026-08-26",
+   "eng": 8,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGilCisneros",
+    "RepFriedmanCA"
+   ],
+   "ids": [
+    "2092674866562682946",
+    "2092736774762352668"
+   ],
+   "sample": "When the whole team is on the same page, we win.\n\nThat’s why I brought my Congressional colleagues and LA’s public transit leaders together to talk about LA and the federal government’s gameplan to prepare the region for a successful LA28 Olympic &amp; Paralympic Games.\n\nWe’re taking https://t.co/zssID20lUE",
+   "placement": null
+  },
+  {
+   "key": "substance-use-recovery",
+   "label": "substance-use-recovery",
+   "labels": [
+    "substance-use-recovery"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 4,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepEspaillat"
+   ],
+   "ids": [
+    "2097391045222748202",
+    "2097393562031706569"
+   ],
+   "sample": "During National Recovery Month, we celebrate those in recovery and work to end the stigma surrounding substance use and addiction. \n\nEveryone deserves access to the care, resources, and support they need to recover and thrive. https://t.co/iaFBGRkHd5",
+   "placement": null
+  },
+  {
+   "key": "child-performer-workplace-protections",
+   "label": "child performer workplace protections",
+   "labels": [
+    "child performer workplace protections"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-07",
+   "lastSeen": "2026-09-07",
+   "eng": 53,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDonBeyer"
+   ],
+   "ids": [
+    "2097054799296409725",
+    "2097054799619371072"
+   ],
+   "sample": "In the past few years, many former child actors have told their stories of unsafe or even abusive environments at work.\n\nThis is completely unacceptable, but with the patchwork of state laws on background checks, red flags have slipped through the cracks.",
+   "placement": null
+  },
+  {
+   "key": "cabinet-officials-qualifications",
+   "label": "cabinet-officials-qualifications",
+   "labels": [
+    "cabinet-officials-qualifications"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 6006,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SeanCasten"
+   ],
+   "ids": [
+    "2094804127196873148",
+    "2094804337767645459"
+   ],
+   "sample": "Scott Bessent is the living proof of the old joke that the easiest way to become a millionaire is to start with $2M and lose half of it.  He turned a $5.7B fund into $537M of value before he transitioned to a job on the government dime. https://t.co/OrRP4705Kf",
+   "placement": null
+  },
+  {
+   "key": "fbi-hiring-standards",
+   "label": "fbi-hiring-standards",
+   "labels": [
+    "fbi-hiring-standards"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-28",
+   "lastSeen": "2026-08-28",
+   "eng": 909,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "JoaquinCastrotx"
+   ],
+   "ids": [
+    "2093459558907720151",
+    "2093465293460779119"
+   ],
+   "sample": "RT @margbrennan: \"The FBI previously refused to hire job applicants if they admitted to hiring sex workers or stealing from an employer — o…",
+   "placement": null
+  },
+  {
+   "key": "hasan-piker-controversy",
+   "label": "hasan-piker-controversy",
+   "labels": [
+    "hasan-piker-controversy"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 3506,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RashidaTlaib"
+   ],
+   "ids": [
+    "2093141904347070917",
+    "2093142986682937491"
+   ],
+   "sample": "RT @chrisrabb: This is what the institutionalists are focusing their efforts on now: Disavowing #HasanPiker.\n\nNot white Christian nationali…",
+   "placement": null
+  },
+  {
+   "key": "9-11-records-survivor-care",
+   "label": "9/11 records & survivor care",
+   "labels": [
+    "9/11 records & survivor care"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-09",
+   "lastSeen": "2026-09-09",
+   "eng": 14,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Grace4NY"
+   ],
+   "ids": [
+    "2097780861324153039"
+   ],
+   "sample": "After 25 years, New Yorkers deserve answers. The release of these files is an important step.\n\nWe must continue to fight for transparency, accountability, and to ensure every survivor gets the care they need. https://t.co/9LljVZTlWh",
+   "placement": null
+  },
+  {
+   "key": "smithsonian-institution",
+   "label": "smithsonian-institution",
+   "labels": [
+    "smithsonian-institution"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 15,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGlennIvey"
+   ],
+   "ids": [
+    "2097418675376488604"
+   ],
+   "sample": "Read my statement on the retirement of Smithsonian Secretary, Lonnie G. Bunch III. https://t.co/noKheD8Smx",
+   "placement": null
+  },
+  {
+   "key": "presidential-falsehoods",
+   "label": "presidential-falsehoods",
+   "labels": [
+    "presidential-falsehoods"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 233,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "CongressmanRaja"
+   ],
+   "ids": [
+    "2097465058049638520"
+   ],
+   "sample": "Trump is once again claiming he “worked long and hard” at Ground Zero after 9/11.\nThere’s no evidence he did. The heroes of that tragedy deserve better than having the President lie about sharing in their sacrifice.\nhttps://t.co/jZCgIDQLZ4",
+   "placement": null
+  },
+  {
+   "key": "presidential-fitness-25th-amendment",
+   "label": "presidential fitness / 25th Amendment",
+   "labels": [
+    "presidential fitness / 25th Amendment"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 15,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "DaveMinCA"
+   ],
+   "ids": [
+    "2097376760077623574"
+   ],
+   "sample": "Trump has repeatedly demonstrated that he is mentally unfit to serve as President.\n\nBut Congressional Repubs won’t even acknowledge Trump’s mental illness.\n\n25th Amendment now. https://t.co/W9bCfG85fw",
+   "placement": null
+  },
+  {
+   "key": "parental-rights-child-welfare",
+   "label": "parental-rights-child-welfare",
+   "labels": [
+    "parental-rights-child-welfare"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 21,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDeluzio"
+   ],
+   "ids": [
+    "2097338124128919667"
+   ],
+   "sample": "I am a co-sponsor of @RepBlakeMoore's Promoting Childhood Independence and Resilience Act. Parents should not have to worry about the government showing up at their front door just for giving their kids some basic independence, like so many of us had as kids a generation ago. https://t.co/eq5UzmTeZf",
+   "placement": null
+  },
+  {
+   "key": "industrial-policy",
+   "label": "industrial-policy",
+   "labels": [
+    "industrial-policy"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-08",
+   "eng": 2,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepScottPeters"
+   ],
+   "ids": [
+    "2097405231802016245"
+   ],
+   "sample": "RT @newindustrials: What unites an Oklahoma Republican and a California Democrat? @SenArmstrong &amp; @RepScottPeters believe one of the most p…",
+   "placement": null
+  },
+  {
+   "key": "crypto-regulation",
+   "label": "crypto-regulation",
+   "labels": [
+    "crypto-regulation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-07",
+   "lastSeen": "2026-09-07",
+   "eng": 17,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepAlGreen"
+   ],
+   "ids": [
+    "2096969605713478075"
+   ],
+   "sample": "IN CASE YOU MISSED IT: \n \nThe Gizmodo article below, titled “Crypto Industry’s CLARITY Act Faces Major Setback,” speaks for itself.\n\nYou can access the article by clicking the link here: https://t.co/KDeCZJzBt1",
+   "placement": null
+  },
+  {
+   "key": "campaign-finance",
+   "label": "campaign-finance",
+   "labels": [
+    "campaign-finance"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-04",
+   "eng": 39,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MaggieG603"
+   ],
+   "ids": [
+    "2096037463286272119"
+   ],
+   "sample": "Corporations are not people. Corporations do not vote. Corporations do not raise families. Corporations should not have louder voices in our elections than citizens do. Citizens United got it wrong, and that’s why I’m fighting to overturn it. https://t.co/Okkv1D9QaX",
+   "placement": null
+  },
+  {
+   "key": "trucking-driver-standards",
+   "label": "trucking-driver-standards",
+   "labels": [
+    "trucking-driver-standards"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-04",
+   "eng": 8,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MGPforCongress"
+   ],
+   "ids": [
+    "2095920503953531285"
+   ],
+   "sample": "RT @MGPforCongress: I spoke with Jewel, a trucker from Battle Ground, last week. He explained why English proficiency matters for anyone dr…",
+   "placement": null
+  },
+  {
+   "key": "local-tourism-promotion",
+   "label": "local-tourism-promotion",
+   "labels": [
+    "local-tourism-promotion"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-04",
+   "eng": 4,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGilCisneros"
+   ],
+   "ids": [
+    "2095916377122959523"
+   ],
+   "sample": "I’m proud to represent a community that has so many special spots to offer both visitors and residents alike. From great food to natural beauty, CA-31 has it all! I shared some of my personal recommendations with @SpecNews1SoCal. https://t.co/MagIkxubbi",
+   "placement": null
+  },
+  {
+   "key": "holocaust-remembrance",
+   "label": "holocaust-remembrance",
+   "labels": [
+    "holocaust-remembrance"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-04",
+   "eng": 4,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepFriedmanCA"
+   ],
+   "ids": [
+    "2095981837852246198"
+   ],
+   "sample": "There's a boxcar on the new grounds at @hmla1961, one of the cars that carried Jewish people to the Majdanek death camp. You can walk right up to it and think about the people who were forced inside, who had no idea where they were going and no way to get out.  It is a powerful, https://t.co/N17FIwwMwN",
+   "placement": null
+  },
+  {
+   "key": "reca-downwinders",
+   "label": "reca-downwinders",
+   "labels": [
+    "reca-downwinders"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-04",
+   "lastSeen": "2026-09-04",
+   "eng": 28,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Gabe_NM"
+   ],
+   "ids": [
+    "2096010421249646689"
+   ],
+   "sample": "La lucha por los Downwinders no se trata de política. Se trata de hacer lo correcto.\n\nSiempre he apoyado a RECA y seguiré luchando por las familias de Nuevo México que llevan generaciones esperando justicia. https://t.co/qDDmaJgTGc",
+   "placement": null
+  },
+  {
+   "key": "tribal-water-rights",
+   "label": "tribal-water-rights",
+   "labels": [
+    "tribal-water-rights"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-03",
+   "lastSeen": "2026-09-03",
+   "eng": 23,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGregStanton"
+   ],
+   "ids": [
+    "2095659427416203412"
+   ],
+   "sample": "I'm proud to back the bipartisan Yavapai-Apache Nation Water Rights Settlement Act.\n\nGreat talking with Chairman Buddy Rocha Jr. this week about what it means: honoring Tribal sovereignty, investing in critical infrastructure, and protecting the Verde River for every community https://t.co/tbNJBbLZ8Q",
+   "placement": null
+  },
+  {
+   "key": "robocalls-scam-calls",
+   "label": "robocalls-scam-calls",
+   "labels": [
+    "robocalls-scam-calls"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-03",
+   "lastSeen": "2026-09-03",
+   "eng": 12,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepThompson"
+   ],
+   "ids": [
+    "2095618409899720885"
+   ],
+   "sample": "Proud to cosponsor @repmcdowell, @repgregsteube, Morrison, and @repjimmypanetta's “Foreign Robocall Elimination Act.” This bill targets overseas robocall threats by tracking the networks behind these calls and bringing long-term solutions to Congress. Scammers target the most https://t.co/LJlqSIS7mV",
+   "placement": null
+  },
+  {
+   "key": "rail-merger-consolidation",
+   "label": "rail-merger-consolidation",
+   "labels": [
+    "rail-merger-consolidation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-03",
+   "lastSeen": "2026-09-03",
+   "eng": 9,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepValHoyle"
+   ],
+   "ids": [
+    "2095629457440805342"
+   ],
+   "sample": "The proposed Union Pacific-Norfolk Southern merger would create the largest rail network in this country’s history, impacting workers across 43 states. I’m leading a letter with 100 of my colleagues demanding that the Surface Transportation Board fully consider what this merger https://t.co/wKR8ETVnOa",
+   "placement": null
+  },
+  {
+   "key": "elder-financial-exploitation",
+   "label": "elder-financial-exploitation",
+   "labels": [
+    "elder-financial-exploitation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-03",
+   "lastSeen": "2026-09-03",
+   "eng": 11,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepDonDavis"
+   ],
+   "ids": [
+    "2095689184790847540"
+   ],
+   "sample": "For many older Americans, a lifetime of hard work is reflected in the savings they have built for retirement, their families, and their future. No one should have to worry that someone could take those savings to exploit them.\n\nThe North Carolina Bankers Association stopped by https://t.co/Z0imGbCA9f",
+   "placement": null
+  },
+  {
+   "key": "nitrous-oxide-misuse",
+   "label": "nitrous-oxide-misuse",
+   "labels": [
+    "nitrous-oxide-misuse"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 2,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepKevinMullin"
+   ],
+   "ids": [
+    "2095250929813725203"
+   ],
+   "sample": "Today, I stood alongside more than 30 parents and family members who traveled from across America to Washington to share their stories and demand action on nitrous oxide misuse. Their courage in turning unimaginable loss into a call for change is deeply inspiring. Together, we’re https://t.co/k5pXSjzBKQ",
+   "placement": null
+  },
+  {
+   "key": "sports-economic-development",
+   "label": "sports-economic-development",
+   "labels": [
+    "sports-economic-development"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 286,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "GovSherrillNJ"
+   ],
+   "ids": [
+    "2095240348486209899"
+   ],
+   "sample": "The World Cup brought more than 645,000 fans to MetLife Stadium and put New Jersey on the world soccer stage.\n\nAnd we’re keeping that momentum going.\n\nMiddlesex County is getting a new MLS NEXT Pro team and a new home for soccer at NEXUS, giving New Jerseyans even more https://t.co/ScMcL8OH5h",
+   "placement": null
+  },
+  {
+   "key": "federal-holidays",
+   "label": "federal-holidays",
+   "labels": [
+    "federal-holidays"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 109,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "rosadelauro"
+   ],
+   "ids": [
+    "2095243876390908120"
+   ],
+   "sample": "President Trump wants to take away your holidays. https://t.co/9huHkAtTDO",
+   "placement": null
+  },
+  {
+   "key": "dc-statehood",
+   "label": "dc statehood",
+   "labels": [
+    "dc statehood"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 89,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "EleanorNorton"
+   ],
+   "ids": [
+    "2095165408021983495"
+   ],
+   "sample": "We recently lost one of the first celebrity advocates for #DCStatehood when actor &amp; activist Hayden Panettiere passed away in August.\n \nHayden's affection for DC and support for statehood never wavered, and DC formally honored her by recognizing 9/16/2011 as \"Hayden Panettiere https://t.co/OqaR37pzlx",
+   "placement": null
+  },
+  {
+   "key": "commemorations-monuments",
+   "label": "commemorations-monuments",
+   "labels": [
+    "commemorations-monuments"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-02",
+   "lastSeen": "2026-09-02",
+   "eng": 330,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepRaskin"
+   ],
+   "ids": [
+    "2095211068520091992"
+   ],
+   "sample": "We are close finally to properly honoring Tom Paine, the extraordinary author of Common Sense and the Rights of Man, the too often unsung hero of the American Revolution and champion of democratic freedom. \n\nI testified before @NRDems on my legislation with @RepSpartz to put https://t.co/ClF9nD4xKZ",
+   "placement": null
+  },
+  {
+   "key": "fisheries-regulation",
+   "label": "fisheries-regulation",
+   "labels": [
+    "fisheries-regulation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 264,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGolden"
+   ],
+   "ids": [
+    "2094913618634482167"
+   ],
+   "sample": "Great news! The House just passed my bill to protect Maine lobstermen from unnecessary new regulations related to the North Atlantic right whale until 2035.\n\nThis bill will protect lobstermen so they can keep doing what they do best: Providing for their families and communities, https://t.co/0aDSV3FGlh",
+   "placement": null
+  },
+  {
+   "key": "tribal-land-claims",
+   "label": "tribal-land-claims",
+   "labels": [
+    "tribal-land-claims"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 11,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SenatorSlotkin"
+   ],
+   "ids": [
+    "2094938746344833495"
+   ],
+   "sample": "We also talked about the bipartisan land claim bill that we have passed unanimously in the Senate (twice) that has stalled in the House. It’s common sense, fixes a historic injustice, and I intend to keep working to get it over the finish line. Thank you to everyone who joined https://t.co/VVPjRU3Tt0",
+   "placement": null
+  },
+  {
+   "key": "film-tv-production",
+   "label": "film-tv-production",
+   "labels": [
+    "film-tv-production"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 6,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepFriedmanCA"
+   ],
+   "ids": [
+    "2094856946520109431"
+   ],
+   "sample": "You can’t replicate Silver Lake, Griffith Observatory, or any of LA’s other iconic locations. And there’s nowhere else in the world where you’ll find so many industry-supporting businesses or more talented crews.\n\nThat’s why LA-filmed shows win BIG during award season.\n\nI’m",
+   "placement": null
+  },
+  {
+   "key": "smithsonian-museums",
+   "label": "smithsonian-museums",
+   "labels": [
+    "smithsonian-museums"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 18,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Grace4NY"
+   ],
+   "ids": [
+    "2094854090081669235"
+   ],
+   "sample": "RT @USLatinoMuseum: The Smithsonian’s National Museum of the American Latino officially has a permanent home on the National Mall to honor…",
+   "placement": null
+  },
+  {
+   "key": "disease-awareness-observances",
+   "label": "disease awareness observances",
+   "labels": [
+    "disease awareness observances"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-09-01",
+   "lastSeen": "2026-09-01",
+   "eng": 4180,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPressley"
+   ],
+   "ids": [
+    "2094964983666778477"
+   ],
+   "sample": "Walking into Alopecia Areata Awareness Month like: https://t.co/ULiOc54Myt",
+   "placement": null
+  },
+  {
+   "key": "college-athlete-health",
+   "label": "college-athlete-health",
+   "labels": [
+    "college-athlete-health"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 57,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MarcVeasey"
+   ],
+   "ids": [
+    "2094587679362949626"
+   ],
+   "sample": "RT @clarencehilljr: TCU focused on the star-telegram yet dropped the ball on their own players health\n\n2 hours before he was sent er\n\nWhere…",
+   "placement": null
+  },
+  {
+   "key": "marijuana-policy",
+   "label": "marijuana-policy",
+   "labels": [
+    "marijuana-policy"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 13,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Ilhan"
+   ],
+   "ids": [
+    "2094497502984544379"
+   ],
+   "sample": "RT @repdinatitus: As the rescheduling of certain marijuana products moves forward, it is vital that all affected stakeholders understand ho…",
+   "placement": null
+  },
+  {
+   "key": "fisheries-management",
+   "label": "fisheries-management",
+   "labels": [
+    "fisheries-management"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 3,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGolden"
+   ],
+   "ids": [
+    "2094442954668560878"
+   ],
+   "sample": "RT @fishstewardship: NEFSA is proud to support @RepGolden's H.R. 9436 to ensure proper data is collected before enacting crushing regulatio…",
+   "placement": null
+  },
+  {
+   "key": "service-academy-athletics",
+   "label": "service-academy-athletics",
+   "labels": [
+    "service-academy-athletics"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-08-31",
+   "eng": 190,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "GovSherrillNJ"
+   ],
+   "ids": [
+    "2094454081305678208"
+   ],
+   "sample": "For the first time since 1956, two Midshipmen selected in the same NFL Draft have earned spots on the Bengals' and Steelers' rosters.\n\nEli Heidenreich and Landon Robinson spent all four years at Navy and never entered the transfer portal.\n\nNow they’re making Navy football history",
+   "placement": null
+  },
+  {
+   "key": "broadband-infrastructure",
+   "label": "broadband-infrastructure",
+   "labels": [
+    "broadband-infrastructure"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-30",
+   "lastSeen": "2026-08-30",
+   "eng": 17,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepMikeQuigley"
+   ],
+   "ids": [
+    "2094105869734551983"
+   ],
+   "sample": "I’m proud to have helped secure over $1 BILLION from the National Telecommunications and Information Administration to bring universal #broadband to Illinois!🛜\n\nUnder the 2021 Bipartisan Infrastructure Law, the BEAD program helps ensure ALL Americans have access to reliable WiFi",
+   "placement": null
+  },
+  {
+   "key": "church-state-separation-christian-nation",
+   "label": "church-state separation / Christian nationalism",
+   "labels": [
+    "church-state separation / Christian nationalism"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-29",
+   "lastSeen": "2026-08-29",
+   "eng": 40,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "JaredHuffman"
+   ],
+   "ids": [
+    "2093693936178983050"
+   ],
+   "sample": "RT @AndrewLSeidel: I'm an atheist. Everyday, I work alongside Christians and other believers to fight Christian Nationalism and defend the…",
+   "placement": null
+  },
+  {
+   "key": "parks-recreation-trails",
+   "label": "parks-recreation-trails",
+   "labels": [
+    "parks-recreation-trails"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-29",
+   "lastSeen": "2026-08-29",
+   "eng": 79,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SenatorSlotkin"
+   ],
+   "ids": [
+    "2093740749330239649"
+   ],
+   "sample": "If you build it, they will come. That’s the mantra for so many communities when it comes to having great walking and biking trails. Boardman Lake Loop in TC is a model, and it’s amazing to watch its impact on the local economy. https://t.co/zi8bFspRQO",
+   "placement": null
+  },
+  {
+   "key": "olympics-preparation",
+   "label": "olympics-preparation",
+   "labels": [
+    "olympics-preparation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-28",
+   "lastSeen": "2026-08-28",
+   "eng": 63,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepTedLieu"
+   ],
+   "ids": [
+    "2093417919627595796"
+   ],
+   "sample": "It is an honor to represent a district that will help host the 2028 Olympics.\n\nBut in order to protect Los Angeles residents and ensure athletes and fans are able to safely travel to Olympic venues, we need more support from the federal government. https://t.co/Jg3uTvIpIg",
+   "placement": null
+  },
+  {
+   "key": "aviation-airports",
+   "label": "aviation-airports",
+   "labels": [
+    "aviation-airports"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-28",
+   "lastSeen": "2026-08-28",
+   "eng": 12,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "CongBoyle"
+   ],
+   "ids": [
+    "2093459360827473989"
+   ],
+   "sample": "Happy to see @PHLAirport will have new direct international flights to Porto, Vienna, and Reykjavik via @AmericanAir.\n\nIn my unbiased opinion, Philadelphia is the greatest city on earth, and it’s great to share that with even more of our friends abroad.\n\nhttps://t.co/KMBJKeQsyE",
+   "placement": null
+  },
+  {
+   "key": "olympics-hosting-infrastructure",
+   "label": "olympics-hosting-infrastructure",
+   "labels": [
+    "olympics-hosting-infrastructure"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-28",
+   "lastSeen": "2026-08-28",
+   "eng": 11,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJudyChu"
+   ],
+   "ids": [
+    "2093440260101570903"
+   ],
+   "sample": "The LA 2028 Olympic &amp; Paralympic Games are an incredible opportunity for our region, including Pasadena and Arcadia, to host the world. But safely and efficiently transporting millions of spectators will require significant coordination and federal support.\n\nI joined https://t.co/sExKCqnTko",
+   "placement": null
+  },
+  {
+   "key": "landmark-renaming",
+   "label": "landmark-renaming",
+   "labels": [
+    "landmark-renaming"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 142,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepLiccardo"
+   ],
+   "ids": [
+    "2093119415009083769"
+   ],
+   "sample": "If he gets to call it Lake America, we’ll call Lake Erie Lake Toronto. https://t.co/X0f7bdtsFF",
+   "placement": null
+  },
+  {
+   "key": "federal-data-collection",
+   "label": "federal-data-collection",
+   "labels": [
+    "federal-data-collection"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 38,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPabloJose"
+   ],
+   "ids": [
+    "2093045901317337345"
+   ],
+   "sample": "Nos reunimos con el Instituto de Estadísticas de Puerto Rico 📊🇵🇷 para dialogar sobre cómo lograr una mayor inclusión de Puerto Rico en la recopilación de datos federales y contar con información comparable y de calidad que ayude a visibilizar nuestras necesidades y ampliar el https://t.co/gubyzVaAiT",
+   "placement": null
+  },
+  {
+   "key": "federal-archives-historic-site-closures",
+   "label": "federal archives & historic site closures",
+   "labels": [
+    "federal archives & historic site closures"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 3,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepKevinMullin"
+   ],
+   "ids": [
+    "2093156620260016225"
+   ],
+   "sample": "I'm working with lawmakers to stop the federal closure of our Nation Archive in San Bruno. We have a responsibility to protect these culturally significant archives including documents from the Chinese Exclusion Act era and Japanese internment camp records that hold deep meaning https://t.co/QmR9cV1efP",
+   "placement": null
+  },
+  {
+   "key": "permitting-reform",
+   "label": "permitting-reform",
+   "labels": [
+    "permitting-reform"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 5,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepScottPeters"
+   ],
+   "ids": [
+    "2093081261304930450"
+   ],
+   "sample": "RT @USChamber: Permitting delays drive up costs, create uncertainty, and hold back projects businesses and communities need. Thank you, @Re…",
+   "placement": null
+  },
+  {
+   "key": "aviation-air-traffic-control",
+   "label": "aviation-air-traffic-control",
+   "labels": [
+    "aviation-air-traffic-control"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 7,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJimmyPanetta"
+   ],
+   "ids": [
+    "2093139770511679660"
+   ],
+   "sample": "Great to tour our local air traffic control center and learn firsthand about the work controllers do every day to keep our skies safe and air travel moving. It’s amazing. https://t.co/HbGZxXMGVi",
+   "placement": null
+  },
+  {
+   "key": "maritime-blue-economy",
+   "label": "maritime-blue-economy",
+   "labels": [
+    "maritime-blue-economy"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 22,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGabeAmo"
+   ],
+   "ids": [
+    "2093107457706852627"
+   ],
+   "sample": "🌊Exciting Blue Economy news: RI is home to the first Coast Guard-approved, autonomous offshore crew transfer vessel, the Atlantic Endurance!⚓\n\nChecked out Blue Water Autonomy’s cutting-edge tech, which will improve safety, lower costs &amp; support missions across the oceans. https://t.co/1ChD0FT9GH",
+   "placement": null
+  },
+  {
+   "key": "canada-relations",
+   "label": "canada-relations",
+   "labels": [
+    "canada-relations"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-27",
+   "eng": 12421,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "chelliepingree"
+   ],
+   "ids": [
+    "2093075804712255563"
+   ],
+   "sample": "RT @MarkJCarney: Le nom du lac Ontario tire son origine du mot wendat « Ontari’io », qui signifie « le lac est beau, le lac est grand ».\n\nC…",
+   "placement": null
+  },
+  {
+   "key": "trucking-cdl-licensing-fraud",
+   "label": "trucking & CDL licensing fraud",
+   "labels": [
+    "trucking & CDL licensing fraud"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-26",
+   "lastSeen": "2026-08-26",
+   "eng": 141,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MGPforCongress"
+   ],
+   "ids": [
+    "2092755943981514979"
+   ],
+   "sample": "I talked with Jewel, a Battle Ground trucker about my Stop Scamming Truckers Act. Fraud and scams in CDL licensing is a growing problem nationwide and affects our truckers here in SW Washington. It's hard enough to be an owner/operator and these bad actors are scamming them out https://t.co/hf2lXIBIAm",
+   "placement": null
+  },
+  {
+   "key": "stadium-public-subsidies",
+   "label": "stadium-public-subsidies",
+   "labels": [
+    "stadium-public-subsidies"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 80,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepCasar"
+   ],
+   "ids": [
+    "2092355163495211343"
+   ],
+   "sample": "Here we go again: a billionaire owner wants hundreds of millions in public money for his arena, and threatens to move the team if he doesn't get it. \n\nFans and taxpayers get screwed either way.\n\nMy Home Team Act gives fans the chance to buy and keep the teams they love. https://t.co/R6b2WIb1Mk",
+   "placement": null
+  },
+  {
+   "key": "child-abuse-prevention",
+   "label": "child-abuse-prevention",
+   "labels": [
+    "child-abuse-prevention"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 16,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepScholten"
+   ],
+   "ids": [
+    "2092278707305996301"
+   ],
+   "sample": "I visited the Children's Advocacy Center of Kent County, where survivors of child sexual abuse and their families find care, support, and a path toward healing. I got to hear about their Kids Have Rights program, which reached over 25,000 students across Kent County last school https://t.co/j5Ib5f0Qc7",
+   "placement": null
+  },
+  {
+   "key": "youth-mentorship",
+   "label": "youth-mentorship",
+   "labels": [
+    "youth-mentorship"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 26,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepWilson"
+   ],
+   "ids": [
+    "2092394152755331190"
+   ],
+   "sample": "So proud of Role Model Dr. Phelton Moss, Vice Chair of the District 7 Prince George’s County Board of Education, and his new initiative, 100 Men in Suits. This is what leadership and mentorship look like! https://t.co/QEmV6e0PnT",
+   "placement": null
+  },
+  {
+   "key": "youth-sports-private-equity",
+   "label": "youth-sports-private-equity",
+   "labels": [
+    "youth-sports-private-equity"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 26,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "PatRyanUC"
+   ],
+   "ids": [
+    "2092308629877576027"
+   ],
+   "sample": "Youth sports should be where our kids learn teamwork &amp; community.\n\nInstead, it’s become a cash grab for private equity, lining their pockets while our kids sit on the sidelines.\n\nProud that Dutchess County is tackling the problem head on so that every kid has a chance to play https://t.co/6WyCJ4TMOx",
+   "placement": null
+  },
+  {
+   "key": "helicopter-noise-aviation-oversight",
+   "label": "helicopter noise & aviation oversight",
+   "labels": [
+    "helicopter noise & aviation oversight"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 6,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepMenendez"
+   ],
+   "ids": [
+    "2092041156787872091"
+   ],
+   "sample": "Residents across Hudson County have been clear: the noise &amp; disruption from non-essential helicopters is unacceptable. \n\nI commend County Exec Craig Guy and our cities for holding HHI accountable. We’ll keep pushing for stronger oversight &amp; the peace our residents deserve.\n\nWe https://t.co/Y6d3ei43l5",
+   "placement": null
+  },
+  {
+   "key": "power-grid-reliability-puerto-rico-black",
+   "label": "power grid reliability / Puerto Rico blackouts",
+   "labels": [
+    "power grid reliability / Puerto Rico blackouts"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 22,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepPabloJose"
+   ],
+   "ids": [
+    "2091981893340188832"
+   ],
+   "sample": "Lideré un esfuerzo bipartita en el Congreso para exigir acción federal inmediata ante los apagones y reducir el riesgo de nuevas interrupciones en el servicio eléctrico de Puerto Rico. ⚡🇵🇷 https://t.co/mEFb3e7m54",
+   "placement": null
+  },
+  {
+   "key": "private-equity-consolidation",
+   "label": "private-equity-consolidation",
+   "labels": [
+    "private-equity-consolidation"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 238,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "ChrisForPA"
+   ],
+   "ids": [
+    "2091876309307658609"
+   ],
+   "sample": "Youth sports is a foundational part of the American Dream. Kids learning the value of hard work, parents taking pride in their kids’ success — it’s important stuff. \n\nLike so many other parts of our lives, private equity is sinking their claws in, ruining these leagues, and https://t.co/UHntbmdK1w",
+   "placement": null
+  },
+  {
+   "key": "commercial-fishing",
+   "label": "commercial-fishing",
+   "labels": [
+    "commercial-fishing"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 79,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "sethmoulton"
+   ],
+   "ids": [
+    "2091945559758115076"
+   ],
+   "sample": "Today I’m out in Chatham to meet with local fishermen.\n\nFishing is part of the lifeblood of Massachusetts. We need to stand with our fishermen and work together to ensure this industry remains a vital part of our economy and our Commonwealth’s identity for generations to come. https://t.co/JlRFkJLhWK",
+   "placement": null
+  },
+  {
+   "key": "sexism-in-media",
+   "label": "sexism-in-media",
+   "labels": [
+    "sexism-in-media"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-24",
+   "lastSeen": "2026-08-24",
+   "eng": 203,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "MarcVeasey"
+   ],
+   "ids": [
+    "2092093534673240320"
+   ],
+   "sample": "RT @shannonrwatts: Hasan Piker is sexist, offensive and harmful. Shame on every pundit and politician enabling him.",
+   "placement": null
+  },
+  {
+   "key": "women-s-sports",
+   "label": "women's sports",
+   "labels": [
+    "women's sports"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-23",
+   "lastSeen": "2026-08-23",
+   "eng": 47,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepKamlagerDove"
+   ],
+   "ids": [
+    "2091675777624641870"
+   ],
+   "sample": "I had such a ball meeting the team behind @primevideo’s WNBA!\n\nAlthough @sydjcolson and I have the same name, I definitely don’t have her skills. 😅🏀\n\nThank you @sportsonprime, @swincash, @lachinarobinson, and Sydney Colson for sharing your work to elevate women’s sports from https://t.co/d3HsX92J6o",
+   "placement": null
+  },
+  {
+   "key": "latino-men-families",
+   "label": "latino-men-families",
+   "labels": [
+    "latino-men-families"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-23",
+   "lastSeen": "2026-08-23",
+   "eng": 151,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "SenRubenGallego"
+   ],
+   "ids": [
+    "2091682153989853403"
+   ],
+   "sample": "Latino men feel a deep responsibility to provide for and protect their families.\n\nWe need to make sure they have the support to be good fathers, husbands, partners, business owners, and community leaders—while also valuing and empowering the Latinas in our lives. https://t.co/gPKjw22pNz",
+   "placement": null
+  },
+  {
+   "key": "retirement-savings",
+   "label": "retirement-savings",
+   "labels": [
+    "retirement-savings"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-22",
+   "lastSeen": "2026-08-22",
+   "eng": 3,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepLiccardo"
+   ],
+   "ids": [
+    "2091244766021493243"
+   ],
+   "sample": "Your retirement savings should stay yours.\n\nFormer Oxnard Mayor John Zaragoza gets exactly why I introduced the bipartisan SAFER Act. Californians shouldn’t lose control of their retirement savings simply because an account goes untouched for a few years.\n\nWorth a read: https://t.co/Fus6ebgDzI",
+   "placement": null
+  },
+  {
+   "key": "sports-leagues-antitrust",
+   "label": "sports-leagues-antitrust",
+   "labels": [
+    "sports-leagues-antitrust"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-08-21",
+   "eng": 254,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "ChrisForPA"
+   ],
+   "ids": [
+    "2090927005009133824"
+   ],
+   "sample": "Lots of Pirates fans know the pain of long watching a team make money in a beautiful public stadium with a barebones payroll. I’m up for any ideas to force teams to invest in competing when they get the benefit of antitrust exemptions and publicly funded stadiums. \n\nAnything to https://t.co/xUNCz9Qz1N",
+   "placement": null
+  },
+  {
+   "key": "congestion-pricing",
+   "label": "congestion-pricing",
+   "labels": [
+    "congestion-pricing"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-21",
+   "lastSeen": "2026-08-21",
+   "eng": 156,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepJoshG"
+   ],
+   "ids": [
+    "2090904775412068760"
+   ],
+   "sample": "New York told us that their insane Congestion Tax was taking money out of your wallets to improve our air quality. Turns out that just wasn't true.\n\nStop whacking hardworking Jersey families just to line the mismanaged MTA’s pockets. Turn the cameras off and end this crash grab",
+   "placement": null
+  },
+  {
+   "key": "agriculture-local-food-production",
+   "label": "agriculture & local food production",
+   "labels": [
+    "agriculture & local food production"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-20",
+   "eng": 7,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepMenendez"
+   ],
+   "ids": [
+    "2090459073049178459"
+   ],
+   "sample": "📍@Oishii_berry in @JerseyCity \n\n🍓 Met with Oishii to discuss how our work in Congress can help local businesses thrive. I'm also proud to lead legislation that expands urban farming, so it was great seeing their vertical smart farm firsthand! https://t.co/jej8WI4vLm",
+   "placement": null
+  },
+  {
+   "key": "fisheries-ocean-economy",
+   "label": "fisheries-ocean-economy",
+   "labels": [
+    "fisheries-ocean-economy"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-20",
+   "eng": 1,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGabeAmo"
+   ],
+   "ids": [
+    "2090481292110413953"
+   ],
+   "sample": "More seafood, more research, and more blue economy wins!🐟🔬🌊\n\nGreat to hear how NERACOOS, URI researchers, and regional partners are working to grow fisheries, aquaculture, and our Blue Economy workforce here in the Ocean State.\nhttps://t.co/XOZxPynztz",
+   "placement": null
+  },
+  {
+   "key": "bridge-naming-honorary-designations",
+   "label": "bridge naming / honorary designations",
+   "labels": [
+    "bridge naming / honorary designations"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-20",
+   "eng": 12,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "repscfigures"
+   ],
+   "ids": [
+    "2090566806406922242"
+   ],
+   "sample": ".@SenatorElliott We love Jimmy Buffett! But the bridge should be named for the man who put Mobile on the map. The global icon, athlete, and philanthropist who is hands down the most famous person this city, and possibly this state, has ever produced. The man who broke the",
+   "placement": null
+  },
+  {
+   "key": "radiation-exposure-compensation-reca",
+   "label": "radiation-exposure-compensation (RECA)",
+   "labels": [
+    "radiation-exposure-compensation (RECA)"
+   ],
+   "posts": 1,
+   "members": 1,
+   "days": 1,
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-20",
+   "eng": 26,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Gabe_NM"
+   ],
+   "ids": [
+    "2090604805085331711"
+   ],
+   "sample": "Thank you to Tina Cordova, who leads New Mexico’s Downwinders, for setting the record straight on RECA and most importantly, for your decades of work.\n\nTina knows this fight better than anyone, and we’ve been working together for years to get justice for New Mexicans - together, https://t.co/XF6ISjZPZF",
+   "placement": null
+  }
+ ]
+}

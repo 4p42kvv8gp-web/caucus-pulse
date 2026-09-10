@@ -56,13 +56,24 @@
 - X reads on 2026-09-09: 0 / 2,500 budget (~$0.00)
 - Classifier: claude-opus-5, 1 unclassified
 
-## Emerging clusters (taxonomy decisions needed)
+## Developing stories (not yet in the taxonomy)
 
-- **smithsonian-history-erasure** — 3 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **9-11-remembrance** — 2 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **9/11 commemoration** — 2 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **christian-nationalism** — 2 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **agriculture-rural** — 1 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **9/11 anniversary commemoration** — 1 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **small-business-support** — 1 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
-- **smithsonian-arts-culture** — 1 tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.
+- **Dolly Parton tribute** — 67 posts, 26 members over 3 day(s) (2026-08-21 → 2026-09-09). Promote: `npm run stories -- --promote=dolly-parton-tribute` → (no macro fits) dolly-parton-tribute
+- **9/11 25th anniversary remembrance** — 20 posts, 8 members over 3 day(s) (2026-09-02 → 2026-09-09). Promote: `npm run stories -- --promote=sept-11-anniversary` → (no macro fits) sept-11-anniversary
+- **Trump 'Lake America' renaming** — 10 posts, 3 members over 3 day(s) (2026-08-25 → 2026-09-03). Promote: `npm run stories -- --promote=lake-america-renaming` → democracy/lake-america-renaming
+- **Epstein files transparency** — 8 posts, 3 members over 3 day(s) (2026-08-31 → 2026-09-02). Promote: `npm run stories -- --promote=epstein-files` → democracy/epstein-files
+- **Trump Arch monument project** — 8 posts, 2 members over 3 day(s) (2026-09-03 → 2026-09-05). Promote: `npm run stories -- --promote=trump-arch-monument` → democracy/trump-arch-monument
+- **Trump renaming of Lake Ontario** — 7 posts, 6 members over 4 day(s) (2026-08-28 → 2026-09-08). Promote: `npm run stories -- --promote=lake-ontario-renaming` → democracy/lake-ontario-renaming
+- **Amy Acton campaign attack** — 5 posts, 5 members over 1 day(s) (2026-09-06 → 2026-09-06). Promote: `npm run stories -- --promote=amy-acton-attack` → public-safety/amy-acton-attack
+- **National Archives San Bruno closure** — 5 posts, 2 members over 5 day(s) (2026-08-20 → 2026-08-30). Promote: `npm run stories -- --promote=national-archives-sanbruno` → democracy/national-archives-sanbruno
+
+## Taxonomy gaps (durable subjects with no home)
+
+- **Agriculture & farmers** — 59 posts, 30 members over 16 day(s) (2026-08-20 → 2026-09-09). Promote: `npm run stories -- --promote=agriculture-farmers` → economy/agriculture-farmers
+- **Transit & infrastructure** — 32 posts, 22 members over 13 day(s) (2026-08-20 → 2026-09-04). Promote: `npm run stories -- --promote=transit-infrastructure` → economy/transit-infrastructure
+- **Space, NASA & science research** — 25 posts, 17 members over 12 day(s) (2026-08-20 → 2026-09-04). Promote: `npm run stories -- --promote=space-science-research` → tech/space-science-research
+- **Mental health & suicide prevention** — 21 posts, 20 members over 5 day(s) (2026-09-01 → 2026-09-08). Promote: `npm run stories -- --promote=mental-health` → healthcare/mental-health
+- **Data centers & energy costs** — 21 posts, 19 members over 12 day(s) (2026-08-20 → 2026-09-09). Promote: `npm run stories -- --promote=data-centers` → tech/data-centers
+- **Child care & caregiving costs** — 14 posts, 10 members over 8 day(s) (2026-08-23 → 2026-09-09). Promote: `npm run stories -- --promote=child-care` → economy/child-care
+- **Small business & SBA** — 13 posts, 13 members over 7 day(s) (2026-08-20 → 2026-09-09). Promote: `npm run stories -- --promote=small-business` → economy/small-business
+- **Arts, museums & cultural institutions** — 13 posts, 12 members over 10 day(s) (2026-08-21 → 2026-09-09). Promote: `npm run stories -- --promote=arts-culture` → civil-rights/arts-culture
