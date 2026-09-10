@@ -14,6 +14,20 @@
   subtopics, provisional incidents, correction loop, outside context), do not
   merge it.
 
+## Product principle: the story is the unit (owner, 2026-09-10)
+
+- A macro topic like "Congress & campaign politics" means nothing to the
+  Leader's office on its own. Macros are shelves for navigation; the rows
+  that matter are specific, named, dated developing stories: "AI safety →
+  Jacob Coxon resignation", "Immigration → Liam Ramos / Dilley".
+- Every macro should carry story subtopics (`story: true`, `since:`) fed by
+  the emerging-cluster pipeline; a post about a named event is assigned the
+  story, never left at the bare macro. Generic subtopics exist only where a
+  durable subject has volume and no story.
+- Promotion is continuous: candidates that clear the thresholds in
+  `settings.stories` are promoted nightly as provisional stories; the owner
+  prunes rather than approves one by one.
+
 ## How things run
 
 - GitHub Actions on `main` do the capture (`poll` every 20 min), the nightly
