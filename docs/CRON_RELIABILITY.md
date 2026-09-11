@@ -71,3 +71,55 @@ that would tell you whether option 3 is needed.
 One day, one repository, one account. GitHub's scheduler load varies by time of
 day and by region, and today's 25% may not be representative in either
 direction. The number to watch is the gap distribution, not the headline rate.
+
+## Update, 2026-09-11: the nightly is not dropped, it is *reliably* late
+
+The poll numbers above describe drops. The nightly behaves differently, and
+the difference changes the remedy.
+
+`nightly.yml` is scheduled `30 7 * * *`. Both scheduled runs so far:
+
+| scheduled | actually started | late by |
+|---|---|---|
+| 2026-09-10 07:30Z | 12:17:23Z | **4h47m** |
+| 2026-09-11 07:30Z | 12:15:32Z | **4h45m** |
+
+Two minutes apart across two days. That is not a dropped run and it is not
+random jitter — it is a consistent offset, and consistency is the useful part.
+
+**This was mis-diagnosed once already.** On 2026-09-11 the run had not appeared
+68 minutes after its scheduled time, and was called dropped and dispatched by
+hand at 08:38Z. The scheduled run then arrived at 12:15Z and did the same work
+again, so the refresh stage's X reads were paid for twice. The precedent for a
+4h47m delay was *already recorded in this file* and was cited in the decision —
+then a 60-minute grace window was chosen anyway, a quarter of the known delay.
+The lesson is narrow and worth stating plainly: a grace window has to come from
+the measured distribution, not from what feels like a long time.
+
+### What follows from a fixed offset
+
+Two remedies, both cheap, and they are not the same as the poll remedy:
+
+1. **Move the schedule earlier.** If the offset holds, `30 2 * * *` lands the
+   real run near 07:15Z. This is the one-line fix, and it is reversible. Its
+   risk is that the offset is not actually fixed — two points is a line, not a
+   distribution — so it should be tried and then measured for several days
+   rather than assumed.
+2. **Move to an unpopular minute.** 07:30 is a common cron time and GitHub
+   deprioritises schedules under load; an odd minute at an odd hour
+   (`37 6 * * *`) may simply be delayed less. This addresses the cause rather
+   than compensating for it, but it is a guess until measured.
+
+Do not reach for an external scheduler for the nightly on this evidence. The
+runs are arriving. They are arriving late and *predictably* late, which is a
+scheduling problem, not a reliability one.
+
+### What to actually do first
+
+Nothing in the repo notices whether the nightly ran. `src/health.js` checks
+capture recency and classification coverage — a nightly that never fired and a
+nightly that fired and failed look identical to it, and both look identical to
+a nightly that fired four hours late. Before tuning the cron, make the run
+observable: record each nightly's start time and have the health check say when
+the last successful one was. That is what turns "did it run?" from a question
+someone has to ask into one the system answers.
