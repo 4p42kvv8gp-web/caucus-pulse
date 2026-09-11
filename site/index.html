@@ -113,8 +113,15 @@ function render() {
   const coreMax = Math.max(1, ...coreRaw.map((c) => c.n));
   const coreN = coreRaw.reduce((a, c) => a + c.n, 0);
   const classified = D.topics.reduce((a, t) => a + val(t).n, 0);
-  const leader = D.topics.filter((t) => val(t).n > 0).sort((a, b) => b.momentum.score - a.momentum.score)[0];
+  // Momentum is paused when the last 24h holds captured posts but none are
+  // classified yet (nightly not run): a gap in the instrument, not a collapse.
+  const paused = !!D.classification?.momentumPaused;
+  const leader = paused ? null : D.topics.filter((t) => val(t).n > 0).sort((a, b) => b.momentum.score - a.momentum.score)[0];
   const card = (inner) => `<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between">${inner}</div>`;
+  const pausedCard = card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum</span></div>
+      <div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1;color:#8e8e93">—</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">paused</span></div>
+      <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2"></div>
+      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `topics classified through ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.capturedIn24h || 0)} posts in the last 24h await the classifier</div>`);
   $('cards').innerHTML = [
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.posts)}</div>${spark(curve, 108, 26)}</div>
@@ -130,7 +137,7 @@ function render() {
     leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum leader</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${leader.momentum.score}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(leader.name)}</span></div>${spark(leader.trend)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, MOMENTUM_FILL)}</div>
-      <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>`) : ''
+      <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>`) : (paused ? pausedCard : '')
   ].join('');
 
   renderTopics(isAll, scope, win);
@@ -158,6 +165,8 @@ function renderTopics(isAll, scope, win) {
 
   // Rows are clickable: a macro or subtopic row opens its whole post list in
   // the Feed card (row mode). The chevron alone folds subtopics.
+  const paused = !!D.classification?.momentumPaused;
+  const pausedTitle = 'Momentum paused: the last 24h has captured posts but none are classified yet';
   const rows = sorted.map((t) => {
     const v = val(t);
     const isOpen = t.subs.length > 0 && !!state.open[t.key];
@@ -187,8 +196,8 @@ function renderTopics(isAll, scope, win) {
       <td style="padding:8px 8px 8px 0;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px">${fold}<span style="font-weight:600;letter-spacing:-0.01em">${esc(t.name)}</span></div></td>
       ${caucusCells}
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right;font-weight:600">${fmt(v.n)}${!isAll ? `<div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(100 * v.n / maxPosts, C[scope])}</div>` : ''}</td>
-      <td style="padding:8px 8px 8px 12px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${spark(t.trend)}<span style="font-size:11px;color:${t.d >= 0 ? '#1d1d1f' : '#8e8e93'};font-weight:${t.d >= 0 ? 500 : 400};white-space:nowrap">${arrow(t.d)}</span></div></td>
-      <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="${esc(momentumTitle)}"><span style="font-weight:600">${mo.score}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(mo.score, MOMENTUM_FILL)}</div></td>
+      <td style="padding:8px 8px 8px 12px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${spark(t.trend)}<span style="font-size:11px;color:${!paused && t.d >= 0 ? '#1d1d1f' : '#8e8e93'};font-weight:${!paused && t.d >= 0 ? 500 : 400};white-space:nowrap"${paused ? ` title="${pausedTitle}"` : ''}>${paused ? '—' : arrow(t.d)}</span></div></td>
+      <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right" title="${paused ? pausedTitle : esc(momentumTitle)}"><span style="font-weight:600;color:${paused ? '#8e8e93' : 'inherit'}">${paused ? '—' : mo.score}</span><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${paused ? '' : fill(mo.score, MOMENTUM_FILL)}</div></td>
       <td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.eng)}</td>
       <td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.m)}</td></tr>${subRows}`;
   }).join('');

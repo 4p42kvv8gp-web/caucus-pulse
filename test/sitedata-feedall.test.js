@@ -61,3 +61,24 @@ test('every Topics row lists its posts (postIds) and feedAll resolves them', { s
     if (x.quoted) assert.ok(x.quoted.text.length <= 200, `${x.id}: quoted text over 200 chars`);
   }
 });
+
+// Momentum pause: the rolling 24h window with captured posts and no topics is
+// a classifier gap (nightly not run, or unpaid), not a caucus-wide collapse.
+test('classificationCoverage pauses momentum when the last 24h is captured but unclassified', async () => {
+  const { classificationCoverage } = await import('../src/sitedata.js');
+  const now = Date.parse('2026-09-11T20:00:00Z');
+  const h = (n) => new Date(now - n * 3600_000).toISOString();
+  const days = ['2026-09-09', '2026-09-10', '2026-09-11'];
+  const posts = [
+    { date: '2026-09-09', createdAt: h(50), topics: [['economy', null]] },
+    { date: '2026-09-10', createdAt: h(30), topics: [] },
+    { date: '2026-09-11', createdAt: h(3), topics: [] },
+    { date: '2026-09-11', createdAt: h(1), topics: [] }
+  ];
+  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-09', capturedIn24h: 2, classifiedIn24h: 0, momentumPaused: true });
+  // one classified post in the window is enough to keep momentum live
+  posts[3].topics = [['economy', 'jobs']];
+  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-11', capturedIn24h: 2, classifiedIn24h: 1, momentumPaused: false });
+  // a quiet 24h (nothing captured) is not a pause either
+  assert.equal(classificationCoverage(posts.slice(0, 2), days, now).momentumPaused, false);
+});

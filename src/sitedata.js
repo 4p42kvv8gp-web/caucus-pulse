@@ -185,6 +185,26 @@ export function attachRelated({
   return counts;
 }
 
+// How far the classifier has actually reached. Momentum compares the rolling
+// last 24h to the six prior days; when the last 24h holds captured posts but
+// none of them carry topics (the nightly has not run, or could not — the
+// 2026-09-10/11 Anthropic credit outage), every topic reads as a 100%
+// collapse and the leader card crowns a topic with a score of 0. That is a
+// gap in the instrument, not a fact about the caucus, so the dashboard is
+// told to pause momentum instead of showing it.
+export function classificationCoverage(allPosts, days, now = Date.now()) {
+  let through = null;
+  for (const d of days) if (allPosts.some((x) => x.date === d && x.topics?.length)) through = d;
+  let capturedIn24h = 0;
+  let classifiedIn24h = 0;
+  for (const x of allPosts) {
+    if (now - Date.parse(x.createdAt) >= DAY) continue;
+    capturedIn24h++;
+    if (x.topics?.length) classifiedIn24h++;
+  }
+  return { through, capturedIn24h, classifiedIn24h, momentumPaused: capturedIn24h > 0 && classifiedIn24h === 0 };
+}
+
 function zeroScope() {
   return { n: 0, eng: 0, members: new Set() };
 }
@@ -228,6 +248,8 @@ export function buildSiteData() {
     postsByDay.set(date, house);
     allPosts.push(...house);
   }
+  const classification = classificationCoverage(allPosts, days);
+  if (classification.momentumPaused) console.warn(`[sitedata] momentum paused: ${classification.capturedIn24h} post(s) in the last 24h, none classified (topics through ${classification.through || 'never'})`);
 
   // ── topics: per-day, per-scope aggregation ──
   // acc[topicKey][scope] = today/week scopes; trends per day.
@@ -624,6 +646,9 @@ export function buildSiteData() {
     caucusKeys: KEYS,
     caucusNames: Object.fromEntries(Object.entries(settings.caucus_keys).map(([tag, k]) => [k, settings.caucuses[tag]])),
     caucusActive: Object.fromEntries(KEYS.map((k) => [k, activeByCaucus[k].size])),
+    // Classifier reach: the latest day with topics, and whether the rolling
+    // 24h momentum window has any classified posts at all.
+    classification,
     core,
     labels,
     members,
