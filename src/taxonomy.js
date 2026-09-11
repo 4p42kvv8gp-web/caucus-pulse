@@ -76,17 +76,28 @@ export function renderTaxonomy(tax) {
 // thrown away. Three days in the 2026-08/09 corpus carry 0 subtopics across
 // 219, 585 and 273 posts with failedChunks 0, which a per-post rate cannot
 // explain; this counter is what tells the two cases apart on the next run.
-// The prime suspect is a format mismatch: renderTaxonomy prints subtopics as
+// The prime suspect was a format mismatch: renderTaxonomy prints subtopics as
 // `macro/sub` while the response schema asks for a bare `sub-id`, and the
-// lookup below is by bare key, so a response echoing the rendered form loses
-// every subtopic in that chunk.
-export function validAssignments(topics, tax, dropped) {
+// lookup was by bare key, so a response echoing the rendered form lost every
+// subtopic in that chunk. That form is now resolved (the subtopic is kept)
+// and reported through `echoed`, so the next run measures how often the
+// model answers in the rendered form instead of throwing the answer away.
+export function validAssignments(topics, tax, dropped, echoed) {
   const out = [];
   const seen = new Set();
   for (const t of Array.isArray(topics) ? topics : []) {
-    const [macro, sub] = Array.isArray(t) ? t : [t, null];
+    const [macro, rawSub] = Array.isArray(t) ? t : [t, null];
     if (!tax[macro]) continue;
-    const known = sub && tax[macro].subtopics?.[sub];
+    let sub = rawSub == null || rawSub === '' ? null : String(rawSub);
+    let known = sub && tax[macro].subtopics?.[sub];
+    if (sub && !known && sub.startsWith(`${macro}/`)) {
+      const bare = sub.slice(macro.length + 1);
+      if (tax[macro].subtopics?.[bare]) {
+        if (Array.isArray(echoed)) echoed.push(`${macro}\u2192${sub}`);
+        sub = bare;
+        known = true;
+      }
+    }
     if (sub && !known && Array.isArray(dropped)) dropped.push(`${macro}\u2192${sub}`);
     const pair = [macro, known ? sub : null];
     const key = `${pair[0]}/${pair[1] || ''}`;
@@ -118,7 +129,10 @@ ${renderExamples(examples)}
 
 Taxonomy (id: label). A tweet can carry multiple topics. Assign the most
 specific level that fits: use "macro/sub" when a subtopic applies, bare
-"macro" when only the macro level fits.
+"macro" when only the macro level fits. Before you answer ["macro", null]
+for any macro, read that macro's full subtopic list once and confirm none
+of them fits; do not default to null. In the answer, give the subtopic as
+its bare id (the part after the slash).
 
 ${renderTaxonomy(tax)}
 

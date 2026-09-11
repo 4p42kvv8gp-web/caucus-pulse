@@ -1,0 +1,328 @@
+{
+  "key": "anthropic-researcher-resignation",
+  "label": "AI safety → Jacob Coxon resignation (Anthropic) and Hubinger's \">10%\"",
+  "macro": "tech",
+  "kind": "story",
+  "date": "2026-09-09",
+  "window": {
+    "from": "2026-09-09T00:04:29Z",
+    "to": "2026-09-10T07:20:43Z",
+    "note": "from = Coxon's post (snowflake, coverage.json timeline; = Tue 2026-09-08 8:04 PM ET); to = latest evidence file generatedAt (caucus.json). Evidence sub-windows: archive sweep 2026-09-07..10 (caucus.json window.archiveDays); X recent-search sample 2026-09-09T02:23:35Z..2026-09-10T06:59:37Z (x-search.json posts); inbox 2026-09-08..10 (coverage.json method.inbox). Weekday note: the task brief and caucus.json label 2026-09-08 'Monday'; the calendar and Axios AM 9/9 ('It's already Wednesday') make it Tuesday, so caucus.json's 'Tuesday 2026-09-09' is Wednesday."
+  },
+  "generatedAt": "2026-09-10T07:35:00Z",
+  "builtFrom": [
+    "data/narratives/anthropic-researcher-resignation/x-search.json (generatedAt 2026-09-10T07:06:29.746Z)",
+    "data/narratives/anthropic-researcher-resignation/coverage.json (generatedAt 2026-09-10T07:10:00Z)",
+    "data/narratives/anthropic-researcher-resignation/coverage.md",
+    "data/narratives/anthropic-researcher-resignation/caucus.json (generatedAt 2026-09-10T07:20:43.578Z)",
+    "data/narratives/anthropic-researcher-resignation/caucus.md",
+    "data/lists/house-democrats.json (218), congressional-media.json (142), cap-hill-reporters.json (372), house-news.json (199), labor-reporters.json (18)"
+  ],
+  "provenanceClasses": "MEASURED = a number in an evidence file or recomputed from its rows (source named); JUDGED = this card's interpretation; UNVERIFIED = asserted by a source the evidence files could not confirm.",
+  "measured": {
+    "x": {
+      "source": "x-search.json — 8 GET /2/tweets/search/recent pages, max_results 100, newest-first; counts are rate samples inside each page window, NOT story volume (x-search.json method.caveat)",
+      "posts": 743,
+      "originals": 467,
+      "retweets": 276,
+      "byType": { "tweet": 216, "reply": 158, "quote": 93, "retweet": 276 },
+      "overlapAcrossQueries": 50,
+      "uniqueAuthors": 610,
+      "sampleSpan": "2026-09-09T02:23:35Z..2026-09-10T06:59:37Z",
+      "byAccountType": {
+        "rule": "x-search.json method.accountTypeRule: caucus-member = authorId in data/authors.json or on List house-democrats; reporter = on any of congressional-media, cap-hill-reporters, house-news, labor-reporters; other = everything else (no user expansions bought)",
+        "postAuthors": { "other": 742, "caucus-member": 1, "reporter": 0 },
+        "postAuthorsOriginals": { "other": 466, "caucus-member": 1, "reporter": 0 },
+        "caucusMemberAuthoredPost": "@RoKhanna 2097888523562913941 (290 likes / 64 RTs / 12,783 impressions)",
+        "retweetTargets": { "other": 234, "caucus-member": 42, "reporter": 0 },
+        "caucusHandlesCarriedViaRetweet": {
+          "@RepCasar": { "retweetsSeenInSample": 27, "retweetCountOnOriginal": 1068, "originalId": "2097685220442923030" },
+          "@RepYassAnsari": { "retweetsSeenInSample": 15, "retweetCountOnOriginal": 407, "originalId": "2097721236839162155" }
+        },
+        "postsWithResolvedHandle": 126,
+        "postsWithoutResolvedHandle": 617,
+        "note": "83% of sampled posts have no resolved handle by design (949 roster users + one 42-user lookup; no expansions). 'other 99.9%' is therefore an upper bound on non-roster authorship, not a measurement of who they are."
+      },
+      "retweetShare": {
+        "allSampledPosts": 0.371,
+        "retweetInclusiveQueriesOnly": 0.696,
+        "note": "allSampledPosts is depressed by the three -is:retweet queries; retweetInclusiveQueriesOnly (queries 1,3,4,5) is the honest RT share of the live stream (x-search.json retweetShare.note). Pre-crime query: 94 of 100 posts were RTs of four originals (42 / 28 / 22 / 2 by refId; x-search.json's framing note says three)."
+      },
+      "topCarriers": [
+        { "handle": "@JordanSchachtel", "type": "other", "posts": 1, "engagement": 16362, "engagementBasis": "likes 14,518 + RTs 1,844 on original 2097806624895254818; 773,450 impressions; 297,042 followers; also 7 RTs of it seen", "frame": "coordinated-op (JUDGED)", "role": "commentator, online right (JUDGED)" },
+        { "handle": "@GlobeEyeNews", "type": "other", "posts": 6, "engagement": 7316, "engagementBasis": "retweet_count on the retweeted original (6 RTs seen in sample)", "frame": "insider-alarm (JUDGED)", "role": "news aggregator account (JUDGED)" },
+        { "handle": "@Polymarket", "type": "other", "posts": 3, "engagement": 4309, "engagementBasis": "retweet_count on the retweeted original (3 RTs seen)", "frame": "insider-alarm / prediction-market (JUDGED)", "role": "prediction market (JUDGED)" },
+        { "handle": "@fdbedout", "type": "other", "posts": 1, "engagement": 4587, "engagementBasis": "likes 3,450 + RTs 1,137 on 2097511940302021084; 362,505 impressions; 2,507,175 followers; Spanish", "frame": "insider-alarm (JUDGED)", "role": "Univision anchor (JUDGED)" },
+        { "handle": "@MorePerfectUS", "type": "other", "posts": 28, "engagement": 2866, "engagementBasis": "retweet_count on original 2097675318978842764 (28 RTs seen)", "frame": "pre-crime-surveillance (JUDGED)", "role": "progressive advocacy account; the post Rep. Castro retweeted (JUDGED)" },
+        { "handle": "@AC360", "type": "other", "posts": 26, "engagement": 1943, "engagementBasis": "retweet_count on the retweeted original (26 RTs seen)", "frame": "insider-alarm (JUDGED)", "role": "CNN Anderson Cooper 360 — Coxon interviewed (text of RT)" },
+        { "handle": "@FoxNews", "type": "other", "posts": 10, "engagement": 1476, "engagementBasis": "retweet_count on the retweeted original (10 RTs seen)", "frame": "insider-alarm (JUDGED)", "role": "cable news" },
+        { "handle": "@DRBoguslaw", "type": "other", "posts": 42, "engagement": 1411, "engagementBasis": "retweet_count on the retweeted original (42 RTs seen — the largest RT source in the sample)", "frame": "pre-crime-surveillance (JUDGED)", "role": "American Prospect author of the surveillance story" },
+        { "handle": "@RepCasar", "type": "caucus-member", "posts": 27, "engagement": 1068, "engagementBasis": "retweet_count on original 2097685220442923030 (27 RTs seen in one 5-minute page); archive capture 6,991 likes / 1,033 RTs", "frame": "congress-must-act / hearings-oversight (JUDGED)", "role": "House Democrat (house-democrats List)" },
+        { "handle": "@RBReich", "type": "other", "posts": 11, "engagement": 501, "engagementBasis": "retweet_count on the retweeted original (11 RTs seen)", "frame": "insider-alarm + corporate-greed (JUDGED)", "role": "commentator, left" },
+        { "handle": "@AFpost", "type": "other", "posts": 1, "engagement": 851, "engagementBasis": "likes 788 + RTs 63 on 2097835603962282442; 508,651 followers", "frame": "coordinated-op, names Ro Khanna (JUDGED)", "role": "aggregator, online right (JUDGED)" },
+        { "handle": "@RepYassAnsari", "type": "caucus-member", "posts": 15, "engagement": 407, "engagementBasis": "retweet_count on original 2097721236839162155 (15 RTs seen); archive capture 2,130 likes / 396 RTs", "frame": "existential-risk / hubinger-confirms (JUDGED)", "role": "House Democrat (house-democrats List)" },
+        { "handle": "@brianchau57", "type": "other", "posts": 8, "engagement": 372, "engagementBasis": "retweet_count on the retweeted original (8 RTs seen)", "frame": "coordinated-op ('Newspeak' NGO thread) (JUDGED)", "role": "commentator, tech right (JUDGED)" },
+        { "handle": "@RoKhanna", "type": "caucus-member", "posts": 1, "engagement": 354, "engagementBasis": "likes 290 + RTs 64 on 2097888523562913941; the only caucus-authored post in the sample", "frame": "congress-must-act (keep Congress in session) (JUDGED)", "role": "House Democrat (personal account; not on house-democrats List, resolved via data/authors.json)" },
+        { "handle": "@yashar", "type": "other", "posts": 13, "engagement": 163, "engagementBasis": "retweet_count on the retweeted original (13 RTs seen); a separate @yashar summary (2097542341670359082) carried 2,398 RTs at capture in the archive (Min's RT, data/archive/2026-09-09.jsonl:489)", "frame": "insider-alarm (JUDGED)", "role": "reporter (not on any of the five Hill Lists)" },
+        { "handle": "@NewsHour", "type": "other", "posts": 1, "engagement": 228, "engagementBasis": "likes 157 + RTs 71 on 2097799382900851148; 1,220,293 followers", "frame": "insider-alarm (JUDGED)", "role": "PBS News" },
+        { "handle": "@daniel_271828", "type": "other", "posts": 4, "engagement": 187, "engagementBasis": "likes 176 + RTs 11 across 4 originals incl. tracker thread 2097866883307602163 and count post 2097892665337753874", "frame": "congress-must-act (tracker of member posts) (JUDGED)", "role": "AI-safety community tracker (JUDGED)" },
+        { "handle": "@grok", "type": "other", "posts": 64, "engagement": 0, "engagementBasis": "64 replies = 13.7% of sampled originals; 0 likes/RTs", "frame": "none — users asking Grok to fact-check Coxon", "role": "assistant account; noise to filter (x-search.json framings.crossCutting)" }
+      ],
+      "hourlyPeak": {
+        "peakMeasuredRate": { "postsPerMinute": 18.33, "posts": 99, "spanMinutes": 5.4, "window": "2026-09-10T06:54:11Z..06:59:35Z (Thu 2:54–2:59 AM ET)", "query": "Coxon Anthropic", "retweets": 92, "uniqueAuthors": 93 },
+        "peakSampledHourET": { "hour": "2026-09-10T02", "posts": 348, "originals": 137, "note": "the hour most page windows fell in; not a volume measurement (x-search.json hourlyNote)" },
+        "originalsOnlyRates": [
+          { "window": "2026-09-09T02:23:35Z..02:59:45Z (Tue 10:23–10:59 PM ET, 2h20m after the post)", "postsPerMinute": 2.68, "posts": 97, "query": "Coxon -is:retweet" },
+          { "window": "2026-09-09T20:56:30Z..21:59:26Z (Wed 4:56–5:59 PM ET)", "postsPerMinute": 1.59, "posts": 100, "query": "(Coxon OR Hubinger) Anthropic -is:retweet" },
+          { "window": "2026-09-10T05:49:46Z..06:59:37Z (Thu 1:49–2:59 AM ET)", "postsPerMinute": 1.42, "posts": 99, "query": "Anthropic (resign OR resigns OR resigned OR resignation OR quits OR quit) -is:retweet" }
+        ],
+        "caveat": "Recent search is newest-first and a 100-post page spans minutes for this story; total volume and a true hourly curve are not measurable from these pages. A counts endpoint or start/end-time slicing is needed (x-search.json method.caveat)."
+      },
+      "concentration": {
+        "rule": "docs/NARRATIVE_INTELLIGENCE.md §2.3 'manufactured?' flag: top-5 accounts ≥50% of sampled originals, or originals share <25%, or an assistant/bot account is a top-3 carrier",
+        "distinctOriginalAuthors": 348,
+        "top5AuthorShareOfOriginals": 0.18,
+        "top5AuthorShareOfOriginalsExcludingGrok": 0.057,
+        "assistantShareOfOriginals": 0.137,
+        "originalsShareOfSample": 0.629,
+        "replyShareOfOriginals": 0.338,
+        "quoteShareOfOriginals": 0.199,
+        "flag": "not tripped on concentration (18.0% ≪ 50%); @grok IS the top author by post count (64 of 467 originals), which the rule counts as a top-3 assistant carrier — treat as a filtering artifact, not manufacture (recomputed from x-search.json posts[] by authorId)"
+      },
+      "nonEnglishShare": 0.194,
+      "nonEnglishPosts": 144,
+      "languages": 21,
+      "byLangTop": { "en": 599, "es": 49, "fr": 23, "zh": 14, "th": 12, "ja": 9, "it": 9 },
+      "mostReferencedIds": [
+        { "id": "2097476196791709843", "references": 56, "byType": { "quote": 44, "reply": 12 }, "identity": "Coxon's resignation post (opening line verbatim via @DaveMinCA's RT, data/archive/2026-09-09.jsonl:490; time 2026-09-09T00:04:29Z)" },
+        { "id": "2097640353352258017", "references": 43, "byType": { "retweet": 42, "quote": 1 }, "identity": "@DRBoguslaw pre-crime post (RT prefix)" },
+        { "id": "2097675318978842764", "references": 28, "byType": { "retweet": 28 }, "identity": "@MorePerfectUS pre-crime post (RT prefix; Castro's RT target)" },
+        { "id": "2097685220442923030", "references": 28, "byType": { "retweet": 27, "reply": 1 }, "identity": "@RepCasar (archive data/archive/2026-09-09.jsonl:513)" },
+        { "id": "2097721236839162155", "references": 17, "byType": { "retweet": 15, "quote": 2 }, "identity": "@RepYassAnsari (archive data/archive/2026-09-09.jsonl:30)" }
+      ]
+    },
+    "caucus": {
+      "source": "caucus.json — data/archive/2026-09-07..10.jsonl swept by keyword, regex and refId; each hit read and tiered by hand; engagement = metricsAtCapture at 2026-09-10T05:26–05:59Z (retweet rows excluded from sums)",
+      "posts": 34,
+      "originals": 23,
+      "retweets": 11,
+      "byType": { "quote": 19, "tweet": 4, "retweet": 11 },
+      "members": 21,
+      "houseMembers": 20,
+      "senateMembers": 1,
+      "accounts": 26,
+      "membersList": ["Becca Balint", "Bill Foster", "Christopher R. Deluzio", "Dave Min", "Delia C. Ramirez", "Donald S. Beyer, Jr.", "Greg Casar", "Greg Landsman", "Jennifer L. McClellan", "Jesús G. \"Chuy\" García", "Joaquin Castro", "Kelly Morrison", "Lori Trahan", "Patrick Ryan", "Pramila Jayapal", "Ro Khanna", "Ruben Gallego (Sen.)", "Sara Jacobs", "Seth Magaziner", "Ted Lieu", "Yassamin Ansari"],
+      "byAccountType": { "official": 19, "personal": 15 },
+      "byStatus": { "house": 30, "senate": 4 },
+      "byDay": { "2026-09-08": { "posts": 1, "originals": 1, "members": 1 }, "2026-09-09": { "posts": 33, "originals": 22, "retweets": 11, "accounts": 26, "members": 21 } },
+      "shareOfDay_2026-09-09": { "corePosts": 33, "dayPosts": 625, "sharePosts": 0.0528, "coreOriginals": 22, "dayOriginals": 532, "shareOriginals": 0.0414, "coreMembers": 21, "dayMembersPosting": 186, "shareMembers": 0.1129 },
+      "byCaucus": {
+        "progressive": { "posts": 24, "originals": 17, "accounts": 18, "members": 15 },
+        "newdem": { "posts": 11, "originals": 9, "accounts": 11, "members": 10 },
+        "capac": { "posts": 11, "originals": 7, "accounts": 6, "members": 4 },
+        "chc": { "posts": 5, "originals": 4, "accounts": 5, "members": 5 },
+        "leadership": { "posts": 5, "originals": 3, "accounts": 3, "members": 2 },
+        "cbc": { "posts": 1, "originals": 1, "accounts": 1, "members": 1 },
+        "(none)": { "posts": 4, "originals": 1, "accounts": 2, "members": 1, "note": "Sen. Gallego" }
+      },
+      "byFraming": {
+        "taxonomy": ["existential-risk", "hearings-oversight", "regulation-plan", "surveillance-pre-crime", "labor-economy", "other"],
+        "primary": { "regulation-plan": 13, "existential-risk": 10, "hearings-oversight": 10, "surveillance-pre-crime": 1 },
+        "primaryOriginals": { "regulation-plan": 11, "hearings-oversight": 7, "existential-risk": 5 },
+        "anyMention": { "regulation-plan": 19, "existential-risk": 19, "hearings-oversight": 11, "other": 5, "surveillance-pre-crime": 1, "labor-economy": 1 },
+        "note": "framing assignments are JUDGED in caucus.json; the counts of those assignments are MEASURED"
+      },
+      "timing": {
+        "first": "Ted Lieu @tedlieu 2026-09-09T02:56:07Z (Tue 10:56 PM ET), 2h52m after Coxon's post — data/archive/2026-09-08.jsonl:170",
+        "firstOn0909": "Sen. Gallego RT of @hadip 01:27 ET; first original Lori Trahan 07:01 ET (11:01Z), one minute after Rep. Luna (R-FL) 11:00Z per coverage.json",
+        "last": "Ro Khanna 23:22 ET (2026-09-10T03:22:55Z)",
+        "bursts": "09:00–10:59 ET (9 posts, 6 originals) and 16:00–19:59 ET (12 posts, 9 originals); nothing 15:00–16:39 ET",
+        "peakHoursET": [ { "hour": "09", "posts": 5, "originals": 2 }, { "hour": "18", "posts": 5, "originals": 3 } ]
+      },
+      "engagement": {
+        "originalsSumLikesRtsRepliesQuotes": 34427,
+        "top": [
+          { "handle": "@tedlieu", "id": "2097519390480891976", "likes": 8007, "retweets": 1437 },
+          { "handle": "@RepCasar", "id": "2097685220442923030", "likes": 6991, "retweets": 1033 },
+          { "handle": "@RoKhanna", "id": "2097754129489596612", "likes": 2225, "retweets": 570 },
+          { "handle": "@RepYassAnsari", "id": "2097721236839162155", "likes": 2130, "retweets": 396 },
+          { "handle": "@RepTedLieu", "id": "2097730021733400740", "likes": 1276, "retweets": 177 },
+          { "handle": "@PatRyanUC", "id": "2097675180231319915", "likes": 961, "retweets": 209 },
+          { "handle": "@RepLoriTrahan", "id": "2097641446983528943", "likes": 897, "retweets": 110 },
+          { "handle": "@RepDonBeyer", "id": "2097728914906869764", "likes": 734, "retweets": 144 }
+        ],
+        "top2ShareOfOriginalsEngagement": 0.53,
+        "originalsUnder200Likes": 9,
+        "quotesOrRetweetsOfCoxonPost": 14
+      },
+      "classifierCoverage": {
+        "model": "claude-opus-5 (data/topics/2026-09-09.json)",
+        "classified": 33,
+        "unclassified": 1,
+        "unclassifiedPost": "2097641446983528943 @RepLoriTrahan (897 likes; names FRONTIER bill) — the only unclassified post of 2026-09-09",
+        "bareTech": 28,
+        "techAiPolicy": 5,
+        "emergingClusters": 0,
+        "storiesJsonCandidates": 0,
+        "contextJsonHits": 0,
+        "incidentsJsonHits": 0,
+        "reportMentions": 0,
+        "techMacroRankOn0909": "8 of 15 (26 posts + 10 RTs, 25 members) — data/rollups/topic-days.json",
+        "captureLag": "every 2026-09-09 post capturedAt 2026-09-10T05:26–05:59Z (backfill): the corpus had none of the day's posts until ~01:30 ET 9/10",
+        "truncatedOriginals": 11
+      },
+      "adjacentSameCycle": 8,
+      "precursors": 3
+    },
+    "press": {
+      "source": "coverage.json — web search/fetch + 29 inbox newsletter editions read in PLAIN_TEXT; blocked domains read via titles, syndications or inbox copies",
+      "outlets": 52,
+      "outletRowsCatalogued": 63,
+      "newslettersExamined": 29,
+      "newslettersMentioning": 17,
+      "ledInHowMany": 4,
+      "ledBy": ["Politico Pro alert 'AI insiders say their technology could doom humanity. Will Congress act?' (alert@email.politicopro.com, thread 1a088b3f5c896912)", "Politico California Playbook PM 'Arnold tried to warn you' (thread 1a087e260074ee19)", "Semafor Flagship 'From the fringe to the mainstream' (thread 1a0859aa3c05d26d)", "Axios alert 'Anthropic researcher... excessive paranoia' (thread 1a08879cc9427351)"],
+      "ranAsItem2": ["Axios AM 'Trump, alone' (thread 1a0859e5c4d32e02; 'Presented by Anthropic')", "Politico Playbook PM (thread 1a0873636d174e10; sponsor Anthropic)"],
+      "silent": 12,
+      "silentNamed": ["Politico Playbook AM 9/9 (thread 1a085ba7c6cfe34c; sponsor Anthropic)", "Punchbowl News AM 9/9 (thread 1a0856fc6c019d72)", "Politico Morning Tech 9/9 (led with UK ASI-ban bill instead)", "NYT The Morning 9/9", "Politico Morning Cybersecurity", "Politico Pro Influence", "Politico Pro midterms analysis", "NYT The World 9/10", "Puck Hidden Layer 9/8 (73 min before the thread)", "Puck Courant 9/9", "Semafor Flagship 9/10 (Anthropic UK item, no Coxon)", "Politico Pro alert 'House Democrats weigh AI select committee' (thread 1a0874a8c947004b; led its own story but does not name Coxon — the 12th non-mention by elimination: coverage.json lists 29 editions, 17 mentions and 11 named absences; Semafor Washington DC's PDB bullet does mention the resignation)"],
+      "wireAndNational": ["AP (Huamani/Keaten; syndicated to MPR, NBC stations, PBS, ABC7, KRCG, ClickOnDetroit, Press Democrat)", "Washington Post (title/slug only, 403)", "WSJ exclusive (pre-arranged per timing)", "Bloomberg", "TIME (direct interview)", "CBS", "NBC News", "NPR (503)", "CNN Business (451)", "CNBC (403)", "Democracy Now!", "Yahoo/Deadline", "Yahoo Finance/Moneywise", "TechCrunch", "Axios x4", "Forbes x3", "Newsweek x2", "The Hill", "HuffPost x2", "Common Dreams x3", "New Republic", "Slate", "Futurism", "Mediaite", "MS NOW", "Semafor", "Euronews", "AFP", "IBTimes UK", "American Prospect (surveillance)"],
+      "tvSegmentsSeenInXSample": ["CNN AC360 (@AC360 RT: Coxon 'tells Anderson')", "Fox News (@FoxNews RT)", "PBS NewsHour (@NewsHour post)", "ABC The View (Cruz; coverage.json)"],
+      "hillListReporters": {
+        "authoredInXSample": 0,
+        "retweetedInXSample": 0,
+        "inCaucusCorpus": [
+          { "handle": "@igorbobic", "lists": ["cap-hill-reporters", "house-news"], "followers": 158845, "post": "2097818430032257216 'News: Democrats are gearing up for action on AI — Rep. Robert Garcia... investigations'", "retweetedBy": "@RubenGallego 18:57 ET (data/archive/2026-09-09.jsonl:380)" },
+          { "handle": "@politico", "lists": [], "post": "2097684240356049178 'Lawmakers urge Congress to act after AI researcher's dire warning'", "retweetedBy": "@tedlieu 14:01 ET (data/archive/2026-09-09.jsonl:110)" }
+        ],
+        "note": "the five Hill Lists (949 accounts) do not contain the accounts that carried this story on X (@AC360, @FoxNews, @NewsHour, @yashar, @washingtonsun, @fdbedout are on none of them — checked against data/lists/*.json)"
+      },
+      "membersOfCongressReacting": {
+        "trackerClaim": 26,
+        "trackerStricterCount": 20,
+        "distinctNamesInTrackerThread": 24,
+        "confirmedByOutletOrSnippet": 14,
+        "republicans": ["Luna (first member to post, 11:00:08Z)", "Cruz", "Moran", "Davidson (UNVERIFIED post)"],
+        "democratsConfirmedInArchive": 21,
+        "unionOfConfirmedNames": 33,
+        "unionNote": "recomputed here: 21 archive members (caucus.json) + Sanders, Murphy, Van Hollen, Klobuchar (statement), Gottheimer (interview; his X post is about the Stop Rogue AI Act), Liccardo, R. Garcia, Cruz, Luna, Moran, Lawler, Roy from coverage.json political_responses (status confirmed). 'Reaction' definitions differ across sources; treat as ≥, not =."
+      },
+      "viewsReported": "~76M overnight (Deadline/Yahoo) / 100M+ by 9/9 afternoon (AP/PBS, Axios alert) — outlet-reported; outlets mix views and reach. coverage.json's '70M+ (TechCrunch)' is not in the TechCrunch article text as fetched 9/10 (UNVERIFIED)",
+      "officialAnthropicStatements": 0,
+      "noCommentRecordedBy": 8,
+      "whiteHouseStatementsOnCoxon": 0,
+      "politicoMisnaming": "'Jason Coxon' in CA Playbook PM and NatSec Daily (matters for keyword recall)"
+    }
+  },
+  "judged": {
+    "breakthrough": {
+      "score": 78,
+      "scale": "0 = confined to a niche; 50 = a Beltway/press story members can ignore; 100 = the dominant national story every office must have a position on",
+      "rationale": "JUDGED. Up: AP wire plus 52 outlets in one day; four newsletters led with it and Axios AM/Playbook PM ran it second; national TV (CNN AC360 interview, Fox, PBS, Cruz on The View); 100M+ reported views; 24–26 members of Congress within 24h including the Senate Commerce chair; 21 caucus members = 11.3% of the members who posted on 9/9; a live X rate of 18.33 posts/min at 3 AM ET two nights later; 19.4% non-English relay; parody copypasta and a memecoin, which signal saturation. Down: it was not the Beltway lead — Politico Playbook AM and Punchbowl AM 9/9 ignored it and the Dallas convention led most tip sheets; Jeffries, Johnson and Thune are all silent; no White House response; no Anthropic statement; tech ranked only 8 of 15 macros in the caucus's own day; no second-day decay or growth has been measured (recent-search pages cannot measure volume). Score would rise past 85 if leadership or the White House engages or a hearing is scheduled; it would fall below 60 if the 9/10 rate is measured well under the 9/8–9/9 originals-only rates (2.68 and 1.59/min) and no member posts on 9/10.",
+      "ruleStatus": "'breaking-through' in the spirit of docs/NARRATIVE_INTELLIGENCE.md §2.3 — present in press (17 newsletter hits, 52 articles), organic (sampled stream) and gop (4 Republican members) — but the rule's organic lift vs a control query could not be computed (no counts endpoint used; x-search.json method.caveat)",
+      "manufacturedFlag": "not tripped on concentration (top-5 authors 18.0% of sampled originals, 5.7% excluding @grok; originals share 62.9%); the 'coordinated op' claim is a frame in the stream, not a finding of this card"
+    },
+    "leadingFraming": {
+      "caucus": "regulation-plan by primary (13 of 34; 11 of 23 originals), with existential-risk tied at 19 of 34 by any mention: members quote the warning and pivot to their own remedy in the same post (caucus.json judged.leadingFraming.reading).",
+      "wideStream": "insider-alarm ('gambling with our lives' / 'could kill us all by the end of the decade') is dominant across news, wire-style and non-English accounts; hubinger-confirms is its amplifier. The single most-engaged original in the sample carries the opposite frame, coordinated-op (@JordanSchachtel 14,518 likes).",
+      "press": "two parallel stories — existential-risk/whistleblower (general, progressive, international) and Congress-can't-act (Politico Pro, Forecast, HuffPost, Washington Sun); business press fused it with Anthropic's IPO/ratings narrative (coverage.json measured_vs_judged.judged[0]).",
+      "frames": [
+        { "key": "insider-alarm", "who": "wire/news accounts, non-English relay, AC360/Fox/PBS", "example": "2097517512875487325 @moneycontrolcom: 'Anthropic researcher resigns, warns AI labs are gambling with our lives'" },
+        { "key": "hubinger-confirms", "who": "news accounts; Ansari; Gallego/Ansari RTs of @hadip", "example": "2097799204659749128: 'An Anthropic AI safety researcher believes there is a greater than 10% chance that AI could kill all humans'" },
+        { "key": "coordinated-op", "who": "online right/tech right (@JordanSchachtel, @AFpost, @brianchau57, @crystalwizard x7, @shelley_alt)", "example": "2097806624895254818 @JordanSchachtel: 'a grand total of six weeks... highly coordinated op through doomer mega donors'" },
+        { "key": "regulatory-capture", "who": "libertarian-tech and some left accounts; often names Khanna", "example": "2097885041301065793: 'My AI model is so dangerous, please regulate my competitors'; 2097833448799084843: 'regulatory capture scheme... While Ro Khanna picks winners'" },
+        { "key": "congress-must-act", "who": "House Democrats via RT waves of Casar/Ansari, Khanna quotes, @washingtonsun, @daniel_271828 tracker", "example": "2097888523562913941 @RoKhanna: Speaker Johnson 'has a moral and practical duty to keep Congress in session'" },
+        { "key": "pre-crime-surveillance", "who": "@DRBoguslaw/@MorePerfectUS RT waves; Rep. Castro (one RT); Common Dreams", "example": "2097942737815253477 RT @DRBoguslaw: 'Anthropic Is building A Pre-Crime system to monitor activists and protesters'" },
+        { "key": "parody-copypasta", "who": "unrelated accounts", "example": "2097931429715829098: 'I resigned from Anthropic today. Not because of AI...'" },
+        { "key": "china-race", "who": "replies to members; Bessent 9/8 pre-positioned it", "example": "2097930173459157434 reply to @RepCasar: 'And then China reaches superintelligence first'" }
+      ]
+    },
+    "caucusPosture": "JUDGED. Fast (first original 07:01 ET, one minute behind a Republican), broad (21 members across Progressive 15, New Dem 10, CAPAC 4, CHC 5, CBC 1) and top-heavy (Lieu + Casar = 53% of originals' engagement; 9 of 23 originals under 200 likes). It is an emergency-plus-remedy posture with no shared remedy: nine different asks (Casar/Sanders ban; Lieu/Moran Kill Switch; Trahan/Obernolte FRONTIER; Khanna federal agency + 5 points; Gallego Senate select committee; Morrison cancel recess; Foster physical containment; García ban + data-center pause; Ryan emergency hearings), none echoed by a second member. The only shared language is a phrase ('the call is coming from inside the house' — Trahan, Morrison) and a rhythm ('pump the brakes' / 'heads in the sand' — Deluzio, Balint). The hearings/oversight ask is the remedy most members converge on (Casar, Ryan, Morrison, McClellan, Ramirez, Gallego, Khanna, Lieu's RT of Politico) and the one the Beltway press is already running (Politico Pro select-committee scoop; Washington Sun/Igor Bobic on Robert Garcia). Leadership is present only as Lieu/Trahan (leadership-tagged members posting their own bills) and as Jeffries briefed and having 'expressed openness' in Politico Pro — no Leader-level line exists. The intra-Democratic ban-vs-guardrails split (Sanders/Casar/Jayapal/Ansari/García vs Gottheimer/Trahan/Lieu/Beyer/Liccardo) was framed by Politico Pro within 24h. The surveillance/pre-crime angle the owner flagged reached the caucus once (Castro RT) and did not spread.",
+    "gopCounterMessage": {
+      "present": true,
+      "what": "JUDGED, two layers. (1) Elected Republicans did not rebut; they co-signed with a China condition and a no-ban condition: Cruz on The View 'highly concerning... I'd rather they be American killer robots than Chinese killer robots' (Politico Pro; TMZ; @SenTedCruz 2097727324011536877); Luna first member to post, special session (@RepLuna 2097641199196684682); Moran 'a priority in the next Congress' (Politico Pro; his X post 'innovation and safety are not mutually exclusive' is tracker-only, UNVERIFIED); Lawler 'broad consensus... they want a regulatory framework'; Chip Roy 'can't just go in and say government's got the solution — they're just going to ban it all... some friggin' leadership'; DeSantis/Uthmeier 'Frankenstein'. Johnson and Thune spokespeople silent; no markup; Senate Commerce has no AI hearings scheduled for four months. (2) The administration's operative line predates the thread: Bessent 9/8 'We can't pause... the Chinese won't pause. Even the North Koreans' (Breitbart); no White House statement on Coxon; Politico's Mak: WH 'really does not like Anthropic... woke'. (3) The real counter-message is in online-right/tech-right accounts and it is the most-engaged post in the sample: 'six weeks at Anthropic, socials appeared yesterday, coordinated op through doomer mega donors and the corporate media' (@JordanSchachtel 14,518 likes) and 'reposted by AI-safetyist foundations tied to Dustin Moskowitz... Ro Khanna' (@AFpost), plus 'regulatory capture / IPO marketing' and 'China wins if we pause'. The Sacks 'regulatory capture... fear-mongering' quote in circulation is from 2025-10-14, not this week (coverage.json claim, snowflake-dated).",
+      "lagHours": "first Republican member post 10h56m after the thread (Luna 11:00:08Z); Cruz 16:42Z; no administration response by 07:00Z 9/10",
+      "sampleCaveat": "no house-gop List capture exists yet (docs/NARRATIVE_INTELLIGENCE.md §2.1 plans one); GOP posts here come from coverage.json (outlets + tracker ids) and from replies in the X sample"
+    },
+    "risksForDems": [
+      "Fragmented remedy menu: nine asks, no bill echoed twice; Politico Forecast already quotes Brugger that House Dems are 'talking a big game' — an easy 'they can't agree on what to do' line for the other side (caucus.json judged.shape[3]; coverage.json Forecast row).",
+      "The intra-Democratic ban-vs-guardrails split is on the record within 24h (Gottheimer on Sanders: 'not living in reality'; Jayapal 'push out the executives' vs Beyer 'bills are being written') and Politico Pro has framed it (coverage.json measured_vs_judged.judged[1]).",
+      "Messenger risk: the most-engaged post in the sample attacks Coxon's biography ('six weeks', 'socials appeared yesterday') and ties the Democratic response to a donor operation naming Khanna; the WSJ pre-arrangement is timing-supported (13-minute gap) and Coxon's tenure is inconsistent across sources (IBTimes 'OpenAI until July 2026' vs Axios 'four months at Anthropic' vs Schachtel 'six weeks'). 13 of 34 caucus posts quote Coxon's post directly and one retweets it (14 references, caucus.json sourcesReferenced).",
+      "Anthropic proximity: 'Presented by Anthropic' on Playbook AM/PM and Axios AM this week, Amodei as a Public First PAC donor, and Anthropic's own pro-restriction moves (quit ITI over China-chip bills) let the 'regulatory capture' frame attach to any Democrat carrying the company's safety line (coverage.json anthropic_response.same_cycle_corporate_actions).",
+      "China framing: every pause/ban ask draws 'unilateral disarmament' (replies to Casar in the sample; Bessent 9/8; Cruz 'American killer robots'); the ban camp is most exposed.",
+      "The Prospect 'pre-crime' story is a separate Anthropic-negative thread with progressive uptake (Castro RT; 70 of 276 sampled RTs are its two originals) that can tangle 'regulate frontier AI' with 'Anthropic surveils activists' inside the coalition (caucus.json judged.shape[6]).",
+      "Public salience may be thinner than the volume suggests: Third Way poll via Politico CA Decoded — only 35% 'very concerned' about AI's pace (reported, not read here); parody copypasta in the sample signals fatigue as much as reach.",
+      "The office's own pipeline was blind: 28 of 34 caucus posts filed as bare 'tech', no story candidate, no report line, and no 9/9 posts captured until ~01:30 ET 9/10 (caucus.json problems[0..5])."
+    ],
+    "opportunitiesForDems": [
+      "A hearings/oversight ask is the one remedy most members already share and Republicans have co-signed in principle (Luna special session; Cruz 'highly concerning'; Lawler 'broad consensus'); Republican leadership's silence and 'no AI hearings for four months' is a measured contrast (coverage.json political_responses).",
+      "The select-committee track already has leadership traction (Jeffries briefed and 'expressed openness'; Lieu/Foster leading; Gallego's Senate letter; Robert Garcia's Oversight pledge) and is the frame Politico Pro and Washington Sun are running — the Beltway press is asking 'will Congress act?', which is the caucus's question.",
+      "Two bipartisan bills are already in members' mouths (Lieu/Moran AI Kill Switch — the largest caucus post at 8,007 likes; Trahan/Obernolte FRONTIER) — a 'name the bipartisan bill Johnson won't schedule' line does not require settling ban-vs-guardrails.",
+      "The company's own people, still employed, endorsed the number (Hubinger >10%, Marks 'the more senior the employee, the more concerned') and both labs disclosed summer breakouts — arguments that do not depend on Coxon's biography.",
+      "The story has crossed to general-audience and non-English audiences (AC360, Fox, PBS, Univision's @fdbedout 3,450 likes; 19.4% non-English in the sample), and shared language exists ('the call is coming from inside the house')."
+    ],
+    "whatToWatchNext": [
+      "Whether Jeffries or the Leader's office takes a position (select committee, hearings) — Politico Pro has him briefed and having 'expressed openness', with spokespeople not responding to requests for comment.",
+      "Whether the 'coordinated op / Khanna' line moves from @JordanSchachtel/@AFpost to an elected Republican or the White House — a genuine Sacks post about Coxon would be the tell (none as of 07:00Z 9/10; the circulating quote is from 2025).",
+      "Any Anthropic statement, and whether mainstream outlets merge the Prospect surveillance story with the resignation (not merged as of 9/10 07Z).",
+      "Congress's return next week (Khanna: 'when members return to Washington next week'): hearing requests, the Sanders/Casar bill's actual introduction, Cruz's catastrophic-risk bill with Thune-Klobuchar, Lieu/Foster select-committee planning.",
+      "Second-day decay: re-run the same three originals-only queries at fixed windows to compare against 2.68/min (Tue 10–11 PM ET) and 1.59/min (Wed 5–6 PM ET); or use a counts endpoint.",
+      "Coxon's next moves (TIME: AI Futures Project; Axios interview) and resolution of the tenure inconsistency; whether Hubinger/Marks say more.",
+      "Whether Republican engagement stays China-conditioned or produces legislation; whether Playbook AM/Punchbowl AM pick it up on 9/10."
+    ]
+  },
+  "unverified": [
+    "Khanna's five-point plan beyond point 1 ('Establish a federal agency like we have for...'): the archive stores 280 chars (data/archive/2026-09-09.jsonl:137) and no outlet quoted the plan; points 2–5 come only from the unofficial tracker congresscoxon.netlify.app (coverage.json claims[10]).",
+    "Coxon's thread text beyond its opening paragraph: reconstructed from outlets (MS NOW, Futurism, Euronews, TechCrunch, Common Dreams), never read verbatim on X; the opening line is verbatim in the archive via @DaveMinCA's RT.",
+    "Identity of 2097476203863224394 (quoted by Khanna and Gallego): coverage.json calls it Coxon's thread #2 (1 second after #1); caucus.json says the two members quote it 'as the Hubinger >10% line'. Not read on X; Axios AM (thread 1a0859e5c4d32e02) hyperlinks the 'people building AI earnestly believe...' quote to x.com/hilbertspaess/status/2097476203863224394, which supports the thread-#2 reading.",
+    "What 2097474365163999402 shows (posted 2026-09-08T23:57:12Z, 7 minutes before Coxon; quoted by @tedlieu as 'exhibit number 739') — not in the corpus, no lookup bought; Lieu's 8,007-like post is tied to the story by timing and wording only.",
+    "Rep. Min's official post (@CongressMin 2097690443358073241, 'Trump is focused on picking out the wallpaper') and Rep. Jacobs' post are linked to the story by timing/wording, not an explicit reference; Min's two RTs of Coxon and @yashar are explicit.",
+    "The tracker's '24 sitting members of Congress (including 8 senators)' / '26' — a third party's count (2097892665337753874); this card confirms 21 Democrats in the archive and a union of 33 confirmed names by combining coverage.json and caucus.json, with differing definitions of 'reaction'.",
+    "Total X volume and 100M+ views: no counts endpoint was used; recent-search pages are rate samples; the views figures are outlet-reported and mix views with reach; the '70M+ (TechCrunch)' figure in coverage.json is not in the TechCrunch article text as fetched 9/10.",
+    "Coxon's tenure: IBTimes 'OpenAI until July 2026' vs Axios 'four months at Anthropic' vs @JordanSchachtel 'six weeks' vs his own 'three years... at both' — unresolved.",
+    "Formal introduction status of the Sanders/Casar Ban Artificial Superintelligence Act ('introduced' 9/3 vs Sanders 9/9 'will soon be introducing'; Puck: text not public).",
+    "Posts attributed by the tracker but not quoted by an outlet or present in the archive: Van Hollen, Blunt Rochester, Davidson, Moran's X post (Moran's Politico interview is confirmed).",
+    "The full text of 11 truncated caucus originals (Trahan's bill name, García's remaining demands, Beyer's bill list, Foster's containment methods, Gallego's letter) and the links in Magaziner's and Jacobs' posts.",
+    "Whether @tedlieu's 09-10 01:23 ET 'let CA dictate AI laws' post and Ansari's RT of @AlexBores are responses to this story.",
+    "617 of 743 sampled X posts have no resolved handle; the 'other 99.9%' author share is by construction, and the five Hill Lists' zero hits mean the press-List roster does not cover this story's carriers, not that reporters were silent.",
+    "Anthropic's 'wide-ranging access' offer to the institute that reviewed OpenAI's incidents (Semafor 9/10) — detail unverified in coverage.json.",
+    "Polling cited by outlets (Newsweek: YouGov/NBC figures; Third Way via Politico CA Decoded) — reported in coverage.json outlet rows, not read here.",
+    "The data/state.json ledger deltas cited under costs (posts 11,898→12,691, users 462→1,453): state.json has since moved on (2026-09-10 posts 14,145 / users 2,551 at fact-check time) and no spend file preserves the intermediate values; the 793 / 991 read counts rest on x-search.json method.reads alone."
+  ],
+  "sources": [
+    "data/narratives/anthropic-researcher-resignation/x-search.json — method, queries[], measured, byAccountType, hourly, topPosts, topRetweetedSources, retweetShare, framings, posts[743]",
+    "data/narratives/anthropic-researcher-resignation/coverage.json — headline_numbers, timeline[28], claims[20], outlets[63], political_responses[34], anthropic_response, measured_vs_judged, problems",
+    "data/narratives/anthropic-researcher-resignation/caucus.json — window, method, measured (core/shareOfDay/hourTable0909/classifierContext/storyCandidate), judged, unverified, problems, posts[45]",
+    "data/lists/house-democrats.json, congressional-media.json, cap-hill-reporters.json, house-news.json, labor-reporters.json — roster membership checks (@igorbobic on cap-hill-reporters + house-news; @RepCasar, @RepYassAnsari, @RepTedLieu on house-democrats; @AC360/@FoxNews/@NewsHour/@yashar/@washingtonsun/@fdbedout on none)",
+    "docs/NARRATIVE_INTELLIGENCE.md §1 (staff questions), §2.3 (status and manufactured? rules), §12.1 (record shape)",
+    "https://x.com/hilbertspaess/status/2097476196791709843 — Coxon thread #1 (2026-09-09T00:04:29Z, snowflake)",
+    "https://x.com/EvanHub/status/2097497037956891126 — Hubinger '>10% within the next decade' (01:27:18Z); https://x.com/EvanHub/status/2097528891846074828 — RSI clarification (03:33:52Z)",
+    "https://x.com/saprmarks/status/2097570226804011302 — Marks (06:18:07Z)",
+    "https://x.com/wallstengine/status/2097473010001391983 — WSJ summary 13 min before the thread (2026-09-08T23:51:49Z)",
+    "https://x.com/RepCasar/status/2097685220442923030; https://x.com/RepYassAnsari/status/2097721236839162155; https://x.com/RoKhanna/status/2097754129489596612; https://x.com/RoKhanna/status/2097888523562913941; https://x.com/RepLoriTrahan/status/2097641446983528943; https://x.com/RepTedLieu/status/2097730021733400740; https://x.com/tedlieu/status/2097519390480891976; https://x.com/SenRubenGallego/status/2097820074568454156 — caucus posts (archive lines in caucus.json posts[])",
+    "https://x.com/RepLuna/status/2097641199196684682; https://x.com/SenTedCruz/status/2097727324011536877; https://x.com/BernieSanders/status/2097705093520863568; https://x.com/ChrisMurphyCT/status/2097669346814304677 — non-caucus member posts (ids from tracker, times decoded; coverage.json)",
+    "https://x.com/JordanSchachtel/status/2097806624895254818; https://x.com/AFpost/status/2097835603962282442 — counter-frame originals (x-search.json topPosts)",
+    "https://x.com/DavidSacks/status/1978145266269077891 — 2025-10-14 'regulatory capture' post (not this cycle)",
+    "https://www.mprnews.org/story/2026/09/09/anthropic-researcher-resigns-with-warning-about-the-dangers-of-ai-development — AP wire",
+    "https://www.washingtonpost.com/technology/2026/09/09/anthropic-researcher-resigns-warning-reckless-race-toward-superintelligence/ (403; title/slug)",
+    "https://www.democracynow.org/2026/9/9/headlines/researcher_quits_anthropic_warning_self_improving_ai_poses_existential_risk",
+    "https://www.yahoo.com/news/science/articles/anthropic-researcher-jacob-coxon-resigns-151127374.html — Deadline/Yahoo (76M views)",
+    "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/",
+    "https://time.com/article/2026/09/09/ai-anthropic-openai-jacob-coxon/ — TIME interview",
+    "https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview — Axios scoop (via inbox alert thread 1a08879cc9427351)",
+    "https://www.huffpost.com/entry/anthropic-researcher-resigns-with-dire-ai-warning_n_6aa12c15e4b0307636059fcb — HuffPost (pairs with Bessent)",
+    "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/ — American Prospect 'pre-crime' story",
+    "https://www.breitbart.com/politics/2026/09/08/exclusive-secretary-scott-bessent-if-china-were-pull-ahead-of-us-on-ai-nothing-else-matters/ — Bessent 'we can't pause'",
+    "https://openai.com/index/ai-policy-window/ — OpenAI/Lehane policy post 9/9",
+    "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals; https://www.axios.com/2026/08/04/openai-anthropic-models-hacking-human-error — summer breakout background",
+    "https://washingtonsun.com/congress/democrats-in-congress-plan-to-investigate-ai-companies — Robert Garcia / Oversight",
+    "https://congresscoxon.netlify.app/ — unofficial tracker (UNVERIFIED source for Khanna/Min/Van Hollen/Blunt Rochester/Davidson posts)",
+    "Inbox threads (Gmail, PLAIN_TEXT): Politico Pro alert 1a088b3f5c896912 ('Will Congress act?'); Politico Pro alert 1a0874a8c947004b (select committee); Politico CA Playbook PM 1a087e260074ee19; Semafor Flagship 1a0859aa3c05d26d; Axios alert 1a08879cc9427351; Axios AM 1a0859e5c4d32e02; Politico Playbook PM 1a0873636d174e10; Politico Playbook AM 1a085ba7c6cfe34c (silent); Punchbowl AM 1a0856fc6c019d72 (silent); Politico Forecast 1a087ccc5bb48f66; Politico NatSec Daily 1a087c29eb682622; West Wing Playbook 1a088207cc388dc1; Politico CA Decoded 1a0860bb6b1a5d84"
+  ],
+  "costs": {
+    "xReads": 1784,
+    "xUsd": 13.88,
+    "breakdown": { "posts": 793, "users": 991, "usersFromLists": 949, "usersFromLookup": 42, "caps": { "posts": 1200, "users": 1000 }, "source": "x-search.json method.reads (793 posts / 991 users); the data/state.json ledger deltas (posts 11,898→12,691, users 462→1,453) are UNVERIFIED — state.json now reads 2026-09-10 posts 14,145 / users 2,551 after later polls" },
+    "thisCard": { "xReads": 0, "xUsd": 0, "note": "built from the three evidence files and data/lists only; no network calls" },
+    "unmetered": "five GET /2/lists/:id member_count probes before the roster fetch (x-search task problems); list-object billing unknown, at most cents"
+  }
+}

@@ -1,0 +1,605 @@
+# Caucus Pulse topic taxonomy — two levels, multi-label. v2, revised
+# 2026-09-10 from three weeks of classified data (2026-08-20..09-09); the
+# reasoning and the v1 → v2 key mapping are in docs/TAXONOMY_V2.md.
+#
+# This file IS the intelligence layer: edit it in place and the nightly
+# classifier picks it up on its next run. A tweet can carry several
+# (macro, subtopic) assignments; a subtopic assignment always counts toward
+# its macro too, so "56 tweets about Dilley" rolls up into Immigration
+# without double-reading in reports (subtopics render nested under macros).
+#
+# Grow it from the daily report's "emerging clusters" section: the classifier
+# surfaces tweets that fit nothing, with a suggested subtopic label — add the
+# ones you approve here. It never silently invents categories. The nightly
+# `stories --auto-promote` also writes candidates that clear settings.stories
+# into this file as provisional developing stories; prune them, do not
+# approve them one by one.
+#
+# THE STORY IS THE UNIT (owner, 2026-09-10). Macros are shelves for
+# navigation only; "Congress & campaign politics" means nothing on its own.
+# The rows that matter are specific, named, dated developing stories:
+# "Technology → Jacob Coxon resignation", "Immigration → Liam Ramos /
+# Dilley". Every macro carries the stories the archive supports; a post
+# about a named event is assigned the story, never left at the bare macro.
+# Generic subtopics survive only where a durable subject has real volume and
+# no story. Catch-all rows ("campaign politics", "political rhetoric",
+# "party and caucus activity") are forbidden: name the fight, the vote, the
+# bill or the event, or drop the row.
+#
+# Fields per subtopic:
+#   label         required; what the dashboard and the classifier see.
+#   aliases       optional hints for the classifier — nicknames, hashtags,
+#                 misspellings the label itself cannot carry. Keep them few:
+#                 every line here is rendered into the classifier prompt.
+#   story: true   a developing story: a named event, person, place, bill or
+#                 vote the caucus is reacting to. It sits beside the generic
+#                 sibling it belongs to and wins over it when both fit.
+#   since         "YYYY-MM-DD": the first day the archive shows caucus posts
+#                 about the story, or the story's real start when it predates
+#                 the archive (noted in docs/TAXONOMY_V2.md). Always quote
+#                 it — an unquoted date loads as a JS Date.
+#   provisional: true
+#                 the row may be pruned without asking. The nightly --retire
+#                 marks it retired after settings.stories.retire_after_quiet_days
+#                 with no assignments. Auto-promoted stories carry it, and so
+#                 does every date-bound message event here (a tribute, an
+#                 anniversary wave, a single vote) so it leaves the prompt on
+#                 its own once the caucus moves on. Delete the flag to keep a
+#                 story until you say otherwise.
+#   promoted      "YYYY-MM-DD": the day a provisional row entered this file;
+#                 the retirement clock starts here, not at `since`.
+#   retired: true out of the classifier prompt, key kept so rollups, history
+#                 and config/corrections.yaml still resolve. Used for quiet
+#                 stories and for the v1 rows this revision replaced.
+#   anchors       tweet ids a story is built around; a post that quotes,
+#                 replies to or retweets one is assigned the story before the
+#                 model runs (docs/QUOTED_CONTEXT.md). Ids never reach the
+#                 prompt.
+#
+# Routing rules the rows are built around (mirror them in the prompt):
+# - A named event with a story row goes to that story wherever the row sits
+#   (a Labor Day post → labor/labor-day-2026, a Steinem tribute →
+#   commemorations/gloria-steinem). commemorations/holidays-observances and
+#   /tributes are only for observances and obituaries with no story row.
+# - District emergencies (fire, flood, storm, recovery money) → disasters,
+#   never climate; a disaster alone is not climate policy.
+# - Fairs, parades, visits, congratulations → constituent-services, not
+#   congress-politics. Campaign-trail posts with no named fight get the bare
+#   macro or [] — there is deliberately no "campaign" row.
+# - oversight rows are additive: an ICE facility visit is
+#   immigration/detention AND oversight/facility-visits.
+# - Spanish-language posts are classified exactly like English ones.
+#
+# Formatting the pipeline depends on: macro keys at column 0, one blank line
+# between macros and none inside a macro block, `  subtopics:` on every macro
+# (`{}` when empty), subtopic keys at 4 spaces and their fields at 6 —
+# stories.js inserts and retires entries by those exact indents.
+
+immigration:
+  label: Immigration
+  subtopics:
+    dilley-detention:
+      label: "Liam Ramos / Dilley child detention (Liam Tadeo)"
+      aliases: ["Liam Ramos", "Dilley", "South Texas Family Residential Center"]
+      story: true
+      since: "2026-08-20"
+    pierre-damas-bel:
+      label: "Pierre Damas Bel death (Haitian student, ICE ankle monitor)"
+      story: true
+      since: "2026-09-01"
+    el-salvador-tps:
+      label: "El Salvador TPS deadline"
+      story: true
+      since: "2026-09-02"
+    midway-blitz-anniversary:
+      label: "Operation Midway Blitz anniversary (Chicago)"
+      story: true
+      since: "2026-09-08"
+      provisional: true
+      promoted: "2026-09-10"
+    ice-enforcement:
+      label: "ICE raids, deportations & agent violence"
+      aliases: ["Stephen Miller"]
+    detention:
+      label: "Detention conditions & deaths in custody"
+      aliases: ["Stewart Detention Center"]
+    tps-status:
+      label: "TPS & legal-status terminations"
+    citizenship:
+      label: "Birthright citizenship & DACA"
+      aliases: ["Dreamers"]
+    border-policy:
+      label: Border policy
+      retired: true
+    dreamers-daca:
+      label: Dreamers / DACA
+      retired: true
+    asylum-refugees:
+      label: Asylum & refugees
+      retired: true
+
+economy:
+  label: "Economy & cost of living"
+  subtopics:
+    prices-inflation:
+      label: "Prices, inflation & gas"
+      aliases: ["cost of living"]
+    tariffs-trade:
+      label: "Tariffs & trade"
+    canada-trade-war:
+      label: "Trump's trade war with Canada"
+      story: true
+      since: "2026-08-22"
+    housing:
+      label: "Housing affordability"
+    jobs-wages:
+      label: "Jobs, wages & unemployment"
+      aliases: ["minimum wage"]
+    taxes:
+      label: "Taxes & billionaire tax breaks"
+    trump-dividend:
+      label: "Trump's $5,000 'dividend' promise"
+      aliases: ["Trump Dividend"]
+      story: true
+      since: "2026-09-09"
+      provisional: true
+      promoted: "2026-09-10"
+    agriculture-farmers:
+      label: "Farmers & agriculture"
+      aliases: ["farm bill", "USDA"]
+    child-care:
+      label: "Child care & family costs"
+      aliases: ["Head Start"]
+    small-business:
+      label: "Small business & Main Street"
+      aliases: ["SBA"]
+    consumer-protection:
+      label: "Consumer protection, scams & gambling"
+      aliases: ["CFPB", "prediction markets"]
+
+healthcare:
+  label: "Health care"
+  subtopics:
+    medicaid:
+      label: "Medicaid cuts & work requirements"
+    medicare:
+      label: Medicare
+    aca:
+      label: "ACA premiums & marketplace coverage"
+      aliases: ["Obamacare"]
+    drug-prices:
+      label: "Prescription drug prices"
+      aliases: ["Big Pharma"]
+    public-health:
+      label: "Public health, CDC/NIH & FDA"
+      aliases: ["RFK Jr."]
+    vaccine-schedule:
+      label: "RFK Jr. vaccine-schedule overhaul & measles surge"
+      story: true
+      since: "2026-08-21"
+    mental-health:
+      label: "Mental health & addiction"
+      aliases: ["overdose"]
+    suicide-prevention-988:
+      label: "988 Day & Suicide Prevention Month"
+      story: true
+      since: "2026-09-01"
+      provisional: true
+      promoted: "2026-09-10"
+
+reproductive-rights:
+  label: "Reproductive rights"
+  subtopics:
+    abortion-access:
+      label: "Abortion access & bans"
+    ivf-contraception:
+      label: "IVF, contraception & maternal health"
+
+democracy:
+  label: "Democracy & rule of law"
+  subtopics:
+    voting-rights:
+      label: "Voting rights & redistricting"
+      aliases: ["SAVE Act", "troops at the polls"]
+    mail-voting:
+      label: "Trump vote-by-mail crackdown (SCOTUS order, USPS ballot tracking)"
+      aliases: ["Postmaster General Steiner"]
+      story: true
+      since: "2026-08-24"
+    john-lewis-vra:
+      label: "John Lewis VRA 5th-anniversary message"
+      story: true
+      since: "2026-08-24"
+      provisional: true
+      promoted: "2026-09-10"
+    courts-doj:
+      label: "Supreme Court & DOJ independence"
+    executive-overreach:
+      label: "Executive overreach & authoritarianism"
+      aliases: ["National Guard deployments"]
+    corruption-ethics:
+      label: "Corruption & self-dealing"
+      aliases: ["crypto", "insider trading"]
+    stock-trading-ban:
+      label: "Congressional stock-trading ban"
+      story: true
+      since: "2026-08-21"
+    white-house-ballroom:
+      label: "Trump's White House ballroom"
+      story: true
+      since: "2026-08-21"
+    epstein-files:
+      label: "Epstein files (Transparency Act II, Leon Black)"
+      story: true
+      since: "2026-08-20"
+    press-speech:
+      label: "Press freedom & free speech"
+      aliases: ["Stars and Stripes"]
+    lake-america-renaming:
+      label: "Lake Ontario to 'Lake America' renaming"
+      aliases: ["MapQuest"]
+      story: true
+      since: "2026-08-25"
+    new-mexico-renaming:
+      label: "New Mexico renaming push"
+      story: true
+      since: "2026-09-06"
+      provisional: true
+      promoted: "2026-09-10"
+    trump-arch-monument:
+      label: "'Arch de Trump' monument beside Arlington"
+      aliases: ["Trump Arch"]
+      story: true
+      since: "2026-09-03"
+      provisional: true
+      promoted: "2026-09-10"
+    kennedy-center:
+      label: "Kennedy Center demolition threat"
+      story: true
+      since: "2026-08-25"
+    smithsonian-history:
+      label: "Lonnie Bunch resignation & Smithsonian history erasure"
+      story: true
+      since: "2026-09-08"
+    national-archives-sanbruno:
+      label: "National Archives San Bruno closure"
+      story: true
+      since: "2026-08-20"
+      provisional: true
+      promoted: "2026-09-10"
+
+oversight:
+  label: "Oversight & accountability"
+  subtopics:
+    facility-visits:
+      label: "Facility oversight visits"
+    investigations:
+      label: "Hearings, subpoenas & investigations"
+    watchdogs:
+      label: "Inspectors general & whistleblowers"
+
+public-safety:
+  label: "Guns & public safety"
+  subtopics:
+    gun-violence:
+      label: "Gun violence & gun reform"
+    minneapolis-shooting:
+      label: "Minneapolis downtown shooting"
+      story: true
+      since: "2026-09-02"
+      provisional: true
+      promoted: "2026-09-10"
+    crime-policing:
+      label: "Crime, policing & law enforcement"
+      aliases: ["fentanyl"]
+    political-violence:
+      label: "Political violence & threats"
+    amy-acton-attack:
+      label: "Armed attack on Amy Acton (Ohio governor nominee)"
+      story: true
+      since: "2026-09-06"
+      provisional: true
+      promoted: "2026-09-10"
+
+disasters:
+  label: "Disaster response & recovery"
+  subtopics:
+    wildfires:
+      label: Wildfires
+    storms-flooding:
+      label: "Storms, flooding & extreme heat"
+      aliases: ["hurricane"]
+    fema-recovery:
+      label: "FEMA & disaster relief funding"
+
+labor:
+  label: "Labor & workers"
+  subtopics:
+    unions:
+      label: "Unions, organizing & strikes"
+    labor-day-2026:
+      label: "Labor Day 2026 'working people' message"
+      aliases: ["Labor Day"]
+      story: true
+      since: "2026-09-04"
+      provisional: true
+      promoted: "2026-09-10"
+    federal-workforce:
+      label: "Federal workforce cuts & USPS service"
+      aliases: ["DOGE", "RIF"]
+    workplace-rights:
+      label: "Workplace rights, pay & safety"
+      aliases: ["OSHA", "paid leave"]
+
+climate:
+  label: "Climate, energy & environment"
+  subtopics:
+    clean-energy:
+      label: "Energy & clean energy"
+      aliases: ["IRA"]
+    epa-rollbacks:
+      label: "EPA, clean air & water rollbacks"
+      aliases: ["PFAS"]
+    public-lands:
+      label: "Public lands, parks & forests"
+      aliases: ["Forest Service"]
+    nps-110th-birthday:
+      label: "National Park Week & NPS 110th birthday"
+      story: true
+      since: "2026-08-22"
+      provisional: true
+      promoted: "2026-09-10"
+    animal-welfare:
+      label: "Animal welfare"
+      aliases: ["Dog Lovers Caucus", "factory farming"]
+    disasters:
+      label: Extreme weather & disaster response
+      retired: true
+
+education:
+  label: Education
+  subtopics:
+    public-schools:
+      label: "K-12 schools & Department of Education"
+      aliases: ["vouchers"]
+    higher-ed:
+      label: "Higher ed & student debt"
+
+civil-rights:
+  label: "Civil rights & equality"
+  subtopics:
+    racial-justice:
+      label: "Racial justice"
+      aliases: ["DEI"]
+    march-on-washington:
+      label: "March on Washington 63rd-anniversary message"
+      story: true
+      since: "2026-08-28"
+      provisional: true
+      promoted: "2026-09-10"
+    jeffries-racist-attack:
+      label: "Racist attack on Leader Jeffries ('monkey', 'errand boy')"
+      aliases: ["Wajahat Ali"]
+      story: true
+      since: "2026-09-04"
+    lgbtq:
+      label: "LGBTQ+ rights"
+      aliases: ["transgender", "Pride"]
+    disability:
+      label: "Disability rights"
+    womens-equality-day:
+      label: "Women's Equality Day message"
+      story: true
+      since: "2026-08-26"
+      provisional: true
+      promoted: "2026-09-10"
+    antisemitism:
+      label: "Antisemitism & religious freedom"
+      aliases: ["Islamophobia"]
+    hasan-piker:
+      label: "Hasan Piker's comments on American Jews"
+      story: true
+      since: "2026-08-23"
+    tribal-affairs:
+      label: "Tribal & Native American affairs"
+      aliases: ["Indian Country"]
+    latino-museum:
+      label: "National Museum of the American Latino"
+      story: true
+      since: "2026-09-01"
+      provisional: true
+      promoted: "2026-09-10"
+
+foreign-policy:
+  label: "Foreign policy & defense"
+  subtopics:
+    iran-war:
+      label: "Iran war (war powers, costs, casualties)"
+      aliases: ["Strait of Hormuz"]
+      story: true
+      since: "2026-02-28"
+    venezuela:
+      label: "Venezuela boat strikes & Trump's oil deal"
+      aliases: ["Maduro"]
+      story: true
+      since: "2026-08-24"
+    uss-abraham-lincoln:
+      label: "USS Abraham Lincoln conditions"
+      story: true
+      since: "2026-08-20"
+    hegseth-pentagon:
+      label: "Hegseth & Pentagon leadership"
+      aliases: ["Department of War"]
+    nepal-floods:
+      label: "Nepal-Tibet flash floods (Americans missing)"
+      story: true
+      since: "2026-08-26"
+      provisional: true
+      promoted: "2026-09-10"
+    middle-east:
+      label: "Israel, Gaza & Middle East"
+    ukraine-russia:
+      label: "Ukraine / Russia"
+    china:
+      label: "China, Taiwan & Indo-Pacific"
+      aliases: ["CCP"]
+    military-veterans:
+      label: "Veterans, VA & military families"
+
+budget-appropriations:
+  label: "Budget, appropriations & safety net"
+  subtopics:
+    shutdown:
+      label: "Funding deadlines & shutdown threats"
+      aliases: ["CR", "continuing resolution"]
+    september-cr:
+      label: "September CR vote (funding through Dec. 11)"
+      story: true
+      since: "2026-09-01"
+      provisional: true
+      promoted: "2026-09-10"
+    obbba:
+      label: "'One Big Beautiful Bill' / 'Big Ugly Law' fallout"
+      aliases: ["OBBBA"]
+      story: true
+      since: "2025-07-04"
+    social-security:
+      label: "Social Security"
+    snap-benefits:
+      label: "SNAP, WIC & food assistance"
+      aliases: ["food stamps"]
+    snap-anniversary:
+      label: "SNAP 62nd-anniversary message"
+      story: true
+      since: "2026-08-31"
+      provisional: true
+      promoted: "2026-09-10"
+    spending-debt:
+      label: "Federal spending, debt & grant freezes"
+      aliases: ["impoundment"]
+
+tech:
+  label: "Technology, AI & science"
+  subtopics:
+    ai-safety:
+      label: "AI safety & regulation"
+    coxon-resignation:
+      label: "Jacob Coxon resignation (Anthropic)"
+      aliases: ["Jacob Coxon", "Coxon", "Evan Hubinger", "Anthropic resignation", "superintelligence", "10% chance", "gambling with our lives"]
+      story: true
+      since: "2026-09-08"
+      anchors: ["2097476196791709843"]
+    data-centers:
+      label: "Data-center fight (moratoria, ratepayer costs)"
+      aliases: ["utility bills"]
+      story: true
+      since: "2026-08-20"
+    big-tech:
+      label: "Big Tech, social media & kids online"
+      aliases: ["Section 230", "KOSA"]
+    surveillance-privacy:
+      label: "Privacy, surveillance & cybersecurity"
+      aliases: ["Flock cameras"]
+    space-science-research:
+      label: "NASA, space & science funding"
+      aliases: ["NSF", "Roman Space Telescope"]
+    ai-policy:
+      label: AI policy
+      retired: true
+
+congress-politics:
+  label: "Congress: votes, procedure & party events"
+  subtopics:
+    house-floor:
+      label: "House floor votes & procedure"
+      aliases: ["discharge petition"]
+    sept-votes-cancelled:
+      label: "Speaker Johnson cancels September votes"
+      story: true
+      since: "2026-09-03"
+      provisional: true
+      promoted: "2026-09-10"
+    gop-midterm-convention:
+      label: "GOP midterm convention ('Trumpalooza', 'communist caucus')"
+      story: true
+      since: "2026-09-04"
+    generational-politics:
+      label: "Gen Z & generational politics"
+      story: true
+      since: "2026-08-30"
+      provisional: true
+      promoted: "2026-09-10"
+    elections-2026:
+      label: 2026 midterms
+      retired: true
+    town-halls:
+      label: Town halls & district events
+      retired: true
+
+constituent-services:
+  label: "District & constituent services"
+  subtopics:
+    town-halls:
+      label: "Town halls & telephone town halls"
+    district-events:
+      label: "District visits, fairs & parades"
+      aliases: ["ribbon cutting"]
+    casework-resources:
+      label: "Casework & office programs"
+      aliases: ["academy nominations", "App Challenge"]
+    local-funding:
+      label: "Federal grants & local projects"
+    community-recognition:
+      label: "Local recognition & congratulations"
+      aliases: ["hometown hero", "local sports"]
+
+commemorations:
+  label: "Commemorations & observances"
+  subtopics:
+    holidays-observances:
+      label: "Holiday greetings & awareness days"
+      aliases: ["America 250"]
+    tributes:
+      label: "Tributes, obituaries & condolences"
+    dolly-parton-tribute:
+      label: "Dolly Parton death tributes"
+      aliases: ["Imagination Library"]
+      story: true
+      since: "2026-08-25"
+      provisional: true
+      promoted: "2026-09-10"
+    gloria-steinem:
+      label: "Gloria Steinem death tributes"
+      story: true
+      since: "2026-09-03"
+      provisional: true
+      promoted: "2026-09-10"
+    sept-11-anniversary:
+      label: "9/11 25th anniversary remembrance"
+      aliases: ["September 11", "never forget"]
+      story: true
+      since: "2026-08-27"
+      provisional: true
+      promoted: "2026-09-10"
+
+infrastructure:
+  label: "Infrastructure & transportation"
+  subtopics:
+    transit-rail:
+      label: "Transit, rail & Amtrak"
+      aliases: ["UP-Norfolk Southern merger"]
+    gateway-tunnel:
+      label: "Trump blocks the Gateway Tunnel"
+      story: true
+      since: "2026-08-26"
+      provisional: true
+      promoted: "2026-09-10"
+    roads-broadband:
+      label: "Roads, bridges & broadband"
+      aliases: ["Bipartisan Infrastructure Law"]
+    transportation-safety:
+      label: "Aviation, road & rail safety"
+      aliases: ["FAA", "Miami Airport crash"]
+    utilities-water:
+      label: "Water & power utilities"
+      aliases: ["Puerto Rico blackouts"]
