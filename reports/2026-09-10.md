@@ -2,24 +2,45 @@
 
 ## Top topics of the day
 
-_No classified tweets for this day yet._
+1. **Economy & cost of living** — 121 posts + 11 RTs from 83 members, 46,879 engagement
+   - Prices / inflation: 70 posts, 54 members
+   - Tariffs & trade: 22 posts, 21 members
+   - Taxes: 15 posts, 14 members
+2. **Congress & campaign politics** — 115 posts + 12 RTs from 83 members, 31,031 engagement
+   - 2026 midterms: 79 posts, 56 members
+   - Town halls & district events: 25 posts, 22 members
+   - House floor & procedure: 7 posts, 9 members
+3. **Democracy & rule of law** — 98 posts + 22 RTs from 69 members, 18,236 engagement
+   - Corruption & ethics: 43 posts, 30 members
+   - Voting rights & elections: 31 posts, 31 members
+   - Courts & DOJ independence: 10 posts, 13 members
 
 ## Per caucus
 
 ### Progressive Caucus
-_No activity attributed (check caucus tags in config/accounts.csv)._
+1. **Economy & cost of living** — 66 posts + 5 RTs, 43 members, 25,581 engagement
+2. **Democracy & rule of law** — 51 posts + 16 RTs, 34 members, 13,515 engagement
+3. **Congress & campaign politics** — 51 posts + 8 RTs, 43 members, 17,481 engagement
 
 ### New Democrat Coalition
-_No activity attributed (check caucus tags in config/accounts.csv)._
+1. **Economy & cost of living** — 65 posts + 8 RTs, 47 members, 15,429 engagement
+2. **Congress & campaign politics** — 62 posts + 5 RTs, 45 members, 11,042 engagement
+3. **Democracy & rule of law** — 44 posts + 9 RTs, 33 members, 5,530 engagement
 
 ### Black Caucus
-_No activity attributed (check caucus tags in config/accounts.csv)._
+1. **Congress & campaign politics** — 19 posts + 5 RTs, 17 members, 4,937 engagement
+2. **Economy & cost of living** — 19 posts + 1 RTs, 14 members, 5,236 engagement
+3. **Democracy & rule of law** — 12 posts + 4 RTs, 16 members, 2,127 engagement
 
 ### Hispanic Caucus
-_No activity attributed (check caucus tags in config/accounts.csv)._
+1. **Democracy & rule of law** — 17 posts + 10 RTs, 11 members, 2,671 engagement
+2. **Congress & campaign politics** — 21 posts + 3 RTs, 16 members, 1,775 engagement
+3. **Economy & cost of living** — 15 posts + 2 RTs, 14 members, 1,039 engagement
 
 ### Asian Pacific American Caucus
-_No activity attributed (check caucus tags in config/accounts.csv)._
+1. **Democracy & rule of law** — 18 posts + 0 RTs, 6 members, 3,351 engagement
+2. **Congress & campaign politics** — 17 posts + 0 RTs, 9 members, 11,122 engagement
+3. **Economy & cost of living** — 16 posts + 0 RTs, 8 members, 22,319 engagement
 
 ## Strategic syntax
 
@@ -33,6 +54,7 @@ _No activity attributed (check caucus tags in config/accounts.csv)._
 
 - Tweets captured: **631** (532 originals)
 - X reads on 2026-09-10: 21,125 / 50,000 budget (~$126.84)
+- Classifier: claude-opus-5
 
 ## Developing stories (not yet in the taxonomy)
 
@@ -67,7 +89,7 @@ _The classifier sees these from its next run. Keep one by deleting `provisional:
 
 _2 auto-promoted stories in config/taxonomy.yaml with the last 7 days of assignments. Prune here: remove an entry or set `retired: true`; delete `provisional: true` to confirm one. Quiet ones retire on their own after 21 days._
 
-- **Epstein files transparency** (democracy/epstein-files, since 2026-08-31, promoted 2026-09-10) — no assignments in the last 7 days
+- **Epstein files transparency** (democracy/epstein-files, since 2026-08-31, promoted 2026-09-10) — 2 posts + 3 RTs on 1 of the last 7 days, up to 2 members/day
 - **Trump 'Lake America' renaming** (democracy/lake-america-renaming, since 2026-08-25, promoted 2026-09-10) — no assignments in the last 7 days
 
 ## Taxonomy learned tonight
