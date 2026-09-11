@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { renderTaxonomy, validAssignments, ymd } from '../src/taxonomy.js';
+import { renderTaxonomy, validAssignments, systemPrompt, ymd } from '../src/taxonomy.js';
 
 test('ymd normalises the Date js-yaml makes of an unquoted since: to YYYY-MM-DD', () => {
   assert.equal(ymd(new Date('2026-09-01T00:00:00Z')), '2026-09-01');
@@ -50,9 +50,32 @@ test('validAssignments reports a subtopic key it could not resolve', () => {
   assert.deepEqual(validAssignments([['economy', 'jobs']], tax, dropped), [['economy', 'jobs']]);
   assert.deepEqual(dropped, [], 'a resolvable subtopic is not a drop');
 
-  // the suspected failure: the model echoes the rendered `macro/sub` form
-  assert.deepEqual(validAssignments([['economy', 'economy/jobs']], tax, dropped), [['economy', null]]);
-  assert.deepEqual(dropped, ['economy\u2192economy/jobs']);
+  // a genuinely unknown key is still collapsed to the macro, and counted
+  assert.deepEqual(validAssignments([['economy', 'bogus']], tax, dropped), [['economy', null]]);
+  assert.deepEqual(dropped, ['economy\u2192bogus']);
+});
+
+test('validAssignments resolves the rendered macro/sub form instead of dropping it, and counts the echo', () => {
+  const tax = { economy: { label: 'Economy', subtopics: { jobs: { label: 'Jobs' } } } };
+  const dropped = [];
+  const echoed = [];
+  assert.deepEqual(validAssignments([['economy', 'economy/jobs']], tax, dropped, echoed), [['economy', 'jobs']]);
+  assert.deepEqual(dropped, [], 'a resolvable echo is not a drop');
+  assert.deepEqual(echoed, ['economy\u2192economy/jobs']);
+  // dedupes against the bare form of the same subtopic
+  assert.deepEqual(validAssignments([['economy', 'jobs'], ['economy', 'economy/jobs']], tax), [['economy', 'jobs']]);
+  // a slash key that is not this macro's is still unknown
+  assert.deepEqual(validAssignments([['economy', 'health/jobs']], tax, dropped, echoed), [['economy', null]]);
+  assert.deepEqual(dropped, ['economy\u2192health/jobs']);
+  // works without collectors (classify-live)
+  assert.deepEqual(validAssignments([['economy', 'economy/jobs']], tax), [['economy', 'jobs']]);
+});
+
+test('systemPrompt tells the model to check the subtopic list before answering null', () => {
+  const tax = { economy: { label: 'Economy', subtopics: { jobs: { label: 'Jobs' } } } };
+  const prompt = systemPrompt(tax);
+  assert.match(prompt, /do not default to null/);
+  assert.match(prompt, /bare id/);
 });
 
 test('validAssignments does not count a deliberate macro-only answer as a drop', () => {

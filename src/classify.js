@@ -171,7 +171,7 @@ export function anchoredAssignments(tweets, anchors) {
 
 export function mergeParsed(parsed, tax, out) {
   for (const a of parsed.assignments || []) {
-    out.assignments[a.id] = validAssignments(a.topics, tax, out.droppedSubs);
+    out.assignments[a.id] = validAssignments(a.topics, tax, out.droppedSubs, out.echoedSubs);
     if (a.incident?.kind && a.incident?.place) {
       out.incidents[a.id] = { kind: String(a.incident.kind).toLowerCase(), place: String(a.incident.place) };
     }
@@ -185,8 +185,8 @@ export function mergeParsed(parsed, tax, out) {
   }
 }
 
-const emptyOut = () => ({ assignments: {}, incidents: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [] });
-const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs });
+const emptyOut = () => ({ assignments: {}, incidents: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [], echoedSubs: [] });
+const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs, echoedSubs: o.echoedSubs });
 
 // Stream a finished batch's results, grouped by the custom_id prefix before
 // "chunk-" (empty string for single-day batches). Returns {prefix → result}.
@@ -266,7 +266,7 @@ export function planDay(date, {
 // written earlier in the same run.
 export function mergeDay(plan, result, { prior } = {}) {
   const { date, tweets, toClassify, deferred, anchored = {} } = plan;
-  const { assignments, incidents, failedChunks, droppedSubs = [] } = result;
+  const { assignments, incidents, failedChunks, droppedSubs = [], echoedSubs = [] } = result;
   const inherited = { ...plan.inherited };
   const priorMap = prior ?? (deferred.length ? priorAssignments(date) : {});
   for (const t of tweets) {
@@ -282,7 +282,7 @@ export function mergeDay(plan, result, { prior } = {}) {
     .filter((e) => e.ids.length);
   const unclassified = [...toClassify, ...deferred].filter((t) => !(t.id in merged)).map((t) => t.id);
   return {
-    day: { date, assignments: merged, incidents, emerging, unclassified, anchored, failedChunks, droppedSubs },
+    day: { date, assignments: merged, incidents, emerging, unclassified, anchored, failedChunks, droppedSubs, echoedSubs },
     stats: {
       classified: Object.keys(assignments).length,
       inherited: Object.keys(inherited).length,
@@ -291,6 +291,7 @@ export function mergeDay(plan, result, { prior } = {}) {
       emerging: emerging.length,
       unclassified: unclassified.length,
       droppedSubs: droppedSubs.length,
+      echoedSubs: echoedSubs.length,
       failedChunks
     }
   };
@@ -309,13 +310,14 @@ export function writeDay(plan, result, model) {
     unclassified: day.unclassified,
     anchored: day.anchored,
     failedChunks: day.failedChunks,
-    droppedSubs: day.droppedSubs
+    droppedSubs: day.droppedSubs,
+    echoedSubs: day.echoedSubs
   });
   return stats;
 }
 
 export function summarize(date, s) {
-  return `[classify] ${date}: ${s.classified} classified, ${s.inherited} inherited, ${s.anchored ? `${s.anchored} anchored, ` : ''}${s.incidents} incident-flagged, ${s.emerging} emerging clusters, ${s.unclassified} unclassified${s.droppedSubs ? `, ${s.droppedSubs} SUBTOPIC KEY(S) DROPPED AS UNRESOLVABLE` : ''}${s.failedChunks ? `, ${s.failedChunks} chunk(s) failed` : ''}`;
+  return `[classify] ${date}: ${s.classified} classified, ${s.inherited} inherited, ${s.anchored ? `${s.anchored} anchored, ` : ''}${s.incidents} incident-flagged, ${s.emerging} emerging clusters, ${s.unclassified} unclassified${s.droppedSubs ? `, ${s.droppedSubs} SUBTOPIC KEY(S) DROPPED AS UNRESOLVABLE` : ''}${s.echoedSubs ? `, ${s.echoedSubs} subtopic key(s) answered as macro/sub and resolved` : ''}${s.failedChunks ? `, ${s.failedChunks} chunk(s) failed` : ''}`;
 }
 
 async function main() {
