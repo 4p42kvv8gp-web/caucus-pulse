@@ -23,6 +23,27 @@ const DAY = 86_400_000;
 
 export const rollupsJsonPath = p('site', 'data', 'rollups.json');
 
+// Size guard for rollups.json. The story drill-down ships every classified
+// post in the window (`feedAll`, full text) so a row can open to its whole
+// feed; a busy week could grow the file past what a phone loads comfortably.
+// Above this many bytes, feedAll is cut to the newest N and the file says so.
+export const ROLLUPS_MAX_BYTES = 2_500_000;
+export const QUOTED_TEXT_MAX = 200;
+
+// Largest newest-first prefix of `list` whose serialised size (per `sizeOf`,
+// which measures the whole file with that prefix in place) stays under
+// `maxBytes`. Binary search: ~12 serialisations at most.
+export function fitFeedAll(list, sizeOf, maxBytes = ROLLUPS_MAX_BYTES) {
+  if (sizeOf(list) < maxBytes) return { feedAll: list, truncated: false };
+  let lo = 0, hi = list.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi) / 2);
+    if (sizeOf(list.slice(0, mid)) < maxBytes) lo = mid;
+    else hi = mid - 1;
+  }
+  return { feedAll: list.slice(0, lo), truncated: true };
+}
+
 function caucusKeysOf(author) {
   const keys = new Set();
   for (const tag of author?.caucuses || []) {
@@ -226,7 +247,8 @@ export function buildSiteData() {
         r24: Object.fromEntries(['All', ...KEYS].map((k) => [k, zeroScope()])),
         trend: days.map(() => 0),
         mByDay: days.map(() => new Set()),
-        leadEng: new Map() // authorId → eng (for sub lead)
+        leadEng: new Map(), // authorId → eng (for sub lead)
+        postIds: { t: [], w: [] } // every post on this row, today / 7 days (sorted newest-first below)
       });
     }
     return map.get(key);
@@ -245,6 +267,8 @@ export function buildSiteData() {
           const acc = ensure(topicAcc, macro);
           acc.trend[di]++;
           acc.mByDay[di].add(post.authorId);
+          acc.postIds.w.push(post.id);
+          if (di === 6) acc.postIds.t.push(post.id);
           for (const s of scopes) {
             const bucket = di === 6 ? acc.t[s] : null;
             if (bucket) { bucket.n++; bucket.eng += post.engN; bucket.members.add(post.authorId); }
@@ -256,6 +280,8 @@ export function buildSiteData() {
           seenSub.add(`${macro}/${sub}`);
           const acc = ensure(subAcc, `${macro}/${sub}`);
           acc.trend[di]++;
+          acc.postIds.w.push(post.id);
+          if (di === 6) acc.postIds.t.push(post.id);
           if (post.type !== 'retweet') acc.leadEng.set(post.authorId, (acc.leadEng.get(post.authorId) || 0) + post.engN);
           for (const s of scopes) {
             if (di === 6) { acc.t[s].n++; acc.t[s].eng += post.engN; acc.t[s].members.add(post.authorId); }
@@ -267,6 +293,13 @@ export function buildSiteData() {
   }
 
   const handleOf = (authorId) => authorsById[authorId]?.handle ? `@${authorsById[authorId].handle}` : null;
+  // Row post lists are newest-first so the drill-down can render them as-is.
+  const createdAtById = new Map(allPosts.map((x) => [x.id, x.createdAt]));
+  const newestFirst = (ids) => ids.slice().sort((a, b) => {
+    const ca = createdAtById.get(a) || '', cb = createdAtById.get(b) || '';
+    return ca === cb ? (a < b ? 1 : -1) : (ca < cb ? 1 : -1);
+  });
+  const rowPostIds = (acc) => ({ t: newestFirst(acc.postIds.t), w: newestFirst(acc.postIds.w) });
   const topics = [...topicAcc.entries()].map(([key, acc]) => {
     const trend = acc.trend;
     // Baseline = the six full days before today (trend[0..5]); current = last 24h.
@@ -290,7 +323,8 @@ export function buildSiteData() {
           key: sk.split('/')[1],
           t: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.t[k])])),
           w: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.w[k])])),
-          lead: lead ? handleOf(lead[0]) : null
+          lead: lead ? handleOf(lead[0]) : null,
+          postIds: rowPostIds(sa)
         };
       })
       .sort((a, b) => b.t.All.n - a.t.All.n || b.w.All.n - a.w.All.n);
@@ -301,7 +335,8 @@ export function buildSiteData() {
       w: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(acc.w[k])])),
       trend, d, mAvg: Math.round(mAvg * 10) / 10, epAvg: Math.round(epAvg),
       momentum: { score: mo.score, drivers: mo.drivers.slice(0, 2).map(([n]) => n), volume: mo.volume, accel: mo.accel, adoption: mo.adoption, eff: Math.round(mo.eff * 10) / 10, engLift: mo.engLift },
-      subs
+      subs,
+      postIds: rowPostIds(acc)
     };
   }).sort((a, b) => b.t.All.n - a.t.All.n || b.w.All.n - a.w.All.n);
 
@@ -525,6 +560,34 @@ export function buildSiteData() {
       };
     });
 
+  // ── feedAll: every classified post in the window, for the story drill-down ──
+  // The 200-post `feed` above stays as the default Feed card; a Topics row
+  // opens to its whole post list via `postIds` + this table. Compact rows:
+  // authors resolve client-side through `authorHandles` → `members`.
+  const feedTopics = (x) => [...new Set(x.topics.flatMap(([m, s]) => s ? [`${m}/${s}`, m] : [m]))];
+  const feedAllFull = allPosts
+    .filter((x) => x.topics.length)
+    .sort((a, b) => (a.createdAt === b.createdAt ? (a.id < b.id ? 1 : -1) : (a.createdAt < b.createdAt ? 1 : -1)))
+    .map((x) => {
+      const row = { id: x.id, authorId: x.authorId, createdAt: x.createdAt, type: x.type, text: x.text, engN: x.engN, topics: feedTopics(x) };
+      // Quoted-post context, when the capture carries it ({handle, text}).
+      const q = x.quoted;
+      if (q && (q.text || q.handle)) {
+        const text = String(q.text || '');
+        row.quoted = {
+          handle: q.handle ? `@${String(q.handle).replace(/^@/, '')}` : null,
+          text: text.length > QUOTED_TEXT_MAX ? text.slice(0, QUOTED_TEXT_MAX - 1).replace(/\s+\S*$/, '') + '…' : text
+        };
+      }
+      return row;
+    });
+  const authorHandles = {};
+  for (const x of feedAllFull) {
+    if (authorHandles[x.authorId] !== undefined) continue;
+    const h = handleOf(x.authorId);
+    if (h) authorHandles[x.authorId] = h;
+  }
+
   // ── members map + per-caucus active counts (posted in the 7-day window) ──
   // House accounts only, so `accounts` is the roster the numbers describe.
   const members = {};
@@ -548,7 +611,7 @@ export function buildSiteData() {
     for (const k of caucusKeysOf(authorsById[x.authorId])) activeByCaucus[k].add(x.authorId);
   }
 
-  writeJSON(rollupsJsonPath, {
+  const out = {
     generatedAt: new Date().toISOString(),
     lastPollAt: state.lastPollAt || null,
     timezone: settings.timezone,
@@ -570,10 +633,19 @@ export function buildSiteData() {
     clusters,
     incidents: incidentsFile.incidents,
     incidentsFiltered: (incidentsFile.filtered || []).length,
-    feed
-  });
+    feed,
+    authorHandles,
+    feedAll: feedAllFull,
+    feedAllTruncated: false
+  };
+  // Size guard: measure the file exactly as writeJSON serialises it.
+  const sizeOf = (list) => Buffer.byteLength(JSON.stringify({ ...out, feedAll: list }, null, 1)) + 1;
+  const fit = fitFeedAll(feedAllFull, sizeOf, ROLLUPS_MAX_BYTES);
+  out.feedAll = fit.feedAll;
+  out.feedAllTruncated = fit.truncated;
+  writeJSON(rollupsJsonPath, out);
   const provisional = incidentsFile.incidents.filter((i) => i.status === 'provisional').length;
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents (${provisional} provisional, ${(incidentsFile.filtered || []).length} flags filtered), ${feed.length} feed posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents (${provisional} provisional, ${(incidentsFile.filtered || []).length} flags filtered), ${feed.length} feed posts, ${out.feedAll.length}${fit.truncated ? ` of ${feedAllFull.length} (truncated to stay under ${ROLLUPS_MAX_BYTES} bytes)` : ''} drill-down posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
