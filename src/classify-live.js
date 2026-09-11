@@ -67,7 +67,12 @@ export async function classifyLive(records) {
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const client = await anthropicClient();
 
-  const out = { assignments: {}, incidents: {}, emergingMap: new Map() };
+  // droppedSubs / echoedSubs collect what validAssignments (taxonomy.js) had
+  // to throw away or repair — subtopic keys the taxonomy does not know, and
+  // keys answered in the rendered "macro/sub" form. The nightly batch already
+  // counts both; without the arrays here the poll path discarded them
+  // silently, which hid how the model actually answers.
+  const out = { assignments: {}, incidents: {}, emergingMap: new Map(), droppedSubs: [], echoedSubs: [] };
   const per = settings.classify.tweets_per_request || 40;
   for (let i = 0; i < items.length; i += per) {
     const chunk = items.slice(i, i + per);
@@ -85,6 +90,12 @@ export async function classifyLive(records) {
     const parsed = textBlock && parseJsonLoose(textBlock.text);
     if (parsed) mergeParsed(parsed, tax, out);
   }
+
+  if (out.droppedSubs.length) {
+    const sample = [...new Set(out.droppedSubs)].slice(0, 8).join(', ');
+    console.warn(`[classify-live] ${out.droppedSubs.length} subtopic key(s) dropped as unresolvable: ${sample}`);
+  }
+  if (out.echoedSubs.length) console.log(`[classify-live] ${out.echoedSubs.length} subtopic key(s) answered as macro/sub and resolved`);
 
   // Retweets in the same poll inherit their original's fresh tags.
   for (const t of records) {
@@ -113,7 +124,11 @@ export async function classifyLive(records) {
     }
     existing.model = model;
     existing.updatedAt = new Date().toISOString();
+    // Running count for the day (a poll spanning midnight ET books its
+    // drops to both days — the count is a smoke signal, not a ledger).
+    existing.droppedSubs = (existing.droppedSubs || 0) + out.droppedSubs.length;
+    existing.echoedSubs = (existing.echoedSubs || 0) + out.echoedSubs.length;
     writeJSON(file, existing);
   }
-  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length, quoting: items.filter((t) => t.quoting).length, hinted: hintedCount(items), anchored: Object.keys(anchored).length };
+  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length, quoting: items.filter((t) => t.quoting).length, hinted: hintedCount(items), anchored: Object.keys(anchored).length, dropped: out.droppedSubs.length, echoed: out.echoedSubs.length };
 }

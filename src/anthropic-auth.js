@@ -28,6 +28,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import { settings } from './util.js';
+import { instrument, budgetStatus, formatStatus } from './anthropic-usage.js';
 
 const AUDIENCE = 'https://api.anthropic.com';
 const IDENTITY_MAX_AGE_MS = 4 * 60_000;
@@ -75,9 +76,27 @@ function applyFederationSettings() {
   }
 }
 
-// True when some credential path exists. Cheap and synchronous so callers can
-// gate optional stages ("skip live tagging when there is no way to auth").
+// The daily dollar ceiling (anthropic.daily_budget_usd; src/anthropic-usage.js).
+// Once today's ledger reaches it, anthropicConfigured() answers false — every
+// optional Claude stage already skips on that — and anthropicClient() refuses,
+// so a stage that does not ask first fails loudly instead of spending. Read
+// from disk on each call: a poll job's ledger is the committed one plus what
+// this process has recorded. Warned once per process.
+let budgetWarned = false;
+export function budgetExhausted() {
+  const s = budgetStatus();
+  if (s.exhausted && !budgetWarned) {
+    budgetWarned = true;
+    console.warn(`[anthropic] ${formatStatus(s)}`);
+  }
+  return s.exhausted;
+}
+
+// True when some credential path exists and today's spend is under the daily
+// budget. Cheap and synchronous so callers can gate optional stages ("skip
+// live tagging when there is no way to auth").
 export function anthropicConfigured() {
+  if (budgetExhausted()) return false;
   if (explicitCredential()) return true;
   if (federationEnvSet()) return true;
   return inActions() && Boolean(settings.anthropic?.federation?.rule_id);
@@ -125,11 +144,17 @@ export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, for
 // SDK directly (so CLASSIFIER_ANTHROPIC_API_KEY works without ever touching
 // ANTHROPIC_API_KEY); otherwise federation env is applied and the identity
 // token is fresh by the time the SDK reads them.
+// Every client is instrumented (src/anthropic-usage.js), so each response's
+// usage lands in data/anthropic-usage.json under this process's stage.
 export async function anthropicClient(options = {}) {
+  if (budgetExhausted()) {
+    const s = budgetStatus();
+    throw new Error(`Anthropic daily budget reached: $${s.spent.toFixed(2)} of $${s.budget} spent on ${s.day} — no Claude calls until tomorrow ET (raise anthropic.daily_budget_usd in config/settings.json to continue)`);
+  }
   const key = apiKey();
   if (!key) await refreshIdentityToken();
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   // The SDK only reads ANTHROPIC_API_KEY from the env; hand it the
   // CLASSIFIER_ key explicitly so local runs work without re-exporting.
-  return new Anthropic(key && !options.apiKey ? { ...options, apiKey: key } : options);
+  return instrument(new Anthropic(key && !options.apiKey ? { ...options, apiKey: key } : options));
 }

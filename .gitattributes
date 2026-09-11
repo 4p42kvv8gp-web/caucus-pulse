@@ -2,3 +2,4 @@
 # data/. See .github/scripts/commit-data.sh for how each class merges.
 data/archive/*.jsonl merge=union
 data/state.json merge=state
+data/anthropic-usage.json merge=ledger

@@ -91,6 +91,18 @@
       "organization_id": "554a72f1-6a10-4aca-9027-1642b4a66ab4",
       "service_account_id": "svac_01JEdFDBYcdR49gw6cf14hwh",
       "workspace_id": "wrkspc_011YNxhjEtK5CWK2AmBBQ7hq"
+    },
+    "_budget_comment": "daily_budget_usd: Claude spend ceiling per ET day, read from data/anthropic-usage.json (src/anthropic-usage.js). At the ceiling every Claude stage stops until the day rolls; ANTHROPIC_DAILY_BUDGET_USD in the environment overrides it for one run. Set for 2026-09-11..12 when $100 of credit had to last two days. pricing: list price per million tokens by model, used to turn the ledger tokens into dollars (cache reads x0.1, cache writes x1.25, batch x0.5 are constants in the module); default covers a model with no row.",
+    "daily_budget_usd": 40,
+    "pricing": {
+      "claude-opus-5": {
+        "input": 5,
+        "output": 25
+      },
+      "default": {
+        "input": 5,
+        "output": 25
+      }
     }
   },
   "narrative_lists": {
@@ -99,7 +111,7 @@
       "id": "6136726",
       "name": "House Democrats",
       "owner": "HouseDemocrats",
-      "role": "official accounts of House Democrats in the 119th Congress (218) \u2014 the authoritative official-handle roster; cross-check for data/authors.json",
+      "role": "official accounts of House Democrats in the 119th Congress (218) — the authoritative official-handle roster; cross-check for data/authors.json",
       "priority": 1
     },
     "congressional-media": {
@@ -120,7 +132,7 @@
       "id": "34179516",
       "name": "Members of Congress",
       "owner": "cspan",
-      "role": "all members incl. Republicans and senators (559) \u2014 reference only; the product stays focused on House Democrats",
+      "role": "all members incl. Republicans and senators (559) — reference only; the product stays focused on House Democrats",
       "priority": 3
     },
     "house-news": {

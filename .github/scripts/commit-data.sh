@@ -9,7 +9,8 @@
 #
 #   - data/state.json merges field by field (src/merge-state.js: usage adds up,
 #     the cursor takes the larger id) — .gitattributes names the driver, this
-#     script registers it.
+#     script registers it. data/anthropic-usage.json is all counters and merges
+#     the same way (src/merge-anthropic-usage.js).
 #   - data/archive/*.jsonl are append-only, so both sides' lines are kept
 #     (merge=union in .gitattributes; loadDay dedupes by id on read).
 #   - Files this job rebuilt from the archive are safe to overwrite with the
@@ -34,6 +35,8 @@ git config user.name "caucus-pulse"
 git config user.email "actions@users.noreply.github.com"
 git config merge.state.name "caucus-pulse state.json field merge"
 git config merge.state.driver "node src/merge-state.js %O %A %B"
+git config merge.ledger.name "caucus-pulse anthropic-usage.json counter merge"
+git config merge.ledger.driver "node src/merge-anthropic-usage.js %O %A %B"
 
 git add "$@"
 if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi

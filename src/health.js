@@ -14,6 +14,7 @@
 import { readJSON, etDate, daysAgoEt } from './util.js';
 import { loadState, archiveDates, topicsPath, loadDay, dailyBudget, estCost } from './store.js';
 import { authMode as anthropicAuthMode } from './anthropic-auth.js';
+import { budgetStatus as anthropicBudget } from './anthropic-usage.js';
 import { authMode as xAuthMode } from './x.js';
 
 const HOURS = 60 * 60 * 1000;
@@ -101,6 +102,18 @@ export function checkBudget(state, { budget = dailyBudget(), today = etDate() } 
   return { name: 'budget', status: 'ok', detail };
 }
 
+// Claude spend against the daily ceiling (data/anthropic-usage.json, priced
+// by config/settings.json anthropic.pricing). Without a ceiling the line is
+// informational; with one, reaching it is a fail because every Claude stage
+// has stopped for the day and someone should know before the nightly.
+export function checkAnthropicSpend({ spent = 0, budget = null, calls = 0, byStage = {} }) {
+  const stages = Object.entries(byStage).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => `${k} $${v.toFixed(2)}`).join(', ');
+  const detail = `$${spent.toFixed(2)} Claude spend today across ${calls} call(s)${budget != null ? ` of $${budget} daily budget` : ' (no daily budget set)'}${stages ? ` — ${stages}` : ''}`;
+  if (budget != null && spent >= budget) return { name: 'anthropic-spend', status: 'fail', detail: `${detail} — Claude stages are stopped until tomorrow ET` };
+  if (budget != null && spent >= budget * 0.85) return { name: 'anthropic-spend', status: 'warn', detail };
+  return { name: 'anthropic-spend', status: 'ok', detail };
+}
+
 export function runChecks({ now = Date.now(), today = etDate() } = {}) {
   const state = loadState();
   const dates = archiveDates();
@@ -117,7 +130,8 @@ export function runChecks({ now = Date.now(), today = etDate() } = {}) {
       assignmentCount: Object.keys(topics?.assignments || {}).length,
       ran: Boolean(topics)
     }),
-    checkBudget(state, { today })
+    checkBudget(state, { today }),
+    checkAnthropicSpend(anthropicBudget({ day: today }))
   ];
 }
 

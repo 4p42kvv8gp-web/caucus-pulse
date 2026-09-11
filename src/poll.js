@@ -177,7 +177,7 @@ export async function pollOnce() {
     try {
       const { classifyLive } = await import('./classify-live.js');
       const r = await classifyLive(records);
-      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.hinted ? `, ${r.hinted} with similarity hints` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.hinted ? `, ${r.hinted} with similarity hints` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}${r.dropped ? `, ${r.dropped} SUBTOPIC KEY(S) DROPPED AS UNRESOLVABLE` : ''}${r.echoed ? `, ${r.echoed} echoed macro/sub key(s) resolved` : ''}`);
     } catch (e) {
       console.warn(`[poll] live classification skipped: ${e.message}`);
     }

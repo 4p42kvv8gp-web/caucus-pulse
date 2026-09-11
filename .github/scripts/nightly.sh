@@ -15,10 +15,21 @@
 # less work, or none, but it gets its turn.
 set -uo pipefail
 
+# NIGHTLY_STAGES="classify,rollup,report" (the workflow_dispatch `stages`
+# input) runs only the named stages; empty runs them all. Skipped stages are
+# not failures. This is how one stage gets re-run — or run alone — without
+# paying for the Claude stages around it: classify for a day the nightly
+# missed costs a few dollars, stories + taxonomy-learn discovery on top of it
+# can cost ten times that.
+ONLY="${NIGHTLY_STAGES:-}"
 FAILED=()
 
 stage() {
   local name="$1"; shift
+  if [ -n "$ONLY" ] && [[ ",$ONLY," != *",$name,"* ]]; then
+    echo "skip $name (NIGHTLY_STAGES=$ONLY)"
+    return
+  fi
   echo "::group::$name"
   if "$@"; then
     echo "::endgroup::"

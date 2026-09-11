@@ -4,6 +4,7 @@ import {
   checkCapture, checkClassification, checkAssignments, checkCredentials, checkBudget,
   worstStatus, CAPTURE_WARN_HOURS, CAPTURE_FAIL_HOURS
 } from '../src/health.js';
+import * as health from '../src/health.js';
 
 const HOURS = 60 * 60 * 1000;
 const now = Date.parse('2026-09-10T12:00:00Z');
@@ -67,4 +68,14 @@ test('worstStatus reports the most severe check', () => {
   assert.equal(worstStatus([{ status: 'ok' }, { status: 'ok' }]), 'ok');
   assert.equal(worstStatus([{ status: 'ok' }, { status: 'warn' }]), 'warn');
   assert.equal(worstStatus([{ status: 'warn' }, { status: 'fail' }]), 'fail');
+});
+
+test('anthropic spend is informational without a ceiling, warns near it, fails at it', () => {
+  const { checkAnthropicSpend } = health;
+  assert.equal(checkAnthropicSpend({ spent: 12.5, budget: null, calls: 3, byStage: { poll: 12.5 } }).status, 'ok');
+  assert.equal(checkAnthropicSpend({ spent: 20, budget: 40, calls: 3, byStage: {} }).status, 'ok');
+  assert.equal(checkAnthropicSpend({ spent: 35, budget: 40, calls: 3, byStage: {} }).status, 'warn');
+  const stopped = checkAnthropicSpend({ spent: 41, budget: 40, calls: 9, byStage: { 'taxonomy-learn': 30, classify: 11 } });
+  assert.equal(stopped.status, 'fail');
+  assert.match(stopped.detail, /taxonomy-learn \$30\.00, classify \$11\.00.*stopped until tomorrow ET/);
 });

@@ -7,10 +7,15 @@
 // ANTHROPIC_API_KEY, then ANTHROPIC_AUTH_TOKEN, then workload identity
 // federation (GitHub Actions only). Exit 2 when nothing is configured, 1 when
 // the credential is rejected.
-import { anthropicClient, anthropicConfigured, authMode, apiKeySource } from './anthropic-auth.js';
+import { anthropicClient, anthropicConfigured, authMode, apiKeySource, budgetExhausted } from './anthropic-auth.js';
+import { budgetStatus, formatStatus } from './anthropic-usage.js';
 import { settings } from './util.js';
 
 async function main() {
+  if (budgetExhausted()) {
+    console.log(`RESULT: daily budget reached — ${formatStatus(budgetStatus())}`);
+    process.exit(3);
+  }
   if (!anthropicConfigured()) {
     console.log('RESULT: no Anthropic credential — set CLASSIFIER_ANTHROPIC_API_KEY (or ANTHROPIC_API_KEY locally); in Actions, federation needs id-token: write');
     process.exit(2);
