@@ -11,9 +11,10 @@
 import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, readJSON, writeJSON, p } from './util.js';
 import { loadTaxonomy, systemPrompt, parseJsonLoose, anchorIndex } from './taxonomy.js';
-import { mergeParsed, classifierLine, withQuoting, anchoredAssignments, mergeTopics } from './classify.js';
+import { mergeParsed, classifierLine, withQuoting, withCandidates, hintedCount, anchoredAssignments, mergeTopics } from './classify.js';
 import { quotedResolver } from './quoted.js';
 import { correctionExamples } from './corrections.js';
+import { loadSemanticOrNull } from './semantic.js';
 
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
 
@@ -42,12 +43,26 @@ function resolver() {
   }
 }
 
+// Similarity hints from the embedding index (the poller embeds the new
+// records just before calling us, so their vectors are usually on disk; a
+// checkout without the model simply gets no hints). Nothing here may stop
+// live tagging either.
+async function similarityHints(items, tax) {
+  const warn = (m) => console.warn(`[classify-live] ${m}`);
+  try {
+    return await withCandidates(items, loadSemanticOrNull({ warn }), { tax, warn });
+  } catch (e) {
+    warn(`similarity hints skipped: ${e.message}`);
+    return items;
+  }
+}
+
 export async function classifyLive(records) {
   if (process.env.CLASSIFY_LIVE === 'false' || !anthropicConfigured()) return null;
   const originals = records.filter((t) => t.type !== 'retweet');
   if (!originals.length) return null;
   const tax = loadTaxonomy();
-  const items = withQuoting(originals, resolver());
+  const items = await similarityHints(withQuoting(originals, resolver()), tax);
   const system = [{ type: 'text', text: systemPrompt(tax, { examples: precedents(tax) }), cache_control: { type: 'ephemeral' } }];
   const model = process.env.CLASSIFY_MODEL || settings.classify.model;
   const client = await anthropicClient();
@@ -100,5 +115,5 @@ export async function classifyLive(records) {
     existing.updatedAt = new Date().toISOString();
     writeJSON(file, existing);
   }
-  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length, quoting: items.filter((t) => t.quoting).length, anchored: Object.keys(anchored).length };
+  return { tagged: Object.keys(out.assignments).length, incidents: Object.keys(out.incidents).length, quoting: items.filter((t) => t.quoting).length, hinted: hintedCount(items), anchored: Object.keys(anchored).length };
 }

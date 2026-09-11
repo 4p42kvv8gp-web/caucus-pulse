@@ -114,11 +114,13 @@ starts. Every day before that is gone; turn it on early.
 | `src/classify.js` | nightly | Claude Batch API + `config/taxonomy.yaml` → `data/topics/` (authoritative), emerging clusters, incident flags | ~50% batch rates |
 | `src/backfill-members.js` | once | Per-member timelines back N days → archive + seeded metrics (the List endpoint stops at ~800 posts) | $0.005/post |
 | `src/classify-range.js` | after a backfill | Every unclassified day in one Claude batch; retweets inherit across days | ~50% batch rates |
+| `src/taxonomy-learn.js` | nightly | Reads each macro's posts, clusters them by meaning, proposes subtopics / elevations / merges / retirements with evidence → `data/taxonomy-proposals.json`; `--apply` writes the auto ones into the YAML | ~2 Claude calls per macro per night (first night reads everything) |
 | `src/syntax.js` | nightly | 2–4-word n-grams by distinct-member spread → `data/syntax/`, `data/phrases.json` (with per-member first-use for adoption curves) | free |
-| `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json` with the active → monitoring → resolved lifecycle; nightly runs also extract intel panels | pennies |
+| `src/incidents.js` | nightly (+grouping each poll) | Groups incident-flagged posts into `data/incidents.json`. A single member's report surfaces at once as **provisional**; a second member, a later post from the same member (≥1h) or the nightly intel panel corroborates it into the active → monitoring → resolved lifecycle. Each post stores the exact evidence span naming the event and place; a deterministic post-filter drops commemorations, hypotheticals, dated recovery posts, reaction-only posts, bare-state places and non-House accounts (listed under `filtered`) | pennies |
 | `src/rollup.js` | nightly | topic × day × caucus aggregates → `data/rollups/` | free |
 | `src/report.js` | nightly | `reports/YYYY-MM-DD.md` + `reports/latest.md` | free |
 | `src/sitedata.js` | every poll + nightly | Everything above → `site/data/rollups.json`, the one file the dashboard reads | free |
+| `src/embed-archive.js` | every poll (new posts) + nightly (`embed`, before `classify`) | Local BGE-small embeddings for every archived post → `data/embeddings/` (4 MB, incremental); `src/semantic.js` turns them into story centroids, similarity hints for the classifier and the dashboard's "similar, unlabeled" lists (see *Semantic matching*) | free (CPU, ~1 min for 10k posts, ~1 s per poll) |
 
 ## The dashboard
 
@@ -137,7 +139,10 @@ panel is a stub until an X search connector is added. Serve via GitHub Pages
 
 Emerging cards also carry an **In the news** list — newsletter hits for the
 story candidate from the owner's briefing inbox (`data/context.json`, see
-`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification.
+`docs/OUTSIDE_CONTEXT.md`): unreviewed context, not verification — and,
+like every story row in the topics table, a **Similar, unlabeled** list: the
+posts in the window whose wording sits near the story's posts but that carry
+no label for it (see *Semantic matching* below).
 
 Real windows, no fakery: `rollups.json` carries separate Today and 7-day
 aggregates per caucus for every topic — the design's sample data scaled one
@@ -183,6 +188,101 @@ the entry, or set `retired: true`) or confirms (delete `provisional: true`)
 rather than approving one by one. A taxonomy edit is only seen by the next
 classification run. Set `settings.stories.auto_promote` to `false` to make
 the nightly step list-only. The system never invents categories silently.
+
+**The taxonomy learns from the data.** Rows like "2026 midterms" mean
+nothing; rows must be what the caucus is actually talking about at the
+granularity the posts support. Every night after the stories step,
+`npm run taxonomy-learn -- --apply` (`src/taxonomy-learn.js`,
+`docs/TAXONOMY_LEARNING.md`):
+
+- reads the last 14 days of original posts under every macro (and the
+  posts left with no topic), clusters them by meaning — agglomerative on
+  embeddings when a semantic index exists, otherwise Claude reads them in
+  batches and groups them into subjects, cached per post so a later night
+  only reads what is new — and asks Claude once per macro to name each
+  cluster (label, key, aliases, kind: subtopic | story | noise), say whether
+  it duplicates an existing subtopic, and judge the existing rows (dead,
+  too coarse, duplicate, misnamed), with a reason for every verdict;
+- measures shape: each subtopic's share of its macro over 7 days, members,
+  days. A subject that draws `elevate_share` of its parent (or
+  `elevate_factor` × the median sibling while holding `elevate_min_share`)
+  is flagged **ELEVATE** — its own macro, dual-listed (`dual: true, of:`)
+  under the parent so history reads both ways; near-duplicates **MERGE**;
+  rows with zero assignments over `retire_days` **RETIRE**;
+- writes `data/taxonomy-proposals.json` with the evidence behind every
+  proposal, applies the `auto` ones (adds and retirements over the
+  thresholds, at most `max_per_night`) as text edits to the YAML with
+  `provisional: true` and `learned: <date>`, and lists everything in the
+  report's *Taxonomy learned tonight* section. Elevations and merges wait
+  for a human: `npm run taxonomy-learn -- --apply --elevate=key` /
+  `--merge=key` (or `settings.taxonomy_learn.auto_elevate: true`).
+
+`--dry-run` prints the plan and writes nothing; `--no-llm` uses cached
+clusters and the measured rules only; `--macro=economy,unassigned
+--scan=all` reads one pool completely. Hand edits to the YAML remain
+authoritative: a key, label or alias already present is never re-added.
+
+Keywords are not enough to find a story's posts — "Another AI wakeup call
+for Congress" never says Coxon. The next section is the layer that reads
+for similarity instead.
+
+## Semantic matching
+
+Every archived post is embedded with a small sentence model on the CPU
+(`bge-small-en-v1.5`, ONNX int8, 384 dimensions); every tracked story — a
+`story: true` taxonomy row, or a `data/stories.json` candidate the placement
+pass called a story — gets a centroid from the posts already tied to it
+(assignments plus anchors, so a quote of Coxon's post that never names him
+counts); the corpus is ranked against it. Method, measured precision and the
+calibration behind the thresholds: `docs/SEMANTIC_MATCHING.md`.
+
+**Getting the model.** `npm run download-model` fetches the four pinned files
+(35 MB, sizes and digests in `src/embeddings.js`) into git-ignored
+`data/models/`; it is the only network step, refuses anything that does not
+verify, and is a no-op once the files are there. The `poll` and `nightly`
+workflows restore it from the Actions cache (key = the model revision) and
+fall back to the download, best-effort. Then `npm run embed` embeds whatever
+the committed index (`data/embeddings/`, 4.3 MB int8 for 10.5k posts) lacks;
+`--rebuild` starts over, `--require-model` turns the missing-model skip into
+an error.
+
+**What it costs.** CPU time only — no GPU, no API spend. Measured on the
+4-core host: the whole archive (10,482 posts) in 60 s, a poll's worth of new
+posts in about a second including model load, the index loaded in well under
+a second, a nearest-neighbour pass over the whole corpus in a few
+milliseconds. Verifying the model on disk reads the 34 MB weights once per
+process (~0.1 s). Without the model every step prints one skip line and the
+pipeline continues; without the index the classifier's requests are
+byte-identical to what they were.
+
+**What it does.**
+
+- The nightly chain is `refresh → embed → classify → …`, and the poller
+  embeds each poll's new posts right after capture, so vectors exist before
+  anything asks for them.
+- Every post sent to Claude — nightly batch, `classify-range`, poll-time
+  tagging — carries `candidates`: up to `settings.semantic.candidates`
+  stories whose centroid its vector sits within `settings.semantic.min_sim`
+  of. A live taxonomy row arrives as `{"story": "macro/sub", "sim": 0.87}`;
+  a story candidate the taxonomy has not promoted yet as `{"emerging":
+  "<label>", …}` so the model reuses the label the story pipeline already
+  merges on. The prompt calls them hints: the model assigns a candidate only
+  when the text or quoted context supports it.
+- The dashboard's Emerging cards and story rows each carry **Similar,
+  unlabeled**: up to `settings.semantic.related_posts` posts from the 7-day
+  window whose wording sits near the story's posts but that carry no label
+  for it (retweets left out; the original speaks for itself), with the
+  similarity number beside each.
+
+**What it does not claim.** Similarity is a retrieval signal, not a
+judgment: above the floor a reader — or Claude, via `npm run semantic-proof`,
+which reads the nearest posts and gives a reason per post — still decides.
+Adjacent subjects inside a dense macro overlap a story in similarity (the
+top neighbour of the Coxon story was a data-centre post), a post attacking a
+bill sits next to one supporting it, small candidate stories pull in their
+genre, retweets embed as the retweeted text, replies and quotes embed as
+their own words without the parent, and non-English posts are noise. The
+dashboard labels the lists as measured similarity for that reason.
 
 ## Local development
 

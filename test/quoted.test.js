@@ -373,7 +373,7 @@ test('planDay assigns anchored stories before the model and attaches quoted cont
   assert.deepEqual(day.emerging, [{ label: 'AI lab departures', ids: ['n1'] }]); // anchored ids leave the clusters; an emptied cluster is dropped
   assert.deepEqual(day.unclassified, []);
   // rt1 is anchored, not inherited: its original has no assignment to inherit
-  assert.deepEqual(stats, { classified: 3, inherited: 2, anchored: 2, incidents: 0, emerging: 1, unclassified: 0, failedChunks: 0 });
+  assert.deepEqual(stats, { classified: 3, inherited: 2, anchored: 2, incidents: 0, emerging: 1, unclassified: 0, droppedSubs: 0, failedChunks: 0 });
 
   // without anchors nothing changes: a missing model answer is unclassified
   const noAnchors = planDay('2026-09-09', { tax: { economy: tax.economy }, tweets, prior: {}, resolve });

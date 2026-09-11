@@ -1,0 +1,1266 @@
+{
+ "generatedAt": "2026-09-11T12:15:52.318Z",
+ "night": "2026-09-11",
+ "window": {
+  "from": "2026-08-28",
+  "to": "2026-09-10",
+  "days": 14,
+  "shareDays": 7,
+  "retireDays": 21,
+  "classifiedDays": 20
+ },
+ "settings": {
+  "model": "claude-opus-5",
+  "min_posts": 8,
+  "min_members": 3,
+  "elevate_share": 0.6,
+  "elevate_factor": 3,
+  "merge_sim": 0.9,
+  "retire_days": 21,
+  "auto_apply": false,
+  "auto_elevate": false,
+  "max_per_night": 6,
+  "max_calls": 40,
+  "semantic": false
+ },
+ "calls": 60,
+ "coverage": {
+  "economy": {
+   "label": "Economy & cost of living",
+   "posts": 994,
+   "posts7": 422,
+   "scanned": 56,
+   "scanned7": 13,
+   "read": 0,
+   "calls": 2,
+   "clusters": 14,
+   "named": 1,
+   "generic": 10,
+   "subjects": [
+    {
+     "key": "iran-war-gas-prices",
+     "label": "Iran war driving gas prices up",
+     "posts": 8,
+     "posts7": 32,
+     "members": 8,
+     "days": 5,
+     "share": 0.077
+    },
+    {
+     "key": "trump-priorities-vs-costs",
+     "label": "Trump's vanity projects vs costs",
+     "posts": 6,
+     "posts7": 32,
+     "members": 6,
+     "days": 4,
+     "share": 0.077
+    },
+    {
+     "key": "canada-tariffs",
+     "label": "Canada tariffs & trade",
+     "posts": 4,
+     "posts7": 32,
+     "members": 3,
+     "days": 4,
+     "share": 0.077
+    },
+    {
+     "key": "cost-of-living-crisis",
+     "label": "Cost-of-living crisis broadly",
+     "posts": 4,
+     "posts7": 65,
+     "members": 4,
+     "days": 4,
+     "share": 0.154
+    },
+    {
+     "key": "food-insecurity",
+     "label": "Grocery costs & food insecurity",
+     "posts": 3,
+     "posts7": 32,
+     "members": 3,
+     "days": 3,
+     "share": 0.077
+    },
+    {
+     "key": "labor-day",
+     "label": "Labor Day & worker dignity",
+     "posts": 3,
+     "posts7": 97,
+     "members": 3,
+     "days": 1,
+     "share": 0.231
+    },
+    {
+     "key": "lake-renaming",
+     "label": "Trump renaming Lake Ontario",
+     "posts": 3,
+     "posts7": 0,
+     "members": 3,
+     "days": 3,
+     "share": 0
+    },
+    {
+     "key": "utility-bills",
+     "label": "Electricity & utility bills",
+     "posts": 3,
+     "posts7": 32,
+     "members": 2,
+     "days": 3,
+     "share": 0.077
+    },
+    {
+     "key": "film-tax-incentive",
+     "label": "Federal film tax incentive",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "gas-prices",
+     "label": "Gas prices & gas tax relief",
+     "posts": 2,
+     "posts7": 32,
+     "members": 2,
+     "days": 2,
+     "share": 0.077
+    },
+    {
+     "key": "housing-affordability",
+     "label": "Housing costs & affordable housing",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "khanna-industrial-policy",
+     "label": "Khanna industrial policy exchange",
+     "posts": 2,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "national-debt-tax-breaks",
+     "label": "National debt & billionaire tax cuts",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "tariff-household-costs",
+     "label": "Tariff/policy cost per household",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    }
+   ],
+   "existing": {
+    "prices-inflation": {
+     "posts": 92,
+     "posts7": 41,
+     "members7": 37,
+     "days7": 5,
+     "share": 0.097,
+     "verdict": null
+    },
+    "tariffs-trade": {
+     "posts": 34,
+     "posts7": 10,
+     "members7": 8,
+     "days7": 4,
+     "share": 0.024,
+     "verdict": null
+    },
+    "housing": {
+     "posts": 6,
+     "posts7": 3,
+     "members7": 3,
+     "days7": 3,
+     "share": 0.007,
+     "verdict": null
+    },
+    "jobs-wages": {
+     "posts": 31,
+     "posts7": 25,
+     "members7": 24,
+     "days7": 5,
+     "share": 0.059,
+     "verdict": null
+    },
+    "taxes": {
+     "posts": 17,
+     "posts7": 7,
+     "members7": 6,
+     "days7": 3,
+     "share": 0.017,
+     "verdict": null
+    }
+   },
+   "proposals": 1
+  },
+  "congress-politics": {
+   "label": "Congress & campaign politics",
+   "posts": 916,
+   "posts7": 375,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "house-floor": {
+     "posts": 21,
+     "posts7": 6,
+     "members7": 6,
+     "days7": 4,
+     "share": 0.016,
+     "verdict": null
+    },
+    "elections-2026": {
+     "posts": 52,
+     "posts7": 28,
+     "members7": 20,
+     "days7": 4,
+     "share": 0.075,
+     "verdict": null
+    },
+    "town-halls": {
+     "posts": 41,
+     "posts7": 18,
+     "members7": 16,
+     "days7": 5,
+     "share": 0.048,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "democracy": {
+   "label": "Democracy & rule of law",
+   "posts": 786,
+   "posts7": 275,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "epstein-files": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "lake-america-renaming": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "voting-rights": {
+     "posts": 41,
+     "posts7": 16,
+     "members7": 14,
+     "days7": 4,
+     "share": 0.058,
+     "verdict": null
+    },
+    "courts-doj": {
+     "posts": 11,
+     "posts7": 7,
+     "members7": 7,
+     "days7": 3,
+     "share": 0.025,
+     "verdict": null
+    },
+    "executive-overreach": {
+     "posts": 30,
+     "posts7": 15,
+     "members7": 14,
+     "days7": 5,
+     "share": 0.055,
+     "verdict": null
+    },
+    "corruption-ethics": {
+     "posts": 41,
+     "posts7": 13,
+     "members7": 11,
+     "days7": 4,
+     "share": 0.047,
+     "verdict": null
+    },
+    "press-speech": {
+     "posts": 9,
+     "posts7": 3,
+     "members7": 3,
+     "days7": 3,
+     "share": 0.011,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "foreign-policy": {
+   "label": "Foreign policy & national security",
+   "posts": 648,
+   "posts7": 216,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "ukraine-russia": {
+     "posts": 3,
+     "posts7": 3,
+     "members7": 3,
+     "days7": 3,
+     "share": 0.014,
+     "verdict": null
+    },
+    "middle-east": {
+     "posts": 49,
+     "posts7": 21,
+     "members7": 20,
+     "days7": 5,
+     "share": 0.097,
+     "verdict": null
+    },
+    "china": {
+     "posts": 2,
+     "posts7": 2,
+     "members7": 2,
+     "days7": 2,
+     "share": 0.009,
+     "verdict": null
+    },
+    "military-veterans": {
+     "posts": 23,
+     "posts7": 8,
+     "members7": 8,
+     "days7": 3,
+     "share": 0.037,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "labor": {
+   "label": "Labor & workers",
+   "posts": 406,
+   "posts7": 358,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "unions": {
+     "posts": 65,
+     "posts7": 59,
+     "members7": 56,
+     "days7": 4,
+     "share": 0.165,
+     "verdict": null
+    },
+    "federal-workforce": {
+     "posts": 2,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.003,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "healthcare": {
+   "label": "Health care",
+   "posts": 346,
+   "posts7": 163,
+   "scanned": 148,
+   "scanned7": 65,
+   "read": 0,
+   "calls": 2,
+   "clusters": 27,
+   "named": 4,
+   "generic": 31,
+   "subjects": [
+    {
+     "key": "obbba-health-cuts",
+     "label": "OBBBA Medicaid & ACA coverage cuts",
+     "posts": 21,
+     "posts7": 25,
+     "members": 18,
+     "days": 10,
+     "share": 0.154
+    },
+    {
+     "key": "988-suicide-prevention",
+     "label": "988 lifeline & suicide prevention",
+     "posts": 20,
+     "posts7": 30,
+     "members": 17,
+     "days": 7,
+     "share": 0.185
+    },
+    {
+     "key": "food-safety-recalls",
+     "label": "Food safety & recalls",
+     "posts": 8,
+     "posts7": 5,
+     "members": 6,
+     "days": 5,
+     "share": 0.031
+    },
+    {
+     "key": "overdose-awareness-day",
+     "label": "Overdose awareness & recovery",
+     "posts": 8,
+     "posts7": 5,
+     "members": 8,
+     "days": 4,
+     "share": 0.031
+    },
+    {
+     "key": "local-health-facility-visits",
+     "label": "Local hospital/clinic visits & praise",
+     "posts": 7,
+     "posts7": 13,
+     "members": 7,
+     "days": 5,
+     "share": 0.077
+    },
+    {
+     "key": "medicare-for-all",
+     "label": "Medicare for All / universal care",
+     "posts": 7,
+     "posts7": 10,
+     "members": 2,
+     "days": 5,
+     "share": 0.062
+    },
+    {
+     "key": "vaccines-rfk-misinformation",
+     "label": "Measles outbreaks & RFK Jr. vaccines",
+     "posts": 7,
+     "posts7": 5,
+     "members": 7,
+     "days": 6,
+     "share": 0.031
+    },
+    {
+     "key": "federal-health-facility-grants",
+     "label": "Federal grants to local health sites",
+     "posts": 5,
+     "posts7": 3,
+     "members": 5,
+     "days": 5,
+     "share": 0.015
+    },
+    {
+     "key": "health-cost-spike",
+     "label": "Health insurance cost spike",
+     "posts": 4,
+     "posts7": 8,
+     "members": 4,
+     "days": 3,
+     "share": 0.046
+    },
+    {
+     "key": "anti-socialism-resolution",
+     "label": "House anti-socialism resolution",
+     "posts": 3,
+     "posts7": 0,
+     "members": 2,
+     "days": 3,
+     "share": 0
+    },
+    {
+     "key": "ground-zero-air-files",
+     "label": "Ground Zero air quality files",
+     "posts": 3,
+     "posts7": 8,
+     "members": 3,
+     "days": 3,
+     "share": 0.046
+    },
+    {
+     "key": "nih-funds-to-pentagon",
+     "label": "NIH funds redirected to Pentagon",
+     "posts": 3,
+     "posts7": 5,
+     "members": 3,
+     "days": 3,
+     "share": 0.031
+    },
+    {
+     "key": "prescription-drug-costs",
+     "label": "Prescription drug costs",
+     "posts": 3,
+     "posts7": 3,
+     "members": 3,
+     "days": 3,
+     "share": 0.015
+    },
+    {
+     "key": "bus-idling-asthma",
+     "label": "Bus idling, asthma & BUSES Act",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "florida-medicaid-theft",
+     "label": "Florida $10M Medicaid funds theft",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "hhs-maternal-infant-grants",
+     "label": "HHS infant mortality grant cuts",
+     "posts": 2,
+     "posts7": 5,
+     "members": 2,
+     "days": 2,
+     "share": 0.031
+    },
+    {
+     "key": "nitrous-oxide-ban",
+     "label": "Nitrous oxide misuse ban bill",
+     "posts": 2,
+     "posts7": 0,
+     "members": 1,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "blood-donation-drive",
+     "label": "Red Cross blood drive",
+     "posts": 1,
+     "posts7": 3,
+     "members": 1,
+     "days": 1,
+     "share": 0.015
+    },
+    {
+     "key": "caregiving-infrastructure-bill",
+     "label": "Caregiving infrastructure bill",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "child-detention-centers-letter",
+     "label": "Child detention center expansion letter",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "lake-america-renaming",
+     "label": "Lake Ontario renamed 'Lake America'",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "medical-nutrition-therapy-act",
+     "label": "Medical Nutrition Therapy Act",
+     "posts": 1,
+     "posts7": 3,
+     "members": 1,
+     "days": 1,
+     "share": 0.015
+    },
+    {
+     "key": "ms-research-advocacy",
+     "label": "MS research & Oregon advocacy",
+     "posts": 1,
+     "posts7": 3,
+     "members": 1,
+     "days": 1,
+     "share": 0.015
+    },
+    {
+     "key": "ovarian-cancer-awareness",
+     "label": "Ovarian cancer risk & genetic testing",
+     "posts": 1,
+     "posts7": 3,
+     "members": 1,
+     "days": 1,
+     "share": 0.015
+    },
+    {
+     "key": "pepfar-global-health",
+     "label": "PEPFAR & withheld global health funds",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "pfas-hudson-valley",
+     "label": "PFAS cleanup in Hudson Valley",
+     "posts": 1,
+     "posts7": 3,
+     "members": 1,
+     "days": 1,
+     "share": 0.015
+    },
+    {
+     "key": "veterans-copay-bill",
+     "label": "Copay Fairness for Veterans Act",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    }
+   ],
+   "existing": {
+    "medicaid": {
+     "posts": 11,
+     "posts7": 6,
+     "members7": 6,
+     "days7": 3,
+     "share": 0.037,
+     "verdict": {
+      "key": "medicaid",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "12 posts and the largest cluster is Medicaid cuts hitting coverage and rural hospitals."
+     }
+    },
+    "medicare": {
+     "posts": 5,
+     "posts7": 2,
+     "members7": 2,
+     "days7": 1,
+     "share": 0.012,
+     "verdict": {
+      "key": "medicare",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "7 posts sustained across the window; thin but a durable, separately-argued program."
+     }
+    },
+    "aca": {
+     "posts": 1,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.006,
+     "verdict": {
+      "key": "aca",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "Only 1 post assigned directly, but cluster 1 shows real ACA premium-credit content being absorbed into the cuts story; keep the row."
+     }
+    },
+    "drug-prices": {
+     "posts": 2,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.006,
+     "verdict": {
+      "key": "drug-prices",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "3 posts, no cluster of its own — low volume but a live, distinct subject, not empty."
+     }
+    },
+    "public-health": {
+     "posts": 19,
+     "posts7": 9,
+     "members7": 8,
+     "days7": 4,
+     "share": 0.055,
+     "verdict": {
+      "key": "public-health",
+      "verdict": "coarse",
+      "of": null,
+      "label": null,
+      "splits": [
+       "measles-rfk-vaccines",
+       "food-safety-recalls",
+       "mental-health-988",
+       "overdose-recovery"
+      ],
+      "reason": "Its 19 posts split into four distinct subjects: vaccines/measles, food safety, 988 mental health, and overdose/recovery."
+     }
+    }
+   },
+   "proposals": 4
+  },
+  "civil-rights": {
+   "label": "Civil rights & equality",
+   "posts": 329,
+   "posts7": 79,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "lgbtq": {
+     "posts": 2,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "racial-justice": {
+     "posts": 26,
+     "posts7": 11,
+     "members7": 11,
+     "days7": 5,
+     "share": 0.139,
+     "verdict": null
+    },
+    "disability": {
+     "posts": 3,
+     "posts7": 2,
+     "members7": 2,
+     "days7": 2,
+     "share": 0.025,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "constituent-services": {
+   "label": "District & constituent services",
+   "posts": 323,
+   "posts7": 141,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 1,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {},
+   "proposals": 0
+  },
+  "immigration": {
+   "label": "Immigration",
+   "posts": 313,
+   "posts7": 109,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "dilley-detention": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "ice-enforcement": {
+     "posts": 31,
+     "posts7": 8,
+     "members7": 8,
+     "days7": 5,
+     "share": 0.073,
+     "verdict": null
+    },
+    "border-policy": {
+     "posts": 2,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "dreamers-daca": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "asylum-refugees": {
+     "posts": 4,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.009,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "climate": {
+   "label": "Climate & environment",
+   "posts": 247,
+   "posts7": 100,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "clean-energy": {
+     "posts": 1,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "disasters": {
+     "posts": 19,
+     "posts7": 12,
+     "members7": 11,
+     "days7": 5,
+     "share": 0.12,
+     "verdict": null
+    },
+    "epa-rollbacks": {
+     "posts": 5,
+     "posts7": 3,
+     "members7": 3,
+     "days7": 2,
+     "share": 0.03,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "budget-appropriations": {
+   "label": "Budget & appropriations",
+   "posts": 224,
+   "posts7": 65,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "shutdown": {
+     "posts": 3,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.015,
+     "verdict": null
+    },
+    "social-security": {
+     "posts": 5,
+     "posts7": 3,
+     "members7": 2,
+     "days7": 2,
+     "share": 0.046,
+     "verdict": null
+    },
+    "snap-benefits": {
+     "posts": 11,
+     "posts7": 5,
+     "members7": 5,
+     "days7": 3,
+     "share": 0.077,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "education": {
+   "label": "Education",
+   "posts": 168,
+   "posts7": 86,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "public-schools": {
+     "posts": 13,
+     "posts7": 9,
+     "members7": 7,
+     "days7": 4,
+     "share": 0.105,
+     "verdict": null
+    },
+    "higher-ed": {
+     "posts": 8,
+     "posts7": 2,
+     "members7": 2,
+     "days7": 1,
+     "share": 0.023,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "tech": {
+   "label": "Technology",
+   "posts": 110,
+   "posts7": 54,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "ai-policy": {
+     "posts": 15,
+     "posts7": 12,
+     "members7": 10,
+     "days7": 3,
+     "share": 0.222,
+     "verdict": null
+    },
+    "big-tech": {
+     "posts": 2,
+     "posts7": 1,
+     "members7": 1,
+     "days7": 1,
+     "share": 0.019,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "public-safety": {
+   "label": "Guns & public safety",
+   "posts": 62,
+   "posts7": 29,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "gun-violence": {
+     "posts": 4,
+     "posts7": 2,
+     "members7": 2,
+     "days7": 1,
+     "share": 0.069,
+     "verdict": null
+    },
+    "crime-policing": {
+     "posts": 2,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "reproductive-rights": {
+   "label": "Reproductive rights",
+   "posts": 32,
+   "posts7": 7,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "abortion-access": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    },
+    "ivf-contraception": {
+     "posts": 0,
+     "posts7": 0,
+     "members7": 0,
+     "days7": 0,
+     "share": 0,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
+  "unassigned": {
+   "label": "Unassigned posts",
+   "posts": 832,
+   "posts7": 351,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 1,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {},
+   "proposals": 0
+  }
+ },
+ "deferred": [],
+ "proposals": [
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "iran-war-gas-prices",
+   "pool": "economy",
+   "label": "Iran war driving gas prices up",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 8,
+    "hits7": 1,
+    "posts7": 32,
+    "estimated": true,
+    "members": 8,
+    "days": 5,
+    "firstSeen": "2026-08-28",
+    "lastSeen": "2026-09-04",
+    "share": 0.077,
+    "sample_ids": [
+     "2093434114049253887",
+     "2093417996060430751",
+     "2093357416284877182",
+     "2094421123588874357",
+     "2095659322420154408"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts (named 2026-09-10) — 8 posts read (≈32 in the last 7 days, extrapolated), 8 members, 5 day(s), 8% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "healthcare",
+   "key": "obbba-health-cuts",
+   "pool": "healthcare",
+   "label": "OBBBA Medicaid & ACA coverage cuts",
+   "aliases": [
+    "One Big Beautiful Bill health cuts",
+    "cancel the cuts",
+    "Medicaid cuts",
+    "ACA premium tax credits expiring",
+    "coverage losses"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 21,
+    "hits7": 10,
+    "posts7": 25,
+    "estimated": true,
+    "members": 18,
+    "days": 10,
+    "firstSeen": "2026-08-28",
+    "lastSeen": "2026-09-09",
+    "share": 0.154,
+    "sample_ids": [
+     "2097839585745043470",
+     "2097409023595221244",
+     "2094149444665024876",
+     "2096563379246633023",
+     "2095565396375916738"
+    ]
+   },
+   "story": true,
+   "since": "2026-08-28",
+   "reason": "Posts attack the Republican budget law for stripping Medicaid/ACA coverage to fund tax cuts — spans both medicaid and aca, so not identical to either. (named 2026-09-10) — 21 posts read (≈25 in the last 7 days, extrapolated), 18 members, 10 day(s), 15% of healthcare this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "healthcare",
+   "key": "mental-health-988",
+   "pool": "healthcare",
+   "label": "988 lifeline & suicide prevention",
+   "aliases": [
+    "988",
+    "988 Day",
+    "Suicide & Crisis Lifeline",
+    "Suicide Prevention Month",
+    "mental health crisis line"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 20,
+    "hits7": 12,
+    "posts7": 30,
+    "estimated": true,
+    "members": 17,
+    "days": 7,
+    "firstSeen": "2026-09-01",
+    "lastSeen": "2026-09-09",
+    "share": 0.185,
+    "sample_ids": [
+     "2097484631704838622",
+     "2094810354127712531",
+     "2097399746696487106",
+     "2095154653868491010",
+     "2095602589303783884"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "A recurring awareness/resource push (\"call 988 to be connected with free, confidential counseling\") distinct from CDC/NIH public health. (named 2026-09-10) — 20 posts read (≈30 in the last 7 days, extrapolated), 17 members, 7 day(s), 19% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "healthcare",
+   "key": "food-safety-recalls",
+   "pool": "healthcare",
+   "label": "Food safety & recalls",
+   "aliases": [
+    "food safety",
+    "recall",
+    "FDA inspectors",
+    "USDA inspections",
+    "foodborne illness"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 8,
+    "hits7": 2,
+    "posts7": 5,
+    "estimated": true,
+    "members": 6,
+    "days": 5,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-08",
+    "share": 0.031,
+    "sample_ids": [
+     "2094461570768155031",
+     "2094784737738891518",
+     "2096256518064591056",
+     "2094517732813234504",
+     "2094537969449246884"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "Posts hit gutted inspections and recalls — \"They're making your food less safe\" — a distinct health subject from vaccines or CDC. (named 2026-09-10) — 8 posts read (≈5 in the last 7 days, extrapolated), 6 members, 5 day(s), 3% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "healthcare",
+   "key": "overdose-recovery",
+   "pool": "healthcare",
+   "label": "Overdose awareness & recovery",
+   "aliases": [
+    "Overdose Awareness Day",
+    "National Recovery Month",
+    "naloxone",
+    "opioid crisis",
+    "addiction treatment"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 8,
+    "hits7": 2,
+    "posts7": 5,
+    "estimated": true,
+    "members": 8,
+    "days": 4,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-08",
+    "share": 0.031,
+    "sample_ids": [
+     "2095899692538167502",
+     "2094510978289254451",
+     "2094953453374054410",
+     "2094568248989610403",
+     "2097324225786691613"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "Posts mark Overdose Awareness Day/Recovery Month and push prevention, treatment and naloxone access. (named 2026-09-10) — 8 posts read (≈5 in the last 7 days, extrapolated), 8 members, 4 day(s), 3% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "auto": false,
+   "eligible": true
+  }
+ ],
+ "applied": []
+}

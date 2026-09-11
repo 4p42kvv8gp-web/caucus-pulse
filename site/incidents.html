@@ -43,7 +43,7 @@
 </main>
 </div>
 <script type="module">
-import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups } from './ui.js';
+import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups, provisionalBadge, evidenceQuote, markEvidence } from './ui.js';
 
 let D = null;
 const state = { status: 'All', selected: null, copied: false };
@@ -69,10 +69,18 @@ function kindTag(kind, small = false) {
   return `<span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(kind)}</span>`;
 }
 
+// On the desk: corroborated and not resolved, or provisional and not yet
+// stale. A provisional report is never "resolved" — it just ages out.
+const onDesk = (i) => i.status === 'active' || i.status === 'monitoring' || (i.status === 'provisional' && i.lifecycle !== 'resolved');
+
 function briefOf(sel) {
   const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  const ev = sel.evidence || {};
+  const prov = sel.status === 'provisional';
   return [
-    `${sel.title} — ${sel.place} · ${sel.status} · ${etWhen(sel.since, D.today)} → ${etWhen(sel.last, D.today)}`,
+    `${sel.title} — ${sel.place} · ${prov ? `PROVISIONAL (${sel.lifecycle})` : sel.status} · ${etWhen(sel.since, D.today)} → ${etWhen(sel.last, D.today)}`,
+    ...(prov ? [`Single-member report, not yet corroborated: ${sel.corroboration?.note || ''}`] : sel.corroboration?.by ? [`Corroborated by ${sel.corroboration.by}: ${sel.corroboration.note || ''}`] : []),
+    ...(ev.span ? [`Evidence${ev.exact ? '' : ' (first 140 chars; event/place not named verbatim)'}: “${ev.span}${ev.exact ? '' : '…'}” — ${sel.handle}, ${etWhen(sel.since, D.today)}`] : []),
     '',
     'Confirmed', ...(intel.confirmed.length ? intel.confirmed.map((c) => `• ${c.text} (${c.src})`) : ['• nothing extracted yet']),
     ...(intel.unverified.length ? ['', 'Circulating, unverified', ...intel.unverified.map((u) => `• ${u.text} (${u.src})`)] : []),
@@ -88,16 +96,17 @@ function render() {
   const all = incidents();
   $('updated').innerHTML = `${dot('#1d1d1f', 6)}${esc(headerDate(D.today))} · updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
   const count = (s) => all.filter((i) => i.status === s).length;
-  $('counts').textContent = `${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week`;
-  $('statusseg').innerHTML = seg(['All', 'Active', 'Monitoring', 'Resolved'], 'status');
+  $('counts').textContent = `${count('provisional')} provisional · ${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week${D.incidentsFiltered ? ` · ${D.incidentsFiltered} flags filtered` : ''}`;
+  $('statusseg').innerHTML = seg(['All', 'Provisional', 'Active', 'Monitoring', 'Resolved'], 'status');
 
-  const list = all.filter((i) => state.status === 'All' ? i.status !== 'resolved' : i.status === state.status.toLowerCase());
+  const list = all.filter((i) => state.status === 'All' ? onDesk(i) : i.status === state.status.toLowerCase());
   if (!state.selected || !all.some((i) => i.id === state.selected)) state.selected = (list[0] || all[0])?.id || null;
   const sel = all.find((i) => i.id === state.selected);
 
-  $('list').innerHTML = list.map((i) => `<button class="card" data-pick="${esc(i.id)}">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px">${statusDot(i.status)}${kindTag(i.kind)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(i.last, D.today))}</span></div>
+  $('list').innerHTML = list.map((i) => `<button class="card" data-pick="${esc(i.id)}"${i.status === 'provisional' ? ' style="border-style:dashed;border-color:#c7d2ea"' : ''}>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap">${statusDot(i.status)}${kindTag(i.kind)}${i.status === 'provisional' ? provisionalBadge(i.corroboration?.note) : ''}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(i.last, D.today))}</span></div>
     <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(i.place)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${i.updates} posts</span></div>
+    ${i.status === 'provisional' && i.evidence?.span ? `<div style="font-size:12px;line-height:1.35;color:#3a3a3c">“${esc(i.evidence.span.length > 120 ? i.evidence.span.slice(0, 119).replace(/\s+\S*$/, '') + '…' : i.evidence.span)}${i.evidence.exact || i.evidence.span.length > 120 ? '' : '…'}”</div>` : ''}
     <div style="font-size:12px;color:#6e6e73">${esc(i.handle)} · ${esc(i.member)}${i.id === state.selected ? '<span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span>' : ''}</div>
   </button>`).join('') || '<div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div>';
 
@@ -110,13 +119,29 @@ function render() {
   }
   const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
   const newCount = sel.timeline.filter((e) => e.isNew).length;
+  const prov = sel.status === 'provisional';
+  const corr = sel.corroboration || {};
   const panel = (title, color, rows) => `<div style="background:#f7f7f9;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:6px"><div style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:${color}">${title}</div>${rows}</div>`;
+  const flagLine = (e) => {
+    const f = e.flag || {};
+    const differs = (f.kind && f.kind !== sel.kind) || (f.place && f.place !== sel.placeRaw);
+    return differs ? ` · flagged as ${esc(f.kind)} · ${esc(f.place)}` : '';
+  };
+  const evLine = (e) => {
+    const ev = e.evidence;
+    if (!ev) return '';
+    if (ev.exact) return `<div style="font-size:10px;color:#6e6e73">evidence highlighted · names the event and the place${flagLine(e)}</div>`;
+    const missing = ev.matched ? ['kind', 'place'].filter((k) => !ev.matched[k]) : [];
+    return `<div style="font-size:10px;color:#a35d00">evidence not found verbatim — the post does not name the ${missing.length ? missing.join(' or ') : 'event and place'}; first 140 chars stored${flagLine(e)}</div>`;
+  };
   $('detail').innerHTML = `
   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start">
     <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${kindTag(sel.kind)}<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">${statusDot(sel.status)}${sel.status}</span><span style="font-size:11px;color:#6e6e73">${esc(etWhen(sel.since, D.today))} → ${esc(etWhen(sel.last, D.today))}</span></div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${kindTag(sel.kind)}${prov ? provisionalBadge(corr.note) : ''}<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">${statusDot(sel.status)}${prov ? `provisional · ${esc(sel.lifecycle)} by age` : esc(sel.status)}</span><span style="font-size:11px;color:#6e6e73">${esc(etWhen(sel.since, D.today))} → ${esc(etWhen(sel.last, D.today))}</span></div>
       <h2 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(sel.title)}</h2>
-      <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${esc(sel.handle)}</span> · ${esc(sel.member)} · ${esc(sel.place)}</div>
+      <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${esc(sel.handle)}</span> · ${esc(sel.member)} · ${esc(sel.place)}${sel.districtMatch === false && sel.district ? ` <span title="The flagged place is not in the lead member's state (${esc(sel.district)}); the district suffix is withheld">· outside ${esc(sel.district)}</span>` : ''}</div>
+      <div style="font-size:12px;color:${prov ? '#194292' : '#6e6e73'}">${prov ? `Single-member report — ${esc(corr.note || 'not yet corroborated')}` : `Corroborated by ${esc(corr.by || 'grouping')}${corr.note ? ` — ${esc(corr.note)}` : ''}`}</div>
+      ${prov ? evidenceQuote(sel.evidence, sel.timeline[0]?.text) : ''}
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,auto);gap:14px;font-size:11px;color:#6e6e73;text-align:right">
       <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${sel.updates}</div>member posts</div>
@@ -133,12 +158,13 @@ function render() {
         <div style="display:flex;justify-content:center;padding-top:5px">${dot(e.isNew ? '#1d1d1f' : '#d2d2d7')}</div>
         <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
           <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${esc(e.who)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span></div>
-          <p style="margin:0;font-size:13px;line-height:1.4">${esc(e.text)}</p>
+          <p style="margin:0;font-size:13px;line-height:1.4">${markEvidence(e.text, e.evidence)}</p>
+          ${evLine(e)}
           <div style="font-size:11px;color:#6e6e73">${fmt(e.engN)} engagement</div>
         </div></div>`).join('')}
     </div>
     <div style="flex:2 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:13px;font-weight:700">Intel</h3>
-      ${panel('Confirmed', '#00823a', intel.confirmed.length ? intel.confirmed.map((c) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#00823a;font-weight:700">✓</span><span>${esc(c.text)} <span style="color:#6e6e73">· ${esc(c.src)}</span></span></div>`).join('') : '<div style="font-size:12px;color:#6e6e73">Nothing extracted yet — intel updates on the nightly run.</div>')}
+      ${panel('Confirmed', '#00823a', intel.confirmed.length ? intel.confirmed.map((c) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#00823a;font-weight:700">✓</span><span>${esc(c.text)} <span style="color:#6e6e73">· ${esc(c.src)}</span></span></div>`).join('') : `<div style="font-size:12px;color:#6e6e73">${prov ? 'Nothing extracted yet — the nightly intel pass is one of the ways a single-member report gets corroborated.' : 'Nothing extracted yet — intel updates on the nightly run.'}</div>`)}
       ${intel.unverified.length ? panel('Circulating, unverified', '#d70015', intel.unverified.map((u) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#d70015;font-weight:700">?</span><span>${esc(u.text)} <span style="color:#6e6e73">· ${esc(u.src)}</span></span></div>`).join('')) : ''}
       ${panel("What's new", '#6e6e73', (intel.whatsNew.length ? intel.whatsNew : sel.timeline.slice(-2).reverse().map((e) => e.text.slice(0, 90))).map((n) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;margin-top:5px"></span><span>${esc(n)}</span></div>`).join(''))}
       ${panel('Who else is on it', '#6e6e73', `<div style="display:flex;flex-wrap:wrap;gap:4px">${sel.others.length ? sel.others.map((o) => `<span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">${esc(o)}</span>`).join('') : '<span style="font-size:12px;color:#6e6e73">Only the lead member so far.</span>'}</div>`)}

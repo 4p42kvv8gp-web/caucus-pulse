@@ -42,7 +42,7 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote } from './ui.js';
 
 let D = null;
 const state = {
@@ -59,6 +59,21 @@ const val = (t, win = state.window, scope = state.caucus) => t[win][scope] || { 
 const caucusName = (k) => k === 'All' ? 'all caucuses' : (D.caucusNames[k] || k);
 const inTopic = (f, key) => f.topics.some((tk) => tk === key || tk.startsWith(key + '/'));
 const winPosts = (f) => state.window === 't' ? f.date === D.today : true;
+
+// "Similar, unlabeled": posts in the window whose wording sits near a
+// story's posts but that carry no label for it (sitedata attachRelated).
+// The number is cosine similarity to the story's posts — a reading cue,
+// not a judgment; the title says so. `wrap` for the narrow emerging cards,
+// single-line ellipsis inside the topics table.
+const SIMILAR_TITLE = 'Posts in the 7-day window whose wording sits near this story\'s posts but that carry no label for it — measured similarity (0–1), not a judgment. Read before you count them. docs/SEMANTIC_MATCHING.md';
+function similarList(list, { wrap = false } = {}) {
+  if (!list?.length) return '';
+  const body = (r) => wrap
+    ? `<span style="min-width:0">${esc(r.text)}</span>`
+    : `<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1">${esc(r.text)}</span>`;
+  const rows = list.map((r) => `<div style="display:flex;gap:6px;align-items:baseline;font-size:12px;line-height:1.35;color:#3a3a3c;min-width:0" title="${esc(r.topics?.length ? 'labeled: ' + r.topics.map(label).join(', ') : 'no labels')}"><span style="font-weight:500;color:#1d1d1f;white-space:nowrap">${esc(r.handle)}</span>${body(r)}<span style="color:#6e6e73;white-space:nowrap;margin-left:auto;font-variant-numeric:tabular-nums">${Number(r.sim).toFixed(2)}</span></div>`).join('');
+  return `<div style="display:flex;flex-direction:column;gap:2px;min-width:0" title="${esc(SIMILAR_TITLE)}"><span style="font-size:11px;font-weight:500;color:#6e6e73">Similar, unlabeled <span style="font-weight:400">· ${list.length}</span></span>${rows}</div>`;
+}
 
 function render() {
   const scope = state.caucus, win = state.window, isAll = scope === 'All';
@@ -131,11 +146,14 @@ function renderTopics(isAll, scope, win) {
       return `<td style="padding:8px 8px;border-bottom:1px solid #f0f0f2;text-align:right"><div style="display:flex;justify-content:flex-end;align-items:center;gap:5px">${rank >= 0 ? rankBadge(i, rank + 1) : ''}<span>${fmt(n)}</span></div><div style="height:3px;background:#f0f0f2;border-radius:2px;margin-top:3px;overflow:hidden">${fill(100 * n / colMax[i], C[k])}</div></td>`;
     }).join('') : '';
     const momentumTitle = `Momentum ${mo.score} · volume ${Math.round(100 * mo.volume)} · acceleration ${Math.round(100 * mo.accel)} · adoption ${Math.round(100 * mo.adoption)} · spread ${mo.eff} caucuses · engagement ${Math.round(100 * mo.engLift)}`;
+    const cols = 6 + (isAll ? MATRIX.length : 0);
     const subRows = isOpen ? t.subs.map((s) => {
       const sv = s[win][scope] || { n: 0, eng: 0, m: 0 };
       const share = v.n ? Math.round(100 * sv.n / v.n) : 0;
       const subCells = isAll ? MATRIX.map((k) => `<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px;color:#3a3a3c">${fmt(s[win][k].n)}</td>`).join('') : '';
-      return `<tr style="background:#f7f7f9"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">${esc(label(`${t.key}/${s.key}`))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>`;
+      // A story row can carry the posts the labels missed (similar, unlabeled).
+      const similar = s.related?.length ? `<tr style="background:#f7f7f9"><td colspan="${cols}" style="padding:0 8px 8px 36px;border-bottom:1px solid #fff">${similarList(s.related)}</td></tr>` : '';
+      return `<tr style="background:#f7f7f9"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px">${esc(label(`${t.key}/${s.key}`))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>${similar}`;
     }).join('') : '';
     return `<tr class="rowhover" data-toggle="${esc(t.key)}" aria-expanded="${isOpen}">
       <td style="padding:8px 8px 8px 0;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px">${chevron(t.subs.length > 0, isOpen)}<span style="font-weight:600;letter-spacing:-0.01em">${esc(t.name)}</span></div></td>
@@ -221,20 +239,32 @@ function renderClusters() {
     <div style="display:flex;height:5px;border-radius:3px;overflow:hidden;gap:1px" title="members by caucus">${seg(c.cm.map((n, i) => [100 * n / Math.max(1, c.members), C[KEYS[i]]]))}</div>
     <div style="font-size:12px;color:#6e6e73;line-height:1.4">“${esc(c.sample)}”</div>
     ${c.context?.length ? `<div style="display:flex;flex-direction:column;gap:2px" title="Newsletter hits from the owner's inbox — unreviewed context, not verification (docs/OUTSIDE_CONTEXT.md)"><span style="font-size:11px;font-weight:500;color:#6e6e73">In the news</span>${c.context.map((n) => `<div style="font-size:12px;line-height:1.35;color:#3a3a3c" title="${esc(n.why || '')}"><span style="font-weight:500;color:#1d1d1f">${esc(n.sender)}</span> · ${esc(n.subject)} <span style="color:#6e6e73;white-space:nowrap">· ${esc(etDay(n.date))}</span></div>`).join('')}</div>` : ''}
+    ${similarList(c.related, { wrap: true })}
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${c.phrase ? `<span style="font-size:11px;color:#6e6e73">${c.coherence}% say “${esc(c.phrase)}”</span>` : ''}${tag(c.suggest)}<span style="margin-left:auto;display:flex;gap:10px"><button class="textbtn" data-compose="cluster:${esc(c.label)}">Compose</button><a href="../config/taxonomy.yaml" style="font-size:12px;font-weight:500" title="Approve by adding this subtopic to config/taxonomy.yaml">Add ›</a></span></div>
   </div>`).join('');
   $('clusters').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging</h2><span style="font-size:12px;color:#6e6e73">outside the taxonomy</span></div>${items || '<div style="padding:30px 0;text-align:center;color:#6e6e73;font-size:12px">Nothing outside the taxonomy right now.</div>'}`;
 }
 
 function renderDistrict() {
-  const active = D.incidents.filter((n) => n.status === 'active');
-  const cards = active.map((n) => `<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(n.kind)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(n.since, D.today))} → ${esc(etWhen(n.last, D.today))}</span></div>
+  // Corroborated-and-active incidents plus provisional ones that are still
+  // fresh (a single member's report within the last 12h): those surface
+  // here immediately, badged, with the evidence span instead of the whole
+  // post. A provisional report that has gone quiet stays on the desk only.
+  const live = D.incidents.filter((n) => n.status === 'active' || (n.status === 'provisional' && n.lifecycle === 'active'));
+  const nActive = live.filter((n) => n.status === 'active').length;
+  const nProv = live.length - nActive;
+  const cards = live.map((n) => {
+    const prov = n.status === 'provisional';
+    const corr = n.corroboration || {};
+    return `<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9${prov ? ';border:1px dashed #c7d2ea' : ''}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(n.kind)}</span>${prov ? provisionalBadge(corr.note) : ''}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(n.since, D.today))} → ${esc(etWhen(n.last, D.today))}</span></div>
     <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(n.place)}</span><span style="font-size:12px"><span style="font-weight:500">${esc(n.handle)}</span><span style="color:#6e6e73"> · ${esc(n.member)}</span></span></div>
-    <p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">“${esc(n.timeline[0]?.text || '')}”</p>
+    ${evidenceQuote(n.evidence, n.timeline[0]?.text)}
+    <div style="font-size:11px;color:#6e6e73">${prov ? `Single-member report · ${esc(corr.note || 'not yet corroborated')}` : `Corroborated by ${esc(corr.by || 'grouping')}${corr.note ? ` · ${esc(corr.note)}` : ''}`}</div>
     <div style="display:flex;justify-content:space-between;font-size:11px;color:#6e6e73"><span>${n.updates} updates · ${fmt(n.engN)} engagement</span><a href="./incidents.html">Thread ›</a></div>
-  </div>`).join('');
-  $('district').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">${active.length} active</span></div><a href="./incidents.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
+  </div>`;
+  }).join('');
+  $('district').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">${nActive} active${nProv ? ` · ${nProv} provisional` : ''}</span></div><a href="./incidents.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px">${cards || '<div style="padding:16px 0;color:#6e6e73;font-size:13px">No active district incidents.</div>'}</div>`;
 }
 

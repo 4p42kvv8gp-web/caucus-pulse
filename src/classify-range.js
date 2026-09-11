@@ -16,7 +16,8 @@ import fs from 'node:fs';
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
 import { settings, daysAgoEt, p, readJSON, writeJSON } from './util.js';
 import { topicsPath } from './store.js';
-import { loadTaxonomy, chunkRequests, collectResults, planDay, writeDay, summarize } from './classify.js';
+import { loadTaxonomy, chunkRequests, collectResults, planDay, writeDay, summarize, withCandidates, hintedCount } from './classify.js';
+import { loadSemanticOrNull } from './semantic.js';
 import { progressPath } from './backfill-members.js';
 
 const arg = (name, dflt) => {
@@ -54,13 +55,18 @@ async function main() {
     console.log(`[classify-range] resuming batch ${batchId} for ${todo.length} day(s)`);
   } else {
     plans = todo.map((d) => planDay(d, { deferInCorpus: true, tax }));
+    // Similarity hints: posts already in the index use their stored vector,
+    // the rest are embedded once here (or skipped when the model is absent).
+    const semantic = loadSemanticOrNull({ warn: (m) => console.warn(`[classify-range] ${m}`) });
+    for (const pl of plans) pl.toClassify = await withCandidates(pl.toClassify, semantic, { tax });
     const requests = plans.flatMap((pl) => chunkRequests(pl.toClassify, tax, model, `${pl.date}_`));
     const sent = plans.reduce((n, pl) => n + pl.toClassify.length, 0);
     const quoting = plans.reduce((n, pl) => n + pl.toClassify.filter((t) => t.quoting).length, 0);
+    const hinted = plans.reduce((n, pl) => n + hintedCount(pl.toClassify), 0);
     const held = plans.reduce((n, pl) => n + Object.keys(pl.inherited).length + pl.deferred.length, 0);
     const anchored = plans.reduce((n, pl) => n + Object.keys(pl.anchored).length, 0);
-    console.log(`[classify-range] ${todo.length} day(s) ${todo[0]}..${todo.at(-1)}: ${sent} tweets in ${requests.length} requests (${quoting} with quoted context, ${held} retweets inherit, ${anchored} anchored), model ${model}`);
-    if (dryRun) { for (const pl of plans) console.log(`  ${pl.date}: ${pl.tweets.length} archived, ${pl.toClassify.length} to model (${pl.toClassify.filter((t) => t.quoting).length} with quoted context), ${Object.keys(pl.inherited).length} inherit, ${pl.deferred.length} deferred, ${Object.keys(pl.anchored).length} anchored`); return; }
+    console.log(`[classify-range] ${todo.length} day(s) ${todo[0]}..${todo.at(-1)}: ${sent} tweets in ${requests.length} requests (${quoting} with quoted context, ${hinted} with similarity hints, ${held} retweets inherit, ${anchored} anchored), model ${model}`);
+    if (dryRun) { for (const pl of plans) console.log(`  ${pl.date}: ${pl.tweets.length} archived, ${pl.toClassify.length} to model (${pl.toClassify.filter((t) => t.quoting).length} with quoted context, ${hintedCount(pl.toClassify)} with similarity hints), ${Object.keys(pl.inherited).length} inherit, ${pl.deferred.length} deferred, ${Object.keys(pl.anchored).length} anchored`); return; }
     if (!requests.length) { for (const pl of plans) writeDay(pl, { assignments: {}, incidents: {}, emerging: [], failedChunks: 0 }, model); return; }
     const batch = await client.messages.batches.create({ requests });
     batchId = batch.id;

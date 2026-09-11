@@ -108,7 +108,35 @@ export function badge(kind) {
 }
 
 export function statusDot(s) {
-  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : '#8e8e93');
+  return dot(s === 'active' ? '#d70015' : s === 'monitoring' ? '#ea580c' : s === 'provisional' ? '#194292' : '#8e8e93');
+}
+
+// Provisional = one member's report with nothing else behind it yet
+// (src/incidents.js corroborationOf). Dashed navy so it never reads as the
+// red alert tag; the title carries what would corroborate it.
+export function provisionalBadge(note) {
+  return `<span title="${esc(note || 'One post from one member — not yet corroborated')}" style="font-size:10px;font-weight:700;color:#194292;background:#e8eefb;border:1px dashed #194292;padding:1px 7px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap">Provisional</span>`;
+}
+
+// The stored evidence span, quoted. An inexact span is the post's first 140
+// characters, so it ends with an ellipsis and says what was not found.
+export function evidenceQuote(ev, fallbackText = '') {
+  const span = ev?.span || String(fallbackText || '').slice(0, 140);
+  const exact = ev?.exact === true;
+  const missing = ev?.matched ? ['kind', 'place'].filter((k) => !ev.matched[k]) : [];
+  const caption = exact
+    ? 'evidence · exact span naming the event and the place'
+    : `evidence · first 140 chars — post does not name the ${missing.length ? missing.join(' or ') : 'event and place'} verbatim`;
+  return `<p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">“${esc(span)}${exact ? '' : '…'}”</p><div style="font-size:10px;color:${exact ? '#6e6e73' : '#a35d00'}">${esc(caption)}</div>`;
+}
+
+// The full post text with the exact evidence span highlighted in place.
+export function markEvidence(text, ev) {
+  const t = String(text || '');
+  if (ev?.exact && Number.isInteger(ev.start) && Number.isInteger(ev.end) && t.slice(ev.start, ev.end) === ev.span) {
+    return `${esc(t.slice(0, ev.start))}<mark style="background:#fff3c4;color:inherit;padding:0 1px;border-radius:2px">${esc(ev.span)}</mark>${esc(t.slice(ev.end))}`;
+  }
+  return esc(t);
 }
 
 export function copyText(text, done) {

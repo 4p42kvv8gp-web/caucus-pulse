@@ -40,11 +40,24 @@ export function includeReferenced() {
 // Only the last six polls (~2h) count: a one-off burst (the 465-post first
 // capture) must not keep overnight polls paying for 30-row pages all night,
 // and a real evening surge should lift the page size within an hour.
-export function adaptivePageSize(recentNewCounts, max = 100) {
+//
+// The per-poll average only means anything at the scheduled cadence. GitHub's
+// cron is best-effort and has skipped hours at a time on this repo, so when
+// the last poll is well past due, the backlog is whatever accumulated in that
+// gap, not the recent per-poll rate: ask for a full page and let the boundary
+// stop decide where to stop.
+export function adaptivePageSize(recentNewCounts, max = 100, { minutesSinceLastPoll = null, cadenceMinutes = 20 } = {}) {
+  if (minutesSinceLastPoll != null && minutesSinceLastPoll > cadenceMinutes * 2) return max;
   const recent = recentNewCounts.slice(-6);
   if (!recent.length) return max;
   const avg = recent.reduce((a, b) => a + b, 0) / recent.length;
   return Math.min(max, Math.max(5, Math.ceil(avg * 2)));
+}
+
+export function minutesSince(iso) {
+  if (!iso) return null;
+  const t = Date.parse(iso);
+  return Number.isFinite(t) ? (Date.now() - t) / 60000 : null;
 }
 
 // Split a newest-first page at the since-id boundary → the part we keep.
@@ -56,9 +69,13 @@ async function pull(state) {
   const id = listId();
   const maxPages = Number(process.env.X_MAX_PAGES || settings.poll.max_pages || 5);
   const useSinceId = state.sinceIdSupported !== false && Boolean(state.sinceId);
+  const gapMinutes = minutesSince(state.lastPollAt);
   const pageSize = state.sinceIdSupported === false
-    ? adaptivePageSize(state.recentNewCounts, settings.poll.page_size)
+    ? adaptivePageSize(state.recentNewCounts, settings.poll.page_size, { minutesSinceLastPoll: gapMinutes })
     : settings.poll.page_size;
+  if (gapMinutes != null && gapMinutes > 60) {
+    console.warn(`[poll] ${(gapMinutes / 60).toFixed(1)}h since the last poll (scheduled every 20 min) — draining the backlog at full page size`);
+  }
 
   const raw = [];
   const includes = { tweets: [], users: [] }; // referenced posts + their authors, all pages
@@ -101,7 +118,10 @@ async function pull(state) {
     paginationToken = res.nextToken;
     if (!paginationToken) break;
     if (page === maxPages - 1 && !hitBoundary && res.tweets.length) {
-      console.warn(`[poll] burst exceeded ${maxPages} pages — older tweets will be caught by dedupe next cycle only if still on page 1..${maxPages}; raise X_MAX_PAGES if this repeats`);
+      // Not recoverable by waiting: the cursor advances to the newest id
+      // captured, so posts older than this page are below the boundary and
+      // no later poll will ask for them again.
+      console.warn(`[poll] the backlog is deeper than ${maxPages} pages — posts older than the ${raw.length} captured here fall behind the cursor and need "npm run backfill-members -- --days=1" to recover; raise poll.max_pages in config/settings.json if this repeats`);
     }
   }
   return { raw, includes };
@@ -139,14 +159,25 @@ export async function pollOnce() {
   const quoted = records.filter((r) => r.quoted).length;
   console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''} (${quoted} with quoted context; ${includes.tweets.length} referenced post(s) + ${includes.users.length} author(s) read); today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
 
-  // Post-capture extras are best-effort: live topic tags for the dashboard
-  // feed, then a rollups.json rebuild. Dynamic imports keep the capture path
+  // Post-capture extras are best-effort: the new posts into the embedding
+  // index (seconds on the CPU; a one-line skip when the 35 MB model was never
+  // downloaded on this checkout), live topic tags for the dashboard feed —
+  // which read those vectors for their similarity hints — then a
+  // rollups.json rebuild. Dynamic imports keep the capture path
   // dependency-free — if node_modules is absent these steps just skip.
   if (records.length) {
     try {
+      const { embedArchive } = await import('./embed-archive.js');
+      const r = await embedArchive();
+      if (r.skipped) console.log(`[poll] embedding skipped: ${r.skipped} (${r.pending} post(s) not in the index)`);
+      else if (r.embedded) console.log(`[poll] embedded ${r.embedded} new post(s) in ${r.seconds}s (index now ${r.total} rows)`);
+    } catch (e) {
+      console.warn(`[poll] embedding skipped: ${e.message}`);
+    }
+    try {
       const { classifyLive } = await import('./classify-live.js');
       const r = await classifyLive(records);
-      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
+      if (r) console.log(`[poll] live-tagged ${r.tagged} post(s)${r.quoting ? ` (${r.quoting} with quoted context)` : ''}${r.hinted ? `, ${r.hinted} with similarity hints` : ''}${r.anchored ? `, ${r.anchored} anchored` : ''}${r.incidents ? `, ${r.incidents} incident-flagged` : ''}`);
     } catch (e) {
       console.warn(`[poll] live classification skipped: ${e.message}`);
     }

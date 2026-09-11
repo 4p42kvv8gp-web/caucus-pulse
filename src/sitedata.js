@@ -16,6 +16,7 @@ import { loadTaxonomy, labelOf } from './taxonomy.js';
 import { momentum } from './momentum.js';
 import { minePhrases, tokenize, ngrams } from './syntax.js';
 import { incidentsPath } from './incidents.js';
+import { loadSemanticOrNull, configuredMinSim } from './semantic.js';
 
 const KEYS = [...new Set(Object.values(settings.caucus_keys))]; // display order: CPC, NewDem, CBC
 const DAY = 86_400_000;
@@ -101,6 +102,66 @@ export function contextKeyFor(cluster, entries) {
     if (want.has(norm(k)) || want.has(norm(e?.key)) || want.has(norm(e?.label))) return k;
   }
   return null;
+}
+
+// "Similar, unlabeled": for each emerging cluster and each story subtopic
+// row, the posts in the window whose wording sits near the story's posts
+// but that carry no label for it — the misses a keyword search cannot find
+// (docs/SEMANTIC_MATCHING.md). Measured similarity, not a judgment: the
+// dashboard says so, and the list is capped (settings.semantic.related_posts)
+// so rollups.json stays small.
+//
+// Seeds: a cluster the story map knows (its `suggest` key is a tracked
+// story) uses the story's centroid over every post tied to it; any other
+// cluster uses its own posts (`seeds`: cluster → ids). A story row uses its
+// taxonomy story. Excluded everywhere: posts outside the window, retweets
+// (the original speaks for itself), and — for story rows — posts that
+// already carry the story's label from the live tagger.
+//
+// Pure: `semantic` is injected (null → nothing attached) and the objects
+// are decorated in place. Returns how many lists were non-empty.
+export function attachRelated({
+  clusters = [], seeds = new Map(), topics = [], tax = {}, posts = [], semantic = null,
+  k = settings.semantic?.related_posts ?? 5, minSim = configuredMinSim(),
+  handleOf = () => null, warn = console.warn
+} = {}) {
+  const counts = { clusters: 0, subs: 0 };
+  if (!semantic || !(k > 0)) return counts;
+  const byId = new Map(posts.map((x) => [x.id, x]));
+  const trim = (t) => t.length > 200 ? t.slice(0, 199).replace(/\s+\S*$/, '') + '…' : t;
+  const carries = (x, macro, sub) => (x.topics || []).some(([m, s]) => m === macro && s === sub);
+  const excludeFor = (macro, sub) => (id) => {
+    const x = byId.get(id);
+    return !x || x.type === 'retweet' || (macro != null && sub != null && carries(x, macro, sub));
+  };
+  const decorate = (hits) => hits.map((h) => {
+    const x = byId.get(h.id);
+    return {
+      id: h.id, sim: h.sim, handle: handleOf(x.authorId) || x.authorId, text: trim(x.text), time: x.createdAt,
+      topics: [...new Set((x.topics || []).map(([m, s]) => s ? `${m}/${s}` : m))]
+    };
+  });
+  const safe = (fn, what) => {
+    try { return fn(); } catch (e) { warn(`[sitedata] similar posts for ${what} skipped: ${e.message}`); return []; }
+  };
+  for (const c of clusters) {
+    const storyKey = c.suggest && semantic.story(c.suggest) ? c.suggest : null;
+    const exclude = excludeFor(null, null);
+    c.related = decorate(safe(() => storyKey
+      ? semantic.relatedPosts(storyKey, { k, minSim, exclude })
+      : semantic.nearSeed(seeds.get(c) || [], { k, minSim, exclude }).hits, c.label));
+    if (c.related.length) counts.clusters++;
+  }
+  for (const t of topics) {
+    for (const s of t.subs || []) {
+      if (!tax[t.key]?.subtopics?.[s.key]?.story) continue;
+      const key = semantic.storyKeyFor(t.key, s.key);
+      if (!key) continue;
+      s.related = decorate(safe(() => semantic.relatedPosts(key, { k, minSim, exclude: excludeFor(t.key, s.key) }), `${t.key}/${s.key}`));
+      if (s.related.length) counts.subs++;
+    }
+  }
+  return counts;
 }
 
 function zeroScope() {
@@ -368,6 +429,7 @@ export function buildSiteData() {
   // the story file has not been built yet. Only candidates the placement
   // pass called a story or a taxonomy gap are shown; noise stays out.
   let clusters = [];
+  const seeds = new Map(); // cluster → its post ids (for the similar-unlabeled list; not written out)
   const storyFile = readJSON(p('data', 'stories.json'), null);
   const storyCands = (storyFile?.candidates || [])
     .filter((c) => c.placement && c.placement.kind !== 'noise' && !(storyFile.promoted || []).includes(`${c.placement.macro}/${c.placement.key}`))
@@ -400,7 +462,7 @@ export function buildSiteData() {
       const topGram = [...gramCount.entries()].sort((a, b) => b[1] - a[1])[0];
       const members = new Set(posts.map((x) => x.authorId));
       const best = posts.slice().sort((a, b) => b.engN - a.engN)[0];
-      return {
+      const cluster = {
         label: e.label,
         posts: posts.length,
         members: members.size,
@@ -417,6 +479,8 @@ export function buildSiteData() {
         macro: e.macro || null,    // suggested parent macro id
         days: e.days || null       // distinct days the subject surfaced
       };
+      seeds.set(cluster, e.ids);
+      return cluster;
     }).filter(Boolean);
   }
 
@@ -429,6 +493,14 @@ export function buildSiteData() {
     c.context = (k ? context.stories[k].matches : []).slice(0, 3)
       .map(({ sender, subject, date, why }) => ({ sender, subject, date, why: why || null }));
   }
+
+  // ── similar, unlabeled: the embedding index against each emerging cluster
+  // and each story row (attachRelated above). Skipped, with one line, when
+  // there is no index on disk yet.
+  const related = attachRelated({
+    clusters, seeds, topics, tax, posts: allPosts, handleOf,
+    semantic: loadSemanticOrNull({ warn: (m) => console.warn(`[sitedata] ${m}`) })
+  });
 
   // ── feed: window posts, newest first ──
   const feed = allPosts
@@ -462,7 +534,11 @@ export function buildSiteData() {
     if (a.handle) members[`@${a.handle}`] = [a.member || a.name || a.handle, a.stateDistrict || '', caucusKeysOf(a)];
   }
 
-  const incidentsFile = readJSON(incidentsPath, { incidents: [] });
+  // Incidents pass through whole: status (provisional | active | monitoring |
+  // resolved), lifecycle, corroboration, per-post evidence spans and flags,
+  // intel. `incidentsFiltered` is how many classifier flags the desk's
+  // deterministic post-filter dropped this build (src/incidents.js).
+  const incidentsFile = readJSON(incidentsPath, { incidents: [], filtered: [] });
 
   const core = Object.entries(settings.core_messages).map(([name, keys]) => ({ name, topics: keys }));
 
@@ -493,9 +569,11 @@ export function buildSiteData() {
     phrases,
     clusters,
     incidents: incidentsFile.incidents,
+    incidentsFiltered: (incidentsFile.filtered || []).length,
     feed
   });
-  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents, ${feed.length} feed posts; ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
+  const provisional = incidentsFile.incidents.filter((i) => i.status === 'provisional').length;
+  console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents (${provisional} provisional, ${(incidentsFile.filtered || []).length} flags filtered), ${feed.length} feed posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
