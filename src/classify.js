@@ -358,6 +358,15 @@ async function main() {
 
   const client = await anthropicClient();
   const state = loadState();
+  // A pending batch for a day that already has a topics file is stale: the
+  // day was finished another way (--sync cancels the batch, but a poll that
+  // started earlier can carry the old pointer back in through merge-state.js,
+  // which keeps any non-null pendingBatch). Drop it here so nothing resumes it.
+  if (state.pendingBatch && readJSON(topicsPath(state.pendingBatch.date), null)) {
+    console.log(`[classify] dropping stale pending batch ${state.pendingBatch.id} — ${state.pendingBatch.date} is already classified`);
+    state.pendingBatch = null;
+    saveState(state);
+  }
   let batchId = state.pendingBatch?.date === date ? state.pendingBatch.id : null;
 
   // --sync (or CLASSIFY_SYNC=true, the workflow's classify_sync input):
