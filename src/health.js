@@ -61,10 +61,19 @@ export function checkClassification({ dates, hasTopics, today = etDate(), lookba
 
 // A day can have a topics file and still be empty inside — a batch that came
 // back all-errors writes one. Catch that separately from a missing file.
-export function checkAssignments({ date, postCount, assignmentCount }) {
+// `ran` is whether a topics file exists for the day at all. Without it this
+// check told a 7am reader "the classifier ran but most requests failed" for a
+// day the classifier never started — which sends them hunting through batch
+// responses for a failure that is really an upstream stage that died (no
+// credit, no credential, a killed run). Same status either way; only the
+// diagnosis changes, because the diagnosis is what the reader acts on.
+export function checkAssignments({ date, postCount, assignmentCount, ran = true }) {
   if (!postCount) return { name: 'assignments', status: 'ok', detail: `${date}: no posts archived` };
   const share = assignmentCount / postCount;
   const pct = `${(share * 100).toFixed(0)}%`;
+  if (!ran) {
+    return { name: 'assignments', status: 'fail', detail: `${date}: none of ${postCount} archived post(s) carry a topic — no topics file exists, so the classifier never produced output for this day (check the classify stage, not the batch responses)` };
+  }
   if (share < 0.5) {
     return { name: 'assignments', status: 'fail', detail: `${date}: only ${assignmentCount} of ${postCount} posts carry a topic (${pct}) — the classifier ran but most requests failed` };
   }
@@ -105,7 +114,8 @@ export function runChecks({ now = Date.now(), today = etDate() } = {}) {
     checkAssignments({
       date: yesterday,
       postCount: dates.includes(yesterday) ? loadDay(yesterday).length : 0,
-      assignmentCount: Object.keys(topics?.assignments || {}).length
+      assignmentCount: Object.keys(topics?.assignments || {}).length,
+      ran: Boolean(topics)
     }),
     checkBudget(state, { today })
   ];

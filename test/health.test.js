@@ -36,6 +36,17 @@ test('assignments catch a topics file that came back empty', () => {
   assert.equal(checkAssignments({ date: d, postCount: 100, assignmentCount: 70 }).status, 'warn');
   assert.equal(checkAssignments({ date: d, postCount: 100, assignmentCount: 0 }).status, 'fail');
   assert.equal(checkAssignments({ date: d, postCount: 0, assignmentCount: 0 }).status, 'ok');
+
+  // A day the classifier never ran fails too, but must not be diagnosed as
+  // failed batch requests — that sends the reader to the wrong place.
+  const never = checkAssignments({ date: d, postCount: 631, assignmentCount: 0, ran: false });
+  assert.equal(never.status, 'fail');
+  assert.match(never.detail, /never produced output/);
+  assert.equal(never.detail.includes('most requests failed'), false);
+
+  const ranAndFailed = checkAssignments({ date: d, postCount: 631, assignmentCount: 12, ran: true });
+  assert.equal(ranAndFailed.status, 'fail');
+  assert.match(ranAndFailed.detail, /most requests failed/);
 });
 
 test('credentials fail closed when either side is unresolvable', () => {
