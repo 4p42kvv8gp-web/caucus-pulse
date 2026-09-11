@@ -21,6 +21,10 @@ on:
         description: 'Comma-separated stages to run, empty = all: refresh,embed,classify,stories,promote,taxonomy-learn,corrections,syntax,incidents,rollup,report,sitedata'
         required: false
         default: ''
+      classify_wait_minutes:
+        description: 'How long the classify stage waits on its batch before handing back (default: settings classify.max_wait_minutes, 55). The job holds the data-writes lock while it waits, so polls queue behind it.'
+        required: false
+        default: ''
 
 concurrency:
   group: data-writes
@@ -61,6 +65,7 @@ jobs:
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           NIGHTLY_STAGES: ${{ inputs.stages }}
+          CLASSIFY_MAX_WAIT_MINUTES: ${{ inputs.classify_wait_minutes }}
         run: .github/scripts/nightly.sh
       - name: Commit results
         # always(): whatever stages did finish are worth keeping even when a

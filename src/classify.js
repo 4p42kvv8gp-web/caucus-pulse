@@ -349,15 +349,28 @@ async function main() {
     console.log(`[classify] resuming pending batch ${batchId} for ${date}`);
   }
 
-  const deadline = Date.now() + (settings.classify.max_wait_minutes || 55) * 60_000;
+  // How long to sit on the batch. The job holds the data-writes concurrency
+  // lock the whole time, so every minute here is a minute no poll can run:
+  // CLASSIFY_MAX_WAIT_MINUTES (the workflow's classify_wait_minutes input)
+  // lets a resume run check in for a few minutes and give the lock back.
+  const waitMinutes = Number(process.env.CLASSIFY_MAX_WAIT_MINUTES) || settings.classify.max_wait_minutes || 55;
+  const deadline = Date.now() + waitMinutes * 60_000;
+  const started = Date.now();
   let batch;
+  let lastLog = 0;
   while (true) {
     await refreshIdentityToken(); // federation: keep the OIDC file fresh across a long wait
     batch = await client.messages.batches.retrieve(batchId);
     if (batch.processing_status === 'ended') break;
+    const c = batch.request_counts || {};
+    const progress = `${c.succeeded || 0} done, ${c.processing || 0} processing, ${c.errored || 0} errored, ${c.expired || 0} expired, ${c.canceled || 0} canceled`;
     if (Date.now() > deadline) {
-      console.warn(`[classify] batch ${batchId} still ${batch.processing_status} at deadline — will resume on the next nightly run`);
-      return; // pendingBatch stays in state; tomorrow's run picks it up
+      console.warn(`[classify] batch ${batchId} still ${batch.processing_status} after ${Math.round((Date.now() - started) / 60_000)} min (${progress}) — will resume on the next classify run`);
+      return; // pendingBatch stays in state; the next run picks it up
+    }
+    if (Date.now() - lastLog >= 5 * 60_000) { // every 5 min, so a stalled batch is visible in the log
+      console.log(`[classify] ${batch.processing_status}: ${progress} (${Math.round((Date.now() - started) / 60_000)} min)`);
+      lastLog = Date.now();
     }
     await new Promise((r) => setTimeout(r, 30_000));
   }
