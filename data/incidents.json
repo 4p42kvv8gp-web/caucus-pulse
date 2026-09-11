@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T19:59:59.245Z",
+ "generatedAt": "2026-09-11T22:11:22.047Z",
  "incidents": [
   {
    "id": "san-diego-ca--extreme-heat",
@@ -578,98 +578,6 @@
    }
   },
   {
-   "id": "lake-county-ca--wildfire",
-   "kind": "wildfire",
-   "kinds": [
-    "wildfire"
-   ],
-   "status": "resolved",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 4 confirmed, 0 unverified item(s)"
-   },
-   "place": "Lake County, CA · CA-04",
-   "placeRaw": "Lake County, CA",
-   "district": "CA-04",
-   "districtMatch": true,
-   "handle": "@RepThompson",
-   "member": "Mike Thompson",
-   "since": "2026-09-04T20:06:01.000Z",
-   "last": "2026-09-04T20:06:01.000Z",
-   "updates": 1,
-   "engN": 6,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Wildfire · Lake County, CA",
-   "evidence": {
-    "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
-    "exact": true,
-    "start": 0,
-    "end": 141,
-    "matched": {
-     "kind": true,
-     "place": true
-    }
-   },
-   "timeline": [
-    {
-     "time": "2026-09-04T20:06:01.000Z",
-     "who": "@RepThompson",
-     "tag": "member",
-     "text": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay. It is unsafe to stay and threatens the safety of you, your family, and emergency responders. Your life could be in great danger. Emergency https://t.co/RnWfThRDNu",
-     "engN": 6,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Lake County, CA"
-     },
-     "evidence": {
-      "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
-      "exact": true,
-      "start": 0,
-      "end": 141,
-      "matched": {
-       "kind": true,
-       "place": true
-      }
-     }
-    }
-   ],
-   "tweetIds": [
-    "2095966636222144688"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "A wildfire identified as the #ScottFire is burning in Lake County, CA (CA-04).",
-      "src": "per @RepThompson, 2026-09-04T20:06:01Z"
-     },
-     {
-      "text": "An Evacuation Order is in effect for Zones LAK-E054 and LAK-E056 (post does not name the issuing agency).",
-      "src": "per @RepThompson, 2026-09-04T20:06:01Z"
-     },
-     {
-      "text": "An Evacuation Warning is in effect for Zone UPP-E043 (post does not name the issuing agency).",
-      "src": "per @RepThompson, 2026-09-04T20:06:01Z"
-     },
-     {
-      "text": "Evacuation guidance states: leave without delay; it is unsafe to stay and threatens the safety of you, your family, and emergency responders; your life could be in great danger.",
-      "src": "per @RepThompson, 2026-09-04T20:06:01Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Evacuation Order issued for Zones LAK-E054 and LAK-E056 — per @RepThompson, 2026-09-04T20:06:01Z",
-     "Evacuation Warning issued for Zone UPP-E043 — per @RepThompson, 2026-09-04T20:06:01Z",
-     "Member urges residents to leave without delay, saying it is unsafe to stay — per @RepThompson, 2026-09-04T20:06:01Z"
-    ],
-    "extractedAt": "2026-09-10T06:13:14.970Z",
-    "posts": 1
-   }
-  },
-  {
    "id": "kauai-hi--hurricane",
    "kind": "hurricane",
    "kinds": [
@@ -731,71 +639,6 @@
    ],
    "tweetIds": [
     "2097783883286905197"
-   ],
-   "intel": null
-  },
-  {
-   "id": "detroit-mi--severe-storm",
-   "kind": "severe storm",
-   "kinds": [
-    "severe storms"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
-   },
-   "place": "Detroit, MI · MI-13",
-   "placeRaw": "Detroit, MI",
-   "district": "MI-13",
-   "districtMatch": true,
-   "handle": "@RepShriThanedar",
-   "member": "Shri Thanedar",
-   "since": "2026-09-04T20:49:18.000Z",
-   "last": "2026-09-04T20:49:18.000Z",
-   "updates": 1,
-   "engN": 8,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe storm · Detroit, MI",
-   "evidence": {
-    "span": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE c",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": true,
-     "place": false
-    }
-   },
-   "timeline": [
-    {
-     "time": "2026-09-04T20:49:18.000Z",
-     "who": "@RepShriThanedar",
-     "tag": "member",
-     "text": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE customer who has a power outage, call 877-447-4747\n\nhttps://t.co/ZySrgKP037",
-     "engN": 8,
-     "isNew": false,
-     "flag": {
-      "kind": "severe storms",
-      "place": "Detroit, MI"
-     },
-     "evidence": {
-      "span": "Heartbroken to see severe storms hit our community yesterday afternoon. If you need emergency shelter, call 866-313-2520. If you are a DTE c",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      }
-     }
-    }
-   ],
-   "tweetIds": [
-    "2095977527172890978"
    ],
    "intel": null
   }
