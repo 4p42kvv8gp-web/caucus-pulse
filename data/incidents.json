@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T02:42:00.562Z",
+ "generatedAt": "2026-09-11T05:10:02.429Z",
  "incidents": [
   {
    "id": "san-diego-ca--extreme-heat",
@@ -245,7 +245,7 @@
    "corroboration": {
     "corroborated": true,
     "by": "second post",
-    "note": "@RepJimmyPanetta posted again 6d after the first report"
+    "note": "@RepJimmyPanetta posted again 5d after the first report"
    },
    "place": "Monterey County, CA · CA-19",
    "placeRaw": "Monterey County, CA",
@@ -253,68 +253,24 @@
    "districtMatch": true,
    "handle": "@RepJimmyPanetta",
    "member": "Jimmy Panetta",
-   "since": "2026-09-03T14:04:32.000Z",
+   "since": "2026-09-04T19:37:00.000Z",
    "last": "2026-09-09T13:40:09.000Z",
-   "updates": 4,
-   "engN": 31,
+   "updates": 2,
+   "engN": 16,
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Monterey County, CA",
    "evidence": {
-    "span": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
-    "exact": true,
+    "span": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for",
+    "exact": false,
     "start": 0,
-    "end": 140,
+    "end": 139,
     "matched": {
      "kind": true,
-     "place": true
+     "place": false
     }
    },
    "timeline": [
-    {
-     "time": "2026-09-03T14:04:32.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
-     "engN": 2,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA"
-     },
-     "evidence": {
-      "span": "RT @MCoSheriff: *** Timber Fire Evacuation Warnings/Orders Update ***\n\nEffective immediately, the Monterey County Sheriff’s Office is downg…",
-      "exact": true,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": true
-      }
-     }
-    },
-    {
-     "time": "2026-09-03T16:15:17.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "CAL FIRE and the U.S. Forest Service continue to work together in a strategic partnership to fully suppress these fires. They’ll continue doing their job in steep terrain and tough conditions to put out the Timber and Plaskett fires and keep our communities safe. https://t.co/Un6yFc5vem",
-     "engN": 13,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA"
-     },
-     "evidence": {
-      "span": "CAL FIRE and the U.S. Forest Service continue to work together in a strategic partnership to fully suppress these fires. They’ll continue do",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      }
-     }
-    },
     {
      "time": "2026-09-04T19:37:00.000Z",
      "who": "@RepJimmyPanetta",
@@ -361,8 +317,6 @@
     }
    ],
    "tweetIds": [
-    "2095513274666115365",
-    "2095546180369330381",
     "2095959332437279110",
     "2097681465265795466"
    ],
@@ -1139,33 +1093,6 @@
    "time": "2026-09-04T16:14:25.000Z",
    "reason": "non-House account",
    "cue": null
-  },
-  {
-   "id": "2095617128992796887",
-   "kind": "hurricane damage",
-   "place": "Hawaii Island, HI",
-   "who": "@RepJillTokuda",
-   "time": "2026-09-03T20:57:12.000Z",
-   "reason": "aftermath",
-   "cue": "Lala is gone"
-  },
-  {
-   "id": "2095610298820383184",
-   "kind": "severe weather",
-   "place": "Michigan, MI",
-   "who": "@RepDebDingell",
-   "time": "2026-09-03T20:30:04.000Z",
-   "reason": "place is a whole state",
-   "cue": "Michigan, MI"
-  },
-  {
-   "id": "2095520030834250131",
-   "kind": "wildfire",
-   "place": "Aspen, CO",
-   "who": "@RepJasonCrow",
-   "time": "2026-09-03T14:31:22.000Z",
-   "reason": "aftermath",
-   "cue": "disaster declaration"
   }
  ]
 }
