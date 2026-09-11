@@ -153,3 +153,22 @@ test('configuredMinSim reads settings.semantic.min_sim and falls back to the cal
   assert.ok(v > 0 && v < 1);
   assert.equal(DEFAULT_MIN_SIM, 0.8);
 });
+
+test('classifySync sends each chunk through messages.create and counts refusals and errors as failed chunks', async () => {
+  const { classifySync, chunkRequests } = await import('../src/classify.js');
+  const { loadTaxonomy } = await import('../src/taxonomy.js');
+  const tax = loadTaxonomy();
+  const macro = Object.keys(tax)[0];
+  const items = Array.from({ length: 3 }, (_, i) => ({ id: `t${i}`, text: `post ${i}`, handle: 'rep', createdAt: '2026-09-10T12:00:00Z' }));
+  const requests = chunkRequests(items, tax, 'claude-opus-5');
+  const replies = [
+    { stop_reason: 'end_turn', usage: { output_tokens: 5 }, content: [{ type: 'text', text: JSON.stringify({ assignments: items.map((t) => ({ id: t.id, topics: [[macro, null]] })) }) }] },
+    { stop_reason: 'refusal', usage: { output_tokens: 0 }, content: [] }
+  ];
+  let calls = 0;
+  const client = { messages: { create: async () => { const r = replies[calls] || replies[1]; calls++; if (calls === 3) throw new Error('boom'); return r; } } };
+  const result = await classifySync(client, [...requests, ...requests, ...requests], tax);
+  assert.equal(calls, 3);
+  assert.deepEqual(Object.keys(result.assignments), ['t0', 't1', 't2']);
+  assert.equal(result.failedChunks, 2);
+});

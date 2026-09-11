@@ -197,12 +197,39 @@ export async function collectResults(client, batchId, tax) {
     if (!byPrefix.has(prefix)) byPrefix.set(prefix, emptyOut());
     const out = byPrefix.get(prefix);
     if (result.result.type !== 'succeeded') { out.failedChunks++; continue; }
-    const textBlock = result.result.message.content.find((b) => b.type === 'text');
-    const parsed = textBlock && parseJsonLoose(textBlock.text);
-    if (!parsed) { out.failedChunks++; continue; }
-    mergeParsed(parsed, tax, out);
+    mergeMessage(result.result.message, tax, out);
   }
   return new Map([...byPrefix].map(([k, v]) => [k, finishOut(v)]));
+}
+
+// One model reply → out. A refusal or an unparseable reply counts as a
+// failed chunk, the same as a batch request that errored.
+function mergeMessage(message, tax, out) {
+  const textBlock = message?.stop_reason !== 'refusal' && message?.content?.find((b) => b.type === 'text');
+  const parsed = textBlock && parseJsonLoose(textBlock.text);
+  if (!parsed) { out.failedChunks++; return; }
+  mergeParsed(parsed, tax, out);
+}
+
+// The same requests chunkRequests builds for a batch, sent one at a time
+// through messages.create. Full price instead of the batch's half, which at
+// ~16 requests a day is a couple of dollars — the escape hatch for a batch
+// that sits in Anthropic's queue for hours (2026-09-11: 0 of 16 done after
+// two hours) while the dashboard shows a day with no topics.
+export async function classifySync(client, requests, tax, { log = () => {} } = {}) {
+  const out = emptyOut();
+  for (const [i, req] of requests.entries()) {
+    await refreshIdentityToken();
+    try {
+      const res = await client.messages.create(req.params);
+      mergeMessage(res, tax, out);
+      log(`[classify] sync ${i + 1}/${requests.length}: ${res.stop_reason}, ${res.usage?.output_tokens ?? '?'} output tokens`);
+    } catch (e) {
+      out.failedChunks++;
+      log(`[classify] sync ${i + 1}/${requests.length} failed: ${e.message}`);
+    }
+  }
+  return finishOut(out);
 }
 
 // Look up an original tweet's assignment for retweet inheritance — checks
@@ -332,6 +359,23 @@ async function main() {
   const client = await anthropicClient();
   const state = loadState();
   let batchId = state.pendingBatch?.date === date ? state.pendingBatch.id : null;
+
+  // --sync (or CLASSIFY_SYNC=true, the workflow's classify_sync input):
+  // skip the batch API entirely. A batch already pending for the day is
+  // cancelled first so the same posts are not classified twice.
+  if (process.argv.includes('--sync') || process.env.CLASSIFY_SYNC === 'true') {
+    if (batchId) {
+      try { await client.messages.batches.cancel(batchId); console.log(`[classify] cancelled pending batch ${batchId} — classifying synchronously instead`); } catch (e) { console.warn(`[classify] could not cancel batch ${batchId} (${e.message}) — continuing synchronously anyway`); }
+      state.pendingBatch = null;
+      saveState(state);
+    }
+    plan.toClassify = await withCandidates(plan.toClassify, loadSemanticOrNull({ warn: (m) => console.warn(`[classify] ${m}`) }), { tax });
+    const requests = chunkRequests(plan.toClassify, tax, model);
+    console.log(`[classify] sync: ${plan.toClassify.length} tweets in ${requests.length} requests (${plan.toClassify.filter((t) => t.quoting).length} with quoted context, ${hintedCount(plan.toClassify)} with similarity hints, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
+    const result = await classifySync(client, requests, tax, { log: console.log });
+    console.log(summarize(date, writeDay(plan, result, model)));
+    return;
+  }
 
   if (!batchId) {
     // Similarity hints need the index (nightly chain: `npm run embed` runs
