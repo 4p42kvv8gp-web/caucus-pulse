@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T09:01:07.304Z",
+ "generatedAt": "2026-09-12T11:47:56.962Z",
  "incidents": [
   {
    "id": "lake-county-ca--wildfire",
@@ -23,7 +23,7 @@
    "since": "2026-09-11T00:52:02.000Z",
    "last": "2026-09-12T01:10:26.000Z",
    "updates": 2,
-   "engN": 18,
+   "engN": 23,
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Lake County, CA",
@@ -65,7 +65,7 @@
      "who": "@RepThompson",
      "tag": "member",
      "text": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-     "engN": 8,
+     "engN": 13,
      "isNew": false,
      "flag": {
       "kind": "wildfire",
@@ -86,6 +86,191 @@
    "tweetIds": [
     "2098212938746065092",
     "2098579959321080152"
+   ],
+   "intel": null
+  },
+  {
+   "id": "monterey-county-ca--wildfire",
+   "kind": "wildfire",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "monitoring",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": true,
+    "by": "second post",
+    "note": "@RepJimmyPanetta posted again 2d after the first report"
+   },
+   "place": "Monterey County, CA · CA-19",
+   "placeRaw": "Monterey County, CA",
+   "district": "CA-19",
+   "districtMatch": true,
+   "handle": "@RepJimmyPanetta",
+   "member": "Jimmy Panetta",
+   "since": "2026-09-09T13:40:09.000Z",
+   "last": "2026-09-11T21:43:03.000Z",
+   "updates": 2,
+   "engN": 12,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Wildfire · Monterey County, CA",
+   "evidence": {
+    "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-09T13:40:09.000Z",
+     "who": "@RepJimmyPanetta",
+     "tag": "member",
+     "text": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is now 61% contained and Timber is at 27%. More than 3,700 personnel, along with 23 helicopters, 210 engines, and 55 dozers, are supporting",
+     "engN": 11,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
+    },
+    {
+     "time": "2026-09-11T21:43:03.000Z",
+     "who": "@RepJimmyPanetta",
+     "tag": "member",
+     "text": "RT @MCoSheriff: *** Plaskett Fire Evacuation Order Downgrades Zones MRY-F037-B and MRY-F038-B ***\n\nThe Monterey County Sheriff’s Office is…",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA"
+     },
+     "evidence": {
+      "span": "RT @MCoSheriff: *** Plaskett Fire Evacuation Order Downgrades Zones MRY-F037-B and MRY-F038-B ***\n\nThe Monterey County Sheriff’s Office is…",
+      "exact": true,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": true,
+       "place": true
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2097681465265795466",
+    "2098527767893508504"
+   ],
+   "intel": {
+    "confirmed": [
+     {
+      "text": "Retweeted Monterey County Sheriff's Office notice titled \"Timber Fire Evacuation Warnings/Orders Update,\" stating that effective immediately the Sheriff's Office is downgrading (post text is cut off before specifying which zones/levels).",
+      "src": "per @MCoSheriff, retweeted by @RepJimmyPanetta, 2026-09-03T14:04:32Z"
+     },
+     {
+      "text": "CAL FIRE and the U.S. Forest Service are working together in a strategic partnership to fully suppress the Timber and Plaskett fires, operating in steep terrain and tough conditions.",
+      "src": "per @RepJimmyPanetta, 2026-09-03T16:15:17Z"
+     },
+     {
+      "text": "Firefighters are using many resources against the Timber and Plaskett Fires, including two Super Scooper aircraft.",
+      "src": "per @RepJimmyPanetta, 2026-09-04T19:37:00Z"
+     },
+     {
+      "text": "Plaskett Fire is 61% contained and Timber Fire is 27% contained.",
+      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
+     },
+     {
+      "text": "More than 3,700 personnel, 23 helicopters, 210 engines, and 55 dozers are supporting the response (post text cut off).",
+      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
+     }
+    ],
+    "unverified": [],
+    "whatsNew": [
+     "Sep 9: Plaskett at 61% containment, Timber at 27%; 3,700+ personnel, 23 helicopters, 210 engines, 55 dozers committed (per @RepJimmyPanetta, 2026-09-09T13:40:09Z).",
+     "Sep 4: Two Super Scooper aircraft added to the resources working both fires (per @RepJimmyPanetta, 2026-09-04T19:37:00Z).",
+     "Sep 3: CAL FIRE and U.S. Forest Service continuing joint suppression effort in steep terrain (per @RepJimmyPanetta, 2026-09-03T16:15:17Z).",
+     "Sep 3: Monterey County Sheriff's Office announced a downgrade to Timber Fire evacuation warnings/orders, effective immediately (per @MCoSheriff via @RepJimmyPanetta, 2026-09-03T14:04:32Z; details truncated in post)."
+    ],
+    "extractedAt": "2026-09-10T06:11:14.890Z",
+    "posts": 4
+   }
+  },
+  {
+   "id": "bronx-ny--other",
+   "kind": "other",
+   "kinds": [
+    "other"
+   ],
+   "status": "provisional",
+   "lifecycle": "monitoring",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Bronx, NY · NY-15",
+   "placeRaw": "Bronx, NY",
+   "district": "NY-15",
+   "districtMatch": true,
+   "handle": "@RepRitchie",
+   "member": "Ritchie Torres",
+   "since": "2026-09-11T21:00:58.000Z",
+   "last": "2026-09-11T21:00:58.000Z",
+   "updates": 1,
+   "engN": 15,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Other · Bronx, NY",
+   "evidence": {
+    "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": false,
+     "place": true
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-11T21:00:58.000Z",
+     "who": "@RepRitchie",
+     "tag": "member",
+     "text": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected and their families. \n\nIf you were in this area and develop flu-like symptoms, seek medical attention. Early treatment matters. \n\nRead my https://t.co/6ysTgKZYmd",
+     "engN": 15,
+     "isNew": false,
+     "flag": {
+      "kind": "other",
+      "place": "Bronx, NY"
+     },
+     "evidence": {
+      "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": false,
+       "place": true
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2098517177246629925"
    ],
    "intel": null
   },
@@ -255,103 +440,6 @@
     ],
     "extractedAt": "2026-09-10T06:10:30.994Z",
     "posts": 1
-   }
-  },
-  {
-   "id": "monterey-county-ca--wildfire",
-   "kind": "wildfire",
-   "kinds": [
-    "wildfire"
-   ],
-   "status": "resolved",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 5 confirmed, 0 unverified item(s)"
-   },
-   "place": "Monterey County, CA · CA-19",
-   "placeRaw": "Monterey County, CA",
-   "district": "CA-19",
-   "districtMatch": true,
-   "handle": "@RepJimmyPanetta",
-   "member": "Jimmy Panetta",
-   "since": "2026-09-09T13:40:09.000Z",
-   "last": "2026-09-09T13:40:09.000Z",
-   "updates": 1,
-   "engN": 11,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Wildfire · Monterey County, CA",
-   "evidence": {
-    "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": true,
-     "place": false
-    }
-   },
-   "timeline": [
-    {
-     "time": "2026-09-09T13:40:09.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is now 61% contained and Timber is at 27%. More than 3,700 personnel, along with 23 helicopters, 210 engines, and 55 dozers, are supporting",
-     "engN": 11,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA"
-     },
-     "evidence": {
-      "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      }
-     }
-    }
-   ],
-   "tweetIds": [
-    "2097681465265795466"
-   ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Retweeted Monterey County Sheriff's Office notice titled \"Timber Fire Evacuation Warnings/Orders Update,\" stating that effective immediately the Sheriff's Office is downgrading (post text is cut off before specifying which zones/levels).",
-      "src": "per @MCoSheriff, retweeted by @RepJimmyPanetta, 2026-09-03T14:04:32Z"
-     },
-     {
-      "text": "CAL FIRE and the U.S. Forest Service are working together in a strategic partnership to fully suppress the Timber and Plaskett fires, operating in steep terrain and tough conditions.",
-      "src": "per @RepJimmyPanetta, 2026-09-03T16:15:17Z"
-     },
-     {
-      "text": "Firefighters are using many resources against the Timber and Plaskett Fires, including two Super Scooper aircraft.",
-      "src": "per @RepJimmyPanetta, 2026-09-04T19:37:00Z"
-     },
-     {
-      "text": "Plaskett Fire is 61% contained and Timber Fire is 27% contained.",
-      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
-     },
-     {
-      "text": "More than 3,700 personnel, 23 helicopters, 210 engines, and 55 dozers are supporting the response (post text cut off).",
-      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
-     }
-    ],
-    "unverified": [],
-    "whatsNew": [
-     "Sep 9: Plaskett at 61% containment, Timber at 27%; 3,700+ personnel, 23 helicopters, 210 engines, 55 dozers committed (per @RepJimmyPanetta, 2026-09-09T13:40:09Z).",
-     "Sep 4: Two Super Scooper aircraft added to the resources working both fires (per @RepJimmyPanetta, 2026-09-04T19:37:00Z).",
-     "Sep 3: CAL FIRE and U.S. Forest Service continuing joint suppression effort in steep terrain (per @RepJimmyPanetta, 2026-09-03T16:15:17Z).",
-     "Sep 3: Monterey County Sheriff's Office announced a downgrade to Timber Fire evacuation warnings/orders, effective immediately (per @MCoSheriff via @RepJimmyPanetta, 2026-09-03T14:04:32Z; details truncated in post)."
-    ],
-    "extractedAt": "2026-09-10T06:11:14.890Z",
-    "posts": 4
    }
   },
   {

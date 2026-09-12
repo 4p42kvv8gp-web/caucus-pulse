@@ -34,6 +34,28 @@
      "cacheWrite": 8504
     }
    }
+  },
+  "classify": {
+   "claude-opus-5": {
+    "batch": {
+     "calls": 20,
+     "input": 102514,
+     "output": 61407,
+     "cacheRead": 28608,
+     "cacheWrite": 42912
+    }
+   }
+  },
+  "stories": {
+   "claude-opus-5": {
+    "live": {
+     "calls": 1,
+     "input": 5162,
+     "output": 1676,
+     "cacheRead": 0,
+     "cacheWrite": 0
+    }
+   }
   }
  }
 }
