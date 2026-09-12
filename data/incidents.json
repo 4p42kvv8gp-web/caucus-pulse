@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T00:35:17.465Z",
+ "generatedAt": "2026-09-12T04:58:29.869Z",
  "incidents": [
   {
    "id": "lake-county-ca--wildfire",
@@ -7,12 +7,12 @@
    "kinds": [
     "wildfire"
    ],
-   "status": "monitoring",
-   "lifecycle": "monitoring",
+   "status": "active",
+   "lifecycle": "active",
    "corroboration": {
     "corroborated": true,
     "by": "second post",
-    "note": "@RepThompson posted again 6d after the first report"
+    "note": "@RepThompson posted again 24.3h after the first report"
    },
    "place": "Lake County, CA · CA-04",
    "placeRaw": "Lake County, CA",
@@ -20,46 +20,24 @@
    "districtMatch": true,
    "handle": "@RepThompson",
    "member": "Mike Thompson",
-   "since": "2026-09-04T20:06:01.000Z",
-   "last": "2026-09-11T00:52:02.000Z",
+   "since": "2026-09-11T00:52:02.000Z",
+   "last": "2026-09-12T01:10:26.000Z",
    "updates": 2,
-   "engN": 16,
+   "engN": 18,
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Lake County, CA",
    "evidence": {
-    "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
+    "span": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay.",
     "exact": true,
     "start": 0,
-    "end": 141,
+    "end": 263,
     "matched": {
      "kind": true,
      "place": true
     }
    },
    "timeline": [
-    {
-     "time": "2026-09-04T20:06:01.000Z",
-     "who": "@RepThompson",
-     "tag": "member",
-     "text": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay. It is unsafe to stay and threatens the safety of you, your family, and emergency responders. Your life could be in great danger. Emergency https://t.co/RnWfThRDNu",
-     "engN": 6,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Lake County, CA"
-     },
-     "evidence": {
-      "span": "#ScottFire in Lake County: An Evacuation Order for Zone: LAK-E054, LAK-E056 and an Evacuation Warning for Zone: UPP-E043 Leave without delay.",
-      "exact": true,
-      "start": 0,
-      "end": 141,
-      "matched": {
-       "kind": true,
-       "place": true
-      }
-     }
-    },
     {
      "time": "2026-09-11T00:52:02.000Z",
      "who": "@RepThompson",
@@ -81,76 +59,33 @@
        "place": true
       }
      }
-    }
-   ],
-   "tweetIds": [
-    "2095966636222144688",
-    "2098212938746065092"
-   ],
-   "intel": null
-  },
-  {
-   "id": "malibu-ca--infrastructure-failure",
-   "kind": "infrastructure failure",
-   "kinds": [
-    "infrastructure failure"
-   ],
-   "status": "provisional",
-   "lifecycle": "monitoring",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
-   },
-   "place": "Malibu, CA · CA-32",
-   "placeRaw": "Malibu, CA",
-   "district": "CA-32",
-   "districtMatch": true,
-   "handle": "@BradSherman",
-   "member": "Brad Sherman",
-   "since": "2026-09-10T15:10:53.000Z",
-   "last": "2026-09-10T15:10:53.000Z",
-   "updates": 1,
-   "engN": 23,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Infrastructure failure · Malibu, CA",
-   "evidence": {
-    "span": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": false,
-     "place": true
-    }
-   },
-   "timeline": [
+    },
     {
-     "time": "2026-09-10T15:10:53.000Z",
-     "who": "@BradSherman",
+     "time": "2026-09-12T01:10:26.000Z",
+     "who": "@RepThompson",
      "tag": "member",
-     "text": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
-     "engN": 23,
-     "isNew": false,
+     "text": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
+     "engN": 8,
+     "isNew": true,
      "flag": {
-      "kind": "infrastructure failure",
-      "place": "Malibu, CA"
+      "kind": "wildfire",
+      "place": "Lake County, CA"
      },
      "evidence": {
-      "span": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
-      "exact": false,
+      "span": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross.",
+      "exact": true,
       "start": 0,
-      "end": 140,
+      "end": 157,
       "matched": {
-       "kind": false,
+       "kind": true,
        "place": true
       }
      }
     }
    ],
    "tweetIds": [
-    "2098066687752810846"
+    "2098212938746065092",
+    "2098579959321080152"
    ],
    "intel": null
   },
@@ -332,8 +267,8 @@
    "lifecycle": "resolved",
    "corroboration": {
     "corroborated": true,
-    "by": "second post",
-    "note": "@RepJimmyPanetta posted again 5d after the first report"
+    "by": "intel",
+    "note": "nightly intel pass: 5 confirmed, 0 unverified item(s)"
    },
    "place": "Monterey County, CA · CA-19",
    "placeRaw": "Monterey County, CA",
@@ -341,46 +276,24 @@
    "districtMatch": true,
    "handle": "@RepJimmyPanetta",
    "member": "Jimmy Panetta",
-   "since": "2026-09-04T19:37:00.000Z",
+   "since": "2026-09-09T13:40:09.000Z",
    "last": "2026-09-09T13:40:09.000Z",
-   "updates": 2,
-   "engN": 16,
+   "updates": 1,
+   "engN": 11,
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Monterey County, CA",
    "evidence": {
-    "span": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for",
+    "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
     "exact": false,
     "start": 0,
-    "end": 139,
+    "end": 140,
     "matched": {
      "kind": true,
      "place": false
     }
    },
    "timeline": [
-    {
-     "time": "2026-09-04T19:37:00.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for the firefighters and first responders working tirelessly to suppress both and protect our communities. \n\nhttps://t.co/lwwAcDhqky",
-     "engN": 5,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA"
-     },
-     "evidence": {
-      "span": "Firefighters are using many resources to bear against the Timber and Plaskett Fires, including two Super Scooper aircraft. I’m grateful for",
-      "exact": false,
-      "start": 0,
-      "end": 139,
-      "matched": {
-       "kind": true,
-       "place": false
-      }
-     }
-    },
     {
      "time": "2026-09-09T13:40:09.000Z",
      "who": "@RepJimmyPanetta",
@@ -405,7 +318,6 @@
     }
    ],
    "tweetIds": [
-    "2095959332437279110",
     "2097681465265795466"
    ],
    "intel": {
@@ -731,6 +643,71 @@
    }
   },
   {
+   "id": "malibu-ca--infrastructure-failure",
+   "kind": "infrastructure failure",
+   "kinds": [
+    "infrastructure failure"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Malibu, CA · CA-32",
+   "placeRaw": "Malibu, CA",
+   "district": "CA-32",
+   "districtMatch": true,
+   "handle": "@BradSherman",
+   "member": "Brad Sherman",
+   "since": "2026-09-10T15:10:53.000Z",
+   "last": "2026-09-10T15:10:53.000Z",
+   "updates": 1,
+   "engN": 23,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Infrastructure failure · Malibu, CA",
+   "evidence": {
+    "span": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": true
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-10T15:10:53.000Z",
+     "who": "@BradSherman",
+     "tag": "member",
+     "text": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
+     "engN": 23,
+     "isNew": false,
+     "flag": {
+      "kind": "infrastructure failure",
+      "place": "Malibu, CA"
+     },
+     "evidence": {
+      "span": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": true
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2098066687752810846"
+   ],
+   "intel": null
+  },
+  {
    "id": "kauai-hi--hurricane",
    "kind": "hurricane",
    "kinds": [
@@ -893,51 +870,6 @@
    "place": "Detroit, MI",
    "who": "@SenatorSlotkin",
    "time": "2026-09-05T14:10:00.000Z",
-   "reason": "non-House account",
-   "cue": null
-  },
-  {
-   "id": "2095971514361209296",
-   "kind": "wildfire",
-   "place": "Aspen Acres & Gold Mountain, CO",
-   "who": "@RepPettersen",
-   "time": "2026-09-04T20:25:24.000Z",
-   "reason": "dated past",
-   "cue": "spent months"
-  },
-  {
-   "id": "2095961160432619692",
-   "kind": "storm damage",
-   "place": "Northwest Indiana, IN",
-   "who": "@RepMrvan",
-   "time": "2026-09-04T19:44:16.000Z",
-   "reason": "dated past",
-   "cue": "the August storm"
-  },
-  {
-   "id": "2095960913144693225",
-   "kind": "wildfire",
-   "place": "Washington, WA",
-   "who": "@RepKimSchrier",
-   "time": "2026-09-04T19:43:17.000Z",
-   "reason": "place is a whole state",
-   "cue": "Washington, WA"
-  },
-  {
-   "id": "2095935053721198956",
-   "kind": "severe storms",
-   "place": "Illinois, IL",
-   "who": "@RepRobinKelly",
-   "time": "2026-09-04T18:00:32.000Z",
-   "reason": "place is a whole state",
-   "cue": "Illinois, IL"
-  },
-  {
-   "id": "2095908349724291271",
-   "kind": "severe storms",
-   "place": "Southeast Michigan, MI",
-   "who": "@SenatorSlotkin",
-   "time": "2026-09-04T16:14:25.000Z",
    "reason": "non-House account",
    "cue": null
   }
