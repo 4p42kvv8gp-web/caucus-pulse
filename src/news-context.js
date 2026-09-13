@@ -130,15 +130,25 @@ export function extractArticle(html, { url, passageChars = 600, maxPassages = 3 
   const publishedAt = isoDate(metaContent(src, 'article:published_time') || metaContent(src, 'datePublished') || jsonLd(src, 'datePublished'));
   const lang = (src.match(/<html\b[^>]*\blang=["']([a-zA-Z-]+)["']/i) || [])[1] || null;
   const title = stripHtml(metaContent(src, 'og:title') || tag(src, 'title'));
-  let scope = src.replace(/<(nav|header|footer|aside|figure|form)\b[\s\S]*?<\/\1>/gi, ' ');
-  const art = scope.match(/<article\b[\s\S]*?<\/article>/i);
-  if (art) scope = art[0];
-  const paragraphs = [];
-  for (const m of scope.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)) {
-    const t = stripHtml(m[1]).replace(/\n+/g, ' ').trim();
-    if (t.length >= 40 && !/^(advertisement|sign up|subscribe|read more)/i.test(t)) paragraphs.push(t);
-    if (paragraphs.length >= maxPassages) break;
-  }
+  const cleaned = src.replace(/<(nav|header|footer|aside|figure|figcaption|form)\b[\s\S]*?<\/\1>/gi, ' ');
+  const collect = (scope) => {
+    const out = [];
+    for (const m of scope.matchAll(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi)) {
+      if (/class=["'][^"']*(caption|credit|byline|dateline|meta|promo|newsletter)/i.test(m[1])) continue;
+      const t = stripHtml(m[2]).replace(/\n+/g, ' ').trim();
+      if (t.length < 40) continue;
+      if (/^(advertisement|sign up|subscribe|read more|file\s*[-–—]|photo\b|image\b|credit\b)/i.test(t)) continue;
+      if (/\b(getty images|ap photo|reuters\/|\/ap\b|photo by|photograph by)\b/i.test(t) && t.length < 240) continue;
+      out.push(t);
+      if (out.length >= maxPassages) break;
+    }
+    return out;
+  };
+  // <article> first; when it wraps only the headline (NPR's pages did),
+  // the prose is elsewhere on the page, so fall back to the whole body.
+  const art = cleaned.match(/<article\b[\s\S]*?<\/article>/i);
+  let paragraphs = art ? collect(art[0]) : [];
+  if (!paragraphs.length) paragraphs = collect(cleaned);
   const passages = paragraphs.map((t) => (t.length > passageChars ? `${t.slice(0, passageChars - 1)}…` : t));
   return { canonical, publishedAt, lang, title, passages, extract: passages.length ? 'body' : 'headline-only' };
 }
@@ -208,20 +218,22 @@ export function changedSince(version, opts = {}) {
 
 const STOP = new Set('a an the and or but of to in on at for from by with as is are was were be been this that these those it its into over under about after before during than then there their they them we our you your he she his her him not no yes do does did have has had will would can could should may might just also more most very so up out if when where which who whom whose what why how all any some such only own same too s t d ll re ve m today tonight yesterday tomorrow week day new'.split(' '));
 
+// Names that appear in most political reporting on most days. Capitalised,
+// so they would score like a distinctive name; the first live run matched
+// a constituent-services post to a harassment-settlement story on "House"
+// and "Trump" alone. They still count, at the weight of an ordinary word,
+// but they never make an item a report on their own.
+export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump president white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen sept september friday monday tuesday wednesday thursday saturday sunday'.split(' '));
+
 // Query terms with weights: a capitalised token that is not sentence-initial
-// (a name, a place) counts 3, a number counts 2, anything else 1. Hashtags
-// and handles are split into their word. Stopwords are dropped.
+// (a name, a place) counts 3, a number counts 2, anything else 1 — and a
+// capitalised token in COMMON_NAMES counts 1. Hashtags and handles are
+// split into their word. Stopwords are dropped.
 export function queryTerms(text) {
   const weights = new Map();
-  const raw = String(text ?? '').replace(/https?:\/\/\S+/g, ' ');
-  let sentenceStart = true;
-  for (const tok of raw.split(/[^A-Za-z0-9'’#@]+/)) {
-    if (!tok) continue;
-    const word = tok.replace(/^[#@]/, '').replace(/[’']s$/, '').toLowerCase();
-    const cap = /^[#@]?[A-Z][a-z]/.test(tok);
+  for (const { word, cap, sentenceStart } of words(String(text ?? '').replace(/https?:\/\/\S+/g, ' '))) {
     const num = /^\d{2,4}$/.test(word);
-    const w = num ? 2 : cap && !sentenceStart ? 3 : 1;
-    sentenceStart = /[.!?]$/.test(tok);
+    const w = num ? 2 : cap && !sentenceStart && !COMMON_NAMES.has(word) ? 3 : 1;
     if (word.length < 3 && !num) continue;
     if (STOP.has(word)) continue;
     weights.set(word, Math.max(weights.get(word) || 0, w));
@@ -229,7 +241,37 @@ export function queryTerms(text) {
   return weights;
 }
 
-const tokens = (s) => String(s ?? '').toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !STOP.has(t));
+// Whitespace-split words with the two facts the weighting needs: was the
+// token capitalised, and did the previous token end a sentence. Splitting
+// on non-letters first would eat the full stop that answers the second.
+function* words(text) {
+  let sentenceStart = true;
+  for (const raw of text.split(/\s+/)) {
+    if (!raw) continue;
+    const core = raw.replace(/^[^A-Za-z0-9#@]+/, '').replace(/[^A-Za-z0-9]+$/, '');
+    const endsSentence = /[.!?]["”’')\]]*$/.test(raw);
+    if (!core) { if (endsSentence) sentenceStart = true; continue; }
+    const word = core.replace(/^[#@]/, '').replace(/[’']s$/, '').replace(/,(?=\d{3})/g, '').toLowerCase();
+    yield { word, cap: /^[#@]?[A-Z][a-z]/.test(core), sentenceStart };
+    sentenceStart = endsSentence;
+  }
+}
+
+// "2,400" is one number on both sides of a match.
+const tokens = (s) => String(s ?? '').toLowerCase().replace(/,(?=\d{3})/g, '').split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !STOP.has(t));
+
+// Words the item's own prose treats as names: capitalised mid-sentence in
+// the summary or a passage (titles are title-cased, so they do not count).
+// A post capitalises freely ("Big", "Home"); an article's sentences do not,
+// so this is the better judge of whether a shared word is a name.
+export function itemProperNouns(item) {
+  const out = new Set();
+  const text = [item.summary, ...(item.passages || [])].filter(Boolean).join(' ');
+  for (const { word, cap, sentenceStart } of words(text)) {
+    if (cap && !sentenceStart && word.length >= 3 && !STOP.has(word) && !COMMON_NAMES.has(word)) out.add(word);
+  }
+  return out;
+}
 
 // Score one item for a query. A term counts once for appearing in the title
 // (double) and once for appearing in the body, plus a small bonus for
@@ -277,9 +319,14 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
     if (score < minScore) continue;
     const ageHours = Math.round((at - when) / 3_600_000);
     const stale = ageHours > staleDays * 24;
-    const strong = [...terms].some(([t, w]) => w >= 2 && (inTitle.includes(t) || inBody.includes(t)));
-    const kind = it.extract === 'body' && inBody.length && strong && !stale ? 'report' : 'lead';
-    scored.push({ id: it.id, url: it.url, publisher: it.publisher, sourceId: it.sourceId, title: it.title, publishedAt: it.publishedAt, fetchedAt: it.fetchedAt, extract: it.extract, passage: (it.passages || [])[0] || it.summary || '', score, matched: [...new Set([...inTitle, ...inBody])], ageHours, stale, kind });
+    const matched = [...new Set([...inTitle, ...inBody])];
+    const proper = itemProperNouns(it);
+    // A distinctive match: a number, or a word the article itself treats
+    // as a name (and that is not one everyone uses). This is what separates
+    // "the Dilley facility" from a shared "House".
+    const matchedProper = matched.filter((m) => /^\d/.test(m) || (proper.has(m) && !COMMON_NAMES.has(m)));
+    const kind = it.extract === 'body' && inBody.length && matchedProper.length && !stale ? 'report' : 'lead';
+    scored.push({ id: it.id, url: it.url, publisher: it.publisher, sourceId: it.sourceId, title: it.title, publishedAt: it.publishedAt, fetchedAt: it.fetchedAt, extract: it.extract, passage: (it.passages || [])[0] || it.summary || '', score, matched, matchedProper, ageHours, stale, kind });
   }
   scored.sort((a, b) => b.score - a.score || String(b.publishedAt).localeCompare(String(a.publishedAt)));
   const evidence = scored.slice(0, k);
@@ -305,7 +352,7 @@ export function evidenceForPosts(posts, { k = 2, perChunkCap = 12, items = null,
 
 // Compact form for a prompt line (mirrors `candidates` on classifierLine):
 // id, publisher, date, kind and a short passage. Passages are data.
-export const evidenceLine = (e) => ({ id: e.id, publisher: e.publisher, date: (e.publishedAt || '').slice(0, 10), kind: e.kind, url: e.url, text: String(e.passage || e.title).slice(0, 200) });
+export const evidenceLine = (e) => ({ id: e.id, publisher: e.publisher, date: (e.publishedAt || '').slice(0, 10), kind: e.kind, url: e.url, text: String(e.passage || e.title).replace(/\s+/g, ' ').trim().slice(0, 200) });
 
 // Text block for a system prompt or a story card. The frame names the
 // content as quoted press text and tells the model it is not instructions;
@@ -320,7 +367,7 @@ export function renderEvidence(evidence) {
 // Posts whose classification is empty or macro-only and that now have
 // evidence — the reconsideration queue. Only items newer than
 // `sinceVersion` count, so a rerun after nothing changed queues nothing.
-export function reconsiderCandidates(topicsDay, posts, { sinceVersion = 0, items = null, minScore = DEFAULTS.minScore + 1, k = 2 } = {}) {
+export function reconsiderCandidates(topicsDay, posts, { sinceVersion = 0, items = null, minScore = DEFAULTS.minScore * 2, k = 2 } = {}) {
   const store = items ? { items } : loadNews({ days: 14 });
   const fresh = store.items.filter((it) => (it.version || 0) > sinceVersion);
   if (!fresh.length) return [];
@@ -332,7 +379,11 @@ export function reconsiderCandidates(topicsDay, posts, { sinceVersion = 0, items
     const t = byId.get(id);
     if (!t) continue;
     const { evidence } = retrieveEvidence([t.text, t.quoting?.text].filter(Boolean).join(' '), { items: fresh, asOf: t.createdAt, k, minScore });
-    if (evidence.length) out.push({ id, current: topics || [], evidence: evidence.map(evidenceLine) });
+    // Worth a second look only when the article names something the post
+    // names (matchedProper) and they share at least one more term; a shared
+    // "House", or a single ordinary word, does not queue anything.
+    const distinctive = evidence.filter((e) => e.matchedProper.length && e.matched.length >= 2);
+    if (distinctive.length) out.push({ id, current: topics || [], evidence: distinctive.map(evidenceLine) });
   }
   return out;
 }

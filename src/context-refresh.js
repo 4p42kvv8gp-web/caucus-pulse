@@ -97,9 +97,10 @@ export async function refreshSource(source, { cfg, fetchImpl = fetch, known = ne
     const base = { id, sourceId: source.id, publisher: source.publisher, url, feedLink: url, feedUrl: source.url, title: f.title, publishedAt: f.publishedAt, fetchedAt: now, extract: 'headline-only', passages: [], summary: f.summary || '', lang: null };
     const prior = known.get(id);
     if (prior) {
-      // Body already on file: carry it, so a re-seen item is not downgraded
-      // to a headline and the store only versions on a real change.
-      Object.assign(base, { id: prior.id, url: prior.url, passages: prior.passages, extract: prior.extract, lang: prior.lang, publishedAt: f.publishedAt || prior.publishedAt });
+      // Body already on file (or a fresh failure): carry it, so a re-seen
+      // item is not downgraded to a headline and the store only versions
+      // on a real change.
+      Object.assign(base, { id: prior.id, url: prior.url, passages: prior.passages, extract: prior.extract, lang: prior.lang, publishedAt: f.publishedAt || prior.publishedAt, fetchError: prior.fetchError });
       items.push(base);
       continue;
     }
@@ -132,9 +133,13 @@ export async function refreshAll({ cfg = loadSources(), only = null, fetchImpl =
   const sources = cfg.sources.filter((s) => !only || only.includes(s.id));
   // Bodies already on file, reachable by the feed's link as well as the
   // canonical URL (they can differ), so a known article is never refetched.
+  // A body that failed (403, timeout) is left alone for a day rather than
+  // hammered hourly; it is retried once the record is a day old.
   const known = new Map();
+  const dayAgo = Date.parse(now) - 86_400_000;
   for (const it of loadNews({ file: itemsFile, statusFile }).items) {
-    if (it.extract !== 'body') continue;
+    const keep = it.extract === 'body' || (it.extract === 'failed' && Date.parse(it.fetchedAt || 0) > dayAgo);
+    if (!keep) continue;
     known.set(it.id, it);
     if (it.feedLink) known.set(itemId(it.feedLink), it);
   }

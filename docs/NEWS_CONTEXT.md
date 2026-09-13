@@ -138,5 +138,38 @@ not stored, committed, or shown.
 
 ## Live evidence
 
-Filled in from the first run in Actions — see the section below once the
-run has committed `data/news/`.
+First run in GitHub Actions, on this branch, 2026-09-13 16:45–16:47Z:
+https://github.com/4p42kvv8gp-web/caucus-pulse/actions/runs/34769536839
+(commit `d3fc29f` on `claude/news-context`). From its log and the files it
+committed:
+
+| source | feed | items | bodies attempted → readable | note |
+|---|---|---|---|---|
+| npr-politics | 200, rss | 10 | 10 → 2 | pages wrap only the headline in `<article>`; the extractor now falls back to the page body (fix after this run) |
+| politico-politics | 200, rss | 30 | 15 → 0 | every article page answered HTTP 403 to our User-Agent; set to headline-only |
+| the-hill | 200, rss | 100 | 15 → 0 | HTTP 403 on article pages; set to headline-only |
+| roll-call | 200, rss | 10 | 10 → 10 | canonical URLs, publication times and three passages each |
+| cnn-politics | 200, rss | 18 | 15 → 6 | 4 pages HTTP 403, the rest headline-only after extraction |
+| nyt-politics | 200, rss | 20 | headline-only by policy | |
+| wapo-politics | 200, rss | 12 | headline-only by policy | |
+| govinfo-crec | 200, rss | 100 | headline-only by policy | Congressional Record issues |
+| whitehouse | 404 | — | — | feed URL wrong; removed from the registry |
+| house-clerk-floor | 200 but HTML | — | — | not a feed at that URL; removed |
+
+200 items stored, context version 1, 81 seconds, no X or Claude call. The
+commit landed through `commit-data.sh` like every other data commit.
+
+The store was then queried offline for 2026-09-12 (`--reconsider`): of that
+day's posts whose classification was empty or macro-only, 13 have evidence
+that names something the post names — for example a post with no topic
+matched Roll Call's account of the House 9/11 anniversary ceremony
+(`report`, body passage), and posts about the Smithsonian and about the
+Good Friday Agreement matched The Hill leads. The first version of the
+matcher queued 72; the two fixes made from that data (everyday names like
+"House" and "Trump" no longer count as distinctive; a term is distinctive
+when the article's own prose capitalises it) cut it to 13. The queue is a
+candidate list for reclassification, not a claim about any post.
+
+What this run did not prove: that the classifier uses the evidence (the
+hooks are proposed, not applied), and body retrieval from publishers that
+refuse our User-Agent.

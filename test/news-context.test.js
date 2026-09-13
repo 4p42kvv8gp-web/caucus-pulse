@@ -158,7 +158,20 @@ test('queryTerms weighs names and numbers over ordinary words and drops stopword
   assert.equal(t.get('dilley'), 3);
   assert.equal(t.get('families'), 1); // sentence-initial capital is not a name
   assert.equal(t.has('this'), false);
-  assert.equal(t.get('400'), 2);
+  assert.equal(t.get('2400'), 2);
+  const c = queryTerms('The House voted while Trump spoke in Dilley');
+  assert.equal(c.get('house'), 1);
+  assert.equal(c.get('trump'), 1);
+  assert.equal(c.get('dilley'), 3);
+});
+
+test('extractArticle skips captions and credits, and falls back past an <article> that holds no prose', () => {
+  const html = `<html><body><article><h1>Headline</h1><p class="caption">FILE - A logo is seen on a podium before a news conference, May 4, 2026, in Washington. (AP Photo/Someone)</p></article>
+  <div class="storytext"><p>The agency said on Friday that the Dilley facility will expand, according to three officials who described the plan.</p><p>Photo by Jane Doe/Getty Images</p><p>A second paragraph of prose long enough to count as a passage for the extractor.</p></div></body></html>`;
+  const art = extractArticle(html, { url: 'https://x.test/a' });
+  assert.equal(art.passages.length, 2);
+  assert.match(art.passages[0], /^The agency said on Friday/);
+  assert.ok(!art.passages.join(' ').includes('Getty'));
 });
 
 test('ambiguous name: "Dilley" the facility and "Dilley" the coach both surface; the detention report ranks first and is the only report', async () => {
@@ -169,6 +182,15 @@ test('ambiguous name: "Dilley" the facility and "Dilley" the coach both surface;
   assert.equal(evidence[0].kind, 'report');
   assert.ok(evidence.some((e) => /Coach Dilley/.test(e.title)), 'the surname hit is still visible as an ambiguity');
   assert.ok(evidence.filter((e) => e.kind === 'report').every((e) => e.extract === 'body'));
+  assert.deepEqual(evidence[0].matchedProper, ['dilley']);
+});
+
+test('a shared everyday name is not a report: "House" and "Trump" overlap alone stays a lead', async () => {
+  const items = [{ id: 'n1', publisher: 'P', url: 'https://p.test/1', title: 'House vote on Trump plan', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['The House voted on the plan from President Trump on Thursday, with members split along party lines for the third time.'], summary: '' }];
+  const { evidence } = retrieveEvidence('Proud to vote in the House against Trump today', { items, asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.equal(evidence.length, 1);
+  assert.equal(evidence[0].kind, 'lead');
+  assert.deepEqual(evidence[0].matchedProper, []);
 });
 
 test('ambiguous place: "Springfield" returns both the Ohio and the Illinois item as leads, choosing neither', async () => {
