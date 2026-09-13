@@ -1,0 +1,17 @@
+{
+  "_comment": "Authorized public sources for the news-context lane (src/context-refresh.js, docs/NEWS_CONTEXT.md). kind: rss|atom. bodies: true = the linked article's public HTML may be fetched and up to three short passages stored as evidence; false = headline-only leads (paywalled, or the publisher's terms do not allow body retrieval). verified is written by the live refresh run (last HTTP status + item count), never by hand — a source is unverified until a run in GitHub Actions has fetched it. Add a source here; nothing else reads URLs.",
+  "user_agent": "caucus-pulse/0.1 news-context (+https://github.com/4p42kvv8gp-web/caucus-pulse)",
+  "fetch": { "timeout_ms": 15000, "max_bytes": 2000000, "max_bodies_per_source": 15, "pace_ms": 1000, "passage_chars": 600, "max_passages": 3, "keep_days": 21 },
+  "sources": [
+    { "id": "npr-politics", "publisher": "NPR", "kind": "rss", "url": "https://feeds.npr.org/1014/rss.xml", "bodies": true, "category": "national" },
+    { "id": "politico-politics", "publisher": "Politico", "kind": "rss", "url": "https://rss.politico.com/politics-news.xml", "bodies": true, "category": "national" },
+    { "id": "the-hill", "publisher": "The Hill", "kind": "rss", "url": "https://thehill.com/feed/", "bodies": true, "category": "national" },
+    { "id": "roll-call", "publisher": "Roll Call", "kind": "rss", "url": "https://rollcall.com/feed/", "bodies": true, "category": "congress" },
+    { "id": "cnn-politics", "publisher": "CNN", "kind": "rss", "url": "http://rss.cnn.com/rss/cnn_allpolitics.rss", "bodies": true, "category": "national" },
+    { "id": "nyt-politics", "publisher": "The New York Times", "kind": "rss", "url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml", "bodies": false, "category": "national" },
+    { "id": "wapo-politics", "publisher": "The Washington Post", "kind": "rss", "url": "https://feeds.washingtonpost.com/rss/politics", "bodies": false, "category": "national" },
+    { "id": "whitehouse", "publisher": "The White House", "kind": "rss", "url": "https://www.whitehouse.gov/feed/", "bodies": true, "category": "official" },
+    { "id": "govinfo-crec", "publisher": "GovInfo — Congressional Record", "kind": "rss", "url": "https://www.govinfo.gov/rss/crec.xml", "bodies": false, "category": "floor" },
+    { "id": "house-clerk-floor", "publisher": "Clerk of the House — floor activity", "kind": "rss", "url": "https://clerk.house.gov/floorsummary/floor-rss.aspx", "bodies": false, "category": "floor" }
+  ]
+}

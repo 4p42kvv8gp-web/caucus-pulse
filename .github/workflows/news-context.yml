@@ -1,0 +1,56 @@
+# News context — hourly acquisition from the authorized public sources in
+# config/news-sources.json (src/context-refresh.js, docs/NEWS_CONTEXT.md).
+# No X token and no Claude credential: feeds and article pages only. The
+# job commits data/news/ (append-only items + status) with the same
+# commit-data.sh the poll and nightly use, so a concurrent push just
+# rebases. Separate concurrency group from data-writes on purpose: a slow
+# news site must never hold the capture lock.
+name: news-context
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'Comma-separated registry ids to refresh (empty = all)'
+        required: false
+        default: ''
+      dry_run:
+        description: "'true' fetches and reports without writing"
+        required: false
+        default: ''
+      reconsider:
+        description: 'YYYY-MM-DD: after refreshing, list that day''s empty/macro-only classifications that now have evidence'
+        required: false
+        default: ''
+
+concurrency:
+  group: news-context
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Refresh news context
+        env:
+          SOURCES: ${{ inputs.sources }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          node src/context-refresh.js ${SOURCES:+--sources=$SOURCES} ${DRY_RUN:+--dry-run}
+      - name: Reconsideration queue
+        if: inputs.reconsider != ''
+        run: node src/context-refresh.js --reconsider=${{ inputs.reconsider }}
+      - name: Commit news context
+        if: always()
+        run: |
+          .github/scripts/commit-data.sh "news-context: $(date -u +'%Y-%m-%d %H:%M') refresh" data/news
