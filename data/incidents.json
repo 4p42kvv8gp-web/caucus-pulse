@@ -1,6 +1,71 @@
 {
- "generatedAt": "2026-09-13T15:11:02.202Z",
+ "generatedAt": "2026-09-13T16:38:42.010Z",
  "incidents": [
+  {
+   "id": "providence-ri--flooding",
+   "kind": "flooding",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Providence, RI · RI-01",
+   "placeRaw": "Providence, RI",
+   "district": "RI-01",
+   "districtMatch": true,
+   "handle": "@RepGabeAmo",
+   "member": "Gabe Amo",
+   "since": "2026-09-13T15:20:11.000Z",
+   "last": "2026-09-13T15:20:11.000Z",
+   "updates": 1,
+   "engN": 0,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Providence, RI",
+   "evidence": {
+    "span": "Stay safe in the flash floods, Rhode Island: don't drive through standing water and report downed power lines by calling Rhode Island Energy",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-13T15:20:11.000Z",
+     "who": "@RepGabeAmo",
+     "tag": "member",
+     "text": "Stay safe in the flash floods, Rhode Island: don't drive through standing water and report downed power lines by calling Rhode Island Energy at 1-855-743-1101. https://t.co/Hfgf1p8czl",
+     "engN": 0,
+     "isNew": true,
+     "flag": {
+      "kind": "flooding",
+      "place": "Providence, RI"
+     },
+     "evidence": {
+      "span": "Stay safe in the flash floods, Rhode Island: don't drive through standing water and report downed power lines by calling Rhode Island Energy",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2099156192987591003"
+   ],
+   "intel": null
+  },
   {
    "id": "lake-county-ca--wildfire",
    "kind": "wildfire",
