@@ -126,6 +126,10 @@ test('refreshAll: one failed source does not fail the run; the store versions on
   assert.equal(first.stored.added, 7);
   const status = readStatus(statusFile);
   assert.equal(status.sources.dead.ok, false);
+  // a source dropped from the registry disappears from status on the next run
+  const pruned = await refreshAll({ cfg: { ...cfg, sources: [WIRE, GAZETTE] }, fetchImpl: fakeFetch(PAGES), log, statusFile, itemsFile: file, now: '2026-09-13T15:30:00.000Z' });
+  assert.equal(pruned.total, 2);
+  assert.equal(readStatus(statusFile).sources.dead, undefined);
   assert.match(status.sources.dead.error, /HTTP 404/);
   assert.equal(status.sources.wire.format, 'rss');
   // same content again: nothing new, version unchanged

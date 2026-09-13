@@ -131,6 +131,9 @@ export async function refreshSource(source, { cfg, fetchImpl = fetch, known = ne
 
 export async function refreshAll({ cfg = loadSources(), only = null, fetchImpl = fetch, dryRun = false, now = new Date().toISOString(), log = console.log, statusFile = STATUS_FILE, itemsFile = ITEMS_FILE } = {}) {
   const sources = cfg.sources.filter((s) => !only || only.includes(s.id));
+  // A source removed from the registry leaves status.json too, so the file
+  // describes the registry as it is, not as it was.
+  const registered = new Set(cfg.sources.map((s) => s.id));
   // Bodies already on file, reachable by the feed's link as well as the
   // canonical URL (they can differ), so a known article is never refetched.
   // A body that failed (403, timeout) is left alone for a day rather than
@@ -144,6 +147,7 @@ export async function refreshAll({ cfg = loadSources(), only = null, fetchImpl =
     if (it.feedLink) known.set(itemId(it.feedLink), it);
   }
   const status = readStatus(statusFile);
+  for (const id of Object.keys(status.sources)) if (!registered.has(id)) delete status.sources[id];
   const results = [];
   const toStore = [];
   for (const s of sources) {

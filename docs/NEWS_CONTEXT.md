@@ -170,6 +170,14 @@ matcher queued 72; the two fixes made from that data (everyday names like
 when the article's own prose capitalises it) cut it to 13. The queue is a
 candidate list for reclassification, not a claim about any post.
 
-What this run did not prove: that the classifier uses the evidence (the
+Second run, after the fixes above, 2026-09-13 17:05–17:06Z:
+https://github.com/4p42kvv8gp-web/caucus-pulse/actions/runs/34770529801
+(commit `98c8f36`). NPR: 10 of 10 articles now yield readable passages
+(the `<article>` fallback); CNN 8 of 15; Roll Call re-used its 10 stored
+bodies without a fetch; Politico and The Hill were not re-hit (their 403s
+are under a day old). Context version moved 1 → 2 with 12 new lines
+appended — only what changed — and 203 items are on file. 48 seconds.
+
+What these runs did not prove: that the classifier uses the evidence (the
 hooks are proposed, not applied), and body retrieval from publishers that
 refuse our User-Agent.
