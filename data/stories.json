@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T12:49:52.724Z",
+ "generatedAt": "2026-09-13T15:10:09.681Z",
  "windowDays": 30,
  "promoted": [
   "democracy/lake-america-renaming",
@@ -842,11 +842,879 @@
     "consumer protection"
    ],
    "mergeInto": null
+  },
+  "9-11-25th-anniversary-remembrance": {
+   "macro": "foreign-policy",
+   "key": "sept11-25th-anniversary",
+   "label": "9/11 25th anniversary remembrance",
+   "kind": "story",
+   "aliases": [
+    "9/11",
+    "September 11",
+    "Flight 93",
+    "Pentagon Memorial",
+    "Never Forget"
+   ],
+   "mergeInto": null
+  },
+  "rosh-hashanah-greetings": {
+   "macro": null,
+   "key": "rosh-hashanah-greetings",
+   "label": "Rosh Hashanah greetings",
+   "kind": "noise",
+   "aliases": [
+    "Shana Tova",
+    "Rosh Hashanah",
+    "L'shana Tovah",
+    "Jewish New Year"
+   ],
+   "mergeInto": null
+  },
+  "local-sports-teams": {
+   "macro": null,
+   "key": "arte-moreno-angels",
+   "label": "Arte Moreno / Angels sale reaction",
+   "kind": "story",
+   "aliases": [
+    "Arte Moreno",
+    "Angels",
+    "Anaheim",
+    "baseball"
+   ],
+   "mergeInto": null
+  },
+  "broadband-access": {
+   "macro": "tech",
+   "key": "broadband-access",
+   "label": "Broadband access & deployment",
+   "kind": "gap",
+   "aliases": [
+    "BEAD",
+    "broadband",
+    "high-speed internet",
+    "digital divide",
+    "NTIA"
+   ],
+   "mergeInto": null
+  },
+  "college-sports-scandal": {
+   "macro": "education",
+   "key": "college-sports-ncaa",
+   "label": "College sports & NCAA regulation",
+   "kind": "gap",
+   "aliases": [
+    "NCAA",
+    "college football",
+    "NIL",
+    "eligibility"
+   ],
+   "mergeInto": null
+  },
+  "local-institution-preservation": {
+   "macro": "constituent-services",
+   "key": "local-landmark-preservation",
+   "label": "Saving local landmarks & facilities",
+   "kind": "gap",
+   "aliases": [
+    "National Archives San Bruno",
+    "AMC Kips Bay",
+    "closure",
+    "preservation"
+   ],
+   "mergeInto": null
+  },
+  "olympics-la28": {
+   "macro": "constituent-services",
+   "key": "la28-olympics",
+   "label": "LA28 Olympics preparations",
+   "kind": "story",
+   "aliases": [
+    "LA28",
+    "2028 Olympics",
+    "Paralympics",
+    "Metro LA",
+    "Olympic transit"
+   ],
+   "mergeInto": null
+  },
+  "substance-use-recovery": {
+   "macro": "healthcare",
+   "key": "substance-use-recovery",
+   "label": "Addiction & recovery services",
+   "kind": "gap",
+   "aliases": [
+    "Recovery Month",
+    "substance use",
+    "addiction",
+    "opioids",
+    "overdose"
+   ],
+   "mergeInto": null
+  },
+  "child-performer-workplace-protections": {
+   "macro": "labor",
+   "key": "child-performer-protections",
+   "label": "Child performer workplace protections",
+   "kind": "gap",
+   "aliases": [
+    "child actors",
+    "background checks",
+    "set safety",
+    "performers"
+   ],
+   "mergeInto": null
+  },
+  "cabinet-officials-qualifications": {
+   "macro": "democracy",
+   "key": "bessent-record",
+   "label": "Scott Bessent's record & fitness",
+   "kind": "story",
+   "aliases": [
+    "Bessent",
+    "Scott Bessent",
+    "Treasury Secretary"
+   ],
+   "mergeInto": null
+  },
+  "fbi-hiring-standards": {
+   "macro": "democracy",
+   "key": "fbi-hiring-standards",
+   "label": "FBI hiring standards rollback",
+   "kind": "story",
+   "aliases": [
+    "FBI",
+    "hiring standards",
+    "Patel FBI",
+    "background checks"
+   ],
+   "mergeInto": null
+  },
+  "hasan-piker-controversy": {
+   "macro": "democracy",
+   "key": "hasan-piker-controversy",
+   "label": "Hasan Piker condemnation fight",
+   "kind": "story",
+   "aliases": [
+    "Hasan Piker",
+    "#HasanPiker",
+    "Van Hollen"
+   ],
+   "mergeInto": null
+  },
+  "battery-fire-safety": {
+   "macro": "climate",
+   "key": "lithium-battery-safety",
+   "label": "Lithium battery disposal fires",
+   "kind": "gap",
+   "aliases": [
+    "lithium batteries",
+    "battery fires",
+    "recycling",
+    "EMR plant"
+   ],
+   "mergeInto": null
+  },
+  "agriculture-crop-pest-funding": {
+   "macro": null,
+   "key": "agriculture-farmers",
+   "label": "Agriculture & farmers",
+   "kind": "gap",
+   "aliases": [
+    "USDA",
+    "farmers",
+    "crops",
+    "APHIS",
+    "pest control"
+   ],
+   "mergeInto": null
+  },
+  "la-2028-olympics-transit-readiness": {
+   "macro": "constituent-services",
+   "key": "la28-olympics",
+   "label": "LA28 Olympics preparations",
+   "kind": "story",
+   "aliases": [
+    "LA28",
+    "Olympics",
+    "Metro",
+    "LADOT"
+   ],
+   "mergeInto": "olympics-la28"
+  },
+  "sports-congratulations": {
+   "macro": null,
+   "key": "sports-congratulations",
+   "label": "Sports congratulations",
+   "kind": "noise",
+   "aliases": [
+    "US Open",
+    "Gators",
+    "congrats",
+    "championship"
+   ],
+   "mergeInto": null
+  },
+  "local-journalist-tribute": {
+   "macro": null,
+   "key": "mark-vanderhoff-tribute",
+   "label": "Mark Vanderhoff tribute",
+   "kind": "noise",
+   "aliases": [
+    "Mark Vanderhoff",
+    "journalist tribute",
+    "Kentucky reporter"
+   ],
+   "mergeInto": null
+  },
+  "national-space-academy-oversight": {
+   "macro": "foreign-policy",
+   "key": "national-space-academy",
+   "label": "National Space Academy oversight",
+   "kind": "story",
+   "aliases": [
+    "National Space Academy",
+    "Space Force",
+    "aerospace"
+   ],
+   "mergeInto": null
+  },
+  "lincoln-memorial-reflecting-pool-neglect": {
+   "macro": null,
+   "key": "lincoln-reflecting-pool",
+   "label": "Lincoln Memorial Reflecting Pool neglect",
+   "kind": "story",
+   "aliases": [
+    "Lincoln Memorial",
+    "Reflecting Pool",
+    "National Mall",
+    "Park Service"
+   ],
+   "mergeInto": null
+  },
+  "9-11-records-survivor-care": {
+   "macro": "foreign-policy",
+   "key": "sept11-25th-anniversary",
+   "label": "9/11 records & survivor care",
+   "kind": "story",
+   "aliases": [
+    "9/11 files",
+    "survivors",
+    "World Trade Center Health Program"
+   ],
+   "mergeInto": "9-11-25th-anniversary-remembrance"
+  },
+  "smithsonian-institution": {
+   "macro": null,
+   "key": "smithsonian-bunch-retirement",
+   "label": "Smithsonian: Lonnie Bunch retirement",
+   "kind": "story",
+   "aliases": [
+    "Smithsonian",
+    "Lonnie Bunch",
+    "Smithsonian Secretary",
+    "National Museum of African American History"
+   ],
+   "mergeInto": null
+  },
+  "presidential-falsehoods": {
+   "macro": "democracy",
+   "key": "trump-ground-zero-claim",
+   "label": "Trump's 9/11 Ground Zero claim",
+   "kind": "story",
+   "aliases": [
+    "Ground Zero",
+    "9/11 claim",
+    "Trump lie",
+    "worked long and hard"
+   ],
+   "mergeInto": null
+  },
+  "presidential-fitness-25th-amendment": {
+   "macro": "democracy",
+   "key": "trump-fitness-25th",
+   "label": "Trump fitness & 25th Amendment",
+   "kind": "story",
+   "aliases": [
+    "25th Amendment",
+    "mentally unfit",
+    "cognitive decline",
+    "fitness for office"
+   ],
+   "mergeInto": null
+  },
+  "parental-rights-child-welfare": {
+   "macro": null,
+   "key": "child-family-policy",
+   "label": "Children & family policy",
+   "kind": "gap",
+   "aliases": [
+    "parental rights",
+    "childhood independence",
+    "child welfare",
+    "free-range parenting"
+   ],
+   "mergeInto": null
+  },
+  "industrial-policy": {
+   "macro": "economy",
+   "key": "manufacturing-industry",
+   "label": "Manufacturing & industrial policy",
+   "kind": "gap",
+   "aliases": [
+    "industrial policy",
+    "manufacturing",
+    "reindustrialization",
+    "supply chains"
+   ],
+   "mergeInto": null
+  },
+  "crypto-regulation": {
+   "macro": "economy",
+   "key": "crypto-regulation",
+   "label": "Crypto & digital assets regulation",
+   "kind": "gap",
+   "aliases": [
+    "crypto",
+    "CLARITY Act",
+    "digital assets",
+    "stablecoin",
+    "bitcoin"
+   ],
+   "mergeInto": null
+  },
+  "campaign-finance": {
+   "macro": "democracy",
+   "key": "campaign-finance",
+   "label": "Campaign finance & Citizens United",
+   "kind": "gap",
+   "aliases": [
+    "Citizens United",
+    "dark money",
+    "corporate PACs",
+    "campaign finance reform"
+   ],
+   "mergeInto": null
+  },
+  "trucking-driver-standards": {
+   "macro": "economy",
+   "key": "trucking-policy",
+   "label": "Trucking & driver standards",
+   "kind": "gap",
+   "aliases": [
+    "truckers",
+    "CDL",
+    "English proficiency",
+    "trucking safety"
+   ],
+   "mergeInto": null
+  },
+  "local-tourism-promotion": {
+   "macro": "constituent-services",
+   "key": "local-tourism",
+   "label": "Local tourism & district highlights",
+   "kind": "gap",
+   "aliases": [
+    "tourism",
+    "visit the district",
+    "local businesses",
+    "things to do"
+   ],
+   "mergeInto": null
+  },
+  "holocaust-remembrance": {
+   "macro": "civil-rights",
+   "key": "holocaust-antisemitism",
+   "label": "Holocaust remembrance & antisemitism",
+   "kind": "gap",
+   "aliases": [
+    "Holocaust",
+    "Majdanek",
+    "Holocaust museum",
+    "antisemitism",
+    "Never Again"
+   ],
+   "mergeInto": null
+  },
+  "reca-downwinders": {
+   "macro": "healthcare",
+   "key": "reca-downwinders",
+   "label": "RECA & radiation downwinders",
+   "kind": "gap",
+   "aliases": [
+    "RECA",
+    "Downwinders",
+    "radiation exposure",
+    "uranium miners"
+   ],
+   "mergeInto": null
+  },
+  "tribal-water-rights": {
+   "macro": "civil-rights",
+   "key": "tribal-affairs",
+   "label": "Tribal sovereignty & Native affairs",
+   "kind": "gap",
+   "aliases": [
+    "Tribal sovereignty",
+    "Native American",
+    "water rights settlement",
+    "Yavapai-Apache Nation"
+   ],
+   "mergeInto": null
+  },
+  "robocalls-scam-calls": {
+   "macro": "tech",
+   "key": "robocalls-scams",
+   "label": "Robocalls & phone scams",
+   "kind": "gap",
+   "aliases": [
+    "robocalls",
+    "Foreign Robocall Elimination Act",
+    "scam calls",
+    "spoofing"
+   ],
+   "mergeInto": null
+  },
+  "rail-merger-consolidation": {
+   "macro": "economy",
+   "key": "up-ns-rail-merger",
+   "label": "Union Pacific–Norfolk Southern merger",
+   "kind": "story",
+   "aliases": [
+    "Union Pacific",
+    "Norfolk Southern",
+    "rail merger",
+    "STB",
+    "rail consolidation"
+   ],
+   "mergeInto": null
+  },
+  "elder-financial-exploitation": {
+   "macro": "economy",
+   "key": "elder-financial-abuse",
+   "label": "Elder financial abuse & senior scams",
+   "kind": "gap",
+   "aliases": [
+    "elder abuse",
+    "senior scams",
+    "retirement savings fraud",
+    "financial exploitation"
+   ],
+   "mergeInto": null
+  },
+  "nitrous-oxide-misuse": {
+   "macro": "healthcare",
+   "key": "nitrous-oxide-misuse",
+   "label": "Nitrous oxide misuse & drug harms",
+   "kind": "gap",
+   "aliases": [
+    "nitrous oxide",
+    "whippets",
+    "galaxy gas",
+    "substance misuse"
+   ],
+   "mergeInto": null
+  },
+  "sports-economic-development": {
+   "macro": "economy",
+   "key": "sports-events-economy",
+   "label": "Sports events & local economy",
+   "kind": "gap",
+   "aliases": [
+    "World Cup",
+    "MetLife Stadium",
+    "MLS NEXT Pro",
+    "stadium economy"
+   ],
+   "mergeInto": null
+  },
+  "federal-holidays": {
+   "macro": "labor",
+   "key": "federal-holidays",
+   "label": "Trump targeting federal holidays",
+   "kind": "story",
+   "aliases": [
+    "federal holidays",
+    "take away your holidays",
+    "holiday schedule",
+    "Juneteenth holiday"
+   ],
+   "mergeInto": null
+  },
+  "dc-statehood": {
+   "macro": "democracy",
+   "key": "dc-statehood",
+   "label": "DC statehood",
+   "kind": "gap",
+   "aliases": [
+    "#DCStatehood",
+    "DC statehood",
+    "51st state",
+    "District of Columbia"
+   ],
+   "mergeInto": null
+  },
+  "commemorations-monuments": {
+   "macro": null,
+   "key": "monuments-commemorations",
+   "label": "Monuments & commemorations",
+   "kind": "gap",
+   "aliases": [
+    "Tom Paine",
+    "memorial",
+    "statue",
+    "commemorative act"
+   ],
+   "mergeInto": null
+  },
+  "fisheries-regulation": {
+   "macro": "climate",
+   "key": "fisheries",
+   "label": "Fisheries & lobstermen",
+   "kind": "gap",
+   "aliases": [
+    "lobstermen",
+    "right whale",
+    "fishing industry",
+    "NOAA fisheries"
+   ],
+   "mergeInto": null
+  },
+  "tribal-land-claims": {
+   "macro": "civil-rights",
+   "key": "tribal-affairs",
+   "label": "Tribal nations & Native affairs",
+   "kind": "gap",
+   "aliases": [
+    "tribal land claim",
+    "Native American",
+    "tribes",
+    "land claim bill"
+   ],
+   "mergeInto": null
+  },
+  "film-tv-production": {
+   "macro": "economy",
+   "key": "film-tv-industry",
+   "label": "Film & TV production jobs",
+   "kind": "gap",
+   "aliases": [
+    "Hollywood",
+    "film tax credit",
+    "runaway production",
+    "entertainment industry"
+   ],
+   "mergeInto": null
+  },
+  "smithsonian-museums": {
+   "macro": null,
+   "key": "museums-arts",
+   "label": "Museums, arts & cultural heritage",
+   "kind": "gap",
+   "aliases": [
+    "Smithsonian",
+    "National Mall museum",
+    "Latino Museum",
+    "arts funding"
+   ],
+   "mergeInto": null
+  },
+  "disease-awareness-observances": {
+   "macro": "healthcare",
+   "key": "awareness-months",
+   "label": "Health awareness observances",
+   "kind": "noise",
+   "aliases": [
+    "Awareness Month",
+    "alopecia",
+    "awareness day",
+    "ribbon"
+   ],
+   "mergeInto": null
+  },
+  "college-athlete-health": {
+   "macro": "education",
+   "key": "college-sports",
+   "label": "College athletics & athlete welfare",
+   "kind": "gap",
+   "aliases": [
+    "NCAA",
+    "college athletes",
+    "student-athlete health",
+    "TCU"
+   ],
+   "mergeInto": null
+  },
+  "marijuana-policy": {
+   "macro": "healthcare",
+   "key": "cannabis-policy",
+   "label": "Cannabis & marijuana policy",
+   "kind": "gap",
+   "aliases": [
+    "marijuana rescheduling",
+    "cannabis",
+    "Schedule III",
+    "hemp"
+   ],
+   "mergeInto": null
+  },
+  "fisheries-management": {
+   "macro": "climate",
+   "key": "fisheries",
+   "label": "Fisheries & lobstermen",
+   "kind": "gap",
+   "aliases": [
+    "NEFSA",
+    "H.R. 9436",
+    "fishermen",
+    "fisheries data"
+   ],
+   "mergeInto": "fisheries-regulation"
+  },
+  "service-academy-athletics": {
+   "macro": "foreign-policy",
+   "key": "service-academy-sports",
+   "label": "Service academy athlete shoutouts",
+   "kind": "noise",
+   "aliases": [
+    "Midshipmen",
+    "Navy football",
+    "NFL Draft",
+    "West Point"
+   ],
+   "mergeInto": null
+  },
+  "broadband-infrastructure": {
+   "macro": "tech",
+   "key": "broadband",
+   "label": "Broadband & rural internet",
+   "kind": "gap",
+   "aliases": [
+    "broadband",
+    "BEAD",
+    "NTIA",
+    "digital divide"
+   ],
+   "mergeInto": null
+  },
+  "church-state-separation-christian-nation": {
+   "macro": "civil-rights",
+   "key": "church-state",
+   "label": "Church-state separation",
+   "kind": "gap",
+   "aliases": [
+    "Christian nationalism",
+    "religious freedom",
+    "separation of church and state",
+    "First Amendment"
+   ],
+   "mergeInto": null
+  },
+  "parks-recreation-trails": {
+   "macro": "climate",
+   "key": "parks-public-lands",
+   "label": "Parks, trails & public lands",
+   "kind": "gap",
+   "aliases": [
+    "trails",
+    "national parks",
+    "public lands",
+    "recreation"
+   ],
+   "mergeInto": null
+  },
+  "olympics-preparation": {
+   "macro": "economy",
+   "key": "la-2028-olympics",
+   "label": "LA 2028 Olympics preparations",
+   "kind": "story",
+   "aliases": [
+    "LA28",
+    "2028 Olympics",
+    "Paralympic Games",
+    "Olympic transit"
+   ],
+   "mergeInto": null
+  },
+  "aviation-airports": {
+   "macro": "economy",
+   "key": "aviation-airports",
+   "label": "Aviation, airports & air travel",
+   "kind": "gap",
+   "aliases": [
+    "airport",
+    "FAA",
+    "air traffic control",
+    "flights"
+   ],
+   "mergeInto": null
+  },
+  "olympics-hosting-infrastructure": {
+   "macro": "economy",
+   "key": "la-2028-olympics",
+   "label": "LA 2028 Olympics preparations",
+   "kind": "story",
+   "aliases": [
+    "LA28",
+    "Olympic venues",
+    "Pasadena",
+    "spectator transit"
+   ],
+   "mergeInto": "olympics-preparation"
+  },
+  "landmark-renaming": {
+   "macro": "democracy",
+   "key": "lake-america-renaming",
+   "label": "Trump 'Lake America' renaming",
+   "kind": "story",
+   "aliases": [
+    "Lake America",
+    "Lake Erie",
+    "Great Lakes renaming",
+    "Lake Michigan"
+   ],
+   "mergeInto": null
+  },
+  "federal-data-collection": {
+   "macro": "democracy",
+   "key": "census-federal-data",
+   "label": "Census & federal data collection",
+   "kind": "gap",
+   "aliases": [
+    "census",
+    "federal data",
+    "Puerto Rico statistics",
+    "data inclusion"
+   ],
+   "mergeInto": null
+  },
+  "federal-archives-historic-site-closures": {
+   "macro": "labor",
+   "key": "national-archives-san-bruno",
+   "label": "National Archives San Bruno closure",
+   "kind": "story",
+   "aliases": [
+    "National Archives",
+    "San Bruno",
+    "NARA",
+    "archives closure"
+   ],
+   "mergeInto": null
+  },
+  "permitting-reform": {
+   "macro": "economy",
+   "key": "permitting-reform",
+   "label": "Permitting reform",
+   "kind": "gap",
+   "aliases": [
+    "permitting",
+    "NEPA",
+    "project approvals",
+    "permitting delays"
+   ],
+   "mergeInto": null
+  },
+  "aviation-air-traffic-control": {
+   "macro": "economy",
+   "key": "aviation-airports",
+   "label": "Aviation, airports & air travel",
+   "kind": "gap",
+   "aliases": [
+    "air traffic control",
+    "controllers",
+    "FAA",
+    "airspace safety"
+   ],
+   "mergeInto": "aviation-airports"
   }
  },
  "confirmation": {
-  "checked": [],
-  "groups": []
+  "checked": [
+   "9-11-25th-anniversary-remembrance",
+   "celebrity-tribute",
+   "dolly-parton-tribute",
+   "public-figure-tributes",
+   "political-violence",
+   "epstein-files",
+   "trump-arch-monument-project",
+   "place-renaming",
+   "lake-renaming-stunt",
+   "geographic-renaming",
+   "historical-records-archives",
+   "smithsonian-history-erasure",
+   "national-museum-of-the-american-latino",
+   "epstein-investigation",
+   "notable-deaths-tributes",
+   "state-renaming",
+   "generational-politics",
+   "ted-cruz-pressler-allegations",
+   "aviation-aerospace-innovation",
+   "local-sports-teams",
+   "olympics-la28",
+   "cabinet-officials-qualifications",
+   "fbi-hiring-standards",
+   "hasan-piker-controversy",
+   "la-2028-olympics-transit-readiness",
+   "national-space-academy-oversight",
+   "lincoln-memorial-reflecting-pool-neglect",
+   "9-11-records-survivor-care",
+   "smithsonian-institution",
+   "presidential-falsehoods",
+   "presidential-fitness-25th-amendment",
+   "rail-merger-consolidation",
+   "federal-holidays",
+   "olympics-preparation",
+   "olympics-hosting-infrastructure",
+   "landmark-renaming",
+   "federal-archives-historic-site-closures"
+  ],
+  "groups": [
+   {
+    "keys": [
+     "dolly-parton-tribute",
+     "notable-deaths-tributes"
+    ],
+    "reason": "Tributes to Dolly Parton on her passing"
+   },
+   {
+    "keys": [
+     "place-renaming",
+     "lake-renaming-stunt",
+     "landmark-renaming"
+    ],
+    "reason": "Trump's renaming of Lake Ontario to 'Lake America' and Democratic pushback"
+   },
+   {
+    "keys": [
+     "historical-records-archives",
+     "federal-archives-historic-site-closures"
+    ],
+    "reason": "Effort to stop closure of the National Archives facility in San Bruno"
+   },
+   {
+    "keys": [
+     "smithsonian-history-erasure",
+     "smithsonian-institution"
+    ],
+    "reason": "Smithsonian Secretary Lonnie Bunch III's retirement/legacy"
+   },
+   {
+    "keys": [
+     "epstein-files",
+     "epstein-investigation"
+    ],
+    "reason": "Push to release and investigate the Epstein files"
+   },
+   {
+    "keys": [
+     "olympics-la28",
+     "la-2028-olympics-transit-readiness",
+     "olympics-preparation",
+     "olympics-hosting-infrastructure"
+    ],
+    "reason": "LA28 Olympics preparation and federal support for transit/infrastructure"
+   }
+  ],
+  "checkedAt": "2026-09-13T15:10:09.674Z"
  },
  "candidates": [
   {
@@ -863,9 +1731,10 @@
     "9/11 remembrance & misinformation",
     "9/11-remembrance",
     "9/11 remembrance",
-    "9-11-commemoration"
+    "9-11-commemoration",
+    "9/11 records & survivor care"
    ],
-   "posts": 427,
+   "posts": 428,
    "members": 258,
    "days": 10,
    "dates": [
@@ -882,7 +1751,7 @@
    ],
    "firstSeen": "2026-09-01",
    "lastSeen": "2026-09-12",
-   "eng": 72223,
+   "eng": 72237,
    "cm": [
     0,
     0,
@@ -901,8 +1770,8 @@
     "RepJasonCrow",
     "LauraAGillen",
     "RepScottPeters",
-    "RepJahanaHayes",
-    "SenatorAndyKim"
+    "Grace4NY",
+    "RepJahanaHayes"
    ],
    "ids": [
     "2094771163377307941",
@@ -921,6 +1790,7 @@
     "2097690602905219541",
     "2097723872766271915",
     "2097737969545195713",
+    "2097780861324153039",
     "2097782574102012170",
     "2097782878998343782",
     "2097834903295479922",
@@ -1356,8 +2226,29 @@
     }
    ],
    "sample": "RT @ChrisDJackson: My Lord.\n\n@JoeBiden, 83 years old, battling Stage 4 cancer that has spread to his bones, stood for HOURS alongside @DrBi…",
-   "mergedFrom": [],
-   "placement": null
+   "mergedFrom": [
+    {
+     "key": "9-11-records-survivor-care",
+     "label": "9/11 records & survivor care",
+     "posts": 1,
+     "by": "hint",
+     "reason": "placement hint; labels share \"11\""
+    }
+   ],
+   "placement": {
+    "macro": "foreign-policy",
+    "key": "sept11-25th-anniversary",
+    "label": "9/11 25th anniversary remembrance",
+    "kind": "story",
+    "aliases": [
+     "9/11",
+     "September 11",
+     "Flight 93",
+     "Pentagon Memorial",
+     "Never Forget"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "agriculture-farmers",
@@ -1885,7 +2776,129 @@
    "topQuoted": [],
    "sample": "Wishing a Happy and Sweet New Year to all celebrating Rosh Hashanah in San Francisco and around the world.  L’Shana Tova and all best wishes for the year to come. -NP",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "rosh-hashanah-greetings",
+    "label": "Rosh Hashanah greetings",
+    "kind": "noise",
+    "aliases": [
+     "Shana Tova",
+     "Rosh Hashanah",
+     "L'shana Tovah",
+     "Jewish New Year"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "dolly-parton-tribute",
+   "label": "dolly-parton-tribute",
+   "labels": [
+    "dolly-parton-tribute",
+    "notable-deaths-tributes"
+   ],
+   "posts": 26,
+   "members": 23,
+   "days": 1,
+   "dates": [
+    "2026-08-25"
+   ],
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-08-25",
+   "eng": 77544,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "Rep_Stansbury",
+    "RepLiccardo",
+    "RepJulieJohnson",
+    "RepJoshG",
+    "PatRyanUC",
+    "RepBeccaB",
+    "RepThompson",
+    "RepCohen",
+    "RepDean",
+    "RepCarbajal",
+    "RepTerriSewell",
+    "RepLoriTrahan"
+   ],
+   "ids": [
+    "2092316415961272334",
+    "2092321487294234756",
+    "2092325288315101568",
+    "2092326892472877285",
+    "2092328093289529358",
+    "2092328897383719169",
+    "2092329077659107367",
+    "2092329154553258010",
+    "2092330414106988975",
+    "2092332952839663818",
+    "2092335860523933892",
+    "2092337744504668608",
+    "2092338001775149277",
+    "2092338252179017834",
+    "2092338824676331988",
+    "2092342875757346939",
+    "2092369462209233146",
+    "2092372195670688167",
+    "2092375544104988813",
+    "2092380476753248379",
+    "2092381269728358823",
+    "2092406602443669518",
+    "2092421815826317745",
+    "2092422045409718308",
+    "2092429569512948198",
+    "2092450986782552192"
+   ],
+   "topQuoted": [
+    {
+     "id": "2092329891350159576",
+     "n": 2
+    },
+    {
+     "id": "2092309743981228273",
+     "n": 1
+    },
+    {
+     "id": "2092311602921980053",
+     "n": 1
+    },
+    {
+     "id": "2092311930329301022",
+     "n": 1
+    },
+    {
+     "id": "2092312617545052405",
+     "n": 1
+    }
+   ],
+   "sample": "RT @mattvanswol: In 1988 Dolly Parton pulled every 7th and 8th grader in Sevier County into a room and told them to pick a buddy. \n\nShe mad…",
+   "mergedFrom": [
+    {
+     "key": "notable-deaths-tributes",
+     "label": "notable-deaths-tributes",
+     "posts": 3,
+     "by": "confirmed",
+     "reason": "Tributes to Dolly Parton on her passing"
+    }
+   ],
+   "placement": {
+    "macro": null,
+    "key": "dolly-parton-tribute",
+    "label": "Dolly Parton tribute",
+    "kind": "story",
+    "aliases": [
+     "Dolly Parton",
+     "Imagination Library",
+     "RIP Dolly"
+    ],
+    "mergeInto": "celebrity-tribute"
+   }
   },
   {
    "key": "space-nasa",
@@ -2012,104 +3025,6 @@
      "national labs"
     ],
     "mergeInto": null
-   }
-  },
-  {
-   "key": "dolly-parton-tribute",
-   "label": "dolly-parton-tribute",
-   "labels": [
-    "dolly-parton-tribute"
-   ],
-   "posts": 23,
-   "members": 20,
-   "days": 1,
-   "dates": [
-    "2026-08-25"
-   ],
-   "firstSeen": "2026-08-25",
-   "lastSeen": "2026-08-25",
-   "eng": 77456,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "Rep_Stansbury",
-    "RepLiccardo",
-    "PatRyanUC",
-    "RepBeccaB",
-    "RepThompson",
-    "RepCohen",
-    "RepDean",
-    "RepCarbajal",
-    "RepTerriSewell",
-    "RepLoriTrahan",
-    "RepNikkiB",
-    "RepLucyMcBath"
-   ],
-   "ids": [
-    "2092316415961272334",
-    "2092321487294234756",
-    "2092328093289529358",
-    "2092328897383719169",
-    "2092329077659107367",
-    "2092329154553258010",
-    "2092330414106988975",
-    "2092332952839663818",
-    "2092335860523933892",
-    "2092337744504668608",
-    "2092338001775149277",
-    "2092338252179017834",
-    "2092338824676331988",
-    "2092342875757346939",
-    "2092369462209233146",
-    "2092375544104988813",
-    "2092380476753248379",
-    "2092381269728358823",
-    "2092406602443669518",
-    "2092421815826317745",
-    "2092422045409718308",
-    "2092429569512948198",
-    "2092450986782552192"
-   ],
-   "topQuoted": [
-    {
-     "id": "2092329891350159576",
-     "n": 2
-    },
-    {
-     "id": "2092309743981228273",
-     "n": 1
-    },
-    {
-     "id": "2092311602921980053",
-     "n": 1
-    },
-    {
-     "id": "2092311930329301022",
-     "n": 1
-    },
-    {
-     "id": "2092312617545052405",
-     "n": 1
-    }
-   ],
-   "sample": "RT @mattvanswol: In 1988 Dolly Parton pulled every 7th and 8th grader in Sevier County into a room and told them to pick a buddy. \n\nShe mad…",
-   "mergedFrom": [],
-   "placement": {
-    "macro": null,
-    "key": "dolly-parton-tribute",
-    "label": "Dolly Parton tribute",
-    "kind": "story",
-    "aliases": [
-     "Dolly Parton",
-     "Imagination Library",
-     "RIP Dolly"
-    ],
-    "mergeInto": "celebrity-tribute"
    }
   },
   {
@@ -2326,6 +3241,138 @@
      "data center moratorium",
      "AI data centers",
      "utility bills"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "place-renaming",
+   "label": "place-renaming",
+   "labels": [
+    "symbolic renaming of places",
+    "place-renaming",
+    "place-renaming-lake-america",
+    "lake-renaming-stunt",
+    "trump-renaming-stunts",
+    "Trump geographic renaming push",
+    "geographic-renaming",
+    "landmark-renaming"
+   ],
+   "posts": 19,
+   "members": 12,
+   "days": 9,
+   "dates": [
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-07",
+    "2026-09-08",
+    "2026-09-10"
+   ],
+   "firstSeen": "2026-08-25",
+   "lastSeen": "2026-09-10",
+   "eng": 26004,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "tedlieu",
+    "RepMGS",
+    "SeanCasten",
+    "RepDebDingell",
+    "RepLiccardo",
+    "MarkPocan",
+    "KatieS",
+    "RepSaraJacobs",
+    "sliccardo",
+    "Rep_Stansbury",
+    "FrankPallone",
+    "JasonCrowCO"
+   ],
+   "ids": [
+    "2092408289606984085",
+    "2092412389950181832",
+    "2092614816959525309",
+    "2093086478859432387",
+    "2093095855834169587",
+    "2093119415009083769",
+    "2093152558281871791",
+    "2093155449629528167",
+    "2093176136058765462",
+    "2093390088830910663",
+    "2093399818186150127",
+    "2093406308221210765",
+    "2095126278525362330",
+    "2095225304264368452",
+    "2095624484900184534",
+    "2095650445234692213",
+    "2097084773261066337",
+    "2097382095320408376",
+    "2098194878354321564"
+   ],
+   "topQuoted": [
+    {
+     "id": "2092311899320828116",
+     "n": 1
+    },
+    {
+     "id": "2092339772228260130",
+     "n": 1
+    },
+    {
+     "id": "2093046238606250185",
+     "n": 1
+    },
+    {
+     "id": "2093082699305046162",
+     "n": 1
+    },
+    {
+     "id": "2093095138373578976",
+     "n": 1
+    }
+   ],
+   "sample": "Dear @SecretaryBurgum: There are 1,397 more important things you can be working on.\n\nNovember is coming. https://t.co/ZKMA8KJjYl",
+   "mergedFrom": [
+    {
+     "key": "lake-renaming-stunt",
+     "label": "lake-renaming-stunt",
+     "posts": 6,
+     "by": "confirmed",
+     "reason": "Trump's renaming of Lake Ontario to 'Lake America' and Democratic pushback"
+    },
+    {
+     "key": "geographic-renaming",
+     "label": "geographic-renaming",
+     "posts": 5,
+     "by": "hint",
+     "reason": "placement hint; labels share \"trump\", \"renaming\""
+    },
+    {
+     "key": "landmark-renaming",
+     "label": "landmark-renaming",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "Trump's renaming of Lake Ontario to 'Lake America' and Democratic pushback"
+    }
+   ],
+   "placement": {
+    "macro": "democracy",
+    "key": "lake-ontario-renaming",
+    "label": "Trump renaming of Lake Ontario",
+    "kind": "story",
+    "aliases": [
+     "Lake America",
+     "Lake Ontario renaming",
+     "Dingell bill",
+     "Gulf of America"
     ],
     "mergeInto": null
    }
@@ -2976,27 +4023,24 @@
    }
   },
   {
-   "key": "lake-renaming-stunt",
-   "label": "lake-renaming-stunt",
+   "key": "epstein-files",
+   "label": "epstein-files",
    "labels": [
-    "lake-renaming-stunt",
-    "trump-renaming-stunts",
-    "Trump geographic renaming push",
-    "geographic-renaming"
+    "epstein-files",
+    "epstein-investigation"
    ],
    "posts": 11,
-   "members": 7,
-   "days": 5,
+   "members": 5,
+   "days": 4,
    "dates": [
-    "2026-08-25",
-    "2026-08-26",
-    "2026-08-27",
-    "2026-09-03",
-    "2026-09-10"
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-06"
    ],
-   "firstSeen": "2026-08-25",
-   "lastSeen": "2026-09-10",
-   "eng": 21263,
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-09-06",
+   "eng": 81654,
    "cm": [
     0,
     0,
@@ -3005,69 +4049,67 @@
     0
    ],
    "who": [
-    "tedlieu",
-    "RepMGS",
+    "RubenGallego",
+    "RoKhanna",
     "SeanCasten",
-    "RepDebDingell",
-    "RepSaraJacobs",
-    "sliccardo",
-    "JasonCrowCO"
+    "RepRobertGarcia",
+    "RobertGarcia"
    ],
    "ids": [
-    "2092408289606984085",
-    "2092412389950181832",
-    "2092614816959525309",
-    "2093086478859432387",
-    "2093095855834169587",
-    "2093152558281871791",
-    "2093155449629528167",
-    "2093176136058765462",
-    "2095624484900184534",
-    "2095650445234692213",
-    "2098194878354321564"
+    "2094574822659396082",
+    "2094600704140746932",
+    "2094616969790034092",
+    "2094762711858958707",
+    "2094789773420269621",
+    "2094847422249803999",
+    "2094882657960149441",
+    "2095215868598702167",
+    "2096708147662520376",
+    "2096709759143485691",
+    "2096721116433957340"
    ],
    "topQuoted": [
     {
-     "id": "2092311899320828116",
+     "id": "2081862854517375029",
      "n": 1
     },
     {
-     "id": "2092339772228260130",
+     "id": "2094569449370050892",
      "n": 1
     },
     {
-     "id": "2093046238606250185",
+     "id": "2094579503787814975",
      "n": 1
     },
     {
-     "id": "2093095138373578976",
+     "id": "2094587230215933959",
      "n": 1
     },
     {
-     "id": "2093113843060732004",
+     "id": "2094788606825017457",
      "n": 1
     }
    ],
-   "sample": "Dear @SecretaryBurgum: There are 1,397 more important things you can be working on.\n\nNovember is coming. https://t.co/ZKMA8KJjYl",
+   "sample": "RT @Holden_Culotta: Thomas Massie just dropped a bombshell on the House floor.\n\nHe named 14 Epstein co-conspirators.\n\nAnd he’s demanding im…",
    "mergedFrom": [
     {
-     "key": "geographic-renaming",
-     "label": "geographic-renaming",
-     "posts": 5,
-     "by": "hint",
-     "reason": "placement hint; labels share \"trump\", \"renaming\""
+     "key": "epstein-investigation",
+     "label": "epstein-investigation",
+     "posts": 3,
+     "by": "confirmed",
+     "reason": "Push to release and investigate the Epstein files"
     }
    ],
    "placement": {
     "macro": "democracy",
-    "key": "lake-america-renaming",
-    "label": "Trump 'Lake America' renaming",
+    "key": "epstein-files",
+    "label": "Epstein files transparency",
     "kind": "story",
     "aliases": [
-     "Lake America",
-     "Lake Michigan",
-     "Burgum",
-     "Great Lakes renaming"
+     "Epstein files",
+     "Epstein Files Transparency Act",
+     "Massie",
+     "discharge petition"
     ],
     "mergeInto": null
    }
@@ -3244,83 +4286,6 @@
    }
   },
   {
-   "key": "epstein-files",
-   "label": "epstein-files",
-   "labels": [
-    "epstein-files"
-   ],
-   "posts": 8,
-   "members": 3,
-   "days": 3,
-   "dates": [
-    "2026-08-31",
-    "2026-09-01",
-    "2026-09-02"
-   ],
-   "firstSeen": "2026-08-31",
-   "lastSeen": "2026-09-02",
-   "eng": 77210,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RubenGallego",
-    "RoKhanna",
-    "SeanCasten"
-   ],
-   "ids": [
-    "2094574822659396082",
-    "2094600704140746932",
-    "2094616969790034092",
-    "2094762711858958707",
-    "2094789773420269621",
-    "2094847422249803999",
-    "2094882657960149441",
-    "2095215868598702167"
-   ],
-   "topQuoted": [
-    {
-     "id": "2081862854517375029",
-     "n": 1
-    },
-    {
-     "id": "2094569449370050892",
-     "n": 1
-    },
-    {
-     "id": "2094579503787814975",
-     "n": 1
-    },
-    {
-     "id": "2094587230215933959",
-     "n": 1
-    },
-    {
-     "id": "2094788606825017457",
-     "n": 1
-    }
-   ],
-   "sample": "RT @Holden_Culotta: Thomas Massie just dropped a bombshell on the House floor.\n\nHe named 14 Epstein co-conspirators.\n\nAnd he’s demanding im…",
-   "mergedFrom": [],
-   "placement": {
-    "macro": "democracy",
-    "key": "epstein-files",
-    "label": "Epstein files transparency",
-    "kind": "story",
-    "aliases": [
-     "Epstein files",
-     "Epstein Files Transparency Act",
-     "Massie",
-     "discharge petition"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
    "key": "trump-arch-monument-project",
    "label": "trump-arch-monument-project",
    "labels": [
@@ -3464,88 +4429,6 @@
      "Postal Service",
      "Postmaster General",
      "mail delays"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
-   "key": "place-renaming",
-   "label": "place-renaming",
-   "labels": [
-    "symbolic renaming of places",
-    "place-renaming",
-    "place-renaming-lake-america"
-   ],
-   "posts": 7,
-   "members": 6,
-   "days": 4,
-   "dates": [
-    "2026-08-28",
-    "2026-09-02",
-    "2026-09-07",
-    "2026-09-08"
-   ],
-   "firstSeen": "2026-08-28",
-   "lastSeen": "2026-09-08",
-   "eng": 4599,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepDebDingell",
-    "tedlieu",
-    "MarkPocan",
-    "KatieS",
-    "Rep_Stansbury",
-    "FrankPallone"
-   ],
-   "ids": [
-    "2093390088830910663",
-    "2093399818186150127",
-    "2093406308221210765",
-    "2095126278525362330",
-    "2095225304264368452",
-    "2097084773261066337",
-    "2097382095320408376"
-   ],
-   "topQuoted": [
-    {
-     "id": "2093082699305046162",
-     "n": 1
-    },
-    {
-     "id": "2093388916065787949",
-     "n": 1
-    },
-    {
-     "id": "2093389668385468702",
-     "n": 1
-    },
-    {
-     "id": "2095024654456881175",
-     "n": 1
-    },
-    {
-     "id": "2096657477928448250",
-     "n": 1
-    }
-   ],
-   "sample": "Wait but trump instructed federal agencies to call Lake Ontario by the name of Lake America. https://t.co/0ne8PxXiEa",
-   "mergedFrom": [],
-   "placement": {
-    "macro": "democracy",
-    "key": "lake-ontario-renaming",
-    "label": "Trump renaming of Lake Ontario",
-    "kind": "story",
-    "aliases": [
-     "Lake America",
-     "Lake Ontario renaming",
-     "Dingell bill",
-     "Gulf of America"
     ],
     "mergeInto": null
    }
@@ -3757,6 +4640,158 @@
    }
   },
   {
+   "key": "historical-records-archives",
+   "label": "historical-records-archives",
+   "labels": [
+    "historical-records-archives",
+    "national-archives-preservation",
+    "historic-preservation",
+    "archives-historic-preservation",
+    "national-archives-records",
+    "federal archives & historic site closures"
+   ],
+   "posts": 6,
+   "members": 2,
+   "days": 6,
+   "dates": [
+    "2026-08-20",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-30"
+   ],
+   "firstSeen": "2026-08-20",
+   "lastSeen": "2026-08-30",
+   "eng": 19,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "kevinmullin",
+    "RepKevinMullin"
+   ],
+   "ids": [
+    "2090632937096315105",
+    "2091987504224518588",
+    "2092108173947937141",
+    "2092760896611463367",
+    "2093156620260016225",
+    "2094122985229541566"
+   ],
+   "topQuoted": [
+    {
+     "id": "2090619921289867522",
+     "n": 1
+    },
+    {
+     "id": "2092028185013797073",
+     "n": 1
+    }
+   ],
+   "sample": "RT @nbcbayarea: Tens of thousands of historical records that tell the story of the United States, including immigration records, may no lon…",
+   "mergedFrom": [
+    {
+     "key": "federal-archives-historic-site-closures",
+     "label": "federal archives & historic site closures",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "Effort to stop closure of the National Archives facility in San Bruno"
+    }
+   ],
+   "placement": {
+    "macro": "democracy",
+    "key": "national-archives-sanbruno",
+    "label": "National Archives San Bruno closure",
+    "kind": "story",
+    "aliases": [
+     "National Archives",
+     "San Bruno",
+     "historical records",
+     "NARA"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "smithsonian-history-erasure",
+   "label": "smithsonian-history-erasure",
+   "labels": [
+    "Smithsonian & history erasure",
+    "smithsonian-history-erasure",
+    "smithsonian-institution"
+   ],
+   "posts": 5,
+   "members": 5,
+   "days": 3,
+   "dates": [
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10"
+   ],
+   "firstSeen": "2026-09-08",
+   "lastSeen": "2026-09-10",
+   "eng": 25,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGlennIvey",
+    "RepBynum",
+    "RepJulieJohnson",
+    "RepKweisiMfume",
+    "BobbyScott"
+   ],
+   "ids": [
+    "2097418675376488604",
+    "2097703720200904717",
+    "2097710540671844655",
+    "2097756941296578679",
+    "2098147971896340958"
+   ],
+   "topQuoted": [
+    {
+     "id": "2097371819539849686",
+     "n": 1
+    },
+    {
+     "id": "2098141491122077956",
+     "n": 1
+    }
+   ],
+   "sample": "Read my statement on the retirement of Smithsonian Secretary, Lonnie G. Bunch III. https://t.co/noKheD8Smx",
+   "mergedFrom": [
+    {
+     "key": "smithsonian-institution",
+     "label": "smithsonian-institution",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "Smithsonian Secretary Lonnie Bunch III's retirement/legacy"
+    }
+   ],
+   "placement": {
+    "macro": "democracy",
+    "key": "smithsonian-history",
+    "label": "Smithsonian & history erasure",
+    "kind": "story",
+    "aliases": [
+     "Lonnie Bunch",
+     "Smithsonian",
+     "rewriting history",
+     "Bunch resignation"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
    "key": "tributes-condolences",
    "label": "tributes-condolences",
    "labels": [
@@ -3815,6 +4850,86 @@
      "passing",
      "prayers",
      "rest in peace"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "olympics-la28",
+   "label": "olympics-la28",
+   "labels": [
+    "olympics-la28",
+    "LA 2028 Olympics transit readiness",
+    "olympics-preparation",
+    "olympics-hosting-infrastructure"
+   ],
+   "posts": 5,
+   "members": 4,
+   "days": 3,
+   "dates": [
+    "2026-08-26",
+    "2026-08-28",
+    "2026-09-11"
+   ],
+   "firstSeen": "2026-08-26",
+   "lastSeen": "2026-09-11",
+   "eng": 82,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGilCisneros",
+    "RepFriedmanCA",
+    "RepTedLieu",
+    "RepJudyChu"
+   ],
+   "ids": [
+    "2092674866562682946",
+    "2092736774762352668",
+    "2093417919627595796",
+    "2093440260101570903",
+    "2098532313999311134"
+   ],
+   "topQuoted": [],
+   "sample": "It is an honor to represent a district that will help host the 2028 Olympics.\n\nBut in order to protect Los Angeles residents and ensure athletes and fans are able to safely travel to Olympic venues, we need more support from the federal government. https://t.co/Jg3uTvIpIg",
+   "mergedFrom": [
+    {
+     "key": "la-2028-olympics-transit-readiness",
+     "label": "LA 2028 Olympics transit readiness",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "LA28 Olympics preparation and federal support for transit/infrastructure"
+    },
+    {
+     "key": "olympics-preparation",
+     "label": "olympics-preparation",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "LA28 Olympics preparation and federal support for transit/infrastructure"
+    },
+    {
+     "key": "olympics-hosting-infrastructure",
+     "label": "olympics-hosting-infrastructure",
+     "posts": 1,
+     "by": "confirmed",
+     "reason": "LA28 Olympics preparation and federal support for transit/infrastructure"
+    }
+   ],
+   "placement": {
+    "macro": "constituent-services",
+    "key": "la28-olympics",
+    "label": "LA28 Olympics preparations",
+    "kind": "story",
+    "aliases": [
+     "LA28",
+     "2028 Olympics",
+     "Paralympics",
+     "Metro LA",
+     "Olympic transit"
     ],
     "mergeInto": null
    }
@@ -3943,73 +5058,6 @@
    }
   },
   {
-   "key": "historical-records-archives",
-   "label": "historical-records-archives",
-   "labels": [
-    "historical-records-archives",
-    "national-archives-preservation",
-    "historic-preservation",
-    "archives-historic-preservation",
-    "national-archives-records"
-   ],
-   "posts": 5,
-   "members": 2,
-   "days": 5,
-   "dates": [
-    "2026-08-20",
-    "2026-08-24",
-    "2026-08-25",
-    "2026-08-26",
-    "2026-08-30"
-   ],
-   "firstSeen": "2026-08-20",
-   "lastSeen": "2026-08-30",
-   "eng": 16,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "kevinmullin",
-    "RepKevinMullin"
-   ],
-   "ids": [
-    "2090632937096315105",
-    "2091987504224518588",
-    "2092108173947937141",
-    "2092760896611463367",
-    "2094122985229541566"
-   ],
-   "topQuoted": [
-    {
-     "id": "2090619921289867522",
-     "n": 1
-    },
-    {
-     "id": "2092028185013797073",
-     "n": 1
-    }
-   ],
-   "sample": "RT @nbcbayarea: Tens of thousands of historical records that tell the story of the United States, including immigration records, may no lon…",
-   "mergedFrom": [],
-   "placement": {
-    "macro": "democracy",
-    "key": "national-archives-sanbruno",
-    "label": "National Archives San Bruno closure",
-    "kind": "story",
-    "aliases": [
-     "National Archives",
-     "San Bruno",
-     "historical records",
-     "NARA"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
    "key": "history-commemoration",
    "label": "history-commemoration",
    "labels": [
@@ -4070,68 +5118,6 @@
      "Battle of Long Island",
      "semiquincentennial",
      "Revolutionary War history"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
-   "key": "smithsonian-history-erasure",
-   "label": "smithsonian-history-erasure",
-   "labels": [
-    "Smithsonian & history erasure",
-    "smithsonian-history-erasure"
-   ],
-   "posts": 4,
-   "members": 4,
-   "days": 2,
-   "dates": [
-    "2026-09-09",
-    "2026-09-10"
-   ],
-   "firstSeen": "2026-09-09",
-   "lastSeen": "2026-09-10",
-   "eng": 10,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepBynum",
-    "RepJulieJohnson",
-    "RepKweisiMfume",
-    "BobbyScott"
-   ],
-   "ids": [
-    "2097703720200904717",
-    "2097710540671844655",
-    "2097756941296578679",
-    "2098147971896340958"
-   ],
-   "topQuoted": [
-    {
-     "id": "2097371819539849686",
-     "n": 1
-    },
-    {
-     "id": "2098141491122077956",
-     "n": 1
-    }
-   ],
-   "sample": "@smithsonian Secretary Bunch has dedicated nearly four decades to ensuring our country tells its whole, unvarnished story.\n\nSee my full statement on his resignation as Secretary. https://t.co/bl5jrxjza2",
-   "mergedFrom": [],
-   "placement": {
-    "macro": "democracy",
-    "key": "smithsonian-history",
-    "label": "Smithsonian & history erasure",
-    "kind": "story",
-    "aliases": [
-     "Lonnie Bunch",
-     "Smithsonian",
-     "rewriting history",
-     "Bunch resignation"
     ],
     "mergeInto": null
    }
@@ -4667,118 +5653,6 @@
      "child care costs",
      "daycare",
      "preschool"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
-   "key": "epstein-investigation",
-   "label": "epstein-investigation",
-   "labels": [
-    "epstein-investigation"
-   ],
-   "posts": 3,
-   "members": 3,
-   "days": 1,
-   "dates": [
-    "2026-09-06"
-   ],
-   "firstSeen": "2026-09-06",
-   "lastSeen": "2026-09-06",
-   "eng": 4444,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RoKhanna",
-    "RepRobertGarcia",
-    "RobertGarcia"
-   ],
-   "ids": [
-    "2096708147662520376",
-    "2096709759143485691",
-    "2096721116433957340"
-   ],
-   "topQuoted": [
-    {
-     "id": "2096664346176946245",
-     "n": 1
-    },
-    {
-     "id": "2096709759143485691",
-     "n": 1
-    }
-   ],
-   "sample": "RT @Acyn: Ro Khanna on why Speaker Johnson sent the House home early: He doesn’t want Epstein to become the issue before the midterms, and…",
-   "mergedFrom": [],
-   "placement": {
-    "macro": "democracy",
-    "key": "epstein-files",
-    "label": "Epstein files & investigation",
-    "kind": "story",
-    "aliases": [
-     "Epstein",
-     "Epstein files",
-     "Leon Black",
-     "Oversight Epstein subpoena"
-    ],
-    "mergeInto": null
-   }
-  },
-  {
-   "key": "notable-deaths-tributes",
-   "label": "notable-deaths-tributes",
-   "labels": [
-    "notable-deaths-tributes"
-   ],
-   "posts": 3,
-   "members": 3,
-   "days": 1,
-   "dates": [
-    "2026-08-25"
-   ],
-   "firstSeen": "2026-08-25",
-   "lastSeen": "2026-08-25",
-   "eng": 88,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepJulieJohnson",
-    "RepJoshG",
-    "RepKamlagerDove"
-   ],
-   "ids": [
-    "2092325288315101568",
-    "2092326892472877285",
-    "2092372195670688167"
-   ],
-   "topQuoted": [
-    {
-     "id": "2092314347515289764",
-     "n": 1
-    }
-   ],
-   "sample": "I’m deeply saddened to hear that Dolly Parton, an American legend, has passed. From a one-room cabin in the Smoky Mountains to the heights of global stardom, she lived the American dream and never forgot where she came from.\n\nHer songs became part of our national soundtrack, and",
-   "mergedFrom": [],
-   "placement": {
-    "macro": null,
-    "key": "dolly-parton-death",
-    "label": "Dolly Parton death tributes",
-    "kind": "story",
-    "aliases": [
-     "Dolly Parton",
-     "Dollywood",
-     "Imagination Library",
-     "country music icon"
     ],
     "mergeInto": null
    }
@@ -5456,7 +6330,19 @@
    "topQuoted": [],
    "sample": "Hallelujah! Maybe the Angels can start winning again, with the putrid rot of Arte Moreno now behind them. https://t.co/Whj27yjS1V",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "arte-moreno-angels",
+    "label": "Arte Moreno / Angels sale reaction",
+    "kind": "story",
+    "aliases": [
+     "Arte Moreno",
+     "Angels",
+     "Anaheim",
+     "baseball"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "broadband-access",
@@ -5492,7 +6378,20 @@
    "topQuoted": [],
    "sample": "Great news for millions of Americans still waiting for high-speed internet: My bipartisan PLAN for Broadband Act passed a critical subcommittee yesterday. The Bipartisan Infrastructure Law gave us the funding to expand broadband access nationwide, but the money can’t just sit in",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "tech",
+    "key": "broadband-access",
+    "label": "Broadband access & deployment",
+    "kind": "gap",
+    "aliases": [
+     "BEAD",
+     "broadband",
+     "high-speed internet",
+     "digital divide",
+     "NTIA"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "college-sports-scandal",
@@ -5538,7 +6437,19 @@
    ],
    "sample": "RT @startelegram: Coach Dykes’ childish stunt on news coverage can’t fix TCU cover up | Opinion https://t.co/nMmoSo4WLv",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "education",
+    "key": "college-sports-ncaa",
+    "label": "College sports & NCAA regulation",
+    "kind": "gap",
+    "aliases": [
+     "NCAA",
+     "college football",
+     "NIL",
+     "eligibility"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "local-institution-preservation",
@@ -5582,23 +6493,37 @@
    ],
    "sample": "RT @KeithPowersNYC: Today, we sent a letter to NYU Langone asking for them to work with us to save the AMC movie theater in Kips Bay. \n\nGra…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "constituent-services",
+    "key": "local-landmark-preservation",
+    "label": "Saving local landmarks & facilities",
+    "kind": "gap",
+    "aliases": [
+     "National Archives San Bruno",
+     "AMC Kips Bay",
+     "closure",
+     "preservation"
+    ],
+    "mergeInto": null
+   }
   },
   {
-   "key": "olympics-la28",
-   "label": "olympics-la28",
+   "key": "aviation-airports",
+   "label": "aviation-airports",
    "labels": [
-    "olympics-la28"
+    "aviation-airports",
+    "aviation-air-traffic-control"
    ],
    "posts": 2,
    "members": 2,
-   "days": 1,
+   "days": 2,
    "dates": [
-    "2026-08-26"
+    "2026-08-27",
+    "2026-08-28"
    ],
-   "firstSeen": "2026-08-26",
-   "lastSeen": "2026-08-26",
-   "eng": 8,
+   "firstSeen": "2026-08-27",
+   "lastSeen": "2026-08-28",
+   "eng": 19,
    "cm": [
     0,
     0,
@@ -5607,17 +6532,37 @@
     0
    ],
    "who": [
-    "RepGilCisneros",
-    "RepFriedmanCA"
+    "RepJimmyPanetta",
+    "CongBoyle"
    ],
    "ids": [
-    "2092674866562682946",
-    "2092736774762352668"
+    "2093139770511679660",
+    "2093459360827473989"
    ],
    "topQuoted": [],
-   "sample": "When the whole team is on the same page, we win.\n\nThat’s why I brought my Congressional colleagues and LA’s public transit leaders together to talk about LA and the federal government’s gameplan to prepare the region for a successful LA28 Olympic &amp; Paralympic Games.\n\nWe’re taking https://t.co/zssID20lUE",
-   "mergedFrom": [],
-   "placement": null
+   "sample": "Happy to see @PHLAirport will have new direct international flights to Porto, Vienna, and Reykjavik via @AmericanAir.\n\nIn my unbiased opinion, Philadelphia is the greatest city on earth, and it’s great to share that with even more of our friends abroad.\n\nhttps://t.co/KMBJKeQsyE",
+   "mergedFrom": [
+    {
+     "key": "aviation-air-traffic-control",
+     "label": "aviation-air-traffic-control",
+     "posts": 1,
+     "by": "hint",
+     "reason": "placement hint; labels share \"aviation\""
+    }
+   ],
+   "placement": {
+    "macro": "economy",
+    "key": "aviation-airports",
+    "label": "Aviation, airports & air travel",
+    "kind": "gap",
+    "aliases": [
+     "airport",
+     "FAA",
+     "air traffic control",
+     "flights"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "substance-use-recovery",
@@ -5656,7 +6601,20 @@
    ],
    "sample": "During National Recovery Month, we celebrate those in recovery and work to end the stigma surrounding substance use and addiction. \n\nEveryone deserves access to the care, resources, and support they need to recover and thrive. https://t.co/iaFBGRkHd5",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "healthcare",
+    "key": "substance-use-recovery",
+    "label": "Addiction & recovery services",
+    "kind": "gap",
+    "aliases": [
+     "Recovery Month",
+     "substance use",
+     "addiction",
+     "opioids",
+     "overdose"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "child-performer-workplace-protections",
@@ -5695,7 +6653,19 @@
    ],
    "sample": "In the past few years, many former child actors have told their stories of unsafe or even abusive environments at work.\n\nThis is completely unacceptable, but with the patchwork of state laws on background checks, red flags have slipped through the cracks.",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "labor",
+    "key": "child-performer-protections",
+    "label": "Child performer workplace protections",
+    "kind": "gap",
+    "aliases": [
+     "child actors",
+     "background checks",
+     "set safety",
+     "performers"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "cabinet-officials-qualifications",
@@ -5738,7 +6708,18 @@
    ],
    "sample": "Scott Bessent is the living proof of the old joke that the easiest way to become a millionaire is to start with $2M and lose half of it.  He turned a $5.7B fund into $537M of value before he transitioned to a job on the government dime. https://t.co/OrRP4705Kf",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "bessent-record",
+    "label": "Scott Bessent's record & fitness",
+    "kind": "story",
+    "aliases": [
+     "Bessent",
+     "Scott Bessent",
+     "Treasury Secretary"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "fbi-hiring-standards",
@@ -5781,7 +6762,19 @@
    ],
    "sample": "RT @margbrennan: \"The FBI previously refused to hire job applicants if they admitted to hiring sex workers or stealing from an employer — o…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "fbi-hiring-standards",
+    "label": "FBI hiring standards rollback",
+    "kind": "story",
+    "aliases": [
+     "FBI",
+     "hiring standards",
+     "Patel FBI",
+     "background checks"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "hasan-piker-controversy",
@@ -5824,7 +6817,79 @@
    ],
    "sample": "RT @chrisrabb: This is what the institutionalists are focusing their efforts on now: Disavowing #HasanPiker.\n\nNot white Christian nationali…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "hasan-piker-controversy",
+    "label": "Hasan Piker condemnation fight",
+    "kind": "story",
+    "aliases": [
+     "Hasan Piker",
+     "#HasanPiker",
+     "Van Hollen"
+    ],
+    "mergeInto": null
+   }
+  },
+  {
+   "key": "fisheries-regulation",
+   "label": "fisheries-regulation",
+   "labels": [
+    "fisheries-regulation",
+    "fisheries-management"
+   ],
+   "posts": 2,
+   "members": 1,
+   "days": 2,
+   "dates": [
+    "2026-08-31",
+    "2026-09-01"
+   ],
+   "firstSeen": "2026-08-31",
+   "lastSeen": "2026-09-01",
+   "eng": 267,
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "who": [
+    "RepGolden"
+   ],
+   "ids": [
+    "2094442954668560878",
+    "2094913618634482167"
+   ],
+   "topQuoted": [
+    {
+     "id": "2094438499826991302",
+     "n": 1
+    }
+   ],
+   "sample": "Great news! The House just passed my bill to protect Maine lobstermen from unnecessary new regulations related to the North Atlantic right whale until 2035.\n\nThis bill will protect lobstermen so they can keep doing what they do best: Providing for their families and communities, https://t.co/0aDSV3FGlh",
+   "mergedFrom": [
+    {
+     "key": "fisheries-management",
+     "label": "fisheries-management",
+     "posts": 1,
+     "by": "hint",
+     "reason": "placement hint; labels share \"fisherie\""
+    }
+   ],
+   "placement": {
+    "macro": "climate",
+    "key": "fisheries",
+    "label": "Fisheries & lobstermen",
+    "kind": "gap",
+    "aliases": [
+     "lobstermen",
+     "right whale",
+     "fishing industry",
+     "NOAA fisheries"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "battery-fire-safety",
@@ -5857,7 +6922,19 @@
    "topQuoted": [],
    "sample": "In the United States, there's an estimated 5,000 fires annually caused by improper disposal of lithium batteries.\n \n@FrankPallone and I toured the EMR recycling plant this week to get a first hand look at what we can do to stop these fires from happening: https://t.co/9a3mAykZYr",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "climate",
+    "key": "lithium-battery-safety",
+    "label": "Lithium battery disposal fires",
+    "kind": "gap",
+    "aliases": [
+     "lithium batteries",
+     "battery fires",
+     "recycling",
+     "EMR plant"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "agriculture-crop-pest-funding",
@@ -5890,40 +6967,20 @@
    "topQuoted": [],
    "sample": "Glad that @USDA Animal and Plant Health Inspection Service is providing $4 million in funding to fight the glassy-winged sharpshooter. This funding will allow for the expansion of trace-forward investigations, increased inspections, the destruction of infested materials, and",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "la-2028-olympics-transit-readiness",
-   "label": "LA 2028 Olympics transit readiness",
-   "labels": [
-    "LA 2028 Olympics transit readiness"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-09-11"
-   ],
-   "firstSeen": "2026-09-11",
-   "lastSeen": "2026-09-11",
-   "eng": 0,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepFriedmanCA"
-   ],
-   "ids": [
-    "2098532313999311134"
-   ],
-   "topQuoted": [],
-   "sample": "In less than 700 days, the Olympic &amp; Paralympic games start. Will Los Angeles be ready?  \n\nThat’s what I asked @metrolosangeles, @LADOTofficial, and local transit agencies at a panel I led. Their answer? Yes, but only if the federal government steps up to the plate and delivers",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "agriculture-farmers",
+    "label": "Agriculture & farmers",
+    "kind": "gap",
+    "aliases": [
+     "USDA",
+     "farmers",
+     "crops",
+     "APHIS",
+     "pest control"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "sports-congratulations",
@@ -5961,7 +7018,19 @@
    ],
    "sample": "🐊🎾 @UF #Gators star Ben Shelton makes his 1st Grand Slam final, beating class act Frances Tiafoe. He’s now the 1st Black American man in a US Open Final since legend Arthur Ashe did it in ‘72, and in any major final since MaliVai Washington’s ‘96 Wimbledon run. Let’s Go Ben! 🏆 https://t.co/9pX6JSUOdi",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "sports-congratulations",
+    "label": "Sports congratulations",
+    "kind": "noise",
+    "aliases": [
+     "US Open",
+     "Gators",
+     "congrats",
+     "championship"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "local-journalist-tribute",
@@ -5999,7 +7068,18 @@
    ],
    "sample": "Mark Vanderhoff cared just as deeply about Kentucky as he did his reporting. He brought compassion, fairness, and dedication to his work, and truly changed our communities for the better.\n\nMy heart is with his wife Sheila, his family, his colleagues, and all who knew and loved https://t.co/PC3J78LCcn",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "mark-vanderhoff-tribute",
+    "label": "Mark Vanderhoff tribute",
+    "kind": "noise",
+    "aliases": [
+     "Mark Vanderhoff",
+     "journalist tribute",
+     "Kentucky reporter"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "national-space-academy-oversight",
@@ -6032,7 +7112,18 @@
    "topQuoted": [],
    "sample": "I’m always supportive of more young people getting involved in the aerospace industry. But if we are going to build a National Space Academy, it needs to be done right. There are lots of questions about this administration’s ability to carry this project out, and Congress must be https://t.co/1w2yZ78DNp",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "foreign-policy",
+    "key": "national-space-academy",
+    "label": "National Space Academy oversight",
+    "kind": "story",
+    "aliases": [
+     "National Space Academy",
+     "Space Force",
+     "aerospace"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "lincoln-memorial-reflecting-pool-neglect",
@@ -6070,73 +7161,19 @@
    ],
    "sample": "RT @MacFarlaneNews: The Lincoln Memorial Reflecting Pool remains an unmitigated mess https://t.co/JMyAn47iNn",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "9-11-records-survivor-care",
-   "label": "9/11 records & survivor care",
-   "labels": [
-    "9/11 records & survivor care"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-09-09"
-   ],
-   "firstSeen": "2026-09-09",
-   "lastSeen": "2026-09-09",
-   "eng": 14,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "Grace4NY"
-   ],
-   "ids": [
-    "2097780861324153039"
-   ],
-   "topQuoted": [],
-   "sample": "After 25 years, New Yorkers deserve answers. The release of these files is an important step.\n\nWe must continue to fight for transparency, accountability, and to ensure every survivor gets the care they need. https://t.co/9LljVZTlWh",
-   "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "smithsonian-institution",
-   "label": "smithsonian-institution",
-   "labels": [
-    "smithsonian-institution"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-09-08"
-   ],
-   "firstSeen": "2026-09-08",
-   "lastSeen": "2026-09-08",
-   "eng": 15,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepGlennIvey"
-   ],
-   "ids": [
-    "2097418675376488604"
-   ],
-   "topQuoted": [],
-   "sample": "Read my statement on the retirement of Smithsonian Secretary, Lonnie G. Bunch III. https://t.co/noKheD8Smx",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "lincoln-reflecting-pool",
+    "label": "Lincoln Memorial Reflecting Pool neglect",
+    "kind": "story",
+    "aliases": [
+     "Lincoln Memorial",
+     "Reflecting Pool",
+     "National Mall",
+     "Park Service"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "presidential-falsehoods",
@@ -6169,7 +7206,19 @@
    "topQuoted": [],
    "sample": "Trump is once again claiming he “worked long and hard” at Ground Zero after 9/11.\nThere’s no evidence he did. The heroes of that tragedy deserve better than having the President lie about sharing in their sacrifice.\nhttps://t.co/jZCgIDQLZ4",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "trump-ground-zero-claim",
+    "label": "Trump's 9/11 Ground Zero claim",
+    "kind": "story",
+    "aliases": [
+     "Ground Zero",
+     "9/11 claim",
+     "Trump lie",
+     "worked long and hard"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "presidential-fitness-25th-amendment",
@@ -6207,7 +7256,19 @@
    ],
    "sample": "Trump has repeatedly demonstrated that he is mentally unfit to serve as President.\n\nBut Congressional Repubs won’t even acknowledge Trump’s mental illness.\n\n25th Amendment now. https://t.co/W9bCfG85fw",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "trump-fitness-25th",
+    "label": "Trump fitness & 25th Amendment",
+    "kind": "story",
+    "aliases": [
+     "25th Amendment",
+     "mentally unfit",
+     "cognitive decline",
+     "fitness for office"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "parental-rights-child-welfare",
@@ -6245,7 +7306,19 @@
    ],
    "sample": "I am a co-sponsor of @RepBlakeMoore's Promoting Childhood Independence and Resilience Act. Parents should not have to worry about the government showing up at their front door just for giving their kids some basic independence, like so many of us had as kids a generation ago. https://t.co/eq5UzmTeZf",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "child-family-policy",
+    "label": "Children & family policy",
+    "kind": "gap",
+    "aliases": [
+     "parental rights",
+     "childhood independence",
+     "child welfare",
+     "free-range parenting"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "industrial-policy",
@@ -6283,7 +7356,19 @@
    ],
    "sample": "RT @newindustrials: What unites an Oklahoma Republican and a California Democrat? @SenArmstrong &amp; @RepScottPeters believe one of the most p…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "manufacturing-industry",
+    "label": "Manufacturing & industrial policy",
+    "kind": "gap",
+    "aliases": [
+     "industrial policy",
+     "manufacturing",
+     "reindustrialization",
+     "supply chains"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "crypto-regulation",
@@ -6316,7 +7401,20 @@
    "topQuoted": [],
    "sample": "IN CASE YOU MISSED IT: \n \nThe Gizmodo article below, titled “Crypto Industry’s CLARITY Act Faces Major Setback,” speaks for itself.\n\nYou can access the article by clicking the link here: https://t.co/KDeCZJzBt1",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "crypto-regulation",
+    "label": "Crypto & digital assets regulation",
+    "kind": "gap",
+    "aliases": [
+     "crypto",
+     "CLARITY Act",
+     "digital assets",
+     "stablecoin",
+     "bitcoin"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "campaign-finance",
@@ -6349,7 +7447,19 @@
    "topQuoted": [],
    "sample": "Corporations are not people. Corporations do not vote. Corporations do not raise families. Corporations should not have louder voices in our elections than citizens do. Citizens United got it wrong, and that’s why I’m fighting to overturn it. https://t.co/Okkv1D9QaX",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "campaign-finance",
+    "label": "Campaign finance & Citizens United",
+    "kind": "gap",
+    "aliases": [
+     "Citizens United",
+     "dark money",
+     "corporate PACs",
+     "campaign finance reform"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "trucking-driver-standards",
@@ -6387,7 +7497,19 @@
    ],
    "sample": "RT @MGPforCongress: I spoke with Jewel, a trucker from Battle Ground, last week. He explained why English proficiency matters for anyone dr…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "trucking-policy",
+    "label": "Trucking & driver standards",
+    "kind": "gap",
+    "aliases": [
+     "truckers",
+     "CDL",
+     "English proficiency",
+     "trucking safety"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "local-tourism-promotion",
@@ -6420,7 +7542,19 @@
    "topQuoted": [],
    "sample": "I’m proud to represent a community that has so many special spots to offer both visitors and residents alike. From great food to natural beauty, CA-31 has it all! I shared some of my personal recommendations with @SpecNews1SoCal. https://t.co/MagIkxubbi",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "constituent-services",
+    "key": "local-tourism",
+    "label": "Local tourism & district highlights",
+    "kind": "gap",
+    "aliases": [
+     "tourism",
+     "visit the district",
+     "local businesses",
+     "things to do"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "holocaust-remembrance",
@@ -6453,7 +7587,20 @@
    "topQuoted": [],
    "sample": "There's a boxcar on the new grounds at @hmla1961, one of the cars that carried Jewish people to the Majdanek death camp. You can walk right up to it and think about the people who were forced inside, who had no idea where they were going and no way to get out.  It is a powerful, https://t.co/N17FIwwMwN",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "civil-rights",
+    "key": "holocaust-antisemitism",
+    "label": "Holocaust remembrance & antisemitism",
+    "kind": "gap",
+    "aliases": [
+     "Holocaust",
+     "Majdanek",
+     "Holocaust museum",
+     "antisemitism",
+     "Never Again"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "reca-downwinders",
@@ -6486,7 +7633,19 @@
    "topQuoted": [],
    "sample": "La lucha por los Downwinders no se trata de política. Se trata de hacer lo correcto.\n\nSiempre he apoyado a RECA y seguiré luchando por las familias de Nuevo México que llevan generaciones esperando justicia. https://t.co/qDDmaJgTGc",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "healthcare",
+    "key": "reca-downwinders",
+    "label": "RECA & radiation downwinders",
+    "kind": "gap",
+    "aliases": [
+     "RECA",
+     "Downwinders",
+     "radiation exposure",
+     "uranium miners"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "tribal-water-rights",
@@ -6519,7 +7678,19 @@
    "topQuoted": [],
    "sample": "I'm proud to back the bipartisan Yavapai-Apache Nation Water Rights Settlement Act.\n\nGreat talking with Chairman Buddy Rocha Jr. this week about what it means: honoring Tribal sovereignty, investing in critical infrastructure, and protecting the Verde River for every community https://t.co/tbNJBbLZ8Q",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "civil-rights",
+    "key": "tribal-affairs",
+    "label": "Tribal sovereignty & Native affairs",
+    "kind": "gap",
+    "aliases": [
+     "Tribal sovereignty",
+     "Native American",
+     "water rights settlement",
+     "Yavapai-Apache Nation"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "robocalls-scam-calls",
@@ -6552,7 +7723,19 @@
    "topQuoted": [],
    "sample": "Proud to cosponsor @repmcdowell, @repgregsteube, Morrison, and @repjimmypanetta's “Foreign Robocall Elimination Act.” This bill targets overseas robocall threats by tracking the networks behind these calls and bringing long-term solutions to Congress. Scammers target the most https://t.co/LJlqSIS7mV",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "tech",
+    "key": "robocalls-scams",
+    "label": "Robocalls & phone scams",
+    "kind": "gap",
+    "aliases": [
+     "robocalls",
+     "Foreign Robocall Elimination Act",
+     "scam calls",
+     "spoofing"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "rail-merger-consolidation",
@@ -6585,7 +7768,20 @@
    "topQuoted": [],
    "sample": "The proposed Union Pacific-Norfolk Southern merger would create the largest rail network in this country’s history, impacting workers across 43 states. I’m leading a letter with 100 of my colleagues demanding that the Surface Transportation Board fully consider what this merger https://t.co/wKR8ETVnOa",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "up-ns-rail-merger",
+    "label": "Union Pacific–Norfolk Southern merger",
+    "kind": "story",
+    "aliases": [
+     "Union Pacific",
+     "Norfolk Southern",
+     "rail merger",
+     "STB",
+     "rail consolidation"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "elder-financial-exploitation",
@@ -6618,7 +7814,19 @@
    "topQuoted": [],
    "sample": "For many older Americans, a lifetime of hard work is reflected in the savings they have built for retirement, their families, and their future. No one should have to worry that someone could take those savings to exploit them.\n\nThe North Carolina Bankers Association stopped by https://t.co/Z0imGbCA9f",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "elder-financial-abuse",
+    "label": "Elder financial abuse & senior scams",
+    "kind": "gap",
+    "aliases": [
+     "elder abuse",
+     "senior scams",
+     "retirement savings fraud",
+     "financial exploitation"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "nitrous-oxide-misuse",
@@ -6651,7 +7859,19 @@
    "topQuoted": [],
    "sample": "Today, I stood alongside more than 30 parents and family members who traveled from across America to Washington to share their stories and demand action on nitrous oxide misuse. Their courage in turning unimaginable loss into a call for change is deeply inspiring. Together, we’re https://t.co/k5pXSjzBKQ",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "healthcare",
+    "key": "nitrous-oxide-misuse",
+    "label": "Nitrous oxide misuse & drug harms",
+    "kind": "gap",
+    "aliases": [
+     "nitrous oxide",
+     "whippets",
+     "galaxy gas",
+     "substance misuse"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "sports-economic-development",
@@ -6684,7 +7904,19 @@
    "topQuoted": [],
    "sample": "The World Cup brought more than 645,000 fans to MetLife Stadium and put New Jersey on the world soccer stage.\n\nAnd we’re keeping that momentum going.\n\nMiddlesex County is getting a new MLS NEXT Pro team and a new home for soccer at NEXUS, giving New Jerseyans even more https://t.co/ScMcL8OH5h",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "sports-events-economy",
+    "label": "Sports events & local economy",
+    "kind": "gap",
+    "aliases": [
+     "World Cup",
+     "MetLife Stadium",
+     "MLS NEXT Pro",
+     "stadium economy"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "federal-holidays",
@@ -6717,7 +7949,19 @@
    "topQuoted": [],
    "sample": "President Trump wants to take away your holidays. https://t.co/9huHkAtTDO",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "labor",
+    "key": "federal-holidays",
+    "label": "Trump targeting federal holidays",
+    "kind": "story",
+    "aliases": [
+     "federal holidays",
+     "take away your holidays",
+     "holiday schedule",
+     "Juneteenth holiday"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "dc-statehood",
@@ -6755,7 +7999,19 @@
    ],
    "sample": "We recently lost one of the first celebrity advocates for #DCStatehood when actor &amp; activist Hayden Panettiere passed away in August.\n \nHayden's affection for DC and support for statehood never wavered, and DC formally honored her by recognizing 9/16/2011 as \"Hayden Panettiere https://t.co/OqaR37pzlx",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "dc-statehood",
+    "label": "DC statehood",
+    "kind": "gap",
+    "aliases": [
+     "#DCStatehood",
+     "DC statehood",
+     "51st state",
+     "District of Columbia"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "commemorations-monuments",
@@ -6788,40 +8044,19 @@
    "topQuoted": [],
    "sample": "We are close finally to properly honoring Tom Paine, the extraordinary author of Common Sense and the Rights of Man, the too often unsung hero of the American Revolution and champion of democratic freedom. \n\nI testified before @NRDems on my legislation with @RepSpartz to put https://t.co/ClF9nD4xKZ",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "fisheries-regulation",
-   "label": "fisheries-regulation",
-   "labels": [
-    "fisheries-regulation"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-09-01"
-   ],
-   "firstSeen": "2026-09-01",
-   "lastSeen": "2026-09-01",
-   "eng": 264,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepGolden"
-   ],
-   "ids": [
-    "2094913618634482167"
-   ],
-   "topQuoted": [],
-   "sample": "Great news! The House just passed my bill to protect Maine lobstermen from unnecessary new regulations related to the North Atlantic right whale until 2035.\n\nThis bill will protect lobstermen so they can keep doing what they do best: Providing for their families and communities, https://t.co/0aDSV3FGlh",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "monuments-commemorations",
+    "label": "Monuments & commemorations",
+    "kind": "gap",
+    "aliases": [
+     "Tom Paine",
+     "memorial",
+     "statue",
+     "commemorative act"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "tribal-land-claims",
@@ -6859,7 +8094,19 @@
    ],
    "sample": "We also talked about the bipartisan land claim bill that we have passed unanimously in the Senate (twice) that has stalled in the House. It’s common sense, fixes a historic injustice, and I intend to keep working to get it over the finish line. Thank you to everyone who joined https://t.co/VVPjRU3Tt0",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "civil-rights",
+    "key": "tribal-affairs",
+    "label": "Tribal nations & Native affairs",
+    "kind": "gap",
+    "aliases": [
+     "tribal land claim",
+     "Native American",
+     "tribes",
+     "land claim bill"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "film-tv-production",
@@ -6892,7 +8139,19 @@
    "topQuoted": [],
    "sample": "You can’t replicate Silver Lake, Griffith Observatory, or any of LA’s other iconic locations. And there’s nowhere else in the world where you’ll find so many industry-supporting businesses or more talented crews.\n\nThat’s why LA-filmed shows win BIG during award season.\n\nI’m",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "film-tv-industry",
+    "label": "Film & TV production jobs",
+    "kind": "gap",
+    "aliases": [
+     "Hollywood",
+     "film tax credit",
+     "runaway production",
+     "entertainment industry"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "smithsonian-museums",
@@ -6930,7 +8189,19 @@
    ],
    "sample": "RT @USLatinoMuseum: The Smithsonian’s National Museum of the American Latino officially has a permanent home on the National Mall to honor…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": null,
+    "key": "museums-arts",
+    "label": "Museums, arts & cultural heritage",
+    "kind": "gap",
+    "aliases": [
+     "Smithsonian",
+     "National Mall museum",
+     "Latino Museum",
+     "arts funding"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "disease-awareness-observances",
@@ -6963,7 +8234,19 @@
    "topQuoted": [],
    "sample": "Walking into Alopecia Areata Awareness Month like: https://t.co/ULiOc54Myt",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "healthcare",
+    "key": "awareness-months",
+    "label": "Health awareness observances",
+    "kind": "noise",
+    "aliases": [
+     "Awareness Month",
+     "alopecia",
+     "awareness day",
+     "ribbon"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "college-athlete-health",
@@ -7001,7 +8284,19 @@
    ],
    "sample": "RT @clarencehilljr: TCU focused on the star-telegram yet dropped the ball on their own players health\n\n2 hours before he was sent er\n\nWhere…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "education",
+    "key": "college-sports",
+    "label": "College athletics & athlete welfare",
+    "kind": "gap",
+    "aliases": [
+     "NCAA",
+     "college athletes",
+     "student-athlete health",
+     "TCU"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "marijuana-policy",
@@ -7039,45 +8334,19 @@
    ],
    "sample": "RT @repdinatitus: As the rescheduling of certain marijuana products moves forward, it is vital that all affected stakeholders understand ho…",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "fisheries-management",
-   "label": "fisheries-management",
-   "labels": [
-    "fisheries-management"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-31"
-   ],
-   "firstSeen": "2026-08-31",
-   "lastSeen": "2026-08-31",
-   "eng": 3,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepGolden"
-   ],
-   "ids": [
-    "2094442954668560878"
-   ],
-   "topQuoted": [
-    {
-     "id": "2094438499826991302",
-     "n": 1
-    }
-   ],
-   "sample": "RT @fishstewardship: NEFSA is proud to support @RepGolden's H.R. 9436 to ensure proper data is collected before enacting crushing regulatio…",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "healthcare",
+    "key": "cannabis-policy",
+    "label": "Cannabis & marijuana policy",
+    "kind": "gap",
+    "aliases": [
+     "marijuana rescheduling",
+     "cannabis",
+     "Schedule III",
+     "hemp"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "service-academy-athletics",
@@ -7110,7 +8379,19 @@
    "topQuoted": [],
    "sample": "For the first time since 1956, two Midshipmen selected in the same NFL Draft have earned spots on the Bengals' and Steelers' rosters.\n\nEli Heidenreich and Landon Robinson spent all four years at Navy and never entered the transfer portal.\n\nNow they’re making Navy football history",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "foreign-policy",
+    "key": "service-academy-sports",
+    "label": "Service academy athlete shoutouts",
+    "kind": "noise",
+    "aliases": [
+     "Midshipmen",
+     "Navy football",
+     "NFL Draft",
+     "West Point"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "broadband-infrastructure",
@@ -7143,7 +8424,19 @@
    "topQuoted": [],
    "sample": "I’m proud to have helped secure over $1 BILLION from the National Telecommunications and Information Administration to bring universal #broadband to Illinois!🛜\n\nUnder the 2021 Bipartisan Infrastructure Law, the BEAD program helps ensure ALL Americans have access to reliable WiFi",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "tech",
+    "key": "broadband",
+    "label": "Broadband & rural internet",
+    "kind": "gap",
+    "aliases": [
+     "broadband",
+     "BEAD",
+     "NTIA",
+     "digital divide"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "church-state-separation-christian-nation",
@@ -7181,7 +8474,19 @@
    ],
    "sample": "RT @AndrewLSeidel: I'm an atheist. Everyday, I work alongside Christians and other believers to fight Christian Nationalism and defend the…",
    "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "civil-rights",
+    "key": "church-state",
+    "label": "Church-state separation",
+    "kind": "gap",
+    "aliases": [
+     "Christian nationalism",
+     "religious freedom",
+     "separation of church and state",
+     "First Amendment"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "parks-recreation-trails",
@@ -7214,139 +8519,19 @@
    "topQuoted": [],
    "sample": "If you build it, they will come. That’s the mantra for so many communities when it comes to having great walking and biking trails. Boardman Lake Loop in TC is a model, and it’s amazing to watch its impact on the local economy. https://t.co/zi8bFspRQO",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "olympics-preparation",
-   "label": "olympics-preparation",
-   "labels": [
-    "olympics-preparation"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-28"
-   ],
-   "firstSeen": "2026-08-28",
-   "lastSeen": "2026-08-28",
-   "eng": 63,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepTedLieu"
-   ],
-   "ids": [
-    "2093417919627595796"
-   ],
-   "topQuoted": [],
-   "sample": "It is an honor to represent a district that will help host the 2028 Olympics.\n\nBut in order to protect Los Angeles residents and ensure athletes and fans are able to safely travel to Olympic venues, we need more support from the federal government. https://t.co/Jg3uTvIpIg",
-   "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "aviation-airports",
-   "label": "aviation-airports",
-   "labels": [
-    "aviation-airports"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-28"
-   ],
-   "firstSeen": "2026-08-28",
-   "lastSeen": "2026-08-28",
-   "eng": 12,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "CongBoyle"
-   ],
-   "ids": [
-    "2093459360827473989"
-   ],
-   "topQuoted": [],
-   "sample": "Happy to see @PHLAirport will have new direct international flights to Porto, Vienna, and Reykjavik via @AmericanAir.\n\nIn my unbiased opinion, Philadelphia is the greatest city on earth, and it’s great to share that with even more of our friends abroad.\n\nhttps://t.co/KMBJKeQsyE",
-   "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "olympics-hosting-infrastructure",
-   "label": "olympics-hosting-infrastructure",
-   "labels": [
-    "olympics-hosting-infrastructure"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-28"
-   ],
-   "firstSeen": "2026-08-28",
-   "lastSeen": "2026-08-28",
-   "eng": 11,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepJudyChu"
-   ],
-   "ids": [
-    "2093440260101570903"
-   ],
-   "topQuoted": [],
-   "sample": "The LA 2028 Olympic &amp; Paralympic Games are an incredible opportunity for our region, including Pasadena and Arcadia, to host the world. But safely and efficiently transporting millions of spectators will require significant coordination and federal support.\n\nI joined https://t.co/sExKCqnTko",
-   "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "landmark-renaming",
-   "label": "landmark-renaming",
-   "labels": [
-    "landmark-renaming"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-27"
-   ],
-   "firstSeen": "2026-08-27",
-   "lastSeen": "2026-08-27",
-   "eng": 142,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepLiccardo"
-   ],
-   "ids": [
-    "2093119415009083769"
-   ],
-   "topQuoted": [],
-   "sample": "If he gets to call it Lake America, we’ll call Lake Erie Lake Toronto. https://t.co/X0f7bdtsFF",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "climate",
+    "key": "parks-public-lands",
+    "label": "Parks, trails & public lands",
+    "kind": "gap",
+    "aliases": [
+     "trails",
+     "national parks",
+     "public lands",
+     "recreation"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "federal-data-collection",
@@ -7379,40 +8564,19 @@
    "topQuoted": [],
    "sample": "Nos reunimos con el Instituto de Estadísticas de Puerto Rico 📊🇵🇷 para dialogar sobre cómo lograr una mayor inclusión de Puerto Rico en la recopilación de datos federales y contar con información comparable y de calidad que ayude a visibilizar nuestras necesidades y ampliar el https://t.co/gubyzVaAiT",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "federal-archives-historic-site-closures",
-   "label": "federal archives & historic site closures",
-   "labels": [
-    "federal archives & historic site closures"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-27"
-   ],
-   "firstSeen": "2026-08-27",
-   "lastSeen": "2026-08-27",
-   "eng": 3,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepKevinMullin"
-   ],
-   "ids": [
-    "2093156620260016225"
-   ],
-   "topQuoted": [],
-   "sample": "I'm working with lawmakers to stop the federal closure of our Nation Archive in San Bruno. We have a responsibility to protect these culturally significant archives including documents from the Chinese Exclusion Act era and Japanese internment camp records that hold deep meaning https://t.co/QmR9cV1efP",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "democracy",
+    "key": "census-federal-data",
+    "label": "Census & federal data collection",
+    "kind": "gap",
+    "aliases": [
+     "census",
+     "federal data",
+     "Puerto Rico statistics",
+     "data inclusion"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "permitting-reform",
@@ -7450,40 +8614,19 @@
    ],
    "sample": "RT @USChamber: Permitting delays drive up costs, create uncertainty, and hold back projects businesses and communities need. Thank you, @Re…",
    "mergedFrom": [],
-   "placement": null
-  },
-  {
-   "key": "aviation-air-traffic-control",
-   "label": "aviation-air-traffic-control",
-   "labels": [
-    "aviation-air-traffic-control"
-   ],
-   "posts": 1,
-   "members": 1,
-   "days": 1,
-   "dates": [
-    "2026-08-27"
-   ],
-   "firstSeen": "2026-08-27",
-   "lastSeen": "2026-08-27",
-   "eng": 7,
-   "cm": [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "who": [
-    "RepJimmyPanetta"
-   ],
-   "ids": [
-    "2093139770511679660"
-   ],
-   "topQuoted": [],
-   "sample": "Great to tour our local air traffic control center and learn firsthand about the work controllers do every day to keep our skies safe and air travel moving. It’s amazing. https://t.co/HbGZxXMGVi",
-   "mergedFrom": [],
-   "placement": null
+   "placement": {
+    "macro": "economy",
+    "key": "permitting-reform",
+    "label": "Permitting reform",
+    "kind": "gap",
+    "aliases": [
+     "permitting",
+     "NEPA",
+     "project approvals",
+     "permitting delays"
+    ],
+    "mergeInto": null
+   }
   },
   {
    "key": "maritime-blue-economy",
