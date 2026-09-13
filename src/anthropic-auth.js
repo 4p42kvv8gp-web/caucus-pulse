@@ -146,13 +146,22 @@ export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, for
 // token is fresh by the time the SDK reads them.
 // Every client is instrumented (src/anthropic-usage.js), so each response's
 // usage lands in data/anthropic-usage.json under this process's stage.
+//
+// In Actions the identity JWT is minted fresh for every client, even when the
+// file on disk is seconds old. The exchange at /v1/oauth/token accepts an
+// assertion once: on 2026-09-12 and 09-13 the nightly's classify stage
+// exchanged the JWT, and every later stage in the same job (stories,
+// taxonomy-learn's 30 calls, incident intel) found a file younger than
+// IDENTITY_MAX_AGE_MS, reused that JWT, and got 401 "Token exchange failed"
+// — while the run stayed green. A mint is one call to GitHub's OIDC endpoint;
+// a process is the unit that exchanges, so a process gets its own JWT.
 export async function anthropicClient(options = {}) {
   if (budgetExhausted()) {
     const s = budgetStatus();
     throw new Error(`Anthropic daily budget reached: $${s.spent.toFixed(2)} of $${s.budget} spent on ${s.day} — no Claude calls until tomorrow ET (raise anthropic.daily_budget_usd in config/settings.json to continue)`);
   }
   const key = apiKey();
-  if (!key) await refreshIdentityToken();
+  if (!key) await refreshIdentityToken({ force: true });
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
   // The SDK only reads ANTHROPIC_API_KEY from the env; hand it the
   // CLASSIFIER_ key explicitly so local runs work without re-exporting.

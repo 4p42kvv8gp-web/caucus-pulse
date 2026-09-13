@@ -73,3 +73,33 @@ test('refreshIdentityToken is a no-op outside Actions or with an API key', async
   assert.equal(await withEnv({ CLASSIFIER_ANTHROPIC_API_KEY: 'c', ACTIONS_ID_TOKEN_REQUEST_URL: 'u', ACTIONS_ID_TOKEN_REQUEST_TOKEN: 't' },
     () => refreshIdentityToken()), false);
 });
+
+test('in Actions, anthropicClient mints a fresh identity token for every client, even when the file is seconds old', async () => {
+  const fs = await import('node:fs');
+  const os = await import('node:os');
+  const path = await import('node:path');
+  const { anthropicClient } = await import('../src/anthropic-auth.js');
+  const file = path.join(fs.mkdtempSync(path.join(os.tmpdir(), 'oidc-')), 'anthropic-oidc.jwt');
+  // withEnv restores the environment as soon as its callback returns, which
+  // for an async callback is before the awaits inside it run — so set and
+  // restore by hand here.
+  const vars = { ACTIONS_ID_TOKEN_REQUEST_URL: 'https://example/oidc', ACTIONS_ID_TOKEN_REQUEST_TOKEN: 'x', ANTHROPIC_FEDERATION_RULE_ID: 'fdrl_x', ANTHROPIC_ORGANIZATION_ID: 'org', ANTHROPIC_IDENTITY_TOKEN_FILE: file };
+  const all = [...KEYS, 'ANTHROPIC_IDENTITY_TOKEN_FILE'];
+  const saved = Object.fromEntries(all.map((k) => [k, process.env[k]]));
+  const savedFetch = globalThis.fetch;
+  let mints = 0;
+  globalThis.fetch = async () => ({ ok: true, json: async () => ({ value: `jwt-${++mints}` }) });
+  for (const k of KEYS) delete process.env[k];
+  Object.assign(process.env, vars);
+  try {
+    await anthropicClient();          // first process: mints jwt-1
+    assert.equal(fs.readFileSync(file, 'utf8'), 'jwt-1');
+    await anthropicClient();          // a second client moments later: its own jwt-2, not a reuse
+    assert.equal(fs.readFileSync(file, 'utf8'), 'jwt-2');
+    assert.equal(await refreshIdentityToken(), false); // the periodic refresh still respects the age window
+    assert.equal(mints, 2);
+  } finally {
+    globalThis.fetch = savedFetch;
+    for (const k of all) { if (saved[k] === undefined) delete process.env[k]; else process.env[k] = saved[k]; }
+  }
+});

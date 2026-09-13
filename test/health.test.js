@@ -79,3 +79,14 @@ test('anthropic spend is informational without a ceiling, warns near it, fails a
   assert.equal(stopped.status, 'fail');
   assert.match(stopped.detail, /taxonomy-learn \$30\.00, classify \$11\.00.*stopped until tomorrow ET/);
 });
+
+test('a failed Claude call is a health FAIL, and an auth failure says so', () => {
+  const { checkAnthropicSpend } = health;
+  const auth = checkAnthropicSpend({ spent: 1.2, budget: 40, calls: 10, byStage: { classify: 1.2 }, authFailures: 30, otherFailures: 0, failedStages: ['stories', 'taxonomy-learn'] });
+  assert.equal(auth.status, 'fail');
+  assert.match(auth.detail, /30 call\(s\) failed AUTHENTICATION in stories, taxonomy-learn/);
+  const other = checkAnthropicSpend({ spent: 1.2, budget: 40, calls: 10, byStage: {}, authFailures: 0, otherFailures: 2, failedStages: ['incidents'] });
+  assert.equal(other.status, 'fail');
+  assert.match(other.detail, /2 call\(s\) failed in incidents/);
+  assert.equal(checkAnthropicSpend({ spent: 1.2, budget: 40, calls: 10, byStage: {} }).status, 'ok');
+});

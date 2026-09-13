@@ -11,7 +11,12 @@
 //   data/anthropic-usage.json
 //   { "<ET day>": { "<stage>": { "<model>": {
 //       "live":  { calls, input, output, cacheRead, cacheWrite },   // messages.create / stream
-//       "batch": { calls, input, output, cacheRead, cacheWrite } } } } }   // messages.batches results
+//       "batch": { calls, input, output, cacheRead, cacheWrite } },  // messages.batches results
+//     "_errors": { auth, other } } } }                                 // calls that threw, per stage
+//
+// _errors is the line the health check reads: a stage that catches its own
+// errors and "continues with cached results" leaves no other trace, and on
+// 2026-09-12/13 that hid two nights of federation 401s behind a green run.
 //
 // Recording happens by wrapping the SDK client in anthropicClient()
 // (instrument below: messages.create, messages.stream, messages.batches.
@@ -68,6 +73,22 @@ export function recordUsage({ stage, model, usage, batch = false, file = LEDGER,
   return row;
 }
 
+// A failed call: auth (the federation exchange or the key was refused) or
+// anything else. Counted per stage, not per model — a refused exchange never
+// reaches a model.
+export const ERRORS_KEY = '_errors';
+export function isAuthError(e) {
+  const code = e?.statusCode ?? e?.status;
+  return code === 401 || code === 403 || /token exchange failed|authentication_error/i.test(String(e?.message || ''));
+}
+export function recordError({ stage, error, file = LEDGER, day = etDate() }) {
+  const ledger = readJSON(file, {});
+  const row = (((ledger[day] ||= {})[stage || 'unknown'] ||= {})[ERRORS_KEY] ||= { auth: 0, other: 0 });
+  row[isAuthError(error) ? 'auth' : 'other'] += 1;
+  writeJSON(file, ledger);
+  return row;
+}
+
 export function priceFor(model, pricing = settings.anthropic?.pricing) {
   const table = pricing || {};
   const row = table[model] || table.default || DEFAULT_PRICE;
@@ -89,9 +110,18 @@ export function rowCost(row, price, { batch = false } = {}) {
 export function dayCost(dayLedger, pricing) {
   let total = 0;
   let calls = 0;
+  let authFailures = 0;
+  let otherFailures = 0;
   const byStage = {};
+  const failedStages = [];
   for (const [stage, models] of Object.entries(dayLedger || {})) {
     for (const [model, kinds] of Object.entries(models || {})) {
+      if (model === ERRORS_KEY) {
+        authFailures += kinds.auth || 0;
+        otherFailures += kinds.other || 0;
+        if ((kinds.auth || 0) + (kinds.other || 0) > 0) failedStages.push(stage);
+        continue;
+      }
       const price = priceFor(model, pricing);
       for (const [kind, row] of Object.entries(kinds || {})) {
         const usd = rowCost(row, price, { batch: kind === 'batch' });
@@ -101,7 +131,7 @@ export function dayCost(dayLedger, pricing) {
       }
     }
   }
-  return { total, calls, byStage };
+  return { total, calls, byStage, authFailures, otherFailures, failedStages };
 }
 
 // The daily ceiling in dollars: ANTHROPIC_DAILY_BUDGET_USD for a one-off run,
@@ -120,8 +150,8 @@ export function spendOn(day, { file = LEDGER, pricing } = {}) {
 // module reads: once true, anthropicConfigured() says no and anthropicClient()
 // refuses, so every Claude stage skips or fails loudly until the ET day rolls.
 export function budgetStatus({ file = LEDGER, day = etDate(), budget = dailyBudgetUsd(), pricing } = {}) {
-  const { total, calls, byStage } = spendOn(day, { file, pricing });
-  return { day, budget, spent: total, calls, byStage, exhausted: budget != null && total >= budget };
+  const { total, calls, byStage, authFailures, otherFailures, failedStages } = spendOn(day, { file, pricing });
+  return { day, budget, spent: total, calls, byStage, authFailures, otherFailures, failedStages, exhausted: budget != null && total >= budget };
 }
 
 // Wrap an SDK client so its responses land in the ledger. Idempotent per
@@ -132,18 +162,27 @@ export function instrument(client, { stage = defaultStage(), file = LEDGER } = {
   const record = (usage, model, batch) => {
     try { recordUsage({ stage, model, usage, batch, file }); } catch (e) { console.warn(`[anthropic-usage] not recorded: ${e.message}`); }
   };
+  const failed = (error) => {
+    try { recordError({ stage, error, file }); } catch (e) { console.warn(`[anthropic-usage] error not recorded: ${e.message}`); }
+  };
   const m = client.messages;
   const create = m.create.bind(m);
   m.create = (params, opts) => {
     const r = create(params, opts);
     if (params?.stream) return r; // raw event stream: usage is in its events, not a Message
-    return r.then((res) => { record(res?.usage, res?.model || params?.model, false); return res; });
+    return r.then(
+      (res) => { record(res?.usage, res?.model || params?.model, false); return res; },
+      (err) => { failed(err); throw err; }
+    );
   };
   if (typeof m.stream === 'function') {
     const stream = m.stream.bind(m);
     m.stream = (params, opts) => {
       const s = stream(params, opts);
-      if (typeof s?.on === 'function') s.on('finalMessage', (msg) => record(msg?.usage, msg?.model || params?.model, false));
+      if (typeof s?.on === 'function') {
+        s.on('finalMessage', (msg) => record(msg?.usage, msg?.model || params?.model, false));
+        s.on('error', (err) => failed(err));
+      }
       return s;
     };
   }
@@ -167,7 +206,9 @@ export function instrument(client, { stage = defaultStage(), file = LEDGER } = {
 export function formatStatus(s) {
   const stages = Object.entries(s.byStage).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} $${v.toFixed(2)}`).join(', ');
   const cap = s.budget != null ? ` of $${s.budget} daily budget` : ' (no daily budget set)';
-  return `${s.day}: $${s.spent.toFixed(2)}${cap} across ${s.calls} call(s)${stages ? ` — ${stages}` : ''}${s.exhausted ? ' — BUDGET REACHED, Claude stages stopped until tomorrow ET' : ''}`;
+  const failed = (s.authFailures || 0) + (s.otherFailures || 0);
+  const failures = failed ? `; ${failed} call(s) FAILED (${s.authFailures || 0} auth) in ${(s.failedStages || []).join(', ')}` : '';
+  return `${s.day}: $${s.spent.toFixed(2)}${cap} across ${s.calls} call(s)${stages ? ` — ${stages}` : ''}${failures}${s.exhausted ? ' — BUDGET REACHED, Claude stages stopped until tomorrow ET' : ''}`;
 }
 
 function main() {

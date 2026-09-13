@@ -106,9 +106,15 @@ export function checkBudget(state, { budget = dailyBudget(), today = etDate() } 
 // by config/settings.json anthropic.pricing). Without a ceiling the line is
 // informational; with one, reaching it is a fail because every Claude stage
 // has stopped for the day and someone should know before the nightly.
-export function checkAnthropicSpend({ spent = 0, budget = null, calls = 0, byStage = {} }) {
+export function checkAnthropicSpend({ spent = 0, budget = null, calls = 0, byStage = {}, authFailures = 0, otherFailures = 0, failedStages = [] }) {
   const stages = Object.entries(byStage).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => `${k} $${v.toFixed(2)}`).join(', ');
   const detail = `$${spent.toFixed(2)} Claude spend today across ${calls} call(s)${budget != null ? ` of $${budget} daily budget` : ' (no daily budget set)'}${stages ? ` — ${stages}` : ''}`;
+  if (authFailures > 0) {
+    return { name: 'anthropic-spend', status: 'fail', detail: `${detail}; ${authFailures} call(s) failed AUTHENTICATION in ${failedStages.join(', ')} — the federation exchange was refused, so those stages ran on cached results (a stage that re-uses an already-exchanged JWT gets 401; see anthropicClient in src/anthropic-auth.js)` };
+  }
+  if (otherFailures > 0) {
+    return { name: 'anthropic-spend', status: 'fail', detail: `${detail}; ${otherFailures} call(s) failed in ${failedStages.join(', ')} — those stages ran on cached results; read the stage log` };
+  }
   if (budget != null && spent >= budget) return { name: 'anthropic-spend', status: 'fail', detail: `${detail} — Claude stages are stopped until tomorrow ET` };
   if (budget != null && spent >= budget * 0.85) return { name: 'anthropic-spend', status: 'warn', detail };
   return { name: 'anthropic-spend', status: 'ok', detail };

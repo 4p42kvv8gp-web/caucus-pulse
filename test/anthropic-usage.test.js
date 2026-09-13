@@ -131,3 +131,25 @@ test('mergeLedger adds both sides\' increments at every leaf', () => {
   });
   assert.deepEqual(mergeLedger({}, {}, {}), {});
 });
+
+test('failed calls are counted per stage, auth failures separately, and never priced', async () => {
+  const file = tmp();
+  const exchangeRefused = Object.assign(new Error('Token exchange failed with status 401 (request-id req_x): {"error":{"type":"authentication_error"}}'), { statusCode: 401 });
+  const client = instrument({
+    messages: {
+      create: async () => { throw exchangeRefused; },
+      stream: () => { const s = new EventEmitter(); s.finalMessage = () => new Promise((_, reject) => setImmediate(() => { s.emit('error', new Error('rate limited')); reject(new Error('rate limited')); })); return s; }
+    }
+  }, { stage: 'stories', file });
+  await assert.rejects(() => client.messages.create({ model: 'claude-opus-5', max_tokens: 5, messages: [] }), /Token exchange failed/);
+  await assert.rejects(() => client.messages.stream({ model: 'claude-opus-5', max_tokens: 5, messages: [] }).finalMessage(), /rate limited/);
+  const day = Object.keys(read(file))[0];
+  assert.deepEqual(read(file)[day].stories._errors, { auth: 1, other: 1 });
+  const s = budgetStatus({ file, day, budget: 40, pricing: { default: price } });
+  assert.equal(s.spent, 0);
+  assert.equal(s.calls, 0);
+  assert.equal(s.authFailures, 1);
+  assert.equal(s.otherFailures, 1);
+  assert.deepEqual(s.failedStages, ['stories']);
+  assert.match(formatStatus(s), /2 call\(s\) FAILED \(1 auth\) in stories/);
+});
