@@ -9,6 +9,14 @@ name: news-context
 on:
   schedule:
     - cron: '17 * * * *'
+  # A workflow that only exists on a feature branch cannot be dispatched by
+  # name until it is on the default branch; pushes to this branch run it so
+  # the lane can be proven before integration. Its own data commit is
+  # excluded so a run never triggers the next one. Drop the push trigger
+  # when the branch merges.
+  push:
+    branches: [claude/news-context]
+    paths-ignore: ['data/news/**']
   workflow_dispatch:
     inputs:
       sources:
