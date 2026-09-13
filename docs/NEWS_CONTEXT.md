@@ -150,7 +150,7 @@ git apply docs/hooks/news-context-classifier.patch && npm test
    schema gains an optional `"evidence_used": ["n_…"]` per assignment so a
    later pass can tell grounded answers from model prose.
 3. `src/sitedata.js`: replace the `data/context.json` read with `retrieveEvidence(candidate.label + sample text, { asOf: candidate.lastSeen })` and render publisher · title · date · URL. Delete `data/context.json` from the public tree.
-4. `.github/scripts/nightly.sh`: a `context` stage (`npm run context-refresh`) before `classify`, and `npm run context-refresh -- --reconsider=$(yesterday)` after it; the classification queue consumes `data/news/reconsider.json`.
+4. `.github/scripts/nightly.sh`: a `context` stage (`npm run context-refresh`) before `classify`, and a `reconsider` stage after it for the day classify just handled (yesterday, Eastern); the classification queue consumes `data/news/reconsider.json`. Written out as `docs/hooks/news-context-nightly.patch` (two lines; the nightly's existing `data` commit path already covers `data/news/`). Both stages need no credential; a failure in either is one warning, not a red night.
 5. Already on this branch: `package.json` script `context-refresh`; `.gitattributes` `data/news/*.jsonl merge=union`; the hourly workflow.
 
 ## Privacy
