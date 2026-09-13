@@ -167,6 +167,29 @@ test('queryTerms weighs names and numbers over ordinary words and drops stopword
   assert.equal(c.get('house'), 1);
   assert.equal(c.get('trump'), 1);
   assert.equal(c.get('dilley'), 3);
+  const m = queryTerms('Serving the families of eastern North Carolina means showing up');
+  assert.equal(m.get('north carolina'), 4);
+  assert.equal(m.get('north'), 0.5);
+  assert.equal(m.get('carolina'), 0.5);
+});
+
+test('a multi-word name matches as a phrase; one of its words alone does not', () => {
+  const carolina = { id: 'c', publisher: 'P', url: 'https://p.test/c', title: 'Storm damage in eastern North Carolina', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['Crews in North Carolina worked through the weekend after the storm.'], summary: '' };
+  const america = { id: 'a', publisher: 'P', url: 'https://p.test/a', title: 'Alliance talks', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['Even more concerning is the prospect that the North America alliance could weaken.'], summary: '' };
+  const r = retrieveEvidence('Serving the families of eastern North Carolina means showing up', { items: [carolina, america], asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.deepEqual(r.evidence.map((e) => e.id), ['c']);
+  assert.deepEqual(r.evidence[0].matchedProper, ['north carolina']);
+  assert.equal(r.evidence[0].kind, 'report');
+});
+
+test('a number alone is not evidence: "25th" against an unrelated story returns nothing; "25th" next to "Pentagon" does', () => {
+  const dallas = { id: 'd', publisher: 'P', url: 'https://p.test/d', title: 'On the road: day two in Dallas', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['The 25th stop of the tour drew a crowd downtown.'], summary: '' };
+  const anniv = { id: 'n', publisher: 'P', url: 'https://p.test/n', title: 'Former members reflect on 25th anniversary of attacks', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['They remembered the day the Pentagon was hit, 25th anniversary or not.'], summary: '' };
+  const r = retrieveEvidence('Around the district yesterday, communities came together to remember the 25th anniversary and those lost at the Pentagon.', { items: [dallas, anniv], asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.deepEqual(r.evidence.map((e) => e.id), ['n']);
+  assert.ok(r.evidence[0].matchedProper.includes('pentagon'));
+  const only = retrieveEvidence('Small businesses are the backbone of the district, and this week I had the honor of presenting a 2025 award.', { items: [{ ...dallas, passages: ['A 2025 ruling on the map stands, the court said.'] }], asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.deepEqual(only.evidence, []);
 });
 
 test('extractArticle skips captions and credits, and falls back past an <article> that holds no prose', () => {
@@ -189,12 +212,13 @@ test('ambiguous name: "Dilley" the facility and "Dilley" the coach both surface;
   assert.deepEqual(evidence[0].matchedProper, ['dilley']);
 });
 
-test('a shared everyday name is not a report: "House" and "Trump" overlap alone stays a lead', async () => {
+test('a shared everyday name is not evidence: "House" and "Trump" overlap alone returns nothing', async () => {
   const items = [{ id: 'n1', publisher: 'P', url: 'https://p.test/1', title: 'House vote on Trump plan', publishedAt: '2026-09-12T12:00:00Z', extract: 'body', passages: ['The House voted on the plan from President Trump on Thursday, with members split along party lines for the third time.'], summary: '' }];
-  const { evidence } = retrieveEvidence('Proud to vote in the House against Trump today', { items, asOf: '2026-09-13T02:00:00Z', minScore: 1 });
-  assert.equal(evidence.length, 1);
-  assert.equal(evidence[0].kind, 'lead');
-  assert.deepEqual(evidence[0].matchedProper, []);
+  const r = retrieveEvidence('Proud to vote in the House against Trump today', { items, asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.deepEqual(r.evidence, []);
+  // and a greeting shares no name with primary coverage even though both say "year"
+  const greet = retrieveEvidence('Wishing a sweet and healthy New Year to all who celebrate', { items: [{ id: 'n2', publisher: 'P', url: 'https://p.test/2', title: 'Anti-incumbent anger crossed party lines in this year’s primaries', publishedAt: '2026-09-12T12:00:00Z', extract: 'headline-only', passages: [], summary: 'Redistricting did not change the pattern this year.' }], asOf: '2026-09-13T02:00:00Z', minScore: 1 });
+  assert.deepEqual(greet.evidence, []);
 });
 
 test('ambiguous place: "Springfield" returns both the Ohio and the Illinois item as leads, choosing neither', async () => {

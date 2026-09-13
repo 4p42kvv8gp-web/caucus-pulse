@@ -216,14 +216,19 @@ export function changedSince(version, opts = {}) {
 
 // ── Retrieval ───────────────────────────────────────────────────────────
 
-const STOP = new Set('a an the and or but of to in on at for from by with as is are was were be been this that these those it its into over under about after before during than then there their they them we our you your he she his her him not no yes do does did have has had will would can could should may might just also more most very so up out if when where which who whom whose what why how all any some such only own same too s t d ll re ve m today tonight yesterday tomorrow week day new'.split(' '));
+const STOP = new Set('a an the and or but of to in on at for from by with as is are was were be been this that these those it its into over under about after before during than then there their they them we our you your he she his her him not no yes do does did have has had will would can could should may might just also more most very so up out if when where which who whom whose what why how all any some such only own same too s t d ll re ve m today tonight yesterday tomorrow week day new year years month months time times way thing things lot one two happy wishing everyone celebrating'.split(' '));
 
 // Names that appear in most political reporting on most days. Capitalised,
 // so they would score like a distinctive name; the first live run matched
 // a constituent-services post to a harassment-settlement story on "House"
 // and "Trump" alone. They still count, at the weight of an ordinary word,
 // but they never make an item a report on their own.
-export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump president white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen sept september friday monday tuesday wednesday thursday saturday sunday'.split(' '));
+// Ordinary words that posts and headlines capitalise all the time. Not
+// names, whatever the capitalisation; a match on one is not a distinctive
+// match. Explicit so a reader can see exactly what is excluded.
+export const GENERIC_WORDS = new Set(('good great big new old day night morning evening time people home family families health care year week weekend month first last next today work jobs job right left way life world country state city county town community national public private local school schools students teachers workers women men children kids veterans seniors small business businesses party election elections campaign candidate candidates primary midterm midterms budget tax taxes money cost costs price prices economy energy climate water air land safety justice freedom democracy rights law laws order power plan plans policy fund funds funding report reports news story stories history future every everyone thank thanks proud honored honor join joined happy congratulations welcome update breaking live watch read listen important love support fight fighting protect protecting defend stand together forward strong safe free fair decision decisions emergency open close security now here there again never always').split(' '));
+
+export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump president white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september sept october november december'.split(' '));
 
 // Query terms with weights: a capitalised token that is not sentence-initial
 // (a name, a place) counts 3, a number counts 2, anything else 1 — and a
@@ -231,14 +236,46 @@ export const COMMON_NAMES = new Set('house senate congress congressional democra
 // split into their word. Stopwords are dropped.
 export function queryTerms(text) {
   const weights = new Map();
-  for (const { word, cap, sentenceStart } of words(String(text ?? '').replace(/https?:\/\/\S+/g, ' '))) {
+  const list = [...words(String(text ?? '').replace(/https?:\/\/\S+/g, ' '))];
+  const { phrases, inRun } = nameRuns(list);
+  for (const { word, cap, sentenceStart } of list) {
     const num = /^\d{2,4}$/.test(word);
-    const w = num ? 2 : cap && !sentenceStart && !COMMON_NAMES.has(word) ? 3 : 1;
+    // A word inside a multi-word name ("North" of "North Carolina") counts
+    // only a little on its own: the name is the phrase, and "North" alone
+    // would match "North America".
+    const w = num ? 2 : inRun.has(word) ? 0.5 : cap && !sentenceStart && !COMMON_NAMES.has(word) ? 3 : 1;
     if (word.length < 3 && !num) continue;
     if (STOP.has(word)) continue;
     weights.set(word, Math.max(weights.get(word) || 0, w));
   }
+  for (const ph of phrases) weights.set(ph, 4);
   return weights;
+}
+
+// Runs of consecutive capitalised words are one name ("Rosh Hashanah",
+// "North Carolina", "Social Security"). Returns the phrases (every bigram
+// of each run plus the whole run) and the words that took part, so the
+// caller can stop treating "North" as a name by itself. A run at a sentence
+// start still counts when any word in it is not sentence-initial.
+export function nameRuns(list) {
+  const phrases = new Set();
+  const inRun = new Set();
+  let run = [];
+  const flush = () => {
+    const ws = run.map((r) => r.word).filter((w) => !STOP.has(w));
+    if (ws.length >= 2 && run.some((r) => !r.sentenceStart)) {
+      for (let i = 0; i + 1 < ws.length; i++) phrases.add(`${ws[i]} ${ws[i + 1]}`);
+      if (ws.length > 2) phrases.add(ws.join(' '));
+      for (const w of ws) inRun.add(w);
+    }
+    run = [];
+  };
+  for (const item of list) {
+    if (item.sentenceStart) flush(); // "Dilley. This" is two sentences, not a name
+    if (item.cap && !COMMON_NAMES.has(item.word)) run.push(item); else flush();
+  }
+  flush();
+  return { phrases, inRun };
 }
 
 // Whitespace-split words with the two facts the weighting needs: was the
@@ -252,25 +289,38 @@ function* words(text) {
     const endsSentence = /[.!?]["”’')\]]*$/.test(raw);
     if (!core) { if (endsSentence) sentenceStart = true; continue; }
     const word = core.replace(/^[#@]/, '').replace(/[’']s$/, '').replace(/,(?=\d{3})/g, '').toLowerCase();
-    yield { word, cap: /^[#@]?[A-Z][a-z]/.test(core), sentenceStart };
+    // cap: Capitalised like a name. lower: written in lower case — an
+    // all-caps dateline ("DILLEY, Texas") is neither.
+    yield { word, cap: /^[#@]?[A-Z][a-z]/.test(core), lower: /^[#@]?[a-z]/.test(core), sentenceStart };
     sentenceStart = endsSentence;
   }
 }
 
 // "2,400" is one number on both sides of a match.
 const tokens = (s) => String(s ?? '').toLowerCase().replace(/,(?=\d{3})/g, '').split(/[^a-z0-9]+/).filter((t) => t.length >= 3 && !STOP.has(t));
+const phraseText = (s) => ` ${String(s ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ')} `;
+const phraseCount = (text, ph) => text.split(` ${ph} `).length - 1;
 
 // Words the item's own prose treats as names: capitalised mid-sentence in
 // the summary or a passage (titles are title-cased, so they do not count).
 // A post capitalises freely ("Big", "Home"); an article's sentences do not,
 // so this is the better judge of whether a shared word is a name.
 export function itemProperNouns(item) {
-  const out = new Set();
+  const singles = new Set();
   const text = [item.summary, ...(item.passages || [])].filter(Boolean).join(' ');
-  for (const { word, cap, sentenceStart } of words(text)) {
-    if (cap && !sentenceStart && word.length >= 3 && !STOP.has(word) && !COMMON_NAMES.has(word)) out.add(word);
+  const list = [...words(text)];
+  const { phrases, inRun } = nameRuns(list);
+  // A name is capitalised every time; a word that also appears in lower
+  // case somewhere in the same text ("every", "history") is not one, even
+  // if a headline fragment inside a passage capitalised it once.
+  const lower = new Set(list.filter((w) => w.lower).map((w) => w.word));
+  for (const { word, cap, sentenceStart } of list) {
+    if (cap && !sentenceStart && !inRun.has(word) && !lower.has(word) && word.length >= 3 && !STOP.has(word) && !COMMON_NAMES.has(word) && !GENERIC_WORDS.has(word)) singles.add(word);
   }
-  return out;
+  // Words inside the article's multi-word names, so a post that says just
+  // "Springfield" can meet "Springfield, Ohio".
+  const phraseWords = new Set([...phrases].flatMap((ph) => ph.split(' ')));
+  return { singles, phrases, phraseWords };
 }
 
 // Score one item for a query. A term counts once for appearing in the title
@@ -283,13 +333,16 @@ export function itemProperNouns(item) {
 export function scoreItem(item, terms) {
   const title = tokens(item.title);
   const body = tokens([item.summary, ...(item.passages || [])].join(' '));
+  const titleText = phraseText(item.title);
+  const bodyText = phraseText([item.summary, ...(item.passages || [])].join(' '));
   const tf = (list, w) => list.reduce((n, t) => (t === w ? n + 1 : n), 0);
   let score = 0;
   const inTitle = [];
   const inBody = [];
   for (const [term, weight] of terms) {
-    const t = tf(title, term);
-    const b = tf(body, term);
+    const phrase = term.includes(' ');
+    const t = phrase ? phraseCount(titleText, term) : tf(title, term);
+    const b = phrase ? phraseCount(bodyText, term) : tf(body, term);
     if (t) inTitle.push(term);
     if (b) inBody.push(term);
     score += weight * ((t ? 2 : 0) + (b ? 1 : 0) + 0.5 * Math.min(Math.max(b - 1, 0), 2));
@@ -321,11 +374,24 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
     const stale = ageHours > staleDays * 24;
     const matched = [...new Set([...inTitle, ...inBody])];
     const proper = itemProperNouns(it);
-    // A distinctive match: a number, or a word the article itself treats
-    // as a name (and that is not one everyone uses). This is what separates
-    // "the Dilley facility" from a shared "House".
-    const matchedProper = matched.filter((m) => /^\d/.test(m) || (proper.has(m) && !COMMON_NAMES.has(m)));
-    const kind = it.extract === 'body' && inBody.length && matchedProper.length && !stale ? 'report' : 'lead';
+    // A distinctive match: a number, a multi-word name the article also
+    // uses ("Rosh Hashanah", "North Carolina"), or a single word that both
+    // the post and the article use as a standalone name. "North" from
+    // "North Carolina" against "North America" is none of these.
+    const matchedProper = matched.filter((m) => /^\d/.test(m)
+      || (m.includes(' ') && proper.phrases.has(m))
+      || (!m.includes(' ') && (terms.get(m) || 0) >= 1 && !COMMON_NAMES.has(m) && !GENERIC_WORDS.has(m) && (proper.singles.has(m) || proper.phraseWords.has(m))));
+    // No distinctive match, no evidence: a post and an article that share
+    // only ordinary words ("year", "vote") are not about the same thing,
+    // and the first real posts run through this matched Rosh Hashanah
+    // greetings to primary coverage on "Year" alone.
+    if (!matchedProper.length) continue;
+    // Numbers alone do not ground anything either: a year ("2025") or an
+    // ordinal ("25th") is shared by too many stories. They count only next
+    // to a name — "25th" with "Pentagon" is the Sept. 11 anniversary;
+    // "25th" alone is also "Day Two in Dallas".
+    if (matchedProper.every((m) => /^\d/.test(m))) continue;
+    const kind = it.extract === 'body' && inBody.length && !stale ? 'report' : 'lead';
     scored.push({ id: it.id, url: it.url, publisher: it.publisher, sourceId: it.sourceId, title: it.title, publishedAt: it.publishedAt, fetchedAt: it.fetchedAt, extract: it.extract, passage: (it.passages || [])[0] || it.summary || '', score, matched, matchedProper, ageHours, stale, kind });
   }
   scored.sort((a, b) => b.score - a.score || String(b.publishedAt).localeCompare(String(a.publishedAt)));
