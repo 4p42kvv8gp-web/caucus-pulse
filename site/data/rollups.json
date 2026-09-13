@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-13T04:52:39.416Z",
- "lastPollAt": "2026-09-13T04:52:12.774Z",
+ "generatedAt": "2026-09-13T09:54:04.658Z",
+ "lastPollAt": "2026-09-13T09:54:03.420Z",
  "timezone": "America/New_York",
  "today": "2026-09-13",
  "days": [
@@ -41,8 +41,8 @@
  },
  "classification": {
   "through": "2026-09-13",
-  "capturedIn24h": 309,
-  "classifiedIn24h": 225,
+  "capturedIn24h": 306,
+  "classifiedIn24h": 224,
   "momentumPaused": false
  },
  "core": [
@@ -3334,22 +3334,22 @@
     "engDelta": 0
    },
    "curve48": [
-    5,
+    54,
+    173,
+    155,
+    192,
+    105,
+    61,
+    4,
+    0,
+    9,
+    69,
+    92,
+    72,
+    50,
     12,
-    109,
-    177,
-    154,
-    168,
-    93,
-    34,
-    3,
     2,
-    18,
-    90,
-    87,
-    65,
-    34,
-    10
+    0
    ]
   },
   "CPC": {
@@ -3380,22 +3380,22 @@
     "engDelta": 0
    },
    "curve48": [
+    24,
+    82,
+    75,
+    100,
+    52,
+    32,
     4,
-    8,
-    53,
-    87,
-    80,
-    80,
-    46,
-    18,
-    3,
     0,
-    10,
-    49,
-    51,
-    30,
-    18,
-    5
+    4,
+    40,
+    48,
+    39,
+    25,
+    7,
+    0,
+    0
    ]
   },
   "NewDem": {
@@ -3426,22 +3426,22 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    3,
-    66,
-    101,
-    90,
-    92,
-    45,
-    22,
+    31,
+    106,
+    91,
+    102,
+    56,
+    33,
     0,
-    2,
-    11,
+    0,
+    7,
+    34,
     44,
-    35,
-    32,
-    13,
-    6
+    30,
+    20,
+    6,
+    2,
+    0
    ]
   },
   "CBC": {
@@ -3472,22 +3472,22 @@
     "engDelta": 0
    },
    "curve48": [
+    16,
+    30,
+    29,
+    42,
+    18,
+    14,
+    0,
     0,
     1,
-    24,
-    34,
-    32,
-    29,
-    21,
-    8,
+    15,
+    11,
+    10,
+    12,
     0,
-    0,
-    5,
-    16,
-    8,
-    14,
-    6,
-    2
+    2,
+    0
    ]
   },
   "CHC": {
@@ -3518,22 +3518,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    1,
-    19,
-    30,
+    6,
+    34,
     26,
-    28,
-    10,
-    5,
+    27,
+    17,
+    9,
     0,
     0,
-    3,
+    2,
+    11,
     13,
-    12,
-    10,
-    4,
-    1
+    8,
+    6,
+    3,
+    0,
+    0
    ]
   },
   "CAPAC": {
@@ -3564,22 +3564,22 @@
     "engDelta": 0
    },
    "curve48": [
+    3,
+    15,
+    21,
+    21,
+    10,
+    10,
     4,
     0,
-    7,
-    16,
-    25,
-    14,
-    12,
-    7,
+    1,
+    8,
+    17,
+    11,
+    6,
     3,
     0,
-    1,
-    15,
-    14,
-    9,
-    6,
-    1
+    0
    ]
   }
  },
@@ -5414,19 +5414,19 @@
     61,
     0
    ],
-   "d": -20,
+   "d": -21,
    "mAvg": 55.5,
    "epAvg": 216,
    "momentum": {
-    "score": 25,
+    "score": 24,
     "drivers": [
      "caucus spread",
-     "volume"
+     "adoption"
     ],
-    "volume": 0.3,
+    "volume": 0.29000000000000004,
     "accel": 0,
     "adoption": 0.2927927927927928,
-    "eff": 3.7,
+    "eff": 3.6,
     "engLift": 0
    },
    "subs": [
@@ -6434,16 +6434,16 @@
     34,
     0
    ],
-   "d": -45,
+   "d": -47,
    "mAvg": 47,
    "epAvg": 256,
    "momentum": {
-    "score": 9,
+    "score": 8,
     "drivers": [
      "caucus spread",
-     "volume"
+     "adoption"
     ],
-    "volume": 0.04999999999999999,
+    "volume": 0.030000000000000027,
     "accel": 0,
     "adoption": 0.03191489361702127,
     "eff": 3.6,
@@ -10851,16 +10851,16 @@
     31,
     0
    ],
-   "d": 37,
+   "d": 32,
    "mAvg": 14.5,
    "epAvg": 603,
    "momentum": {
-    "score": 49,
+    "score": 47,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.87,
+    "volume": 0.8200000000000001,
     "accel": 0,
     "adoption": 0.46551724137931033,
     "eff": 2.8,
@@ -13410,7 +13410,7 @@
     2,
     2,
     2,
-    3,
+    4,
     4,
     4,
     4
@@ -13970,9 +13970,9 @@
    "since": "2026-09-11T00:32:35.000Z",
    "shape": [
     3,
-    3,
+    4,
     7,
-    7,
+    8,
     8,
     8,
     8,
@@ -14078,7 +14078,7 @@
    "since": "2026-09-08T17:20:47.000Z",
    "shape": [
     1,
-    1,
+    3,
     3,
     3,
     3,
@@ -14309,8 +14309,8 @@
    "kinds": [
     "wildfire"
    ],
-   "status": "monitoring",
-   "lifecycle": "monitoring",
+   "status": "resolved",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": true,
     "by": "second post",
@@ -14422,71 +14422,6 @@
     "extractedAt": "2026-09-10T06:11:14.890Z",
     "posts": 4
    }
-  },
-  {
-   "id": "bronx-ny--other",
-   "kind": "other",
-   "kinds": [
-    "other"
-   ],
-   "status": "provisional",
-   "lifecycle": "monitoring",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
-   },
-   "place": "Bronx, NY · NY-15",
-   "placeRaw": "Bronx, NY",
-   "district": "NY-15",
-   "districtMatch": true,
-   "handle": "@RepRitchie",
-   "member": "Ritchie Torres",
-   "since": "2026-09-11T21:00:58.000Z",
-   "last": "2026-09-11T21:00:58.000Z",
-   "updates": 1,
-   "engN": 15,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Other · Bronx, NY",
-   "evidence": {
-    "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
-    "exact": false,
-    "start": 0,
-    "end": 139,
-    "matched": {
-     "kind": false,
-     "place": true
-    }
-   },
-   "timeline": [
-    {
-     "time": "2026-09-11T21:00:58.000Z",
-     "who": "@RepRitchie",
-     "tag": "member",
-     "text": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected and their families. \n\nIf you were in this area and develop flu-like symptoms, seek medical attention. Early treatment matters. \n\nRead my https://t.co/6ysTgKZYmd",
-     "engN": 15,
-     "isNew": false,
-     "flag": {
-      "kind": "other",
-      "place": "Bronx, NY"
-     },
-     "evidence": {
-      "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
-      "exact": false,
-      "start": 0,
-      "end": 139,
-      "matched": {
-       "kind": false,
-       "place": true
-      }
-     }
-    }
-   ],
-   "tweetIds": [
-    "2098517177246629925"
-   ],
-   "intel": null
   },
   {
    "id": "san-diego-ca--extreme-heat",
@@ -14857,6 +14792,71 @@
    }
   },
   {
+   "id": "bronx-ny--other",
+   "kind": "other",
+   "kinds": [
+    "other"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Bronx, NY · NY-15",
+   "placeRaw": "Bronx, NY",
+   "district": "NY-15",
+   "districtMatch": true,
+   "handle": "@RepRitchie",
+   "member": "Ritchie Torres",
+   "since": "2026-09-11T21:00:58.000Z",
+   "last": "2026-09-11T21:00:58.000Z",
+   "updates": 1,
+   "engN": 15,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Other · Bronx, NY",
+   "evidence": {
+    "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": false,
+     "place": true
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-11T21:00:58.000Z",
+     "who": "@RepRitchie",
+     "tag": "member",
+     "text": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected and their families. \n\nIf you were in this area and develop flu-like symptoms, seek medical attention. Early treatment matters. \n\nRead my https://t.co/6ysTgKZYmd",
+     "engN": 15,
+     "isNew": false,
+     "flag": {
+      "kind": "other",
+      "place": "Bronx, NY"
+     },
+     "evidence": {
+      "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": false,
+       "place": true
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2098517177246629925"
+   ],
+   "intel": null
+  },
+  {
    "id": "malibu-ca--infrastructure-failure",
    "kind": "infrastructure failure",
    "kinds": [
@@ -15007,7 +15007,7 @@
    "date": "2026-09-13",
    "engN": 2,
    "kind": "quote",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098983892271173939",
@@ -15024,7 +15024,7 @@
    "date": "2026-09-12",
    "engN": 0,
    "kind": "repost",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098981966267793672",
@@ -15043,7 +15043,7 @@
    "date": "2026-09-12",
    "engN": 2,
    "kind": "quote",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098977192096993369",
@@ -15060,7 +15060,7 @@
    "date": "2026-09-12",
    "engN": 0,
    "kind": "repost",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098976055461626346",
@@ -15074,7 +15074,7 @@
    "date": "2026-09-12",
    "engN": 4,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098973619296854124",
@@ -15090,7 +15090,7 @@
    "date": "2026-09-12",
    "engN": 8,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098972938754277456",
@@ -15111,7 +15111,7 @@
    "date": "2026-09-12",
    "engN": 28,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098968600778244103",
@@ -15133,7 +15133,7 @@
    "date": "2026-09-12",
    "engN": 54,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098958878188695589",
@@ -15150,7 +15150,7 @@
    "date": "2026-09-12",
    "engN": 0,
    "kind": "repost",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098955446153355746",
@@ -15170,7 +15170,7 @@
    "date": "2026-09-12",
    "engN": 10,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098952425302376561",
@@ -15190,7 +15190,7 @@
    "date": "2026-09-12",
    "engN": 1165,
    "kind": "quote",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098949084195242071",
@@ -15211,7 +15211,7 @@
    "date": "2026-09-12",
    "engN": 5,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098945183450542266",
@@ -15231,7 +15231,7 @@
    "date": "2026-09-12",
    "engN": 5,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098941028103344450",
@@ -15251,7 +15251,7 @@
    "date": "2026-09-12",
    "engN": 120,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098937602518798350",
@@ -15268,7 +15268,7 @@
    "date": "2026-09-12",
    "engN": 0,
    "kind": "repost",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098934764061302952",
@@ -15289,7 +15289,7 @@
    "date": "2026-09-12",
    "engN": 12,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098932142868934688",
@@ -15308,7 +15308,7 @@
    "date": "2026-09-12",
    "engN": 0,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098931414909550859",
@@ -15327,7 +15327,7 @@
    "date": "2026-09-12",
    "engN": 54,
    "kind": "original",
-   "isNew": true
+   "isNew": false
   },
   {
    "id": "2098928277423636619",

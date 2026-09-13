@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T04:52:38.719Z",
+ "generatedAt": "2026-09-13T09:54:03.875Z",
  "incidents": [
   {
    "id": "lake-county-ca--wildfire",
@@ -95,8 +95,8 @@
    "kinds": [
     "wildfire"
    ],
-   "status": "monitoring",
-   "lifecycle": "monitoring",
+   "status": "resolved",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": true,
     "by": "second post",
@@ -208,71 +208,6 @@
     "extractedAt": "2026-09-10T06:11:14.890Z",
     "posts": 4
    }
-  },
-  {
-   "id": "bronx-ny--other",
-   "kind": "other",
-   "kinds": [
-    "other"
-   ],
-   "status": "provisional",
-   "lifecycle": "monitoring",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
-   },
-   "place": "Bronx, NY · NY-15",
-   "placeRaw": "Bronx, NY",
-   "district": "NY-15",
-   "districtMatch": true,
-   "handle": "@RepRitchie",
-   "member": "Ritchie Torres",
-   "since": "2026-09-11T21:00:58.000Z",
-   "last": "2026-09-11T21:00:58.000Z",
-   "updates": 1,
-   "engN": 15,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Other · Bronx, NY",
-   "evidence": {
-    "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
-    "exact": false,
-    "start": 0,
-    "end": 139,
-    "matched": {
-     "kind": false,
-     "place": true
-    }
-   },
-   "timeline": [
-    {
-     "time": "2026-09-11T21:00:58.000Z",
-     "who": "@RepRitchie",
-     "tag": "member",
-     "text": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected and their families. \n\nIf you were in this area and develop flu-like symptoms, seek medical attention. Early treatment matters. \n\nRead my https://t.co/6ysTgKZYmd",
-     "engN": 15,
-     "isNew": false,
-     "flag": {
-      "kind": "other",
-      "place": "Bronx, NY"
-     },
-     "evidence": {
-      "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
-      "exact": false,
-      "start": 0,
-      "end": 139,
-      "matched": {
-       "kind": false,
-       "place": true
-      }
-     }
-    }
-   ],
-   "tweetIds": [
-    "2098517177246629925"
-   ],
-   "intel": null
   },
   {
    "id": "san-diego-ca--extreme-heat",
@@ -641,6 +576,71 @@
     "extractedAt": "2026-09-10T06:11:39.728Z",
     "posts": 1
    }
+  },
+  {
+   "id": "bronx-ny--other",
+   "kind": "other",
+   "kinds": [
+    "other"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+   },
+   "place": "Bronx, NY · NY-15",
+   "placeRaw": "Bronx, NY",
+   "district": "NY-15",
+   "districtMatch": true,
+   "handle": "@RepRitchie",
+   "member": "Ritchie Torres",
+   "since": "2026-09-11T21:00:58.000Z",
+   "last": "2026-09-11T21:00:58.000Z",
+   "updates": 1,
+   "engN": 15,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Other · Bronx, NY",
+   "evidence": {
+    "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": false,
+     "place": true
+    }
+   },
+   "timeline": [
+    {
+     "time": "2026-09-11T21:00:58.000Z",
+     "who": "@RepRitchie",
+     "tag": "member",
+     "text": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected and their families. \n\nIf you were in this area and develop flu-like symptoms, seek medical attention. Early treatment matters. \n\nRead my https://t.co/6ysTgKZYmd",
+     "engN": 15,
+     "isNew": false,
+     "flag": {
+      "kind": "other",
+      "place": "Bronx, NY"
+     },
+     "evidence": {
+      "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": false,
+       "place": true
+      }
+     }
+    }
+   ],
+   "tweetIds": [
+    "2098517177246629925"
+   ],
+   "intel": null
   },
   {
    "id": "malibu-ca--infrastructure-failure",
