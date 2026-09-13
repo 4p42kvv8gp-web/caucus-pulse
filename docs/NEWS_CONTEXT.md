@@ -226,6 +226,11 @@ united-Ireland reposts → The Hill's lead and NPR's report on the Irish
 visit. The three posts that dropped out were the false positives named
 under *Retrieval*.
 
+Runs 3 and 4 (17:07Z and 17:16Z, push-triggered) behaved the same: 3 and
+3 lines appended, version 3 → 4, under a minute each. The push trigger is
+now removed; the hourly schedule starts when the file reaches the default
+branch (GitHub runs `schedule` only there).
+
 What these runs did not prove: that the classifier uses the evidence (the
 hooks are a patch, not applied), and body retrieval from publishers that
 refuse our User-Agent.
