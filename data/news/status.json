@@ -1,18 +1,18 @@
 {
- "contextVersion": 2,
- "lastRefreshAt": "2026-09-13T17:05:40.504Z",
+ "contextVersion": 3,
+ "lastRefreshAt": "2026-09-13T17:07:40.172Z",
  "sources": {
   "npr-politics": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 8,
+   "bodies": 0,
    "error": null
   },
   "politico-politics": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -21,7 +21,7 @@
    "error": null
   },
   "the-hill": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -30,7 +30,7 @@
    "error": null
   },
   "roll-call": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -39,16 +39,16 @@
    "error": null
   },
   "cnn-politics": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 18,
-   "bodies": 8,
+   "bodies": 6,
    "error": null
   },
   "nyt-politics": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -57,7 +57,7 @@
    "error": null
   },
   "wapo-politics": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -65,32 +65,14 @@
    "bodies": 0,
    "error": null
   },
-  "whitehouse": {
-   "lastFetchAt": "2026-09-13T16:45:39.814Z",
-   "ok": false,
-   "httpStatus": 404,
-   "format": null,
-   "feedItems": 0,
-   "bodies": 0,
-   "error": "feed HTTP 404"
-  },
   "govinfo-crec": {
-   "lastFetchAt": "2026-09-13T17:05:40.504Z",
+   "lastFetchAt": "2026-09-13T17:07:40.172Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 100,
    "bodies": 0,
    "error": null
-  },
-  "house-clerk-floor": {
-   "lastFetchAt": "2026-09-13T16:45:39.814Z",
-   "ok": false,
-   "httpStatus": 200,
-   "format": null,
-   "feedItems": 0,
-   "bodies": 0,
-   "error": "feed parsed as rss with no items"
   }
  }
 }
