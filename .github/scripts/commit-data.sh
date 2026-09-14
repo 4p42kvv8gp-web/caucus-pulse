@@ -1,75 +1,41 @@
 #!/usr/bin/env bash
-# Commit generated data and push, surviving concurrent writers.
-#
-#   .github/scripts/commit-data.sh "<commit message>" <path>...
-#
-# main moves under a job whenever a session or another job pushes first, and a
-# plain `git pull --rebase` then fails on the generated files. Three rules make
-# the replay safe, and one rule keeps it honest:
-#
-#   - data/state.json merges field by field (src/merge-state.js: usage adds up,
-#     the cursor takes the larger id) — .gitattributes names the driver, this
-#     script registers it. data/anthropic-usage.json is all counters and merges
-#     the same way (src/merge-anthropic-usage.js).
-#   - data/archive/*.jsonl are append-only, so both sides' lines are kept
-#     (merge=union in .gitattributes; loadDay dedupes by id on read).
-#   - Files this job rebuilt from the archive are safe to overwrite with the
-#     job's version, because the job's version is the newer derivation of the
-#     same source. REGENERABLE below is exactly that set.
-#   - Everything else — config/, src/, .github/, tests, docs — is hand-written.
-#     A conflict there means a human or another session changed something this
-#     job would clobber, so the script ABORTS and says so rather than picking
-#     a winner. An earlier version of this script used a blanket
-#     `rebase -X theirs`, which silently discarded concurrent edits to
-#     config/taxonomy.yaml — the one hand-written file a nightly run also
-#     writes (story auto-promotion), and the one most expensive to lose.
+# Scheduled writers share data-writes. Concurrent external edits can still
+# race a push: merge archives/ledgers, but never overwrite paid interpretations,
+# queue manifests, configuration, or source code to make the push succeed.
 set -euo pipefail
 msg="$1"; shift
 
-# Paths whose content is a pure function of the archive, so the replayed
-# commit's version always wins. Anchored prefixes, matched against the paths
-# git reports as conflicted.
-REGENERABLE='^(data/(rollups|topics|syntax|metrics|embeddings|topics-live)/|data/(phrases|incidents|stories|why|quoted|context)\.json$|reports/|site/data/)'
-
 git config user.name "caucus-pulse"
 git config user.email "actions@users.noreply.github.com"
-git config merge.state.name "caucus-pulse state.json field merge"
+git config merge.state.name "coherent capture state merge"
 git config merge.state.driver "node src/merge-state.js %O %A %B"
-git config merge.ledger.name "caucus-pulse anthropic-usage.json counter merge"
+git config merge.ledger.name "anthropic usage merge"
 git config merge.ledger.driver "node src/merge-anthropic-usage.js %O %A %B"
-
-git add "$@"
+git add -- "$@"
+node .github/scripts/validate-publication.mjs
 if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+# Retain validated work before a push/rebase; failure-only workflow artifacts
+# make it recoverable after an ephemeral runner exits.
+recovery="${RUNNER_TEMP:-${TMPDIR:-/tmp}}/caucus-pulse-recovery"
+mkdir -p "$recovery"
+base=$(git rev-parse HEAD)
 git commit -q -m "$msg"
-
+git bundle create "$recovery/validated-data.bundle" "$base..HEAD"
 for attempt in 1 2 3 4 5; do
   if git push; then exit 0; fi
-  echo "push rejected (attempt $attempt) — rebasing onto origin/main"
-  git fetch origin main
-
-  if git rebase origin/main; then continue; fi
-
-  # Conflicted. Auto-resolve only the files this job regenerates; anything
-  # else is someone's real work and must not be overwritten silently.
-  conflicts=$(git diff --name-only --diff-filter=U)
-  unsafe=$(echo "$conflicts" | grep -Ev "$REGENERABLE" || true)
-  if [ -n "$unsafe" ]; then
-    echo "rebase hit conflicts in files this job does not regenerate:"
-    echo "$unsafe" | sed 's/^/    /'
-    echo "refusing to overwrite them — resolve by hand."
+  echo "push rejected (attempt $attempt) — trying a lossless rebase"
+  branch=$(git symbolic-ref --short HEAD)
+  git fetch origin "$branch"
+  if ! git rebase "origin/$branch"; then
+    echo "::error::Concurrent edits could not merge safely. No interpretation/checkpoint was overwritten; validated work is in the recovery artifact."
     git rebase --abort
     exit 1
   fi
-
-  echo "resolving regenerated files in favour of this run:"
-  echo "$conflicts" | sed 's/^/    /'
-  # During a rebase, --theirs is the commit being replayed (this job's).
-  echo "$conflicts" | while read -r f; do [ -n "$f" ] && git checkout --theirs -- "$f" && git add -- "$f"; done
-  if ! GIT_EDITOR=true git rebase --continue; then
-    echo "rebase could not be completed:"
-    git status --short | head -20
-    git rebase --abort
-    exit 1
-  fi
+  git diff --name-only -z "origin/$branch..HEAD" | node --input-type=module -e '
+    import fs from "node:fs";
+    import { validatePublication } from "./.github/scripts/validate-publication.mjs";
+    validatePublication({ files: fs.readFileSync(0, "utf8").split("\0").filter(Boolean) });
+  '
 done
-git push
+echo "::error::Publication still rejected after five attempts; recover the validated data bundle."
+exit 1

@@ -13,11 +13,46 @@
 //      applied to config/taxonomy.yaml.
 import { readJSON, writeJSON, settings, daysAgoEt, addDays, p } from './util.js';
 import fs from 'node:fs';
-import { loadState, dailyBudget, estCost, topicsPath, syntaxPath, loadDay } from './store.js';
+import { loadState, dailyBudget, estCost, topicsPath, syntaxPath, loadDay, archiveDates } from './store.js';
 import { rollupsPath } from './rollup.js';
 import { loadTaxonomy, ymd } from './taxonomy.js';
 import { storySettings } from './stories.js';
 import { learnedSection, proposalsPath } from './taxonomy-learn.js';
+import { loadAuthors, splitByRoster } from './authors.js';
+import { tokenize } from './syntax.js';
+
+export const postSourceUrl = (id) => typeof id === 'string' && /^\d{1,30}$/.test(id) ? `https://x.com/i/web/status/${id}` : null;
+export const markdownText = (value) => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/[\\`*_{}\[\]()!]/g, '\\$&').replace(/\s+/g, ' ');
+const handleOf = (post, authors) => String(authors[post?.authorId]?.handle || post?.handle || '').replace(/^@/, '');
+export function reportHandle(handle, source = null) {
+  const h = String(handle || '').replace(/^@/, '');
+  const url = postSourceUrl(source?.id) || (/^[A-Za-z0-9_]{1,15}$/.test(h) ? `https://x.com/${h}` : null);
+  return url ? `[@${h}](${url})` : markdownText(h ? `@${h}` : 'unresolved account');
+}
+const dateOf = (post) => post.date || (post.createdAt ? new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year:'numeric', month:'2-digit', day:'2-digit' }).format(new Date(post.createdAt)) : null);
+const containsPhrase = (post, phrase) => ` ${tokenize(post.text).join(' ')} `.includes(` ${tokenize(phrase).join(' ')} `);
+
+// Only records actually present in the supplied archive can become evidence.
+// A candidate/model-generated ID by itself is never enough to create a link.
+export function reportEvidence(ids, { sourceTweets = [], authorsById = {}, limit = 3 } = {}) {
+  const requested = new Set(ids || []);
+  const seen = new Set();
+  const posts = sourceTweets.filter((t) => requested.has(t.id) && postSourceUrl(t.id) && !seen.has(t.id) && seen.add(t.id))
+    .sort((a,b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+  return posts.slice(0, limit).map((post) => {
+    const text = String(post.text || '');
+    const snippet = text.length > 180 ? text.slice(0,179).replace(/\s+\S*$/, '') + '…' : text;
+    const handle = handleOf(post, authorsById);
+    return `${handle ? reportHandle(handle, post) + ': ' : ''}[“${markdownText(snippet)}”](${postSourceUrl(post.id)})`;
+  });
+}
+
+function linkedHandlesInProse(text) {
+  // This is model-authored explanation, not an identified post quotation.
+  // Link standalone handles to profiles and leave existing links/code intact.
+  return text.replace(/(\[[^\]]*\]\([^)]*\)|`[^`]*`)|(^|[\s(])@([A-Za-z0-9_]{1,15})(?![A-Za-z0-9_])/g,
+    (whole, keep, before, handle) => keep || `${before}${reportHandle(handle)}`);
+}
 
 function fmt(n) { return n.toLocaleString('en-US'); }
 
@@ -64,19 +99,29 @@ export function provisionalStories(tax) {
 
 // `stories` (data/stories.json) and `tax` (config/taxonomy.yaml) are
 // injectable so tests render from fixtures; main() passes the real files.
-export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, stories = readJSON(p('data', 'stories.json'), null), tax = loadTaxonomy(), learned = readJSON(proposalsPath, null) }) {
+export function renderReport(date, { rollups, syntax, topics, tweets, usage, budget, stories = readJSON(p('data', 'stories.json'), null), tax = loadTaxonomy(), learned = readJSON(proposalsPath, null), sourceTweets = tweets, authorsById = {} }) {
   const rows = rollups?.rows || [];
   const labels = rollups?.labels || {};
   const label = (r) => labels[r.sub ? `${r.macro}/${r.sub}` : r.macro] || r.macro;
   const lines = [`# Caucus Pulse — ${date}`, ''];
+  const evidence = (ids) => reportEvidence(ids, { sourceTweets, authorsById });
+  const addEvidence = (ids, indent = '') => {
+    const samples = evidence(ids);
+    if (samples.length) lines.push(`${indent}Source posts (up to 3 archived examples): ${samples.join(' · ')}`);
+  };
+  const topicIds = (macro, sub = null, caucus = 'all') => tweets.filter((t) =>
+    (caucus === 'all' || (authorsById[t.authorId]?.caucuses || []).includes(caucus)) &&
+    (topics?.assignments?.[t.id] || []).some(([m,s]) => m === macro && (!sub || s === sub))).map((t) => t.id);
 
   lines.push('## Top topics of the day', '');
   const top = topTopics(rows, date, 'all');
   if (!top.length) lines.push('_No classified tweets for this day yet._');
   for (const [i, r] of top.entries()) {
     lines.push(`${i + 1}. **${label(r)}** — ${fmt(r.posts)} posts + ${fmt(r.retweets)} RTs from ${fmt(r.members)} members, ${fmt(r.engagement)} engagement`);
+    addEvidence(topicIds(r.macro), '   ');
     for (const s of subsUnder(rows, date, 'all', r.macro)) {
       lines.push(`   - ${label(s)}: ${fmt(s.posts)} posts, ${fmt(s.members)} members`);
+      addEvidence(topicIds(s.macro, s.sub), '     ');
     }
   }
 
@@ -87,6 +132,7 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
     if (!t.length) lines.push('_No activity attributed (check caucus tags in config/accounts.csv)._');
     for (const [i, r] of t.entries()) {
       lines.push(`${i + 1}. **${label(r)}** — ${fmt(r.posts)} posts + ${fmt(r.retweets)} RTs, ${fmt(r.members)} members, ${fmt(r.engagement)} engagement`);
+      addEvidence(topicIds(r.macro, null, tag), '   ');
     }
     lines.push('');
   }
@@ -95,8 +141,15 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
   const phrases = (syntax?.phrases || []).slice(0, 5);
   if (!phrases.length) lines.push('_No phrases crossed the member-spread threshold._');
   for (const ph of phrases) {
-    const badge = ph.isNew ? ' **[new today]**' : ` (first seen ${ph.firstSeen} by @${ph.firstAuthor})`;
-    lines.push(`- "${ph.phrase}" — ${ph.members} members, ${ph.tweets} tweets${badge}`);
+    const matches = sourceTweets.filter((t) => t.type !== 'retweet' && postSourceUrl(t.id) && containsPhrase(t, ph.phrase));
+    const origin = matches.filter((t) => dateOf(t) === ph.firstSeen && handleOf(t, authorsById).toLowerCase() === String(ph.firstAuthor || '').replace(/^@/, '').toLowerCase())
+      .sort((a,b) => String(a.createdAt).localeCompare(String(b.createdAt)))[0];
+    const todaySource = matches.find((t) => dateOf(t) === date);
+    const phrase = todaySource ? `["${markdownText(ph.phrase)}"](${postSourceUrl(todaySource.id)})` : `"${markdownText(ph.phrase)}"`;
+    const badge = ph.isNew ? ' **[new today]**' : ` (first seen ${ph.firstSeen} by ${reportHandle(ph.firstAuthor, origin)})`;
+    lines.push(`- ${phrase} — ${ph.members} accounts, ${ph.tweets} tweets${badge}`);
+    addEvidence(matches.filter((t) => dateOf(t) === date).map((t) => t.id), '  ');
+
   }
 
   lines.push('', '## Volume & spend', '');
@@ -119,6 +172,7 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
       for (const c of list) {
         const where = c.placement.macro ? `${c.placement.macro}/${c.placement.key}` : `(no macro fits) ${c.placement.key}`;
         lines.push(`- **${c.placement.label}** — ${c.posts} posts, ${c.members} members over ${c.days} day(s) (${c.firstSeen} → ${c.lastSeen}). ${hint(c, where)}`);
+        addEvidence(c.ids, '  ');
       }
     };
     show('story', 'Developing stories (not yet in the taxonomy)', (c, where) => (c.placement.macro
@@ -133,6 +187,7 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
       lines.push('', '## Emerging clusters (taxonomy decisions needed)', '');
       for (const e of emerging.sort((a, b) => b.ids.length - a.ids.length).slice(0, 8)) {
         lines.push(`- **${e.label}** — ${e.ids.length} tweet(s). Approve by adding a subtopic to config/taxonomy.yaml.`);
+        addEvidence(e.ids, '  ');
       }
     }
   }
@@ -173,7 +228,13 @@ export function renderReport(date, { rollups, syntax, topics, tweets, usage, bud
   }
 
   // ── The taxonomy learns from the data (src/taxonomy-learn.js).
-  lines.push(...learnedSection(learned, date));
+  lines.push(...learnedSection(learned, date).map(linkedHandlesInProse));
+  if (learned?.night === date || learned?.night === addDays(date, 1)) {
+    for (const proposal of learned?.proposals || []) {
+      const samples = evidence(proposal.evidence?.sample_ids);
+      if (samples.length) lines.push(`- ${markdownText(proposal.label)} — archived evidence: ${samples.join(' · ')}`);
+    }
+  }
   return lines.join('\n') + '\n';
 }
 
@@ -181,11 +242,14 @@ async function main() {
   const dateArg = process.argv.find((a) => a.startsWith('--date='));
   const date = dateArg ? dateArg.split('=')[1] : daysAgoEt(1);
   const state = loadState();
+  const authorsById = loadAuthors().byId;
+  const sourceTweets = archiveDates().filter((d) => d <= date).flatMap((d) => loadDay(d).map((t) => ({ ...t, date:d })));
   const md = renderReport(date, {
+    authorsById, sourceTweets,
     rollups: readJSON(rollupsPath, null),
     syntax: readJSON(syntaxPath(date), null),
     topics: readJSON(topicsPath(date), null),
-    tweets: loadDay(date),
+    tweets: splitByRoster(loadDay(date), authorsById).house,
     usage: state.usage[date],
     budget: dailyBudget(),
     stories: readJSON(p('data', 'stories.json'), null),

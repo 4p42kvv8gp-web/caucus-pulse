@@ -8,25 +8,28 @@
 // Engagement honesty: numbers use the 24h-refresh metrics where they exist
 // and capture-time metrics otherwise, so today's engagement always lags — by
 // design (see the brief), and the dashboard captions say so.
+import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import { p, settings, readJSON, writeJSON, daysAgoEt } from './util.js';
 import { loadDay, topicsPath, metricsPath, loadState } from './store.js';
-import { liveTopicsPath } from './classify-live.js';
+import { liveTopicsPath, combineInterpretations } from './classify-live.js';
 import { loadAuthors, isHouse, splitByRoster } from './authors.js';
 import { loadTaxonomy, labelOf } from './taxonomy.js';
 import { momentum } from './momentum.js';
 import { minePhrases, tokenize, ngrams } from './syntax.js';
 import { incidentsPath } from './incidents.js';
 import { loadSemanticOrNull, configuredMinSim } from './semantic.js';
+import { loadNews, retrieveEvidence, evidenceLine } from './news-context.js';
 
 const KEYS = [...new Set(Object.values(settings.caucus_keys))]; // display order: CPC, NewDem, CBC
 const DAY = 86_400_000;
 
 export const rollupsJsonPath = p('site', 'data', 'rollups.json');
 
-// Size guard for rollups.json. The story drill-down ships every classified
+// Size guard for rollups.json. The story drill-down ships every captured
 // post in the window (`feedAll`, full text) so a row can open to its whole
 // feed; a busy week could grow the file past what a phone loads comfortably.
-// Above this many bytes, feedAll is cut to the newest N and the file says so.
+// Above this many bytes, the remaining posts are delivered as complete shards.
 export const ROLLUPS_MAX_BYTES = 2_500_000;
 export const QUOTED_TEXT_MAX = 200;
 
@@ -44,6 +47,71 @@ export function fitFeedAll(list, sizeOf, maxBytes = ROLLUPS_MAX_BYTES) {
   return { feedAll: list.slice(0, lo), truncated: true };
 }
 
+export function compactQuote(q) {
+  if (!q || (!q.text && !q.handle)) return null;
+  const text = String(q.text || '');
+  return { id: /^\d+$/.test(String(q.id || q.sourceId || '')) ? String(q.id || q.sourceId) : null,
+    handle: q.handle ? `@${String(q.handle).replace(/^@/, '')}` : null,
+    text: text.length > QUOTED_TEXT_MAX ? text.slice(0, QUOTED_TEXT_MAX - 1).replace(/\s+\S*$/, '') + '…' : text };
+}
+
+export function publicProvenance(provenance) {
+  if (!provenance) return null;
+  const supplied = (provenance.evidenceSupplied || []).filter((e) => /^https?:\/\//.test(e.url || ''))
+    .map(({ id, publisher, date, kind, url, text, publishedAt, fetchedAt, publishedAfterPost, acquiredAfterPost, truncated }) => ({ id, publisher, date, kind, url, text: String(text || '').slice(0, 600), publishedAt, fetchedAt, publishedAfterPost, acquiredAfterPost, truncated: Boolean(truncated || String(text || '').length > 600) }));
+  const valid = new Set(supplied.map((e) => e.id));
+  return { contextVersion: provenance.contextVersion || 0, evidenceSupplied: supplied,
+    evidenceUsed: (provenance.evidenceUsed || []).filter((id) => valid.has(id)) };
+}
+
+// Older generated incidents omitted source IDs. Restore them only when an
+// archived record agrees on both exact text and timestamp; never infer from
+// the order of a model's summary or its source label.
+export function hydrateIncidentSources(incident, posts) {
+  const candidates = posts.filter((post) => (incident.tweetIds || []).includes(post.id));
+  const timeline = (incident.timeline || []).map((entry) => {
+    const matches = candidates.filter((post) => post.text === entry.text && post.createdAt === entry.time);
+    const source = matches.length === 1 ? matches[0] : null;
+    return source ? { ...entry, id: source.id, sourceId: source.id, evidence: entry.evidence ? { ...entry.evidence, sourceId: source.id } : null } : entry;
+  });
+  const legacy = (incident.timeline || []).some((entry) => !entry.sourceId);
+  return { ...incident, timeline,
+    ...(legacy ? { status: 'provisional', lifecycle: incident.lifecycle || incident.status, corroboration: { note: 'Member source reports; no independent verification recorded.' } } : {}),
+    evidence: incident.evidence && timeline[0]?.sourceId ? { ...incident.evidence, sourceId: timeline[0].sourceId } : incident.evidence };
+}
+
+// Live discoveries are peers of placed story candidates, never a fallback.
+// Identity joins only exact normalized labels or an explicit stable key in
+// the same macro. Shared broad categories or overlapping post IDs alone do
+// not establish that two events are the same.
+export function combineEmergingSources({ placed = [], raw = [], posts = [], authorsById = {}, now = Date.now() } = {}) {
+  const byId = new Map(posts.map((post) => [post.id, post]));
+  const norm = (value) => String(value || '').normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const groups = [];
+  for (const [source, entries] of [['placed', placed], ['live-or-nightly', raw]]) {
+    for (const entry of entries) {
+      if (!entry || !norm(entry.label)) continue;
+      const ids = [...new Set(entry.ids || [])].filter((id) => typeof id === 'string' && /^\d+$/.test(id) && byId.has(id));
+      if (!ids.length) continue;
+      const label = norm(entry.label);
+      const stableKey = entry.key && entry.macro ? `${entry.macro}/${entry.key}` : null;
+      const match = groups.find((group) => group.normalizedLabel === label || (stableKey && group.stableKey === stableKey));
+      if (match) { match.ids = [...new Set([...match.ids, ...ids])]; match.sources = [...new Set([...match.sources, source])]; }
+      else groups.push({ ...entry, ids, normalizedLabel:label, stableKey, sources:[source], provisional:source !== 'placed' });
+    }
+  }
+  return groups.map(({normalizedLabel,stableKey,...group}) => {
+    const observed = group.ids.map((id) => byId.get(id));
+    const members = new Set(observed.map((post) => rosterPersonKey(authorsById[post.authorId])).filter(Boolean));
+    const activePosts = observed.filter((post) => now - Date.parse(post.createdAt) >= 0 && now - Date.parse(post.createdAt) <= DAY);
+    const activeMembers = new Set(activePosts.map((post) => rosterPersonKey(authorsById[post.authorId])).filter(Boolean));
+    return { ...group, memberCount:members.size, thresholdMet:members.size >= 3, active:activePosts.length > 0,
+      activeMembers:activeMembers.size, lastSeen:observed.map((post) => post.createdAt).sort().at(-1) };
+  }).sort((a,b) => Number(b.active && b.thresholdMet) - Number(a.active && a.thresholdMet)
+    || Number(b.activeMembers >= 3) - Number(a.activeMembers >= 3)
+    || String(b.lastSeen).localeCompare(String(a.lastSeen)) || b.memberCount - a.memberCount || a.label.localeCompare(b.label));
+}
+
 function caucusKeysOf(author) {
   const keys = new Set();
   for (const tag of author?.caucuses || []) {
@@ -57,11 +125,8 @@ function caucusKeysOf(author) {
 export function dayAssignments(date) {
   const nightly = readJSON(topicsPath(date), null);
   const live = readJSON(liveTopicsPath(date), null);
-  return {
-    assignments: { ...(live?.assignments || {}), ...(nightly?.assignments || {}) },
-    emerging: nightly?.emerging || [],
-    hasNightly: Boolean(nightly)
-  };
+  const combined = combineInterpretations(live, nightly);
+  return { ...combined, hasNightly: Boolean(nightly) };
 }
 
 function engagementOf(m) {
@@ -109,7 +174,8 @@ export function clusterFamilies(phraseList) {
   return [...groups.values()];
 }
 
-// Which outside-context entry (data/context.json, see docs/OUTSIDE_CONTEXT.md)
+// Legacy key matching helper retained for compatibility; no private context is loaded.
+// Which keyed entry
 // belongs to an emerging cluster? Entries are keyed by the story candidate's
 // key, but the dashboard cluster only carries the placement key (`suggest`)
 // and the display label — and a re-run of stories.js can re-key a placement.
@@ -205,12 +271,22 @@ export function classificationCoverage(allPosts, days, now = Date.now()) {
   return { through, capturedIn24h, classifiedIn24h, momentumPaused: capturedIn24h > 0 && classifiedIn24h === 0 };
 }
 
+export function rosterPersonKey(author) {
+  if (author?.personId || author?.memberId) return String(author.personId || author.memberId);
+  return author?.member ? `member:${String(author.member).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim()}` : null;
+}
+
 function zeroScope() {
-  return { n: 0, eng: 0, members: new Set() };
+  return { n: 0, eng: 0, members: new Set(), accounts: new Set() };
+}
+function addScope(s, post, author) {
+  s.n++; s.eng += post.engN; s.accounts.add(post.authorId);
+  const person = rosterPersonKey(author);
+  if (person) s.members.add(person);
 }
 
 function finishScope(s) {
-  return { n: s.n, eng: s.eng, m: s.members.size };
+  return { n: s.n, eng: s.eng, m: s.members.size, a: s.accounts.size };
 }
 
 export function buildSiteData() {
@@ -229,7 +305,8 @@ export function buildSiteData() {
   const excluded = { posts: 0, t: 0 };
   for (const date of days) {
     const metrics = readJSON(metricsPath(date), {});
-    const { assignments } = dayAssignments(date);
+    const { assignments, provenance, needsContext, pendingIds = [], unclassified = [], corrected = {} } = dayAssignments(date);
+    const pending = new Set([...pendingIds, ...unclassified]);
     const posts = loadDay(date).map((t) => {
       const m = metrics[t.id];
       const cap = t.metricsAtCapture || {};
@@ -239,6 +316,10 @@ export function buildSiteData() {
           ? engagementOf(m)
           : (cap.likes || 0) + (cap.retweets || 0) + (cap.replies || 0) + (cap.quotes || 0),
         topics: assignments[t.id] || [],
+        classificationStatus: Object.hasOwn(assignments, t.id) && (!pending.has(t.id) || corrected[t.id]) ? 'complete' : 'pending',
+        provenance: provenance[t.id] || null,
+        needsContext: Boolean(needsContext[t.id]),
+        metricsObservedAt: m?.observedAt || m?.fetchedAt || m?.refreshedAt || t.capturedAt || null,
         date
       };
     });
@@ -288,14 +369,14 @@ export function buildSiteData() {
           seenMacro.add(macro);
           const acc = ensure(topicAcc, macro);
           acc.trend[di]++;
-          acc.mByDay[di].add(post.authorId);
+          if (rosterPersonKey(authorsById[post.authorId])) acc.mByDay[di].add(rosterPersonKey(authorsById[post.authorId]));
           acc.postIds.w.push(post.id);
           if (di === 6) acc.postIds.t.push(post.id);
           for (const s of scopes) {
             const bucket = di === 6 ? acc.t[s] : null;
-            if (bucket) { bucket.n++; bucket.eng += post.engN; bucket.members.add(post.authorId); }
-            if (recent) { acc.r24[s].n++; acc.r24[s].eng += post.engN; acc.r24[s].members.add(post.authorId); }
-            acc.w[s].n++; acc.w[s].eng += post.engN; acc.w[s].members.add(post.authorId);
+            if (bucket) addScope(bucket, post, authorsById[post.authorId]);
+            if (recent) addScope(acc.r24[s], post, authorsById[post.authorId]);
+            addScope(acc.w[s], post, authorsById[post.authorId]);
           }
         }
         if (sub && !seenSub.has(`${macro}/${sub}`)) {
@@ -306,8 +387,8 @@ export function buildSiteData() {
           if (di === 6) acc.postIds.t.push(post.id);
           if (post.type !== 'retweet') acc.leadEng.set(post.authorId, (acc.leadEng.get(post.authorId) || 0) + post.engN);
           for (const s of scopes) {
-            if (di === 6) { acc.t[s].n++; acc.t[s].eng += post.engN; acc.t[s].members.add(post.authorId); }
-            acc.w[s].n++; acc.w[s].eng += post.engN; acc.w[s].members.add(post.authorId);
+            if (di === 6) addScope(acc.t[s], post, authorsById[post.authorId]);
+            addScope(acc.w[s], post, authorsById[post.authorId]);
           }
         }
       }
@@ -346,6 +427,7 @@ export function buildSiteData() {
           t: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.t[k])])),
           w: Object.fromEntries(['All', ...KEYS].map((k) => [k, finishScope(sa.w[k])])),
           lead: lead ? handleOf(lead[0]) : null,
+          leadPostId: lead ? allPosts.filter((x) => x.authorId === lead[0] && sa.postIds.w.includes(x.id)).sort((a,b) => b.engN - a.engN)[0]?.id : null,
           postIds: rowPostIds(sa)
         };
       })
@@ -390,7 +472,14 @@ export function buildSiteData() {
       stats[scope][wk] = {
         posts: n,
         mix: n ? [Math.round(100 * orig / n), Math.round(100 * replies / n), Math.max(0, 100 - Math.round(100 * orig / n) - Math.round(100 * replies / n))] : [0, 0, 0],
-        members: byMember.size,
+        accounts: byMember.size,
+        members: new Set(posts.map((x) => rosterPersonKey(authorsById[x.authorId])).filter(Boolean)).size,
+        unidentifiedAccounts: new Set(posts.filter((x) => !rosterPersonKey(authorsById[x.authorId])).map((x) => x.authorId)).size,
+        classified: posts.filter((x) => x.classificationStatus === 'complete').length,
+        tagged: posts.filter((x) => x.topics.length).length,
+        pending: posts.filter((x) => x.classificationStatus === 'pending').length,
+        corePosts: posts.filter((x) => x.topics.some(([macro]) => Object.values(settings.core_messages).some((keys) => keys.includes(macro)))).length,
+        coreCounts: Object.fromEntries(Object.entries(settings.core_messages).map(([name, keys]) => [name, posts.filter((x) => x.topics.some(([macro]) => keys.includes(macro))).length])),
         eng,
         perPost: n ? Math.round(eng / n) : 0,
         top10Share: eng ? Math.round(100 * top10 / eng) : 0,
@@ -417,7 +506,7 @@ export function buildSiteData() {
   // (share of uses in the exact canonical wording).
   const ledger = readJSON(p('data', 'phrases.json'), {});
   const nonRt = allPosts.filter((x) => x.type !== 'retweet');
-  const mined = minePhrases(nonRt, {
+  const mined = minePhrases(nonRt.filter((x) => rosterPersonKey(authorsById[x.authorId])).map((x) => ({ ...x, authorId: rosterPersonKey(authorsById[x.authorId]) })), {
     minMembers: settings.syntax.min_members,
     minNgram: settings.syntax.min_ngram,
     maxNgram: settings.syntax.max_ngram
@@ -453,8 +542,13 @@ export function buildSiteData() {
         if (!memberFirst[a] || memberFirst[a] > d) memberFirst[a] = d;
       }
     }
+    const personFirst = new Map();
+    for (const [account, date] of Object.entries(memberFirst)) {
+      const person = rosterPersonKey(authorsById[account]);
+      if (person && (!personFirst.has(person) || date < personFirst.get(person))) personFirst.set(person, date);
+    }
     const adopt = days.map(() => 0);
-    for (const d of Object.values(memberFirst)) {
+    for (const d of personFirst.values()) {
       const idx = dayIndex.has(d) ? dayIndex.get(d) : (d < days[0] ? 0 : 6);
       adopt[idx]++;
     }
@@ -470,16 +564,19 @@ export function buildSiteData() {
       pillar: topMacro ? pillarOf(topMacro) : null,
       topic: topSub ? (labels[topSub] || labelOf(topSub)) : topMacro ? (tax[topMacro]?.label || labelOf(topMacro)) : null,
       first: firstAuthorId ? handleOf(firstAuthorId) : null,
+      firstPostId: hits.map((h) => h.x).filter((x) => x.authorId === firstAuthorId).sort((a,b) => a.createdAt.localeCompare(b.createdAt))[0]?.id || null,
+      postIds: hits.map((h) => h.x.id),
       firstSeen,
       leadership: Boolean((authorsById[firstAuthorId]?.caucuses || []).includes(settings.leadership_tag)),
-      spread: users.size,
-      cm: KEYS.map((k) => [...users.keys()].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length),
+      spread: new Set([...users.keys()].map((id) => rosterPersonKey(authorsById[id])).filter(Boolean)).size,
+      accounts: users.size,
+      cm: KEYS.map((k) => new Set([...users.keys()].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).map((a) => rosterPersonKey(authorsById[a])).filter(Boolean)).size),
       adopt,
       exact: hits.length ? Math.round(100 * hits.filter((h) => h.matched.includes(canonical)).length / hits.length) / 100 : 1,
       total: hits.length,
       eng: hits.reduce((a, h) => a + h.x.engN, 0)
     };
-  }).filter(Boolean).sort((a, b) => b.spread - a.spread).slice(0, 12);
+  }).filter((x) => x && x.spread >= settings.syntax.min_members).sort((a, b) => b.spread - a.spread).slice(0, 12);
 
   // ── emerging: cross-day story candidates (data/stories.json, built by
   // src/stories.js) — falls back to the latest nightly's raw clusters when
@@ -490,18 +587,16 @@ export function buildSiteData() {
   const storyFile = readJSON(p('data', 'stories.json'), null);
   const storyCands = (storyFile?.candidates || [])
     .filter((c) => c.placement && c.placement.kind !== 'noise' && !(storyFile.promoted || []).includes(`${c.placement.macro}/${c.placement.key}`))
-    .slice(0, 12)
     .map((c) => ({ label: c.placement.label, ids: c.ids, kind: c.placement.kind, macro: c.placement.macro, key: c.placement.key, days: c.days }));
-  const raw = storyCands.length ? [] : (() => {
-    for (let d = 0; d < 3; d++) {
-      const file = readJSON(topicsPath(daysAgoEt(d)), null);
-      if (file?.emerging?.length) return file.emerging;
-    }
-    return [];
-  })();
+  const raw = days.flatMap((date) => dayAssignments(date).emerging || []);
+  const emergingSources = combineEmergingSources({ placed:storyCands, raw, posts:allPosts, authorsById });
+  // Keep every currently active cluster meeting the three-person threshold;
+  // use remaining slots for other observed candidates rather than suppressing
+  // a live discovery simply because placed stories already exist.
+  const visibleEmerging = emergingSources.filter((entry, index) => (entry.active && entry.thresholdMet) || index < 12);
   {
     const byId = new Map(allPosts.map((x) => [x.id, x]));
-    clusters = (storyCands.length ? storyCands : raw).map((e) => {
+    clusters = visibleEmerging.map((e) => {
       const posts = e.ids.map((id) => byId.get(id)).filter(Boolean);
       if (!posts.length) return null;
       posts.sort((a, b) => a.createdAt < b.createdAt ? -1 : 1);
@@ -521,10 +616,20 @@ export function buildSiteData() {
       const best = posts.slice().sort((a, b) => b.engN - a.engN)[0];
       const cluster = {
         label: e.label,
+        lastSeen: e.lastSeen,
+        thresholdMet: e.thresholdMet,
+        activeMembers: e.activeMembers,
+        provisional: e.provisional,
+        discoverySources: e.sources,
         posts: posts.length,
-        members: members.size,
+        members: new Set(posts.map((x) => rosterPersonKey(authorsById[x.authorId])).filter(Boolean)).size,
+        accounts: members.size,
+        postIds: posts.map((x) => x.id),
+        sourcePosts: posts.map((x) => ({ id: x.id, handle: handleOf(x.authorId), time: x.createdAt })),
+        sampleId: best.id,
+        sampleHandle: handleOf(best.authorId),
         who: [...members].map(handleOf).filter(Boolean),
-        cm: KEYS.map((k) => [...members].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).length),
+        cm: KEYS.map((k) => new Set([...members].filter((a) => caucusKeysOf(authorsById[a]).includes(k)).map((a) => rosterPersonKey(authorsById[a])).filter(Boolean)).size),
         eng: posts.reduce((a, x) => a + x.engN, 0),
         phrase: topGram?.[0] || null,
         coherence: topGram ? Math.round(100 * topGram[1] / posts.length) : 0,
@@ -541,14 +646,13 @@ export function buildSiteData() {
     }).filter(Boolean);
   }
 
-  // ── outside context: newsletter hits per story candidate (data/context.json,
-  // hand-searched from the owner's inbox — unreviewed context, not
-  // verification). Top 3 per cluster; clusters without an entry get [].
-  const context = readJSON(p('data', 'context.json'), null);
+  // Only the public reporting store can enter published dashboard context.
+  // A retrieved match is a reading lead, separate from sources actually used
+  // by an accepted classification; no inbox-derived fields are copied.
+  const news = loadNews({ days: 10 });
   for (const c of clusters) {
-    const k = contextKeyFor(c, context?.stories);
-    c.context = (k ? context.stories[k].matches : []).slice(0, 3)
-      .map(({ sender, subject, date, why }) => ({ sender, subject, date, why: why || null }));
+    const { evidence } = retrieveEvidence(`${c.label} ${c.sample}`, { items: news.items, asOf: new Date().toISOString(), k: 3, windowAfterDays: 0 });
+    c.context = evidence.map(evidenceLine);
   }
 
   // ── similar, unlabeled: the embedding index against each emerging cluster
@@ -578,36 +682,33 @@ export function buildSiteData() {
         date: x.date,
         engN: x.engN,
         kind: x.type === 'tweet' ? 'original' : x.type === 'retweet' ? 'repost' : x.type,
+        quoted: compactQuote(x.quoted),
+        classificationStatus: x.classificationStatus,
+        needsContext: x.needsContext,
+        provenance: publicProvenance(x.provenance),
+        metricsObservedAt: x.metricsObservedAt,
         isNew: Boolean(state.lastPollAt && x.capturedAt === state.lastPollAt)
       };
     });
 
-  // ── feedAll: every classified post in the window, for the story drill-down ──
+  // ── feedAll: every captured House post in the window, for the story drill-down ──
   // The 200-post `feed` above stays as the default Feed card; a Topics row
   // opens to its whole post list via `postIds` + this table. Compact rows:
   // authors resolve client-side through `authorHandles` → `members`.
   const feedTopics = (x) => [...new Set(x.topics.flatMap(([m, s]) => s ? [`${m}/${s}`, m] : [m]))];
   const feedAllFull = allPosts
-    .filter((x) => x.topics.length)
+    .slice()
     .sort((a, b) => (a.createdAt === b.createdAt ? (a.id < b.id ? 1 : -1) : (a.createdAt < b.createdAt ? 1 : -1)))
     .map((x) => {
-      const row = { id: x.id, authorId: x.authorId, createdAt: x.createdAt, type: x.type, text: x.text, engN: x.engN, topics: feedTopics(x) };
-      // Quoted-post context, when the capture carries it ({handle, text}).
-      const q = x.quoted;
-      if (q && (q.text || q.handle)) {
-        const text = String(q.text || '');
-        row.quoted = {
-          handle: q.handle ? `@${String(q.handle).replace(/^@/, '')}` : null,
-          text: text.length > QUOTED_TEXT_MAX ? text.slice(0, QUOTED_TEXT_MAX - 1).replace(/\s+\S*$/, '') + '…' : text
-        };
-      }
+      const row = { id: x.id, authorId: x.authorId, createdAt: x.createdAt, date: x.date, type: x.type, text: x.text, engN: x.engN, topics: feedTopics(x), classificationStatus: x.classificationStatus, needsContext: x.needsContext, provenance: publicProvenance(x.provenance), metricsObservedAt: x.metricsObservedAt };
+      if (x.quoted) row.quoted = compactQuote(x.quoted);
       return row;
     });
   const authorHandles = {};
   for (const x of feedAllFull) {
     if (authorHandles[x.authorId] !== undefined) continue;
     const h = handleOf(x.authorId);
-    if (h) authorHandles[x.authorId] = h;
+    authorHandles[x.authorId] = h || x.authorId;
   }
 
   // ── members map + per-caucus active counts (posted in the 7-day window) ──
@@ -624,18 +725,24 @@ export function buildSiteData() {
   // intel. `incidentsFiltered` is how many classifier flags the desk's
   // deterministic post-filter dropped this build (src/incidents.js).
   const incidentsFile = readJSON(incidentsPath, { incidents: [], filtered: [] });
+  incidentsFile.incidents = incidentsFile.incidents.map((incident) => hydrateIncidentSources(incident, allPosts));
 
   const core = Object.entries(settings.core_messages).map(([name, keys]) => ({ name, topics: keys }));
 
   // Active accounts per caucus in the window — the unity threshold's denominator.
   const activeByCaucus = Object.fromEntries(KEYS.map((k) => [k, new Set()]));
   for (const x of allPosts) {
-    for (const k of caucusKeysOf(authorsById[x.authorId])) activeByCaucus[k].add(x.authorId);
+    for (const k of caucusKeysOf(authorsById[x.authorId])) rosterPersonKey(authorsById[x.authorId]) && activeByCaucus[k].add(rosterPersonKey(authorsById[x.authorId]));
   }
 
   const out = {
     generatedAt: new Date().toISOString(),
     lastPollAt: state.lastPollAt || null,
+    lastPollAttemptAt: state.lastPollAttemptAt || null,
+    lastPollOutcome: state.lastPollOutcome || null,
+    captureInProgress: Boolean(state.pollProgress),
+    rosterMembers: new Set(Object.values(authorsById).filter(isHouse).map(rosterPersonKey).filter(Boolean)).size,
+    news: { version: news.version, items: news.items.length, latestPublishedAt: news.items.map((item) => item.publishedAt).filter(Boolean).sort().at(-1) || null, latestFetchedAt: news.items.map((item) => item.fetchedAt).filter(Boolean).sort().at(-1) || null, latest: news.items.slice(0, 8).map((item) => evidenceLine({ ...item, kind: 'lead', passage: item.title })) },
     timezone: settings.timezone,
     today,
     days,
@@ -656,19 +763,39 @@ export function buildSiteData() {
     topics,
     phrases,
     clusters,
+    emergingCoverage: { total:emergingSources.length, displayed:clusters.length, activeThresholdClusters:emergingSources.filter((entry) => entry.active && entry.thresholdMet).length },
     incidents: incidentsFile.incidents,
     incidentsFiltered: (incidentsFile.filtered || []).length,
     feed,
     authorHandles,
     feedAll: feedAllFull,
-    feedAllTruncated: false
+    feedAllTruncated: false,
+    feedAllTotal: feedAllFull.length,
+    feedAllFiles: []
   };
   // Size guard: measure the file exactly as writeJSON serialises it.
   const sizeOf = (list) => Buffer.byteLength(JSON.stringify({ ...out, feedAll: list }, null, 1)) + 1;
-  const fit = fitFeedAll(feedAllFull, sizeOf, ROLLUPS_MAX_BYTES);
+  const fit = fitFeedAll(feedAllFull, sizeOf, ROLLUPS_MAX_BYTES - 10_000);
   out.feedAll = fit.feedAll;
   out.feedAllTruncated = fit.truncated;
+  // Full-text overflow remains available, including pending classifications.
+  // Each shard is published in the same Pages snapshot as its manifest.
+  if (fit.truncated) {
+    for (let i = 0; i < feedAllFull.length; i += 400) {
+      const page = feedAllFull.slice(i, i + 400);
+      const hash = createHash('sha256').update(JSON.stringify(page)).digest('hex').slice(0, 16);
+      const name = `feed-${Math.floor(i / 400)}-${hash}.json`;
+      writeJSON(p('site', 'data', name), page);
+      out.feedAllFiles.push(name);
+    }
+  }
+  if (Buffer.byteLength(JSON.stringify(out, null, 1)) + 1 >= ROLLUPS_MAX_BYTES) throw new Error('Dashboard summary exceeds its size limit');
   writeJSON(rollupsJsonPath, out);
+  // Old derived shards can be rebuilt from the archive; avoid retaining every
+  // metric refresh as another loose file in the latest deployment.
+  for (const name of fs.readdirSync(p('site', 'data'))) {
+    if (/^feed-\d+(?:-[a-f0-9]{16})?\.json$/.test(name) && !out.feedAllFiles.includes(name)) fs.unlinkSync(p('site', 'data', name));
+  }
   const provisional = incidentsFile.incidents.filter((i) => i.status === 'provisional').length;
   console.log(`[sitedata] rollups.json: ${topics.length} topics, ${phrases.length} phrases, ${clusters.length} clusters (${clusters.filter((c) => c.context?.length).length} with outside context), ${incidentsFile.incidents.length} incidents (${provisional} provisional, ${(incidentsFile.filtered || []).length} flags filtered), ${feed.length} feed posts, ${out.feedAll.length}${fit.truncated ? ` of ${feedAllFull.length} (truncated to stay under ${ROLLUPS_MAX_BYTES} bytes)` : ''} drill-down posts; similar-unlabeled lists on ${related.clusters} cluster(s) and ${related.subs} story row(s); ${excluded.posts} post(s) from ${nonHouseAccounts} non-House account(s) excluded`);
 }

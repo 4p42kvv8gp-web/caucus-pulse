@@ -29,7 +29,7 @@
     ]
   },
   "poll": {
-    "_comment": "max_pages 10 covers the whole window the list-tweets endpoint will serve (it ran dry after ~800 posts in the 2026-09-10 backfill), so no gap the endpoint can still answer for is lost when GitHub's cron skips hours — as it did between 07:19 and 09:47 UTC that day. Pages past the boundary are never requested, so an on-cadence poll still costs one partial page.",
+    "_comment": "Each run reads at most 10 pages and retains an unfinished continuation for the next run. The cursor advances only after the prior boundary is reached or a supported since_id interval is exhausted. Provider-window gaps and interrupted schedules remain explicit recovery conditions; this limit does not guarantee complete history.",
     "max_pages": 10,
     "page_size": 100
   },
@@ -45,7 +45,7 @@
   "classify": {
     "model": "claude-opus-5",
     "tweets_per_request": 40,
-    "max_wait_minutes": 55,
+    "max_wait_minutes": 0,
     "correction_examples": 8
   },
   "semantic": {

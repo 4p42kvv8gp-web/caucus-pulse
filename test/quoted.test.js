@@ -305,7 +305,7 @@ test('systemPrompt is byte-stable, carries the quoting rule once, and shows anch
   assert.equal(a, systemPrompt(tax));
   assert.equal(a, systemPrompt(tax, { examples: [] }));
   assert.equal(a.split('Some inputs carry "quoting"').length, 2);
-  const rule = 'A quote or reply is about the subject of the post it quotes/answers (assign that subject and its story) in addition to whatever its own text adds; a quoted post with very high reach is a strong signal the story is live.';
+  const rule = 'A reference is not evidence of agreement, and impression counts do not establish truth, recency, or the identity of an event.';
   assert.match(a, new RegExp(rule.replace(/[/()."]/g, '\\$&').replace(/ /g, '\\s+'))); // the rule wraps like the others
   assert.equal(a.replace(/\s+/g, ' ').split(rule).length, 2);
   assert.ok(a.indexOf('Some inputs carry "quoting"') < a.indexOf('Reply with ONLY a JSON object'));
@@ -370,7 +370,8 @@ test('planDay assigns anchored stories before the model and attaches quoted cont
     rt1: [['tech', 'coxon-resignation']] // anchored retweet with no model answer
   });
   assert.deepEqual(day.anchored, plan.anchored);
-  assert.deepEqual(day.emerging, [{ label: 'AI lab departures', ids: ['n1'] }]); // anchored ids leave the clusters; an emptied cluster is dropped
+  assert.deepEqual(day.emerging, [{ label: 'AI lab departures', ids: ['q1', 'n1'] }]); // a known story does not suppress another supported event
+  assert.deepEqual(day.pendingIds, ['rt1']); // deterministic anchor does not disguise a missing model response
   assert.deepEqual(day.unclassified, []);
   // rt1 is anchored, not inherited: its original has no assignment to inherit
   assert.deepEqual(stats, { classified: 3, inherited: 2, anchored: 2, incidents: 0, emerging: 1, unclassified: 0, droppedSubs: 0, echoedSubs: 0, failedChunks: 0 });

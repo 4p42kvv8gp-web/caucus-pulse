@@ -26,19 +26,24 @@ export const CAPTURE_WARN_HOURS = 2;
 export const CAPTURE_FAIL_HOURS = 8;
 
 export function checkCapture(state, now = Date.now()) {
+  const progress = state.pollProgress;
+  if (progress?.recoveryRequired) {
+    return { name: 'capture', status: 'fail', detail: `capture interval unfinished since ${progress.startedAt}: ${progress.recoveryRequired.reason}; archived pages are retained and the completed cursor has not advanced — recovery is required` };
+  }
   const last = state.lastPollAt ? Date.parse(state.lastPollAt) : NaN;
   if (!Number.isFinite(last)) {
-    return { name: 'capture', status: 'fail', detail: 'the poller has never recorded a run (data/state.json has no lastPollAt)' };
+    return { name: 'capture', status: 'fail', detail: `the poller has no completed capture interval${progress ? `; ${progress.pages} page(s) saved, continuation pending` : ''}` };
   }
   const hours = (now - last) / HOURS;
   const ago = `${hours.toFixed(1)}h ago`;
+  const unfinished = progress ? `; ${progress.pages} page(s) saved for an unfinished interval (${state.lastPollOutcome || 'pending'})` : '';
   if (hours >= CAPTURE_FAIL_HOURS) {
-    return { name: 'capture', status: 'fail', detail: `last poll ${ago} — past the ${CAPTURE_FAIL_HOURS}h limit; the X List endpoint only serves its newest ~800 posts, so a longer silence loses them` };
+    return { name: 'capture', status: 'fail', detail: `last completed poll ${ago} — past the ${CAPTURE_FAIL_HOURS}h limit; provider retention may prevent full recovery${unfinished}` };
   }
-  if (hours >= CAPTURE_WARN_HOURS) {
-    return { name: 'capture', status: 'warn', detail: `last poll ${ago} — GitHub's cron is running behind the 20-minute schedule` };
+  if (hours >= CAPTURE_WARN_HOURS || progress || (state.lastPollOutcome && state.lastPollOutcome !== 'complete')) {
+    return { name: 'capture', status: 'warn', detail: `last completed poll ${ago}${unfinished}; latest attempt: ${state.lastPollOutcome || 'late'}` };
   }
-  return { name: 'capture', status: 'ok', detail: `last poll ${ago}` };
+  return { name: 'capture', status: 'ok', detail: `last completed poll ${ago}` };
 }
 
 // Every archive day that has closed should have been classified. Today is
@@ -96,7 +101,7 @@ export function checkCredentials({ x, anthropic }) {
 export function checkBudget(state, { budget = dailyBudget(), today = etDate() } = {}) {
   const u = state.usage?.[today] || { posts: 0, users: 0 };
   const used = (u.posts || 0) + (u.users || 0);
-  const detail = `${used}/${budget} X reads today (~$${estCost(u).toFixed(2)})`;
+  const detail = `${used}/${budget} X returned objects today (before provider billing deduplication, ~$${estCost(u).toFixed(2)})`;
   if (used >= budget) return { name: 'budget', status: 'fail', detail: `${detail} — the guard has stopped capture until tomorrow` };
   if (used >= budget * 0.85) return { name: 'budget', status: 'warn', detail };
   return { name: 'budget', status: 'ok', detail };
@@ -121,7 +126,10 @@ export function checkAnthropicSpend({ spent = 0, budget = null, calls = 0, bySta
 }
 
 export function runChecks({ now = Date.now(), today = etDate() } = {}) {
-  const state = loadState();
+  let state;
+  try { state = loadState(); } catch (e) {
+    return [{ name: 'capture-state', status: 'fail', detail: e.message }];
+  }
   const dates = archiveDates();
   const yesterday = daysAgoEt(1);
   const topics = readJSON(topicsPath(yesterday), null);

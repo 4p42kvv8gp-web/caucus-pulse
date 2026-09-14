@@ -156,10 +156,10 @@ test('correctionExamples takes the most recent N and renders a byte-stable promp
   const withEx = systemPrompt(tax, { examples: ex });
   assert.equal(withEx, systemPrompt(tax, { examples: ex }));
   assert.equal(plain, systemPrompt(tax, { examples: [] }));
-  assert.doesNotMatch(plain, /Corrections from the editors/);
-  assert.match(withEx, /Corrections from the editors \(follow these precedents\)/);
+  assert.doesNotMatch(plain, /Configured classification examples/);
+  assert.match(withEx, /Configured classification examples \(precedents, not independent evidence\)/);
   assert.ok(withEx.includes(block));
-  assert.ok(withEx.indexOf('Corrections from the editors') < withEx.indexOf('Reply with ONLY a JSON object'));
+  assert.ok(withEx.indexOf('Configured classification examples') < withEx.indexOf('Reply with ONLY a JSON object'));
 });
 
 // The checked-in file must load against the checked-in taxonomy and resolve

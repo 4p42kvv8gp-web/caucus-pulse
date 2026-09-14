@@ -1,0 +1,14 @@
+diff --git a/.github/scripts/nightly.sh b/.github/scripts/nightly.sh
+index e69ae23..7f29de1 100755
+--- a/.github/scripts/nightly.sh
++++ b/.github/scripts/nightly.sh
+@@ -43,7 +43,9 @@ stage() {
+ 
+ stage refresh        npm run refresh
+ stage embed          npm run embed
++stage context        npm run context-refresh
+ stage classify       npm run classify
++stage reconsider     npm run context-refresh -- --reconsider="$(TZ=America/New_York date -d yesterday +%F)"
+ stage stories        npm run stories
+ stage promote        npm run stories -- --auto-promote --retire
+ stage taxonomy-learn npm run taxonomy-learn -- --apply

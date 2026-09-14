@@ -30,6 +30,7 @@
     "check-anthropic": "node --use-env-proxy src/check-anthropic-access.js",
     "download-model": "node --use-env-proxy scripts/download-embedding-model.js",
     "embed": "node src/embed-archive.js",
+    "context-refresh": "node --use-env-proxy src/context-refresh.js",
     "semantic-proof": "node --use-env-proxy scripts/semantic-proof.js",
     "test": "node --test"
   },

@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {
   corroborationOf, applyStatus, sortIncidents, groupIncidents, CORROBORATION_GAP,
   findEvidence, kindTerms, placeTerms, EVIDENCE_FALLBACK_CHARS,
-  postFilterReason, placeFilterReason, filterFlags, canonicalKind, districtLabel, stateOf, countByStatus
+  postFilterReason, placeFilterReason, filterFlags, canonicalKind, districtLabel, stateOf, countByStatus,
+  supportedEventName, validateIntel, incidentInputHash
 } from '../src/incidents.js';
 
 const H = 3_600_000;
@@ -11,131 +12,152 @@ const NOW = Date.parse('2026-09-10T12:00:00Z');
 const iso = (hoursAgo) => new Date(NOW - hoursAgo * H).toISOString();
 const entry = (who, hoursAgo) => ({ who, time: iso(hoursAgo) });
 
-// ── provisional rule ──────────────────────────────────────────────────────
-
-test('corroborationOf: one post from one member is provisional', () => {
-  const c = corroborationOf([entry('@RepA', 1)]);
-  assert.equal(c.corroborated, false);
-  assert.equal(c.by, null);
-  assert.match(c.note, /one post from one member/);
-  assert.match(c.note, /second member|later post|nightly intel/);
-});
-
-test('corroborationOf: a second member corroborates', () => {
-  const c = corroborationOf([entry('@RepA', 3), entry('@RepB', 2)]);
-  assert.equal(c.corroborated, true);
-  assert.equal(c.by, 'second member');
-  assert.match(c.note, /@RepA, @RepB/);
-});
-
-test('corroborationOf: a same-member follow-up counts only after CORROBORATION_GAP', () => {
-  assert.equal(CORROBORATION_GAP, H);
-  const soon = corroborationOf([entry('@RepA', 2), entry('@RepA', 1.5)]); // 30 min apart
-  assert.equal(soon.corroborated, false);
-  assert.match(soon.note, /2 posts from one member within 30 min/);
-  const later = corroborationOf([entry('@RepA', 1), entry('@RepA', 3)]); // unsorted input, 2h apart
-  assert.equal(later.corroborated, true);
-  assert.equal(later.by, 'second post');
-  assert.match(later.note, /2h after the first report/);
-  const exact = corroborationOf([entry('@RepA', 2), { who: '@RepA', time: new Date(NOW - 2 * H + CORROBORATION_GAP).toISOString() }]);
-  assert.equal(exact.corroborated, true); // ≥, not >
-});
-
-test('corroborationOf: an intel panel with content corroborates; an empty one does not', () => {
-  const one = [entry('@RepA', 1)];
-  assert.equal(corroborationOf(one, { confirmed: [], unverified: [], whatsNew: [] }).corroborated, false);
-  assert.equal(corroborationOf(one, null).corroborated, false);
-  const c = corroborationOf(one, { confirmed: [{ text: 'x', src: 'y' }], unverified: [], whatsNew: [] });
-  assert.equal(c.corroborated, true);
-  assert.equal(c.by, 'intel');
-  assert.match(c.note, /1 confirmed, 0 unverified/);
-  assert.equal(corroborationOf(one, { confirmed: [], unverified: [], whatsNew: ['new'] }).by, 'intel');
-});
-
-test('applyStatus: provisional in front of the lifecycle; corroboration hands the lifecycle status back', () => {
-  const inc = { lifecycle: 'active', timeline: [entry('@RepA', 1)], intel: null };
-  applyStatus(inc);
-  assert.equal(inc.status, 'provisional');
-  assert.equal(inc.lifecycle, 'active');
-  inc.intel = { confirmed: [{ text: 'evacuations ordered', src: 'per @RepA' }], unverified: [], whatsNew: [] };
-  applyStatus(inc);
-  assert.equal(inc.status, 'active');
-  // a stale uncorroborated report is still provisional, never "resolved"
-  const old = applyStatus({ lifecycle: 'resolved', timeline: [entry('@RepA', 40)], intel: null });
-  assert.equal(old.status, 'provisional');
-  assert.equal(old.lifecycle, 'resolved');
-  // corroborated incidents keep the existing transitions
-  for (const phase of ['active', 'monitoring', 'resolved']) {
-    assert.equal(applyStatus({ lifecycle: phase, timeline: [entry('@RepA', 5), entry('@RepB', 4)], intel: null }).status, phase);
+// Source statements establish what was said, not independent verification.
+test('repetition, follow-ups, and model summaries never corroborate a source statement', () => {
+  const cases = [
+    [entry('@AccountA', 1)],
+    [entry('@AccountA', 3), entry('@AccountB', 2)],
+    [entry('@AccountA', 3), entry('@AccountA', 1)]
+  ];
+  assert.equal(CORROBORATION_GAP, H); // legacy compatibility only
+  for (const timeline of cases) {
+    for (const intel of [null, { confirmed: [{ text: 'model claim' }], whatsNew: ['model update'] }]) {
+      const c = corroborationOf(timeline, intel);
+      assert.equal(c.corroborated, false);
+      assert.equal(c.independentSourceCount, 0);
+      assert.equal(c.by, null);
+      assert.match(c.note, /independent verification has not been established/);
+    }
   }
 });
 
-test('sortIncidents: by lifecycle, corroborated before provisional within a phase, newest last post first', () => {
-  const mk = (id, lifecycle, status, hoursAgo) => ({ id, lifecycle, status, last: iso(hoursAgo) });
-  const out = sortIncidents([
-    mk('res-prov', 'resolved', 'provisional', 40),
-    mk('mon', 'monitoring', 'monitoring', 20),
-    mk('act-prov-old', 'active', 'provisional', 6),
-    mk('act', 'active', 'active', 3),
-    mk('act-prov-new', 'active', 'provisional', 1),
-    mk('res', 'resolved', 'resolved', 50),
-    mk('mon-prov', 'monitoring', 'provisional', 15)
+test('account aliases and common repost parents stay distinct from independent sources', () => {
+  const c = corroborationOf([
+    { sourceId: '101', authorId: 'a', personId: 'member-one', referenceIds: ['99'] },
+    { sourceId: '102', authorId: 'b', personId: 'member-one', referenceIds: ['99'] },
+    { sourceId: '103', authorId: 'c', referenceIds: [] }
   ]);
-  assert.deepEqual(out.map((i) => i.id), ['act', 'act-prov-new', 'act-prov-old', 'mon', 'mon-prov', 'res', 'res-prov']);
+  assert.equal(c.accounts, 3);
+  assert.equal(c.resolvedPeople, 1);
+  assert.equal(c.unresolvedAccounts, 1);
+  assert.equal(c.independentSourceCount, 0);
+  assert.deepEqual(c.repeatedSourceGroups, [{ sourceId: '99', url: 'https://x.com/i/web/status/99', repeatedBy: ['101', '102'] }]);
 });
 
-test('groupIncidents: a single report is provisional immediately; grouping corroborates; intel from the previous file carries over', () => {
+test('posting lifecycle never overrides unverified evidence status', () => {
+  for (const lifecycle of ['active', 'monitoring', 'resolved']) {
+    const inc = applyStatus({ lifecycle, timeline: [entry('@AccountA', 5), entry('@AccountB', 4)], intel: { confirmed: [{ text: 'generated claim' }] } });
+    assert.equal(inc.status, 'provisional');
+    assert.equal(inc.lifecycle, lifecycle);
+    assert.equal(inc.verification.status, 'unverified');
+    assert.equal(inc.verification.independentSourceCount, 0);
+  }
+});
+
+test('sortIncidents retains activity ordering for provisional reports', () => {
+  const mk = (id, lifecycle, hoursAgo) => ({ id, lifecycle, status: 'provisional', last: iso(hoursAgo) });
+  const out = sortIncidents([mk('quiet', 'resolved', 40), mk('older', 'active', 6), mk('monitor', 'monitoring', 20), mk('new', 'active', 1)]);
+  assert.deepEqual(out.map((i) => i.id), ['new', 'older', 'monitor', 'quiet']);
+});
+
+const AUTHORS = {
+  a: { handle: 'AccountA', member: 'Member One', stateDistrict: 'CA-04' },
+  b: { handle: 'AccountB', member: 'Member Two', stateDistrict: 'CA-05' }
+};
+const namedFixture = () => {
   const flags = {
-    a: { kind: 'wildfire', place: 'Napa County, CA' },
-    b: { kind: 'hazmat release', place: 'La Habra, CA' },
-    c: { kind: 'chemical leak', place: 'La Habra, CA' },
-    d: { kind: 'flooding', place: 'Miami, FL' }
+    '101': { kind: 'wildfire', place: 'Example County, CA', name: 'Cedar Fire' },
+    '102': { kind: 'brush fire', place: 'Example County, CA', name: 'Cedar Fire' },
+    '103': { kind: 'wildfire', place: 'Example County, CA', name: 'Pine Fire' }
   };
   const posts = new Map([
-    ['a', { id: 'a', authorId: 'u1', createdAt: iso(2), text: '#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008. Please be ready to evacuate.', engN: 40, capturedAt: 'p2' }],
-    ['b', { id: 'b', authorId: 'u2', createdAt: iso(20), text: 'LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street. Officials have ordered evacuations.', engN: 10, capturedAt: 'p1' }],
-    ['c', { id: 'c', authorId: 'u2', createdAt: iso(17.5), text: 'RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra', engN: 5, capturedAt: 'p1' }],
-    ['d', { id: 'd', authorId: 'u3', createdAt: iso(1), text: 'Flooding across Miami this morning. My office is in contact with the county.', engN: 3, capturedAt: 'p2' }]
+    ['101', { id: '101', authorId: 'a', createdAt: iso(3), text: 'Cedar Fire in Example County. No evacuations ordered.', engN: 10 }],
+    ['102', { id: '102', authorId: 'b', createdAt: iso(1), text: 'Cedar Fire in Example County: a shelter is open.', engN: 5, capturedAt: 'p2' }],
+    ['103', { id: '103', authorId: 'a', createdAt: iso(2), text: 'Pine Fire in Example County. My office is in contact.', engN: 3 }]
   ]);
-  const authors = {
-    u1: { handle: 'RepThompson', member: 'Mike Thompson', stateDistrict: 'CA-04' },
-    u2: { handle: 'RepLindaSanchez', member: 'Linda T. Sánchez', stateDistrict: 'CA-38' },
-    u3: { handle: 'RepSoto', member: 'Darren Soto', stateDistrict: 'FL-09' }
-  };
-  const prevById = new Map([['miami-fl--flooding', { id: 'miami-fl--flooding', intel: { confirmed: [{ text: 'county EOC activated', src: 'per @RepSoto' }], unverified: [], whatsNew: [], posts: 1 } }]]);
-  const out = groupIncidents(flags, posts, authors, { now: NOW, lastPollAt: 'p2', prevById });
-  assert.deepEqual(out.map((i) => i.id), ['miami-fl--flooding', 'napa-county-ca--wildfire', 'la-habra-ca--hazmat']);
+  return { flags, posts };
+};
 
-  const napa = out.find((i) => i.id === 'napa-county-ca--wildfire');
-  assert.equal(napa.status, 'provisional');
-  assert.equal(napa.lifecycle, 'active');
-  assert.equal(napa.corroboration.corroborated, false);
-  assert.equal(napa.place, 'Napa County, CA · CA-04'); // state matches the lead's district
-  assert.equal(napa.districtMatch, true);
-  assert.equal(napa.evidence.exact, true);
-  assert.equal(napa.evidence.span, '#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008.');
-  assert.equal(napa.timeline[0].isNew, true);
-  assert.deepEqual(napa.timeline[0].flag, { kind: 'wildfire', place: 'Napa County, CA' });
+test('named events in the same county stay separate; every timeline item cites its source', () => {
+  const { flags, posts } = namedFixture();
+  const out = groupIncidents(flags, posts, AUTHORS, { now: NOW, lastPollAt: 'p2' });
+  assert.equal(out.length, 2);
+  const cedar = out.find((i) => i.name === 'Cedar Fire');
+  assert.equal(cedar.updates, 2);
+  assert.equal(cedar.kind, 'wildfire');
+  assert.deepEqual(cedar.kinds, ['wildfire', 'brush fire']);
+  assert.equal(cedar.status, 'provisional');
+  assert.equal(cedar.eventIdentity, 'named-source-supported');
+  assert.match(cedar.title, /^Cedar Fire/);
+  assert.equal(cedar.timeline[1].isNew, true);
+  for (const source of cedar.timeline) {
+    assert.equal(source.url, `https://x.com/i/web/status/${source.sourceId}`);
+    assert.equal(source.evidence.sourceId, source.sourceId);
+    assert.equal(source.evidence.url, source.url);
+    assert.equal(source.text.slice(source.evidence.start, source.evidence.end), source.evidence.span);
+  }
+  assert.deepEqual(countByStatus(out), { provisional: 2, active: 0, monitoring: 0, resolved: 0 });
+  assert.deepEqual(groupIncidents(Object.fromEntries(Object.entries(flags).reverse()), posts, AUTHORS, { now: NOW }).map((i) => i.id), out.map((i) => i.id));
+});
 
-  // kind synonyms fold into one incident; two posts 2.5h apart from one member corroborate it
-  const habra = out.find((i) => i.id === 'la-habra-ca--hazmat');
-  assert.equal(habra.kind, 'hazmat');
-  assert.deepEqual(habra.kinds, ['hazmat release', 'chemical leak']);
-  assert.equal(habra.updates, 2);
-  assert.equal(habra.status, 'monitoring');
-  assert.equal(habra.lifecycle, 'monitoring');
-  assert.equal(habra.corroboration.by, 'second post');
-  assert.deepEqual(habra.timeline[1].flag, { kind: 'chemical leak', place: 'La Habra, CA' });
-  assert.equal(habra.title, 'Hazmat · La Habra, CA');
+test('invented names cannot link unrelated unnamed events and named episodes separate after 48h', () => {
+  const { flags, posts } = namedFixture();
+  flags['101'].name = 'Invented Fire';
+  flags['102'].name = null;
+  assert.equal(supportedEventName(flags['101'], posts.get('101')), null);
+  assert.equal(supportedEventName({ kind: 'wildfire' }, { text: '#CedarFire in Example County' }), 'CedarFire');
+  const unlinked = groupIncidents(flags, posts, AUTHORS, { now: NOW });
+  assert.equal(unlinked.length, 3);
+  assert.equal(unlinked.filter((i) => i.eventIdentity === 'unresolved-source-specific').length, 2);
+  flags['101'].name = flags['102'].name = 'Cedar Fire';
+  posts.get('101').createdAt = iso(55);
+  assert.equal(groupIncidents(flags, posts, AUTHORS, { now: NOW }).length, 3);
+});
 
-  // intel from the previous build corroborates a single report; the lead's district (FL-09) is not Miami's, so no suffix
-  const miami = out.find((i) => i.id === 'miami-fl--flooding');
-  assert.equal(miami.status, 'active');
-  assert.equal(miami.corroboration.by, 'intel');
-  assert.equal(miami.place, 'Miami, FL · FL-09'); // same state: the most the data can vouch for
-  assert.equal(miami.intel.posts, 1);
+test('a hashtag and spaced event name link when both are supported by their sources', () => {
+  const { flags, posts } = namedFixture();
+  flags['102'].name = null;
+  posts.get('102').text = '#CedarFire in Example County: shelter is open.';
+  const out = groupIncidents(flags, posts, AUTHORS, { now: NOW });
+  assert.equal(out.length, 2);
+  assert.equal(out.find((i) => i.name === 'Cedar Fire').updates, 2);
+});
 
-  assert.deepEqual(countByStatus(out), { provisional: 1, active: 1, monitoring: 1, resolved: 0 });
+test('intel rejects invented or truncated quotes and reconstructs attribution and URLs', () => {
+  const { flags, posts } = namedFixture();
+  const incident = groupIncidents(flags, posts, AUTHORS, { now: NOW }).find((i) => i.name === 'Cedar Fire');
+  const good = { sourceId: '101', evidenceQuote: 'No evacuations ordered.', text: 'EVACUATE NOW', url: 'https://untrusted.example', src: 'made up' };
+  const intel = validateIntel({
+    confirmed: [{ text: 'unsupported fact' }],
+    reported: [good, good, { sourceId: '999', evidenceQuote: 'No evacuations ordered.' }, { sourceId: '101', evidenceQuote: 'evacuations ordered.' }, { sourceId: '101', evidenceQuote: 'An invented statement.' }],
+    updates: [{ sourceId: '102', evidenceQuote: posts.get('102').text }],
+    whatsNew: ['unsupported development']
+  }, incident);
+  assert.deepEqual(intel.confirmed, []);
+  assert.deepEqual(intel.whatsNew, []);
+  assert.equal(intel.reported.length, 1);
+  assert.equal(intel.reported[0].text, 'No evacuations ordered.');
+  assert.equal(intel.reported[0].url, 'https://x.com/i/web/status/101');
+  assert.equal(intel.reported[0].src, `@AccountA, ${iso(3)}`);
+  assert.equal(intel.updates[0].sourceId, '102');
+  assert.equal(intel.rejectedItems, 3);
+  assert.equal(intel.verification, 'source-statements-only');
+  assert.equal(applyStatus({ ...incident, intel }).status, 'provisional');
+});
+
+test('cached intel is reused only when its source contents match; legacy model facts are discarded', () => {
+  const { flags, posts } = namedFixture();
+  const incident = groupIncidents(flags, posts, AUTHORS, { now: NOW }).find((i) => i.name === 'Cedar Fire');
+  const intel = validateIntel({ reported: [{ sourceId: '101', evidenceQuote: 'No evacuations ordered.' }] }, incident);
+  const prevById = new Map([[incident.id, { ...incident, intel }]]);
+  const rebuilt = () => groupIncidents(flags, posts, AUTHORS, { now: NOW, prevById }).find((i) => i.name === 'Cedar Fire');
+  assert.equal(rebuilt().intel.reported[0].sourceId, '101');
+  assert.equal(rebuilt().intel.extractedAt, intel.extractedAt);
+  posts.get('101').text = 'Cedar Fire in Example County. Evacuations now ordered.';
+  assert.notEqual(incidentInputHash(rebuilt()), intel.inputHash);
+  assert.equal(rebuilt().intel, null);
+  prevById.set(incident.id, { intel: { confirmed: [{ text: 'legacy fabricated claim' }], posts: 2 } });
+  assert.equal(rebuilt().intel, null);
 });
 
 test('districtLabel / stateOf: the suffix is withheld when the place is in another state', () => {

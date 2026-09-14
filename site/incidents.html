@@ -32,8 +32,8 @@
     <div style="display:flex;flex-direction:column;gap:12px;flex:1 1 280px;min-width:0">
       <div id="list" style="display:flex;flex-direction:column;gap:6px"></div>
       <div style="background:#fff;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;flex:1 1 auto">
-        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Search</h2><span style="font-size:11px;color:#6e6e73">sample results until X search is connected</span></div>
-        <div style="display:flex;gap:6px"><input id="query" placeholder='e.g. (shooting OR "shots fired") Aurora -is:retweet' style="flex:1;min-width:0;font:inherit;font-size:12px;padding:7px 10px;border:1px solid #d2d2d7;border-radius:9px;background:#f5f5f7"><button class="pill" style="border-radius:9px" title="X search is not connected yet">Run</button></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Search</h2><span style="font-size:11px;color:#6e6e73">Search is not connected</span></div>
+        <div style="display:flex;gap:6px"><input id="query" placeholder='e.g. (shooting OR "shots fired") Aurora -is:retweet' style="flex:1;min-width:0;font:inherit;font-size:12px;padding:7px 10px;border:1px solid #d2d2d7;border-radius:9px;background:#f5f5f7"><button class="pill" disabled style="border-radius:9px;opacity:.5;cursor:default" title="X search is not connected yet">Unavailable</button></div>
         <div id="saved" style="display:flex;gap:5px;flex-wrap:wrap"></div>
         <div id="results" style="display:flex;flex-direction:column;gap:2px"></div>
       </div>
@@ -43,11 +43,22 @@
 </main>
 </div>
 <script type="module">
-import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups, provisionalBadge, evidenceQuote, markEvidence } from './ui.js';
+import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups, provisionalBadge, evidenceQuote, markEvidence, sourceLink, sourceAnchor, handleLink, postUrl, captureLabel, startRefresh } from './ui.js';
 
 let D = null;
 const state = { status: 'All', selected: null, copied: false };
 let copyTimer = null;
+let refreshError = null;
+const sourceFor = (incident, handle) => incident.timeline.find((e) => e.who === handle);
+const intelOf = (sel) => ({ reported: sel.intel?.reported || [], unverified: sel.intel?.unverified || [], updates: sel.intel?.updates || [] });
+function updateCaptureLabel() {
+  $('updated').textContent = captureLabel(D, refreshError);
+  $('updated').title = `Dashboard built ${D?.generatedAt || 'unknown'}. Automatic refresh every 2 minutes.`;
+}
+const citation = (item, incident) => {
+  const source = incident.timeline.find((e) => (e.sourceId || e.id) === item.sourceId);
+  return source ? `${item.text} — ${source.who} ${postUrl(source) || ''}` : item.text;
+};
 const $ = (id) => document.getElementById(id);
 
 const SAVED = [
@@ -74,19 +85,19 @@ function kindTag(kind, small = false) {
 const onDesk = (i) => i.status === 'active' || i.status === 'monitoring' || (i.status === 'provisional' && i.lifecycle !== 'resolved');
 
 function briefOf(sel) {
-  const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  const intel = intelOf(sel);
   const ev = sel.evidence || {};
   const prov = sel.status === 'provisional';
   return [
     `${sel.title} — ${sel.place} · ${prov ? `PROVISIONAL (${sel.lifecycle})` : sel.status} · ${etWhen(sel.since, D.today)} → ${etWhen(sel.last, D.today)}`,
-    ...(prov ? [`Single-member report, not yet corroborated: ${sel.corroboration?.note || ''}`] : sel.corroboration?.by ? [`Corroborated by ${sel.corroboration.by}: ${sel.corroboration.note || ''}`] : []),
-    ...(ev.span ? [`Evidence${ev.exact ? '' : ' (first 140 chars; event/place not named verbatim)'}: “${ev.span}${ev.exact ? '' : '…'}” — ${sel.handle}, ${etWhen(sel.since, D.today)}`] : []),
+    ...(prov ? [`Source report, not yet corroborated: ${sel.corroboration?.note || ''}`] : sel.corroboration?.by ? [`Verification basis ${sel.corroboration.by}: ${sel.corroboration.note || ''}`] : []),
+    ...(ev.span ? [`Evidence${ev.exact ? '' : ' (first 140 chars; event/place not named verbatim)'}: “${ev.span}${ev.exact ? '' : '…'}” — ${sel.handle}, ${etWhen(sel.since, D.today)} ${postUrl(sel.timeline[0]) || ''}`] : []),
     '',
-    'Confirmed', ...(intel.confirmed.length ? intel.confirmed.map((c) => `• ${c.text} (${c.src})`) : ['• nothing extracted yet']),
-    ...(intel.unverified.length ? ['', 'Circulating, unverified', ...intel.unverified.map((u) => `• ${u.text} (${u.src})`)] : []),
-    '', "What's new", ...(intel.whatsNew.length ? intel.whatsNew.map((n) => `• ${n}`) : sel.timeline.slice(-2).map((e) => `• ${e.text.slice(0, 100)}`)),
+    'Reported in source posts', ...(intel.reported.length ? intel.reported.map((c) => `• ${citation(c, sel)}`) : ['• no validated passage extracted yet']),
+    ...(intel.unverified.length ? ['', 'Circulating, unverified', ...intel.unverified.map((u) => `• ${citation(u, sel)}`)] : []),
+    '', "What's new", ...(intel.updates.length ? intel.updates.map((n) => `• ${citation(n, sel)}`) : sel.timeline.slice(-2).map((e) => `• ${e.text.slice(0, 100)}… ${postUrl(e) || ''}`)),
     '',
-    `${sel.handle} has posted ${sel.updates} times · ${fmt(sel.engN)} engagement${sel.others.length ? ` · also on it: ${sel.others.join(', ')}` : ''}`,
+    `${sel.handle} has posted ${sel.updates} times · ${fmt(sel.engN)} engagement${sel.others.length ? ` · also on it: ${sel.others.map((h) => `${h} ${postUrl(sourceFor(sel, h)) || ''}`).join(', ')}` : ''}`,
     '—',
     `caucus-pulse · ${D.lastPollAt ? etTime(D.lastPollAt) : ''} ET`
   ].join('\n');
@@ -94,7 +105,7 @@ function briefOf(sel) {
 
 function render() {
   const all = incidents();
-  $('updated').innerHTML = `${dot('#1d1d1f', 6)}${esc(headerDate(D.today))} · updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
+  updateCaptureLabel();
   const count = (s) => all.filter((i) => i.status === s).length;
   $('counts').textContent = `${count('provisional')} provisional · ${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week${D.incidentsFiltered ? ` · ${D.incidentsFiltered} flags filtered` : ''}`;
   $('statusseg').innerHTML = seg(['All', 'Provisional', 'Active', 'Monitoring', 'Resolved'], 'status');
@@ -103,12 +114,12 @@ function render() {
   if (!state.selected || !all.some((i) => i.id === state.selected)) state.selected = (list[0] || all[0])?.id || null;
   const sel = all.find((i) => i.id === state.selected);
 
-  $('list').innerHTML = list.map((i) => `<button class="card" data-pick="${esc(i.id)}"${i.status === 'provisional' ? ' style="border-style:dashed;border-color:#c7d2ea"' : ''}>
+  $('list').innerHTML = list.map((i) => `<article class="card"${i.status === 'provisional' ? ' style="border-style:dashed;border-color:#c7d2ea"' : ''}>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap">${statusDot(i.status)}${kindTag(i.kind)}${i.status === 'provisional' ? provisionalBadge(i.corroboration?.note) : ''}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(i.last, D.today))}</span></div>
-    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(i.place)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${i.updates} posts</span></div>
-    ${i.status === 'provisional' && i.evidence?.span ? `<div style="font-size:12px;line-height:1.35;color:#3a3a3c">“${esc(i.evidence.span.length > 120 ? i.evidence.span.slice(0, 119).replace(/\s+\S*$/, '') + '…' : i.evidence.span)}${i.evidence.exact || i.evidence.span.length > 120 ? '' : '…'}”</div>` : ''}
-    <div style="font-size:12px;color:#6e6e73">${esc(i.handle)} · ${esc(i.member)}${i.id === state.selected ? '<span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span>' : ''}</div>
-  </button>`).join('') || '<div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div>';
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em"><button data-pick="${esc(i.id)}" style="border:0;background:transparent;padding:0;text-align:left;font:inherit;font-weight:600;cursor:pointer" aria-pressed="${i.id === state.selected}">${esc(i.place)}</button></span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${i.updates} posts</span></div>
+    ${i.status === 'provisional' && i.evidence?.span ? `<div style="font-size:12px;line-height:1.35;color:#3a3a3c">“${sourceLink(i.timeline[0], i.evidence.span.length > 120 ? i.evidence.span.slice(0, 119).replace(/\s+\S*$/, '') + '…' : i.evidence.span)}${i.evidence.exact || i.evidence.span.length > 120 ? '' : '…'}”</div>` : ''}
+    <div style="font-size:12px;color:#6e6e73">${handleLink(i.handle, i.timeline[0])} · ${esc(i.member)}${i.id === state.selected ? '<span style="margin-left:6px;font-weight:600;color:#1d1d1f">· viewing</span>' : ''}</div>
+  </article>`).join('') || '<div style="padding:30px 12px;text-align:center;font-size:12px;color:#6e6e73">Nothing in this state.</div>';
 
   $('saved').innerHTML = SAVED.map(([label, q], i) => `<button class="chip" data-q="${i}">${esc(label)}</button>`).join('');
   $('results').innerHTML = `<div style="padding:14px 0;font-size:12px;color:#6e6e73;border-top:1px solid #f0f0f2">X search runs against accounts beyond the tracked list (police, local press, officials). It lights up when an X search connector is added — queries and saved chips are ready.</div>`;
@@ -117,7 +128,7 @@ function render() {
     $('detail').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:13px">No incidents on the board. When a member responds to a breaking district emergency, the classifier opens a thread here.</div>';
     return;
   }
-  const intel = sel.intel || { confirmed: [], unverified: [], whatsNew: [] };
+  const intel = intelOf(sel);
   const newCount = sel.timeline.filter((e) => e.isNew).length;
   const prov = sel.status === 'provisional';
   const corr = sel.corroboration || {};
@@ -139,9 +150,9 @@ function render() {
     <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">${kindTag(sel.kind)}${prov ? provisionalBadge(corr.note) : ''}<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#6e6e73">${statusDot(sel.status)}${prov ? `provisional · ${esc(sel.lifecycle)} by age` : esc(sel.status)}</span><span style="font-size:11px;color:#6e6e73">${esc(etWhen(sel.since, D.today))} → ${esc(etWhen(sel.last, D.today))}</span></div>
       <h2 style="margin:0;font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(sel.title)}</h2>
-      <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${esc(sel.handle)}</span> · ${esc(sel.member)} · ${esc(sel.place)}${sel.districtMatch === false && sel.district ? ` <span title="The flagged place is not in the lead member's state (${esc(sel.district)}); the district suffix is withheld">· outside ${esc(sel.district)}</span>` : ''}</div>
-      <div style="font-size:12px;color:${prov ? '#194292' : '#6e6e73'}">${prov ? `Single-member report — ${esc(corr.note || 'not yet corroborated')}` : `Corroborated by ${esc(corr.by || 'grouping')}${corr.note ? ` — ${esc(corr.note)}` : ''}`}</div>
-      ${prov ? evidenceQuote(sel.evidence, sel.timeline[0]?.text) : ''}
+      <div style="font-size:12px;color:#6e6e73"><span style="font-weight:500;color:#1d1d1f">${handleLink(sel.handle, sel.timeline[0])}</span> · ${esc(sel.member)} · ${esc(sel.place)}${sel.districtMatch === false && sel.district ? ` <span title="The flagged place is not in the lead member's state (${esc(sel.district)}); the district suffix is withheld">· outside ${esc(sel.district)}</span>` : ''}</div>
+      <div style="font-size:12px;color:${prov ? '#194292' : '#6e6e73'}">${prov ? `Source report — ${esc(corr.note || 'not yet corroborated')}` : `Verification: ${esc(corr.note || 'not independently verified')}`}</div>
+      ${prov ? evidenceQuote(sel.evidence, sel.timeline[0]?.text, sel.timeline[0]) : ''}
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,auto);gap:14px;font-size:11px;color:#6e6e73;text-align:right">
       <div><div style="font-size:18px;font-weight:700;color:#1d1d1f;line-height:1">${sel.updates}</div>member posts</div>
@@ -157,23 +168,24 @@ function render() {
         <span style="font-size:11px;color:#6e6e73;padding-top:2px;white-space:nowrap;min-width:58px">${esc(etWhen(e.time, D.today))}</span>
         <div style="display:flex;justify-content:center;padding-top:5px">${dot(e.isNew ? '#1d1d1f' : '#d2d2d7')}</div>
         <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-          <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${esc(e.who)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span></div>
-          <p style="margin:0;font-size:13px;line-height:1.4">${markEvidence(e.text, e.evidence)}</p>
+          <div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">${handleLink(e.who, e)}</span><span style="font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a3c;background:#f2f2f4;padding:1px 6px;border-radius:5px">${esc(e.tag)}</span></div>
+          <p style="margin:0;font-size:13px;line-height:1.4">${sourceAnchor(e, markEvidence(e.text, e.evidence))}</p>
           ${evLine(e)}
           <div style="font-size:11px;color:#6e6e73">${fmt(e.engN)} engagement</div>
         </div></div>`).join('')}
     </div>
     <div style="flex:2 1 260px;min-width:0;display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font-size:13px;font-weight:700">Intel</h3>
-      ${panel('Confirmed', '#00823a', intel.confirmed.length ? intel.confirmed.map((c) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#00823a;font-weight:700">✓</span><span>${esc(c.text)} <span style="color:#6e6e73">· ${esc(c.src)}</span></span></div>`).join('') : `<div style="font-size:12px;color:#6e6e73">${prov ? 'Nothing extracted yet — the nightly intel pass is one of the ways a single-member report gets corroborated.' : 'Nothing extracted yet — intel updates on the nightly run.'}</div>`)}
-      ${intel.unverified.length ? panel('Circulating, unverified', '#d70015', intel.unverified.map((u) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="color:#d70015;font-weight:700">?</span><span>${esc(u.text)} <span style="color:#6e6e73">· ${esc(u.src)}</span></span></div>`).join('')) : ''}
-      ${panel("What's new", '#6e6e73', (intel.whatsNew.length ? intel.whatsNew : sel.timeline.slice(-2).reverse().map((e) => e.text.slice(0, 90))).map((n) => `<div style="font-size:12px;line-height:1.4;display:grid;grid-template-columns:auto 1fr;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#1d1d1f;margin-top:5px"></span><span>${esc(n)}</span></div>`).join(''))}
-      ${panel('Who else is on it', '#6e6e73', `<div style="display:flex;flex-wrap:wrap;gap:4px">${sel.others.length ? sel.others.map((o) => `<span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">${esc(o)}</span>`).join('') : '<span style="font-size:12px;color:#6e6e73">Only the lead member so far.</span>'}</div>`)}
+      ${panel('Reported in source posts', '#194292', intel.reported.length ? intel.reported.map((c) => `<div style="font-size:12px;line-height:1.4">${sourceLink({sourceId:c.sourceId}, c.text)} <span style="color:#6e6e73">· ${handleLink(sel.timeline.find((e) => (e.sourceId || e.id) === c.sourceId)?.who || 'Source', {sourceId:c.sourceId})}</span></div>`).join('') : '<div style="font-size:12px;color:#6e6e73">No validated passages extracted yet. Member statements and summaries do not independently confirm an event.</div>')}
+      ${intel.unverified.length ? panel('Circulating, unverified', '#d70015', intel.unverified.map((u) => `<div style="font-size:12px;line-height:1.4">${sourceLink({sourceId:u.sourceId}, u.text)} · ${handleLink(sel.timeline.find((e) => (e.sourceId || e.id) === u.sourceId)?.who || 'Source', {sourceId:u.sourceId})}</div>`).join('')) : ''}
+      ${panel("Latest source updates", '#6e6e73', (intel.updates.length ? intel.updates : sel.timeline.slice(-2).reverse()).map((n) => `<div style="font-size:12px;line-height:1.4">${sourceLink(n, n.text)}</div>`).join(''))}
+      ${panel('Who else is on it', '#6e6e73', `<div style="display:flex;flex-wrap:wrap;gap:4px">${sel.others.length ? sel.others.map((o) => `<span style="font-size:11px;background:#fff;border:1px solid #e8e8ed;padding:2px 8px;border-radius:6px">${handleLink(o, sourceFor(sel, o))}</span>`).join('') : '<span style="font-size:12px;color:#6e6e73">Only the lead member so far.</span>'}</div>`)}
       <button class="pill" data-brief style="margin-top:auto;align-self:flex-start">${state.copied ? 'Copied ✓' : 'Copy brief for Signal'}</button>
     </div>
   </div>`;
 }
 
 document.addEventListener('click', (e) => {
+  if (e.target.closest('a')) return;
   const st = e.target.closest('[data-status]');
   if (st) { state.status = st.dataset.status; render(); return; }
   const pick = e.target.closest('[data-pick]');
@@ -187,13 +199,13 @@ document.addEventListener('click', (e) => {
   }
 });
 
-loadRollups().then((data) => {
-  if (!data) {
-    document.querySelector('main').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:14px">No data yet — the first poll and nightly run create <code>site/data/rollups.json</code>.</div>';
-    return;
+startRefresh({
+  onData(data) { D = data; refreshError = null; render(); },
+  onError(error) {
+    refreshError = error;
+    if (D) updateCaptureLabel();
+    else $('updated').textContent = 'Dashboard could not load · retrying automatically';
   }
-  D = data;
-  render();
 });
 </script>
 </body>

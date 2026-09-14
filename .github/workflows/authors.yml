@@ -8,6 +8,7 @@ on:
 
 concurrency:
   group: data-writes
+  queue: max
   cancel-in-progress: false
 
 permissions:
@@ -30,3 +31,11 @@ jobs:
       - name: Commit author table
         run: |
           .github/scripts/commit-data.sh "authors: weekly refresh" data/authors.json data/state.json
+      - name: Retain validated work if publication failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: authors-recovery-${{ github.run_id }}
+          path: ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          if-no-files-found: ignore
+          retention-days: 7

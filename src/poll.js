@@ -1,51 +1,28 @@
-// The poller: pull everything new from the X List timeline, append to the
-// archive, advance the cursor. Runs every 20 minutes from GitHub Actions.
-//
-// Cursor strategy — the list endpoint may or may not honor since_id (search
-// and user timelines do; list tweets has not consistently documented it):
-//   1. First run tries since_id. If the API rejects it (400), we remember
-//      that (state.sinceIdSupported=false) and never send it again.
-//   2. Without since_id we paginate newest-first and stop at the first page
-//      that crosses the last-seen id (boundary stop). The tail of that page
-//      is a re-read we already have — billed but bounded by one page — so we
-//      shrink the page size adaptively toward recent per-poll volume.
-// Either way local dedupe (recentIds) keeps the archive exact.
+// Capture the List timeline with a durable per-page continuation. sinceId is
+// the last completed interval boundary, not simply the newest observed ID.
+// The List endpoint defaults to local boundary filtering; setting
+// sinceIdSupported=null explicitly permits a capability probe.
 import * as x from './x.js';
 import { settings, etDate, idGt, maxId } from './util.js';
 import {
-  loadState, saveState, addUsage, budgetExhausted, dailyBudget, estCost,
-  recentIds, appendToArchive
+  loadState, saveState, addUsage, dailyBudget, estCost,
+  boundedPageSize, unarchivedRecords, appendToArchive
 } from './store.js';
 
 export function listId() {
   return process.env.X_LIST_ID || settings.list_id;
 }
 
-// Capture the post a quote/reply points at with the post (x.js
-// includeReferenced) — on by default; X_INCLUDE_REFERENCED=false is the kill
-// switch. The included posts and their authors are billed reads on top of
-// the page: with ~22% of caucus posts being quotes or replies and ~16%
-// retweets (whose originals X returns too), a 100-post page brings back
-// roughly 35-40 extra post objects and ~30 user objects — about +18% in
-// post reads for the quotes and replies alone, up to ~2× the page's dollar
-// cost in all. docs/QUOTED_CONTEXT.md has the arithmetic.
+// Referenced posts and authors are retained as context. Returned resources
+// count against the conservative read guard; provider billing deduplication
+// is separate from this local counter.
 export function includeReferenced() {
   return !/^(0|false|no|off)$/i.test(process.env.X_INCLUDE_REFERENCED || '');
 }
 
-// Page size when we pay for boundary overlap: aim ~2× the recent per-poll
-// volume so bursts rarely need page 2, but quiet polls don't re-read 100.
-// Floor is the endpoint's minimum (5) — every row past the boundary is a
-// billed re-read, so overnight polls should ask for as little as possible.
-// Only the last six polls (~2h) count: a one-off burst (the 465-post first
-// capture) must not keep overnight polls paying for 30-row pages all night,
-// and a real evening surge should lift the page size within an hour.
-//
-// The per-poll average only means anything at the scheduled cadence. GitHub's
-// cron is best-effort and has skipped hours at a time on this repo, so when
-// the last poll is well past due, the backlog is whatever accumulated in that
-// gap, not the recent per-poll rate: ask for a full page and let the boundary
-// stop decide where to stop.
+// Adapt response size to recent volume; use full pages after a missed
+// cadence. Five is the client's compatibility floor, not a pricing unit.
+// Repeated resources can be deduplicated by X within its UTC billing day.
 export function adaptivePageSize(recentNewCounts, max = 100, { minutesSinceLastPoll = null, cadenceMinutes = 20 } = {}) {
   if (minutesSinceLastPoll != null && minutesSinceLastPoll > cadenceMinutes * 2) return max;
   const recent = recentNewCounts.slice(-6);
@@ -65,99 +42,158 @@ export function newerThan(tweets, sinceId) {
   return sinceId ? tweets.filter((t) => idGt(t.id, sinceId)) : tweets;
 }
 
-async function pull(state) {
-  const id = listId();
-  const maxPages = Number(process.env.X_MAX_PAGES || settings.poll.max_pages || 5);
-  const useSinceId = state.sinceIdSupported !== false && Boolean(state.sinceId);
-  const gapMinutes = minutesSince(state.lastPollAt);
-  const pageSize = state.sinceIdSupported === false
-    ? adaptivePageSize(state.recentNewCounts, settings.poll.page_size, { minutesSinceLastPoll: gapMinutes })
-    : settings.poll.page_size;
-  if (gapMinutes != null && gapMinutes > 60) {
-    console.warn(`[poll] ${(gapMinutes / 60).toFixed(1)}h since the last poll (scheduled every 20 min) — draining the backlog at full page size`);
-  }
-
-  const raw = [];
-  const includes = { tweets: [], users: [] }; // referenced posts + their authors, all pages
-  let paginationToken = null;
-  let hitBoundary = false;
-
-  for (let page = 0; page < maxPages && !hitBoundary; page++) {
-    let res;
-    try {
-      res = await x.listTweetsPage(id, {
-        sinceId: useSinceId ? state.sinceId : undefined,
-        paginationToken,
-        // after page 1 we're inside a burst — full pages are cheapest
-        pageSize: page === 0 ? pageSize : 100,
-        includeReferenced: includeReferenced()
-      });
-    } catch (e) {
-      if (e.status === 400 && useSinceId && state.sinceIdSupported === null) {
-        console.warn('[poll] list endpoint rejected since_id — switching to boundary-stop mode');
-        state.sinceIdSupported = false;
-        saveState(state);
-        return pull(state); // retry once in the discovered mode
-      }
-      // A failure past page 0 must not discard already-billed pages.
-      if (page === 0) throw e;
-      console.warn(`[poll] page ${page + 1} failed (${e.message}) — keeping earlier pages`);
-      break;
-    }
-    if (res.rateLimited) { console.warn('[poll] rate limited — backing off this cycle'); break; }
-    if (useSinceId && state.sinceIdSupported === null && res.tweets.length >= 0) {
-      state.sinceIdSupported = true; // the param was accepted
-    }
-    addUsage(state, { posts: res.usage, users: res.userReads || 0 });
-    includes.tweets.push(...(res.includes?.tweets || []));
-    includes.users.push(...(res.includes?.users || []));
-
-    const fresh = newerThan(res.tweets, state.sinceId);
-    raw.push(...fresh);
-    hitBoundary = fresh.length < res.tweets.length; // page crossed the cursor
-    paginationToken = res.nextToken;
-    if (!paginationToken) break;
-    if (page === maxPages - 1 && !hitBoundary && res.tweets.length) {
-      // Not recoverable by waiting: the cursor advances to the newest id
-      // captured, so posts older than this page are below the boundary and
-      // no later poll will ask for them again.
-      console.warn(`[poll] the backlog is deeper than ${maxPages} pages — posts older than the ${raw.length} captured here fall behind the cursor and need "npm run backfill-members -- --days=1" to recover; raise poll.max_pages in config/settings.json if this repeats`);
-    }
-  }
-  return { raw, includes };
+function boundedPages(value) {
+  const n = Number(value);
+  if (!Number.isSafeInteger(n) || n < 1 || n > 1000) throw new Error('maxPages must be an integer between 1 and 1000');
+  return n;
 }
 
-export async function pollOnce() {
-  if (!x.isConfigured()) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
-  if (!listId()) throw new Error('No list id: set X_LIST_ID or config/settings.json "list_id"');
-
-  const state = loadState();
-  if (budgetExhausted(state)) {
-    console.warn(`[poll] daily X read budget reached (${dailyBudget()}) — skipping until tomorrow (raise daily_read_budget in config/settings.json to change)`);
-    saveState(state);
-    return { captured: 0 };
+// Checkpoint each received page before publishing its continuation. The
+// completed cursor does not move until the entire interval is drained.
+// Dependencies keep all acceptance tests offline and outside the real data.
+export async function collectListPages(state, {
+  id = listId(), maxPages = 10, progressKey = 'pollProgress',
+  baseSinceId = state.sinceId, advanceCursor = true,
+  fetchPage = x.listTweetsPage, persist = saveState,
+  archive = appendToArchive, unseen = unarchivedRecords,
+  now = () => new Date().toISOString(), includeReferences = includeReferenced(),
+  restartPagination = false
+} = {}) {
+  maxPages = boundedPages(maxPages);
+  let progress = state[progressKey];
+  if (progress && progress.listId !== id) {
+    throw new Error('The configured List changed while a capture interval is unfinished; recover that interval before replacing its source');
   }
-
-  const capturedAt = new Date().toISOString();
-  const { raw, includes } = await pull(state);
-
-  const seen = recentIds();
-  const records = [];
-  for (const t of raw) {
-    if (seen.has(t.id)) continue;
-    seen.add(t.id);
-    records.push(x.toRecord(t, capturedAt, includes));
-    state.sinceId = maxId(state.sinceId, t.id);
+  if (!progress) {
+    progress = state[progressKey] = {
+      listId: id, baseSinceId: baseSinceId || null, newestId: baseSinceId || null,
+      nextToken: null, startedAt: now(), pages: 0, captured: 0, recoveryRequired: null
+    };
   }
+  if (restartPagination) {
+    progress.nextToken = null;
+    progress.pages = 0;
+    progress.recoveryRequired = null;
+    progress.restartCount = (progress.restartCount || 0) + 1;
+    progress.restartedAt = now();
+  }
+  const records = [], dates = new Set();
+  let pages = 0, postsRead = 0, usersRead = 0, completed = false;
+  let reason = progress.recoveryRequired?.reason || (Date.parse(progress.retryAt) > Date.parse(now()) ? 'rate-limited' : null);
+  persist(state);
+  if (reason) return { records, dates: [], pages, postsRead, usersRead, complete: false, reason };
 
-  const dates = appendToArchive(records);
-  state.recentNewCounts = [...state.recentNewCounts, records.length].slice(-30);
-  state.lastPollAt = capturedAt;
-  saveState(state);
+  for (; pages < maxPages;) {
+    const useSinceId = state.sinceIdSupported !== false && Boolean(progress.baseSinceId);
+    const desired = progress.pages > 0 ? 100 : adaptivePageSize(state.recentNewCounts || [], settings.poll.page_size, {
+      minutesSinceLastPoll: minutesSince(state.lastPollAt)
+    });
+    const pageSize = boundedPageSize(state, { desired, includeReferenced: includeReferences });
+    if (!pageSize) { reason = 'budget'; break; }
+    let res;
+    try {
+      res = await fetchPage(id, {
+        sinceId: useSinceId ? progress.baseSinceId : undefined,
+        paginationToken: progress.nextToken,
+        pageSize, includeReferenced: includeReferences
+      });
+    } catch (e) {
+      if (e.status === 400 && useSinceId && state.sinceIdSupported === null && !progress.nextToken) {
+        state.sinceIdSupported = false;
+        persist(state);
+        continue;
+      }
+      reason = e.status === 400 && progress.nextToken ? 'pagination-token-rejected' : 'request-failed';
+      if (reason === 'pagination-token-rejected') progress.recoveryRequired = { reason, at: now() };
+      progress.lastError = { at: now(), status: e.status || null, kind: reason };
+      break;
+    }
+    if (res.rateLimited) {
+      reason = 'rate-limited';
+      progress.retryAt = res.resetAt ? new Date(res.resetAt).toISOString() : null;
+      break;
+    }
+    if (useSinceId && state.sinceIdSupported === null) state.sinceIdSupported = true;
+    const capturedAt = now();
+    if (progressKey === 'pollProgress') state.lastPollSuccessAt = capturedAt;
+    addUsage(state, { posts: res.usage, users: res.userReads || 0 });
+    postsRead += res.usage; usersRead += res.userReads || 0;
+    persist(state); // retain the read ledger even if the archive write fails
 
+    const fresh = newerThan(res.tweets, progress.baseSinceId);
+    let pageRecords;
+    try {
+      pageRecords = unseen(fresh.map((t) => x.toRecord(t, capturedAt, res.includes)));
+      for (const date of archive(pageRecords)) dates.add(date);
+    } catch (e) {
+      reason = 'archive-write-failed';
+      progress.recoveryRequired = { reason, at: now() };
+      persist(state);
+      throw e;
+    }
+    records.push(...pageRecords);
+    const newest = fresh.reduce((id, t) => maxId(id, t.id), progress.newestId);
+    const crossedBoundary = fresh.length < res.tweets.length;
+    const repeatedToken = res.nextToken && res.nextToken === progress.nextToken;
+    progress.newestId = newest;
+    progress.pages++;
+    progress.captured = (progress.captured || 0) + pageRecords.length;
+    progress.lastPageAt = capturedAt;
+    progress.nextToken = res.nextToken || null;
+    delete progress.lastError;
+    delete progress.retryAt;
+    pages++;
+    if (crossedBoundary || (!res.nextToken && (!progress.baseSinceId || useSinceId))) {
+      completed = true;
+      if (advanceCursor) state.sinceId = maxId(state.sinceId, newest);
+      state[progressKey] = null;
+    } else if (repeatedToken) {
+      reason = 'pagination-not-advancing';
+      progress.recoveryRequired = { reason, at: now() };
+    } else if (!res.nextToken) {
+      // The provider ran out before an established boundary was observed.
+      // Keep the old cursor and all captured pages; don't call it complete.
+      reason = 'boundary-not-reached';
+      progress.recoveryRequired = { reason, at: now(), oldestReturnedId: res.tweets.at(-1)?.id || null };
+    }
+    persist(state); // all records are durable before nextToken/cursor advances
+    if (completed || reason) break;
+  }
+  if (!completed && !reason) reason = 'page-cap';
+  persist(state);
+  return { records, dates: [...dates], pages, postsRead, usersRead, complete: completed, reason, intervalCaptured: progress.captured || 0 };
+}
+
+export async function pollOnce({
+  state = loadState(), id = listId(), maxPages = process.env.X_MAX_PAGES || settings.poll.max_pages || 10,
+  fetchPage = x.listTweetsPage, persist = saveState, archive = appendToArchive,
+  unseen = unarchivedRecords, now = () => new Date().toISOString(),
+  afterCapture = true, configured = x.isConfigured(),
+  includeReferences = includeReferenced(), restartPagination = process.argv.includes('--restart-pagination')
+} = {}) {
+  if (!configured) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
+  if (!id) throw new Error('No list id: set X_LIST_ID or config/settings.json "list_id"');
+  state.lastPollAttemptAt = now();
+  state.lastPollOutcome = 'running';
+  persist(state);
+  let result;
+  try {
+    result = await collectListPages(state, { id, maxPages, fetchPage, persist, archive, unseen, now, includeReferences, restartPagination });
+  } catch (e) {
+    state.lastPollOutcome = state.pollProgress?.recoveryRequired?.reason || 'failed';
+    persist(state);
+    throw e;
+  }
+  const { records, dates } = result;
+  state.lastPollOutcome = result.complete ? 'complete' : result.reason;
+  if (result.complete) {
+    state.recentNewCounts = [...(state.recentNewCounts || []), result.intervalCaptured].slice(-30);
+    state.lastPollAt = now();
+  }
+  persist(state);
   const today = state.usage[etDate()] || { posts: 0, users: 0 };
-  const quoted = records.filter((r) => r.quoted).length;
-  console.log(`[poll] captured ${records.length} new tweet(s)${dates.length ? ` → ${dates.join(', ')}` : ''} (${quoted} with quoted context; ${includes.tweets.length} referenced post(s) + ${includes.users.length} author(s) read); today's reads: ${today.posts + today.users}/${dailyBudget()} (~$${estCost(today).toFixed(2)})`);
+  console.log(`[poll] captured ${records.length} new post(s)${dates.length ? ` → ${dates.join(', ')}` : ''}; ${result.complete ? 'interval complete' : `interval unfinished: ${result.reason}`}; returned objects today: ${today.posts + today.users}/${dailyBudget()} (before provider billing deduplication, ~$${estCost(today).toFixed(2)})`);
+  if (!afterCapture) return { captured: records.length, complete: result.complete, reason: result.reason, pages: result.pages };
 
   // Post-capture extras are best-effort: the new posts into the embedding
   // index (seconds on the CPU; a one-line skip when the 35 MB model was never
@@ -174,6 +210,9 @@ export async function pollOnce() {
     } catch (e) {
       console.warn(`[poll] embedding skipped: ${e.message}`);
     }
+  }
+  // A quiet capture cycle can still repair a pending classification job.
+  {
     try {
       const { classifyLive } = await import('./classify-live.js');
       const r = await classifyLive(records);
@@ -190,9 +229,9 @@ export async function pollOnce() {
   } catch (e) {
     console.warn(`[poll] site data rebuild skipped: ${e.message}`);
   }
-  return { captured: records.length };
+  return { captured: records.length, complete: result.complete, reason: result.reason, pages: result.pages };
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
-  pollOnce().catch((e) => { console.error(e); process.exit(1); });
+  pollOnce().then((r) => { if (!r.complete) process.exitCode = 2; }).catch((e) => { console.error(e); process.exitCode = 1; });
 }

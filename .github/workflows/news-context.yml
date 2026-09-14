@@ -1,0 +1,113 @@
+# Acquire public news outside the capture lock, then publish a validated
+# snapshot under the same writer lock as capture and classification.
+name: news-context
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/news-context.js'
+      - 'src/context-refresh.js'
+      - 'config/news-sources.json'
+      - '.github/scripts/news-snapshot.mjs'
+      - '.github/scripts/refresh-news.sh'
+      - '.github/workflows/news-context.yml'
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'Comma-separated registry ids to refresh (empty = all)'
+        required: false
+        default: ''
+      dry_run:
+        description: "'true' fetches and reports without writing"
+        required: false
+        default: ''
+      reconsider:
+        description: 'Valid YYYY-MM-DD: list classifications with newly relevant public evidence'
+        required: false
+        default: ''
+
+concurrency:
+  group: news-context
+  queue: max
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      outcome: ${{ steps.fetch.outcome }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Save news base
+        run: node .github/scripts/news-snapshot.mjs base "$RUNNER_TEMP/news-transfer"
+      - name: Refresh public reporting
+        id: fetch
+        continue-on-error: true
+        env:
+          SOURCES: ${{ inputs.sources }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          RECONSIDER: ${{ inputs.reconsider }}
+        run: .github/scripts/refresh-news.sh
+      - name: Validate fetched snapshot
+        if: ${{ !cancelled() && inputs.dry_run != 'true' }}
+        run: node .github/scripts/news-snapshot.mjs pack "$RUNNER_TEMP/news-transfer"
+      - name: Retain public snapshot for serialized publication
+        if: ${{ !cancelled() && inputs.dry_run != 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-transfer-${{ github.run_id }}
+          path: ${{ runner.temp }}/news-transfer/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Report fetch failure after saving status
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
+
+  publish:
+    needs: refresh
+    if: ${{ always() && !cancelled() && inputs.dry_run != 'true' && (needs.refresh.outputs.outcome == 'success' || needs.refresh.outputs.outcome == 'failure') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    concurrency:
+      group: data-writes
+      queue: max
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: news-transfer-${{ github.run_id }}
+          path: ${{ runner.temp }}/news-transfer/
+      - name: Apply public snapshot without overwriting concurrent news changes
+        run: node .github/scripts/news-snapshot.mjs apply "$RUNNER_TEMP/news-transfer"
+      - name: Commit news context
+        run: |
+          .github/scripts/commit-data.sh "news-context: $(date -u +'%Y-%m-%d %H:%M') refresh" data/news
+      - name: Retain validated work if publication failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-recovery-${{ github.run_id }}
+          path: ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          if-no-files-found: ignore
+          retention-days: 7

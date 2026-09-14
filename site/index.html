@@ -46,6 +46,7 @@
 <div id="modal"></div>
 <main style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
   <section id="controls" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 0 2px"></section>
+  <section id="news" style="background:#fff;border-radius:12px;padding:12px 16px"></section>
   <section id="cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px"></section>
   <section style="display:flex;flex-wrap:wrap;gap:14px;align-items:stretch">
     <div id="topics" style="background:#fff;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;flex:2 1 560px;min-width:0"></div>
@@ -61,16 +62,25 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash, decoratePost, sourceLink, sourceAnchor, handleLink, postUrl, profileUrl, newsEvidence, captureLabel, startRefresh } from './ui.js';
 
 let D = null;
 const state = {
   caucus: 'All', window: 't', open: {}, topic: 'all', sort: 'Newest',
-  row: null, // selected Topics row ('macro' or 'macro/sub') → Feed card in row mode
+  feedLimit: 200, row: null, // selected Topics row ('macro' or 'macro/sub') → Feed card in row mode
   clipOpen: false, clipSubject: '', clipCaucus: 'All', clipWindow: 't', clipSort: 'Engagement', clipFormat: 'List', copied: false,
   inc: { handle: true, district: true, caucus: true, counts: true, quote: true, time: false, numbered: true, footer: true }
 };
 let copyTimer = null;
+let refreshError = null;
+const decorated = new WeakMap();
+const allFeed = () => { if (!decorated.has(D)) decorated.set(D, D.feedAll?.length ? D.feedAll.map((p) => decoratePost(D, p)) : D.feed); return decorated.get(D); };
+const sourceForHandle = (handle, ids = null) => allFeed().find((p) => p.handle === handle && (!ids || ids.includes(p.id)));
+function updateCaptureLabel() {
+  $('updated').textContent = captureLabel(D, refreshError);
+  $('updated').style.color = refreshError ? '#a35d00' : '#6e6e73';
+  $('updated').title = `Page data built ${D?.generatedAt || 'unknown'}; last capture attempt ${D?.lastPollAttemptAt || 'unknown'}. Automatic page refresh every 2 minutes. Completed capture does not prove full account coverage.`;
+}
 
 const $ = (id) => document.getElementById(id);
 const label = (k) => D.labels[k] || String(k).split('/').pop().split(/[_-]+/).map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
@@ -89,19 +99,19 @@ const SIMILAR_TITLE = 'Posts in the 7-day window whose wording sits near this st
 function similarList(list, { wrap = false } = {}) {
   if (!list?.length) return '';
   const body = (r) => wrap
-    ? `<span style="min-width:0">${esc(r.text)}</span>`
-    : `<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1">${esc(r.text)}</span>`;
-  const rows = list.map((r) => `<div style="display:flex;gap:6px;align-items:baseline;font-size:12px;line-height:1.35;color:#3a3a3c;min-width:0" title="${esc(r.topics?.length ? 'labeled: ' + r.topics.map(label).join(', ') : 'no labels')}"><span style="font-weight:500;color:#1d1d1f;white-space:nowrap">${esc(r.handle)}</span>${body(r)}<span style="color:#6e6e73;white-space:nowrap;margin-left:auto;font-variant-numeric:tabular-nums">${Number(r.sim).toFixed(2)}</span></div>`).join('');
+    ? `<span style="min-width:0">${sourceLink(r, r.text)}</span>`
+    : `<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1">${sourceLink(r, r.text)}</span>`;
+  const rows = list.map((r) => `<div style="display:flex;gap:6px;align-items:baseline;font-size:12px;line-height:1.35;color:#3a3a3c;min-width:0" title="${esc(r.topics?.length ? 'labeled: ' + r.topics.map(label).join(', ') : 'no labels')}"><span style="font-weight:500;color:#1d1d1f;white-space:nowrap">${handleLink(r.handle, r)}</span>${body(r)}<span style="color:#6e6e73;white-space:nowrap;margin-left:auto;font-variant-numeric:tabular-nums">${Number(r.sim).toFixed(2)}</span></div>`).join('');
   return `<div style="display:flex;flex-direction:column;gap:2px;min-width:0" title="${esc(SIMILAR_TITLE)}"><span style="font-size:11px;font-weight:500;color:#6e6e73">Similar, unlabeled <span style="font-weight:400">· ${list.length}</span></span>${rows}</div>`;
 }
 
 function render() {
+  const openDetails = [...document.querySelectorAll('details[data-group][open]')].map((el) => el.dataset.group);
   const scope = state.caucus, win = state.window, isAll = scope === 'All';
   const S = (D.stats[scope] || D.stats.All)[win];
   const curve = (D.stats[scope] || D.stats.All).curve48;
 
-  $('updated').innerHTML = `${dot('#1d1d1f', 6)}<span class="hdate">${esc(headerDate(D.today))} · </span>updated ${D.lastPollAt ? esc(etTime(D.lastPollAt)) : '—'}`;
-  $('updated').title = D.lastPollAt ? `Next poll ~${etTime(new Date(new Date(D.lastPollAt).getTime() + 20 * 60000).toISOString())}` : '';
+  updateCaptureLabel();
 
   // Ideological pair, a divider, then the identity caucuses.
   $('controls').innerHTML =
@@ -109,10 +119,10 @@ function render() {
     control([['t', 'Today', null], ['w', '7 days', null]], 'window', win);
 
   // ── stat cards ──
-  const coreRaw = D.core.map(({ name, topics }) => ({ name, n: topics.reduce((a, k) => a + (byKey(k) ? val(byKey(k)).n : 0), 0) }));
+  const coreRaw = D.core.map(({ name }) => ({ name, n: S.coreCounts?.[name] || 0 }));
   const coreMax = Math.max(1, ...coreRaw.map((c) => c.n));
-  const coreN = coreRaw.reduce((a, c) => a + c.n, 0);
-  const classified = D.topics.reduce((a, t) => a + val(t).n, 0);
+  const coreN = S.corePosts || 0;
+  const classified = S.classified || 0;
   // Momentum is paused when the last 24h holds captured posts but none are
   // classified yet (nightly not run): a gap in the instrument, not a collapse.
   const paused = !!D.classification?.momentumPaused;
@@ -121,31 +131,34 @@ function render() {
   const pausedCard = card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum</span></div>
       <div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1;color:#8e8e93">—</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">paused</span></div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2"></div>
-      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `topics classified through ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.capturedIn24h || 0)} posts in the last 24h await the classifier</div>`);
+      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `latest topical assignment ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.capturedIn24h || 0)} posts in the last 24h await the classifier</div>`);
   $('cards').innerHTML = [
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.posts)}</div>${spark(curve, 108, 26)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.mix[0], '#194292'], [S.mix[1], '#a9c3ee'], [S.mix[2], '#e0e0e4']])}</div>
       <div style="font-size:11px;color:#6e6e73">${S.mix[0]}% original · ${S.mix[1]}% replies · ${S.mix[2]}% reposts</div>`),
-    card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages</span><span style="white-space:nowrap">${classified ? Math.round(100 * coreN / classified) : 0}% of posts</span></div>
+    card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages</span><span style="white-space:nowrap">${S.posts ? Math.round(100 * coreN / S.posts) : 0}% of captured posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(coreN)}</div></div>
       <div style="display:flex;flex-direction:column;gap:3px;margin-top:1px">${coreRaw.map((c) => `<div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:0 7px;align-items:center;font-size:12px">${dot('#1d1d1f', 5)}<span>${esc(c.name)}</span><div style="width:44px;height:3px;background:#f0f0f2;border-radius:2px;overflow:hidden">${fill(100 * c.n / coreMax, '#1d1d1f')}</div><span style="font-weight:600;min-width:3.2ch;text-align:right">${fmt(c.n)}</span></div>`).join('')}</div>`),
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Engagement</span></div>
       <div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.eng)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.top10Share, '#1d1d1f'], [100 - S.top10Share, '#d2d2d7']])}</div>
-      <div style="font-size:11px;color:#6e6e73">${fmt(S.perPost)} per post · ${win === 't' ? arrow(S.engDelta) + ' vs 7-day avg · ' : ''}top 10 members ${S.top10Share}%</div>`),
-    leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum leader</span></div>
+      <div style="font-size:11px;color:#6e6e73">${fmt(S.perPost)} per post · ${win === 't' ? arrow(S.engDelta) + ' vs prior 6-day avg · ' : ''}top 10 accounts ${S.top10Share}%</div>`),
+    leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Observed momentum · all House · 24h</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${leader.momentum.score}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(leader.name)}</span></div>${spark(leader.trend)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, MOMENTUM_FILL)}</div>
-      <div style="font-size:11px;color:#6e6e73">driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs 7-day avg</div>`) : (paused ? pausedCard : '')
+      <div style="font-size:11px;color:#6e6e73">observed activity · driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs prior 6-day avg</div>`) : (paused ? pausedCard : '')
   ].join('');
 
+  $('controls').insertAdjacentHTML('beforeend', `<span style="font-size:11px;color:#6e6e73;flex-basis:100%;padding-top:5px">${fmt(S.members)} roster members · ${fmt(S.accounts ?? S.members)} accounts posting · ${fmt(classified)} of ${fmt(S.posts)} captured posts classified · ${fmt(S.pending || 0)} pending. Counts describe captured posts; continuous full coverage is not established. Engagement is the latest stored observation, not a live total.</span>`);
+  $('news').innerHTML = `<details data-group="public-news"><summary style="font-size:12px;cursor:pointer"><strong>Public news context</strong> · ${fmt(D.news?.items || 0)} stored articles · ${D.news?.latestPublishedAt ? 'latest publication ' + esc(etWhen(D.news.latestPublishedAt, D.today)) : 'article publication dates unavailable'} · view recent sources</summary>${newsEvidence(D.news?.latest, {title:'Recent public reporting · context leads, independent of member posts'})}</details>`;
   renderTopics(isAll, scope, win);
   renderFeed(scope, win);
   renderPhrases();
   renderClusters(scope, win);
   renderDistrict();
   renderModal();
+  for (const group of openDetails) { const element = document.querySelector(`details[data-group="${CSS.escape(group)}"]`); if (element) element.open = true; }
 }
 
 function renderTopics(isAll, scope, win) {
@@ -187,7 +200,7 @@ function renderTopics(isAll, scope, win) {
       const subSel = state.row === subKey;
       // A story row can carry the posts the labels missed (similar, unlabeled).
       const similar = s.related?.length ? `<tr style="background:#f7f7f9"><td colspan="${cols}" style="padding:0 8px 8px 36px;border-bottom:1px solid #fff">${similarList(s.related)}</td></tr>` : '';
-      return `<tr class="subrow${subSel ? ' rowsel' : ''}" data-row="${esc(subKey)}" role="button" tabindex="0" aria-pressed="${subSel}" title="Show every post on ${esc(label(subKey))}"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px;font-weight:${subSel ? 600 : 400}">${esc(label(subKey))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${esc(s.lead)}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>${similar}`;
+      return `<tr class="subrow${subSel ? ' rowsel' : ''}" data-row="${esc(subKey)}" role="button" tabindex="0" aria-pressed="${subSel}" title="Show every post on ${esc(label(subKey))}"><td style="padding:6px 8px 6px 22px;border-bottom:1px solid #fff"><span style="font-size:12px;font-weight:${subSel ? 600 : 400}">${esc(label(subKey))}</span><span style="font-size:11px;color:#6e6e73;margin-left:7px">${share}%${s.lead ? ` · lead <span style="font-weight:500">${handleLink(s.lead, {id:s.leadPostId})}</span>` : ''}</span></td>${subCells}<td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.n)}</td><td style="padding:6px 8px 6px 12px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff"></td><td style="padding:6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.eng)}</td><td style="padding:6px 0 6px 8px;border-bottom:1px solid #fff;text-align:right;font-size:12px">${fmt(sv.m)}</td></tr>${similar}`;
     }).join('') : '';
     const fold = t.subs.length > 0
       ? `<button class="expand" data-expand="${esc(t.key)}" aria-expanded="${isOpen}" aria-label="${isOpen ? 'Hide' : 'Show'} subtopics of ${esc(t.name)}" title="${isOpen ? 'Hide' : 'Show'} subtopics">${chevron(true, isOpen)}</button>`
@@ -208,43 +221,44 @@ function renderTopics(isAll, scope, win) {
     ${isAll ? MATRIX.map((k) => `<th style="text-align:right;font-size:11px;font-weight:600;color:${CT[k]};padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">${SHORT[k]}</th>`).join('') : ''}
     ${th('Posts', 'text-align:right')}
     <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 12px;border-bottom:1px solid #e8e8ed;width:13%">7-day trend</th>
-    <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%" title="0–100, 50 = steady. 40% volume lift · 20% acceleration · 20% member adoption · 10% caucus spread · 10% engagement lift, each against the topic's 7-day baseline">Momentum</th>
+    <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%" title="All House, rolling last 24 hours; these scores do not change with table filters. Observed activity in captured classified posts, not a forecast. 0–100, 50 = steady. 40% volume lift · 20% acceleration · 20% member adoption · 10% caucus spread · 10% engagement lift, each against the topic's 7-day baseline">Momentum</th>
     ${th('Engagement', 'text-align:right')}
-    <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 8px;border-bottom:1px solid #e8e8ed">Members</th>
+    <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 8px;border-bottom:1px solid #e8e8ed">Roster members</th>
   </tr></thead><tbody>${rows || `<tr><td colspan="9" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No classified posts yet — the nightly job (or the poll-time tagger) fills this in.</td></tr>`}</tbody></table></div>`;
 }
 
 // One post card — used by the default feed and by row mode. `chipKeys` are
 // the topic keys to show as tags (two, then "+n").
 function postCard(f, chipKeys) {
-  const chips = chipKeys.slice(0, 2).map((tk) => tag(label(tk))).join('');
+  const chips = chipKeys.slice(0, 2).map((tk) => tag(label(tk))).join('') + (f.classificationStatus === 'pending' ? tag('Classification pending') : !f.topics.length ? tag('Reviewed · no topic assigned') : '') + (f.needsContext ? tag('Needs context') : '');
   const extra = chipKeys.length > 2 ? tag('+' + (chipKeys.length - 2)) : '';
-  const quoted = f.quoted ? `<div style="font-size:12px;line-height:1.4;color:#3a3a3c;border-left:2px solid #e8e8ed;padding:1px 0 1px 9px;margin-top:2px"><span style="color:#8e8e93">❝</span> ${f.quoted.handle ? `<span style="font-weight:600">${esc(f.quoted.handle)}</span> ` : ''}${esc(f.quoted.text || '')}</div>` : '';
+  const quoted = f.quoted ? `<div style="font-size:12px;line-height:1.4;color:#3a3a3c;border-left:2px solid #e8e8ed;padding:1px 0 1px 9px;margin-top:2px"><span style="color:#8e8e93">❝</span> ${f.quoted.handle ? `<span style="font-weight:600">${handleLink(f.quoted.handle, f.quoted)}</span> ` : ''}${sourceLink(f.quoted, f.quoted.text || '')}</div>` : '';
   return `<div style="display:grid;grid-template-columns:30px 1fr;gap:4px 10px;padding:10px 0;border-top:1px solid #f0f0f2">${avatar(f.member || f.handle, f.caucus)}
     <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
-      <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;min-width:0">${f.isNew ? `<span title="Captured in the latest poll">${dot('#1d1d1f', 6)}</span>` : ''}<span style="font-weight:600;font-size:13px">${esc(f.handle)}</span>${f.caucus.map((c) => `<span style="display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#6e6e73">${dot(C[c] || '#c7c7cc')}${SHORT[c] || esc(c)}</span>`).join('')}</div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(f.time, D.today))}</span></div>
-      <p style="margin:0;font-size:13px;line-height:1.45;overflow-wrap:anywhere">${esc(f.text)}</p>${quoted}
-      <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div style="display:flex;gap:4px;flex-wrap:wrap">${chips}${extra}</div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${f.kind === 'repost' ? '↻ repost' : (f.kind === 'quote' ? '❝ ' : '') + fmt(f.engN)}</span></div>
+      <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div style="display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;min-width:0">${f.isNew ? `<span title="Captured in the latest poll">${dot('#1d1d1f', 6)}</span>` : ''}<span style="font-weight:600;font-size:13px">${handleLink(f.handle, f)}</span>${f.caucus.map((c) => `<span style="display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#6e6e73">${dot(C[c] || '#c7c7cc')}${SHORT[c] || esc(c)}</span>`).join('')}</div><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(f.time, D.today))}</span></div>
+      <p style="margin:0;font-size:13px;line-height:1.45;overflow-wrap:anywhere">${sourceLink(f, f.text)}</p>${quoted}${newsEvidence(f.provenance?.evidenceSupplied, {used:f.provenance?.evidenceUsed})}
+      <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><div style="display:flex;gap:4px;flex-wrap:wrap">${chips}${extra}</div><span style="font-size:11px;color:#6e6e73;white-space:nowrap" title="${esc(f.metricsObservedAt ? 'Metrics last observed ' + etWhen(f.metricsObservedAt, D.today) : 'Metrics observation time unavailable')}">${f.kind === 'repost' ? '↻ repost' : (f.kind === 'quote' ? '❝ ' : '') + fmt(f.engN)}</span></div>
     </div></div>`;
 }
 
 const feedHead = (h2, meta, title) => `<div aria-live="polite" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:9px;min-width:0;flex-wrap:wrap"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em"${title ? ` title="${esc(title)}"` : ''}>${esc(h2)}</h2><span style="font-size:12px;color:#6e6e73;display:inline-flex;align-items:center;gap:5px;white-space:nowrap">${meta}</span></div>${control([['Newest', 'Newest', null], ['Top', 'Top', null]], 'sort', state.sort)}</div>`;
-const feedBody = (items, empty) => `<div style="overflow:auto;flex:1;min-height:0;padding-right:6px;scrollbar-gutter:stable">${items || `<div style="padding:40px 12px;text-align:center;color:#6e6e73;font-size:13px;line-height:1.5">${empty}</div>`}</div>`;
+const feedBody = (items, empty) => `<div id="feed-scroll" style="overflow:auto;flex:1;min-height:0;padding-right:6px;scrollbar-gutter:stable">${items || `<div style="padding:40px 12px;text-align:center;color:#6e6e73;font-size:13px;line-height:1.5">${empty}</div>`}</div>`;
 
+function morePosts(total) { return total > state.feedLimit ? `<button class="secondary" data-act="morePosts">Show 200 more · ${Math.min(state.feedLimit, total)} of ${total} displayed</button>` : ''; }
 function renderFeed(scope, win) {
   const hit = state.row ? findRow(D, state.row) : null;
   if (hit) return renderRowFeed(hit, scope, win);
   const byC = (f) => scope === 'All' || f.caucus.includes(scope);
-  const base = D.feed.filter((f) => winPosts(f) && byC(f));
-  let feed = base.filter((f) => state.topic === 'all' || inTopic(f, state.topic));
+  const base = allFeed().filter((f) => winPosts(f) && byC(f));
+  let feed = base.filter((f) => state.topic === 'all' || (state.topic === 'pending' ? f.classificationStatus === 'pending' : inTopic(f, state.topic)));
   if (state.sort === 'Top') feed = feed.slice().sort((a, b) => b.engN - a.engN);
   const macroKeys = D.topics.map((t) => [t.key, t.name]);
-  const topicOpts = [['all', 'All topics', base.length]].concat(macroKeys.map(([k, name]) => [k, name, base.filter((f) => inTopic(f, k)).length]));
+  const topicOpts = [['all', 'All captured posts', base.length], ['pending', 'Classification pending', base.filter((f) => f.classificationStatus === 'pending').length]].concat(macroKeys.map(([k, name]) => [k, name, base.filter((f) => inTopic(f, k)).length]));
   const newCount = feed.filter((f) => f.isNew).length;
-  const items = feed.map((f) => postCard(f, f.topics.filter((tk) => !tk.includes('/')))).join('');
+  const items = feed.slice(0, state.feedLimit).map((f) => postCard(f, f.topics.filter((tk) => !tk.includes('/')))).join('');
   $('feed').innerHTML = feedHead('Feed', `${dot('#1d1d1f', 6)}${feed.length} posts · ${newCount} new`) +
   `<div style="display:flex;gap:6px">${select(topicOpts, 'topic', state.topic)}</div>` +
-  feedBody(items, 'No posts match this caucus and topic.');
+  feedBody(items, 'No posts match this caucus and topic.') + morePosts(feed.length);
 }
 
 // Row mode: every post on the selected Topics row (macro or story) in the
@@ -260,7 +274,7 @@ function renderRowFeed(hit, scope, win) {
   const chipsFor = (f) => hit.sub
     ? f.topics.filter((tk) => !tk.includes('/') && tk !== macroKey)
     : f.topics.filter((tk) => tk.startsWith(macroKey + '/')).concat(f.topics.filter((tk) => !tk.includes('/') && tk !== macroKey));
-  const items = posts.map((f) => postCard(f, chipsFor(f))).join('');
+  const items = posts.slice(0, state.feedLimit).map((f) => postCard(f, chipsFor(f))).join('');
   const wAll = hit.row.w?.[scope]?.n || 0;
   const empty = `No posts on ${esc(hit.label)} ${win === 't' ? 'today' : 'in the last 7 days'}${scope !== 'All' ? ` from the ${esc(caucusName(scope))}` : ''}.` +
     (win === 't' && wAll ? `<div style="margin-top:8px"><button class="secondary" data-set="window" data-val="w">Show 7 days · ${wAll} ${wAll === 1 ? 'post' : 'posts'}</button></div>` : '');
@@ -268,7 +282,7 @@ function renderRowFeed(hit, scope, win) {
     ? `<div style="font-size:11px;color:#6e6e73;padding:6px 0 0">Newest ${posts.length} of ${ids.length} loaded — older posts were trimmed to keep the page light.</div>` : '';
   $('feed').innerHTML = feedHead(hit.label, `${fmt(v.n)} ${v.n === 1 ? 'post' : 'posts'} · ${fmt(v.m)} ${v.m === 1 ? 'member' : 'members'}`, rowHeader(hit.label, v.n, v.m)) +
   `<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="secondary" data-act="allPosts" title="Back to the full feed (Esc)">‹ All posts</button><span style="font-size:11px;color:#6e6e73;min-width:0">${hit.sub ? `in ${esc(hit.topic.name)} · ` : ''}${win === 't' ? 'today' : '7 days'}${scope !== 'All' ? ` · ${esc(SHORT[scope] || scope)}` : ''}</span></div>` +
-  feedBody(items, empty) + trimmed;
+  feedBody(items, empty) + morePosts(posts.length) + trimmed;
 }
 
 function renderPhrases() {
@@ -287,18 +301,18 @@ function renderPhrases() {
     const unity = `<div style="display:flex;gap:4px" title="${KEYS.map((k, i) => `${SHORT[k]} ${p.cm[i]}`).join(' · ')}">${KEYS.map((k, i) => `<span style="width:7px;height:7px;border-radius:50%;background:${inC(k, p.cm[i]) ? C[k] : '#e8e8ed'};display:inline-block"></span>`).join('')}</div>`;
     return `<tr><td style="padding:7px 6px 7px 0;border-bottom:1px solid #f0f0f2"><span style="font-weight:600;letter-spacing:-0.01em">${esc(p.text)}</span></td>
     <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:6px;white-space:nowrap">${pillarTag}${subTopic ? `<span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(subTopic)}</span>` : ''}</div></td>
-    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2;font-size:12px"><span style="font-weight:500">${esc(p.first || '')}</span><span style="color:#6e6e73"> · ${esc(firstStr)}</span>${p.leadership ? '<span style="color:#6e6e73"> · leadership</span>' : ''}</td>
+    <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2;font-size:12px"><span style="font-weight:500">${handleLink(p.first || '', {id:p.firstPostId})}</span><span style="color:#6e6e73"> · ${esc(firstStr)}</span>${p.leadership ? '<span style="color:#6e6e73"> · leadership</span>' : ''}</td>
     <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px"><span style="font-weight:600;min-width:2ch;text-align:right">${p.spread}</span>${spark(p.adopt, 64, 18, true)}<span style="font-size:11px;color:${gain >= 5 ? '#1d1d1f' : '#8e8e93'};font-weight:${gain >= 5 ? 500 : 400};white-space:nowrap">${gain >= 0 ? '+' : ''}${gain}</span></div></td>
     <td style="padding:7px 6px;border-bottom:1px solid #f0f0f2"><div style="display:flex;align-items:center;gap:8px">${unity}<span style="font-size:11px;color:#6e6e73;white-space:nowrap">${reach}/${KEYS.length}</span></div></td>
     <td style="padding:7px 0 7px 6px;border-bottom:1px solid #f0f0f2;text-align:right;font-size:12px" title="${pct}% of uses are the exact wording${p.variants?.length ? ` · variants: ${esc(p.variants.join(', '))}` : ''}"><span style="${pct < 75 ? 'font-weight:600;color:#1d1d1f' : 'color:#6e6e73'}">${pct}%</span></td></tr>`;
   }).join('');
-  $('phrases').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Phrases</h2></div><span style="font-size:11px;color:#6e6e73">shared 2–4-word lines · gauged by adoption, unity across caucuses, and discipline of wording</span></div>
+  $('phrases').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Phrases</h2></div><span style="font-size:11px;color:#6e6e73">All House accounts · last 7 days · unaffected by filters above · shared 2–4-word lines</span></div>
   <div class="scrollx"><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>
   <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px 0;border-bottom:1px solid #e8e8ed">Phrase</th>
   <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:21%" title="The core message the line serves — the same three pillars as the Core-messages card">Pillar</th>
   <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed">Origin</th>
   <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;width:20%" title="Members using the line · cumulative adopters over 7 days · members gained this week">Adoption</th>
-  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Caucuses with three or more members using the line and 10%+ of their active accounts">Unity</th>
+  <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 6px 8px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Caucuses with three or more members using the line and 10%+ of their active roster members">Unity</th>
   <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 6px;border-bottom:1px solid #e8e8ed;white-space:nowrap" title="Share of uses in the exact wording — a low share means the line is drifting into variants">Discipline</th>
   </tr></thead><tbody>${rows || '<tr><td colspan="6" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No phrases over the member-spread threshold yet.</td></tr>'}</tbody></table></div>`;
 }
@@ -308,12 +322,13 @@ function renderClusters() {
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font-weight:600;font-size:13px;letter-spacing:-0.01em">${esc(c.label)}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">since ${esc(etWhen(c.since, D.today))}</span></div>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><div style="font-size:12px;color:#6e6e73;display:flex;gap:12px;flex-wrap:wrap"><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${c.posts}</span> posts</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${c.members}</span> members</span><span><span style="font-weight:700;color:#1d1d1f;font-size:14px">${fmt(c.eng)}</span> engagement</span></div>${spark(c.shape, 72, 18)}</div>
     <div style="display:flex;height:5px;border-radius:3px;overflow:hidden;gap:1px" title="members by caucus">${seg(c.cm.map((n, i) => [100 * n / Math.max(1, c.members), C[KEYS[i]]]))}</div>
-    <div style="font-size:12px;color:#6e6e73;line-height:1.4">“${esc(c.sample)}”</div>
-    ${c.context?.length ? `<div style="display:flex;flex-direction:column;gap:2px" title="Newsletter hits from the owner's inbox — unreviewed context, not verification (docs/OUTSIDE_CONTEXT.md)"><span style="font-size:11px;font-weight:500;color:#6e6e73">In the news</span>${c.context.map((n) => `<div style="font-size:12px;line-height:1.35;color:#3a3a3c" title="${esc(n.why || '')}"><span style="font-weight:500;color:#1d1d1f">${esc(n.sender)}</span> · ${esc(n.subject)} <span style="color:#6e6e73;white-space:nowrap">· ${esc(etDay(n.date))}</span></div>`).join('')}</div>` : ''}
+    <div style="font-size:12px;color:#6e6e73;line-height:1.4">“${sourceLink({id:c.sampleId}, c.sample)}”</div>
+    ${newsEvidence(c.context)}
+    <details data-group="${esc(c.label)}"><summary style="font-size:11px;cursor:pointer">View ${c.sourcePosts?.length || 0} source posts</summary><div style="font-size:11px;display:flex;flex-wrap:wrap;gap:6px;max-height:200px;overflow:auto;padding-top:6px">${(c.sourcePosts || []).map((p) => handleLink(p.handle || 'Post', p)).join(' · ')}</div></details>
     ${similarList(c.related, { wrap: true })}
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${c.phrase ? `<span style="font-size:11px;color:#6e6e73">${c.coherence}% say “${esc(c.phrase)}”</span>` : ''}${tag(c.suggest)}<span style="margin-left:auto;display:flex;gap:10px"><button class="textbtn" data-compose="cluster:${esc(c.label)}">Compose</button><a href="../config/taxonomy.yaml" style="font-size:12px;font-weight:500" title="Approve by adding this subtopic to config/taxonomy.yaml">Add ›</a></span></div>
   </div>`).join('');
-  $('clusters').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging</h2><span style="font-size:12px;color:#6e6e73">outside the taxonomy</span></div>${items || '<div style="padding:30px 0;text-align:center;color:#6e6e73;font-size:12px">Nothing outside the taxonomy right now.</div>'}`;
+  $('clusters').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging</h2><span style="font-size:12px;color:#6e6e73">All House · 7 days · independent of filters</span></div>${items || '<div style="padding:30px 0;text-align:center;color:#6e6e73;font-size:12px">No stored emerging clusters in the current window.</div>'}`;
 }
 
 function renderDistrict() {
@@ -329,9 +344,9 @@ function renderDistrict() {
     const corr = n.corroboration || {};
     return `<div style="display:flex;flex-direction:column;gap:6px;padding:12px 14px;border-radius:10px;background:#f7f7f9${prov ? ';border:1px dashed #c7d2ea' : ''}">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-size:10px;font-weight:700;color:#d70015;background:#ffebe9;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em">${esc(n.kind)}</span>${prov ? provisionalBadge(corr.note) : ''}</span><span style="font-size:11px;color:#6e6e73;white-space:nowrap">${esc(etWhen(n.since, D.today))} → ${esc(etWhen(n.last, D.today))}</span></div>
-    <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(n.place)}</span><span style="font-size:12px"><span style="font-weight:500">${esc(n.handle)}</span><span style="color:#6e6e73"> · ${esc(n.member)}</span></span></div>
-    ${evidenceQuote(n.evidence, n.timeline[0]?.text)}
-    <div style="font-size:11px;color:#6e6e73">${prov ? `Single-member report · ${esc(corr.note || 'not yet corroborated')}` : `Corroborated by ${esc(corr.by || 'grouping')}${corr.note ? ` · ${esc(corr.note)}` : ''}`}</div>
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap"><span style="font-weight:600;font-size:14px;letter-spacing:-0.01em">${esc(n.place)}</span><span style="font-size:12px"><span style="font-weight:500">${handleLink(n.handle, n.timeline[0])}</span><span style="color:#6e6e73"> · ${esc(n.member)}</span></span></div>
+    ${evidenceQuote(n.evidence, n.timeline[0]?.text, n.timeline[0])}
+    <div style="font-size:11px;color:#6e6e73">${prov ? `Source report · ${esc(corr.note || 'not yet corroborated')}` : `Verification: ${esc(corr.note || 'not independently verified')}${corr.note ? ` · ${esc(corr.note)}` : ''}`}</div>
     <div style="display:flex;justify-content:space-between;font-size:11px;color:#6e6e73"><span>${n.updates} updates · ${fmt(n.engN)} engagement</span><a href="./incidents.html">Thread ›</a></div>
   </div>`;
   }).join('');
@@ -354,8 +369,9 @@ function composeText() {
     const p = people.get(handle) || { handle, name: m[0], district: m[1], caucus: m[2], posts: 0, eng: 0, quote: '', quoteEng: -1, last: '' };
     p.posts += 1;
     if (post) {
+      p.sourceUrls = [...new Set([...(p.sourceUrls || []), postUrl(post)].filter(Boolean))];
       p.eng += post.engN || 0;
-      if ((post.engN || 0) > p.quoteEng && post.text) { p.quoteEng = post.engN || 0; p.quote = post.text; }
+      if ((post.engN || 0) > p.quoteEng && post.text) { p.quoteEng = post.engN || 0; p.quote = post.text; p.quoteUrl = postUrl(post);  }
       p.last = post.time ? etWhen(post.time, D.today) : p.last;
     }
     Object.assign(p, extra || {});
@@ -364,33 +380,32 @@ function composeText() {
   let title = '';
   if (kind === 'topic') {
     const t = byKey(key); title = t ? t.name : key;
-    D.feed.filter((f) => inWin(f) && inTopic(f, key) && f.kind !== 'repost').forEach((f) => add(f.handle, f));
+    allFeed().filter((f) => inWin(f) && inTopic(f, key) && f.kind !== 'repost').forEach((f) => add(f.handle, f));
     (t?.subs || []).forEach((s) => { if (s.lead && people.has(s.lead)) Object.assign(people.get(s.lead), { leadOf: label(`${key}/${s.key}`) }); });
   } else if (kind === 'phrase') {
     const ph = D.phrases.find((x) => x.text === key); title = `“${key}”`;
-    if (ph?.first) add(ph.first, null, { firstUse: ph.firstSeen === D.today ? 'today' : etDay(ph.firstSeen) });
-    D.feed.filter((f) => inWin(f) && f.kind !== 'repost' && f.text.toLowerCase().includes(key.toLowerCase())).forEach((f) => add(f.handle, f));
+    allFeed().filter((f) => inWin(f) && f.kind !== 'repost' && ph?.postIds?.includes(f.id)).forEach((f) => add(f.handle, f));
   } else if (kind === 'cluster') {
     const cl = D.clusters.find((x) => x.label === key); title = key + ' (emerging)';
-    (cl?.who || []).forEach((h, i) => add(h, i === 0 && cl.sample ? { engN: 0, text: cl.sample } : null));
+    allFeed().filter((p) => cl?.postIds?.includes(p.id) && inWin(p)).forEach((p) => add(p.handle, p));
   } else if (kind === 'incident') {
     const n = D.incidents.find((x) => x.id === key); title = n ? n.title : key;
-    (n?.timeline || []).forEach((e) => add(e.who, { engN: e.engN, text: e.text, time: e.time }));
+    (n?.timeline || []).forEach((e) => add(e.who, { id: e.sourceId || e.id, engN: e.engN, text: e.text, time: e.time }));
     (n?.others || []).forEach((h) => { if (people.has(h)) people.get(h).via = 'amplified'; });
   }
   let rows = [...people.values()].filter((p) => cc === 'All' || p.caucus.includes(cc));
   rows.sort((a, b) => clipSort === 'Engagement' ? b.eng - a.eng : clipSort === 'Caucus' ? (a.caucus[0] || 'zz').localeCompare(b.caucus[0] || 'zz') || b.eng - a.eng : a.name.split(' ').pop().localeCompare(b.name.split(' ').pop()));
   const scopeStr = caucusName(cc) + ' · ' + (cw === 't' ? 'today' : 'last 7 days');
   const totalPosts = rows.reduce((a, p) => a + p.posts, 0);
-  const head = `${rows.length} ${rows.length === 1 ? 'official' : 'officials'} on ${title} · ${scopeStr}` + (inc.counts ? ` · ${totalPosts} posts` : '');
+  const head = `${rows.length} ${rows.length === 1 ? 'account' : 'accounts'} on ${title} · ${scopeStr}` + (inc.counts ? ` · ${totalPosts} posts` : '');
   const foot = inc.footer ? `\n—\ncaucus-pulse · ${D.lastPollAt ? etTime(D.lastPollAt) : ''} ET · archive` : '';
   if (rows.length === 0) return `${head}\n\nNo one in scope has posted on this yet.${foot}`;
-  if (clipFormat === 'Handles') return rows.map((p) => p.handle).join(' ') + foot;
+  if (clipFormat === 'Handles') return rows.map((p) => `${p.handle} ${p.sourceUrls?.[0] || profileUrl(p.handle) || ''}`).join('\n') + foot;
   if (clipFormat === 'Brief') {
     const names = rows.map((p) => p.name.replace(/^(Rep\.|Sen\.|Gov\.|Del\.|Leader) /, '') + (inc.district && p.district ? ` (${p.district})` : ''));
     const list = names.length <= 4 ? names.join(', ') : names.slice(0, 3).join(', ') + ` and ${names.length - 3} others`;
     const top = rows.find((p) => p.quote);
-    return `${list} ${rows.length === 1 ? 'has' : 'have'} posted on ${title} (${scopeStr}${inc.counts ? `, ${totalPosts} posts` : ''}).` + (inc.quote && top ? `\n\nStrongest post — ${top.name}${inc.handle ? ' ' + top.handle : ''}: “${trim(top.quote, 160)}”` : '') + foot;
+    return `${list} ${rows.length === 1 ? 'has' : 'have'} posted on ${title} (${scopeStr}${inc.counts ? `, ${totalPosts} posts` : ''}).` + (inc.quote && top ? `\n\nStrongest post — ${top.name}${inc.handle ? ' ' + top.handle : ''}: “${trim(top.quote, 160)}” ${top.quoteUrl || ''}` : '') + foot;
   }
   const lines = rows.map((p, i) => {
     const bits = [p.name];
@@ -400,6 +415,7 @@ function composeText() {
     const tail = [inc.counts && (p.posts + (p.posts === 1 ? ' post' : ' posts') + (p.eng ? ` · ${fmt(p.eng)} eng` : '')), inc.time && p.last && `last ${p.last}`, p.leadOf && `leads on ${p.leadOf}`, p.firstUse && `first use ${p.firstUse}`, p.via].filter(Boolean).join(' · ');
     let line = (inc.numbered ? `${i + 1}. ` : '• ') + bits.join(' ') + (tail ? ` — ${tail}` : '');
     if (inc.quote && p.quote) line += `\n   “${trim(p.quote)}”`;
+    line += `\n   ${(p.sourceUrls?.length ? p.sourceUrls : [profileUrl(p.handle)]).filter(Boolean).join('\n   ')}`;
     return line;
   });
   return `${head}\n\n${lines.join('\n')}${foot}`;
@@ -412,7 +428,7 @@ function renderModal() {
     .concat(D.incidents.map((n) => [`incident:${n.id}`, `Incident · ${n.title}`]))
     .concat(D.clusters.map((c) => [`cluster:${c.label}`, `Emerging · ${c.label}`]));
   if (!state.clipSubject && subjects.length) state.clipSubject = subjects[0][0];
-  const text = composeText();
+  const text = state.clipDraft ?? composeText();
   const entries = text.split('\n').filter((l) => /^(\d+\.|•) /.test(l)).length || (state.clipFormat === 'Handles' ? text.split(' ').filter((w) => w.startsWith('@')).length : 1);
   const check = (k, lab) => `<label style="display:flex;align-items:center;gap:7px"><input type="checkbox" data-tog="${k}"${state.inc[k] ? ' checked' : ''}>${lab}</label>`;
   const plainSel = (list, key, value) => `<select data-sel="${key}" style="font:inherit;font-size:13px;color:#1d1d1f;background:#f5f5f7;border:1px solid #e0e0e4;border-radius:8px;padding:6px 28px 6px 10px;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#6e6e73 50%),linear-gradient(135deg,#6e6e73 50%,transparent 50%);background-position:calc(100% - 14px) 14px,calc(100% - 9px) 14px;background-size:5px 5px;background-repeat:no-repeat;width:100%;min-width:0">${list.map(([k, name]) => `<option value="${esc(k)}"${k === value ? ' selected' : ''}>${esc(name)}</option>`).join('')}</select>`;
@@ -431,7 +447,7 @@ function renderModal() {
       </div>
       <div style="flex:1.4 1 380px;min-width:0;padding:14px 18px;display:flex;flex-direction:column;gap:10px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><span style="font-size:12px;color:#6e6e73">${entries} entries · ${text.length} characters</span><div style="display:flex;gap:6px"><button class="pill" data-act="copyClip">${state.copied ? 'Copied ✓' : 'Copy text'}</button></div></div>
-        <textarea readonly spellcheck="false" id="cliptext" style="flex:1;min-height:360px;width:100%;box-sizing:border-box;resize:vertical;font:inherit;font-size:13px;line-height:1.45;padding:12px 14px;border:1px solid #e8e8ed;border-radius:10px;background:#f7f7f9;color:#1d1d1f">${esc(text)}</textarea>
+        <textarea spellcheck="false" id="cliptext" style="flex:1;min-height:360px;width:100%;box-sizing:border-box;resize:vertical;font:inherit;font-size:13px;line-height:1.45;padding:12px 14px;border:1px solid #e8e8ed;border-radius:10px;background:#f7f7f9;color:#1d1d1f">${esc(text)}</textarea>
       </div>
     </div>
   </div></div>`;
@@ -441,6 +457,7 @@ function renderModal() {
 // The hash carries the selection so a link opens straight to a row; window
 // and caucus ride along only when they differ from the defaults.
 function selectRow(key) {
+  state.feedLimit = 200;
   if (key && findRow(D, key)) {
     state.row = key;
     state.open[key.split('/')[0]] = true; // keep the selected story visible
@@ -463,19 +480,22 @@ function applyHash() {
 
 // ── events ──
 document.addEventListener('click', (e) => {
+  if (e.target.closest('a')) return;
   const setBtn = e.target.closest('[data-set]');
+  if (setBtn?.dataset.set.startsWith('clip')) state.clipDraft = null;
   if (setBtn) { state[setBtn.dataset.set] = setBtn.dataset.val; state.copied = false; syncHash(); render(); return; }
   const foldBtn = e.target.closest('[data-expand]');
   if (foldBtn) { state.open[foldBtn.dataset.expand] = !state.open[foldBtn.dataset.expand]; render(); return; }
   const comp = e.target.closest('[data-compose]');
-  if (comp) { state.clipOpen = true; state.copied = false; state.clipSubject = comp.dataset.compose; state.clipCaucus = state.caucus; state.clipWindow = state.window; render(); return; }
+  if (comp) { state.clipDraft = null; state.clipOpen = true; state.copied = false; state.clipSubject = comp.dataset.compose; state.clipCaucus = state.caucus; state.clipWindow = state.window; render(); return; }
   const actBtn = e.target.closest('button[data-act]');
   if (actBtn) {
     const a = actBtn.dataset.act;
-    if (a === 'openClip') { state.clipOpen = true; state.copied = false; state.clipCaucus = state.caucus; state.clipWindow = state.window; }
+    if (a === 'openClip') { state.clipDraft = null; state.clipOpen = true; state.copied = false; state.clipCaucus = state.caucus; state.clipWindow = state.window; }
     if (a === 'closeClip') state.clipOpen = false;
     if (a === 'allPosts') selectRow(null);
-    if (a === 'copyClip') { copyText(composeText(), () => { state.copied = true; render(); clearTimeout(copyTimer); copyTimer = setTimeout(() => { state.copied = false; render(); }, 1800); }); return; }
+    if (a === 'morePosts') { const scroll = $('feed-scroll')?.scrollTop || 0; state.feedLimit += 200; renderFeed(state.caucus, state.window); if ($('feed-scroll')) $('feed-scroll').scrollTop = scroll; return; }
+    if (a === 'copyClip') { copyText($('cliptext')?.value || composeText(), () => { state.copied = true; render(); clearTimeout(copyTimer); copyTimer = setTimeout(() => { state.copied = false; render(); }, 1800); }); return; }
     render();
     return;
   }
@@ -493,12 +513,13 @@ document.addEventListener('keydown', (e) => {
   selectRow(state.row === row.dataset.row ? null : row.dataset.row); render();
   document.querySelector(`[data-row="${CSS.escape(row.dataset.row)}"]`)?.focus();
 });
+document.addEventListener('input', (e) => { if (e.target.id === 'cliptext') state.clipDraft = e.target.value; });
 window.addEventListener('hashchange', () => { if (D) { applyHash(); render(); } });
 document.addEventListener('change', (e) => {
   const sel = e.target.closest('[data-sel]');
-  if (sel) { state[sel.dataset.sel] = sel.value; state.copied = false; render(); return; }
+  if (sel) { if (sel.dataset.sel.startsWith('clip')) state.clipDraft = null; state[sel.dataset.sel] = sel.value; state.copied = false; render(); return; }
   const tog = e.target.closest('[data-tog]');
-  if (tog) { state.inc[tog.dataset.tog] = !state.inc[tog.dataset.tog]; state.copied = false; render(); }
+  if (tog) { state.clipDraft = null; state.inc[tog.dataset.tog] = !state.inc[tog.dataset.tog]; state.copied = false; render(); }
 });
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;
@@ -506,14 +527,22 @@ document.addEventListener('keydown', (e) => {
   else if (state.row) { selectRow(null); render(); }
 });
 
-loadRollups().then((data) => {
-  if (!data) {
-    document.querySelector('main').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:14px">No data yet — the first poll and nightly run create <code>site/data/rollups.json</code>.</div>';
-    return;
+startRefresh({
+  onData(data) {
+    const first = !D;
+    const scroll = $('feed-scroll')?.scrollTop || 0;
+    D = data; refreshError = null;
+    if (first) applyHash();
+    // Keep a displayed export stable while it is being read or copied.
+    if (state.clipOpen) { updateCaptureLabel(); return; }
+    render();
+    if ($('feed-scroll')) $('feed-scroll').scrollTop = scroll;
+  },
+  onError(error) {
+    refreshError = error;
+    if (D) updateCaptureLabel();
+    else $('updated').textContent = 'Dashboard could not load · retrying automatically';
   }
-  D = data;
-  applyHash();
-  render();
 });
 </script>
 </body>
