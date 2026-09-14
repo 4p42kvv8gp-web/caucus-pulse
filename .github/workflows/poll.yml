@@ -28,7 +28,7 @@ permissions:
 jobs:
   poll:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 22
     steps:
       # The event SHA can predate a preceding queued writer's data commit.
       # Resolve the selected branch now, after acquiring the writer lock.
@@ -63,17 +63,47 @@ jobs:
           CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
         run: .github/scripts/poll.sh
       - name: Commit archive + site data
+        id: capture_commit
         if: ${{ !cancelled() && (steps.pipeline.outcome == 'success' || steps.pipeline.outcome == 'failure') }}
         run: |
           .github/scripts/commit-data.sh "poll: $(date -u +'%Y-%m-%d %H:%M') capture" data site/data
+      # Originals are acquired only after capture is safely published. The
+      # acquisition runner checkpoints its intent, response and accepted cache
+      # before continuing, so a later failure cannot lose captured posts or
+      # silently repeat an uncertain lookup. Reclassification waits for the
+      # next ordinary poll; this step never starts a second live model pass.
+      - name: Acquire missing repost originals
+        id: repost_sources
+        if: ${{ success() && steps.pipeline.outcome == 'success' && steps.capture_commit.outcome == 'success' }}
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: node --use-env-proxy src/repost-acquire.js
+      - name: Rebuild source display after acquisition
+        id: repost_display
+        if: ${{ !cancelled() && steps.capture_commit.outcome == 'success' && (steps.repost_sources.outcome == 'success' || steps.repost_sources.outcome == 'failure') }}
+        timeout-minutes: 2
+        run: npm run sitedata
+      - name: Commit recovered sources + site data
+        if: ${{ !cancelled() && steps.capture_commit.outcome == 'success' && (steps.repost_sources.outcome == 'success' || steps.repost_sources.outcome == 'failure') }}
+        run: |
+          .github/scripts/commit-data.sh "poll: $(date -u +'%Y-%m-%d %H:%M') repost sources" data site/data
+      - name: Report incomplete pipeline after saving its work
+        if: ${{ !cancelled() && steps.pipeline.outcome == 'failure' }}
+        run: exit 1
+      - name: Report incomplete source acquisition after saving its work
+        if: ${{ !cancelled() && steps.repost_sources.outcome == 'failure' }}
+        run: exit 1
       - name: Retain validated work if publication failed
-        if: failure()
+        if: ${{ !cancelled() && failure() }}
         uses: actions/upload-artifact@v4
         with:
           name: poll-recovery-${{ github.run_id }}
-          path: ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          path: |
+            ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+            data/repost-acquisition.json
+            data/quoted.json
+            data/state.json
           if-no-files-found: ignore
           retention-days: 7
-      - name: Report incomplete pipeline after saving its work
-        if: steps.pipeline.outcome == 'failure'
-        run: exit 1
