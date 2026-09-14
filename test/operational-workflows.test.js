@@ -150,3 +150,19 @@ test('publication refuses missing feed shards, coverage mismatch, and corrupt in
   write(dir, 'data/incidents.json', '{broken');
   assert.throws(() => validatePublication({ root: dir }), SyntaxError);
 });
+
+test('every queued data writer checks out the current dispatched branch instead of an old event commit', () => {
+  const directory = path.join(ROOT, '.github/workflows');
+  const writers = [];
+  for (const name of fs.readdirSync(directory).filter((name) => name.endsWith('.yml'))) {
+    const workflow = yaml.load(fs.readFileSync(path.join(directory, name), 'utf8'));
+    for (const [jobName, job] of Object.entries(workflow.jobs || {})) {
+      if (!job.steps?.some((step) => String(step.run || '').includes('commit-data.sh'))) continue;
+      writers.push(`${name}/${jobName}`);
+      const checkout = job.steps.find((step) => /^actions\/checkout@/.test(step.uses || ''));
+      assert.equal(checkout?.with?.ref, '${{ github.ref_name }}', `${name}/${jobName}: a queued writer must resolve the selected branch when it starts, not use the triggering event SHA`);
+      assert.equal((job.concurrency || workflow.concurrency)?.group, 'data-writes', `${name}/${jobName}: branch resolution must happen inside the shared writer lock`);
+    }
+  }
+  assert.deepEqual(writers.sort(), ['authors.yml/authors', 'news-context.yml/publish', 'nightly.yml/nightly', 'poll.yml/poll']);
+});

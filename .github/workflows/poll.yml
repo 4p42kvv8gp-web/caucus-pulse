@@ -30,7 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 18
     steps:
+      # The event SHA can predate a preceding queued writer's data commit.
+      # Resolve the selected branch now, after acquiring the writer lock.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v5
         with:
           node-version: 22

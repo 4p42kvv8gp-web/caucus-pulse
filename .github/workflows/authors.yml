@@ -18,7 +18,10 @@ jobs:
   authors:
     runs-on: ubuntu-latest
     steps:
+      # Resolve the dispatched branch after the shared writer queue releases us.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v5
         with:
           node-version: 22
