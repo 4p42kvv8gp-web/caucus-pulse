@@ -16,6 +16,8 @@ The CLI awaits asynchronous source loading, freezes the review time, and builds 
 
 The saved ledger caps this pilot at two submission attempts across restarts. Provider timeouts or uncertain submissions are not retried automatically. Explicit provider rejections can be retried only while an attempt remains. A malformed or partial response is retained for review. Incomplete outcomes make the job fail visibly after saving its work. The final state and recovery artifact preserve available work if publication fails. No credentials are written into the ledger.
 
+Validator versions are separate from inference-policy versions. A validator update replays an existing raw response without a model call, preserving the prior validation decision. Request hashes are checked before replay. Provider thinking metadata is retained in the raw envelope but is never parsed as an answer or evidence; exactly one text answer is required.
+
 ## Interpretation limits
 
 Validation requires every exact input ID once, unchanged topics, citations drawn from that same post's evidence, and literal supporting spans from each proposed member post or its attached source context. Counts and the rolling 24-hour three-distinct-member threshold are calculated in code. Two accounts belonging to one roster member count once. The roster's normalized member names remain a fallback where durable person IDs are absent.

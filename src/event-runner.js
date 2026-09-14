@@ -32,10 +32,10 @@ const errorInfo = (error) => ({ message: String(error?.message || error).slice(0
 
 export async function runEventShadow(plans, {
   state, save, checkpoint = async () => {}, client, refresh = async () => {}, validate,
-  currentSnapshot, now = () => new Date().toISOString(), maxCalls = 2
+  currentSnapshot, now = () => new Date().toISOString(), maxCalls = 2, validatorVersion = 'event-validator-v1'
 } = {}) {
   if (!object(state) || state.version !== 1 || !object(state.receipts) || !Array.isArray(state.events)
-      || !Array.isArray(plans) || !integer(maxCalls)
+      || !Array.isArray(plans) || !integer(maxCalls) || typeof validatorVersion !== 'string' || !validatorVersion
       || [save, checkpoint, refresh, validate, currentSnapshot].some((fn) => typeof fn !== 'function')) throw new Error('Invalid shadow runner dependencies/state');
   const timestamp = () => {
     const value = typeof now === 'function' ? now() : now;
@@ -45,7 +45,8 @@ export async function runEventShadow(plans, {
   let sum = 0;
   for (const [key, receipt] of Object.entries(state.receipts)) {
     checkPlan(receipt.plan);
-    if (receipt.plan.key !== key || !STATES.has(receipt.status) || !integer(receipt.attempts)) throw new Error('Invalid shadow receipt');
+    if (receipt.plan.key !== key || !STATES.has(receipt.status) || !integer(receipt.attempts)
+        || receipt.inputHash !== hash(receipt.plan.request)) throw new Error('Invalid shadow receipt');
     sum += receipt.attempts;
   }
   if ((state.attempts != null && (!integer(state.attempts) || state.attempts < sum))
@@ -87,6 +88,14 @@ export async function runEventShadow(plans, {
   for (const receipt of Object.values(state.receipts)) {
     if (receipt.status === 'superseded') continue;
     if (!(await isCurrent(receipt))) continue;
+    if (receipt.response && ['accepted', 'partial'].includes(receipt.status) && receipt.validatorVersion !== validatorVersion) {
+      // Compatibility/validation fixes can replay a paid response. Preserve
+      // the old decision, never replace the request or resubmit to the model.
+      (receipt.validationHistory ||= []).push({ validatorVersion: receipt.validatorVersion ?? null,
+        status: receipt.status, validatedAt: receipt.validatedAt, validation: clone(receipt.validation) });
+      receipt.status = 'response-saved'; removeEvents(receipt.plan.key);
+      await persist(true);
+    }
     if (['accepted', 'partial', 'submission-unknown'].includes(receipt.status)) continue;
     if (receipt.status === 'planned') {
       if (receipt.retryable === false || state.attempts >= state.maxCalls) continue;
@@ -132,7 +141,7 @@ export async function runEventShadow(plans, {
     // A correction/source edit made while the request or validator was running
     // invalidates acceptance, even when the model response itself is well formed.
     if (!(await isCurrent(receipt))) continue;
-    receipt.status = result.valid ? 'accepted' : 'partial'; receipt.validatedAt = timestamp();
+    receipt.status = result.valid ? 'accepted' : 'partial'; receipt.validatedAt = timestamp(); receipt.validatorVersion = validatorVersion;
     removeEvents(receipt.plan.key);
     if (result.valid) for (const event of result.events) state.events.push({ ...clone(event), receiptKey: receipt.plan.key });
     await persist(true);

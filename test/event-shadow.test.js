@@ -79,3 +79,21 @@ test('corrupt saved state and unknown arguments cannot reset the evaluation', as
   await assert.rejects(eventShadowMain(['--reset'], deps), /Supported arguments/);
   assert.equal(fs.readFileSync(file, 'utf8'), '{torn');
 });
+
+test('CLI recovers legacy metadata-only rejections from saved responses without calling the provider', async (t) => {
+  const { deps, file } = fixture(t);
+  deps.client = { messages: { create: async (params) => noEvents(params) } };
+  await eventShadowMain(['--execute'], deps);
+  const state = readShadowState(file); state.events = [];
+  for (const receipt of Object.values(state.receipts)) {
+    receipt.response.content.unshift({ type: 'thinking', thinking: '', signature: 'opaque' });
+    receipt.status = 'partial'; delete receipt.validatorVersion;
+    receipt.validation = { valid: false, events: [], assignments: [], unresolved: [], errors: [{ code: 'invalid-response-content' }] };
+  }
+  fs.writeFileSync(file, JSON.stringify(state));
+  delete deps.client;
+  deps.clientFactory = async () => { throw new Error('No new API call is allowed'); };
+  const replay = await eventShadowMain(['--execute'], deps);
+  assert.equal(replay.calls, 0); assert.equal(replay.attempts, 2); assert.equal(replay.accepted, 2);
+  assert.ok(Object.values(replay.state.receipts).every((r) => r.validationHistory.length === 1));
+});
