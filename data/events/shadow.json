@@ -416,7 +416,7 @@
     "2099512150737719793",
     "2099493450152382894"
    ],
-   "status": "response-saved",
+   "status": "accepted",
    "attempts": 1,
    "plannedAt": "2026-09-14T19:56:55.554Z",
    "submittedAt": "2026-09-14T19:56:56.070Z",
@@ -458,17 +458,292 @@
    },
    "respondedAt": "2026-09-14T19:57:19.638Z",
    "validation": {
-    "valid": false,
-    "events": [],
-    "errors": [
+    "valid": true,
+    "events": [
      {
-      "code": "invalid-response-content"
+      "label": "House Democrats press Speaker Johnson over AI oversight after his remarks on AI regulation",
+      "actor": "House Democratic members (Ted Lieu, Greg Casar, Daniel Goldman, Mike Thompson)",
+      "action": "publicly criticize Speaker Mike Johnson's stated approach to AI regulation and demand he convene Congress, schedule hearings with AI industry leaders, or keep the House in session",
+      "ids": [
+       "2099486798074257742",
+       "2099487281677554158",
+       "2099508362484302050",
+       "2099515039484960898"
+      ],
+      "supports": [
+       {
+        "id": "2099486798074257742",
+        "field": "text",
+        "quote": "Dear Speaker Johnson: Your party controls subpoena power. You can do the “big meeting” right now by issuing subpoenas to AI industry leaders and summoning them to testify before the American people."
+       },
+       {
+        "id": "2099487281677554158",
+        "field": "text",
+        "quote": "\"Bank robbers must be responsible for bank safety, Mike Johnson says, not Congress.\""
+       },
+       {
+        "id": "2099508362484302050",
+        "field": "text",
+        "quote": "must immediately schedule a hearing with AI CEO’s so Congress can safeguard the growing AI catastrophe."
+       },
+       {
+        "id": "2099515039484960898",
+        "field": "text",
+        "quote": "Speaker Johnson needs to keep the House in session so we can work"
+       }
+      ],
+      "status": "provisional",
+      "contractValid": true,
+      "verified": false,
+      "policyVersion": "event-v1",
+      "mode": "retrospective",
+      "sources": [
+       {
+        "id": "2099486798074257742",
+        "url": "https://x.com/i/web/status/2099486798074257742",
+        "authorId": "21059255",
+        "personId": "member:ted lieu",
+        "createdAt": "2026-09-14T13:13:53.000Z"
+       },
+       {
+        "id": "2099487281677554158",
+        "url": "https://x.com/i/web/status/2099487281677554158",
+        "authorId": "1499512178013057032",
+        "personId": "member:greg casar",
+        "createdAt": "2026-09-14T13:15:49.000Z"
+       },
+       {
+        "id": "2099508362484302050",
+        "url": "https://x.com/i/web/status/2099508362484302050",
+        "authorId": "435232010",
+        "personId": "member:daniel s. goldman",
+        "createdAt": "2026-09-14T14:39:35.000Z"
+       },
+       {
+        "id": "2099515039484960898",
+        "url": "https://x.com/i/web/status/2099515039484960898",
+        "authorId": "303861808",
+        "personId": "member:mike thompson",
+        "createdAt": "2026-09-14T15:06:07.000Z"
+       }
+      ],
+      "counts": {
+       "posts": 4,
+       "accounts": 4,
+       "members": 4,
+       "posts24h": 4,
+       "accounts24h": 4,
+       "members24h": 4,
+       "unknownPersonAccounts24h": 0
+      },
+      "window": {
+       "start": "2026-09-13T19:56:55.393Z",
+       "end": "2026-09-14T19:56:55.393Z"
+      },
+      "thresholdMet": true,
+      "reviewedAsOf": "2026-09-14T19:56:55.393Z"
      }
     ],
-    "unresolved": [],
-    "assignments": []
+    "errors": [],
+    "unresolved": [
+     "2099512150737719793"
+    ],
+    "assignments": [
+     {
+      "id": "2099486798074257742",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ],
+       [
+        "congress-politics",
+        "house-floor"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [
+       {
+        "id": "n_df684ca366a9e074",
+        "publisher": "The Hill",
+        "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+        "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T15:11:14.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       },
+       {
+        "id": "n_de25d593b7936aa2",
+        "publisher": "The Hill",
+        "title": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+        "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+        "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T19:49:35.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       }
+      ],
+      "evidenceUsed": [
+       "n_df684ca366a9e074",
+       "n_de25d593b7936aa2"
+      ],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099487281677554158",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [
+       {
+        "id": "n_df684ca366a9e074",
+        "publisher": "The Hill",
+        "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+        "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T15:11:14.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       }
+      ],
+      "evidenceUsed": [
+       "n_df684ca366a9e074"
+      ],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099508362484302050",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [
+       {
+        "id": "n_df684ca366a9e074",
+        "publisher": "The Hill",
+        "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+        "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T15:11:14.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       }
+      ],
+      "evidenceUsed": [
+       "n_df684ca366a9e074"
+      ],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099515039484960898",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ],
+       [
+        "congress-politics",
+        "house-floor"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [
+       {
+        "id": "n_df684ca366a9e074",
+        "publisher": "The Hill",
+        "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+        "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T15:11:14.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       },
+       {
+        "id": "n_de25d593b7936aa2",
+        "publisher": "The Hill",
+        "title": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+        "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+        "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+        "kind": "lead",
+        "publishedAt": "2026-09-13T19:49:35.000Z",
+        "fetchedAt": "2026-09-14T12:52:50.846Z",
+        "version": 5,
+        "publishedAfterPost": false,
+        "acquiredAfterPost": false,
+        "truncated": false
+       }
+      ],
+      "evidenceUsed": [
+       "n_df684ca366a9e074",
+       "n_de25d593b7936aa2"
+      ],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099528618003366257",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [],
+      "evidenceUsed": [],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099512150737719793",
+      "topics": [],
+      "needs_context": true,
+      "evidenceSupplied": [],
+      "evidenceUsed": [],
+      "contextVersion": 8
+     },
+     {
+      "id": "2099493450152382894",
+      "topics": [
+       [
+        "tech",
+        "ai-policy"
+       ]
+      ],
+      "needs_context": false,
+      "evidenceSupplied": [],
+      "evidenceUsed": [],
+      "contextVersion": 8
+     }
+    ]
    },
-   "validatedAt": "2026-09-14T19:57:22.629Z",
+   "validatedAt": "2026-09-14T20:04:55.512Z",
    "validationHistory": [
     {
      "validatorVersion": null,
@@ -486,7 +761,8 @@
       "assignments": []
      }
     }
-   ]
+   ],
+   "validatorVersion": "event-contract-v2"
   },
   "59de37c60fb6070ac2d69a526b2f542fea613b0d457a86cd052f0aa243d03e95": {
    "plan": {
@@ -1007,7 +1283,92 @@
    "validatedAt": "2026-09-14T19:57:38.299Z"
   }
  },
- "events": [],
+ "events": [
+  {
+   "label": "House Democrats press Speaker Johnson over AI oversight after his remarks on AI regulation",
+   "actor": "House Democratic members (Ted Lieu, Greg Casar, Daniel Goldman, Mike Thompson)",
+   "action": "publicly criticize Speaker Mike Johnson's stated approach to AI regulation and demand he convene Congress, schedule hearings with AI industry leaders, or keep the House in session",
+   "ids": [
+    "2099486798074257742",
+    "2099487281677554158",
+    "2099508362484302050",
+    "2099515039484960898"
+   ],
+   "supports": [
+    {
+     "id": "2099486798074257742",
+     "field": "text",
+     "quote": "Dear Speaker Johnson: Your party controls subpoena power. You can do the “big meeting” right now by issuing subpoenas to AI industry leaders and summoning them to testify before the American people."
+    },
+    {
+     "id": "2099487281677554158",
+     "field": "text",
+     "quote": "\"Bank robbers must be responsible for bank safety, Mike Johnson says, not Congress.\""
+    },
+    {
+     "id": "2099508362484302050",
+     "field": "text",
+     "quote": "must immediately schedule a hearing with AI CEO’s so Congress can safeguard the growing AI catastrophe."
+    },
+    {
+     "id": "2099515039484960898",
+     "field": "text",
+     "quote": "Speaker Johnson needs to keep the House in session so we can work"
+    }
+   ],
+   "status": "provisional",
+   "contractValid": true,
+   "verified": false,
+   "policyVersion": "event-v1",
+   "mode": "retrospective",
+   "sources": [
+    {
+     "id": "2099486798074257742",
+     "url": "https://x.com/i/web/status/2099486798074257742",
+     "authorId": "21059255",
+     "personId": "member:ted lieu",
+     "createdAt": "2026-09-14T13:13:53.000Z"
+    },
+    {
+     "id": "2099487281677554158",
+     "url": "https://x.com/i/web/status/2099487281677554158",
+     "authorId": "1499512178013057032",
+     "personId": "member:greg casar",
+     "createdAt": "2026-09-14T13:15:49.000Z"
+    },
+    {
+     "id": "2099508362484302050",
+     "url": "https://x.com/i/web/status/2099508362484302050",
+     "authorId": "435232010",
+     "personId": "member:daniel s. goldman",
+     "createdAt": "2026-09-14T14:39:35.000Z"
+    },
+    {
+     "id": "2099515039484960898",
+     "url": "https://x.com/i/web/status/2099515039484960898",
+     "authorId": "303861808",
+     "personId": "member:mike thompson",
+     "createdAt": "2026-09-14T15:06:07.000Z"
+    }
+   ],
+   "counts": {
+    "posts": 4,
+    "accounts": 4,
+    "members": 4,
+    "posts24h": 4,
+    "accounts24h": 4,
+    "members24h": 4,
+    "unknownPersonAccounts24h": 0
+   },
+   "window": {
+    "start": "2026-09-13T19:56:55.393Z",
+    "end": "2026-09-14T19:56:55.393Z"
+   },
+   "thresholdMet": true,
+   "reviewedAsOf": "2026-09-14T19:56:55.393Z",
+   "receiptKey": "be9ee9e5a1bbdebb4e3119e49cb39e1f398a642101b1c9a1b54a340cf4c5a874"
+  }
+ ],
  "runAsOf": "2026-09-14T19:56:55.393Z",
  "attempts": 2,
  "maxCalls": 2
