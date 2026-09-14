@@ -1,7 +1,7 @@
 {
  "date": "2026-09-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T13:43:57.782Z",
+ "classifiedAt": "2026-09-14T18:37:36.016Z",
  "assignments": {
   "2098985036456288391": [
    [
@@ -179,12 +179,7 @@
     "prices-inflation"
    ]
   ],
-  "2099156192987591003": [
-   [
-    "climate",
-    "disasters"
-   ]
-  ],
+  "2099156192987591003": [],
   "2099156115963482177": [
    [
     "economy",
@@ -1026,7 +1021,12 @@
    ]
   ],
   "2099227536173552126": [],
-  "2099227365033345337": [],
+  "2099227365033345337": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
   "2099227113513443719": [
    [
     "immigration",
@@ -1082,10 +1082,6 @@
    [
     "tech",
     "ai-policy"
-   ],
-   [
-    "tech",
-    "big-tech"
    ],
    [
     "foreign-policy",
@@ -1345,7 +1341,12 @@
    ]
   ],
   "2099256579308605842": [],
-  "2099306522538848465": [],
+  "2099306522538848465": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
   "2099306143738683822": [
    [
     "budget-appropriations",
@@ -1406,18 +1407,8 @@
     "middle-east"
    ]
   ],
-  "2099292118028300733": [
-   [
-    "congress-politics",
-    "elections-2026"
-   ]
-  ],
-  "2099292099544072397": [
-   [
-    "congress-politics",
-    "elections-2026"
-   ]
-  ],
+  "2099292118028300733": [],
+  "2099292099544072397": [],
   "2099291936574042185": [
    [
     "climate",
@@ -1457,12 +1448,7 @@
     "executive-overreach"
    ]
   ],
-  "2099287175254692125": [
-   [
-    "congress-politics",
-    null
-   ]
-  ],
+  "2099287175254692125": [],
   "2099287170972266990": [
    [
     "climate",
@@ -1499,10 +1485,6 @@
    [
     "tech",
     "ai-policy"
-   ],
-   [
-    "foreign-policy",
-    "china"
    ]
   ],
   "2099285899079000097": [
@@ -1521,12 +1503,20 @@
    [
     "tech",
     "ai-policy"
+   ],
+   [
+    "congress-politics",
+    null
    ]
   ],
   "2099285890392543543": [
    [
     "tech",
     "ai-policy"
+   ],
+   [
+    "congress-politics",
+    null
    ]
   ],
   "2099324860807688589": [
@@ -1748,12 +1738,7 @@
    ]
   ],
   "2099283604421398574": [],
-  "2099302613275574609": [
-   [
-    "foreign-policy",
-    null
-   ]
-  ],
+  "2099302613275574609": [],
   "2099303835910987912": [
    [
     "civil-rights",
@@ -1769,6 +1754,11 @@
   "2099320687617814782": []
  },
  "incidents": {
+  "2099156192987591003": {
+   "kind": "flooding",
+   "place": "Providence, RI",
+   "name": null
+  },
   "2099171247347134504": {
    "kind": "flooding",
    "place": "Providence, RI"
@@ -1784,11 +1774,6 @@
   "2099184102993793416": {
    "kind": "wildfire",
    "place": "Monterey County, CA"
-  },
-  "2099156192987591003": {
-   "kind": "flooding",
-   "place": "Providence, RI",
-   "name": null
   }
  },
  "provenance": {
@@ -1831,6 +1816,102 @@
     "n_4f4b5f8ffb82a60c"
    ],
    "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
+  },
+  "2099227365033345337": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_96a2bd2e061c5cba",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6086408-marshall-shifts-trump-dividends/",
+     "text": "Marshall backtracks on support for $5,000 Trump dividend in Kansas Senate debate",
+     "title": "Marshall backtracks on support for $5,000 Trump dividend in Kansas Senate debate",
+     "publishedAt": "2026-09-12T22:44:10.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_af6db7966d836369",
+     "publisher": "NPR",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/11/nx-s1-5963499/mayor-of-the-air-capital-of-the-world-reacts-to-trumps-threats-against-bombardier",
+     "text": "SACHA PFEIFFER, HOST: One of the U.S. cities concerned about President Trump's trade war with Canada is Wichita, Kansas. Wichita is the U.S. headquarters for the Canadian aircraft company Bombardier. And this week, Trump threatened to ban the sale of Bombardier jets in the United States. The company employs about 3,500 people across the U.S. Fifteen hundred of those jobs are in Wichita. That makes Bombardier a big employer by local standards. Those are jobs the city doesn't want to lose. So we have called Wichita Mayor Lily Wu. She is a libertarian. Mayor Wu, thank you for making time for us.…",
+     "title": "Mayor of the 'Air Capital of the World' reacts to Trump's threats against Bombardier",
+     "publishedAt": "2026-09-11T20:34:45.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "version": 2,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
+  },
+  "2099230451185410522": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_85c8c02756c33de6",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
+     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
+     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
+     "publishedAt": "2026-09-11T12:40:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
+  },
+  "2099240301147631619": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_32103b358223c1b2",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/12/nx-s1-5952234/charlie-kirk-death-doxing",
+     "text": "A week into fall semester at Utah Valley University in Orem, Utah, the campus's grassy, terraced courtyard bakes under the heat of full late August sunlight. The sound of trickling water from a fountain that meanders through the space beckons students to stop, chat and unwind. But Collin Grannis, who graduated over the summer, said the space hasn't had much activity since Charlie Kirk was assassinated there last year.",
+     "title": "Neighbor turned on neighbor after Charlie Kirk's killing. Is the divide here to stay?",
+     "publishedAt": "2026-09-12T09:00:00.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "version": 2,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
   },
   "2099156192987591003": {
    "contextVersion": 5,
@@ -1906,142 +1987,6 @@
    "evidenceUsed": [],
    "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
   },
-  "2099227365033345337": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_96a2bd2e061c5cba",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6086408-marshall-shifts-trump-dividends/",
-     "text": "Marshall backtracks on support for $5,000 Trump dividend in Kansas Senate debate",
-     "title": "Marshall backtracks on support for $5,000 Trump dividend in Kansas Senate debate",
-     "publishedAt": "2026-09-12T22:44:10.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_af6db7966d836369",
-     "publisher": "NPR",
-     "date": "2026-09-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/11/nx-s1-5963499/mayor-of-the-air-capital-of-the-world-reacts-to-trumps-threats-against-bombardier",
-     "text": "SACHA PFEIFFER, HOST: One of the U.S. cities concerned about President Trump's trade war with Canada is Wichita, Kansas. Wichita is the U.S. headquarters for the Canadian aircraft company Bombardier. And this week, Trump threatened to ban the sale of Bombardier jets in the United States. The company employs about 3,500 people across the U.S. Fifteen hundred of those jobs are in Wichita. That makes Bombardier a big employer by local standards. Those are jobs the city doesn't want to lose. So we have called Wichita Mayor Lily Wu. She is a libertarian. Mayor Wu, thank you for making time for us.…",
-     "title": "Mayor of the 'Air Capital of the World' reacts to Trump's threats against Bombardier",
-     "publishedAt": "2026-09-11T20:34:45.000Z",
-     "fetchedAt": "2026-09-13T17:05:40.504Z",
-     "version": 2,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
-  },
-  "2099227536173552126": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_4385a856b9c8acb4",
-     "publisher": "NPR",
-     "date": "2026-09-13",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/13/nx-s1-5968081/wisconsin-congressman-survives-emergency-plane-landing-swims-to-safety",
-     "text": "Wisconsin Rep. Tom Tiffany was returning from a campaign event when the plane he was riding in made an emergency water landing on Saturday, Sept. 12, 2026. Both Tiffany and the pilot escaped without serious injury. Avery Martinez/Wisconsin Public Radio hide caption",
-     "title": "Wisconsin congressman survives emergency plane landing, swims to safety",
-     "publishedAt": "2026-09-13T17:45:33.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_4fcbd04c74a83a02",
-     "publisher": "The New York Times",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/13/us/politics/tom-tiffany-wisconsin-lake-wausau-plane-crash.html",
-     "text": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
-     "title": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
-     "publishedAt": "2026-09-13T13:53:05.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4385a856b9c8acb4",
-    "n_4fcbd04c74a83a02"
-   ],
-   "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
-  },
-  "2099230451185410522": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_85c8c02756c33de6",
-     "publisher": "Roll Call",
-     "date": "2026-09-11",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
-     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
-     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
-     "publishedAt": "2026-09-11T12:40:25.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ecae75bade23bb4ec0ac8e9ebfe1497922b4b06a6feb0c059b74edfd75642b05"
-  },
-  "2099240301147631619": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_32103b358223c1b2",
-     "publisher": "NPR",
-     "date": "2026-09-12",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/12/nx-s1-5952234/charlie-kirk-death-doxing",
-     "text": "A week into fall semester at Utah Valley University in Orem, Utah, the campus's grassy, terraced courtyard bakes under the heat of full late August sunlight. The sound of trickling water from a fountain that meanders through the space beckons students to stop, chat and unwind. But Collin Grannis, who graduated over the summer, said the space hasn't had much activity since Charlie Kirk was assassinated there last year.",
-     "title": "Neighbor turned on neighbor after Charlie Kirk's killing. Is the divide here to stay?",
-     "publishedAt": "2026-09-12T09:00:00.000Z",
-     "fetchedAt": "2026-09-13T17:05:40.504Z",
-     "version": 2,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
-  },
   "2099255725730202052": {
    "contextVersion": 5,
    "evidenceSupplied": [
@@ -2062,13 +2007,532 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099284079984132322": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_077eef895e15395a",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/bombardier-workers-wichita-push-back-against-trumps-ban-threat/",
+     "text": "In this red state, backlash erupts over president’s threat to ban major employer",
+     "title": "In this red state, backlash erupts over president’s threat to ban major employer",
+     "publishedAt": "2026-09-14T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099284082303603110": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099284084715315655": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "title": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_39ee7368a82724f4",
+     "publisher": "The New York Times",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/13/us/politics/congress-ai-risks-johnson-jeffries.html",
+     "text": "Top Lawmakers Agree A.I.’s Risks Are Rising but Say They Have No Quick Fix",
+     "title": "Top Lawmakers Agree A.I.’s Risks Are Rising but Say They Have No Quick Fix",
+     "publishedAt": "2026-09-13T20:49:16.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099284088305963441": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "title": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099284091577246122": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099285890392543543": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_de25d593b7936aa2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+     "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "title": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "publishedAt": "2026-09-13T19:49:35.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_df684ca366a9e074"
+   ],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099285892485521622": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_de25d593b7936aa2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+     "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "title": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "publishedAt": "2026-09-13T19:49:35.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_df684ca366a9e074"
+   ],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099285895060881591": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_54b1cf1dac0931be",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085955-trump-ireland-reunification-comments/",
+     "text": "Trump says a unified Ireland is ‘going to happen eventually’",
+     "title": "Trump says a unified Ireland is ‘going to happen eventually’",
+     "publishedAt": "2026-09-12T12:51:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099285899079000097": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6426b6e0f0cc7043022b63cda6f0396b5794353573687ec454f4cd916c4d6fd1"
+  },
+  "2099285901629092089": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "title": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099285904057573490": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_63641d8587979fc9",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6086440-kamala-harris-property-trespasser-stopped/",
+     "text": "Kamala Harris’ home targeted by trespasser",
+     "title": "Kamala Harris’ home targeted by trespasser",
+     "publishedAt": "2026-09-12T23:53:25.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099285906427445267": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "title": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099287008417845659": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099287170972266990": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_63641d8587979fc9",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6086440-kamala-harris-property-trespasser-stopped/",
+     "text": "Kamala Harris’ home targeted by trespasser",
+     "title": "Kamala Harris’ home targeted by trespasser",
+     "publishedAt": "2026-09-12T23:53:25.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099287175254692125": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099288110076977281": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099290532690173996": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099290667398627635": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099291288164024717": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_720e64d8ae2dfbaa",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6087423-trump-urges-ukraine-halt-russia-oil-strikes/",
+     "text": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
+     "title": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
+     "publishedAt": "2026-09-14T03:16:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977"
+   ],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099291895625371878": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099291936574042185": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099292099544072397": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099292118028300733": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099292321862881633": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "title": "At the Races: Defiant in Dallas",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977",
+    "n_4a11200196924fd7"
+   ],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099296076922585204": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099298080978059723": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977"
+   ],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099302199658459324": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
   },
   "2099302613275574609": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099303042474492410": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099303119373103203": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
+  },
+  "2099303276696973472": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "771fdc9f15d588bc612f6938aee79bffe58534c31f3df4c877cd47d2f39f9d8a"
   },
   "2099303835910987912": {
    "contextVersion": 5,
@@ -2105,42 +2569,224 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099304056007131617": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099306143738683822": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_12463d044cf4784f",
+     "publisher": "Politico",
+     "date": "2026-09-09",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/09/stefany-shaheen-wins-new-hampshire-house-primary-01068480",
+     "text": "Stefany Shaheen, daughter of Sen. Jeanne Shaheen, wins New Hampshire House primary",
+     "title": "Stefany Shaheen, daughter of Sen. Jeanne Shaheen, wins New Hampshire House primary",
+     "publishedAt": "2026-09-09T04:48:32.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099306522538848465": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
   },
   "2099308494302159053": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099311097996063074": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099311305614373255": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099311941726445841": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
   },
   "2099320687617814782": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
+   "inputHash": "a4a903c81eb92311a6c36ea2b37e4f20f550033d328b6534a97baa2b84782cd4"
+  },
+  "2099132737273655458": {
+   "contextVersion": 6,
+   "evidenceSupplied": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8"
+  },
+  "2099153882618245510": {
+   "contextVersion": 6,
+   "evidenceSupplied": [
+    {
+     "id": "n_70c0ee5a58503553",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6088200-trump-administration-crackdown-era-loans/",
+     "text": "Watch live: Vance, Blanche unveil fraud charges tied to COVID-era emergency loans",
+     "title": "Watch live: Vance, Blanche unveil fraud charges tied to COVID-era emergency loans",
+     "publishedAt": "2026-09-14T15:41:18.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8"
+  },
+  "2099227536173552126": {
+   "contextVersion": 6,
+   "evidenceSupplied": [
+    {
+     "id": "n_4385a856b9c8acb4",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5968081/wisconsin-congressman-survives-emergency-plane-landing-swims-to-safety",
+     "text": "Wisconsin Rep. Tom Tiffany was returning from a campaign event when the plane he was riding in made an emergency water landing on Saturday, Sept. 12, 2026. Both Tiffany and the pilot escaped without serious injury. Avery Martinez/Wisconsin Public Radio hide caption",
+     "title": "Wisconsin congressman survives emergency plane landing, swims to safety",
+     "publishedAt": "2026-09-13T17:45:33.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4fcbd04c74a83a02",
+     "publisher": "The New York Times",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/13/us/politics/tom-tiffany-wisconsin-lake-wausau-plane-crash.html",
+     "text": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
+     "title": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
+     "publishedAt": "2026-09-13T13:53:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4385a856b9c8acb4",
+    "n_4fcbd04c74a83a02"
+   ],
+   "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8"
   }
  },
  "needsContext": {
   "2099111692944691693": false,
-  "2099156192987591003": false,
-  "2099188910580445574": false,
   "2099227365033345337": false,
-  "2099227536173552126": false,
   "2099230451185410522": false,
   "2099240301147631619": false,
+  "2099156192987591003": false,
+  "2099188910580445574": false,
   "2099255725730202052": false,
-  "2099302613275574609": true,
+  "2099284079984132322": false,
+  "2099284082303603110": false,
+  "2099284084715315655": false,
+  "2099284088305963441": false,
+  "2099284091577246122": false,
+  "2099285890392543543": false,
+  "2099285892485521622": false,
+  "2099285895060881591": false,
+  "2099285899079000097": false,
+  "2099285901629092089": false,
+  "2099285904057573490": false,
+  "2099285906427445267": false,
+  "2099287008417845659": false,
+  "2099287170972266990": false,
+  "2099287175254692125": false,
+  "2099288110076977281": false,
+  "2099290532690173996": false,
+  "2099290667398627635": false,
+  "2099291288164024717": false,
+  "2099291895625371878": false,
+  "2099291936574042185": false,
+  "2099292099544072397": false,
+  "2099292118028300733": false,
+  "2099292321862881633": false,
+  "2099296076922585204": false,
+  "2099298080978059723": false,
+  "2099302199658459324": false,
+  "2099302613275574609": false,
+  "2099303042474492410": false,
+  "2099303119373103203": false,
+  "2099303276696973472": false,
   "2099303835910987912": true,
+  "2099304056007131617": false,
+  "2099306143738683822": false,
+  "2099306522538848465": false,
   "2099308494302159053": false,
-  "2099320687617814782": true
+  "2099311097996063074": false,
+  "2099311305614373255": false,
+  "2099311941726445841": false,
+  "2099320687617814782": true,
+  "2099132737273655458": false,
+  "2099153882618245510": false,
+  "2099227536173552126": false
  },
- "contextVersion": 5,
+ "contextVersion": 6,
  "emerging": [
   {
    "label": "9/11 25th anniversary remembrance",
    "ids": [
-    "2099132737273655458",
-    "2099168285526794677"
+    "2099168285526794677",
+    "2099306522538848465",
+    "2099132737273655458"
+   ]
+  },
+  {
+   "label": "Rep. Tom Tiffany plane emergency water landing",
+   "ids": [
+    "2099111692944691693",
+    "2099227536173552126"
    ]
   },
   {
@@ -2176,10 +2822,17 @@
    ]
   },
   {
-   "label": "Rep. Tom Tiffany emergency plane landing in Lake Wausau",
+   "label": "Trump Iran war economic costs",
    "ids": [
-    "2099111692944691693",
-    "2099227536173552126"
+    "2099291288164024717",
+    "2099292321862881633",
+    "2099298080978059723"
+   ]
+  },
+  {
+   "label": "Bo French racist remark about Texas students",
+   "ids": [
+    "2099303835910987912"
    ]
   }
  ],
@@ -2194,75 +2847,139 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099111692944691693",
-    "2099156192987591003",
-    "2099188910580445574",
-    "2099227365033345337",
+    "2099132737273655458",
+    "2099153882618245510",
     "2099227536173552126",
-    "2099230451185410522"
+    "2099535909649551799",
+    "2099536153942655192",
+    "2099537322974773520",
+    "2099538036874957242",
+    "2099538533090238854",
+    "2099539185497460905",
+    "2099539816975052976",
+    "2099539996164137236",
+    "2099540355213340784",
+    "2099541373279965688",
+    "2099541568910700796",
+    "2099541843687993854",
+    "2099541880883048726",
+    "2099541891951772129",
+    "2099541953595511282",
+    "2099542402566431223",
+    "2099542644300939282"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2099240301147631619",
-    "2099255725730202052",
-    "2099302613275574609",
-    "2099303835910987912",
-    "2099308494302159053",
-    "2099320687617814782",
-    "2099353778470482251",
-    "2099353953653981248",
-    "2099359393355600281",
-    "2099368567539991032",
-    "2099450301681991761",
-    "2099452207665906073",
-    "2099471129777668544",
-    "2099476447689584944",
-    "2099477508970160297",
-    "2099480314338758686",
-    "2099480760327557446",
-    "2099480952229511440",
-    "2099482314912715259",
-    "2099483525976056181",
-    "2099483691911123215",
-    "2099484757423775908"
+    "2099543149056024632",
+    "2099543706571567312",
+    "2099543726343278912",
+    "2099543732345327890",
+    "2099544054329405565",
+    "2099544175578415452",
+    "2099544185585947123",
+    "2099544187284689170",
+    "2099544188287058415",
+    "2099544776081064365",
+    "2099544839280787874",
+    "2099545132072587366",
+    "2099545939685900627",
+    "2099546171538616419",
+    "2099546184297697611",
+    "2099546943277981992"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2099485221263380690",
-    "2099486798074257742",
-    "2099487281677554158",
-    "2099487326925684932",
-    "2099487805059612703",
-    "2099488225479848340",
-    "2099488335899070762",
-    "2099488390064267489",
-    "2099488710102282733",
-    "2099488882265866523",
-    "2099489566356877448",
-    "2099489632148754661"
+    "2099547822177526139",
+    "2099547825004577151",
+    "2099547884563648581",
+    "2099548159990989021",
+    "2099549272752484354",
+    "2099550068466495859",
+    "2099550836921606380",
+    "2099550906329014612",
+    "2099551017931014374",
+    "2099551197585911897",
+    "2099551373624774850",
+    "2099552173524726252",
+    "2099552623896498620",
+    "2099552895767036234",
+    "2099552963396026508",
+    "2099553058841670059",
+    "2099554278163521640",
+    "2099554314733646134",
+    "2099554486284910836",
+    "2099554616853647854",
+    "2099554831178342799",
+    "2099554969976176834",
+    "2099555293491343819",
+    "2099555412978643376",
+    "2099555530746339653"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-3": {
    "acceptedIds": [
-    "2099489711324643474",
-    "2099489922193187145",
-    "2099490710395269124",
-    "2099491286571250149",
-    "2099491963720421759",
-    "2099493450152382894",
-    "2099493552526868986"
+    "2099555542993699154",
+    "2099555807943618937",
+    "2099556471910351230",
+    "2099556482320601151",
+    "2099557767883194680",
+    "2099558043318894973",
+    "2099558377982439854",
+    "2099558767306195158",
+    "2099558834167480505",
+    "2099559278805684382",
+    "2099559428622061647",
+    "2099559934044098693",
+    "2099559954654908830",
+    "2099560448605450333",
+    "2099560457623281855",
+    "2099560560409145744",
+    "2099560595607662751",
+    "2099561382635045349",
+    "2099561718028316869",
+    "2099562389922353514",
+    "2099563154309050789",
+    "2099563291546648975",
+    "2099564307478446134",
+    "2099564445085180182",
+    "2099564682457522514",
+    "2099564687318753406"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-4": {
+   "acceptedIds": [
+    "2099565101514666470",
+    "2099565154878845430",
+    "2099565212902785153",
+    "2099565355161014357",
+    "2099566152846307531",
+    "2099566216050352624",
+    "2099566708335780180",
+    "2099567301791994114",
+    "2099567328476168576",
+    "2099532456814588248",
+    "2099532657407229957",
+    "2099532858259804413",
+    "2099532866019262583",
+    "2099534481510076839",
+    "2099534674657693869",
+    "2099535628564103213",
+    "2099535707882570117",
+    "2099535800073416719"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T13:43:57.784Z"
+ "updatedAt": "2026-09-14T18:37:36.018Z"
 }
