@@ -164,7 +164,21 @@ test('every queued data writer checks out the current dispatched branch instead 
       assert.equal((job.concurrency || workflow.concurrency)?.group, 'data-writes', `${name}/${jobName}: branch resolution must happen inside the shared writer lock`);
     }
   }
-  assert.deepEqual(writers.sort(), ['authors.yml/authors', 'news-context.yml/publish', 'nightly.yml/nightly', 'poll.yml/poll']);
+  assert.deepEqual(writers.sort(), ['authors.yml/authors', 'event-shadow.yml/shadow', 'news-context.yml/publish', 'nightly.yml/nightly', 'poll.yml/poll']);
+});
+
+test('event evaluation is bounded, separately checkpointed and cannot schedule itself from saved data', () => {
+  const workflow = yaml.load(fs.readFileSync(path.join(ROOT, '.github/workflows/event-shadow.yml'), 'utf8'));
+  assert.equal(workflow.on.schedule, undefined);
+  assert.deepEqual(workflow.on.push.paths, ['src/event-*.js', '.github/workflows/event-shadow.yml']);
+  assert.equal(workflow.jobs.shadow['timeout-minutes'], 8);
+  assert.equal(workflow.permissions['id-token'], 'write');
+  const steps = workflow.jobs.shadow.steps;
+  assert.ok(steps.some((step) => step.run === 'node --use-env-proxy src/event-shadow.js --execute --publish'));
+  const save = steps.find((step) => step.run?.includes('commit-data.sh'));
+  assert.match(save.if, /!cancelled/);
+  assert.match(save.run.trim(), /data\/events data\/anthropic-usage\.json$/);
+  assert.ok(!steps.some((step) => /npm run (poll|sitedata|classify)/.test(step.run || '')));
 });
 
 test('news publication refreshes the dashboard without waiting for another capture', () => {
