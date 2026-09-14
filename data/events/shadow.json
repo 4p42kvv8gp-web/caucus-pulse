@@ -416,7 +416,7 @@
     "2099512150737719793",
     "2099493450152382894"
    ],
-   "status": "response-saved",
+   "status": "partial",
    "attempts": 1,
    "plannedAt": "2026-09-14T19:56:55.554Z",
    "submittedAt": "2026-09-14T19:56:56.070Z",
@@ -456,7 +456,19 @@
      "inference_geo": "global"
     }
    },
-   "respondedAt": "2026-09-14T19:57:19.638Z"
+   "respondedAt": "2026-09-14T19:57:19.638Z",
+   "validation": {
+    "valid": false,
+    "events": [],
+    "errors": [
+     {
+      "code": "invalid-response-content"
+     }
+    ],
+    "unresolved": [],
+    "assignments": []
+   },
+   "validatedAt": "2026-09-14T19:57:22.629Z"
   },
   "59de37c60fb6070ac2d69a526b2f542fea613b0d457a86cd052f0aa243d03e95": {
    "plan": {
