@@ -43,11 +43,13 @@ const jsonResponse = (body, status = 200) => new Response(JSON.stringify(body), 
 
 // ── 1. toRecord with includes ────────────────────────────────────────────
 
-test('toRecord attaches quoted context to quotes and replies from includes, nothing else changes', () => {
+test('toRecord preserves legacy fields while attaching quoted context and source provenance', () => {
   const quote = toRecord(raw('1', [{ type: 'quoted', id: COXON }]), capturedAt, includes);
   assert.equal(quote.type, 'quote');
   assert.equal(quote.refId, COXON);
-  assert.deepEqual(quote.quoted, {
+  const { source: quoteSource, ...legacyQuote } = quote.quoted;
+  assert.equal(quoteSource.raw.text, includes.tweets[0].text);
+  assert.deepEqual(legacyQuote, {
     id: COXON, authorId: 'u-coxon', handle: 'hilbertspaess', text: 'I resigned from Anthropic today.',
     metrics: { likes: 708063, retweets: 143632, replies: 16404, quotes: 33837, impressions: 139252407 } // no bookmarks
   });
@@ -58,7 +60,9 @@ test('toRecord attaches quoted context to quotes and replies from includes, noth
 
   // author object missing from includes → handle null, still attached
   const orphan = toRecord(raw('3', [{ type: 'quoted', id: '500' }]), capturedAt, includes);
-  assert.deepEqual(orphan.quoted, { id: '500', authorId: 'u-orphan', handle: null, text: 'author not included', metrics: { likes: 0, retweets: 0, replies: 0, quotes: 0, impressions: 0 } });
+  const { source: orphanSource, ...legacyOrphan } = orphan.quoted;
+  assert.equal(orphanSource.url, 'https://x.com/i/web/status/500');
+  assert.deepEqual(legacyOrphan, { id: '500', authorId: 'u-orphan', handle: null, text: 'author not included', metrics: { likes: 0, retweets: 0, replies: 0, quotes: 0, impressions: 0 } });
 
   // a retweet of an included post is inherited, not quoted; a plain tweet has nothing
   assert.ok(!('quoted' in toRecord(raw('4', [{ type: 'retweeted', id: COXON }]), capturedAt, includes)));
@@ -67,7 +71,7 @@ test('toRecord attaches quoted context to quotes and replies from includes, noth
   const before = toRecord(raw('6', [{ type: 'quoted', id: '999' }]), capturedAt);
   const after = toRecord(raw('6', [{ type: 'quoted', id: '999' }]), capturedAt, includes);
   assert.deepEqual(after, before);
-  assert.deepEqual(Object.keys(before), ['id', 'authorId', 'createdAt', 'type', 'refId', 'lang', 'text', 'capturedAt', 'metricsAtCapture']);
+  assert.deepEqual(Object.keys(before), ['id', 'authorId', 'createdAt', 'type', 'refId', 'lang', 'text', 'capturedAt', 'metricsAtCapture', 'source']);
   assert.equal(quotedFromIncludes('nope', includes), null);
 });
 
@@ -129,10 +133,12 @@ test('lookupTweets withText returns full posts with handles and bills the author
 
     const full = await lookupTweets([COXON, '404404'], { withText: true });
     assert.equal(calls[1].url.searchParams.get('ids'), `${COXON},404404`);
-    assert.equal(calls[1].url.searchParams.get('tweet.fields'), 'public_metrics,author_id,created_at,text');
+    for (const field of ['public_metrics', 'author_id', 'created_at', 'text', 'note_tweet', 'entities']) assert.ok(calls[1].url.searchParams.get('tweet.fields').split(',').includes(field));
     assert.equal(calls[1].url.searchParams.get('expansions'), 'author_id');
     assert.equal(calls[1].url.searchParams.get('user.fields'), 'username');
-    assert.deepEqual(full.tweetsById.get(COXON), {
+    const { source, ...legacyLookup } = full.tweetsById.get(COXON);
+    assert.equal(source.raw.text, body.data[0].text);
+    assert.deepEqual(legacyLookup, {
       id: COXON, authorId: 'u-coxon', handle: 'hilbertspaess', text: 'I resigned from Anthropic today.', createdAt: '2026-09-08T18:00:00.000Z',
       metrics: { likes: 708063, retweets: 143632, replies: 16404, quotes: 33837, bookmarks: 253769, impressions: 139252407 }
     });

@@ -173,18 +173,39 @@ export function readStatus(file = STATUS_FILE) {
   return readJSON(file, { contextVersion: 0, lastRefreshAt: null, sources: {} });
 }
 
-// Every stored line, newest version per id, optionally limited to items
-// published (or, lacking a date, fetched) within `days`.
-export function loadNews({ days = null, file = ITEMS_FILE, statusFile = STATUS_FILE, now = Date.now() } = {}) {
+// Retrieval also checks old stored records: fetch-time rules cannot repair
+// advertisements or redirects acquired before publisher allowlists existed.
+export function newsSourceIssue(item, sources = loadSources().sources) {
+  const source = sources.find((s) => s.id === item.sourceId);
+  const origin = source?.url || item.feedUrl;
+  if (!origin) return null; // caller-supplied fixtures/records have no registry claim
+  try {
+    const hosts = source?.allowed_hosts || [new URL(origin).hostname];
+    const u = new URL(item.url);
+    if (!['http:', 'https:'].includes(u.protocol) || u.username || u.password || !hosts.some((host) => u.hostname.toLowerCase() === host.toLowerCase() || u.hostname.toLowerCase().endsWith(`.${host.toLowerCase()}`))) return 'publisher-host-mismatch';
+  } catch { return 'invalid-source-url'; }
+  return null;
+}
+
+// Every stored line, newest version per id. A bounded recency query requires
+// a real publication date and checks publisher provenance; an unbounded
+// load retains the raw acquired history for acquisition/recovery tooling.
+export function loadNews({ days = null, file = ITEMS_FILE, statusFile = STATUS_FILE, now = Date.now(), sources = loadSources().sources } = {}) {
   const byId = new Map();
   for (const it of readJSONL(file)) if (!byId.has(it.id) || (it.version || 0) >= (byId.get(it.id).version || 0)) byId.set(it.id, it);
   let items = [...byId.values()];
+  const excluded = [];
   if (days != null) {
     const floor = now - days * 86_400_000;
-    items = items.filter((it) => Date.parse(it.publishedAt || it.fetchedAt || 0) >= floor);
+    items = items.filter((it) => {
+      const published = Date.parse(it.publishedAt);
+      const reason = !Number.isFinite(published) ? 'undated' : published > now ? 'future-publication' : newsSourceIssue(it, sources);
+      if (reason) { excluded.push({ id: it.id, reason }); return false; }
+      return published >= floor;
+    });
   }
-  items.sort((a, b) => String(b.publishedAt || b.fetchedAt).localeCompare(String(a.publishedAt || a.fetchedAt)));
-  return { items, version: readStatus(statusFile).contextVersion };
+  items.sort((a, b) => String(b.publishedAt || '').localeCompare(String(a.publishedAt || '')));
+  return { items, version: readStatus(statusFile).contextVersion, excluded };
 }
 
 // Append new or changed items; bump contextVersion once per call that
@@ -239,7 +260,17 @@ const STOP = new Set('a an the and or but of to in on at for from by with as is 
 // Ordinary words that posts and headlines capitalise all the time. Not
 // names, whatever the capitalisation; a match on one is not a distinctive
 // match. Explicit so a reader can see exactly what is excluded.
-export const GENERIC_WORDS = new Set(('good great big new old day night morning evening time people home family families health care year week weekend month first last next today work jobs job right left way life world country state city county town community national public private local school schools students teachers workers women men children kids veterans seniors small business businesses party election elections campaign candidate candidates primary midterm midterms budget tax taxes money cost costs price prices economy energy climate water air land safety justice freedom democracy rights law laws order power plan plans policy fund funds funding report reports news story stories history future every everyone thank thanks proud honored honor join joined happy congratulations welcome update breaking live watch read listen important love support fight fighting protect protecting defend stand together forward strong safe free fair decision decisions emergency open close security now here there again never always').split(' '));
+export const GENERIC_WORDS = new Set(('good great big new old day night morning evening time people home family families health care year week weekend month first last next today work jobs job right left way life world country state city county town community national public private local school schools students teachers workers women men children kids veterans seniors small business businesses party election elections campaign candidate candidates primary midterm midterms budget tax taxes money cost costs price prices economy energy climate water air land safety justice freedom democracy rights law laws order power plan plans policy fund funds funding report reports news story stories history future every everyone thank thanks proud honored honor join joined happy congratulations welcome update breaking live watch read listen important love support fight fighting protect protecting defend stand together forward strong safe free fair decision decisions emergency open close security now here there again never always recent general inside make').split(' '));
+
+// Verbs and connective wording are not an event's subject. When a query
+// names a person AND describes a subject, a surname-only match is not useful
+// context for that subject (for example, a voting ruling vs an AI interview).
+const SUBJECT_FILLER = new Set('recent like really real make made making sure say says said saying told tell tells ask asks asked call calls called come comes came coming go goes going went get gets got getting means mean show shows showing serve serving sent back stop around across together take takes taking done complete nothing something anything everything much many several need needs needed held hold having happen happens happening happened seriously just again still also even whether would could should might must'.split(' '));
+
+function subjectTerms(terms) {
+  const nameWords = new Set([...terms].filter(([term, weight]) => weight >= 3).flatMap(([term]) => term.split(' ')));
+  return [...terms.keys()].filter((term) => !term.includes(' ') && !/^\d/.test(term) && !nameWords.has(term) && !STOP.has(term) && !COMMON_NAMES.has(term) && !GENERIC_WORDS.has(term) && !SUBJECT_FILLER.has(term));
+}
 
 export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump president white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september sept october november december'.split(' '));
 
@@ -369,20 +400,21 @@ export const DEFAULTS = { k: 3, minScore: 2.5, windowBeforeDays: 7, windowAfterD
 // Dated evidence for a query. `asOf` is the moment the query is about (a
 // post's createdAt): items published from windowBeforeDays before it to
 // windowAfterDays after it are eligible; older ones inside the window are
-// returned flagged `stale` and never as a report. Items without a date use
-// their fetch time. Deterministic; bounded to k.
-export function retrieveEvidence(query, { items, asOf = new Date().toISOString(), knownAt = new Date().toISOString(), mode = 'retrospective', k = DEFAULTS.k, minScore = DEFAULTS.minScore, windowBeforeDays = DEFAULTS.windowBeforeDays, windowAfterDays = DEFAULTS.windowAfterDays, staleDays = DEFAULTS.staleDays } = {}) {
+// returned flagged `stale` and never as a report. Undated items cannot be
+// dated from their fetch time and are excluded. Deterministic; bounded to k.
+export function retrieveEvidence(query, { items, asOf = new Date().toISOString(), knownAt = new Date().toISOString(), mode = 'retrospective', k = DEFAULTS.k, minScore = DEFAULTS.minScore, windowBeforeDays = DEFAULTS.windowBeforeDays, windowAfterDays = DEFAULTS.windowAfterDays, staleDays = DEFAULTS.staleDays, sources = loadSources().sources } = {}) {
   const terms = queryTerms(query);
   if (!terms.size || !items?.length) return { evidence: [], reason: !terms.size ? 'no searchable terms in the query' : 'no items in the store' };
   const at = Date.parse(asOf);
   const lo = at - windowBeforeDays * 86_400_000;
   const hi = at + windowAfterDays * 86_400_000;
   const cutoff = mode === 'as-of' ? Math.min(at, Date.parse(knownAt)) : Date.parse(knownAt);
+  const subject = subjectTerms(terms);
   const scored = [];
   for (const it of items) {
-    const when = Date.parse(it.publishedAt || it.fetchedAt || 0);
+    const when = Date.parse(it.publishedAt);
     const fetched = Date.parse(it.fetchedAt || 0);
-    if (!(when >= lo && when <= hi && when <= cutoff && fetched <= cutoff)) continue;
+    if (!(when >= lo && when <= hi && when <= cutoff && fetched <= cutoff) || newsSourceIssue(it, sources)) continue;
     const { score, inTitle, inBody } = scoreItem(it, terms);
     if (score < minScore) continue;
     const ageHours = Math.round((at - when) / 3_600_000);
@@ -406,6 +438,9 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
     // to a name — "25th" with "Pentagon" is the Sept. 11 anniversary;
     // "25th" alone is also "Day Two in Dallas".
     if (matchedProper.every((m) => /^\d/.test(m))) continue;
+    // Preserve sparse references/aliases for review, but a sufficiently
+    // specific query must overlap on its subject as well as a name.
+    if (subject.length >= 3 && !matched.some((term) => subject.includes(term))) continue;
     // A match elsewhere in the article cannot make an unrelated first
     // paragraph supporting evidence. Select a passage containing a name
     // shared by this query; otherwise retain the headline as a lead.
@@ -431,7 +466,7 @@ export function evidenceForPosts(posts, { k = 2, perChunkCap = 12, items = null,
   let used = 0;
   for (const t of posts) {
     if (used >= perChunkCap) break;
-    const q = [t.text, t.quoting?.text, t.quoted?.text].filter(Boolean).join(' ');
+    const q = [t.text, t.quoting?.text, t.quoted?.text, t.reposted?.text, t.reposting?.text].filter(Boolean).join(' ');
     const { evidence } = retrieveEvidence(q, { items: store.items, asOf: t.createdAt, ...opts, k: Math.min(k, perChunkCap - used) });
     if (evidence.length) { byPost[t.id] = evidence; used += evidence.length; }
   }
@@ -471,7 +506,7 @@ export function reconsiderCandidates(topicsDay, posts, { sinceVersion = 0, items
     if (!generic) continue;
     const t = byId.get(id);
     if (!t) continue;
-    const { evidence } = retrieveEvidence([t.text, t.quoting?.text].filter(Boolean).join(' '), { items: fresh, asOf: t.createdAt, k, minScore });
+    const { evidence } = retrieveEvidence([t.text, t.quoting?.text, t.quoted?.text, t.reposted?.text, t.reposting?.text].filter(Boolean).join(' '), { items: fresh, asOf: t.createdAt, k, minScore });
     // Worth a second look only when the article names something the post
     // names (matchedProper) and they share at least one more term; a shared
     // "House", or a single ordinary word, does not queue anything.

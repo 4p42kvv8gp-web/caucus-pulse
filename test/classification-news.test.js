@@ -46,6 +46,23 @@ test('public evidence survives request splitting with exact per-post manifest me
   assert.equal(manifest['chunk-1'].contextVersions['20'], 3);
 });
 
+test('captured repost originals reach classification intact and long inputs split without dropping source IDs', () => {
+  const originalText = 'New Haven Line service suspended between Norwalk and Bridgeport. ' + 'More captured wording. '.repeat(300);
+  const items = ['1', '2', '3'].map((id) => post(id, { text: 'RT @source: abbreviated…', type: 'retweet', reposted: {
+    id: '900', handle: 'source', text: originalText, createdAt: '2026-09-12T16:00:00Z', source: { text: 'wrapper' }
+  } }));
+  const requests = chunkRequests(items, tax, 'offline', '', { examples: [], inputCharsCap: 9000 });
+  const lines = requests.flatMap(linesOf);
+  assert.equal(requests.length, 3);
+  assert.deepEqual(lines.map((line) => line.id), ['1', '2', '3']);
+  assert.equal(lines[0].reposting.text, originalText);
+  assert.equal(lines[0].reposting.id, '900');
+  assert.equal(lines[0].reposting.createdAt, '2026-09-12T16:00:00Z');
+  assert.equal(lines[0].text, 'RT @source: abbreviated…');
+  assert.ok(!('source' in lines[0].reposting));
+  assert.ok(!('reposting' in JSON.parse(classifierLine(post('4')))));
+});
+
 test('evidence citations cannot cross posts, name unseen sources, duplicate IDs or accept malformed uncertainty', () => {
   const out = emptyOut();
   const entry = { evidenceByPost: { 1: [{ id: 'n_one' }], 2: [{ id: 'n_two' }], 3: [{ id: 'n_one' }] }, contextVersions: { 1: 2 } };
@@ -108,6 +125,20 @@ test('uncertain specific labels can be reconsidered, but unchanged or unrelated 
   assert.deepEqual(newsReconsideration(previous, [post('1')], store(2)), ['1']);
   assert.deepEqual(newsReconsideration(previous, [post('1')], { items: [article(2, { title: 'Music festival opens', passages: ['Concertgoers heard a band perform.'] })], version: 2 }), []);
   assert.deepEqual(newsReconsideration({ ...previous, corrected: { 1: { by: 'reviewer' } } }, [post('1')], store(2)), []);
+});
+
+test('generic subtopics stay eligible for event discovery while identified stories and corrections stay settled', () => {
+  const taxonomy = { immigration: { subtopics: {
+    detention: { label: 'Detention' }, dilley: { label: 'Dilley expansion', story: true }
+  } } };
+  const previous = { assignments: { 1: [['immigration', 'detention']] }, provenance: { 1: { contextVersion: 1 } } };
+  const reconsider = (prior, news = store(2)) => newsReconsideration(prior, [post('1')], news, { tax: taxonomy });
+  assert.deepEqual(reconsider(previous), ['1'], 'generic subtopic does not establish the event');
+  assert.deepEqual(reconsider(previous, store(1)), [], 'unchanged news does not retry');
+  assert.deepEqual(reconsider({ ...previous, assignments: { 1: [['immigration', 'dilley']] } }), []);
+  assert.deepEqual(reconsider({ ...previous, emerging: [{ label: 'Dilley expansion', ids: ['1'] }] }), []);
+  assert.deepEqual(reconsider({ ...previous, corrected: { 1: { by: 'reviewer' } } }), []);
+  assert.deepEqual(reconsider({ ...previous, assignments: { 1: [['immigration', 'dilley']] }, needsContext: { 1: true } }), ['1']);
 });
 
 test('human correction arriving during inference preserves its topics, incident state, emerging labels and provenance', async (t) => {

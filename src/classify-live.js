@@ -82,7 +82,7 @@ async function classifyLiveUnlocked(records, {
   for (const date of selectedDates) {
     const tweets = [...byDate.get(date).values()];
     const completePlan = planDay(date, { tax, tweets, prior, resolve });
-    const reconsiderIds = newsReconsideration(existing.get(date), completePlan.toClassify, newsStore);
+    const reconsiderIds = newsReconsideration(existing.get(date), completePlan.toClassify, newsStore, { tax });
     if (!pendingIdsFor(tweets, existing.get(date)).length && !reconsiderIds.length) continue;
     const pl = remainingPlan(completePlan, existing.get(date), { reconsiderIds });
     const deferred = pl.toClassify.filter((t) => t.type === 'retweet' && allIds.has(t.refId));

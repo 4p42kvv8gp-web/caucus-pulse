@@ -166,3 +166,16 @@ test('every queued data writer checks out the current dispatched branch instead 
   }
   assert.deepEqual(writers.sort(), ['authors.yml/authors', 'news-context.yml/publish', 'nightly.yml/nightly', 'poll.yml/poll']);
 });
+
+test('news publication refreshes the dashboard without waiting for another capture', () => {
+  const workflow = yaml.load(fs.readFileSync(path.join(ROOT, '.github/workflows/news-context.yml'), 'utf8'));
+  const steps = workflow.jobs.publish.steps;
+  const apply = steps.findIndex((s) => s.run?.includes('news-snapshot.mjs apply'));
+  const saveNews = steps.findIndex((s) => s.run?.includes('commit-data.sh') && s.run?.includes('data/news'));
+  const rebuild = steps.findIndex((s) => s.run === 'npm run sitedata');
+  const saveDisplay = steps.findIndex((s) => s.run?.includes('commit-data.sh') && s.run?.includes('site/data'));
+  assert.ok(apply >= 0 && saveNews > apply, 'save acquired reporting before deriving its display');
+  assert.ok(rebuild > saveNews, 'a failed derived build must not discard the fetched news');
+  assert.ok(saveDisplay > rebuild, 'fresh news must reach the dashboard in this workflow');
+  assert.equal(workflow.jobs.publish.concurrency.group, 'data-writes');
+});

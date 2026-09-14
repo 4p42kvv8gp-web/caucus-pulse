@@ -131,7 +131,7 @@ function render() {
   const pausedCard = card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum</span></div>
       <div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1;color:#8e8e93">—</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">paused</span></div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2"></div>
-      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `latest topical assignment ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.capturedIn24h || 0)} posts in the last 24h await the classifier</div>`);
+      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `latest completed classification ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.pendingIn24h ?? D.classification?.capturedIn24h ?? 0)} posts in the last 24h await the classifier</div>`);
   $('cards').innerHTML = [
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.posts)}</div>${spark(curve, 108, 26)}</div>

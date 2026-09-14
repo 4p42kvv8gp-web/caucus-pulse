@@ -6,7 +6,7 @@
 //   - no author expansions (authors resolve against data/authors.json,
 //     refreshed weekly by src/authors.js)
 //   - one merged list timeline instead of per-account polling or search
-//   - engagement is re-read exactly once, batched, at the 24h mark
+//   - engagement refresh is batched for yesterday's ET archive
 //
 // The one deliberate exception is quoted context ({ includeReferenced: true }
 // on the timeline/search pagers): the post a quote or reply points at comes
@@ -64,7 +64,106 @@ export function isConfigured() {
   return authMode() !== null;
 }
 
-const TWEET_FIELDS = 'created_at,public_metrics,referenced_tweets,author_id,lang,conversation_id';
+const TWEET_FIELDS = 'created_at,public_metrics,referenced_tweets,author_id,lang,conversation_id,note_tweet,entities,edit_history_tweet_ids';
+
+const object = (value) => value != null && typeof value === 'object' && !Array.isArray(value);
+const ownData = (value, key) => object(value) ? Object.getOwnPropertyDescriptor(value, key)?.value : undefined;
+const list = (value) => Array.isArray(value) ? value : [];
+const validDate = (value) => typeof value === 'string' && Number.isFinite(Date.parse(value));
+const sourceUrl = (id) => typeof id === 'string' && /^\d{1,25}$/.test(id) ? `https://x.com/i/web/status/${id}` : null;
+const refsOf = (t) => list(t.referenced_tweets ?? t.referenced_posts).filter((r) => object(r)
+  && ['retweeted', 'quoted', 'replied_to'].includes(r.type) && typeof r.id === 'string' && r.id.length > 0);
+const includedTweets = (includes) => list(includes?.tweets ?? includes?.posts);
+
+// Keep text byte-for-byte as returned: no slicing, URL substitution, trimming,
+// or concatenation with the referenced author's words. Some newer API schemas
+// call the field note_post; the currently working request dialect is unchanged.
+function selectedText(t) {
+  for (const field of ['note_tweet', 'note_post']) {
+    const text = ownData(ownData(t, field), 'text');
+    if (typeof text === 'string' && text.trim()) return { text, field: `${field}.text` };
+  }
+  const text = ownData(t, 'text');
+  return { text: typeof text === 'string' ? text : '', field: 'text' };
+}
+export const textOf = (t) => selectedText(t).text;
+
+// Copy JSON data without invoking toJSON/accessors or mutating input. Invalid
+// optional objects cannot break capture; they are omitted with an explicit flag.
+function jsonSnapshot(value, ancestors = new Set(), budget = { nodes: 0 }, depth = 0) {
+  if (++budget.nodes > 100000 || depth > 32) throw new Error('oversized optional JSON');
+  if (value === null || typeof value === 'string' || typeof value === 'boolean') return value;
+  if (typeof value === 'number' && Number.isFinite(value)) return value;
+  if (!object(value) && !Array.isArray(value)) throw new Error('not JSON data');
+  if (ancestors.has(value)) throw new Error('cyclic optional JSON');
+  const proto = Object.getPrototypeOf(value);
+  if (!Array.isArray(value) && proto !== Object.prototype && proto !== null) throw new Error('non-JSON prototype');
+  ancestors.add(value);
+  const out = Array.isArray(value) ? [] : {};
+  for (const [key, descriptor] of Object.entries(Object.getOwnPropertyDescriptors(value))) {
+    if (!descriptor.enumerable) continue;
+    if (!Object.hasOwn(descriptor, 'value')) throw new Error('optional accessor');
+    const copied = jsonSnapshot(descriptor.value, ancestors, budget, depth + 1);
+    Object.defineProperty(out, key, { value: copied, enumerable: true, writable: true, configurable: true });
+  }
+  ancestors.delete(value);
+  return out;
+}
+function safeSourceLink(value) {
+  if (typeof value !== 'string' || /[\s\u0000-\u001f\u007f]/u.test(value)) return null;
+  try {
+    const url = new URL(value);
+    return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? value : null;
+  } catch { return null; }
+}
+
+// Optional additive envelope. Existing records remain readable without it.
+// raw preserves returned text/entities; urls is a validated HTTP(S) projection
+// for later article matching, never a request to fetch or trust those links.
+export function sourceEnvelope(t, includes) {
+  const raw = {}, warnings = [];
+  for (const field of ['text', 'note_tweet', 'note_post', 'entities', 'created_at', 'conversation_id',
+    'referenced_tweets', 'referenced_posts', 'edit_history_tweet_ids', 'edit_history_post_ids', 'article']) {
+    const descriptor = Object.getOwnPropertyDescriptor(t, field);
+    if (!descriptor) continue;
+    if (!Object.hasOwn(descriptor, 'value')) { warnings.push(`unserializable-${field}`); continue; }
+    if (descriptor.value === undefined) continue;
+    try { raw[field] = jsonSnapshot(descriptor.value); } catch { warnings.push(`unserializable-${field}`); }
+  }
+  const textField = selectedText(t).field;
+  for (const field of ['note_tweet', 'note_post']) {
+    if (raw[field] != null && !(object(raw[field]) && typeof raw[field].text === 'string' && raw[field].text.trim())) warnings.push(`invalid-${field}-text`);
+  }
+  const urls = [];
+  for (const [field, entities] of [['entities', raw.entities], ['note_tweet.entities', raw.note_tweet?.entities], ['note_post.entities', raw.note_post?.entities]]) {
+    if (entities == null) continue;
+    if (!object(entities) || (entities.urls != null && !Array.isArray(entities.urls))) { warnings.push(`invalid-${field}`); continue; }
+    for (const entity of list(entities.urls)) {
+      if (!object(entity)) { warnings.push(`invalid-${field}-url`); continue; }
+      const entry = { field };
+      for (const [source, target] of [['url', 'url'], ['expanded_url', 'expandedUrl'], ['unwound_url', 'unwoundUrl']]) {
+        const valid = safeSourceLink(entity[source]);
+        if (valid) entry[target] = valid;
+        else if (entity[source] != null) warnings.push(`invalid-${field}-${source}`);
+      }
+      if (Object.keys(entry).length === 1) continue;
+      if (typeof entity.display_url === 'string') entry.displayUrl = entity.display_url;
+      if (Number.isSafeInteger(entity.start) && entity.start >= 0) entry.start = entity.start;
+      if (Number.isSafeInteger(entity.end) && entity.end >= (entry.start ?? 0)) entry.end = entity.end;
+      urls.push(entry);
+    }
+  }
+  const references = refsOf(raw).map((ref) => {
+    const included = includedTweets(includes).find((post) => post?.id === ref.id);
+    return { id: ref.id, type: ref.type, url: sourceUrl(ref.id),
+      ...(validDate(included?.created_at) ? { createdAt: included.created_at } : {}),
+      // Preserve every direct expansion, including retweets and a second
+      // reference. No includes argument here, so cycles cannot recurse.
+      ...(included ? { source: sourceEnvelope(included) } : {}) };
+  });
+  return { version: 1, url: sourceUrl(t.id), textField, raw, urls, references,
+    ...(warnings.length ? { warnings: [...new Set(warnings)] } : {}) };
+}
 
 // Quoted context: the referenced post itself and its author. tweet.fields
 // applies to included posts too, so they carry public_metrics (impressions).
@@ -81,7 +180,7 @@ function withReferenced(params) {
 // counts the included posts, so a caller cannot under-bill posts by
 // forgetting them) as `userReads` for the user-object side of the ledger.
 function includesOf(body) {
-  return { tweets: body.includes?.tweets || [], users: body.includes?.users || [] };
+  return { tweets: includedTweets(body.includes), users: list(body.includes?.users) };
 }
 
 async function fail(res, label) {
@@ -237,16 +336,16 @@ export function metricsOf(t) {
 
 // Batched lookup: up to 100 ids per request; each returned tweet is one post
 // read. Deleted/protected tweets simply don't come back. The default asks for
-// metrics only (the 24h refresh). withText=true also fetches text, author and
+// metrics only (the daily refresh). withText=true also fetches full text, author and
 // created_at plus the author expansion — one user read per distinct author,
 // reported in `userReads` — and returns the full posts in `tweetsById` as
-// {id, authorId, handle, text, createdAt, metrics} (the quoted-context shape).
+// {id, authorId, handle, text, createdAt, metrics, source}.
 export async function lookupTweets(ids, { withText = false } = {}) {
   const empty = { metricsById: new Map(), tweetsById: new Map(), usage: 0, userReads: 0 };
   if (!ids.length) return empty;
   const params = new URLSearchParams({
     ids: ids.slice(0, 100).join(','),
-    'tweet.fields': withText ? 'public_metrics,author_id,created_at,text' : 'public_metrics'
+    'tweet.fields': withText ? `${TWEET_FIELDS},text` : 'public_metrics'
   });
   if (withText) {
     params.set('expansions', 'author_id');
@@ -260,7 +359,7 @@ export async function lookupTweets(ids, { withText = false } = {}) {
   if (!res.ok) await fail(res, 'tweets lookup');
   const body = await res.json();
   const includes = includesOf(body);
-  const handleOf = new Map(includes.users.map((u) => [u.id, u.username]));
+  const handleOf = new Map(includes.users.filter(object).map((u) => [u.id, typeof u.username === 'string' ? u.username : null]));
   const metricsById = new Map();
   const tweetsById = new Map();
   for (const t of body.data || []) {
@@ -269,7 +368,8 @@ export async function lookupTweets(ids, { withText = false } = {}) {
     if (withText) {
       tweetsById.set(t.id, {
         id: t.id, authorId: t.author_id ?? null, handle: handleOf.get(t.author_id) ?? null,
-        text: t.text ?? '', createdAt: t.created_at ?? null, metrics
+        text: textOf(t), createdAt: validDate(t.created_at) ? t.created_at : null, metrics,
+        source: sourceEnvelope(t, includes)
       });
     }
   }
@@ -325,20 +425,23 @@ export async function listMembers(listId) {
 }
 
 // The referenced post `id` as quoted context, when the page's includes carry
-// it: {id, authorId, handle, text, metrics}. handle is null when the author
+// it: {id, authorId, handle, text, metrics, source}, plus createdAt when valid.
+// handle is null when the author
 // object was not included (the expansion was not asked for, or X withheld
 // a protected account).
 export function quotedFromIncludes(id, includes) {
-  const t = includes?.tweets?.find((x) => x.id === id);
+  const t = includedTweets(includes).find((x) => x?.id === id);
   if (!t) return null;
-  const author = includes.users?.find((u) => u.id === t.author_id);
+  const author = list(includes?.users).find((u) => u?.id === t.author_id);
   const { bookmarks, ...metrics } = metricsOf(t); // the record keeps the five reach/engagement numbers
   return {
     id: t.id,
     authorId: t.author_id ?? null,
-    handle: author?.username ?? null,
-    text: t.text ?? '',
-    metrics
+    handle: typeof author?.username === 'string' ? author.username : null,
+    text: textOf(t),
+    metrics,
+    ...(validDate(t.created_at) ? { createdAt: t.created_at } : {}),
+    source: sourceEnvelope(t, includes)
   };
 }
 
@@ -346,9 +449,9 @@ export function quotedFromIncludes(id, includes) {
 // happens at read time from the local author table, never via expansions.
 // With `includes` (a page fetched with includeReferenced), a quote or reply
 // also carries the post it points at as `quoted` — the record's shape is
-// unchanged when the referenced post is not there.
+// legacy fields remain readable; new records also carry a source envelope.
 export function toRecord(t, capturedAt, includes) {
-  const refs = t.referenced_tweets || [];
+  const refs = refsOf(t);
   const rt = refs.find((r) => r.type === 'retweeted');
   const quote = refs.find((r) => r.type === 'quoted');
   const reply = refs.find((r) => r.type === 'replied_to');
@@ -361,7 +464,7 @@ export function toRecord(t, capturedAt, includes) {
     type,
     refId: rt?.id || quote?.id || reply?.id || null,
     lang: t.lang,
-    text: t.text,
+    text: type === 'retweet' ? (typeof t.text === 'string' ? t.text : '') : textOf(t),
     capturedAt,
     // metrics at capture come free in the same object; near-zero this early —
     // the real numbers land in data/metrics/ at the 24h refresh
@@ -374,5 +477,11 @@ export function toRecord(t, capturedAt, includes) {
     const quoted = quotedFromIncludes(rec.refId, includes);
     if (quoted) rec.quoted = quoted;
   }
+  if (type === 'retweet' && includes) {
+    const reposted = quotedFromIncludes(rec.refId, includes);
+    if (reposted) rec.reposted = reposted;
+  }
+  rec.source = sourceEnvelope(t, includes);
+  if (type === 'retweet') rec.source.textField = 'text';
   return rec;
 }
