@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-09-14T14:19:44.669Z",
+ "generatedAt": "2026-09-14T16:14:29.413Z",
  "incidents": [
+  {
+   "id": "miami-fl--industrial-accident--source-2099498135366095232",
+   "kind": "industrial accident",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "industrial accident"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Miami, FL · FL-23",
+   "placeRaw": "Miami, FL",
+   "district": "FL-23",
+   "districtMatch": true,
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "since": "2026-09-14T15:09:49.000Z",
+   "last": "2026-09-14T15:09:49.000Z",
+   "updates": 1,
+   "engN": 8,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Industrial accident · Miami, FL",
+   "evidence": {
+    "span": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.\n\nThank you to the first respon",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": false
+    },
+    "sourceId": "2099515971211817257",
+    "url": "https://x.com/i/web/status/2099515971211817257"
+   },
+   "timeline": [
+    {
+     "id": "2099515971211817257",
+     "sourceId": "2099515971211817257",
+     "url": "https://x.com/i/web/status/2099515971211817257",
+     "authorId": "1610009027743830018",
+     "personId": "member:jared moskowitz",
+     "referenceIds": [
+      "2099498135366095232"
+     ],
+     "time": "2026-09-14T15:09:49.000Z",
+     "who": "@RepMoskowitz",
+     "tag": "member",
+     "text": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.\n\nThank you to the first responders who are on the scene right now, my office will continue to provide updates as they come. https://t.co/nOuf12SfVL",
+     "engN": 8,
+     "isNew": false,
+     "flag": {
+      "kind": "industrial accident",
+      "place": "Miami, FL",
+      "name": null
+     },
+     "evidence": {
+      "span": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.\n\nThank you to the first respon",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": false
+      },
+      "sourceId": "2099515971211817257",
+      "url": "https://x.com/i/web/status/2099515971211817257"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2099515971211817257"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2099515971211817257"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "norwalk-ct--infrastructure-failure--source-2099167548684087801",
    "kind": "infrastructure failure",

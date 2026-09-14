@@ -1,7 +1,7 @@
 {
  "date": "2026-09-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.759Z",
+ "classifiedAt": "2026-09-14T16:14:32.195Z",
  "assignments": {
   "2097015493232411011": [
    [
@@ -656,7 +656,16 @@
     "elections-2026"
    ]
   ],
-  "2097113396865081562": [],
+  "2097113396865081562": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
   "2097113893487493409": [],
   "2097114075100787054": [
    [
@@ -1003,12 +1012,7 @@
     null
    ]
   ],
-  "2096979138582048780": [
-   [
-    "labor",
-    null
-   ]
-  ],
+  "2096979138582048780": [],
   "2096980167801360489": [
    [
     "labor",
@@ -1261,7 +1265,11 @@
   "2097126891924631591": [
    [
     "labor",
-    null
+    "unions"
+   ],
+   [
+    "economy",
+    "jobs-wages"
    ]
   ],
   "2096916642986864919": [
@@ -1391,11 +1399,11 @@
   "2097033032276279741": [],
   "2097038681412391253": [
    [
-    "foreign-policy",
-    null
+    "democracy",
+    "executive-overreach"
    ],
    [
-    "democracy",
+    "foreign-policy",
     null
    ]
   ],
@@ -1565,7 +1573,16 @@
    ]
   ],
   "2097108642046595282": [],
-  "2097108778025959583": [],
+  "2097108778025959583": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    null
+   ]
+  ],
   "2097109270864986550": [],
   "2097132069692575806": [
    [
@@ -1718,7 +1735,7 @@
   "2097126962233753994": [
    [
     "congress-politics",
-    null
+    "elections-2026"
    ]
   ],
   "2097149471985475913": [
@@ -2915,6 +2932,231 @@
    "place": "Miami, FL"
   }
  },
+ "provenance": {
+  "2097108778025959583": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_92e0059cf02ca340",
+     "publisher": "Politico",
+     "date": "2026-09-01",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/01/jd-vance-republican-jewish-coalition-01058782",
+     "text": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "title": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "publishedAt": "2026-09-01T04:48:42.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ca36b1342b71ea6f",
+     "publisher": "Politico",
+     "date": "2026-09-02",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/01/republican-jewish-coalition-jd-vance-tucker-carlson-01060877",
+     "text": "JD Vance courts Jewish Republicans. Tucker Carlson still looms.",
+     "title": "JD Vance courts Jewish Republicans. Tucker Carlson still looms.",
+     "publishedAt": "2026-09-02T00:15:24.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2097126962233753994": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_c45e465db3bf3b53",
+     "publisher": "Politico",
+     "date": "2026-09-09",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/09/republicans-economy-trump-dallas-midterm-convention-01069724",
+     "text": "‘We are going in the wrong direction’: Republican convention dogged by the cost of living",
+     "title": "‘We are going in the wrong direction’: Republican convention dogged by the cost of living",
+     "publishedAt": "2026-09-09T23:25:24.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_f31494aabac0a4f0",
+     "publisher": "Politico",
+     "date": "2026-09-08",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/08/gop-midterm-convention-trump-message-01066258",
+     "text": "Republicans are hoping ‘Trump-a-palooza’ isn’t only about Trump",
+     "title": "Republicans are hoping ‘Trump-a-palooza’ isn’t only about Trump",
+     "publishedAt": "2026-09-08T08:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2097038681412391253": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2096979138582048780": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2097126891924631591": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_8290c073e4aff992",
+     "publisher": "Politico",
+     "date": "2026-09-10",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/09/dan-mckee-loses-rhode-island-primary-01069983",
+     "text": "Dan McKee becomes first governor in 8 years to lose primary",
+     "title": "Dan McKee becomes first governor in 8 years to lose primary",
+     "publishedAt": "2026-09-10T00:25:46.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2097113396865081562": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b77a53c4ad66d195f3bdfe5c1bcf3f59697b60503d1df3ad3743fa1d6c436e6"
+  },
+  "2096974385793929677": {
+   "inheritedFrom": "2096966492436803931"
+  },
+  "2096983745765224852": {
+   "inheritedFrom": "2096964186496794666"
+  },
+  "2096961577039642659": {
+   "inheritedFrom": "2096237052345852094"
+  },
+  "2097009891046993942": {
+   "inheritedFrom": "2096955410620051504"
+  },
+  "2097018223791055022": {
+   "inheritedFrom": "2096656427058348442"
+  },
+  "2097018896175726941": {
+   "inheritedFrom": "2096672530295877691"
+  },
+  "2097018978283503756": {
+   "inheritedFrom": "2096777806826873108"
+  },
+  "2097124129077928091": {
+   "inheritedFrom": "2096963947379245544"
+  },
+  "2096987287816933431": {
+   "inheritedFrom": "2096968394167685311"
+  },
+  "2096994153653579798": {
+   "inheritedFrom": "2096987565333057559"
+  },
+  "2097104709492588833": {
+   "inheritedFrom": "2097065374353424850"
+  },
+  "2097040697241018506": {
+   "inheritedFrom": "2097034647947354310"
+  },
+  "2097156694438765001": {
+   "inheritedFrom": "2097130872776327320"
+  }
+ },
+ "needsContext": {
+  "2097108778025959583": true,
+  "2097126962233753994": false,
+  "2097038681412391253": false,
+  "2096979138582048780": false,
+  "2097126891924631591": false,
+  "2097113396865081562": false,
+  "2096974385793929677": false,
+  "2096983745765224852": false,
+  "2096961577039642659": false,
+  "2097009891046993942": false,
+  "2097018223791055022": false,
+  "2097018896175726941": false,
+  "2097018978283503756": false,
+  "2097124129077928091": false,
+  "2096987287816933431": false,
+  "2096994153653579798": false,
+  "2097104709492588833": false,
+  "2097040697241018506": false,
+  "2097156694438765001": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "september-11-remembrance",
@@ -2946,8 +3188,35 @@
    "ids": [
     "2097130872776327320"
    ]
+  },
+  {
+   "label": "Trump post depicting US conquest of North America map",
+   "ids": [
+    "2097038681412391253",
+    "2097113396865081562"
+   ]
   }
  ],
  "unclassified": [],
- "failedChunks": 0
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-07_chunk-0": {
+   "acceptedIds": [
+    "2097108778025959583",
+    "2097126962233753994",
+    "2097038681412391253",
+    "2096979138582048780",
+    "2097126891924631591",
+    "2097113396865081562"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }

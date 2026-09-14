@@ -1,7 +1,7 @@
 {
  "date": "2026-09-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.735Z",
+ "classifiedAt": "2026-09-14T16:14:32.153Z",
  "assignments": {
   "2094884141980401788": [
    [
@@ -404,18 +404,22 @@
   ],
   "2094917711922876898": [
    [
-    "congress-politics",
-    null
+    "democracy",
+    "corruption-ethics"
    ],
    [
-    "democracy",
-    null
+    "congress-politics",
+    "house-floor"
    ]
   ],
   "2094918046615757015": [
    [
     "congress-politics",
-    null
+    "house-floor"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
    ]
   ],
   "2094918703565455754": [
@@ -452,28 +456,32 @@
   ],
   "2094920378858525107": [
    [
-    "congress-politics",
-    null
+    "democracy",
+    "corruption-ethics"
    ],
    [
-    "democracy",
-    null
+    "congress-politics",
+    "house-floor"
    ]
   ],
   "2094920842777935882": [
    [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
     "congress-politics",
-    null
+    "house-floor"
    ]
   ],
   "2094921142100213857": [
    [
-    "congress-politics",
-    null
+    "democracy",
+    "corruption-ethics"
    ],
    [
-    "democracy",
-    null
+    "congress-politics",
+    "house-floor"
    ]
   ],
   "2094921444815757793": [
@@ -489,7 +497,7 @@
   "2094921580195332542": [
    [
     "democracy",
-    null
+    "corruption-ethics"
    ]
   ],
   "2094921805852987419": [
@@ -822,11 +830,11 @@
   "2094954590206644586": [
    [
     "democracy",
-    null
+    "corruption-ethics"
    ],
    [
     "congress-politics",
-    null
+    "house-floor"
    ]
   ],
   "2094961169387729381": [
@@ -1909,11 +1917,19 @@
   "2094847422249803999": [
    [
     "congress-politics",
-    null
+    "house-floor"
+   ],
+   [
+    "democracy",
+    "epstein-files"
    ],
    [
     "foreign-policy",
-    null
+    "middle-east"
+   ],
+   [
+    "public-safety",
+    "crime-policing"
    ]
   ],
   "2094853120475951221": [
@@ -1954,11 +1970,11 @@
   "2094883976552837146": [
    [
     "democracy",
-    null
+    "courts-doj"
    ],
    [
     "congress-politics",
-    null
+    "house-floor"
    ]
   ],
   "2094888924225143020": [],
@@ -2153,16 +2169,16 @@
   "2094820175795081289": [],
   "2094823609969562080": [
    [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
     "foreign-policy",
-    null
+    "middle-east"
    ],
    [
     "civil-rights",
-    null
-   ],
-   [
-    "congress-politics",
-    null
+    "racial-justice"
    ]
   ],
   "2094826166729298378": [
@@ -2259,7 +2275,11 @@
   "2094867815551390023": [
    [
     "democracy",
-    null
+    "voting-rights"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
    ]
   ],
   "2094873638033830138": [
@@ -3759,12 +3779,12 @@
   ],
   "2094803441381978214": [
    [
-    "economy",
-    null
+    "foreign-policy",
+    "middle-east"
    ],
    [
-    "foreign-policy",
-    null
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2094813337758400963": [
@@ -4729,6 +4749,12 @@
     "constituent-services",
     null
    ]
+  ],
+  "2094928010310729780": [
+   [
+    "tech",
+    "ai-policy"
+   ]
   ]
  },
  "incidents": {
@@ -4785,6 +4811,410 @@
    "place": "Queens, NY"
   }
  },
+ "provenance": {
+  "2094823609969562080": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_92e0059cf02ca340",
+     "publisher": "Politico",
+     "date": "2026-09-01",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/01/jd-vance-republican-jewish-coalition-01058782",
+     "text": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "title": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "publishedAt": "2026-09-01T04:48:42.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094867815551390023": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_a5ee51f9c66b0646",
+     "publisher": "Politico",
+     "date": "2026-09-02",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/02/susan-collins-on-trump-tariffs-and-her-fight-for-maine-2156176",
+     "text": "Susan Collins on Trump, tariffs and the state of her senate race over Maine lobsters",
+     "title": "Susan Collins on Trump, tariffs and the state of her senate race over Maine lobsters",
+     "publishedAt": "2026-09-02T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094803441381978214": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094954590206644586": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094928010310729780": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094847422249803999": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094883976552837146": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094917711922876898": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094918046615757015": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094920378858525107": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094920842777935882": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094921142100213857": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094921580195332542": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66a0d7e04b66650f355f7e8bc2f777d2e83a68f3657be59cf643de989c3b3b00"
+  },
+  "2094877699407745259": {
+   "inheritedFrom": "2094840488159318207"
+  },
+  "2094842403416932793": {
+   "inheritedFrom": "2094562418756059484"
+  },
+  "2094842426913337665": {
+   "inheritedFrom": "2094814330814337083"
+  },
+  "2094845803042848907": {
+   "inheritedFrom": "2094800816964063718"
+  },
+  "2094877586245509348": {
+   "inheritedFrom": "2094784120324825137"
+  },
+  "2094730503928619151": {
+   "inheritedFrom": "2094509543250096536"
+  },
+  "2094751730151952586": {
+   "inheritedFrom": "2094545852304101390"
+  },
+  "2094888377074245889": {
+   "inheritedFrom": "2094844353651044624"
+  },
+  "2094933091739672781": {
+   "inheritedFrom": "2094789990819737854"
+  },
+  "2094936345210769894": {
+   "inheritedFrom": "2094931163857006953"
+  },
+  "2094797881496494336": {
+   "inheritedFrom": "2094784861189882038"
+  },
+  "2094867383747760202": {
+   "inheritedFrom": "2094826166729298378"
+  },
+  "2094881872517980456": {
+   "inheritedFrom": "2094869292915322998"
+  },
+  "2094768165406273999": {
+   "inheritedFrom": "2094509543250096536"
+  },
+  "2094807097842024638": {
+   "inheritedFrom": "2094771281849696493"
+  },
+  "2094859248735826222": {
+   "inheritedFrom": "2094809467716043219"
+  },
+  "2094774127353606174": {
+   "inheritedFrom": "2094503983545016561"
+  },
+  "2094816086625567100": {
+   "inheritedFrom": "2094784737738891518"
+  },
+  "2094789779279778197": {
+   "inheritedFrom": "2094781756515766316"
+  },
+  "2094913482529685745": {
+   "inheritedFrom": "2094890641981391202"
+  },
+  "2094929410151379448": {
+   "inheritedFrom": "2094923490918862888"
+  },
+  "2094813287065993518": {
+   "inheritedFrom": "2094795605688066296"
+  },
+  "2094825316397011454": {
+   "inheritedFrom": "2094589990470647872"
+  },
+  "2094825589513269362": {
+   "inheritedFrom": "2094822399359213722"
+  },
+  "2094854229915516960": {
+   "inheritedFrom": "2094837800654741853"
+  },
+  "2094884300353159468": {
+   "inheritedFrom": "2094881012450791651"
+  },
+  "2094855243448173046": {
+   "inheritedFrom": "2094803553122500762"
+  },
+  "2094872534411870596": {
+   "inheritedFrom": "2094870706882482223"
+  },
+  "2094988247357141172": {
+   "inheritedFrom": "2094822375154127051"
+  }
+ },
+ "needsContext": {
+  "2094823609969562080": false,
+  "2094867815551390023": false,
+  "2094803441381978214": false,
+  "2094954590206644586": false,
+  "2094928010310729780": false,
+  "2094847422249803999": false,
+  "2094883976552837146": false,
+  "2094917711922876898": false,
+  "2094918046615757015": false,
+  "2094920378858525107": false,
+  "2094920842777935882": false,
+  "2094921142100213857": false,
+  "2094921580195332542": false,
+  "2094877699407745259": false,
+  "2094842403416932793": false,
+  "2094842426913337665": false,
+  "2094845803042848907": false,
+  "2094877586245509348": false,
+  "2094730503928619151": false,
+  "2094751730151952586": false,
+  "2094888377074245889": false,
+  "2094933091739672781": false,
+  "2094936345210769894": false,
+  "2094797881496494336": false,
+  "2094867383747760202": false,
+  "2094881872517980456": false,
+  "2094768165406273999": false,
+  "2094807097842024638": false,
+  "2094859248735826222": false,
+  "2094774127353606174": false,
+  "2094816086625567100": false,
+  "2094789779279778197": false,
+  "2094913482529685745": false,
+  "2094929410151379448": false,
+  "2094813287065993518": false,
+  "2094825316397011454": false,
+  "2094825589513269362": false,
+  "2094854229915516960": false,
+  "2094884300353159468": false,
+  "2094855243448173046": false,
+  "2094872534411870596": false,
+  "2094988247357141172": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "fisheries-regulation",
@@ -4795,7 +5225,6 @@
   {
    "label": "data-centers",
    "ids": [
-    "2094928010310729780",
     "2094783637933662347",
     "2094859741453332538"
    ]
@@ -4871,8 +5300,7 @@
    "ids": [
     "2094789773420269621",
     "2094882657960149441",
-    "2094762711858958707",
-    "2094847422249803999"
+    "2094762711858958707"
    ]
   },
   {
@@ -4949,12 +5377,67 @@
    "ids": [
     "2094964983666778477"
    ]
+  },
+  {
+   "label": "Chuck Edwards censure over harassment of female staffers",
+   "ids": [
+    "2094954590206644586",
+    "2094917711922876898",
+    "2094918046615757015",
+    "2094920378858525107",
+    "2094920842777935882",
+    "2094921142100213857",
+    "2094921580195332542"
+   ]
+  },
+  {
+   "label": "USPS mail-ballot rule court fight",
+   "ids": [
+    "2094867815551390023"
+   ]
+  },
+  {
+   "label": "Data center community protections bill",
+   "ids": [
+    "2094928010310729780"
+   ]
+  },
+  {
+   "label": "Bill to ban federal funding of Flock cameras",
+   "ids": [
+    "2094847422249803999"
+   ]
   }
  ],
- "unclassified": [
-  "2094928010310729780"
- ],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
  "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-01_chunk-0": {
+   "acceptedIds": [
+    "2094823609969562080",
+    "2094867815551390023",
+    "2094803441381978214",
+    "2094954590206644586",
+    "2094928010310729780",
+    "2094847422249803999",
+    "2094883976552837146",
+    "2094917711922876898",
+    "2094918046615757015",
+    "2094920378858525107",
+    "2094920842777935882",
+    "2094921142100213857",
+    "2094921580195332542"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ },
  "corrected": {
   "2094891807276757143": {
    "note": "Stored as bare Budget & appropriations plus Congress & campaign politics. A CR vote is the shutdown/funding-deadline subtopic (aliases \"CR\", \"continuing resolution\"), and the post's substance about denying ICE/CBP money is ICE enforcement, not floor procedure.",

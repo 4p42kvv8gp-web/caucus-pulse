@@ -1,7 +1,7 @@
 {
  "date": "2026-09-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.752Z",
+ "classifiedAt": "2026-09-14T16:14:32.180Z",
  "assignments": {
   "2095859506987090177": [
    [
@@ -1243,7 +1243,7 @@
   "2095922737042653428": [
    [
     "democracy",
-    null
+    "voting-rights"
    ]
   ],
   "2095928047753216007": [
@@ -1797,7 +1797,7 @@
   ],
   "2095869424733454464": [
    [
-    "economy",
+    "constituent-services",
     null
    ]
   ],
@@ -2035,11 +2035,11 @@
   "2095975778811003262": [
    [
     "democracy",
-    null
+    "voting-rights"
    ],
    [
     "democracy",
-    null
+    "courts-doj"
    ]
   ],
   "2095983017529348239": [
@@ -3030,7 +3030,7 @@
   "2095937436727882228": [
    [
     "democracy",
-    null
+    "voting-rights"
    ]
   ],
   "2095937839192260718": [
@@ -3295,12 +3295,6 @@
   "2095921506630971736": [
    [
     "congress-politics",
-    null
-   ]
-  ],
-  "2095923725ангел725619077472": [
-   [
-    "foreign-policy",
     null
    ]
   ],
@@ -3674,6 +3668,16 @@
     "tech",
     null
    ]
+  ],
+  "2095897327437332986": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
   ]
  },
  "incidents": {
@@ -3718,6 +3722,268 @@
    "place": "Orange County, CA"
   }
  },
+ "provenance": {
+  "2095937436727882228": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_7e19a6c4ae3406a5",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/03/missouri-gerrymander-paused-2026-election-01064420",
+     "text": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "title": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "publishedAt": "2026-09-03T22:28:11.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7e19a6c4ae3406a5"
+   ],
+   "inputHash": "dc3d88a25eae418a255d83bdb32cdc974851fb4ffa3f813e0c6c8186c923c9b6"
+  },
+  "2095869424733454464": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dc3d88a25eae418a255d83bdb32cdc974851fb4ffa3f813e0c6c8186c923c9b6"
+  },
+  "2095975778811003262": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_7e19a6c4ae3406a5",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/03/missouri-gerrymander-paused-2026-election-01064420",
+     "text": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "title": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "publishedAt": "2026-09-03T22:28:11.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7e19a6c4ae3406a5"
+   ],
+   "inputHash": "dc3d88a25eae418a255d83bdb32cdc974851fb4ffa3f813e0c6c8186c923c9b6"
+  },
+  "2095897327437332986": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "dc3d88a25eae418a255d83bdb32cdc974851fb4ffa3f813e0c6c8186c923c9b6"
+  },
+  "2095922737042653428": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_7e19a6c4ae3406a5",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/03/missouri-gerrymander-paused-2026-election-01064420",
+     "text": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "title": "Missouri Supreme Court pauses GOP gerrymander, likely netting Democrats 1 House seat",
+     "publishedAt": "2026-09-03T22:28:11.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7e19a6c4ae3406a5"
+   ],
+   "inputHash": "dc3d88a25eae418a255d83bdb32cdc974851fb4ffa3f813e0c6c8186c923c9b6"
+  },
+  "2095732413376934386": {
+   "inheritedFrom": "2095732104667766844"
+  },
+  "2095884039286857936": {
+   "inheritedFrom": "2095619593716773018"
+  },
+  "2095888277232390539": {
+   "inheritedFrom": "2095848957607907403"
+  },
+  "2095937870041104525": {
+   "inheritedFrom": "2095233365196845462"
+  },
+  "2095748042016354798": {
+   "inheritedFrom": "2095747936886063391"
+  },
+  "2095748052023902555": {
+   "inheritedFrom": "2095682622907203996"
+  },
+  "2095894273056972907": {
+   "inheritedFrom": "2095878988379873625"
+  },
+  "2095874088354959772": {
+   "inheritedFrom": "2095624590525436187"
+  },
+  "2095874095464296892": {
+   "inheritedFrom": "2095624728467681327"
+  },
+  "2095874104536473665": {
+   "inheritedFrom": "2095625337115693380"
+  },
+  "2095874113294180747": {
+   "inheritedFrom": "2095625627428655242"
+  },
+  "2095874123071209972": {
+   "inheritedFrom": "2095625980895277247"
+  },
+  "2096006174856401372": {
+   "inheritedFrom": "2095973281040138255"
+  },
+  "2096029240408096988": {
+   "inheritedFrom": "2095999399780663707"
+  },
+  "2096046610996433358": {
+   "inheritedFrom": "2095506345323626986"
+  },
+  "2096046642705371604": {
+   "inheritedFrom": "2095142180046127366"
+  },
+  "2095929952780661097": {
+   "inheritedFrom": "2095888383553757258"
+  },
+  "2095954386144923886": {
+   "inheritedFrom": "2095633614222278834"
+  },
+  "2095958393978585270": {
+   "inheritedFrom": "2095950791865749603"
+  },
+  "2096024225156907112": {
+   "inheritedFrom": "2096015349711880396"
+  },
+  "2095912391691194389": {
+   "inheritedFrom": "2095909994830975001"
+  },
+  "2095936700824289737": {
+   "inheritedFrom": "2095928252506255747"
+  },
+  "2095955736815694075": {
+   "inheritedFrom": "2095951733784502576"
+  },
+  "2095990883917217914": {
+   "inheritedFrom": "2095651946850070975"
+  },
+  "2096020654185177503": {
+   "inheritedFrom": "2095956633213939916"
+  },
+  "2095723907508830637": {
+   "inheritedFrom": "2095635550090752485"
+  },
+  "2095909755537478052": {
+   "inheritedFrom": "2095894272255897972"
+  },
+  "2095989703128273365": {
+   "inheritedFrom": "2095980268704129203"
+  },
+  "2095894651492552932": {
+   "inheritedFrom": "2095859506987090177"
+  },
+  "2095911782577787229": {
+   "inheritedFrom": "2095884969088323906"
+  },
+  "2095942042572734914": {
+   "inheritedFrom": "2095745889017246155"
+  },
+  "2095956989712924762": {
+   "inheritedFrom": "2095953414194593935"
+  },
+  "2095974707891941670": {
+   "inheritedFrom": "2095928792896147894"
+  },
+  "2096012381147021561": {
+   "inheritedFrom": "2096012258178486718"
+  },
+  "2095943973961441757": {
+   "inheritedFrom": "2095606208338006265"
+  },
+  "2095962111948034209": {
+   "inheritedFrom": "2095571548958503225"
+  },
+  "2095988422049411524": {
+   "inheritedFrom": "2095970381936861657"
+  },
+  "2096019968773292529": {
+   "inheritedFrom": "2095921753595785390"
+  }
+ },
+ "needsContext": {
+  "2095937436727882228": false,
+  "2095869424733454464": false,
+  "2095975778811003262": false,
+  "2095897327437332986": false,
+  "2095922737042653428": false,
+  "2095732413376934386": false,
+  "2095884039286857936": false,
+  "2095888277232390539": false,
+  "2095937870041104525": false,
+  "2095748042016354798": false,
+  "2095748052023902555": false,
+  "2095894273056972907": false,
+  "2095874088354959772": false,
+  "2095874095464296892": false,
+  "2095874104536473665": false,
+  "2095874113294180747": false,
+  "2095874123071209972": false,
+  "2096006174856401372": false,
+  "2096029240408096988": false,
+  "2096046610996433358": false,
+  "2096046642705371604": false,
+  "2095929952780661097": false,
+  "2095954386144923886": false,
+  "2095958393978585270": false,
+  "2096024225156907112": false,
+  "2095912391691194389": false,
+  "2095936700824289737": false,
+  "2095955736815694075": false,
+  "2095990883917217914": false,
+  "2096020654185177503": false,
+  "2095723907508830637": false,
+  "2095909755537478052": false,
+  "2095989703128273365": false,
+  "2095894651492552932": false,
+  "2095911782577787229": false,
+  "2095942042572734914": false,
+  "2095956989712924762": false,
+  "2095974707891941670": false,
+  "2096012381147021561": false,
+  "2095943973961441757": false,
+  "2095962111948034209": false,
+  "2095988422049411524": false,
+  "2096019968773292529": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "space-nasa-industry",
@@ -3845,10 +4111,41 @@
    "ids": [
     "2095941715609743383"
    ]
+  },
+  {
+   "label": "Missouri Supreme Court blocks GOP redistricting map",
+   "ids": [
+    "2095937436727882228",
+    "2095975778811003262",
+    "2095922737042653428"
+   ]
+  },
+  {
+   "label": "Record diesel prices amid Iran war",
+   "ids": [
+    "2095897327437332986"
+   ]
   }
  ],
- "unclassified": [
-  "2095897327437332986"
- ],
- "failedChunks": 0
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-04_chunk-0": {
+   "acceptedIds": [
+    "2095937436727882228",
+    "2095869424733454464",
+    "2095975778811003262",
+    "2095897327437332986",
+    "2095922737042653428"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }

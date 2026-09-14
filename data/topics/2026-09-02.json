@@ -1,7 +1,7 @@
 {
  "date": "2026-09-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.739Z",
+ "classifiedAt": "2026-09-14T16:14:32.161Z",
  "assignments": {
   "2095262141376840138": [
    [
@@ -1763,11 +1763,11 @@
   "2095313122504372353": [
    [
     "congress-politics",
-    null
+    "elections-2026"
    ],
    [
     "economy",
-    null
+    "jobs-wages"
    ]
   ],
   "2095331008191049962": [
@@ -2647,7 +2647,11 @@
   "2095225391904403484": [
    [
     "economy",
-    null
+    "prices-inflation"
+   ],
+   [
+    "democracy",
+    "lake-america-renaming"
    ]
   ],
   "2095234303462658107": [
@@ -3015,7 +3019,11 @@
   "2095231917394424257": [
    [
     "civil-rights",
-    null
+    "racial-justice"
+   ],
+   [
+    "education",
+    "higher-ed"
    ]
   ],
   "2095240885122289930": [
@@ -3162,7 +3170,7 @@
   "2095226049432842535": [
    [
     "congress-politics",
-    null
+    "elections-2026"
    ]
   ],
   "2095232844897427644": [
@@ -4614,6 +4622,247 @@
    "place": "Northwest Indiana, IN"
   }
  },
+ "provenance": {
+  "2095313122504372353": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ebd65e2f381b918c",
+     "publisher": "Politico",
+     "date": "2026-09-03",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/02/elon-musk-spending-key-races-midterms-01063146",
+     "text": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "title": "Elon Musk unleashes first wave of spending on key races in the midterms",
+     "publishedAt": "2026-09-03T02:57:19.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4a838415a1167f14960c859c1380131f758e6d1e88d6c32b27646d697a8f4b70"
+  },
+  "2095226049432842535": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9e1c3f933fb610e7",
+     "publisher": "Politico",
+     "date": "2026-08-31",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/08/31/ken-paxton-ad-campaign-01057911",
+     "text": "Paxton allies launch $15 million ad campaign",
+     "title": "Paxton allies launch $15 million ad campaign",
+     "publishedAt": "2026-08-31T21:55:45.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4a838415a1167f14960c859c1380131f758e6d1e88d6c32b27646d697a8f4b70"
+  },
+  "2095225391904403484": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4a838415a1167f14960c859c1380131f758e6d1e88d6c32b27646d697a8f4b70"
+  },
+  "2095231917394424257": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4a838415a1167f14960c859c1380131f758e6d1e88d6c32b27646d697a8f4b70"
+  },
+  "2095248765502296454": {
+   "inheritedFrom": "2095148296876535880"
+  },
+  "2095131641408557231": {
+   "inheritedFrom": "2094949488775381453"
+  },
+  "2095156630610452595": {
+   "inheritedFrom": "2095142180046127366"
+  },
+  "2095271798388470244": {
+   "inheritedFrom": "2095239993211937121"
+  },
+  "2095312040797565244": {
+   "inheritedFrom": "2095307075274301946"
+  },
+  "2095021863609213187": {
+   "inheritedFrom": "2094965788608520643"
+  },
+  "2095259239648514364": {
+   "inheritedFrom": "2095154605168501247"
+  },
+  "2095260524195762330": {
+   "inheritedFrom": "2095253385368813831"
+  },
+  "2095204813331939576": {
+   "inheritedFrom": "2095203959736516696"
+  },
+  "2095229289545252962": {
+   "inheritedFrom": "2095223197213815260"
+  },
+  "2095257654255898651": {
+   "inheritedFrom": "2095222726407467199"
+  },
+  "2095159494204326283": {
+   "inheritedFrom": "2095159072358035891"
+  },
+  "2095231374919688340": {
+   "inheritedFrom": "2095228835004346482"
+  },
+  "2095239253944885539": {
+   "inheritedFrom": "2095202376109924598"
+  },
+  "2095247166499324121": {
+   "inheritedFrom": "2095195438718624080"
+  },
+  "2095210644567957626": {
+   "inheritedFrom": "2094837350698250678"
+  },
+  "2095271073004572814": {
+   "inheritedFrom": "2095253580626170105"
+  },
+  "2095281252421042456": {
+   "inheritedFrom": "2095279454872564190"
+  },
+  "2095178732222779732": {
+   "inheritedFrom": "2095168611736272913"
+  },
+  "2095150438379119102": {
+   "inheritedFrom": "2094927460303352173"
+  },
+  "2095207860611240197": {
+   "inheritedFrom": "2095188877245895008"
+  },
+  "2095220827893408052": {
+   "inheritedFrom": "2094446996195033114"
+  },
+  "2095227328192188828": {
+   "inheritedFrom": "2095225556371378232"
+  },
+  "2095257509992767961": {
+   "inheritedFrom": "2095246666185994710"
+  },
+  "2095295319391039575": {
+   "inheritedFrom": "2095267952689844402"
+  },
+  "2095307520558395849": {
+   "inheritedFrom": "2095196163162927208"
+  },
+  "2095335187164909639": {
+   "inheritedFrom": "2095260537416241592"
+  },
+  "2095016517746262334": {
+   "inheritedFrom": "2095016017944580264"
+  },
+  "2095160254266843530": {
+   "inheritedFrom": "2095159072358035891"
+  },
+  "2095193274919055362": {
+   "inheritedFrom": "2095193004050919802"
+  },
+  "2095201020808724683": {
+   "inheritedFrom": "2094888924225143020"
+  },
+  "2095238668113858939": {
+   "inheritedFrom": "2095202708676378806"
+  },
+  "2095239837120946526": {
+   "inheritedFrom": "2095236623763972357"
+  },
+  "2095250548073037922": {
+   "inheritedFrom": "2095250353386111005"
+  },
+  "2095284199276093716": {
+   "inheritedFrom": "2095280085989228957"
+  },
+  "2095340108794720585": {
+   "inheritedFrom": "2095297505504457125"
+  }
+ },
+ "needsContext": {
+  "2095313122504372353": false,
+  "2095226049432842535": false,
+  "2095225391904403484": false,
+  "2095231917394424257": false,
+  "2095248765502296454": false,
+  "2095131641408557231": false,
+  "2095156630610452595": false,
+  "2095271798388470244": false,
+  "2095312040797565244": false,
+  "2095021863609213187": false,
+  "2095259239648514364": false,
+  "2095260524195762330": false,
+  "2095204813331939576": false,
+  "2095229289545252962": false,
+  "2095257654255898651": false,
+  "2095159494204326283": false,
+  "2095231374919688340": false,
+  "2095239253944885539": false,
+  "2095247166499324121": false,
+  "2095210644567957626": false,
+  "2095271073004572814": false,
+  "2095281252421042456": false,
+  "2095178732222779732": false,
+  "2095150438379119102": false,
+  "2095207860611240197": false,
+  "2095220827893408052": false,
+  "2095227328192188828": false,
+  "2095257509992767961": false,
+  "2095295319391039575": false,
+  "2095307520558395849": false,
+  "2095335187164909639": false,
+  "2095016517746262334": false,
+  "2095160254266843530": false,
+  "2095193274919055362": false,
+  "2095201020808724683": false,
+  "2095238668113858939": false,
+  "2095239837120946526": false,
+  "2095250548073037922": false,
+  "2095284199276093716": false,
+  "2095340108794720585": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "nitrous-oxide-misuse",
@@ -4807,10 +5056,34 @@
    "ids": [
     "2095211068520091992"
    ]
+  },
+  {
+   "label": "UNC Chapel Hill racial harassment incident",
+   "ids": [
+    "2095231917394424257"
+   ]
   }
  ],
  "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
  "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-02_chunk-0": {
+   "acceptedIds": [
+    "2095313122504372353",
+    "2095226049432842535",
+    "2095225391904403484",
+    "2095231917394424257"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ },
  "corrected": {
   "2095338461855191088": {
    "note": "Stored as [] (treated as a condolence with no policy content). A member reacting to a shooting in her city is Guns & public safety / gun violence even when the post is a condolence — that is how the caucus's gun-violence volume is measured.",

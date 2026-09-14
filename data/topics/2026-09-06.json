@@ -1,7 +1,7 @@
 {
  "date": "2026-09-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.758Z",
+ "classifiedAt": "2026-09-14T16:14:32.191Z",
  "assignments": {
   "2096573582172147859": [
    [
@@ -780,7 +780,7 @@
   "2096675393634029740": [
    [
     "budget-appropriations",
-    null
+    "snap-benefits"
    ]
   ],
   "2096686625791300045": [
@@ -1750,6 +1750,94 @@
    "place": "Miami, FL"
   }
  },
+ "provenance": {
+  "2096675393634029740": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_e2b602eaf591a20a",
+     "publisher": "Politico",
+     "date": "2026-09-07",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/07/nevada-republicans-2028-gavin-newsom-joe-lombardo-01066256",
+     "text": "Nevada Republicans are testing the 2028 case against Gavin Newsom",
+     "title": "Nevada Republicans are testing the 2028 case against Gavin Newsom",
+     "publishedAt": "2026-09-07T13:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "2c93d9fa4006d4a6fd9b0d22d5d437a172c52c8dc579a7bc6467a65f50d11b58"
+  },
+  "2096579895132672310": {
+   "inheritedFrom": "2096426429957452198"
+  },
+  "2096670588530004033": {
+   "inheritedFrom": "2096634948492960190"
+  },
+  "2096582955040928182": {
+   "inheritedFrom": "2096576386047639788"
+  },
+  "2096733537882001564": {
+   "inheritedFrom": "2096426429957452198"
+  },
+  "2096733551723225581": {
+   "inheritedFrom": "2096235740783112669"
+  },
+  "2096603028745048553": {
+   "inheritedFrom": "2096422194666754391"
+  },
+  "2096719865952493965": {
+   "inheritedFrom": "2096652157768344055"
+  },
+  "2096745162550702424": {
+   "inheritedFrom": "2096686625791300045"
+  },
+  "2096655197686677691": {
+   "inheritedFrom": "2096633623361319035"
+  },
+  "2096731022784127083": {
+   "inheritedFrom": "2096708185650499654"
+  },
+  "2096603305111609773": {
+   "inheritedFrom": "2096600045965468120"
+  },
+  "2096710058986057774": {
+   "inheritedFrom": "2096641143618568400"
+  },
+  "2096749992010785094": {
+   "inheritedFrom": "2096693551661027692"
+  },
+  "2096737221889937444": {
+   "inheritedFrom": "2096624496241156435"
+  },
+  "2096762004317098071": {
+   "inheritedFrom": "2096755393200603534"
+  }
+ },
+ "needsContext": {
+  "2096675393634029740": false,
+  "2096579895132672310": false,
+  "2096670588530004033": false,
+  "2096582955040928182": false,
+  "2096733537882001564": false,
+  "2096733551723225581": false,
+  "2096603028745048553": false,
+  "2096719865952493965": false,
+  "2096745162550702424": false,
+  "2096655197686677691": false,
+  "2096731022784127083": false,
+  "2096603305111609773": false,
+  "2096710058986057774": false,
+  "2096749992010785094": false,
+  "2096737221889937444": false,
+  "2096762004317098071": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "data center siting",
@@ -1817,5 +1905,20 @@
   }
  ],
  "unclassified": [],
- "failedChunks": 0
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-06_chunk-0": {
+   "acceptedIds": [
+    "2096675393634029740"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }

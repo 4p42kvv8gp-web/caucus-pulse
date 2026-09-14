@@ -1,7 +1,7 @@
 {
  "date": "2026-09-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-13T12:49:51.458Z",
+ "classifiedAt": "2026-09-14T16:14:32.229Z",
  "assignments": {
   "2098836136839815615": [
    [
@@ -1663,7 +1663,12 @@
     "prices-inflation"
    ]
   ],
-  "2098793670438703363": [],
+  "2098793670438703363": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
   "2098793763594191181": [
    [
     "economy",
@@ -2012,6 +2017,158 @@
   ]
  },
  "incidents": {},
+ "provenance": {
+  "2098745369186234865": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9019fcc60c597288",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/trump-vance-begin-midterm-drive-with-north-carolina-kansas-visits/",
+     "text": "Trump, Vance open midterm campaign tour as GOP troubles deepen",
+     "title": "Trump, Vance open midterm campaign tour as GOP troubles deepen",
+     "publishedAt": "2026-09-14T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_466692006509682e",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085604-gop-candidates-split-strategy/",
+     "text": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "title": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "publishedAt": "2026-09-12T16:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "86f2c59777d694ffac1bc112e190c9041d1e1f6b169f30a634b8c3d90cc614ba"
+  },
+  "2098781437788877115": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_2f5b08a5b37348db",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6085055-gop-cruz-muslim-democrats-midterms/",
+     "text": "Republicans cast Muslim Democrats as chief enemies in ‘dangerous’ midterm pitch",
+     "title": "Republicans cast Muslim Democrats as chief enemies in ‘dangerous’ midterm pitch",
+     "publishedAt": "2026-09-13T10:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "86f2c59777d694ffac1bc112e190c9041d1e1f6b169f30a634b8c3d90cc614ba"
+  },
+  "2098793670438703363": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_df496f35ba78fdf0",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/former-house-members-reflect-on-25th-anniversary-of-sept-11-attacks/",
+     "text": "Former Rep. Jane Harman, D-Calif., stood on the House steps of the Capitol under silver clouds on Friday morning, remembering how she had gathered outside with colleagues 25 years ago, unsure of what to expect after planes hijacked by terrorists attacked the Pentagon and World Trade Center.",
+     "title": "Former House members reflect on 25th anniversary of Sept. 11 attacks",
+     "publishedAt": "2026-09-11T15:18:36.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ae27b883684e289d",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/12/nx-s1-5965782/week-in-politics-trump-attends-republican-midterm-convention-and-pentagons-9-11-memorial-service",
+     "text": "President Trump attended a 9/11 memorial service at the Pentagon on Friday after speaking on both nights of a Republican gathering in Dallas.",
+     "title": "Week in politics: Trump attends Republican midterm convention and Pentagon's 9/11 memorial service",
+     "publishedAt": "2026-09-12T12:04:21.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "version": 2,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_df496f35ba78fdf0"
+   ],
+   "inputHash": "86f2c59777d694ffac1bc112e190c9041d1e1f6b169f30a634b8c3d90cc614ba"
+  },
+  "2098884703352738080": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_466692006509682e",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085604-gop-candidates-split-strategy/",
+     "text": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "title": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "publishedAt": "2026-09-12T16:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9019fcc60c597288",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/trump-vance-begin-midterm-drive-with-north-carolina-kansas-visits/",
+     "text": "Trump, Vance open midterm campaign tour as GOP troubles deepen",
+     "title": "Trump, Vance open midterm campaign tour as GOP troubles deepen",
+     "publishedAt": "2026-09-14T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "86f2c59777d694ffac1bc112e190c9041d1e1f6b169f30a634b8c3d90cc614ba"
+  },
+  "2098785696798679461": {
+   "inheritedFrom": "2098273276573405212"
+  },
+  "2098789169250353550": {
+   "inheritedFrom": "2098080006572237020"
+  }
+ },
+ "needsContext": {
+  "2098745369186234865": false,
+  "2098781437788877115": false,
+  "2098793670438703363": false,
+  "2098884703352738080": false,
+  "2098785696798679461": false,
+  "2098789169250353550": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "NSF & federal science research",
@@ -2049,8 +2206,7 @@
   {
    "label": "9/11 anniversary commemoration",
    "ids": [
-    "2098781216090550452",
-    "2098793670438703363"
+    "2098781216090550452"
    ]
   },
   {
@@ -2058,11 +2214,32 @@
    "ids": [
     "2098787700119613567"
    ]
+  },
+  {
+   "label": "9/11 25th anniversary remembrance",
+   "ids": [
+    "2098793670438703363"
+   ]
   }
  ],
  "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
  "anchored": {},
  "failedChunks": 0,
  "droppedSubs": [],
- "echoedSubs": []
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-12_chunk-0": {
+   "acceptedIds": [
+    "2098745369186234865",
+    "2098781437788877115",
+    "2098793670438703363",
+    "2098884703352738080"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }

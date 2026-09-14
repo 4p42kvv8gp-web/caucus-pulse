@@ -1,7 +1,7 @@
 {
  "date": "2026-09-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-11T22:31:52.752Z",
+ "classifiedAt": "2026-09-14T16:14:32.214Z",
  "assignments": {
   "2097903635082473888": [
    [
@@ -1856,6 +1856,10 @@
    [
     "climate",
     null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2098108540204322932": [
@@ -3094,7 +3098,12 @@
     "asylum-refugees"
    ]
   ],
-  "2098147971896340958": [],
+  "2098147971896340958": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
   "2098148358716076344": [
    [
     "congress-politics",
@@ -3308,12 +3317,6 @@
    [
     "tech",
     "big-tech"
-   ]
-  ],
-  "2098154623534265702": [
-   [
-    "economy",
-    "prices-inflation"
    ]
   ],
   "2098154623534235702": [
@@ -3535,6 +3538,10 @@
    [
     "civil-rights",
     null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ],
   "2098160786631967228": [
@@ -4222,6 +4229,10 @@
    [
     "democracy",
     null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ],
   "2098208101052616716": [
@@ -4281,7 +4292,16 @@
     "middle-east"
    ]
   ],
-  "2098216167357743527": [],
+  "2098216167357743527": [
+   [
+    "democracy",
+    null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
   "2098216185640697962": [
    [
     "healthcare",
@@ -4301,7 +4321,11 @@
   "2098218004333179002": [
    [
     "economy",
-    null
+    "taxes"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ],
   "2098221295187976252": [
@@ -4333,7 +4357,16 @@
    ]
   ],
   "2098225187225215465": [],
-  "2098225206019907802": [],
+  "2098225206019907802": [
+   [
+    "democracy",
+    null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
   "2098225876890439682": [
    [
     "economy",
@@ -4463,6 +4496,403 @@
    "place": "Lake County, CA"
   }
  },
+ "provenance": {
+  "2098077679144583383": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9f562b64502fe490",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/capitol-lens-pipes-of-peace/",
+     "text": "From left, former Reps. Tim Roemer, D-Ind. (behind the piper), Jane Harman, D-Calif., and Charlie Dent, R-Pa., walk in procession to the House steps of the Capitol on Friday for a ceremony with the Association of Former Members of Congress to commemorate the 25th anniversary of the Sept. 11 attacks. Also seen in the background are, from left, former Rep. Susan W. Brooks, R-Ind., Rep. Glenn Ivey, D-Md, and former Rep. Derek Kilmer, D-Wash.",
+     "title": "Capitol Lens | Pipes of peace",
+     "publishedAt": "2026-09-11T17:02:23.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098089297123385702": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_466692006509682e",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085604-gop-candidates-split-strategy/",
+     "text": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "title": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "publishedAt": "2026-09-12T16:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098108526350532774": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_466692006509682e",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085604-gop-candidates-split-strategy/",
+     "text": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "title": "Trump plots a campaign blitz; GOP candidates face a decision",
+     "publishedAt": "2026-09-12T16:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098134493139697963": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "title": "At the Races: Defiant in Dallas",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098147971896340958": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_e4f685cb21937855",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6086040-trump-smithsonian-george-washington-statue-build/",
+     "text": "Trump wants Smithsonian to build George Washington statue, exhibit",
+     "title": "Trump wants Smithsonian to build George Washington statue, exhibit",
+     "publishedAt": "2026-09-12T14:32:07.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098160448965345585": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_50c4715766a6bda4",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/roll-call-on-the-road-day-two-in-dallas/",
+     "text": "Democrats were also in town for various counter-programming events, including Senate nominee James Talarico, who held a news conference Thursday to urge his Republican rival, state Attorney General Ken Paxton, to sue the Justice Department for the release of the entirety of the Epstein files.",
+     "title": "Roll Call on the Road: Day Two in Dallas",
+     "publishedAt": "2026-09-10T22:23:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_a676d8bbe5ed8afb",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/media/6086319-talarico-brushed-off-trump-nickname/",
+     "text": "Talarico rips Trump’s ‘corny nicknames’ for opponents in Kimmel interview",
+     "title": "Talarico rips Trump’s ‘corny nicknames’ for opponents in Kimmel interview",
+     "publishedAt": "2026-09-12T20:27:54.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098182363285221445": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "title": "Taxpayers spent more than $500,000 on House sexual harassment payouts",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098189271140278542": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_621206e86c400a14",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6086086-darline-graham-annie-andrews-debate-announcement/",
+     "text": "Graham accepts debate with Andrews after challenger pushes for more",
+     "title": "Graham accepts debate with Andrews after challenger pushes for more",
+     "publishedAt": "2026-09-12T15:47:43.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "10f5f8112555cc9357c79e04982bcd4a87b73eb45cfb728c0ab4cc1438fc6ba8"
+  },
+  "2098194927268114641": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_38ee531a41df152a",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/11/at-9-11-ceremony-giuliani-and-mamdani-shake-hands-01073067",
+     "text": "At 9/11 ceremony, Giuliani and Mamdani … shake hands?",
+     "title": "At 9/11 ceremony, Giuliani and Mamdani … shake hands?",
+     "publishedAt": "2026-09-11T21:32:08.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_a8547b859094d56e",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/12/nx-s1-5965806/democrats-and-republicans-can-agree-there-should-be-more-monetary-support-for-child-care",
+     "text": "SCOTT SIMON, HOST: A story first reported by The New York Times was all over the internet this week. The White House is considering giving married couples with one stay-at-home parent money to help raise their children. The proposal fits in with the Trump administration's broader push for traditional family structures. But as NPR's Andrea Hsu reports, the idea of supporting parents who want to stay home, well, that's something Democrats embrace too. ANDREA HSU, BYLINE: When Tara McGuinness first saw the story about this White House proposal, her first thought was not this is crazy. Instead, i…",
+     "title": "Democrats and Republicans can agree: there should be more monetary support for child care",
+     "publishedAt": "2026-09-12T12:47:08.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "version": 2,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d59a82da5b1d43c905ba90b2b9cd20cf032ba2953bf2eb5e6e241c5b91dd0e2e"
+  },
+  "2098208044521750800": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dc09063dabb87b1",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/10/ted-cruz-on-his-2028-lane-jd-vance-and-the-gops-future-2159892",
+     "text": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "title": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "publishedAt": "2026-09-11T03:59:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_20c71c1709d32c94",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6086287-maher-calls-democrats-cowards/",
+     "text": "Maher calls Democrat politicians ‘cowards,’ referencing take on the Sept. 11 attack that got his old show canceled",
+     "title": "Maher calls Democrat politicians ‘cowards,’ referencing take on the Sept. 11 attack that got his old show canceled",
+     "publishedAt": "2026-09-12T19:28:55.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d59a82da5b1d43c905ba90b2b9cd20cf032ba2953bf2eb5e6e241c5b91dd0e2e"
+  },
+  "2098216167357743527": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dc09063dabb87b1",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/10/ted-cruz-on-his-2028-lane-jd-vance-and-the-gops-future-2159892",
+     "text": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "title": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "publishedAt": "2026-09-11T03:59:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d59a82da5b1d43c905ba90b2b9cd20cf032ba2953bf2eb5e6e241c5b91dd0e2e"
+  },
+  "2098218004333179002": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "title": "At the Races: Defiant in Dallas",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977",
+    "n_4a11200196924fd7"
+   ],
+   "inputHash": "d59a82da5b1d43c905ba90b2b9cd20cf032ba2953bf2eb5e6e241c5b91dd0e2e"
+  },
+  "2098225206019907802": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dc09063dabb87b1",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/10/ted-cruz-on-his-2028-lane-jd-vance-and-the-gops-future-2159892",
+     "text": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "title": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "publishedAt": "2026-09-11T03:59:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d59a82da5b1d43c905ba90b2b9cd20cf032ba2953bf2eb5e6e241c5b91dd0e2e"
+  }
+ },
+ "needsContext": {
+  "2098077679144583383": false,
+  "2098089297123385702": false,
+  "2098108526350532774": false,
+  "2098134493139697963": false,
+  "2098147971896340958": false,
+  "2098160448965345585": false,
+  "2098182363285221445": false,
+  "2098189271140278542": false,
+  "2098194927268114641": false,
+  "2098208044521750800": false,
+  "2098216167357743527": false,
+  "2098218004333179002": false,
+  "2098225206019907802": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "international-tragedy-condolences",
@@ -4487,10 +4917,10 @@
     "2098130407908634939",
     "2098154905714184455",
     "2098178132456948042",
-    "2098194927268114641",
     "2098201167314522613",
     "2098236654305591437",
-    "2098256990040416274"
+    "2098256990040416274",
+    "2098194927268114641"
    ]
   },
   {
@@ -4503,12 +4933,6 @@
    "label": "agriculture-food-systems",
    "ids": [
     "2098100944420630584"
-   ]
-  },
-  {
-   "label": "Smithsonian & history erasure",
-   "ids": [
-    "2098147971896340958"
    ]
   },
   {
@@ -4530,19 +4954,6 @@
    ]
   },
   {
-   "label": "political violence rhetoric",
-   "ids": [
-    "2098208044521750800"
-   ]
-  },
-  {
-   "label": "political violence threats against candidates",
-   "ids": [
-    "2098216167357743527",
-    "2098225206019907802"
-   ]
-  },
-  {
    "label": "National Space Academy oversight",
    "ids": [
     "2098225187225215465"
@@ -4553,11 +4964,67 @@
    "ids": [
     "2098238558020509935"
    ]
+  },
+  {
+   "label": "Chemours/DuPont PFAS contamination settlement in North Carolina",
+   "ids": [
+    "2098089297123385702"
+   ]
+  },
+  {
+   "label": "Smithsonian & history erasure",
+   "ids": [
+    "2098147971896340958"
+   ]
+  },
+  {
+   "label": "GOP convention crowd calls for violence against Democratic candidates (Cruz)",
+   "ids": [
+    "2098208044521750800",
+    "2098216167357743527",
+    "2098225206019907802"
+   ]
+  },
+  {
+   "label": "Trump $5,000 payment promise at Dallas rally",
+   "ids": [
+    "2098218004333179002"
+   ]
   }
  ],
  "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
  "anchored": {},
  "failedChunks": 0,
  "droppedSubs": [],
- "echoedSubs": []
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-10_chunk-0": {
+   "acceptedIds": [
+    "2098077679144583383",
+    "2098089297123385702",
+    "2098108526350532774",
+    "2098134493139697963",
+    "2098147971896340958",
+    "2098160448965345585",
+    "2098182363285221445",
+    "2098189271140278542"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "2026-09-10_chunk-1": {
+   "acceptedIds": [
+    "2098194927268114641",
+    "2098208044521750800",
+    "2098216167357743527",
+    "2098218004333179002",
+    "2098225206019907802"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }

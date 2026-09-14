@@ -1,7 +1,7 @@
 {
  "date": "2026-09-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-10T06:09:37.755Z",
+ "classifiedAt": "2026-09-14T16:14:32.186Z",
  "assignments": {
   "2096307944459579642": [
    [
@@ -12,11 +12,7 @@
   "2096312681955577987": [
    [
     "democracy",
-    null
-   ],
-   [
-    "congress-politics",
-    null
+    "voting-rights"
    ]
   ],
   "2096319183927541895": [
@@ -1709,7 +1705,7 @@
   "2096233415083278538": [
    [
     "democracy",
-    null
+    "voting-rights"
    ]
   ],
   "2096359373824233908": [
@@ -1733,6 +1729,109 @@
    "place": "Indianapolis, IN"
   }
  },
+ "provenance": {
+  "2096312681955577987": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_ec8e16cce4c87711",
+     "publisher": "Politico",
+     "date": "2026-09-04",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/04/trump-mail-ballots-order-november-elections-01065234",
+     "text": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "title": "‘Not feasible’: With ballots already in the mail, election officials say it is too late for Trump’s USPS order",
+     "publishedAt": "2026-09-04T18:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6f15057e71ef3d16d1ba42c2b15678a4285b4bab726273259e197044e70a47bf"
+  },
+  "2096448074532958321": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_92e0059cf02ca340",
+     "publisher": "Politico",
+     "date": "2026-09-01",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/01/jd-vance-republican-jewish-coalition-01058782",
+     "text": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "title": "Vance offers olive branch to pro-Israel Republicans in closed-door speech",
+     "publishedAt": "2026-09-01T04:48:42.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6f15057e71ef3d16d1ba42c2b15678a4285b4bab726273259e197044e70a47bf"
+  },
+  "2096237456966210005": {
+   "inheritedFrom": "2096235740783112669"
+  },
+  "2096399143656685769": {
+   "inheritedFrom": "2095594979083133393"
+  },
+  "2096294472485138514": {
+   "inheritedFrom": "2096252115458965955"
+  },
+  "2096251705801290069": {
+   "inheritedFrom": "2095988980374229336"
+  },
+  "2096297603621069176": {
+   "inheritedFrom": "2095586489014874511"
+  },
+  "2096242080624312554": {
+   "inheritedFrom": "2096239303277838540"
+  },
+  "2096332765147046168": {
+   "inheritedFrom": "2096283164138496006"
+  },
+  "2096292317342695646": {
+   "inheritedFrom": "2096252115458965955"
+  },
+  "2096301365291016693": {
+   "inheritedFrom": "2096252115458965955"
+  },
+  "2096424348429201754": {
+   "inheritedFrom": "2096424328909017178"
+  },
+  "2096430831875317956": {
+   "inheritedFrom": "2096429165587382611"
+  },
+  "2096233415083278538": {
+   "inheritedFrom": "2095937436727882228"
+  },
+  "2096359373824233908": {
+   "inheritedFrom": "2096355676595585347"
+  }
+ },
+ "needsContext": {
+  "2096312681955577987": false,
+  "2096448074532958321": false,
+  "2096237456966210005": false,
+  "2096399143656685769": false,
+  "2096294472485138514": false,
+  "2096251705801290069": false,
+  "2096297603621069176": false,
+  "2096242080624312554": false,
+  "2096332765147046168": false,
+  "2096292317342695646": false,
+  "2096301365291016693": false,
+  "2096424348429201754": false,
+  "2096430831875317956": false,
+  "2096233415083278538": false,
+  "2096359373824233908": false
+ },
+ "contextVersion": 5,
  "emerging": [
   {
    "label": "mental-health-addiction",
@@ -1792,8 +1891,30 @@
    "ids": [
     "2096226853774115255"
    ]
+  },
+  {
+   "label": "Anti-Muslim remarks at Jewish American Summit in LA",
+   "ids": [
+    "2096448074532958321"
+   ]
   }
  ],
  "unclassified": [],
- "failedChunks": 0
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "2026-09-05_chunk-0": {
+   "acceptedIds": [
+    "2096312681955577987",
+    "2096448074532958321"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }
