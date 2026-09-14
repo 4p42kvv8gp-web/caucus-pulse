@@ -1,0 +1,13 @@
+# Repost source completeness
+
+A completed classification does not mean the complete original was captured. A selected New Haven Line repost was accepted with empty topics and `needsContext: false` even though only its abbreviated RT wrapper was available. This release records that missing-source condition separately and exposes it in the dashboard without marking completed work as pending.
+
+`sourceContextStatus` requires a numeric reference ID and a matching original with nonempty text. A resolver checks the captured `reposted` source, existing quoted cache, then archived originals. It performs no API lookup, does not infer truncation from an ellipsis and never changes archived source wording. Incorrect or unavailable originals cannot satisfy the reference.
+
+Live and nightly planning attach available originals before constructing requests. Exact source status and a fingerprint survive serialized request manifests into synchronous and batch results. Missing original context forces `needsContext: true` even if the model returns false; accepted topics remain accepted. Inherited topics remain usable but retain their uncertainty when the original is absent. Explicit human corrections remain authoritative.
+
+Provenance separates `sourceContext` (the submitted source status, or deterministic inherited status when `inheritedFrom` is present) from `sourceContextObserved` (currently available source material). A completed legacy repost first receives an observation baseline without another model call. A later matching original or changed original wording can reopen its classification once. Engagement changes, refresh clocks, unchanged empty polls and unrelated news do not trigger this reconsideration. An asynchronous answer retains its original submitted fingerprint when source material changes before it returns. Newer completed live source interpretations are not replaced by older nightly interpretations merely because their news versions match.
+
+The dashboard derives source coverage directly from current archives and caches, so older accepted records can show the warning without rewriting their historical model outputs. `sourceIncomplete` remains a factual coverage field. An explicit corrected `needsContext` value is preserved separately; a staff member may resolve an interpretation using context outside the captured record.
+
+This release does not fetch absent originals, re-read every historical paid classification or establish semantic accuracy. Legacy records whose originals are already complete receive a baseline only. Original-source acquisition and broader interpretation evaluation remain separate follow-up work.
