@@ -251,24 +251,27 @@ export function attachRelated({
   return counts;
 }
 
-// How far the classifier has actually reached. Momentum compares the rolling
-// last 24h to the six prior days; when the last 24h holds captured posts but
-// none of them carry topics (the nightly has not run, or could not — the
-// 2026-09-10/11 Anthropic credit outage), every topic reads as a 100%
-// collapse and the leader card crowns a topic with a score of 0. That is a
-// gap in the instrument, not a fact about the caucus, so the dashboard is
-// told to pause momentum instead of showing it.
+// Completed interpretation and topic presence are separate measurements:
+// an accepted empty assignment is complete; a pending retry can carry old
+// topic labels. Legacy callers without status retain the topic fallback.
 export function classificationCoverage(allPosts, days, now = Date.now()) {
+  const complete = (post) => post.classificationStatus
+    ? post.classificationStatus === 'complete' : Boolean(post.topics?.length);
   let through = null;
-  for (const d of days) if (allPosts.some((x) => x.date === d && x.topics?.length)) through = d;
+  for (const d of days) if (allPosts.some((x) => x.date === d && complete(x))) through = d;
   let capturedIn24h = 0;
   let classifiedIn24h = 0;
+  let taggedIn24h = 0;
   for (const x of allPosts) {
-    if (now - Date.parse(x.createdAt) >= DAY) continue;
+    const age = now - Date.parse(x.createdAt);
+    if (!Number.isFinite(age) || age < 0 || age >= DAY) continue;
     capturedIn24h++;
-    if (x.topics?.length) classifiedIn24h++;
+    if (complete(x)) classifiedIn24h++;
+    if (x.topics?.length) taggedIn24h++;
   }
-  return { through, capturedIn24h, classifiedIn24h, momentumPaused: capturedIn24h > 0 && classifiedIn24h === 0 };
+  return { through, capturedIn24h, classifiedIn24h, taggedIn24h,
+    pendingIn24h: capturedIn24h - classifiedIn24h,
+    momentumPaused: capturedIn24h > 0 && classifiedIn24h === 0 };
 }
 
 export function rosterPersonKey(author) {
@@ -330,7 +333,7 @@ export function buildSiteData() {
     allPosts.push(...house);
   }
   const classification = classificationCoverage(allPosts, days);
-  if (classification.momentumPaused) console.warn(`[sitedata] momentum paused: ${classification.capturedIn24h} post(s) in the last 24h, none classified (topics through ${classification.through || 'never'})`);
+  if (classification.momentumPaused) console.warn(`[sitedata] momentum paused: ${classification.capturedIn24h} post(s) in the last 24h, none completed (classification through ${classification.through || 'never'})`);
 
   // ── topics: per-day, per-scope aggregation ──
   // acc[topicKey][scope] = today/week scopes; trends per day.

@@ -5,7 +5,7 @@
 | Work | Schedule | What it actually does |
 | --- | --- | --- |
 | Capture and live interpretation | Every hour at :07, :27, :47 UTC | Resume the current List interval, persist every page, live-interpret up to 120 pending posts from today/yesterday, retrieve an existing durable batch without submitting a new one, rebuild the dashboard, then publish valid work. |
-| Public news acquisition | Every hour at :17 UTC | Refresh the registered feeds/articles without holding the capture writer lock. Publish the resulting public snapshot under the shared writer lock. New evidence reaches live interpretation on a later poll. |
+| Public news acquisition | Every hour at :17 UTC | Refresh the registered feeds/articles without holding the capture writer lock. Publish the resulting public snapshot, then rebuild and publish the dashboard under the shared writer lock. New evidence reaches live interpretation on a later poll. |
 | Nightly pipeline | 07:30 UTC daily, 03:30 EDT / 02:30 EST | Refresh yesterday's ET archive metrics, embed, submit/resume classification across unfinished archived days, then run corrections, syntax, incidents, rollup, report, and dashboard stages. Longer story discovery, promotion, and taxonomy maintenance require manual selection. Classification consumes already acquired public news before sending its requests. |
 | Author/account table | Monday 06:00 UTC, 02:00 EDT / 01:00 EST | Refresh author records against the configured roster/List. |
 
@@ -28,6 +28,8 @@ Publication validates again after a rebase. A state merge preserves a coherent c
 Before a push, the publisher saves a Git bundle containing the validated data commit. Failed publication retains that bundle as a seven-day Actions artifact. An operator can fetch its `HEAD` into a recovery branch, inspect its changes against current main, and reconcile them. A new source/configuration conflict is never resolved by silently choosing the job's version. For news, the public transfer artifact also survives seven days; publication checks that the news base has not changed before applying its snapshot.
 
 ## Remaining limits
+
+Live checks on September 14, 2026 found no schedule-triggered poll after 08:05 UTC, despite the enabled twenty-minute schedule. Later successful captures came from code pushes or manual dispatches. A completed manually triggered pipeline does not establish unattended scheduling reliability; a separate scheduler or permanent worker remains required to meet the operational target.
 
 - The current X source is the configured List endpoint. This does not prove every roster account is present, nor that replies, removed posts, long outages, or provider-window gaps are fully covered. Boundary exhaustion remains an explicit recovery condition.
 - The daily engagement refresh is yesterday's ET archive, not a rolling queue that refreshes each post at 24 hours. The dashboard must display observation time rather than imply current totals.

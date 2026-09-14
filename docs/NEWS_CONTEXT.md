@@ -178,6 +178,37 @@ Publisher host allowlists apply to feed items, canonical URLs and each
 redirect before it is fetched. A redirect to a local address or another
 publisher is rejected. These URL checks do not establish reporting accuracy.
 
+## Current-news quality filters
+
+A bounded `loadNews({days: ...})` now requires a valid publication date
+inside the requested window, excludes future-dated items, and checks the
+stored URL against the registered publisher hosts. Acquisition time is not
+used as a substitute publication date. An undated podcast-series landing
+page therefore cannot outrank a dated article simply because it was fetched
+this morning. The loader returns `excluded` IDs and reasons for diagnostics;
+an unbounded load still preserves all acquired records for recovery and audit.
+The same date and publisher checks apply when retrieving evidence, including
+legacy records captured before fetch-time allowlists were introduced.
+
+The September 14 review found three undated CNN podcast-series pages and
+legacy credit-card/home-equity advertisements in the stored feed material.
+It also reproduced irrelevant context on three posts: a Hugging Face hack
+matched a Dallas campaign newsletter; an Alligator Alcatraz investigation
+matched campaign ratings; and a Jeffries voting ruling matched his unrelated
+impeachment and AI comments. The shared words `recent`, `inside`, `general`
+and `make` had been treated as distinctive names. These ordinary words no
+longer qualify. When a query includes at least three substantive terms in
+addition to names and routine political/connective wording, a match must
+overlap on that subject too. A surname by itself cannot satisfy a detailed
+voting query. Sparse aliases such as “back to Dilley” still return competing
+leads rather than assuming which event was meant.
+
+These filters remove the reproduced false matches; they do not establish
+general precision or recall. Lexical subject overlap can still be incidental,
+and differently worded true connections can be missed. Existing per-post
+provenance remains a record of what an earlier request received, not an
+assertion that every old retrieved source passed the current rules.
+
 ## Privacy
 
 No inbox data enters this lane. The owner's newsletter inbox may be used

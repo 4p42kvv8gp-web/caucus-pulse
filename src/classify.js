@@ -37,6 +37,10 @@ export function classifierLine(t) {
   const line = { id: t.id, text: t.text };
   if (t.createdAt) line.createdAt = t.createdAt;
   if (t.quoting) line.quoting = t.quoting;
+  if (t.reposted?.text) line.reposting = {
+    id: t.reposted.id, handle: t.reposted.handle ?? null,
+    text: t.reposted.text, createdAt: t.reposted.createdAt ?? null
+  };
   if (t.candidates?.length) line.candidates = t.candidates;
   if (t.evidence?.length) line.evidence = t.evidence.map(evidenceLine);
   if (Number.isInteger(t.contextVersion)) line.contextVersion = t.contextVersion;
@@ -55,16 +59,21 @@ export function withEvidence(items, { store = loadNews({ days: 14 }), ...opts } 
 // Recompute candidates from the current source store, rather than trusting a
 // stale JSON queue. Only a changed, relevant source can reopen a completed
 // decision; unrelated hourly news updates do not cause another model call.
-export function newsReconsideration(previous, tweets, store = loadNews({ days: 14 })) {
+export function newsReconsideration(previous, tweets, store = loadNews({ days: 14 }), { tax = loadTaxonomy() } = {}) {
   if (!store.items.length) return [];
   const pending = new Set(pendingIdsFor(tweets, previous));
   const ids = [];
   for (const t of tweets) {
     if (pending.has(t.id) || previous?.corrected?.[t.id] || t.type === 'retweet') continue;
     const topics = previous?.assignments?.[t.id];
-    if (!topics || (topics.some((pair) => pair?.[1]) && !previous?.needsContext?.[t.id])) continue;
+    if (!topics) continue;
+    // Ordinary subtopics such as detention or AI policy do not identify an
+    // event. Only a declared story row or emerging entry settles identity.
+    const namedStory = topics.some(([macro, sub]) => sub && tax[macro]?.subtopics?.[sub]?.story);
+    const emerging = previous?.emerging?.some((entry) => entry.ids?.includes(t.id));
+    if ((namedStory || emerging) && !previous?.needsContext?.[t.id]) continue;
     const sinceVersion = previous?.provenance?.[t.id]?.contextVersion || 0;
-    const candidateTopics = previous?.needsContext?.[t.id] ? [] : topics;
+    const candidateTopics = topics.map(([macro]) => [macro, null]);
     if (reconsiderCandidates({ assignments: { [t.id]: candidateTopics } }, [t], { sinceVersion, items: store.items }).length) ids.push(t.id);
   }
   return ids;
@@ -141,16 +150,19 @@ export function classificationExamples(tax, { warn = console.warn } = {}) {
   catch (e) { warn(`[classify] correction examples unavailable: ${e.message}`); return []; }
 }
 
-export function chunkRequests(items, tax, model, prefix = '', { examples = classificationExamples(tax), evidenceCap = 12 } = {}) {
+export function chunkRequests(items, tax, model, prefix = '', { examples = classificationExamples(tax), evidenceCap = 12, inputCharsCap = 120_000 } = {}) {
   const per = settings.classify.tweets_per_request || 40;
   const system = [{ type: 'text', text: systemPrompt(tax, { examples }), cache_control: { type: 'ephemeral' } }];
   const requests = [];
   const chunks = [];
-  let chunk = [], evidenceCount = 0;
+  let chunk = [], evidenceCount = 0, inputChars = 0;
   for (const item of items) {
     const count = item.evidence?.length || 0;
-    if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap)) { chunks.push(chunk); chunk = []; evidenceCount = 0; }
-    chunk.push(item); evidenceCount += count;
+    const chars = classifierLine(item).length + 1;
+    if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap || inputChars + chars > inputCharsCap)) {
+      chunks.push(chunk); chunk = []; evidenceCount = 0; inputChars = 0;
+    }
+    chunk.push(item); evidenceCount += count; inputChars += chars;
   }
   if (chunk.length) chunks.push(chunk);
   for (const [i, chunk] of chunks.entries()) {
@@ -594,7 +606,7 @@ async function runClassificationUnlocked({
     plans = [...new Set(dates)].sort().map((d) => {
       const previous = topicsFor(d);
       const pl = plan(d, tax);
-      return remainingPlan(pl, previous, { reconsiderIds: newsReconsideration(previous, pl.toClassify, newsStore) });
+      return remainingPlan(pl, previous, { reconsiderIds: newsReconsideration(previous, pl.toClassify, newsStore, { tax }) });
     }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous));
     const unfinished = plans.map((pl) => pl.date);
     if (!plans.length) {

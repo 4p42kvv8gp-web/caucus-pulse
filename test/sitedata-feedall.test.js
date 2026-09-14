@@ -76,12 +76,37 @@ test('classificationCoverage pauses momentum when the last 24h is captured but u
     { date: '2026-09-11', createdAt: h(3), topics: [] },
     { date: '2026-09-11', createdAt: h(1), topics: [] }
   ];
-  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-09', capturedIn24h: 2, classifiedIn24h: 0, momentumPaused: true });
+  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-09', capturedIn24h: 2, classifiedIn24h: 0, taggedIn24h: 0, pendingIn24h: 2, momentumPaused: true });
   // one classified post in the window is enough to keep momentum live
   posts[3].topics = [['economy', 'jobs']];
-  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-11', capturedIn24h: 2, classifiedIn24h: 1, momentumPaused: false });
+  assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-11', capturedIn24h: 2, classifiedIn24h: 1, taggedIn24h: 1, pendingIn24h: 1, momentumPaused: false });
   // a quiet 24h (nothing captured) is not a pause either
   assert.equal(classificationCoverage(posts.slice(0, 2), days, now).momentumPaused, false);
+});
+
+test('coverage counts accepted empty assignments as completed and pending old labels as pending', async () => {
+  const { classificationCoverage } = await import('../src/sitedata.js');
+  const now = Date.parse('2026-09-14T18:00:00Z');
+  const base = { date: '2026-09-14', createdAt: '2026-09-14T17:00:00Z' };
+  const empty = { ...base, topics: [], classificationStatus: 'complete' };
+  const retry = { ...base, topics: [['tech', 'ai-policy']], classificationStatus: 'pending' };
+  assert.deepEqual(classificationCoverage([empty, retry], [base.date], now), {
+    through: base.date, capturedIn24h: 2, classifiedIn24h: 1, taggedIn24h: 1,
+    pendingIn24h: 1, momentumPaused: false
+  });
+  assert.equal(classificationCoverage([empty], [base.date], now).momentumPaused, false);
+  assert.equal(classificationCoverage([retry], [base.date], now).momentumPaused, true);
+});
+
+test('rolling classification coverage excludes invalid, future and boundary-old timestamps', async () => {
+  const { classificationCoverage } = await import('../src/sitedata.js');
+  const now = Date.parse('2026-09-14T18:00:00Z');
+  const posts = ['invalid', '2026-09-14T18:00:01Z', '2026-09-13T18:00:00Z']
+    .map((createdAt) => ({ createdAt, topics: [], classificationStatus: 'complete' }));
+  const result = classificationCoverage(posts, [], now);
+  assert.equal(result.capturedIn24h, 0);
+  assert.equal(result.classifiedIn24h, 0);
+  assert.equal(result.pendingIn24h, 0);
 });
 
 test('full-feed shards preserve the complete captured window, including pending posts', { skip: !rollups?.feedAllTotal && 'no new full-feed manifest built' }, () => {

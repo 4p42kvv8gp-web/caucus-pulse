@@ -103,6 +103,13 @@ jobs:
       - name: Commit news context
         run: |
           .github/scripts/commit-data.sh "news-context: $(date -u +'%Y-%m-%d %H:%M') refresh" data/news
+      # Publish the acquired reporting first so a derived-view failure cannot
+      # discard it. Rebuild here: capture may be delayed after this job runs.
+      - name: Rebuild dashboard with published reporting
+        run: npm run sitedata
+      - name: Commit refreshed news display
+        run: |
+          .github/scripts/commit-data.sh "news-context: $(date -u +'%Y-%m-%d %H:%M') dashboard" site/data
       - name: Retain validated work if publication failed
         if: failure()
         uses: actions/upload-artifact@v4
