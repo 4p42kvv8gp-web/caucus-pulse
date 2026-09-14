@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { p, settings, writeJSON } from './util.js';
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
 import { loadEventPilot } from './event-pilot.js';
-import { buildEventRequest, validateEventResponse } from './event-contract.js';
+import { buildEventRequest, validateEventResponse, EVENT_VALIDATOR_VERSION } from './event-contract.js';
 import { runEventShadow } from './event-runner.js';
 
 export const EVENT_POLICY_VERSION = 'event-v1';
@@ -86,7 +86,7 @@ export async function eventShadowMain(args = process.argv.slice(2), deps = {}) {
   const result = await runEventShadow(plans, {
     state, save, checkpoint, client: deps.client || lazyClient,
     refresh: deps.refresh || refreshIdentityToken, validate: validateEventResponse,
-    maxCalls: 2,
+    maxCalls: 2, validatorVersion: EVENT_VALIDATOR_VERSION,
     currentSnapshot: async (plan) => {
       const current = (await load({ runAsOf: plan.runAsOf, mode: plan.mode })).plans.find((item) => item.caseId === plan.caseId);
       return current?.ready ? { sourceHash: current.sourceHash, correctionHash: current.correctionHash }

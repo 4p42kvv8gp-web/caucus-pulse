@@ -2,6 +2,7 @@
 // topic mutations or source validation by model assertion occur here.
 export const EVENT_MAX_POSTS = 24;
 export const EVENT_MAX_REQUEST_CHARS = 120_000;
+export const EVENT_VALIDATOR_VERSION = 'event-contract-v2';
 const DAY = 86_400_000;
 const MODES = new Set(['as-of', 'retrospective']);
 const POST_FIELDS = ['id', 'authorId', 'personId', 'createdAt', 'capturedAt', 'type', 'text', 'quoting', 'sourceIncomplete', 'sourceIncompleteReasons', 'topics', 'evidence', 'contextVersion', 'corrected'];
@@ -165,9 +166,13 @@ export function validateEventResponse(message, posts, { runAsOf, mode = 'retrosp
   const rejected = () => ({ valid: false, events: [], errors, unresolved: [], assignments: [] });
   if (errors.length) return rejected();
   if (message?.stop_reason !== 'end_turn') { fail('incomplete-model-response', { reason: message?.stop_reason || 'missing-stop-reason' }); return rejected(); }
-  if (!Array.isArray(message.content) || message.content.length !== 1 || message.content[0]?.type !== 'text' || typeof message.content[0].text !== 'string') { fail('invalid-response-content'); return rejected(); }
+  // Provider reasoning metadata is not the answer or source evidence. Accept
+  // exactly one text answer; never interpret metadata or tool output as JSON.
+  if (!Array.isArray(message.content) || message.content.some((block) => !['text', 'thinking', 'redacted_thinking'].includes(block?.type))) { fail('invalid-response-content'); return rejected(); }
+  const answer = message.content.filter((block) => block.type === 'text');
+  if (answer.length !== 1 || typeof answer[0].text !== 'string') { fail('invalid-response-content'); return rejected(); }
   let parsed;
-  try { parsed = JSON.parse(message.content[0].text); } catch { fail('invalid-json'); return rejected(); }
+  try { parsed = JSON.parse(answer[0].text); } catch { fail('invalid-json'); return rejected(); }
   if (!keysExactly(parsed, ['assignments', 'events', 'unresolved']) || !Array.isArray(parsed.assignments) || !Array.isArray(parsed.events) || !Array.isArray(parsed.unresolved)) { fail('invalid-response-schema'); return rejected(); }
   const byId = new Map(input.posts.map((post) => [post.id, post]));
   const assignments = new Map();

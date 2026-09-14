@@ -31,6 +31,33 @@ function rig({ state = empty() } = {}) {
   return r;
 }
 
+test('a validator update replays saved partial responses without another call and retains the old decision', async () => {
+  const r = rig(); r.result = { valid: false, events: [], errors: [{ code: 'invalid-response-content' }], unresolved: [] };
+  await r.run([plan()], { validatorVersion: 'old' });
+  const response = copy(r.state.receipts.one.response);
+  r.result = valid();
+  const result = await r.run([plan()], { validatorVersion: 'new', client: null });
+  assert.equal(result.accepted, 1); assert.equal(result.calls, 0); assert.equal(r.calls.length, 1);
+  assert.equal(r.state.receipts.one.validatorVersion, 'new');
+  assert.equal(r.state.receipts.one.validationHistory[0].status, 'partial');
+  assert.deepEqual(r.state.receipts.one.response, response);
+});
+
+test('a stricter validator can withdraw an earlier accepted proposal without another model call', async () => {
+  const r = rig(); await r.run([plan()], { validatorVersion: 'old' });
+  r.result = { valid: false, events: [], errors: [{ code: 'new-rule' }], unresolved: [] };
+  const result = await r.run([plan()], { validatorVersion: 'new', client: null });
+  assert.equal(result.partial, 1); assert.equal(result.calls, 0); assert.deepEqual(r.state.events, []);
+  assert.equal(r.state.receipts.one.validationHistory[0].status, 'accepted');
+});
+
+test('a modified saved request is rejected before replay or provider work', async () => {
+  const r = rig(); await r.run([plan()]);
+  r.state.receipts.one.plan.request.params.messages[0].content = 'modified';
+  await assert.rejects(r.run([plan()], { validatorVersion: 'new' }), /Invalid shadow receipt/);
+  assert.equal(r.calls.length, 1);
+});
+
 test('intent is checkpointed before the paid call and raw response before validation; replay deduplicates accepted output', async () => {
   const r = rig();
   const p = plan();
