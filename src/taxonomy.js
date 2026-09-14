@@ -144,12 +144,18 @@ Rules:
   the story (it still counts toward its macro) rather than the generic
   sibling subtopic.
 - Some inputs carry "quoting": the post this one quotes or replies to
-  (handle, text, impressions). Read it alongside the current post to
+  (source ID, author, complete available text, creation date, and known
+  impressions). Read it alongside the current post to
   identify its supported subject and any additional subject in the post.
   A reference is not evidence of agreement, and impression counts do not
   establish truth, recency, or the identity of an event.
 - Use "createdAt", when present, to interpret relative dates in the post.
   Distinguish a current event from retrospective mentions of an older one.
+  Interpret relative wording inside "quoting" or "reposting" against that
+  original's own "createdAt", not the member's later post or fetch time.
+  A recent quote or repost establishes renewed attention to the original;
+  it does not establish that an old closure, warning, or allegation is current.
+  Unknown source dates remain unknown; do not invent them.
 - Some reposts carry "reposting": the captured original with its own source
   ID, author, date and complete available wording. Read it to resolve an
   abbreviated RT wrapper. It remains the original author's statement; do

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { toRecord, quotedFromIncludes, listTweetsPage, userTweetsPage, searchRecent, lookupTweets } from '../src/x.js';
-import { quotedContext, quotedResolver, quotingFor, archiveLookup, QUOTING_TEXT_MAX } from '../src/quoted.js';
+import { quotedContext, quotedResolver, quotingFor, archiveLookup } from '../src/quoted.js';
 import { selectRefIds, fetchQuoted } from '../src/quotes-backfill.js';
 import { anchorIndex, renderTaxonomy, systemPrompt } from '../src/taxonomy.js';
 import { chunkRequests, classifierLine, withQuoting, mergeTopics, anchoredAssignments, planDay, mergeDay } from '../src/classify.js';
@@ -236,7 +236,7 @@ test('quotedContext: the record first, then data/quoted.json, then the archive; 
   };
   // 1. the record itself wins even when the store knows the id
   const onRecord = quotedContext({ type: 'quote', refId: COXON, quoted: { id: COXON, authorId: 'u-coxon', handle: 'hilbertspaess', text: 'from capture', metrics: { likes: 9, retweets: 0, replies: 0, quotes: 0, impressions: 10 } } }, deps);
-  assert.deepEqual(onRecord, { id: COXON, authorId: 'u-coxon', handle: 'hilbertspaess', text: 'from capture', metrics: { likes: 9, retweets: 0, replies: 0, quotes: 0, impressions: 10 } });
+  assert.deepEqual(onRecord, { id: COXON, authorId: 'u-coxon', handle: 'hilbertspaess', text: 'from capture', createdAt: null, metrics: { likes: 9, retweets: 0, replies: 0, quotes: 0, impressions: 10 } });
   // 2. the store
   const fromStore = quotedContext({ type: 'reply', refId: COXON }, deps);
   assert.equal(fromStore.text, 'from the store');
@@ -244,7 +244,7 @@ test('quotedContext: the record first, then data/quoted.json, then the archive; 
   assert.ok(!('fetchedAt' in fromStore));
   // 3. the archive: handle from authors, metrics from the 24h refresh
   const fromArchive = quotedContext({ type: 'quote', refId: '100' }, deps);
-  assert.deepEqual(fromArchive, { id: '100', authorId: 'm2', handle: 'RepTwo', text: 'a member post that gets quoted', metrics: { likes: 30, retweets: 10, replies: 2, quotes: 1, impressions: 5000 } });
+  assert.deepEqual(fromArchive, { id: '100', authorId: 'm2', handle: 'RepTwo', text: 'a member post that gets quoted', createdAt: null, metrics: { likes: 30, retweets: 10, replies: 2, quotes: 1, impressions: 5000 } });
   // an unavailable store entry falls through to the archive, and to nothing
   assert.equal(quotedContext({ type: 'quote', refId: '500' }, deps), null);
   assert.equal(quotedContext({ type: 'quote', refId: '999' }, deps), null);
@@ -270,11 +270,10 @@ test('archiveLookup reads at most the three day files around the snowflake and c
   assert.ok(loads.length <= 3, `read ${loads.length} day files`); // the same days serve every id around that timestamp
 });
 
-test('quotingFor caps the text and gives impressions only when known', () => {
-  const long = quotingFor({ handle: 'h', text: 'x'.repeat(1000), metrics: { impressions: 7 } });
-  assert.deepEqual(long, { handle: 'h', text: 'x'.repeat(QUOTING_TEXT_MAX), impressions: 7 });
-  assert.equal(QUOTING_TEXT_MAX, 400);
-  assert.deepEqual(quotingFor({ handle: null, text: 'short', metrics: { likes: 3 } }), { handle: null, text: 'short' });
+test('quotingFor preserves full source text and gives impressions only when known', () => {
+  const long = quotingFor({ id: COXON, handle: 'h', text: 'x'.repeat(1000), metrics: { impressions: 7 } });
+  assert.deepEqual(long, { id: COXON, authorId: null, handle: 'h', text: 'x'.repeat(1000), createdAt: null, impressions: 7 });
+  assert.deepEqual(quotingFor({ handle: null, text: 'short', metrics: { likes: 3 } }), { id: null, authorId: null, handle: null, text: 'short', createdAt: null });
   assert.equal(quotingFor(null), null);
 });
 
@@ -292,7 +291,7 @@ test('chunk items carry quoting only when context exists; a bare item is exactly
   assert.equal(classifierLine(items[1]), '{"id":"2","text":"plain"}');
   const line = JSON.parse(classifierLine(items[0]));
   assert.deepEqual(Object.keys(line), ['id', 'text', 'quoting']);
-  assert.deepEqual(line.quoting, { handle: 'hilbertspaess', text: 'y'.repeat(400), impressions: 139252407 });
+  assert.deepEqual(line.quoting, { id: COXON, authorId: null, handle: 'hilbertspaess', text: 'y'.repeat(600), createdAt: null, impressions: 139252407 });
   assert.ok(!('type' in line) && !('refId' in line)); // nothing else leaks into the prompt
 
   const [req] = chunkRequests(items, tax, 'm');
@@ -355,7 +354,7 @@ test('planDay assigns anchored stories before the model and attaches quoted cont
   assert.deepEqual(plan.inherited, { rt3: [['economy', 'jobs']] });
   // the quote still goes to the model (its own topics), with the quoted post attached
   assert.deepEqual(plan.toClassify.map((t) => t.id), ['q1', 'rt1', 'rt2', 'p1', 'n1']);
-  assert.deepEqual(plan.toClassify[0].quoting, { handle: 'hilbertspaess', text: 'I resigned from Anthropic today.', impressions: 139252407 });
+  assert.deepEqual(plan.toClassify[0].quoting, { id: COXON, authorId: null, handle: 'hilbertspaess', text: 'I resigned from Anthropic today.', createdAt: null, impressions: 139252407 });
   assert.ok(!('quoting' in plan.toClassify[3]));
   assert.ok(!('quoting' in tweets[0])); // the archive records are not mutated
   assert.deepEqual(plan.deferred, []);
