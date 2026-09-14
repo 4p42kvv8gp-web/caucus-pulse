@@ -1,0 +1,23 @@
+# Collection checkpoints and recovery
+
+`poll` saves each API page to the archive before publishing its continuation token. `state.sinceId` advances only after the previous boundary is observed or a supported server-side `since_id` interval is exhausted. A first capture with no previous boundary establishes a baseline for the window the endpoint returned; it does not establish complete historical coverage.
+
+An unfinished run retains `state.pollProgress`: List ID, old boundary, newest archived ID, next token, start time, page count and recovery condition. The next run resumes that token, including when the previous run reached its page cap. Archive writes deduplicate against the dates actually touched, so resuming after several days cannot bypass deduplication. A manual List backfill uses `listBackfillProgress` and never changes the normal poll cursor. Per-account backfills save each page and empty completion separately.
+
+`lastPollAttemptAt` records a collection attempt. `lastPollSuccessAt` records a successful API response, even if later storage fails. Legacy `lastPollAt` now records a completed interval only. `lastPollOutcome` distinguishes completion from rate limits, budget stops, page caps, request failures and recovery requirements. Health checks report unfinished intervals and do not treat a throttled request as successful capture.
+
+The collector checks the returned-resource headroom before every page. A plain page reserves one resource per requested post. A page with referenced-post/author expansions conservatively reserves seven, covering the post and up to three direct references with their authors. The client retains a minimum page size of five, so it stops if that minimum cannot fit. This is deliberately a conservative resource counter, not an actual bill: X documents UTC calendar-day deduplication, while the existing local guard remains an Eastern-day counter. [X pricing](https://docs.x.com/x-api/getting-started/pricing).
+
+JSON state files publish through a same-directory temporary file, file sync and atomic rename. Archive appends sync before the corresponding continuation advances. Invalid state, invalid counters and malformed archive lines stop collection without resetting cursors. An interrupted append remains available for explicit recovery; it cannot silently consume the next valid record. Existing archive records are not rewritten by normal capture. Publication must still run after a valid partial poll and must refuse malformed archive data.
+
+## Operator recovery
+
+- **Page cap, normal request error, or budget stop:** retain the checkpoint and run the normal poll again. It resumes the next saved page. A known rate-limit reset is honored before retrying.
+- **Rejected or non-advancing token:** inspect the condition, then use `npm run poll -- --restart-pagination` to restart from the newest page while retaining the original boundary and all archived data. The corresponding `backfill` and `backfill-members` commands accept the same flag. A restart performs API requests under the configured guard; it is not a dry run.
+- **Boundary not reached:** the provider exhausted its available window before showing the previous boundary. Restarting can help a transient response but cannot recreate expired history. Reconcile the interval through per-account backfill and retain an explicit record of any unresolved gap. No automatic claim of complete recovery is made.
+- **Archive or state error:** inspect the retained bytes and restore/repair from a verified copy. The collector refuses malformed input rather than truncating it. Restart pagination only after the storage problem is repaired.
+- **Changed List while an interval is unfinished:** resolve the prior interval before changing the source; the collector refuses to apply its cursor to a different List.
+
+A complete CLI run exits zero; a valid but unfinished interval exits two; a configuration or storage exception exits one. Workflows must publish safe partial pages and checkpoint state before reporting the incomplete result. A provider timeout or crash can still leave an uncertain billed request whose page must be fetched again; the conservative counter is not a provider transaction ledger. Independent processes still require the repository's single-writer/publication coordination.
+
+Offline acceptance tests in `test/collection-reliability.test.js` cover interrupted pagination, page-cap resumption, replay deduplication, budget headroom, rate-limit timestamps, explicit token recovery, provider-window uncertainty, archive failures, both backfill paths, atomic state publication, corruption refusal and Unicode-safe JSONL handling. No paid request is needed for these tests.

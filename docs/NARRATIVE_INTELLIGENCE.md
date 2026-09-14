@@ -1,3 +1,5 @@
+> Historical design note: inbox serialization examples below are superseded by [OUTSIDE_CONTEXT.md](OUTSIDE_CONTEXT.md). Private mailbox contents, metadata and identifiers must remain outside this public repository and dashboard; public evidence must be independently acquired from a public URL.
+
 # Narrative intelligence — design for the build
 
 Status: design, 2026-09-10. Synthesised from three proposals and two judge

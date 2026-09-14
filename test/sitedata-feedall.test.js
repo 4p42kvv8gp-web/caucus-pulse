@@ -55,7 +55,8 @@ test('every Topics row lists its posts (postIds) and feedAll resolves them', { s
     assert.ok(row.postIds.t.every((id) => row.postIds.w.includes(id)), `${key}: today's posts must be in the 7-day list`);
   }
   for (const x of rollups.feedAll) {
-    assert.ok(x.topics.length > 0, `${x.id} carries no topic`);
+    assert.ok(Array.isArray(x.topics), `${x.id} lacks topics array`);
+    if (rollups.feedAllTotal != null) assert.ok(['complete', 'pending'].includes(x.classificationStatus));
     for (const k of ['id', 'authorId', 'createdAt', 'type', 'text', 'engN']) assert.ok(k in x, `${x.id} lacks ${k}`);
     assert.ok(rollups.authorHandles[x.authorId], `${x.id}: author ${x.authorId} has no handle`);
     if (x.quoted) assert.ok(x.quoted.text.length <= 200, `${x.id}: quoted text over 200 chars`);
@@ -81,4 +82,16 @@ test('classificationCoverage pauses momentum when the last 24h is captured but u
   assert.deepEqual(classificationCoverage(posts, days, now), { through: '2026-09-11', capturedIn24h: 2, classifiedIn24h: 1, momentumPaused: false });
   // a quiet 24h (nothing captured) is not a pause either
   assert.equal(classificationCoverage(posts.slice(0, 2), days, now).momentumPaused, false);
+});
+
+test('full-feed shards preserve the complete captured window, including pending posts', { skip: !rollups?.feedAllTotal && 'no new full-feed manifest built' }, () => {
+  const path = new URL('../site/data/', import.meta.url);
+  const full = rollups.feedAllFiles?.length ? rollups.feedAllFiles.flatMap((name) => {
+    assert.match(name, /^feed-\d+-[a-f0-9]{16}\.json$/);
+    return JSON.parse(fs.readFileSync(new URL(name,path),'utf8'));
+  }) : rollups.feedAll;
+  assert.equal(full.length,rollups.feedAllTotal);
+  assert.equal(new Set(full.map((x)=>x.id)).size,full.length);
+  assert.equal(full.length,rollups.stats.All.w.posts);
+  assert.equal(full.filter((x)=>x.classificationStatus==='pending').length,rollups.stats.All.w.pending);
 });

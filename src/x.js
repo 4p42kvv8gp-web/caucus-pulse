@@ -45,11 +45,14 @@ function tokenCandidates() {
 }
 
 async function authFetch(url) {
-  if (authMode() === 'proxy') return fetch(url);
+  const configuredTimeout = Number(process.env.X_REQUEST_TIMEOUT_MS || 30000);
+  const timeoutMs = Number.isFinite(configuredTimeout) && configuredTimeout >= 1000 && configuredTimeout <= 120000 ? configuredTimeout : 30000;
+  const signal = () => AbortSignal.timeout(timeoutMs);
+  if (authMode() === 'proxy') return fetch(url, { signal: signal() });
   const candidates = tokenCandidates();
   let res;
   for (const tok of candidates) {
-    res = await fetch(url, { headers: { Authorization: `Bearer ${tok}` } });
+    res = await fetch(url, { headers: { Authorization: `Bearer ${tok}` }, signal: signal() });
     if (res.status === 401 && tok !== candidates[candidates.length - 1]) continue;
     if (res.ok) resolvedToken = tok;
     break;
@@ -111,7 +114,10 @@ export async function listTweetsPage(listId, { sinceId, paginationToken, pageSiz
   if (paginationToken) params.set('pagination_token', paginationToken);
   const res = await authFetch(`${API}/lists/${listId}/tweets?${params}`);
   const empty = { tweets: [], includes: { tweets: [], users: [] }, nextToken: null, usage: 0, userReads: 0 };
-  if (res.status === 429) return { rateLimited: true, ...empty };
+  if (res.status === 429) {
+    const resetAt = Number(res.headers.get('x-rate-limit-reset')) * 1000;
+    return { rateLimited: true, ...empty, ...(Number.isFinite(resetAt) && resetAt > 0 ? { resetAt } : {}) };
+  }
   if (!res.ok) await fail(res, 'list tweets');
   const body = await res.json();
   const includes = includesOf(body);
@@ -121,7 +127,8 @@ export async function listTweetsPage(listId, { sinceId, paginationToken, pageSiz
     includes,
     nextToken: body.meta?.next_token || null,
     usage: (body.data?.length || 0) + includes.tweets.length,
-    userReads: includes.users.length
+    userReads: includes.users.length,
+    errors: body.errors || []
   };
 }
 
@@ -160,7 +167,8 @@ export async function userTweetsPage(userId, { startTime, endTime, paginationTok
     includes,
     nextToken: body.meta?.next_token || null,
     usage: (body.data?.length || 0) + includes.tweets.length,
-    userReads: includes.users.length
+    userReads: includes.users.length,
+    errors: body.errors || []
   };
 }
 
@@ -245,7 +253,10 @@ export async function lookupTweets(ids, { withText = false } = {}) {
     params.set('user.fields', REFERENCED_USER_FIELDS);
   }
   const res = await authFetch(`${API}/tweets?${params}`);
-  if (res.status === 429) return { rateLimited: true, ...empty };
+  if (res.status === 429) {
+    const resetAt = Number(res.headers.get('x-rate-limit-reset')) * 1000;
+    return { rateLimited: true, ...empty, ...(Number.isFinite(resetAt) && resetAt > 0 ? { resetAt } : {}) };
+  }
   if (!res.ok) await fail(res, 'tweets lookup');
   const body = await res.json();
   const includes = includesOf(body);
@@ -262,7 +273,7 @@ export async function lookupTweets(ids, { withText = false } = {}) {
       });
     }
   }
-  return { metricsById, tweetsById, usage: body.data?.length || 0, userReads: includes.users.length };
+  return { metricsById, tweetsById, usage: body.data?.length || 0, userReads: includes.users.length, errors: body.errors || [] };
 }
 
 // Resolve handles → user objects, 100 per request ($0.01 per user returned —

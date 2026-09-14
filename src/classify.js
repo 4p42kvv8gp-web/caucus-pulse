@@ -1,44 +1,33 @@
-// Nightly topic classification via the Anthropic Message Batches API (50%
-// of standard price, results typically within the hour — right for a job
-// that runs at 3am). The taxonomy YAML is the entire "intelligence layer":
-// it renders into a prompt-cached system block, tweets go through in chunks,
-// and anything that fits nothing comes back as an "emerging cluster" with a
-// suggested subtopic for human review in the daily report.
-//
-// The same pass flags district emergencies (incident: {kind, place}) — the
-// raw material src/incidents.js groups into the incident desk.
-//
-// Retweets are never sent to the model: they inherit the original tweet's
-// assignment when the original is in the corpus, and only fall back to
-// classifying their truncated "RT @…" text when it isn't. Posts already
-// tagged by the poll-time pass (data/topics-live/) are still re-classified
-// here — the nightly batch is authoritative and costs half as much.
-//
-// Quotes and replies go to the model with the post they point at
-// (`quoting`, resolved by src/quoted.js) — a member reacting to Coxon's
-// resignation rarely names it. Story anchors (taxonomy `anchors:`) assign a
-// story deterministically to any post that quotes, replies to or retweets
-// an anchored post; the model still runs for the post's own topics and the
-// two are merged at write time.
-//
-// Similarity hints (`candidates`, src/semantic.js): when the embedding index
-// is on disk, each post also carries the tracked stories its wording sits
-// near — a taxonomy id the model may assign, or the label of an emerging
-// subject seen before. The prompt calls them hints; the model still decides
-// from the text. Without the index the request is byte-identical to before.
-//
-// The building blocks (planDay → chunkRequests → collectResults → writeDay)
-// are exported so classify-range.js can put many days into one batch.
+// Factual classification shared by live, nightly and archive-range runs.
+// Every model response is checked against its submitted source-ID manifest.
+// Partial results are published with durable pending IDs, and later runs retry
+// only unresolved work. Batch manifests preserve the original dates, model,
+// taxonomy and request membership across restarts.
+import fs from 'node:fs';
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
-import { settings, daysAgoEt, readJSON, writeJSON } from './util.js';
-import { loadState, saveState, loadDay, topicsPath, archivePath } from './store.js';
+import { settings, daysAgoEt, writeJSON } from './util.js';
+import { loadState, saveState, loadDay, topicsPath, archivePath, archiveDates } from './store.js';
 import { readJSONL } from './util.js';
 import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
 import { quotedResolver, quotingFor } from './quoted.js';
 import { configuredMinSim, storyRow, loadSemanticOrNull } from './semantic.js';
 import { embed as sharedEmbed } from './embeddings.js';
+import { correctionExamples } from './corrections.js';
+import { loadNews, evidenceForPosts, evidenceLine, reconsiderCandidates } from './news-context.js';
+import { readQueue, saveQueue, submitJob, finishJob, requestManifest, queuePath, withQueueLock } from './classification-queue.js';
 
 export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
+
+// Missing interpretation files are normal; unreadable/corrupt files are not
+// an empty corpus and must not trigger a silent paid reclassification.
+export function readClassificationFile(file, fallback = null) {
+  let text;
+  try { text = fs.readFileSync(file, 'utf8'); }
+  catch (e) { if (e.code === 'ENOENT') return fallback; throw e; }
+  const data = JSON.parse(text);
+  if (!data || !data.assignments || typeof data.assignments !== 'object' || Array.isArray(data.assignments)) throw new Error(`Invalid classification file: ${file}`);
+  return data;
+}
 
 // One input line for the model. Exactly {id, text} unless the item carries
 // quoted context and/or similarity candidates — the line is what the
@@ -46,9 +35,39 @@ export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorI
 // a post without extras serialises exactly as it always has.
 export function classifierLine(t) {
   const line = { id: t.id, text: t.text };
+  if (t.createdAt) line.createdAt = t.createdAt;
   if (t.quoting) line.quoting = t.quoting;
   if (t.candidates?.length) line.candidates = t.candidates;
+  if (t.evidence?.length) line.evidence = t.evidence.map(evidenceLine);
+  if (Number.isInteger(t.contextVersion)) line.contextVersion = t.contextVersion;
   return JSON.stringify(line);
+}
+
+// Read one public-source snapshot per run. Request splitting below keeps
+// every selected source while bounding each prompt; a cap must not silently
+// deprive later posts of the evidence that triggered reconsideration.
+export function withEvidence(items, { store = loadNews({ days: 14 }), ...opts } = {}) {
+  const { byPost } = evidenceForPosts(items, { ...opts, items: store.items, version: store.version, k: 2, perChunkCap: Infinity });
+  const contextVersion = Number.isInteger(store.version) ? store.version : 0;
+  return { items: items.map((t) => ({ ...t, evidence: byPost[t.id] || [], contextVersion })), contextVersion };
+}
+
+// Recompute candidates from the current source store, rather than trusting a
+// stale JSON queue. Only a changed, relevant source can reopen a completed
+// decision; unrelated hourly news updates do not cause another model call.
+export function newsReconsideration(previous, tweets, store = loadNews({ days: 14 })) {
+  if (!store.items.length) return [];
+  const pending = new Set(pendingIdsFor(tweets, previous));
+  const ids = [];
+  for (const t of tweets) {
+    if (pending.has(t.id) || previous?.corrected?.[t.id] || t.type === 'retweet') continue;
+    const topics = previous?.assignments?.[t.id];
+    if (!topics || (topics.some((pair) => pair?.[1]) && !previous?.needsContext?.[t.id])) continue;
+    const sinceVersion = previous?.provenance?.[t.id]?.contextVersion || 0;
+    const candidateTopics = previous?.needsContext?.[t.id] ? [] : topics;
+    if (reconsiderCandidates({ assignments: { [t.id]: candidateTopics } }, [t], { sinceVersion, items: store.items }).length) ids.push(t.id);
+  }
+  return ids;
 }
 
 // Items with their quoted context attached (a copy per item that has one;
@@ -117,14 +136,26 @@ export const hintedCount = (items) => items.filter((t) => t.candidates?.length).
 
 // custom_id must match ^[a-zA-Z0-9_-]{1,64}$ — a date prefix keeps multi-day
 // batches separable ("2026-08-20_chunk-3").
-export function chunkRequests(items, tax, model, prefix = '') {
+export function classificationExamples(tax, { warn = console.warn } = {}) {
+  try { return correctionExamples(settings.classify.correction_examples ?? 8, { tax }); }
+  catch (e) { warn(`[classify] correction examples unavailable: ${e.message}`); return []; }
+}
+
+export function chunkRequests(items, tax, model, prefix = '', { examples = classificationExamples(tax), evidenceCap = 12 } = {}) {
   const per = settings.classify.tweets_per_request || 40;
-  const system = [{ type: 'text', text: systemPrompt(tax), cache_control: { type: 'ephemeral' } }];
+  const system = [{ type: 'text', text: systemPrompt(tax, { examples }), cache_control: { type: 'ephemeral' } }];
   const requests = [];
-  for (let i = 0; i < items.length; i += per) {
-    const chunk = items.slice(i, i + per);
+  const chunks = [];
+  let chunk = [], evidenceCount = 0;
+  for (const item of items) {
+    const count = item.evidence?.length || 0;
+    if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap)) { chunks.push(chunk); chunk = []; evidenceCount = 0; }
+    chunk.push(item); evidenceCount += count;
+  }
+  if (chunk.length) chunks.push(chunk);
+  for (const [i, chunk] of chunks.entries()) {
     requests.push({
-      custom_id: `${prefix}chunk-${i / per}`,
+      custom_id: `${prefix}chunk-${i}`,
       params: {
         model,
         max_tokens: 8000,
@@ -169,46 +200,136 @@ export function anchoredAssignments(tweets, anchors) {
   return out;
 }
 
-export function mergeParsed(parsed, tax, out) {
-  for (const a of parsed.assignments || []) {
-    out.assignments[a.id] = validAssignments(a.topics, tax, out.droppedSubs, out.echoedSubs);
-    if (a.incident?.kind && a.incident?.place) {
-      out.incidents[a.id] = { kind: String(a.incident.kind).toLowerCase(), place: String(a.incident.place) };
+export const INCIDENT_KINDS = new Set(['active shooter', 'shooting', 'wildfire', 'flooding', 'severe storm', 'tornado', 'hurricane', 'extreme heat', 'power outage', 'water outage', 'hazmat', 'structure fire', 'explosion', 'plane crash', 'train crash', 'industrial accident', 'infrastructure failure', 'missing persons', 'other']);
+
+// Retain only complete, structurally valid records belonging to this exact
+// request. Partial success is useful: missing/rejected IDs remain retryable,
+// while unrelated IDs can never enter the corpus through a model response.
+export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}, contextVersions = {}, inputHash = null } = {}) {
+  if (!Array.isArray(expectedIds)) throw new Error('Classification response requires a request ID manifest');
+  const expected = new Set(expectedIds);
+  const counts = new Map();
+  const errors = [];
+  const accepted = new Set();
+  const rows = Array.isArray(parsed?.assignments) ? parsed.assignments : [];
+  if (!Array.isArray(parsed?.assignments)) errors.push({ code: 'invalid-assignments' });
+  for (const a of rows) if (typeof a?.id === 'string') counts.set(a.id, (counts.get(a.id) || 0) + 1);
+  for (const a of rows) {
+    const id = a?.id;
+    if (typeof id !== 'string' || !expected.has(id)) { errors.push({ code: 'unexpected-id', id: typeof id === 'string' ? id : null }); continue; }
+    if (counts.get(id) !== 1) { errors.push({ code: 'duplicate-id', id }); continue; }
+    const supplied = evidenceByPost[id] || [];
+    const suppliedIds = new Set(supplied.map((e) => e.id));
+    const evidenceUsed = a.evidence_used ?? [];
+    if (!Array.isArray(evidenceUsed) || evidenceUsed.some((ref) => typeof ref !== 'string' || !suppliedIds.has(ref)) || new Set(evidenceUsed).size !== evidenceUsed.length) {
+      errors.push({ code: 'invalid-evidence-reference', id }); continue;
     }
+    if (a.needs_context != null && typeof a.needs_context !== 'boolean') { errors.push({ code: 'invalid-context-status', id }); continue; }
+    if (!Array.isArray(a.topics) || a.topics.length > 4 || a.topics.some((t) => !Array.isArray(t) || t.length !== 2 || typeof t[0] !== 'string' || !Object.hasOwn(tax, t[0]) || (t[1] !== null && (typeof t[1] !== 'string' || !t[1].trim())))) {
+      errors.push({ code: 'invalid-topics', id }); continue;
+    }
+    const dropped = [], echoed = [];
+    const topics = validAssignments(a.topics, tax, dropped, echoed);
+    if (dropped.length) { (out.droppedSubs ||= []).push(...dropped); errors.push({ code: 'unknown-subtopic', id }); continue; }
+    let incident = null;
+    if (a.incident != null) {
+      const v = a.incident;
+      const kind = typeof v.kind === 'string' ? v.kind.trim().toLowerCase() : '';
+      if (!INCIDENT_KINDS.has(kind) || typeof v.place !== 'string' || !v.place.trim() || v.place.length > 300 || (v.name != null && (typeof v.name !== 'string' || v.name.length > 300))) {
+        errors.push({ code: 'invalid-incident', id }); continue;
+      }
+      incident = { kind, place: v.place.trim(), name: v.name?.trim() || null };
+    }
+    out.assignments[id] = topics;
+    delete out.incidents[id];
+    if (incident) out.incidents[id] = incident;
+    (out.provenance ||= {})[id] = { contextVersion: contextVersions[id] || 0, evidenceSupplied: supplied, evidenceUsed, inputHash };
+    (out.needsContext ||= {})[id] = a.needs_context === true;
+    (out.echoedSubs ||= []).push(...echoed);
+    accepted.add(id);
   }
-  for (const e of parsed.emerging || []) {
-    const key = String(e.label || '').trim().toLowerCase();
-    if (!key) continue;
-    const entry = out.emergingMap.get(key) || { label: String(e.label).trim(), ids: [] };
-    entry.ids.push(...(e.ids || []));
+  const incompleteEmerging = new Set();
+  if (parsed?.emerging != null && !Array.isArray(parsed.emerging)) {
+    errors.push({ code: 'invalid-emerging' });
+    for (const id of accepted) incompleteEmerging.add(id);
+  }
+  for (const e of Array.isArray(parsed?.emerging) ? parsed.emerging : []) {
+    if (typeof e?.label !== 'string' || !e.label.trim() || e.label.length > 300 || !Array.isArray(e.ids)) {
+      errors.push({ code: 'invalid-emerging-entry' });
+      for (const id of (Array.isArray(e?.ids) ? e.ids : accepted)) if (accepted.has(id)) incompleteEmerging.add(id);
+      continue;
+    }
+    const ids = [];
+    for (const id of e.ids) {
+      if (typeof id !== 'string' || !expected.has(id) || !accepted.has(id)) { errors.push({ code: 'invalid-emerging-reference', id: typeof id === 'string' ? id : null }); continue; }
+      ids.push(id);
+    }
+    if (!ids.length) continue;
+    const key = e.label.trim().toLowerCase();
+    const entry = out.emergingMap.get(key) || { label: e.label.trim(), ids: [] };
+    entry.ids = [...new Set([...entry.ids, ...ids])];
     out.emergingMap.set(key, entry);
   }
+  for (const id of incompleteEmerging) {
+    delete out.assignments[id]; delete out.incidents[id]; accepted.delete(id);
+    delete out.provenance?.[id]; delete out.needsContext?.[id];
+    for (const [key, entry] of out.emergingMap) {
+      entry.ids = entry.ids.filter((ref) => ref !== id);
+      if (!entry.ids.length) out.emergingMap.delete(key);
+    }
+  }
+  const retryIds = expectedIds.filter((id) => !accepted.has(id));
+  for (const id of retryIds) if (!counts.has(id)) errors.push({ code: 'missing-id', id });
+  (out.validationErrors ||= []).push(...errors);
+  return { acceptedIds: [...accepted], retryIds, errors };
 }
 
-const emptyOut = () => ({ assignments: {}, incidents: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [], echoedSubs: [] });
-const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs, echoedSubs: o.echoedSubs });
+export const emptyOut = () => ({ assignments: {}, incidents: {}, provenance: {}, needsContext: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [], echoedSubs: [], validationErrors: [], requestStatus: {} });
+export const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, provenance: o.provenance, needsContext: o.needsContext, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs, echoedSubs: o.echoedSubs, validationErrors: o.validationErrors, requestStatus: o.requestStatus });
 
 // Stream a finished batch's results, grouped by the custom_id prefix before
 // "chunk-" (empty string for single-day batches). Returns {prefix → result}.
-export async function collectResults(client, batchId, tax) {
+export async function collectResults(client, batchId, tax, manifest) {
+  if (!manifest || typeof manifest !== 'object') throw new Error('Batch results require their saved request manifest');
   const byPrefix = new Map();
-  for await (const result of await client.messages.batches.results(batchId)) {
-    const prefix = String(result.custom_id).replace(/chunk-\d+$/, '');
+  const received = new Map();
+  const bucket = (id) => {
+    const prefix = String(id).replace(/chunk-\d+$/, '');
     if (!byPrefix.has(prefix)) byPrefix.set(prefix, emptyOut());
-    const out = byPrefix.get(prefix);
-    if (result.result.type !== 'succeeded') { out.failedChunks++; continue; }
-    mergeMessage(result.result.message, tax, out);
+    return byPrefix.get(prefix);
+  };
+  for await (const result of await client.messages.batches.results(batchId)) {
+    const id = result.custom_id;
+    if (!Object.hasOwn(manifest, id)) { console.warn(`[classify] ignored unexpected batch result ${String(id)}`); continue; }
+    if (received.has(id)) { received.set(id, null); continue; }
+    received.set(id, result);
+  }
+  for (const [id, entry] of Object.entries(manifest)) {
+    const out = bucket(id);
+    const result = received.get(id);
+    if (!result || result.result?.type !== 'succeeded') {
+      out.failedChunks++;
+      out.requestStatus[id] = { acceptedIds: [], retryIds: entry.ids, error: result?.result?.type || (received.has(id) ? 'duplicate-result' : 'missing-result') };
+      continue;
+    }
+    mergeMessage(result.result.message, tax, out, entry.ids, id, entry);
   }
   return new Map([...byPrefix].map(([k, v]) => [k, finishOut(v)]));
 }
 
 // One model reply → out. A refusal or an unparseable reply counts as a
 // failed chunk, the same as a batch request that errored.
-function mergeMessage(message, tax, out) {
-  const textBlock = message?.stop_reason !== 'refusal' && message?.content?.find((b) => b.type === 'text');
+export function mergeMessage(message, tax, out, expectedIds, requestId = 'request', manifestEntry = {}) {
+  const textBlock = message?.stop_reason !== 'refusal' && message?.stop_reason !== 'max_tokens' && message?.content?.find((b) => b.type === 'text');
   const parsed = textBlock && parseJsonLoose(textBlock.text);
-  if (!parsed) { out.failedChunks++; return; }
-  mergeParsed(parsed, tax, out);
+  if (!parsed) {
+    out.failedChunks++;
+    out.requestStatus[requestId] = { acceptedIds: [], retryIds: expectedIds, error: message?.stop_reason || 'unparseable' };
+    return;
+  }
+  const result = mergeParsed(parsed, tax, out, expectedIds, manifestEntry);
+  out.requestStatus[requestId] = result;
+  if (result.retryIds.length) out.failedChunks++;
 }
 
 // The same requests chunkRequests builds for a batch, sent one at a time
@@ -216,18 +337,22 @@ function mergeMessage(message, tax, out) {
 // ~16 requests a day is a couple of dollars — the escape hatch for a batch
 // that sits in Anthropic's queue for hours (2026-09-11: 0 of 16 done after
 // two hours) while the dashboard shows a day with no topics.
-export async function classifySync(client, requests, tax, { log = () => {} } = {}) {
+export async function classifySync(client, requests, tax, { log = () => {}, refresh = refreshIdentityToken, onResult = null } = {}) {
   const out = emptyOut();
   for (const [i, req] of requests.entries()) {
-    await refreshIdentityToken();
+    const manifestEntry = requestManifest([req])[req.custom_id];
+    const ids = manifestEntry.ids;
     try {
+      await refresh();
       const res = await client.messages.create(req.params);
-      mergeMessage(res, tax, out);
+      mergeMessage(res, tax, out, ids, req.custom_id, manifestEntry);
       log(`[classify] sync ${i + 1}/${requests.length}: ${res.stop_reason}, ${res.usage?.output_tokens ?? '?'} output tokens`);
     } catch (e) {
       out.failedChunks++;
+      out.requestStatus[req.custom_id] = { acceptedIds: [], retryIds: ids, error: String(e.message || e).slice(0, 300) };
       log(`[classify] sync ${i + 1}/${requests.length} failed: ${e.message}`);
     }
+    if (onResult) await onResult(finishOut(out));
   }
   return finishOut(out);
 }
@@ -239,8 +364,11 @@ export function priorAssignments(date) {
   for (let d = 2; d >= 0; d--) {
     const dt = new Date(`${date}T12:00:00Z`);
     dt.setUTCDate(dt.getUTCDate() - d);
-    const file = readJSON(topicsPath(dt.toISOString().slice(0, 10)), null);
-    if (file) Object.assign(map, file.assignments);
+    const file = readClassificationFile(topicsPath(dt.toISOString().slice(0, 10)), null);
+    if (file) {
+      const pending = new Set([...(file.pendingIds || []), ...(file.unclassified || [])]);
+      for (const [id, topics] of Object.entries(file.assignments || {})) if (!pending.has(id) || file.corrected?.[id]) map[id] = topics;
+    }
   }
   return map;
 }
@@ -252,7 +380,7 @@ function corpusIds(date) {
   for (let d = 2; d >= 0; d--) {
     const dt = new Date(`${date}T12:00:00Z`);
     dt.setUTCDate(dt.getUTCDate() - d);
-    for (const t of readJSONL(archivePath(dt.toISOString().slice(0, 10)))) ids.add(t.id);
+    for (const t of readJSONL(archivePath(dt.toISOString().slice(0, 10)), { strict: true })) ids.add(t.id);
   }
   return ids;
 }
@@ -285,31 +413,90 @@ export function planDay(date, {
   return { date, tweets, toClassify: withQuoting(toClassify, resolve), inherited, deferred, anchored };
 }
 
+export function pendingIdsFor(tweets, file) {
+  const pending = new Set([...(file?.pendingIds || []), ...(file?.unclassified || [])]);
+  return tweets.filter((t) => !Object.hasOwn(file?.assignments || {}, t.id) || (pending.has(t.id) && !file?.corrected?.[t.id])).map((t) => t.id);
+}
+
+export function dayComplete(tweets, file) {
+  return Boolean(file && !pendingIdsFor(tweets, file).length);
+}
+
+// Retry only unresolved records. Already completed [] is a valid decision,
+// distinct from an absent or pending interpretation.
+export function remainingPlan(plan, previous = null, { reconsiderIds = [] } = {}) {
+  const pending = new Set([...pendingIdsFor(plan.tweets, previous), ...reconsiderIds.filter((id) => !previous?.corrected?.[id])]);
+  return {
+    ...plan, previous, reconsiderIds: reconsiderIds.filter((id) => !previous?.corrected?.[id]),
+    toClassify: plan.toClassify.filter((t) => pending.has(t.id)),
+    deferred: plan.deferred.filter((t) => pending.has(t.id))
+  };
+}
+
+export function mergeEmerging(groups, { allowed = null, remove = new Set() } = {}) {
+  const byLabel = new Map();
+  for (const e of groups || []) {
+    if (typeof e?.label !== 'string') continue;
+    const ids = (Array.isArray(e.ids) ? e.ids : []).filter((id) => (!allowed || allowed.has(id)) && !remove.has(id));
+    if (!ids.length) continue;
+    const key = e.label.trim().toLowerCase();
+    const entry = byLabel.get(key) || { label: e.label.trim(), ids: [] };
+    entry.ids = [...new Set([...entry.ids, ...ids])];
+    byLabel.set(key, entry);
+  }
+  return [...byLabel.values()];
+}
+
 // The day file's content from a plan and its batch result: retweets inherit
 // (from this batch, then from prior days), anchors merge over whatever the
-// model said, and an anchored post is classified by definition — it leaves
-// "unclassified" and the emerging clusters. `prior` is injectable (tests);
+// model said. Anchors do not hide another supported emerging event, and a
+// missing model response stays pending even when a deterministic anchor exists. `prior` is injectable (tests);
 // by default prior days are re-read so deferred retweets inherit from days
 // written earlier in the same run.
 export function mergeDay(plan, result, { prior } = {}) {
   const { date, tweets, toClassify, deferred, anchored = {} } = plan;
-  const { assignments, incidents, failedChunks, droppedSubs = [], echoedSubs = [] } = result;
+  const { assignments, failedChunks = 0, droppedSubs = [], echoedSubs = [] } = result;
+  const sourceIds = new Set(tweets.map((t) => t.id));
+  const previous = plan.previous || {};
+  const keepSource = (obj) => Object.fromEntries(Object.entries(obj || {}).filter(([id]) => sourceIds.has(id)));
+  const modelIds = new Set(Object.keys(assignments).filter((id) => sourceIds.has(id) && !previous.corrected?.[id]));
+  const keepModel = (obj) => Object.fromEntries(Object.entries(obj || {}).filter(([id]) => modelIds.has(id)));
+  const base = keepSource(previous.assignments);
+  const incidents = keepSource(previous.incidents);
+  const provenance = keepSource(previous.provenance);
+  const needsContext = keepSource(previous.needsContext);
+  for (const id of modelIds) { delete incidents[id]; delete provenance[id]; delete needsContext[id]; }
+  Object.assign(incidents, keepModel(result.incidents));
+  Object.assign(provenance, keepModel(result.provenance));
+  Object.assign(needsContext, keepModel(result.needsContext));
   const inherited = { ...plan.inherited };
-  const priorMap = prior ?? (deferred.length ? priorAssignments(date) : {});
+  const priorMap = prior ?? (tweets.some((t) => t.type === 'retweet') ? priorAssignments(date) : {});
   for (const t of tweets) {
-    if (t.type !== 'retweet' || inherited[t.id]) continue;
-    if (assignments[t.refId]) inherited[t.id] = assignments[t.refId];
+    if (t.type !== 'retweet') continue;
+    if (previous.corrected?.[t.refId] && base[t.refId]) inherited[t.id] = base[t.refId];
+    else if (assignments[t.refId]) inherited[t.id] = assignments[t.refId];
     else if (priorMap[t.refId]) inherited[t.id] = priorMap[t.refId];
+    else if (base[t.refId] && !(previous.pendingIds || []).includes(t.refId)) inherited[t.id] = base[t.refId];
+    if (inherited[t.id] && !previous.corrected?.[t.id]) {
+      provenance[t.id] = { ...(provenance[t.refId] || {}), inheritedFrom: t.refId };
+      needsContext[t.id] = needsContext[t.refId] || false;
+    }
   }
-  const merged = { ...assignments, ...inherited };
+  const merged = { ...base, ...keepSource(assignments), ...inherited };
   for (const [id, topics] of Object.entries(anchored)) merged[id] = mergeTopics(topics, merged[id]);
+  for (const id of Object.keys(previous.corrected || {})) if (Object.hasOwn(base, id)) merged[id] = base[id];
   const anchoredIds = new Set(Object.keys(anchored));
-  const emerging = (result.emerging || [])
-    .map((e) => ({ ...e, ids: (e.ids || []).filter((id) => !anchoredIds.has(id)) }))
-    .filter((e) => e.ids.length);
-  const unclassified = [...toClassify, ...deferred].filter((t) => !(t.id in merged)).map((t) => t.id);
+  const oldEmerging = mergeEmerging(previous.emerging, { allowed: sourceIds, remove: modelIds });
+  const newEmerging = mergeEmerging(result.emerging, { allowed: modelIds });
+  const emerging = mergeEmerging([...oldEmerging, ...newEmerging], { allowed: sourceIds });
+  const unclassified = tweets.filter((t) => !(t.id in merged)).map((t) => t.id);
+  const previouslyPending = new Set(pendingIdsFor(tweets, previous));
+  const settled = new Set(Object.keys(base).filter((id) => !previouslyPending.has(id)));
+  for (const id of plan.reconsiderIds || []) if (!previous.corrected?.[id]) settled.delete(id);
+  for (const id of [...Object.keys(assignments), ...Object.keys(inherited)]) settled.add(id);
+  const pendingIds = tweets.filter((t) => !settled.has(t.id)).map((t) => t.id);
   return {
-    day: { date, assignments: merged, incidents, emerging, unclassified, anchored, failedChunks, droppedSubs, echoedSubs },
+    day: { date, assignments: merged, incidents, provenance, needsContext, contextVersion: Math.max(0, ...Object.values(provenance).map((p) => p.contextVersion || 0)), emerging, unclassified, pendingIds, complete: !pendingIds.length, anchored, failedChunks, droppedSubs, echoedSubs, validationErrors: result.validationErrors || [], requestStatus: result.requestStatus || {}, corrected: keepSource(previous.corrected) },
     stats: {
       classified: Object.keys(assignments).length,
       inherited: Object.keys(inherited).length,
@@ -325,20 +512,28 @@ export function mergeDay(plan, result, { prior } = {}) {
 }
 
 // Write data/topics/<date>.json from a plan and its batch result.
-export function writeDay(plan, result, model) {
+export function writeDay(plan, result, model, { pathFor = topicsPath, write = writeJSON, now = new Date().toISOString() } = {}) {
   const { day, stats } = mergeDay(plan, result);
-  writeJSON(topicsPath(plan.date), {
+  write(pathFor(plan.date), {
     date: day.date,
     model,
-    classifiedAt: new Date().toISOString(),
+    classifiedAt: now,
     assignments: day.assignments,
     incidents: day.incidents,
+    provenance: day.provenance,
+    needsContext: day.needsContext,
+    contextVersion: day.contextVersion,
     emerging: day.emerging,
     unclassified: day.unclassified,
+    pendingIds: day.pendingIds,
+    complete: day.complete,
     anchored: day.anchored,
     failedChunks: day.failedChunks,
     droppedSubs: day.droppedSubs,
-    echoedSubs: day.echoedSubs
+    echoedSubs: day.echoedSubs,
+    validationErrors: day.validationErrors,
+    requestStatus: day.requestStatus,
+    ...(Object.keys(day.corrected).length ? { corrected: day.corrected } : {})
   });
   return stats;
 }
@@ -347,93 +542,134 @@ export function summarize(date, s) {
   return `[classify] ${date}: ${s.classified} classified, ${s.inherited} inherited, ${s.anchored ? `${s.anchored} anchored, ` : ''}${s.incidents} incident-flagged, ${s.emerging} emerging clusters, ${s.unclassified} unclassified${s.droppedSubs ? `, ${s.droppedSubs} SUBTOPIC KEY(S) DROPPED AS UNRESOLVABLE` : ''}${s.echoedSubs ? `, ${s.echoedSubs} subtopic key(s) answered as macro/sub and resolved` : ''}${s.failedChunks ? `, ${s.failedChunks} chunk(s) failed` : ''}`;
 }
 
+// Shared runner for nightly and range work. All dates share one durable queue,
+// so a later invocation cannot overwrite a batch that is still processing.
+async function runClassificationUnlocked({
+  dates = archiveDates().filter((d) => d < daysAgoEt(0)),
+  source = 'nightly', sync = false, dryRun = false, resumeOnly = false,
+  maxWaitMinutes = Number(process.env.CLASSIFY_MAX_WAIT_MINUTES ?? 0),
+  model = process.env.CLASSIFY_MODEL || settings.classify.model,
+  tax = loadTaxonomy(), queueFile = queuePath,
+  client = null, clientFactory = anthropicClient,
+  loadDay: loadDayFn = loadDay,
+  topicsFor = (date) => readClassificationFile(topicsPath(date), null),
+  plan = (date, taxonomy) => planDay(date, { tax: taxonomy }),
+  publish = writeDay,
+  hints = async (items, taxonomy) => withCandidates(items, loadSemanticOrNull({ warn: (m) => console.warn(`[classify] ${m}`) }), { tax: taxonomy }),
+  newsStore = loadNews({ days: 14 }), evidence = (items) => withEvidence(items, { store: newsStore }),
+  legacy = null, onLegacyComplete = null,
+  refresh = refreshIdentityToken, sleep = (ms) => new Promise((r) => setTimeout(r, ms)),
+  clock = Date.now, log = console.log
+} = {}) {
+  const queue = readQueue(queueFile);
+  const publishCurrent = (pl, out, currentModel) => {
+    pl.previous = topicsFor(pl.date) || pl.previous;
+    return publish(pl, out, currentModel);
+  };
+  // Older releases stored only id/date. Reconstruct conservatively from the
+  // archived request order once, mark that provenance, then persist it. New
+  // batches always retain the manifest from the exact submitted JSONL.
+  if (!queue.jobs.length && legacy?.batchId && !queue.completed[legacy.batchId]) {
+    const legacyTax = tax;
+    const plans = legacy.dates.map((d) => plan(d, legacyTax));
+    const requests = plans.flatMap((pl) => chunkRequests(pl.toClassify, legacyTax, model, legacy.prefixDates ? `${pl.date}_` : ''));
+    queue.jobs.push({ key: `legacy-${legacy.batchId}`, batchId: legacy.batchId, dates: legacy.dates, source: 'legacy', model, taxonomy: legacyTax, manifest: requestManifest(requests), reconstructedManifest: true, status: 'processing' });
+    if (!dryRun) saveQueue(queue, queueFile);
+  }
+  let job = queue.jobs[0];
+  let plans;
+  if (job) {
+    if (dryRun) return { status: 'pending', batchId: job.batchId, dates: job.dates, submissionUnknown: !job.batchId };
+    if (!job.batchId) throw new Error('A classification submission has an unknown outcome. Reconcile its provider batch ID in data/classification-batches.json before submitting again.');
+    tax = job.taxonomy;
+    model = job.model;
+    const submittedIds = new Set(Object.values(job.manifest).flatMap((entry) => entry.ids));
+    plans = job.dates.map((d) => {
+      const pl = plan(d, tax);
+      return remainingPlan(pl, topicsFor(d), { reconsiderIds: pl.tweets.filter((t) => submittedIds.has(t.id)).map((t) => t.id) });
+    });
+    log(`[classify] resuming ${job.batchId} for ${job.dates.join(', ')}${job.reconstructedManifest ? ' (legacy manifest reconstructed)' : ''}`);
+  } else {
+    if (resumeOnly) return { status: 'idle', dates: [] };
+    plans = [...new Set(dates)].sort().map((d) => {
+      const previous = topicsFor(d);
+      const pl = plan(d, tax);
+      return remainingPlan(pl, previous, { reconsiderIds: newsReconsideration(previous, pl.toClassify, newsStore) });
+    }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous));
+    const unfinished = plans.map((pl) => pl.date);
+    if (!plans.length) {
+      if (legacy?.batchId && queue.completed[legacy.batchId] && onLegacyComplete && !dryRun) await onLegacyComplete(legacy.batchId);
+      return { status: 'complete', dates: [] };
+    }
+    if (dryRun) return { status: 'planned', dates: unfinished, pending: plans.reduce((n, pl) => n + pl.toClassify.length + pl.deferred.length, 0) };
+    const requests = [];
+    for (const pl of plans) {
+      pl.toClassify = await hints(pl.toClassify, tax);
+      ({ items: pl.toClassify, contextVersion: pl.contextVersion } = await evidence(pl.toClassify));
+      requests.push(...chunkRequests(pl.toClassify, tax, model, `${pl.date}_`));
+    }
+    if (!requests.length) {
+      for (const pl of plans) publishCurrent(pl, finishOut(emptyOut()), model);
+      return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', dates: unfinished };
+    }
+    client ||= await clientFactory();
+    if (sync) {
+      const stats = [];
+      for (const pl of plans) {
+        const mine = requests.filter((r) => r.custom_id.startsWith(`${pl.date}_`));
+        const result = await classifySync(client, mine, tax, { log, refresh, onResult: (partial) => publishCurrent(pl, partial, model) });
+        const s = publishCurrent(pl, result, model);
+        stats.push({ date: pl.date, ...s });
+        log(summarize(pl.date, s));
+      }
+      return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', dates: unfinished, stats };
+    }
+    job = await submitJob(client, queue, { requests, dates: unfinished, model, taxonomy: tax, source }, { file: queueFile });
+    log(`[classify] submitted ${job.batchId}: ${requests.length} request(s), ${unfinished.join(', ')}`);
+  }
+  client ||= await clientFactory();
+  const deadline = clock() + Math.max(0, Number.isFinite(maxWaitMinutes) ? maxWaitMinutes : 0) * 60_000;
+  while (true) {
+    await refresh();
+    const batch = await client.messages.batches.retrieve(job.batchId);
+    if (batch.processing_status === 'ended') break;
+    if (clock() >= deadline) return { status: 'pending', batchId: job.batchId, dates: job.dates };
+    await sleep(Math.min(30_000, Math.max(0, deadline - clock())));
+  }
+  const results = await collectResults(client, job.batchId, tax, job.manifest);
+  const stats = [];
+  for (const pl of plans) {
+    const result = results.get(`${pl.date}_`) || (job.dates.length === 1 ? results.get('') : null) || finishOut(emptyOut());
+    const s = publishCurrent(pl, result, model);
+    stats.push({ date: pl.date, ...s });
+    log(summarize(pl.date, s));
+  }
+  finishJob(queue, job);
+  saveQueue(queue, queueFile);
+  if (onLegacyComplete) await onLegacyComplete(job.batchId);
+  return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', batchId: job.batchId, dates: job.dates, stats };
+}
+
+export async function runClassification(options = {}) {
+  return withQueueLock(options.queueFile || queuePath, () => runClassificationUnlocked(options));
+}
+
 async function main() {
   const dateArg = process.argv.find((a) => a.startsWith('--date='));
-  const date = dateArg ? dateArg.split('=')[1] : daysAgoEt(1);
-  const model = process.env.CLASSIFY_MODEL || settings.classify.model;
-  const tax = loadTaxonomy();
-  const plan = planDay(date, { tax });
-  if (!plan.tweets.length) { console.log(`[classify] no tweets archived for ${date} — nothing to do`); return; }
-  if (readJSON(topicsPath(date), null)) { console.log(`[classify] ${date} already classified — skipping`); return; }
-
-  const client = await anthropicClient();
-  const state = loadState();
-  // A pending batch for a day that already has a topics file is stale: the
-  // day was finished another way (--sync cancels the batch, but a poll that
-  // started earlier can carry the old pointer back in through merge-state.js,
-  // which keeps any non-null pendingBatch). Drop it here so nothing resumes it.
-  if (state.pendingBatch && readJSON(topicsPath(state.pendingBatch.date), null)) {
-    console.log(`[classify] dropping stale pending batch ${state.pendingBatch.id} — ${state.pendingBatch.date} is already classified`);
-    state.pendingBatch = null;
-    saveState(state);
-  }
-  let batchId = state.pendingBatch?.date === date ? state.pendingBatch.id : null;
-
-  // --sync (or CLASSIFY_SYNC=true, the workflow's classify_sync input):
-  // skip the batch API entirely. A batch already pending for the day is
-  // cancelled first so the same posts are not classified twice.
-  if (process.argv.includes('--sync') || process.env.CLASSIFY_SYNC === 'true') {
-    if (batchId) {
-      try { await client.messages.batches.cancel(batchId); console.log(`[classify] cancelled pending batch ${batchId} — classifying synchronously instead`); } catch (e) { console.warn(`[classify] could not cancel batch ${batchId} (${e.message}) — continuing synchronously anyway`); }
-      state.pendingBatch = null;
-      saveState(state);
+  const dates = dateArg ? [dateArg.split('=')[1]] : archiveDates().filter((d) => d < daysAgoEt(0));
+  const old = loadState().pendingBatch;
+  const result = await runClassification({
+    dates,
+    sync: process.argv.includes('--sync') || process.env.CLASSIFY_SYNC === 'true',
+    resumeOnly: process.argv.includes('--resume-only'),
+    dryRun: process.argv.includes('--dry-run'),
+    legacy: old?.id ? { batchId: old.id, dates: [old.date] } : null,
+    onLegacyComplete: (id) => {
+      const state = loadState();
+      if (state.pendingBatch?.id === id) { state.pendingBatch = null; saveState(state); }
     }
-    plan.toClassify = await withCandidates(plan.toClassify, loadSemanticOrNull({ warn: (m) => console.warn(`[classify] ${m}`) }), { tax });
-    const requests = chunkRequests(plan.toClassify, tax, model);
-    console.log(`[classify] sync: ${plan.toClassify.length} tweets in ${requests.length} requests (${plan.toClassify.filter((t) => t.quoting).length} with quoted context, ${hintedCount(plan.toClassify)} with similarity hints, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
-    const result = await classifySync(client, requests, tax, { log: console.log });
-    console.log(summarize(date, writeDay(plan, result, model)));
-    return;
-  }
-
-  if (!batchId) {
-    // Similarity hints need the index (nightly chain: `npm run embed` runs
-    // first, so every archived post is already a row); posts it lacks are
-    // embedded on the fly when the model is present.
-    plan.toClassify = await withCandidates(plan.toClassify, loadSemanticOrNull({ warn: (m) => console.warn(`[classify] ${m}`) }), { tax });
-    const requests = chunkRequests(plan.toClassify, tax, model);
-    const batch = await client.messages.batches.create({ requests });
-    batchId = batch.id;
-    state.pendingBatch = { id: batchId, date };
-    saveState(state);
-    const quoting = plan.toClassify.filter((t) => t.quoting).length;
-    console.log(`[classify] submitted batch ${batchId}: ${plan.toClassify.length} tweets in ${requests.length} requests (${quoting} with quoted context, ${hintedCount(plan.toClassify)} with similarity hints, ${Object.keys(plan.inherited).length} retweets inherit, ${Object.keys(plan.anchored).length} anchored)`);
-  } else {
-    console.log(`[classify] resuming pending batch ${batchId} for ${date}`);
-  }
-
-  // How long to sit on the batch. The job holds the data-writes concurrency
-  // lock the whole time, so every minute here is a minute no poll can run:
-  // CLASSIFY_MAX_WAIT_MINUTES (the workflow's classify_wait_minutes input)
-  // lets a resume run check in for a few minutes and give the lock back.
-  const waitMinutes = Number(process.env.CLASSIFY_MAX_WAIT_MINUTES) || settings.classify.max_wait_minutes || 55;
-  const deadline = Date.now() + waitMinutes * 60_000;
-  const started = Date.now();
-  let batch;
-  let lastLog = 0;
-  while (true) {
-    await refreshIdentityToken(); // federation: keep the OIDC file fresh across a long wait
-    batch = await client.messages.batches.retrieve(batchId);
-    if (batch.processing_status === 'ended') break;
-    const c = batch.request_counts || {};
-    const progress = `${c.succeeded || 0} done, ${c.processing || 0} processing, ${c.errored || 0} errored, ${c.expired || 0} expired, ${c.canceled || 0} canceled`;
-    if (Date.now() > deadline) {
-      console.warn(`[classify] batch ${batchId} still ${batch.processing_status} after ${Math.round((Date.now() - started) / 60_000)} min (${progress}) — will resume on the next classify run`);
-      return; // pendingBatch stays in state; the next run picks it up
-    }
-    if (Date.now() - lastLog >= 5 * 60_000) { // every 5 min, so a stalled batch is visible in the log
-      console.log(`[classify] ${batch.processing_status}: ${progress} (${Math.round((Date.now() - started) / 60_000)} min)`);
-      lastLog = Date.now();
-    }
-    await new Promise((r) => setTimeout(r, 30_000));
-  }
-
-  const results = await collectResults(client, batchId, tax);
-  const result = results.get('') || finishOut(emptyOut());
-  const stats = writeDay(plan, result, model);
-  state.pendingBatch = null;
-  saveState(state);
-  console.log(summarize(date, stats));
+  });
+  console.log(`[classify] ${result.status}${result.batchId ? ` batch=${result.batchId}` : ''}; dates=${result.dates.join(', ') || 'none'}`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {

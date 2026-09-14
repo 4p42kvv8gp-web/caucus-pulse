@@ -1,12 +1,9 @@
 # Nightly pipeline — 07:30 UTC (2:30/3:30am ET, after the ET day closes):
-# 24h engagement refresh → Claude batch classification → story candidates,
-# then continuous promotion/retirement (src/stories.js --auto-promote
-# --retire edits config/taxonomy.yaml in place; the classifier only sees
-# that change on the NEXT night's run) → taxonomy learning
-# (src/taxonomy-learn.js --apply: reads each macro's posts, proposes
-# subtopics / elevations / merges / retirements with evidence, applies the
-# auto ones to the YAML) → corrections → strategic-syntax
-# n-grams → incidents → rollups → daily report → site data. Each stage reads
+# yesterday-ET engagement refresh → embedding → Claude classification →
+# corrections → syntax → incidents → rollups → report → site data.
+# Longer story-discovery/promotion/taxonomy-maintenance stages require explicit
+# manual selection so they do not hold up scheduled capture by default.
+# Each stage reads
 # the previous stage's committed files, so a failed stage can be re-run with
 # workflow_dispatch. Claude auth for every stage is the same federation
 # exchange (src/anthropic-auth.js); stories.js goes through anthropicClient
@@ -18,20 +15,21 @@ on:
   workflow_dispatch:
     inputs:
       stages:
-        description: 'Comma-separated stages to run, empty = all: refresh,embed,classify,stories,promote,taxonomy-learn,corrections,syntax,incidents,rollup,report,sitedata'
+        description: 'Empty = operational stages. Comma-separated overrides; stories,promote,taxonomy-learn are opt-in. Use all for every stage.'
         required: false
         default: ''
       classify_wait_minutes:
-        description: 'How long the classify stage waits on its batch before handing back (default: settings classify.max_wait_minutes, 55). The job holds the data-writes lock while it waits, so polls queue behind it.'
+        description: 'Batch wait in minutes (default 0: one status check). Poll runs resume pending batches every 20 minutes.'
         required: false
         default: ''
       classify_sync:
-        description: "'true' classifies through messages.create instead of a batch (full price, minutes not hours); cancels a pending batch for the day first."
+        description: "'true' uses synchronous requests (full price) when no batch is pending; existing batches are always resumed first."
         required: false
         default: ''
 
 concurrency:
   group: data-writes
+  queue: max
   cancel-in-progress: false
 
 permissions:
@@ -59,6 +57,7 @@ jobs:
           key: embedding-model-bge-small-en-v1.5-ea104dacec62
       - name: Download embedding model (verified; no-op when cached)
         continue-on-error: true
+        timeout-minutes: 1
         run: npm run download-model
       - name: Refresh, embed, classify, mine syntax, roll up, report
         # Claude auth: the job's OIDC token is exchanged for a short-lived
@@ -69,7 +68,7 @@ jobs:
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           NIGHTLY_STAGES: ${{ inputs.stages }}
-          CLASSIFY_MAX_WAIT_MINUTES: ${{ inputs.classify_wait_minutes }}
+          CLASSIFY_MAX_WAIT_MINUTES: ${{ inputs.classify_wait_minutes || '0' }}
           CLASSIFY_SYNC: ${{ inputs.classify_sync }}
         run: .github/scripts/nightly.sh
       - name: Commit results
@@ -81,7 +80,15 @@ jobs:
         env:
           NIGHTLY_STAGES: ${{ inputs.stages }}
         run: |
-          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') ${NIGHTLY_STAGES:+stages }${NIGHTLY_STAGES:-refresh + classify + stories + report}" data reports site/data config/taxonomy.yaml
+          .github/scripts/commit-data.sh "nightly: $(date -u +'%Y-%m-%d') ${NIGHTLY_STAGES:+stages }${NIGHTLY_STAGES:-operational stages}" data reports site/data config/taxonomy.yaml
+      - name: Retain validated work if publication failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-recovery-${{ github.run_id }}
+          path: ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          if-no-files-found: ignore
+          retention-days: 7
       # Last, and after the commit so the night's work is saved either way:
       # turn the run red if the pipeline only *looked* like it worked. Every
       # Claude stage swallows its own errors to keep the rest of the night

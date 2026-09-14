@@ -3,13 +3,22 @@
 # resolved or CLASSIFY_LIVE=false), regroups incidents, rebuilds site/data/rollups.json.
 name: poll
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'config/**'
+      - '.github/scripts/**'
+      - '.github/workflows/poll.yml'
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '7,27,47 * * * *'
   workflow_dispatch:
 
-# One writer at a time — poll, nightly, and authors all commit to main.
+# One writer at a time, including the news publication job. Queue pending
+# writers instead of allowing each new poll to replace the previous waiter.
 concurrency:
   group: data-writes
+  queue: max
   cancel-in-progress: false
 
 permissions:
@@ -19,6 +28,7 @@ permissions:
 jobs:
   poll:
     runs-on: ubuntu-latest
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -35,15 +45,31 @@ jobs:
           key: embedding-model-bge-small-en-v1.5-ea104dacec62
       - name: Download embedding model (verified; no-op when cached)
         continue-on-error: true
+        timeout-minutes: 1
         run: npm run download-model
       - name: Pull, embed, live-tag, rebuild site data
+        id: pipeline
+        continue-on-error: true
+        timeout-minutes: 12
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           X_LIST_ID: ${{ vars.X_LIST_ID }}
           # Read budget comes from config/settings.json "daily_read_budget"
           # (git-controlled); the X_DAILY_READ_BUDGET repo variable is no longer read.
           CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
-        run: npm run poll
+        run: .github/scripts/poll.sh
       - name: Commit archive + site data
+        if: ${{ !cancelled() && (steps.pipeline.outcome == 'success' || steps.pipeline.outcome == 'failure') }}
         run: |
           .github/scripts/commit-data.sh "poll: $(date -u +'%Y-%m-%d %H:%M') capture" data site/data
+      - name: Retain validated work if publication failed
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poll-recovery-${{ github.run_id }}
+          path: ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Report incomplete pipeline after saving its work
+        if: steps.pipeline.outcome == 'failure'
+        run: exit 1

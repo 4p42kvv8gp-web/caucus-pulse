@@ -25,14 +25,15 @@ test('mergeParsed keeps only taxonomy-valid assignments and groups emerging labe
   const out = { assignments: {}, incidents: {}, emergingMap: new Map() };
   mergeParsed({
     assignments: [
-      { id: '1', topics: [['economy', 'jobs'], ['nonsense', null]], incident: { kind: 'Flood', place: 'Asheville' } },
-      { id: '2', topics: [['economy', null]] }
+      { id: '1', topics: [['economy', 'jobs']], incident: { kind: 'Flooding', place: 'Asheville' } },
+      { id: '2', topics: [['economy', null]] },
+      { id: '3', topics: [] }, { id: '4', topics: [] }
     ],
     emerging: [{ label: 'Rail strike', ids: ['3'] }, { label: 'rail strike', ids: ['4'] }]
-  }, tax, out);
+  }, tax, out, ['1', '2', '3', '4']);
   assert.deepEqual(out.assignments['1'], [['economy', 'jobs']]);
   assert.deepEqual(out.assignments['2'], [['economy', null]]);
-  assert.deepEqual(out.incidents['1'], { kind: 'flood', place: 'Asheville' });
+  assert.deepEqual(out.incidents['1'], { kind: 'flooding', place: 'Asheville', name: null });
   assert.equal(out.emergingMap.size, 1);
   assert.deepEqual([...out.emergingMap.values()][0].ids, ['3', '4']);
 });

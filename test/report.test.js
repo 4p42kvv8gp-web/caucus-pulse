@@ -69,3 +69,27 @@ test('report without promotions, provisional stories or candidates has none of t
   assert.ok(!md.includes('awaiting review'));
   assert.ok(!md.includes('Developing stories'));
 });
+
+test('report links archived evidence across topics, phrases and stories without inventing IDs', async () => {
+  const { reportEvidence, reportHandle } = await import('../src/report.js');
+  const date='2026-09-13';
+  const sourceTweets=[
+    {id:'2099000000000000001',authorId:'u1',date,createdAt:'2026-09-13T12:00:00Z',type:'tweet',text:'Liam Ramos at Dilley: read [the record](javascript:bad).'},
+    {id:'2098000000000000001',authorId:'u1',date:'2026-09-12',createdAt:'2026-09-12T12:00:00Z',type:'tweet',text:'Liam Ramos needs answers.'}
+  ];
+  const authorsById={u1:{handle:'RepOne',member:'Member One',caucuses:['progressive']}};
+  const stories={candidates:[{ids:[sourceTweets[0].id,'2099999999999999999','invented'],posts:3,members:2,days:1,firstSeen:date,lastSeen:date,placement:{kind:'story',macro:'immigration',key:'liam',label:'Liam Ramos'}}]};
+  const md=renderReport(date,{...base,learned:null,tax:{},stories,sourceTweets,authorsById,tweets:[sourceTweets[0]],
+    topics:{assignments:{[sourceTweets[0].id]:[['immigration','liam']]}},
+    syntax:{phrases:[{phrase:'Liam Ramos',firstSeen:'2026-09-12',firstAuthor:'RepOne',members:1,tweets:1,isNew:false}]},
+    rollups:{labels:{immigration:'Immigration','immigration/liam':'Liam Ramos'},rows:[row(date,'immigration',null,1),row(date,'immigration','liam',1)]}});
+  assert.match(md,/\["Liam Ramos"\]\(https:\/\/x\.com\/i\/web\/status\/2099000000000000001\)/);
+  assert.match(md,/first seen 2026-09-12 by \[@RepOne\]\(https:\/\/x\.com\/i\/web\/status\/2098000000000000001\)/);
+  assert.match(md,/Source posts \(up to 3 archived examples\): \[@RepOne\]\(https:\/\/x\.com\/i\/web\/status\/2099000000000000001\)/);
+  assert.ok(!md.includes('status/2099999999999999999'));
+  assert.ok(!md.includes('status/invented'));
+  assert.ok(md.includes('\\[the record\\]\\(javascript:bad\\)'));
+  assert.equal(reportEvidence(['2099999999999999999'],{sourceTweets}).length,0);
+  assert.equal(reportHandle('RepOne'), '[@RepOne](https://x.com/RepOne)');
+  assert.equal(reportEvidence([sourceTweets[0].id],{sourceTweets:[...sourceTweets,sourceTweets[0]],authorsById}).length,1);
+});

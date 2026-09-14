@@ -22,15 +22,18 @@ export function fmt(n) {
 export function arrow(d) { return (d >= 0 ? '▲ ' : '▼ ') + Math.abs(Math.round(d)) + '%'; }
 
 const ET = 'America/New_York';
+const etClock = new Intl.DateTimeFormat('en-US', { timeZone: ET, hour: 'numeric', minute: '2-digit' });
+const etCalendarDay = new Intl.DateTimeFormat('en-CA', { timeZone: ET, year: 'numeric', month: '2-digit', day: '2-digit' });
+const etShortDay = new Intl.DateTimeFormat('en-US', { timeZone: ET, month: 'short', day: 'numeric' });
 export function etTime(iso) {
-  return new Intl.DateTimeFormat('en-US', { timeZone: ET, hour: 'numeric', minute: '2-digit' }).format(new Date(iso));
+  return etClock.format(new Date(iso));
 }
 export function etDay(iso) {
-  return new Intl.DateTimeFormat('en-US', { timeZone: ET, month: 'short', day: 'numeric' }).format(new Date(iso + (iso.length === 10 ? 'T12:00:00' : '')));
+  return etShortDay.format(new Date(iso + (iso.length === 10 ? 'T12:00:00' : '')));
 }
 // "2:31 PM" if today (ET), else "Sep 6, 7:30 PM"
 export function etWhen(iso, today) {
-  const d = new Intl.DateTimeFormat('en-CA', { timeZone: ET, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(iso));
+  const d = etCalendarDay.format(new Date(iso));
   return d === today ? etTime(iso) : `${etDay(iso)}, ${etTime(iso)}`;
 }
 export function headerDate(today) {
@@ -120,14 +123,14 @@ export function provisionalBadge(note) {
 
 // The stored evidence span, quoted. An inexact span is the post's first 140
 // characters, so it ends with an ellipsis and says what was not found.
-export function evidenceQuote(ev, fallbackText = '') {
+export function evidenceQuote(ev, fallbackText = '', source = ev) {
   const span = ev?.span || String(fallbackText || '').slice(0, 140);
   const exact = ev?.exact === true;
   const missing = ev?.matched ? ['kind', 'place'].filter((k) => !ev.matched[k]) : [];
   const caption = exact
     ? 'evidence · exact span naming the event and the place'
     : `evidence · first 140 chars — post does not name the ${missing.length ? missing.join(' or ') : 'event and place'} verbatim`;
-  return `<p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">“${esc(span)}${exact ? '' : '…'}”</p><div style="font-size:10px;color:${exact ? '#6e6e73' : '#a35d00'}">${esc(caption)}</div>`;
+  return `<p style="margin:0;font-size:13px;line-height:1.4;color:#3a3a3c">${sourceLink(source, `“${span}${exact ? '' : '…'}”`)}</p><div style="font-size:10px;color:${exact ? '#6e6e73' : '#a35d00'}">${esc(caption)}</div>`;
 }
 
 // The full post text with the exact evidence span highlighted in place.
@@ -186,6 +189,7 @@ export function decoratePost(data, post) {
     district: m?.[1] || '',
     caucus: m?.[2] || [],
     kind: KIND[post.type] || post.kind || 'original',
+    date: post.date || (post.createdAt ? etCalendarDay.format(new Date(post.createdAt)) : null),
     time: post.createdAt || post.time
   };
 }
@@ -246,8 +250,90 @@ export function rowHash({ row, win, caucus } = {}) {
   return '#' + q.toString().replace(/%2F/gi, '/');
 }
 
+export function dataBaseUrl(location = globalThis.location) {
+  // Scheduled GITHUB_TOKEN commits do not rebuild Pages. Read the public
+  // repository data directly so capture freshness is independent of a build.
+  const host = location?.hostname || '';
+  const repo = (location?.pathname || '').split('/').filter(Boolean)[0];
+  const owner = host.match(/^([a-z0-9-]+)\.github\.io$/i)?.[1];
+  return owner && repo && /^[A-Za-z0-9_.-]+$/.test(repo)
+    ? `https://raw.githubusercontent.com/${owner}/${repo}/main/site/data/`
+    : './data/';
+}
 export async function loadRollups() {
-  const res = await fetch('./data/rollups.json', { cache: 'no-store' });
-  if (!res.ok) return null;
-  return res.json();
+  const base = dataBaseUrl();
+  const res = await fetch(`${base}rollups.json`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`Dashboard fetch failed (${res.status})`);
+  const data = await res.json();
+  if (data.feedAllFiles?.length) {
+    const pages = await Promise.all(data.feedAllFiles.map(async (name) => {
+      if (!/^feed-\d+(?:-[a-f0-9]{16})?\.json$/.test(name)) throw new Error('Invalid archive page');
+      const response = await fetch(`${base}${name}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Archive page could not be loaded');
+      return response.json();
+    }));
+    const posts = pages.flat();
+    if (posts.length !== data.feedAllTotal || new Set(posts.map((p) => p.id)).size !== posts.length) throw new Error('Archive pages do not match the published coverage');
+    data.feedAll = posts; data.feedAllTruncated = false;
+  }
+  return data;
+}
+
+// Source URLs are built from validated identifiers, never from model prose.
+export function postUrl(record) {
+  const id = typeof record === 'string' ? record : record?.sourceId || record?.id;
+  return typeof id === 'string' && /^\d{1,30}$/.test(id) ? `https://x.com/i/web/status/${id}` : null;
+}
+export function profileUrl(handle) {
+  const h = String(handle || '').replace(/^@/, '');
+  if (/^[A-Za-z0-9_]{1,15}$/.test(h) && !/^\d+$/.test(h)) return `https://x.com/${h}`;
+  return /^\d{1,30}$/.test(h) ? `https://x.com/i/user/${h}` : null;
+}
+export function publicUrl(url) {
+  try { const u = new URL(url); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password ? u.href : null; } catch { return null; }
+}
+export function sourceAnchor(record, safeHtml) {
+  const url = postUrl(record);
+  return url ? `<a class="source-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer" title="Open original post on X">${safeHtml}</a>` : safeHtml;
+}
+export function sourceLink(record, text) { return sourceAnchor(record, esc(text)); }
+export function handleLink(handle, record = null) {
+  const url = postUrl(record) || profileUrl(handle);
+  return url ? `<a class="source-link" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(handle)}</a>` : esc(handle);
+}
+export function newsEvidence(list, { used = [], title = 'Public reporting · retrieved context' } = {}) {
+  const rows = (list || []).filter((e) => publicUrl(e.url)).map((e) => {
+    const date = e.publishedAt || e.date;
+    const when = date && Number.isFinite(Date.parse(date)) ? etDay(date) : 'date unknown';
+    const use = used.includes(e.id) ? ' · used by classifier' : '';
+    const later = e.publishedAfterPost ? ' · published after post' : e.acquiredAfterPost ? ' · retrieved after post' : '';
+    const kind = e.kind === 'report' ? 'article passage' : 'headline lead';
+    const details = [e.fetchedAt && `Retrieved ${e.fetchedAt}`, e.publishedAt && `Published ${e.publishedAt}`].filter(Boolean).join(' · ');
+    return `<div style="font-size:11px;line-height:1.4" title="${esc(details)}"><a href="${esc(publicUrl(e.url))}" target="_blank" rel="noopener noreferrer"><strong>${esc(e.publisher || 'Source')}</strong> · ${esc(when)} · ${kind}${use}${later}<br>“${esc(e.text || e.passage || e.title || '')}”</a></div>`;
+  });
+  return rows.length ? `<div style="display:flex;flex-direction:column;gap:5px;padding-top:5px"><span style="font-size:10px;color:#6e6e73">${esc(title)} · read the linked source</span>${rows.join('')}</div>` : '';
+}
+export function captureLabel(data, error = null, now = Date.now()) {
+  if (error) return 'Refresh failed · showing last loaded data';
+  const done = data?.lastPollAt;
+  if (!done) return 'No completed capture yet';
+  const stale = now - Date.parse(done) > 45 * 60_000;
+  const incomplete = data.captureInProgress || (data.lastPollOutcome && data.lastPollOutcome !== 'complete');
+  return `Capture completed ${etWhen(done, data.today)}${stale ? ' · stale' : ''}${incomplete ? ' · newer attempt incomplete' : ''}`;
+}
+
+// A failed background refresh never replaces the last successful data. The
+// caller owns rendering so filters, selection and drafts can remain intact.
+export function startRefresh({ load = loadRollups, onData, onError, intervalMs = 120_000, setIntervalFn = setInterval } = {}) {
+  let running = false;
+  const refresh = async () => {
+    if (running) return;
+    running = true;
+    try { const data = await load(); if (!data) throw new Error('No published data available'); onData(data); }
+    catch (error) { onError(error); }
+    finally { running = false; }
+  };
+  const timer = setIntervalFn(refresh, intervalMs);
+  refresh();
+  return { refresh, timer };
 }

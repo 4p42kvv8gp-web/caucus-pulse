@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { randomUUID } from 'node:crypto';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const p = (...parts) => path.join(ROOT, ...parts);
@@ -30,26 +31,79 @@ export function readJSON(file, fallback = null) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
 }
 
+// Publish a complete file or leave the prior version intact. The temporary
+// file lives beside the target so rename remains atomic on its filesystem.
+function syncDirectory(dir) {
+  let fd;
+  try {
+    fd = fs.openSync(dir, 'r');
+    fs.fsyncSync(fd);
+  } catch (e) {
+    // Some non-POSIX filesystems cannot fsync directory handles.
+    if (!['EINVAL', 'ENOTSUP', 'EISDIR', 'EPERM', 'EBADF'].includes(e.code)) throw e;
+  } finally { if (fd !== undefined) fs.closeSync(fd); }
+}
+
 export function writeJSON(file, value) {
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, JSON.stringify(value, null, 1) + '\n');
+  const dir = path.dirname(file);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmp = path.join(dir, `.${path.basename(file)}.${process.pid}.${randomUUID()}.tmp`);
+  let fd;
+  try {
+    fd = fs.openSync(tmp, 'wx', 0o600);
+    const serialized = JSON.stringify(value, null, 1);
+    if (serialized === undefined) throw new TypeError('Cannot publish undefined JSON');
+    fs.writeFileSync(fd, serialized + '\n');
+    fs.fsyncSync(fd);
+    fs.closeSync(fd); fd = undefined;
+    fs.renameSync(tmp, file);
+    syncDirectory(dir);
+  } finally {
+    if (fd !== undefined) fs.closeSync(fd);
+    try { fs.unlinkSync(tmp); } catch (e) { if (e.code !== 'ENOENT') throw e; }
+  }
 }
 
 export function appendJSONL(file, records) {
   if (!records.length) return;
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.appendFileSync(file, records.map((r) => JSON.stringify(r)).join('\n') + '\n');
+  // Never attach the next valid record to a torn line. Refuse corruption;
+  // keep the original bytes available for recovery instead of deleting them.
+  let previous = '';
+  try { previous = fs.readFileSync(file, 'utf8'); } catch (e) { if (e.code !== 'ENOENT') throw e; }
+  parseJSONL(previous, file, true);
+  const separator = previous && !previous.endsWith('\n') ? '\n' : '';
+  const serialized = records.map((r) => {
+    const line = JSON.stringify(r);
+    if (line === undefined) throw new TypeError('Cannot append undefined JSON');
+    return line;
+  }).join('\n');
+  const fd = fs.openSync(file, 'a', 0o600);
+  try {
+    fs.writeFileSync(fd, separator + serialized + '\n');
+    fs.fsyncSync(fd);
+  } finally { fs.closeSync(fd); }
+  syncDirectory(path.dirname(file));
 }
 
-export function readJSONL(file) {
-  let text;
-  try { text = fs.readFileSync(file, 'utf8'); } catch { return []; }
+function parseJSONL(text, file, strict) {
   const out = [];
-  for (const line of text.split('\n')) {
+  for (const [index, line] of text.split('\n').entries()) {
     if (!line.trim()) continue;
-    try { out.push(JSON.parse(line)); } catch { /* tolerate a torn tail line */ }
+    try { out.push(JSON.parse(line)); } catch (e) {
+      if (strict) throw new Error(`Invalid archive JSON at ${file}:${index + 1}; capture stopped without changing its cursor`, { cause: e });
+    }
   }
   return out;
+}
+
+export function readJSONL(file, { strict = false } = {}) {
+  let text;
+  try { text = fs.readFileSync(file, 'utf8'); } catch (e) {
+    if (strict && e.code !== 'ENOENT') throw e;
+    return [];
+  }
+  return parseJSONL(text, file, strict);
 }
 
 // Tweet ids are snowflakes: numeric strings too large for Number.

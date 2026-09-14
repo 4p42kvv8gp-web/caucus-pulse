@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 # local ONNX embedding model (35 MB, fetched by `npm run download-model`)
 data/models/
 .claude/settings.local.json
@@ -10,3 +10,9 @@ eval/keys/
 eval/verdicts/
 eval/out/
 eval/__pycache__/
+
+# Private context is processed outside the public checkout.
+data/context.json
+data/private/
+.env
+.env.*

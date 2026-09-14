@@ -6,7 +6,7 @@ import path from 'node:path';
 import { EventEmitter } from 'node:events';
 import {
   recordUsage, dayCost, rowCost, priceFor, budgetStatus, instrument, dailyBudgetUsd, formatStatus,
-  CACHE_READ_RATE, CACHE_WRITE_RATE, BATCH_RATE
+  CACHE_READ_RATE, CACHE_WRITE_RATE, BATCH_RATE, REQUESTS_KEY, estimateRequestUsd
 } from '../src/anthropic-usage.js';
 import { mergeLedger } from '../src/merge-anthropic-usage.js';
 
@@ -58,8 +58,8 @@ test('dayCost totals across stages and models; budgetStatus flags the ceiling', 
 
 test('dailyBudgetUsd reads the env override, tolerates separators, rejects nonsense', () => {
   assert.equal(dailyBudgetUsd({ ANTHROPIC_DAILY_BUDGET_USD: '1,500' }), 1500);
-  assert.equal(dailyBudgetUsd({ ANTHROPIC_DAILY_BUDGET_USD: 'lots' }), null);
-  assert.equal(dailyBudgetUsd({ ANTHROPIC_DAILY_BUDGET_USD: '0' }), null);
+  assert.throws(() => dailyBudgetUsd({ ANTHROPIC_DAILY_BUDGET_USD: 'lots' }), /Invalid.*budget/);
+  assert.equal(dailyBudgetUsd({ ANTHROPIC_DAILY_BUDGET_USD: '0' }), 0);
 });
 
 function fakeClient() {
@@ -102,17 +102,21 @@ test('instrument records create, stream and batch results without changing what 
   assert.deepEqual(seen, ['a', 'b', 'c']);
 
   const day = Object.keys(read(file))[0];
-  const rows = read(file)[day]['test-stage']['claude-opus-5'];
-  assert.deepEqual(rows.live, { calls: 2, input: 800, output: 80, cacheRead: 900, cacheWrite: 0 });
-  assert.deepEqual(rows.batch, { calls: 2, input: 8000, output: 800, cacheRead: 0, cacheWrite: 0 });
+  const rows = Object.values(read(file)[day][REQUESTS_KEY]);
+  const sum = (batch) => rows.filter((r) => r.batch === batch && r.usage).reduce((out, r) => {
+    for (const [k, v] of Object.entries(r.usage)) out[k] = (out[k] || 0) + v;
+    return out;
+  }, {});
+  assert.deepEqual(sum(false), { calls: 2, input: 800, output: 80, cacheRead: 900, cacheWrite: 0 });
+  assert.deepEqual(sum(true), { calls: 2, input: 8000, output: 800, cacheRead: 0, cacheWrite: 0 });
 });
 
-test('a ledger that cannot be written never breaks the call', async () => {
+test('an unwritable ledger prevents the paid call', async () => {
   const blocker = tmp(); // a regular file where a directory would have to be → ENOTDIR
   fs.writeFileSync(blocker, '{}');
   const client = instrument(fakeClient(), { stage: 's', file: path.join(blocker, 'ledger.json') });
-  const res = await client.messages.create({ model: 'm', max_tokens: 5, messages: [] });
-  assert.equal(res.stop_reason, 'end_turn');
+  await assert.rejects(() => client.messages.create({ model: 'm', max_tokens: 5, messages: [] }));
+  assert.equal(client.calls.length, 0);
 });
 
 test('mergeLedger adds both sides\' increments at every leaf', () => {
@@ -152,4 +156,114 @@ test('failed calls are counted per stage, auth failures separately, and never pr
   assert.equal(s.otherFailures, 1);
   assert.deepEqual(s.failedStages, ['stories']);
   assert.match(formatStatus(s), /2 call\(s\) FAILED \(1 auth\) in stories/);
+});
+
+test('a reused client rechecks budget before every paid call', async () => {
+  const file = tmp();
+  let calls = 0;
+  const client = instrument({ messages: { create: async () => {
+    calls++;
+    return { model: 'claude-opus-5', usage: usage(1000, 800) };
+  } } }, { file, budget: 0.045 });
+  const params = { model: 'claude-opus-5', max_tokens: 1000, messages: [] };
+  await client.messages.create(params);
+  await assert.rejects(() => client.messages.create(params), /would exceed budget/);
+  assert.equal(calls, 1);
+  assert.equal(budgetStatus({ file, budget: 0.045 }).spent, 0.025);
+  assert.equal(budgetStatus({ file, budget: 0.045 }).reserved, 0);
+});
+
+test('an in-flight call reserves allowance against a second client', async () => {
+  const file = tmp();
+  const params = { model: 'claude-opus-5', max_tokens: 1000, messages: [] };
+  const estimate = estimateRequestUsd(params);
+  let complete;
+  const first = instrument({ messages: { create: () => new Promise((resolve) => { complete = resolve; }) } }, { file, budget: estimate * 1.5 });
+  const second = instrument(fakeClient(), { file, budget: estimate * 1.5 });
+  const pending = first.messages.create(params);
+  await new Promise(setImmediate);
+  await assert.rejects(() => second.messages.create(params), /would exceed budget/);
+  assert.equal(second.calls.length, 0);
+  complete({ model: params.model, usage: usage(100, 10) });
+  await pending;
+  assert.equal(budgetStatus({ file }).reserved, 0);
+});
+
+test('corrupt ledgers block paid calls without overwriting evidence', async () => {
+  for (const corrupt of ['{', '[]', '{"2026-09-13":{"poll":{"m":{"live":{"input":-1}}}}}']) {
+    const file = tmp();
+    fs.writeFileSync(file, corrupt);
+    const client = instrument(fakeClient(), { file });
+    await assert.rejects(() => client.messages.create({ model: 'claude-opus-5', max_tokens: 10, messages: [] }));
+    assert.equal(client.calls.length, 0);
+    assert.equal(fs.readFileSync(file, 'utf8'), corrupt);
+    assert.equal(fs.existsSync(`${file}.lock`), false);
+  }
+});
+
+test('batch reservations survive midnight and settle each custom_id once across rereads', async () => {
+  const file = tmp();
+  let day = '2026-09-13';
+  const fake = fakeClient();
+  fake.messages.batches.create = async () => ({ id: 'batch-one' });
+  const client = instrument(fake, { file, today: () => day, budget: 1 });
+  const params = { model: 'claude-opus-5', max_tokens: 1000, messages: [] };
+  await client.messages.batches.create({ requests: ['a', 'b', 'c'].map((custom_id) => ({ custom_id, params })) });
+  const initiallyReserved = budgetStatus({ file, day, budget: 1 }).reserved;
+  assert.ok(initiallyReserved > 0);
+  assert.equal(budgetStatus({ file, day, budget: 1 }).spent, 0);
+  day = '2026-09-14';
+  assert.equal(budgetStatus({ file, day, budget: 1 }).reserved, initiallyReserved);
+  // Breaking a results read retains the other requests' outstanding liability.
+  for await (const row of await client.messages.batches.results('batch-one')) break;
+  assert.ok(budgetStatus({ file, day, budget: 1 }).reserved > 0);
+  for await (const row of await client.messages.batches.results('batch-one')) { /* complete */ }
+  assert.equal(budgetStatus({ file, day, budget: 1 }).reserved, 0);
+  const charged = budgetStatus({ file, day: '2026-09-13', budget: 1 }).spent;
+  assert.equal(charged, 0.03);
+  for await (const row of await client.messages.batches.results('batch-one')) { /* identical reread */ }
+  assert.equal(budgetStatus({ file, day: '2026-09-13', budget: 1 }).spent, charged);
+});
+
+test('existing batch results remain readable when new-call allowance is zero', async () => {
+  const file = tmp();
+  const client = instrument(fakeClient(), { file, budget: 0 });
+  await assert.rejects(() => client.messages.create({ model: 'claude-opus-5', max_tokens: 1, messages: [] }), /budget/);
+  for await (const row of await client.messages.batches.results('existing-batch')) { /* allowed */ }
+  assert.equal(budgetStatus({ file, budget: 0 }).calls, 2);
+});
+
+test('an uncertain transport failure retains its allowance until reconciled', async () => {
+  const file = tmp();
+  const client = instrument({ messages: { create: async () => { throw new Error('connection lost after submission'); } } }, { file, budget: 1 });
+  await assert.rejects(() => client.messages.create({ model: 'claude-opus-5', max_tokens: 10, messages: [] }), /connection lost/);
+  assert.ok(budgetStatus({ file }).reserved > 0);
+});
+
+test('preflight failures identify definitely-unsent requests to durable queues', async () => {
+  const params = { model: 'claude-opus-5', max_tokens: 5, messages: [] };
+  for (const options of [{ budget: 0 }, { budget: NaN }, { pricing: { default: { input: -1, output: 25 } } }]) {
+    const fake = fakeClient();
+    const client = instrument(fake, { file: tmp(), ...options });
+    await assert.rejects(() => client.messages.create(params), (error) => {
+      assert.equal(error.requestSent, false);
+      assert.equal(error.code, options.budget === 0 ? 'ANTHROPIC_BUDGET_EXCEEDED' : 'ANTHROPIC_PREFLIGHT_REJECTED');
+      return true;
+    });
+    assert.equal(fake.calls.length, 0);
+  }
+  const client = instrument({ messages: { create: async () => { throw new Error('provider outcome unknown'); } } }, { file: tmp(), budget: 1 });
+  await assert.rejects(() => client.messages.create(params), (error) => {
+    assert.notEqual(error.requestSent, false);
+    return true;
+  });
+});
+
+test('merge keeps one terminal settlement when both writers reread the same batch', () => {
+  const reserved = { id: 'batch:1:a', stage: 'classify', model: 'm', batch: true, status: 'reserved', reservedUsd: 1 };
+  const settled = { ...reserved, status: 'settled', usage: { calls: 1, input: 100, output: 10, cacheRead: 0, cacheWrite: 0 } };
+  const wrap = (r) => ({ '2026-09-13': { [REQUESTS_KEY]: { [r.id]: r } } });
+  assert.deepEqual(mergeLedger(wrap(reserved), wrap(settled), wrap(settled)), wrap(settled));
+  assert.deepEqual(mergeLedger(wrap(reserved), wrap(reserved), wrap(settled)), wrap(settled));
+  assert.throws(() => mergeLedger(wrap(reserved), wrap(settled), wrap({ ...settled, usage: { ...settled.usage, input: 999 } })), /Conflicting.*settlement/);
 });

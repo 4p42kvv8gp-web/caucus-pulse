@@ -156,10 +156,8 @@ export async function refreshIdentityToken({ maxAgeMs = IDENTITY_MAX_AGE_MS, for
 // — while the run stayed green. A mint is one call to GitHub's OIDC endpoint;
 // a process is the unit that exchanges, so a process gets its own JWT.
 export async function anthropicClient(options = {}) {
-  if (budgetExhausted()) {
-    const s = budgetStatus();
-    throw new Error(`Anthropic daily budget reached: $${s.spent.toFixed(2)} of $${s.budget} spent on ${s.day} — no Claude calls until tomorrow ET (raise anthropic.daily_budget_usd in config/settings.json to continue)`);
-  }
+  // Client construction must remain available to retrieve/cancel work already
+  // paid for. The instrumented creation methods reserve budget per request.
   const key = apiKey();
   if (!key) await refreshIdentityToken({ force: true });
   const { default: Anthropic } = await import('@anthropic-ai/sdk');

@@ -1,9 +1,11 @@
 {
- "generatedAt": "2026-09-14T12:13:37.745Z",
+ "generatedAt": "2026-09-14T12:44:21.928Z",
  "incidents": [
   {
-   "id": "providence-ri--flooding",
+   "id": "providence-ri--flooding--source-2099151483195228287",
    "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "flooding"
    ],
@@ -12,7 +14,14 @@
    "corroboration": {
     "corroborated": false,
     "by": null,
-    "note": "one post from one member; awaiting a second member, a later post from the same member or the nightly intel pass"
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Providence, RI · RI-01",
    "placeRaw": "Providence, RI",
@@ -35,10 +44,20 @@
     "matched": {
      "kind": true,
      "place": false
-    }
+    },
+    "sourceId": "2099156192987591003",
+    "url": "https://x.com/i/web/status/2099156192987591003"
    },
    "timeline": [
     {
+     "id": "2099156192987591003",
+     "sourceId": "2099156192987591003",
+     "url": "https://x.com/i/web/status/2099156192987591003",
+     "authorId": "1724849796496924672",
+     "personId": "member:gabe amo",
+     "referenceIds": [
+      "2099151483195228287"
+     ],
      "time": "2026-09-13T15:20:11.000Z",
      "who": "@RepGabeAmo",
      "tag": "member",
@@ -47,7 +66,8 @@
      "isNew": false,
      "flag": {
       "kind": "flooding",
-      "place": "Providence, RI"
+      "place": "Providence, RI",
+      "name": null
      },
      "evidence": {
       "span": "Stay safe in the flash floods, Rhode Island: don't drive through standing water and report downed power lines by calling Rhode Island Energy",
@@ -57,27 +77,48 @@
       "matched": {
        "kind": true,
        "place": false
-      }
+      },
+      "sourceId": "2099156192987591003",
+      "url": "https://x.com/i/web/status/2099156192987591003"
      }
     }
    ],
    "tweetIds": [
     "2099156192987591003"
    ],
-   "intel": null
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2099156192987591003"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
   },
   {
-   "id": "lake-county-ca--wildfire",
+   "id": "lake-county-ca--wildfire--lucasfire--2026-09-11",
    "kind": "wildfire",
+   "name": "LucasFire",
+   "eventIdentity": "named-source-supported",
    "kinds": [
     "wildfire"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "second post",
-    "note": "@RepThompson posted again 24.3h after the first report"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 2,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": true,
+    "repeatedSourceGroups": [],
+    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Lake County, CA · CA-04",
    "placeRaw": "Lake County, CA",
@@ -91,7 +132,7 @@
    "engN": 23,
    "amplifiers": 0,
    "others": [],
-   "title": "Wildfire · Lake County, CA",
+   "title": "LucasFire · Lake County, CA",
    "evidence": {
     "span": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay.",
     "exact": true,
@@ -100,10 +141,18 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2098212938746065092",
+    "url": "https://x.com/i/web/status/2098212938746065092"
    },
    "timeline": [
     {
+     "id": "2098212938746065092",
+     "sourceId": "2098212938746065092",
+     "url": "https://x.com/i/web/status/2098212938746065092",
+     "authorId": "303861808",
+     "personId": "member:mike thompson",
+     "referenceIds": [],
      "time": "2026-09-11T00:52:02.000Z",
      "who": "@RepThompson",
      "tag": "member",
@@ -112,7 +161,8 @@
      "isNew": false,
      "flag": {
       "kind": "wildfire",
-      "place": "Lake County, CA"
+      "place": "Lake County, CA",
+      "name": null
      },
      "evidence": {
       "span": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay.",
@@ -122,10 +172,18 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2098212938746065092",
+      "url": "https://x.com/i/web/status/2098212938746065092"
      }
     },
     {
+     "id": "2098579959321080152",
+     "sourceId": "2098579959321080152",
+     "url": "https://x.com/i/web/status/2098579959321080152",
+     "authorId": "303861808",
+     "personId": "member:mike thompson",
+     "referenceIds": [],
      "time": "2026-09-12T01:10:26.000Z",
      "who": "@RepThompson",
      "tag": "member",
@@ -134,7 +192,8 @@
      "isNew": false,
      "flag": {
       "kind": "wildfire",
-      "place": "Lake County, CA"
+      "place": "Lake County, CA",
+      "name": null
      },
      "evidence": {
       "span": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross.",
@@ -144,7 +203,9 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2098579959321080152",
+      "url": "https://x.com/i/web/status/2098579959321080152"
      }
     }
    ],
@@ -152,47 +213,40 @@
     "2098212938746065092",
     "2098579959321080152"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Evacuation Order in effect for Zones MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027 and UPP-E030 for the #LucasFire in Lake County, with instruction to leave without delay.",
-      "src": "per @RepThompson, 2026-09-11T00:52Z"
-     },
-     {
-      "text": "Evacuation Warning in effect for Zones MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035 and UPP-E038.",
-      "src": "per @RepThompson, 2026-09-11T00:52Z"
-     },
-     {
-      "text": "The Lake County Fairgrounds (Fritch Hall), 401 Martin St, Lakeport, is now an official shelter staffed by the American Red Cross.",
-      "src": "per @RepThompson, 2026-09-12T01:10Z"
-     },
-     {
-      "text": "Shelter access guidance: enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear; small animals are housed near Fritch Hall.",
-      "src": "per @RepThompson, 2026-09-12T01:10Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2098212938746065092",
+     "2098579959321080152"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Sept 12, 01:10Z — Red Cross-staffed shelter open at Lake County Fairgrounds (Fritch Hall), Lakeport, with small-animal sheltering nearby (per @RepThompson).",
-     "Sept 11, 00:52Z — Evacuation Order issued for 8 zones (MNF-E016/E018/E019, UPP-E023/E025/E026/E027/E030); leave without delay (per @RepThompson).",
-     "Sept 11, 00:52Z — Evacuation Warning issued for 7 additional zones (MNF-E017, MNF-E021, UPP-E028/E031/E032/E035/E038) (per @RepThompson)."
-    ],
-    "extractedAt": "2026-09-13T15:10:17.687Z",
-    "posts": 2
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "monterey-county-ca--wildfire",
+   "id": "monterey-county-ca--wildfire--source-2098526295865151744",
    "kind": "wildfire",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "wildfire"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "second post",
-    "note": "@RepJimmyPanetta posted again 2d after the first report"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Monterey County, CA · CA-19",
    "placeRaw": "Monterey County, CA",
@@ -200,56 +254,45 @@
    "districtMatch": true,
    "handle": "@RepJimmyPanetta",
    "member": "Jimmy Panetta",
-   "since": "2026-09-09T13:40:09.000Z",
+   "since": "2026-09-11T21:43:03.000Z",
    "last": "2026-09-11T21:43:03.000Z",
-   "updates": 2,
-   "engN": 12,
+   "updates": 1,
+   "engN": 1,
    "amplifiers": 0,
    "others": [],
    "title": "Wildfire · Monterey County, CA",
    "evidence": {
-    "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
-    "exact": false,
+    "span": "RT @MCoSheriff: *** Plaskett Fire Evacuation Order Downgrades Zones MRY-F037-B and MRY-F038-B ***\n\nThe Monterey County Sheriff’s Office is…",
+    "exact": true,
     "start": 0,
-    "end": 140,
+    "end": 139,
     "matched": {
      "kind": true,
-     "place": false
-    }
+     "place": true
+    },
+    "sourceId": "2098527767893508504",
+    "url": "https://x.com/i/web/status/2098527767893508504"
    },
    "timeline": [
     {
-     "time": "2026-09-09T13:40:09.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is now 61% contained and Timber is at 27%. More than 3,700 personnel, along with 23 helicopters, 210 engines, and 55 dozers, are supporting",
-     "engN": 11,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA"
-     },
-     "evidence": {
-      "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      }
-     }
-    },
-    {
+     "id": "2098527767893508504",
+     "sourceId": "2098527767893508504",
+     "url": "https://x.com/i/web/status/2098527767893508504",
+     "authorId": "796736612554117120",
+     "personId": "member:jimmy panetta",
+     "referenceIds": [
+      "2098526295865151744"
+     ],
      "time": "2026-09-11T21:43:03.000Z",
      "who": "@RepJimmyPanetta",
-     "tag": "member",
+     "tag": "repost",
      "text": "RT @MCoSheriff: *** Plaskett Fire Evacuation Order Downgrades Zones MRY-F037-B and MRY-F038-B ***\n\nThe Monterey County Sheriff’s Office is…",
      "engN": 1,
      "isNew": false,
      "flag": {
       "kind": "wildfire",
-      "place": "Monterey County, CA"
+      "place": "Monterey County, CA",
+      "name": null
      },
      "evidence": {
       "span": "RT @MCoSheriff: *** Plaskett Fire Evacuation Order Downgrades Zones MRY-F037-B and MRY-F038-B ***\n\nThe Monterey County Sheriff’s Office is…",
@@ -259,60 +302,48 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2098527767893508504",
+      "url": "https://x.com/i/web/status/2098527767893508504"
      }
     }
    ],
    "tweetIds": [
-    "2097681465265795466",
     "2098527767893508504"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Retweeted Monterey County Sheriff's Office notice titled \"Timber Fire Evacuation Warnings/Orders Update,\" stating that effective immediately the Sheriff's Office is downgrading (post text is cut off before specifying which zones/levels).",
-      "src": "per @MCoSheriff, retweeted by @RepJimmyPanetta, 2026-09-03T14:04:32Z"
-     },
-     {
-      "text": "CAL FIRE and the U.S. Forest Service are working together in a strategic partnership to fully suppress the Timber and Plaskett fires, operating in steep terrain and tough conditions.",
-      "src": "per @RepJimmyPanetta, 2026-09-03T16:15:17Z"
-     },
-     {
-      "text": "Firefighters are using many resources against the Timber and Plaskett Fires, including two Super Scooper aircraft.",
-      "src": "per @RepJimmyPanetta, 2026-09-04T19:37:00Z"
-     },
-     {
-      "text": "Plaskett Fire is 61% contained and Timber Fire is 27% contained.",
-      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
-     },
-     {
-      "text": "More than 3,700 personnel, 23 helicopters, 210 engines, and 55 dozers are supporting the response (post text cut off).",
-      "src": "per @RepJimmyPanetta, 2026-09-09T13:40:09Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2098527767893508504"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Sep 9: Plaskett at 61% containment, Timber at 27%; 3,700+ personnel, 23 helicopters, 210 engines, 55 dozers committed (per @RepJimmyPanetta, 2026-09-09T13:40:09Z).",
-     "Sep 4: Two Super Scooper aircraft added to the resources working both fires (per @RepJimmyPanetta, 2026-09-04T19:37:00Z).",
-     "Sep 3: CAL FIRE and U.S. Forest Service continuing joint suppression effort in steep terrain (per @RepJimmyPanetta, 2026-09-03T16:15:17Z).",
-     "Sep 3: Monterey County Sheriff's Office announced a downgrade to Timber Fire evacuation warnings/orders, effective immediately (per @MCoSheriff via @RepJimmyPanetta, 2026-09-03T14:04:32Z; details truncated in post)."
-    ],
-    "extractedAt": "2026-09-10T06:11:14.890Z",
-    "posts": 4
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "bronx-ny--other",
+   "id": "bronx-ny--other--source-2098517177246629925",
    "kind": "other",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "other"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Bronx, NY · NY-15",
    "placeRaw": "Bronx, NY",
@@ -335,10 +366,18 @@
     "matched": {
      "kind": false,
      "place": true
-    }
+    },
+    "sourceId": "2098517177246629925",
+    "url": "https://x.com/i/web/status/2098517177246629925"
    },
    "timeline": [
     {
+     "id": "2098517177246629925",
+     "sourceId": "2098517177246629925",
+     "url": "https://x.com/i/web/status/2098517177246629925",
+     "authorId": "1276403757224546304",
+     "personId": "member:ritchie torres",
+     "referenceIds": [],
      "time": "2026-09-11T21:00:58.000Z",
      "who": "@RepRitchie",
      "tag": "member",
@@ -347,7 +386,8 @@
      "isNew": false,
      "flag": {
       "kind": "other",
-      "place": "Bronx, NY"
+      "place": "Bronx, NY",
+      "name": null
      },
      "evidence": {
       "span": "The Legionnaires’ disease outbreak in Melrose and Morrisania is a serious matter for our community. My heart is with the Bronxites affected",
@@ -357,50 +397,48 @@
       "matched": {
        "kind": false,
        "place": true
-      }
+      },
+      "sourceId": "2098517177246629925",
+      "url": "https://x.com/i/web/status/2098517177246629925"
      }
     }
    ],
    "tweetIds": [
     "2098517177246629925"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "A Legionnaires' disease outbreak is affecting the Melrose and Morrisania neighborhoods of the Bronx (stated by the member directly; no official agency cited in the post).",
-      "src": "per @RepRitchie, 2026-09-11T21:00:58Z"
-     },
-     {
-      "text": "Guidance from the member: anyone who has been in the affected area and develops flu-like symptoms should seek medical attention, as early treatment matters.",
-      "src": "per @RepRitchie, 2026-09-11T21:00:58Z"
-     },
-     {
-      "text": "The member linked to his own statement on the outbreak.",
-      "src": "per @RepRitchie, 2026-09-11T21:00:58Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2098517177246629925"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Member publicly addresses Legionnaires' outbreak in Melrose/Morrisania and offers condolences to affected Bronxites (per @RepRitchie, 9/11 21:00 UTC).",
-     "Public health advisory issued in post: those in the area with flu-like symptoms should seek medical care early (per @RepRitchie, 9/11 21:00 UTC).",
-     "Full written statement linked from the post (per @RepRitchie, 9/11 21:00 UTC)."
-    ],
-    "extractedAt": "2026-09-13T15:10:39.302Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "malibu-ca--infrastructure-failure",
+   "id": "malibu-ca--infrastructure-failure--source-2097496022381388230",
    "kind": "infrastructure failure",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "infrastructure failure"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Malibu, CA · CA-32",
    "placeRaw": "Malibu, CA",
@@ -423,19 +461,30 @@
     "matched": {
      "kind": false,
      "place": true
-    }
+    },
+    "sourceId": "2098066687752810846",
+    "url": "https://x.com/i/web/status/2098066687752810846"
    },
    "timeline": [
     {
+     "id": "2098066687752810846",
+     "sourceId": "2098066687752810846",
+     "url": "https://x.com/i/web/status/2098066687752810846",
+     "authorId": "30216513",
+     "personId": "member:brad sherman",
+     "referenceIds": [
+      "2097496022381388230"
+     ],
      "time": "2026-09-10T15:10:53.000Z",
      "who": "@BradSherman",
-     "tag": "member",
+     "tag": "repost",
      "text": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
      "engN": 23,
      "isNew": false,
      "flag": {
       "kind": "infrastructure failure",
-      "place": "Malibu, CA"
+      "place": "Malibu, CA",
+      "name": null
      },
      "evidence": {
       "span": "RT @CityMalibu: City of Malibu Declares Existence of Local Emergency Following Sinkhole from Coastal Erosion at Sea Level Drive, and Issues…",
@@ -445,50 +494,48 @@
       "matched": {
        "kind": false,
        "place": true
-      }
+      },
+      "sourceId": "2098066687752810846",
+      "url": "https://x.com/i/web/status/2098066687752810846"
      }
     }
    ],
    "tweetIds": [
     "2098066687752810846"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "The City of Malibu declared the existence of a local emergency following a sinkhole at Sea Level Drive.",
-      "src": "per @BradSherman, 2026-09-10 15:10 UTC (retweet of @CityMalibu)"
-     },
-     {
-      "text": "The sinkhole is attributed to coastal erosion.",
-      "src": "per @BradSherman, 2026-09-10 15:10 UTC (retweet of @CityMalibu)"
-     },
-     {
-      "text": "Alongside the emergency declaration, the City indicated it was issuing something further; the retweeted text is cut off, so the nature of that additional action is not stated in the post.",
-      "src": "per @BradSherman, 2026-09-10 15:10 UTC (retweet of @CityMalibu)"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2098066687752810846"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Member retweeted the City of Malibu's local emergency declaration over a Sea Level Drive sinkhole (per @BradSherman, 2026-09-10 15:10 UTC).",
-     "City ties the sinkhole to coastal erosion (per @BradSherman, 2026-09-10 15:10 UTC).",
-     "Retweet text is truncated at 'and Issues…' — no details on evacuations, closures, injuries, or timeline in the post."
-    ],
-    "extractedAt": "2026-09-13T15:10:49.627Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "san-diego-ca--extreme-heat",
+   "id": "san-diego-ca--extreme-heat--source-2097769581934751988",
    "kind": "extreme heat",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "extreme heat"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 0 confirmed, 2 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "San Diego, CA · CA-50",
    "placeRaw": "San Diego, CA",
@@ -511,10 +558,20 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2097787715458675057",
+    "url": "https://x.com/i/web/status/2097787715458675057"
    },
    "timeline": [
     {
+     "id": "2097787715458675057",
+     "sourceId": "2097787715458675057",
+     "url": "https://x.com/i/web/status/2097787715458675057",
+     "authorId": "1135486501",
+     "personId": "member:scott h. peters",
+     "referenceIds": [
+      "2097769581934751988"
+     ],
      "time": "2026-09-09T20:42:21.000Z",
      "who": "@RepScottPeters",
      "tag": "member",
@@ -523,7 +580,8 @@
      "isNew": false,
      "flag": {
       "kind": "extreme heat",
-      "place": "San Diego, CA"
+      "place": "San Diego, CA",
+      "name": null
      },
      "evidence": {
       "span": "San Diego is experiencing an extreme heat wave expected to last through 8pm today and possibly into tomorrow.",
@@ -533,46 +591,48 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2097787715458675057",
+      "url": "https://x.com/i/web/status/2097787715458675057"
      }
     }
    ],
    "tweetIds": [
     "2097787715458675057"
    ],
-   "intel": {
-    "confirmed": [],
-    "unverified": [
-     {
-      "text": "San Diego is experiencing an extreme heat wave expected to last through 8pm on Sept 9 and possibly into the following day; the post does not cite a police, OEM, fire, or weather-agency source for this.",
-      "src": "per @RepScottPeters, 2026-09-09T20:42:21Z"
-     },
-     {
-      "text": "The member points constituents to designated \"cool zones\" and other heat-protection resources via a link; no issuing agency is named in the post.",
-      "src": "per @RepScottPeters, 2026-09-09T20:42:21Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097787715458675057"
     ],
-    "whatsNew": [
-     "Per @RepScottPeters (2026-09-09T20:42:21Z): extreme heat wave underway in San Diego, expected to last through 8pm today and possibly into tomorrow.",
-     "Per the same post: constituents directed to find a designated cool zone and other protective resources via an included link.",
-     "No official agency attribution, casualty, outage, or closure details appear in the posts so far."
-    ],
-    "extractedAt": "2026-09-10T06:10:04.149Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "kauai-hi--hurricane",
+   "id": "kauai-hi--hurricane--source-2097783883286905197",
    "kind": "hurricane",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "tropical storm"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Kauai, HI · HI-01",
    "placeRaw": "Kauai, HI",
@@ -595,10 +655,18 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2097783883286905197",
+    "url": "https://x.com/i/web/status/2097783883286905197"
    },
    "timeline": [
     {
+     "id": "2097783883286905197",
+     "sourceId": "2097783883286905197",
+     "url": "https://x.com/i/web/status/2097783883286905197",
+     "authorId": "1081350574589833221",
+     "personId": "member:ed case",
+     "referenceIds": [],
      "time": "2026-09-09T20:27:07.000Z",
      "who": "@RepEdCase",
      "tag": "member",
@@ -607,7 +675,8 @@
      "isNew": false,
      "flag": {
       "kind": "tropical storm",
-      "place": "Kauai, HI"
+      "place": "Kauai, HI",
+      "name": null
      },
      "evidence": {
       "span": "Here’s updated info https://t.co/CCSiCRLWgm and https://t.co/4V0EQfV0QP, especially for Kaua’i/Ni’ihau, the link to report storm damage which will be used to request a presidential disaster declaration freeing up",
@@ -617,50 +686,48 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2097783883286905197",
+      "url": "https://x.com/i/web/status/2097783883286905197"
      }
     }
    ],
    "tweetIds": [
     "2097783883286905197"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Rep. Case states that updated information on the storm is available at the links he shared, and that a damage-reporting link is available specifically for Kaua'i/Ni'ihau residents (stated directly by the member; no official agency cited in the post).",
-      "src": "per @RepEdCase, 2026-09-09T20:27:07Z"
-     },
-     {
-      "text": "Rep. Case states that storm damage reports submitted through that link will be used to support a request for a presidential disaster declaration to free up assistance (post text is truncated at that point).",
-      "src": "per @RepEdCase, 2026-09-09T20:27:07Z"
-     },
-     {
-      "text": "Rep. Case refers to the storm as 'Lowell' and describes it as devastating, with residents in the district now recovering.",
-      "src": "per @RepEdCase, 2026-09-09T20:27:07Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097783883286905197"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Rep. Case posted updated storm information links for constituents (per @RepEdCase, 2026-09-09T20:27:07Z).",
-     "Kaua'i/Ni'ihau residents directed to a damage-reporting link (per @RepEdCase, same post).",
-     "Damage reports to be used in seeking a presidential disaster declaration (per @RepEdCase, same post)."
-    ],
-    "extractedAt": "2026-09-13T15:11:02.202Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "napa-county-ca--wildfire",
+   "id": "napa-county-ca--wildfire--steelefire--2026-09-09",
    "kind": "wildfire",
+   "name": "SteeleFire",
+   "eventIdentity": "named-source-supported",
    "kinds": [
     "wildfire"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 2 confirmed, 0 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Napa County, CA · CA-04",
    "placeRaw": "Napa County, CA",
@@ -674,7 +741,7 @@
    "engN": 5,
    "amplifiers": 0,
    "others": [],
-   "title": "Wildfire · Napa County, CA",
+   "title": "SteeleFire · Napa County, CA",
    "evidence": {
     "span": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008.",
     "exact": true,
@@ -683,10 +750,18 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2097766395152933115",
+    "url": "https://x.com/i/web/status/2097766395152933115"
    },
    "timeline": [
     {
+     "id": "2097766395152933115",
+     "sourceId": "2097766395152933115",
+     "url": "https://x.com/i/web/status/2097766395152933115",
+     "authorId": "303861808",
+     "personId": "member:mike thompson",
+     "referenceIds": [],
      "time": "2026-09-09T19:17:37.000Z",
      "who": "@RepThompson",
      "tag": "member",
@@ -695,7 +770,8 @@
      "isNew": false,
      "flag": {
       "kind": "wildfire",
-      "place": "Napa County, CA"
+      "place": "Napa County, CA",
+      "name": null
      },
      "evidence": {
       "span": "#SteeleFire in Napa County: An Evacuation Warning for Zone: BER-E008.",
@@ -705,47 +781,337 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2097766395152933115",
+      "url": "https://x.com/i/web/status/2097766395152933115"
      }
     }
    ],
    "tweetIds": [
     "2097766395152933115"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "An Evacuation Warning is in effect for Zone BER-E008 in Napa County in connection with the #SteeleFire.",
-      "src": "per @RepThompson, 2026-09-09 19:17 UTC"
-     },
-     {
-      "text": "Residents are urged to be vigilant and ready to evacuate if needed; a link to more information was shared.",
-      "src": "per @RepThompson, 2026-09-09 19:17 UTC"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097766395152933115"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Evacuation Warning issued for Zone BER-E008 (Napa County) — per @RepThompson, 2026-09-09 19:17 UTC",
-     "Member urging residents to stay alert and be ready to evacuate — per @RepThompson, 2026-09-09 19:17 UTC",
-     "Link to additional #SteeleFire information shared in the post — per @RepThompson, 2026-09-09 19:17 UTC"
-    ],
-    "extractedAt": "2026-09-10T06:10:30.994Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "la-habra-ca--hazmat",
-   "kind": "hazmat",
+   "id": "monterey-county-ca--wildfire--source-2097681465265795466",
+   "kind": "wildfire",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
-    "hazmat release",
-    "chemical leak"
+    "wildfire"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "second post",
-    "note": "@RepLindaSanchez posted again 2.4h after the first report"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Monterey County, CA · CA-19",
+   "placeRaw": "Monterey County, CA",
+   "district": "CA-19",
+   "districtMatch": true,
+   "handle": "@RepJimmyPanetta",
+   "member": "Jimmy Panetta",
+   "since": "2026-09-09T13:40:09.000Z",
+   "last": "2026-09-09T13:40:09.000Z",
+   "updates": 1,
+   "engN": 11,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Wildfire · Monterey County, CA",
+   "evidence": {
+    "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2097681465265795466",
+    "url": "https://x.com/i/web/status/2097681465265795466"
+   },
+   "timeline": [
+    {
+     "id": "2097681465265795466",
+     "sourceId": "2097681465265795466",
+     "url": "https://x.com/i/web/status/2097681465265795466",
+     "authorId": "796736612554117120",
+     "personId": "member:jimmy panetta",
+     "referenceIds": [],
+     "time": "2026-09-09T13:40:09.000Z",
+     "who": "@RepJimmyPanetta",
+     "tag": "member",
+     "text": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is now 61% contained and Timber is at 27%. More than 3,700 personnel, along with 23 helicopters, 210 engines, and 55 dozers, are supporting",
+     "engN": 11,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "The firefighters and first responders fighting the Plaskett and Timber Fires continue to give it their all to put out the fires. Plaskett is",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2097681465265795466",
+      "url": "https://x.com/i/web/status/2097681465265795466"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2097681465265795466"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097681465265795466"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "la-habra-ca--hazmat--source-2097453568290619482",
+   "kind": "hazmat",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "chemical leak"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "La Habra, CA · CA-38",
+   "placeRaw": "La Habra, CA",
+   "district": "CA-38",
+   "districtMatch": true,
+   "handle": "@RepLindaSanchez",
+   "member": "Linda T. Sánchez",
+   "since": "2026-09-08T23:20:07.000Z",
+   "last": "2026-09-08T23:20:07.000Z",
+   "updates": 1,
+   "engN": 9,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hazmat · La Habra, CA",
+   "evidence": {
+    "span": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory",
+    "exact": true,
+    "start": 0,
+    "end": 103,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2097465033416458372",
+    "url": "https://x.com/i/web/status/2097465033416458372"
+   },
+   "timeline": [
+    {
+     "id": "2097465033416458372",
+     "sourceId": "2097465033416458372",
+     "url": "https://x.com/i/web/status/2097465033416458372",
+     "authorId": "312134473",
+     "personId": "member:linda t. sanchez",
+     "referenceIds": [
+      "2097453568290619482"
+     ],
+     "time": "2026-09-08T23:20:07.000Z",
+     "who": "@RepLindaSanchez",
+     "tag": "repost",
+     "text": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory\nhttps://t.co/QPLS1b2uuJ",
+     "engN": 9,
+     "isNew": false,
+     "flag": {
+      "kind": "chemical leak",
+      "place": "La Habra, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory",
+      "exact": true,
+      "start": 0,
+      "end": 103,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2097465033416458372",
+      "url": "https://x.com/i/web/status/2097465033416458372"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2097465033416458372"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097465033416458372"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "la-habra-ca--hazmat--source-2097463889180934561",
+   "kind": "hazmat",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "chemical leak"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "La Habra, CA · CA-38",
+   "placeRaw": "La Habra, CA",
+   "district": "CA-38",
+   "districtMatch": true,
+   "handle": "@RepLindaSanchez",
+   "member": "Linda T. Sánchez",
+   "since": "2026-09-08T23:20:04.000Z",
+   "last": "2026-09-08T23:20:04.000Z",
+   "updates": 1,
+   "engN": 1,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hazmat · La Habra, CA",
+   "evidence": {
+    "span": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra",
+    "exact": true,
+    "start": 0,
+    "end": 83,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2097465021995356640",
+    "url": "https://x.com/i/web/status/2097465021995356640"
+   },
+   "timeline": [
+    {
+     "id": "2097465021995356640",
+     "sourceId": "2097465021995356640",
+     "url": "https://x.com/i/web/status/2097465021995356640",
+     "authorId": "312134473",
+     "personId": "member:linda t. sanchez",
+     "referenceIds": [
+      "2097463889180934561"
+     ],
+     "time": "2026-09-08T23:20:04.000Z",
+     "who": "@RepLindaSanchez",
+     "tag": "repost",
+     "text": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra https://t.co/Al59GKHBAi",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "chemical leak",
+      "place": "La Habra, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra",
+      "exact": true,
+      "start": 0,
+      "end": 83,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2097465021995356640",
+      "url": "https://x.com/i/web/status/2097465021995356640"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2097465021995356640"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097465021995356640"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "la-habra-ca--hazmat--source-2097422681574346958",
+   "kind": "hazmat",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "hazmat release"
+   ],
+   "status": "provisional",
+   "lifecycle": "resolved",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "La Habra, CA · CA-38",
    "placeRaw": "La Habra, CA",
@@ -754,9 +1120,9 @@
    "handle": "@RepLindaSanchez",
    "member": "Linda T. Sánchez",
    "since": "2026-09-08T20:58:47.000Z",
-   "last": "2026-09-08T23:20:07.000Z",
-   "updates": 3,
-   "engN": 17,
+   "last": "2026-09-08T20:58:47.000Z",
+   "updates": 1,
+   "engN": 7,
    "amplifiers": 0,
    "others": [],
    "title": "Hazmat · La Habra, CA",
@@ -768,10 +1134,20 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2097429464565108767",
+    "url": "https://x.com/i/web/status/2097429464565108767"
    },
    "timeline": [
     {
+     "id": "2097429464565108767",
+     "sourceId": "2097429464565108767",
+     "url": "https://x.com/i/web/status/2097429464565108767",
+     "authorId": "312134473",
+     "personId": "member:linda t. sanchez",
+     "referenceIds": [
+      "2097422681574346958"
+     ],
      "time": "2026-09-08T20:58:47.000Z",
      "who": "@RepLindaSanchez",
      "tag": "member",
@@ -780,7 +1156,8 @@
      "isNew": false,
      "flag": {
       "kind": "hazmat release",
-      "place": "La Habra, CA"
+      "place": "La Habra, CA",
+      "name": null
      },
      "evidence": {
       "span": "🚨 LA HABRA RESIDENTS: A hazmat situation has been reported in La Habra near Cypress Street and South Cypress Street.",
@@ -790,105 +1167,48 @@
       "matched": {
        "kind": true,
        "place": true
-      }
-     }
-    },
-    {
-     "time": "2026-09-08T23:20:04.000Z",
-     "who": "@RepLindaSanchez",
-     "tag": "member",
-     "text": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra https://t.co/Al59GKHBAi",
-     "engN": 1,
-     "isNew": false,
-     "flag": {
-      "kind": "chemical leak",
-      "place": "La Habra, CA"
-     },
-     "evidence": {
-      "span": "RT @ocregister: Shelter-in-place order lifted following hazmat incident in La Habra",
-      "exact": true,
-      "start": 0,
-      "end": 83,
-      "matched": {
-       "kind": true,
-       "place": true
-      }
-     }
-    },
-    {
-     "time": "2026-09-08T23:20:07.000Z",
-     "who": "@RepLindaSanchez",
-     "tag": "member",
-     "text": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory\nhttps://t.co/QPLS1b2uuJ",
-     "engN": 9,
-     "isNew": false,
-     "flag": {
-      "kind": "chemical leak",
-      "place": "La Habra, CA"
-     },
-     "evidence": {
-      "span": "RT @ABC7: UPDATE: All-clear given after orange smoke seen rising from chemical leak at La Habra factory",
-      "exact": true,
-      "start": 0,
-      "end": 103,
-      "matched": {
-       "kind": true,
-       "place": true
-      }
+      },
+      "sourceId": "2097429464565108767",
+      "url": "https://x.com/i/web/status/2097429464565108767"
      }
     }
    ],
    "tweetIds": [
-    "2097429464565108767",
-    "2097465021995356640",
-    "2097465033416458372"
+    "2097429464565108767"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Officials ordered evacuations within a 1-mile radius near Cypress Street and South Cypress Street in La Habra while they investigate.",
-      "src": "per @RepLindaSanchez, 2026-09-08 20:58 UTC"
-     },
-     {
-      "text": "Public guidance from the member: avoid the area and follow local authorities.",
-      "src": "per @RepLindaSanchez, 2026-09-08 20:58 UTC"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097429464565108767"
     ],
-    "unverified": [
-     {
-      "text": "A hazmat situation was 'reported' near Cypress Street and South Cypress Street, described as an unknown chemical release.",
-      "src": "per @RepLindaSanchez, 2026-09-08 20:58 UTC"
-     },
-     {
-      "text": "A shelter-in-place order was lifted following the La Habra hazmat incident (shared via retweet of @ocregister, not stated by the member from officials).",
-      "src": "per @RepLindaSanchez, 2026-09-08 23:20 UTC (RT @ocregister)"
-     },
-     {
-      "text": "An all-clear was given after orange smoke was seen rising from a chemical leak at a La Habra factory (shared via retweet of @ABC7, not stated by the member from officials).",
-      "src": "per @RepLindaSanchez, 2026-09-08 23:20 UTC (RT @ABC7)"
-     }
-    ],
-    "whatsNew": [
-     "Member retweeted @ABC7 reporting an all-clear after orange smoke from a chemical leak at a La Habra factory — per @RepLindaSanchez, 2026-09-08 23:20 UTC",
-     "Member retweeted @ocregister reporting the shelter-in-place order has been lifted — per @RepLindaSanchez, 2026-09-08 23:20 UTC",
-     "Initial alert: evacuations ordered within a 1-mile radius near Cypress St/S. Cypress St over a reported unknown chemical release — per @RepLindaSanchez, 2026-09-08 20:58 UTC"
-    ],
-    "extractedAt": "2026-09-13T15:10:28.352Z",
-    "posts": 3
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
   {
-   "id": "orange-and-la-counties-ca--extreme-heat",
+   "id": "orange-and-la-counties-ca--extreme-heat--source-2097429404288720922",
    "kind": "extreme heat",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
    "kinds": [
     "extreme heat"
    ],
-   "status": "resolved",
+   "status": "provisional",
    "lifecycle": "resolved",
    "corroboration": {
-    "corroborated": true,
-    "by": "intel",
-    "note": "nightly intel pass: 3 confirmed, 0 unverified item(s)"
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Orange and LA counties, CA · CA-45",
    "placeRaw": "Orange and LA counties, CA",
@@ -911,10 +1231,18 @@
     "matched": {
      "kind": true,
      "place": true
-    }
+    },
+    "sourceId": "2097429404288720922",
+    "url": "https://x.com/i/web/status/2097429404288720922"
    },
    "timeline": [
     {
+     "id": "2097429404288720922",
+     "sourceId": "2097429404288720922",
+     "url": "https://x.com/i/web/status/2097429404288720922",
+     "authorId": "1877088040453079040",
+     "personId": "member:derek tran",
+     "referenceIds": [],
      "time": "2026-09-08T20:58:32.000Z",
      "who": "@RepDerekTranCA",
      "tag": "member",
@@ -923,7 +1251,8 @@
      "isNew": false,
      "flag": {
       "kind": "extreme heat",
-      "place": "Orange and LA counties, CA"
+      "place": "Orange and LA counties, CA",
+      "name": null
      },
      "evidence": {
       "span": "Orange and L.A. counties are under an Extreme Heat Warning through Wednesday, September 9th with temperatures reaching the high 90s and some communities hitting over 100 degrees.",
@@ -933,36 +1262,25 @@
       "matched": {
        "kind": true,
        "place": true
-      }
+      },
+      "sourceId": "2097429404288720922",
+      "url": "https://x.com/i/web/status/2097429404288720922"
      }
     }
    ],
    "tweetIds": [
     "2097429404288720922"
    ],
-   "intel": {
-    "confirmed": [
-     {
-      "text": "Orange and Los Angeles counties are under an Extreme Heat Warning through Wednesday, September 9.",
-      "src": "per @RepDerekTranCA, 2026-09-08T20:58:32Z"
-     },
-     {
-      "text": "Temperatures are reaching the high 90s, with some communities topping 100 degrees.",
-      "src": "per @RepDerekTranCA, 2026-09-08T20:58:32Z"
-     },
-     {
-      "text": "The member urges residents to check in on seniors and vulnerable neighbors to ensure they are safe from the heat.",
-      "src": "per @RepDerekTranCA, 2026-09-08T20:58:32Z"
-     }
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2097429404288720922"
     ],
-    "unverified": [],
-    "whatsNew": [
-     "Extreme Heat Warning in effect for Orange and L.A. counties through Wed., Sept. 9 (per @RepDerekTranCA, 2026-09-08T20:58:32Z).",
-     "Highs in the high 90s, with some communities over 100 degrees (per @RepDerekTranCA, 2026-09-08T20:58:32Z).",
-     "Member asks constituents to check on seniors and vulnerable neighbors (per @RepDerekTranCA, 2026-09-08T20:58:32Z)."
-    ],
-    "extractedAt": "2026-09-10T06:11:39.728Z",
-    "posts": 1
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   }
  ],

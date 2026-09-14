@@ -62,10 +62,10 @@ test('statusOf lifecycle: active → monitoring → resolved', () => {
 test('groupIncidents merges same-event flags and builds the timeline', () => {
   const now = Date.now();
   const iso = (hoursAgo) => new Date(now - hoursAgo * 3600e3).toISOString();
-  const flags = { a: { kind: 'flooding', place: 'Aurora, CO' }, b: { kind: 'flooding', place: 'aurora co' }, c: { kind: 'wildfire', place: 'Banning, CA' } };
+  const flags = { a: { kind: 'flooding', place: 'Aurora, CO', name: 'Pine Creek Flood' }, b: { kind: 'flooding', place: 'aurora co', name: 'Pine Creek Flood' }, c: { kind: 'wildfire', place: 'Banning, CA' } };
   const posts = new Map([
-    ['a', { id: 'a', authorId: 'u1', createdAt: iso(5), text: 'first', engN: 100, capturedAt: 'p1' }],
-    ['b', { id: 'b', authorId: 'u2', createdAt: iso(2), text: 'second', engN: 50, capturedAt: 'p2' }],
+    ['a', { id: 'a', authorId: 'u1', createdAt: iso(5), text: 'Pine Creek Flood in Aurora: evacuate now.', engN: 100, capturedAt: 'p1' }],
+    ['b', { id: 'b', authorId: 'u2', createdAt: iso(2), text: 'Pine Creek Flood: my office has shelter information for Aurora.', engN: 50, capturedAt: 'p2' }],
     ['c', { id: 'c', authorId: 'u1', createdAt: iso(50), text: 'old fire', engN: 10, capturedAt: 'p0' }]
   ]);
   const authors = { u1: { handle: 'RepA', member: 'Rep A', stateDistrict: 'CO-06' }, u2: { handle: 'RepB', member: 'Rep B', stateDistrict: 'CO-07' } };
@@ -76,9 +76,10 @@ test('groupIncidents merges same-event flags and builds the timeline', () => {
   assert.equal(flood.handle, '@RepA'); // earliest poster leads
   assert.equal(flood.place, 'Aurora, CO · CO-06');
   assert.deepEqual(flood.others, ['@RepB']);
-  assert.equal(flood.status, 'active'); // two members: corroborated, so the lifecycle status shows
+  assert.equal(flood.status, 'provisional'); // repetition does not independently verify the event
   assert.equal(flood.lifecycle, 'active');
-  assert.equal(flood.corroboration.by, 'second member');
+  assert.equal(flood.corroboration.by, null);
+  assert.equal(flood.corroboration.resolvedPeople, 2);
   assert.equal(flood.timeline[1].isNew, true); // captured in the latest poll
   const fire = out.find((i) => i.kind === 'wildfire');
   assert.equal(fire.status, 'provisional'); // one post from one member, nothing else behind it

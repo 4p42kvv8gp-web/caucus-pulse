@@ -16,12 +16,13 @@
 set -uo pipefail
 
 # NIGHTLY_STAGES="classify,rollup,report" (the workflow_dispatch `stages`
-# input) runs only the named stages; empty runs them all. Skipped stages are
-# not failures. This is how one stage gets re-run — or run alone — without
-# paying for the Claude stages around it: classify for a day the nightly
-# missed costs a few dollars, stories + taxonomy-learn discovery on top of it
-# can cost ten times that.
-ONLY="${NIGHTLY_STAGES:-}"
+# input) runs only the named stages. Empty uses the operational defaults;
+# "all" explicitly includes discovery, promotion, and taxonomy maintenance.
+# Those longer stages remain available manually but do not hold up scheduled
+# collection by default. Live emerging-event detection remains enabled.
+DEFAULT_STAGES='refresh,embed,classify,corrections,syntax,incidents,rollup,report,sitedata'
+ONLY="${NIGHTLY_STAGES:-$DEFAULT_STAGES}"
+if [ "$ONLY" = all ]; then ONLY=''; fi
 FAILED=()
 
 stage() {
@@ -43,6 +44,10 @@ stage() {
 
 stage refresh        npm run refresh
 stage embed          npm run embed
+# The classifier attaches the latest committed, dated public evidence from
+# data/news. Acquisition runs hourly outside this writer lock; an unavailable
+# publisher cannot block capture here. A pending batch returns immediately and
+# is retrieved by a later poll invocation instead of holding this lock waiting.
 stage classify       npm run classify
 stage stories        npm run stories
 stage promote        npm run stories -- --auto-promote --retire
