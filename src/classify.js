@@ -4,6 +4,7 @@
 // only unresolved work. Batch manifests preserve the original dates, model,
 // taxonomy and request membership across restarts.
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import { anthropicClient, refreshIdentityToken } from './anthropic-auth.js';
 import { settings, daysAgoEt, writeJSON } from './util.js';
 import { loadState, saveState, loadDay, topicsPath, archivePath, archiveDates } from './store.js';
@@ -73,6 +74,13 @@ export function sourceMetadataChanged(previous, tweets) {
     const current = sourceContextStatus(post), observed = previous?.provenance?.[post.id]?.sourceContextObserved;
     return observed?.fingerprint !== current.fingerprint || (current.incomplete && previous?.needsContext?.[post.id] !== true);
   });
+}
+
+// A human correction or a removed source can settle a previously blocked ID
+// without selecting any inference work. Persist that diagnostic cleanup too.
+export function inputBlockMetadataChanged(previous, tweets) {
+  const pending = new Set(pendingIdsFor(tweets, previous));
+  return Object.keys(previous?.inputBlocks || {}).some((id) => !pending.has(id) || previous?.corrected?.[id]);
 }
 
 // Read one public-source snapshot per run. Request splitting below keeps
@@ -178,19 +186,30 @@ export function classificationExamples(tax, { warn = console.warn } = {}) {
   catch (e) { warn(`[classify] correction examples unavailable: ${e.message}`); return []; }
 }
 
-export function chunkRequests(items, tax, model, prefix = '', { examples = classificationExamples(tax), evidenceCap = 12, inputCharsCap = 120_000 } = {}) {
+export function planChunkRequests(items, tax, model, prefix = '', { examples = classificationExamples(tax), evidenceCap = 12, inputCharsCap = 120_000 } = {}) {
+  if (!Number.isSafeInteger(inputCharsCap) || inputCharsCap < 1) throw new Error('Classification input limit must be a positive integer');
+  const limit = Math.min(inputCharsCap, 120_000);
   const per = settings.classify.tweets_per_request || 40;
   const system = [{ type: 'text', text: systemPrompt(tax, { examples }), cache_control: { type: 'ephemeral' } }];
   const requests = [];
   const chunks = [];
+  const blocked = [];
   let chunk = [], evidenceCount = 0, inputChars = 0;
   for (const item of items) {
+    // Serialize once: the measured source and the submitted source must be
+    // identical, including complete quoted wording and escaped characters.
+    const line = classifierLine(item);
+    if (line.length > limit) {
+      blocked.push([item.id, { reason: 'input-too-large', inputChars: line.length, limit,
+        inputHash: createHash('sha256').update(line).digest('hex') }]);
+      continue;
+    }
     const count = item.evidence?.length || 0;
-    const chars = classifierLine(item).length + 1;
-    if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap || inputChars + chars > inputCharsCap)) {
+    if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap || inputChars + 1 + line.length > limit)) {
       chunks.push(chunk); chunk = []; evidenceCount = 0; inputChars = 0;
     }
-    chunk.push(item); evidenceCount += count; inputChars += chars;
+    inputChars += line.length + (chunk.length ? 1 : 0);
+    chunk.push(line); evidenceCount += count;
   }
   if (chunk.length) chunks.push(chunk);
   for (const [i, chunk] of chunks.entries()) {
@@ -202,10 +221,22 @@ export function chunkRequests(items, tax, model, prefix = '', { examples = class
         system,
         messages: [{
           role: 'user',
-          content: chunk.map(classifierLine).join('\n')
+          content: chunk.join('\n')
         }]
       }
     });
+  }
+  return { requests, inputBlocks: Object.fromEntries(blocked) };
+}
+
+// Existing callers must never silently lose an oversized source. The live,
+// nightly and range runners use the planner and persist its pending reason.
+export function chunkRequests(...args) {
+  const { requests, inputBlocks } = planChunkRequests(...args);
+  if (Object.keys(inputBlocks).length) {
+    const error = new Error(`Classification input too large for ${Object.keys(inputBlocks).join(', ')}; use planChunkRequests to retain pending diagnostics`);
+    error.inputBlocks = inputBlocks;
+    throw error;
   }
   return requests;
 }
@@ -245,7 +276,7 @@ export const INCIDENT_KINDS = new Set(['active shooter', 'shooting', 'wildfire',
 // Retain only complete, structurally valid records belonging to this exact
 // request. Partial success is useful: missing/rejected IDs remain retryable,
 // while unrelated IDs can never enter the corpus through a model response.
-export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}, contextVersions = {}, sourceContextByPost = {}, inputHash = null } = {}) {
+export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}, contextVersions = {}, sourceContextByPost = {}, quotedContextByPost = {}, inputHash = null } = {}) {
   if (!Array.isArray(expectedIds)) throw new Error('Classification response requires a request ID manifest');
   const expected = new Set(expectedIds);
   const counts = new Map();
@@ -284,8 +315,9 @@ export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}
     delete out.incidents[id];
     if (incident) out.incidents[id] = incident;
     const sourceContext = sourceContextByPost[id];
+    const quotedContext = quotedContextByPost[id];
     (out.provenance ||= {})[id] = { contextVersion: contextVersions[id] || 0, evidenceSupplied: supplied, evidenceUsed, inputHash,
-      ...(sourceContext ? { sourceContext } : {}) };
+      ...(sourceContext ? { sourceContext } : {}), ...(quotedContext ? { quotedContext } : {}) };
     (out.needsContext ||= {})[id] = sourceContext?.incomplete === true || a.needs_context === true;
     (out.echoedSubs ||= []).push(...echoed);
     accepted.add(id);
@@ -326,8 +358,8 @@ export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}
   return { acceptedIds: [...accepted], retryIds, errors };
 }
 
-export const emptyOut = () => ({ assignments: {}, incidents: {}, provenance: {}, needsContext: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [], echoedSubs: [], validationErrors: [], requestStatus: {} });
-export const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, provenance: o.provenance, needsContext: o.needsContext, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs, echoedSubs: o.echoedSubs, validationErrors: o.validationErrors, requestStatus: o.requestStatus });
+export const emptyOut = () => ({ assignments: {}, incidents: {}, provenance: {}, needsContext: {}, inputBlocks: {}, emergingMap: new Map(), failedChunks: 0, droppedSubs: [], echoedSubs: [], validationErrors: [], requestStatus: {} });
+export const finishOut = (o) => ({ assignments: o.assignments, incidents: o.incidents, provenance: o.provenance, needsContext: o.needsContext, inputBlocks: o.inputBlocks || {}, emerging: [...o.emergingMap.values()], failedChunks: o.failedChunks, droppedSubs: o.droppedSubs, echoedSubs: o.echoedSubs, validationErrors: o.validationErrors, requestStatus: o.requestStatus });
 
 // Stream a finished batch's results, grouped by the custom_id prefix before
 // "chunk-" (empty string for single-day batches). Returns {prefix → result}.
@@ -552,8 +584,15 @@ export function mergeDay(plan, result, { prior } = {}) {
   for (const id of plan.reconsiderIds || []) if (!previous.corrected?.[id]) settled.delete(id);
   for (const id of [...Object.keys(assignments), ...Object.keys(inherited)]) settled.add(id);
   const pendingIds = tweets.filter((t) => !settled.has(t.id)).map((t) => t.id);
+  const pending = new Set(pendingIds);
+  const priorInputBlocks = { ...previous.inputBlocks };
+  // A newly measured input may fit even when its provider call later fails.
+  // Keep it pending for that failure, without retaining a stale size diagnosis.
+  for (const id of plan.inputEvaluatedIds || []) delete priorInputBlocks[id];
+  const inputBlocks = Object.fromEntries(Object.entries({ ...priorInputBlocks, ...plan.inputBlocks, ...result.inputBlocks })
+    .filter(([id]) => sourceIds.has(id) && pending.has(id) && !previous.corrected?.[id]));
   return {
-    day: { date, assignments: merged, incidents, provenance, needsContext, contextVersion: Math.max(0, ...Object.values(provenance).map((p) => p.contextVersion || 0)), emerging, unclassified, pendingIds, complete: !pendingIds.length, anchored, failedChunks, droppedSubs, echoedSubs, validationErrors: result.validationErrors || [], requestStatus: result.requestStatus || {}, corrected: keepSource(previous.corrected) },
+    day: { date, assignments: merged, incidents, provenance, needsContext, inputBlocks, contextVersion: Math.max(0, ...Object.values(provenance).map((p) => p.contextVersion || 0)), emerging, unclassified, pendingIds, complete: !pendingIds.length, anchored, failedChunks, droppedSubs, echoedSubs, validationErrors: result.validationErrors || [], requestStatus: result.requestStatus || {}, corrected: keepSource(previous.corrected) },
     stats: {
       classified: Object.keys(assignments).length,
       inherited: Object.keys(inherited).length,
@@ -579,6 +618,7 @@ export function writeDay(plan, result, model, { pathFor = topicsPath, write = wr
     incidents: day.incidents,
     provenance: day.provenance,
     needsContext: day.needsContext,
+    inputBlocks: day.inputBlocks,
     contextVersion: day.contextVersion,
     emerging: day.emerging,
     unclassified: day.unclassified,
@@ -654,7 +694,7 @@ async function runClassificationUnlocked({
       return remainingPlan(pl, previous, { reconsiderIds: [...new Set([
         ...newsReconsideration(previous, pl.toClassify, newsStore, { tax }), ...sourceReconsideration(previous, pl.toClassify)
       ])] });
-    }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous) || sourceMetadataChanged(pl.previous, pl.tweets));
+    }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous) || sourceMetadataChanged(pl.previous, pl.tweets) || inputBlockMetadataChanged(pl.previous, pl.tweets));
     const unfinished = plans.map((pl) => pl.date);
     if (!plans.length) {
       if (legacy?.batchId && queue.completed[legacy.batchId] && onLegacyComplete && !dryRun) await onLegacyComplete(legacy.batchId);
@@ -665,10 +705,15 @@ async function runClassificationUnlocked({
     for (const pl of plans) {
       pl.toClassify = await hints(pl.toClassify, tax);
       ({ items: pl.toClassify, contextVersion: pl.contextVersion } = await evidence(pl.toClassify));
-      requests.push(...chunkRequests(pl.toClassify, tax, model, `${pl.date}_`));
+      pl.inputEvaluatedIds = pl.toClassify.map((item) => item.id);
+      const chunkPlan = planChunkRequests(pl.toClassify, tax, model, `${pl.date}_`);
+      pl.inputBlocks = chunkPlan.inputBlocks;
+      requests.push(...chunkPlan.requests);
     }
+    // Record blocked input before authentication or batch submission. A later
+    // resume uses the exact paid manifest while these other IDs stay pending.
+    for (const pl of plans) publishCurrent(pl, finishOut(emptyOut()), model);
     if (!requests.length) {
-      for (const pl of plans) publishCurrent(pl, finishOut(emptyOut()), model);
       return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', dates: unfinished };
     }
     client ||= await clientFactory();

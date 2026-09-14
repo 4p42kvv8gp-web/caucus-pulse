@@ -5,7 +5,7 @@ import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, daysAgoEt, writeJSON, p } from './util.js';
 import { loadTaxonomy } from './taxonomy.js';
 import { loadDay, topicsPath, archiveDates } from './store.js';
-import { chunkRequests, classifySync, planDay, remainingPlan, pendingIdsFor, writeDay, readClassificationFile, mergeEmerging, emptyOut, finishOut, withCandidates, hintedCount, withEvidence, newsReconsideration, sourceReconsideration, sourceMetadataChanged, makeRepostResolver } from './classify.js';
+import { planChunkRequests, classifySync, planDay, remainingPlan, pendingIdsFor, writeDay, readClassificationFile, mergeEmerging, emptyOut, finishOut, withCandidates, hintedCount, withEvidence, newsReconsideration, sourceReconsideration, sourceMetadataChanged, inputBlockMetadataChanged, makeRepostResolver } from './classify.js';
 import { loadNews } from './news-context.js';
 import { readQueue, queuePath, withQueueLock } from './classification-queue.js';
 import { quotedResolver } from './quoted.js';
@@ -36,7 +36,7 @@ function interpretationTime(file) {
 // Observations are separate from model-submitted sources: recording that an
 // original arrived cannot imply an earlier model already read it.
 export function combineInterpretations(live, nightly) {
-  const combined = { ...live, assignments: { ...live?.assignments }, incidents: { ...live?.incidents }, provenance: { ...live?.provenance }, needsContext: { ...live?.needsContext }, corrected: { ...live?.corrected }, emerging: [...(live?.emerging || [])] };
+  const combined = { ...live, assignments: { ...live?.assignments }, incidents: { ...live?.incidents }, provenance: { ...live?.provenance }, needsContext: { ...live?.needsContext }, corrected: { ...live?.corrected }, inputBlocks: { ...nightly?.inputBlocks, ...live?.inputBlocks }, emerging: [...(live?.emerging || [])] };
   const pending = new Set([...(live?.pendingIds || []), ...(live?.unclassified || [])]);
   const nightlyPending = new Set([...(nightly?.pendingIds || []), ...(nightly?.unclassified || [])]);
   const authoritative = new Set();
@@ -54,6 +54,7 @@ export function combineInterpretations(live, nightly) {
     if (!nightly.corrected?.[id] && (live?.corrected?.[id] || (liveCompleted
       && ((liveProvenance?.contextVersion || 0) > (nightlyProvenance?.contextVersion || 0) || newerSourceInterpretation)))) continue;
     combined.assignments[id] = topics;
+    delete combined.inputBlocks[id];
     authoritative.add(id);
     delete combined.incidents[id];
     if (nightly.incidents?.[id]) combined.incidents[id] = nightly.incidents[id];
@@ -84,6 +85,7 @@ async function classifyLiveUnlocked(records, {
   queueFile = queuePath,
   client = null, clientFactory = anthropicClient, refresh,
   maxPosts = Number(process.env.CLASSIFY_LIVE_MAX_POSTS || 120),
+  requestOptions = {},
   now = () => new Date().toISOString(), warn = console.warn
 } = {}) {
   const inBatch = new Set(readQueue(queueFile).jobs.flatMap((job) => Object.values(job.manifest).flatMap((entry) => entry.ids)));
@@ -99,7 +101,7 @@ async function classifyLiveUnlocked(records, {
   }
   const allIds = new Set([...byDate.values()].flatMap((posts) => [...posts.keys()]));
   const plans = [];
-  let capacity = Number.isFinite(maxPosts) ? Math.max(0, Math.floor(maxPosts)) : 120;
+  const capacity = Number.isFinite(maxPosts) ? Math.max(0, Math.floor(maxPosts)) : 120;
   for (const date of selectedDates) {
     const tweets = [...byDate.get(date).values()];
     const completePlan = planDay(date, { tax, tweets, prior, resolve, resolveRepost });
@@ -108,13 +110,20 @@ async function classifyLiveUnlocked(records, {
       ...sourceReconsideration(existing.get(date), completePlan.toClassify)
     ])];
     if (!pendingIdsFor(tweets, existing.get(date)).length && !reconsiderIds.length
-      && !sourceMetadataChanged(existing.get(date), completePlan.tweets)) continue;
+      && !sourceMetadataChanged(existing.get(date), completePlan.tweets)
+      && !inputBlockMetadataChanged(existing.get(date), completePlan.tweets)) continue;
     const pl = remainingPlan(completePlan, existing.get(date), { reconsiderIds });
     const deferred = pl.toClassify.filter((t) => t.type === 'retweet' && allIds.has(t.refId));
     const deferredIds = new Set(deferred.map((t) => t.id));
     pl.deferred.push(...deferred);
-    pl.toClassify = pl.toClassify.filter((t) => !deferredIds.has(t.id) && !inBatch.has(t.id)).slice(0, capacity);
-    capacity -= pl.toClassify.length;
+    pl.toClassify = pl.toClassify.filter((t) => !deferredIds.has(t.id) && !inBatch.has(t.id));
+    // Reject an oversized source before enrichment and before consuming the
+    // per-poll inference allowance. It stays pending with a source-specific
+    // diagnostic, while later ordinary sources can still be processed.
+    const sizing = planChunkRequests(pl.toClassify, tax, model, 'live_', { ...requestOptions, examples: [] });
+    pl.inputBlocks = sizing.inputBlocks;
+    pl.inputEvaluatedIds = Object.keys(sizing.inputBlocks);
+    pl.toClassify = pl.toClassify.filter((t) => !Object.hasOwn(pl.inputBlocks, t.id));
     plans.push(pl);
   }
   if (!plans.length) return null;
@@ -134,16 +143,23 @@ async function classifyLiveUnlocked(records, {
   let out = finishOut(emptyOut());
   publish(out); // Record pending IDs before attempting authentication or inference.
   let items = [];
-  if (enabled && configured()) {
+  if (enabled && configured() && capacity > 0) {
     try {
       for (const pl of plans) {
         pl.toClassify = await hints(pl.toClassify, tax);
         ({ items: pl.toClassify, contextVersion: pl.contextVersion } = await evidence(pl.toClassify));
+        const sizing = planChunkRequests(pl.toClassify, tax, model, 'live_', { ...requestOptions, examples: [] });
+        pl.inputEvaluatedIds = [...new Set([...pl.inputEvaluatedIds, ...pl.toClassify.map((item) => item.id)])];
+        Object.assign(pl.inputBlocks, sizing.inputBlocks);
+        pl.toClassify = pl.toClassify.filter((t) => !Object.hasOwn(pl.inputBlocks, t.id));
       }
-      items = plans.flatMap((pl) => pl.toClassify);
+      items = plans.flatMap((pl) => pl.toClassify).slice(0, capacity);
+      const chosen = new Set(items.map((item) => item.id));
+      for (const pl of plans) pl.toClassify = pl.toClassify.filter((item) => chosen.has(item.id));
+      publish(out); // persist enriched-input blocks before any provider call
       if (items.length) {
-        client ||= await clientFactory();
-        const requests = chunkRequests(items, tax, model, 'live_');
+        const { requests } = planChunkRequests(items, tax, model, 'live_', requestOptions);
+        if (requests.length) client ||= await clientFactory();
         out = await classifySync(client, requests, tax, { ...(refresh ? { refresh } : {}), onResult: (partial) => { out = partial; publish(partial); }, log: warn });
       }
     } catch (e) { warn(`[classify-live] work remains pending: ${e.message}`); }

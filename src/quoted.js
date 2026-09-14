@@ -12,7 +12,7 @@
 //   3. the archive — the quoted post may be a caucus post we already hold
 //      (a member quoting another member), with its 24h metrics in
 //      data/metrics/ when the refresh has run.
-// Every path returns the same shape: {id, authorId, handle, text, metrics}
+// Every path returns {id, authorId, handle, text, createdAt, metrics}
 // with metrics {likes, retweets, replies, quotes, impressions?}; null when
 // nothing is known. Retweets are not quotes — their original is inherited
 // by the classifier, not read as context — so they resolve to null.
@@ -37,6 +37,10 @@ export function saveQuoted(quoted) {
 }
 
 const METRIC_KEYS = ['likes', 'retweets', 'replies', 'quotes', 'impressions'];
+const object = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+const numericId = (value) => typeof value === 'string' && /^\d{1,25}$/.test(value);
+const textPresent = (value) => typeof value === 'string' && value.trim().length > 0;
+const knownDate = (value) => typeof value === 'string' && Number.isFinite(Date.parse(value)) ? value : null;
 function pickMetrics(m) {
   const out = {};
   for (const k of METRIC_KEYS) if (m && typeof m[k] === 'number') out[k] = m[k];
@@ -44,11 +48,16 @@ function pickMetrics(m) {
 }
 
 function shape(id, src) {
+  // Legacy embedded/cache records omitted their ID; their matched reference
+  // supplies it. An explicit conflicting ID cannot be relabeled as this source.
+  if (!numericId(id) || !object(src) || src.unavailable === true || !textPresent(src.text)
+    || (src.id != null && src.id !== id)) return null;
   return {
     id,
-    authorId: src.authorId ?? null,
+    authorId: typeof src.authorId === 'string' && src.authorId.trim() ? src.authorId : null,
     handle: src.handle ?? null,
-    text: src.text ?? '',
+    text: src.text,
+    createdAt: knownDate(src.createdAt),
     metrics: pickMetrics(src.metrics)
   };
 }
@@ -97,24 +106,22 @@ export function archiveMetrics({ readMetrics = (date) => readJSON(metricsPath(da
 // metrics). Prefer quotedResolver() when resolving many posts: it builds the
 // deps once and caches the day files it reads.
 export function quotedContext(post, deps = {}) {
-  if (!post || !QUOTABLE.has(post.type) || !post.refId) return null;
-  if (post.quoted && typeof post.quoted === 'object') return shape(post.refId, post.quoted);
+  if (!post || !QUOTABLE.has(post.type) || !numericId(post.refId)) return null;
+  const embedded = shape(post.refId, post.quoted);
+  if (embedded) return embedded;
 
   const store = deps.quoted ?? loadQuoted();
-  const entry = store[post.refId];
-  if (entry && !entry.unavailable) return shape(post.refId, entry);
+  const entry = Object.hasOwn(store, post.refId) ? shape(post.refId, store[post.refId]) : null;
+  if (entry) return entry;
 
   const archive = deps.archive ?? archiveLookup();
   const orig = archive(post.refId);
-  if (!orig) return null;
+  const original = shape(post.refId, orig);
+  if (!original) return null;
   const authorsById = deps.authorsById ?? loadAuthors().byId;
   const metricsFor = deps.metricsFor ?? archiveMetrics();
-  return shape(post.refId, {
-    authorId: orig.authorId,
-    handle: authorsById[orig.authorId]?.handle ?? null,
-    text: orig.text,
-    metrics: metricsFor(orig)
-  });
+  return { ...original, handle: authorsById[orig.authorId]?.handle ?? original.handle,
+    metrics: pickMetrics(metricsFor(orig)) };
 }
 
 // post → context, with every source loaded once for the run.
@@ -128,15 +135,16 @@ export function quotedResolver(deps = {}) {
   return (post) => quotedContext(post, shared);
 }
 
-// The classifier's view of a context: what it needs to judge the subject
-// and its reach, nothing else. Text is capped so a long quoted thread does
-// not crowd out the post itself; impressions are given only when known (an
-// archived original that has not had its 24h refresh has none, and 0 would
-// read as "no reach").
-export const QUOTING_TEXT_MAX = 400;
+// The classifier receives the full captured wording and the original's own
+// identity/date. Request batching bounds inputs without silently removing the
+// end of a source. Unknown original dates are not replaced by the quote date.
+// Impressions are supplied only when known; provider envelopes stay outside
+// the model input.
 export function quotingFor(ctx) {
-  if (!ctx) return null;
-  const out = { handle: ctx.handle ?? null, text: String(ctx.text ?? '').slice(0, QUOTING_TEXT_MAX) };
+  if (!object(ctx) || ctx.unavailable === true || !textPresent(ctx.text)) return null;
+  const out = { id: numericId(ctx.id) ? ctx.id : null,
+    authorId: typeof ctx.authorId === 'string' && ctx.authorId.trim() ? ctx.authorId : null,
+    handle: ctx.handle ?? null, text: ctx.text, createdAt: knownDate(ctx.createdAt) };
   if (typeof ctx.metrics?.impressions === 'number') out.impressions = ctx.metrics.impressions;
   return out;
 }
