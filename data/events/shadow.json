@@ -934,7 +934,7 @@
     "2099526917690892520",
     "2099514645480419802"
    ],
-   "status": "response-saved",
+   "status": "partial",
    "attempts": 1,
    "plannedAt": "2026-09-14T19:56:55.555Z",
    "submittedAt": "2026-09-14T19:57:24.318Z",
@@ -974,7 +974,19 @@
      "inference_geo": "global"
     }
    },
-   "respondedAt": "2026-09-14T19:57:36.800Z"
+   "respondedAt": "2026-09-14T19:57:36.800Z",
+   "validation": {
+    "valid": false,
+    "events": [],
+    "errors": [
+     {
+      "code": "invalid-response-content"
+     }
+    ],
+    "unresolved": [],
+    "assignments": []
+   },
+   "validatedAt": "2026-09-14T19:57:38.299Z"
   }
  },
  "events": [],
