@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T21:30:40.531Z",
+ "classifiedAt": "2026-09-14T22:02:54.604Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -79,6 +79,10 @@
    [
     "congress-politics",
     "elections-2026"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2099359393355600281": [
@@ -101,8 +105,8 @@
   ],
   "2099452207665906073": [
    [
-    "labor",
-    null
+    "economy",
+    "jobs-wages"
    ]
   ],
   "2099471129777668544": [
@@ -462,10 +466,6 @@
    [
     "budget-appropriations",
     "snap-benefits"
-   ],
-   [
-    "constituent-services",
-    null
    ]
   ],
   "2099505238931574922": [
@@ -564,10 +564,6 @@
    [
     "congress-politics",
     "elections-2026"
-   ],
-   [
-    "democracy",
-    "voting-rights"
    ]
   ],
   "2099511522942689550": [
@@ -981,10 +977,6 @@
    [
     "congress-politics",
     "town-halls"
-   ],
-   [
-    "constituent-services",
-    null
    ]
   ],
   "2099530356831514645": [
@@ -1077,6 +1069,10 @@
    [
     "democracy",
     "corruption-ethics"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2099539996164137236": [
@@ -2779,154 +2775,271 @@
     "budget-appropriations",
     "snap-benefits"
    ]
+  ],
+  "2099611339199033820": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2099611399186239926": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2099611720045989927": [
+   [
+    "foreign-policy",
+    "china"
+   ],
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2099611835544514834": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2099611938099454044": [
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2099612236255985787": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2099612489738547224": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2099612577336553896": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2099612875811610853": [
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2099613174370562328": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
+   ]
+  ],
+  "2099613275457564882": [
+   [
+    "climate",
+    "epa-rollbacks"
+   ]
+  ],
+  "2099613418168693197": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2099613460778676633": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "civil-rights",
+    null
+   ]
+  ],
+  "2099613583185248730": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "labor",
+    "federal-workforce"
+   ]
+  ],
+  "2099613922751914148": [],
+  "2099614157892907387": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2099614192080683100": [
+   [
+    "immigration",
+    null
+   ]
+  ],
+  "2099614315653300263": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "tech",
+    "big-tech"
+   ]
+  ],
+  "2099614699608314009": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2099614870945530024": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2099615522212192636": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2099615568626102440": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2099615935887753603": [
+   [
+    "reproductive-rights",
+    "abortion-access"
+   ]
+  ],
+  "2099615956871909673": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2099616677553950782": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2099616702572961903": [
+   [
+    "climate",
+    "epa-rollbacks"
+   ]
+  ],
+  "2099617637630177379": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2099618068133552307": [],
+  "2099618244965363881": [
+   [
+    "climate",
+    "epa-rollbacks"
+   ],
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2099618313026277791": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2099618411349184732": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2099618715243274362": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "budget-appropriations",
+    "social-security"
+   ]
+  ],
+  "2099619115103035830": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2099619224427593951": [
+   [
+    "foreign-policy",
+    null
+   ],
+   [
+    "labor",
+    "federal-workforce"
+   ]
   ]
  },
  "incidents": {
-  "2099500624953889071": {
-   "kind": "infrastructure failure",
-   "place": "Norwalk, CT",
-   "name": null
-  },
   "2099515971211817257": {
    "kind": "industrial accident",
    "place": "Miami, FL",
    "name": null
+  },
+  "2099500624953889071": {
+   "kind": "flooding",
+   "place": "Norwalk, CT",
+   "name": null
   }
  },
  "provenance": {
-  "2099353778470482251": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099322718084800699",
-    "fingerprint": "65064ccc4cdc45177dcd16308f396af4c65fb0e53bc7e6f5cdd78342f30be24d"
-   }
-  },
-  "2099353953653981248": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099319362809393547",
-    "fingerprint": "6bf42085c5c3242adba8eade6c35f3d657358b3c70d74a3fd10bfd269ad95982"
-   }
-  },
-  "2099359393355600281": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_c260e4cab8c6d48b",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
-     "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
-     "title": "Trump’s plan to halve FEMA workforce illegal, judge rules",
-     "publishedAt": "2026-09-12T21:56:57.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099347931530740157",
-    "fingerprint": "744bdbbf90c7c6744088cca82cabe2846834ff32f79fee98af030959d712d12a"
-   }
-  },
-  "2099368567539991032": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099301181428273618",
-    "fingerprint": "d6a54615bcc5fd7aab01929e0cf1387418ac6c0a5d10a564ef8d598bffa7e66b"
-   }
-  },
-  "2099450301681991761": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099239046467793361",
-    "fingerprint": "a8c1673ff3977b0d20babbbfcd88398a87a05aae87ed250b16ade25fc2d15521"
-   }
-  },
-  "2099452207665906073": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099282941021167909",
-    "fingerprint": "7b3cb78c8f60022dcd8238724751f83ba0d246a26a5da87f9f245bb8ef23f5ee"
-   }
-  },
-  "2099471129777668544": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_f5ad5fc52010f3b2",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6086761-jeffries-urges-ai-regulation/",
-     "text": "Jeffries says Congress should ‘act urgently’ on AI safeguards",
-     "title": "Jeffries says Congress should ‘act urgently’ on AI safeguards",
-     "publishedAt": "2026-09-13T15:13:25.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_024d7e27c814b2cd",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6086866-jeffries-trump-impeachment-possibility/",
-     "text": "Jeffries does not rule out pursuing Trump impeachment if Democrats win House",
-     "title": "Jeffries does not rule out pursuing Trump impeachment if Democrats win House",
-     "publishedAt": "2026-09-13T18:10:57.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_f5ad5fc52010f3b2"
-   ],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099377750989545890",
-    "fingerprint": "fd47e26d45ae54e9ccb766b65f44855cc7c4db687e5d3163826122c52cfdec3d"
-   }
-  },
   "2099476447689584944": {
    "contextVersion": 5,
    "evidenceSupplied": [],
@@ -3320,18 +3433,6 @@
    "evidenceUsed": [],
    "inputHash": "28250dc26d50c9e3cda7b3e920d5fd40428a66a17eae2c7bc8beff0d66db62bb"
   },
-  "2099491286571250149": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "28250dc26d50c9e3cda7b3e920d5fd40428a66a17eae2c7bc8beff0d66db62bb",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099327143427690552",
-    "fingerprint": "f1c4aebb96df0b41d5277e611800367bbd9d84e440c6d0babf821713c7940280"
-   }
-  },
   "2099491963720421759": {
    "contextVersion": 5,
    "evidenceSupplied": [],
@@ -3494,18 +3595,6 @@
    "evidenceUsed": [],
    "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
   },
-  "2099500624953889071": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099167548684087801",
-    "fingerprint": "ad576a366f9f1284c932bf5a4e60b66fd558fa8ff8073b00511b1bfa65d6ea30"
-   }
-  },
   "2099501481925685670": {
    "contextVersion": 5,
    "evidenceSupplied": [],
@@ -3566,35 +3655,11 @@
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
   },
-  "2099504499681313151": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2094875476896485661",
-    "fingerprint": "d1c3995ea7057ea2a5df08c92c056ff357875d6759c873c51e68a0592966fdf1"
-   }
-  },
   "2099505238931574922": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
-  },
-  "2099505805120704946": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2072372201928712394",
-    "fingerprint": "cc0c9e1f8abba81255cec23632d8f5f4c96ffdaf19fa2ae8eea000d993147d7e"
-   }
   },
   "2099505888604176692": {
    "contextVersion": 5,
@@ -3752,34 +3817,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
-  },
-  "2099511273570422928": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_4fcbd04c74a83a02",
-     "publisher": "The New York Times",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/13/us/politics/tom-tiffany-wisconsin-lake-wausau-plane-crash.html",
-     "text": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
-     "title": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
-     "publishedAt": "2026-09-13T13:53:05.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099237934545199349",
-    "fingerprint": "83c322c598ebf2b0a8a17b57fc89dccce2620d6fdf6e0f70abe40eb1789fd2cd"
-   }
   },
   "2099511522942689550": {
    "contextVersion": 5,
@@ -4433,18 +4470,6 @@
    "evidenceUsed": [],
    "inputHash": "960518f3d0791ea69450b131ce0fa655da29c7b1cff5f127d93cf0c8b1718d3b"
   },
-  "2099530209594671320": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "960518f3d0791ea69450b131ce0fa655da29c7b1cff5f127d93cf0c8b1718d3b",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2086512835790578039",
-    "fingerprint": "a1471d8b9aee3268ca57ef8a9540943358e72738850bf885af2ab52d998148de"
-   }
-  },
   "2099530356831514645": {
    "contextVersion": 5,
    "evidenceSupplied": [],
@@ -4526,34 +4551,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8"
-  },
-  "2099539816975052976": {
-   "contextVersion": 6,
-   "evidenceSupplied": [
-    {
-     "id": "n_4a11200196924fd7",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
-     "title": "At the Races: Defiant in Dallas",
-     "publishedAt": "2026-09-10T14:45:00.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099118615584797138",
-    "fingerprint": "d65566c5fab16d430e01c1387ab817411970a8ac6117b846d9471679d6f71f8f"
-   }
   },
   "2099539996164137236": {
    "contextVersion": 6,
@@ -8907,16 +8904,1143 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "7b14473c6ec9eaddbe93f258e0af1384c8f0b59381eda7c5088c14700ffd189d"
+  },
+  "2099353778470482251": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099322718084800699",
+    "fingerprint": "d4bf5a0bbf6d956aa1611f4df825524cb4753bbaf0bcf02ab6ca310c95ae9966"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099322718084800699",
+    "fingerprint": "d4bf5a0bbf6d956aa1611f4df825524cb4753bbaf0bcf02ab6ca310c95ae9966"
+   }
+  },
+  "2099353953653981248": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099319362809393547",
+    "fingerprint": "b4c7523ad10db3e2a5385d62535168d8871777c1c229c4b2510d7ec609a4e373"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099319362809393547",
+    "fingerprint": "b4c7523ad10db3e2a5385d62535168d8871777c1c229c4b2510d7ec609a4e373"
+   }
+  },
+  "2099359393355600281": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c260e4cab8c6d48b",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
+     "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "title": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "publishedAt": "2026-09-12T21:56:57.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099347931530740157",
+    "fingerprint": "ae147043ab14f2bea9a99494ba6737ca88ea9e454cffd02162122de47738fde7"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099347931530740157",
+    "fingerprint": "ae147043ab14f2bea9a99494ba6737ca88ea9e454cffd02162122de47738fde7"
+   }
+  },
+  "2099368567539991032": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099301181428273618",
+    "fingerprint": "d70d477eb9709c503fd47aabdff2e567c2402548f2f9c3d014f073d00fc4819d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099301181428273618",
+    "fingerprint": "d70d477eb9709c503fd47aabdff2e567c2402548f2f9c3d014f073d00fc4819d"
+   }
+  },
+  "2099450301681991761": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099239046467793361",
+    "fingerprint": "917dad086554acc2e932f19ebc51d84b5748164b59092df734f84ecec156977a"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099239046467793361",
+    "fingerprint": "917dad086554acc2e932f19ebc51d84b5748164b59092df734f84ecec156977a"
+   }
+  },
+  "2099452207665906073": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "87f752e5086485d91ddb974078b073664118a862d9fa0b9507990eaed3813f61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099282941021167909",
+    "fingerprint": "14f36b0e5b7eaee5b4ed4af0bbe2bdefaf4ba8f21ce765a867cdc38ee8723e39"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099282941021167909",
+    "fingerprint": "14f36b0e5b7eaee5b4ed4af0bbe2bdefaf4ba8f21ce765a867cdc38ee8723e39"
+   }
+  },
+  "2099471129777668544": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_f5ad5fc52010f3b2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6086761-jeffries-urges-ai-regulation/",
+     "text": "Jeffries says Congress should ‘act urgently’ on AI safeguards",
+     "title": "Jeffries says Congress should ‘act urgently’ on AI safeguards",
+     "publishedAt": "2026-09-13T15:13:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_024d7e27c814b2cd",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6086866-jeffries-trump-impeachment-possibility/",
+     "text": "Jeffries does not rule out pursuing Trump impeachment if Democrats win House",
+     "title": "Jeffries does not rule out pursuing Trump impeachment if Democrats win House",
+     "publishedAt": "2026-09-13T18:10:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_f5ad5fc52010f3b2"
+   ],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099377750989545890",
+    "fingerprint": "084c67dbb0d570dc798ef3ac763551342f65dee8ee2dfbf18e6748e3036bab89"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099377750989545890",
+    "fingerprint": "084c67dbb0d570dc798ef3ac763551342f65dee8ee2dfbf18e6748e3036bab89"
+   }
+  },
+  "2099491286571250149": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099327143427690552",
+    "fingerprint": "06ec059dccca9bc090cb2decf3f0f6f0360bcf6502d652460e023845fb5cb272"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099327143427690552",
+    "fingerprint": "06ec059dccca9bc090cb2decf3f0f6f0360bcf6502d652460e023845fb5cb272"
+   }
+  },
+  "2099500624953889071": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099167548684087801",
+    "fingerprint": "9e979a99b5686b1c6291bab5b772ed8a9c533cfb00b3d7d2ee545d30db962641"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099167548684087801",
+    "fingerprint": "9e979a99b5686b1c6291bab5b772ed8a9c533cfb00b3d7d2ee545d30db962641"
+   }
+  },
+  "2099504499681313151": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2094875476896485661",
+    "fingerprint": "d8b7349225689548127971d1bc41c17640b5d046bbaf8e4d654a61069054c788"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2094875476896485661",
+    "fingerprint": "d8b7349225689548127971d1bc41c17640b5d046bbaf8e4d654a61069054c788"
+   }
+  },
+  "2099505805120704946": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2072372201928712394",
+    "fingerprint": "07fcaf09df39254e45b1bac28d18f21820d1012846741e6a4515db94e634d381"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2072372201928712394",
+    "fingerprint": "07fcaf09df39254e45b1bac28d18f21820d1012846741e6a4515db94e634d381"
+   }
+  },
+  "2099511273570422928": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_4fcbd04c74a83a02",
+     "publisher": "The New York Times",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/13/us/politics/tom-tiffany-wisconsin-lake-wausau-plane-crash.html",
+     "text": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
+     "title": "Tom Tiffany, Wisconsin Representative, Sustains Minor Injuries After Plane Lands in Lake",
+     "publishedAt": "2026-09-13T13:53:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099237934545199349",
+    "fingerprint": "cb16b8eb2558f00c70ceba4a901890288d95b1d73c356661c05c67cf73060c82"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099237934545199349",
+    "fingerprint": "cb16b8eb2558f00c70ceba4a901890288d95b1d73c356661c05c67cf73060c82"
+   }
+  },
+  "2099530209594671320": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2086512835790578039",
+    "fingerprint": "7e4c7ae8101a5b9c7056104d704e8629d9d830eef2832154deb195348812c70c"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2086512835790578039",
+    "fingerprint": "7e4c7ae8101a5b9c7056104d704e8629d9d830eef2832154deb195348812c70c"
+   }
+  },
+  "2099539816975052976": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_105aa55ba1996123",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5964863/politics-chat-trumps-5-000-promise-to-voters-vance-invokes-charlie-kirk",
+     "text": "AYESHA RASCOE, HOST: On his way to Ireland Friday night, President Trump talked to reporters about his two-day Republican midterm convention in Dallas. (SOUNDBITE OF ARCHIVED RECORDING) PRESIDENT DONALD TRUMP: I would call it the convention, although you could call it midterm. But whether it was midterm or not - it was certainly midterm. But it was a tremendous success. It was packed. RASCOE: Fact check - it was not packed. There were a lot of empty seats. Joining me now is NPR senior national political correspondent Mara Liasson. Good morning, Mara. MARA LIASSON, BYLINE: Good morning. RASCOE…",
+     "title": "Politics chat: Trump's $5,000 promise to voters, Vance invokes Charlie Kirk",
+     "publishedAt": "2026-09-13T12:04:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_54b1cf1dac0931be",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085955-trump-ireland-reunification-comments/",
+     "text": "Trump says a unified Ireland is ‘going to happen eventually’",
+     "title": "Trump says a unified Ireland is ‘going to happen eventually’",
+     "publishedAt": "2026-09-12T12:51:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099118615584797138",
+    "fingerprint": "fee4930d90562b8ffacf6821ff51ca36f00d8ae25b0edd56e77421cb0206f42d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099118615584797138",
+    "fingerprint": "fee4930d90562b8ffacf6821ff51ca36f00d8ae25b0edd56e77421cb0206f42d"
+   }
+  },
+  "2099611339199033820": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "title": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c4106f38f9529342",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
+     "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "title": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "publishedAt": "2026-09-14T18:03:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8bc96534ce69b582",
+    "n_c4106f38f9529342"
+   ],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "quotedContext": {
+    "id": "2099456585651175840",
+    "authorId": "14606079",
+    "handle": "propublica",
+    "createdAt": "2026-09-14T11:13:50.000Z",
+    "textChars": 179,
+    "textHash": "0bf2a113e205c763c1ee433b89a2bfe8bf77a377773d9ddbb6849a827ea150c5"
+   }
+  },
+  "2099611399186239926": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2098433425359151580",
+    "fingerprint": "d43eddfbe5058108e99369ba2c6e9513865c6c9158745c5d3e61adfaa4490330"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2098433425359151580",
+    "fingerprint": "d43eddfbe5058108e99369ba2c6e9513865c6c9158745c5d3e61adfaa4490330"
+   }
+  },
+  "2099611720045989927": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_47ec0deeb8557046",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085912-trump-permits-chinese-automakers-us-manufacturing/",
+     "text": "Trump says he would allow Chinese automakers to build cars in US",
+     "title": "Trump says he would allow Chinese automakers to build cars in US",
+     "publishedAt": "2026-09-12T12:01:30.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099611835544514834": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "title": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c4106f38f9529342",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
+     "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "title": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "publishedAt": "2026-09-14T18:03:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8bc96534ce69b582"
+   ],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099611739016863971",
+    "fingerprint": "ca52a6e1d0d695d5761627dd049263de23082684a5ce33a241a48e65b03b9c8b"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099611739016863971",
+    "fingerprint": "ca52a6e1d0d695d5761627dd049263de23082684a5ce33a241a48e65b03b9c8b"
+   }
+  },
+  "2099611938099454044": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099593460051288396",
+    "fingerprint": "b5806e0368c299b0ea6c7d64f146f83dea9efd27fce967e53c4d2e2f7ae5de93"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099593460051288396",
+    "fingerprint": "b5806e0368c299b0ea6c7d64f146f83dea9efd27fce967e53c4d2e2f7ae5de93"
+   }
+  },
+  "2099612236255985787": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_32103b358223c1b2",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/12/nx-s1-5952234/charlie-kirk-death-doxing",
+     "text": "A week into fall semester at Utah Valley University in Orem, Utah, the campus's grassy, terraced courtyard bakes under the heat of full late August sunlight. The sound of trickling water from a fountain that meanders through the space beckons students to stop, chat and unwind. But Collin Grannis, who graduated over the summer, said the space hasn't had much activity since Charlie Kirk was assassinated there last year.",
+     "title": "Neighbor turned on neighbor after Charlie Kirk's killing. Is the divide here to stay?",
+     "publishedAt": "2026-09-12T09:00:00.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "version": 2,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099612489738547224": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099612577336553896": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099612875811610853": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099585839097323696",
+    "fingerprint": "3b714c991ef85e49846c9d4014f041d9830d4d2dd1efff9d0db92493684abe25"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099585839097323696",
+    "fingerprint": "3b714c991ef85e49846c9d4014f041d9830d4d2dd1efff9d0db92493684abe25"
+   }
+  },
+  "2099613174370562328": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099613275457564882": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "92288c66e02e77d497d7342685cd33f78ddb58dc225b14fb211899e327122dfc"
+  },
+  "2099613418168693197": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "title": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c4106f38f9529342",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
+     "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "title": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "publishedAt": "2026-09-14T18:03:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8bc96534ce69b582",
+    "n_c4106f38f9529342"
+   ],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099613174731546647",
+    "fingerprint": "b12d0a43535103a86b4289ab4f32d7fd71dc654434cb6af7f55554b5b923848d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099613174731546647",
+    "fingerprint": "b12d0a43535103a86b4289ab4f32d7fd71dc654434cb6af7f55554b5b923848d"
+   }
+  },
+  "2099613460778676633": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099586696543183215",
+    "fingerprint": "91f8caef4123b124ac74e4f34ca3cf3e2f10e58229bdfcec0270ef971cc14393"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099586696543183215",
+    "fingerprint": "91f8caef4123b124ac74e4f34ca3cf3e2f10e58229bdfcec0270ef971cc14393"
+   }
+  },
+  "2099613583185248730": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099613922751914148": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099614157892907387": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_b58ef0b117a289b5",
+     "publisher": "Politico",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/14/hochuls-how-to-guide-to-stopping-ice-01075287",
+     "text": "Hochul’s how-to guide to stopping ICE",
+     "title": "Hochul’s how-to guide to stopping ICE",
+     "publishedAt": "2026-09-14T21:03:18.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099614192080683100": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_2d6239c6629eb761",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6088483-manchin-susan-collins-senate/",
+     "text": "Manchin endorses Collins in Maine Senate race",
+     "title": "Manchin endorses Collins in Maine Senate race",
+     "publishedAt": "2026-09-14T17:17:46.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099614315653300263": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "title": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "title": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bf977cbc37be9141"
+   ],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "quotedContext": {
+    "id": "2099553702952513873",
+    "authorId": "1275254687797739521",
+    "handle": "Reporter_Mia",
+    "createdAt": "2026-09-14T17:39:45.000Z",
+    "textChars": 351,
+    "textHash": "4295bcc88aa2cd57516ddaf98d66dac9bc21d7d9c9ce4ae0b75c1ced91be3210"
+   }
+  },
+  "2099614699608314009": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "title": "Taxpayers spent more than $500,000 on House sexual harassment payouts",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099614870945530024": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099615522212192636": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_b58ef0b117a289b5",
+     "publisher": "Politico",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/14/hochuls-how-to-guide-to-stopping-ice-01075287",
+     "text": "Hochul’s how-to guide to stopping ICE",
+     "title": "Hochul’s how-to guide to stopping ICE",
+     "publishedAt": "2026-09-14T21:03:18.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fbf956931228f7fc",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6087947-tom-homan-ice-midterm-polls/",
+     "text": "ICE has no plans to ‘sweep polling locations’ for noncitizens, Homan says",
+     "title": "ICE has no plans to ‘sweep polling locations’ for noncitizens, Homan says",
+     "publishedAt": "2026-09-14T15:07:22.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099615568626102440": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_b6191a70df3bf3fc",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
+     "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "title": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "publishedAt": "2026-09-14T14:57:13.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099615935887753603": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099615956871909673": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099602785276760399",
+    "fingerprint": "107c8a5065220c00b4fa0991f0ffe67a24bb039e5ff49f0c22857965852de8f3"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099602785276760399",
+    "fingerprint": "107c8a5065220c00b4fa0991f0ffe67a24bb039e5ff49f0c22857965852de8f3"
+   }
+  },
+  "2099616677553950782": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c4106f38f9529342",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
+     "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "title": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "publishedAt": "2026-09-14T18:03:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "title": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c4106f38f9529342",
+    "n_8bc96534ce69b582"
+   ],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "quotedContext": {
+    "id": "2099456585651175840",
+    "authorId": "14606079",
+    "handle": "propublica",
+    "createdAt": "2026-09-14T11:13:50.000Z",
+    "textChars": 179,
+    "textHash": "0bf2a113e205c763c1ee433b89a2bfe8bf77a377773d9ddbb6849a827ea150c5"
+   }
+  },
+  "2099616702572961903": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "quotedContext": {
+    "id": "2099032373941641510",
+    "authorId": "8216772",
+    "handle": "denverpost",
+    "createdAt": "2026-09-13T07:08:10.000Z",
+    "textChars": 129,
+    "textHash": "8a671f5fcd366f64c6ea79491f27c011ff6938c6edaeda626014ff67c4f15d53"
+   }
+  },
+  "2099617637630177379": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099584226286833752",
+    "fingerprint": "0206deb42d0f20eb1c2fbd9024f75a8ece911808c580da3859af213c53f256bc"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099584226286833752",
+    "fingerprint": "0206deb42d0f20eb1c2fbd9024f75a8ece911808c580da3859af213c53f256bc"
+   }
+  },
+  "2099618068133552307": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099618244965363881": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099618313026277791": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bf003ce42276b56335f2434ae3c2f71f2f66caf391736fe653ec5ff4c4ca6c1b"
+  },
+  "2099618411349184732": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_343b74b60d914590",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088221-petraeus-johnson-evacuate-ukraine/",
+     "text": "Russian drone almost hit former CIA director, may have targeted Boris Johnson",
+     "title": "Russian drone almost hit former CIA director, may have targeted Boris Johnson",
+     "publishedAt": "2026-09-14T17:22:39.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "title": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "700665feb9d8772ef90266ec871fa07e834ed2baf6d6059656d317933289b005"
+  },
+  "2099618715243274362": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_f3f9c7fbcdbe91eb",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5898447-e1/the-social-security-trust-fund-is-running-out-why-is-it-not-a-top-campaign-issue",
+     "text": "AYESHA RASCOE, HOST: The Social Security Trust Fund is running out of reserves. The program's board of trustees projects that in six years, if Congress does nothing, payments to beneficiaries will be reduced by nearly a quarter. This would be devastating for seniors who rely on their Social Security payments. As NPR's Ashley Lopez reports, it's not something that's getting much attention this election year. ASHLEY LOPEZ, BYLINE: Six years sounds like a lot of time. But when you think of how much time it takes to fix a big budget problem with complicated politics, it's really not. Bill Sweeney…",
+     "title": "The Social Security trust fund is running out. Why is it not a top campaign issue?",
+     "publishedAt": "2026-09-13T12:04:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "title": "Taxpayers spent more than $500,000 on House sexual harassment payouts",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "700665feb9d8772ef90266ec871fa07e834ed2baf6d6059656d317933289b005"
+  },
+  "2099619115103035830": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_85c8c02756c33de6",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
+     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
+     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
+     "publishedAt": "2026-09-11T12:40:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "700665feb9d8772ef90266ec871fa07e834ed2baf6d6059656d317933289b005",
+   "quotedContext": {
+    "id": "2024258861645914519",
+    "authorId": "15012486",
+    "handle": "CBSNews",
+    "createdAt": "2026-02-18T23:04:56.000Z",
+    "textChars": 546,
+    "textHash": "e223632e17edfa5e5a1c90a5dce6231ffeccd9786382264cea8df007818e1dd4"
+   }
+  },
+  "2099619224427593951": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c260e4cab8c6d48b",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
+     "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "title": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "publishedAt": "2026-09-12T21:56:57.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c13184d6ed48b1f6",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6088472-states-sue-trump-public-charge-rule/",
+     "text": "States and cities sue over ‘public charge’ green card restrictions",
+     "title": "States and cities sue over ‘public charge’ green card restrictions",
+     "publishedAt": "2026-09-14T17:25:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "version": 7,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "700665feb9d8772ef90266ec871fa07e834ed2baf6d6059656d317933289b005",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2098590418669605298",
+    "fingerprint": "cc7406f1898f30f1279dbbc46c1a81513257548027ba59395db55c9a9c4db000"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2098590418669605298",
+    "fingerprint": "cc7406f1898f30f1279dbbc46c1a81513257548027ba59395db55c9a9c4db000"
+   }
   }
  },
  "needsContext": {
-  "2099353778470482251": true,
-  "2099353953653981248": true,
-  "2099359393355600281": true,
-  "2099368567539991032": true,
-  "2099450301681991761": true,
-  "2099452207665906073": true,
-  "2099471129777668544": true,
   "2099476447689584944": false,
   "2099480314338758686": true,
   "2099480760327557446": false,
@@ -8939,7 +10063,6 @@
   "2099489711324643474": false,
   "2099489922193187145": false,
   "2099490710395269124": true,
-  "2099491286571250149": true,
   "2099491963720421759": false,
   "2099493450152382894": false,
   "2099493552526868986": false,
@@ -8952,7 +10075,6 @@
   "2099498543912247778": false,
   "2099498881264308703": false,
   "2099499136194129920": false,
-  "2099500624953889071": true,
   "2099501481925685670": false,
   "2099501519263375777": false,
   "2099502645337895115": true,
@@ -8962,9 +10084,7 @@
   "2099503257517252931": false,
   "2099504154578190519": false,
   "2099504247683301426": false,
-  "2099504499681313151": true,
   "2099505238931574922": false,
-  "2099505805120704946": true,
   "2099505888604176692": false,
   "2099505971592585591": false,
   "2099506950195052596": false,
@@ -8977,7 +10097,6 @@
   "2099509986996998174": false,
   "2099510005045108873": false,
   "2099511254654091271": false,
-  "2099511273570422928": true,
   "2099511522942689550": false,
   "2099511555691807199": false,
   "2099511659316265448": false,
@@ -9031,7 +10150,6 @@
   "2099529236923011326": false,
   "2099529783138779560": false,
   "2099529860347818054": false,
-  "2099530209594671320": true,
   "2099530356831514645": false,
   "2099530369141821886": false,
   "2099530887440257360": false,
@@ -9043,7 +10161,6 @@
   "2099538036874957242": false,
   "2099538533090238854": false,
   "2099539185497460905": false,
-  "2099539816975052976": true,
   "2099539996164137236": false,
   "2099540355213340784": false,
   "2099541373279965688": false,
@@ -9301,8 +10418,57 @@
   "2099609270975123904": false,
   "2099609272413774102": false,
   "2099609399266341329": false,
-  "2099609979225276775": false
+  "2099609979225276775": false,
+  "2099353778470482251": false,
+  "2099353953653981248": false,
+  "2099359393355600281": false,
+  "2099368567539991032": false,
+  "2099450301681991761": false,
+  "2099452207665906073": false,
+  "2099471129777668544": false,
+  "2099491286571250149": false,
+  "2099500624953889071": false,
+  "2099504499681313151": false,
+  "2099505805120704946": false,
+  "2099511273570422928": false,
+  "2099530209594671320": false,
+  "2099539816975052976": false,
+  "2099611339199033820": false,
+  "2099611399186239926": false,
+  "2099611720045989927": false,
+  "2099611835544514834": false,
+  "2099611938099454044": false,
+  "2099612236255985787": false,
+  "2099612489738547224": false,
+  "2099612577336553896": false,
+  "2099612875811610853": false,
+  "2099613174370562328": false,
+  "2099613275457564882": false,
+  "2099613418168693197": false,
+  "2099613460778676633": false,
+  "2099613583185248730": false,
+  "2099613922751914148": false,
+  "2099614157892907387": false,
+  "2099614192080683100": true,
+  "2099614315653300263": false,
+  "2099614699608314009": false,
+  "2099614870945530024": false,
+  "2099615522212192636": false,
+  "2099615568626102440": false,
+  "2099615935887753603": false,
+  "2099615956871909673": false,
+  "2099616677553950782": false,
+  "2099616702572961903": false,
+  "2099617637630177379": false,
+  "2099618068133552307": true,
+  "2099618244965363881": false,
+  "2099618313026277791": false,
+  "2099618411349184732": false,
+  "2099618715243274362": false,
+  "2099619115103035830": false,
+  "2099619224427593951": false
  },
+ "inputBlocks": {},
  "contextVersion": 9,
  "emerging": [
   {
@@ -9426,7 +10592,8 @@
   {
    "label": "Bo French racist posts about UT students",
    "ids": [
-    "2099567301791994114"
+    "2099567301791994114",
+    "2099450301681991761"
    ]
   },
   {
@@ -9594,6 +10761,26 @@
     "2099609270975123904",
     "2099609272413774102"
    ]
+  },
+  {
+   "label": "Russian oligarch funded Trump Jr.'s wedding",
+   "ids": [
+    "2099611339199033820",
+    "2099611835544514834"
+   ]
+  },
+  {
+   "label": "Trump Jr. wedding bankrolled by Russian oligarch",
+   "ids": [
+    "2099613418168693197",
+    "2099616677553950782"
+   ]
+  },
+  {
+   "label": "Rep. Bryan Steil AI data center stock holdings",
+   "ids": [
+    "2099615956871909673"
+   ]
   }
  ],
  "unclassified": [],
@@ -9607,143 +10794,87 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099128466603991088",
-    "2099143614706176240",
-    "2099145396354179227",
-    "2099146981411021172",
-    "2099148420095103371",
-    "2099149631972134947"
+    "2099255304709980623",
+    "2099261476628250907",
+    "2099263836981510409",
+    "2099283604421398574",
+    "2099302613275574609",
+    "2099303835910987912",
+    "2099308494302159053",
+    "2099320687617814782",
+    "2099338422032703725",
+    "2099341491063644393",
+    "2099343524126740513",
+    "2099353778470482251",
+    "2099353953653981248",
+    "2099359393355600281",
+    "2099368567539991032",
+    "2099450301681991761",
+    "2099452207665906073"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2099150618245976207",
-    "2099152215071986004",
-    "2099188861247340671",
-    "2099190459918905442",
-    "2099192433602953372",
-    "2099232335212290520"
+    "2099471129777668544",
+    "2099491286571250149",
+    "2099500624953889071",
+    "2099504499681313151",
+    "2099505805120704946",
+    "2099511273570422928",
+    "2099530209594671320",
+    "2099539816975052976",
+    "2099611339199033820",
+    "2099611399186239926",
+    "2099611720045989927",
+    "2099611835544514834",
+    "2099611938099454044",
+    "2099612236255985787",
+    "2099612489738547224",
+    "2099612577336553896",
+    "2099612875811610853",
+    "2099613174370562328",
+    "2099613275457564882"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2099250786202989005",
-    "2099267865266307548",
-    "2099272684097904929",
-    "2099341492150292857",
-    "2099470719365038165",
-    "2099498429319696654",
-    "2099508362484302050"
+    "2099613418168693197",
+    "2099613460778676633",
+    "2099613583185248730",
+    "2099613922751914148",
+    "2099614157892907387",
+    "2099614192080683100",
+    "2099614315653300263",
+    "2099614699608314009",
+    "2099614870945530024",
+    "2099615522212192636",
+    "2099615568626102440",
+    "2099615935887753603",
+    "2099615956871909673",
+    "2099616677553950782",
+    "2099616702572961903",
+    "2099617637630177379",
+    "2099618068133552307",
+    "2099618244965363881",
+    "2099618313026277791"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-3": {
    "acceptedIds": [
-    "2099514645480419802",
-    "2099515039484960898",
-    "2099521129320759445",
-    "2099525710561853678",
-    "2099526388432949402",
-    "2099528214380957830",
-    "2099531437619675394"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-4": {
-   "acceptedIds": [
-    "2099542644300939282",
-    "2099543149056024632",
-    "2099544839280787874",
-    "2099562389922353514",
-    "2099565154878845430",
-    "2099567658098217102"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-5": {
-   "acceptedIds": [
-    "2099577178576884201",
-    "2099579052612862230",
-    "2099581985060442578",
-    "2099585920659812552",
-    "2099590248661463294",
-    "2099590981729341825",
-    "2099591475780620325",
-    "2099594662524666178",
-    "2099599745203286261",
-    "2099599748931969161",
-    "2099599818985463869"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-6": {
-   "acceptedIds": [
-    "2099600003106848839",
-    "2099600036451541312",
-    "2099600053513888090",
-    "2099600116579488129",
-    "2099600154890317967",
-    "2099600311161659437",
-    "2099600612920795344",
-    "2099600867573793269",
-    "2099601058414678322",
-    "2099601430508134751",
-    "2099602485509775596",
-    "2099602517172641818"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-7": {
-   "acceptedIds": [
-    "2099602667144130687",
-    "2099602691991449895",
-    "2099603260344553622",
-    "2099603751988289840",
-    "2099604031773519971",
-    "2099604138761802074",
-    "2099604145355235603",
-    "2099604349412581813",
-    "2099604560092299530",
-    "2099604988854993120",
-    "2099605607992934474",
-    "2099605686145478738",
-    "2099606190795743482",
-    "2099606428981829690",
-    "2099606591532122148",
-    "2099606632112050188",
-    "2099606643134599174",
-    "2099606865483362800"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-8": {
-   "acceptedIds": [
-    "2099607420553093272",
-    "2099607888259874868",
-    "2099608028345487369",
-    "2099608209459761404",
-    "2099608333963694509",
-    "2099608347527786970",
-    "2099608789037076988",
-    "2099608965952745618",
-    "2099609270975123904",
-    "2099609272413774102",
-    "2099609399266341329",
-    "2099609979225276775"
+    "2099618411349184732",
+    "2099618715243274362",
+    "2099619115103035830",
+    "2099619224427593951"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T21:30:40.533Z"
+ "updatedAt": "2026-09-14T22:02:54.607Z"
 }
