@@ -1,7 +1,7 @@
 {
  "date": "2026-09-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T20:36:38.360Z",
+ "classifiedAt": "2026-09-14T21:30:40.523Z",
  "assignments": {
   "2098985036456288391": [
    [
@@ -373,7 +373,7 @@
   "2099143614706176240": [
    [
     "healthcare",
-    null
+    "medicare"
    ],
    [
     "congress-politics",
@@ -714,10 +714,6 @@
    [
     "tech",
     "ai-policy"
-   ],
-   [
-    "foreign-policy",
-    null
    ]
   ],
   "2099190326040601008": [
@@ -1238,6 +1234,10 @@
    [
     "public-safety",
     "crime-policing"
+   ],
+   [
+    "tech",
+    null
    ]
   ],
   "2099267441935151405": [
@@ -1877,43 +1877,6 @@
    ],
    "inputHash": "933b64b698365ecfc58f3808a0390d2b74c1455e456097ce7d26bb9b900f35d8"
   },
-  "2099128466603991088": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_7819325ea296ba5a",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
-     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "publishedAt": "2026-09-13T19:05:43.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_ac76b38c8a008a20",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
-     "text": "Iran’s war didn’t end. It changed units.",
-     "title": "Iran’s war didn’t end. It changed units.",
-     "publishedAt": "2026-09-12T19:00:00.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
-  },
   "2099135417505235387": {
    "contextVersion": 7,
    "evidenceSupplied": [
@@ -1990,65 +1953,6 @@
    "evidenceUsed": [],
    "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
   },
-  "2099143614706176240": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_4a11200196924fd7",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
-     "title": "At the Races: Defiant in Dallas",
-     "publishedAt": "2026-09-10T14:45:00.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
-  },
-  "2099145396354179227": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_cc56be24d2bea374",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
-     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "publishedAt": "2026-09-14T01:43:48.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_4a11200196924fd7",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
-     "title": "At the Races: Defiant in Dallas",
-     "publishedAt": "2026-09-10T14:45:00.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
-  },
   "2099145914103284001": {
    "contextVersion": 7,
    "evidenceSupplied": [
@@ -2070,80 +1974,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
-  },
-  "2099146981411021172": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_cc56be24d2bea374",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
-     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "publishedAt": "2026-09-14T01:43:48.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_4a11200196924fd7",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
-     "title": "At the Races: Defiant in Dallas",
-     "publishedAt": "2026-09-10T14:45:00.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3598365ffd2a4c2f48c94ac69c04e3db4514bdace1f9fdefa1212b04d73dc240"
-  },
-  "2099148420095103371": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_7819325ea296ba5a",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
-     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "publishedAt": "2026-09-13T19:05:43.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_cc56be24d2bea374",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
-     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
-     "publishedAt": "2026-09-14T01:43:48.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "fef57313e0459a404662c73998076ccc81255fe46bad492dc24bc09bd4b7bd27"
   },
   "2099148792113008725": {
    "contextVersion": 7,
@@ -2172,102 +2002,6 @@
      "text": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
      "title": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
      "publishedAt": "2026-09-14T03:16:14.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "fef57313e0459a404662c73998076ccc81255fe46bad492dc24bc09bd4b7bd27"
-  },
-  "2099149631972134947": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_ac76b38c8a008a20",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
-     "text": "Iran’s war didn’t end. It changed units.",
-     "title": "Iran’s war didn’t end. It changed units.",
-     "publishedAt": "2026-09-12T19:00:00.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_2ce84007013d6253",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6085057-maine-lobster-industry-pressures/",
-     "text": "Maine’s lobster industry finds itself squeezed on all sides amid Canada trade war",
-     "title": "Maine’s lobster industry finds itself squeezed on all sides amid Canada trade war",
-     "publishedAt": "2026-09-13T19:54:03.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "fef57313e0459a404662c73998076ccc81255fe46bad492dc24bc09bd4b7bd27"
-  },
-  "2099150618245976207": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_43311994c5f22c08",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/business/6086906-hassett-plays-down-trump-trade-threat/",
-     "text": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
-     "title": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
-     "publishedAt": "2026-09-13T18:28:27.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "fef57313e0459a404662c73998076ccc81255fe46bad492dc24bc09bd4b7bd27"
-  },
-  "2099152215071986004": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_43311994c5f22c08",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/business/6086906-hassett-plays-down-trump-trade-threat/",
-     "text": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
-     "title": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
-     "publishedAt": "2026-09-13T18:28:27.000Z",
      "fetchedAt": "2026-09-14T12:52:50.846Z",
      "version": 5,
      "publishedAfterPost": true,
@@ -2439,71 +2173,7 @@
    ],
    "inputHash": "6ad88e77423a1d62e44d459a47097d7fa0d6f1b57cd01092df74d4b65ab9bdf9"
   },
-  "2099190459918905442": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_80fa1a031c680b49",
-     "publisher": "NPR",
-     "date": "2026-09-13",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/13/nx-s1-5968078/trump-mike-johnson-ai-slowdown",
-     "text": "\"We're leading China in AI, we're the most sophisticated country in the world, and frankly, I want to keep it that way because whoever wins AI, wins,\" Trump said. \"And we can put guardrails, we can do this and that. But I think you have a lot of negative forces that are bringing it up that shouldn't be bringing it up.\"",
-     "title": "Trump downplays calls for AI slowdown",
-     "publishedAt": "2026-09-13T22:32:39.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_d0ad328f9c4e7e17",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
-     "text": "Trump downplays AI warnings, citing competition with China",
-     "title": "Trump downplays AI warnings, citing competition with China",
-     "publishedAt": "2026-09-13T15:57:05.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_d0ad328f9c4e7e17",
-    "n_80fa1a031c680b49"
-   ],
-   "inputHash": "6ad88e77423a1d62e44d459a47097d7fa0d6f1b57cd01092df74d4b65ab9bdf9"
-  },
   "2099191578363592904": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_df684ca366a9e074",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
-     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
-     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
-     "publishedAt": "2026-09-13T15:11:14.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_df684ca366a9e074"
-   ],
-   "inputHash": "6ad88e77423a1d62e44d459a47097d7fa0d6f1b57cd01092df74d4b65ab9bdf9"
-  },
-  "2099192433602953372": {
    "contextVersion": 7,
    "evidenceSupplied": [
     {
@@ -2841,46 +2511,6 @@
    "evidenceUsed": [],
    "inputHash": "b2d448f9d0a8cb99596e8768c0241e98e7b01b2328e25301e90162241e353999"
   },
-  "2099232335212290520": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_7819325ea296ba5a",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
-     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "publishedAt": "2026-09-13T19:05:43.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_9048ded17444c977",
-    "n_7819325ea296ba5a"
-   ],
-   "inputHash": "b2d448f9d0a8cb99596e8768c0241e98e7b01b2328e25301e90162241e353999"
-  },
   "2099237556084711504": {
    "contextVersion": 7,
    "evidenceSupplied": [
@@ -2956,45 +2586,6 @@
    ],
    "evidenceUsed": [
     "n_c29ccdcc98993029"
-   ],
-   "inputHash": "b2d448f9d0a8cb99596e8768c0241e98e7b01b2328e25301e90162241e353999"
-  },
-  "2099250786202989005": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_ac76b38c8a008a20",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
-     "text": "Iran’s war didn’t end. It changed units.",
-     "title": "Iran’s war didn’t end. It changed units.",
-     "publishedAt": "2026-09-12T19:00:00.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_9048ded17444c977"
    ],
    "inputHash": "b2d448f9d0a8cb99596e8768c0241e98e7b01b2328e25301e90162241e353999"
   },
@@ -3297,45 +2888,6 @@
    ],
    "inputHash": "25547731a2f016510bc7bcea6c970ed5c4d6670f8f15f9d5a077d8da85badac0"
   },
-  "2099272684097904929": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_7819325ea296ba5a",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
-     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "publishedAt": "2026-09-13T19:05:43.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_7819325ea296ba5a"
-   ],
-   "inputHash": "25547731a2f016510bc7bcea6c970ed5c4d6670f8f15f9d5a077d8da85badac0"
-  },
   "2099283364612116500": {
    "contextVersion": 7,
    "evidenceSupplied": [
@@ -3473,43 +3025,6 @@
     "n_df684ca366a9e074"
    ],
    "inputHash": "25547731a2f016510bc7bcea6c970ed5c4d6670f8f15f9d5a077d8da85badac0"
-  },
-  "2099341492150292857": {
-   "contextVersion": 7,
-   "evidenceSupplied": [
-    {
-     "id": "n_7819325ea296ba5a",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
-     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
-     "publishedAt": "2026-09-13T19:05:43.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_ac76b38c8a008a20",
-     "publisher": "The Hill",
-     "date": "2026-09-12",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
-     "text": "Iran’s war didn’t end. It changed units.",
-     "title": "Iran’s war didn’t end. It changed units.",
-     "publishedAt": "2026-09-12T19:00:00.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "d76839b9f7d5df8f1566ef4c4e6e73de13a9ecd5a7b4a903f790d9a1f02af5f4"
   },
   "2099111692944691693": {
    "contextVersion": 5,
@@ -4595,32 +4110,594 @@
     "referenceId": "2099306240769744953",
     "fingerprint": "759db531358c49000890a5b8f15b98b035ae1cb0265e168ea219559f8bc6e732"
    }
+  },
+  "2099128466603991088": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "title": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099143614706176240": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_d98b4e4ff568bd54",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6088845-rfk-jr-scheduled-chd-keynote/",
+     "text": "RFK Jr. to headline Children’s Health Defense conference in D.C.",
+     "title": "RFK Jr. to headline Children’s Health Defense conference in D.C.",
+     "publishedAt": "2026-09-14T19:48:03.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "title": "At the Races: Defiant in Dallas",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099145396354179227": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_cc56be24d2bea374",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
+     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "publishedAt": "2026-09-14T01:43:48.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_80ee0bf1b89676ac",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088975-trump-vtb-sanctions-iran/",
+     "text": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "title": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "publishedAt": "2026-09-14T20:31:13.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099146981411021172": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_cc56be24d2bea374",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
+     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "publishedAt": "2026-09-14T01:43:48.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_80ee0bf1b89676ac",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088975-trump-vtb-sanctions-iran/",
+     "text": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "title": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "publishedAt": "2026-09-14T20:31:13.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099148420095103371": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_cc56be24d2bea374",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6087347-usaf-colonel-survives-iran-crash/",
+     "text": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "title": "Air Force colonel recounts how he survived after F-15E jet was shot down over Iran",
+     "publishedAt": "2026-09-14T01:43:48.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099149631972134947": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "title": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_2ce84007013d6253",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6085057-maine-lobster-industry-pressures/",
+     "text": "Maine’s lobster industry finds itself squeezed on all sides amid Canada trade war",
+     "title": "Maine’s lobster industry finds itself squeezed on all sides amid Canada trade war",
+     "publishedAt": "2026-09-13T19:54:03.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "97624324d5d2f45d2ea7a56d0b15dd9532e9e8964dbf070624af806748666757"
+  },
+  "2099150618245976207": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_80ee0bf1b89676ac",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088975-trump-vtb-sanctions-iran/",
+     "text": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "title": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "publishedAt": "2026-09-14T20:31:13.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_43311994c5f22c08",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/business/6086906-hassett-plays-down-trump-trade-threat/",
+     "text": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
+     "title": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
+     "publishedAt": "2026-09-13T18:28:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099152215071986004": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_43311994c5f22c08",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/business/6086906-hassett-plays-down-trump-trade-threat/",
+     "text": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
+     "title": "Hassett on Trump trade war interest rates threat: ‘I don’t expect the trade’s going to go to zero’",
+     "publishedAt": "2026-09-13T18:28:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_80ee0bf1b89676ac",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088975-trump-vtb-sanctions-iran/",
+     "text": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "title": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "publishedAt": "2026-09-14T20:31:13.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099188861247340671": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_80ee0bf1b89676ac",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088975-trump-vtb-sanctions-iran/",
+     "text": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "title": "Trump adds extra sanctions to Russian bank for ties to Iran",
+     "publishedAt": "2026-09-14T20:31:13.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099190459918905442": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_80fa1a031c680b49",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5968078/trump-mike-johnson-ai-slowdown",
+     "text": "\"We're leading China in AI, we're the most sophisticated country in the world, and frankly, I want to keep it that way because whoever wins AI, wins,\" Trump said. \"And we can put guardrails, we can do this and that. But I think you have a lot of negative forces that are bringing it up that shouldn't be bringing it up.\"",
+     "title": "Trump downplays calls for AI slowdown",
+     "publishedAt": "2026-09-13T22:32:39.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "title": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_80fa1a031c680b49",
+    "n_d0ad328f9c4e7e17"
+   ],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099192433602953372": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "title": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_10bef9ea790d7de9",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6088903-john-thune-artificial-intelligence-legislation/",
+     "text": "Thune: Legislation to regulate AI needs to have a ‘light touch’",
+     "title": "Thune: Legislation to regulate AI needs to have a ‘light touch’",
+     "publishedAt": "2026-09-14T20:08:10.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_df684ca366a9e074"
+   ],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099232335212290520": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977",
+    "n_7819325ea296ba5a"
+   ],
+   "inputHash": "f48d377d976d0cd45359feb038e7efa34b60fe08afd92b5441cb282b5e7236c9"
+  },
+  "2099250786202989005": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "title": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b95523c5fc3c79f5fc16425996c3a1008de112184ea982cf1c72db5cc8fd5c89"
+  },
+  "2099267865266307548": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_f5ea14eba6490c42",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088725-trump-backs-ai-surveillance/",
+     "text": "Trump weighs in on Flock debate: ‘I like them’",
+     "title": "Trump weighs in on Flock debate: ‘I like them’",
+     "publishedAt": "2026-09-14T19:07:22.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b95523c5fc3c79f5fc16425996c3a1008de112184ea982cf1c72db5cc8fd5c89"
+  },
+  "2099272684097904929": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7819325ea296ba5a"
+   ],
+   "inputHash": "b95523c5fc3c79f5fc16425996c3a1008de112184ea982cf1c72db5cc8fd5c89"
+  },
+  "2099341492150292857": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "title": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b95523c5fc3c79f5fc16425996c3a1008de112184ea982cf1c72db5cc8fd5c89"
   }
  },
  "needsContext": {
   "2099132737273655458": false,
   "2099153882618245510": false,
   "2099227536173552126": false,
-  "2099128466603991088": false,
   "2099135417505235387": false,
   "2099136205619073270": false,
-  "2099143614706176240": false,
-  "2099145396354179227": false,
   "2099145914103284001": false,
-  "2099146981411021172": false,
-  "2099148420095103371": false,
   "2099148792113008725": false,
-  "2099149631972134947": false,
-  "2099150618245976207": false,
-  "2099152215071986004": false,
   "2099154995123769798": false,
   "2099155494480879840": false,
   "2099157936526254356": false,
   "2099158381277671713": false,
   "2099172680293400664": false,
-  "2099190459918905442": false,
   "2099191578363592904": false,
-  "2099192433602953372": false,
   "2099199348621894136": false,
   "2099208244904534055": false,
   "2099209787363991640": false,
@@ -4631,10 +4708,8 @@
   "2099212988737532347": false,
   "2099229041652064518": false,
   "2099230451185410522": false,
-  "2099232335212290520": false,
   "2099237556084711504": false,
   "2099248617932615800": false,
-  "2099250786202989005": false,
   "2099257130788217233": false,
   "2099260085545394679": false,
   "2099261047828021306": false,
@@ -4644,12 +4719,10 @@
   "2099268973388865991": false,
   "2099269784906932535": false,
   "2099271825997889913": false,
-  "2099272684097904929": false,
   "2099283364612116500": false,
   "2099284077203337644": false,
   "2099339015489007764": false,
   "2099339875753328842": false,
-  "2099341492150292857": false,
   "2099111692944691693": false,
   "2099133162752200794": true,
   "2099135391810941223": true,
@@ -4725,9 +4798,25 @@
   "2099311097996063074": false,
   "2099311305614373255": false,
   "2099311941726445841": false,
-  "2099320687617814782": true
+  "2099320687617814782": true,
+  "2099128466603991088": false,
+  "2099143614706176240": false,
+  "2099145396354179227": false,
+  "2099146981411021172": false,
+  "2099148420095103371": false,
+  "2099149631972134947": false,
+  "2099150618245976207": false,
+  "2099152215071986004": false,
+  "2099188861247340671": false,
+  "2099190459918905442": false,
+  "2099192433602953372": false,
+  "2099232335212290520": false,
+  "2099250786202989005": false,
+  "2099267865266307548": false,
+  "2099272684097904929": false,
+  "2099341492150292857": false
  },
- "contextVersion": 7,
+ "contextVersion": 9,
  "emerging": [
   {
    "label": "9/11 25th anniversary remembrance",
@@ -4817,6 +4906,21 @@
    "ids": [
     "2099303835910987912"
    ]
+  },
+  {
+   "label": "2026 U.S. war with Iran",
+   "ids": [
+    "2099128466603991088",
+    "2099145396354179227",
+    "2099146981411021172",
+    "2099149631972134947"
+   ]
+  },
+  {
+   "label": "Flock/ALPR license-plate surveillance privacy",
+   "ids": [
+    "2099267865266307548"
+   ]
   }
  ],
  "unclassified": [],
@@ -4830,36 +4934,143 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099590133968204048",
+    "2099128466603991088",
+    "2099143614706176240",
+    "2099145396354179227",
+    "2099146981411021172",
+    "2099148420095103371",
+    "2099149631972134947"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-1": {
+   "acceptedIds": [
+    "2099150618245976207",
+    "2099152215071986004",
+    "2099188861247340671",
+    "2099190459918905442",
+    "2099192433602953372",
+    "2099232335212290520"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-2": {
+   "acceptedIds": [
+    "2099250786202989005",
+    "2099267865266307548",
+    "2099272684097904929",
+    "2099341492150292857",
+    "2099470719365038165",
+    "2099498429319696654",
+    "2099508362484302050"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-3": {
+   "acceptedIds": [
+    "2099514645480419802",
+    "2099515039484960898",
+    "2099521129320759445",
+    "2099525710561853678",
+    "2099526388432949402",
+    "2099528214380957830",
+    "2099531437619675394"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-4": {
+   "acceptedIds": [
+    "2099542644300939282",
+    "2099543149056024632",
+    "2099544839280787874",
+    "2099562389922353514",
+    "2099565154878845430",
+    "2099567658098217102"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-5": {
+   "acceptedIds": [
+    "2099577178576884201",
+    "2099579052612862230",
+    "2099581985060442578",
+    "2099585920659812552",
     "2099590248661463294",
-    "2099590346166464904",
     "2099590981729341825",
-    "2099591387981205766",
-    "2099591391043039397",
     "2099591475780620325",
-    "2099591550757978386",
-    "2099592018477424806",
-    "2099592177923899704",
-    "2099592790334112127",
-    "2099593508491321846",
-    "2099593548316254224",
-    "2099593679388221771",
-    "2099593821424099385",
-    "2099593969680121923",
-    "2099594460237648211",
-    "2099594538868199435",
     "2099594662524666178",
-    "2099596134096212210",
-    "2099596246696550740",
-    "2099596432965542155",
-    "2099596607280849294",
-    "2099597051222688182",
-    "2099597538512765144",
-    "2099597801529167951"
+    "2099599745203286261",
+    "2099599748931969161",
+    "2099599818985463869"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-6": {
+   "acceptedIds": [
+    "2099600003106848839",
+    "2099600036451541312",
+    "2099600053513888090",
+    "2099600116579488129",
+    "2099600154890317967",
+    "2099600311161659437",
+    "2099600612920795344",
+    "2099600867573793269",
+    "2099601058414678322",
+    "2099601430508134751",
+    "2099602485509775596",
+    "2099602517172641818"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-7": {
+   "acceptedIds": [
+    "2099602667144130687",
+    "2099602691991449895",
+    "2099603260344553622",
+    "2099603751988289840",
+    "2099604031773519971",
+    "2099604138761802074",
+    "2099604145355235603",
+    "2099604349412581813",
+    "2099604560092299530",
+    "2099604988854993120",
+    "2099605607992934474",
+    "2099605686145478738",
+    "2099606190795743482",
+    "2099606428981829690",
+    "2099606591532122148",
+    "2099606632112050188",
+    "2099606643134599174",
+    "2099606865483362800"
+   ],
+   "retryIds": [],
+   "errors": []
+  },
+  "live_chunk-8": {
+   "acceptedIds": [
+    "2099607420553093272",
+    "2099607888259874868",
+    "2099608028345487369",
+    "2099608209459761404",
+    "2099608333963694509",
+    "2099608347527786970",
+    "2099608789037076988",
+    "2099608965952745618",
+    "2099609270975123904",
+    "2099609272413774102",
+    "2099609399266341329",
+    "2099609979225276775"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T20:36:38.364Z"
+ "updatedAt": "2026-09-14T21:30:40.527Z"
 }
