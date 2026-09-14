@@ -18,7 +18,7 @@
 import { settings, readJSON, writeJSON, readJSONL } from './util.js';
 import { archivePath, topicsPath } from './store.js';
 import {
-  loadSources, parseFeed, extractArticle, stripHtml, itemId, storeItems, readStatus, loadNews,
+  loadSources, parseFeed, extractArticle, stripHtml, itemId, storeItems, readStatus, loadNews, sameSite,
   reconsiderCandidates, STATUS_FILE, RECONSIDER_FILE, ITEMS_FILE
 } from './news-context.js';
 
@@ -110,7 +110,12 @@ export async function refreshSource(source, { cfg, fetchImpl = fetch, known = ne
       await sleep(cfg.fetch?.pace_ms ?? 1000);
       try {
         const page = await fetchText(url, fetchOpts);
-        if (page.ok) {
+        if (page.ok && !sameSite(page.url, url)) {
+          // A redirect off the publisher's site is not that publisher's
+          // article; nothing from the landing page is stored.
+          base.extract = 'failed';
+          base.fetchError = 'redirected off-site';
+        } else if (page.ok) {
           const art = extractArticle(page.text, { url: page.url, passageChars: cfg.fetch?.passage_chars, maxPassages: cfg.fetch?.max_passages });
           Object.assign(base, { url: art.canonical || page.url || url, publishedAt: f.publishedAt || art.publishedAt, passages: art.passages, extract: art.extract, lang: art.lang, title: base.title || art.title });
           base.id = itemId(base.url);
@@ -172,7 +177,10 @@ async function main() {
     const day = readJSON(topicsPath(reconsider), null);
     if (!day) { console.log(`[context-refresh] no topics file for ${reconsider}`); return; }
     const posts = readJSONL(archivePath(reconsider));
-    const since = Number(arg('since') ?? 0);
+    // Default: the store version the day was classified against (stamped
+    // by the classifier as contextVersion). Without it every run would
+    // queue the same posts again; with it a run after no change queues none.
+    const since = Number(arg('since') ?? day.contextVersion ?? 0);
     const queue = reconsiderCandidates(day, posts, { sinceVersion: since });
     writeJSON(RECONSIDER_FILE, { date: reconsider, sinceVersion: since, contextVersion: readStatus().contextVersion, generatedAt: new Date().toISOString(), posts: queue });
     console.log(`[context-refresh] ${reconsider}: ${queue.length} post(s) with empty or macro-only topics now have evidence newer than version ${since} → data/news/reconsider.json`);
