@@ -40,7 +40,10 @@ jobs:
   nightly:
     runs-on: ubuntu-latest
     steps:
+      # A queued run must include data published since its event was emitted.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v5
         with:
           node-version: 22
