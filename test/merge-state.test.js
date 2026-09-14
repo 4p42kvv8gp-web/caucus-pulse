@@ -51,6 +51,44 @@ test('counter resets and malformed counters fail closed', () => {
     assert.throws(() => mergeState(base, { ...base, usage: { '2026-09-10': { posts, users: 10 } } }, base), /counter/i);
   }
 });
+
+const receipt = { day: '2026-09-10', posts: 25, users: 3, responseHash: 'response-one' };
+test('identical new acquisition receipts on both branches cannot double-count paid reads', () => {
+  const a = { ...base, repostAcquisitionUsage: { lookup1: receipt }, usage: { '2026-09-10': { posts: 1025, users: 13 } } };
+  const b = structuredClone(a);
+  assert.throws(() => mergeState(base, a, b), /Concurrent application of repost acquisition receipt lookup1.*double-count/);
+});
+
+test('one branch acquisition preserves its receipt and combines independent capture usage', () => {
+  const a = { ...base, repostAcquisitionUsage: { lookup1: receipt }, usage: { '2026-09-10': { posts: 1025, users: 13 } } };
+  const b = { ...base, sinceId: '250', recentNewCounts: [5, 10], lastPollAt: '2026-09-10T05:20:00Z', usage: { '2026-09-10': { posts: 1010, users: 10 } } };
+  const merged = mergeState(base, a, b);
+  assert.deepEqual(merged.repostAcquisitionUsage, { lookup1: receipt });
+  assert.deepEqual(merged.usage, { '2026-09-10': { posts: 1035, users: 13 } });
+  assert.equal(merged.sinceId, '250');
+  assert.deepEqual(mergeState(base, b, a), merged);
+});
+
+test('receipts already present in the common base do not block unrelated capture increments', () => {
+  const common = { ...base, repostAcquisitionUsage: { lookup1: receipt } };
+  const a = { ...common, usage: { '2026-09-10': { posts: 1005, users: 10 } } };
+  const b = { ...common, usage: { '2026-09-10': { posts: 1000, users: 12 } } };
+  const merged = mergeState(common, a, b);
+  assert.deepEqual(merged.repostAcquisitionUsage, common.repostAcquisitionUsage);
+  assert.deepEqual(merged.usage, { '2026-09-10': { posts: 1005, users: 12 } });
+});
+
+test('distinct concurrent acquisition maps still require explicit conflict resolution', () => {
+  const a = { ...base, repostAcquisitionUsage: { lookup1: receipt }, usage: { '2026-09-10': { posts: 1025, users: 13 } } };
+  const b = { ...base, repostAcquisitionUsage: { lookup2: { ...receipt, responseHash: 'response-two' } }, usage: { '2026-09-10': { posts: 1025, users: 13 } } };
+  assert.throws(() => mergeState(base, a, b), /Concurrent changes to repostAcquisitionUsage/);
+});
+
+test('malformed acquisition ledgers cannot evade overlap checks', () => {
+  for (const repostAcquisitionUsage of [[], 3, 'bad']) {
+    assert.throws(() => mergeState(base, { ...base, repostAcquisitionUsage }, base), /Invalid repost acquisition usage ledger/);
+  }
+});
 test('merging unchanged sides is the identity', () => assert.deepEqual(mergeState(base, base, base), base));
 test('merge driver leaves ours untouched when any JSON input is corrupt', (t) => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'state-merge-'));

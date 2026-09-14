@@ -373,7 +373,10 @@ export async function lookupTweets(ids, { withText = false } = {}) {
       });
     }
   }
-  return { metricsById, tweetsById, usage: body.data?.length || 0, userReads: includes.users.length, errors: body.errors || [] };
+  return { metricsById, tweetsById, usage: body.data?.length || 0, userReads: includes.users.length, errors: body.errors || [],
+    // Text acquisition can checkpoint the original provider response before
+    // projecting/cache-writing it. Never includes request headers or tokens.
+    ...(withText ? { raw: body } : {}) };
 }
 
 // Resolve handles → user objects, 100 per request ($0.01 per user returned —

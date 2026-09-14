@@ -21,6 +21,18 @@ export function mergeState(base, a, b) {
   for (const state of [base, a, b]) {
     if (!state || typeof state !== 'object' || Array.isArray(state)) throw new Error('Invalid state during merge');
     if (state.sinceId != null && (typeof state.sinceId !== 'string' || !/^\d+$/.test(state.sinceId))) throw new Error('Invalid capture cursor during merge');
+    if (state.repostAcquisitionUsage != null && (typeof state.repostAcquisitionUsage !== 'object' || Array.isArray(state.repostAcquisitionUsage))) throw new Error('Invalid repost acquisition usage ledger during merge');
+  }
+  // Usage below combines independent increments. The same acquisition receipt
+  // newly applied on both sides is not independent, even if its markers are
+  // byte-for-byte equal: choose() would accept the marker and double the reads.
+  const baseReceipts = base.repostAcquisitionUsage || {};
+  const oursReceipts = a.repostAcquisitionUsage || {};
+  const theirsReceipts = b.repostAcquisitionUsage || {};
+  for (const key of Object.keys(oursReceipts)) {
+    if (!Object.hasOwn(baseReceipts, key) && Object.hasOwn(theirsReceipts, key)) {
+      throw new Error(`Concurrent application of repost acquisition receipt ${key}; refusing to double-count read usage`);
+    }
   }
   const merged = choose(pick(base, CAPTURE_FIELDS), pick(a, CAPTURE_FIELDS), pick(b, CAPTURE_FIELDS), 'capture state');
   const out = { ...merged };

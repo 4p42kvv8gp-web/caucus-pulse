@@ -150,6 +150,7 @@ test('timeline/search and text lookup request long-form fields; metrics-only loo
     assert.equal(lookup.tweetsById.get('123').source.raw.note_tweet.entities.urls[0].expanded_url, link.expanded_url);
     assert.equal(lookup.usage, 1);
     assert.equal(lookup.userReads, 1);
+    assert.deepEqual(lookup.raw, { data: [post], includes: { users: [{ id: '456', username: 'Member' }] } });
     await lookupTweets(['123']);
     assert.equal(calls.at(-1).searchParams.get('tweet.fields'), 'public_metrics');
     assert.equal(calls.at(-1).searchParams.get('expansions'), null);
