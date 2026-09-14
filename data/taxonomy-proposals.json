@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-09-13T12:49:55.867Z",
- "night": "2026-09-13",
+ "generatedAt": "2026-09-14T13:16:39.420Z",
+ "night": "2026-09-14",
  "window": {
-  "from": "2026-08-30",
-  "to": "2026-09-12",
+  "from": "2026-08-31",
+  "to": "2026-09-13",
   "days": 14,
   "shareDays": 7,
   "retireDays": 21,
@@ -23,104 +23,740 @@
   "max_calls": 40,
   "semantic": false
  },
- "calls": 30,
+ "calls": 36,
  "coverage": {
   "economy": {
    "label": "Economy & cost of living",
-   "posts": 1065,
-   "posts7": 508,
-   "scanned": 42,
-   "scanned7": 8,
-   "read": 0,
-   "calls": 2,
-   "clusters": 13,
-   "named": 0,
-   "generic": 8,
+   "posts": 1053,
+   "posts7": 498,
+   "scanned": 398,
+   "scanned7": 171,
+   "read": 360,
+   "calls": 5,
+   "clusters": 46,
+   "named": 12,
+   "generic": 44,
    "subjects": [
-    {
-     "key": "iran-war-gas-prices",
-     "label": "Iran war driving gas prices up",
-     "posts": 5,
-     "posts7": 0,
-     "members": 5,
-     "days": 4,
-     "share": 0
-    },
     {
      "key": "cost-of-living-crisis",
      "label": "Cost-of-living crisis broadly",
-     "posts": 4,
-     "posts7": 0,
-     "members": 4,
-     "days": 4,
-     "share": 0
+     "posts": 32,
+     "posts7": 44,
+     "members": 28,
+     "days": 13,
+     "share": 0.088
     },
     {
-     "key": "trump-priorities-vs-costs",
-     "label": "Trump's vanity projects vs costs",
-     "posts": 4,
-     "posts7": 64,
-     "members": 4,
-     "days": 2,
-     "share": 0.125
+     "key": "iran-war-gas-prices",
+     "label": "Iran war driving gas prices up",
+     "posts": 26,
+     "posts7": 32,
+     "members": 25,
+     "days": 10,
+     "share": 0.064
     },
     {
      "key": "canada-tariffs",
-     "label": "Canada tariffs & trade",
-     "posts": 3,
-     "posts7": 64,
-     "members": 2,
-     "days": 3,
-     "share": 0.125
+     "label": "Trump's Canada trade war",
+     "posts": 22,
+     "posts7": 35,
+     "members": 17,
+     "days": 6,
+     "share": 0.07
     },
     {
-     "key": "food-insecurity",
-     "label": "Grocery costs & food insecurity",
-     "posts": 3,
-     "posts7": 0,
-     "members": 3,
+     "key": "trump-5k-checks",
+     "label": "Trump's $5,000 tariff checks promise",
+     "posts": 22,
+     "posts7": 64,
+     "members": 21,
      "days": 3,
-     "share": 0
+     "share": 0.129
+    },
+    {
+     "key": "trump-priorities-vs-costs",
+     "label": "GOP priorities vs. cost of living",
+     "posts": 22,
+     "posts7": 12,
+     "members": 19,
+     "days": 8,
+     "share": 0.023
     },
     {
      "key": "labor-day",
      "label": "Labor Day & worker dignity",
-     "posts": 3,
-     "posts7": 191,
-     "members": 3,
-     "days": 1,
-     "share": 0.375
+     "posts": 21,
+     "posts7": 50,
+     "members": 21,
+     "days": 4,
+     "share": 0.099
     },
     {
-     "key": "film-tax-incentive",
-     "label": "Federal film tax incentive",
-     "posts": 2,
-     "posts7": 0,
-     "members": 2,
-     "days": 2,
-     "share": 0
+     "key": "housing-affordability",
+     "label": "Housing costs & affordable housing",
+     "posts": 19,
+     "posts7": 15,
+     "members": 17,
+     "days": 10,
+     "share": 0.029
+    },
+    {
+     "key": "utility-bills",
+     "label": "Electricity & utility bills",
+     "posts": 15,
+     "posts7": 15,
+     "members": 14,
+     "days": 8,
+     "share": 0.029
+    },
+    {
+     "key": "iran-war-cost-of-living",
+     "label": "Iran war raising overall costs",
+     "posts": 11,
+     "posts7": 6,
+     "members": 9,
+     "days": 6,
+     "share": 0.012
+    },
+    {
+     "key": "diesel-prices",
+     "label": "Record diesel prices",
+     "posts": 10,
+     "posts7": 12,
+     "members": 10,
+     "days": 4,
+     "share": 0.023
+    },
+    {
+     "key": "manufacturing-investment",
+     "label": "Manufacturing & industrial policy",
+     "posts": 9,
+     "posts7": 9,
+     "members": 9,
+     "days": 7,
+     "share": 0.018
+    },
+    {
+     "key": "tariff-household-costs",
+     "label": "Tariff/policy cost per household",
+     "posts": 9,
+     "posts7": 15,
+     "members": 9,
+     "days": 6,
+     "share": 0.029
+    },
+    {
+     "key": "gop-dallas-convention",
+     "label": "GOP Dallas convention vs costs",
+     "posts": 8,
+     "posts7": 20,
+     "members": 8,
+     "days": 4,
+     "share": 0.041
+    },
+    {
+     "key": "health-costs-tax-cuts",
+     "label": "Health costs & Medicaid cuts for tax cut",
+     "posts": 8,
+     "posts7": 15,
+     "members": 8,
+     "days": 5,
+     "share": 0.029
+    },
+    {
+     "key": "jobs-wage-growth",
+     "label": "Jobs & wage growth data",
+     "posts": 8,
+     "posts7": 3,
+     "members": 7,
+     "days": 6,
+     "share": 0.006
     },
     {
      "key": "lake-renaming",
      "label": "Trump renaming Lake Ontario",
+     "posts": 8,
+     "posts7": 3,
+     "members": 7,
+     "days": 5,
+     "share": 0.006
+    },
+    {
+     "key": "snap-cuts",
+     "label": "SNAP & school meal cuts",
+     "posts": 8,
+     "posts7": 3,
+     "members": 8,
+     "days": 4,
+     "share": 0.006
+    },
+    {
+     "key": "tariff-costs-general",
+     "label": "Tariffs & trade war with allies",
+     "posts": 8,
+     "posts7": 9,
+     "members": 7,
+     "days": 6,
+     "share": 0.018
+    },
+    {
+     "key": "socialism-resolution-vote",
+     "label": "House socialism resolution vote",
+     "posts": 7,
+     "posts7": 0,
+     "members": 7,
+     "days": 3,
+     "share": 0
+    },
+    {
+     "key": "food-insecurity",
+     "label": "Grocery costs & food insecurity",
+     "posts": 6,
+     "posts7": 6,
+     "members": 6,
+     "days": 6,
+     "share": 0.012
+    },
+    {
+     "key": "beef-market",
+     "label": "Beef market & meatpacking cartel",
+     "posts": 5,
+     "posts7": 3,
+     "members": 5,
+     "days": 4,
+     "share": 0.006
+    },
+    {
+     "key": "tariffs-small-business",
+     "label": "Tariffs hitting small business",
+     "posts": 5,
+     "posts7": 6,
+     "members": 5,
+     "days": 5,
+     "share": 0.012
+    },
+    {
+     "key": "tax-cuts-rich",
+     "label": "Tax cuts & breaks for the wealthy",
+     "posts": 5,
+     "posts7": 3,
+     "members": 5,
+     "days": 5,
+     "share": 0.006
+    },
+    {
+     "key": "affordability-denial",
+     "label": "GOP denying affordability crisis",
+     "posts": 4,
+     "posts7": 9,
+     "members": 4,
+     "days": 4,
+     "share": 0.018
+    },
+    {
+     "key": "back-to-school-costs",
+     "label": "Back-to-school supply & lunch costs",
+     "posts": 4,
+     "posts7": 0,
+     "members": 4,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "gas-prices",
+     "label": "Gas prices & gas tax relief",
+     "posts": 4,
+     "posts7": 3,
+     "members": 4,
+     "days": 3,
+     "share": 0.006
+    },
+    {
+     "key": "iran-war-food-costs",
+     "label": "Iran war fuel costs raising groceries",
+     "posts": 4,
+     "posts7": 6,
+     "members": 4,
+     "days": 4,
+     "share": 0.012
+    },
+    {
+     "key": "vance-be-grateful",
+     "label": "Vance's 'be grateful' pump remark",
+     "posts": 4,
+     "posts7": 3,
+     "members": 4,
+     "days": 3,
+     "share": 0.006
+    },
+    {
+     "key": "billionaire-tax",
+     "label": "Billionaire wealth tax proposal",
+     "posts": 3,
+     "posts7": 6,
+     "members": 2,
+     "days": 3,
+     "share": 0.012
+    },
+    {
+     "key": "campaign-affordability-plan",
+     "label": "Campaign plans to lower costs",
+     "posts": 3,
+     "posts7": 6,
+     "members": 3,
+     "days": 2,
+     "share": 0.012
+    },
+    {
+     "key": "corporate-profits-wages",
+     "label": "Record corporate profits vs wages",
+     "posts": 3,
+     "posts7": 6,
+     "members": 3,
+     "days": 2,
+     "share": 0.012
+    },
+    {
+     "key": "farm-economy",
+     "label": "Farmers hurt by tariffs & war",
+     "posts": 3,
+     "posts7": 6,
+     "members": 3,
+     "days": 3,
+     "share": 0.012
+    },
+    {
+     "key": "fed-rate-cuts",
+     "label": "Fed rate cuts & inflation risk",
+     "posts": 3,
+     "posts7": 6,
+     "members": 2,
+     "days": 2,
+     "share": 0.012
+    },
+    {
+     "key": "film-tax-incentive",
+     "label": "Federal film tax incentive",
+     "posts": 3,
+     "posts7": 0,
+     "members": 3,
+     "days": 2,
+     "share": 0
+    },
+    {
+     "key": "at-home-parent-payments",
+     "label": "Vance stay-at-home parent plan",
+     "posts": 2,
+     "posts7": 3,
+     "members": 2,
+     "days": 2,
+     "share": 0.006
+    },
+    {
+     "key": "child-care-costs",
+     "label": "Child care & cost of raising kids",
+     "posts": 2,
+     "posts7": 3,
+     "members": 2,
+     "days": 2,
+     "share": 0.006
+    },
+    {
+     "key": "corporate-consolidation",
+     "label": "Corporate consolidation & antitrust",
      "posts": 2,
      "posts7": 0,
      "members": 2,
      "days": 2,
      "share": 0
+    },
+    {
+     "key": "deportation-costs",
+     "label": "Cost of mass deportations",
+     "posts": 2,
+     "posts7": 6,
+     "members": 2,
+     "days": 2,
+     "share": 0.012
+    },
+    {
+     "key": "family-credits-bills",
+     "label": "Baby Bonds & Child Tax Credit bills",
+     "posts": 2,
+     "posts7": 3,
+     "members": 2,
+     "days": 2,
+     "share": 0.006
     },
     {
      "key": "national-debt-tax-breaks",
      "label": "National debt & billionaire tax cuts",
      "posts": 2,
-     "posts7": 0,
+     "posts7": 3,
      "members": 2,
+     "days": 2,
+     "share": 0.006
+    }
+   ],
+   "existing": {
+    "prices-inflation": {
+     "posts": 224,
+     "posts7": 173,
+     "members7": 95,
+     "days7": 7,
+     "share": 0.347,
+     "verdict": {
+      "key": "prices-inflation",
+      "verdict": "coarse",
+      "of": null,
+      "label": null,
+      "splits": [
+       "iran-war-gas-prices",
+       "utility-bills",
+       "diesel-price-record"
+      ],
+      "reason": "224 posts absorb distinct stories the reader split out: Iran-war gas prices, record diesel, and electric/utility bills alongside generic cost-of-living."
+     }
+    },
+    "tariffs-trade": {
+     "posts": 72,
+     "posts7": 50,
+     "members7": 37,
+     "days7": 6,
+     "share": 0.1,
+     "verdict": {
+      "key": "tariffs-trade",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "72 posts with a live Canada trade-war cluster and tariff-cost-per-household posts; the row holds."
+     }
+    },
+    "housing": {
+     "posts": 17,
+     "posts7": 16,
+     "members7": 12,
+     "days7": 5,
+     "share": 0.032,
+     "verdict": {
+      "key": "housing",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "Cluster 7 (rents, HUD, affordable housing supply) maps cleanly onto it at 17 posts."
+     }
+    },
+    "jobs-wages": {
+     "posts": 47,
+     "posts7": 39,
+     "members7": 35,
+     "days7": 7,
+     "share": 0.078,
+     "verdict": {
+      "key": "jobs-wages",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "47 posts, supported by Labor Day worker-dignity and manufacturing/jobs clusters."
+     }
+    },
+    "taxes": {
+     "posts": 40,
+     "posts7": 30,
+     "members7": 25,
+     "days7": 6,
+     "share": 0.06,
+     "verdict": {
+      "key": "taxes",
+      "verdict": "ok",
+      "of": null,
+      "label": null,
+      "splits": [],
+      "reason": "40 posts (30 last week) still classified here even though no tax cluster crossed the reading threshold; not dead."
+     }
+    }
+   },
+   "proposals": 11
+  },
+  "congress-politics": {
+   "label": "Congress & campaign politics",
+   "posts": 1005,
+   "posts7": 432,
+   "scanned": 260,
+   "scanned7": 117,
+   "read": 260,
+   "calls": 5,
+   "clusters": 42,
+   "named": 8,
+   "generic": 19,
+   "subjects": [
+    {
+     "key": "district-community-events",
+     "label": "District visits & community events",
+     "posts": 44,
+     "posts7": 89,
+     "members": 35,
+     "days": 13,
+     "share": 0.205
+    },
+    {
+     "key": "dem-party-events",
+     "label": "Democratic party events & organizing",
+     "posts": 24,
+     "posts7": 37,
+     "members": 18,
+     "days": 13,
+     "share": 0.085
+    },
+    {
+     "key": "dem-candidate-endorsements",
+     "label": "Boosting other Democratic candidates",
+     "posts": 19,
+     "posts7": 55,
+     "members": 18,
+     "days": 7,
+     "share": 0.128
+    },
+    {
+     "key": "campaign-endorsements",
+     "label": "Endorsements received by the member",
+     "posts": 13,
+     "posts7": 22,
+     "members": 9,
+     "days": 8,
+     "share": 0.051
+    },
+    {
+     "key": "trump-5000-dividend",
+     "label": "Trump's $5,000 dividend promise",
+     "posts": 13,
+     "posts7": 48,
+     "members": 13,
+     "days": 3,
+     "share": 0.111
+    },
+    {
+     "key": "telephone-town-halls",
+     "label": "Town hall announcements",
+     "posts": 12,
+     "posts7": 7,
+     "members": 12,
+     "days": 7,
+     "share": 0.017
+    },
+    {
+     "key": "opponent-contrast",
+     "label": "Attacks on the member's opponent",
+     "posts": 11,
+     "posts7": 26,
+     "members": 8,
+     "days": 8,
+     "share": 0.06
+    },
+    {
+     "key": "ma-senate-primary",
+     "label": "Massachusetts Senate primary push",
+     "posts": 8,
+     "posts7": 7,
+     "members": 4,
+     "days": 5,
+     "share": 0.017
+    },
+    {
+     "key": "voting-rights-attacks",
+     "label": "GOP attacks on voting access",
+     "posts": 7,
+     "posts7": 7,
+     "members": 7,
+     "days": 5,
+     "share": 0.017
+    },
+    {
+     "key": "ai-regulation-session",
+     "label": "Demand for AI regulation hearings",
+     "posts": 6,
+     "posts7": 22,
+     "members": 5,
+     "days": 4,
+     "share": 0.051
+    },
+    {
+     "key": "debate-challenges",
+     "label": "Debate challenges to GOP opponents",
+     "posts": 6,
+     "posts7": 4,
+     "members": 3,
+     "days": 5,
+     "share": 0.009
+    },
+    {
+     "key": "house-gop-cancels-september",
+     "label": "House GOP cancels September session",
+     "posts": 6,
+     "posts7": 7,
+     "members": 6,
+     "days": 4,
+     "share": 0.017
+    },
+    {
+     "key": "labor-day-events",
+     "label": "Labor Day parades & cookouts",
+     "posts": 6,
+     "posts7": 18,
+     "members": 6,
+     "days": 3,
+     "share": 0.043
+    },
+    {
+     "key": "house-gop-floor-agenda",
+     "label": "House GOP floor messaging votes",
+     "posts": 5,
+     "posts7": 0,
+     "members": 5,
      "days": 2,
      "share": 0
     },
     {
-     "key": "tariff-household-costs",
-     "label": "Tariff/policy cost per household",
+     "key": "ma-primary-results",
+     "label": "Massachusetts House primary results",
+     "posts": 5,
+     "posts7": 0,
+     "members": 5,
+     "days": 3,
+     "share": 0
+    },
+    {
+     "key": "chuck-edwards-censure",
+     "label": "Chuck Edwards censure vote",
+     "posts": 4,
+     "posts7": 0,
+     "members": 3,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "fetterman-defection",
+     "label": "Fetterman's GOP-friendly remarks",
+     "posts": 4,
+     "posts7": 7,
+     "members": 3,
+     "days": 2,
+     "share": 0.017
+    },
+    {
+     "key": "rising-costs-gas-utilities",
+     "label": "Rising gas, grocery & utility prices",
+     "posts": 4,
+     "posts7": 0,
+     "members": 3,
+     "days": 3,
+     "share": 0
+    },
+    {
+     "key": "service-academy-nights",
+     "label": "Service academy nomination nights",
+     "posts": 4,
+     "posts7": 7,
+     "members": 4,
+     "days": 4,
+     "share": 0.017
+    },
+    {
+     "key": "colleague-tributes",
+     "label": "Tributes to Pelosi and Doggett",
+     "posts": 3,
+     "posts7": 4,
+     "members": 2,
+     "days": 2,
+     "share": 0.009
+    },
+    {
+     "key": "corruption-dark-money",
+     "label": "Dark money & political corruption",
+     "posts": 3,
+     "posts7": 4,
+     "members": 3,
+     "days": 3,
+     "share": 0.009
+    },
+    {
+     "key": "dem-left-strategy",
+     "label": "Democrats' left flank & messaging",
+     "posts": 3,
+     "posts7": 4,
+     "members": 3,
+     "days": 3,
+     "share": 0.009
+    },
+    {
+     "key": "gop-dallas-convention",
+     "label": "GOP Dallas donor convention",
+     "posts": 3,
+     "posts7": 11,
+     "members": 3,
+     "days": 1,
+     "share": 0.026
+    },
+    {
+     "key": "gotv-voter-registration",
+     "label": "Voter registration & GOTV deadlines",
+     "posts": 3,
+     "posts7": 4,
+     "members": 3,
+     "days": 3,
+     "share": 0.009
+    },
+    {
+     "key": "trump-iran-war",
+     "label": "Trump's war in Iran",
+     "posts": 3,
+     "posts7": 7,
+     "members": 3,
+     "days": 3,
+     "share": 0.017
+    },
+    {
+     "key": "constituent-service-events",
+     "label": "Mobile office hours & resource fairs",
+     "posts": 2,
+     "posts7": 4,
+     "members": 2,
+     "days": 2,
+     "share": 0.009
+    },
+    {
+     "key": "gop-healthcare-cuts",
+     "label": "GOP healthcare cuts on the ballot",
+     "posts": 2,
+     "posts7": 4,
+     "members": 2,
+     "days": 2,
+     "share": 0.009
+    },
+    {
+     "key": "new-member-welcome",
+     "label": "Welcoming newly sworn-in Democrats",
+     "posts": 2,
+     "posts7": 0,
+     "members": 2,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "trump-renaming-places",
+     "label": "Trump renaming lakes and states",
+     "posts": 2,
+     "posts7": 4,
+     "members": 2,
+     "days": 2,
+     "share": 0.009
+    },
+    {
+     "key": "usps-mail-ballots",
+     "label": "USPS digital mail ballot rules",
      "posts": 2,
      "posts7": 0,
      "members": 2,
@@ -128,17 +764,8 @@
      "share": 0
     },
     {
-     "key": "utility-bills",
-     "label": "Electricity & utility bills",
-     "posts": 2,
-     "posts7": 64,
-     "members": 1,
-     "days": 2,
-     "share": 0.125
-    },
-    {
-     "key": "gas-prices",
-     "label": "Gas prices & gas tax relief",
+     "key": "antisemitism-forum",
+     "label": "Jewish constituent forum",
      "posts": 1,
      "posts7": 0,
      "members": 1,
@@ -146,8 +773,80 @@
      "share": 0
     },
     {
-     "key": "housing-affordability",
-     "label": "Housing costs & affordable housing",
+     "key": "blakeman-9-11-endorsement",
+     "label": "Blakeman's 9/11 truther endorsement",
+     "posts": 1,
+     "posts7": 4,
+     "members": 1,
+     "days": 1,
+     "share": 0.009
+    },
+    {
+     "key": "budget-resolution-vote",
+     "label": "Bipartisan budget resolution vote",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "epstein-investigation",
+     "label": "Epstein oversight investigation",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "lobsterman-whales-bill",
+     "label": "Northeast Lobsterman Act vote",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "new-dem-coalition-chair",
+     "label": "New Dem Coalition chair bid",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "ny-relief-funds",
+     "label": "Blocked federal relief funds in NY",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "social-security-fairness",
+     "label": "Social Security Fairness Act",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "star-act-discharge-petition",
+     "label": "Major Richard Star Act petition",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
+     "key": "trump-white-house-renovation",
+     "label": "Trump's White House makeover",
      "posts": 1,
      "posts7": 0,
      "members": 1,
@@ -156,93 +855,37 @@
     }
    ],
    "existing": {
-    "prices-inflation": {
-     "posts": 207,
-     "posts7": 162,
-     "members7": 94,
-     "days7": 7,
-     "share": 0.319,
-     "verdict": null
-    },
-    "tariffs-trade": {
-     "posts": 65,
-     "posts7": 46,
-     "members7": 36,
-     "days7": 6,
-     "share": 0.091,
-     "verdict": null
-    },
-    "housing": {
-     "posts": 16,
-     "posts7": 15,
-     "members7": 11,
-     "days7": 5,
-     "share": 0.03,
-     "verdict": null
-    },
-    "jobs-wages": {
-     "posts": 45,
-     "posts7": 39,
-     "members7": 34,
-     "days7": 7,
-     "share": 0.077,
-     "verdict": null
-    },
-    "taxes": {
-     "posts": 36,
-     "posts7": 29,
-     "members7": 24,
-     "days7": 6,
-     "share": 0.057,
-     "verdict": null
-    }
-   },
-   "proposals": 1
-  },
-  "congress-politics": {
-   "label": "Congress & campaign politics",
-   "posts": 1008,
-   "posts7": 458,
-   "scanned": 0,
-   "scanned7": 0,
-   "read": 0,
-   "calls": 2,
-   "clusters": 0,
-   "named": 0,
-   "generic": 0,
-   "subjects": [],
-   "existing": {
     "house-floor": {
-     "posts": 36,
-     "posts7": 19,
-     "members7": 14,
+     "posts": 38,
+     "posts7": 20,
+     "members7": 15,
      "days7": 6,
-     "share": 0.041,
+     "share": 0.046,
      "verdict": null
     },
     "elections-2026": {
-     "posts": 177,
-     "posts7": 159,
-     "members7": 98,
+     "posts": 199,
+     "posts7": 162,
+     "members7": 96,
      "days7": 7,
-     "share": 0.347,
+     "share": 0.375,
      "verdict": null
     },
     "town-halls": {
-     "posts": 88,
-     "posts7": 68,
-     "members7": 53,
+     "posts": 93,
+     "posts7": 72,
+     "members7": 57,
      "days7": 7,
-     "share": 0.148,
+     "share": 0.167,
      "verdict": null
     }
    },
-   "proposals": 0
+   "proposals": 8
   },
   "democracy": {
    "label": "Democracy & rule of law",
-   "posts": 861,
-   "posts7": 349,
+   "posts": 860,
+   "posts7": 339,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -253,11 +896,11 @@
    "subjects": [],
    "existing": {
     "epstein-files": {
-     "posts": 6,
-     "posts7": 6,
-     "members7": 4,
-     "days7": 3,
-     "share": 0.017,
+     "posts": 8,
+     "posts7": 8,
+     "members7": 5,
+     "days7": 4,
+     "share": 0.024,
      "verdict": null
     },
     "lake-america-renaming": {
@@ -265,56 +908,56 @@
      "posts7": 4,
      "members7": 1,
      "days7": 1,
-     "share": 0.011,
+     "share": 0.012,
      "verdict": null
     },
     "voting-rights": {
-     "posts": 81,
-     "posts7": 57,
-     "members7": 49,
+     "posts": 87,
+     "posts7": 63,
+     "members7": 53,
      "days7": 6,
-     "share": 0.163,
+     "share": 0.186,
      "verdict": null
     },
     "courts-doj": {
-     "posts": 26,
-     "posts7": 20,
-     "members7": 19,
+     "posts": 29,
+     "posts7": 21,
+     "members7": 20,
      "days7": 5,
-     "share": 0.057,
+     "share": 0.062,
      "verdict": null
     },
     "executive-overreach": {
      "posts": 54,
-     "posts7": 38,
+     "posts7": 39,
      "members7": 32,
      "days7": 7,
-     "share": 0.109,
+     "share": 0.115,
      "verdict": null
     },
     "corruption-ethics": {
-     "posts": 114,
-     "posts7": 86,
-     "members7": 64,
+     "posts": 123,
+     "posts7": 89,
+     "members7": 62,
      "days7": 6,
-     "share": 0.246,
+     "share": 0.263,
      "verdict": null
     },
     "press-speech": {
-     "posts": 19,
-     "posts7": 13,
-     "members7": 9,
-     "days7": 5,
-     "share": 0.037,
+     "posts": 20,
+     "posts7": 14,
+     "members7": 10,
+     "days7": 6,
+     "share": 0.041,
      "verdict": null
     }
    },
-   "proposals": 0
+   "proposals": 1
   },
   "foreign-policy": {
    "label": "Foreign policy & national security",
-   "posts": 633,
-   "posts7": 249,
+   "posts": 630,
+   "posts7": 252,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -326,34 +969,34 @@
    "existing": {
     "ukraine-russia": {
      "posts": 10,
-     "posts7": 9,
-     "members7": 5,
-     "days7": 5,
-     "share": 0.036,
+     "posts7": 8,
+     "members7": 4,
+     "days7": 4,
+     "share": 0.032,
      "verdict": null
     },
     "middle-east": {
-     "posts": 95,
-     "posts7": 73,
-     "members7": 49,
+     "posts": 107,
+     "posts7": 83,
+     "members7": 54,
      "days7": 7,
-     "share": 0.293,
+     "share": 0.329,
      "verdict": null
     },
     "china": {
-     "posts": 9,
+     "posts": 10,
      "posts7": 9,
-     "members7": 9,
+     "members7": 8,
      "days7": 5,
      "share": 0.036,
      "verdict": null
     },
     "military-veterans": {
-     "posts": 56,
-     "posts7": 40,
-     "members7": 28,
-     "days7": 5,
-     "share": 0.161,
+     "posts": 58,
+     "posts7": 44,
+     "members7": 31,
+     "days7": 6,
+     "share": 0.175,
      "verdict": null
     }
    },
@@ -361,8 +1004,8 @@
   },
   "labor": {
    "label": "Labor & workers",
-   "posts": 417,
-   "posts7": 348,
+   "posts": 420,
+   "posts7": 338,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -373,19 +1016,19 @@
    "subjects": [],
    "existing": {
     "unions": {
-     "posts": 74,
-     "posts7": 70,
-     "members7": 63,
+     "posts": 76,
+     "posts7": 67,
+     "members7": 59,
      "days7": 7,
-     "share": 0.201,
+     "share": 0.198,
      "verdict": null
     },
     "federal-workforce": {
-     "posts": 11,
-     "posts7": 10,
-     "members7": 9,
-     "days7": 3,
-     "share": 0.029,
+     "posts": 12,
+     "posts7": 11,
+     "members7": 10,
+     "days7": 4,
+     "share": 0.033,
      "verdict": null
     }
    },
@@ -393,13 +1036,13 @@
   },
   "healthcare": {
    "label": "Health care",
-   "posts": 382,
-   "posts7": 188,
-   "scanned": 135,
-   "scanned7": 47,
+   "posts": 386,
+   "posts7": 180,
+   "scanned": 131,
+   "scanned7": 39,
    "read": 0,
    "calls": 2,
-   "clusters": 25,
+   "clusters": 24,
    "named": 4,
    "generic": 28,
    "subjects": [
@@ -407,100 +1050,100 @@
      "key": "988-suicide-prevention",
      "label": "988 lifeline & suicide prevention",
      "posts": 20,
-     "posts7": 40,
+     "posts7": 42,
      "members": 17,
      "days": 7,
-     "share": 0.213
+     "share": 0.231
     },
     {
      "key": "obbba-health-cuts",
      "label": "OBBBA Medicaid & ACA coverage cuts",
-     "posts": 20,
-     "posts7": 28,
-     "members": 17,
-     "days": 9,
-     "share": 0.149
+     "posts": 19,
+     "posts7": 23,
+     "members": 16,
+     "days": 8,
+     "share": 0.128
     },
     {
      "key": "food-safety-recalls",
      "label": "Food safety & recalls",
      "posts": 8,
-     "posts7": 4,
+     "posts7": 5,
      "members": 6,
      "days": 5,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "overdose-awareness-day",
      "label": "Overdose awareness & recovery",
      "posts": 8,
-     "posts7": 4,
+     "posts7": 5,
      "members": 8,
      "days": 4,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "local-health-facility-visits",
      "label": "Local hospital/clinic visits & praise",
      "posts": 6,
-     "posts7": 16,
+     "posts7": 18,
      "members": 6,
      "days": 4,
-     "share": 0.085
-    },
-    {
-     "key": "medicare-for-all",
-     "label": "Medicare for All / universal care",
-     "posts": 6,
-     "posts7": 16,
-     "members": 2,
-     "days": 4,
-     "share": 0.085
+     "share": 0.103
     },
     {
      "key": "vaccines-rfk-misinformation",
      "label": "Measles outbreaks & RFK Jr. vaccines",
      "posts": 6,
-     "posts7": 4,
+     "posts7": 5,
      "members": 6,
      "days": 5,
-     "share": 0.021
+     "share": 0.026
+    },
+    {
+     "key": "medicare-for-all",
+     "label": "Medicare for All / universal care",
+     "posts": 5,
+     "posts7": 18,
+     "members": 2,
+     "days": 3,
+     "share": 0.103
     },
     {
      "key": "health-cost-spike",
      "label": "Health insurance cost spike",
      "posts": 4,
-     "posts7": 12,
+     "posts7": 5,
      "members": 4,
      "days": 3,
-     "share": 0.064
+     "share": 0.026
     },
     {
      "key": "federal-health-facility-grants",
      "label": "Federal grants to local health sites",
      "posts": 3,
-     "posts7": 4,
+     "posts7": 5,
      "members": 3,
      "days": 3,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "ground-zero-air-files",
      "label": "Ground Zero air quality files",
      "posts": 3,
-     "posts7": 8,
+     "posts7": 9,
      "members": 3,
      "days": 3,
-     "share": 0.043
+     "share": 0.051
     },
     {
      "key": "nih-funds-to-pentagon",
      "label": "NIH funds redirected to Pentagon",
      "posts": 3,
-     "posts7": 4,
+     "posts7": 0,
      "members": 3,
      "days": 3,
-     "share": 0.021
+     "share": 0
     },
     {
      "key": "anti-socialism-resolution",
@@ -521,22 +1164,13 @@
      "share": 0
     },
     {
-     "key": "florida-medicaid-theft",
-     "label": "Florida $10M Medicaid funds theft",
-     "posts": 2,
-     "posts7": 0,
-     "members": 2,
-     "days": 2,
-     "share": 0
-    },
-    {
      "key": "hhs-maternal-infant-grants",
      "label": "HHS infant mortality grant cuts",
      "posts": 2,
-     "posts7": 8,
+     "posts7": 9,
      "members": 2,
      "days": 2,
-     "share": 0.043
+     "share": 0.051
     },
     {
      "key": "nitrous-oxide-ban",
@@ -551,19 +1185,19 @@
      "key": "prescription-drug-costs",
      "label": "Prescription drug costs",
      "posts": 2,
-     "posts7": 4,
+     "posts7": 0,
      "members": 2,
      "days": 2,
-     "share": 0.021
+     "share": 0
     },
     {
      "key": "blood-donation-drive",
      "label": "Red Cross blood drive",
      "posts": 1,
-     "posts7": 4,
+     "posts7": 5,
      "members": 1,
      "days": 1,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "caregiving-infrastructure-bill",
@@ -584,6 +1218,15 @@
      "share": 0
     },
     {
+     "key": "florida-medicaid-theft",
+     "label": "Florida $10M Medicaid funds theft",
+     "posts": 1,
+     "posts7": 0,
+     "members": 1,
+     "days": 1,
+     "share": 0
+    },
+    {
      "key": "medical-nutrition-therapy-act",
      "label": "Medical Nutrition Therapy Act",
      "posts": 1,
@@ -596,46 +1239,37 @@
      "key": "ms-research-advocacy",
      "label": "MS research & Oregon advocacy",
      "posts": 1,
-     "posts7": 4,
+     "posts7": 5,
      "members": 1,
      "days": 1,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "ovarian-cancer-awareness",
      "label": "Ovarian cancer risk & genetic testing",
      "posts": 1,
-     "posts7": 4,
+     "posts7": 5,
      "members": 1,
      "days": 1,
-     "share": 0.021
+     "share": 0.026
     },
     {
      "key": "pfas-hudson-valley",
      "label": "PFAS cleanup in Hudson Valley",
      "posts": 1,
-     "posts7": 4,
+     "posts7": 5,
      "members": 1,
      "days": 1,
-     "share": 0.021
-    },
-    {
-     "key": "veterans-copay-bill",
-     "label": "Copay Fairness for Veterans Act",
-     "posts": 1,
-     "posts7": 0,
-     "members": 1,
-     "days": 1,
-     "share": 0
+     "share": 0.026
     }
    ],
    "existing": {
     "medicaid": {
-     "posts": 22,
+     "posts": 24,
      "posts7": 17,
      "members7": 12,
      "days7": 6,
-     "share": 0.09,
+     "share": 0.094,
      "verdict": {
       "key": "medicaid",
       "verdict": "ok",
@@ -646,11 +1280,11 @@
      }
     },
     "medicare": {
-     "posts": 9,
-     "posts7": 6,
-     "members7": 5,
-     "days7": 4,
-     "share": 0.032,
+     "posts": 12,
+     "posts7": 9,
+     "members7": 8,
+     "days7": 5,
+     "share": 0.05,
      "verdict": {
       "key": "medicare",
       "verdict": "ok",
@@ -662,10 +1296,10 @@
     },
     "aca": {
      "posts": 8,
-     "posts7": 8,
-     "members7": 7,
-     "days7": 3,
-     "share": 0.043,
+     "posts7": 7,
+     "members7": 6,
+     "days7": 2,
+     "share": 0.039,
      "verdict": {
       "key": "aca",
       "verdict": "ok",
@@ -680,7 +1314,7 @@
      "posts7": 1,
      "members7": 1,
      "days7": 1,
-     "share": 0.005,
+     "share": 0.006,
      "verdict": {
       "key": "drug-prices",
       "verdict": "ok",
@@ -691,11 +1325,11 @@
      }
     },
     "public-health": {
-     "posts": 59,
-     "posts7": 49,
-     "members7": 41,
+     "posts": 61,
+     "posts7": 48,
+     "members7": 40,
      "days7": 6,
-     "share": 0.261,
+     "share": 0.267,
      "verdict": {
       "key": "public-health",
       "verdict": "coarse",
@@ -715,8 +1349,8 @@
   },
   "constituent-services": {
    "label": "District & constituent services",
-   "posts": 372,
-   "posts7": 199,
+   "posts": 381,
+   "posts7": 207,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -730,8 +1364,8 @@
   },
   "immigration": {
    "label": "Immigration",
-   "posts": 324,
-   "posts7": 127,
+   "posts": 321,
+   "posts7": 129,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -750,11 +1384,11 @@
      "verdict": null
     },
     "ice-enforcement": {
-     "posts": 61,
-     "posts7": 42,
+     "posts": 64,
+     "posts7": 46,
      "members7": 32,
      "days7": 7,
-     "share": 0.331,
+     "share": 0.357,
      "verdict": null
     },
     "border-policy": {
@@ -774,11 +1408,11 @@
      "verdict": null
     },
     "asylum-refugees": {
-     "posts": 11,
-     "posts7": 8,
-     "members7": 7,
-     "days7": 3,
-     "share": 0.063,
+     "posts": 12,
+     "posts7": 9,
+     "members7": 8,
+     "days7": 4,
+     "share": 0.07,
      "verdict": null
     }
    },
@@ -787,7 +1421,7 @@
   "civil-rights": {
    "label": "Civil rights & equality",
    "posts": 296,
-   "posts7": 105,
+   "posts7": 106,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -798,7 +1432,7 @@
    "subjects": [],
    "existing": {
     "lgbtq": {
-     "posts": 8,
+     "posts": 7,
      "posts7": 6,
      "members7": 5,
      "days7": 3,
@@ -806,11 +1440,11 @@
      "verdict": null
     },
     "racial-justice": {
-     "posts": 58,
-     "posts7": 48,
-     "members7": 40,
+     "posts": 65,
+     "posts7": 54,
+     "members7": 42,
      "days7": 7,
-     "share": 0.457,
+     "share": 0.509,
      "verdict": null
     },
     "disability": {
@@ -826,8 +1460,8 @@
   },
   "climate": {
    "label": "Climate & environment",
-   "posts": 259,
-   "posts7": 109,
+   "posts": 256,
+   "posts7": 102,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -842,7 +1476,7 @@
      "posts7": 9,
      "members7": 7,
      "days7": 3,
-     "share": 0.083,
+     "share": 0.088,
      "verdict": null
     },
     "disasters": {
@@ -850,15 +1484,15 @@
      "posts7": 28,
      "members7": 15,
      "days7": 7,
-     "share": 0.257,
+     "share": 0.275,
      "verdict": null
     },
     "epa-rollbacks": {
      "posts": 11,
-     "posts7": 9,
-     "members7": 8,
-     "days7": 5,
-     "share": 0.083,
+     "posts7": 7,
+     "members7": 6,
+     "days7": 4,
+     "share": 0.069,
      "verdict": null
     }
    },
@@ -867,7 +1501,7 @@
   "budget-appropriations": {
    "label": "Budget & appropriations",
    "posts": 238,
-   "posts7": 61,
+   "posts7": 59,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -886,51 +1520,19 @@
      "verdict": null
     },
     "social-security": {
-     "posts": 6,
-     "posts7": 4,
-     "members7": 3,
-     "days7": 3,
-     "share": 0.066,
+     "posts": 7,
+     "posts7": 6,
+     "members7": 5,
+     "days7": 4,
+     "share": 0.102,
      "verdict": null
     },
     "snap-benefits": {
-     "posts": 23,
-     "posts7": 16,
-     "members7": 14,
+     "posts": 24,
+     "posts7": 15,
+     "members7": 13,
      "days7": 4,
-     "share": 0.262,
-     "verdict": null
-    }
-   },
-   "proposals": 0
-  },
-  "education": {
-   "label": "Education",
-   "posts": 174,
-   "posts7": 83,
-   "scanned": 0,
-   "scanned7": 0,
-   "read": 0,
-   "calls": 2,
-   "clusters": 0,
-   "named": 0,
-   "generic": 0,
-   "subjects": [],
-   "existing": {
-    "public-schools": {
-     "posts": 23,
-     "posts7": 17,
-     "members7": 17,
-     "days7": 6,
-     "share": 0.205,
-     "verdict": null
-    },
-    "higher-ed": {
-     "posts": 16,
-     "posts7": 10,
-     "members7": 10,
-     "days7": 4,
-     "share": 0.12,
+     "share": 0.254,
      "verdict": null
     }
    },
@@ -938,8 +1540,8 @@
   },
   "tech": {
    "label": "Technology",
-   "posts": 168,
-   "posts7": 111,
+   "posts": 184,
+   "posts7": 126,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -950,28 +1552,60 @@
    "subjects": [],
    "existing": {
     "ai-policy": {
-     "posts": 80,
-     "posts7": 73,
-     "members7": 34,
-     "days7": 5,
-     "share": 0.658,
+     "posts": 96,
+     "posts7": 89,
+     "members7": 41,
+     "days7": 6,
+     "share": 0.706,
      "verdict": null
     },
     "big-tech": {
-     "posts": 8,
-     "posts7": 6,
-     "members7": 5,
-     "days7": 2,
-     "share": 0.054,
+     "posts": 11,
+     "posts7": 9,
+     "members7": 7,
+     "days7": 3,
+     "share": 0.071,
      "verdict": null
     }
    },
    "proposals": 1
   },
+  "education": {
+   "label": "Education",
+   "posts": 164,
+   "posts7": 77,
+   "scanned": 0,
+   "scanned7": 0,
+   "read": 0,
+   "calls": 2,
+   "clusters": 0,
+   "named": 0,
+   "generic": 0,
+   "subjects": [],
+   "existing": {
+    "public-schools": {
+     "posts": 22,
+     "posts7": 14,
+     "members7": 14,
+     "days7": 5,
+     "share": 0.182,
+     "verdict": null
+    },
+    "higher-ed": {
+     "posts": 16,
+     "posts7": 11,
+     "members7": 11,
+     "days7": 5,
+     "share": 0.143,
+     "verdict": null
+    }
+   },
+   "proposals": 0
+  },
   "public-safety": {
    "label": "Guns & public safety",
-   "posts": 76,
-   "posts7": 36,
+   "posts": 80,
+   "posts7": 37,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -982,19 +1616,19 @@
    "subjects": [],
    "existing": {
     "gun-violence": {
-     "posts": 8,
-     "posts7": 6,
-     "members7": 6,
-     "days7": 4,
-     "share": 0.167,
+     "posts": 9,
+     "posts7": 7,
+     "members7": 7,
+     "days7": 5,
+     "share": 0.189,
      "verdict": null
     },
     "crime-policing": {
-     "posts": 15,
-     "posts7": 13,
-     "members7": 12,
-     "days7": 3,
-     "share": 0.361,
+     "posts": 19,
+     "posts7": 17,
+     "members7": 15,
+     "days7": 4,
+     "share": 0.459,
      "verdict": null
     }
    },
@@ -1002,8 +1636,8 @@
   },
   "reproductive-rights": {
    "label": "Reproductive rights",
-   "posts": 36,
-   "posts7": 10,
+   "posts": 38,
+   "posts7": 12,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -1014,11 +1648,11 @@
    "subjects": [],
    "existing": {
     "abortion-access": {
-     "posts": 7,
-     "posts7": 7,
-     "members7": 6,
-     "days7": 2,
-     "share": 0.7,
+     "posts": 9,
+     "posts7": 9,
+     "members7": 8,
+     "days7": 3,
+     "share": 0.75,
      "verdict": null
     },
     "ivf-contraception": {
@@ -1030,12 +1664,12 @@
      "verdict": null
     }
    },
-   "proposals": 0
+   "proposals": 1
   },
   "unassigned": {
    "label": "Unassigned posts",
-   "posts": 1304,
-   "posts7": 809,
+   "posts": 1290,
+   "posts7": 807,
    "scanned": 0,
    "scanned7": 0,
    "read": 0,
@@ -1051,6 +1685,377 @@
  "deferred": [],
  "proposals": [
   {
+   "type": "merge",
+   "macro": "economy",
+   "key": "prices-inflation",
+   "from": "cost-of-living-crisis",
+   "pool": "economy",
+   "label": "Prices / inflation",
+   "aliases": [
+    "cost of living",
+    "everything is more expensive",
+    "lower costs",
+    "Trump's economy"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 41,
+    "hits7": 20,
+    "posts7": 58,
+    "estimated": true,
+    "members": 35,
+    "days": 13,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-13",
+    "share": 0.117,
+    "sample_ids": [
+     "2095977244518740202",
+     "2095869436850839561",
+     "2095962227761168891",
+     "2097350962897629522",
+     "2095589115085361412"
+    ]
+   },
+   "reason": "\"Cost-of-living crisis under Trump\" reads as the same subject as economy/prices-inflation: Samples list gas, groceries, utilities, health care all rising — the generic prices/cost-of-living message already covered by prices-inflation. — 41 posts read (≈58 in the last 7 days, extrapolated), 35 members, 13 day(s); adds its aliases to that row",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "iran-war-gas-prices",
+   "pool": "economy",
+   "label": "Iran war & skyrocketing gas prices",
+   "aliases": [
+    "Iran war gas prices",
+    "war of choice",
+    "gas prices skyrocketed",
+    "pain at the pump"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 37,
+    "hits7": 13,
+    "posts7": 38,
+    "estimated": true,
+    "members": 32,
+    "days": 12,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-12",
+    "share": 0.076,
+    "sample_ids": [
+     "2094420762484486338",
+     "2095610048160399745",
+     "2095985060155392305",
+     "2095910393327595728",
+     "2094542092353589458"
+    ]
+   },
+   "story": true,
+   "since": "2026-08-31",
+   "reason": "Posts tie a specific named event — Trump's Iran war — to record gas prices and family costs. — 37 posts read (≈38 in the last 7 days, extrapolated), 32 members, 12 day(s), 8% of economy this week; splits economy/prices-inflation (too coarse)",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "canada-trade-war",
+   "pool": "economy",
+   "label": "Trump's Canada trade war",
+   "aliases": [
+    "Canada tariffs",
+    "trade war with Canada",
+    "Canadian retaliation",
+    "wine exports Canada"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 22,
+    "hits7": 12,
+    "posts7": 35,
+    "estimated": true,
+    "members": 17,
+    "days": 6,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-10",
+    "share": 0.07,
+    "sample_ids": [
+     "2094866218746343553",
+     "2097447729152614499",
+     "2095555524515283337",
+     "2097403814428946791",
+     "2097774861640732807"
+    ]
+   },
+   "story": true,
+   "since": "2026-08-31",
+   "reason": "Samples are specifically about Canada tariffs and retaliation hitting wine, autos, farmers — a named-country episode within tariffs. — 22 posts read (≈35 in the last 7 days, extrapolated), 17 members, 6 day(s), 7% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "trump-5000-checks",
+   "pool": "economy",
+   "label": "Trump's $5,000 tariff checks promise",
+   "aliases": [
+    "$5,000 checks",
+    "$2000 check",
+    "tariff dividend",
+    "DOGE dividend"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 22,
+    "hits7": 22,
+    "posts7": 64,
+    "estimated": true,
+    "members": 21,
+    "days": 3,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-12",
+    "share": 0.129,
+    "sample_ids": [
+     "2098145510100287656",
+     "2098875064644960490",
+     "2098091821981225454",
+     "2098012749703913840",
+     "2098841694577864750"
+    ]
+   },
+   "story": true,
+   "since": "2026-09-10",
+   "reason": "Posts mock a specific promise of $5K/$2K rebate checks as vote-buying before the election. — 22 posts read (≈64 in the last 7 days, extrapolated), 21 members, 3 day(s), 13% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "gop-priorities-vs-costs",
+   "pool": "economy",
+   "label": "GOP priorities vs. cost of living",
+   "aliases": [
+    "out of touch",
+    "Trump coins",
+    "vanity projects",
+    "adjourned early",
+    "not lowering costs"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 22,
+    "hits7": 4,
+    "posts7": 12,
+    "estimated": true,
+    "members": 19,
+    "days": 8,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-10",
+    "share": 0.023,
+    "sample_ids": [
+     "2097435616291992033",
+     "2096750290443829520",
+     "2095665246232887316",
+     "2095531738634092658",
+     "2094505879760761173"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "Recurring contrast frame: gold coins, arch, canceled floor session instead of acting on prices. — 22 posts read (≈12 in the last 7 days, extrapolated), 19 members, 8 day(s), 2% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "labor-day",
+   "pool": "economy",
+   "label": "Labor Day & worker dignity",
+   "aliases": [
+    "Labor Day",
+    "honor workers",
+    "dignity of work",
+    "workers' rights"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 21,
+    "hits7": 17,
+    "posts7": 50,
+    "estimated": true,
+    "members": 21,
+    "days": 4,
+    "firstSeen": "2026-09-03",
+    "lastSeen": "2026-09-07",
+    "share": 0.099,
+    "sample_ids": [
+     "2097111827549176280",
+     "2096916540369043497",
+     "2096945328163536995",
+     "2096966745336565760",
+     "2096348468734542212"
+    ]
+   },
+   "story": true,
+   "since": "2026-09-03",
+   "reason": "Clustered holiday messaging honoring workers over a 4-day window, not a running policy fight. — 21 posts read (≈50 in the last 7 days, extrapolated), 21 members, 4 day(s), 10% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "merge",
+   "macro": "economy",
+   "key": "housing",
+   "from": "housing-costs",
+   "pool": "economy",
+   "label": "Housing affordability",
+   "aliases": [
+    "rent",
+    "affordable housing",
+    "HUD",
+    "greedy landlords",
+    "homelessness"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 19,
+    "hits7": 5,
+    "posts7": 15,
+    "estimated": true,
+    "members": 17,
+    "days": 10,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-11",
+    "share": 0.029,
+    "sample_ids": [
+     "2095269761366041071",
+     "2095919055777509438",
+     "2095227962412950001",
+     "2096222032199364725",
+     "2097822382811459813"
+    ]
+   },
+   "reason": "\"Housing costs & affordable housing\" reads as the same subject as economy/housing: Rents, home prices, HUD fair housing — exactly the existing housing affordability row. — 19 posts read (≈15 in the last 7 days, extrapolated), 17 members, 10 day(s); adds its aliases to that row",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "utility-bills",
+   "pool": "economy",
+   "label": "Electricity & utility bills",
+   "aliases": [
+    "electric bills",
+    "energy bills",
+    "utility costs",
+    "data centers ratepayers"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 15,
+    "hits7": 5,
+    "posts7": 15,
+    "estimated": true,
+    "members": 14,
+    "days": 8,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-12",
+    "share": 0.029,
+    "sample_ids": [
+     "2094924610143740277",
+     "2096682961399677353",
+     "2095164179825012902",
+     "2094473370079289745",
+     "2095580205695852947"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "Distinct recurring subject: rising power bills and data centers shifting costs onto ratepayers. — 15 posts read (≈15 in the last 7 days, extrapolated), 14 members, 8 day(s), 3% of economy this week; splits economy/prices-inflation (too coarse)",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "diesel-price-record",
+   "pool": "economy",
+   "label": "Record diesel prices",
+   "aliases": [
+    "diesel record high",
+    "$5.85 a gallon",
+    "truckers fuel costs",
+    "diesel prices"
+   ],
+   "kind": "story",
+   "evidence": {
+    "posts": 10,
+    "hits7": 4,
+    "posts7": 12,
+    "estimated": true,
+    "members": 10,
+    "days": 4,
+    "firstSeen": "2026-09-04",
+    "lastSeen": "2026-09-12",
+    "share": 0.023,
+    "sample_ids": [
+     "2095983017529348239",
+     "2096283164138496006",
+     "2095972669623775419",
+     "2095981728821391526",
+     "2095918278531014922"
+    ]
+   },
+   "story": true,
+   "since": "2026-09-04",
+   "reason": "Specific datapoint — national diesel average hitting a record — hitting truckers, farmers, small business. — 10 posts read (≈12 in the last 7 days, extrapolated), 10 members, 4 day(s), 2% of economy this week; splits economy/prices-inflation (too coarse)",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "economy",
+   "key": "manufacturing",
+   "pool": "economy",
+   "label": "Manufacturing & industrial policy",
+   "aliases": [
+    "manufacturing jobs",
+    "semiconductors",
+    "chips",
+    "industrial policy",
+    "plant tour"
+   ],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 9,
+    "hits7": 3,
+    "posts7": 9,
+    "estimated": true,
+    "members": 9,
+    "days": 7,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-12",
+    "share": 0.018,
+    "sample_ids": [
+     "2097400821700788716",
+     "2094484320425562511",
+     "2095623645452292296",
+     "2097785956791120096",
+     "2095257021075345561"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "Plant visits, chip/space investment and calls for industrial policy — a subject distinct from wage/jobs messaging. — 9 posts read (≈9 in the last 7 days, extrapolated), 9 members, 7 day(s), 2% of economy this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
    "type": "elevate",
    "macro": "economy",
    "key": "prices-inflation",
@@ -1064,16 +2069,299 @@
    "dual": true,
    "rule": "median",
    "evidence": {
-    "posts": 207,
-    "hits7": 162,
-    "posts7": 162,
+    "posts": 224,
+    "hits7": 173,
+    "posts7": 173,
     "estimated": false,
-    "members": 94,
+    "members": 95,
     "days": 7,
-    "share": 0.319,
+    "share": 0.347,
     "sample_ids": []
    },
-   "reason": "162 posts over 7 days ≥ 3 × the macro's median live subtopic (34), 32% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under economy",
+   "reason": "173 posts over 7 days ≥ 3 × the macro's median live subtopic (34.5), 35% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under economy",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "district-community-events",
+   "pool": "congress-politics",
+   "label": "District visits & community events",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 44,
+    "hits7": 24,
+    "posts7": 89,
+    "estimated": true,
+    "members": 35,
+    "days": 13,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-13",
+    "share": 0.205,
+    "sample_ids": [
+     "2097523538064502848",
+     "2097473924145549329",
+     "2096598972584366363",
+     "2094937885015196063",
+     "2095620531353755826"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 44 posts read (≈89 in the last 7 days, extrapolated), 35 members, 13 day(s), 21% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "dem-party-events",
+   "pool": "congress-politics",
+   "label": "Democratic party events & organizing",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 24,
+    "hits7": 10,
+    "posts7": 37,
+    "estimated": true,
+    "members": 18,
+    "days": 13,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-13",
+    "share": 0.085,
+    "sample_ids": [
+     "2094928232126550188",
+     "2096680449498132742",
+     "2097100578891379171",
+     "2094485335191265607",
+     "2096680548643266725"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 24 posts read (≈37 in the last 7 days, extrapolated), 18 members, 13 day(s), 9% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "dem-candidate-endorsements",
+   "pool": "congress-politics",
+   "label": "Boosting other Democratic candidates",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 19,
+    "hits7": 15,
+    "posts7": 55,
+    "estimated": true,
+    "members": 18,
+    "days": 7,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-12",
+    "share": 0.128,
+    "sample_ids": [
+     "2095875795487015307",
+     "2097429852244578629",
+     "2094471695356555384",
+     "2097367355223576616",
+     "2096563386146234479"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 19 posts read (≈55 in the last 7 days, extrapolated), 18 members, 7 day(s), 13% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "campaign-endorsements",
+   "pool": "congress-politics",
+   "label": "Endorsements received by the member",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 13,
+    "hits7": 6,
+    "posts7": 22,
+    "estimated": true,
+    "members": 9,
+    "days": 8,
+    "firstSeen": "2026-09-01",
+    "lastSeen": "2026-09-13",
+    "share": 0.051,
+    "sample_ids": [
+     "2096682676564406583",
+     "2095477012496257437",
+     "2097801273638527270",
+     "2094903437280391404",
+     "2095233514765443356"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 13 posts read (≈22 in the last 7 days, extrapolated), 9 members, 8 day(s), 5% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "trump-5000-dividend",
+   "pool": "congress-politics",
+   "label": "Trump's $5,000 dividend promise",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 13,
+    "hits7": 13,
+    "posts7": 48,
+    "estimated": true,
+    "members": 13,
+    "days": 3,
+    "firstSeen": "2026-09-10",
+    "lastSeen": "2026-09-12",
+    "share": 0.111,
+    "sample_ids": [
+     "2098012749703913840",
+     "2098109166216724869",
+     "2098108540204322932",
+     "2098138169916940362",
+     "2098844473770102850"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 13 posts read (≈48 in the last 7 days, extrapolated), 13 members, 3 day(s), 11% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "telephone-town-halls",
+   "pool": "congress-politics",
+   "label": "Town hall announcements",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 12,
+    "hits7": 2,
+    "posts7": 7,
+    "estimated": true,
+    "members": 12,
+    "days": 7,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-12",
+    "share": 0.017,
+    "sample_ids": [
+     "2095301484028068169",
+     "2095949132204495020",
+     "2094964473240961230",
+     "2094879474600845494",
+     "2095610313244541181"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 12 posts read (≈7 in the last 7 days, extrapolated), 12 members, 7 day(s), 2% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "opponent-contrast",
+   "pool": "congress-politics",
+   "label": "Attacks on the member's opponent",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 11,
+    "hits7": 7,
+    "posts7": 26,
+    "estimated": true,
+    "members": 8,
+    "days": 8,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-11",
+    "share": 0.06,
+    "sample_ids": [
+     "2097041346754162979",
+     "2095612014815273096",
+     "2096043359844602089",
+     "2094480820966756830",
+     "2097333512370000022"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 11 posts read (≈26 in the last 7 days, extrapolated), 8 members, 8 day(s), 6% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "add",
+   "macro": "congress-politics",
+   "key": "ma-senate-primary",
+   "pool": "congress-politics",
+   "label": "Massachusetts Senate primary push",
+   "aliases": [],
+   "kind": "subtopic",
+   "evidence": {
+    "posts": 8,
+    "hits7": 2,
+    "posts7": 7,
+    "estimated": true,
+    "members": 4,
+    "days": 5,
+    "firstSeen": "2026-08-31",
+    "lastSeen": "2026-09-08",
+    "share": 0.017,
+    "sample_ids": [
+     "2096769292167512520",
+     "2094565313811468726",
+     "2094845532900343875",
+     "2096975199438594245",
+     "2094513394216845628"
+    ]
+   },
+   "story": false,
+   "since": null,
+   "reason": "read from the posts — 8 posts read (≈7 in the last 7 days, extrapolated), 4 members, 5 day(s), 2% of congress-politics this week",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "elevate",
+   "macro": "democracy",
+   "key": "corruption-ethics",
+   "label": "Corruption & ethics",
+   "aliases": [
+    "grift",
+    "emoluments"
+   ],
+   "kind": "subtopic",
+   "pool": "democracy",
+   "dual": true,
+   "rule": "median",
+   "evidence": {
+    "posts": 123,
+    "hits7": 89,
+    "posts7": 89,
+    "estimated": false,
+    "members": 62,
+    "days": 6,
+    "share": 0.263,
+    "sample_ids": []
+   },
+   "reason": "89 posts over 7 days ≥ 3 × the macro's median live subtopic (17.5), 26% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under democracy",
    "auto": false,
    "eligible": true
   },
@@ -1092,16 +2380,16 @@
    "dual": true,
    "rule": "median",
    "evidence": {
-    "posts": 95,
-    "hits7": 73,
-    "posts7": 73,
+    "posts": 107,
+    "hits7": 83,
+    "posts7": 83,
     "estimated": false,
-    "members": 49,
+    "members": 54,
     "days": 7,
-    "share": 0.293,
+    "share": 0.329,
     "sample_ids": []
    },
-   "reason": "73 posts over 7 days ≥ 3 × the macro's median live subtopic (9), 29% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under foreign-policy",
+   "reason": "83 posts over 7 days ≥ 3 × the macro's median live subtopic (9), 33% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under foreign-policy",
    "auto": false,
    "eligible": true
   },
@@ -1121,14 +2409,14 @@
    "kind": "subtopic",
    "evidence": {
     "posts": 20,
-    "hits7": 10,
-    "posts7": 40,
+    "hits7": 9,
+    "posts7": 42,
     "estimated": true,
     "members": 17,
     "days": 7,
     "firstSeen": "2026-09-01",
     "lastSeen": "2026-09-09",
-    "share": 0.213,
+    "share": 0.231,
     "sample_ids": [
      "2097484631704838622",
      "2094810354127712531",
@@ -1139,7 +2427,7 @@
    },
    "story": false,
    "since": null,
-   "reason": "A recurring awareness/resource push (\"call 988 to be connected with free, confidential counseling\") distinct from CDC/NIH public health. (named 2026-09-10) — 20 posts read (≈40 in the last 7 days, extrapolated), 17 members, 7 day(s), 21% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "reason": "A recurring awareness/resource push (\"call 988 to be connected with free, confidential counseling\") distinct from CDC/NIH public health. (named 2026-09-10) — 20 posts read (≈42 in the last 7 days, extrapolated), 17 members, 7 day(s), 23% of healthcare this week; splits healthcare/public-health (too coarse)",
    "auto": false,
    "eligible": true
   },
@@ -1158,26 +2446,26 @@
    ],
    "kind": "story",
    "evidence": {
-    "posts": 20,
-    "hits7": 7,
-    "posts7": 28,
+    "posts": 19,
+    "hits7": 5,
+    "posts7": 23,
     "estimated": true,
-    "members": 17,
-    "days": 9,
-    "firstSeen": "2026-08-30",
+    "members": 16,
+    "days": 8,
+    "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-09",
-    "share": 0.149,
+    "share": 0.128,
     "sample_ids": [
      "2097839585745043470",
      "2097409023595221244",
-     "2094149444665024876",
      "2096563379246633023",
-     "2095565396375916738"
+     "2095565396375916738",
+     "2094529205107380361"
     ]
    },
    "story": true,
-   "since": "2026-08-30",
-   "reason": "Posts attack the Republican budget law for stripping Medicaid/ACA coverage to fund tax cuts — spans both medicaid and aca, so not identical to either. (named 2026-09-10) — 20 posts read (≈28 in the last 7 days, extrapolated), 17 members, 9 day(s), 15% of healthcare this week",
+   "since": "2026-08-31",
+   "reason": "Posts attack the Republican budget law for stripping Medicaid/ACA coverage to fund tax cuts — spans both medicaid and aca, so not identical to either. (named 2026-09-10) — 19 posts read (≈23 in the last 7 days, extrapolated), 16 members, 8 day(s), 13% of healthcare this week",
    "auto": false,
    "eligible": true
   },
@@ -1198,13 +2486,13 @@
    "evidence": {
     "posts": 8,
     "hits7": 1,
-    "posts7": 4,
+    "posts7": 5,
     "estimated": true,
     "members": 6,
     "days": 5,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-08",
-    "share": 0.021,
+    "share": 0.026,
     "sample_ids": [
      "2094461570768155031",
      "2094784737738891518",
@@ -1215,7 +2503,7 @@
    },
    "story": false,
    "since": null,
-   "reason": "Posts hit gutted inspections and recalls — \"They're making your food less safe\" — a distinct health subject from vaccines or CDC. (named 2026-09-10) — 8 posts read (≈4 in the last 7 days, extrapolated), 6 members, 5 day(s), 2% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "reason": "Posts hit gutted inspections and recalls — \"They're making your food less safe\" — a distinct health subject from vaccines or CDC. (named 2026-09-10) — 8 posts read (≈5 in the last 7 days, extrapolated), 6 members, 5 day(s), 3% of healthcare this week; splits healthcare/public-health (too coarse)",
    "auto": false,
    "eligible": true
   },
@@ -1236,13 +2524,13 @@
    "evidence": {
     "posts": 8,
     "hits7": 1,
-    "posts7": 4,
+    "posts7": 5,
     "estimated": true,
     "members": 8,
     "days": 4,
     "firstSeen": "2026-08-31",
     "lastSeen": "2026-09-08",
-    "share": 0.021,
+    "share": 0.026,
     "sample_ids": [
      "2095899692538167502",
      "2094510978289254451",
@@ -1253,7 +2541,7 @@
    },
    "story": false,
    "since": null,
-   "reason": "Posts mark Overdose Awareness Day/Recovery Month and push prevention, treatment and naloxone access. (named 2026-09-10) — 8 posts read (≈4 in the last 7 days, extrapolated), 8 members, 4 day(s), 2% of healthcare this week; splits healthcare/public-health (too coarse)",
+   "reason": "Posts mark Overdose Awareness Day/Recovery Month and push prevention, treatment and naloxone access. (named 2026-09-10) — 8 posts read (≈5 in the last 7 days, extrapolated), 8 members, 4 day(s), 3% of healthcare this week; splits healthcare/public-health (too coarse)",
    "auto": false,
    "eligible": true
   },
@@ -1271,16 +2559,16 @@
    "dual": true,
    "rule": "median",
    "evidence": {
-    "posts": 59,
-    "hits7": 49,
-    "posts7": 49,
+    "posts": 61,
+    "hits7": 48,
+    "posts7": 48,
     "estimated": false,
-    "members": 41,
+    "members": 40,
     "days": 6,
-    "share": 0.261,
+    "share": 0.267,
     "sample_ids": []
    },
-   "reason": "49 posts over 7 days ≥ 3 × the macro's median live subtopic (7), 26% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under healthcare",
+   "reason": "48 posts over 7 days ≥ 3 × the macro's median live subtopic (8), 27% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under healthcare",
    "auto": false,
    "eligible": true
   },
@@ -1298,16 +2586,16 @@
    "dual": true,
    "rule": "median",
    "evidence": {
-    "posts": 61,
-    "hits7": 42,
-    "posts7": 42,
+    "posts": 64,
+    "hits7": 46,
+    "posts7": 46,
     "estimated": false,
     "members": 32,
     "days": 7,
-    "share": 0.331,
+    "share": 0.357,
     "sample_ids": []
    },
-   "reason": "42 posts over 7 days ≥ 3 × the macro's median live subtopic (2), 33% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under immigration",
+   "reason": "46 posts over 7 days ≥ 3 × the macro's median live subtopic (2), 36% of the macro — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under immigration",
    "auto": false,
    "eligible": true
   },
@@ -1322,16 +2610,40 @@
    "dual": true,
    "rule": "share",
    "evidence": {
-    "posts": 80,
-    "hits7": 73,
-    "posts7": 73,
+    "posts": 96,
+    "hits7": 89,
+    "posts7": 89,
     "estimated": false,
-    "members": 34,
-    "days": 5,
-    "share": 0.658,
+    "members": 41,
+    "days": 6,
+    "share": 0.706,
     "sample_ids": []
    },
-   "reason": "66% of the macro over 7 days (≥ 60%) — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under tech",
+   "reason": "71% of the macro over 7 days (≥ 60%) — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under tech",
+   "auto": false,
+   "eligible": true
+  },
+  {
+   "type": "elevate",
+   "macro": "reproductive-rights",
+   "key": "abortion-access",
+   "label": "Abortion access & bans",
+   "aliases": [],
+   "kind": "subtopic",
+   "pool": "reproductive-rights",
+   "dual": true,
+   "rule": "share",
+   "evidence": {
+    "posts": 9,
+    "hits7": 9,
+    "posts7": 9,
+    "estimated": false,
+    "members": 8,
+    "days": 3,
+    "share": 0.75,
+    "sample_ids": []
+   },
+   "reason": "75% of the macro over 7 days (≥ 60%) — an existing subtopic that draws as much attention as its parent; proposed as its own macro, dual-listed under reproductive-rights",
    "auto": false,
    "eligible": true
   }

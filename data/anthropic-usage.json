@@ -115,6 +115,54 @@
      "cacheWrite": 12756
     }
    }
+  },
+  "classify": {
+   "claude-opus-5": {
+    "batch": {
+     "calls": 8,
+     "input": 37778,
+     "output": 32510,
+     "cacheRead": 25032,
+     "cacheWrite": 3576
+    }
+   }
+  },
+  "stories": {
+   "claude-opus-5": {
+    "live": {
+     "calls": 3,
+     "input": 14280,
+     "output": 5937,
+     "cacheRead": 0,
+     "cacheWrite": 0
+    }
+   }
+  },
+  "taxonomy-learn": {
+   "claude-opus-5": {
+    "live": {
+     "calls": 8,
+     "input": 78871,
+     "output": 57717,
+     "cacheRead": 0,
+     "cacheWrite": 0
+    }
+   },
+   "_errors": {
+    "auth": 28,
+    "other": 0
+   }
+  },
+  "incidents": {
+   "claude-opus-5": {
+    "live": {
+     "calls": 3,
+     "input": 1120,
+     "output": 2978,
+     "cacheRead": 0,
+     "cacheWrite": 0
+    }
+   }
   }
  }
 }
