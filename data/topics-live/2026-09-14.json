@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T19:56:29.324Z",
+ "classifiedAt": "2026-09-14T20:04:25.485Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -2222,6 +2222,49 @@
    [
     "democracy",
     "press-speech"
+   ]
+  ],
+  "2099588128713425021": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ]
+  ],
+  "2099588245256368324": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2099588368413991128": [],
+  "2099589125762387995": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2099589378251313444": [
+   [
+    "budget-appropriations",
+    "social-security"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2099589413147754683": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ]
  },
@@ -6779,6 +6822,89 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "95936e954347fa1f3a88df3be438019646cbc3d231faefc18c414819fc321d9a"
+  },
+  "2099588128713425021": {
+   "contextVersion": 8,
+   "evidenceSupplied": [
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "title": "Taxpayers spent more than $500,000 on House sexual harassment payouts",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
+  },
+  "2099588245256368324": {
+   "contextVersion": 8,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
+  },
+  "2099588368413991128": {
+   "contextVersion": 8,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
+  },
+  "2099589125762387995": {
+   "contextVersion": 8,
+   "evidenceSupplied": [
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "title": "Taxpayers spent more than $500,000 on House sexual harassment payouts",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_ae94a7216fd68e4c",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6087275-pennsylvania-third-measles-death/",
+     "text": "Pennsylvania woman dies from measles complications",
+     "title": "Pennsylvania woman dies from measles complications",
+     "publishedAt": "2026-09-13T23:30:16.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
+  },
+  "2099589378251313444": {
+   "contextVersion": 8,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
+  },
+  "2099589413147754683": {
+   "contextVersion": 8,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "33eab8ac6cb2862da5690f234f4d54f4354c10a3fc5122b0838d8ecc589362ca"
   }
  },
  "needsContext": {
@@ -7095,7 +7221,13 @@
   "2099585920659812552": false,
   "2099586164701212718": false,
   "2099586280715678200": false,
-  "2099586324214751506": false
+  "2099586324214751506": false,
+  "2099588128713425021": false,
+  "2099588245256368324": false,
+  "2099588368413991128": false,
+  "2099589125762387995": false,
+  "2099589378251313444": false,
+  "2099589413147754683": false
  },
  "contextVersion": 8,
  "emerging": [
@@ -7311,6 +7443,12 @@
    "ids": [
     "2099586280715678200"
    ]
+  },
+  {
+   "label": "Hope Florida Foundation Medicaid settlement fund diversion investigation",
+   "ids": [
+    "2099588128713425021"
+   ]
   }
  ],
  "unclassified": [],
@@ -7324,100 +7462,16 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099562389922353514",
-    "2099534674657693869",
-    "2099535628564103213",
-    "2099567658098217102",
-    "2099567706462736756",
-    "2099567861471510953",
-    "2099568288833372223",
-    "2099568470060908749",
-    "2099568483692343576",
-    "2099569023268581752",
-    "2099569246070047097",
-    "2099569351766802495",
-    "2099569410818089049",
-    "2099569412277710899",
-    "2099569594268516852",
-    "2099570182960074904",
-    "2099570789104177236",
-    "2099570984864928000",
-    "2099571415695409556",
-    "2099571704070545839",
-    "2099572068517814559",
-    "2099572214295081191",
-    "2099572340568776885",
-    "2099572349041324284",
-    "2099572528180027801",
-    "2099572811853345132"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2099572965201322469",
-    "2099573148752437455",
-    "2099573901487485195",
-    "2099573917253795935",
-    "2099574064805212595",
-    "2099575163595419707",
-    "2099575554949120207",
-    "2099575560498209168",
-    "2099575757567561786",
-    "2099575758595219746",
-    "2099576233000309000",
-    "2099576408343298249",
-    "2099576492464226571",
-    "2099576591357510023"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2099576676699050111",
-    "2099576760421487009",
-    "2099576952541659166",
-    "2099577178576884201",
-    "2099577684879667677",
-    "2099577700805398638",
-    "2099577956041466118",
-    "2099578232337035746",
-    "2099578510759047497",
-    "2099578925852615149",
-    "2099579052612862230",
-    "2099579372931805406",
-    "2099579741720195183",
-    "2099580929643532597",
-    "2099581211761135957",
-    "2099581269960995283",
-    "2099581619514310969",
-    "2099581720823501223",
-    "2099581746907894082",
-    "2099581822359199989",
-    "2099581929225912804",
-    "2099581971970097597",
-    "2099581985060442578",
-    "2099582552386285698",
-    "2099583120827728346",
-    "2099583965053046973",
-    "2099584392515535182",
-    "2099584887590117442"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2099585920659812552",
-    "2099586164701212718",
-    "2099586280715678200",
-    "2099586324214751506"
+    "2099588128713425021",
+    "2099588245256368324",
+    "2099588368413991128",
+    "2099589125762387995",
+    "2099589378251313444",
+    "2099589413147754683"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T19:56:29.327Z"
+ "updatedAt": "2026-09-14T20:04:25.487Z"
 }
