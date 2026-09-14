@@ -20,6 +20,8 @@ import { minePhrases, tokenize, ngrams } from './syntax.js';
 import { incidentsPath } from './incidents.js';
 import { loadSemanticOrNull, configuredMinSim } from './semantic.js';
 import { loadNews, retrieveEvidence, evidenceLine } from './news-context.js';
+import { loadQuoted, archiveLookup } from './quoted.js';
+import { sourceContextStatus, createRepostResolver } from './source-context.js';
 
 const KEYS = [...new Set(Object.values(settings.caucus_keys))]; // display order: CPC, NewDem, CBC
 const DAY = 86_400_000;
@@ -132,6 +134,33 @@ export function dayAssignments(date) {
 function engagementOf(m) {
   if (!m || m.unavailable) return 0;
   return (m.likes || 0) + (m.retweets || 0) + (m.replies || 0) + (m.quotes || 0);
+}
+
+// Interpretation completion does not imply that the full original source
+// was captured. Derive that separate warning from current source material,
+// including legacy records, without editing paid or human interpretations.
+export function projectPostForSite(post, { metrics = {}, interpretation = {}, date = null, original = null, pending = null } = {}) {
+  const { assignments = {}, provenance = {}, needsContext = {}, pendingIds = [], unclassified = [], corrected = {} } = interpretation;
+  const isPending = pending ? pending.has(post.id) : pendingIds.includes(post.id) || unclassified.includes(post.id);
+  const m = metrics[post.id];
+  const cap = post.metricsAtCapture || {};
+  const source = sourceContextStatus(post, original);
+  return {
+    ...post,
+    engN: post.type === 'retweet' ? 0 : (m && !m.unavailable)
+      ? engagementOf(m)
+      : (cap.likes || 0) + (cap.retweets || 0) + (cap.replies || 0) + (cap.quotes || 0),
+    topics: assignments[post.id] || [],
+    classificationStatus: Object.hasOwn(assignments, post.id) && (!isPending || corrected[post.id]) ? 'complete' : 'pending',
+    provenance: provenance[post.id] || null,
+    needsContext: corrected[post.id] && typeof needsContext[post.id] === 'boolean'
+      ? needsContext[post.id] : Boolean(needsContext[post.id] || source.incomplete),
+    sourceIncomplete: source.incomplete,
+    sourceContextReason: source.reason,
+    sourceReferenceId: source.referenceId,
+    metricsObservedAt: m?.observedAt || m?.fetchedAt || m?.refreshedAt || post.capturedAt || null,
+    date
+  };
 }
 
 // One token-level edit apart? (substitute, insert, or delete one token)
@@ -306,26 +335,14 @@ export function buildSiteData() {
   const postsByDay = new Map();
   const allPosts = [];
   const excluded = { posts: 0, t: 0 };
+  const resolveRepost = createRepostResolver({ quoted: loadQuoted(), archive: archiveLookup() });
   for (const date of days) {
     const metrics = readJSON(metricsPath(date), {});
-    const { assignments, provenance, needsContext, pendingIds = [], unclassified = [], corrected = {} } = dayAssignments(date);
-    const pending = new Set([...pendingIds, ...unclassified]);
-    const posts = loadDay(date).map((t) => {
-      const m = metrics[t.id];
-      const cap = t.metricsAtCapture || {};
-      return {
-        ...t,
-        engN: t.type === 'retweet' ? 0 : (m && !m.unavailable)
-          ? engagementOf(m)
-          : (cap.likes || 0) + (cap.retweets || 0) + (cap.replies || 0) + (cap.quotes || 0),
-        topics: assignments[t.id] || [],
-        classificationStatus: Object.hasOwn(assignments, t.id) && (!pending.has(t.id) || corrected[t.id]) ? 'complete' : 'pending',
-        provenance: provenance[t.id] || null,
-        needsContext: Boolean(needsContext[t.id]),
-        metricsObservedAt: m?.observedAt || m?.fetchedAt || m?.refreshedAt || t.capturedAt || null,
-        date
-      };
-    });
+    const interpretation = dayAssignments(date);
+    const pending = new Set([...(interpretation.pendingIds || []), ...(interpretation.unclassified || [])]);
+    const posts = loadDay(date).map((post) => projectPostForSite(post, {
+      metrics, interpretation, date, original: resolveRepost(post), pending
+    }));
     const { house, excluded: out } = splitByRoster(posts, authorsById);
     excluded.posts += out.length;
     if (date === today) excluded.t += out.length;
@@ -688,6 +705,9 @@ export function buildSiteData() {
         quoted: compactQuote(x.quoted),
         classificationStatus: x.classificationStatus,
         needsContext: x.needsContext,
+        sourceIncomplete: x.sourceIncomplete,
+        sourceContextReason: x.sourceContextReason,
+        sourceReferenceId: x.sourceReferenceId,
         provenance: publicProvenance(x.provenance),
         metricsObservedAt: x.metricsObservedAt,
         isNew: Boolean(state.lastPollAt && x.capturedAt === state.lastPollAt)
@@ -703,7 +723,7 @@ export function buildSiteData() {
     .slice()
     .sort((a, b) => (a.createdAt === b.createdAt ? (a.id < b.id ? 1 : -1) : (a.createdAt < b.createdAt ? 1 : -1)))
     .map((x) => {
-      const row = { id: x.id, authorId: x.authorId, createdAt: x.createdAt, date: x.date, type: x.type, text: x.text, engN: x.engN, topics: feedTopics(x), classificationStatus: x.classificationStatus, needsContext: x.needsContext, provenance: publicProvenance(x.provenance), metricsObservedAt: x.metricsObservedAt };
+      const row = { id: x.id, authorId: x.authorId, createdAt: x.createdAt, date: x.date, type: x.type, text: x.text, engN: x.engN, topics: feedTopics(x), classificationStatus: x.classificationStatus, needsContext: x.needsContext, sourceIncomplete: x.sourceIncomplete, sourceContextReason: x.sourceContextReason, sourceReferenceId: x.sourceReferenceId, provenance: publicProvenance(x.provenance), metricsObservedAt: x.metricsObservedAt };
       if (x.quoted) row.quoted = compactQuote(x.quoted);
       return row;
     });

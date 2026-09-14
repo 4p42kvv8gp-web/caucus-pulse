@@ -48,7 +48,7 @@ test('public evidence survives request splitting with exact per-post manifest me
 
 test('captured repost originals reach classification intact and long inputs split without dropping source IDs', () => {
   const originalText = 'New Haven Line service suspended between Norwalk and Bridgeport. ' + 'More captured wording. '.repeat(300);
-  const items = ['1', '2', '3'].map((id) => post(id, { text: 'RT @source: abbreviated…', type: 'retweet', reposted: {
+  const items = ['1', '2', '3'].map((id) => post(id, { text: 'RT @source: abbreviated…', type: 'retweet', refId: '900', reposted: {
     id: '900', handle: 'source', text: originalText, createdAt: '2026-09-12T16:00:00Z', source: { text: 'wrapper' }
   } }));
   const requests = chunkRequests(items, tax, 'offline', '', { examples: [], inputCharsCap: 9000 });

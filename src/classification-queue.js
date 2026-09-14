@@ -6,6 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
 import { p, writeJSON } from './util.js';
+import { sourceContextStatus } from './source-context.js';
 
 export const queuePath = p('data', 'classification-batches.json');
 export const emptyQueue = () => ({ version: 1, jobs: [], completed: {} });
@@ -33,6 +34,9 @@ export function readQueue(file = queuePath) {
       for (const [id, evidence] of Object.entries(entry.evidenceByPost || {})) {
         if (!entry.ids.includes(id) || !Array.isArray(evidence) || evidence.some((e) => typeof e?.id !== 'string' || !e.id)) throw new Error(`Invalid classification evidence manifest: ${file}`);
       }
+      for (const [id, context] of Object.entries(entry.sourceContextByPost || {})) {
+        if (!entry.ids.includes(id) || typeof context?.incomplete !== 'boolean' || !/^[a-f0-9]{64}$/.test(context.fingerprint || '')) throw new Error(`Invalid source context manifest: ${file}`);
+      }
     }
   }
   return queue;
@@ -58,8 +62,9 @@ export function requestManifest(requests) {
       if (allIds.has(id)) throw new Error(`Source post ID requested twice: ${id}`);
       allIds.add(id);
     }
-    const evidenceByPost = {}, contextVersions = {};
+    const evidenceByPost = {}, contextVersions = {}, sourceContextByPost = {};
     for (const line of lines) {
+      if (line.type === 'retweet') sourceContextByPost[line.id] = sourceContextStatus({ ...line, reposted: line.reposting });
       if (line.evidence != null) {
         if (!Array.isArray(line.evidence) || line.evidence.some((e) => typeof e?.id !== 'string' || !e.id) || new Set(line.evidence.map((e) => e.id)).size !== line.evidence.length) throw new Error(`Invalid source evidence for post ${line.id}`);
         evidenceByPost[line.id] = line.evidence;
@@ -69,7 +74,7 @@ export function requestManifest(requests) {
         contextVersions[line.id] = line.contextVersion;
       }
     }
-    manifest[request.custom_id] = { ids, evidenceByPost, contextVersions, inputHash: hash(request.params) };
+    manifest[request.custom_id] = { ids, evidenceByPost, contextVersions, sourceContextByPost, inputHash: hash(request.params) };
   }
   return manifest;
 }

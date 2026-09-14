@@ -5,7 +5,7 @@ import { anthropicClient, anthropicConfigured } from './anthropic-auth.js';
 import { settings, etDate, daysAgoEt, writeJSON, p } from './util.js';
 import { loadTaxonomy } from './taxonomy.js';
 import { loadDay, topicsPath, archiveDates } from './store.js';
-import { chunkRequests, classifySync, planDay, remainingPlan, pendingIdsFor, writeDay, readClassificationFile, mergeEmerging, emptyOut, finishOut, withCandidates, hintedCount, withEvidence, newsReconsideration } from './classify.js';
+import { chunkRequests, classifySync, planDay, remainingPlan, pendingIdsFor, writeDay, readClassificationFile, mergeEmerging, emptyOut, finishOut, withCandidates, hintedCount, withEvidence, newsReconsideration, sourceReconsideration, sourceMetadataChanged, makeRepostResolver } from './classify.js';
 import { loadNews } from './news-context.js';
 import { readQueue, queuePath, withQueueLock } from './classification-queue.js';
 import { quotedResolver } from './quoted.js';
@@ -26,8 +26,15 @@ async function similarityHints(items, tax) {
   catch (e) { warn(`similarity hints unavailable: ${e.message}`); return items; }
 }
 
-// A settled nightly interpretation overrides provisional live tags. Pending
-// nightly work does not erase completed live work. Reviewed corrections win.
+function interpretationTime(file) {
+  const timestamps = [file?.updatedAt, file?.classifiedAt].map((value) => Date.parse(value || ''));
+  return Math.max(-Infinity, ...timestamps.filter(Number.isFinite));
+}
+
+// A settled nightly interpretation overrides provisional live tags unless
+// completed live work has newer news or a later, changed source interpretation.
+// Observations are separate from model-submitted sources: recording that an
+// original arrived cannot imply an earlier model already read it.
 export function combineInterpretations(live, nightly) {
   const combined = { ...live, assignments: { ...live?.assignments }, incidents: { ...live?.incidents }, provenance: { ...live?.provenance }, needsContext: { ...live?.needsContext }, corrected: { ...live?.corrected }, emerging: [...(live?.emerging || [])] };
   const pending = new Set([...(live?.pendingIds || []), ...(live?.unclassified || [])]);
@@ -35,7 +42,17 @@ export function combineInterpretations(live, nightly) {
   const authoritative = new Set();
   for (const [id, topics] of Object.entries(nightly?.assignments || {})) {
     if (nightlyPending.has(id) && !nightly.corrected?.[id]) continue;
-    if (!nightly.corrected?.[id] && (live?.corrected?.[id] || (!pending.has(id) && (live?.provenance?.[id]?.contextVersion || 0) > (nightly?.provenance?.[id]?.contextVersion || 0)))) continue;
+    const liveProvenance = live?.provenance?.[id];
+    const nightlyProvenance = nightly?.provenance?.[id];
+    const liveIsNewer = interpretationTime(live) > interpretationTime(nightly);
+    const observed = liveProvenance?.sourceContextObserved;
+    const submitted = liveProvenance?.sourceContext;
+    const liveCompleted = Object.hasOwn(live?.assignments || {}, id) && !pending.has(id);
+    const newerSourceInterpretation = liveIsNewer && submitted?.incomplete === false
+      && submitted.fingerprint && submitted.fingerprint === observed?.fingerprint
+      && submitted.fingerprint !== nightlyProvenance?.sourceContext?.fingerprint;
+    if (!nightly.corrected?.[id] && (live?.corrected?.[id] || (liveCompleted
+      && ((liveProvenance?.contextVersion || 0) > (nightlyProvenance?.contextVersion || 0) || newerSourceInterpretation)))) continue;
     combined.assignments[id] = topics;
     authoritative.add(id);
     delete combined.incidents[id];
@@ -43,6 +60,10 @@ export function combineInterpretations(live, nightly) {
     delete combined.provenance[id]; delete combined.needsContext[id];
     if (nightly.provenance?.[id]) combined.provenance[id] = nightly.provenance[id];
     if (nightly.needsContext?.[id] != null) combined.needsContext[id] = nightly.needsContext[id];
+    if (!nightly.corrected?.[id] && liveIsNewer && observed?.fingerprint) {
+      combined.provenance[id] = { ...combined.provenance[id], sourceContextObserved: observed };
+      if (observed.incomplete) combined.needsContext[id] = true;
+    }
     if (nightly.corrected?.[id]) combined.corrected[id] = nightly.corrected[id];
     pending.delete(id);
   }
@@ -58,7 +79,7 @@ async function classifyLiveUnlocked(records, {
   dates = archiveDates().filter((d) => d >= daysAgoEt(1) && d <= daysAgoEt(0)),
   load = loadDay, read = readClassificationFile, write = writeJSON,
   livePath = liveTopicsPath, nightlyPath = topicsPath,
-  resolve = resolver(), hints = similarityHints,
+  resolve = resolver(), resolveRepost = makeRepostResolver(), hints = similarityHints,
   newsStore = loadNews({ days: 14 }), evidence = (items) => withEvidence(items, { store: newsStore }),
   queueFile = queuePath,
   client = null, clientFactory = anthropicClient, refresh,
@@ -81,9 +102,13 @@ async function classifyLiveUnlocked(records, {
   let capacity = Number.isFinite(maxPosts) ? Math.max(0, Math.floor(maxPosts)) : 120;
   for (const date of selectedDates) {
     const tweets = [...byDate.get(date).values()];
-    const completePlan = planDay(date, { tax, tweets, prior, resolve });
-    const reconsiderIds = newsReconsideration(existing.get(date), completePlan.toClassify, newsStore, { tax });
-    if (!pendingIdsFor(tweets, existing.get(date)).length && !reconsiderIds.length) continue;
+    const completePlan = planDay(date, { tax, tweets, prior, resolve, resolveRepost });
+    const reconsiderIds = [...new Set([
+      ...newsReconsideration(existing.get(date), completePlan.toClassify, newsStore, { tax }),
+      ...sourceReconsideration(existing.get(date), completePlan.toClassify)
+    ])];
+    if (!pendingIdsFor(tweets, existing.get(date)).length && !reconsiderIds.length
+      && !sourceMetadataChanged(existing.get(date), completePlan.tweets)) continue;
     const pl = remainingPlan(completePlan, existing.get(date), { reconsiderIds });
     const deferred = pl.toClassify.filter((t) => t.type === 'retweet' && allIds.has(t.refId));
     const deferredIds = new Set(deferred.map((t) => t.id));

@@ -9,7 +9,8 @@ import { settings, daysAgoEt, writeJSON } from './util.js';
 import { loadState, saveState, loadDay, topicsPath, archivePath, archiveDates } from './store.js';
 import { readJSONL } from './util.js';
 import { loadTaxonomy, systemPrompt, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
-import { quotedResolver, quotingFor } from './quoted.js';
+import { quotedResolver, quotingFor, loadQuoted, archiveLookup } from './quoted.js';
+import { sourceContextStatus, createRepostResolver } from './source-context.js';
 import { configuredMinSim, storyRow, loadSemanticOrNull } from './semantic.js';
 import { embed as sharedEmbed } from './embeddings.js';
 import { correctionExamples } from './corrections.js';
@@ -35,16 +36,43 @@ export function readClassificationFile(file, fallback = null) {
 // a post without extras serialises exactly as it always has.
 export function classifierLine(t) {
   const line = { id: t.id, text: t.text };
+  const context = sourceContextStatus(t);
+  if (t.type === 'retweet') {
+    line.type = t.type; line.refId = t.refId ?? null; line.sourceContext = context;
+  }
   if (t.createdAt) line.createdAt = t.createdAt;
   if (t.quoting) line.quoting = t.quoting;
-  if (t.reposted?.text) line.reposting = {
-    id: t.reposted.id, handle: t.reposted.handle ?? null,
+  if (t.reposted?.text && !context.incomplete) line.reposting = {
+    id: t.reposted.id, authorId: t.reposted.authorId ?? null, handle: t.reposted.handle ?? null,
     text: t.reposted.text, createdAt: t.reposted.createdAt ?? null
   };
   if (t.candidates?.length) line.candidates = t.candidates;
   if (t.evidence?.length) line.evidence = t.evidence.map(evidenceLine);
   if (Number.isInteger(t.contextVersion)) line.contextVersion = t.contextVersion;
   return JSON.stringify(line);
+}
+
+export const makeRepostResolver = () => createRepostResolver({ quoted: loadQuoted(), archive: archiveLookup() });
+
+// Record a baseline without inference, then reopen only when new complete
+// original wording differs. Missing context is not a failed classification.
+export function sourceReconsideration(previous, tweets) {
+  const pending = new Set(pendingIdsFor(tweets, previous));
+  return tweets.filter((post) => {
+    if (post.type !== 'retweet' || pending.has(post.id) || previous?.corrected?.[post.id]) return false;
+    const current = sourceContextStatus(post);
+    const provenance = previous?.provenance?.[post.id];
+    const baseline = provenance?.sourceContext || provenance?.sourceContextObserved;
+    return !current.incomplete && Boolean(baseline?.fingerprint) && baseline.fingerprint !== current.fingerprint;
+  }).map((post) => post.id);
+}
+
+export function sourceMetadataChanged(previous, tweets) {
+  return tweets.some((post) => {
+    if (post.type !== 'retweet' || previous?.corrected?.[post.id] || !Object.hasOwn(previous?.assignments || {}, post.id)) return false;
+    const current = sourceContextStatus(post), observed = previous?.provenance?.[post.id]?.sourceContextObserved;
+    return observed?.fingerprint !== current.fingerprint || (current.incomplete && previous?.needsContext?.[post.id] !== true);
+  });
 }
 
 // Read one public-source snapshot per run. Request splitting below keeps
@@ -217,7 +245,7 @@ export const INCIDENT_KINDS = new Set(['active shooter', 'shooting', 'wildfire',
 // Retain only complete, structurally valid records belonging to this exact
 // request. Partial success is useful: missing/rejected IDs remain retryable,
 // while unrelated IDs can never enter the corpus through a model response.
-export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}, contextVersions = {}, inputHash = null } = {}) {
+export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}, contextVersions = {}, sourceContextByPost = {}, inputHash = null } = {}) {
   if (!Array.isArray(expectedIds)) throw new Error('Classification response requires a request ID manifest');
   const expected = new Set(expectedIds);
   const counts = new Map();
@@ -255,8 +283,10 @@ export function mergeParsed(parsed, tax, out, expectedIds, { evidenceByPost = {}
     out.assignments[id] = topics;
     delete out.incidents[id];
     if (incident) out.incidents[id] = incident;
-    (out.provenance ||= {})[id] = { contextVersion: contextVersions[id] || 0, evidenceSupplied: supplied, evidenceUsed, inputHash };
-    (out.needsContext ||= {})[id] = a.needs_context === true;
+    const sourceContext = sourceContextByPost[id];
+    (out.provenance ||= {})[id] = { contextVersion: contextVersions[id] || 0, evidenceSupplied: supplied, evidenceUsed, inputHash,
+      ...(sourceContext ? { sourceContext } : {}) };
+    (out.needsContext ||= {})[id] = sourceContext?.incomplete === true || a.needs_context === true;
     (out.echoedSubs ||= []).push(...echoed);
     accepted.add(id);
   }
@@ -410,8 +440,14 @@ export function planDay(date, {
   tax = loadTaxonomy(),
   tweets = loadDay(date),
   prior = priorAssignments(date),
-  resolve = quotedResolver()
+  resolve = quotedResolver(),
+  resolveRepost = makeRepostResolver()
 } = {}) {
+  tweets = tweets.map((post) => {
+    if (post.type !== 'retweet') return post;
+    const original = resolveRepost(post);
+    return original ? { ...post, reposted: original } : post;
+  });
   const corpus = deferInCorpus ? corpusIds(date) : null;
   const inherited = {};
   const deferred = [];
@@ -492,11 +528,20 @@ export function mergeDay(plan, result, { prior } = {}) {
     if (inherited[t.id] && !previous.corrected?.[t.id]) {
       provenance[t.id] = { ...(provenance[t.refId] || {}), inheritedFrom: t.refId };
       needsContext[t.id] = needsContext[t.refId] || false;
+      provenance[t.id].sourceContext = sourceContextStatus(t);
     }
   }
   const merged = { ...base, ...keepSource(assignments), ...inherited };
   for (const [id, topics] of Object.entries(anchored)) merged[id] = mergeTopics(topics, merged[id]);
   for (const id of Object.keys(previous.corrected || {})) if (Object.hasOwn(base, id)) merged[id] = base[id];
+  for (const post of tweets) {
+    if (post.type !== 'retweet' || !Object.hasOwn(merged, post.id) || previous.corrected?.[post.id]) continue;
+    const current = sourceContextStatus(post);
+    provenance[post.id] = { ...provenance[post.id], sourceContextObserved: current };
+    // Retain the exact submitted fingerprint when a batch finishes after the
+    // source changed; the next plan can reconsider that change once.
+    if (current.incomplete) needsContext[post.id] = true;
+  }
   const anchoredIds = new Set(Object.keys(anchored));
   const oldEmerging = mergeEmerging(previous.emerging, { allowed: sourceIds, remove: modelIds });
   const newEmerging = mergeEmerging(result.emerging, { allowed: modelIds });
@@ -606,8 +651,10 @@ async function runClassificationUnlocked({
     plans = [...new Set(dates)].sort().map((d) => {
       const previous = topicsFor(d);
       const pl = plan(d, tax);
-      return remainingPlan(pl, previous, { reconsiderIds: newsReconsideration(previous, pl.toClassify, newsStore, { tax }) });
-    }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous));
+      return remainingPlan(pl, previous, { reconsiderIds: [...new Set([
+        ...newsReconsideration(previous, pl.toClassify, newsStore, { tax }), ...sourceReconsideration(previous, pl.toClassify)
+      ])] });
+    }).filter((pl) => pl.toClassify.length || pl.deferred.length || !dayComplete(pl.tweets, pl.previous) || sourceMetadataChanged(pl.previous, pl.tweets));
     const unfinished = plans.map((pl) => pl.date);
     if (!plans.length) {
       if (legacy?.batchId && queue.completed[legacy.batchId] && onLegacyComplete && !dryRun) await onLegacyComplete(legacy.batchId);
