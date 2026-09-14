@@ -1228,7 +1228,7 @@
     "2099526917690892520",
     "2099514645480419802"
    ],
-   "status": "partial",
+   "status": "response-saved",
    "attempts": 1,
    "plannedAt": "2026-09-14T19:56:55.555Z",
    "submittedAt": "2026-09-14T19:57:24.318Z",
@@ -1280,7 +1280,25 @@
     "unresolved": [],
     "assignments": []
    },
-   "validatedAt": "2026-09-14T19:57:38.299Z"
+   "validatedAt": "2026-09-14T19:57:38.299Z",
+   "validationHistory": [
+    {
+     "validatorVersion": null,
+     "status": "partial",
+     "validatedAt": "2026-09-14T19:57:38.299Z",
+     "validation": {
+      "valid": false,
+      "events": [],
+      "errors": [
+       {
+        "code": "invalid-response-content"
+       }
+      ],
+      "unresolved": [],
+      "assignments": []
+     }
+    }
+   ]
   }
  },
  "events": [
