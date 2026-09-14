@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T22:02:54.604Z",
+ "classifiedAt": "2026-09-14T22:07:57.898Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -153,7 +153,7 @@
   "2099483525976056181": [
    [
     "economy",
-    null
+    "prices-inflation"
    ]
   ],
   "2099483691911123215": [
@@ -630,7 +630,7 @@
   "2099514768050549072": [
    [
     "climate",
-    "epa-rollbacks"
+    null
    ]
   ],
   "2099515039484960898": [
@@ -1347,7 +1347,7 @@
   "2099553058841670059": [
    [
     "healthcare",
-    null
+    "medicaid"
    ],
    [
     "congress-politics",
@@ -1381,6 +1381,10 @@
    [
     "tech",
     "ai-policy"
+   ],
+   [
+    "foreign-policy",
+    "china"
    ]
   ],
   "2099554969976176834": [],
@@ -1631,7 +1635,12 @@
     "racial-justice"
    ]
   ],
-  "2099567328476168576": [],
+  "2099567328476168576": [
+   [
+    "immigration",
+    null
+   ]
+  ],
   "2099532456814588248": [
    [
     "economy",
@@ -3025,6 +3034,38 @@
     "labor",
     "federal-workforce"
    ]
+  ],
+  "2099619802973139221": [],
+  "2099620573340950586": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2099620621172736506": [],
+  "2099620690286534907": [
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2099620857375035481": [
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
   ]
  },
  "incidents": {
@@ -3069,18 +3110,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45"
-  },
-  "2099483525976056181": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "20f4ed9ca0b38eb80bf4a161f8aac0961b5f5d7762f0a946863a0880b47f2a45",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099480018183188550",
-    "fingerprint": "8a351426ab1fd5a686e5875248e4bfba7bfda115be5a13fe7c96d2eb8f1b073d"
-   }
   },
   "2099483691911123215": {
    "contextVersion": 5,
@@ -3516,66 +3545,11 @@
    "evidenceUsed": [],
    "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
   },
-  "2099497657093799974": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_85c8c02756c33de6",
-     "publisher": "Roll Call",
-     "date": "2026-09-11",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
-     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
-     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
-     "publishedAt": "2026-09-11T12:40:25.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099488146962395531",
-    "fingerprint": "6adcbb61d0299b6340c8e8af8ab2b63119236c5ac5022b6b1b0add9e63272342"
-   }
-  },
   "2099498101929038090": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
-  },
-  "2099498137102786987": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099479189271318618",
-    "fingerprint": "50ad7c0b07385df68c55c85954b3df74090a2ccc8e5ac4198461d8ec4af74593"
-   }
   },
   "2099498543912247778": {
    "contextVersion": 5,
@@ -3606,18 +3580,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
-  },
-  "2099502645337895115": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099472167398215782",
-    "fingerprint": "fb8b0150efb4cf5b1ce303fd9ea275e5c2cc93e825b7aa954366734c59798202"
-   }
   },
   "2099502705106456605": {
    "contextVersion": 5,
@@ -3725,18 +3687,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
-  },
-  "2099508799262384400": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099499830582092118",
-    "fingerprint": "5f68e8de218f92c8dc5b01472e9364eb9ed0a3791ce47d82af466dc37d1267ef"
-   }
   },
   "2099509061175656520": {
    "contextVersion": 5,
@@ -3848,18 +3798,6 @@
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
   },
-  "2099513558631391423": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099500325304472014",
-    "fingerprint": "1bccc8311ecd8b89694b9d7b671adef32a3ce81776ce8025259705d6fc82e1d4"
-   }
-  },
   "2099513654420914644": {
    "contextVersion": 5,
    "evidenceSupplied": [
@@ -3881,30 +3819,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78"
-  },
-  "2099514706553643064": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099426822979002407",
-    "fingerprint": "eea398bf3ccfe5a64cc9c5da52f8c7a552d182a22041fa61bc23fac4e7339555"
-   }
-  },
-  "2099514768050549072": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ba05f23acb2ed654c3aac18e6699b9c14044a40df83e91574ea5a3b2827ddf78",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099472973908316650",
-    "fingerprint": "51877db07fd98c5cba91cd518895e9b1bce42d9632d00710684aaf8021ffc367"
-   }
   },
   "2099515238378844417": {
    "contextVersion": 5,
@@ -4002,51 +3916,11 @@
    "evidenceUsed": [],
    "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce"
   },
-  "2099516589036970233": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099516290998194647",
-    "fingerprint": "eda6df72c4c36e0b3b37e419ab5d31b7d102c1a29f424f810b0421fdb7a525c6"
-   }
-  },
   "2099516982383010296": {
    "contextVersion": 5,
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce"
-  },
-  "2099518403258048641": {
-   "contextVersion": 5,
-   "evidenceSupplied": [
-    {
-     "id": "n_ae94a7216fd68e4c",
-     "publisher": "The Hill",
-     "date": "2026-09-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/healthcare/6087275-pennsylvania-third-measles-death/",
-     "text": "Pennsylvania woman dies from measles complications",
-     "title": "Pennsylvania woman dies from measles complications",
-     "publishedAt": "2026-09-13T23:30:16.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099512782869668071",
-    "fingerprint": "98ab7816869d4d44f1bcd777fc80c673678aedfac6de6658b4d0f4cd1a035d4d"
-   }
   },
   "2099518768846192883": {
    "contextVersion": 5,
@@ -4157,18 +4031,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce"
-  },
-  "2099520098218185013": {
-   "contextVersion": 5,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "1372746f7f2a0f550fc9598188cac05f59b38043c8c657aa22f24b8b75e1ebce",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099505235588776057",
-    "fingerprint": "68ad7bfa225926bc8b8077deae72fa210026a890e8da6e45ef61be3265199626"
-   }
   },
   "2099520173405323757": {
    "contextVersion": 5,
@@ -4911,18 +4773,6 @@
    "evidenceUsed": [],
    "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7"
   },
-  "2099547884563648581": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099544534778565067",
-    "fingerprint": "3b885f110fffc64320faa96cd1f458701363e80371a9b1a3afe8dd17f2b6ffaa"
-   }
-  },
   "2099548159990989021": {
    "contextVersion": 6,
    "evidenceSupplied": [],
@@ -4989,30 +4839,6 @@
     "n_bf977cbc37be9141"
    ],
    "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7"
-  },
-  "2099550836921606380": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099535995293065536",
-    "fingerprint": "26947625e540a276bdfc7d444e2543f27b1cf71ca39f4ccbceec7d09cda63b6b"
-   }
-  },
-  "2099550906329014612": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099538774002692235",
-    "fingerprint": "ce5207f134c110836e7422b7b492dcbef7f6ee38e74cda29658e365c89949078"
-   }
   },
   "2099551017931014374": {
    "contextVersion": 6,
@@ -5097,18 +4923,6 @@
    "evidenceUsed": [],
    "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7"
   },
-  "2099553058841670059": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099516844201660880",
-    "fingerprint": "fbd26a989af47d891347436efc1579c5e0941fdd71b3fadd1492aea85521765b"
-   }
-  },
   "2099554278163521640": {
    "contextVersion": 6,
    "evidenceSupplied": [],
@@ -5120,73 +4934,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7"
-  },
-  "2099554486284910836": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099553976400097704",
-    "fingerprint": "270fc9291624916adf8df54c1557af9e01832abbd5594ecc420621888b026633"
-   }
-  },
-  "2099554616853647854": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099550724002545911",
-    "fingerprint": "528cf016d3d46e21dc0227df201bb377596d52164f4bbdbac3347f35dc7d4a1f"
-   }
-  },
-  "2099554831178342799": {
-   "contextVersion": 6,
-   "evidenceSupplied": [
-    {
-     "id": "n_d4518ea11b18511c",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/rating-changes-10-races-move-toward-democrats-one-toward-republicans/",
-     "text": "Polls show Republican candidates and incumbents around the country underperforming in states and districts that typically vote for Republicans. If President Donald Trump can use a rare midterm convention to energize the party faithful and boost GOP turnout in the closing weeks by hitting the campaign trail, Republicans could hold the Senate and minimize their losses in the House. But if an apathetic base doesn’t show up at normal levels, Republicans could suffer heavy losses on Nov. 3.",
-     "title": "Rating changes: 10 races move toward Democrats, one toward Republicans",
-     "publishedAt": "2026-09-10T11:28:45.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_85c8c02756c33de6",
-     "publisher": "Roll Call",
-     "date": "2026-09-11",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
-     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
-     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
-     "publishedAt": "2026-09-11T12:40:25.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "0744c1cd4b30e87498aa6ca47b03c096d3f102de9603a4dd05351fc6b60789a7",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099485026106716600",
-    "fingerprint": "86f654f46546a39da243db53ed252990a3994bfb2a21ee3c0c68972c0d767452"
-   }
   },
   "2099554969976176834": {
    "contextVersion": 6,
@@ -5288,18 +5035,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "26b9cf0dc6bed26c959ec8ff7a60d51eab285ced59b51ff1a01b868421a286eb"
-  },
-  "2099558043318894973": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "26b9cf0dc6bed26c959ec8ff7a60d51eab285ced59b51ff1a01b868421a286eb",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099556634632556697",
-    "fingerprint": "20748b762289b8197a2cb86aa2f71b21e852cca227aa1934d76e4ccc92d1700e"
-   }
   },
   "2099558377982439854": {
    "contextVersion": 6,
@@ -5459,49 +5194,6 @@
    "evidenceUsed": [],
    "inputHash": "26b9cf0dc6bed26c959ec8ff7a60d51eab285ced59b51ff1a01b868421a286eb"
   },
-  "2099564682457522514": {
-   "contextVersion": 6,
-   "evidenceSupplied": [
-    {
-     "id": "n_bf977cbc37be9141",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
-     "text": "AI leaders call for development slowdown",
-     "title": "AI leaders call for development slowdown",
-     "publishedAt": "2026-09-14T15:45:59.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_03d9642892988701",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6087626-chuck-schumer-artificial-intelligence-risk-briefing/",
-     "text": "Schumer calls for classified briefing on danger posed by AI",
-     "title": "Schumer calls for classified briefing on danger posed by AI",
-     "publishedAt": "2026-09-14T12:27:00.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "26b9cf0dc6bed26c959ec8ff7a60d51eab285ced59b51ff1a01b868421a286eb",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099550742696595481",
-    "fingerprint": "a70d055af7a49ed8b7660cfec4035476e2e28f0686114c65a79647c2c7ef5b40"
-   }
-  },
   "2099564687318753406": {
    "contextVersion": 6,
    "evidenceSupplied": [],
@@ -5546,18 +5238,6 @@
     "n_c260e4cab8c6d48b"
    ],
    "inputHash": "93ac1d886842155637d6ee59293086f9f703a631a9e27b723fdbce8537519851"
-  },
-  "2099565212902785153": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "93ac1d886842155637d6ee59293086f9f703a631a9e27b723fdbce8537519851",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099563244390117675",
-    "fingerprint": "67387a23fe75a1d764f3724e7b28e375b88ab9be4d77a5adeaf8ddab193e0bb8"
-   }
   },
   "2099565355161014357": {
    "contextVersion": 6,
@@ -5613,64 +5293,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "93ac1d886842155637d6ee59293086f9f703a631a9e27b723fdbce8537519851"
-  },
-  "2099567301791994114": {
-   "contextVersion": 6,
-   "evidenceSupplied": [
-    {
-     "id": "n_7c9480b7c80cb70c",
-     "publisher": "The Washington Post",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/09/14/texas-republicans-denounce-gop-statewide-candidate-racist-posts-about-ut-students/",
-     "text": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
-     "title": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
-     "publishedAt": "2026-09-14T15:05:47.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_c29ccdcc98993029",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
-     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "publishedAt": "2026-09-14T13:58:50.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_7c9480b7c80cb70c",
-    "n_c29ccdcc98993029"
-   ],
-   "inputHash": "93ac1d886842155637d6ee59293086f9f703a631a9e27b723fdbce8537519851",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099559084324208724",
-    "fingerprint": "4f436f7b974a397b3e36a105175e8422928d7c92da2e7c711c9bb26bdfe0e398"
-   }
-  },
-  "2099567328476168576": {
-   "contextVersion": 6,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "93ac1d886842155637d6ee59293086f9f703a631a9e27b723fdbce8537519851",
-   "sourceContextObserved": {
-    "incomplete": true,
-    "reason": "repost-original-unavailable",
-    "referenceId": "2099567234783875348",
-    "fingerprint": "91abcf2ae70ab280d47dbfb8d28194fcb95f8034d8056c5e78cf7ec580833c3a"
-   }
   },
   "2099532456814588248": {
    "contextVersion": 6,
@@ -10038,6 +9660,683 @@
     "referenceId": "2098590418669605298",
     "fingerprint": "cc7406f1898f30f1279dbbc46c1a81513257548027ba59395db55c9a9c4db000"
    }
+  },
+  "2099483525976056181": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099480018183188550",
+    "fingerprint": "d089213d2f2148379e19f8f2f89ac89420a34a86507fb51ec06a2bff10f202a8"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099480018183188550",
+    "fingerprint": "d089213d2f2148379e19f8f2f89ac89420a34a86507fb51ec06a2bff10f202a8"
+   }
+  },
+  "2099497657093799974": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_15aef2f7ba706cc2",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/white-house/6085829-trump-inflation-payout-promises/",
+     "text": "Will Trump’s payout promises boost Republican appeal to white women?",
+     "title": "Will Trump’s payout promises boost Republican appeal to white women?",
+     "publishedAt": "2026-09-14T13:30:00.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099488146962395531",
+    "fingerprint": "2fbf975af0fdf337524f1ba9b6c64ffa8cd6d14731a1705018f71381f46de227"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099488146962395531",
+    "fingerprint": "2fbf975af0fdf337524f1ba9b6c64ffa8cd6d14731a1705018f71381f46de227"
+   }
+  },
+  "2099498137102786987": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_82c3fd59440ab2e2",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6087615-newly-completed-presidential-helipad/",
+     "text": "Trump says White House was a ‘dump’ before renovations",
+     "title": "Trump says White House was a ‘dump’ before renovations",
+     "publishedAt": "2026-09-14T12:50:16.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099479189271318618",
+    "fingerprint": "59e254c013e64b648e60b54ed9bd562fda86b065b3c022887d673f9ac780afee"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099479189271318618",
+    "fingerprint": "59e254c013e64b648e60b54ed9bd562fda86b065b3c022887d673f9ac780afee"
+   }
+  },
+  "2099502645337895115": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099472167398215782",
+    "fingerprint": "605b449289ada9e200ff3cd19611c011bd64289aac70986d8d192ca1f3517a96"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099472167398215782",
+    "fingerprint": "605b449289ada9e200ff3cd19611c011bd64289aac70986d8d192ca1f3517a96"
+   }
+  },
+  "2099508799262384400": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099499830582092118",
+    "fingerprint": "d8800354169f49a5758199df5b7b5dea093bb9e0178ee8720b5a9e59c27496ee"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099499830582092118",
+    "fingerprint": "d8800354169f49a5758199df5b7b5dea093bb9e0178ee8720b5a9e59c27496ee"
+   }
+  },
+  "2099513558631391423": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_61ffb4801784ea07",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6088968-kraft-group-macklemore-palestinian-advocacy/",
+     "text": "Macklemore says Robert Kraft, stadium owners fueled his ouster from Ed Sheeran’s tour over call to ‘free Palestine’",
+     "title": "Macklemore says Robert Kraft, stadium owners fueled his ouster from Ed Sheeran’s tour over call to ‘free Palestine’",
+     "publishedAt": "2026-09-14T20:36:47.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099500325304472014",
+    "fingerprint": "9c738fe72604488bca126c0b3cc89458db59e861ce495e6aef8223cd24e96e63"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099500325304472014",
+    "fingerprint": "9c738fe72604488bca126c0b3cc89458db59e861ce495e6aef8223cd24e96e63"
+   }
+  },
+  "2099514706553643064": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099426822979002407",
+    "fingerprint": "c5fb0741e884f39d68fbfd7a94668308a76d4a7e8725078e9001cb98f5d6ec12"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099426822979002407",
+    "fingerprint": "c5fb0741e884f39d68fbfd7a94668308a76d4a7e8725078e9001cb98f5d6ec12"
+   }
+  },
+  "2099514768050549072": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099472973908316650",
+    "fingerprint": "9d8d34cd5e23f2a78e566c37bf101929de257daec1f34d39a2b663de99c62f76"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099472973908316650",
+    "fingerprint": "9d8d34cd5e23f2a78e566c37bf101929de257daec1f34d39a2b663de99c62f76"
+   }
+  },
+  "2099516589036970233": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099516290998194647",
+    "fingerprint": "964e05e42ef1e2880ab51ce4f1ee021a9a1c87726442f9b2c94ebffd8f92e3d1"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099516290998194647",
+    "fingerprint": "964e05e42ef1e2880ab51ce4f1ee021a9a1c87726442f9b2c94ebffd8f92e3d1"
+   }
+  },
+  "2099518403258048641": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099512782869668071",
+    "fingerprint": "e3a076386070f02e6aac05c56af65470f20eb17ec87d22b39e8813fcdb6c233d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099512782869668071",
+    "fingerprint": "e3a076386070f02e6aac05c56af65470f20eb17ec87d22b39e8813fcdb6c233d"
+   }
+  },
+  "2099520098218185013": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_b6191a70df3bf3fc",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
+     "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "title": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "publishedAt": "2026-09-14T14:57:13.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_b6191a70df3bf3fc"
+   ],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099505235588776057",
+    "fingerprint": "1357c9b6e4df9f05b898cfb64abed74ef0e464342d8e146746f241580c489b5e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099505235588776057",
+    "fingerprint": "1357c9b6e4df9f05b898cfb64abed74ef0e464342d8e146746f241580c489b5e"
+   }
+  },
+  "2099547884563648581": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099544534778565067",
+    "fingerprint": "b4fa1dd076eeabcbd7ba804056e8643e92fe841b259ca1eece6e29c68ba6fc94"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099544534778565067",
+    "fingerprint": "b4fa1dd076eeabcbd7ba804056e8643e92fe841b259ca1eece6e29c68ba6fc94"
+   }
+  },
+  "2099550836921606380": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c260e4cab8c6d48b",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
+     "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "title": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "publishedAt": "2026-09-12T21:56:57.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099535995293065536",
+    "fingerprint": "8449740fcf59bbdee728b5120abb8efa63c645b9c3431a4abc4811d8b9393435"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099535995293065536",
+    "fingerprint": "8449740fcf59bbdee728b5120abb8efa63c645b9c3431a4abc4811d8b9393435"
+   }
+  },
+  "2099550906329014612": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099538774002692235",
+    "fingerprint": "4f0d53241185dbbfc205a54d4cd6e9c57dd0e11e1b57f071d3367c7861b8d751"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099538774002692235",
+    "fingerprint": "4f0d53241185dbbfc205a54d4cd6e9c57dd0e11e1b57f071d3367c7861b8d751"
+   }
+  },
+  "2099553058841670059": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099516844201660880",
+    "fingerprint": "89628154fb3a06db22e715659f5b93d5620a2ef73ad25d909e756a268e89e939"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099516844201660880",
+    "fingerprint": "89628154fb3a06db22e715659f5b93d5620a2ef73ad25d909e756a268e89e939"
+   }
+  },
+  "2099554486284910836": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099553976400097704",
+    "fingerprint": "8dad5729475a9752ce34babaecc95670da9ca943607b89a9b3bdbcc25de4490f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099553976400097704",
+    "fingerprint": "8dad5729475a9752ce34babaecc95670da9ca943607b89a9b3bdbcc25de4490f"
+   }
+  },
+  "2099554616853647854": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099550724002545911",
+    "fingerprint": "e294846b18ad0491c07037dfa1f1b471458135b72b84b3f6df76b4aa04c8092f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099550724002545911",
+    "fingerprint": "e294846b18ad0491c07037dfa1f1b471458135b72b84b3f6df76b4aa04c8092f"
+   }
+  },
+  "2099554831178342799": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "title": "At the Races: Defiant in Dallas",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099485026106716600",
+    "fingerprint": "6c6a5b1296d9789a821bf8986be6d0cf1394e14701b19985c541b1feb20dd547"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099485026106716600",
+    "fingerprint": "6c6a5b1296d9789a821bf8986be6d0cf1394e14701b19985c541b1feb20dd547"
+   }
+  },
+  "2099558043318894973": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099556634632556697",
+    "fingerprint": "2df9803b03fd40f8d421c42403a9e70d7e7aced9c98c275a8de3a07171cba68e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099556634632556697",
+    "fingerprint": "2df9803b03fd40f8d421c42403a9e70d7e7aced9c98c275a8de3a07171cba68e"
+   }
+  },
+  "2099564682457522514": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099550742696595481",
+    "fingerprint": "a1afe049c6df8a683846052b9971cd6f840cb14e490ec0ee5296da6afcb1e7c7"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099550742696595481",
+    "fingerprint": "a1afe049c6df8a683846052b9971cd6f840cb14e490ec0ee5296da6afcb1e7c7"
+   }
+  },
+  "2099565212902785153": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c260e4cab8c6d48b",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
+     "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "title": "Trump’s plan to halve FEMA workforce illegal, judge rules",
+     "publishedAt": "2026-09-12T21:56:57.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099563244390117675",
+    "fingerprint": "f7160a682910760714b855a87638f4c0c7e8efde994d1fdfcffbe900028822de"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099563244390117675",
+    "fingerprint": "f7160a682910760714b855a87638f4c0c7e8efde994d1fdfcffbe900028822de"
+   }
+  },
+  "2099567301791994114": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7c9480b7c80cb70c",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/texas-republicans-denounce-gop-statewide-candidate-racist-posts-about-ut-students/",
+     "text": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
+     "title": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
+     "publishedAt": "2026-09-14T15:05:47.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c29ccdcc98993029",
+    "n_7c9480b7c80cb70c"
+   ],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099559084324208724",
+    "fingerprint": "abd43667164fc3c1b8e082d99d6dc574c4846299e93be65af7f35118b8aba6a8"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099559084324208724",
+    "fingerprint": "abd43667164fc3c1b8e082d99d6dc574c4846299e93be65af7f35118b8aba6a8"
+   }
+  },
+  "2099567328476168576": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6aeed23c4bedaf14e9fd55524a0f75a45b9327ee90a9c8bfba36c5e8088e11eb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099567234783875348",
+    "fingerprint": "b12f216db9e658efaec5f9072bf9b8a39b3b522371b1c3b6477332e894297113"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2099567234783875348",
+    "fingerprint": "b12f216db9e658efaec5f9072bf9b8a39b3b522371b1c3b6477332e894297113"
+   }
+  },
+  "2099619802973139221": {
+   "contextVersion": 9,
+   "evidenceSupplied": [
+    {
+     "id": "n_38ee531a41df152a",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/11/at-9-11-ceremony-giuliani-and-mamdani-shake-hands-01073067",
+     "text": "At 9/11 ceremony, Giuliani and Mamdani … shake hands?",
+     "title": "At 9/11 ceremony, Giuliani and Mamdani … shake hands?",
+     "publishedAt": "2026-09-11T21:32:08.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_df496f35ba78fdf0",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/former-house-members-reflect-on-25th-anniversary-of-sept-11-attacks/",
+     "text": "Former Rep. Jane Harman, D-Calif., stood on the House steps of the Capitol under silver clouds on Friday morning, remembering how she had gathered outside with colleagues 25 years ago, unsure of what to expect after planes hijacked by terrorists attacked the Pentagon and World Trade Center.",
+     "title": "Former House members reflect on 25th anniversary of Sept. 11 attacks",
+     "publishedAt": "2026-09-11T15:18:36.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9b5bc0d52634d441a17c0fbcfaca95b73238855dbad7458779fb6721b670d534"
+  },
+  "2099620573340950586": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b5bc0d52634d441a17c0fbcfaca95b73238855dbad7458779fb6721b670d534",
+   "quotedContext": {
+    "id": "2099469468304884112",
+    "authorId": "16365305",
+    "handle": "TexasMonthly",
+    "createdAt": "2026-09-14T12:05:02.000Z",
+    "textChars": 202,
+    "textHash": "b1ce52422afc748d3d7810e34f63480f924af6ce8d9ed40b4ad7ecbe5759e6b3"
+   }
+  },
+  "2099620621172736506": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b5bc0d52634d441a17c0fbcfaca95b73238855dbad7458779fb6721b670d534",
+   "quotedContext": {
+    "id": "2099503694362362108",
+    "authorId": "18734310",
+    "handle": "Broncos",
+    "createdAt": "2026-09-14T14:21:02.000Z",
+    "textChars": 91,
+    "textHash": "b0b80c18caaaa4b2428d442bb46c23cf175758c1650b9c4bdb2bb90e38f0cce2"
+   }
+  },
+  "2099620690286534907": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b5bc0d52634d441a17c0fbcfaca95b73238855dbad7458779fb6721b670d534",
+   "quotedContext": {
+    "id": "2099420524690768015",
+    "authorId": "9300262",
+    "handle": "politico",
+    "createdAt": "2026-09-14T08:50:33.000Z",
+    "textChars": 84,
+    "textHash": "11ed61eb6c44ea5bbc24080ffc11e43e7a27f67ef76323507771e60a03f2ddb3"
+   }
+  },
+  "2099620857375035481": {
+   "contextVersion": 9,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b5bc0d52634d441a17c0fbcfaca95b73238855dbad7458779fb6721b670d534"
   }
  },
  "needsContext": {
@@ -10046,7 +10345,6 @@
   "2099480760327557446": false,
   "2099480952229511440": false,
   "2099482314912715259": false,
-  "2099483525976056181": true,
   "2099483691911123215": false,
   "2099484757423775908": false,
   "2099485221263380690": false,
@@ -10069,15 +10367,12 @@
   "2099495593311670685": false,
   "2099495693400355003": false,
   "2099496797039206569": false,
-  "2099497657093799974": true,
   "2099498101929038090": false,
-  "2099498137102786987": true,
   "2099498543912247778": false,
   "2099498881264308703": false,
   "2099499136194129920": false,
   "2099501481925685670": false,
   "2099501519263375777": false,
-  "2099502645337895115": true,
   "2099502705106456605": false,
   "2099495505965338851": false,
   "2099495518858551344": false,
@@ -10088,7 +10383,6 @@
   "2099505888604176692": false,
   "2099505971592585591": false,
   "2099506950195052596": false,
-  "2099508799262384400": true,
   "2099509061175656520": false,
   "2099509319242813647": false,
   "2099509342428873179": false,
@@ -10102,10 +10396,7 @@
   "2099511659316265448": false,
   "2099511958751850847": false,
   "2099512150737719793": true,
-  "2099513558631391423": true,
   "2099513654420914644": false,
-  "2099514706553643064": true,
-  "2099514768050549072": true,
   "2099515238378844417": false,
   "2099515366766473248": false,
   "2099515566104907987": false,
@@ -10114,9 +10405,7 @@
   "2099515824608252391": false,
   "2099515971211817257": false,
   "2099516017487511620": false,
-  "2099516589036970233": true,
   "2099516982383010296": false,
-  "2099518403258048641": true,
   "2099518768846192883": false,
   "2099518858096783736": false,
   "2099518867122851980": false,
@@ -10125,7 +10414,6 @@
   "2099519792176623700": false,
   "2099519802440044959": false,
   "2099520033885962585": false,
-  "2099520098218185013": true,
   "2099520173405323757": false,
   "2099520798637834738": false,
   "2099520823954469038": false,
@@ -10186,24 +10474,17 @@
   "2099546943277981992": false,
   "2099547822177526139": false,
   "2099547825004577151": false,
-  "2099547884563648581": true,
   "2099548159990989021": false,
   "2099549272752484354": false,
   "2099550068466495859": false,
-  "2099550836921606380": true,
-  "2099550906329014612": true,
   "2099551017931014374": false,
   "2099551197585911897": false,
   "2099551373624774850": false,
   "2099552623896498620": true,
   "2099552895767036234": false,
   "2099552963396026508": false,
-  "2099553058841670059": true,
   "2099554278163521640": false,
   "2099554314733646134": false,
-  "2099554486284910836": true,
-  "2099554616853647854": true,
-  "2099554831178342799": true,
   "2099554969976176834": false,
   "2099555293491343819": true,
   "2099555412978643376": false,
@@ -10213,7 +10494,6 @@
   "2099556471910351230": false,
   "2099556482320601151": false,
   "2099557767883194680": false,
-  "2099558043318894973": true,
   "2099558377982439854": false,
   "2099558767306195158": false,
   "2099558834167480505": false,
@@ -10230,16 +10510,12 @@
   "2099563291546648975": false,
   "2099564307478446134": true,
   "2099564445085180182": true,
-  "2099564682457522514": true,
   "2099564687318753406": false,
   "2099565101514666470": false,
-  "2099565212902785153": true,
   "2099565355161014357": false,
   "2099566152846307531": false,
   "2099566216050352624": false,
   "2099566708335780180": false,
-  "2099567301791994114": true,
-  "2099567328476168576": true,
   "2099532456814588248": false,
   "2099532657407229957": false,
   "2099532858259804413": false,
@@ -10466,7 +10742,35 @@
   "2099618411349184732": false,
   "2099618715243274362": false,
   "2099619115103035830": false,
-  "2099619224427593951": false
+  "2099619224427593951": false,
+  "2099483525976056181": true,
+  "2099497657093799974": false,
+  "2099498137102786987": false,
+  "2099502645337895115": false,
+  "2099508799262384400": false,
+  "2099513558631391423": false,
+  "2099514706553643064": false,
+  "2099514768050549072": true,
+  "2099516589036970233": true,
+  "2099518403258048641": true,
+  "2099520098218185013": false,
+  "2099547884563648581": false,
+  "2099550836921606380": false,
+  "2099550906329014612": true,
+  "2099553058841670059": false,
+  "2099554486284910836": false,
+  "2099554616853647854": false,
+  "2099554831178342799": false,
+  "2099558043318894973": true,
+  "2099564682457522514": false,
+  "2099565212902785153": false,
+  "2099567301791994114": false,
+  "2099567328476168576": false,
+  "2099619802973139221": false,
+  "2099620573340950586": false,
+  "2099620621172736506": false,
+  "2099620690286534907": false,
+  "2099620857375035481": false
  },
  "inputBlocks": {},
  "contextVersion": 9,
@@ -10592,14 +10896,7 @@
   {
    "label": "Bo French racist posts about UT students",
    "ids": [
-    "2099567301791994114",
     "2099450301681991761"
-   ]
-  },
-  {
-   "label": "Sanders-Casar superintelligence AI ban proposal",
-   "ids": [
-    "2099565212902785153"
    ]
   },
   {
@@ -10781,6 +11078,31 @@
    "ids": [
     "2099615956871909673"
    ]
+  },
+  {
+   "label": "Sanders-Casar superintelligence ban bill",
+   "ids": [
+    "2099550836921606380",
+    "2099565212902785153"
+   ]
+  },
+  {
+   "label": "Macklemore dropped from Ed Sheeran tour over Palestine remarks",
+   "ids": [
+    "2099513558631391423"
+   ]
+  },
+  {
+   "label": "Bo French racist post about UT South Asian students",
+   "ids": [
+    "2099567301791994114"
+   ]
+  },
+  {
+   "label": "House Democrats letter urging global AI rules with China",
+   "ids": [
+    "2099554831178342799"
+   ]
   }
  ],
  "unclassified": [],
@@ -10794,87 +11116,44 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099255304709980623",
-    "2099261476628250907",
-    "2099263836981510409",
-    "2099283604421398574",
-    "2099302613275574609",
-    "2099303835910987912",
-    "2099308494302159053",
-    "2099320687617814782",
-    "2099338422032703725",
-    "2099341491063644393",
-    "2099343524126740513",
-    "2099353778470482251",
-    "2099353953653981248",
-    "2099359393355600281",
-    "2099368567539991032",
-    "2099450301681991761",
-    "2099452207665906073"
+    "2099483525976056181",
+    "2099497657093799974",
+    "2099498137102786987",
+    "2099502645337895115",
+    "2099508799262384400",
+    "2099513558631391423",
+    "2099514706553643064",
+    "2099514768050549072",
+    "2099516589036970233",
+    "2099518403258048641",
+    "2099520098218185013",
+    "2099547884563648581",
+    "2099550836921606380",
+    "2099550906329014612",
+    "2099553058841670059",
+    "2099554486284910836",
+    "2099554616853647854",
+    "2099554831178342799",
+    "2099558043318894973",
+    "2099564682457522514",
+    "2099565212902785153",
+    "2099567301791994114",
+    "2099567328476168576"
    ],
    "retryIds": [],
    "errors": []
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2099471129777668544",
-    "2099491286571250149",
-    "2099500624953889071",
-    "2099504499681313151",
-    "2099505805120704946",
-    "2099511273570422928",
-    "2099530209594671320",
-    "2099539816975052976",
-    "2099611339199033820",
-    "2099611399186239926",
-    "2099611720045989927",
-    "2099611835544514834",
-    "2099611938099454044",
-    "2099612236255985787",
-    "2099612489738547224",
-    "2099612577336553896",
-    "2099612875811610853",
-    "2099613174370562328",
-    "2099613275457564882"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2099613418168693197",
-    "2099613460778676633",
-    "2099613583185248730",
-    "2099613922751914148",
-    "2099614157892907387",
-    "2099614192080683100",
-    "2099614315653300263",
-    "2099614699608314009",
-    "2099614870945530024",
-    "2099615522212192636",
-    "2099615568626102440",
-    "2099615935887753603",
-    "2099615956871909673",
-    "2099616677553950782",
-    "2099616702572961903",
-    "2099617637630177379",
-    "2099618068133552307",
-    "2099618244965363881",
-    "2099618313026277791"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2099618411349184732",
-    "2099618715243274362",
-    "2099619115103035830",
-    "2099619224427593951"
+    "2099619802973139221",
+    "2099620573340950586",
+    "2099620621172736506",
+    "2099620690286534907",
+    "2099620857375035481"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T22:02:54.607Z"
+ "updatedAt": "2026-09-14T22:07:57.900Z"
 }
