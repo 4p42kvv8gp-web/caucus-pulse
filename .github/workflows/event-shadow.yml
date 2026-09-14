@@ -1,0 +1,51 @@
+# Two fixed public evaluation bundles, never a dashboard publisher. There is
+# no recurring schedule until the recorded proposals have been reviewed.
+name: event-shadow
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/event-*.js'
+      - '.github/workflows/event-shadow.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: data-writes
+  queue: max
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # The CLI publishes intent before each call and the response before
+      # validation. Runner loss therefore leaves a durable uncertain receipt.
+      - name: Run bounded event review with durable checkpoints
+        run: node --use-env-proxy src/event-shadow.js --execute --publish
+      - name: Preserve final event and usage state
+        if: ${{ !cancelled() }}
+        run: |
+          .github/scripts/commit-data.sh 'events: retain shadow review state' data/events data/anthropic-usage.json
+      - name: Retain event work when publication fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: event-shadow-recovery-${{ github.run_id }}
+          path: |
+            data/events/
+            ${{ runner.temp }}/caucus-pulse-recovery/validated-data.bundle
+          if-no-files-found: ignore
+          retention-days: 7
