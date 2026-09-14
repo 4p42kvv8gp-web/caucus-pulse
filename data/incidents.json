@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-09-14T14:18:44.166Z",
+ "generatedAt": "2026-09-14T14:19:44.669Z",
  "incidents": [
+  {
+   "id": "norwalk-ct--infrastructure-failure--source-2099167548684087801",
+   "kind": "infrastructure failure",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "infrastructure failure"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Norwalk, CT · CT-03",
+   "placeRaw": "Norwalk, CT",
+   "district": "CT-03",
+   "districtMatch": true,
+   "handle": "@rosadelauro",
+   "member": "Rosa L. DeLauro",
+   "since": "2026-09-14T14:08:50.000Z",
+   "last": "2026-09-14T14:08:50.000Z",
+   "updates": 1,
+   "engN": 44,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Infrastructure failure · Norwalk, CT",
+   "evidence": {
+    "span": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2099500624953889071",
+    "url": "https://x.com/i/web/status/2099500624953889071"
+   },
+   "timeline": [
+    {
+     "id": "2099500624953889071",
+     "sourceId": "2099500624953889071",
+     "url": "https://x.com/i/web/status/2099500624953889071",
+     "authorId": "140519774",
+     "personId": "member:rosa l. delauro",
+     "referenceIds": [
+      "2099167548684087801"
+     ],
+     "time": "2026-09-14T14:08:50.000Z",
+     "who": "@rosadelauro",
+     "tag": "repost",
+     "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+     "engN": 44,
+     "isNew": false,
+     "flag": {
+      "kind": "infrastructure failure",
+      "place": "Norwalk, CT",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2099500624953889071",
+      "url": "https://x.com/i/web/status/2099500624953889071"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2099500624953889071"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2099500624953889071"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "monterey-county-ca--wildfire--source-2099184102993793416",
    "kind": "wildfire",

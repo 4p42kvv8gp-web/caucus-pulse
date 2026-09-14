@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-14T13:43:57.787Z",
+ "classifiedAt": "2026-09-14T14:19:44.612Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -305,9 +305,129 @@
     "foreign-policy",
     "military-veterans"
    ]
+  ],
+  "2099495593311670685": [],
+  "2099495693400355003": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2099496797039206569": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2099497657093799974": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2099498101929038090": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2099498137102786987": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2099498429319696654": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2099498543912247778": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2099498881264308703": [
+   [
+    "immigration",
+    null
+   ]
+  ],
+  "2099499136194129920": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2099499712931897356": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2099500624953889071": [],
+  "2099501481925685670": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2099501519263375777": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "civil-rights",
+    "disability"
+   ]
+  ],
+  "2099502645337895115": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2099502705106456605": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2099495505965338851": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2099495518858551344": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2099500624953889071": {
+   "kind": "infrastructure failure",
+   "place": "Norwalk, CT",
+   "name": null
+  }
+ },
  "provenance": {
   "2099353778470482251": {
    "contextVersion": 5,
@@ -884,6 +1004,254 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "28250dc26d50c9e3cda7b3e920d5fd40428a66a17eae2c7bc8beff0d66db62bb"
+  },
+  "2099495593311670685": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099495693400355003": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_d2b41800576c033a",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6086056-trump-admin-blocks-park-projects-funding/",
+     "text": "$25 million in national park project funds blocked by Trump administration: Report",
+     "title": "$25 million in national park project funds blocked by Trump administration: Report",
+     "publishedAt": "2026-09-12T14:44:45.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4a6177bfd9147ee9",
+     "publisher": "The Washington Post",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/11/florida-fight-over-mail-in-ballots-hints-chaos-if-trump-rules-take-effect/",
+     "text": "Ballot scramble hints at chaos under Trump proposal, Fla. election official says",
+     "title": "Ballot scramble hints at chaos under Trump proposal, Fla. election official says",
+     "publishedAt": "2026-09-11T18:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099496797039206569": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_20c71c1709d32c94",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6086287-maher-calls-democrats-cowards/",
+     "text": "Maher calls Democrat politicians ‘cowards,’ referencing take on the Sept. 11 attack that got his old show canceled",
+     "title": "Maher calls Democrat politicians ‘cowards,’ referencing take on the Sept. 11 attack that got his old show canceled",
+     "publishedAt": "2026-09-12T19:28:55.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099497657093799974": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_85c8c02756c33de6",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
+     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
+     "title": "‘Tired of politics’: By GOP convention’s end, even Trump had tapped out",
+     "publishedAt": "2026-09-11T12:40:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099498101929038090": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099498137102786987": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099498429319696654": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_36bc7b8c141eb4fa",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6086519-driscoll-touts-ukraines-military-innovation-in-first-public-appearance-since-resigning-as-army-secretary/",
+     "text": "Driscoll touts Ukraine’s military innovation in first public appearance since resigning as Army Secretary",
+     "title": "Driscoll touts Ukraine’s military innovation in first public appearance since resigning as Army Secretary",
+     "publishedAt": "2026-09-13T03:06:16.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_720e64d8ae2dfbaa",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6087423-trump-urges-ukraine-halt-russia-oil-strikes/",
+     "text": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
+     "title": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
+     "publishedAt": "2026-09-14T03:16:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099498543912247778": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099498881264308703": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099499136194129920": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099499712931897356": {
+   "contextVersion": 5,
+   "evidenceSupplied": [
+    {
+     "id": "n_14483314428a8049",
+     "publisher": "The Washington Post",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/11/ohio-senate-campaign-staffer-used-nazi-soldiers-profile-photo/",
+     "text": "Ohio Senate campaign staffer used Nazi soldiers as profile photo",
+     "title": "Ohio Senate campaign staffer used Nazi soldiers as profile photo",
+     "publishedAt": "2026-09-11T19:21:08.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_de25d593b7936aa2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+     "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "title": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "publishedAt": "2026-09-13T19:49:35.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099500624953889071": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099501481925685670": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099501519263375777": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099502645337895115": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099502705106456605": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099495505965338851": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
+  },
+  "2099495518858551344": {
+   "contextVersion": 5,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3eb935e2731c3a62ac30ed0ad2fc32b6ae7a089105641925c1b636332d80c029"
   }
  },
  "needsContext": {
@@ -921,7 +1289,25 @@
   "2099491286571250149": false,
   "2099491963720421759": false,
   "2099493450152382894": false,
-  "2099493552526868986": false
+  "2099493552526868986": false,
+  "2099495593311670685": false,
+  "2099495693400355003": false,
+  "2099496797039206569": false,
+  "2099497657093799974": false,
+  "2099498101929038090": false,
+  "2099498137102786987": false,
+  "2099498429319696654": false,
+  "2099498543912247778": false,
+  "2099498881264308703": false,
+  "2099499136194129920": false,
+  "2099499712931897356": false,
+  "2099500624953889071": false,
+  "2099501481925685670": false,
+  "2099501519263375777": false,
+  "2099502645337895115": false,
+  "2099502705106456605": false,
+  "2099495505965338851": false,
+  "2099495518858551344": false
  },
  "contextVersion": 5,
  "emerging": [
@@ -952,7 +1338,8 @@
   {
    "label": "9/11 25th anniversary remembrance",
    "ids": [
-    "2099491963720421759"
+    "2099491963720421759",
+    "2099495593311670685"
    ]
   }
  ],
@@ -967,75 +1354,28 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099111692944691693",
-    "2099156192987591003",
-    "2099188910580445574",
-    "2099227365033345337",
-    "2099227536173552126",
-    "2099230451185410522"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2099240301147631619",
-    "2099255725730202052",
-    "2099302613275574609",
-    "2099303835910987912",
-    "2099308494302159053",
-    "2099320687617814782",
-    "2099353778470482251",
-    "2099353953653981248",
-    "2099359393355600281",
-    "2099368567539991032",
-    "2099450301681991761",
-    "2099452207665906073",
-    "2099471129777668544",
-    "2099476447689584944",
-    "2099477508970160297",
-    "2099480314338758686",
-    "2099480760327557446",
-    "2099480952229511440",
-    "2099482314912715259",
-    "2099483525976056181",
-    "2099483691911123215",
-    "2099484757423775908"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2099485221263380690",
-    "2099486798074257742",
-    "2099487281677554158",
-    "2099487326925684932",
-    "2099487805059612703",
-    "2099488225479848340",
-    "2099488335899070762",
-    "2099488390064267489",
-    "2099488710102282733",
-    "2099488882265866523",
-    "2099489566356877448",
-    "2099489632148754661"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2099489711324643474",
-    "2099489922193187145",
-    "2099490710395269124",
-    "2099491286571250149",
-    "2099491963720421759",
-    "2099493450152382894",
-    "2099493552526868986"
+    "2099495593311670685",
+    "2099495693400355003",
+    "2099496797039206569",
+    "2099497657093799974",
+    "2099498101929038090",
+    "2099498137102786987",
+    "2099498429319696654",
+    "2099498543912247778",
+    "2099498881264308703",
+    "2099499136194129920",
+    "2099499712931897356",
+    "2099500624953889071",
+    "2099501481925685670",
+    "2099501519263375777",
+    "2099502645337895115",
+    "2099502705106456605",
+    "2099495505965338851",
+    "2099495518858551344"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-14T13:43:57.788Z"
+ "updatedAt": "2026-09-14T14:19:44.613Z"
 }
