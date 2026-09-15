@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-15T04:50:03.570Z",
+ "classifiedAt": "2026-09-15T07:23:33.745Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -4117,10 +4117,6 @@
    [
     "constituent-services",
     null
-   ],
-   [
-    "public-safety",
-    "crime-policing"
    ]
   ],
   "2099689219887394976": [
@@ -14731,43 +14727,6 @@
    "evidenceUsed": [],
    "inputHash": "fdcfa35345cf121f1d7b34ff86646051d4a134004d5fc402f13a557f93d7b668"
   },
-  "2099688791426429358": {
-   "contextVersion": 13,
-   "evidenceSupplied": [
-    {
-     "id": "n_edb36600f307a831",
-     "publisher": "NPR",
-     "date": "2026-09-14",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/14/nx-s1-5962190/supreme-court-mail-in-voting-trump",
-     "text": "Voting by mail has already begun in states including Alabama , North Carolina and Wisconsin, with more soon to follow — including Western states such as Hawaii, Oregon and Washington, where elections are held primarily or fully with mail ballots.",
-     "title": "The Supreme Court rejects Trump's mail voting restrictions for this year's midterms",
-     "publishedAt": "2026-09-14T23:38:40.000Z",
-     "fetchedAt": "2026-09-15T00:59:29.161Z",
-     "version": 11,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_087d98b1a60e46ed",
-     "publisher": "Roll Call",
-     "date": "2026-09-14",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/14/supreme-court-blocks-efforts-to-stop-mail-voting-this-fall/",
-     "text": "The Supreme Court Monday rejected President Donald Trump’s effort to curtail mail voting in this fall’s elections, keeping the U.S. Postal Service’s new rule restricting election mail paused.",
-     "title": "Supreme Court blocks efforts to stop mail voting this fall",
-     "publishedAt": "2026-09-14T20:33:43.000Z",
-     "fetchedAt": "2026-09-15T01:27:56.811Z",
-     "version": 12,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "260d31d33babfd8e680423f3eb82bca7b8a734925e33cdf79ef878b4b3d96d1d"
-  },
   "2099689219887394976": {
    "contextVersion": 13,
    "evidenceSupplied": [],
@@ -15027,6 +14986,43 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "260d31d33babfd8e680423f3eb82bca7b8a734925e33cdf79ef878b4b3d96d1d"
+  },
+  "2099688791426429358": {
+   "contextVersion": 14,
+   "evidenceSupplied": [
+    {
+     "id": "n_edb36600f307a831",
+     "publisher": "NPR",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/14/nx-s1-5962190/supreme-court-mail-in-voting-trump",
+     "text": "Voting by mail has already begun in states including Alabama , North Carolina and Wisconsin, with more soon to follow — including Western states such as Hawaii, Oregon and Washington, where elections are held primarily or fully with mail ballots.",
+     "title": "The Supreme Court rejects Trump's mail voting restrictions for this year's midterms",
+     "publishedAt": "2026-09-14T23:38:40.000Z",
+     "fetchedAt": "2026-09-15T00:59:29.161Z",
+     "version": 11,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_087d98b1a60e46ed",
+     "publisher": "Roll Call",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/14/supreme-court-blocks-efforts-to-stop-mail-voting-this-fall/",
+     "text": "The Supreme Court Monday rejected President Donald Trump’s effort to curtail mail voting in this fall’s elections, keeping the U.S. Postal Service’s new rule restricting election mail paused.",
+     "title": "Supreme Court blocks efforts to stop mail voting this fall",
+     "publishedAt": "2026-09-14T20:33:43.000Z",
+     "fetchedAt": "2026-09-15T01:27:56.811Z",
+     "version": 12,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "baf765dd3634c71fb71f7f1032edc5927d5fdc58b1a480ccec4288876f6e0ade"
   }
  },
  "needsContext": {
@@ -15610,7 +15606,6 @@
   "2099664159868637582": false,
   "2099684074617016494": false,
   "2099684279718691152": false,
-  "2099688791426429358": false,
   "2099689219887394976": false,
   "2099689788878066104": false,
   "2099689862307651859": false,
@@ -15624,10 +15619,11 @@
   "2099697466874421355": false,
   "2099700152122445862": true,
   "2099700829708288404": true,
-  "2099703427441872979": false
+  "2099703427441872979": false,
+  "2099688791426429358": false
  },
  "inputBlocks": {},
- "contextVersion": 13,
+ "contextVersion": 14,
  "emerging": [
   {
    "label": "Russian oligarch Umar Kremlev funded Trump Jr. wedding",
@@ -16189,40 +16185,12 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099577178576884201",
-    "2099602667144130687",
-    "2099618411349184732",
-    "2099644819429638170",
-    "2099664159868637582",
-    "2099684074617016494",
-    "2099684279718691152"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
     "2099688791426429358",
-    "2099689219887394976",
-    "2099689788878066104",
-    "2099689862307651859",
-    "2099690021137584629",
-    "2099690092851769639",
-    "2099690596248043687",
-    "2099691131663499271",
-    "2099691630932464040",
-    "2099694560716730599",
-    "2099694762055926050",
-    "2099697466874421355",
-    "2099700152122445862",
-    "2099700829708288404",
-    "2099703427441872979",
-    "2099714786472665566",
-    "2099720452902187189"
+    "2099749991283933238"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-15T04:50:03.574Z"
+ "updatedAt": "2026-09-15T07:23:33.747Z"
 }

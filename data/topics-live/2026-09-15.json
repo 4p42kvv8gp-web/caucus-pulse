@@ -1,7 +1,7 @@
 {
  "date": "2026-09-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-15T04:50:03.580Z",
+ "classifiedAt": "2026-09-15T07:23:33.759Z",
  "assignments": {
   "2099714786472665566": [
    [
@@ -13,6 +13,24 @@
    [
     "tech",
     "ai-policy"
+   ]
+  ],
+  "2099749991283933238": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -53,14 +71,52 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "260d31d33babfd8e680423f3eb82bca7b8a734925e33cdf79ef878b4b3d96d1d"
+  },
+  "2099749991283933238": {
+   "contextVersion": 14,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "title": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "baf765dd3634c71fb71f7f1032edc5927d5fdc58b1a480ccec4288876f6e0ade"
   }
  },
  "needsContext": {
   "2099714786472665566": false,
-  "2099720452902187189": false
+  "2099720452902187189": false,
+  "2099749991283933238": false
  },
  "inputBlocks": {},
- "contextVersion": 13,
+ "contextVersion": 14,
  "emerging": [
   {
    "label": "Bo French racist post about UT students",
@@ -80,40 +136,12 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2099577178576884201",
-    "2099602667144130687",
-    "2099618411349184732",
-    "2099644819429638170",
-    "2099664159868637582",
-    "2099684074617016494",
-    "2099684279718691152"
-   ],
-   "retryIds": [],
-   "errors": []
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
     "2099688791426429358",
-    "2099689219887394976",
-    "2099689788878066104",
-    "2099689862307651859",
-    "2099690021137584629",
-    "2099690092851769639",
-    "2099690596248043687",
-    "2099691131663499271",
-    "2099691630932464040",
-    "2099694560716730599",
-    "2099694762055926050",
-    "2099697466874421355",
-    "2099700152122445862",
-    "2099700829708288404",
-    "2099703427441872979",
-    "2099714786472665566",
-    "2099720452902187189"
+    "2099749991283933238"
    ],
    "retryIds": [],
    "errors": []
   }
  },
- "updatedAt": "2026-09-15T04:50:03.580Z"
+ "updatedAt": "2026-09-15T07:23:33.759Z"
 }
