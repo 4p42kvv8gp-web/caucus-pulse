@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T09:29:39.191Z",
+ "generatedAt": "2026-09-15T10:29:20.882Z",
  "incidents": [
   {
    "id": "miami-fl--industrial-accident--source-2099498135366095232",
@@ -127,7 +127,7 @@
    }
   },
   {
-   "id": "norwalk-ct--flooding--source-2099167548684087801",
+   "id": "new-haven-ct--flooding--source-2099167548684087801",
    "kind": "flooding",
    "name": null,
    "eventIdentity": "unresolved-source-specific",
@@ -148,8 +148,8 @@
     "repeatedSourceGroups": [],
     "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
-   "place": "Norwalk, CT · CT-03",
-   "placeRaw": "Norwalk, CT",
+   "place": "New Haven, CT · CT-03",
+   "placeRaw": "New Haven, CT",
    "district": "CT-03",
    "districtMatch": true,
    "handle": "@rosadelauro",
@@ -160,7 +160,7 @@
    "engN": 44,
    "amplifiers": 0,
    "others": [],
-   "title": "Flooding · Norwalk, CT",
+   "title": "Flooding · New Haven, CT",
    "evidence": {
     "span": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
     "exact": false,
@@ -191,7 +191,7 @@
      "isNew": false,
      "flag": {
       "kind": "flooding",
-      "place": "Norwalk, CT",
+      "place": "New Haven, CT",
       "name": null
      },
      "evidence": {
@@ -211,35 +211,7 @@
    "tweetIds": [
     "2099500624953889071"
    ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [],
-    "unverified": [
-     {
-      "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-      "sourceId": "2099500624953889071",
-      "url": "https://x.com/i/web/status/2099500624953889071",
-      "evidenceQuote": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-      "src": "@rosadelauro, 2026-09-14T14:08:50.000Z"
-     }
-    ],
-    "updates": [
-     {
-      "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-      "sourceId": "2099500624953889071",
-      "url": "https://x.com/i/web/status/2099500624953889071",
-      "evidenceQuote": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-      "src": "@rosadelauro, 2026-09-14T14:08:50.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-09-15T08:42:34.215Z",
-    "posts": 1,
-    "inputHash": "752400c34e94d2d1094f517fdd1416dad81c1fb7ad9ed27527b969c4e811a2c5",
-    "rejectedItems": 0
-   },
+   "intel": null,
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
