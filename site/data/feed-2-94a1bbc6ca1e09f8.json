@@ -59,7 +59,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_80ee0bf1b89676ac",
@@ -139,7 +139,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_ac76b38c8a008a20",
@@ -236,7 +236,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 7,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_7819325ea296ba5a",
@@ -312,7 +312,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_7819325ea296ba5a",
@@ -371,7 +371,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_cc56be24d2bea374",
@@ -430,7 +430,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_cc56be24d2bea374",
@@ -511,7 +511,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 10,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_d98b4e4ff568bd54",
@@ -791,8 +791,7 @@
   "engN": 41,
   "topics": [
    "foreign-policy/middle-east",
-   "foreign-policy",
-   "economy"
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -800,7 +799,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 7,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_7819325ea296ba5a",
@@ -870,7 +869,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 7,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_9048ded17444c977",
@@ -1024,7 +1023,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 9,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_7819325ea296ba5a",
@@ -1222,7 +1221,9 @@
   "engN": 18,
   "topics": [
    "civil-rights/racial-justice",
-   "civil-rights"
+   "civil-rights",
+   "democracy/press-speech",
+   "democracy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -1230,7 +1231,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 10,
+   "contextVersion": 15,
    "evidenceSupplied": [
     {
      "id": "n_cb2900ff6aa76e59",
@@ -1246,9 +1247,7 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_cb2900ff6aa76e59"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-09-14T12:26:24.104Z",
   "quoted": {
@@ -1298,7 +1297,40 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_744cd6c03a9e2ff5"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z",
   "quoted": {
    "id": "2098973625252708460",
@@ -1404,7 +1436,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_2b439b8078cf30bb",
+     "publisher": "NPR",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/14/nx-s1-5968892/dhs-whistleblower-voter-fraud",
+     "text": "The report details that last month the Department of Homeland Security began surging personnel for what it called the Unlawful Voter Initiative. Those enlisted federal agents then began scouring voter rolls, plugging personally identifiable information (PII) into public-facing state websites to check for an individual's voter history.",
+     "publishedAt": "2026-09-14T22:05:06.000Z",
+     "fetchedAt": "2026-09-14T22:30:02.833Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -1491,7 +1541,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_97041ad38e6fc824",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
+     "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
+     "publishedAt": "2026-09-10T17:49:57.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_023215c91f8ccac4",
+     "publisher": "Roll Call",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/14/an-ex-congresswomans-passion-project-the-national-debt/",
+     "text": "As director of Georgia’s Senate Budget and Evaluation Office during the Great Recession, the Democrat won recognition from a Republican-controlled Senate for her work to cover a budget shortfall.",
+     "publishedAt": "2026-09-14T17:22:13.000Z",
+     "fetchedAt": "2026-09-14T22:30:02.833Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -1597,7 +1678,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_be0281ea03729851",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6089280-epa-power-plant-regs-coal-gas/",
+     "text": "6 takeaways as Trump takes sledgehammer to power plant climate regs",
+     "publishedAt": "2026-09-14T22:56:24.000Z",
+     "fetchedAt": "2026-09-15T00:59:29.161Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e2b602eaf591a20a",
+     "publisher": "Politico",
+     "date": "2026-09-07",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/07/nevada-republicans-2028-gavin-newsom-joe-lombardo-01066256",
+     "text": "Nevada Republicans are testing the 2028 case against Gavin Newsom",
+     "publishedAt": "2026-09-07T13:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -1712,17 +1824,48 @@
    "congress-politics/town-halls",
    "congress-politics",
    "immigration",
-   "economy/prices-inflation",
-   "economy",
    "foreign-policy/middle-east",
-   "foreign-policy"
+   "foreign-policy",
+   "economy/prices-inflation",
+   "economy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2142,7 +2285,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_2cf0bbc131691b03",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/republicans-scotus-bid-new-missouri-map/",
+     "text": "The original challengers to the map had asked the justices to intervene in the case after Judge Stephen R. Clark for the U.S. District Court for the Eastern District of Missouri ordered the state to use the 2025 map this fall after having used it in the August primary.",
+     "publishedAt": "2026-09-10T11:04:53.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_087d98b1a60e46ed",
+     "publisher": "Roll Call",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/14/supreme-court-blocks-efforts-to-stop-mail-voting-this-fall/",
+     "text": "The brief order accompanying the majority ruling Monday left in place an order from Judge Indira Talwani of the U.S. District Court for the District of Massachusetts that held the rule would violate federal law and the Constitution, which place the responsibility for the majority of administration of federal elections with state and local officials.",
+     "publishedAt": "2026-09-14T20:33:43.000Z",
+     "fetchedAt": "2026-09-15T01:27:56.811Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2217,14 +2391,46 @@
   "text": "Was honored to join @Stanford’s 2026 Latino Alumni Summit for their panel on “Decisive Voices: The New Era of Latino Political Power”! \n\nTogether — students, alumni, community and university leaders — explored how Latinos shape public policy at the local, state, and national https://t.co/4ixTLEnWGT",
   "engN": 7,
   "topics": [
-   "civil-rights"
+   "congress-politics/town-halls",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_fff6f6a8b4401c2b",
+     "publisher": "Politico",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/14/bo-french-ut-football-students-01075214",
+     "text": "Texas GOP candidate stands by xenophobic comments following backlash",
+     "publishedAt": "2026-09-14T20:12:44.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2267,7 +2473,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_105aa55ba1996123",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5964863/politics-chat-trumps-5-000-promise-to-voters-vance-invokes-charlie-kirk",
+     "text": "AYESHA RASCOE, HOST: On his way to Ireland Friday night, President Trump talked to reporters about his two-day Republican midterm convention in Dallas. (SOUNDBITE OF ARCHIVED RECORDING) PRESIDENT DONALD TRUMP: I would call it the convention, although you could call it midterm. But whether it was midterm or not - it was certainly midterm. But it was a tremendous success. It was packed. RASCOE: Fact check - it was not packed. There were a lot of empty seats. Joining me now is NPR senior national political correspondent Mara Liasson. Good morning, Mara. MARA LIASSON, BYLINE: Good morning. RASCOE…",
+     "publishedAt": "2026-09-13T12:04:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_b6191a70df3bf3fc",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
+     "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "publishedAt": "2026-09-14T14:57:13.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z",
   "quoted": {
    "id": "2098776830228471831",
@@ -2314,7 +2551,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_b6191a70df3bf3fc",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
+     "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
+     "publishedAt": "2026-09-14T14:57:13.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e52f284fb823d1a1",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/paul-lepage-former-maine-governor-poised-join-house-after-jared-golden-exit/",
+     "text": "He’s called himself ‘Trump before Donald Trump.’ Now he could replace a House centrist.",
+     "publishedAt": "2026-09-14T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2394,7 +2662,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_c4106f38f9529342",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
+     "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
+     "publishedAt": "2026-09-14T18:03:06.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2414,7 +2713,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_80fa1a031c680b49",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5968078/trump-mike-johnson-ai-slowdown",
+     "text": "Speaking to reporters at his Doonbeg golf resort in Ireland, the president said the dire warnings about AI were exaggerated and that \"negative forces\" are making claims about things that won't happen.",
+     "publishedAt": "2026-09-13T22:32:39.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z",
   "quoted": {
    "id": "2098778170891653332",
@@ -2672,7 +2989,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_d2b41800576c033a",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6086056-trump-admin-blocks-park-projects-funding/",
+     "text": "$25 million in national park project funds blocked by Trump administration: Report",
+     "publishedAt": "2026-09-12T14:44:45.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_087d98b1a60e46ed",
+     "publisher": "Roll Call",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/14/supreme-court-blocks-efforts-to-stop-mail-voting-this-fall/",
+     "text": "The Supreme Court Monday rejected President Donald Trump’s effort to curtail mail voting in this fall’s elections, keeping the U.S. Postal Service’s new rule restricting election mail paused.",
+     "publishedAt": "2026-09-14T20:33:43.000Z",
+     "fetchedAt": "2026-09-15T01:27:56.811Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -2733,7 +3081,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_e2b602eaf591a20a",
+     "publisher": "Politico",
+     "date": "2026-09-07",
+     "kind": "lead",
+     "url": "https://www.politico.com/news/2026/09/07/nevada-republicans-2028-gavin-newsom-joe-lombardo-01066256",
+     "text": "Nevada Republicans are testing the 2028 case against Gavin Newsom",
+     "publishedAt": "2026-09-07T13:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -3130,7 +3496,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -3347,14 +3744,47 @@
    "foreign-policy/middle-east",
    "foreign-policy",
    "democracy/executive-overreach",
-   "democracy"
+   "democracy",
+   "economy/prices-inflation",
+   "economy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
  },
  {
@@ -3598,7 +4028,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -3659,7 +4107,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_20c71c1709d32c94",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6086287-maher-calls-democrats-cowards/",
+     "text": "Maher calls Democrat politicians ‘cowards,’ referencing take on the Sept. 11 attack that got his old show canceled",
+     "publishedAt": "2026-09-12T19:28:55.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098834229018685885",
@@ -3677,14 +4156,34 @@
   "engN": 4,
   "topics": [
    "civil-rights/racial-justice",
-   "civil-rights"
+   "civil-rights",
+   "congress-politics/elections-2026",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098857220926501340",
@@ -3722,14 +4221,49 @@
   "engN": 463,
   "topics": [
    "tech/ai-policy",
-   "tech"
+   "tech",
+   "foreign-policy/china",
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dc09063dabb87b1",
+     "publisher": "Politico",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/10/ted-cruz-on-his-2028-lane-jd-vance-and-the-gops-future-2159892",
+     "text": "Ted Cruz on his 2028 lane, JD Vance and the GOP’s future",
+     "publishedAt": "2026-09-11T03:59:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7ad4666a3f11fd67",
+     "publisher": "Roll Call",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/14/cruz-coaching-legends-make-pitch-for-nil-bill-on-cusp-of-votes/",
+     "text": "“Some have asked why should Congress get in the middle of this? The answer is simple: because Congress screwed it up in the first place. It has been the federal antitrust laws applied in litigation after litigation after litigation that have had the effect of tearing down essentially all the rules,” Senate Commerce Committee Chair Ted Cruz said during a press conference outside the Capitol.",
+     "publishedAt": "2026-09-14T17:48:04.000Z",
+     "fetchedAt": "2026-09-14T22:30:02.833Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dc09063dabb87b1"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098117210296156663",
@@ -3747,14 +4281,34 @@
   "engN": 290,
   "topics": [
    "civil-rights/racial-justice",
-   "civil-rights"
+   "civil-rights",
+   "congress-politics/elections-2026",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098391755594883561",
@@ -3858,14 +4412,49 @@
    "economy/prices-inflation",
    "economy",
    "foreign-policy/middle-east",
-   "foreign-policy"
+   "foreign-policy",
+   "congress-politics/elections-2026",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2097758684361138532",
@@ -3890,7 +4479,40 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_744cd6c03a9e2ff5"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098847403134611522",
@@ -4342,15 +4964,32 @@
   "text": "Trump is trying to make up for the fact that his approval rating is underwater by making false promises to give every American a $5,000 check. https://t.co/TDq2YESUtU",
   "engN": 225,
   "topics": [
-   "economy/taxes",
    "economy"
   ],
   "classificationStatus": "complete",
-  "needsContext": false,
+  "needsContext": true,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_105aa55ba1996123",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5964863/politics-chat-trumps-5-000-promise-to-voters-vance-invokes-charlie-kirk",
+     "text": "AYESHA RASCOE, HOST: On his way to Ireland Friday night, President Trump talked to reporters about his two-day Republican midterm convention in Dallas. (SOUNDBITE OF ARCHIVED RECORDING) PRESIDENT DONALD TRUMP: I would call it the convention, although you could call it midterm. But whether it was midterm or not - it was certainly midterm. But it was a tremendous success. It was packed. RASCOE: Fact check - it was not packed. There were a lot of empty seats. Joining me now is NPR senior national political correspondent Mara Liasson. Good morning, Mara. MARA LIASSON, BYLINE: Good morning. RASCOE…",
+     "publishedAt": "2026-09-13T12:04:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -4370,7 +5009,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_cff6644e63136219",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6087668-second-judge-freeze-donald-trump-usps-mail-in-voting-restrictions-midterms/",
+     "text": "Second judge freezes Trump mail ballot plan as Supreme Court ruling looms",
+     "publishedAt": "2026-09-14T13:01:11.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4a6177bfd9147ee9",
+     "publisher": "The Washington Post",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/11/florida-fight-over-mail-in-ballots-hints-chaos-if-trump-rules-take-effect/",
+     "text": "Ballot scramble hints at chaos under Trump proposal, Fla. election official says",
+     "publishedAt": "2026-09-11T18:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2097349243212071366",
@@ -4802,7 +5472,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7da793b15e3a21c2",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/sunday-talk-shows/6086297-sunday-shows-republicans-strategy-economy-struggles/",
+     "text": "Sunday shows preview: Republicans talk strategy as midterms approach; Iran conflict, Canada trade war leave economy in flux",
+     "publishedAt": "2026-09-12T20:35:42.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -4852,14 +5553,46 @@
   "engN": 966,
   "topics": [
    "tech/ai-policy",
-   "tech"
+   "tech",
+   "tech/big-tech"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9f562b64502fe490",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/capitol-lens-pipes-of-peace/",
+     "text": "From left, former Reps. Tim Roemer, D-Ind. (behind the piper), Jane Harman, D-Calif., and Charlie Dent, R-Pa., walk in procession to the House steps of the Capitol on Friday for a ceremony with the Association of Former Members of Congress to commemorate the 25th anniversary of the Sept. 11 attacks. Also seen in the background are, from left, former Rep. Susan W. Brooks, R-Ind., Rep. Glenn Ivey, D-Md, and former Rep. Derek Kilmer, D-Wash.",
+     "publishedAt": "2026-09-11T17:02:23.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098579482424881469",
@@ -4929,7 +5662,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_8bc96534ce69b582",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
+     "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
+     "publishedAt": "2026-09-14T16:16:28.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_a4297ca08d71db54",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/12/nx-s1-5967476/alien-removal-court-deportation-afganistan",
+     "text": "For the first time, the Justice Department brought a case before a decades-old but until now unused special court to deport a legal US resident to Afghanistan after she conceded to being an \"alien terrorist,\" court records show.",
+     "publishedAt": "2026-09-12T18:29:18.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098079190083915966",
@@ -5125,14 +5889,47 @@
   "engN": 499,
   "topics": [
    "tech/ai-policy",
-   "tech"
+   "tech",
+   "congress-politics/house-floor",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_de25d593b7936aa2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+     "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "publishedAt": "2026-09-13T19:49:35.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_df684ca366a9e074",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086745-johnson-advocates-ai-regulation-balance/",
+     "text": "Johnson on AI regulation: ‘We don’t need everybody to panic right now’",
+     "publishedAt": "2026-09-13T15:11:14.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098479947262095813",
@@ -5308,7 +6105,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_96a2bd2e061c5cba",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6086408-marshall-shifts-trump-dividends/",
+     "text": "Marshall backtracks on support for $5,000 Trump dividend in Kansas Senate debate",
+     "publishedAt": "2026-09-12T22:44:10.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -5330,7 +6145,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -5429,7 +6275,40 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_744cd6c03a9e2ff5"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098784182818205874",
@@ -5493,7 +6372,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_cd35ff3992734a42",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/robbys-radar/6088387-trump-rejects-ai-regulation/",
+     "text": "Donald Trump is right: ‘Whoever wins AI, wins’ — no pause!",
+     "publishedAt": "2026-09-14T16:35:01.000Z",
+     "fetchedAt": "2026-09-14T18:38:00.705Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098773920774074715",
@@ -5553,14 +6463,48 @@
   "engN": 34,
   "topics": [
    "foreign-policy/middle-east",
-   "foreign-policy"
+   "foreign-policy",
+   "foreign-policy/military-veterans"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_8d8c702839db11a1",
+     "publisher": "The Washington Post",
+     "date": "2026-09-11",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/11/pentagon-trump-edges-toward-embracing-post-911-policies-he-attacked/",
+     "text": "At the Pentagon, Trump ties the legacy of 9/11 to his Iran war",
+     "publishedAt": "2026-09-11T17:02:12.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8d8c702839db11a1"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z"
  },
  {
@@ -5599,7 +6543,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098780471966802037",
@@ -5643,7 +6618,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_684fac5cf53aeb1f",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6085616-anthropic-resignation-viral-debate/",
+     "text": "Debate, confusion explodes over AI ‘doomsday’ warnings",
+     "publishedAt": "2026-09-13T14:18:50.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.448Z",
   "quoted": {
    "id": "2098805386199396453",
@@ -5777,7 +6770,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098773920774074715",
@@ -5795,14 +6819,48 @@
   "engN": 8,
   "topics": [
    "foreign-policy/middle-east",
-   "foreign-policy"
+   "foreign-policy",
+   "foreign-policy/military-veterans"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -5861,7 +6919,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_4a11200196924fd7",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/at-the-races-defiant-in-dallas/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who\\u2019d like to get this newsletter? They can subscribe here . \\n \\n\\n \\n By Daniela Altimari , Mary Ellen McIntire and Niels Lesniewski \\n \\n\\n \\n DALLAS \\u2013 Recent national polls show President Donald Trump\\u2019s job approval rating sinking to historic lows, driven by deep dissatisfaction over rising prices, including gas topping $4 a gallon, fueled by an unpopular conflict with Iran and his tariffs policy. \\n \\n\\n \\n But if any of that has the Republican faithful feeli…",
+     "publishedAt": "2026-09-10T14:45:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -5881,7 +6957,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098797926051197073",
@@ -5908,7 +7015,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_de25d593b7936aa2",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6087028-democrats-urge-congress-ai-safety/",
+     "text": "Dem rep urges Johnson: ‘Bring us back to Congress’ to discuss AI",
+     "publishedAt": "2026-09-13T19:49:35.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098512400966090798",
@@ -5935,7 +7073,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_2ce84007013d6253",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6085057-maine-lobster-industry-pressures/",
+     "text": "Maine’s lobster industry finds itself squeezed on all sides amid Canada trade war",
+     "publishedAt": "2026-09-13T19:54:03.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -5975,7 +7144,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ca58c42837392314",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086701-coxon-warns-ai-race-danger/",
+     "text": "Former AI researcher: ‘Not enough time’ for employees to consider safety of models",
+     "publishedAt": "2026-09-13T14:52:50.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098773920774074715",
@@ -6017,7 +7217,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_03d9642892988701",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6087626-chuck-schumer-artificial-intelligence-risk-briefing/",
+     "text": "Schumer calls for classified briefing on danger posed by AI",
+     "publishedAt": "2026-09-14T12:27:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098783902076694935",
@@ -6201,14 +7432,49 @@
   "engN": 8,
   "topics": [
    "tech/ai-policy",
-   "tech"
+   "tech",
+   "congress-politics/elections-2026",
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_744cd6c03a9e2ff5",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086167-anthropic-ceo-ai-development-guardrails/",
+     "text": "Anthropic CEO calls to ‘slow the pace’ of AI development amid safety concerns",
+     "publishedAt": "2026-09-12T17:06:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bf977cbc37be9141",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6088151-ai-leaders-call-slowdown/",
+     "text": "AI leaders call for development slowdown",
+     "publishedAt": "2026-09-14T15:45:59.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_744cd6c03a9e2ff5"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098797926051197073",
@@ -6284,7 +7550,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_6e45debe95570f8a",
+     "publisher": "NPR",
+     "date": "2026-09-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/11/nx-s1-5964970/ethics-watchdogs-await-rfk-jr-s-financial-report",
+     "text": "Health Secretary RFK Jr.'s annual financial disclosure is late. When it posts, the public could learn how much he has earned from a vaccine-related lawsuit against Merck, which RFK now regulates.",
+     "publishedAt": "2026-09-12T00:42:54.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_36bc7b8c141eb4fa",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6086519-driscoll-touts-ukraines-military-innovation-in-first-public-appearance-since-resigning-as-army-secretary/",
+     "text": "Driscoll touts Ukraine’s military innovation in first public appearance since resigning as Army Secretary",
+     "publishedAt": "2026-09-13T03:06:16.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -6381,7 +7678,25 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ca58c42837392314",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086701-coxon-warns-ai-race-danger/",
+     "text": "Former AI researcher: ‘Not enough time’ for employees to consider safety of models",
+     "publishedAt": "2026-09-13T14:52:50.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098773920774074715",
@@ -6563,7 +7878,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -6583,7 +7929,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_03d9642892988701",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6087626-chuck-schumer-artificial-intelligence-risk-briefing/",
+     "text": "Schumer calls for classified briefing on danger posed by AI",
+     "publishedAt": "2026-09-14T12:27:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_684fac5cf53aeb1f",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6085616-anthropic-resignation-viral-debate/",
+     "text": "Debate, confusion explodes over AI ‘doomsday’ warnings",
+     "publishedAt": "2026-09-13T14:18:50.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098783902076694935",
@@ -6955,14 +8332,46 @@
   "engN": 46,
   "topics": [
    "foreign-policy/middle-east",
-   "foreign-policy"
+   "foreign-policy",
+   "foreign-policy/military-veterans"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -7060,7 +8469,41 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_85c8c02756c33de6",
+     "publisher": "Roll Call",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
+     "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
+     "publishedAt": "2026-09-11T12:40:25.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_9048ded17444c977",
+    "n_85c8c02756c33de6"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2097901163072847952",
@@ -7454,14 +8897,49 @@
    "foreign-policy/china",
    "foreign-policy",
    "economy/tariffs-trade",
-   "economy"
+   "economy",
+   "labor/unions",
+   "labor"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_47ec0deeb8557046",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6085912-trump-permits-chinese-automakers-us-manufacturing/",
+     "text": "Trump says he would allow Chinese automakers to build cars in US",
+     "publishedAt": "2026-09-12T12:01:30.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_d0ad328f9c4e7e17",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6086739-trump-downplays-ai-risks/",
+     "text": "Trump downplays AI warnings, citing competition with China",
+     "publishedAt": "2026-09-13T15:57:05.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_47ec0deeb8557046"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098556766514712818",
@@ -7599,14 +9077,36 @@
   "engN": 225,
   "topics": [
    "economy/tariffs-trade",
-   "economy"
+   "economy",
+   "democracy/corruption-ethics",
+   "democracy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_af6db7966d836369",
+     "publisher": "NPR",
+     "date": "2026-09-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/11/nx-s1-5963499/mayor-of-the-air-capital-of-the-world-reacts-to-trumps-threats-against-bombardier",
+     "text": "NPR's Sacha Pfeiffer talks with Wichita Mayor Lily Wu about President Trump's tariff war with Canada, Bombardier aircrafts, and the trade war's potential impact on her city.",
+     "publishedAt": "2026-09-11T20:34:45.000Z",
+     "fetchedAt": "2026-09-13T17:05:40.504Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_af6db7966d836369"
+   ]
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z"
  },
  {
@@ -7911,16 +9411,32 @@
    "tech/ai-policy",
    "tech",
    "congress-politics/elections-2026",
-   "congress-politics",
-   "democracy/corruption-ethics",
-   "democracy"
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_105aa55ba1996123",
+     "publisher": "NPR",
+     "date": "2026-09-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/13/nx-s1-5964863/politics-chat-trumps-5-000-promise-to-voters-vance-invokes-charlie-kirk",
+     "text": "AYESHA RASCOE, HOST: On his way to Ireland Friday night, President Trump talked to reporters about his two-day Republican midterm convention in Dallas. (SOUNDBITE OF ARCHIVED RECORDING) PRESIDENT DONALD TRUMP: I would call it the convention, although you could call it midterm. But whether it was midterm or not - it was certainly midterm. But it was a tremendous success. It was packed. RASCOE: Fact check - it was not packed. There were a lot of empty seats. Joining me now is NPR senior national political correspondent Mara Liasson. Good morning, Mara. MARA LIASSON, BYLINE: Good morning. RASCOE…",
+     "publishedAt": "2026-09-13T12:04:27.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-13T12:47:17.201Z",
   "quoted": {
    "id": "2098610853641703578",
@@ -8377,7 +9893,38 @@
   "sourceIncomplete": false,
   "sourceContextReason": null,
   "sourceReferenceId": null,
-  "provenance": null,
+  "provenance": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_9048ded17444c977",
+     "publisher": "Roll Call",
+     "date": "2026-09-10",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
+     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
+     "publishedAt": "2026-09-10T10:11:38.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7819325ea296ba5a",
+     "publisher": "The Hill",
+     "date": "2026-09-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6086928-trump-compares-iran-venezuela-oil/",
+     "text": "Trump floats idea to ‘stay and keep the oil’ in Iran, noting Venezuela deal",
+     "publishedAt": "2026-09-13T19:05:43.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": []
+  },
   "metricsObservedAt": "2026-09-12T11:39:56.757Z"
  },
  {

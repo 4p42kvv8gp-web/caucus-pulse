@@ -1,7 +1,7 @@
 {
  "date": "2026-09-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-15T08:42:19.285Z",
+ "classifiedAt": "2026-09-15T09:29:44.584Z",
  "assignments": {
   "2095556816893518330": [
    [
@@ -6657,6 +6657,36 @@
     "referenceId": "2095628037832224912",
     "fingerprint": "753c28375ed6bb40dd29e24aee7d438f68f9fe89e57d06436378d75ec5c5be8f"
    }
+  },
+  "2095589767215788288": {
+   "contextVersion": 15,
+   "evidenceSupplied": [
+    {
+     "id": "n_a5ee51f9c66b0646",
+     "publisher": "Politico",
+     "date": "2026-09-02",
+     "kind": "lead",
+     "url": "https://www.politico.com/video/2026/09/02/susan-collins-on-trump-tariffs-and-her-fight-for-maine-2156176",
+     "text": "Susan Collins on Trump, tariffs and the state of her senate race over Maine lobsters",
+     "title": "Susan Collins on Trump, tariffs and the state of her senate race over Maine lobsters",
+     "publishedAt": "2026-09-02T09:00:00.000Z",
+     "fetchedAt": "2026-09-14T12:52:50.846Z",
+     "version": 5,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b3f210f45931e726b434586a0e3d39137d19b41b21578358cc66151e71bbbb0",
+   "quotedContext": {
+    "id": "2095577857967747321",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": null,
+    "textChars": 116,
+    "textHash": "348dcd749e7e619b78d4953de79264f37b21b8fb3236f4bc760762021eba41e7"
+   }
   }
  },
  "needsContext": {
@@ -6788,10 +6818,11 @@
   "2095584626924204318": true,
   "2095592036405555616": true,
   "2095612490440638833": true,
-  "2095634721812181360": true
+  "2095634721812181360": true,
+  "2095589767215788288": true
  },
  "inputBlocks": {},
- "contextVersion": 5,
+ "contextVersion": 15,
  "emerging": [
   {
    "label": "agriculture-farmers",
@@ -6961,14 +6992,20 @@
   }
  ],
  "unclassified": [],
- "pendingIds": [
-  "2095589767215788288"
- ],
- "complete": false,
+ "pendingIds": [],
+ "complete": true,
  "anchored": {},
  "failedChunks": 0,
  "droppedSubs": [],
  "echoedSubs": [],
  "validationErrors": [],
- "requestStatus": {}
+ "requestStatus": {
+  "2026-09-03_chunk-0": {
+   "acceptedIds": [
+    "2095589767215788288"
+   ],
+   "retryIds": [],
+   "errors": []
+  }
+ }
 }
