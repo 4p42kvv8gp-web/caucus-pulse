@@ -7,6 +7,9 @@ on:
     paths:
       - 'src/news-context.js'
       - 'src/context-refresh.js'
+      - 'src/floor-context.js'
+      - 'src/floor-refresh.js'
+      - 'src/news-coverage.js'
       - 'config/news-sources.json'
       - '.github/scripts/news-snapshot.mjs'
       - '.github/scripts/refresh-news.sh'
@@ -53,6 +56,14 @@ jobs:
       - run: npm ci
       - name: Save news base
         run: node .github/scripts/news-snapshot.mjs base "$RUNNER_TEMP/news-transfer"
+      # Official agenda acquisition is independent of article retrieval and X.
+      # Preserve the last good agenda and failure status in the same artifact.
+      - name: Refresh official weekly floor agenda
+        id: floor
+        continue-on-error: true
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: node --use-env-proxy src/floor-refresh.js
       - name: Refresh public reporting
         id: fetch
         continue-on-error: true
@@ -73,7 +84,7 @@ jobs:
           if-no-files-found: error
           retention-days: 7
       - name: Report fetch failure after saving status
-        if: steps.fetch.outcome == 'failure'
+        if: steps.fetch.outcome == 'failure' || steps.floor.outcome == 'failure'
         run: exit 1
 
   publish:

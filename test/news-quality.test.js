@@ -1,5 +1,6 @@
-// Minimal invented fixtures reproduce failure mechanisms found in the public
-// production store. They are not article quotations or model-quality scores.
+// Invented fixtures isolate failure mechanisms; the explicit archive-backed
+// regression below also uses saved public source records. Neither is an
+// estimate of retrieval or model accuracy across the corpus.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -88,4 +89,60 @@ test('captured repost originals supply retrieval context when the wrapper is tru
     assert.deepEqual(evidence.byPost['1'].map((e) => e.id), ['detention']);
     assert.deepEqual(reconsiderCandidates({ assignments: { 1: [] } }, [post], { items: [item], sinceVersion: 1 }).map((entry) => entry.id), ['1']);
   }
+});
+
+test('the archived Pardon Integrity Act quote rejects unrelated Dallas and other Donald-only matches', () => {
+  const root = path.resolve(import.meta.dirname, '..');
+  const readRows = (file) => fs.readFileSync(path.join(root, file), 'utf8').split('\n').filter(Boolean).map(JSON.parse);
+  const post = readRows('data/archive/2026-09-14.jsonl').find((row) => row.id === '2099619115103035830');
+  assert.equal(post.quoted.id, '2024258861645914519');
+  assert.match(post.quoted.text, /Donald Trump/);
+  const history = readRows('data/news/items.jsonl');
+  const ids = ['n_85c8c02756c33de6', 'n_9048ded17444c977', 'n_8bc96534ce69b582', 'n_05a9ebace433bb53'];
+  // First stored versions are stable public regression inputs even if later
+  // feed refreshes append another version with a different acquisition time.
+  const unrelated = ids.map((id) => history.find((item) => item.id === id));
+  assert.ok(unrelated.every(Boolean));
+  assert.ok(unrelated.every((item) => /Donald/i.test([item.summary, ...(item.passages || [])].join(' '))));
+  const query = `${post.text} ${post.quoted.text}`;
+  const options = { asOf: post.createdAt, knownAt: '2026-09-15T01:00:00Z', k: 10 };
+  assert.deepEqual(retrieveEvidence(query, { ...options, items: unrelated }).evidence, []);
+  const positive = report('synthetic-pardon-report', { title: 'Support grows for the Pardon Integrity Act',
+    passages: ['Supporters of the Pardon Integrity Act seek a constitutional amendment to limit presidential pardons and give Congress a role in blocking abuses of the pardon power.'] });
+  const results = retrieveEvidence(query, { ...options, items: [...unrelated, positive] }).evidence;
+  assert.deepEqual(results.map((item) => item.id), ['synthetic-pardon-report']);
+  assert.equal(results[0].kind, 'report');
+  assert.match(results[0].passage, /constitutional amendment.*pardons/);
+});
+
+test('common national political-name aliases cannot independently ground a story match', () => {
+  for (const alias of ['Donald Trump', 'Donald J. Trump', 'Joe Biden', 'Joseph Biden', 'Kamala Harris', 'JD Vance', 'POTUS']) {
+    const item = report('convention', { title: 'Convention speech',
+      passages: [`A speech by ${alias} at the Dallas convention described campaign strategy and the political role of the administration.`] });
+    assert.deepEqual(retrieve(`Remarks by ${alias} about the administration`, [item]), [], alias);
+  }
+});
+
+test('connector words cannot satisfy subject overlap with an unrelated article about the same member', () => {
+  const item = report('unrelated', { title: 'Olszewski at the convention',
+    passages: ['They spoke with Olszewski about efforts to put an end to his political role at the convention.'] });
+  const query = 'Olszewski put forward efforts to end abuses of pardons through constitutional amendment and disclosure requirements.';
+  assert.deepEqual(retrieve(query, [item]), []);
+});
+
+test('the selected passage must carry both the actor and the specific subject, not borrow support from another paragraph', () => {
+  const query = 'Olszewski seeks constitutional limits on pardons through a proposed amendment and stricter disclosure.';
+  const irrelevant = 'They spoke with Olszewski about weekend travel and the annual convention.';
+  const subjectWithoutActor = 'The proposal would establish constitutional limits on pardons through an amendment and stricter disclosure.';
+  const article = report('interview', { title: 'Interview with Olszewski', passages: [irrelevant, subjectWithoutActor] });
+  assert.deepEqual(retrieve(query, [article]), [], 'separate paragraphs do not create a supporting excerpt');
+  const supporting = 'The proposal by Olszewski sets constitutional limits on pardons and requires disclosure.';
+  const grounded = retrieve(query, [{ ...article, passages: [irrelevant, supporting] }]);
+  assert.equal(grounded.length, 1);
+  assert.equal(grounded[0].passage, supporting);
+  assert.equal(grounded[0].kind, 'report');
+  const lead = retrieve(query, [{ ...article, title: 'Olszewski seeks constitutional limits on pardons' }]);
+  assert.equal(lead.length, 1);
+  assert.equal(lead[0].kind, 'lead');
+  assert.equal(lead[0].passage, 'Olszewski seeks constitutional limits on pardons');
 });

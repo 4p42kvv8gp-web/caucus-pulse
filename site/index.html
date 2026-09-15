@@ -40,7 +40,7 @@
 <div style="min-height:100vh;display:flex;flex-direction:column">
 <header>
   <a href="./index.html" aria-label="caucus-pulse home" style="display:inline-flex;align-items:center;gap:.08em;font-size:17px;font-weight:700;letter-spacing:-0.02em;line-height:1;white-space:nowrap;flex:none;color:#1d1d1f;text-decoration:none">Caucus<svg viewBox="0 0 28 24" fill="none" stroke-width="4.2" stroke-linecap="butt" stroke-linejoin="round" aria-hidden="true" style="height:.6em;width:.7em;overflow:visible;transform:translateY(.06em)"><path d="M2 13H8L11.5 4L13.75 13" stroke="#194292"></path><path d="M13.75 13L15.5 20L18.5 13H26" stroke="#d70015"></path></svg>Pulse</a>
-  <nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a class="nav on" href="./index.html">Dashboard</a><a class="nav" href="./incidents.html">Incidents</a></nav>
+  <nav style="display:flex;gap:clamp(12px,2vw,24px);font-size:13px;margin:0 auto;flex:1 1 auto;min-width:0;justify-content:center;white-space:nowrap;overflow:hidden"><a class="nav on" href="./index.html">Dashboard</a><a class="nav" href="./incidents.html">Incidents</a><a class="nav" href="./floor.html">Floor agenda</a></nav>
   <div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span id="updated"></span><a class="quiet" href="../reports/latest.md">Daily report</a><button class="pill" data-act="openClip">Compose</button></div>
 </header>
 <div id="modal"></div>
@@ -62,7 +62,7 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash, decoratePost, sourceLink, sourceAnchor, handleLink, postUrl, profileUrl, newsEvidence, captureLabel, startRefresh } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash, decoratePost, sourceLink, sourceAnchor, handleLink, postUrl, profileUrl, publicUrl, newsEvidence, captureLabel, startRefresh } from './ui.js';
 
 let D = null;
 const state = {
@@ -103,6 +103,29 @@ function similarList(list, { wrap = false } = {}) {
     : `<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1">${sourceLink(r, r.text)}</span>`;
   const rows = list.map((r) => `<div style="display:flex;gap:6px;align-items:baseline;font-size:12px;line-height:1.35;color:#3a3a3c;min-width:0" title="${esc(r.topics?.length ? 'labeled: ' + r.topics.map(label).join(', ') : 'no labels')}"><span style="font-weight:500;color:#1d1d1f;white-space:nowrap">${handleLink(r.handle, r)}</span>${body(r)}<span style="color:#6e6e73;white-space:nowrap;margin-left:auto;font-variant-numeric:tabular-nums">${Number(r.sim).toFixed(2)}</span></div>`).join('');
   return `<div style="display:flex;flex-direction:column;gap:2px;min-width:0" title="${esc(SIMILAR_TITLE)}"><span style="font-size:11px;font-weight:500;color:#6e6e73">Similar, unlabeled <span style="font-weight:400">· ${list.length}</span></span>${rows}</div>`;
+}
+
+function renderNewsPanel(data) {
+  const coverage = data.news?.coverage;
+  const link = (url, text, title = '') => publicUrl(url)
+    ? `<a href="${esc(publicUrl(url))}" target="_blank" rel="noopener noreferrer" title="${esc(title)}">${esc(text)}</a>` : esc(text);
+  const date = (value) => value && Number.isFinite(Date.parse(value))
+    ? new Date(value).toLocaleDateString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric' }) : 'Unknown';
+  const when = (value) => value && Number.isFinite(Date.parse(value)) ? esc(etWhen(value, data.today)) : 'time unknown';
+  const summary = coverage
+    ? `${fmt(coverage.eligibleItems)} ${coverage.eligibleItems === 1 ? 'item' : 'items'} in ${fmt(coverage.windowDays)} days · ${fmt(coverage.withExcerpts)} with excerpts${coverage.sourcesWithoutRecentItems ? ` · ${fmt(coverage.sourcesWithoutRecentItems)} ${coverage.sourcesWithoutRecentItems === 1 ? 'source' : 'sources'} without recent items` : ''}${coverage.failedSources ? ` · ${fmt(coverage.failedSources)} fetch ${coverage.failedSources === 1 ? 'failure' : 'failures'}` : ''}`
+    : 'Coverage details unavailable';
+  const rows = (coverage?.sources || []).map((source) => {
+    const fetch = source.lastFetchOutcome === 'failed'
+      ? `Fetch failed${source.eligibleItems ? '; saved items retained' : ''}`
+      : source.lastFetchOutcome === 'succeeded' ? 'Fetch completed' : 'No fetch recorded';
+    const counts = source.eligibleItems
+      ? `${fmt(source.eligibleItems)} ${source.eligibleItems === 1 ? 'item' : 'items'}<br><span style="color:#6e6e73">${fmt(source.withExcerpts)} with excerpts · ${fmt(source.headlineOrSummary)} headlines/summaries${source.withoutReadableText ? ` · ${fmt(source.withoutReadableText)} without readable text` : ''}</span>`
+      : '<strong style="color:#a35d00">No recent items</strong>';
+    return `<tr><td style="padding:7px 12px 7px 0">${link(source.sourceUrl, source.publisher)}</td><td style="padding:7px 12px">${counts}</td><td style="padding:7px 12px">${link(source.latestItem?.url, date(source.latestPublishedAt), source.latestItem?.title)}</td><td style="padding:7px 0 7px 12px;color:${source.lastFetchOutcome === 'failed' ? '#a35d00' : '#6e6e73'}">${esc(fetch)}<br>${when(source.lastFetchAt)}</td></tr>`;
+  }).join('');
+  const details = coverage ? `<p style="font-size:11px;color:#6e6e73;margin:9px 0">Coverage as of ${when(coverage.asOf)}. Excerpts are short saved passages. Headline/summary items have no saved article passage.</p><div class="scrollx"><table style="width:100%;border-collapse:collapse;text-align:left;font-size:11px"><thead><tr><th>Source</th><th style="padding-left:12px">Last ${fmt(coverage.windowDays)} days</th><th style="padding-left:12px">Latest publication</th><th style="padding-left:12px">Collection</th></tr></thead><tbody>${rows}</tbody></table></div>` : '';
+  return `<details data-group="public-news"><summary style="font-size:12px;cursor:pointer"><strong>Public news context</strong> · ${summary} · view sources</summary>${details}${newsEvidence(data.news?.latest, {title:'Recent public reporting · context leads, independent of member posts'})}</details>`;
 }
 
 function render() {
@@ -151,7 +174,7 @@ function render() {
   ].join('');
 
   $('controls').insertAdjacentHTML('beforeend', `<span style="font-size:11px;color:#6e6e73;flex-basis:100%;padding-top:5px">${fmt(S.members)} roster members · ${fmt(S.accounts ?? S.members)} accounts posting · ${fmt(classified)} of ${fmt(S.posts)} captured posts classified · ${fmt(S.pending || 0)} pending. Counts describe captured posts; continuous full coverage is not established. Engagement is the latest stored observation, not a live total.</span>`);
-  $('news').innerHTML = `<details data-group="public-news"><summary style="font-size:12px;cursor:pointer"><strong>Public news context</strong> · ${fmt(D.news?.items || 0)} stored articles · ${D.news?.latestPublishedAt ? 'latest publication ' + esc(etWhen(D.news.latestPublishedAt, D.today)) : 'article publication dates unavailable'} · view recent sources</summary>${newsEvidence(D.news?.latest, {title:'Recent public reporting · context leads, independent of member posts'})}</details>`;
+  $('news').innerHTML = renderNewsPanel(D);
   renderTopics(isAll, scope, win);
   renderFeed(scope, win);
   renderPhrases();

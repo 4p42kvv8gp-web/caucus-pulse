@@ -307,7 +307,7 @@ export function newsEvidence(list, { used = [], title = 'Public reporting · ret
     const when = date && Number.isFinite(Date.parse(date)) ? etDay(date) : 'date unknown';
     const use = used.includes(e.id) ? ' · used by classifier' : '';
     const later = e.publishedAfterPost ? ' · published after post' : e.acquiredAfterPost ? ' · retrieved after post' : '';
-    const kind = e.kind === 'report' ? 'article passage' : 'headline lead';
+    const kind = e.kind === 'floor-agenda' ? 'Floor agenda' : e.kind === 'report' ? 'article passage' : 'headline lead';
     const details = [e.fetchedAt && `Retrieved ${e.fetchedAt}`, e.publishedAt && `Published ${e.publishedAt}`].filter(Boolean).join(' · ');
     return `<div style="font-size:11px;line-height:1.4" title="${esc(details)}"><a href="${esc(publicUrl(e.url))}" target="_blank" rel="noopener noreferrer"><strong>${esc(e.publisher || 'Source')}</strong> · ${esc(when)} · ${kind}${use}${later}<br>“${esc(e.text || e.passage || e.title || '')}”</a></div>`;
   });

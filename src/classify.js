@@ -16,6 +16,7 @@ import { configuredMinSim, storyRow, loadSemanticOrNull } from './semantic.js';
 import { embed as sharedEmbed } from './embeddings.js';
 import { correctionExamples } from './corrections.js';
 import { loadNews, evidenceForPosts, evidenceLine, reconsiderCandidates } from './news-context.js';
+import { loadFloor, floorEvidenceForPost } from './floor-context.js';
 import { readQueue, saveQueue, submitJob, finishJob, requestManifest, queuePath, withQueueLock } from './classification-queue.js';
 
 export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
@@ -49,6 +50,7 @@ export function classifierLine(t) {
   };
   if (t.candidates?.length) line.candidates = t.candidates;
   if (t.evidence?.length) line.evidence = t.evidence.map(evidenceLine);
+  if (t.officialAgenda?.length) line.officialAgenda = t.officialAgenda;
   if (Number.isInteger(t.contextVersion)) line.contextVersion = t.contextVersion;
   return JSON.stringify(line);
 }
@@ -86,10 +88,11 @@ export function inputBlockMetadataChanged(previous, tweets) {
 // Read one public-source snapshot per run. Request splitting below keeps
 // every selected source while bounding each prompt; a cap must not silently
 // deprive later posts of the evidence that triggered reconsideration.
-export function withEvidence(items, { store = loadNews({ days: 14 }), ...opts } = {}) {
+export function withEvidence(items, { store = loadNews({ days: 14 }), agenda = loadFloor(), now = Date.now(), ...opts } = {}) {
   const { byPost } = evidenceForPosts(items, { ...opts, items: store.items, version: store.version, k: 2, perChunkCap: Infinity });
   const contextVersion = Number.isInteger(store.version) ? store.version : 0;
-  return { items: items.map((t) => ({ ...t, evidence: byPost[t.id] || [], contextVersion })), contextVersion };
+  return { items: items.map((t) => ({ ...t, evidence: byPost[t.id] || [],
+    officialAgenda: floorEvidenceForPost(t, { agenda, now: new Date(now).toISOString() }), contextVersion })), contextVersion };
 }
 
 // Recompute candidates from the current source store, rather than trusting a
@@ -204,7 +207,7 @@ export function planChunkRequests(items, tax, model, prefix = '', { examples = c
         inputHash: createHash('sha256').update(line).digest('hex') }]);
       continue;
     }
-    const count = item.evidence?.length || 0;
+    const count = (item.evidence?.length || 0) + (item.officialAgenda?.length || 0);
     if (chunk.length && (chunk.length >= per || evidenceCount + count > evidenceCap || inputChars + 1 + line.length > limit)) {
       chunks.push(chunk); chunk = []; evidenceCount = 0; inputChars = 0;
     }

@@ -265,14 +265,17 @@ export const GENERIC_WORDS = new Set(('good great big new old day night morning 
 // Verbs and connective wording are not an event's subject. When a query
 // names a person AND describes a subject, a surname-only match is not useful
 // context for that subject (for example, a voting ruling vs an AI interview).
-const SUBJECT_FILLER = new Set('recent like really real make made making sure say says said saying told tell tells ask asks asked call calls called come comes came coming go goes going went get gets got getting means mean show shows showing serve serving sent back stop around across together take takes taking done complete nothing something anything everything much many several need needs needed held hold having happen happens happening happened seriously just again still also even whether would could should might must'.split(' '));
+const SUBJECT_FILLER = new Set('recent like really real make made making sure say says said saying told tell tells ask asks asked call calls called come comes came coming go goes going went get gets got getting means mean show shows showing serve serving sent back stop around across together take takes taking done complete nothing something anything everything much many several need needs needed held hold having happen happens happening happened seriously just again still also even whether would could should might must put puts putting end ends ending ended role roles effort efforts absolutely gotten give gives given think thinks'.split(' '));
 
 function subjectTerms(terms) {
   const nameWords = new Set([...terms].filter(([term, weight]) => weight >= 3).flatMap(([term]) => term.split(' ')));
   return [...terms.keys()].filter((term) => !term.includes(' ') && !/^\d/.test(term) && !nameWords.has(term) && !STOP.has(term) && !COMMON_NAMES.has(term) && !GENERIC_WORDS.has(term) && !SUBJECT_FILLER.has(term));
 }
 
-export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump president white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september sept october november december'.split(' '));
+// Common national political actors need the same treatment under their first
+// names, surnames and office aliases. Otherwise "Donald Trump" silently gains
+// a supposedly distinctive "Donald" match that "Trump" alone cannot provide.
+export const COMMON_NAMES = new Set('house senate congress congressional democrats democrat democratic republicans republican gop trump donald don potus flotus biden joe joseph harris kamala vance jd president presidential presidency white washington capitol american americans america united states u.s us federal government administration bill act vote court supreme committee speaker leader rep sen monday tuesday wednesday thursday friday saturday sunday january february march april may june july august september sept october november december'.split(' '));
 
 // Query terms with weights: a capitalised token that is not sentence-initial
 // (a name, a place) counts 3, a number counts 2, anything else 1 — and a
@@ -409,7 +412,7 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
   const lo = at - windowBeforeDays * 86_400_000;
   const hi = at + windowAfterDays * 86_400_000;
   const cutoff = mode === 'as-of' ? Math.min(at, Date.parse(knownAt)) : Date.parse(knownAt);
-  const subject = subjectTerms(terms);
+  const querySubject = subjectTerms(terms);
   const scored = [];
   for (const it of items) {
     const when = Date.parse(it.publishedAt);
@@ -428,6 +431,11 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
     const matchedProper = matched.filter((m) => /^\d/.test(m)
       || (m.includes(' ') && proper.phrases.has(m))
       || (!m.includes(' ') && (terms.get(m) || 0) >= 1 && !COMMON_NAMES.has(m) && !GENERIC_WORDS.has(m) && (proper.singles.has(m) || proper.phraseWords.has(m))));
+    // Sentence-initial names get ordinary query weights. Once the article
+    // establishes such a name, it cannot also count as the separate subject
+    // overlap ("Olszewski" plus "Olszewski" is still only an actor match).
+    const matchedNameWords = new Set(matchedProper.flatMap((term) => term.split(' ')));
+    const subject = querySubject.filter((term) => !matchedNameWords.has(term));
     // No distinctive match, no evidence: a post and an article that share
     // only ordinary words ("year", "vote") are not about the same thing,
     // and the first real posts run through this matched Rosh Hashanah
@@ -441,12 +449,15 @@ export function retrieveEvidence(query, { items, asOf = new Date().toISOString()
     // Preserve sparse references/aliases for review, but a sufficiently
     // specific query must overlap on its subject as well as a name.
     if (subject.length >= 3 && !matched.some((term) => subject.includes(term))) continue;
-    // A match elsewhere in the article cannot make an unrelated first
-    // paragraph supporting evidence. Select a passage containing a name
-    // shared by this query; otherwise retain the headline as a lead.
+    // A name in one paragraph and a subject in another cannot make the first
+    // paragraph supporting evidence. The actual selected excerpt must carry
+    // both. A headline can still be a lead when it meets that same condition.
+    const supportsQuery = (matches) => matches.some((term) => matchedProper.includes(term) && !/^\d/.test(term))
+      && (subject.length < 3 || matches.some((term) => subject.includes(term)));
     const passages = (it.passages || []).map((passage) => ({ passage, ...scoreItem({ passages: [passage] }, terms) }))
-      .filter((p) => p.inBody.some((term) => matchedProper.includes(term) && !/^\d/.test(term)))
+      .filter((p) => supportsQuery(p.inBody))
       .sort((a, b) => b.score - a.score);
+    if (!passages.length && !supportsQuery(inTitle)) continue;
     const passage = passages[0]?.passage || it.title || '';
     const kind = it.extract === 'body' && passages.length && !stale ? 'report' : 'lead';
     scored.push({ id: it.id, url: it.url, publisher: it.publisher, sourceId: it.sourceId, title: it.title, publishedAt: it.publishedAt, fetchedAt: it.fetchedAt, version: it.version, publishedAfterPost: when > at, acquiredAfterPost: fetched > at, extract: it.extract, passage, score, matched, matchedProper, ageHours, stale, kind });

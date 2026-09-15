@@ -176,6 +176,14 @@ Rules:
   was known when the member posted. List the source IDs actually relied on
   in that assignment's "evidence_used"; use only IDs on that input line.
   Do not import unrelated events or facts from an article into the tweet.
+- Some inputs carry "officialAgenda": an exact bill-number match from the
+  Clerk's dated weekly list of legislation that MAY be considered. Use the
+  bill title and procedure to clarify the post's subject. This is a weekly
+  agenda, not evidence of passage, a completed vote, a certain vote date,
+  or the member's position. Do not turn a quoted author's bill reference
+  into the member's endorsement. The week window and acquisition time are
+  explicit; publisher timestamps without a timezone remain raw, not UTC.
+  These source IDs may also be cited in "evidence_used" when actually used.
 - When the post's reference or event identity remains ambiguous, retain
   supported broad topics and set "needs_context": true. Do not guess a
   named event merely to avoid an empty or broad assignment. A later public
