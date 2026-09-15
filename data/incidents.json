@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T07:23:33.824Z",
+ "generatedAt": "2026-09-15T08:42:34.215Z",
  "incidents": [
   {
    "id": "miami-fl--industrial-accident--source-2099498135366095232",
@@ -32,7 +32,7 @@
    "since": "2026-09-14T15:09:49.000Z",
    "last": "2026-09-14T15:09:49.000Z",
    "updates": 1,
-   "engN": 8,
+   "engN": 32,
    "amplifiers": 0,
    "others": [],
    "title": "Industrial accident · Miami, FL",
@@ -62,7 +62,7 @@
      "who": "@RepMoskowitz",
      "tag": "member",
      "text": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.\n\nThank you to the first responders who are on the scene right now, my office will continue to provide updates as they come. https://t.co/nOuf12SfVL",
-     "engN": 8,
+     "engN": 32,
      "isNew": false,
      "flag": {
       "kind": "industrial accident",
@@ -86,7 +86,35 @@
    "tweetIds": [
     "2099515971211817257"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.",
+      "sourceId": "2099515971211817257",
+      "url": "https://x.com/i/web/status/2099515971211817257",
+      "evidenceQuote": "My office is closely monitoring the situation in Brickell following the crane collapse on Brickell Bay Drive.",
+      "src": "@RepMoskowitz, 2026-09-14T15:09:49.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "Thank you to the first responders who are on the scene right now, my office will continue to provide updates as they come.",
+      "sourceId": "2099515971211817257",
+      "url": "https://x.com/i/web/status/2099515971211817257",
+      "evidenceQuote": "Thank you to the first responders who are on the scene right now, my office will continue to provide updates as they come.",
+      "src": "@RepMoskowitz, 2026-09-14T15:09:49.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-15T08:42:26.736Z",
+    "posts": 1,
+    "inputHash": "70ec4bcdf6bad88335121d7b690c572739dd96a2c4958983ac9493b8caf12a44",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -183,7 +211,35 @@
    "tweetIds": [
     "2099500624953889071"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+      "sourceId": "2099500624953889071",
+      "url": "https://x.com/i/web/status/2099500624953889071",
+      "evidenceQuote": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+      "src": "@rosadelauro, 2026-09-14T14:08:50.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+      "sourceId": "2099500624953889071",
+      "url": "https://x.com/i/web/status/2099500624953889071",
+      "evidenceQuote": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
+      "src": "@rosadelauro, 2026-09-14T14:08:50.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-15T08:42:34.215Z",
+    "posts": 1,
+    "inputHash": "752400c34e94d2d1094f517fdd1416dad81c1fb7ad9ed27527b969c4e811a2c5",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
