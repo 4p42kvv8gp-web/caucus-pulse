@@ -2420,5 +2420,43 @@
     "completedAt": "2026-09-15T02:18:43.818Z"
    }
   }
+ },
+ "2026-09-15": {
+  "_requests": {
+   "live:4e2bfa5b-2b3b-430b-a99e-aa0d0587cbba": {
+    "id": "live:4e2bfa5b-2b3b-430b-a99e-aa0d0587cbba",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.48675,
+    "status": "settled",
+    "createdAt": "2026-09-15T04:49:25.590Z",
+    "usage": {
+     "calls": 1,
+     "input": 5015,
+     "output": 525,
+     "cacheRead": 0,
+     "cacheWrite": 5090
+    },
+    "completedAt": "2026-09-15T04:49:32.640Z"
+   },
+   "live:c321ce7a-88a1-49c3-bbc3-a07fbb656b9d": {
+    "id": "live:c321ce7a-88a1-49c3-bbc3-a07fbb656b9d",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.53433,
+    "status": "settled",
+    "createdAt": "2026-09-15T04:49:32.658Z",
+    "usage": {
+     "calls": 1,
+     "input": 6995,
+     "output": 2692,
+     "cacheRead": 5090,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-09-15T04:50:03.365Z"
+   }
+  }
  }
 }

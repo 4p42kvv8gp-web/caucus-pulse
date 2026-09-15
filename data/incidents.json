@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-15T02:18:43.943Z",
+ "generatedAt": "2026-09-15T04:50:03.757Z",
  "incidents": [
   {
    "id": "miami-fl--industrial-accident--source-2099498135366095232",
@@ -10,7 +10,7 @@
     "industrial accident"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -327,7 +327,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -452,7 +452,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -577,7 +577,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -2334,24 +2334,6 @@
    "time": "2026-09-08T15:48:01.000Z",
    "reason": "aftermath",
    "cue": "storm recovery"
-  },
-  {
-   "id": "2097152945695449421",
-   "kind": "plane crash",
-   "place": "Miami, FL",
-   "who": "@RepWilson",
-   "time": "2026-09-08T02:40:00.000Z",
-   "reason": "reaction only",
-   "cue": "I am heartbroken"
-  },
-  {
-   "id": "2097033286920860097",
-   "kind": "flooding",
-   "place": "Lake Station, IN",
-   "who": "@RepMrvan",
-   "time": "2026-09-07T18:44:31.000Z",
-   "reason": "aftermath",
-   "cue": "Intake Center"
   }
  ]
 }
