@@ -1,10 +1,35 @@
 {
- "generatedAt": "2026-09-15T13:33:17.846Z",
- "lastPollAt": "2026-09-15T12:58:11.566Z",
- "lastPollAttemptAt": "2026-09-15T12:58:11.009Z",
+ "generatedAt": "2026-09-15T13:53:16.644Z",
+ "lastPollAt": "2026-09-15T13:53:08.292Z",
+ "lastPollAttemptAt": "2026-09-15T13:53:07.463Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
+ "floor": {
+  "schemaVersion": 1,
+  "status": {
+   "ok": false,
+   "lastAttemptAt": null,
+   "lastSuccessAt": null,
+   "error": "Official floor schedule not yet fetched",
+   "httpStatus": null
+  },
+  "available": false,
+  "current": false,
+  "stale": true,
+  "congress": null,
+  "weekStart": null,
+  "weekEnd": null,
+  "observedAt": null,
+  "sourceUrl": "https://docs.house.gov/floor/",
+  "xmlUrl": null,
+  "sourceUpdatedAtRaw": null,
+  "snapshotHash": null,
+  "items": [],
+  "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
+  "referencesAvailable": false,
+  "referenceAsOf": "2026-09-15T13:53:15.569Z"
+ },
  "news": {
   "version": 18,
   "items": 341,
@@ -131,7 +156,149 @@
     "acquiredAfterPost": false,
     "truncated": false
    }
-  ]
+  ],
+  "coverage": {
+   "asOf": "2026-09-15T13:53:16.040Z",
+   "windowDays": 14,
+   "windowStart": "2026-09-01T13:53:16.040Z",
+   "eligibleItems": 353,
+   "withExcerpts": 46,
+   "headlineOrSummary": 307,
+   "withoutReadableText": 0,
+   "sourcesWithRecentItems": 6,
+   "sourcesWithoutRecentItems": 2,
+   "failedSources": 0,
+   "sources": [
+    {
+     "id": "npr-politics",
+     "publisher": "NPR",
+     "sourceUrl": "https://feeds.npr.org/1014/rss.xml",
+     "eligibleItems": 28,
+     "withExcerpts": 28,
+     "headlineOrSummary": 0,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T10:42:20.000Z",
+     "latestItem": {
+      "title": "Trump says developing AI is a critical race, downplaying fears",
+      "url": "https://www.npr.org/2026/09/15/nx-s1-5968682/trump-says-developing-ai-is-a-critical-race-downplaying-fears"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "politico-politics",
+     "publisher": "Politico",
+     "sourceUrl": "https://rss.politico.com/politics-news.xml",
+     "eligibleItems": 34,
+     "withExcerpts": 0,
+     "headlineOrSummary": 34,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T09:00:00.000Z",
+     "latestItem": {
+      "title": "Texas Republicans are scrambling after Bo French’s outburst",
+      "url": "https://www.politico.com/news/2026/09/15/bo-french-texas-republicans-xenophobic-worries-01076388"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "the-hill",
+     "publisher": "The Hill",
+     "sourceUrl": "https://thehill.com/feed/",
+     "eligibleItems": 187,
+     "withExcerpts": 0,
+     "headlineOrSummary": 187,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T13:30:00.000Z",
+     "latestItem": {
+      "title": "A Republican convention about fear collides with a midterm about prices",
+      "url": "https://thehill.com/opinion/campaign/6087693-trump-midterm-affordability-gap/"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "roll-call",
+     "publisher": "Roll Call",
+     "sourceUrl": "https://rollcall.com/feed/",
+     "eligibleItems": 18,
+     "withExcerpts": 18,
+     "headlineOrSummary": 0,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T07:00:00.000Z",
+     "latestItem": {
+      "title": "Congressional Black Caucus Institute kicks off new midterm turnout effort",
+      "url": "https://rollcall.com/2026/09/15/congressional-black-caucus-institute-kicks-off-new-midterm-turnout-effort/"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "cnn-politics",
+     "publisher": "CNN",
+     "sourceUrl": "http://rss.cnn.com/rss/cnn_allpolitics.rss",
+     "eligibleItems": 0,
+     "withExcerpts": 0,
+     "headlineOrSummary": 0,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2024-06-14T04:13:26.000Z",
+     "latestItem": {
+      "title": "Politics of the Day",
+      "url": "https://www.cnn.com/video/playlists/this-week-in-politics/"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "nyt-politics",
+     "publisher": "The New York Times",
+     "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+     "eligibleItems": 48,
+     "withExcerpts": 0,
+     "headlineOrSummary": 48,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T13:09:19.000Z",
+     "latestItem": {
+      "title": "A ‘Blue Wave’ May Be Building, but How High?",
+      "url": "https://www.nytimes.com/2026/09/15/upshot/times-siena-national-poll.html"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "wapo-politics",
+     "publisher": "The Washington Post",
+     "sourceUrl": "https://feeds.washingtonpost.com/rss/politics",
+     "eligibleItems": 38,
+     "withExcerpts": 0,
+     "headlineOrSummary": 38,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-09-15T12:30:00.000Z",
+     "latestItem": {
+      "title": "Kimberly Greenwood, wife of Lee, is nominated to be ambassador to Barbados",
+      "url": "https://www.washingtonpost.com/politics/2026/09/15/kimberly-greenwood-wife-lee-is-nominated-be-ambassador-barbados/"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    },
+    {
+     "id": "govinfo-crec",
+     "publisher": "GovInfo — Congressional Record",
+     "sourceUrl": "https://www.govinfo.gov/rss/crec.xml",
+     "eligibleItems": 0,
+     "withExcerpts": 0,
+     "headlineOrSummary": 0,
+     "withoutReadableText": 0,
+     "latestPublishedAt": "2026-06-26T13:07:00.000Z",
+     "latestItem": {
+      "title": "Congressional Record Volume 172, Issue 107, (June 25, 2026)",
+      "url": "https://www.govinfo.gov/app/details/CREC-2026-06-25"
+     },
+     "lastFetchAt": "2026-09-15T13:32:41.502Z",
+     "lastFetchOutcome": "succeeded"
+    }
+   ]
+  }
  },
  "timezone": "America/New_York",
  "today": "2026-09-15",
@@ -147,8 +314,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 152,
-  "t": 5
+  "posts": 154,
+  "t": 7
  },
  "caucusKeys": [
   "CPC",
@@ -173,10 +340,10 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 566,
-  "classifiedIn24h": 533,
-  "taggedIn24h": 500,
-  "pendingIn24h": 33,
+  "capturedIn24h": 598,
+  "classifiedIn24h": 526,
+  "taggedIn24h": 494,
+  "pendingIn24h": 72,
   "momentumPaused": false
  },
  "core": [
@@ -3442,167 +3609,167 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 29,
+    "posts": 68,
     "mix": [
-     69,
-     3,
-     28
+     74,
+     10,
+     16
     ],
-    "accounts": 24,
-    "members": 23,
+    "accounts": 53,
+    "members": 51,
     "unidentifiedAccounts": 0,
     "classified": 3,
     "tagged": 3,
-    "pending": 26,
+    "pending": 65,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 558,
-    "perPost": 19,
-    "top10Share": 98,
-    "engDelta": -100
+    "eng": 1636,
+    "perPost": 24,
+    "top10Share": 89,
+    "engDelta": -99
    },
    "w": {
-    "posts": 3128,
+    "posts": 3167,
     "mix": [
-     82,
+     81,
      5,
-     13
+     14
     ],
     "accounts": 338,
     "members": 206,
     "unidentifiedAccounts": 0,
     "classified": 3091,
     "tagged": 2326,
-    "pending": 37,
+    "pending": 76,
     "corePosts": 1016,
     "coreCounts": {
      "Affordability": 471,
      "Healthcare": 164,
      "Corruption": 466
     },
-    "eng": 697550,
-    "perPost": 223,
+    "eng": 698628,
+    "perPost": 221,
     "top10Share": 55,
     "engDelta": 0
    },
    "curve48": [
-    73,
-    68,
-    54,
-    48,
-    16,
-    5,
-    0,
-    29,
-    114,
-    149,
-    139,
-    112,
-    24,
-    2,
+    75,
+    69,
+    57,
+    42,
+    15,
     3,
-    23
+    3,
+    33,
+    120,
+    145,
+    146,
+    99,
+    22,
+    1,
+    4,
+    61
    ]
   },
   "CPC": {
    "t": {
-    "posts": 14,
+    "posts": 32,
     "mix": [
-     50,
+     69,
      0,
-     50
+     31
     ],
-    "accounts": 11,
-    "members": 10,
+    "accounts": 27,
+    "members": 26,
     "unidentifiedAccounts": 0,
     "classified": 3,
     "tagged": 3,
-    "pending": 11,
+    "pending": 29,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 469,
-    "perPost": 34,
-    "top10Share": 100,
+    "eng": 734,
+    "perPost": 23,
+    "top10Share": 95,
     "engDelta": -99
    },
    "w": {
-    "posts": 1567,
+    "posts": 1585,
     "mix": [
-     75,
+     76,
      5,
-     20
+     19
     ],
     "accounts": 151,
     "members": 92,
     "unidentifiedAccounts": 0,
     "classified": 1550,
     "tagged": 1186,
-    "pending": 17,
+    "pending": 35,
     "corePosts": 539,
     "coreCounts": {
      "Affordability": 233,
      "Healthcare": 90,
      "Corruption": 270
     },
-    "eng": 549410,
-    "perPost": 351,
+    "eng": 549675,
+    "perPost": 347,
     "top10Share": 69,
     "engDelta": 0
    },
    "curve48": [
-    31,
     30,
+    32,
     33,
-    20,
-    8,
-    5,
-    0,
-    18,
-    52,
-    65,
-    66,
-    56,
+    16,
     10,
-    2,
-    0,
-    11
+    3,
+    1,
+    19,
+    55,
+    63,
+    69,
+    50,
+    11,
+    1,
+    1,
+    28
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 16,
+    "posts": 38,
     "mix": [
-     81,
-     6,
-     13
+     74,
+     18,
+     8
     ],
-    "accounts": 14,
-    "members": 14,
+    "accounts": 28,
+    "members": 27,
     "unidentifiedAccounts": 0,
     "classified": 2,
     "tagged": 2,
-    "pending": 14,
+    "pending": 36,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 105,
-    "perPost": 7,
-    "top10Share": 100,
-    "engDelta": -100
+    "eng": 193,
+    "perPost": 5,
+    "top10Share": 94,
+    "engDelta": -99
    },
    "w": {
-    "posts": 1684,
+    "posts": 1706,
     "mix": [
      83,
      5,
@@ -3613,119 +3780,119 @@
     "unidentifiedAccounts": 0,
     "classified": 1665,
     "tagged": 1217,
-    "pending": 19,
+    "pending": 41,
     "corePosts": 520,
     "coreCounts": {
      "Affordability": 258,
      "Healthcare": 82,
      "Corruption": 212
     },
-    "eng": 132139,
+    "eng": 132227,
     "perPost": 78,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
-    43,
-    41,
-    23,
-    30,
+    47,
+    39,
+    27,
+    24,
     8,
     1,
-    0,
-    11,
-    73,
-    91,
-    77,
-    52,
-    16,
     2,
+    16,
+    72,
+    91,
+    78,
+    48,
+    14,
     1,
-    13
+    1,
+    35
    ]
   },
   "CBC": {
    "t": {
-    "posts": 6,
+    "posts": 17,
     "mix": [
      100,
      0,
      0
     ],
-    "accounts": 6,
-    "members": 6,
+    "accounts": 16,
+    "members": 16,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 6,
+    "pending": 17,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 31,
-    "perPost": 5,
-    "top10Share": 100,
-    "engDelta": -100
+    "eng": 881,
+    "perPost": 52,
+    "top10Share": 99,
+    "engDelta": -95
    },
    "w": {
-    "posts": 558,
+    "posts": 569,
     "mix": [
      84,
-     6,
-     10
+     5,
+     11
     ],
     "accounts": 83,
     "members": 52,
     "unidentifiedAccounts": 0,
     "classified": 549,
     "tagged": 405,
-    "pending": 9,
+    "pending": 20,
     "corePosts": 187,
     "coreCounts": {
      "Affordability": 82,
      "Healthcare": 38,
      "Corruption": 82
     },
-    "eng": 108630,
-    "perPost": 195,
-    "top10Share": 82,
+    "eng": 109480,
+    "perPost": 192,
+    "top10Share": 83,
     "engDelta": 0
    },
    "curve48": [
-    8,
-    8,
-    6,
     7,
-    3,
+    8,
+    9,
+    5,
+    2,
     0,
-    0,
-    6,
-    16,
-    24,
-    24,
+    2,
+    4,
+    20,
+    23,
     22,
-    7,
+    22,
+    6,
     0,
-    1,
-    5
+    2,
+    15
    ]
   },
   "CHC": {
    "t": {
-    "posts": 9,
+    "posts": 10,
     "mix": [
-     56,
+     60,
      0,
-     44
+     40
     ],
-    "accounts": 5,
-    "members": 4,
+    "accounts": 6,
+    "members": 5,
     "unidentifiedAccounts": 0,
     "classified": 2,
     "tagged": 2,
-    "pending": 7,
+    "pending": 8,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
@@ -3733,12 +3900,12 @@
      "Corruption": 0
     },
     "eng": 120,
-    "perPost": 13,
+    "perPost": 12,
     "top10Share": 100,
     "engDelta": -99
    },
    "w": {
-    "posts": 532,
+    "posts": 533,
     "mix": [
      77,
      4,
@@ -3749,7 +3916,7 @@
     "unidentifiedAccounts": 0,
     "classified": 524,
     "tagged": 416,
-    "pending": 8,
+    "pending": 9,
     "corePosts": 181,
     "coreCounts": {
      "Affordability": 66,
@@ -3757,56 +3924,56 @@
      "Corruption": 98
     },
     "eng": 93430,
-    "perPost": 176,
+    "perPost": 175,
     "top10Share": 87,
     "engDelta": 0
    },
    "curve48": [
     10,
-    7,
-    10,
     8,
+    11,
+    6,
     8,
     1,
     0,
-    9,
-    19,
+    10,
+    18,
     25,
-    25,
-    26,
+    30,
+    21,
+    3,
+    1,
     2,
-    2,
-    2,
-    5
+    6
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 3,
+    "posts": 5,
     "mix": [
-     67,
+     80,
      0,
-     33
+     20
     ],
-    "accounts": 3,
-    "members": 3,
+    "accounts": 4,
+    "members": 4,
     "unidentifiedAccounts": 0,
     "classified": 1,
     "tagged": 1,
-    "pending": 2,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 346,
-    "perPost": 115,
+    "eng": 392,
+    "perPost": 78,
     "top10Share": 100,
     "engDelta": -99
    },
    "w": {
-    "posts": 366,
+    "posts": 368,
     "mix": [
      86,
      4,
@@ -3817,35 +3984,35 @@
     "unidentifiedAccounts": 0,
     "classified": 362,
     "tagged": 303,
-    "pending": 4,
+    "pending": 6,
     "corePosts": 132,
     "coreCounts": {
      "Affordability": 61,
      "Healthcare": 21,
      "Corruption": 65
     },
-    "eng": 255799,
-    "perPost": 699,
+    "eng": 255845,
+    "perPost": 695,
     "top10Share": 99,
     "engDelta": 0
    },
    "curve48": [
+    4,
+    3,
     6,
-    1,
-    7,
     9,
+    3,
     2,
-    4,
-    0,
-    4,
-    9,
-    19,
-    15,
-    11,
+    1,
+    3,
+    12,
+    16,
+    16,
+    10,
     1,
     0,
     0,
-    2
+    4
    ]
   }
  },
@@ -3938,7 +4105,7 @@
     131,
     1
    ],
-   "d": 26,
+   "d": 25,
    "mAvg": 59,
    "epAvg": 230,
    "momentum": {
@@ -3947,9 +4114,9 @@
      "volume",
      "adoption"
     ],
-    "volume": 0.76,
+    "volume": 0.75,
     "accel": 0,
-    "adoption": 0.7372881355932204,
+    "adoption": 0.7203389830508474,
     "eff": 3.1,
     "engLift": 0
    },
@@ -6796,19 +6963,19 @@
     56,
     1
    ],
-   "d": 0,
+   "d": -2,
    "mAvg": 41.2,
    "epAvg": 643,
    "momentum": {
-    "score": 49,
+    "score": 48,
     "drivers": [
      "engagement",
      "caucus spread"
     ],
-    "volume": 0.5,
+    "volume": 0.48,
     "accel": 0.016871165644171793,
     "adoption": 0.5931174089068827,
-    "eff": 3.7,
+    "eff": 3.8,
     "engLift": 1
    },
    "subs": [
@@ -7823,16 +7990,16 @@
     67,
     1
    ],
-   "d": 51,
+   "d": 49,
    "mAvg": 20.2,
    "epAvg": 523,
    "momentum": {
     "score": 66,
     "drivers": [
-     "volume",
-     "adoption"
+     "adoption",
+     "volume"
     ],
-    "volume": 1,
+    "volume": 0.99,
     "accel": 0,
     "adoption": 1,
     "eff": 3.5,
@@ -9846,11 +10013,11 @@
     145,
     0
    ],
-   "d": 78,
+   "d": 76,
    "mAvg": 49.7,
    "epAvg": 553,
    "momentum": {
-    "score": 82,
+    "score": 83,
     "drivers": [
      "volume",
      "adoption"
@@ -9859,7 +10026,7 @@
     "accel": 0.424892703862661,
     "adoption": 1,
     "eff": 3.7,
-    "engLift": 0.7171699064765211
+    "engLift": 0.7286931317508965
    },
    "subs": [
     {
@@ -11922,20 +12089,20 @@
     31,
     0
    ],
-   "d": 10,
+   "d": 6,
    "mAvg": 23.5,
    "epAvg": 94,
    "momentum": {
-    "score": 65,
+    "score": 63,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.6,
+    "volume": 0.56,
     "accel": 0.9268292682926829,
-    "adoption": 0.5212765957446809,
+    "adoption": 0.4787234042553192,
     "eff": 3.7,
-    "engLift": 0.5573557911166027
+    "engLift": 0.5769755518777713
    },
    "subs": [
     {
@@ -14464,7 +14631,7 @@
     15,
     0
    ],
-   "d": 70,
+   "d": 58,
    "mAvg": 8,
    "epAvg": 45,
    "momentum": {
@@ -14476,7 +14643,7 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 1.9,
+    "eff": 1.8,
     "engLift": 0
    },
    "subs": [
@@ -15209,7 +15376,10 @@
     "2099562389922353514",
     "2099578925852615149",
     "2099604031773519971",
-    "2099626340026654807"
+    "2099626340026654807",
+    "2099845695180296671",
+    "2099853147736879403",
+    "2099853153042653557"
    ],
    "firstSeen": "2026-08-21",
    "leadership": false,
@@ -15232,8 +15402,8 @@
     153
    ],
    "exact": 0.65,
-   "total": 213,
-   "eng": 11957
+   "total": 216,
+   "eng": 11982
   },
   {
    "text": "first responders",
@@ -16356,14 +16526,15 @@
     "2099661939026891166",
     "2099676632487231703",
     "2099831648992759834",
-    "2099839521852363026"
+    "2099839521852363026",
+    "2099854286913994889"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
-   "spread": 46,
-   "accounts": 49,
+   "spread": 47,
+   "accounts": 50,
    "cm": [
-    20,
+    21,
     25,
     8,
     4,
@@ -16379,8 +16550,8 @@
     94
    ],
    "exact": 1,
-   "total": 62,
-   "eng": 35753
+   "total": 63,
+   "eng": 35843
   },
   {
    "text": "nearly 3 000",
@@ -16779,53 +16950,7 @@
    "kind": null,
    "macro": null,
    "days": null,
-   "context": [
-    {
-     "id": "n_087d98b1a60e46ed",
-     "publisher": "Roll Call",
-     "date": "2026-09-14",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/14/supreme-court-blocks-efforts-to-stop-mail-voting-this-fall/",
-     "text": "The Supreme Court Monday rejected President Donald Trump’s effort to curtail mail voting in this fall’s elections, keeping the U.S. Postal Service’s new rule restricting election mail paused.",
-     "title": "Supreme Court blocks efforts to stop mail voting this fall",
-     "publishedAt": "2026-09-14T20:33:43.000Z",
-     "fetchedAt": "2026-09-15T01:27:56.811Z",
-     "version": 12,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_9048ded17444c977",
-     "publisher": "Roll Call",
-     "date": "2026-09-10",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-     "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-     "title": "Trump puts himself on midterm ballot during Dallas spectacle",
-     "publishedAt": "2026-09-10T10:11:38.000Z",
-     "fetchedAt": "2026-09-13T16:45:39.814Z",
-     "version": 1,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4f2d8c28f1468355",
-     "publisher": "The Hill",
-     "date": "2026-09-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6089724-jon-ossoff-donald-trump-ai-fears-regulation/",
-     "text": "Ossoff: ‘Compromised’ Trump won’t regulate AI",
-     "title": "Ossoff: ‘Compromised’ Trump won’t regulate AI",
-     "publishedAt": "2026-09-15T12:01:00.000Z",
-     "fetchedAt": "2026-09-15T12:58:12.547Z",
-     "version": 17,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
+   "context": [],
    "related": [
     {
      "id": "2099671348507255265",
@@ -16953,23 +17078,7 @@
    "kind": null,
    "macro": null,
    "days": null,
-   "context": [
-    {
-     "id": "n_cda717b088ce0e2f",
-     "publisher": "The Hill",
-     "date": "2026-09-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6089480-house-approves-russia-sanctions-bill/",
-     "text": "Russia sanctions bill passes House Rules Committee",
-     "title": "Russia sanctions bill passes House Rules Committee",
-     "publishedAt": "2026-09-15T02:31:30.000Z",
-     "fetchedAt": "2026-09-15T03:33:14.107Z",
-     "version": 13,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
+   "context": [],
    "related": [
     {
      "id": "2099677725640606185",
@@ -17291,6 +17400,14 @@
      ]
     },
     {
+     "id": "2099853840749040013",
+     "sim": 0.884,
+     "handle": "@jahimes",
+     "text": "We are laser focused on protecting November’s election from Trump’s inevitable rejection of the results when he gets his clock cleaned. \n\nSCOTUS’ rejection of his Post Office nonsense is a huge step…",
+     "time": "2026-09-15T13:32:23.000Z",
+     "topics": []
+    },
+    {
      "id": "2099650932027887640",
      "sim": 0.8816,
      "handle": "@RepGabeAmo",
@@ -17307,16 +17424,6 @@
      "handle": "@RepAdamSmith",
      "text": "The Supreme Court made the right call today. Voting by mail is how millions of Americans, including here in Washington state, where elections are conducted almost entirely by mail — safely and…",
      "time": "2026-09-15T00:09:42.000Z",
-     "topics": [
-      "democracy/voting-rights"
-     ]
-    },
-    {
-     "id": "2099664608822804603",
-     "sim": 0.8772,
-     "handle": "@RepGregStanton",
-     "text": "The Supreme Court got this right.\n\nNo Arizonan should have to wonder whether their ballot will make it through the mail because of a politically motivated rule change 50 days before an election.…",
-     "time": "2026-09-15T01:00:27.000Z",
      "topics": [
       "democracy/voting-rights"
      ]
@@ -17571,24 +17678,17 @@
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
-    },
-    {
-     "id": "n_184027bcc2d3b45c",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6088321-trump-russia-ukraine-gas-prices-diesel/",
-     "text": "Trump says Russia, Ukraine agree to avoid energy targets as fuel prices rise",
-     "title": "Trump says Russia, Ukraine agree to avoid energy targets as fuel prices rise",
-     "publishedAt": "2026-09-14T16:11:33.000Z",
-     "fetchedAt": "2026-09-14T18:38:00.705Z",
-     "version": 7,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
     }
    ],
    "related": [
+    {
+     "id": "2099855077527687286",
+     "sim": 0.8234,
+     "handle": "@RepJamesClyburn",
+     "text": "Every American needs to ask themselves: Why did a Russian oligarch close to Putin—who recently traveled alongside Putin in China—spend hundreds of thousands of dollars on Trump’s son’s wedding…",
+     "time": "2026-09-15T13:37:18.000Z",
+     "topics": []
+    },
     {
      "id": "2099651417115959648",
      "sim": 0.8055,
@@ -17682,36 +17782,6 @@
    "days": null,
    "context": [
     {
-     "id": "n_720e64d8ae2dfbaa",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6087423-trump-urges-ukraine-halt-russia-oil-strikes/",
-     "text": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
-     "title": "Trump says Ukraine should halt Russian refinery strikes amid surging diesel prices",
-     "publishedAt": "2026-09-14T03:16:14.000Z",
-     "fetchedAt": "2026-09-14T12:52:50.846Z",
-     "version": 5,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_d3537f21deb6b143",
-     "publisher": "The New York Times",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/14/business/energy-environment/trump-diesel-russia-ukraine-iran.html",
-     "text": "What Is Driving Diesel Prices Up? Energy Chaos Caused by Two Wars.",
-     "title": "What Is Driving Diesel Prices Up? Energy Chaos Caused by Two Wars.",
-     "publishedAt": "2026-09-14T19:58:01.000Z",
-     "fetchedAt": "2026-09-14T21:11:50.977Z",
-     "version": 9,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
      "id": "n_9048ded17444c977",
      "publisher": "Roll Call",
      "date": "2026-09-10",
@@ -17725,6 +17795,36 @@
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
+    },
+    {
+     "id": "n_ac76b38c8a008a20",
+     "publisher": "The Hill",
+     "date": "2026-09-12",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6085199-us-iran-escalation-rhetoric-threshold/",
+     "text": "Iran’s war didn’t end. It changed units.",
+     "title": "Iran’s war didn’t end. It changed units.",
+     "publishedAt": "2026-09-12T19:00:00.000Z",
+     "fetchedAt": "2026-09-13T16:45:39.814Z",
+     "version": 1,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6e761b696274fe39",
+     "publisher": "NPR",
+     "date": "2026-09-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/14/nx-s1-5966875/trump-returns-home-to-drum-up-voter-support-for-gop-candidates-ahead-of-midterms",
+     "text": "A MARTÍNEZ, HOST: All right, it's officially midterm campaign season. President Trump pledged to visit dozens of Republican candidates nationwide ahead of the November elections to drum up voter enthusiasm. LEILA FADEL, HOST: But the war in Iran and sky-high gasoline prices contribute to a tough political environment for the incumbent party. MARTÍNEZ: NPR's senior national political correspondent Mara Liasson has been watching the dynamics. Mara, so the president, at the Republican convention in Dallas last week, pledged to give every American 5,000 bucks if Republicans win in November. What …",
+     "title": "Trump returns home to drum up voter support for GOP candidates ahead of midterms",
+     "publishedAt": "2026-09-14T08:43:36.000Z",
+     "fetchedAt": "2026-09-14T21:11:50.977Z",
+     "version": 9,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
     }
    ],
    "related": [
@@ -17786,10 +17886,172 @@
    ]
   },
   {
+   "label": "Bo French racist post about UT students",
+   "lastSeen": "2026-09-15T04:19:50.000Z",
+   "thresholdMet": true,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 4,
+   "members": 4,
+   "accounts": 4,
+   "postIds": [
+    "2099262997336125581",
+    "2099266267710640498",
+    "2099269784906932535",
+    "2099714786472665566"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2099262997336125581",
+     "handle": "@CDMenefee",
+     "time": "2026-09-13T22:24:35.000Z"
+    },
+    {
+     "id": "2099266267710640498",
+     "handle": "@RepCuellar",
+     "time": "2026-09-13T22:37:35.000Z"
+    },
+    {
+     "id": "2099269784906932535",
+     "handle": "@Castro4Congress",
+     "time": "2026-09-13T22:51:33.000Z"
+    },
+    {
+     "id": "2099714786472665566",
+     "handle": "@tedlieu",
+     "time": "2026-09-15T04:19:50.000Z"
+    }
+   ],
+   "sampleId": "2099266267710640498",
+   "sampleHandle": "@RepCuellar",
+   "who": [
+    "@CDMenefee",
+    "@RepCuellar",
+    "@Castro4Congress",
+    "@tedlieu"
+   ],
+   "cm": [
+    3,
+    2,
+    1,
+    2,
+    1
+   ],
+   "eng": 3401,
+   "phrase": "republican nominee",
+   "coherence": 50,
+   "since": "2026-09-13T22:24:35.000Z",
+   "shape": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4
+   ],
+   "sample": "The face of Texas is changing, and our future belongs to every Texan willing to work hard and contribute. Young people celebrating their university should be…",
+   "suggest": "bo_french_racist_post_about_ut_students",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [
+    {
+     "id": "n_c29ccdcc98993029",
+     "publisher": "The Hill",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
+     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
+     "publishedAt": "2026-09-14T13:58:50.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7c9480b7c80cb70c",
+     "publisher": "The Washington Post",
+     "date": "2026-09-14",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/14/texas-republicans-denounce-gop-statewide-candidate-racist-posts-about-ut-students/",
+     "text": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
+     "title": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
+     "publishedAt": "2026-09-14T15:05:47.000Z",
+     "fetchedAt": "2026-09-14T16:12:06.254Z",
+     "version": 6,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "related": [
+    {
+     "id": "2099237556084711504",
+     "sim": 0.8706,
+     "handle": "@vgescobar",
+     "text": "Bo French is unfit to serve. His vile racism should very easily and quickly be condemned across the board by all Texas leaders, regardless of political affiliation.\n\nBut Greg Abbott can’t bring…",
+     "time": "2026-09-13T20:43:29.000Z",
+     "topics": [
+      "civil-rights/racial-justice"
+     ]
+    },
+    {
+     "id": "2099629081146888397",
+     "sim": 0.862,
+     "handle": "@RoKhanna",
+     "text": "This isn’t some fringe agitator, this is a candidate for statewide office. Republicans continue to tell countless Americans that we are not welcome in their vision for America. What’s wrong with…",
+     "time": "2026-09-14T22:39:16.000Z",
+     "topics": [
+      "civil-rights/racial-justice"
+     ]
+    },
+    {
+     "id": "2098190029935800499",
+     "sim": 0.8588,
+     "handle": "@Gabe_NM",
+     "text": "While New Mexicans are struggling to make ends meet, my opponent, @cunninghamfornm, is choosing to fly to Texas to stand on a stage and support President Trump and this extreme MAGA administration.…",
+     "time": "2026-09-10T23:21:00.000Z",
+     "topics": [
+      "congress-politics/elections-2026"
+     ]
+    },
+    {
+     "id": "2099449954141888594",
+     "sim": 0.8471,
+     "handle": "@MarcVeasey",
+     "text": "Paxton won’t say a word 😢. He may have been the only Republican to attend French’s Ft Worth fundraiser. Not surprised he tried to turn it around. Ken just doesn’t have it in him to do the right…",
+     "time": "2026-09-14T10:47:29.000Z",
+     "topics": [
+      "civil-rights/racial-justice",
+      "congress-politics/elections-2026"
+     ]
+    },
+    {
+     "id": "2098127008421314578",
+     "sim": 0.8266,
+     "handle": "@JasonCrowCO",
+     "text": "Republican policies have failed Texas.\n\nService first candidates like @PulidoForTexas &amp; @JohnnyGarciaTX are going to flip the House and help us take back Congress. https://t.co/W4MhJxezsl",
+     "time": "2026-09-10T19:10:34.000Z",
+     "topics": [
+      "congress-politics/elections-2026",
+      "economy/prices-inflation",
+      "labor/federal-workforce"
+     ]
+    }
+   ]
+  },
+  {
    "label": "9/11 25th anniversary remembrance",
    "lastSeen": "2026-09-14T14:44:31.000Z",
    "thresholdMet": true,
-   "activeMembers": 3,
+   "activeMembers": 1,
    "provisional": false,
    "discoverySources": [
     "placed",
@@ -20612,183 +20874,6 @@
    ]
   },
   {
-   "label": "Bo French racist post about UT students",
-   "lastSeen": "2026-09-15T04:19:50.000Z",
-   "thresholdMet": true,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 4,
-   "members": 4,
-   "accounts": 4,
-   "postIds": [
-    "2099262997336125581",
-    "2099266267710640498",
-    "2099269784906932535",
-    "2099714786472665566"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2099262997336125581",
-     "handle": "@CDMenefee",
-     "time": "2026-09-13T22:24:35.000Z"
-    },
-    {
-     "id": "2099266267710640498",
-     "handle": "@RepCuellar",
-     "time": "2026-09-13T22:37:35.000Z"
-    },
-    {
-     "id": "2099269784906932535",
-     "handle": "@Castro4Congress",
-     "time": "2026-09-13T22:51:33.000Z"
-    },
-    {
-     "id": "2099714786472665566",
-     "handle": "@tedlieu",
-     "time": "2026-09-15T04:19:50.000Z"
-    }
-   ],
-   "sampleId": "2099266267710640498",
-   "sampleHandle": "@RepCuellar",
-   "who": [
-    "@CDMenefee",
-    "@RepCuellar",
-    "@Castro4Congress",
-    "@tedlieu"
-   ],
-   "cm": [
-    3,
-    2,
-    1,
-    2,
-    1
-   ],
-   "eng": 3401,
-   "phrase": "republican nominee",
-   "coherence": 50,
-   "since": "2026-09-13T22:24:35.000Z",
-   "shape": [
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    4,
-    4
-   ],
-   "sample": "The face of Texas is changing, and our future belongs to every Texan willing to work hard and contribute. Young people celebrating their university should be…",
-   "suggest": "bo_french_racist_post_about_ut_students",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [
-    {
-     "id": "n_c29ccdcc98993029",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
-     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "publishedAt": "2026-09-14T13:58:50.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7fc15b6be62a247d",
-     "publisher": "The Hill",
-     "date": "2026-09-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6089816-ut-students-rebuke-bo-french/",
-     "text": "UT students fire back after Republican’s ‘blatantly racist’ post",
-     "title": "UT students fire back after Republican’s ‘blatantly racist’ post",
-     "publishedAt": "2026-09-15T13:02:29.000Z",
-     "fetchedAt": "2026-09-15T13:32:41.502Z",
-     "version": 18,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_fff6f6a8b4401c2b",
-     "publisher": "Politico",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://www.politico.com/news/2026/09/14/bo-french-ut-football-students-01075214",
-     "text": "Texas GOP candidate stands by xenophobic comments following backlash",
-     "title": "Texas GOP candidate stands by xenophobic comments following backlash",
-     "publishedAt": "2026-09-14T20:12:44.000Z",
-     "fetchedAt": "2026-09-14T21:11:50.977Z",
-     "version": 9,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "related": [
-    {
-     "id": "2099237556084711504",
-     "sim": 0.8706,
-     "handle": "@vgescobar",
-     "text": "Bo French is unfit to serve. His vile racism should very easily and quickly be condemned across the board by all Texas leaders, regardless of political affiliation.\n\nBut Greg Abbott can’t bring…",
-     "time": "2026-09-13T20:43:29.000Z",
-     "topics": [
-      "civil-rights/racial-justice"
-     ]
-    },
-    {
-     "id": "2099629081146888397",
-     "sim": 0.862,
-     "handle": "@RoKhanna",
-     "text": "This isn’t some fringe agitator, this is a candidate for statewide office. Republicans continue to tell countless Americans that we are not welcome in their vision for America. What’s wrong with…",
-     "time": "2026-09-14T22:39:16.000Z",
-     "topics": [
-      "civil-rights/racial-justice"
-     ]
-    },
-    {
-     "id": "2098190029935800499",
-     "sim": 0.8588,
-     "handle": "@Gabe_NM",
-     "text": "While New Mexicans are struggling to make ends meet, my opponent, @cunninghamfornm, is choosing to fly to Texas to stand on a stage and support President Trump and this extreme MAGA administration.…",
-     "time": "2026-09-10T23:21:00.000Z",
-     "topics": [
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2099449954141888594",
-     "sim": 0.8471,
-     "handle": "@MarcVeasey",
-     "text": "Paxton won’t say a word 😢. He may have been the only Republican to attend French’s Ft Worth fundraiser. Not surprised he tried to turn it around. Ken just doesn’t have it in him to do the right…",
-     "time": "2026-09-14T10:47:29.000Z",
-     "topics": [
-      "civil-rights/racial-justice",
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2098127008421314578",
-     "sim": 0.8266,
-     "handle": "@JasonCrowCO",
-     "text": "Republican policies have failed Texas.\n\nService first candidates like @PulidoForTexas &amp; @JohnnyGarciaTX are going to flip the House and help us take back Congress. https://t.co/W4MhJxezsl",
-     "time": "2026-09-10T19:10:34.000Z",
-     "topics": [
-      "congress-politics/elections-2026",
-      "economy/prices-inflation",
-      "labor/federal-workforce"
-     ]
-    }
-   ]
-  },
-  {
    "label": "Oversight probe of Russian oligarch funding Don Jr. wedding",
    "lastSeen": "2026-09-15T03:34:42.000Z",
    "thresholdMet": false,
@@ -20856,21 +20941,6 @@
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
-    },
-    {
-     "id": "n_c3a56158b768c09d",
-     "publisher": "The Hill",
-     "date": "2026-09-15",
-     "kind": "lead",
-     "url": "https://thehill.com/the-hill-notable-staffers-2026/6072467-andrew-bower-deputy-staff-director-house-oversight-committee-democrats/",
-     "text": "Andrew Bower: Deputy staff director, House Oversight Committee Democrats",
-     "title": "Andrew Bower: Deputy staff director, House Oversight Committee Democrats",
-     "publishedAt": "2026-09-15T10:01:00.000Z",
-     "fetchedAt": "2026-09-15T10:21:42.752Z",
-     "version": 16,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
     }
    ],
    "related": [
@@ -20884,6 +20954,14 @@
       "democracy/corruption-ethics",
       "foreign-policy/ukraine-russia"
      ]
+    },
+    {
+     "id": "2099855077527687286",
+     "sim": 0.8143,
+     "handle": "@RepJamesClyburn",
+     "text": "Every American needs to ask themselves: Why did a Russian oligarch close to Putin—who recently traveled alongside Putin in China—spend hundreds of thousands of dollars on Trump’s son’s wedding…",
+     "time": "2026-09-15T13:37:18.000Z",
+     "topics": []
     }
    ]
   },
@@ -20971,53 +21049,7 @@
    "kind": null,
    "macro": null,
    "days": null,
-   "context": [
-    {
-     "id": "n_c29ccdcc98993029",
-     "publisher": "The Hill",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6087705-gop-candidate-ut-south-asian-backlash/",
-     "text": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "title": "Texas Republicans condemn railroad commissioner candidate over post about Asian students, calling it racist",
-     "publishedAt": "2026-09-14T13:58:50.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7fc15b6be62a247d",
-     "publisher": "The Hill",
-     "date": "2026-09-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6089816-ut-students-rebuke-bo-french/",
-     "text": "UT students fire back after Republican’s ‘blatantly racist’ post",
-     "title": "UT students fire back after Republican’s ‘blatantly racist’ post",
-     "publishedAt": "2026-09-15T13:02:29.000Z",
-     "fetchedAt": "2026-09-15T13:32:41.502Z",
-     "version": 18,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7c9480b7c80cb70c",
-     "publisher": "The Washington Post",
-     "date": "2026-09-14",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/09/14/texas-republicans-denounce-gop-statewide-candidate-racist-posts-about-ut-students/",
-     "text": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
-     "title": "Texas Republicans denounce GOP statewide candidate for racist posts about UT students",
-     "publishedAt": "2026-09-14T15:05:47.000Z",
-     "fetchedAt": "2026-09-14T16:12:06.254Z",
-     "version": 6,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
+   "context": [],
    "related": [
     {
      "id": "2099269784906932535",
@@ -23464,6 +23496,997 @@
  ],
  "incidentsFiltered": 4,
  "feed": [
+  {
+   "id": "2099858875776160140",
+   "handle": "@RepWilson",
+   "member": "Frederica S. Wilson",
+   "district": "FL-24",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "Our Black boys deserve to live, lead, and become all they were meant to be. We must continue to fight for their safety, their future, and their right to thrive.\n\nJoin me at the CBC’s Annual Legislative Conference as we cut the ribbon for the U.S. Commission on the Social Status of Black Men and Boys and honor the parents who fight for their sons’ legacies.",
+   "topics": [],
+   "time": "2026-09-15T13:52:24.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099857509288665381",
+   "handle": "@RepVindman",
+   "member": "Eugene Simon Vindman",
+   "district": "VA-07",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "National Hispanic Heritage Month is an opportunity to celebrate the traditions and achievements of Hispanic Americans and recognize the many ways they have shaped our nation.     Join me in celebrating the Hispanic families and neighbors who make our community stronger and contribute to the richness of our country.",
+   "topics": [],
+   "time": "2026-09-15T13:46:58.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099857422714065020",
+   "handle": "@RepGabeAmo",
+   "member": "Gabe Amo",
+   "district": "RI-01",
+   "caucus": [
+    "CBC"
+   ],
+   "text": "Happy Hispanic Heritage Month, Rhode Island!\n\nThis month and every month, we celebrate the culture, history, and incredible contributions Hispanic and Latino communities have made as they continue to strengthen our nation. https://t.co/G2WTy07ulH",
+   "topics": [],
+   "time": "2026-09-15T13:46:37.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099857090810466353",
+   "handle": "@RepJoeMorelle",
+   "member": "Joseph D. Morelle",
+   "district": "NY-25",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "It's National Voter Registration Day! Make sure your voice is heard in November:\n\n✅Confirm your registration status.\n✅Identify your local polling station.\n✅Vote early, or drop off your ballot at a physical drop box.\n✅Contact your local board of elections with any questions. https://t.co/koO8RLFrnT",
+   "topics": [],
+   "time": "2026-09-15T13:45:18.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099856914016243937",
+   "handle": "@PatRyanUC",
+   "member": "Patrick Ryan",
+   "district": "NY-18",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Stopped by the Montgomery Tractor Parade &amp; Farm Day last weekend! A great Hudson Valley tradition to celebrate our farmers and all the folks growing the food that keeps our community fed. https://t.co/7Rr1Plxjij",
+   "topics": [],
+   "time": "2026-09-15T13:44:36.000Z",
+   "date": "2026-09-15",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099856760701915359",
+   "handle": "@RepMcGarvey",
+   "member": "Morgan McGarvey",
+   "district": "KY-03",
+   "caucus": [
+    "CPC",
+    "NewDem"
+   ],
+   "text": "Great to see everyone at Louisville Pride this weekend! https://t.co/I5yZJQ4UlM",
+   "topics": [],
+   "time": "2026-09-15T13:43:59.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099856635527143854",
+   "handle": "@RepDonBeyer",
+   "member": "Donald S. Beyer, Jr.",
+   "district": "VA-08",
+   "caucus": [
+    "CPC",
+    "NewDem"
+   ],
+   "text": "RT @vaELECT: Don’t wait to register to vote. Sept. 15 is National Voter Registration Day.\n\nUse this as a reminder to either register for th…",
+   "topics": [],
+   "time": "2026-09-15T13:43:30.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099845851791151196",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099856494724341786",
+   "handle": "@RepRashida",
+   "member": "Rashida Tlaib",
+   "district": "MI-12",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "It’s all on the ballot: clean air &amp; water, Medicare for All, environmental justice, public health, housing justice, and an end to genocide. Our vote is the great equalizer, and it’s going to take every one of us to create true transformative change.\n\n#NationalVoterRegistrationDay https://t.co/4UxHHRfrsz",
+   "topics": [],
+   "time": "2026-09-15T13:42:56.000Z",
+   "date": "2026-09-15",
+   "engN": 10,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099855932507160588",
+   "handle": "@RepDWStweets",
+   "member": "Debbie Wasserman Schultz",
+   "district": "FL-25",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Your vote is your voice. Make your voice matter. This National Voter Registration Day, make sure you’re registered, encourage your friends and family to sign up to vote, and make a plan to participate in our democracy. https://t.co/vwxkhNbDXq",
+   "topics": [],
+   "time": "2026-09-15T13:40:42.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099855819227427097",
+   "handle": "@RepDwightEvans",
+   "member": "Dwight Evans",
+   "district": "PA-03",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "Happy Hispanic Heritage Month, Philadelphia!\n\nAs we celebrate and uplift the rich history, culture, and contributions of Latino communities in our city and beyond- let’s remember we are stronger because of diversity, not despite it! https://t.co/4HlYDHBiGq",
+   "topics": [],
+   "time": "2026-09-15T13:40:15.000Z",
+   "date": "2026-09-15",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099855077527687286",
+   "handle": "@RepJamesClyburn",
+   "member": "James E. Clyburn",
+   "district": "SC-06",
+   "caucus": [
+    "CBC"
+   ],
+   "text": "Every American needs to ask themselves: Why did a Russian oligarch close to Putin—who recently traveled alongside Putin in China—spend hundreds of thousands of dollars on Trump’s son’s wedding celebrations?\n\nWhether or not they are \"dear friends,\" no answer to this question justifies such an exorbitant donation from such a shadowy source.",
+   "topics": [],
+   "time": "2026-09-15T13:37:18.000Z",
+   "date": "2026-09-15",
+   "engN": 26,
+   "kind": "quote",
+   "quoted": {
+    "id": "2099429380153872751",
+    "handle": "@propublica",
+    "text": "New: Russian oligarch Umar Kremlev footed the bill for hundreds of thousands of dollars of wedding expenses at Donald Trump Jr.’s lavish wedding, including renting out a private island and paying…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099854723188731931",
+   "handle": "@KellyMorrisonMN",
+   "member": "Kelly Morrison",
+   "district": "MN-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "If we had one of those a lot of things about our country would be VERY different https://t.co/YEvf0wcsXG",
+   "topics": [],
+   "time": "2026-09-15T13:35:54.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "quote",
+   "quoted": {
+    "id": "2099498466644783167",
+    "handle": "@atrupar",
+    "text": "Trump: \"The only control or 'guardrails' that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT, and the U.S.A. has that, in spades!\" https://t.co/q5UxQJwQaB"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099854286913994889",
+   "handle": "@Rep_Stansbury",
+   "member": "Melanie A. Stansbury",
+   "district": "NM-01",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "The American people are demanding accountability!\n\nCrypto schemes\nPay to play\nGive-aways to family and friends\nStealing from the public and \nLining their own pockets\n\nThis is by far the most corrupt Administration in American history. This is what experts say needs to happen ⬇️ https://t.co/zIKiSonEGe",
+   "topics": [],
+   "time": "2026-09-15T13:34:10.000Z",
+   "date": "2026-09-15",
+   "engN": 90,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853968608223696",
+   "handle": "@RepJayapal",
+   "member": "Pramila Jayapal",
+   "district": "WA-07",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "Happy Hispanic Heritage Month!\n\nThis month and every month, let us honor the tremendous history, culture, and resilience of Hispanic people in this country. https://t.co/qqL4bHQ0RN",
+   "topics": [],
+   "time": "2026-09-15T13:32:54.000Z",
+   "date": "2026-09-15",
+   "engN": 16,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853840749040013",
+   "handle": "@jahimes",
+   "member": "James A. Himes",
+   "district": "CT-04",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "We are laser focused on protecting November’s election from Trump’s inevitable rejection of the results when he gets his clock cleaned. \n\nSCOTUS’ rejection of his Post Office nonsense is a huge step in the right direction. \n\nAnd you TDS merchants can come talk to me about 1/6/21.",
+   "topics": [],
+   "time": "2026-09-15T13:32:23.000Z",
+   "date": "2026-09-15",
+   "engN": 16,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853799909175445",
+   "handle": "@JaredHuffman",
+   "member": "Jared Huffman",
+   "district": "CA-02",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "RT @MichaelARothman: 𝐃𝐄𝐌𝐎𝐂𝐑𝐀𝐓 𝐂𝐎𝐍𝐆𝐑𝐄𝐒𝐒𝐌𝐀𝐍 𝐂𝐀𝐋𝐋𝐒 𝐌𝐀𝐆𝐀 𝐂𝐇𝐑𝐈𝐒𝐓𝐈𝐀𝐍𝐒 '𝐄𝐗𝐏𝐋𝐈𝐂𝐈𝐓𝐋𝐘 𝐓𝐇𝐄𝐎𝐂𝐑𝐀𝐓𝐈𝐂' 𝐀𝐍𝐃 𝐎𝐏𝐄𝐍 𝐓𝐎 𝐕𝐈𝐎𝐋𝐄𝐍𝐂𝐄\n\nRep. Jared Huffman of Califor…",
+   "topics": [],
+   "time": "2026-09-15T13:32:13.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099806612865290410",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853780984426994",
+   "handle": "@ChrisForPA",
+   "member": "Christopher R. Deluzio",
+   "district": "PA-17",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Coach Brooks keeps his eye on the ball. We need him in Congress! https://t.co/Id7sfJoRWI",
+   "topics": [],
+   "time": "2026-09-15T13:32:09.000Z",
+   "date": "2026-09-15",
+   "engN": 17,
+   "kind": "quote",
+   "quoted": {
+    "id": "2099836089385038130",
+    "handle": "@VoteBobBrooks",
+    "text": "NEW AD: I've coached baseball in the Lehigh Valley for 30 years. Number one rule I tell my players — keep your eye on the ball.\n\nIn Congress, I'll keep my eye squarely on lowering your costs.…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853424632222048",
+   "handle": "@RepJoeNeguse",
+   "member": "Joe Neguse",
+   "district": "CO-02",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "House Republicans have cancelled votes for the next two months. \n\nThe next scheduled vote after this Thursday? \n\nNovember 9th. Seriously. https://t.co/kQULt8oKx0",
+   "topics": [],
+   "time": "2026-09-15T13:30:44.000Z",
+   "date": "2026-09-15",
+   "engN": 70,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853162165203239",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "From public safety to healthcare, education to economic development, these are the people who make South Florida an outstanding place to work and live.\n\nWe're proud to celebrate them this Hispanic Heritage Month and every month, and grateful for everything they do for our community.",
+   "topics": [],
+   "time": "2026-09-15T13:29:41.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853159065686412",
+    "handle": "@RepMoskowitz",
+    "text": "Robert Diaz is a Senior Director at Broward College, leading initiatives focused on STEM education and expanding opportunities for Hispanic and underrepresented students. Through his leadership of…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853159065686412",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Robert Diaz is a Senior Director at Broward College, leading initiatives focused on STEM education and expanding opportunities for Hispanic and underrepresented students. Through his leadership of Project ACCESS, he's strengthened pathways into science, technology, engineering, and math for the next generation.",
+   "topics": [],
+   "time": "2026-09-15T13:29:41.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853153042653557",
+    "handle": "@RepMoskowitz",
+    "text": "Dr. Carlos Casas Reyes is a neurosurgeon with more than 25 years of experience caring for patients in the Fort Lauderdale area. In practice since 2001, he continues to serve our community through…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853153042653557",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Dr. Carlos Casas Reyes is a neurosurgeon with more than 25 years of experience caring for patients in the Fort Lauderdale area. In practice since 2001, he continues to serve our community through Broward Health. https://t.co/97QFXJBR4O",
+   "topics": [],
+   "time": "2026-09-15T13:29:39.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853147736879403",
+    "handle": "@RepMoskowitz",
+    "text": "A proud Latina of Puerto Rican and Dominican heritage, Michelle Caba brings 25+ years across Wall Street, entrepreneurship, and public service to her role as Director of Economic Development for…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853147736879403",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "A proud Latina of Puerto Rican and Dominican heritage, Michelle Caba brings 25+ years across Wall Street, entrepreneurship, and public service to her role as Director of Economic Development for Deerfield Beach. Named Economic Development Director of the Year in 2026, she's passionate about expanding opportunity across our community.",
+   "topics": [],
+   "time": "2026-09-15T13:29:38.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853142783398020",
+    "handle": "@RepMoskowitz",
+    "text": "Elba Jimenez is an attorney and Misdemeanor Supervisor with the Broward County Public Defender's Office, spending seven years defending the constitutional rights of those who can't afford…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853142783398020",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Elba Jimenez is an attorney and Misdemeanor Supervisor with the Broward County Public Defender's Office, spending seven years defending the constitutional rights of those who can't afford representation. She also serves on the Executive Board of the Hispanic Vote Broward County Chapter, empowering the Hispanic community through civic engagement.",
+   "topics": [],
+   "time": "2026-09-15T13:29:37.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853136424755335",
+    "handle": "@RepMoskowitz",
+    "text": "Born and raised in Hialeah, Officer Thomas Mendoza traded pro baseball for law enforcement. Now with the Boca Raton Police Services Department, he serves on Road Patrol as a Field Training Officer,…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853136424755335",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Born and raised in Hialeah, Officer Thomas Mendoza traded pro baseball for law enforcement. Now with the Boca Raton Police Services Department, he serves on Road Patrol as a Field Training Officer, using his background coaching young athletes to help new officers build the skills and confidence to succeed.",
+   "topics": [],
+   "time": "2026-09-15T13:29:35.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2099853127453233394",
+    "handle": "@RepMoskowitz",
+    "text": "South Florida's Hispanic community shapes who we are every single day,  in our neighborhoods, our workplaces, and our public life. This Hispanic Heritage Month, I want to recognize just a few of the…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099853127453233394",
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "district": "FL-23",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "South Florida's Hispanic community shapes who we are every single day,  in our neighborhoods, our workplaces, and our public life. This Hispanic Heritage Month, I want to recognize just a few of the leaders making our community stronger. https://t.co/A9rfAcZK8X",
+   "topics": [],
+   "time": "2026-09-15T13:29:33.000Z",
+   "date": "2026-09-15",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099852535053889941",
+   "handle": "@RepMoulton",
+   "member": "Seth Moulton",
+   "district": "MA-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Today is National Voter Registration Day! Make your voice heard by getting registered today at https://t.co/yev0pdjtYK https://t.co/lCS80uKvY6",
+   "topics": [],
+   "time": "2026-09-15T13:27:12.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099852155486179464",
+   "handle": "@MarkPocan",
+   "member": "Mark Pocan",
+   "district": "WI-02",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Breaking! The “Red to Blue” designation means this seat is flippable. \n\nBetween bad polling, a corrupt fake congressional stock ban bill while having one of the best returns in Congress, &amp; more - @BryanSteil is in a real race with VA nurse @MBermanWI.\n\nHelp elect Mitchell Berman. https://t.co/v1fZwtX6GM",
+   "topics": [],
+   "time": "2026-09-15T13:25:41.000Z",
+   "date": "2026-09-15",
+   "engN": 22,
+   "kind": "quote",
+   "quoted": {
+    "id": "2099792900712288366",
+    "handle": "@journalsentinel",
+    "text": "National Dems add Berman to 'red to blue' program to flip Steil seat https://t.co/6p7PdjQBjh"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099851953261920710",
+   "handle": "@RepPaulTonko",
+   "member": "Paul Tonko",
+   "district": "NY-20",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Trump's illegal attempt to restrict mail-in-voting FAILED.\n \nWhile this administration continues to attack the fundamental right to vote, it is more important than ever to make your voice heard in our elections.\nhttps://t.co/lauM1mYmAY",
+   "topics": [],
+   "time": "2026-09-15T13:24:53.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099851499811537242",
+   "handle": "@RepYassAnsari",
+   "member": "Yassamin Ansari",
+   "district": "AZ-03",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "RT @davidsirota: we are literally inside the movie https://t.co/HMHV7ZoIUe",
+   "topics": [],
+   "time": "2026-09-15T13:23:05.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099555101186920628",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099850462069469282",
+   "handle": "@RepJoeCourtney",
+   "member": "Joe Courtney",
+   "district": "CT-02",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Today is National Voter Registration Day!\n\nRegistering to vote or checking your registration status only takes a few minutes. Make a plan now so your voice is heard on election day.\n\nRegister to vote here: https://t.co/VtMfBFiV7O \nAnd verify voter registration here: https://t.co/MO2qq2XQNu\n\nThe deadline to register in Connecticut is October 16th.",
+   "topics": [],
+   "time": "2026-09-15T13:18:58.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099850094166130899",
+   "handle": "@RepJeffries",
+   "member": "Hakeem S. Jeffries",
+   "district": "NY-08",
+   "caucus": [
+    "CBC"
+   ],
+   "text": "Donald Trump tried to interfere with mail-in voting weeks before the election. \n\nWe sued and the Supreme Court shut him down.\n\nThere will be a free and fair election in November.",
+   "topics": [],
+   "time": "2026-09-15T13:17:30.000Z",
+   "date": "2026-09-15",
+   "engN": 704,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099849464668119413",
+   "handle": "@RepBonnie",
+   "member": "Bonnie Watson Coleman",
+   "district": "NJ-12",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "Life in New Jersey is immeasurably richer thanks to our Hispanic communities. This National Hispanic Heritage Month, we honor and celebrate those contributions in the 12th District and throughout the nation. https://t.co/ntdyp8veLo",
+   "topics": [],
+   "time": "2026-09-15T13:15:00.000Z",
+   "date": "2026-09-15",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099848684229873871",
+   "handle": "@CongressmanRaja",
+   "member": "Raja Krishnamoorthi",
+   "district": "IL-08",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "Donald Trump tried to turn the Postal Service into an instrument of voter suppression, and the Supreme Court stopped him. The President has no authority to rewrite our election laws or give USPS the power to decide which eligible Americans receive a ballot. The Postal Service has one job here: deliver the ballots, not decide who gets to vote.\nhttps://t.co/s2E0AEgMxB",
+   "topics": [],
+   "time": "2026-09-15T13:11:54.000Z",
+   "date": "2026-09-15",
+   "engN": 30,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099847919989924190",
+   "handle": "@RepPressley",
+   "member": "Ayanna Pressley",
+   "district": "MA-07",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "We can't have accountability for survivors of sexual violence without restitution.\n\nI’m introducing my Survivors Rights’ Restitution Fund to change that.\n\nTune in as I join Epstein survivors, MeToo, &amp; @BARCC to unveil this first-of-its-kind legislation.\nhttps://t.co/8dfEgWsAMX",
+   "topics": [],
+   "time": "2026-09-15T13:08:52.000Z",
+   "date": "2026-09-15",
+   "engN": 16,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099846822269223068",
+   "handle": "@RepGonzalez",
+   "member": "Vicente Gonzalez",
+   "district": "TX-34",
+   "caucus": [
+    "NewDem",
+    "CHC"
+   ],
+   "text": "During Hispanic Heritage Month, we proudly celebrate the vibrant traditions and significant contributions that Hispanic Americans have made to South Texas and our nation's history!\n\nOur heritage is a reminder of the incredible impact we can make when we work together to build a brighter future!",
+   "topics": [],
+   "time": "2026-09-15T13:04:30.000Z",
+   "date": "2026-09-15",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099846201688428977",
+   "handle": "@RepNikema",
+   "member": "Nikema Williams",
+   "district": "GA-05",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Happy National Voter Registration Day! Are you #VoteReady? \n\nTake a moment today to register to vote, and if you think you're registered, double check! \n\nIt's quick and easy, visit https://t.co/OJbwCD0H0O for more information on registration and polling locations. https://t.co/TZ5qqnyWyv",
+   "topics": [],
+   "time": "2026-09-15T13:02:02.000Z",
+   "date": "2026-09-15",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099846196877545777",
+   "handle": "@RepHorsford",
+   "member": "Steven Horsford",
+   "district": "NV-04",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Your voice matters and keeping your voter registration up to date is an important part of participating in our democracy. On National Voter Registration Day, I encourage eligible Nevadans to take a few minutes to register to vote, check their current registration, or update their information if they have recently moved or changed their name. Our democracy is strongest when every eligible voter has the information and opportunity, they need to make their voice heard.",
+   "topics": [],
+   "time": "2026-09-15T13:02:01.000Z",
+   "date": "2026-09-15",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099845695180296671",
+   "handle": "@RepTerriSewell",
+   "member": "Terri A. Sewell",
+   "district": "AL-07",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "63 years ago today, four precious little girls were killed when white supremacists bombed the 16th Street Baptist Church in Birmingham, Alabama. Their legacy is a reminder that the freedoms we enjoy today came at a tremendous cost. \n\nWe remember them by name: Addie Mae Collins, Denise McNair, Carole Robertson, and Cynthia Wesley.",
+   "topics": [],
+   "time": "2026-09-15T13:00:01.000Z",
+   "date": "2026-09-15",
+   "engN": 23,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
+  {
+   "id": "2099845386751951301",
+   "handle": "@RepBeccaB",
+   "member": "Becca Balint",
+   "district": "VT-AL",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Let’s be very clear about what’s happening here: the AI companies have had this “change of heart” because they want to be the ones to write the rules about how they’re regulated.\n \nWe can’t just sit on our hands and trust them to police themselves. https://t.co/FAK1XIaTaM",
+   "topics": [],
+   "time": "2026-09-15T12:58:48.000Z",
+   "date": "2026-09-15",
+   "engN": 12,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "isNew": false
+  },
   {
    "id": "2099845119448920332",
    "handle": "@Tom_Suozzi",
@@ -30063,1679 +31086,6 @@
    },
    "metricsObservedAt": "2026-09-15T08:41:57.261Z",
    "isNew": false
-  },
-  {
-   "id": "2099627974421307406",
-   "handle": "@dinatitus",
-   "member": "Dina Titus",
-   "district": "NV-01",
-   "caucus": [],
-   "text": "RT @nvdems: Carrie Buck is doing her best impression of a moderate now that we’re in the general election.\n\nBut Nevadans know she is an ext…",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:34:52.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2099627078530568419",
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-14T23:43:00.514Z",
-   "isNew": false
-  },
-  {
-   "id": "2099627804195213476",
-   "handle": "@WhipKClark",
-   "member": "Katherine M. Clark",
-   "district": "MA-05",
-   "caucus": [],
-   "text": "Corporate polluters poured millions into Trump’s campaign.\n\nNow, he’s giving them the green light to contaminate our air and water.\n\nFor the GOP, it’s always billionaires over working families.\n\nhttps://t.co/2iPMz5fbPh",
-   "topics": [
-    "climate/epa-rollbacks",
-    "climate",
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-09-14T22:34:12.000Z",
-   "date": "2026-09-14",
-   "engN": 46,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099627695072284799",
-   "handle": "@RepSalinas",
-   "member": "Andrea Salinas",
-   "district": "OR-06",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Everybody deserves due process and real access to legal counsel.\n\nAt PIRC, I saw their frontline work to protect immigrants from ICE’s abuses.\n\nI’ll keep fighting to defend our communities and ensure immigrant families get support when a loved one is detained. https://t.co/XF8B1omkoJ",
-   "topics": [
-    "immigration/ice-enforcement",
-    "immigration"
-   ],
-   "time": "2026-09-14T22:33:46.000Z",
-   "date": "2026-09-14",
-   "engN": 9,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099627234952679738",
-   "handle": "@RepMGS",
-   "member": "Mary Gay Scanlon",
-   "district": "PA-05",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "With just 4 days to legislate before Speaker Johnson sends Congress home for another 7 weeks, our Republican colleagues have decided to prioritize legislation that weakens environmental protections for our kids and communities. https://t.co/liXeGbtvgD",
-   "topics": [
-    "congress-politics/house-floor",
-    "congress-politics",
-    "climate/epa-rollbacks",
-    "climate"
-   ],
-   "time": "2026-09-14T22:31:56.000Z",
-   "date": "2026-09-14",
-   "engN": 30,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099627212492124664",
-   "handle": "@RepJohnLarson",
-   "member": "John B. Larson",
-   "district": "CT-01",
-   "caucus": [],
-   "text": "Republicans flocked to Texas last week to celebrate Trump’s ballroom and tax breaks for billionaires—paid for with cuts to your healthcare. His failed agenda has cost the average household $3,800. Democrats are fighting to reverse these cuts and make life more affordable for you!",
-   "topics": [
-    "economy/taxes",
-    "economy",
-    "healthcare",
-    "economy/prices-inflation"
-   ],
-   "time": "2026-09-14T22:31:51.000Z",
-   "date": "2026-09-14",
-   "engN": 20,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099626747725550051",
-   "handle": "@RepShriThanedar",
-   "member": "Shri Thanedar",
-   "district": "MI-13",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CAPAC"
-   ],
-   "text": "The Senate must vote to advance the CLARITY Act tomorrow! https://t.co/YOYgAe6TOV",
-   "topics": [
-    "tech"
-   ],
-   "time": "2026-09-14T22:30:00.000Z",
-   "date": "2026-09-14",
-   "engN": 6,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_55c3994de84bf0db",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/opinion/finance/6086356-lummis-clarity-act-crypto/",
-      "text": "It is now or never for the Clarity Act",
-      "publishedAt": "2026-09-14T11:30:00.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_5946b19bae3ef907",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/technology/6087405-white-house-accepts-clarity-act-ethics/",
-      "text": "White House agrees to new ethics language in crypto bill",
-      "publishedAt": "2026-09-14T02:35:17.000Z",
-      "fetchedAt": "2026-09-14T16:12:06.254Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_55c3994de84bf0db",
-     "n_5946b19bae3ef907"
-    ]
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099626747042124068",
-   "handle": "@RepEmiliaSykes",
-   "member": "Emilia Strong Sykes",
-   "district": "OH-13",
-   "caucus": [
-    "NewDem",
-    "CBC"
-   ],
-   "text": "Save the Date! I'm hosting the Women in Leadership Conference right here in OH-13 on October 9th. Make sure to reserve your spot at https://t.co/0t1bVObl0G. I look forward to seeing you there! https://t.co/aTioTXmWuJ",
-   "topics": [
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:30:00.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099626701953135046",
-   "handle": "@RepChuyGarcia",
-   "member": "Jesús G. \"Chuy\" García",
-   "district": "IL-04",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "The fossil fuel folks donated big to Trump and his campaign, and now Trump is returning the favor by allowing them to pollute our air and destroy our planet. https://t.co/SR0XwplD7V",
-   "topics": [
-    "climate/epa-rollbacks",
-    "climate",
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-09-14T22:29:49.000Z",
-   "date": "2026-09-14",
-   "engN": 6,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099327844560069072",
-    "handle": "@nytimes",
-    "text": "Breaking News: The E.P.A. is said to be planning to announce that the U.S. will no longer limit climate pollution from power plants. https://t.co/AAvQwDUyIw"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099626509975601432",
-   "handle": "@LauraFriedmanCA",
-   "member": "Laura Friedman",
-   "district": "CA-30",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "For anyone who doesn’t believe that big donations or connections to Trump can buy his pardons, explain this record. It’s either pay-for-play, or he just has a real soft spot for fraudsters. There’s no other explanation. https://t.co/3z91pgCge6",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy",
-    "democracy/courts-doj"
-   ],
-   "time": "2026-09-14T22:29:03.000Z",
-   "date": "2026-09-14",
-   "engN": 10,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099573248119701978",
-    "handle": "@HQNewsNow",
-    "text": "Trump has pardoned the following people charged with fraud:\n\n—George Santos, wire fraud\n—Ross William Ulbricht, fraud with identification documents\n—Rod R. Blagojevich, 8 counts of wire fraud under…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_6431837b06708634",
-      "publisher": "NPR",
-      "date": "2026-09-14",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/09/14/nx-s1-5968629/whats-next-for-senator-john-fetterman",
-      "text": "NPR's Juana Summers talks with Adam Jentleson, former chief of staff for Pennsylvania Democratic Senator John Fetterman, about recent revelations about Sen. Fetterman's work performance.",
-      "publishedAt": "2026-09-14T20:34:26.000Z",
-      "fetchedAt": "2026-09-15T03:33:14.107Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": true,
-      "truncated": false
-     },
-     {
-      "id": "n_d2b41800576c033a",
-      "publisher": "The Hill",
-      "date": "2026-09-12",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6086056-trump-admin-blocks-park-projects-funding/",
-      "text": "$25 million in national park project funds blocked by Trump administration: Report",
-      "publishedAt": "2026-09-12T14:44:45.000Z",
-      "fetchedAt": "2026-09-13T16:45:39.814Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099626340026654807",
-   "handle": "@RepMcGovern",
-   "member": "James P. McGovern",
-   "district": "MA-02",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "Since Republicans took control of Washington, gas is up $1.21, inflation is up nearly half a percent, and the cost of diesel is at an all-time high.\n\nAre you better off today than you were two years ago? https://t.co/U0lKeInNYc",
-   "topics": [
-    "economy/prices-inflation",
-    "economy"
-   ],
-   "time": "2026-09-14T22:28:23.000Z",
-   "date": "2026-09-14",
-   "engN": 238,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_b6191a70df3bf3fc",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
-      "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
-      "publishedAt": "2026-09-14T14:57:13.000Z",
-      "fetchedAt": "2026-09-14T16:12:06.254Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099625878992961671",
-   "handle": "@RepCohen",
-   "member": "Steve Cohen",
-   "district": "TN-09",
-   "caucus": [],
-   "text": "It was an honor to serve as Grand Marshal in the Orange Mound Community 2026 Southern Heritage Classic Parade—a tradition I’ve been part of since 2003. Hearing so many Keep Going with Cohen chants from so many constituents was truly overwhelming. It was a gratifying and humbling experience and a wonderful reminder of why serving TN-09 has been the honor of a lifetime.\n\nThank you, Orange Mound, for letting me be part of this incredible Memphis tradition!",
-   "topics": [
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:26:33.000Z",
-   "date": "2026-09-14",
-   "engN": 26,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099624571335008577",
-   "handle": "@MikeLevin",
-   "member": "Mike Levin",
-   "district": "CA-49",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "The Trump administration wants a much freer hand over the California coast. Offshore drilling. Seabed mining. Projects where California communities could lose much of the voice they have today.\n\nNixon signed the Coastal Zone Management Act for a reason. \n\nCoastal states understand their own shorelines better than anyone in Washington, and for 50 years that partnership has worked.\n\nOur coastal communities don’t want drill rigs off our beaches. We remember Huntington Beach in 2021, the tar on the sand, the closed fisheries, the lost business. Our coastal economy supports hundreds of thousands of jobs and depends on water people actually want to swim in. \n\nOne spill puts all of it at risk.\n\nThis administration dropped the Atlantic from its drilling plans after Republican lawmakers from coastal states pushed back. They are betting the West Coast will fold.\n\nWe will not.\n\nI will fight this in Congress and in the courts. Whatever it takes.\nhttps://t.co/apcqXBEiyJ",
-   "topics": [
-    "climate/epa-rollbacks",
-    "climate"
-   ],
-   "time": "2026-09-14T22:21:21.000Z",
-   "date": "2026-09-14",
-   "engN": 234,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099624018064073138",
-   "handle": "@RepJohnnyO",
-   "member": "Johnny Olszewski, Jr.",
-   "district": "MD-02",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Last night’s 60 Minutes episode confirmed what we already knew: President Trump is selling pardons. \n\nIt’s wrong, and it’s exactly why I introduced the Pardon Integrity Act—to prevent these unchecked abuses. https://t.co/VLcNVMyESe",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-09-14T22:19:09.000Z",
-   "date": "2026-09-14",
-   "engN": 20,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099290191449985392",
-    "handle": "@60Minutes",
-    "text": "Our hidden camera footage shows lobbyists pitching their services as pardon brokers to a felon who says he’s seeking a presidential pardon. https://t.co/X3GGJiBUom https://t.co/2WXfB3cz8n"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099623476592062872",
-   "handle": "@RepJamesClyburn",
-   "member": "James E. Clyburn",
-   "district": "SC-06",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "Just to recap what we have very recently learned about Trump, his administration, and his family:\n\nTrump thinks concerns over AI are a “hoax” and rejected calls to regulate it.\n\nTrump’s son had his wedding parties paid for by a Russian oligarch with close ties to Putin and is sanctioned by Ukraine for his role in abducting Ukrainian children.\n\nTrump’s EPA repealed all federal limits on greenhouse-gas emissions from coal- and gas-fired power plants.\n\nDetainees at “Alligator Alcatraz” were punished by being shackled and forced into small cages for up to two hours.\n\nCriminals are paying hundreds of thousands of dollars to politically connected pardon brokers who use their influence to secure pardons from President Trump.\n\nThe list goes on. This administration is out of control.",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy",
-    "climate/epa-rollbacks",
-    "climate",
-    "tech/ai-policy",
-    "tech",
-    "immigration/ice-enforcement",
-    "immigration"
-   ],
-   "time": "2026-09-14T22:17:00.000Z",
-   "date": "2026-09-14",
-   "engN": 1347,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_8bc96534ce69b582",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
-      "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
-      "publishedAt": "2026-09-14T16:16:28.000Z",
-      "fetchedAt": "2026-09-14T18:38:00.705Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_c4106f38f9529342",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/international/6088440-donald-trump-jr-bettina-trump-russian-oligarch-wedding-gift-criticism/",
-      "text": "Donald Trump Jr.’s wife defends wedding gift from Russian oligarch",
-      "publishedAt": "2026-09-14T18:03:06.000Z",
-      "fetchedAt": "2026-09-14T18:38:00.705Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_8bc96534ce69b582",
-     "n_c4106f38f9529342"
-    ]
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099623278092443836",
-   "handle": "@RepGwenMoore",
-   "member": "Gwen Moore",
-   "district": "WI-04",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "RT @SpectrumNews1WI: .@RepGwenMoore says she wants to exempt former foster youth from the work requirements to receive food assistance thro…",
-   "topics": [
-    "budget-appropriations/snap-benefits",
-    "budget-appropriations"
-   ],
-   "time": "2026-09-14T22:16:13.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2099589079608209630",
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_05a9ebace433bb53",
-      "publisher": "Roll Call",
-      "date": "2026-09-14",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/14/pre-election-agenda-may-prove-too-ambitious-for-congress/",
-      "text": "The reality is that the House and Senate don’t have a lot on the fall agenda they absolutely must do before the Nov. 3 midterm elections, especially with President Donald Trump having already signed into law a continuing resolution funding the government through Dec. 11.",
-      "publishedAt": "2026-09-14T06:00:00.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_8bc96534ce69b582",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
-      "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
-      "publishedAt": "2026-09-14T16:16:28.000Z",
-      "fetchedAt": "2026-09-14T18:38:00.705Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-14T23:43:00.514Z",
-   "isNew": false
-  },
-  {
-   "id": "2099623047120470181",
-   "handle": "@LaCongresista",
-   "member": "Sylvia R. Garcia",
-   "district": "TX-29",
-   "caucus": [
-    "CHC"
-   ],
-   "text": "Proud of you, @jamestalarico! Let's flip this seat and get the right person in office. https://t.co/HFCFok88S0 https://t.co/6Wf1jjmTHg",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:15:18.000Z",
-   "date": "2026-09-14",
-   "engN": 16,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099497722722082850",
-    "handle": "@IAPolls2022",
-    "text": "VoteHub moves TX Senate race towards Democrats \n\n🟦 TX SENATE: Toss-up →Tilt D https://t.co/osMQYkxiDq"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_023215c91f8ccac4",
-      "publisher": "Roll Call",
-      "date": "2026-09-14",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/14/an-ex-congresswomans-passion-project-the-national-debt/",
-      "text": "As director of Georgia’s Senate Budget and Evaluation Office during the Great Recession, the Democrat won recognition from a Republican-controlled Senate for her work to cover a budget shortfall.",
-      "publishedAt": "2026-09-14T17:22:13.000Z",
-      "fetchedAt": "2026-09-14T22:30:02.833Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": true,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099621829006819763",
-   "handle": "@RepJimCosta",
-   "member": "Jim Costa",
-   "district": "CA-21",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Congratulations to @fpu on receiving a record-breaking $60 million donation from an anonymous alumnus.\n \nThis historic gift is a major investment in our Valley’s healthcare future—expanding nursing programs, helping establish a physician associate program, and giving more students the opportunity to pursue careers in healthcare. \n\nWith the goal of making Fresno Pacific a premier institution in the Central Valley for healthcare education and preparation, this investment will open doors for the next generation of healthcare professionals and strengthen access to quality care across our Valley.\n\nhttps://t.co/QZhazZuNyC",
-   "topics": [
-    "education/higher-ed",
-    "education"
-   ],
-   "time": "2026-09-14T22:10:27.000Z",
-   "date": "2026-09-14",
-   "engN": 8,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099621828218261624",
-   "handle": "@DorisMatsui",
-   "member": "Doris O. Matsui",
-   "district": "CA-07",
-   "caucus": [
-    "CAPAC"
-   ],
-   "text": "My team will be holding office hours at River City Food Bank tomorrow from 9:30 AM–12:30 PM.\n\nIf you’re having an issue with a federal agency, please stop by. My team is ready and happy to assist you! https://t.co/RtUTwj0V07",
-   "topics": [
-    "constituent-services"
-   ],
-   "time": "2026-09-14T22:10:27.000Z",
-   "date": "2026-09-14",
-   "engN": 6,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_c260e4cab8c6d48b",
-      "publisher": "The Hill",
-      "date": "2026-09-12",
-      "kind": "lead",
-      "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
-      "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
-      "publishedAt": "2026-09-12T21:56:57.000Z",
-      "fetchedAt": "2026-09-13T16:45:39.814Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099621272103669803",
-   "handle": "@DWStweets",
-   "member": "Debbie Wasserman Schultz",
-   "district": "FL-25",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Republicans prioritize massive tax cuts for billionaires and corporations, and balloon our national debt.\n\nDemocrats stress pay-as-you-go policies and always fight to ensure Social Security and Medicare stay fiscally sound. https://t.co/KeVNpvlZvK",
-   "topics": [
-    "economy/taxes",
-    "economy",
-    "budget-appropriations/social-security",
-    "budget-appropriations",
-    "healthcare/medicare",
-    "healthcare"
-   ],
-   "time": "2026-09-14T22:08:15.000Z",
-   "date": "2026-09-14",
-   "engN": 119,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099621108265738372",
-   "handle": "@RepTeresaLF",
-   "member": "Teresa Leger Fernandez",
-   "district": "NM-03",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Do you need help with a federal agency? \n\nMy office can help with Social Security benefits, veteran benefits, tax returns, and more! \n\nStop by our walk-in hours tomorrow in Jemez Springs. https://t.co/bq3pdjQLTR",
-   "topics": [
-    "constituent-services"
-   ],
-   "time": "2026-09-14T22:07:35.000Z",
-   "date": "2026-09-14",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_c260e4cab8c6d48b",
-      "publisher": "The Hill",
-      "date": "2026-09-12",
-      "kind": "lead",
-      "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
-      "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
-      "publishedAt": "2026-09-12T21:56:57.000Z",
-      "fetchedAt": "2026-09-13T16:45:39.814Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099620988862308487",
-   "handle": "@PramilaJayapal",
-   "member": "Pramila Jayapal",
-   "district": "WA-07",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "The reality is that this country cannot trust its own president. https://t.co/6EYv68yViT",
-   "topics": [
-    "democracy"
-   ],
-   "time": "2026-09-14T22:07:07.000Z",
-   "date": "2026-09-14",
-   "engN": 336,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_f3f9c7fbcdbe91eb",
-      "publisher": "NPR",
-      "date": "2026-09-13",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/09/13/nx-s1-5898447-e1/the-social-security-trust-fund-is-running-out-why-is-it-not-a-top-campaign-issue",
-      "text": "Limited public discussion of the trust fund's shortfall has experts worried that most Americans don't fully understand the problems Social Security faces — or weigh in on solutions.",
-      "publishedAt": "2026-09-13T12:04:25.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099620857375035481",
-   "handle": "@RepMGS",
-   "member": "Mary Gay Scanlon",
-   "district": "PA-05",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "Thank you to Southwest CDC and  ACANA for arranging a walking tour and round table with small businesses and housing advocates in the Woodland Avenue Business Corridor in Southwest Philly. We discussed the challenges facing small businesses with shrinking profit margins and lack of access to capital, and the need to coordinate federal, state and local efforts to expand affordable housing across our region.",
-   "topics": [
-    "economy/housing",
-    "economy",
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:06:36.000Z",
-   "date": "2026-09-14",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099620690286534907",
-   "handle": "@FrankPallone",
-   "member": "Frank Pallone, Jr.",
-   "district": "NJ-06",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "Republicans cut your health care so tech billionaires could build their data centers.\n\nIt doesn't get more Reverse Robin Hood than this. https://t.co/v2pc0pTjbt",
-   "topics": [
-    "healthcare",
-    "economy/taxes",
-    "economy",
-    "tech/ai-policy",
-    "tech"
-   ],
-   "time": "2026-09-14T22:05:56.000Z",
-   "date": "2026-09-14",
-   "engN": 11,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099420524690768015",
-    "handle": "@politico",
-    "text": "Corporate tax payments plunge as AI feasts on new incentives https://t.co/eXRa5hw1xY"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099620621172736506",
-   "handle": "@RepJasonCrow",
-   "member": "Jason Crow",
-   "district": "CO-06",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "The road to our next Lombardi begins today.\n\nGo Broncos! https://t.co/7FuPQoIrFv",
-   "topics": [],
-   "time": "2026-09-14T22:05:39.000Z",
-   "date": "2026-09-14",
-   "engN": 24,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099503694362362108",
-    "handle": "@Broncos",
-    "text": "The moment #BroncosCountry has been waiting for ...\n\nIT'S GAMEDAY‼️ https://t.co/oGV8e2WveX"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_cb2900ff6aa76e59",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/sports-gaming/6089095-ted-cruz-protect-college-sports-act-trump-espn-gameday/",
-      "text": "Cruz: Trump should sign college sports bill live on ESPN’s ‘College GameDay’ once passed",
-      "publishedAt": "2026-09-14T22:01:27.000Z",
-      "fetchedAt": "2026-09-14T22:30:02.833Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": true,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099620573340950586",
-   "handle": "@RepCasar",
-   "member": "Greg Casar",
-   "district": "TX-35",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "A few billionaires in Silicon Valley are racing to build technology they admit they can't control. \n\nI'm not willing to gamble your job, your freedom, or your life on it. \n\nWe need to ban artificial superintelligence. https://t.co/SgMCLa2m9A",
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "time": "2026-09-14T22:05:28.000Z",
-   "date": "2026-09-14",
-   "engN": 640,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099469468304884112",
-    "handle": "@TexasMonthly",
-    "text": ".@RepCasar, a Democrat from Austin, talks to @TexasMonthly about his bill to prevent the development of superintelligence, which experts warn poses existential risks to humanity.…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099619802973139221",
-   "handle": "@RepLouCorrea",
-   "member": "J. Luis Correa",
-   "district": "CA-46",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Today, I introduced a bipartisan resolution honoring the late John Seymour, former U.S. Senator, CA State Senator, and Mayor of Anaheim. https://t.co/HYv3kZnbgM",
-   "topics": [
-    "congress-politics/house-floor",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T22:02:24.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_38ee531a41df152a",
-      "publisher": "Politico",
-      "date": "2026-09-11",
-      "kind": "lead",
-      "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/11/at-9-11-ceremony-giuliani-and-mamdani-shake-hands-01073067",
-      "text": "At 9/11 ceremony, Giuliani and Mamdani … shake hands?",
-      "publishedAt": "2026-09-11T21:32:08.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_df496f35ba78fdf0",
-      "publisher": "Roll Call",
-      "date": "2026-09-11",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/11/former-house-members-reflect-on-25th-anniversary-of-sept-11-attacks/",
-      "text": "Former Rep. Jane Harman, D-Calif., stood on the House steps of the Capitol under silver clouds on Friday morning, remembering how she had gathered outside with colleagues 25 years ago, unsure of what to expect after planes hijacked by terrorists attacked the Pentagon and World Trade Center.",
-      "publishedAt": "2026-09-11T15:18:36.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099619224427593951",
-   "handle": "@BennieGThompson",
-   "member": "Bennie G. Thompson",
-   "district": "MS-02",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "RT @HomelandDems: DHS was created to prevent another 9/11. \n\nYet the Trump administration is considering privatizing TSA, has gutted our cy…",
-   "topics": [
-    "foreign-policy",
-    "labor/federal-workforce",
-    "labor"
-   ],
-   "time": "2026-09-14T22:00:06.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2098590418669605298",
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [
-     {
-      "id": "n_c260e4cab8c6d48b",
-      "publisher": "The Hill",
-      "date": "2026-09-12",
-      "kind": "lead",
-      "url": "https://thehill.com/regulation/court-battles/6086363-trump-fema-cuts-illegal-federal-judge/",
-      "text": "Trump’s plan to halve FEMA workforce illegal, judge rules",
-      "publishedAt": "2026-09-12T21:56:57.000Z",
-      "fetchedAt": "2026-09-13T16:45:39.814Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_c13184d6ed48b1f6",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/healthcare/6088472-states-sue-trump-public-charge-rule/",
-      "text": "States and cities sue over ‘public charge’ green card restrictions",
-      "publishedAt": "2026-09-14T17:25:06.000Z",
-      "fetchedAt": "2026-09-14T18:38:00.705Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-14T22:00:59.580Z",
-   "isNew": false
-  },
-  {
-   "id": "2099619115103035830",
-   "handle": "@JohnnyOJr",
-   "member": "Johnny Olszewski, Jr.",
-   "district": "MD-02",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Timely reminder of my efforts to put a real check on the abuses of the pardon power. @60Minutes aired a powerful, damning segment on how selling pardons have gotten absolutely out of control under the Trump administration. We must pass the Pardon Integrity Act and end the grift. https://t.co/E8iQzJfbqE",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-09-14T21:59:40.000Z",
-   "date": "2026-09-14",
-   "engN": 1,
-   "kind": "quote",
-   "quoted": {
-    "id": "2024258861645914519",
-    "handle": "@CBSNews",
-    "text": "A proposed constitutional amendment that would give Congress a role in blocking presidential pardons has gained its first Republican backer this week.\n\nRep. Johnny Olszewski (D-MD), co-sponsor of…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 12,
-    "evidenceSupplied": [
-     {
-      "id": "n_85c8c02756c33de6",
-      "publisher": "Roll Call",
-      "date": "2026-09-11",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/11/tired-of-politics-by-gop-conventions-end-even-trump-had-tapped-out/",
-      "text": "DALLAS \\u2014 President Donald Trump walked a tightrope this week, awkwardly balancing the political with the solemn. By the end, it all seemed too much, even for America's ultimate political scrapper. \\n \\n\\n \\n Trump spent two days here in full campaigner-in-chief mode in front of an adoring audience inside the American Airlines Center in Dallas, headlining both nights of the first-ever Republican midterms convention. He bashed Democrats as communists , begged Texas voters to make state Attorney General Ken Paxton a U.S. senator and even made his loyalists pledge an oath to him that they wo…",
-      "publishedAt": "2026-09-11T12:40:25.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": true
-     },
-     {
-      "id": "n_9048ded17444c977",
-      "publisher": "Roll Call",
-      "date": "2026-09-10",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/10/trump-puts-himself-on-midterm-ballot-during-dallas-spectacle/",
-      "text": "DALLAS and JOINT BASE ANDREWS, Md. — President Donald Trump put himself on the midterm ballot Wednesday but acknowledged it would take more time to end the Iran war and lower gas prices.",
-      "publishedAt": "2026-09-10T10:11:38.000Z",
-      "fetchedAt": "2026-09-13T16:45:39.814Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099618715243274362",
-   "handle": "@Rep_Magaziner",
-   "member": "Seth Magaziner",
-   "district": "RI-02",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Margaret in Warwick needed help securing $33k in newly eligible social security payments.\n\nI helped pass the bill to expand her benefits, and then my team worked with the Warwick social security office to get her hard-earned money! https://t.co/mVrRchhg0B",
-   "topics": [
-    "constituent-services",
-    "budget-appropriations/social-security",
-    "budget-appropriations"
-   ],
-   "time": "2026-09-14T21:58:05.000Z",
-   "date": "2026-09-14",
-   "engN": 5,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [
-     {
-      "id": "n_f3f9c7fbcdbe91eb",
-      "publisher": "NPR",
-      "date": "2026-09-13",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/09/13/nx-s1-5898447-e1/the-social-security-trust-fund-is-running-out-why-is-it-not-a-top-campaign-issue",
-      "text": "AYESHA RASCOE, HOST: The Social Security Trust Fund is running out of reserves. The program's board of trustees projects that in six years, if Congress does nothing, payments to beneficiaries will be reduced by nearly a quarter. This would be devastating for seniors who rely on their Social Security payments. As NPR's Ashley Lopez reports, it's not something that's getting much attention this election year. ASHLEY LOPEZ, BYLINE: Six years sounds like a lot of time. But when you think of how much time it takes to fix a big budget problem with complicated politics, it's really not. Bill Sweeney…",
-      "publishedAt": "2026-09-13T12:04:25.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": true
-     },
-     {
-      "id": "n_97041ad38e6fc824",
-      "publisher": "Roll Call",
-      "date": "2026-09-10",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/10/taxpayers-house-sexual-harassment-payouts/",
-      "text": "Taxpayers footed the bill for more than half a million dollars in sexual harassment settlements involving members of the House, according to estimates released Thursday by the Office of Congressional Workplace Rights.",
-      "publishedAt": "2026-09-10T17:49:57.000Z",
-      "fetchedAt": "2026-09-14T12:52:50.846Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099618411349184732",
-   "handle": "@repdeliaramirez",
-   "member": "Delia C. Ramirez",
-   "district": "IL-03",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Letting the foxes guard the chicken coop HAS NEVER BEEN good policy. Every single time, our communities suffer.\n\nBut Trump and Johnson don't care about the pain they inflict on us as long as they profit.\n\nWe cannot settle for unregulated, unaccountable AI. Congress has the obligation to demand rules and limits, pass legislation, and conduct oversight of AI companies.",
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "time": "2026-09-14T21:56:52.000Z",
-   "date": "2026-09-14",
-   "engN": 30,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 13,
-    "evidenceSupplied": [
-     {
-      "id": "n_343b74b60d914590",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/international/6088221-petraeus-johnson-evacuate-ukraine/",
-      "text": "Russian drone almost hit former CIA director, may have targeted Boris Johnson",
-      "publishedAt": "2026-09-14T17:22:39.000Z",
-      "fetchedAt": "2026-09-14T21:11:50.977Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_8bc96534ce69b582",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/house/6088330-garcia-questions-russian-oligarch-funding/",
-      "text": "Top Oversight Democrat wants answers on Russian oligarch’s role in Trump Jr.’s wedding",
-      "publishedAt": "2026-09-14T16:16:28.000Z",
-      "fetchedAt": "2026-09-14T18:38:00.705Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099618313026277791",
-   "handle": "@McdonaldRivet",
-   "member": "Kristen McDonald Rivet",
-   "district": "MI-08",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "We're officially 50 days out from Election Day this November! Looking to get involved? \n\nCheck out the links in my bio! 🇺🇸💙 https://t.co/KdcKgZKyqR",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T21:56:29.000Z",
-   "date": "2026-09-14",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099618244965363881",
-   "handle": "@RepMikeLevin",
-   "member": "Mike Levin",
-   "district": "CA-49",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "If you care at all about the state of the world we leave our children, you need to be paying attention.\n \nTrump and the EPA have just moved to ELIMINATE limits on climate pollution from power plants. We are talking about some of the MOST climate-destabilizing pollution in the world.\n \nIt's not a question of if, but a matter of when rolling back these protections will cause thousands of premature deaths and cost Americans tens of billions of dollars in health expenses.\n \nThis Administration is selling your health and safety to the highest bidder to fatten up polluters' paychecks.\nhttps://t.co/K3XtE9kDS4",
-   "topics": [
-    "climate/epa-rollbacks",
-    "climate",
-    "healthcare/public-health",
-    "healthcare"
-   ],
-   "time": "2026-09-14T21:56:13.000Z",
-   "date": "2026-09-14",
-   "engN": 17,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099618068133552307",
-   "handle": "@RepTeresaLF",
-   "member": "Teresa Leger Fernandez",
-   "district": "NM-03",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Republican’s priorities are all wrong. https://t.co/iN8MdpLKnx",
-   "topics": [],
-   "time": "2026-09-14T21:55:31.000Z",
-   "date": "2026-09-14",
-   "engN": 61,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099616702572961903",
-   "handle": "@RepPettersen",
-   "member": "Brittany Pettersen",
-   "district": "CO-07",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Colorado has a proud mining history — producing the uranium studied by Marie Curie herself. But that history comes at a cost. Some communities in my district have had toxic uranium waste in their backyards for over 40 years. Any delay in cleanup is unacceptable, and we cannot allow families to pay the price with their health.\n\nThat's why I'm co-leading an effort with @SenatorBennet demanding the @EPA continue cleanup without delay and with transparency to protect our environment from contamination. People in Cañon City and Lincoln Park deserve to know their air and water are safe.",
-   "topics": [
-    "climate/epa-rollbacks",
-    "climate"
-   ],
-   "time": "2026-09-14T21:50:05.000Z",
-   "date": "2026-09-14",
-   "engN": 8,
-   "kind": "quote",
-   "quoted": {
-    "id": "2099032373941641510",
-    "handle": "@denverpost",
-    "text": "Coloradans were exposed to radiation for decades. Now Congress might make them eligible for compensation. https://t.co/L3XgJEAkzw"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 9,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099615956871909673",
-   "handle": "@MarkPocan",
-   "member": "Mark Pocan",
-   "district": "WI-02",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "RT @drake_bentley: News: One reason Congressman Bryan Steil supports AI data centers could be because he has enriched himself by owning sto…",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy",
-    "tech/ai-policy",
-    "tech"
-   ],
-   "time": "2026-09-14T21:47:07.000Z",
-   "date": "2026-09-14",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2099602785276760399",
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-14T22:00:59.580Z",
-   "isNew": false
-  },
-  {
-   "id": "2099615935887753603",
-   "handle": "@RepSaraJacobs",
-   "member": "Sara Jacobs",
-   "district": "CA-51",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "In states with abortion bans, people with ectopic pregnancies are often being denied or forced to delay care – and they’re dying because of it.\n\nIf Republicans actually cared about preserving life, they would legalize abortion, ensure it’s safe and accessible, and fund reproductive health care.\nhttps://t.co/QBMEUkj6M0",
-   "topics": [
-    "reproductive-rights/abortion-access",
-    "reproductive-rights"
-   ],
-   "time": "2026-09-14T21:47:02.000Z",
-   "date": "2026-09-14",
-   "engN": 21,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099615568626102440",
-   "handle": "@RepDeluzio",
-   "member": "Christopher R. Deluzio",
-   "district": "PA-17",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "The cost of diesel just hit a record high in Pennsylvania: $6.35/gallon.\n\nThere's no doubt: America's economy and national security are worse off after 6 months of Donald Trump's senseless Iran War.\nhttps://t.co/WQFsg3fShb https://t.co/3FgNeUb9nR",
-   "topics": [
-    "economy/prices-inflation",
-    "economy",
-    "foreign-policy/middle-east",
-    "foreign-policy"
-   ],
-   "time": "2026-09-14T21:45:35.000Z",
-   "date": "2026-09-14",
-   "engN": 40,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_b6191a70df3bf3fc",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6088141-trump-calls-ai-conspiracy/",
-      "text": "Trump defends AI approach, criticizes Anthropic CEO and ‘conspiracy theorists’",
-      "publishedAt": "2026-09-14T14:57:13.000Z",
-      "fetchedAt": "2026-09-14T16:12:06.254Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099615522212192636",
-   "handle": "@RepScottPeters",
-   "member": "Scott H. Peters",
-   "district": "CA-50",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "ICE activity at our schools creates chaos, fear, and trauma. Our students deserve to feel safe so they can learn and grow. I joined San Diego Unified School District & local leaders to call on ICE to stop conducting enforcement operations during school arrival and dismissal times.\nhttps://t.co/5OgngU7d4L",
-   "topics": [
-    "immigration/ice-enforcement",
-    "immigration",
-    "education/public-schools",
-    "education"
-   ],
-   "time": "2026-09-14T21:45:24.000Z",
-   "date": "2026-09-14",
-   "engN": 28,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_b58ef0b117a289b5",
-      "publisher": "Politico",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://www.politico.com/newsletters/new-york-playbook-pm/2026/09/14/hochuls-how-to-guide-to-stopping-ice-01075287",
-      "text": "Hochul’s how-to guide to stopping ICE",
-      "publishedAt": "2026-09-14T21:03:18.000Z",
-      "fetchedAt": "2026-09-14T21:11:50.977Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_fbf956931228f7fc",
-      "publisher": "The Hill",
-      "date": "2026-09-14",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6087947-tom-homan-ice-midterm-polls/",
-      "text": "ICE has no plans to ‘sweep polling locations’ for noncitizens, Homan says",
-      "publishedAt": "2026-09-14T15:07:22.000Z",
-      "fetchedAt": "2026-09-14T16:12:06.254Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
-  },
-  {
-   "id": "2099614870945530024",
-   "handle": "@RepMGS",
-   "member": "Mary Gay Scanlon",
-   "district": "PA-05",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "Congratulations to DCIU on opening the new Marple Education Center! I was fortunate to join local officials to tour the new Practical Nursing Program facility, additional early childhood education classrooms, a playground, conference rooms, a parent waiting room, and a reconfigured stage! DCIU is such an important part of our community, and I am glad to see these advancements.",
-   "topics": [
-    "education/public-schools",
-    "education",
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-09-14T21:42:48.000Z",
-   "date": "2026-09-14",
-   "engN": 1,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [
-     {
-      "id": "n_dc5291dbe93f4fe8",
-      "publisher": "Roll Call",
-      "date": "2026-09-14",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/14/after-lengthy-absence-mcconnell-returns-to-senate/",
-      "text": "“My recovery has been a long and often frustrating process, and the lingering effects of childhood polio haven’t made it any easier,” he said in a statement. “I’m still not quite back to 100%, but I’ve assured Leader Thune that, as I continue with physical therapy on the advice of my doctors, I will do my best to be present for tough votes when our Conference needs me.”",
-      "publishedAt": "2026-09-14T19:35:03.000Z",
-      "fetchedAt": "2026-09-15T00:59:29.161Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": true,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:57.066Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -31915,20 +31265,32 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1873783602728595456": "@RepVindman",
+  "1724849796496924672": "@RepGabeAmo",
+  "1064595993222615040": "@RepJoeMorelle",
+  "1610300298303787008": "@RepMcGarvey",
+  "1079769536730140672": "@RepRashida",
+  "1863695408653889536": "@KellyMorrisonMN",
+  "1404519992582942724": "@Rep_Stansbury",
+  "815733290955112448": "@RepJayapal",
+  "1078749802765139968": "@RepJoeNeguse",
+  "1610009027743830018": "@RepMoskowitz",
+  "1871623075822772224": "@RepYassAnsari",
+  "814179031956488192": "@CongressmanRaja",
+  "1080584229510172678": "@RepPressley",
+  "818536152588238849": "@RepGonzalez",
+  "1345461797361504259": "@RepNikema",
+  "1606115178210365448": "@RepBeccaB",
   "1225929222839046144": "@YVindman",
   "1195472282329735169": "@mrvan4congress",
   "1080191866509901826": "@RepJasonCrow",
   "1456381091598700556": "@RepShontelBrown",
   "1602792195878047744": "@RepRobertGarcia",
-  "1871623075822772224": "@RepYassAnsari",
   "1191327658124165123": "@Mfume4Congress",
-  "814179031956488192": "@CongressmanRaja",
   "1872709283634397185": "@Rep_Whitesides",
   "1875008939714056192": "@RepLiccardo",
   "912822519136161793": "@LamonicaMciver",
   "1080587263132733442": "@RepSylviaGarcia",
-  "1404519992582942724": "@Rep_Stansbury",
-  "1064595993222615040": "@RepJoeMorelle",
   "1345103905869455361": "@RepSaraJacobs",
   "1869140751512391681": "@RepLuzRivas",
   "1610323296360210433": "@RepDonDavis",
@@ -31937,7 +31299,6 @@
   "1874580463752196096": "@RepAprilDelaney",
   "1874831517706256384": "@RepGoodlander",
   "1603127874512453632": "@RepMGP",
-  "815733290955112448": "@RepJayapal",
   "1875244261844668416": "@RepSarahElfreth",
   "796736612554117120": "@RepJimmyPanetta",
   "1873797020143804416": "@RepDexterOR",
@@ -31949,19 +31310,14 @@
   "816298918468259841": "@RepRoKhanna",
   "1613637172346642432": "@RepGregLandsman",
   "818713465653051392": "@RepDarrenSoto",
-  "1606115178210365448": "@RepBeccaB",
   "1610719275265802253": "@RepShriThanedar",
-  "1080584229510172678": "@RepPressley",
   "806906355214852096": "@RepRaskin",
-  "1724849796496924672": "@RepGabeAmo",
   "1844608219865354246": "@RepLaMonica",
   "1633610542584659970": "@RepMcClellan",
   "1615455071801679874": "@rep_jackson",
   "1612865196489412608": "@RepValHoyle",
   "1615455207713808384": "@Rep_Magaziner",
   "1345147845926670337": "@RepTeresaLF",
-  "1078749802765139968": "@RepJoeNeguse",
-  "1079769536730140672": "@RepRashida",
   "1074354529787895808": "@repdeliaramirez",
   "1610014478405406720": "@RepPettersen",
   "1493294940708696069": "@MGPforCongress",
@@ -31981,15 +31337,12 @@
   "1067748650485497862": "@RepChrisPappas",
   "1080516116395499522": "@RepDavids",
   "1611471154732060692": "@ValerieFoushee",
-  "1610300298303787008": "@RepMcGarvey",
   "1650523264534343687": "@bell4mo",
-  "1345461797361504259": "@RepNikema",
   "4870048156": "@JakeAuch",
   "1343646545955213312": "@RepStricklandWA",
   "816705409486618624": "@RepTomSuozzi",
   "1611441794704674828": "@RepEricSorensen",
   "1603476713995911168": "@RepNikkiB",
-  "818536152588238849": "@RepGonzalez",
   "1858680194112065536": "@CongressMin",
   "965235634053894147": "@bynum4thewin",
   "851477335052140544": "@JasonCrowCO",
@@ -31997,7 +31350,6 @@
   "1609941568869335041": "@RepScholten",
   "1877088040453079040": "@RepDerekTranCA",
   "1707910391844769792": "@DerekTranCA45",
-  "1873783602728595456": "@RepVindman",
   "878331405662420992": "@SarahForMD",
   "1076161611033968640": "@RepHaleyStevens",
   "1081350574589833221": "@RepEdCase",
@@ -32006,13 +31358,11 @@
   "1875014393613688832": "@RepBynum",
   "857009033882083329": "@LizziePFletcher",
   "815310506596691968": "@RepJoshG",
-  "1863695408653889536": "@KellyMorrisonMN",
   "1080462532815532032": "@RepKimSchrier",
   "1861770594108289025": "@RepRileyNY",
   "1608494113174822925": "@RepMaxwellFrost",
   "1872779342784184320": "@RepAdamGrayCA",
   "1075517806551154689": "@RepEscobar",
-  "1610009027743830018": "@RepMoskowitz",
   "1080986167003230208": "@RepGilCisneros",
   "1877805371114635264": "@repscfigures",
   "1610730477563805699": "@RepJillTokuda",
@@ -32079,6 +31429,719 @@
   "756123897783808000": "@KathyCastorFL"
  },
  "feedAll": [
+  {
+   "id": "2099858875776160140",
+   "authorId": "234014087",
+   "createdAt": "2026-09-15T13:52:24.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Our Black boys deserve to live, lead, and become all they were meant to be. We must continue to fight for their safety, their future, and their right to thrive.\n\nJoin me at the CBC’s Annual Legislative Conference as we cut the ribbon for the U.S. Commission on the Social Status of Black Men and Boys and honor the parents who fight for their sons’ legacies.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099857509288665381",
+   "authorId": "1873783602728595456",
+   "createdAt": "2026-09-15T13:46:58.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "National Hispanic Heritage Month is an opportunity to celebrate the traditions and achievements of Hispanic Americans and recognize the many ways they have shaped our nation.     Join me in celebrating the Hispanic families and neighbors who make our community stronger and contribute to the richness of our country.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099857422714065020",
+   "authorId": "1724849796496924672",
+   "createdAt": "2026-09-15T13:46:37.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Happy Hispanic Heritage Month, Rhode Island!\n\nThis month and every month, we celebrate the culture, history, and incredible contributions Hispanic and Latino communities have made as they continue to strengthen our nation. https://t.co/G2WTy07ulH",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099857090810466353",
+   "authorId": "1064595993222615040",
+   "createdAt": "2026-09-15T13:45:18.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "It's National Voter Registration Day! Make sure your voice is heard in November:\n\n✅Confirm your registration status.\n✅Identify your local polling station.\n✅Vote early, or drop off your ballot at a physical drop box.\n✅Contact your local board of elections with any questions. https://t.co/koO8RLFrnT",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099856914016243937",
+   "authorId": "172377413",
+   "createdAt": "2026-09-15T13:44:36.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Stopped by the Montgomery Tractor Parade &amp; Farm Day last weekend! A great Hudson Valley tradition to celebrate our farmers and all the folks growing the food that keeps our community fed. https://t.co/7Rr1Plxjij",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099856760701915359",
+   "authorId": "1610300298303787008",
+   "createdAt": "2026-09-15T13:43:59.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Great to see everyone at Louisville Pride this weekend! https://t.co/I5yZJQ4UlM",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099856635527143854",
+   "authorId": "2962868158",
+   "createdAt": "2026-09-15T13:43:30.000Z",
+   "date": "2026-09-15",
+   "type": "retweet",
+   "text": "RT @vaELECT: Don’t wait to register to vote. Sept. 15 is National Voter Registration Day.\n\nUse this as a reminder to either register for th…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099845851791151196",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099856494724341786",
+   "authorId": "1079769536730140672",
+   "createdAt": "2026-09-15T13:42:56.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "It’s all on the ballot: clean air &amp; water, Medicare for All, environmental justice, public health, housing justice, and an end to genocide. Our vote is the great equalizer, and it’s going to take every one of us to create true transformative change.\n\n#NationalVoterRegistrationDay https://t.co/4UxHHRfrsz",
+   "engN": 10,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099855932507160588",
+   "authorId": "1140648348",
+   "createdAt": "2026-09-15T13:40:42.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Your vote is your voice. Make your voice matter. This National Voter Registration Day, make sure you’re registered, encourage your friends and family to sign up to vote, and make a plan to participate in our democracy. https://t.co/vwxkhNbDXq",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099855819227427097",
+   "authorId": "90639372",
+   "createdAt": "2026-09-15T13:40:15.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Happy Hispanic Heritage Month, Philadelphia!\n\nAs we celebrate and uplift the rich history, culture, and contributions of Latino communities in our city and beyond- let’s remember we are stronger because of diversity, not despite it! https://t.co/4HlYDHBiGq",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099855077527687286",
+   "authorId": "188019606",
+   "createdAt": "2026-09-15T13:37:18.000Z",
+   "date": "2026-09-15",
+   "type": "quote",
+   "text": "Every American needs to ask themselves: Why did a Russian oligarch close to Putin—who recently traveled alongside Putin in China—spend hundreds of thousands of dollars on Trump’s son’s wedding celebrations?\n\nWhether or not they are \"dear friends,\" no answer to this question justifies such an exorbitant donation from such a shadowy source.",
+   "engN": 26,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099429380153872751",
+    "handle": "@propublica",
+    "text": "New: Russian oligarch Umar Kremlev footed the bill for hundreds of thousands of dollars of wedding expenses at Donald Trump Jr.’s lavish wedding, including renting out a private island and paying…"
+   }
+  },
+  {
+   "id": "2099854723188731931",
+   "authorId": "1863695408653889536",
+   "createdAt": "2026-09-15T13:35:54.000Z",
+   "date": "2026-09-15",
+   "type": "quote",
+   "text": "If we had one of those a lot of things about our country would be VERY different https://t.co/YEvf0wcsXG",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099498466644783167",
+    "handle": "@atrupar",
+    "text": "Trump: \"The only control or 'guardrails' that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT, and the U.S.A. has that, in spades!\" https://t.co/q5UxQJwQaB"
+   }
+  },
+  {
+   "id": "2099854286913994889",
+   "authorId": "1404519992582942724",
+   "createdAt": "2026-09-15T13:34:10.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "The American people are demanding accountability!\n\nCrypto schemes\nPay to play\nGive-aways to family and friends\nStealing from the public and \nLining their own pockets\n\nThis is by far the most corrupt Administration in American history. This is what experts say needs to happen ⬇️ https://t.co/zIKiSonEGe",
+   "engN": 90,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099853968608223696",
+   "authorId": "815733290955112448",
+   "createdAt": "2026-09-15T13:32:54.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Happy Hispanic Heritage Month!\n\nThis month and every month, let us honor the tremendous history, culture, and resilience of Hispanic people in this country. https://t.co/qqL4bHQ0RN",
+   "engN": 16,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099853840749040013",
+   "authorId": "31611298",
+   "createdAt": "2026-09-15T13:32:23.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "We are laser focused on protecting November’s election from Trump’s inevitable rejection of the results when he gets his clock cleaned. \n\nSCOTUS’ rejection of his Post Office nonsense is a huge step in the right direction. \n\nAnd you TDS merchants can come talk to me about 1/6/21.",
+   "engN": 16,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099853799909175445",
+   "authorId": "334894942",
+   "createdAt": "2026-09-15T13:32:13.000Z",
+   "date": "2026-09-15",
+   "type": "retweet",
+   "text": "RT @MichaelARothman: 𝐃𝐄𝐌𝐎𝐂𝐑𝐀𝐓 𝐂𝐎𝐍𝐆𝐑𝐄𝐒𝐒𝐌𝐀𝐍 𝐂𝐀𝐋𝐋𝐒 𝐌𝐀𝐆𝐀 𝐂𝐇𝐑𝐈𝐒𝐓𝐈𝐀𝐍𝐒 '𝐄𝐗𝐏𝐋𝐈𝐂𝐈𝐓𝐋𝐘 𝐓𝐇𝐄𝐎𝐂𝐑𝐀𝐓𝐈𝐂' 𝐀𝐍𝐃 𝐎𝐏𝐄𝐍 𝐓𝐎 𝐕𝐈𝐎𝐋𝐄𝐍𝐂𝐄\n\nRep. Jared Huffman of Califor…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099806612865290410",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099853780984426994",
+   "authorId": "227073090",
+   "createdAt": "2026-09-15T13:32:09.000Z",
+   "date": "2026-09-15",
+   "type": "quote",
+   "text": "Coach Brooks keeps his eye on the ball. We need him in Congress! https://t.co/Id7sfJoRWI",
+   "engN": 17,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099836089385038130",
+    "handle": "@VoteBobBrooks",
+    "text": "NEW AD: I've coached baseball in the Lehigh Valley for 30 years. Number one rule I tell my players — keep your eye on the ball.\n\nIn Congress, I'll keep my eye squarely on lowering your costs.…"
+   }
+  },
+  {
+   "id": "2099853424632222048",
+   "authorId": "1078749802765139968",
+   "createdAt": "2026-09-15T13:30:44.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "House Republicans have cancelled votes for the next two months. \n\nThe next scheduled vote after this Thursday? \n\nNovember 9th. Seriously. https://t.co/kQULt8oKx0",
+   "engN": 70,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099853162165203239",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:41.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "From public safety to healthcare, education to economic development, these are the people who make South Florida an outstanding place to work and live.\n\nWe're proud to celebrate them this Hispanic Heritage Month and every month, and grateful for everything they do for our community.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853159065686412",
+    "handle": "@RepMoskowitz",
+    "text": "Robert Diaz is a Senior Director at Broward College, leading initiatives focused on STEM education and expanding opportunities for Hispanic and underrepresented students. Through his leadership of…"
+   }
+  },
+  {
+   "id": "2099853159065686412",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:41.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "Robert Diaz is a Senior Director at Broward College, leading initiatives focused on STEM education and expanding opportunities for Hispanic and underrepresented students. Through his leadership of Project ACCESS, he's strengthened pathways into science, technology, engineering, and math for the next generation.",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853153042653557",
+    "handle": "@RepMoskowitz",
+    "text": "Dr. Carlos Casas Reyes is a neurosurgeon with more than 25 years of experience caring for patients in the Fort Lauderdale area. In practice since 2001, he continues to serve our community through…"
+   }
+  },
+  {
+   "id": "2099853153042653557",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:39.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "Dr. Carlos Casas Reyes is a neurosurgeon with more than 25 years of experience caring for patients in the Fort Lauderdale area. In practice since 2001, he continues to serve our community through Broward Health. https://t.co/97QFXJBR4O",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853147736879403",
+    "handle": "@RepMoskowitz",
+    "text": "A proud Latina of Puerto Rican and Dominican heritage, Michelle Caba brings 25+ years across Wall Street, entrepreneurship, and public service to her role as Director of Economic Development for…"
+   }
+  },
+  {
+   "id": "2099853147736879403",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:38.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "A proud Latina of Puerto Rican and Dominican heritage, Michelle Caba brings 25+ years across Wall Street, entrepreneurship, and public service to her role as Director of Economic Development for Deerfield Beach. Named Economic Development Director of the Year in 2026, she's passionate about expanding opportunity across our community.",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853142783398020",
+    "handle": "@RepMoskowitz",
+    "text": "Elba Jimenez is an attorney and Misdemeanor Supervisor with the Broward County Public Defender's Office, spending seven years defending the constitutional rights of those who can't afford…"
+   }
+  },
+  {
+   "id": "2099853142783398020",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:37.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "Elba Jimenez is an attorney and Misdemeanor Supervisor with the Broward County Public Defender's Office, spending seven years defending the constitutional rights of those who can't afford representation. She also serves on the Executive Board of the Hispanic Vote Broward County Chapter, empowering the Hispanic community through civic engagement.",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853136424755335",
+    "handle": "@RepMoskowitz",
+    "text": "Born and raised in Hialeah, Officer Thomas Mendoza traded pro baseball for law enforcement. Now with the Boca Raton Police Services Department, he serves on Road Patrol as a Field Training Officer,…"
+   }
+  },
+  {
+   "id": "2099853136424755335",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:35.000Z",
+   "date": "2026-09-15",
+   "type": "reply",
+   "text": "Born and raised in Hialeah, Officer Thomas Mendoza traded pro baseball for law enforcement. Now with the Boca Raton Police Services Department, he serves on Road Patrol as a Field Training Officer, using his background coaching young athletes to help new officers build the skills and confidence to succeed.",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099853127453233394",
+    "handle": "@RepMoskowitz",
+    "text": "South Florida's Hispanic community shapes who we are every single day,  in our neighborhoods, our workplaces, and our public life. This Hispanic Heritage Month, I want to recognize just a few of the…"
+   }
+  },
+  {
+   "id": "2099853127453233394",
+   "authorId": "1610009027743830018",
+   "createdAt": "2026-09-15T13:29:33.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "South Florida's Hispanic community shapes who we are every single day,  in our neighborhoods, our workplaces, and our public life. This Hispanic Heritage Month, I want to recognize just a few of the leaders making our community stronger. https://t.co/A9rfAcZK8X",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099852535053889941",
+   "authorId": "3091316093",
+   "createdAt": "2026-09-15T13:27:12.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Today is National Voter Registration Day! Make your voice heard by getting registered today at https://t.co/yev0pdjtYK https://t.co/lCS80uKvY6",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099852155486179464",
+   "authorId": "309070309",
+   "createdAt": "2026-09-15T13:25:41.000Z",
+   "date": "2026-09-15",
+   "type": "quote",
+   "text": "Breaking! The “Red to Blue” designation means this seat is flippable. \n\nBetween bad polling, a corrupt fake congressional stock ban bill while having one of the best returns in Congress, &amp; more - @BryanSteil is in a real race with VA nurse @MBermanWI.\n\nHelp elect Mitchell Berman. https://t.co/v1fZwtX6GM",
+   "engN": 22,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z",
+   "quoted": {
+    "id": "2099792900712288366",
+    "handle": "@journalsentinel",
+    "text": "National Dems add Berman to 'red to blue' program to flip Steil seat https://t.co/6p7PdjQBjh"
+   }
+  },
+  {
+   "id": "2099851953261920710",
+   "authorId": "84119348",
+   "createdAt": "2026-09-15T13:24:53.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Trump's illegal attempt to restrict mail-in-voting FAILED.\n \nWhile this administration continues to attack the fundamental right to vote, it is more important than ever to make your voice heard in our elections.\nhttps://t.co/lauM1mYmAY",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099851499811537242",
+   "authorId": "1871623075822772224",
+   "createdAt": "2026-09-15T13:23:05.000Z",
+   "date": "2026-09-15",
+   "type": "retweet",
+   "text": "RT @davidsirota: we are literally inside the movie https://t.co/HMHV7ZoIUe",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099555101186920628",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099850462069469282",
+   "authorId": "85396297",
+   "createdAt": "2026-09-15T13:18:58.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Today is National Voter Registration Day!\n\nRegistering to vote or checking your registration status only takes a few minutes. Make a plan now so your voice is heard on election day.\n\nRegister to vote here: https://t.co/VtMfBFiV7O \nAnd verify voter registration here: https://t.co/MO2qq2XQNu\n\nThe deadline to register in Connecticut is October 16th.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099850094166130899",
+   "authorId": "467823431",
+   "createdAt": "2026-09-15T13:17:30.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Donald Trump tried to interfere with mail-in voting weeks before the election. \n\nWe sued and the Supreme Court shut him down.\n\nThere will be a free and fair election in November.",
+   "engN": 704,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099849464668119413",
+   "authorId": "2968451607",
+   "createdAt": "2026-09-15T13:15:00.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Life in New Jersey is immeasurably richer thanks to our Hispanic communities. This National Hispanic Heritage Month, we honor and celebrate those contributions in the 12th District and throughout the nation. https://t.co/ntdyp8veLo",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099848684229873871",
+   "authorId": "814179031956488192",
+   "createdAt": "2026-09-15T13:11:54.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Donald Trump tried to turn the Postal Service into an instrument of voter suppression, and the Supreme Court stopped him. The President has no authority to rewrite our election laws or give USPS the power to decide which eligible Americans receive a ballot. The Postal Service has one job here: deliver the ballots, not decide who gets to vote.\nhttps://t.co/s2E0AEgMxB",
+   "engN": 30,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099847919989924190",
+   "authorId": "1080584229510172678",
+   "createdAt": "2026-09-15T13:08:52.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "We can't have accountability for survivors of sexual violence without restitution.\n\nI’m introducing my Survivors Rights’ Restitution Fund to change that.\n\nTune in as I join Epstein survivors, MeToo, &amp; @BARCC to unveil this first-of-its-kind legislation.\nhttps://t.co/8dfEgWsAMX",
+   "engN": 16,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099846822269223068",
+   "authorId": "818536152588238849",
+   "createdAt": "2026-09-15T13:04:30.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "During Hispanic Heritage Month, we proudly celebrate the vibrant traditions and significant contributions that Hispanic Americans have made to South Texas and our nation's history!\n\nOur heritage is a reminder of the incredible impact we can make when we work together to build a brighter future!",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099846201688428977",
+   "authorId": "1345461797361504259",
+   "createdAt": "2026-09-15T13:02:02.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Happy National Voter Registration Day! Are you #VoteReady? \n\nTake a moment today to register to vote, and if you think you're registered, double check! \n\nIt's quick and easy, visit https://t.co/OJbwCD0H0O for more information on registration and polling locations. https://t.co/TZ5qqnyWyv",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099846196877545777",
+   "authorId": "389840566",
+   "createdAt": "2026-09-15T13:02:01.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Your voice matters and keeping your voter registration up to date is an important part of participating in our democracy. On National Voter Registration Day, I encourage eligible Nevadans to take a few minutes to register to vote, check their current registration, or update their information if they have recently moved or changed their name. Our democracy is strongest when every eligible voter has the information and opportunity, they need to make their voice heard.",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099845695180296671",
+   "authorId": "381152398",
+   "createdAt": "2026-09-15T13:00:01.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "63 years ago today, four precious little girls were killed when white supremacists bombed the 16th Street Baptist Church in Birmingham, Alabama. Their legacy is a reminder that the freedoms we enjoy today came at a tremendous cost. \n\nWe remember them by name: Addie Mae Collins, Denise McNair, Carole Robertson, and Cynthia Wesley.",
+   "engN": 23,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
+  {
+   "id": "2099845386751951301",
+   "authorId": "1606115178210365448",
+   "createdAt": "2026-09-15T12:58:48.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Let’s be very clear about what’s happening here: the AI companies have had this “change of heart” because they want to be the ones to write the rules about how they’re regulated.\n \nWe can’t just sit on our hands and trust them to police themselves. https://t.co/FAK1XIaTaM",
+   "engN": 12,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T13:53:08.257Z"
+  },
   {
    "id": "2099845119448920332",
    "authorId": "18907639",
@@ -75592,211 +75655,18 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098493080852693259",
-   "authorId": "814179031956488192",
-   "createdAt": "2026-09-11T19:25:13.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "L’Shanah Tovah to all those celebrating Rosh Hashanah! Wishing you and your loved ones a happy, healthy, and sweet New Year filled with peace and joy. https://t.co/uMCySCJOP2",
-   "engN": 23,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098491858922229787",
-   "authorId": "1081350574589833221",
-   "createdAt": "2026-09-11T19:20:21.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "“September 11, 2001.  A quarter century, a whole generation, ago. So far yet still so near.” I shared some reflections, remembrances and commitments as we again mark 9/11, as we must always. https://t.co/zKMeF1WPWm https://t.co/UwIMA5003J",
-   "engN": 7,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098491534396084358",
-   "authorId": "1872779342784184320",
-   "createdAt": "2026-09-11T19:19:04.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "25 years later, we remember the thousands of Americans who lost their lives on September 11, 2001, and the families who still carry their memory.\n\nWe remember the first responders who ran toward danger, the service members who stepped forward to serve, and the Americans who came",
-   "engN": 0,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098491190152950005",
-   "authorId": "1869140751512391681",
-   "createdAt": "2026-09-11T19:17:42.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "Federal Grants support programs that uplift families, schools, and organizations throughout our community.\n\nIf you need help with the Federal Grant process, my office can help! Call (818) 253-3535 for more information.\n\nYou can also download my office's Grants Resource Guide https://t.co/Og76hoqzL0",
-   "engN": 3,
-   "topics": [
-    "constituent-services"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098490180298510522",
-   "authorId": "48219458",
-   "createdAt": "2026-09-11T19:13:41.000Z",
-   "date": "2026-09-11",
-   "type": "reply",
-   "text": "25 years later, we remember the nearly 3,000 innocent lives taken that day but we also honor the courage and selflessness of the helpers. At a time when we face so much division and corruption, may we honor their legacy by helping those in need.",
-   "engN": 2,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z",
-   "quoted": {
-    "id": "2098490178314588318",
-    "handle": "@DaveMinCA",
-    "text": "On 9/11, America saw the very best of that spirit as so many brave firefighters, police officers and others rushed into the danger without hesitation to help save other."
-   }
-  },
-  {
-   "id": "2098490178314588318",
-   "authorId": "48219458",
-   "createdAt": "2026-09-11T19:13:41.000Z",
-   "date": "2026-09-11",
-   "type": "reply",
-   "text": "On 9/11, America saw the very best of that spirit as so many brave firefighters, police officers and others rushed into the danger without hesitation to help save other.",
-   "engN": 2,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z",
-   "quoted": {
-    "id": "2098490176104251802",
-    "handle": "@DaveMinCA",
-    "text": "But amid that fear, we were also inspired by the extraordinary courage of our first responders. Mr. Rogers famously told us in times of despair, to look for the helpers."
-   }
-  },
-  {
-   "id": "2098490176104251802",
-   "authorId": "48219458",
-   "createdAt": "2026-09-11T19:13:40.000Z",
-   "date": "2026-09-11",
-   "type": "reply",
-   "text": "But amid that fear, we were also inspired by the extraordinary courage of our first responders. Mr. Rogers famously told us in times of despair, to look for the helpers.",
-   "engN": 5,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z",
-   "quoted": {
-    "id": "2098490173830938649",
-    "handle": "@DaveMinCA",
-    "text": "I was a third-year law student at Harvard when 9/11 happened. I remember getting a phone call from my mom that morning telling me to turn on the TV. I remember the fear that swept over all of us,…"
-   }
-  },
-  {
-   "id": "2098490173830938649",
-   "authorId": "48219458",
-   "createdAt": "2026-09-11T19:13:40.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "I was a third-year law student at Harvard when 9/11 happened. I remember getting a phone call from my mom that morning telling me to turn on the TV. I remember the fear that swept over all of us, especially as we learned that two of the planes had originated from Logan Airport.",
-   "engN": 5,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098490055006335397",
-   "authorId": "3018670151",
-   "createdAt": "2026-09-11T19:13:11.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "At my office’s annual Service Academy Night, Inland Empire students met with our country’s great service academies. \n \nI’m proud of all the students who joined us and are considering taking the next step to attend a service academy and serve our nation in uniform. https://t.co/U2f3bk8Tna",
-   "engN": 15,
-   "topics": [
-    "foreign-policy/military-veterans",
-    "foreign-policy",
-    "constituent-services"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
-  },
-  {
-   "id": "2098489773757255872",
-   "authorId": "122174004",
-   "createdAt": "2026-09-11T19:12:04.000Z",
-   "date": "2026-09-11",
-   "type": "tweet",
-   "text": "While @POTUS and Republicans try to sell their so-called “wins,” we aren’t buying it. #TitusTalk https://t.co/DAj05Sqm8w",
-   "engN": 78,
-   "topics": [
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-12T11:39:56.260Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3128,
+ "feedAllTotal": 3167,
  "feedAllFiles": [
-  "feed-0-f8fed3b9ad29a21f.json",
-  "feed-1-a6a4559b089cd12d.json",
-  "feed-2-154384afe4e02e33.json",
-  "feed-3-e3da46b264b5a764.json",
-  "feed-4-1b0c2ed91758b885.json",
-  "feed-5-c01cf2780103fd42.json",
-  "feed-6-73071b29511cf436.json",
-  "feed-7-617b613202fdeea8.json"
+  "feed-0-88ef76f8d4c5b4ca.json",
+  "feed-1-25d86aca1f017cdc.json",
+  "feed-2-00aca306ec1b1c55.json",
+  "feed-3-26b6cd7c2578dd68.json",
+  "feed-4-0d24b102f63234e5.json",
+  "feed-5-54c18e6ad9582621.json",
+  "feed-6-77ad291025652fe3.json",
+  "feed-7-f419489d50404270.json"
  ]
 }

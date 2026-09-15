@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-15T12:58:15.600Z",
+ "classifiedAt": "2026-09-15T13:53:13.201Z",
  "assignments": {
   "2099362525842117072": [
    [
@@ -17035,11 +17035,12 @@
   "2099651721702060125",
   "2099663244436926502",
   "2099684279718691152",
-  "2099688791426429358"
+  "2099688791426429358",
+  "2099694762055926050"
  ],
  "complete": false,
  "anchored": {},
- "failedChunks": 5,
+ "failedChunks": 3,
  "droppedSubs": [],
  "echoedSubs": [],
  "validationErrors": [],
@@ -17052,47 +17053,36 @@
     "2099484757423775908",
     "2099486798074257742",
     "2099515039484960898",
-    "2099562389922353514"
-   ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5GHWmydR63vGSwgGPMy\"}"
-  },
-  "live_chunk-1": {
-   "acceptedIds": [],
-   "retryIds": [
+    "2099562389922353514",
     "2099606632112050188",
     "2099608965952745618",
     "2099651721702060125",
     "2099663244436926502",
     "2099684279718691152",
     "2099688791426429358",
+    "2099694762055926050",
     "2099800394243490173",
     "2099800785269772395",
     "2099800894938431633",
-    "2099808907195527303"
-   ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5GHYQTAUumqUJgfsF4S\"}"
-  },
-  "live_chunk-2": {
-   "acceptedIds": [],
-   "retryIds": [
+    "2099808907195527303",
     "2099811753055932887",
     "2099823396049588400",
     "2099830644561809905",
     "2099831059886002582",
     "2099831587173015668",
     "2099831648992759834",
-    "2099831810289025525",
+    "2099831810289025525"
+   ],
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5LUdkguj3QR1ZxXobnC\"}"
+  },
+  "live_chunk-1": {
+   "acceptedIds": [],
+   "retryIds": [
     "2099833116059722141",
     "2099834365198975472",
     "2099835732336459847",
     "2099835817074065481",
-    "2099836078240706803"
-   ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5GHZVgrpiuJywrNuHTR\"}"
-  },
-  "live_chunk-3": {
-   "acceptedIds": [],
-   "retryIds": [
+    "2099836078240706803",
     "2099838582189904169",
     "2099838597486546951",
     "2099839521852363026",
@@ -17102,21 +17092,62 @@
     "2099841375537692868",
     "2099841396362359188",
     "2099841740144259287",
-    "2099841802354262057"
-   ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5GHaWxBhd1tz97F4Bet\"}"
-  },
-  "live_chunk-4": {
-   "acceptedIds": [],
-   "retryIds": [
+    "2099841802354262057",
     "2099841804979864048",
     "2099842492317245842",
     "2099843410072932511",
     "2099844499232936135",
-    "2099845119448920332"
+    "2099845119448920332",
+    "2099845386751951301",
+    "2099845695180296671",
+    "2099846151948095712",
+    "2099846196877545777",
+    "2099846201688428977",
+    "2099846822269223068",
+    "2099847919989924190",
+    "2099848684229873871",
+    "2099849464668119413",
+    "2099850094166130899",
+    "2099850462069469282",
+    "2099851405838192752",
+    "2099851499811537242",
+    "2099851953261920710",
+    "2099852155486179464",
+    "2099852535053889941",
+    "2099853127453233394",
+    "2099853136424755335",
+    "2099853142783398020",
+    "2099853147736879403"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5GHbU16BG4QYCA3Pgd9\"}"
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5LUf6K2K42mXTXgfNjZ\"}"
+  },
+  "live_chunk-2": {
+   "acceptedIds": [],
+   "retryIds": [
+    "2099853153042653557",
+    "2099853159065686412",
+    "2099853162165203239",
+    "2099853424632222048",
+    "2099853780984426994",
+    "2099853799909175445",
+    "2099853840749040013",
+    "2099853968608223696",
+    "2099854286913994889",
+    "2099854723188731931",
+    "2099855077527687286",
+    "2099855819227427097",
+    "2099855932507160588",
+    "2099856494724341786",
+    "2099856635527143854",
+    "2099856760701915359",
+    "2099856914016243937",
+    "2099857090810466353",
+    "2099857422714065020",
+    "2099857509288665381",
+    "2099858875776160140"
+   ],
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf5LUg94SZvaF69DudmkJ\"}"
   }
  },
- "updatedAt": "2026-09-15T12:58:15.607Z"
+ "updatedAt": "2026-09-15T13:53:13.209Z"
 }
