@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-09-15T01:00:07.146Z",
+ "generatedAt": "2026-09-15T01:28:27.014Z",
  "lastPollAt": "2026-09-15T00:37:42.039Z",
  "lastPollAttemptAt": "2026-09-15T00:37:41.223Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
  "news": {
-  "version": 11,
-  "items": 272,
-  "latestPublishedAt": "2026-09-15T00:49:34.000Z",
-  "latestFetchedAt": "2026-09-15T00:59:29.161Z",
+  "version": 12,
+  "items": 273,
+  "latestPublishedAt": "2026-09-15T01:16:42.000Z",
+  "latestFetchedAt": "2026-09-15T01:27:56.811Z",
   "latest": [
    {
     "id": "n_47e240e556c6b91b",
@@ -19,9 +19,24 @@
     "url": "https://www.nytimes.com/2026/09/14/us/politics/supreme-court-trump-mail-in-ballots.html",
     "text": "Trump’s Effort to Assert Control Over Elections Continues, Despite Court Loss",
     "title": "Trump’s Effort to Assert Control Over Elections Continues, Despite Court Loss",
-    "publishedAt": "2026-09-15T00:49:34.000Z",
-    "fetchedAt": "2026-09-15T00:59:29.161Z",
-    "version": 11,
+    "publishedAt": "2026-09-15T01:16:42.000Z",
+    "fetchedAt": "2026-09-15T01:27:56.811Z",
+    "version": 12,
+    "publishedAfterPost": false,
+    "acquiredAfterPost": false,
+    "truncated": false
+   },
+   {
+    "id": "n_29a6ed53b1adae34",
+    "publisher": "The New York Times",
+    "date": "2026-09-15",
+    "kind": "lead",
+    "url": "https://www.nytimes.com/2026/09/14/us/politics/supreme-court-trump-mail-voting.html",
+    "text": "Supreme Court Blocks Trump Administration Plan to Screen Mail-In Ballots",
+    "title": "Supreme Court Blocks Trump Administration Plan to Screen Mail-In Ballots",
+    "publishedAt": "2026-09-15T01:06:05.000Z",
+    "fetchedAt": "2026-09-15T01:27:56.811Z",
+    "version": 12,
     "publishedAfterPost": false,
     "acquiredAfterPost": false,
     "truncated": false
@@ -50,21 +65,6 @@
     "text": "Blanche to hold press briefing in Rose Garden Tuesday",
     "title": "Blanche to hold press briefing in Rose Garden Tuesday",
     "publishedAt": "2026-09-15T00:39:44.000Z",
-    "fetchedAt": "2026-09-15T00:59:29.161Z",
-    "version": 11,
-    "publishedAfterPost": false,
-    "acquiredAfterPost": false,
-    "truncated": false
-   },
-   {
-    "id": "n_29a6ed53b1adae34",
-    "publisher": "The New York Times",
-    "date": "2026-09-15",
-    "kind": "lead",
-    "url": "https://www.nytimes.com/2026/09/14/us/politics/supreme-court-trump-mail-voting.html",
-    "text": "Supreme Court Blocks Trump Administration Plan to Screen Mail-In Ballots",
-    "title": "Supreme Court Blocks Trump Administration Plan to Screen Mail-In Ballots",
-    "publishedAt": "2026-09-15T00:12:21.000Z",
     "fetchedAt": "2026-09-15T00:59:29.161Z",
     "version": 11,
     "publishedAfterPost": false,
@@ -173,9 +173,9 @@
  },
  "classification": {
   "through": "2026-09-14",
-  "capturedIn24h": 546,
-  "classifiedIn24h": 546,
-  "taggedIn24h": 503,
+  "capturedIn24h": 536,
+  "classifiedIn24h": 536,
+  "taggedIn24h": 495,
   "pendingIn24h": 0,
   "momentumPaused": false
  },
@@ -3490,22 +3490,22 @@
     "engDelta": 0
    },
    "curve48": [
-    14,
-    0,
-    0,
-    3,
-    66,
-    64,
-    60,
-    47,
-    23,
-    8,
-    0,
     12,
-    110,
-    138,
-    148,
-    107
+    0,
+    0,
+    6,
+    71,
+    69,
+    56,
+    48,
+    16,
+    5,
+    0,
+    27,
+    113,
+    143,
+    142,
+    90
    ]
   },
   "CPC": {
@@ -3558,22 +3558,22 @@
     "engDelta": 0
    },
    "curve48": [
-    7,
-    0,
-    0,
-    2,
-    27,
-    26,
-    35,
-    23,
-    12,
     6,
     0,
-    7,
+    0,
+    4,
+    29,
+    32,
+    33,
+    20,
+    8,
+    5,
+    0,
+    17,
     52,
-    61,
-    69,
-    57
+    60,
+    68,
+    49
    ]
   },
   "NewDem": {
@@ -3626,22 +3626,22 @@
     "engDelta": 0
    },
    "curve48": [
-    8,
-    0,
-    0,
-    1,
-    45,
-    34,
-    31,
-    24,
-    13,
-    3,
-    0,
     7,
-    64,
-    83,
-    88,
-    45
+    0,
+    0,
+    4,
+    43,
+    40,
+    25,
+    30,
+    8,
+    1,
+    0,
+    10,
+    72,
+    87,
+    80,
+    38
    ]
   },
   "CBC": {
@@ -3698,18 +3698,18 @@
     0,
     0,
     0,
+    8,
+    8,
+    6,
     7,
-    9,
-    5,
-    7,
-    4,
-    0,
-    0,
     3,
-    14,
-    23,
-    27,
-    20
+    0,
+    0,
+    5,
+    15,
+    25,
+    24,
+    18
    ]
   },
   "CHC": {
@@ -3762,22 +3762,22 @@
     "engDelta": 0
    },
    "curve48": [
+    2,
+    0,
+    0,
     3,
-    0,
-    0,
-    0,
-    12,
+    10,
     7,
     10,
-    6,
-    9,
-    3,
+    8,
+    8,
+    1,
     0,
-    4,
-    21,
+    8,
+    20,
     24,
-    22,
-    27
+    25,
+    21
    ]
   },
   "CAPAC": {
@@ -3830,22 +3830,22 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
-    0,
-    0,
-    0,
-    6,
     2,
-    6,
-    8,
-    4,
+    0,
+    0,
+    0,
+    7,
+    1,
+    7,
+    9,
+    2,
     4,
     0,
-    3,
+    4,
     9,
-    17,
-    15,
-    10
+    19,
+    14,
+    8
    ]
   }
  },
@@ -3938,18 +3938,18 @@
     57,
     121
    ],
-   "d": 52,
+   "d": 47,
    "mAvg": 54.7,
    "epAvg": 192,
    "momentum": {
-    "score": 84,
+    "score": 82,
     "drivers": [
-     "volume",
-     "acceleration"
+     "acceleration",
+     "volume"
     ],
-    "volume": 1,
+    "volume": 0.97,
     "accel": 1,
-    "adoption": 0.8902439024390245,
+    "adoption": 0.853658536585366,
     "eff": 3.6,
     "engLift": 0
    },
@@ -9460,7 +9460,7 @@
     30,
     62
    ],
-   "d": 128,
+   "d": 125,
    "mAvg": 14.8,
    "epAvg": 484,
    "momentum": {
@@ -10304,19 +10304,19 @@
     30,
     50
    ],
-   "d": 2,
+   "d": 0,
    "mAvg": 39.3,
    "epAvg": 333,
    "momentum": {
-    "score": 61,
+    "score": 60,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.52,
+    "volume": 0.5,
     "accel": 1,
     "adoption": 0.6440677966101694,
-    "eff": 3.8,
+    "eff": 3.9,
     "engLift": 0
    },
    "subs": [
@@ -11890,18 +11890,18 @@
     12,
     31
    ],
-   "d": -2,
+   "d": -5,
    "mAvg": 26.8,
    "epAvg": 69,
    "momentum": {
-    "score": 56,
+    "score": 54,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.48,
+    "volume": 0.45,
     "accel": 1,
-    "adoption": 0.46894409937888204,
+    "adoption": 0.4316770186335404,
     "eff": 3.8,
     "engLift": 0
    },
@@ -13493,16 +13493,16 @@
     17,
     25
    ],
-   "d": 51,
+   "d": 46,
    "mAvg": 15.5,
    "epAvg": 373,
    "momentum": {
-    "score": 84,
+    "score": 83,
     "drivers": [
-     "volume",
-     "acceleration"
+     "acceleration",
+     "volume"
     ],
-    "volume": 1,
+    "volume": 0.96,
     "accel": 1,
     "adoption": 0.8548387096774194,
     "eff": 3.9,
@@ -14910,19 +14910,19 @@
     6,
     12
    ],
-   "d": 24,
+   "d": 14,
    "mAvg": 9.7,
    "epAvg": 97,
    "momentum": {
-    "score": 71,
+    "score": 65,
     "drivers": [
      "acceleration",
-     "adoption"
+     "caucus spread"
     ],
-    "volume": 0.74,
+    "volume": 0.64,
     "accel": 1,
-    "adoption": 0.7413793103448276,
-    "eff": 3.5,
+    "adoption": 0.6379310344827587,
+    "eff": 3.6,
     "engLift": 0
    },
    "subs": [
@@ -15331,19 +15331,19 @@
     5,
     10
    ],
-   "d": -7,
+   "d": -15,
    "mAvg": 10.5,
    "epAvg": 42,
    "momentum": {
-    "score": 54,
+    "score": 48,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.43,
+    "volume": 0.35,
     "accel": 1,
-    "adoption": 0.5476190476190477,
-    "eff": 3.3,
+    "adoption": 0.4523809523809524,
+    "eff": 3.1,
     "engLift": 0
    },
    "subs": [
@@ -18532,7 +18532,7 @@
    "shape": [
     1,
     3,
-    3,
+    6,
     6,
     6,
     6,
@@ -18669,8 +18669,8 @@
    "since": "2026-09-15T00:09:14.000Z",
    "shape": [
     1,
-    1,
     2,
+    3,
     3,
     3,
     3,
@@ -18832,8 +18832,8 @@
    "coherence": 56,
    "since": "2026-09-14T23:45:19.000Z",
    "shape": [
-    3,
-    7,
+    5,
+    9,
     9,
     9,
     9,
@@ -19208,7 +19208,7 @@
    "label": "9/11 25th anniversary remembrance",
    "lastSeen": "2026-09-14T14:44:31.000Z",
    "thresholdMet": true,
-   "activeMembers": 4,
+   "activeMembers": 3,
    "provisional": false,
    "discoverySources": [
     "placed",
@@ -21987,7 +21987,7 @@
     3,
     13,
     23,
-    370,
+    372,
     405,
     408,
     413,
