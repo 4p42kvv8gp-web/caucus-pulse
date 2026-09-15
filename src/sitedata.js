@@ -19,9 +19,12 @@ import { momentum } from './momentum.js';
 import { minePhrases, tokenize, ngrams } from './syntax.js';
 import { incidentsPath } from './incidents.js';
 import { loadSemanticOrNull, configuredMinSim } from './semantic.js';
-import { loadNews, retrieveEvidence, evidenceLine } from './news-context.js';
-import { loadQuoted, archiveLookup } from './quoted.js';
+import { loadNews, loadSources, readStatus, retrieveEvidence, evidenceLine } from './news-context.js';
+import { buildNewsCoverage } from './news-coverage.js';
+import { loadQuoted, archiveLookup, quotedResolver, quotingFor } from './quoted.js';
 import { sourceContextStatus, createRepostResolver } from './source-context.js';
+import { loadFloor } from './floor-context.js';
+import { buildFloorDisplay } from './floor-display.js';
 
 const KEYS = [...new Set(Object.values(settings.caucus_keys))]; // display order: CPC, NewDem, CBC
 const DAY = 86_400_000;
@@ -60,7 +63,8 @@ export function compactQuote(q) {
 export function publicProvenance(provenance) {
   if (!provenance) return null;
   const supplied = (provenance.evidenceSupplied || []).filter((e) => /^https?:\/\//.test(e.url || ''))
-    .map(({ id, publisher, date, kind, url, text, publishedAt, fetchedAt, publishedAfterPost, acquiredAfterPost, truncated }) => ({ id, publisher, date, kind, url, text: String(text || '').slice(0, 600), publishedAt, fetchedAt, publishedAfterPost, acquiredAfterPost, truncated: Boolean(truncated || String(text || '').length > 600) }));
+    .map(({ id, publisher, date, kind, url, text, publishedAt, fetchedAt, observedAt, weekStart, weekEnd, billId, procedure, publishedAfterPost, acquiredAfterPost, truncated }) => ({ id, publisher, date, kind, url, text: String(text || '').slice(0, 600), publishedAt, fetchedAt: fetchedAt || observedAt, publishedAfterPost, acquiredAfterPost, truncated: Boolean(truncated || String(text || '').length > 600),
+      ...(kind === 'floor-agenda' ? { observedAt, weekStart, weekEnd, billId, procedure } : {}) }));
   const valid = new Set(supplied.map((e) => e.id));
   return { contextVersion: provenance.contextVersion || 0, evidenceSupplied: supplied,
     evidenceUsed: (provenance.evidenceUsed || []).filter((id) => valid.has(id)) };
@@ -335,7 +339,9 @@ export function buildSiteData() {
   const postsByDay = new Map();
   const allPosts = [];
   const excluded = { posts: 0, t: 0 };
-  const resolveRepost = createRepostResolver({ quoted: loadQuoted(), archive: archiveLookup() });
+  const quoteCache = loadQuoted(), sourceArchive = archiveLookup();
+  const resolveRepost = createRepostResolver({ quoted: quoteCache, archive: sourceArchive });
+  const resolveFloorQuote = quotedResolver({ quoted: quoteCache, archive: sourceArchive, authorsById });
   for (const date of days) {
     const metrics = readJSON(metricsPath(date), {});
     const interpretation = dayAssignments(date);
@@ -670,6 +676,7 @@ export function buildSiteData() {
   // A retrieved match is a reading lead, separate from sources actually used
   // by an accepted classification; no inbox-derived fields are copied.
   const news = loadNews({ days: 10 });
+  const newsCoverage = buildNewsCoverage({ items: loadNews().items, sources: loadSources().sources, status: readStatus() });
   for (const c of clusters) {
     const { evidence } = retrieveEvidence(`${c.label} ${c.sample}`, { items: news.items, asOf: new Date().toISOString(), k: 3, windowAfterDays: 0 });
     c.context = evidence.map(evidenceLine);
@@ -765,7 +772,10 @@ export function buildSiteData() {
     lastPollOutcome: state.lastPollOutcome || null,
     captureInProgress: Boolean(state.pollProgress),
     rosterMembers: new Set(Object.values(authorsById).filter(isHouse).map(rosterPersonKey).filter(Boolean)).size,
-    news: { version: news.version, items: news.items.length, latestPublishedAt: news.items.map((item) => item.publishedAt).filter(Boolean).sort().at(-1) || null, latestFetchedAt: news.items.map((item) => item.fetchedAt).filter(Boolean).sort().at(-1) || null, latest: news.items.slice(0, 8).map((item) => evidenceLine({ ...item, kind: 'lead', passage: item.title })) },
+    floor: buildFloorDisplay({ agenda: loadFloor({ now: new Date(nowMs).toISOString() }),
+      posts: allPosts.map((post) => ({ ...post, reposted: resolveRepost(post), quoting: quotingFor(resolveFloorQuote(post)) })),
+      authors: authorsById, personKey: rosterPersonKey, now: nowMs }),
+    news: { version: news.version, items: news.items.length, latestPublishedAt: news.items.map((item) => item.publishedAt).filter(Boolean).sort().at(-1) || null, latestFetchedAt: news.items.map((item) => item.fetchedAt).filter(Boolean).sort().at(-1) || null, latest: news.items.slice(0, 8).map((item) => evidenceLine({ ...item, kind: 'lead', passage: item.title })), coverage: newsCoverage },
     timezone: settings.timezone,
     today,
     days,

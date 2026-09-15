@@ -79,9 +79,13 @@ export function requestManifest(requests) {
           createdAt: quoted.createdAt ?? null, textChars: quoted.text.length,
           textHash: createHash('sha256').update(quoted.text).digest('hex') };
       }
-      if (line.evidence != null) {
-        if (!Array.isArray(line.evidence) || line.evidence.some((e) => typeof e?.id !== 'string' || !e.id) || new Set(line.evidence.map((e) => e.id)).size !== line.evidence.length) throw new Error(`Invalid source evidence for post ${line.id}`);
-        evidenceByPost[line.id] = line.evidence;
+      if (line.evidence != null || line.officialAgenda != null) {
+        for (const sources of [line.evidence, line.officialAgenda]) {
+          if (sources != null && (!Array.isArray(sources) || sources.some((e) => typeof e?.id !== 'string' || !e.id))) throw new Error(`Invalid source evidence for post ${line.id}`);
+        }
+        const supplied = [...(line.evidence || []), ...(line.officialAgenda || [])];
+        if (new Set(supplied.map((e) => e.id)).size !== supplied.length) throw new Error(`Invalid source evidence for post ${line.id}`);
+        evidenceByPost[line.id] = supplied;
       }
       if (line.contextVersion != null) {
         if (!Number.isInteger(line.contextVersion) || line.contextVersion < 0) throw new Error(`Invalid context version for post ${line.id}`);

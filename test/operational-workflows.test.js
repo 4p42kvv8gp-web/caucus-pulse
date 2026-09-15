@@ -193,3 +193,37 @@ test('news publication refreshes the dashboard without waiting for another captu
   assert.ok(saveDisplay > rebuild, 'fresh news must reach the dashboard in this workflow');
   assert.equal(workflow.jobs.publish.concurrency.group, 'data-writes');
 });
+
+test('official agenda refresh is independent of X and preserves failure status before publication', () => {
+  const workflow = yaml.load(fs.readFileSync(path.join(ROOT, '.github/workflows/news-context.yml'), 'utf8'));
+  const steps = workflow.jobs.refresh.steps;
+  const base = steps.findIndex((s) => s.run?.includes('news-snapshot.mjs base'));
+  const floor = steps.findIndex((s) => s.id === 'floor');
+  const pack = steps.findIndex((s) => s.run?.includes('news-snapshot.mjs pack'));
+  const artifact = steps.findIndex((s) => s.uses?.startsWith('actions/upload-artifact@'));
+  const report = steps.findIndex((s) => s.if?.includes("steps.floor.outcome == 'failure'"));
+  assert.ok(base < floor && floor < pack && pack < artifact && artifact < report);
+  assert.equal(steps[floor]['continue-on-error'], true);
+  assert.equal(steps[floor].env.DRY_RUN, '${{ inputs.dry_run }}');
+  assert.ok(!JSON.stringify(steps[floor]).includes('X_BEARER_TOKEN'));
+});
+
+test('floor snapshots are carried atomically with news and reject stale agenda bases', (t) => {
+  const dir = temp(t), source = path.join(dir, 'source'), target = path.join(dir, 'target'), snapshot = path.join(dir, 'snapshot');
+  for (const root of [source, target]) write(root, 'data/news/floor.json', { snapshot: { weekStart: '2026-09-14' }, status: { ok: true } });
+  captureNewsBase(source, snapshot);
+  write(source, 'data/news/floor.json', { snapshot: { weekStart: '2026-09-14' }, status: { ok: false, error: 'HTTP 503' } });
+  packNews(source, snapshot); applyNews(target, snapshot);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(target, 'data/news/floor.json'))).status.ok, false);
+  assert.throws(() => applyNews(target, snapshot), /News base changed at floor.json/);
+});
+
+test('an older news transfer cannot overwrite an agenda introduced after its acquisition', (t) => {
+  const dir = temp(t), source = path.join(dir, 'source'), target = path.join(dir, 'target'), snapshot = path.join(dir, 'snapshot');
+  fs.mkdirSync(source); captureNewsBase(source, snapshot); packNews(source, snapshot);
+  const file = path.join(snapshot, 'manifest.json'), manifest = JSON.parse(fs.readFileSync(file));
+  delete manifest.base['floor.json']; delete manifest.result['floor.json']; write(snapshot, 'manifest.json', manifest);
+  write(target, 'data/news/floor.json', { snapshot: { weekStart: '2026-09-14' } });
+  applyNews(target, snapshot);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(target, 'data/news/floor.json'))).snapshot.weekStart, '2026-09-14');
+});

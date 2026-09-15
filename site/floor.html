@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floor agenda · Caucus Pulse</title>
+<style>
+body{margin:0;background:#f5f5f7;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-variant-numeric:tabular-nums}a{color:#194292;text-underline-offset:3px}header{background:white;border-bottom:1px solid #ddd;padding:16px max(20px,calc((100% - 1200px)/2));display:flex;align-items:center;gap:24px;flex-wrap:wrap}nav{display:flex;gap:18px;font-size:13px}nav a{text-decoration:none}.brand{font-weight:700;text-decoration:none;color:#1d1d1f}main{max-width:1160px;margin:0 auto;padding:26px 20px 50px}h1{margin:0 0 10px;font-size:27px}h2{font-size:18px;margin:0 0 10px}p{line-height:1.5}.muted{color:#6e6e73;font-size:13px}.notice{padding:13px 16px;background:#fff4d6;border-radius:10px}.card{background:white;border-radius:14px;padding:20px;margin:16px 0}.bill{padding:16px 0;border-top:1px solid #e8e8ed}.bill:first-of-type{border-top:0}.title{font-size:15px;line-height:1.5}.identifier{font-weight:700;margin-right:8px}summary{cursor:pointer;font-size:13px;margin-top:9px}blockquote{margin:12px 0;padding:4px 0 4px 15px;border-left:3px solid #d2d2d7;font-size:13px;line-height:1.55}input{box-sizing:border-box;width:100%;max-width:550px;padding:10px 12px;font:inherit;border:1px solid #ccc;border-radius:8px}a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid #194292;outline-offset:3px}#updated{margin-left:auto;font-size:12px;color:#6e6e73}
+</style>
+</head>
+<body>
+<header><a class="brand" href="./index.html">Caucus Pulse</a><nav aria-label="Main"><a href="./index.html">Dashboard</a><a href="./incidents.html">Incidents</a><a href="./floor.html" aria-current="page">Floor agenda</a></nav><span id="updated"></span></header>
+<main>
+<h1>House floor agenda</h1>
+<p class="muted">The Clerk’s weekly list of legislation that may be considered. Listing does not establish a vote date, passage or a member’s position.</p>
+<div id="status" role="status">Loading official agenda…</div>
+<p><label for="search" class="muted">Find a bill by number or title</label><br><input id="search" type="search" placeholder="H.R. 9576, water resources, PROOF…"></p>
+<div id="agenda"></div>
+</main>
+<script type="module">
+import { esc, publicUrl, sourceLink, etWhen, loadRollups, startRefresh } from './ui.js';
+let data = null, refreshError = null;
+const $ = (id) => document.getElementById(id);
+const link = (url, text) => publicUrl(url) ? `<a href="${esc(publicUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>` : esc(text);
+const when = (iso) => iso && Number.isFinite(Date.parse(iso)) ? etWhen(iso, data.today) + ' ET' : 'not observed';
+function render() {
+  const floor = data?.floor;
+  $('updated').textContent = refreshError ? 'Refresh failed; showing saved data' : `Dashboard built ${when(data?.generatedAt)}`;
+  if (!floor?.available) {
+    $('status').className = 'notice'; $('status').textContent = 'No usable official agenda has been acquired yet.';
+    $('agenda').replaceChildren(); return;
+  }
+  const warnings = [refreshError ? 'Dashboard refresh failed.' : '', floor.status?.ok === false ? 'The latest official-source refresh failed; the previous agenda is retained.' : '', floor.stale ? 'The agenda has not been verified within the last 24 hours.' : '', !floor.current ? 'This retained agenda is outside the current legislative week.' : ''].filter(Boolean);
+  $('status').className = warnings.length ? 'notice' : 'muted';
+  $('status').innerHTML = `${warnings.map(esc).join(' ')}<div>Week of ${esc(floor.weekStart)} · ${floor.items.filter((item) => !item.withdrawn).length} listed items · checked ${esc(when(floor.observedAt))} · ${link(floor.sourceUrl, 'Official House source')}</div><div class="muted">Exact bill-number references below come from captured current-week posts and available quoted or reposted originals. Counts show references, not agreement. Zero means no matched reference in captured material.</div>`;
+  const query = $('search').value.trim().toLowerCase();
+  const items = floor.items.filter((item) => !item.withdrawn && [item.designation, item.billId, item.title].join(' ').toLowerCase().includes(query));
+  const groups = new Map();
+  for (const item of items) {
+    const group = item.procedure || 'Other listed items';
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(item);
+  }
+  $('agenda').innerHTML = [...groups].map(([procedure, rows]) => `<section class="card"><h2>${esc(procedure)}</h2>${rows.map((item) => {
+    const refs = item.references || [];
+    return `<article class="bill"><div class="title"><span class="identifier">${esc(item.designation || item.billId)}</span>${esc(item.title)}</div><div class="muted">${link(item.xmlUrl || floor.xmlUrl || floor.sourceUrl, 'Official listing')}${(item.documents || []).map((doc) => ' · ' + link(doc.url, doc.type || 'Bill text')).join('')}${(item.subitems || []).filter((sub) => !sub.withdrawn && !sub.billId).map((sub) => `<div style="margin-top:6px">${esc(sub.title)}${(sub.documents || []).map((doc) => ' · ' + link(doc.url, doc.type || 'Document')).join('')}</div>`).join('')}</div><details><summary>${floor.referencesAvailable ? `${item.membersReferencing || 0} distinct members · ${refs.length} captured references` : 'Reference matching unavailable'}</summary>${!floor.referencesAvailable ? '<p class="muted">Reference matching awaits a current, successfully refreshed agenda.</p>' : refs.length ? refs.map((post) => `<blockquote>${sourceLink(post, post.text)}<div class="muted">${sourceLink(post, post.handle ? '@' + String(post.handle).replace(/^@/, '') : post.member || 'Original post')} · ${esc(when(post.createdAt))}${post.type === 'retweet' ? ' · repost' : ''}</div>${(post.referencedSources || []).map((original) => `<div class="muted" style="margin-top:8px">Referenced original · ${esc(when(original.createdAt))}</div>${sourceLink(original, original.text)}`).join('')}</blockquote>`).join('') : '<p class="muted">No exact bill-number reference found in the captured current-week material.</p>'}</details></article>`;
+  }).join('')}</section>`).join('') || '<p class="muted">No listed bills match this search.</p>';
+}
+$('search').addEventListener('input', () => { if (data) render(); });
+loadRollups().then((value) => { data = value; render(); }).catch(() => { $('status').textContent = 'The dashboard could not be loaded. Please try again.'; });
+startRefresh({ onData(value) { data = value; refreshError = null; render(); }, onError(error) { refreshError = error; if (data) render(); } });
+</script>
+</body>
+</html>
