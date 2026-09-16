@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import yaml from 'js-yaml';
-import { createJournal, runPilot, pilotSummary, main } from '../.github/scripts/capture-reliability-pilot.mjs';
+import { createJournal, runPilot, pilotSummary, decisionDiagnostics, main } from '../.github/scripts/capture-reliability-pilot.mjs';
 import { initialState, REPOSITORY } from '../src/capture-dispatcher.js';
 
 const root = path.resolve(import.meta.dirname, '..');
@@ -108,4 +108,18 @@ test('CLI refuses local or wrong repository execution before network access', as
     { GITHUB_ACTIONS: 'true', GITHUB_REPOSITORY: REPOSITORY, GITHUB_REF: 'refs/heads/other' }]) {
     await assert.rejects(main(env), /pilot_requires_expected_main_actions_run/);
   }
+});
+
+test('failed evidence logs its closed reason without leaking arbitrary response or error text', async () => {
+  const logs = [], state = initialState({ controllerRunId: 123, now: clock });
+  const client = { listActiveWriters: async () => {
+    throw Object.assign(new Error('private response body must never appear'), { code: 'incomplete_run_list' });
+  } };
+  const result = await runPilot({ state, client, persist: async () => {}, now: () => clock,
+    sleep: async () => { throw new Error('must stop'); }, log: (line) => logs.push(JSON.parse(line)) });
+  assert.equal(result.dispatches, 0);
+  assert.equal(logs[0].evidenceCode, 'incomplete_run_list');
+  assert.equal(pilotSummary(result).evidenceCode, 'incomplete_run_list');
+  assert.ok(!JSON.stringify(logs).includes('private'));
+  assert.deepEqual(decisionDiagnostics({ code: 'arbitrary secret', httpStatus: 403, message: 'private' }), { evidenceHttpStatus: 403 });
 });
