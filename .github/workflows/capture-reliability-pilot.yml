@@ -1,4 +1,6 @@
 # A bounded experiment, not a recurring scheduler or a production service.
+# The first sample stopped before dispatch; this revision records closed error
+# codes in the job log as well as the journal for independent diagnosis.
 name: capture-reliability-pilot
 on:
   push:

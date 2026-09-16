@@ -32,6 +32,7 @@ export function pilotSummary(state) {
     (Date.parse(row.captureAt) - Date.parse(verified[index].captureAt)) / 60_000);
   return {
     status: state.status, stopReason: state.stopReason, startedAt: state.startedAt,
+    ...decisionDiagnostics(state.decisions.at(-1)),
     deadlineAt: state.deadlineAt, dispatches: state.dispatches,
     observedChildren: state.completed.length, verifiedCaptures: verified.length,
     maxObservedCaptureGapMinutes: gapMinutes.length ? Math.max(...gapMinutes) : null,
@@ -44,12 +45,27 @@ export function pilotSummary(state) {
   };
 }
 
+// The core has already reduced exceptions to closed codes. Retain those codes
+// in logs as well as the artifact so a failed evidence read is diagnosable even
+// when an artifact download is unavailable. Never emit arbitrary error text.
+export function decisionDiagnostics(decision) {
+  const codes = new Set(['request_timeout', 'request_failed', 'request_budget_exhausted',
+    'response_too_large', 'invalid_json', 'unexpected_http', 'incomplete_run_list',
+    'invalid_run_list', 'invalid_capture_state', 'invalid_run', 'invalid_dispatch_key', 'evidence_unavailable']);
+  return {
+    ...(codes.has(decision?.code) ? { evidenceCode: decision.code } : {}),
+    ...(Number.isInteger(decision?.httpStatus) && decision.httpStatus >= 100 && decision.httpStatus <= 599
+      ? { evidenceHttpStatus: decision.httpStatus } : {})
+  };
+}
+
 export async function runPilot({ state, client, persist, now = Date.now, sleep = delay, log = () => {} }) {
   await persist(state); // Must be durable before the first network operation.
   while (state.status === 'active') {
     state = await tick({ state, client, persist, now });
     // Only closed decision codes, counts and numeric run IDs enter logs.
     log(JSON.stringify({ decision: state.decisions.at(-1)?.kind, dispatches: state.dispatches,
+      ...decisionDiagnostics(state.decisions.at(-1)),
       verifiedCaptures: state.completed.filter((row) => row.captureVerified).length,
       pendingRunId: state.pending?.runId || null }));
     if (state.status === 'active') {
