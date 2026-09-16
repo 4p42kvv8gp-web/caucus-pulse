@@ -48,6 +48,26 @@ function boundedPages(value) {
   return n;
 }
 
+function validatedRunIdentity(value) {
+  if (value === null) return null;
+  if (!value || typeof value !== 'object' || Array.isArray(value)
+      || typeof value.runId !== 'string' || !/^[1-9]\d*$/.test(value.runId)
+      || !Number.isSafeInteger(value.runAttempt) || value.runAttempt < 1) {
+    throw new Error('Invalid GitHub capture run identity');
+  }
+  return { runId: value.runId, runAttempt: value.runAttempt };
+}
+
+// A shell with leftover GitHub variables is not an Actions capture. Read the
+// identity once per invocation, and keep IDs as strings without rounding.
+export function githubRunIdentity(env = process.env) {
+  if (env.GITHUB_ACTIONS !== 'true') return null;
+  if (typeof env.GITHUB_RUN_ATTEMPT !== 'string' || !/^[1-9]\d*$/.test(env.GITHUB_RUN_ATTEMPT)) {
+    throw new Error('Invalid GitHub capture run identity');
+  }
+  return validatedRunIdentity({ runId: env.GITHUB_RUN_ID, runAttempt: Number(env.GITHUB_RUN_ATTEMPT) });
+}
+
 // Checkpoint each received page before publishing its continuation. The
 // completed cursor does not move until the entire interval is drained.
 // Dependencies keep all acceptance tests offline and outside the real data.
@@ -169,10 +189,12 @@ export async function pollOnce({
   fetchPage = x.listTweetsPage, persist = saveState, archive = appendToArchive,
   unseen = unarchivedRecords, now = () => new Date().toISOString(),
   afterCapture = true, configured = x.isConfigured(),
-  includeReferences = includeReferenced(), restartPagination = process.argv.includes('--restart-pagination')
+  includeReferences = includeReferenced(), restartPagination = process.argv.includes('--restart-pagination'),
+  runIdentity = githubRunIdentity()
 } = {}) {
   if (!configured) throw new Error('X auth not configured: set X_BEARER_TOKEN, or X_PROXY_AUTH=1 where the egress proxy injects the credential');
   if (!id) throw new Error('No list id: set X_LIST_ID or config/settings.json "list_id"');
+  const completedRun = validatedRunIdentity(runIdentity);
   state.lastPollAttemptAt = now();
   state.lastPollOutcome = 'running';
   persist(state);
@@ -189,6 +211,15 @@ export async function pollOnce({
   if (result.complete) {
     state.recentNewCounts = [...(state.recentNewCounts || []), result.intervalCaptured].slice(-30);
     state.lastPollAt = now();
+    // These markers describe the completed interval, never merely an attempt
+    // or successful page. Publish them in the same state write as lastPollAt.
+    if (completedRun) {
+      state.lastPollRunId = completedRun.runId;
+      state.lastPollRunAttempt = completedRun.runAttempt;
+    } else {
+      delete state.lastPollRunId;
+      delete state.lastPollRunAttempt;
+    }
   }
   persist(state);
   const today = state.usage[etDate()] || { posts: 0, users: 0 };

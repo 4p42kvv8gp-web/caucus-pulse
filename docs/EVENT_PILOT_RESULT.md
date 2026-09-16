@@ -10,6 +10,12 @@ The unrelated Hugging Face hack and generic AI post stayed outside the event. Th
 
 The second answer separated the voting-court, impeachment-announcement and oil-stock-allegation posts into three single-member events. It did not merge them merely because they mentioned overlapping political actors. The incomplete Garcia repost remained unresolved and contributed to no event threshold.
 
+## Unresolved-reference acceptance check
+
+An offline counterexample exposed a validator gap: an answer could mark a post unresolved while also counting it in an event. A copy of the saved Johnson answer substituted [Lieu's generic "Congress should step up" post](https://x.com/i/web/status/2099512150737719793) alongside Casar and Goldman. Despite retaining Lieu's `needs_context: true` and unresolved status, the earlier validator accepted the exact quoted sentence and counted three distinct members. The original saved answer did not make this mistake.
+
+Validator version 3 rejects event membership for any unresolved post or assignment needing context. Uncertainty is per post in the current schema, so none of that post's event memberships can be accepted until the reference is resolved. Offline tests preserve both original answers as passing controls and reject this counterexample without changing saved responses, receipts, attempt counts, or source material. This closes a threshold loophole; it does not measure general event accuracy or resolve the wording issues below.
+
 ## Wording that still needs review
 
 - The Johnson action describes the group as criticizing and demanding hearings or session changes. Casar clearly criticizes, but does not explicitly make those demands. A safer shared label is **House Democrats criticize Johnson's approach to AI oversight**; specific demands should be attributed to the members who made them.

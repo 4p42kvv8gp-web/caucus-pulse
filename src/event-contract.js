@@ -2,7 +2,7 @@
 // topic mutations or source validation by model assertion occur here.
 export const EVENT_MAX_POSTS = 24;
 export const EVENT_MAX_REQUEST_CHARS = 120_000;
-export const EVENT_VALIDATOR_VERSION = 'event-contract-v2';
+export const EVENT_VALIDATOR_VERSION = 'event-contract-v3';
 const DAY = 86_400_000;
 const MODES = new Set(['as-of', 'retrospective']);
 const POST_FIELDS = ['id', 'authorId', 'personId', 'createdAt', 'capturedAt', 'type', 'text', 'quoting', 'sourceIncomplete', 'sourceIncompleteReasons', 'topics', 'evidence', 'contextVersion', 'corrected'];
@@ -107,6 +107,9 @@ Every input post must occur exactly once in assignments. evidence_used contains
 only IDs actually used from that input post's own evidence. Set needs_context
 when its reference remains ambiguous. unresolved contains only exact post IDs
 with unresolved or ambiguous references; those assignments set needs_context true.
+Any post with needs_context true or listed in unresolved must stay out of every
+event. Uncertainty is per post in this schema; an exact quote alone does not
+resolve which event an ambiguous reference concerns.
 Event labels, actors and actions are provisional inference, not verified facts.
 Do not invent source URLs, counts, dates, confidence, facts or other fields.
 
@@ -203,6 +206,7 @@ export function validateEventResponse(message, posts, { runAsOf, mode = 'retrosp
     for (const id of event.ids) {
       if (!byId.has(id)) fail('unknown-event-id', { index, id });
       else if (byId.get(id).sourceIncomplete === true) fail('incomplete-source-event-membership', { index, id });
+      else if (unresolved.has(id) || assignments.get(id)?.needs_context === true) fail('unresolved-source-event-membership', { index, id });
       else if (membership.has(id)) fail('duplicate-event-id', { index, id });
       else membership.add(id);
     }

@@ -2,6 +2,7 @@
 # the dashboard feed (skipped automatically if no Anthropic credential can be
 # resolved or CLASSIFY_LIVE=false), regroups incidents, rebuilds site/data/rollups.json.
 name: poll
+run-name: ${{ inputs.dispatch_key || 'poll' }}
 on:
   push:
     branches: [main]
@@ -13,6 +14,15 @@ on:
   schedule:
     - cron: '7,27,47 * * * *'
   workflow_dispatch:
+    inputs:
+      capture_only:
+        description: Collect and publish without model interpretation or extra source lookups
+        type: boolean
+        default: false
+      dispatch_key:
+        description: Optional capture timing receipt label
+        type: string
+        default: ''
 
 # One writer at a time, including the news publication job. Queue pending
 # writers instead of allowing each new poll to replace the previous waiter.
@@ -43,11 +53,13 @@ jobs:
       # Local embedding model for the poll's incremental embed + similarity
       # hints (see nightly.yml). Best-effort: capture must never wait on it.
       - name: Embedding model cache
+        if: ${{ !inputs.capture_only }}
         uses: actions/cache@v4
         with:
           path: data/models
           key: embedding-model-bge-small-en-v1.5-ea104dacec62
       - name: Download embedding model (verified; no-op when cached)
+        if: ${{ !inputs.capture_only }}
         continue-on-error: true
         timeout-minutes: 1
         run: npm run download-model
@@ -61,6 +73,7 @@ jobs:
           # Read budget comes from config/settings.json "daily_read_budget"
           # (git-controlled); the X_DAILY_READ_BUDGET repo variable is no longer read.
           CLASSIFY_LIVE: ${{ vars.CLASSIFY_LIVE }}
+          CAPTURE_ONLY: ${{ inputs.capture_only && 'true' || 'false' }}
         run: .github/scripts/poll.sh
       - name: Commit archive + site data
         id: capture_commit
@@ -74,7 +87,7 @@ jobs:
       # next ordinary poll; this step never starts a second live model pass.
       - name: Acquire missing repost originals
         id: repost_sources
-        if: ${{ success() && steps.pipeline.outcome == 'success' && steps.capture_commit.outcome == 'success' }}
+        if: ${{ success() && !inputs.capture_only && steps.pipeline.outcome == 'success' && steps.capture_commit.outcome == 'success' }}
         continue-on-error: true
         timeout-minutes: 4
         env:

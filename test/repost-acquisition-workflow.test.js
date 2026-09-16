@@ -23,7 +23,7 @@ test('repost lookup runs only after successful capture publication inside the sh
   assert.ok(indexOf('repost_sources') > indexOf('capture_commit'));
   assert.match(capture.run, /commit-data\.sh/);
   assert.match(capture.if, /steps\.pipeline\.outcome == 'failure'/, 'failed capture still saves its validated progress');
-  assert.equal(acquire.if, "${{ success() && steps.pipeline.outcome == 'success' && steps.capture_commit.outcome == 'success' }}", 'lookup must not run after a failed pipeline, failed push, skipped capture or cancellation');
+  assert.equal(acquire.if, "${{ success() && !inputs.capture_only && steps.pipeline.outcome == 'success' && steps.capture_commit.outcome == 'success' }}", 'lookup must not run after a failed pipeline, failed push, skipped capture or cancellation');
   assert.equal(acquire.run, 'node --use-env-proxy src/repost-acquire.js');
   assert.deepEqual(acquire.env, { X_BEARER_TOKEN: '${{ secrets.X_BEARER_TOKEN }}' });
   assert.equal(acquire['continue-on-error'], true, 'failure must allow cache publication and explicit reporting');

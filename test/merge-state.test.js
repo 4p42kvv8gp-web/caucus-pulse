@@ -24,6 +24,35 @@ test('two independently advanced cursors fail instead of choosing the larger id'
   const b = { ...base, sinceId: '900', lastPollAt: '2026-09-10T05:30:00Z' };
   assert.throws(() => mergeState(base, a, b), /Concurrent changes to capture state/);
 });
+test('completed run identity moves with its capture timestamp while unrelated writes merge', () => {
+  const common = { ...base, lastPollRunId: '8000', lastPollRunAttempt: 1 };
+  const a = { ...common, sinceId: '250', lastPollAt: '2026-09-10T05:20:00Z', lastPollRunId: '9000', lastPollRunAttempt: 2 };
+  const b = { ...common, pendingBatch: { id: 'batch-one' } };
+  const merged = mergeState(common, a, b);
+  assert.equal(merged.lastPollAt, a.lastPollAt);
+  assert.equal(merged.lastPollRunId, '9000');
+  assert.equal(merged.lastPollRunAttempt, 2);
+  assert.deepEqual(merged.pendingBatch, b.pendingBatch);
+  const local = { ...a };
+  delete local.lastPollRunId;
+  delete local.lastPollRunAttempt;
+  const localMerged = mergeState(common, local, b);
+  assert.equal(localMerged.lastPollAt, local.lastPollAt);
+  assert.equal(Object.hasOwn(localMerged, 'lastPollRunId'), false);
+  assert.equal(Object.hasOwn(localMerged, 'lastPollRunAttempt'), false);
+  assert.deepEqual(mergeState(common, b, local), localMerged);
+});
+test('concurrent identity-only and capture changes cannot combine into false run attribution', () => {
+  const common = { ...base, lastPollRunId: '8000', lastPollRunAttempt: 1 };
+  const capture = { ...common, sinceId: '250', lastPollAt: '2026-09-10T05:20:00Z' };
+  for (const identity of [
+    { ...common, lastPollRunId: '9000' },
+    { ...common, lastPollRunAttempt: 2 }
+  ]) {
+    assert.throws(() => mergeState(common, capture, identity), /Concurrent changes to capture state/);
+    assert.throws(() => mergeState(common, identity, capture), /Concurrent changes to capture state/);
+  }
+});
 test('partial capture retains its old cursor and completed time alongside a newer successful API response', () => {
   const a = { ...base, lastPollAttemptAt: '2026-09-10T06:00:00Z', lastPollSuccessAt: '2026-09-10T06:00:01Z', lastPollOutcome: 'page-cap', pollProgress: { listId: 'list', baseSinceId: '100', newestId: '300', pages: 1, nextToken: 'page2' } };
   const b = { ...base, pendingBatch: { id: 'msgbatch_1' } };

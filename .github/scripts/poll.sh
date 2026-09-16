@@ -2,12 +2,19 @@
 # Preserve capture before interpretations. An unfinished interval (exit 2) is
 # a useful checkpoint, not a reason to skip publication in the following step.
 set -uo pipefail
+# The timing pilot exercises collection/publication only. Disabling live
+# classification must also skip retrieval of existing paid model batches.
+if [ "${CAPTURE_ONLY:-false}" = 'true' ]; then
+  export CLASSIFY_LIVE=false
+fi
 capture=0
 npm run poll || capture=$?
 # Corrupt source bytes stop further interpretation and fail publication too.
 node .github/scripts/validate-publication.mjs || exit 1
 classification=0
-npm run classify -- --resume-only || classification=$?
+if [ "${CAPTURE_ONLY:-false}" != 'true' ]; then
+  npm run classify -- --resume-only || classification=$?
+fi
 site=0
 npm run sitedata || site=$?
 if [ "$capture" -ne 0 ]; then
