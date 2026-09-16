@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { pollOnce } from '../src/poll.js';
+import { pollOnce, githubRunIdentity } from '../src/poll.js';
 import { backfill } from '../src/backfill.js';
 import { backfillMembers, loadBackfillProgress } from '../src/backfill-members.js';
 import { appendToArchive, loadState, boundedPageSize, dailyBudget } from '../src/store.js';
@@ -18,13 +18,98 @@ function rig() {
   const rows = new Map(), writes = [], requests = [];
   const deps = {
     state, id: 'test-list', now: () => now, configured: true, includeReferences: false,
-    afterCapture: false,
+    afterCapture: false, runIdentity: null,
     unseen: (records) => records.filter((r) => !rows.has(r.id)),
     archive: (records) => { for (const r of records) rows.set(r.id, r); return records.length ? ['2026-09-13'] : []; },
     persist: (s) => writes.push({ state: structuredClone(s), archived: [...rows.keys()] })
   };
   return { state, rows, writes, requests, deps };
 }
+
+test('GitHub run identity requires Actions provenance and preserves numeric IDs exactly', () => {
+  const env = { GITHUB_RUN_ID: '9007199254740993', GITHUB_RUN_ATTEMPT: '2' };
+  for (const GITHUB_ACTIONS of [undefined, 'false', 'TRUE', '1']) {
+    assert.equal(githubRunIdentity({ ...env, GITHUB_ACTIONS }), null);
+  }
+  assert.deepEqual(githubRunIdentity({ ...env, GITHUB_ACTIONS: 'true' }), { runId: env.GITHUB_RUN_ID, runAttempt: 2 });
+  for (const patch of [
+    { GITHUB_RUN_ID: undefined }, { GITHUB_RUN_ID: 123 }, { GITHUB_RUN_ID: '1e3' },
+    { GITHUB_RUN_ID: '0' }, { GITHUB_RUN_ID: ' 123' }, { GITHUB_RUN_ID: '00123' },
+    { GITHUB_RUN_ATTEMPT: undefined }, { GITHUB_RUN_ATTEMPT: '0' }, { GITHUB_RUN_ATTEMPT: '1.5' },
+    { GITHUB_RUN_ATTEMPT: '1e2' }, { GITHUB_RUN_ATTEMPT: '9007199254740993' }
+  ]) assert.throws(() => githubRunIdentity({ ...env, GITHUB_ACTIONS: 'true', ...patch }), /Invalid GitHub capture run identity/);
+});
+
+test('only a complete capture publishes the new run identity atomically with its completed timestamp', async () => {
+  const r = rig(), oldAt = r.state.lastPollAt;
+  Object.assign(r.state, { lastPollRunId: '8000', lastPollRunAttempt: 1 });
+  const runIdentity = { runId: '9007199254740993', runAttempt: 2 };
+  const result = await pollOnce({ ...r.deps, runIdentity, fetchPage: async () => page(['500', '100']) });
+  assert.equal(result.complete, true);
+  assert.equal(r.state.lastPollAt, now);
+  assert.equal(r.state.lastPollRunId, runIdentity.runId);
+  assert.equal(r.state.lastPollRunAttempt, 2);
+  for (const { state } of r.writes) {
+    if (state.lastPollAt === oldAt) {
+      assert.equal(state.lastPollRunId, '8000');
+      assert.equal(state.lastPollRunAttempt, 1);
+    } else {
+      assert.equal(state.lastPollAt, now);
+      assert.equal(state.lastPollRunId, runIdentity.runId);
+      assert.equal(state.lastPollRunAttempt, 2);
+      assert.equal(state.lastPollOutcome, 'complete');
+    }
+  }
+});
+
+test('partial and failed captures retain the prior completed run identity', async () => {
+  for (const outcome of ['page-cap', 'rate-limited', 'request-failed', 'archive-write-failed']) {
+    const r = rig(), oldAt = r.state.lastPollAt;
+    Object.assign(r.state, { lastPollRunId: '8000', lastPollRunAttempt: 1 });
+    const deps = { ...r.deps, runIdentity: { runId: '9000', runAttempt: 2 }, maxPages: 1,
+      fetchPage: async () => {
+        if (outcome === 'rate-limited') return { rateLimited: true };
+        if (outcome === 'request-failed') throw new Error('synthetic unavailable');
+        return page(['500'], 'p2');
+      } };
+    if (outcome === 'archive-write-failed') {
+      deps.archive = () => { throw new Error('synthetic disk failure'); };
+      await assert.rejects(pollOnce(deps), /synthetic disk failure/);
+    } else {
+      const result = await pollOnce(deps);
+      assert.equal(result.complete, false);
+      assert.equal(result.reason, outcome);
+    }
+    for (const { state } of r.writes) {
+      assert.equal(state.lastPollAt, oldAt, outcome);
+      assert.equal(state.lastPollRunId, '8000', outcome);
+      assert.equal(state.lastPollRunAttempt, 1, outcome);
+    }
+  }
+});
+
+test('a complete local capture removes stale GitHub attribution in the completed state write', async () => {
+  const r = rig(), oldAt = r.state.lastPollAt;
+  Object.assign(r.state, { lastPollRunId: '8000', lastPollRunAttempt: 1 });
+  const result = await pollOnce({ ...r.deps, runIdentity: null, fetchPage: async () => page(['500', '100']) });
+  assert.equal(result.complete, true);
+  assert.equal(r.state.lastPollAt, now);
+  assert.equal(Object.hasOwn(r.state, 'lastPollRunId'), false);
+  assert.equal(Object.hasOwn(r.state, 'lastPollRunAttempt'), false);
+  for (const { state } of r.writes) {
+    assert.equal(Object.hasOwn(state, 'lastPollRunId'), state.lastPollAt === oldAt);
+    assert.equal(Object.hasOwn(state, 'lastPollRunAttempt'), state.lastPollAt === oldAt);
+  }
+});
+
+test('invalid injected run identities fail before capture requests or state writes', async () => {
+  for (const runIdentity of [{ runId: '1' }, { runId: 1, runAttempt: 1 }, { runId: '1', runAttempt: '1' }, { runId: '1', runAttempt: 0 }]) {
+    const r = rig(); let requests = 0;
+    await assert.rejects(pollOnce({ ...r.deps, runIdentity, fetchPage: async () => { requests++; return page(['100']); } }), /Invalid GitHub capture run identity/);
+    assert.equal(requests, 0);
+    assert.equal(r.writes.length, 0);
+  }
+});
 
 for (const failure of ['500', '429']) {
   test(`poll resumes a page-${failure} interruption without skipping older records`, async () => {

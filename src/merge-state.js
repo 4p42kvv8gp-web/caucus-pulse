@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import { isDeepStrictEqual } from 'node:util';
 
 const CAPTURE_FIELDS = ['sinceId', 'sinceIdSupported', 'recentNewCounts', 'pollProgress',
-  'lastPollAt', 'lastPollAttemptAt', 'lastPollSuccessAt', 'lastPollOutcome'];
+  'lastPollAt', 'lastPollRunId', 'lastPollRunAttempt', 'lastPollAttemptAt', 'lastPollSuccessAt', 'lastPollOutcome'];
 const pick = (s, keys) => Object.fromEntries(keys.filter((k) => Object.hasOwn(s, k)).map((k) => [k, s[k]]));
 function choose(base, a, b, label) {
   if (isDeepStrictEqual(a, b) || isDeepStrictEqual(b, base)) return a;

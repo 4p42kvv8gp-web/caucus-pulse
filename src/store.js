@@ -56,6 +56,13 @@ export function loadState(file = statePath) {
   if (stored.recentNewCounts != null && (!Array.isArray(stored.recentNewCounts) || stored.recentNewCounts.some((n) => !Number.isSafeInteger(n) || n < 0))) {
     throw new Error('data/state.json has invalid recent capture counts');
   }
+  if (Object.hasOwn(stored, 'lastPollRunId') || Object.hasOwn(stored, 'lastPollRunAttempt')) {
+    if (typeof stored.lastPollRunId !== 'string' || !/^[1-9]\d*$/.test(stored.lastPollRunId)
+        || !Number.isSafeInteger(stored.lastPollRunAttempt) || stored.lastPollRunAttempt < 1
+        || typeof stored.lastPollAt !== 'string' || !Number.isFinite(Date.parse(stored.lastPollAt))) {
+      throw new Error('data/state.json has an invalid completed capture run identity');
+    }
+  }
   if (stored.sinceIdSupported != null && typeof stored.sinceIdSupported !== 'boolean') throw new Error('Invalid sinceIdSupported state');
   for (const key of ['pollProgress', 'listBackfillProgress']) {
     const progress = stored[key];

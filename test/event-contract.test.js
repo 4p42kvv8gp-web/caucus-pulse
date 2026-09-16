@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { buildEventRequest, validateEventResponse, EVENT_MAX_POSTS, EVENT_MAX_REQUEST_CHARS } from '../src/event-contract.js';
 import { requestManifest } from '../src/classification-queue.js';
 
@@ -127,6 +128,69 @@ test('unresolved references are explicit and consistent with assignment flags', 
   rejects({ ...parsed, unresolved: [] }, posts, 'inconsistent-unresolved-status');
   rejects({ ...parsed, unresolved: ['1', '1'] }, posts, 'duplicate-unresolved-id');
   rejects({ ...parsed, unresolved: ['999'] }, posts, 'unknown-unresolved-id');
+});
+
+test('an exact literal span cannot make an unresolved reference an event member', () => {
+  const posts = [post('1'), post('2'), post('3', { text: 'This cannot happen again.' })];
+  const parsed = body(posts, [event(posts)], {
+    assignments: posts.map((p) => row(p, { needs_context: p.id === '3' })), unresolved: ['3']
+  });
+  rejects(parsed, posts, 'unresolved-source-event-membership');
+  // Either uncertainty representation protects membership independently; the
+  // existing consistency guard also rejects the mismatched representations.
+  rejects({ ...parsed, unresolved: [] }, posts, 'unresolved-source-event-membership');
+  rejects({ ...parsed, assignments: posts.map((p) => row(p)) }, posts, 'unresolved-source-event-membership');
+  const request = buildEventRequest(posts, { ...opts, model: 'offline-model' });
+  assert.match(request.params.system[0].text, /needs_context true or listed in unresolved must stay out of every\nevent/);
+});
+
+// Read the two retained historical answers as fixed offline controls. This
+// never invokes the runner, mutates receipts, or changes the paid-attempt cap.
+const savedEventPilot = () => JSON.parse(fs.readFileSync(new URL('../data/events/shadow.json', import.meta.url), 'utf8'));
+const savedOptions = (receipt) => ({ runAsOf: receipt.plan.runAsOf, mode: receipt.plan.mode, policyVersion: receipt.plan.policyVersion });
+
+test('both original saved event answers remain valid, with unresolved posts excluded', () => {
+  const state = savedEventPilot(), before = JSON.stringify(state);
+  const expected = {
+    'johnson-ai-oversight': { events: 1, unresolved: '2099512150737719793', members: 4 },
+    'shared-actors-distinct-events': { events: 3, unresolved: '2099471129777668544', members: 1 }
+  };
+  for (const [caseId, control] of Object.entries(expected)) {
+    const receipt = Object.values(state.receipts).find((r) => r.plan.caseId === caseId);
+    assert.ok(receipt, `missing saved control ${caseId}`);
+    const result = validateEventResponse(receipt.response, receipt.plan.posts, savedOptions(receipt));
+    assert.equal(result.valid, true, JSON.stringify(result.errors));
+    assert.equal(result.events.length, control.events);
+    assert.deepEqual(result.unresolved, [control.unresolved]);
+    assert.ok(result.events.every((e) => !e.ids.includes(control.unresolved)));
+    assert.deepEqual(result.events.map((e) => e.counts.members24h), Array(control.events).fill(control.members));
+    assert.deepEqual(result.events.map((e) => e.thresholdMet), Array(control.events).fill(control.members >= 3));
+  }
+  assert.equal(JSON.stringify(state), before, 'validation must not alter original saved evidence or receipts');
+});
+
+test('saved-source counterexample cannot turn Lieu\'s unresolved statement into a third event member', () => {
+  const state = savedEventPilot(), before = JSON.stringify(state);
+  const receipt = Object.values(state.receipts).find((r) => r.plan.caseId === 'johnson-ai-oversight');
+  const response = structuredClone(receipt.response);
+  const answerBlock = response.content.find((block) => block.type === 'text');
+  const parsed = JSON.parse(answerBlock.text), ambiguousId = '2099512150737719793';
+  const ids = ['2099487281677554158', '2099508362484302050', ambiguousId];
+  assert.equal(parsed.assignments.find((a) => a.id === ambiguousId).needs_context, true);
+  assert.ok(parsed.unresolved.includes(ambiguousId));
+  assert.equal(new Set(receipt.plan.posts.filter((p) => ids.includes(p.id)).map((p) => p.personId)).size, 3);
+  const proposal = parsed.events[0];
+  proposal.ids = ids;
+  proposal.supports = proposal.supports.filter((support) => ids.includes(support.id));
+  proposal.supports.push({ id: ambiguousId, field: 'text', quote: 'It’s time for Congress to step up.' });
+  assert.ok(receipt.plan.posts.find((p) => p.id === ambiguousId).text.includes(proposal.supports.at(-1).quote));
+  answerBlock.text = JSON.stringify(parsed);
+  const result = validateEventResponse(response, receipt.plan.posts, savedOptions(receipt));
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((e) => e.code === 'unresolved-source-event-membership' && e.id === ambiguousId));
+  assert.deepEqual(result.events, []);
+  assert.deepEqual(result.assignments, []);
+  assert.equal(JSON.stringify(state), before, 'counterexample must only mutate an in-memory response copy');
 });
 
 test('incomplete reposts are preserved as abstention controls and cannot contribute event members', () => {
