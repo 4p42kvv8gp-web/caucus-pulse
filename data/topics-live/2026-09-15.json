@@ -1,7 +1,7 @@
 {
  "date": "2026-09-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-16T19:00:30.255Z",
+ "classifiedAt": "2026-09-16T21:13:33.211Z",
  "assignments": {
   "2099714786472665566": [
    [
@@ -1961,24 +1961,24 @@
     "2099840652892635231",
     "2099841271992922590",
     "2099841375537692868",
-    "2099841396362359188",
-    "2099841740144259287"
+    "2099841396362359188"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf7difQHdbpjweGje29tU\"}",
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf7os7uNVksPg5kKxDfvU\"}",
    "reasonCode": "provider-credits",
    "inference": {
-    "attemptedAt": "2026-09-16T19:00:29.682Z",
-    "observedAt": "2026-09-16T19:00:30.237Z",
+    "attemptedAt": "2026-09-16T21:13:32.667Z",
+    "observedAt": "2026-09-16T21:13:33.192Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "provider-credits",
     "acceptedCount": 0,
-    "retryCount": 25
+    "retryCount": 24
    }
   },
   "live_chunk-1": {
    "acceptedIds": [],
    "retryIds": [
+    "2099841740144259287",
     "2099841802354262057",
     "2099841804979864048",
     "2099842492317245842",
@@ -2014,11 +2014,7 @@
     "2099853840749040013",
     "2099853968608223696",
     "2099854286913994889",
-    "2099854723188731931",
-    "2099855077527687286",
-    "2099855819227427097",
-    "2099855932507160588",
-    "2099856494724341786"
+    "2099854723188731931"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -2026,6 +2022,10 @@
   "live_chunk-2": {
    "acceptedIds": [],
    "retryIds": [
+    "2099855077527687286",
+    "2099855819227427097",
+    "2099855932507160588",
+    "2099856494724341786",
     "2099856635527143854",
     "2099856760701915359",
     "2099856914016243937",
@@ -2055,12 +2055,7 @@
     "2099864564359643203",
     "2099864667073990895",
     "2099864682647425120",
-    "2099864738695983317",
-    "2099864965020590345",
-    "2099864992552026577",
-    "2099865075121115159",
-    "2099865149565706527",
-    "2099865365555585103"
+    "2099864738695983317"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -2068,6 +2063,11 @@
   "live_chunk-3": {
    "acceptedIds": [],
    "retryIds": [
+    "2099864965020590345",
+    "2099864992552026577",
+    "2099865075121115159",
+    "2099865149565706527",
+    "2099865365555585103",
     "2099865377119359303",
     "2099866046148509757",
     "2099866529206571038",
@@ -2096,24 +2096,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-16T19:00:29.682Z",
-   "observedAt": "2026-09-16T19:00:30.237Z",
+   "attemptedAt": "2026-09-16T21:13:32.667Z",
+   "observedAt": "2026-09-16T21:13:33.192Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 25
+   "retryCount": 24
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-16T19:00:29.682Z",
-   "observedAt": "2026-09-16T19:00:30.237Z",
+   "attemptedAt": "2026-09-16T21:13:32.667Z",
+   "observedAt": "2026-09-16T21:13:33.192Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 25
+   "retryCount": 24
   }
  },
- "updatedAt": "2026-09-16T19:00:30.261Z"
+ "updatedAt": "2026-09-16T21:13:33.216Z"
 }
