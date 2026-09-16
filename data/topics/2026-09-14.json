@@ -1,7 +1,7 @@
 {
  "date": "2026-09-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-16T08:43:01.175Z",
+ "classifiedAt": "2026-09-16T12:40:53.652Z",
  "assignments": {
   "2099662850125873363": [
    [
@@ -16702,6 +16702,7 @@
   "2099541843687993854",
   "2099542644300939282",
   "2099543149056024632",
+  "2099552623896498620",
   "2099561382635045349",
   "2099561718028316869",
   "2099562389922353514",
@@ -16709,6 +16710,7 @@
   "2099567658098217102",
   "2099569351766802495",
   "2099575758595219746",
+  "2099578510759047497",
   "2099589125762387995",
   "2099590981729341825",
   "2099602691991449895",
@@ -16782,6 +16784,7 @@
     "2099541843687993854",
     "2099542644300939282",
     "2099543149056024632",
+    "2099552623896498620",
     "2099561382635045349",
     "2099561718028316869",
     "2099562389922353514",
@@ -16789,6 +16792,7 @@
     "2099567658098217102",
     "2099569351766802495",
     "2099575758595219746",
+    "2099578510759047497",
     "2099589125762387995",
     "2099590981729341825",
     "2099602691991449895",
@@ -17669,39 +17673,39 @@
     "2100068209982333247",
     "2100068598547120316"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf6pdciwceLrYiUsPYvUo\"}",
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cf78mYgBHJbrLTxqzHhbG\"}",
    "reasonCode": "provider-credits",
    "inference": {
-    "attemptedAt": "2026-09-16T08:43:00.612Z",
-    "observedAt": "2026-09-16T08:43:01.162Z",
+    "attemptedAt": "2026-09-16T12:40:50.674Z",
+    "observedAt": "2026-09-16T12:40:53.641Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "provider-credits",
     "acceptedCount": 0,
-    "retryCount": 920
+    "retryCount": 922
    }
   }
  },
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-16T08:43:00.612Z",
-   "observedAt": "2026-09-16T08:43:01.162Z",
+   "attemptedAt": "2026-09-16T12:40:50.674Z",
+   "observedAt": "2026-09-16T12:40:53.641Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 920
+   "retryCount": 922
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-16T08:43:00.612Z",
-   "observedAt": "2026-09-16T08:43:01.162Z",
+   "attemptedAt": "2026-09-16T12:40:50.674Z",
+   "observedAt": "2026-09-16T12:40:53.641Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 920
+   "retryCount": 922
   }
  }
 }
