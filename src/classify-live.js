@@ -10,6 +10,7 @@ import { loadNews } from './news-context.js';
 import { readQueue, queuePath, withQueueLock } from './classification-queue.js';
 import { quotedResolver } from './quoted.js';
 import { loadSemanticOrNull } from './semantic.js';
+import { inferenceFailureReason, inferenceReceipt } from './inference-health.js';
 
 export const liveTopicsPath = (date) => p('data', 'topics-live', `${date}.json`);
 
@@ -144,6 +145,7 @@ async function classifyLiveUnlocked(records, {
   publish(out); // Record pending IDs before attempting authentication or inference.
   let items = [];
   if (enabled && configured() && capacity > 0) {
+    let authAttemptedAt = null;
     try {
       for (const pl of plans) {
         pl.toClassify = await hints(pl.toClassify, tax);
@@ -159,10 +161,25 @@ async function classifyLiveUnlocked(records, {
       publish(out); // persist enriched-input blocks before any provider call
       if (items.length) {
         const { requests } = planChunkRequests(items, tax, model, 'live_', requestOptions);
-        if (requests.length) client ||= await clientFactory();
-        out = await classifySync(client, requests, tax, { ...(refresh ? { refresh } : {}), onResult: (partial) => { out = partial; publish(partial); }, log: warn });
+        if (requests.length && !client) {
+          authAttemptedAt = now();
+          client = await clientFactory();
+          authAttemptedAt = null;
+        }
+        out = await classifySync(client, requests, tax, { ...(refresh ? { refresh } : {}), now, onResult: (partial) => { out = partial; publish(partial); }, log: warn });
       }
-    } catch (e) { warn(`[classify-live] work remains pending: ${e.message}`); }
+    } catch (e) {
+      // Local enrichment/sizing/publication work is not an inference attempt.
+      // Only an attempted credential setup may add a receipt here; actual
+      // model calls publish their own receipts inside classifySync.
+      if (authAttemptedAt) {
+        const row = { acceptedIds: [], retryIds: items.map((item) => item.id),
+          error: String(e.message || e).slice(0, 300), reasonCode: inferenceFailureReason(e) };
+        row.inference = inferenceReceipt(row, { attemptedAt: authAttemptedAt, observedAt: now() });
+        out.requestStatus.live_setup = row;
+      }
+      warn(`[classify-live] work remains pending: ${e.message}`);
+    }
   }
   publish(out);
   const pending = plans.reduce((n, pl) => n + pendingIdsFor(pl.tweets, read(livePath(pl.date), null)).length, 0);

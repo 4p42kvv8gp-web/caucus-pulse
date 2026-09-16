@@ -123,10 +123,11 @@ export async function refreshSource(source, { cfg, fetchImpl = fetch, known = ne
     if (prior) {
       // Retain the last readable excerpt while attempting a refresh. A
       // timeout is acquisition failure, not a publisher correction.
-      Object.assign(base, { id: prior.id, url: prior.url, passages: prior.passages, extract: prior.extract, lang: prior.lang, publishedAt: f.publishedAt || prior.publishedAt, fetchError: prior.fetchError, fetchedAt: prior.fetchedAt, bodyFetchedAt: prior.bodyFetchedAt, bodyAttemptedAt: prior.bodyAttemptedAt, lastSeenAt: now });
+      Object.assign(base, { id: prior.id, url: prior.url, passages: prior.passages, extract: prior.extract, extractReason: prior.extractReason || null, lang: prior.lang, publishedAt: f.publishedAt || prior.publishedAt, fetchError: prior.fetchError, fetchedAt: prior.fetchedAt, bodyFetchedAt: prior.bodyFetchedAt, bodyAttemptedAt: prior.bodyAttemptedAt, lastSeenAt: now });
     }
     const lastAttempt = Date.parse(prior?.bodyAttemptedAt || prior?.bodyFetchedAt || prior?.fetchedAt || 0);
-    const retryHours = prior?.fetchError || prior?.extract === 'failed' || prior?.extract === 'headline-only' ? 24 : (cfg.fetch?.body_refresh_hours ?? 6);
+    const summaryOnly = prior?.extractReason === 'public-audio-summary-only' && !prior?.fetchError;
+    const retryHours = !summaryOnly && (prior?.fetchError || prior?.extract === 'failed' || prior?.extract === 'headline-only') ? 24 : (cfg.fetch?.body_refresh_hours ?? 6);
     const due = !prior || !Number.isFinite(lastAttempt) || Date.parse(now) - lastAttempt >= retryHours * 3_600_000;
     if (source.bodies && due && bodies < (cfg.fetch?.max_bodies_per_source ?? 15)) {
       if (!(await bodyAllowed(url, fetchOpts))) { bodiesSkipped++; items.push(base); continue; }
@@ -139,8 +140,10 @@ export async function refreshSource(source, { cfg, fetchImpl = fetch, known = ne
           const art = extractArticle(page.text, { url: page.url, passageChars: cfg.fetch?.passage_chars, maxPassages: cfg.fetch?.max_passages });
           let canonical = page.url;
           try { canonical = allowedPublicUrl(art.canonical || page.url, { base: page.url, allowedHosts }); } catch { /* retain actual fetched publisher URL */ }
-          if (art.extract === 'body' || prior?.extract !== 'body') {
-            Object.assign(base, { url: canonical, publishedAt: f.publishedAt || art.publishedAt, passages: art.passages, extract: art.extract, lang: art.lang, title: base.title || art.title, bodyFetchedAt: now, fetchError: null });
+          // A recognized public audio-only layout proves the old body was a
+          // summary/notice, unlike a timeout or an unknown layout. Correct it.
+          if (art.extract === 'body' || prior?.extract !== 'body' || art.extractReason === 'public-audio-summary-only') {
+            Object.assign(base, { url: canonical, publishedAt: f.publishedAt || art.publishedAt, passages: art.passages, extract: art.extract, extractReason: art.extractReason || null, lang: art.lang, title: base.title || art.title, bodyFetchedAt: now, fetchError: null });
             base.id = itemId(base.url);
           } else {
             base.fetchError = 'No readable article passages on refresh; retaining earlier excerpt';

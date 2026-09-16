@@ -119,6 +119,53 @@ export function isoDate(s) {
 
 // ── Articles ────────────────────────────────────────────────────────────
 
+// NPR's article header closes before its story text. Its audio-only pages
+// expose a short summary but no transcript, and its transcripts use optional
+// (sometimes doubled) <p> start tags. Restrict these known layouts to the
+// declared content container; unrelated notices elsewhere are not reporting.
+const htmlAttr = (attrs, name) => (attrs.match(new RegExp(`(?:^|\\s)${name}\\s*=\\s*["']([^"']*)["']`, 'i')) || [])[1] || '';
+const htmlClasses = (attrs) => new Set(htmlAttr(attrs, 'class').split(/\s+/));
+function divBlock(html, predicate) {
+  const tags = /<\/?div\b([^>]*)>/gi;
+  let depth = 0;
+  let start = null;
+  let opening = null;
+  for (const m of html.matchAll(tags)) {
+    const closing = /^<\//.test(m[0]);
+    if (start === null) {
+      if (!closing && predicate(m[1])) { opening = m.index; start = m.index + m[0].length; depth = 1; }
+    } else {
+      depth += closing ? -1 : 1;
+      if (depth === 0) return { content: html.slice(start, m.index), start: opening, end: m.index + m[0].length };
+    }
+  }
+  return null;
+}
+function nprArticleScope(html, url) {
+  let host;
+  try { host = new URL(url).hostname.toLowerCase(); } catch { return null; }
+  if (host !== 'npr.org' && !host.endsWith('.npr.org')) return null;
+  const story = divBlock(html, (attrs) => htmlAttr(attrs, 'id') === 'storytext');
+  const transcript = divBlock(html, (attrs) => htmlClasses(attrs).has('transcript') && htmlClasses(attrs).has('storytext'));
+  if (transcript !== null) return { html: transcript.content, transcript: true };
+  // Unknown publisher markup is not evidence of article prose and is not an
+  // authoritative downgrade of any earlier successfully acquired excerpt.
+  if (story === null) return { html: '' };
+  const body = html.match(/<body\b([^>]*)>/i)?.[1] || '';
+  const classes = htmlClasses(body);
+  const declaredSummary = stripHtml(metaContent(html, 'og:description') || metaContent(html, 'description')).replace(/\s+/g, ' ').trim();
+  const visibleStory = stripHtml(story.content).replace(/\s+/g, ' ').trim();
+  if (classes.has('is-DACS-only') && classes.has('no-transcript') && declaredSummary && visibleStory === declaredSummary) return { html: '', summaryOnly: true };
+  // Captions have <p>s inside a div rather than a class on the paragraph.
+  let prose = story.content;
+  while (true) {
+    const block = divBlock(prose, (attrs) => ['caption-wrap', 'caption', 'imagewrap'].some((name) => htmlClasses(attrs).has(name)));
+    if (!block) break;
+    prose = prose.slice(0, block.start) + prose.slice(block.end);
+  }
+  return { html: prose, transcript: false };
+}
+
 // From a public article page: canonical URL, publication time when the page
 // declares one, and up to `maxPassages` readable paragraphs of at most
 // `passageChars` each — an excerpt, never the article. Paragraphs come from
@@ -131,12 +178,21 @@ export function extractArticle(html, { url, passageChars = 600, maxPassages = 3 
   const publishedAt = isoDate(metaContent(src, 'article:published_time') || metaContent(src, 'datePublished') || jsonLd(src, 'datePublished'));
   const lang = (src.match(/<html\b[^>]*\blang=["']([a-zA-Z-]+)["']/i) || [])[1] || null;
   const title = stripHtml(metaContent(src, 'og:title') || tag(src, 'title'));
-  const cleaned = src.replace(/<(nav|header|footer|aside|figure|figcaption|form)\b[\s\S]*?<\/\1>/gi, ' ');
-  const collect = (scope) => {
+  const cleaned = src.replace(/<!--[\s\S]*?-->/g, ' ').replace(/<(script|style|noscript|svg|iframe|nav|header|footer|aside|figure|figcaption|form)\b[\s\S]*?<\/\1>/gi, ' ');
+  const collect = (scope, transcript = false) => {
     const out = [];
-    for (const m of scope.matchAll(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi)) {
-      if (/class=["'][^"']*(caption|credit|byline|dateline|meta|promo|newsletter)/i.test(m[1])) continue;
-      const t = stripHtml(m[2]).replace(/\n+/g, ' ').trim();
+    let speaker = '';
+    const paragraphPattern = transcript ? /<p\b([^>]*)>([\s\S]*?)(?=<p\b|<\/p>|$)/gi : /<p\b([^>]*)>([\s\S]*?)<\/p>/gi;
+    for (const m of scope.matchAll(paragraphPattern)) {
+      if (/class=["'][^"']*(caption|credit|byline|dateline|meta|promo|newsletter|disclaimer)/i.test(m[1])) continue;
+      let t = stripHtml(m[2]).replace(/\n+/g, ' ').trim();
+      // A speaker label in its own implicit paragraph belongs to the next
+      // spoken paragraph; retaining it avoids stripping attribution.
+      if (transcript && /^[A-ZÀ-ÖØ-Þ][A-ZÀ-ÖØ-Þ ,.'’()-]{1,100}:$/.test(t)) { speaker = t; continue; }
+      if (transcript && speaker && t && !/^\(/.test(t)) {
+        if (!/^[A-ZÀ-ÖØ-Þ][A-ZÀ-ÖØ-Þ ,.'’()-]{1,100}:/.test(t)) t = `${speaker} ${t}`;
+        speaker = '';
+      }
       if (t.length < 40) continue;
       if (/^(advertisement|sign up|subscribe|read more|file\s*[-–—]|photo\b|image\b|credit\b)/i.test(t)) continue;
       if (/\b(getty images|ap photo|reuters\/|\/ap\b|photo by|photograph by)\b/i.test(t) && t.length < 240) continue;
@@ -145,13 +201,19 @@ export function extractArticle(html, { url, passageChars = 600, maxPassages = 3 
     }
     return out;
   };
-  // <article> first; when it wraps only the headline (NPR's pages did),
-  // the prose is elsewhere on the page, so fall back to the whole body.
-  const art = cleaned.match(/<article\b[\s\S]*?<\/article>/i);
-  let paragraphs = art ? collect(art[0]) : [];
-  if (!paragraphs.length) paragraphs = collect(cleaned);
+  // Use NPR's declared text containers; generic publishers keep the existing
+  // <article>-first fallback for pages whose header wraps no prose.
+  const npr = nprArticleScope(cleaned, url);
+  let paragraphs;
+  if (npr) paragraphs = collect(npr.html, npr.transcript);
+  else {
+    const art = cleaned.match(/<article\b[\s\S]*?<\/article>/i);
+    paragraphs = art ? collect(art[0]) : [];
+    if (!paragraphs.length) paragraphs = collect(cleaned);
+  }
   const passages = paragraphs.map((t) => (t.length > passageChars ? `${t.slice(0, passageChars - 1)}…` : t));
-  return { canonical, publishedAt, lang, title, passages, extract: passages.length ? 'body' : 'headline-only' };
+  return { canonical, publishedAt, lang, title, passages, extract: passages.length ? 'body' : 'headline-only',
+    ...(npr?.summaryOnly ? { extractReason: 'public-audio-summary-only' } : {}) };
 }
 
 function metaContent(html, prop) {

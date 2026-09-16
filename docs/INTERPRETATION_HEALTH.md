@@ -1,0 +1,17 @@
+# Interpretation health
+
+Capture completion, dashboard publication and successful interpretation are separate facts. A collected post without an accepted interpretation remains pending; an accepted empty topic list is complete. Existing source and original-post links stay available during an inference outage.
+
+Each synchronous request now records its actual attempt time and the time its result was observed, with accepted/retry counts and a closed failure-reason vocabulary. Daily files retain the latest attempt, accepted response and failure across metadata-only rewrites. `classifiedAt` and `updatedAt` remain legacy file timestamps and are never treated as successful inference timestamps. A failure while preparing credentials also leaves a receipt and the pending IDs intact.
+
+Batch results retain the saved submission time. Results from a batch submitted before a later live failure cannot establish that new model requests work again merely because the batch was collected later. A reconstructed legacy batch with no submission timestamp cannot establish a fresh attempt or recovery.
+
+Authentication or submission failure for new nightly work also records an attempted interpretation. Accessing an already paid batch is separate: retrieval/authentication failures propagate to the workflow and retain the durable queue, but do not create a new inference attempt. A later successful retrieval is not evidence that new paid submissions are available. Every result in a collected batch uses one observation timestamp because manifest order does not establish provider execution order; failures win tied timestamps.
+
+The public `classification.health` reports current request health and exact rolling-24-hour coverage separately. A newer accepted request clears an older provider failure; queued sources keep coverage partial until they are settled. Partial or rejected model output is degraded. Known provider credit/authentication failures are blocked. Without timed receipts, an unresolved legacy error is shown without inventing attempt or success times. New timed receipts supersede that ambiguous legacy fallback. Raw provider diagnostics are not copied into the public health view.
+
+Dashboard and Incidents display this state independently of source capture. Current inference failures pause displayed momentum, and partial topic/event views explain that missing matches do not establish silence. The official floor agenda remains available independently of model interpretation. Healthy request status is not a claim of semantic accuracy or complete source capture.
+
+A definite provider credit/authentication rejection defers the remaining synchronous chunks in that invocation, including later dates in a synchronous range run. Every unattempted source remains pending; it is not counted as an attempted or accepted request. A later ordinary run may recover normally. Transient overload and individual invalid responses keep the existing per-chunk behavior. This change does not purchase credits, change budget limits or initiate model tests.
+
+Validation covers actual request receipts, accepted empty assignments, malformed/partial replies, legacy migration, future timestamps, old batch completion after a new failure, metadata rewrites, deferred source IDs, credential setup errors and dashboard rendering/escaping. Tests use fake clients and public fixtures; production data is unchanged by development tests.

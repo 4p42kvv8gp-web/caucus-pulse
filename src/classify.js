@@ -18,6 +18,7 @@ import { correctionExamples } from './corrections.js';
 import { loadNews, evidenceForPosts, evidenceLine, reconsiderCandidates } from './news-context.js';
 import { loadFloor, floorEvidenceForPost } from './floor-context.js';
 import { readQueue, saveQueue, submitJob, finishJob, requestManifest, queuePath, withQueueLock } from './classification-queue.js';
+import { inferenceFailureReason, inferenceReceipt, mergeInferenceHealth, stopsInferenceRun } from './inference-health.js';
 
 export { loadTaxonomy, renderTaxonomy, validAssignments, parseJsonLoose, anchorIndex } from './taxonomy.js';
 
@@ -366,7 +367,7 @@ export const finishOut = (o) => ({ assignments: o.assignments, incidents: o.inci
 
 // Stream a finished batch's results, grouped by the custom_id prefix before
 // "chunk-" (empty string for single-day batches). Returns {prefix → result}.
-export async function collectResults(client, batchId, tax, manifest) {
+export async function collectResults(client, batchId, tax, manifest, { attemptedAt = null, now = () => new Date().toISOString() } = {}) {
   if (!manifest || typeof manifest !== 'object') throw new Error('Batch results require their saved request manifest');
   const byPrefix = new Map();
   const received = new Map();
@@ -381,15 +382,22 @@ export async function collectResults(client, batchId, tax, manifest) {
     if (received.has(id)) { received.set(id, null); continue; }
     received.set(id, result);
   }
+  // The result stream does not establish provider execution order. Give the
+  // whole collected batch one observation time so a later manifest entry
+  // cannot hide a failed peer merely by being iterated after it.
+  const observedAt = now();
   for (const [id, entry] of Object.entries(manifest)) {
     const out = bucket(id);
     const result = received.get(id);
     if (!result || result.result?.type !== 'succeeded') {
       out.failedChunks++;
       out.requestStatus[id] = { acceptedIds: [], retryIds: entry.ids, error: result?.result?.type || (received.has(id) ? 'duplicate-result' : 'missing-result') };
+      out.requestStatus[id].reasonCode = result?.result?.error ? inferenceFailureReason(result.result.error) : 'invalid-response';
+      out.requestStatus[id].inference = inferenceReceipt(out.requestStatus[id], { attemptedAt, observedAt, kind: 'batch-result' });
       continue;
     }
     mergeMessage(result.result.message, tax, out, entry.ids, id, entry);
+    out.requestStatus[id].inference = inferenceReceipt(out.requestStatus[id], { attemptedAt, observedAt, kind: 'batch-result' });
   }
   return new Map([...byPrefix].map(([k, v]) => [k, finishOut(v)]));
 }
@@ -401,7 +409,7 @@ export function mergeMessage(message, tax, out, expectedIds, requestId = 'reques
   const parsed = textBlock && parseJsonLoose(textBlock.text);
   if (!parsed) {
     out.failedChunks++;
-    out.requestStatus[requestId] = { acceptedIds: [], retryIds: expectedIds, error: message?.stop_reason || 'unparseable' };
+    out.requestStatus[requestId] = { acceptedIds: [], retryIds: expectedIds, error: message?.stop_reason || 'unparseable', reasonCode: 'invalid-response' };
     return;
   }
   const result = mergeParsed(parsed, tax, out, expectedIds, manifestEntry);
@@ -414,11 +422,13 @@ export function mergeMessage(message, tax, out, expectedIds, requestId = 'reques
 // ~16 requests a day is a couple of dollars — the escape hatch for a batch
 // that sits in Anthropic's queue for hours (2026-09-11: 0 of 16 done after
 // two hours) while the dashboard shows a day with no topics.
-export async function classifySync(client, requests, tax, { log = () => {}, refresh = refreshIdentityToken, onResult = null } = {}) {
+export async function classifySync(client, requests, tax, { log = () => {}, refresh = refreshIdentityToken, onResult = null, now = () => new Date().toISOString() } = {}) {
   const out = emptyOut();
   for (const [i, req] of requests.entries()) {
     const manifestEntry = requestManifest([req])[req.custom_id];
     const ids = manifestEntry.ids;
+    const attemptedAt = now();
+    let stop = false;
     try {
       await refresh();
       const res = await client.messages.create(req.params);
@@ -426,10 +436,23 @@ export async function classifySync(client, requests, tax, { log = () => {}, refr
       log(`[classify] sync ${i + 1}/${requests.length}: ${res.stop_reason}, ${res.usage?.output_tokens ?? '?'} output tokens`);
     } catch (e) {
       out.failedChunks++;
-      out.requestStatus[req.custom_id] = { acceptedIds: [], retryIds: ids, error: String(e.message || e).slice(0, 300) };
+      const reasonCode = inferenceFailureReason(e);
+      out.requestStatus[req.custom_id] = { acceptedIds: [], retryIds: ids, error: String(e.message || e).slice(0, 300), reasonCode };
+      stop = stopsInferenceRun(reasonCode);
       log(`[classify] sync ${i + 1}/${requests.length} failed: ${e.message}`);
     }
+    out.requestStatus[req.custom_id].inference = inferenceReceipt(out.requestStatus[req.custom_id], { attemptedAt, observedAt: now() });
+    if (stop) {
+      // These sources remain pending; a known account-wide rejection cannot
+      // be repaired by sending the remaining chunks in the same invocation.
+      for (const next of requests.slice(i + 1)) out.requestStatus[next.custom_id] = {
+        acceptedIds: [], retryIds: requestManifest([next])[next.custom_id].ids,
+        deferred: true, reasonCode: out.requestStatus[req.custom_id].reasonCode
+      };
+      log(`[classify] remaining ${requests.length - i - 1} request(s) deferred after ${out.requestStatus[req.custom_id].reasonCode}`);
+    }
     if (onResult) await onResult(finishOut(out));
+    if (stop) break;
   }
   return finishOut(out);
 }
@@ -594,8 +617,11 @@ export function mergeDay(plan, result, { prior } = {}) {
   for (const id of plan.inputEvaluatedIds || []) delete priorInputBlocks[id];
   const inputBlocks = Object.fromEntries(Object.entries({ ...priorInputBlocks, ...plan.inputBlocks, ...result.inputBlocks })
     .filter(([id]) => sourceIds.has(id) && pending.has(id) && !previous.corrected?.[id]));
+  const requestStatus = Object.fromEntries(Object.entries({ ...previous.requestStatus, ...result.requestStatus })
+    .filter(([, row]) => [...(row.acceptedIds || []), ...(row.retryIds || [])].some((id) => sourceIds.has(id))));
+  const inference = mergeInferenceHealth(previous.inference, requestStatus);
   return {
-    day: { date, assignments: merged, incidents, provenance, needsContext, inputBlocks, contextVersion: Math.max(0, ...Object.values(provenance).map((p) => p.contextVersion || 0)), emerging, unclassified, pendingIds, complete: !pendingIds.length, anchored, failedChunks, droppedSubs, echoedSubs, validationErrors: result.validationErrors || [], requestStatus: result.requestStatus || {}, corrected: keepSource(previous.corrected) },
+    day: { date, assignments: merged, incidents, provenance, needsContext, inputBlocks, contextVersion: Math.max(0, ...Object.values(provenance).map((p) => p.contextVersion || 0)), emerging, unclassified, pendingIds, complete: !pendingIds.length, anchored, failedChunks, droppedSubs, echoedSubs, validationErrors: result.validationErrors || [], requestStatus, inference, corrected: keepSource(previous.corrected) },
     stats: {
       classified: Object.keys(assignments).length,
       inherited: Object.keys(inherited).length,
@@ -633,6 +659,7 @@ export function writeDay(plan, result, model, { pathFor = topicsPath, write = wr
     echoedSubs: day.echoedSubs,
     validationErrors: day.validationErrors,
     requestStatus: day.requestStatus,
+    inference: day.inference,
     ...(Object.keys(day.corrected).length ? { corrected: day.corrected } : {})
   });
   return stats;
@@ -678,6 +705,19 @@ async function runClassificationUnlocked({
   }
   let job = queue.jobs[0];
   let plans;
+  const recordFailure = (error, ids, attemptedAt, requestId) => {
+    const out = finishOut(emptyOut());
+    const row = { acceptedIds: [], retryIds: [...ids], error: String(error.message || error).slice(0, 300), reasonCode: inferenceFailureReason(error) };
+    row.inference = inferenceReceipt(row, { attemptedAt, observedAt: new Date(clock()).toISOString() });
+    out.requestStatus[requestId] = row;
+    for (const pl of plans) publishCurrent(pl, out, model);
+  };
+  const ensureClient = async (ids) => {
+    if (client) return;
+    const attemptedAt = new Date(clock()).toISOString();
+    try { client = await clientFactory(); }
+    catch (error) { recordFailure(error, ids, attemptedAt, 'client_setup'); throw error; }
+  };
   if (job) {
     if (dryRun) return { status: 'pending', batchId: job.batchId, dates: job.dates, submissionUnknown: !job.batchId };
     if (!job.batchId) throw new Error('A classification submission has an unknown outcome. Reconcile its provider batch ID in data/classification-batches.json before submitting again.');
@@ -719,7 +759,8 @@ async function runClassificationUnlocked({
     if (!requests.length) {
       return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', dates: unfinished };
     }
-    client ||= await clientFactory();
+    const requestedIds = Object.values(requestManifest(requests)).flatMap((entry) => entry.ids);
+    await ensureClient(requestedIds);
     if (sync) {
       const stats = [];
       for (const pl of plans) {
@@ -728,12 +769,25 @@ async function runClassificationUnlocked({
         const s = publishCurrent(pl, result, model);
         stats.push({ date: pl.date, ...s });
         log(summarize(pl.date, s));
+        if (Object.values(result.requestStatus || {}).some((row) => row.error && stopsInferenceRun(row.reasonCode))) break;
       }
       return { status: plans.every((pl) => dayComplete(loadDayFn(pl.date), topicsFor(pl.date))) ? 'complete' : 'partial', dates: unfinished, stats };
     }
-    job = await submitJob(client, queue, { requests, dates: unfinished, model, taxonomy: tax, source }, { file: queueFile });
+    let submissionAttemptedAt = null;
+    try {
+      job = await submitJob(client, queue, { requests, dates: unfinished, model, taxonomy: tax, source }, {
+        file: queueFile, onAttempt: () => { submissionAttemptedAt = new Date(clock()).toISOString(); }
+      });
+    } catch (error) {
+      if (submissionAttemptedAt) recordFailure(error, requestedIds, submissionAttemptedAt, 'batch_submission');
+      throw error; // submitJob retains its existing uncertain-submission contract
+    }
     log(`[classify] submitted ${job.batchId}: ${requests.length} request(s), ${unfinished.join(', ')}`);
   }
+  // Reading an already submitted batch is not a new inference submission.
+  // Retrieval/auth failures leave the paid queue intact and propagate to the
+  // runner, but must not supersede actual submission receipts or manufacture
+  // a model outage that successful collection can never clear.
   client ||= await clientFactory();
   const deadline = clock() + Math.max(0, Number.isFinite(maxWaitMinutes) ? maxWaitMinutes : 0) * 60_000;
   while (true) {
@@ -743,7 +797,7 @@ async function runClassificationUnlocked({
     if (clock() >= deadline) return { status: 'pending', batchId: job.batchId, dates: job.dates };
     await sleep(Math.min(30_000, Math.max(0, deadline - clock())));
   }
-  const results = await collectResults(client, job.batchId, tax, job.manifest);
+  const results = await collectResults(client, job.batchId, tax, job.manifest, { attemptedAt: job.submittedAt });
   const stats = [];
   for (const pl of plans) {
     const result = results.get(`${pl.date}_`) || (job.dates.length === 1 ? results.get('') : null) || finishOut(emptyOut());

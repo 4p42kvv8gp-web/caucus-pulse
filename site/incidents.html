@@ -24,6 +24,7 @@
   <div style="display:flex;align-items:center;gap:12px;flex:none;white-space:nowrap"><span id="updated" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#6e6e73"></span></div>
 </header>
 <main style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+  <section id="interpretation" aria-label="Interpretation status"></section>
   <section style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding:4px 0 6px">
     <div style="display:flex;flex-direction:column;gap:5px"><h1 style="margin:0;font-size:24px;line-height:1;font-weight:700;letter-spacing:0.01em;text-transform:uppercase;white-space:nowrap">Incident desk</h1><div id="counts" style="font-size:12px;color:#6e6e73"></div></div>
     <div id="statusseg" style="display:flex;gap:8px;align-items:center"></div>
@@ -43,7 +44,7 @@
 </main>
 </div>
 <script type="module">
-import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups, provisionalBadge, evidenceQuote, markEvidence, sourceLink, sourceAnchor, handleLink, postUrl, captureLabel, startRefresh } from './ui.js';
+import { esc, fmt, etTime, etWhen, headerDate, dot, badge, statusDot, copyText, loadRollups, provisionalBadge, evidenceQuote, markEvidence, sourceLink, sourceAnchor, handleLink, postUrl, captureLabel, interpretationNotice, startRefresh } from './ui.js';
 
 let D = null;
 const state = { status: 'All', selected: null, copied: false };
@@ -106,6 +107,7 @@ function briefOf(sel) {
 function render() {
   const all = incidents();
   updateCaptureLabel();
+  $('interpretation').innerHTML = interpretationNotice(D);
   const count = (s) => all.filter((i) => i.status === s).length;
   $('counts').textContent = `${count('provisional')} provisional · ${count('active')} active · ${count('monitoring')} monitoring · ${count('resolved')} resolved this week${D.incidentsFiltered ? ` · ${D.incidentsFiltered} flags filtered` : ''}`;
   $('statusseg').innerHTML = seg(['All', 'Provisional', 'Active', 'Monitoring', 'Resolved'], 'status');
@@ -125,7 +127,7 @@ function render() {
   $('results').innerHTML = `<div style="padding:14px 0;font-size:12px;color:#6e6e73;border-top:1px solid #f0f0f2">X search runs against accounts beyond the tracked list (police, local press, officials). It lights up when an X search connector is added — queries and saved chips are ready.</div>`;
 
   if (!sel) {
-    $('detail').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:13px">No incidents on the board. When a member responds to a breaking district emergency, the classifier opens a thread here.</div>';
+    $('detail').innerHTML = '<div style="padding:60px 0;text-align:center;color:#6e6e73;font-size:13px">No stored incidents on the board. Missing interpretations or uncaptured posts may leave incidents absent from this view.</div>';
     return;
   }
   const intel = intelOf(sel);

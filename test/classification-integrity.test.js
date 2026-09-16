@@ -28,6 +28,69 @@ function fixture(t, archive) {
   return { temp, topics, opts };
 }
 
+test('a known account rejection defers later synchronous dates without losing their pending IDs', async (t) => {
+  const { opts, topics } = fixture(t, { '2026-09-12': [post('1')], '2026-09-13': [post('2', '2026-09-13')] });
+  let calls = 0;
+  const result = await runClassification({ ...opts, sync: true,
+    evidence: async (items) => ({ items, contextVersion: 0 }),
+    client: { messages: { create: async () => {
+      calls++; throw Object.assign(new Error('Your credit balance is too low to access the Anthropic API.'), { status: 400 });
+    } } } });
+  assert.equal(result.status, 'partial'); assert.equal(calls, 1);
+  assert.deepEqual(topics.get('2026-09-12').pendingIds, ['1']);
+  assert.deepEqual(topics.get('2026-09-13').pendingIds, ['2']);
+  assert.equal(topics.get('2026-09-13').inference, null, 'unattempted date has no receipt');
+});
+
+test('nightly credential rejection records actual failed setup without inventing accepted inference', async (t) => {
+  const { opts, topics } = fixture(t, { '2026-09-12': [post('1')] });
+  await assert.rejects(runClassification({ ...opts,
+    evidence: async (items) => ({ items, contextVersion: 0 }),
+    clientFactory: async () => { throw Object.assign(new Error('Token exchange failed'), { status: 401 }); }
+  }), /Token exchange failed/);
+  assert.deepEqual(topics.get('2026-09-12').pendingIds, ['1']);
+  assert.equal(topics.get('2026-09-12').inference.lastAttempt.reasonCode, 'provider-auth');
+  assert.equal(topics.get('2026-09-12').inference.lastSuccess, null);
+});
+
+test('nightly submission failures record health without altering definite or uncertain queue recovery', async (t) => {
+  for (const [error, reason, queued] of [
+    [Object.assign(new Error('Your credit balance is too low to access the Anthropic API.'), { status: 400 }), 'provider-credits', 0],
+    [new Error('network lost after sending'), 'inference-error', 1]
+  ]) {
+    const { opts, topics } = fixture(t, { '2026-09-12': [post('1')] });
+    await assert.rejects(runClassification({ ...opts,
+      evidence: async (items) => ({ items, contextVersion: 0 }),
+      client: { messages: { batches: { create: async () => { throw error; } } } }
+    }));
+    assert.deepEqual(topics.get('2026-09-12').pendingIds, ['1']);
+    assert.equal(topics.get('2026-09-12').inference.lastAttempt.reasonCode, reason);
+    assert.equal(topics.get('2026-09-12').inference.lastSuccess, null);
+    assert.equal(readQueue(opts.queueFile).jobs.length, queued);
+    if (queued) assert.equal(readQueue(opts.queueFile).jobs[0].status, 'submission-unknown');
+  }
+});
+
+test('failed access to a paid batch preserves its queue without inventing a new inference attempt or blocking recovery', async (t) => {
+  const { opts, topics } = fixture(t, { '2026-09-12': [post('1')] });
+  let creates = 0, accessFails = true;
+  const client = { messages: { batches: {
+    create: async () => { creates++; return { id: 'pending-batch' }; },
+    retrieve: async () => { if (accessFails) throw Object.assign(new Error('Token exchange failed'), { status: 401 }); return { processing_status: 'ended' }; },
+    results: async () => iterable([result('2026-09-12_chunk-0', reply([assignment('1')]))])
+  } } };
+  await assert.rejects(runClassification({ ...opts, client, evidence: async (items) => ({ items, contextVersion: 0 }) }), /Token exchange/);
+  assert.equal(creates, 1); assert.equal(readQueue(opts.queueFile).jobs[0].batchId, 'pending-batch');
+  assert.deepEqual(topics.get('2026-09-12').pendingIds, ['1']);
+  assert.equal(topics.get('2026-09-12').inference, null);
+  await assert.rejects(runClassification({ ...opts, clientFactory: async () => { throw Object.assign(new Error('Token exchange failed'), { status: 401 }); } }), /Token exchange/);
+  assert.equal(topics.get('2026-09-12').inference, null, 'resumed-batch authentication is also access to existing work');
+  accessFails = false;
+  assert.equal((await runClassification({ ...opts, client })).status, 'complete');
+  assert.equal(creates, 1); assert.deepEqual(readQueue(opts.queueFile).jobs, []);
+  assert.equal(topics.get('2026-09-12').inference.lastAttempt.status, 'complete');
+});
+
 test('request validation rejects foreign, duplicate and invalid rows while keeping exact source strings', () => {
   const out = emptyOut();
   const status = mergeParsed({ assignments: [
