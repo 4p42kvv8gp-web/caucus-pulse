@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-16T06:00:50.736Z",
- "lastPollAt": "2026-09-16T05:21:19.811Z",
- "lastPollAttemptAt": "2026-09-16T05:21:19.187Z",
+ "generatedAt": "2026-09-16T07:13:52.479Z",
+ "lastPollAt": "2026-09-16T07:13:31.962Z",
+ "lastPollAttemptAt": "2026-09-16T07:13:31.507Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3285,7 +3285,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": true,
-  "referenceAsOf": "2026-09-16T06:00:49.564Z"
+  "referenceAsOf": "2026-09-16T07:13:51.346Z"
  },
  "news": {
   "version": 26,
@@ -3415,9 +3415,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-16T06:00:50.039Z",
+   "asOf": "2026-09-16T07:13:51.804Z",
    "windowDays": 14,
-   "windowStart": "2026-09-02T06:00:50.039Z",
+   "windowStart": "2026-09-02T07:13:51.804Z",
    "eligibleItems": 489,
    "withExcerpts": 62,
    "headlineOrSummary": 427,
@@ -3597,20 +3597,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 810,
-  "classifiedIn24h": 1,
-  "taggedIn24h": 1,
-  "pendingIn24h": 809,
+  "capturedIn24h": 812,
+  "classifiedIn24h": 0,
+  "taggedIn24h": 0,
+  "pendingIn24h": 812,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-16T05:21:35.736Z",
+   "lastAttemptAt": "2026-09-16T07:13:47.091Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 810,
-   "classifiedIn24h": 1,
-   "pendingIn24h": 809,
+   "capturedIn24h": 812,
+   "classifiedIn24h": 0,
+   "pendingIn24h": 812,
    "coverageComplete": false
   }
  },
@@ -6877,31 +6877,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 2,
+    "posts": 5,
     "mix": [
-     50,
+     80,
      0,
-     50
+     20
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 5,
+    "members": 5,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2,
+    "pending": 5,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 14,
-    "perPost": 7,
+    "eng": 406,
+    "perPost": 81,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3319,
+    "posts": 3322,
     "mix": [
      82,
      5,
@@ -6912,64 +6912,64 @@
     "unidentifiedAccounts": 0,
     "classified": 2498,
     "tagged": 1828,
-    "pending": 821,
+    "pending": 824,
     "corePosts": 803,
     "coreCounts": {
      "Affordability": 366,
      "Healthcare": 120,
      "Corruption": 386
     },
-    "eng": 589684,
+    "eng": 590076,
     "perPost": 178,
     "top10Share": 59,
     "engDelta": 0
    },
    "curve48": [
     0,
-    4,
-    70,
-    134,
-    147,
-    132,
-    75,
-    6,
-    1,
-    6,
-    123,
-    213,
-    203,
-    164,
-    78,
-    22
+    15,
+    118,
+    140,
+    145,
+    121,
+    27,
+    3,
+    3,
+    30,
+    175,
+    215,
+    210,
+    110,
+    65,
+    4
    ]
   },
   "CPC": {
    "t": {
-    "posts": 1,
+    "posts": 3,
     "mix": [
+     67,
      0,
-     0,
-     100
+     33
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
+    "eng": 391,
+    "perPost": 130,
+    "top10Share": 100,
+    "engDelta": -99
    },
    "w": {
-    "posts": 1645,
+    "posts": 1647,
     "mix": [
      77,
      5,
@@ -6980,38 +6980,106 @@
     "unidentifiedAccounts": 0,
     "classified": 1256,
     "tagged": 932,
-    "pending": 389,
+    "pending": 391,
     "corePosts": 440,
     "coreCounts": {
      "Affordability": 189,
      "Healthcare": 65,
      "Corruption": 233
     },
-    "eng": 463972,
+    "eng": 464363,
     "perPost": 282,
     "top10Share": 74,
     "engDelta": 0
    },
    "curve48": [
     0,
-    2,
-    37,
+    9,
+    55,
+    60,
+    70,
+    60,
+    12,
+    3,
+    0,
+    15,
+    87,
+    105,
+    91,
     58,
-    66,
-    66,
-    34,
-    5,
-    1,
-    2,
-    63,
-    100,
-    95,
-    76,
-    42,
-    5
+    26,
+    3
    ]
   },
   "NewDem": {
+   "t": {
+    "posts": 3,
+    "mix": [
+     100,
+     0,
+     0
+    ],
+    "accounts": 3,
+    "members": 3,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 3,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 47,
+    "perPost": 16,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 1806,
+    "mix": [
+     83,
+     5,
+     12
+    ],
+    "accounts": 184,
+    "members": 110,
+    "unidentifiedAccounts": 0,
+    "classified": 1347,
+    "tagged": 960,
+    "pending": 459,
+    "corePosts": 399,
+    "coreCounts": {
+     "Affordability": 197,
+     "Healthcare": 61,
+     "Corruption": 164
+    },
+    "eng": 116447,
+    "perPost": 64,
+    "top10Share": 58,
+    "engDelta": 0
+   },
+   "curve48": [
+    0,
+    8,
+    69,
+    85,
+    85,
+    56,
+    17,
+    2,
+    1,
+    18,
+    105,
+    126,
+    112,
+    54,
+    35,
+    2
+   ]
+  },
+  "CBC": {
    "t": {
     "posts": 1,
     "mix": [
@@ -7031,81 +7099,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 14,
-    "perPost": 14,
+    "eng": 1,
+    "perPost": 1,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1804,
-    "mix": [
-     83,
-     5,
-     12
-    ],
-    "accounts": 184,
-    "members": 110,
-    "unidentifiedAccounts": 0,
-    "classified": 1347,
-    "tagged": 960,
-    "pending": 457,
-    "corePosts": 399,
-    "coreCounts": {
-     "Affordability": 197,
-     "Healthcare": 61,
-     "Corruption": 164
-    },
-    "eng": 116414,
-    "perPost": 65,
-    "top10Share": 58,
-    "engDelta": 0
-   },
-   "curve48": [
-    0,
-    3,
-    36,
-    79,
-    97,
-    60,
-    44,
-    2,
-    1,
-    2,
-    74,
-    132,
-    109,
-    87,
-    32,
-    15
-   ]
-  },
-  "CBC": {
-   "t": {
-    "posts": 0,
-    "mix": [
-     0,
-     0,
-     0
-    ],
-    "accounts": 0,
-    "members": 0,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 0,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 588,
+    "posts": 589,
     "mix": [
      84,
      6,
@@ -7116,44 +7116,112 @@
     "unidentifiedAccounts": 0,
     "classified": 428,
     "tagged": 306,
-    "pending": 160,
+    "pending": 161,
     "corePosts": 140,
     "coreCounts": {
      "Affordability": 61,
      "Healthcare": 31,
      "Corruption": 62
     },
-    "eng": 95736,
+    "eng": 95737,
     "perPost": 163,
     "top10Share": 85,
     "engDelta": 0
    },
    "curve48": [
     0,
-    2,
-    9,
+    3,
+    16,
+    23,
     25,
-    21,
-    21,
-    21,
+    24,
+    8,
     0,
-    0,
-    2,
-    29,
-    28,
-    41,
+    1,
+    9,
+    32,
     31,
-    21,
-    5
+    43,
+    26,
+    15,
+    1
    ]
   },
   "CHC": {
    "t": {
+    "posts": 2,
+    "mix": [
+     50,
+     0,
+     50
+    ],
+    "accounts": 2,
+    "members": 2,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 2,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 32,
+    "perPost": 16,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 581,
+    "mix": [
+     79,
+     4,
+     17
+    ],
+    "accounts": 60,
+    "members": 37,
+    "unidentifiedAccounts": 0,
+    "classified": 425,
+    "tagged": 326,
+    "pending": 156,
+    "corePosts": 146,
+    "coreCounts": {
+     "Affordability": 48,
+     "Healthcare": 22,
+     "Corruption": 85
+    },
+    "eng": 78009,
+    "perPost": 134,
+    "top10Share": 89,
+    "engDelta": 0
+   },
+   "curve48": [
+    0,
+    5,
+    21,
+    23,
+    26,
+    27,
+    4,
+    2,
+    2,
+    6,
+    21,
+    37,
+    50,
+    29,
+    8,
+    2
+   ]
+  },
+  "CAPAC": {
+   "t": {
     "posts": 1,
     "mix": [
+     100,
      0,
-     0,
-     100
+     0
     ],
     "accounts": 1,
     "members": 1,
@@ -7167,81 +7235,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
+    "eng": 359,
+    "perPost": 359,
+    "top10Share": 100,
+    "engDelta": -99
    },
    "w": {
-    "posts": 580,
-    "mix": [
-     79,
-     4,
-     17
-    ],
-    "accounts": 60,
-    "members": 37,
-    "unidentifiedAccounts": 0,
-    "classified": 425,
-    "tagged": 326,
-    "pending": 155,
-    "corePosts": 146,
-    "coreCounts": {
-     "Affordability": 48,
-     "Healthcare": 22,
-     "Corruption": 85
-    },
-    "eng": 77977,
-    "perPost": 134,
-    "top10Share": 89,
-    "engDelta": 0
-   },
-   "curve48": [
-    0,
-    1,
-    18,
-    17,
-    27,
-    32,
-    10,
-    2,
-    1,
-    3,
-    15,
-    31,
-    44,
-    45,
-    15,
-    1
-   ]
-  },
-  "CAPAC": {
-   "t": {
-    "posts": 0,
-    "mix": [
-     0,
-     0,
-     0
-    ],
-    "accounts": 0,
-    "members": 0,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 0,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 384,
+    "posts": 385,
     "mix": [
      86,
      5,
@@ -7252,35 +7252,35 @@
     "unidentifiedAccounts": 0,
     "classified": 302,
     "tagged": 248,
-    "pending": 82,
+    "pending": 83,
     "corePosts": 107,
     "coreCounts": {
      "Affordability": 51,
      "Healthcare": 13,
      "Corruption": 55
     },
-    "eng": 234930,
-    "perPost": 612,
+    "eng": 235289,
+    "perPost": 611,
     "top10Share": 99,
     "engDelta": 0
    },
    "curve48": [
     0,
-    1,
-    8,
-    13,
+    3,
+    10,
+    16,
     17,
     11,
-    8,
+    1,
     1,
     0,
-    0,
-    9,
-    20,
-    16,
-    19,
+    3,
     10,
-    6
+    22,
+    21,
+    15,
+    9,
+    1
    ]
   }
  },
@@ -7373,19 +7373,19 @@
     1,
     0
    ],
-   "d": -99,
+   "d": -100,
    "mAvg": 49.5,
    "epAvg": 205,
    "momentum": {
-    "score": 5,
+    "score": 0,
     "drivers": [
-     "caucus spread",
-     "volume"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 3,
+    "eff": 1,
     "engLift": 0
    },
    "subs": [
@@ -10252,19 +10252,19 @@
     1,
     0
    ],
-   "d": -98,
+   "d": -100,
    "mAvg": 39.3,
    "epAvg": 241,
    "momentum": {
-    "score": 5,
+    "score": 0,
     "drivers": [
-     "caucus spread",
-     "volume"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 3,
+    "eff": 1,
     "engLift": 0
    },
    "subs": [
@@ -11540,19 +11540,19 @@
     1,
     0
    ],
-   "d": -98,
+   "d": -100,
    "mAvg": 32.2,
    "epAvg": 739,
    "momentum": {
-    "score": 5,
+    "score": 0,
     "drivers": [
-     "caucus spread",
-     "volume"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 3,
+    "eff": 1,
     "engLift": 0
    },
    "subs": [
@@ -15270,19 +15270,19 @@
     1,
     0
    ],
-   "d": -94,
+   "d": -100,
    "mAvg": 12.3,
    "epAvg": 227,
    "momentum": {
-    "score": 5,
+    "score": 0,
     "drivers": [
-     "caucus spread",
-     "volume"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 3,
+    "eff": 1,
     "engLift": 0
    },
    "subs": [
@@ -22577,6 +22577,86 @@
  "incidentsFiltered": 3,
  "feed": [
   {
+   "id": "2100103627969106000",
+   "handle": "@RepBynum",
+   "member": "Janelle S. Bynum",
+   "district": "OR-05",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "We need to stop this. https://t.co/QTK4ln2Tta",
+   "topics": [],
+   "time": "2026-09-16T06:04:57.000Z",
+   "date": "2026-09-16",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z",
+   "isNew": false
+  },
+  {
+   "id": "2100099797080264714",
+   "handle": "@tedlieu",
+   "member": "Ted Lieu",
+   "district": "CA-36",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "Market forces failed to provide seat belts in cars. Or advanced airbags.\n\nMarket forces failed to provide safe drugs.\n\nMarket forces failed to prevent acid rain.\n\nThat’s why the federal government regulates vehicles, drugs and power plants.\n\nWhy should AI be exempt? It shouldn’t. https://t.co/9x35iIKfmO",
+   "topics": [],
+   "time": "2026-09-16T05:49:44.000Z",
+   "date": "2026-09-16",
+   "engN": 359,
+   "kind": "quote",
+   "quoted": {
+    "id": "2100045303265243159",
+    "handle": "@DavidSacks",
+    "text": "Jensen Huang: “Safety is paramount. In a lot of ways, it’s job one. However, safety is an engineering problem... If we’re not confident about the safety of the products — like all companies, like…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z",
+   "isNew": false
+  },
+  {
+   "id": "2100099150499188757",
+   "handle": "@MikeLevin",
+   "member": "Mike Levin",
+   "district": "CA-49",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CHC"
+   ],
+   "text": "EPA wants to stop inspecting the oil and gas wells leaking about half the methane that is warming our planet. Why? \n\nTo help one of Trump’s big donors. https://t.co/olpbJr5tda",
+   "topics": [],
+   "time": "2026-09-16T05:47:10.000Z",
+   "date": "2026-09-16",
+   "engN": 32,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z",
+   "isNew": false
+  },
+  {
    "id": "2100080257554420081",
    "handle": "@RobertGarcia",
    "member": "Robert Garcia",
@@ -27524,81 +27604,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-15T22:23:56.258Z",
    "isNew": false
-  },
-  {
-   "id": "2099980523821027804",
-   "handle": "@RepShontelBrown",
-   "member": "Shontel M. Brown",
-   "district": "OH-11",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "Today, my office attended the City of Cleveland’s Hispanic Heritage Month Opening Ceremony at City Hall. \n\nI’m proud to represent a diverse and welcoming city and my office is committed to standing with Hispanic Americans in defense of their rights. https://t.co/VPDuwOw18m",
-   "topics": [],
-   "time": "2026-09-15T21:55:47.000Z",
-   "date": "2026-09-15",
-   "engN": 5,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-15T22:23:56.258Z",
-   "isNew": false
-  },
-  {
-   "id": "2099979874039669243",
-   "handle": "@RepJasonCrow",
-   "member": "Jason Crow",
-   "district": "CO-06",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Trump is destroying the Kennedy Center because he can't put his name on it.\n\nThe Kennedy Center belongs to the American people.\n\nIt's a living memorial to a president who understood service & sacrifice—something our narcissistic President will never comprehend.\nhttps://t.co/9WaQjAdSNz",
-   "topics": [],
-   "time": "2026-09-15T21:53:12.000Z",
-   "date": "2026-09-15",
-   "engN": 113,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-15T22:23:56.258Z",
-   "isNew": false
-  },
-  {
-   "id": "2099979555414900956",
-   "handle": "@RepPeteAguilar",
-   "member": "Pete Aguilar",
-   "district": "CA-33",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "I asked the FAA Administrator why the Trump administration got rid of a policy requiring airlines to compensate travelers for controllable flight delays and cancellations.  \n \nAmericans are already struggling to make ends meet. They can’t afford to pay for airlines’ mistakes. https://t.co/CqyLtwmx0f",
-   "topics": [],
-   "time": "2026-09-15T21:51:56.000Z",
-   "date": "2026-09-15",
-   "engN": 9,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-15T22:23:56.258Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -27774,6 +27779,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1875014393613688832": "@RepBynum",
   "815310506596691968": "@RepJoshG",
   "1610323296360210433": "@RepDonDavis",
   "1724849796496924672": "@RepGabeAmo",
@@ -27869,7 +27875,6 @@
   "1082427779583541248": "@RepChuyGarcia",
   "1075904377221722113": "@RepFletcher",
   "1298346252673994752": "@BGThompsonMS",
-  "1875014393613688832": "@RepBynum",
   "1075517806551154689": "@RepEscobar",
   "1067748650485497862": "@RepChrisPappas",
   "1345461797361504259": "@RepNikema",
@@ -27938,6 +27943,62 @@
   "721127537674489856": "@ReElectNydia"
  },
  "feedAll": [
+  {
+   "id": "2100103627969106000",
+   "authorId": "1875014393613688832",
+   "createdAt": "2026-09-16T06:04:57.000Z",
+   "date": "2026-09-16",
+   "type": "tweet",
+   "text": "We need to stop this. https://t.co/QTK4ln2Tta",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z"
+  },
+  {
+   "id": "2100099797080264714",
+   "authorId": "21059255",
+   "createdAt": "2026-09-16T05:49:44.000Z",
+   "date": "2026-09-16",
+   "type": "quote",
+   "text": "Market forces failed to provide seat belts in cars. Or advanced airbags.\n\nMarket forces failed to provide safe drugs.\n\nMarket forces failed to prevent acid rain.\n\nThat’s why the federal government regulates vehicles, drugs and power plants.\n\nWhy should AI be exempt? It shouldn’t. https://t.co/9x35iIKfmO",
+   "engN": 359,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z",
+   "quoted": {
+    "id": "2100045303265243159",
+    "handle": "@DavidSacks",
+    "text": "Jensen Huang: “Safety is paramount. In a lot of ways, it’s job one. However, safety is an engineering problem... If we’re not confident about the safety of the products — like all companies, like…"
+   }
+  },
+  {
+   "id": "2100099150499188757",
+   "authorId": "14573926",
+   "createdAt": "2026-09-16T05:47:10.000Z",
+   "date": "2026-09-16",
+   "type": "tweet",
+   "text": "EPA wants to stop inspecting the oil and gas wells leaking about half the methane that is warming our planet. Why? \n\nTo help one of Trump’s big donors. https://t.co/olpbJr5tda",
+   "engN": 32,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T07:13:31.953Z"
+  },
   {
    "id": "2100080257554420081",
    "authorId": "18120497",
@@ -72469,87 +72530,19 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-09-13T12:47:17.637Z"
-  },
-  {
-   "id": "2098875064644960490",
-   "authorId": "188019606",
-   "createdAt": "2026-09-12T20:43:05.000Z",
-   "date": "2026-09-12",
-   "type": "tweet",
-   "text": "What ever happened to this $2000 check Trump promised last year? Asking for a friend. https://t.co/meudvlSdC6",
-   "engN": 2251,
-   "topics": [
-    "economy/tariffs-trade",
-    "economy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-13T12:47:17.637Z"
-  },
-  {
-   "id": "2098874260089667628",
-   "authorId": "174332143",
-   "createdAt": "2026-09-12T20:39:53.000Z",
-   "date": "2026-09-12",
-   "type": "retweet",
-   "text": "RT @mehdirhasan: “Now, maybe this is just me, but losing your head of ethics, your head of safety and your head of preparedness around the…",
-   "engN": 0,
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": true,
-   "sourceContextReason": "repost-original-unavailable",
-   "sourceReferenceId": "2098839499140911172",
-   "provenance": {
-    "contextVersion": 0,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-12T22:30:44.169Z"
-  },
-  {
-   "id": "2098874229672546754",
-   "authorId": "174332143",
-   "createdAt": "2026-09-12T20:39:46.000Z",
-   "date": "2026-09-12",
-   "type": "retweet",
-   "text": "RT @davidhogg111: You gotta wonder what happened that we don’t know about to make all of them agree to slow their multi trillion dollar pro…",
-   "engN": 0,
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": true,
-   "sourceContextReason": "repost-original-unavailable",
-   "sourceReferenceId": "2098860846541648201",
-   "provenance": {
-    "contextVersion": 0,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-12T22:30:44.169Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3319,
+ "feedAllTotal": 3322,
  "feedAllFiles": [
-  "feed-0-1c763dc5dfbe2d83.json",
-  "feed-1-9908b7a0f198640e.json",
-  "feed-2-9b3054a0f6c18b70.json",
-  "feed-3-94cd53d2d167699f.json",
-  "feed-4-8108c927ca408b9a.json",
-  "feed-5-1d5a4d1509337b20.json",
-  "feed-6-82a1911274022724.json",
-  "feed-7-de545883785d62ec.json",
-  "feed-8-88fb9b184e3dc780.json"
+  "feed-0-ebcb77318b941d5d.json",
+  "feed-1-7193c84daca72225.json",
+  "feed-2-4e573bfa18ea5b14.json",
+  "feed-3-1489b3ab8de29d35.json",
+  "feed-4-537beed784c67b1f.json",
+  "feed-5-93df6f233ba44014.json",
+  "feed-6-31e40095b7aa0eb0.json",
+  "feed-7-2353456c8bd81373.json",
+  "feed-8-896e7783927db31e.json"
  ]
 }
