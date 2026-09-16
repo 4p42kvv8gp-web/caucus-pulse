@@ -107,6 +107,28 @@ test('a source that now fits loses its obsolete size diagnostic even if inferenc
   assert.match(f.live().requestStatus['live_chunk-0'].error, /provider unavailable/);
 });
 
+test('credential setup failure remains explicit through later metadata-only publication without losing pending sources', async (t) => {
+  const f = fixture(t, [post('1'), post('2')]);
+  const result = await classifyLive([], { ...f.opts, clientFactory: async () => {
+    throw Object.assign(new Error('Token exchange failed'), { status: 401 });
+  } });
+  assert.equal(result.pending, 2); assert.deepEqual(f.live().pendingIds, ['1', '2']);
+  assert.equal(f.live().inference.lastAttempt.reasonCode, 'provider-auth');
+  assert.equal(f.live().inference.lastSuccess, null);
+  const receipt = structuredClone(f.live().inference);
+  await classifyLive([], { ...f.opts, enabled: false, now: () => `${date}T22:00:00Z` });
+  assert.deepEqual(f.live().inference, receipt, 'publishing later cannot manufacture a request or accepted result');
+});
+
+test('local evidence preparation failure is not a new auth or inference attempt', async (t) => {
+  const f = fixture(t, [post('1')]);
+  await classifyLive([], { ...f.opts, clientFactory: async () => { throw Object.assign(new Error('Token exchange failed'), { status: 401 }); } });
+  const prior = structuredClone(f.live().inference);
+  await classifyLive([], { ...f.opts, now: () => `${date}T23:00:00Z`, evidence: async () => { throw new Error('local evidence file malformed'); } });
+  assert.deepEqual(f.live().inference, prior);
+  assert.deepEqual(f.live().pendingIds, ['1']); assert.equal(f.factories(), 0);
+});
+
 test('correcting the only blocked source clears stale diagnostics without constructing a client', async (t) => {
   const f = fixture(t, [post('1', 'x'.repeat(130_000))]);
   await classifyLive([], f.opts);

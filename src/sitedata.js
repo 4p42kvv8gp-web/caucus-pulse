@@ -25,6 +25,7 @@ import { loadQuoted, archiveLookup, quotedResolver, quotingFor } from './quoted.
 import { sourceContextStatus, createRepostResolver } from './source-context.js';
 import { loadFloor } from './floor-context.js';
 import { buildFloorDisplay } from './floor-display.js';
+import { buildInferenceHealth } from './inference-health.js';
 
 const KEYS = [...new Set(Object.values(settings.caucus_keys))]; // display order: CPC, NewDem, CBC
 const DAY = 86_400_000;
@@ -356,7 +357,9 @@ export function buildSiteData() {
     allPosts.push(...house);
   }
   const classification = classificationCoverage(allPosts, days);
-  if (classification.momentumPaused) console.warn(`[sitedata] momentum paused: ${classification.capturedIn24h} post(s) in the last 24h, none completed (classification through ${classification.through || 'never'})`);
+  classification.health = buildInferenceHealth(days.flatMap((date) => [readJSON(topicsPath(date), null), readJSON(liveTopicsPath(date), null)]), classification);
+  classification.momentumPaused ||= classification.health.hasCurrentFailure;
+  if (classification.momentumPaused) console.warn(`[sitedata] momentum paused: interpretation ${classification.health.status}; ${classification.pendingIn24h}/${classification.capturedIn24h} recent post(s) pending`);
 
   // ── topics: per-day, per-scope aggregation ──
   // acc[topicKey][scope] = today/week scopes; trends per day.

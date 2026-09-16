@@ -113,9 +113,10 @@ export function finishJob(queue, job, now = new Date().toISOString()) {
 // Only errors that explicitly reject a request are safe to resubmit. Network
 // timeouts and 5xx failures may happen after acceptance, so their intent stays
 // in the queue until its provider batch ID is reconciled.
-export async function submitJob(client, queue, details, { file = queuePath } = {}) {
+export async function submitJob(client, queue, details, { file = queuePath, onAttempt = () => {} } = {}) {
   const job = prepareJob(queue, details);
   saveQueue(queue, file);
+  onAttempt(); // local intent is durable; the next operation contacts the provider
   try {
     const batch = await client.messages.batches.create({ requests: details.requests });
     if (!batch?.id) throw new Error('Batch submission returned no ID');

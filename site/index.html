@@ -45,6 +45,7 @@
 </header>
 <div id="modal"></div>
 <main style="width:100%;max-width:1240px;margin:0 auto;padding:22px 20px 48px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+  <section id="interpretation" aria-label="Interpretation status"></section>
   <section id="controls" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 0 2px"></section>
   <section id="news" style="background:#fff;border-radius:12px;padding:12px 16px"></section>
   <section id="cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px"></section>
@@ -62,7 +63,7 @@
 </main>
 </div>
 <script type="module">
-import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash, decoratePost, sourceLink, sourceAnchor, handleLink, postUrl, profileUrl, publicUrl, newsEvidence, captureLabel, startRefresh } from './ui.js';
+import { C, CT, KEYS, MATRIX, SHORT, MOMENTUM_FILL, esc, fmt, arrow, etTime, etDay, etWhen, headerDate, dot, fill, seg, spark, chevron, control, select, avatar, tag, copyText, loadRollups, provisionalBadge, evidenceQuote, findRow, rowPosts, rowHeader, parseRowHash, rowHash, decoratePost, sourceLink, sourceAnchor, handleLink, postUrl, profileUrl, publicUrl, newsEvidence, captureLabel, interpretationView, interpretationNotice, startRefresh } from './ui.js';
 
 let D = null;
 const state = {
@@ -135,6 +136,8 @@ function render() {
   const curve = (D.stats[scope] || D.stats.All).curve48;
 
   updateCaptureLabel();
+  const interpretation = interpretationView(D);
+  $('interpretation').innerHTML = interpretationNotice(D, { dashboard: true });
 
   // Ideological pair, a divider, then the identity caucuses.
   $('controls').innerHTML =
@@ -146,28 +149,27 @@ function render() {
   const coreMax = Math.max(1, ...coreRaw.map((c) => c.n));
   const coreN = S.corePosts || 0;
   const classified = S.classified || 0;
-  // Momentum is paused when the last 24h holds captured posts but none are
-  // classified yet (nightly not run): a gap in the instrument, not a collapse.
-  const paused = !!D.classification?.momentumPaused;
+  // A failed interpretation run must not turn missing labels into a collapse.
+  const paused = interpretation.paused;
   const leader = paused ? null : D.topics.filter((t) => val(t).n > 0).sort((a, b) => b.momentum.score - a.momentum.score)[0];
   const card = (inner) => `<div style="background:#fff;border-radius:14px;padding:16px 18px 15px;display:flex;flex-direction:column;gap:6px;justify-content:space-between">${inner}</div>`;
   const pausedCard = card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Momentum</span></div>
       <div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1;color:#8e8e93">—</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">paused</span></div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2"></div>
-      <div style="font-size:11px;color:#6e6e73;line-height:1.4">${D.classification?.through ? `latest completed classification ${esc(etDay(D.classification.through))}` : 'no classified posts yet'} · ${fmt(D.classification?.pendingIn24h ?? D.classification?.capturedIn24h ?? 0)} posts in the last 24h await the classifier</div>`);
+      <div style="font-size:11px;color:#6e6e73;line-height:1.4">Current interpretation is incomplete. Available topic counts remain below; missing labels cannot establish falling activity.</div>`);
   $('cards').innerHTML = [
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.posts)}</div>${spark(curve, 108, 26)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.mix[0], '#194292'], [S.mix[1], '#a9c3ee'], [S.mix[2], '#e0e0e4']])}</div>
       <div style="font-size:11px;color:#6e6e73">${S.mix[0]}% original · ${S.mix[1]}% replies · ${S.mix[2]}% reposts</div>`),
-    card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages</span><span style="white-space:nowrap">${S.posts ? Math.round(100 * coreN / S.posts) : 0}% of captured posts</span></div>
+    card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Core messages${interpretation.partial ? ' · partial' : ''}</span><span style="white-space:nowrap">${S.posts ? Math.round(100 * coreN / S.posts) : 0}% of captured posts</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(coreN)}</div></div>
       <div style="display:flex;flex-direction:column;gap:3px;margin-top:1px">${coreRaw.map((c) => `<div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:0 7px;align-items:center;font-size:12px">${dot('#1d1d1f', 5)}<span>${esc(c.name)}</span><div style="width:44px;height:3px;background:#f0f0f2;border-radius:2px;overflow:hidden">${fill(100 * c.n / coreMax, '#1d1d1f')}</div><span style="font-weight:600;min-width:3.2ch;text-align:right">${fmt(c.n)}</span></div>`).join('')}</div>`),
     card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span>Engagement</span></div>
       <div style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${fmt(S.eng)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;gap:1px">${seg([[S.top10Share, '#1d1d1f'], [100 - S.top10Share, '#d2d2d7']])}</div>
       <div style="font-size:11px;color:#6e6e73">${fmt(S.perPost)} per post · ${win === 't' ? arrow(S.engDelta) + ' vs prior 6-day avg · ' : ''}top 10 accounts ${S.top10Share}%</div>`),
-    leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Observed momentum · all House · 24h</span></div>
+    leader ? card(`<div style="display:flex;justify-content:space-between;font-size:12px;font-weight:500;color:#6e6e73"><span style="white-space:nowrap">Observed momentum${interpretation.partial ? ' · partial' : ''} · all House · 24h</span></div>
       <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px"><div style="display:flex;align-items:baseline;gap:8px;min-width:0"><span style="font-size:28px;font-weight:700;letter-spacing:-0.03em;line-height:1">${leader.momentum.score}</span><span style="font-size:15px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;text-wrap:balance">${esc(leader.name)}</span></div>${spark(leader.trend)}</div>
       <div style="display:flex;height:4px;border-radius:2px;overflow:hidden;background:#f0f0f2">${fill(leader.momentum.score, MOMENTUM_FILL)}</div>
       <div style="font-size:11px;color:#6e6e73">observed activity · driven by <span style="color:#1d1d1f;font-weight:600">${leader.momentum.drivers.map(esc).join(' and ')}</span> · ${arrow(leader.d)} vs prior 6-day avg</div>`) : (paused ? pausedCard : '')
@@ -201,8 +203,9 @@ function renderTopics(isAll, scope, win) {
 
   // Rows are clickable: a macro or subtopic row opens its whole post list in
   // the Feed card (row mode). The chevron alone folds subtopics.
-  const paused = !!D.classification?.momentumPaused;
-  const pausedTitle = 'Momentum paused: the last 24h has captured posts but none are classified yet';
+  const interpretation = interpretationView(D);
+  const paused = interpretation.paused;
+  const pausedTitle = 'Momentum paused because current interpretation is incomplete; missing labels cannot establish falling activity';
   const rows = sorted.map((t) => {
     const v = val(t);
     const isOpen = t.subs.length > 0 && !!state.open[t.key];
@@ -238,7 +241,8 @@ function renderTopics(isAll, scope, win) {
       <td style="padding:8px 0 8px 8px;border-bottom:1px solid #f0f0f2;text-align:right">${fmt(v.m)}</td></tr>${subRows}`;
   }).join('');
 
-  $('topics').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Topics</h2><span style="font-size:11px;color:#6e6e73">click a row to open its posts in the feed</span></div>
+  $('topics').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Topics${interpretation.partial ? ' · partial interpretations' : ''}</h2><span style="font-size:11px;color:#6e6e73">click a row to open its posts in the feed</span></div>
+  ${interpretation.partial ? '<div style="font-size:11px;color:#6e6e73">Counts reflect available interpretations. Zero does not mean no members discussed a topic.</div>' : ''}
   <div class="scrollx"><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr>
     <th style="text-align:left;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px 0;border-bottom:1px solid #e8e8ed">Topic</th>
     ${isAll ? MATRIX.map((k) => `<th style="text-align:right;font-size:11px;font-weight:600;color:${CT[k]};padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%">${SHORT[k]}</th>`).join('') : ''}
@@ -247,7 +251,7 @@ function renderTopics(isAll, scope, win) {
     <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 8px 8px;border-bottom:1px solid #e8e8ed;width:9%" title="All House, rolling last 24 hours; these scores do not change with table filters. Observed activity in captured classified posts, not a forecast. 0–100, 50 = steady. 40% volume lift · 20% acceleration · 20% member adoption · 10% caucus spread · 10% engagement lift, each against the topic's 7-day baseline">Momentum</th>
     ${th('Engagement', 'text-align:right')}
     <th style="text-align:right;font-size:11px;font-weight:500;color:#6e6e73;padding:0 0 8px 8px;border-bottom:1px solid #e8e8ed">Roster members</th>
-  </tr></thead><tbody>${rows || `<tr><td colspan="9" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No classified posts yet — the nightly job (or the poll-time tagger) fills this in.</td></tr>`}</tbody></table></div>`;
+  </tr></thead><tbody>${rows || `<tr><td colspan="9" style="padding:30px 0;text-align:center;color:#6e6e73;font-size:13px">No topic interpretations are available in this view. Captured posts remain in the feed.</td></tr>`}</tbody></table></div>`;
 }
 
 // One post card — used by the default feed and by row mode. `chipKeys` are
@@ -281,7 +285,7 @@ function renderFeed(scope, win) {
   const items = feed.slice(0, state.feedLimit).map((f) => postCard(f, f.topics.filter((tk) => !tk.includes('/')))).join('');
   $('feed').innerHTML = feedHead('Feed', `${dot('#1d1d1f', 6)}${feed.length} posts · ${newCount} new`) +
   `<div style="display:flex;gap:6px">${select(topicOpts, 'topic', state.topic)}</div>` +
-  feedBody(items, 'No posts match this caucus and topic.') + morePosts(feed.length);
+  feedBody(items, 'No captured posts match this filter. Topic filters use available interpretations.') + morePosts(feed.length);
 }
 
 // Row mode: every post on the selected Topics row (macro or story) in the
@@ -299,7 +303,7 @@ function renderRowFeed(hit, scope, win) {
     : f.topics.filter((tk) => tk.startsWith(macroKey + '/')).concat(f.topics.filter((tk) => !tk.includes('/') && tk !== macroKey));
   const items = posts.slice(0, state.feedLimit).map((f) => postCard(f, chipsFor(f))).join('');
   const wAll = hit.row.w?.[scope]?.n || 0;
-  const empty = `No posts on ${esc(hit.label)} ${win === 't' ? 'today' : 'in the last 7 days'}${scope !== 'All' ? ` from the ${esc(caucusName(scope))}` : ''}.` +
+  const empty = `No captured posts with an available interpretation on ${esc(hit.label)} ${win === 't' ? 'today' : 'in the last 7 days'}${scope !== 'All' ? ` from the ${esc(caucusName(scope))}` : ''}.` +
     (win === 't' && wAll ? `<div style="margin-top:8px"><button class="secondary" data-set="window" data-val="w">Show 7 days · ${wAll} ${wAll === 1 ? 'post' : 'posts'}</button></div>` : '');
   const trimmed = D.feedAllTruncated && posts.length < ids.length
     ? `<div style="font-size:11px;color:#6e6e73;padding:6px 0 0">Newest ${posts.length} of ${ids.length} loaded — older posts were trimmed to keep the page light.</div>` : '';
@@ -351,7 +355,7 @@ function renderClusters() {
     ${similarList(c.related, { wrap: true })}
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">${c.phrase ? `<span style="font-size:11px;color:#6e6e73">${c.coherence}% say “${esc(c.phrase)}”</span>` : ''}${tag(c.suggest)}<span style="margin-left:auto;display:flex;gap:10px"><button class="textbtn" data-compose="cluster:${esc(c.label)}">Compose</button><a href="../config/taxonomy.yaml" style="font-size:12px;font-weight:500" title="Approve by adding this subtopic to config/taxonomy.yaml">Add ›</a></span></div>
   </div>`).join('');
-  $('clusters').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging</h2><span style="font-size:12px;color:#6e6e73">All House · 7 days · independent of filters</span></div>${items || '<div style="padding:30px 0;text-align:center;color:#6e6e73;font-size:12px">No stored emerging clusters in the current window.</div>'}`;
+  $('clusters').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:4px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Emerging${interpretationView(D).partial ? ' · partial interpretations' : ''}</h2><span style="font-size:12px;color:#6e6e73">All House · 7 days · independent of filters</span></div>${items || '<div style="padding:30px 0;text-align:center;color:#6e6e73;font-size:12px">No stored emerging clusters in the current window.</div>'}`;
 }
 
 function renderDistrict() {
@@ -374,7 +378,7 @@ function renderDistrict() {
   </div>`;
   }).join('');
   $('district').innerHTML = `<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:baseline;gap:10px"><h2 style="margin:0;font-size:15px;font-weight:700;letter-spacing:-0.01em">Breaking in district</h2><span style="font-size:12px;color:#6e6e73">${nActive} active${nProv ? ` · ${nProv} provisional` : ''}</span></div><a href="./incidents.html" style="font-size:12px;font-weight:500">Open incident desk ›</a></div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px">${cards || '<div style="padding:16px 0;color:#6e6e73;font-size:13px">No active district incidents.</div>'}</div>`;
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px">${cards || '<div style="padding:16px 0;color:#6e6e73;font-size:13px">No stored active district incidents. This does not establish that no incident occurred.</div>'}</div>`;
 }
 
 // ── Compose ──
@@ -422,7 +426,7 @@ function composeText() {
   const totalPosts = rows.reduce((a, p) => a + p.posts, 0);
   const head = `${rows.length} ${rows.length === 1 ? 'account' : 'accounts'} on ${title} · ${scopeStr}` + (inc.counts ? ` · ${totalPosts} posts` : '');
   const foot = inc.footer ? `\n—\ncaucus-pulse · ${D.lastPollAt ? etTime(D.lastPollAt) : ''} ET · archive` : '';
-  if (rows.length === 0) return `${head}\n\nNo one in scope has posted on this yet.${foot}`;
+  if (rows.length === 0) return `${head}\n\nNo matching captured posts appear in the available interpretations. This does not establish silence.${foot}`;
   if (clipFormat === 'Handles') return rows.map((p) => `${p.handle} ${p.sourceUrls?.[0] || profileUrl(p.handle) || ''}`).join('\n') + foot;
   if (clipFormat === 'Brief') {
     const names = rows.map((p) => p.name.replace(/^(Rep\.|Sen\.|Gov\.|Del\.|Leader) /, '') + (inc.district && p.district ? ` (${p.district})` : ''));
@@ -517,6 +521,7 @@ document.addEventListener('click', (e) => {
     if (a === 'openClip') { state.clipDraft = null; state.clipOpen = true; state.copied = false; state.clipCaucus = state.caucus; state.clipWindow = state.window; }
     if (a === 'closeClip') state.clipOpen = false;
     if (a === 'allPosts') selectRow(null);
+    if (a === 'capturedPosts') { state.topic = 'all'; state.caucus = 'All'; state.window = 'w'; selectRow(null); render(); $('feed').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
     if (a === 'morePosts') { const scroll = $('feed-scroll')?.scrollTop || 0; state.feedLimit += 200; renderFeed(state.caucus, state.window); if ($('feed-scroll')) $('feed-scroll').scrollTop = scroll; return; }
     if (a === 'copyClip') { copyText($('cliptext')?.value || composeText(), () => { state.copied = true; render(); clearTimeout(copyTimer); copyTimer = setTimeout(() => { state.copied = false; render(); }, 1800); }); return; }
     render();
@@ -557,7 +562,7 @@ startRefresh({
     D = data; refreshError = null;
     if (first) applyHash();
     // Keep a displayed export stable while it is being read or copied.
-    if (state.clipOpen) { updateCaptureLabel(); return; }
+    if (state.clipOpen) { updateCaptureLabel(); $('interpretation').innerHTML = interpretationNotice(D, { dashboard: true }); return; }
     render();
     if ($('feed-scroll')) $('feed-scroll').scrollTop = scroll;
   },

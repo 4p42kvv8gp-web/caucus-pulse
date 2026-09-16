@@ -322,6 +322,56 @@ export function captureLabel(data, error = null, now = Date.now()) {
   return `Capture completed ${etWhen(done, data.today)}${stale ? ' · stale' : ''}${incomplete ? ' · newer attempt incomplete' : ''}`;
 }
 
+// Public health uses a closed vocabulary. Provider diagnostics and arbitrary
+// fields never become page text; completed interpretations remain readable.
+export function interpretationView(data) {
+  const classification = data?.classification || {}, health = classification.health || {};
+  const count = (key) => Number.isSafeInteger(health[key]) && health[key] >= 0 ? health[key]
+    : Number.isSafeInteger(classification[key]) && classification[key] >= 0 ? classification[key] : null;
+  const pending = count('pendingIn24h'), captured = count('capturedIn24h'), classified = count('classifiedIn24h');
+  const failure = health.hasCurrentFailure === true;
+  let status = ['healthy', 'pending', 'degraded', 'blocked', 'disabled', 'unknown'].includes(health.status) ? health.status : 'unknown';
+  if (status === 'healthy' && (failure || pending > 0 || health.coverageComplete === false)) status = failure ? 'degraded' : 'pending';
+  const partial = status !== 'healthy' || failure || pending > 0;
+  const reasons = {
+    'provider-credits': 'The interpretation service has insufficient credits.',
+    'provider-auth': 'The interpretation service could not authenticate.',
+    'provider-rate-limit': 'The interpretation service is temporarily limiting requests.',
+    'provider-unavailable': 'The interpretation service is unavailable.',
+    'invalid-response': 'The latest interpretation response could not be accepted.',
+    'inference-error': 'The latest interpretation attempt failed.'
+  };
+  const title = { healthy: 'Interpretation current for captured posts', pending: 'Interpretation pending',
+    degraded: 'Interpretation is incomplete', blocked: 'Interpretation blocked', disabled: 'Interpretation disabled',
+    unknown: 'Interpretation status unavailable' }[status];
+  const timestamp = (value) => typeof value === 'string' && /T.*(?:Z|[+-]\d{2}:\d{2})$/.test(value) && Number.isFinite(Date.parse(value)) ? value : null;
+  return { status, title, partial, paused: Boolean(classification.momentumPaused || failure || ['blocked', 'disabled'].includes(status)),
+    reason: (failure || ['blocked', 'degraded'].includes(status)) ? (Object.hasOwn(reasons, health.reasonCode) ? reasons[health.reasonCode] : 'The latest interpretation attempt did not complete successfully.') : null,
+    pending, captured, classified, lastAttemptAt: timestamp(health.lastAttemptAt), lastSuccessAt: timestamp(health.lastSuccessAt) };
+}
+
+export function interpretationNotice(data, { dashboard = false } = {}) {
+  const view = interpretationView(data);
+  const exact = (n) => n.toLocaleString('en-US');
+  const counts = view.captured != null && view.classified != null
+    ? `${exact(view.classified)} of ${exact(view.captured)} captured posts interpreted${view.pending != null ? ` · ${exact(view.pending)} awaiting interpretation` : ''} · all House · last 24 hours`
+    : 'Interpretation coverage counts are unavailable.';
+  const scope = view.partial
+    ? 'Available interpretations are partial. Empty topics or missing incidents do not establish silence.'
+    : view.captured === 0 ? 'No posts were captured in the last 24 hours; this does not establish caucus silence.'
+    : 'Coverage describes captured posts; it does not establish complete account coverage.';
+  const when = (value) => value ? `${etWhen(value, data?.today)} ET` : 'not recorded';
+  const action = dashboard
+    ? '<button class="secondary" data-act="capturedPosts">View all captured posts</button>'
+    : '<a href="./index.html#feed" style="font-weight:600;text-decoration:underline">View captured posts</a>';
+  return `<div role="status" aria-live="polite" style="background:${view.partial ? '#fff4d6' : '#fff'};border-radius:12px;padding:12px 16px;font-size:12px;line-height:1.5">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap"><strong>${esc(view.title)}</strong><span>${esc(counts)}</span></div>
+    <div>${view.reason ? esc(view.reason) + ' ' : ''}${esc(scope)}</div>
+    <div style="font-size:11px;color:#6e6e73">Last interpretation attempt: ${esc(when(view.lastAttemptAt))} · Last accepted interpretation: ${esc(when(view.lastSuccessAt))}</div>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:5px"><span>Post capture runs separately; check the capture status above. Stored source posts remain available.</span>${action}</div>
+  </div>`;
+}
+
 // A failed background refresh never replaces the last successful data. The
 // caller owns rendering so filters, selection and drafts can remain intact.
 export function startRefresh({ load = loadRollups, onData, onError, intervalMs = 120_000, setIntervalFn = setInterval } = {}) {
