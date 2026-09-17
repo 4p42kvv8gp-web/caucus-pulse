@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-17T04:59:11.875Z",
- "lastPollAt": "2026-09-17T04:58:38.200Z",
- "lastPollAttemptAt": "2026-09-17T04:58:37.645Z",
+ "generatedAt": "2026-09-17T05:31:12.071Z",
+ "lastPollAt": "2026-09-17T05:30:47.682Z",
+ "lastPollAttemptAt": "2026-09-17T05:30:47.254Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3379,7 +3379,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": true,
-  "referenceAsOf": "2026-09-17T04:59:10.563Z"
+  "referenceAsOf": "2026-09-17T05:31:10.797Z"
  },
  "news": {
   "version": 38,
@@ -3509,9 +3509,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-17T04:59:11.050Z",
+   "asOf": "2026-09-17T05:31:11.279Z",
    "windowDays": 14,
-   "windowStart": "2026-09-03T04:59:11.050Z",
+   "windowStart": "2026-09-03T05:31:11.279Z",
    "eligibleItems": 631,
    "withExcerpts": 81,
    "headlineOrSummary": 550,
@@ -3691,20 +3691,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 832,
+  "capturedIn24h": 833,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 832,
+  "pendingIn24h": 833,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-17T04:58:56.665Z",
+   "lastAttemptAt": "2026-09-17T05:31:06.507Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 832,
+   "capturedIn24h": 833,
    "classifiedIn24h": 0,
-   "pendingIn24h": 832,
+   "pendingIn24h": 833,
    "coverageComplete": false
   }
  },
@@ -6971,18 +6971,18 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6995,7 +6995,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 3545,
+    "posts": 3546,
     "mix": [
      82,
      5,
@@ -7006,7 +7006,7 @@
     "unidentifiedAccounts": 0,
     "classified": 1864,
     "tagged": 1272,
-    "pending": 1681,
+    "pending": 1682,
     "corePosts": 530,
     "coreCounts": {
      "Affordability": 232,
@@ -7021,36 +7021,36 @@
    "curve48": [
     1,
     4,
-    64,
-    196,
-    208,
-    197,
-    95,
-    45,
+    100,
+    194,
+    211,
+    184,
+    81,
+    35,
     3,
-    0,
-    72,
-    193,
-    217,
-    206,
-    118,
-    23
+    3,
+    99,
+    208,
+    201,
+    218,
+    84,
+    17
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7063,7 +7063,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1730,
+    "posts": 1731,
     "mix": [
      77,
      5,
@@ -7074,7 +7074,7 @@
     "unidentifiedAccounts": 0,
     "classified": 926,
     "tagged": 647,
-    "pending": 804,
+    "pending": 805,
     "corePosts": 297,
     "coreCounts": {
      "Affordability": 117,
@@ -7089,36 +7089,36 @@
    "curve48": [
     1,
     1,
-    30,
-    95,
-    101,
-    92,
-    48,
-    16,
-    2,
-    0,
-    37,
-    70,
-    123,
+    51,
     90,
-    65,
-    15
+    99,
+    89,
+    42,
+    11,
+    2,
+    1,
+    43,
+    95,
+    102,
+    95,
+    54,
+    11
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7131,7 +7131,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1931,
+    "posts": 1932,
     "mix": [
      82,
      6,
@@ -7142,7 +7142,7 @@
     "unidentifiedAccounts": 0,
     "classified": 1015,
     "tagged": 670,
-    "pending": 916,
+    "pending": 917,
     "corePosts": 254,
     "coreCounts": {
      "Affordability": 121,
@@ -7157,36 +7157,36 @@
    "curve48": [
     1,
     1,
-    37,
-    122,
-    117,
-    105,
-    44,
-    25,
+    57,
+    124,
+    118,
+    93,
+    38,
+    20,
     2,
-    0,
-    39,
-    114,
-    121,
-    101,
-    53,
-    13
+    2,
+    57,
+    118,
+    117,
+    103,
+    35,
+    10
    ]
   },
   "CBC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7199,7 +7199,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 656,
+    "posts": 657,
     "mix": [
      82,
      7,
@@ -7210,7 +7210,7 @@
     "unidentifiedAccounts": 0,
     "classified": 325,
     "tagged": 213,
-    "pending": 331,
+    "pending": 332,
     "corePosts": 97,
     "coreCounts": {
      "Affordability": 42,
@@ -7225,19 +7225,19 @@
    "curve48": [
     0,
     2,
-    15,
-    30,
+    24,
+    27,
     38,
     36,
-    27,
-    9,
+    23,
+    7,
     1,
     0,
-    14,
-    35,
-    39,
-    51,
-    23,
+    20,
+    38,
+    32,
+    57,
+    16,
     5
    ]
   },
@@ -7293,20 +7293,20 @@
    "curve48": [
     1,
     2,
-    7,
-    30,
-    39,
-    53,
-    17,
-    6,
+    14,
+    27,
+    44,
+    49,
+    15,
+    3,
     1,
-    0,
-    18,
-    34,
+    2,
+    22,
     41,
-    37,
-    25,
-    4
+    35,
+    40,
+    16,
+    3
    ]
   },
   "CAPAC": {
@@ -7361,19 +7361,19 @@
    "curve48": [
     0,
     0,
-    5,
-    15,
-    21,
+    6,
+    19,
     18,
-    14,
+    20,
+    10,
     7,
     1,
     0,
-    10,
-    10,
-    24,
-    24,
-    13,
+    11,
+    11,
+    25,
+    23,
+    11,
     1
    ]
   }
@@ -20628,6 +20628,32 @@
  "incidentsFiltered": 0,
  "feed": [
   {
+   "id": "2100449641502257534",
+   "handle": "@StevenHorsford",
+   "member": "Steven Horsford",
+   "district": "NV-04",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @BryceMauro: Not a big political commentator, and missed this earlier, but glad to see logic prevail for once. \n\nEasily one of the most…",
+   "topics": [],
+   "time": "2026-09-17T04:59:53.000Z",
+   "date": "2026-09-17",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2100401780290949128",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-17T05:30:47.675Z",
+   "isNew": false
+  },
+  {
    "id": "2100427255553851657",
    "handle": "@RepDonDavis",
    "member": "Donald G. Davis",
@@ -25657,31 +25683,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-16T23:48:22.355Z",
    "isNew": false
-  },
-  {
-   "id": "2100347259078558141",
-   "handle": "@RepJayapal",
-   "member": "Pramila Jayapal",
-   "district": "WA-07",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "Thank you to everyone who is standing up and calling out Trump’s effort to send $2.8 billion of arms to the Israeli government, including Ranking Member of the Foreign Affairs Committee Gregory Meeks.\n\nWe must protect civilian lives. https://t.co/5ufwF3zEIq",
-   "topics": [],
-   "time": "2026-09-16T22:13:03.000Z",
-   "date": "2026-09-16",
-   "engN": 297,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T23:48:22.355Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -26020,6 +26021,23 @@
   "935717078966964228": "@MadeleineDean"
  },
  "feedAll": [
+  {
+   "id": "2100449641502257534",
+   "authorId": "246478393",
+   "createdAt": "2026-09-17T04:59:53.000Z",
+   "date": "2026-09-17",
+   "type": "retweet",
+   "text": "RT @BryceMauro: Not a big political commentator, and missed this earlier, but glad to see logic prevail for once. \n\nEasily one of the most…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2100401780290949128",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-17T05:30:47.675Z"
+  },
   {
    "id": "2100427255553851657",
    "authorId": "1610323296360210433",
@@ -69876,43 +69894,19 @@
     "handle": "@RitchieTorresNY",
     "text": "With less than two months until Election Day, Trump has spread confusion and chaos in our voting system by restricting vote-by-mail. https://t.co/pijSXbSGis"
    }
-  },
-  {
-   "id": "2099544185585947123",
-   "authorId": "1793758601749614592",
-   "createdAt": "2026-09-14T17:01:56.000Z",
-   "date": "2026-09-14",
-   "type": "tweet",
-   "text": "With less than two months until Election Day, Trump has spread confusion and chaos in our voting system by restricting vote-by-mail. https://t.co/pijSXbSGis",
-   "engN": 5,
-   "topics": [
-    "democracy/voting-rights",
-    "democracy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 15,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-15T08:41:56.609Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3545,
+ "feedAllTotal": 3546,
  "feedAllFiles": [
-  "feed-0-aaa12b74edb3cbcd.json",
-  "feed-1-79877ba98047f926.json",
-  "feed-2-ee36c4f9719f4a65.json",
-  "feed-3-9a9ca36ad4509d6f.json",
-  "feed-4-7688e5b7f7887d71.json",
-  "feed-5-3453ea707fe80f0d.json",
-  "feed-6-429359dcf71de669.json",
-  "feed-7-f7020e23ca1adbd0.json",
-  "feed-8-3c39e2b3c678233f.json"
+  "feed-0-ffc4c4f6695b900b.json",
+  "feed-1-309ae2c5ae099708.json",
+  "feed-2-999259c84906c4b3.json",
+  "feed-3-45b6b587fd5588e7.json",
+  "feed-4-d4c334daaa2a3328.json",
+  "feed-5-da46abc66c3ce137.json",
+  "feed-6-8f89597b68492347.json",
+  "feed-7-cec509e7dc180fd0.json",
+  "feed-8-fd6064375e4babb2.json"
  ]
 }
