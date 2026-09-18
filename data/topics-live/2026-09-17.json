@@ -1,7 +1,7 @@
 {
  "date": "2026-09-17",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-18T22:12:19.490Z",
+ "classifiedAt": "2026-09-18T23:16:09.036Z",
  "assignments": {},
  "incidents": {},
  "provenance": {},
@@ -1305,11 +1305,11 @@
     "2100580060730102037",
     "2100580569293709408"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfBfxtqooiFhtc8PwT1uf\"}",
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfBkqBbV114fSzqK8pLDt\"}",
    "reasonCode": "provider-credits",
    "inference": {
-    "attemptedAt": "2026-09-18T22:12:19.096Z",
-    "observedAt": "2026-09-18T22:12:19.479Z",
+    "attemptedAt": "2026-09-18T23:16:08.605Z",
+    "observedAt": "2026-09-18T23:16:09.028Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "provider-credits",
@@ -1461,8 +1461,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-18T22:12:19.096Z",
-   "observedAt": "2026-09-18T22:12:19.479Z",
+   "attemptedAt": "2026-09-18T23:16:08.605Z",
+   "observedAt": "2026-09-18T23:16:09.028Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
@@ -1471,8 +1471,8 @@
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-18T22:12:19.096Z",
-   "observedAt": "2026-09-18T22:12:19.479Z",
+   "attemptedAt": "2026-09-18T23:16:08.605Z",
+   "observedAt": "2026-09-18T23:16:09.028Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
@@ -1480,5 +1480,5 @@
    "retryCount": 15
   }
  },
- "updatedAt": "2026-09-18T22:12:19.493Z"
+ "updatedAt": "2026-09-18T23:16:09.037Z"
 }
