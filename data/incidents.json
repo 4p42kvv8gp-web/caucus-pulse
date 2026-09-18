@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-18T02:07:16.117Z",
+ "generatedAt": "2026-09-18T04:36:48.790Z",
  "incidents": [
   {
    "id": "miami-fl--industrial-accident--source-2099498135366095232",
@@ -791,7 +791,7 @@
    }
   },
   {
-   "id": "lake-county-ca--wildfire--lucasfire--2026-09-11",
+   "id": "lake-county-ca--wildfire--lucasfire--2026-09-12",
    "kind": "wildfire",
    "name": "LucasFire",
    "eventIdentity": "named-source-supported",
@@ -804,13 +804,13 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 2,
+    "statements": 1,
     "resolvedPeople": 1,
     "accounts": 1,
     "unresolvedAccounts": 0,
-    "repeated": true,
+    "repeated": false,
     "repeatedSourceGroups": [],
-    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Lake County, CA · CA-04",
    "placeRaw": "Lake County, CA",
@@ -818,57 +818,26 @@
    "districtMatch": true,
    "handle": "@RepThompson",
    "member": "Mike Thompson",
-   "since": "2026-09-11T00:52:02.000Z",
+   "since": "2026-09-12T01:10:26.000Z",
    "last": "2026-09-12T01:10:26.000Z",
-   "updates": 2,
-   "engN": 23,
+   "updates": 1,
+   "engN": 13,
    "amplifiers": 0,
    "others": [],
    "title": "LucasFire · Lake County, CA",
    "evidence": {
-    "span": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay.",
+    "span": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross.",
     "exact": true,
     "start": 0,
-    "end": 263,
+    "end": 157,
     "matched": {
      "kind": true,
      "place": true
     },
-    "sourceId": "2098212938746065092",
-    "url": "https://x.com/i/web/status/2098212938746065092"
+    "sourceId": "2098579959321080152",
+    "url": "https://x.com/i/web/status/2098579959321080152"
    },
    "timeline": [
-    {
-     "id": "2098212938746065092",
-     "sourceId": "2098212938746065092",
-     "url": "https://x.com/i/web/status/2098212938746065092",
-     "authorId": "303861808",
-     "personId": "member:mike thompson",
-     "referenceIds": [],
-     "time": "2026-09-11T00:52:02.000Z",
-     "who": "@RepThompson",
-     "tag": "member",
-     "text": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay. It is unsafe to https://t.co/x2uR0dRN6K",
-     "engN": 10,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Lake County, CA",
-      "name": null
-     },
-     "evidence": {
-      "span": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay.",
-      "exact": true,
-      "start": 0,
-      "end": 263,
-      "matched": {
-       "kind": true,
-       "place": true
-      },
-      "sourceId": "2098212938746065092",
-      "url": "https://x.com/i/web/status/2098212938746065092"
-     }
-    },
     {
      "id": "2098579959321080152",
      "sourceId": "2098579959321080152",
@@ -902,58 +871,14 @@
     }
    ],
    "tweetIds": [
-    "2098212938746065092",
     "2098579959321080152"
    ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay. It is unsafe to https://t.co/x2uR0dRN6K",
-      "sourceId": "2098212938746065092",
-      "url": "https://x.com/i/web/status/2098212938746065092",
-      "evidenceQuote": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay. It is unsafe to https://t.co/x2uR0dRN6K",
-      "src": "@RepThompson, 2026-09-11T00:52:02.000Z"
-     },
-     {
-      "text": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-      "sourceId": "2098579959321080152",
-      "url": "https://x.com/i/web/status/2098579959321080152",
-      "evidenceQuote": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-      "src": "@RepThompson, 2026-09-12T01:10:26.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-      "sourceId": "2098579959321080152",
-      "url": "https://x.com/i/web/status/2098579959321080152",
-      "evidenceQuote": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-      "src": "@RepThompson, 2026-09-12T01:10:26.000Z"
-     },
-     {
-      "text": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay. It is unsafe to https://t.co/x2uR0dRN6K",
-      "sourceId": "2098212938746065092",
-      "url": "https://x.com/i/web/status/2098212938746065092",
-      "evidenceQuote": "#LucasFire in Lake County: An Evacuation Order for Zones: MNF-E016, MNF-E018, MNF-E019, UPP-E023, UPP-E025, UPP-E026, UPP-E027, UPP-E030 and an Evacuation Warning for Zones: MNF-E017, MNF-E021, UPP-E028, UPP-E031, UPP-E032, UPP-E035, UPP-E038 Leave without delay. It is unsafe to https://t.co/x2uR0dRN6K",
-      "src": "@RepThompson, 2026-09-11T00:52:02.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-09-14T14:17:24.646Z",
-    "posts": 2,
-    "inputHash": "2204f7be57a423a8fe2e1414bfc05641f84657c9fabfa2989aa4ae238790be0e",
-    "rejectedItems": 0
-   },
+   "intel": null,
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
     "independentSourceCount": 0,
     "sourceIds": [
-     "2098212938746065092",
      "2098579959321080152"
     ],
     "repeatedSourceGroups": [],
