@@ -9967,12 +9967,28 @@
     "status": "rejected",
     "createdAt": "2026-09-19T06:23:05.698Z",
     "completedAt": "2026-09-19T06:23:06.240Z"
+   },
+   "live:19da877c-20d8-4fa9-be89-404b708ee8ff": {
+    "id": "live:19da877c-20d8-4fa9-be89-404b708ee8ff",
+    "stage": "incidents",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.0765,
+    "status": "rejected",
+    "createdAt": "2026-09-19T08:18:05.959Z",
+    "completedAt": "2026-09-19T08:18:06.578Z"
    }
   },
   "poll": {
    "_errors": {
     "auth": 0,
     "other": 3
+   }
+  },
+  "incidents": {
+   "_errors": {
+    "auth": 0,
+    "other": 1
    }
   }
  }
