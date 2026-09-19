@@ -45,6 +45,21 @@ economy:
     taxes:
       label: Taxes
       aliases: ["tax cuts for the wealthy", "billionaire tax"]
+    agriculture-farmers:
+      label: Agriculture & farmers
+      aliases: ["farm bill", "farmers", "ranchers", "USDA", "crop insurance", "local growers", "food recall", "food safety"]
+    transit-infrastructure:
+      label: Transit & infrastructure
+      aliases: ["transit", "Amtrak", "SEPTA", "MBTA", "Bipartisan Infrastructure Law", "rail service", "highway"]
+    child-care:
+      label: Child care & caregiving costs
+      aliases: ["childcare", "child care providers", "elder care", "caregiving"]
+    small-business:
+      label: Small business & SBA
+      aliases: ["SBA", "small business", "entrepreneurs", "Main Street"]
+    prediction-markets-gambling:
+      label: Prediction markets & gambling
+      aliases: ["Prediction Markets Are Gambling Act", "sports betting", "gaming"]
 
 healthcare:
   label: Health care
@@ -62,6 +77,9 @@ healthcare:
     public-health:
       label: Public health & CDC/NIH
       aliases: ["vaccines", "RFK Jr."]
+    mental-health:
+      label: Mental health & suicide prevention
+      aliases: ["988", "Suicide Prevention Month", "mental health crisis", "behavioral health"]
 
 reproductive-rights:
   label: Reproductive rights
@@ -130,6 +148,9 @@ climate:
       aliases: ["FEMA"]
     epa-rollbacks:
       label: EPA & environmental rollbacks
+    public-lands:
+      label: Public lands & national parks
+      aliases: ["National Park Service", "National Park Week", "public lands", "BLM"]
 
 education:
   label: Education
@@ -149,6 +170,9 @@ civil-rights:
       label: Racial justice
     disability:
       label: Disability rights
+    arts-culture:
+      label: Arts, museums & cultural institutions
+      aliases: ["Smithsonian", "Kennedy Center", "museum", "NEA", "humanities"]
 
 foreign-policy:
   label: Foreign policy & national security
@@ -184,6 +208,12 @@ tech:
     big-tech:
       label: Big Tech accountability
       aliases: ["Section 230", "antitrust"]
+    space-science-research:
+      label: Space, NASA & science research
+      aliases: ["NASA", "Artemis", "NSF", "national labs", "quantum"]
+    data-centers:
+      label: Data centers & energy costs
+      aliases: ["data center", "ratepayers", "utility bills", "energy and water use"]
 
 congress-politics:
   label: Congress & campaign politics
