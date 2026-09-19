@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-19T00:42:21.549Z",
- "lastPollAt": "2026-09-19T00:41:29.404Z",
- "lastPollAttemptAt": "2026-09-19T00:41:28.839Z",
+ "generatedAt": "2026-09-19T01:24:37.168Z",
+ "lastPollAt": "2026-09-19T01:23:56.093Z",
+ "lastPollAttemptAt": "2026-09-19T01:23:54.061Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3379,7 +3379,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": true,
-  "referenceAsOf": "2026-09-19T00:42:20.092Z"
+  "referenceAsOf": "2026-09-19T01:24:35.707Z"
  },
  "news": {
   "version": 59,
@@ -3509,9 +3509,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-19T00:42:20.641Z",
+   "asOf": "2026-09-19T01:24:36.256Z",
    "windowDays": 14,
-   "windowStart": "2026-09-05T00:42:20.641Z",
+   "windowStart": "2026-09-05T01:24:36.256Z",
    "eligibleItems": 906,
    "withExcerpts": 110,
    "headlineOrSummary": 796,
@@ -3691,20 +3691,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 526,
+  "capturedIn24h": 520,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 526,
+  "pendingIn24h": 520,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-19T00:42:04.727Z",
+   "lastAttemptAt": "2026-09-19T01:24:30.974Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 526,
+   "capturedIn24h": 520,
    "classifiedIn24h": 0,
-   "pendingIn24h": 526,
+   "pendingIn24h": 520,
    "coverageComplete": false
   }
  },
@@ -6971,10 +6971,10 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 505,
+    "posts": 511,
     "mix": [
-     82,
-     8,
+     83,
+     7,
      10
     ],
     "accounts": 217,
@@ -6982,20 +6982,20 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 505,
+    "pending": 511,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 13382,
+    "eng": 13387,
     "perPost": 26,
     "top10Share": 64,
     "engDelta": -92
    },
    "w": {
-    "posts": 3901,
+    "posts": 3907,
     "mix": [
      81,
      5,
@@ -7006,40 +7006,40 @@
     "unidentifiedAccounts": 0,
     "classified": 1109,
     "tagged": 1002,
-    "pending": 2792,
+    "pending": 2798,
     "corePosts": 414,
     "coreCounts": {
      "Affordability": 179,
      "Healthcare": 55,
      "Corruption": 212
     },
-    "eng": 1048747,
-    "perPost": 269,
+    "eng": 1048752,
+    "perPost": 268,
     "top10Share": 57,
     "engDelta": 0
    },
    "curve48": [
-    49,
+    39,
     2,
-    5,
-    18,
-    132,
-    163,
-    176,
-    88,
-    21,
-    3,
-    0,
-    13,
+    6,
+    37,
+    138,
+    181,
+    149,
     83,
-    151,
-    175,
-    80
+    12,
+    0,
+    0,
+    35,
+    96,
+    146,
+    170,
+    61
    ]
   },
   "CPC": {
    "t": {
-    "posts": 223,
+    "posts": 225,
     "mix": [
      81,
      6,
@@ -7050,7 +7050,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 223,
+    "pending": 225,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7058,12 +7058,12 @@
      "Corruption": 0
     },
     "eng": 8418,
-    "perPost": 38,
+    "perPost": 37,
     "top10Share": 74,
     "engDelta": -94
    },
    "w": {
-    "posts": 1860,
+    "posts": 1862,
     "mix": [
      78,
      4,
@@ -7074,7 +7074,7 @@
     "unidentifiedAccounts": 0,
     "classified": 547,
     "tagged": 507,
-    "pending": 1313,
+    "pending": 1315,
     "corePosts": 228,
     "coreCounts": {
      "Affordability": 86,
@@ -7082,32 +7082,32 @@
      "Corruption": 130
     },
     "eng": 849192,
-    "perPost": 457,
+    "perPost": 456,
     "top10Share": 71,
     "engDelta": 0
    },
    "curve48": [
-    32,
+    26,
     2,
     2,
-    8,
-    61,
-    77,
-    84,
+    15,
+    59,
+    90,
+    71,
     43,
-    8,
-    1,
+    4,
     0,
-    5,
-    42,
-    56,
+    0,
+    16,
+    40,
+    58,
     84,
-    35
+    26
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 293,
+    "posts": 297,
     "mix": [
      80,
      10,
@@ -7118,64 +7118,64 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 293,
+    "pending": 297,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 5186,
-    "perPost": 18,
+    "eng": 5187,
+    "perPost": 17,
     "top10Share": 83,
     "engDelta": -89
    },
    "w": {
-    "posts": 2155,
+    "posts": 2159,
     "mix": [
-     80,
+     81,
      7,
-     13
+     12
     ],
     "accounts": 182,
     "members": 110,
     "unidentifiedAccounts": 0,
     "classified": 593,
     "tagged": 524,
-    "pending": 1562,
+    "pending": 1566,
     "corePosts": 199,
     "coreCounts": {
      "Affordability": 92,
      "Healthcare": 23,
      "Corruption": 92
     },
-    "eng": 279198,
-    "perPost": 130,
+    "eng": 279199,
+    "perPost": 129,
     "top10Share": 72,
     "engDelta": 0
    },
    "curve48": [
-    26,
+    19,
     2,
-    1,
-    12,
-    76,
-    93,
-    105,
-    48,
-    15,
-    1,
+    2,
+    23,
+    80,
+    102,
+    89,
+    47,
+    8,
     0,
-    11,
-    41,
-    98,
-    97,
-    45
+    0,
+    21,
+    55,
+    89,
+    95,
+    36
    ]
   },
   "CBC": {
    "t": {
-    "posts": 101,
+    "posts": 102,
     "mix": [
      83,
      10,
@@ -7186,20 +7186,20 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 101,
+    "pending": 102,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 2265,
+    "eng": 2269,
     "perPost": 22,
     "top10Share": 91,
     "engDelta": -90
    },
    "w": {
-    "posts": 707,
+    "posts": 708,
     "mix": [
      81,
      7,
@@ -7210,14 +7210,14 @@
     "unidentifiedAccounts": 0,
     "classified": 176,
     "tagged": 162,
-    "pending": 531,
+    "pending": 532,
     "corePosts": 77,
     "coreCounts": {
      "Affordability": 32,
      "Healthcare": 13,
      "Corruption": 38
     },
-    "eng": 140804,
+    "eng": 140808,
     "perPost": 199,
     "top10Share": 83,
     "engDelta": 0
@@ -7225,25 +7225,25 @@
    "curve48": [
     7,
     1,
-    4,
-    6,
-    17,
-    21,
-    29,
-    15,
-    6,
-    2,
+    5,
+    9,
+    18,
+    25,
+    23,
+    13,
+    7,
     0,
-    3,
-    19,
+    0,
+    10,
+    17,
     24,
-    37,
-    16
+    35,
+    14
    ]
   },
   "CHC": {
    "t": {
-    "posts": 83,
+    "posts": 84,
     "mix": [
      88,
      4,
@@ -7254,20 +7254,20 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 83,
+    "pending": 84,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 1490,
+    "eng": 1491,
     "perPost": 18,
     "top10Share": 85,
     "engDelta": -93
    },
    "w": {
-    "posts": 691,
+    "posts": 692,
     "mix": [
      79,
      4,
@@ -7278,51 +7278,51 @@
     "unidentifiedAccounts": 0,
     "classified": 190,
     "tagged": 181,
-    "pending": 501,
+    "pending": 502,
     "corePosts": 74,
     "coreCounts": {
      "Affordability": 20,
      "Healthcare": 9,
      "Corruption": 49
     },
-    "eng": 133202,
-    "perPost": 193,
+    "eng": 133203,
+    "perPost": 192,
     "top10Share": 88,
     "engDelta": 0
    },
    "curve48": [
-    7,
+    5,
     1,
-    0,
-    2,
-    17,
-    32,
-    29,
-    12,
-    3,
-    1,
-    0,
     0,
     5,
+    18,
+    38,
+    21,
+    13,
+    1,
+    0,
+    0,
+    1,
+    10,
     24,
-    33,
-    20
+    34,
+    14
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 47,
+    "posts": 48,
     "mix": [
-     87,
+     88,
      6,
-     7
+     6
     ],
     "accounts": 18,
     "members": 13,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 47,
+    "pending": 48,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7335,7 +7335,7 @@
     "engDelta": -99
    },
    "w": {
-    "posts": 424,
+    "posts": 425,
     "mix": [
      87,
      4,
@@ -7346,7 +7346,7 @@
     "unidentifiedAccounts": 0,
     "classified": 134,
     "tagged": 128,
-    "pending": 290,
+    "pending": 291,
     "corePosts": 49,
     "coreCounts": {
      "Affordability": 22,
@@ -7354,27 +7354,27 @@
      "Corruption": 25
     },
     "eng": 338012,
-    "perPost": 797,
+    "perPost": 795,
     "top10Share": 99,
     "engDelta": 0
    },
    "curve48": [
-    4,
-    0,
-    0,
-    4,
-    15,
-    15,
-    25,
-    13,
     3,
     0,
     0,
-    1,
-    10,
+    8,
     13,
-    17,
-    6
+    16,
+    25,
+    12,
+    1,
+    0,
+    0,
+    2,
+    15,
+    10,
+    18,
+    3
    ]
   }
  },
@@ -16749,15 +16749,16 @@
     "2101030126154580423",
     "2101031317643157523",
     "2101034541532021201",
-    "2101074033425178874"
+    "2101074033425178874",
+    "2101116292673523894"
    ],
    "firstSeen": "2026-08-21",
    "leadership": false,
-   "spread": 41,
-   "accounts": 42,
+   "spread": 42,
+   "accounts": 43,
    "cm": [
     23,
-    24,
+    25,
     8,
     13,
     4
@@ -16769,10 +16770,10 @@
     50,
     56,
     59,
-    61
+    62
    ],
    "exact": 1,
-   "total": 50,
+   "total": 51,
    "eng": 7343
   },
   {
@@ -19040,105 +19041,161 @@
     ],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
-  },
-  {
-   "id": "lake-county-ca--wildfire--lucasfire--2026-09-12",
-   "kind": "wildfire",
-   "name": "LucasFire",
-   "eventIdentity": "named-source-supported",
-   "kinds": [
-    "wildfire"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Lake County, CA · CA-04",
-   "placeRaw": "Lake County, CA",
-   "district": "CA-04",
-   "districtMatch": true,
-   "handle": "@RepThompson",
-   "member": "Mike Thompson",
-   "since": "2026-09-12T01:10:26.000Z",
-   "last": "2026-09-12T01:10:26.000Z",
-   "updates": 1,
-   "engN": 13,
-   "amplifiers": 0,
-   "others": [],
-   "title": "LucasFire · Lake County, CA",
-   "evidence": {
-    "span": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross.",
-    "exact": true,
-    "start": 0,
-    "end": 157,
-    "matched": {
-     "kind": true,
-     "place": true
-    },
-    "sourceId": "2098579959321080152",
-    "url": "https://x.com/i/web/status/2098579959321080152"
-   },
-   "timeline": [
-    {
-     "id": "2098579959321080152",
-     "sourceId": "2098579959321080152",
-     "url": "https://x.com/i/web/status/2098579959321080152",
-     "authorId": "303861808",
-     "personId": "member:mike thompson",
-     "referenceIds": [],
-     "time": "2026-09-12T01:10:26.000Z",
-     "who": "@RepThompson",
-     "tag": "member",
-     "text": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross. Enter via C St or the main gate and park behind Fritch Hall, keeping roadways clear. Small animals are housed near Fritch",
-     "engN": 13,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Lake County, CA",
-      "name": null
-     },
-     "evidence": {
-      "span": "#LucasFire in Lake County: The Lake County Fairgrounds (Fritch Hall) at 401 Martin St, Lakeport is now an official shelter staffed by the American Red Cross.",
-      "exact": true,
-      "start": 0,
-      "end": 157,
-      "matched": {
-       "kind": true,
-       "place": true
-      },
-      "sourceId": "2098579959321080152",
-      "url": "https://x.com/i/web/status/2098579959321080152"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2098579959321080152"
-   ],
-   "intel": null,
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2098579959321080152"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
   }
  ],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2101119209656713276",
+   "handle": "@CongressMin",
+   "member": "Dave Min",
+   "district": "CA-47",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "The damage that Hurricane Marie has wreaked on Orange County’s coastline has been devastating, forcing families out of their homes and causing massive damage to our beaches, roads, and infrastructure.\n \nI welcome Orange County’s declaration of a local emergency, and we are exploring options for broader actions to ensure that we have the federal, state, and local resources we need to both recover from this disaster and also to prepare for what may come this winter.",
+   "topics": [],
+   "time": "2026-09-19T01:20:31.000Z",
+   "date": "2026-09-18",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
+  {
+   "id": "2101117971171099064",
+   "handle": "@RepSaraJacobs",
+   "member": "Sara Jacobs",
+   "district": "CA-51",
+   "caucus": [
+    "CPC",
+    "NewDem"
+   ],
+   "text": "This was unfortunately foreseeable. That’s why Congress needs to enact my Defense AI Reliability and Reporting Act, that was in the House-passed NDAA. It would require prompt reporting of near misses like this and a coordinated process to find and fix the underlying failures. https://t.co/GX8TRg3l8b",
+   "topics": [],
+   "time": "2026-09-19T01:15:35.000Z",
+   "date": "2026-09-18",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2100999576429732148",
+    "handle": "@CNN",
+    "text": "Exclusive: An AI-assisted intel report, circulated across the US military during the Iran war, nearly triggered an operation but was false, sources say. https://t.co/xRoq2Gc4sc"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
+  {
+   "id": "2101117362619429167",
+   "handle": "@RepGoodlander",
+   "member": "Maggie Goodlander",
+   "district": "NH-02",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Every Granite Stater deserves safe, affordable, reliable water. That’s why I worked across the aisle to pass the Water Resources Development Act — authorizing more than $100 million for New Hampshire priorities, from water infrastructure and dam safety to flood protection and disaster response.\n\nLet’s get this done.",
+   "topics": [],
+   "time": "2026-09-19T01:13:10.000Z",
+   "date": "2026-09-18",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
+  {
+   "id": "2101116292673523894",
+   "handle": "@RepScottPeters",
+   "member": "Scott H. Peters",
+   "district": "CA-50",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "The ongoing shortfall of our nation’s broadband development has left San Diegans and communities across the country still waiting to be connected to the internet. I was glad to see the PLAN for Broadband Act pass out of committee, bringing us one step closer to closing the digital divide.\nhttps://t.co/zGo0RzW1e3",
+   "topics": [],
+   "time": "2026-09-19T01:08:55.000Z",
+   "date": "2026-09-18",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
+  {
+   "id": "2101112799644516738",
+   "handle": "@RepGabeAmo",
+   "member": "Gabe Amo",
+   "district": "RI-01",
+   "caucus": [
+    "CBC"
+   ],
+   "text": "The energy in Providence is electric for PVDFest!\n\nGlad to celebrate opening night of this showcase of our capital city’s creative community. https://t.co/RkDcjZNEhF",
+   "topics": [],
+   "time": "2026-09-19T00:55:02.000Z",
+   "date": "2026-09-18",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
+  {
+   "id": "2101111908070027285",
+   "handle": "@RepJimCosta",
+   "member": "Jim Costa",
+   "district": "CA-21",
+   "caucus": [
+    "NewDem",
+    "CHC"
+   ],
+   "text": "The President obviously doesn’t care about the uncertainty and damage he’s causing as he continues his chaotic tariff war. \n\nOur farmers and agricultural communities deserve better. https://t.co/orSGN3Zc1l",
+   "topics": [],
+   "time": "2026-09-19T00:51:30.000Z",
+   "date": "2026-09-18",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "isNew": false
+  },
   {
    "id": "2101108671552082430",
    "handle": "@rep_jackson",
@@ -24120,157 +24177,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-18T20:51:18.255Z",
    "isNew": false
-  },
-  {
-   "id": "2101036729171869895",
-   "handle": "@mrvan4congress",
-   "member": "Frank J. Mrvan",
-   "district": "IN-01",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "This new Air Traffic Control Tower is an investment in the future of Gary, our airport, and all of Northwest Indiana.    https://t.co/tZXAKUbQgJ",
-   "topics": [],
-   "time": "2026-09-18T19:52:46.000Z",
-   "date": "2026-09-18",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
-  },
-  {
-   "id": "2101036644325535890",
-   "handle": "@ValHoyle",
-   "member": "Val T. Hoyle",
-   "district": "OR-04",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "RT @Acosta: https://t.co/FqkOY0RWpB",
-   "topics": [],
-   "time": "2026-09-18T19:52:26.000Z",
-   "date": "2026-09-18",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2101030532662391293",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
-  },
-  {
-   "id": "2101036536321970220",
-   "handle": "@RepJasonCrow",
-   "member": "Jason Crow",
-   "district": "CO-06",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Pete Hegseth is covering up the deaths of American servicemembers and contractors.\n\nIt’s a betrayal of the men & women who have served and sacrificed for our country.\n\nI’m leading a new bill to prevent the Pentagon from manipulating government data on troop casualties.\nhttps://t.co/jATWP2BE5s",
-   "topics": [],
-   "time": "2026-09-18T19:52:00.000Z",
-   "date": "2026-09-18",
-   "engN": 624,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
-  },
-  {
-   "id": "2101036391480103276",
-   "handle": "@RepTedLieu",
-   "member": "Ted Lieu",
-   "district": "CA-36",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "Republican leadership must stop burying their heads in the sand.\n\nWe need AI regulation NOW. https://t.co/7ls0Z42fx2",
-   "topics": [],
-   "time": "2026-09-18T19:51:25.000Z",
-   "date": "2026-09-18",
-   "engN": 55,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
-  },
-  {
-   "id": "2101035121285452170",
-   "handle": "@RepBillFoster",
-   "member": "Bill Foster",
-   "district": "IL-11",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "JOB SEEKERS &amp; EMPLOYERS: I'm hosting a Job &amp; Career Fair on Thursday, October 1 at Waubonsee Community College!\n\nIf you're looking for a job or an employer looking to set up a booth, visit https://t.co/i3u8dKMp7p to register.\n\nQuestions? Call (630) 585-7672. https://t.co/qRA35mW0nN",
-   "topics": [],
-   "time": "2026-09-18T19:46:22.000Z",
-   "date": "2026-09-18",
-   "engN": 4,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
-  },
-  {
-   "id": "2101035070920274025",
-   "handle": "@rep_jackson",
-   "member": "Jonathan L. Jackson",
-   "district": "IL-01",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "When this president locks the door on journalists, he is locking the door on the American people. \n\nA free press belongs to the people, not to the powerful. We will not be quiet, and we will not look away!! https://t.co/8GtRbnJrTU",
-   "topics": [],
-   "time": "2026-09-18T19:46:10.000Z",
-   "date": "2026-09-18",
-   "engN": 2,
-   "kind": "quote",
-   "quoted": {
-    "id": "2101028687198015616",
-    "handle": "@AP",
-    "text": "BREAKING: President Trump says he is banning CNN, MSNOW and Politico from the White House over their coverage. https://t.co/bUt4s3Dp9l"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T20:51:18.255Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -24444,6 +24350,10 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1858680194112065536": "@CongressMin",
+  "1345103905869455361": "@RepSaraJacobs",
+  "1874831517706256384": "@RepGoodlander",
+  "1724849796496924672": "@RepGabeAmo",
   "1615455071801679874": "@rep_jackson",
   "1618683941464195072": "@RepFriedmanCA",
   "1404519992582942724": "@Rep_Stansbury",
@@ -24465,12 +24375,10 @@
   "1074354529787895808": "@repdeliaramirez",
   "999285287812558848": "@RepSummerLee",
   "872156132688711681": "@LaurenUnderwood",
-  "1724849796496924672": "@RepGabeAmo",
   "1610323296360210433": "@RepDonDavis",
   "1493294940708696069": "@MGPforCongress",
   "1861770594108289025": "@RepRileyNY",
   "1707910391844769792": "@DerekTranCA45",
-  "1345103905869455361": "@RepSaraJacobs",
   "817076257770835968": "@RepEspaillat",
   "1083472286089396224": "@RepCasten",
   "1861777824463376384": "@RepJulieJohnson",
@@ -24483,7 +24391,6 @@
   "1352760304271241218": "@RepTroyCarter",
   "1080587263132733442": "@RepSylviaGarcia",
   "1499512178013057032": "@RepCasar",
-  "1874831517706256384": "@RepGoodlander",
   "1608934316779921408": "@RepDeluzio",
   "1871605623496097792": "@repkmr",
   "1613637172346642432": "@RepGregLandsman",
@@ -24550,7 +24457,6 @@
   "1080222360643485698": "@RepAngieCraig",
   "1082086081238102018": "@RepJahanaHayes",
   "1868715744579489792": "@RepFields",
-  "1858680194112065536": "@CongressMin",
   "1873797020143804416": "@RepDexterOR",
   "1059276581741477888": "@April4Congress",
   "1650523264534343687": "@bell4mo",
@@ -24603,6 +24509,113 @@
   "1906193081814388736": "@AdelitaForAZ"
  },
  "feedAll": [
+  {
+   "id": "2101119209656713276",
+   "authorId": "1858680194112065536",
+   "createdAt": "2026-09-19T01:20:31.000Z",
+   "date": "2026-09-18",
+   "type": "tweet",
+   "text": "The damage that Hurricane Marie has wreaked on Orange County’s coastline has been devastating, forcing families out of their homes and causing massive damage to our beaches, roads, and infrastructure.\n \nI welcome Orange County’s declaration of a local emergency, and we are exploring options for broader actions to ensure that we have the federal, state, and local resources we need to both recover from this disaster and also to prepare for what may come this winter.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z"
+  },
+  {
+   "id": "2101117971171099064",
+   "authorId": "1345103905869455361",
+   "createdAt": "2026-09-19T01:15:35.000Z",
+   "date": "2026-09-18",
+   "type": "quote",
+   "text": "This was unfortunately foreseeable. That’s why Congress needs to enact my Defense AI Reliability and Reporting Act, that was in the House-passed NDAA. It would require prompt reporting of near misses like this and a coordinated process to find and fix the underlying failures. https://t.co/GX8TRg3l8b",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z",
+   "quoted": {
+    "id": "2100999576429732148",
+    "handle": "@CNN",
+    "text": "Exclusive: An AI-assisted intel report, circulated across the US military during the Iran war, nearly triggered an operation but was false, sources say. https://t.co/xRoq2Gc4sc"
+   }
+  },
+  {
+   "id": "2101117362619429167",
+   "authorId": "1874831517706256384",
+   "createdAt": "2026-09-19T01:13:10.000Z",
+   "date": "2026-09-18",
+   "type": "tweet",
+   "text": "Every Granite Stater deserves safe, affordable, reliable water. That’s why I worked across the aisle to pass the Water Resources Development Act — authorizing more than $100 million for New Hampshire priorities, from water infrastructure and dam safety to flood protection and disaster response.\n\nLet’s get this done.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z"
+  },
+  {
+   "id": "2101116292673523894",
+   "authorId": "1135486501",
+   "createdAt": "2026-09-19T01:08:55.000Z",
+   "date": "2026-09-18",
+   "type": "tweet",
+   "text": "The ongoing shortfall of our nation’s broadband development has left San Diegans and communities across the country still waiting to be connected to the internet. I was glad to see the PLAN for Broadband Act pass out of committee, bringing us one step closer to closing the digital divide.\nhttps://t.co/zGo0RzW1e3",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z"
+  },
+  {
+   "id": "2101112799644516738",
+   "authorId": "1724849796496924672",
+   "createdAt": "2026-09-19T00:55:02.000Z",
+   "date": "2026-09-18",
+   "type": "tweet",
+   "text": "The energy in Providence is electric for PVDFest!\n\nGlad to celebrate opening night of this showcase of our capital city’s creative community. https://t.co/RkDcjZNEhF",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z"
+  },
+  {
+   "id": "2101111908070027285",
+   "authorId": "245451804",
+   "createdAt": "2026-09-19T00:51:30.000Z",
+   "date": "2026-09-18",
+   "type": "tweet",
+   "text": "The President obviously doesn’t care about the uncertainty and damage he’s causing as he continues his chaotic tariff war. \n\nOur farmers and agricultural communities deserve better. https://t.co/orSGN3Zc1l",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-19T01:23:56.034Z"
+  },
   {
    "id": "2101108671552082430",
    "authorId": "1615455071801679874",
@@ -67975,64 +67988,20 @@
    "sourceReferenceId": "2099559084324208724",
    "provenance": null,
    "metricsObservedAt": "2026-09-15T19:08:24.708Z"
-  },
-  {
-   "id": "2099921381672829036",
-   "authorId": "1135486501",
-   "createdAt": "2026-09-15T18:00:46.000Z",
-   "date": "2026-09-15",
-   "type": "reply",
-   "text": "5/ At a moment when Californians are already getting crushed by health care costs, Republicans want to strip away protections that save billions in medical expenses, cut cancer risk near our ports, and reduce toxic emissions.\n\nThat's the choice being made on the floor this week. I'll vote NO on both of these harmful bills. (5/5)",
-   "engN": 3,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:30.630Z",
-   "quoted": {
-    "id": "2099921379156222175",
-    "handle": "@RepScottPeters",
-    "text": "4/ Here's the kicker: Republicans are using the Congressional Review Act (a 1996 federal law that allows Congress to overturn rules) to attack these rules that were approved/finalized years ago. The…"
-   }
-  },
-  {
-   "id": "2099921379156222175",
-   "authorId": "1135486501",
-   "createdAt": "2026-09-15T18:00:46.000Z",
-   "date": "2026-09-15",
-   "type": "reply",
-   "text": "4/ Here's the kicker: Republicans are using the Congressional Review Act (a 1996 federal law that allows Congress to overturn rules) to attack these rules that were approved/finalized years ago. The CRA isn't supposed to work this way, and if it succeeds, it will permanently block EPA from ever granting similar protections again. (4/5)",
-   "engN": 4,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:30.630Z",
-   "quoted": {
-    "id": "2099921377512042817",
-    "handle": "@RepScottPeters",
-    "text": "3/ The second rule requires harbor craft vessels in California waters, one of the largest sources of cancer-causing pollution at port, to upgrade to cleaner diesel engines or zero-emission power.…"
-   }
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3901,
+ "feedAllTotal": 3907,
  "feedAllFiles": [
-  "feed-0-bf50673d8ac2c13e.json",
-  "feed-1-fa2339ba31c9a1e4.json",
-  "feed-2-2fe87898282fac88.json",
-  "feed-3-3ee1420f4aca109a.json",
-  "feed-4-24b326d84cea61f4.json",
-  "feed-5-0b24d5e5d066b229.json",
-  "feed-6-e7ce831489dbf46f.json",
-  "feed-7-d1156e335f599b99.json",
-  "feed-8-4cfca66ec0c87105.json",
-  "feed-9-f72653b7cfafcf93.json"
+  "feed-0-801bfc22e9502359.json",
+  "feed-1-898b9a1bf0fd5c70.json",
+  "feed-2-7ad0b3031e2070f8.json",
+  "feed-3-cdfa68f2ad7887db.json",
+  "feed-4-27011f3e17bf383f.json",
+  "feed-5-fa386709cb5d850e.json",
+  "feed-6-691ed4741d23c4e1.json",
+  "feed-7-e0c097d6e2c077b4.json",
+  "feed-8-4adced9938fedeeb.json",
+  "feed-9-6f044541b2cdcb38.json"
  ]
 }
