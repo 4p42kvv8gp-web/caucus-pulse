@@ -1,7 +1,7 @@
 {
  "date": "2026-09-17",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-18T23:16:09.036Z",
+ "classifiedAt": "2026-09-19T00:42:05.213Z",
  "assignments": {},
  "incidents": {},
  "provenance": {},
@@ -1305,11 +1305,11 @@
     "2100580060730102037",
     "2100580569293709408"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfBkqBbV114fSzqK8pLDt\"}",
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfBsPGMKiJzCy65rXdxqx\"}",
    "reasonCode": "provider-credits",
    "inference": {
-    "attemptedAt": "2026-09-18T23:16:08.605Z",
-    "observedAt": "2026-09-18T23:16:09.028Z",
+    "attemptedAt": "2026-09-19T00:42:04.727Z",
+    "observedAt": "2026-09-19T00:42:05.203Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "provider-credits",
@@ -1334,9 +1334,7 @@
     "2100586390861816072",
     "2100586797906395311",
     "2100586834275299507",
-    "2100587201494986888",
-    "2100587336744501345",
-    "2100587991634751719"
+    "2100587201494986888"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -1344,6 +1342,8 @@
   "live_chunk-2": {
    "acceptedIds": [],
    "retryIds": [
+    "2100587336744501345",
+    "2100587991634751719",
     "2100588291267363257",
     "2100588996136927305",
     "2100589123018899884",
@@ -1461,8 +1461,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-18T23:16:08.605Z",
-   "observedAt": "2026-09-18T23:16:09.028Z",
+   "attemptedAt": "2026-09-19T00:42:04.727Z",
+   "observedAt": "2026-09-19T00:42:05.203Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
@@ -1471,8 +1471,8 @@
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-18T23:16:08.605Z",
-   "observedAt": "2026-09-18T23:16:09.028Z",
+   "attemptedAt": "2026-09-19T00:42:04.727Z",
+   "observedAt": "2026-09-19T00:42:05.203Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
@@ -1480,5 +1480,5 @@
    "retryCount": 15
   }
  },
- "updatedAt": "2026-09-18T23:16:09.037Z"
+ "updatedAt": "2026-09-19T00:42:05.214Z"
 }
