@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-20T01:47:14.328Z",
- "lastPollAt": "2026-09-20T01:46:31.553Z",
- "lastPollAttemptAt": "2026-09-20T01:46:30.807Z",
+ "generatedAt": "2026-09-20T03:02:17.084Z",
+ "lastPollAt": "2026-09-20T03:01:45.352Z",
+ "lastPollAttemptAt": "2026-09-20T03:01:44.517Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3379,7 +3379,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": true,
-  "referenceAsOf": "2026-09-20T01:47:12.817Z"
+  "referenceAsOf": "2026-09-20T03:02:15.659Z"
  },
  "news": {
   "version": 75,
@@ -3509,9 +3509,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-20T01:47:13.354Z",
+   "asOf": "2026-09-20T03:02:16.172Z",
    "windowDays": 14,
-   "windowStart": "2026-09-06T01:47:13.354Z",
+   "windowStart": "2026-09-06T03:02:16.172Z",
    "eligibleItems": 960,
    "withExcerpts": 112,
    "headlineOrSummary": 848,
@@ -3665,8 +3665,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 192,
-  "t": 12
+  "posts": 193,
+  "t": 13
  },
  "caucusKeys": [
   "CPC",
@@ -3691,20 +3691,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 256,
+  "capturedIn24h": 248,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 256,
+  "pendingIn24h": 248,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-20T01:46:57.186Z",
+   "lastAttemptAt": "2026-09-20T03:02:10.907Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 256,
+   "capturedIn24h": 248,
    "classifiedIn24h": 0,
-   "pendingIn24h": 256,
+   "pendingIn24h": 248,
    "coverageComplete": false
   }
  },
@@ -6971,31 +6971,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 241,
+    "posts": 245,
     "mix": [
-     88,
+     87,
      4,
-     8
+     9
     ],
-    "accounts": 146,
-    "members": 116,
+    "accounts": 148,
+    "members": 118,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 241,
+    "pending": 245,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 8284,
+    "eng": 8406,
     "perPost": 34,
-    "top10Share": 77,
+    "top10Share": 76,
     "engDelta": -95
    },
    "w": {
-    "posts": 3860,
+    "posts": 3864,
     "mix": [
      81,
      6,
@@ -7006,64 +7006,64 @@
     "unidentifiedAccounts": 0,
     "classified": 801,
     "tagged": 746,
-    "pending": 3059,
+    "pending": 3063,
     "corePosts": 324,
     "coreCounts": {
      "Affordability": 133,
      "Healthcare": 43,
      "Corruption": 173
     },
-    "eng": 1069757,
+    "eng": 1069879,
     "perPost": 277,
     "top10Share": 56,
     "engDelta": 0
    },
    "curve48": [
-    8,
+    6,
     0,
+    4,
+    74,
+    140,
+    174,
+    99,
+    35,
+    7,
     0,
-    45,
-    115,
-    144,
-    148,
-    62,
-    18,
-    1,
-    3,
-    22,
-    62,
-    64,
-    41,
-    45
+    6,
+    47,
+    58,
+    57,
+    49,
+    24
    ]
   },
   "CPC": {
    "t": {
-    "posts": 109,
+    "posts": 113,
     "mix": [
      84,
-     3,
-     13
+     4,
+     12
     ],
-    "accounts": 63,
-    "members": 50,
+    "accounts": 65,
+    "members": 52,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 109,
+    "pending": 113,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 6431,
-    "perPost": 59,
-    "top10Share": 90,
+    "eng": 6553,
+    "perPost": 58,
+    "top10Share": 89,
     "engDelta": -95
    },
    "w": {
-    "posts": 1813,
+    "posts": 1817,
     "mix": [
      78,
      4,
@@ -7074,64 +7074,64 @@
     "unidentifiedAccounts": 0,
     "classified": 381,
     "tagged": 362,
-    "pending": 1432,
+    "pending": 1436,
     "corePosts": 177,
     "coreCounts": {
      "Affordability": 66,
      "Healthcare": 27,
      "Corruption": 100
     },
-    "eng": 853917,
-    "perPost": 471,
+    "eng": 854039,
+    "perPost": 470,
     "top10Share": 70,
     "engDelta": 0
    },
    "curve48": [
     1,
     0,
+    2,
+    35,
+    47,
+    88,
+    40,
+    18,
+    6,
     0,
+    5,
     20,
-    43,
-    63,
-    73,
-    28,
-    8,
-    1,
-    3,
-    12,
     22,
-    29,
+    27,
     20,
-    20
+    16
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 142,
+    "posts": 145,
     "mix": [
      85,
-     5,
-     10
+     6,
+     9
     ],
-    "accounts": 88,
-    "members": 69,
+    "accounts": 89,
+    "members": 70,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 142,
+    "pending": 145,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 1430,
-    "perPost": 10,
-    "top10Share": 72,
+    "eng": 1548,
+    "perPost": 11,
+    "top10Share": 71,
     "engDelta": -97
    },
    "w": {
-    "posts": 2172,
+    "posts": 2175,
     "mix": [
      81,
      7,
@@ -7142,64 +7142,64 @@
     "unidentifiedAccounts": 0,
     "classified": 452,
     "tagged": 414,
-    "pending": 1720,
+    "pending": 1723,
     "corePosts": 165,
     "coreCounts": {
      "Affordability": 73,
      "Healthcare": 20,
      "Corruption": 79
     },
-    "eng": 291096,
+    "eng": 291214,
     "perPost": 134,
     "top10Share": 71,
     "engDelta": 0
    },
    "curve48": [
-    6,
+    4,
     0,
-    0,
-    27,
-    75,
-    75,
+    3,
+    42,
     87,
-    35,
-    10,
+    96,
+    61,
+    19,
+    1,
     0,
-    0,
-    13,
-    43,
-    39,
-    21,
-    26
+    1,
+    31,
+    38,
+    34,
+    27,
+    14
    ]
   },
   "CBC": {
    "t": {
-    "posts": 26,
+    "posts": 28,
     "mix": [
-     92,
-     4,
+     89,
+     7,
      4
     ],
-    "accounts": 19,
-    "members": 17,
+    "accounts": 20,
+    "members": 18,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 26,
+    "pending": 28,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 424,
+    "eng": 436,
     "perPost": 16,
     "top10Share": 98,
     "engDelta": -98
    },
    "w": {
-    "posts": 687,
+    "posts": 689,
     "mix": [
      80,
      7,
@@ -7210,64 +7210,64 @@
     "unidentifiedAccounts": 0,
     "classified": 126,
     "tagged": 121,
-    "pending": 561,
+    "pending": 563,
     "corePosts": 61,
     "coreCounts": {
      "Affordability": 27,
      "Healthcare": 10,
      "Corruption": 28
     },
-    "eng": 146854,
-    "perPost": 214,
+    "eng": 146866,
+    "perPost": 213,
     "top10Share": 82,
     "engDelta": 0
    },
    "curve48": [
-    7,
-    0,
-    0,
-    13,
-    19,
-    22,
-    34,
-    12,
-    3,
-    0,
-    3,
-    3,
-    7,
     5,
+    0,
     2,
-    6
+    18,
+    22,
+    35,
+    20,
+    6,
+    0,
+    0,
+    4,
+    8,
+    4,
+    3,
+    6,
+    3
    ]
   },
   "CHC": {
    "t": {
-    "posts": 40,
+    "posts": 41,
     "mix": [
      78,
-     8,
-     14
+     7,
+     15
     ],
     "accounts": 24,
     "members": 19,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 40,
+    "pending": 41,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 533,
-    "perPost": 13,
+    "eng": 639,
+    "perPost": 16,
     "top10Share": 97,
-    "engDelta": -98
+    "engDelta": -97
    },
    "w": {
-    "posts": 691,
+    "posts": 692,
     "mix": [
      79,
      4,
@@ -7278,14 +7278,14 @@
     "unidentifiedAccounts": 0,
     "classified": 147,
     "tagged": 141,
-    "pending": 544,
+    "pending": 545,
     "corePosts": 63,
     "coreCounts": {
      "Affordability": 16,
      "Healthcare": 9,
      "Corruption": 41
     },
-    "eng": 138941,
+    "eng": 139047,
     "perPost": 201,
     "top10Share": 85,
     "engDelta": 0
@@ -7294,19 +7294,19 @@
     1,
     0,
     0,
-    2,
-    12,
-    28,
-    27,
-    15,
-    1,
+    3,
+    22,
+    30,
+    25,
+    5,
     0,
     0,
-    4,
-    12,
-    8,
-    4,
-    12
+    0,
+    10,
+    9,
+    7,
+    10,
+    5
    ]
   },
   "CAPAC": {
@@ -7362,19 +7362,19 @@
     0,
     0,
     0,
-    3,
-    14,
-    12,
+    6,
     16,
-    4,
-    1,
+    18,
+    7,
+    3,
     0,
     0,
-    2,
+    0,
+    3,
     3,
     7,
     5,
-    5
+    4
    ]
   }
  },
@@ -18414,6 +18414,112 @@
  "incidentsFiltered": 0,
  "feed": [
   {
+   "id": "2101496842060177447",
+   "handle": "@MikeLevin",
+   "member": "Mike Levin",
+   "district": "CA-49",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CHC"
+   ],
+   "text": "Daily reminder that Trump and Republican leadership are spending billions of your tax dollars on military operations against Iran that Congress never authorized, expanding Stephen Miller’s mass deportation agenda, and funding the president’s own vanity projects, while doing nothing to lower your grocery bill or make your life more affordable.\n\nThis November, you can help put an end to it.",
+   "topics": [],
+   "time": "2026-09-20T02:21:05.000Z",
+   "date": "2026-09-19",
+   "engN": 106,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z",
+   "isNew": false
+  },
+  {
+   "id": "2101493659430420560",
+   "handle": "@RepTroyCarter",
+   "member": "Troy A. Carter",
+   "district": "LA-02",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "https://t.co/WVfzHmFO4u",
+   "topics": [],
+   "time": "2026-09-20T02:08:26.000Z",
+   "date": "2026-09-19",
+   "engN": 1,
+   "kind": "reply",
+   "quoted": {
+    "id": "2101493647921275387",
+    "handle": "@RepTroyCarter",
+    "text": "This year’s Phoenix Awards delivered a night to remember.. \n\nWe celebrated Black life and legacy.\n\nWe honored OUR ROOTS history makers, the creatives, the change agents that make us who we are.…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z",
+   "isNew": false
+  },
+  {
+   "id": "2101493647921275387",
+   "handle": "@RepTroyCarter",
+   "member": "Troy A. Carter",
+   "district": "LA-02",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "This year’s Phoenix Awards delivered a night to remember.. \n\nWe celebrated Black life and legacy.\n\nWe honored OUR ROOTS history makers, the creatives, the change agents that make us who we are. \n\nThrough the storms and the rain, we’re still here, and we’re READY for the fight ahead of us…\n\n…and just like the Phoenix, we’re getting ready to RISE. #ALC55 @CBCFInc",
+   "topics": [],
+   "time": "2026-09-20T02:08:24.000Z",
+   "date": "2026-09-19",
+   "engN": 11,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z",
+   "isNew": false
+  },
+  {
+   "id": "2101491257835213163",
+   "handle": "@RepDeSaulnier",
+   "member": "Mark DeSaulnier",
+   "district": "CA-10",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "I joined @HabitatEBSV today for their 2026 Build-A-Thon as they construct 19 new affordable homes in Walnut Creek and toured the site. It was inspiring to be among dedicated volunteers who are committed to ensuring affordable housing is available right here in our community. https://t.co/qQnPGFaJ3H",
+   "topics": [],
+   "time": "2026-09-20T01:58:54.000Z",
+   "date": "2026-09-19",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z",
+   "isNew": false
+  },
+  {
    "id": "2101486614845268373",
    "handle": "@ChrisPappasNH",
    "member": "Chris Pappas",
@@ -23300,112 +23406,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-19T14:38:50.773Z",
    "isNew": false
-  },
-  {
-   "id": "2101318324294410658",
-   "handle": "@RepWesleyBellMO",
-   "member": "Wesley Bell",
-   "district": "MO-01",
-   "caucus": [
-    "NewDem",
-    "CBC"
-   ],
-   "text": "Today is National App Challenge Day! \n\nJust wanted to remind all the rockstar students in Missouri’s First District that registration for the 2026 Congressional App Challenge is open NOW!\n\nRegistration closes in just a few weeks. 📲\nhttps://t.co/whi0icDWT1",
-   "topics": [],
-   "time": "2026-09-19T14:31:43.000Z",
-   "date": "2026-09-19",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T14:38:50.773Z",
-   "isNew": false
-  },
-  {
-   "id": "2101316570836337146",
-   "handle": "@RepGabeAmo",
-   "member": "Gabe Amo",
-   "district": "RI-01",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "Stopped by Operation Stand Down Rhode Island’s Veterans Assistance Fair to hear from local veterans, and thank service agencies &amp; volunteers.\n\n#RI01 veterans who need help with a federal agency can always call my office at 401-729-5600 https://t.co/oLutxCAJis",
-   "topics": [],
-   "time": "2026-09-19T14:24:45.000Z",
-   "date": "2026-09-19",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T14:30:58.481Z",
-   "isNew": false
-  },
-  {
-   "id": "2101315283914739775",
-   "handle": "@RepRobinKelly",
-   "member": "Robin L. Kelly",
-   "district": "IL-02",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "Revoking press passes over unfavorable coverage is what authoritarian governments do, not American presidents.\n\nA free press asking hard questions isn't the enemy.\n\nSilencing it should worry every one of us, regardless of how you vote. https://t.co/zXEY3Jd4Jj",
-   "topics": [],
-   "time": "2026-09-19T14:19:38.000Z",
-   "date": "2026-09-19",
-   "engN": 5,
-   "kind": "quote",
-   "quoted": {
-    "id": "2101040028503748925",
-    "handle": "@CNN",
-    "text": "President Donald Trump said Friday that he is \"banning\" CNN, MS NOW and Politico \"from the White House.\" The president said it was \"effective immediately,\" but there was no indication his…"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T14:30:58.481Z",
-   "isNew": false
-  },
-  {
-   "id": "2101314325017231548",
-   "handle": "@RepLindaSanchez",
-   "member": "Linda T. Sánchez",
-   "district": "CA-38",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Families just want to be able to afford groceries and gas, instead we have Secretary Bessent wasting taxpayer money to hangout with Jake Paul. \n\nMake it make sense. https://t.co/2zRPioTUz9",
-   "topics": [],
-   "time": "2026-09-19T14:15:50.000Z",
-   "date": "2026-09-19",
-   "engN": 3,
-   "kind": "quote",
-   "quoted": {
-    "id": "2100994050400633222",
-    "handle": "@SecScottBessent",
-    "text": "Great to welcome @jakepaul to the Treasury Department today.\n\nJake’s path from content creator to entrepreneur and professional boxer is a distinctly American story. 🇺🇸🇺🇸🇺🇸…"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T14:30:58.481Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -23578,6 +23578,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1352760304271241218": "@RepTroyCarter",
   "1874831517706256384": "@RepGoodlander",
   "1074354529787895808": "@repdeliaramirez",
   "1345103905869455361": "@RepSaraJacobs",
@@ -23649,7 +23650,6 @@
   "1863611233230024704": "@RepGLatimer",
   "816705409486618624": "@RepTomSuozzi",
   "1875014393613688832": "@RepBynum",
-  "1352760304271241218": "@RepTroyCarter",
   "1079061579973439488": "@RepSusieLee",
   "1858680194112065536": "@CongressMin",
   "1615455071801679874": "@rep_jackson",
@@ -23737,6 +23737,79 @@
   "1906193081814388736": "@AdelitaForAZ"
  },
  "feedAll": [
+  {
+   "id": "2101496842060177447",
+   "authorId": "14573926",
+   "createdAt": "2026-09-20T02:21:05.000Z",
+   "date": "2026-09-19",
+   "type": "tweet",
+   "text": "Daily reminder that Trump and Republican leadership are spending billions of your tax dollars on military operations against Iran that Congress never authorized, expanding Stephen Miller’s mass deportation agenda, and funding the president’s own vanity projects, while doing nothing to lower your grocery bill or make your life more affordable.\n\nThis November, you can help put an end to it.",
+   "engN": 106,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z"
+  },
+  {
+   "id": "2101493659430420560",
+   "authorId": "1352760304271241218",
+   "createdAt": "2026-09-20T02:08:26.000Z",
+   "date": "2026-09-19",
+   "type": "reply",
+   "text": "https://t.co/WVfzHmFO4u",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z",
+   "quoted": {
+    "id": "2101493647921275387",
+    "handle": "@RepTroyCarter",
+    "text": "This year’s Phoenix Awards delivered a night to remember.. \n\nWe celebrated Black life and legacy.\n\nWe honored OUR ROOTS history makers, the creatives, the change agents that make us who we are.…"
+   }
+  },
+  {
+   "id": "2101493647921275387",
+   "authorId": "1352760304271241218",
+   "createdAt": "2026-09-20T02:08:24.000Z",
+   "date": "2026-09-19",
+   "type": "tweet",
+   "text": "This year’s Phoenix Awards delivered a night to remember.. \n\nWe celebrated Black life and legacy.\n\nWe honored OUR ROOTS history makers, the creatives, the change agents that make us who we are. \n\nThrough the storms and the rain, we’re still here, and we’re READY for the fight ahead of us…\n\n…and just like the Phoenix, we’re getting ready to RISE. #ALC55 @CBCFInc",
+   "engN": 11,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z"
+  },
+  {
+   "id": "2101491257835213163",
+   "authorId": "2968007206",
+   "createdAt": "2026-09-20T01:58:54.000Z",
+   "date": "2026-09-19",
+   "type": "tweet",
+   "text": "I joined @HabitatEBSV today for their 2026 Build-A-Thon as they construct 19 new affordable homes in Walnut Creek and toured the site. It was inspiring to be among dedicated volunteers who are committed to ensuring affordable housing is available right here in our community. https://t.co/qQnPGFaJ3H",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-20T03:01:45.323Z"
+  },
   {
    "id": "2101486614845268373",
    "authorId": "574799823",
@@ -67740,88 +67813,20 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-16T08:42:31.246Z"
-  },
-  {
-   "id": "2099972465556693451",
-   "authorId": "1873783602728595456",
-   "createdAt": "2026-09-15T21:23:46.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Today’s vote on the House floor was about holding Trump accountable for unlawful conduct.\n\nRenée Good, Alex Pretti, Lorenzo Salgado Araujo, and Johan Sebastián Durán Guerrero lost their lives in encounters involving ICE. They should still be here with us today.\n\nThat’s why I voted to consider articles of impeachment for the President. \n\nTrump is the most corrupt politician in our history, and he will be held accountable.",
-   "engN": 5,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.053Z"
-  },
-  {
-   "id": "2099972281753547128",
-   "authorId": "796736612554117120",
-   "createdAt": "2026-09-15T21:23:02.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Happy Hispanic Heritage Month! I’m happy to celebrate the rich cultures, histories, and contributions of Hispanic communities in CA-19 and across the country. This month and every month, we recognize their hard work and leadership and the many ways they continue to shape and strengthen our nation.",
-   "engN": 3,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.053Z"
-  },
-  {
-   "id": "2099972156952117751",
-   "authorId": "2361650234",
-   "createdAt": "2026-09-15T21:22:32.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Today is National Voter Registration Day. Michigan has had growing voter turnout over the past few elections, and we want to make sure every vote counts. Register today! https://t.co/I9pOmWCxnS",
-   "engN": 0,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.053Z"
-  },
-  {
-   "id": "2099972131521974362",
-   "authorId": "1611800554614755328",
-   "createdAt": "2026-09-15T21:22:26.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Republicans threw themselves a HUGE party in Dallas 🤠 Then they canceled two weeks of work 👎\n\nMeanwhile, hardworking Americans who can’t afford to skip work are paying more for everything from gas to groceries to healthcare.",
-   "engN": 5,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.053Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3860,
+ "feedAllTotal": 3864,
  "feedAllFiles": [
-  "feed-0-3792315ed52d2bc5.json",
-  "feed-1-e8fdd81b9ff0af6c.json",
-  "feed-2-6ecfaba21a3c1881.json",
-  "feed-3-4dac3bb31d30d6c8.json",
-  "feed-4-07a2e1a9015a38c1.json",
-  "feed-5-ee63094f797c74ba.json",
-  "feed-6-453903bc80b08a59.json",
-  "feed-7-77f02d55598ad302.json",
-  "feed-8-5bfc7ed38de02392.json",
-  "feed-9-460fa28dd7d26019.json"
+  "feed-0-35ceb48af4bb1c45.json",
+  "feed-1-02a6e85121581000.json",
+  "feed-2-313faf29bd3c9f79.json",
+  "feed-3-8670cf2a5ff6f70d.json",
+  "feed-4-b88d1db67d084c1d.json",
+  "feed-5-900dc9dc267ef422.json",
+  "feed-6-2897e1aea78203aa.json",
+  "feed-7-6febb112a8ce0ae9.json",
+  "feed-8-7d7369d948f62b1a.json",
+  "feed-9-aba467ea2f833af3.json"
  ]
 }
