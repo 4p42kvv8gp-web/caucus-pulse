@@ -10253,12 +10253,28 @@
     "status": "rejected",
     "createdAt": "2026-09-20T12:02:03.955Z",
     "completedAt": "2026-09-20T12:02:04.527Z"
+   },
+   "live:10603475-0699-4378-8e3e-9cc0945e006f": {
+    "id": "live:10603475-0699-4378-8e3e-9cc0945e006f",
+    "stage": "incidents",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.0765,
+    "status": "rejected",
+    "createdAt": "2026-09-20T12:04:24.313Z",
+    "completedAt": "2026-09-20T12:04:24.763Z"
    }
   },
   "poll": {
    "_errors": {
     "auth": 0,
     "other": 7
+   }
+  },
+  "incidents": {
+   "_errors": {
+    "auth": 0,
+    "other": 1
    }
   }
  }
