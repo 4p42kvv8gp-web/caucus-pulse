@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-21T05:20:11.721Z",
- "lastPollAt": "2026-09-21T05:19:53.301Z",
- "lastPollAttemptAt": "2026-09-21T05:19:52.657Z",
+ "generatedAt": "2026-09-21T06:46:57.513Z",
+ "lastPollAt": "2026-09-21T06:46:43.840Z",
+ "lastPollAttemptAt": "2026-09-21T06:46:43.332Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-21T05:20:10.914Z"
+  "referenceAsOf": "2026-09-21T06:46:56.705Z"
  },
  "news": {
   "version": 92,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-21T05:20:11.341Z",
+   "asOf": "2026-09-21T06:46:57.135Z",
    "windowDays": 14,
-   "windowStart": "2026-09-07T05:20:11.341Z",
+   "windowStart": "2026-09-07T06:46:57.135Z",
    "eligibleItems": 1010,
    "withExcerpts": 120,
    "headlineOrSummary": 890,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 325,
+  "capturedIn24h": 326,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 325,
+  "pendingIn24h": 326,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-21T05:20:03.173Z",
+   "lastAttemptAt": "2026-09-21T06:46:53.973Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 325,
+   "capturedIn24h": 326,
    "classifiedIn24h": 0,
-   "pendingIn24h": 325,
+   "pendingIn24h": 326,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 3,
+    "posts": 4,
     "mix": [
      100,
      0,
      0
     ],
-    "accounts": 3,
-    "members": 3,
+    "accounts": 4,
+    "members": 4,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 26,
-    "perPost": 9,
+    "eng": 63,
+    "perPost": 16,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3358,
+    "posts": 3359,
     "mix": [
      82,
      5,
@@ -6861,106 +6861,38 @@
     "unidentifiedAccounts": 0,
     "classified": 3,
     "tagged": 3,
-    "pending": 3355,
+    "pending": 3356,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 893245,
+    "eng": 893282,
     "perPost": 266,
     "top10Share": 56,
     "engDelta": 0
    },
    "curve48": [
-    1,
-    4,
-    35,
-    56,
-    61,
-    44,
-    40,
-    8,
     0,
+    10,
+    57,
+    59,
+    53,
+    52,
+    14,
+    3,
     0,
-    30,
-    60,
+    5,
+    54,
+    69,
     81,
-    80,
-    63,
-    11
+    78,
+    35,
+    4
    ]
   },
   "CPC": {
-   "t": {
-    "posts": 1,
-    "mix": [
-     100,
-     0,
-     0
-    ],
-    "accounts": 1,
-    "members": 1,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 1,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 24,
-    "perPost": 24,
-    "top10Share": 100,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 1577,
-    "mix": [
-     79,
-     5,
-     16
-    ],
-    "accounts": 141,
-    "members": 91,
-    "unidentifiedAccounts": 0,
-    "classified": 3,
-    "tagged": 3,
-    "pending": 1574,
-    "corePosts": 1,
-    "coreCounts": {
-     "Affordability": 1,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 700137,
-    "perPost": 444,
-    "top10Share": 72,
-    "engDelta": 0
-   },
-   "curve48": [
-    1,
-    4,
-    16,
-    19,
-    30,
-    18,
-    22,
-    5,
-    0,
-    0,
-    10,
-    24,
-    40,
-    42,
-    32,
-    5
-   ]
-  },
-  "NewDem": {
    "t": {
     "posts": 2,
     "mix": [
@@ -6980,13 +6912,81 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 2,
-    "perPost": 1,
+    "eng": 61,
+    "perPost": 31,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1901,
+    "posts": 1578,
+    "mix": [
+     79,
+     5,
+     16
+    ],
+    "accounts": 141,
+    "members": 91,
+    "unidentifiedAccounts": 0,
+    "classified": 3,
+    "tagged": 3,
+    "pending": 1575,
+    "corePosts": 1,
+    "coreCounts": {
+     "Affordability": 1,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 700174,
+    "perPost": 444,
+    "top10Share": 72,
+    "engDelta": 0
+   },
+   "curve48": [
+    0,
+    8,
+    23,
+    21,
+    27,
+    25,
+    10,
+    0,
+    0,
+    2,
+    22,
+    31,
+    39,
+    38,
+    20,
+    2
+   ]
+  },
+  "NewDem": {
+   "t": {
+    "posts": 3,
+    "mix": [
+     100,
+     0,
+     0
+    ],
+    "accounts": 3,
+    "members": 3,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 3,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 39,
+    "perPost": 13,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 1902,
     "mix": [
      82,
      7,
@@ -6997,35 +6997,35 @@
     "unidentifiedAccounts": 0,
     "classified": 2,
     "tagged": 2,
-    "pending": 1899,
+    "pending": 1900,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 272346,
+    "eng": 272383,
     "perPost": 143,
     "top10Share": 76,
     "engDelta": 0
    },
    "curve48": [
     0,
-    0,
-    21,
+    4,
+    38,
     41,
-    36,
-    23,
-    23,
-    7,
+    25,
+    30,
+    10,
+    3,
     0,
-    0,
-    26,
-    35,
-    47,
-    45,
-    32,
-    7
+    5,
+    37,
+    39,
+    49,
+    40,
+    20,
+    3
    ]
   },
   "CBC": {
@@ -7080,49 +7080,49 @@
    "curve48": [
     0,
     4,
-    5,
-    5,
-    4,
-    4,
-    6,
+    9,
+    3,
+    3,
+    7,
+    2,
     1,
     0,
-    0,
-    3,
+    1,
+    5,
+    11,
+    16,
+    25,
     8,
-    15,
-    18,
-    18,
-    4
+    0
    ]
   },
   "CHC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 37,
+    "perPost": 37,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 602,
+    "posts": 603,
     "mix": [
      80,
      5,
@@ -7133,35 +7133,35 @@
     "unidentifiedAccounts": 0,
     "classified": 2,
     "tagged": 2,
-    "pending": 600,
+    "pending": 601,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 125698,
+    "eng": 125735,
     "perPost": 209,
     "top10Share": 87,
     "engDelta": 0
    },
    "curve48": [
     0,
-    0,
-    6,
+    2,
     11,
-    8,
-    5,
-    10,
+    7,
+    6,
+    12,
     3,
+    2,
     0,
-    0,
-    6,
-    6,
-    21,
-    14,
-    11,
-    3
+    1,
+    9,
+    15,
+    15,
+    13,
+    8,
+    1
    ]
   },
   "CAPAC": {
@@ -7215,20 +7215,20 @@
    },
    "curve48": [
     0,
+    1,
+    3,
+    5,
+    6,
+    7,
     0,
-    2,
+    0,
+    0,
+    1,
     3,
     8,
-    5,
-    4,
-    0,
-    0,
-    0,
-    2,
-    7,
     10,
     7,
-    5,
+    2,
     1
    ]
   }
@@ -10219,6 +10219,32 @@
  ],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2101916559979774353",
+   "handle": "@MikeLevin",
+   "member": "Mike Levin",
+   "district": "CA-49",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CHC"
+   ],
+   "text": "Todd Blanche should never have been confirmed as Attorney General. His speech to the recent “convention” was unprecedented and unbecoming of his office. He is indeed the “new Roy Cohn” and every Senator who voted to confirm him should be ashamed. https://t.co/RYyrNOrAOi",
+   "topics": [],
+   "time": "2026-09-21T06:08:54.000Z",
+   "date": "2026-09-21",
+   "engN": 37,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T06:46:43.830Z",
+   "isNew": false
+  },
   {
    "id": "2101899225940304045",
    "handle": "@RepJoshG",
@@ -15177,31 +15203,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-20T19:31:21.109Z",
    "isNew": false
-  },
-  {
-   "id": "2101741289007899106",
-   "handle": "@RepGraceMeng",
-   "member": "Grace Meng",
-   "district": "NY-06",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "Once again, the Trump Administration is putting politics over patients.\n NYU and UPMC should never have been pressured to end care based on the DOJ’s unproven allegations and political agenda.\n I’ll keep fighting for the LGBTQ+ community—and for every patient’s right to compassionate, evidence-based care.\n https://t.co/QYizyFoqQJ",
-   "topics": [],
-   "time": "2026-09-20T18:32:26.000Z",
-   "date": "2026-09-20",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-20T19:31:21.109Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -15529,6 +15530,23 @@
   "912822519136161793": "@LamonicaMciver"
  },
  "feedAll": [
+  {
+   "id": "2101916559979774353",
+   "authorId": "14573926",
+   "createdAt": "2026-09-21T06:08:54.000Z",
+   "date": "2026-09-21",
+   "type": "tweet",
+   "text": "Todd Blanche should never have been confirmed as Attorney General. His speech to the recent “convention” was unprecedented and unbecoming of his office. He is indeed the “new Roy Cohn” and every Senator who voted to confirm him should be ashamed. https://t.co/RYyrNOrAOi",
+   "engN": 37,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T06:46:43.830Z"
+  },
   {
    "id": "2101899225940304045",
    "authorId": "815310506596691968",
@@ -64707,53 +64725,19 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-16T08:42:31.246Z"
-  },
-  {
-   "id": "2099981951642042588",
-   "authorId": "2151608598",
-   "createdAt": "2026-09-15T22:01:27.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Happy Hispanic Heritage Month, New Mexico!\n\nAs a first-generation American and proud Mexican American, I know our heritage is more than a month on the calendar. It’s our families, traditions, languages, stories, lived experiences, and the generations of New Mexicans who have shaped this state and our country.\n\nI’m proud to carry that heritage with me every day—and even prouder to represent a community that has given so much to New Mexico and America.\n\nAs your Congressman, I’ll keep fighting to make sure every New Mexican, no matter where they come from, has a fair shot at the American Dream.\n\n¡Feliz Mes de la Herencia Hispana, Nuevo México! Y siempre se va llamar… Nuevo México!",
-   "engN": 64,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
-  },
-  {
-   "id": "2099981903637930462",
-   "authorId": "310310133",
-   "createdAt": "2026-09-15T22:01:16.000Z",
-   "date": "2026-09-15",
-   "type": "retweet",
-   "text": "RT @thehill: Dem rep asks Bessent to ‘talk sense’ into Trump on regulating AI\n\nhttps://t.co/qPQBGf5NL3",
-   "engN": 0,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2099967995175174251",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-15T22:23:56.258Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3358,
+ "feedAllTotal": 3359,
  "feedAllFiles": [
-  "feed-0-b574ff688a67cf09.json",
-  "feed-1-4613c2afc13b6dda.json",
-  "feed-2-2d65a22a32d26b0b.json",
-  "feed-3-4024b5a58afc6c5e.json",
-  "feed-4-efa92247279198e8.json",
-  "feed-5-e1cc2030c78ce31c.json",
-  "feed-6-0559d2964d53dc7f.json",
-  "feed-7-410daa3102d0bc11.json",
-  "feed-8-5ec6aea18d12694c.json"
+  "feed-0-1137a443e57bccfe.json",
+  "feed-1-301d0abf34498fd2.json",
+  "feed-2-2600c2ab196461e8.json",
+  "feed-3-746987477c75cfbd.json",
+  "feed-4-c1c839579284f72f.json",
+  "feed-5-5cb0d68f5a7b05aa.json",
+  "feed-6-dcfa783d4461ecf7.json",
+  "feed-7-69cdf3802dcd7828.json",
+  "feed-8-63963736560ee67f.json"
  ]
 }
