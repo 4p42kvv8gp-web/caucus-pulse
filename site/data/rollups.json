@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-21T13:17:52.442Z",
+ "generatedAt": "2026-09-21T14:24:54.779Z",
  "lastPollAt": "2026-09-21T13:17:33.444Z",
  "lastPollAttemptAt": "2026-09-21T13:17:32.831Z",
  "lastPollOutcome": "complete",
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-21T13:17:51.785Z"
+  "referenceAsOf": "2026-09-21T14:24:53.929Z"
  },
  "news": {
   "version": 96,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-21T13:17:52.124Z",
+   "asOf": "2026-09-21T14:24:54.378Z",
    "windowDays": 14,
-   "windowStart": "2026-09-07T13:17:52.124Z",
+   "windowStart": "2026-09-07T14:24:54.378Z",
    "eligibleItems": 1034,
    "withExcerpts": 123,
    "headlineOrSummary": 911,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 335,
+  "capturedIn24h": 316,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 335,
+  "pendingIn24h": 316,
   "momentumPaused": true,
   "health": {
-   "status": "blocked",
-   "reasonCode": "provider-credits",
+   "status": "degraded",
+   "reasonCode": "inference-error",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-21T13:17:42.535Z",
+   "lastAttemptAt": "2026-09-21T14:24:51.110Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 335,
+   "capturedIn24h": 316,
    "classifiedIn24h": 0,
-   "pendingIn24h": 335,
+   "pendingIn24h": 316,
    "coverageComplete": false
   }
  },
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    70,
+    58,
+    59,
+    45,
+    39,
+    7,
+    0,
+    0,
+    32,
     60,
-    46,
-    46,
-    12,
+    82,
+    79,
+    62,
+    10,
     2,
-    0,
-    13,
-    53,
-    78,
-    78,
-    80,
-    20,
-    5,
-    0,
-    21
+    2,
+    19
    ]
   },
   "CPC": {
@@ -6942,22 +6942,22 @@
     "engDelta": 0
    },
    "curve48": [
+    22,
     27,
-    26,
+    19,
     22,
-    22,
-    8,
+    4,
     0,
     0,
-    6,
-    21,
-    35,
-    40,
-    37,
-    13,
-    2,
-    0,
-    7
+    11,
+    24,
+    41,
+    41,
+    31,
+    5,
+    1,
+    1,
+    6
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    47,
-    41,
-    20,
-    26,
-    10,
-    2,
+    42,
+    35,
+    24,
+    23,
+    6,
     0,
-    12,
-    33,
-    47,
+    0,
+    27,
+    35,
+    48,
     45,
-    41,
-    12,
-    4,
-    0,
-    13
+    31,
+    6,
+    2,
+    1,
+    12
    ]
   },
   "CBC": {
@@ -7078,19 +7078,19 @@
     "engDelta": 0
    },
    "curve48": [
-    9,
+    5,
     3,
-    3,
-    7,
-    2,
+    4,
+    6,
     1,
     0,
-    2,
-    5,
-    11,
-    19,
-    24,
-    5,
+    0,
+    4,
+    7,
+    15,
+    20,
+    16,
+    4,
     0,
     0,
     3
@@ -7146,19 +7146,19 @@
     "engDelta": 0
    },
    "curve48": [
-    12,
-    7,
-    5,
-    13,
-    3,
-    1,
-    0,
-    4,
-    7,
-    15,
-    15,
-    14,
+    11,
+    8,
     6,
+    10,
+    2,
+    0,
+    0,
+    6,
+    7,
+    21,
+    13,
+    11,
+    3,
     1,
     0,
     3
@@ -7215,19 +7215,19 @@
    },
    "curve48": [
     3,
-    6,
-    6,
-    5,
-    0,
-    0,
-    0,
-    1,
-    4,
-    12,
-    6,
     8,
+    5,
+    4,
     0,
+    0,
+    0,
+    3,
+    6,
+    10,
+    7,
+    5,
     1,
+    0,
     0,
     1
    ]
@@ -10122,103 +10122,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2099515971211817257"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "new-haven-ct--flooding--source-2099167548684087801",
-   "kind": "flooding",
-   "name": null,
-   "eventIdentity": "unresolved-source-specific",
-   "kinds": [
-    "flooding"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "New Haven, CT · CT-03",
-   "placeRaw": "New Haven, CT",
-   "district": "CT-03",
-   "districtMatch": true,
-   "handle": "@rosadelauro",
-   "member": "Rosa L. DeLauro",
-   "since": "2026-09-14T14:08:50.000Z",
-   "last": "2026-09-14T14:08:50.000Z",
-   "updates": 1,
-   "engN": 44,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Flooding · New Haven, CT",
-   "evidence": {
-    "span": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": false,
-     "place": true
-    },
-    "sourceId": "2099500624953889071",
-    "url": "https://x.com/i/web/status/2099500624953889071"
-   },
-   "timeline": [
-    {
-     "id": "2099500624953889071",
-     "sourceId": "2099500624953889071",
-     "url": "https://x.com/i/web/status/2099500624953889071",
-     "authorId": "140519774",
-     "personId": "member:rosa l. delauro",
-     "referenceIds": [
-      "2099167548684087801"
-     ],
-     "time": "2026-09-14T14:08:50.000Z",
-     "who": "@rosadelauro",
-     "tag": "repost",
-     "text": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-     "engN": 44,
-     "isNew": false,
-     "flag": {
-      "kind": "flooding",
-      "place": "New Haven, CT",
-      "name": null
-     },
-     "evidence": {
-      "span": "RT @GovNedLamont: Metro North and Amtrak New Haven Line service is currently suspended between Norwalk and Bridgeport due to track conditio…",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": false,
-       "place": true
-      },
-      "sourceId": "2099500624953889071",
-      "url": "https://x.com/i/web/status/2099500624953889071"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2099500624953889071"
-   ],
-   "intel": null,
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2099500624953889071"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
@@ -64673,6 +64576,96 @@
    "type": "tweet",
    "text": "Great meeting today with Costa Rica’s Minister of Foreign Trade, Manuel Tovar Rivera, and Ambassador to the United States, Douglas Soto Campos, as Costa Rica marks 205 years of independence.\n\nFor over 75 years, Costa Rica has kept the peace without a standing army. On its Independence Day, I join the Costa Rican people in celebrating that legacy. Our nations are stronger when we build on shared values and shared prosperity.\n\n#CostaRicanIndependenceDay",
    "engN": 11,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
+  },
+  {
+   "id": "2099988248596795516",
+   "authorId": "2968007206",
+   "createdAt": "2026-09-15T22:26:29.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Happy Hispanic Heritage Month! This month we recognize the rich cultures, histories, and contributions of Hispanic Americans right here in CA-10 and across our nation and we celebrate the diversity that makes our communities stronger and our nation unique. https://t.co/EAL6X1FnKx",
+   "engN": 9,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
+  },
+  {
+   "id": "2099988234583290088",
+   "authorId": "20688358",
+   "createdAt": "2026-09-15T22:26:25.000Z",
+   "date": "2026-09-15",
+   "type": "quote",
+   "text": "And, parts of northern Dallas county and many parts of Collin county. https://t.co/AwSFkfNP9r",
+   "engN": 2,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T08:42:31.246Z",
+   "quoted": {
+    "id": "2099884744523550872",
+    "handle": "@jmart",
+    "text": "@Southpawtopuria i'd drill down on some ft bend county precincts on that one"
+   }
+  },
+  {
+   "id": "2099987625645842861",
+   "authorId": "30216513",
+   "createdAt": "2026-09-15T22:24:00.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Great to meet with a cohort of passionate #Armenian American youth from @ANCA_DC to discuss our continued fight for #Artsakh and the Armenian cause. https://t.co/zJGjWuUaCR",
+   "engN": 14,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
+  },
+  {
+   "id": "2099987427448566159",
+   "authorId": "2151608598",
+   "createdAt": "2026-09-15T22:23:13.000Z",
+   "date": "2026-09-15",
+   "type": "retweet",
+   "text": "RT @koat7news: Pete Buttigieg campaigns for Gabe Vasquez &amp; Deb Haaland in New Mexico | Click on the image to read the full story https://t.…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2099649429984673845",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-15T22:23:56.258Z"
+  },
+  {
+   "id": "2099987400680198636",
+   "authorId": "30216513",
+   "createdAt": "2026-09-15T22:23:06.000Z",
+   "date": "2026-09-15",
+   "type": "tweet",
+   "text": "Great to meet with a cohort of passionate #Armenian American youth from @ANCA to discuss our continued fight for #Artsakh and the Armenian cause. https://t.co/4bKAoPEMzY",
+   "engN": 0,
    "topics": [],
    "classificationStatus": "pending",
    "needsContext": false,
