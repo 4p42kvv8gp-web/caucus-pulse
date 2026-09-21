@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-21T05:01:17.161Z",
- "lastPollAt": "2026-09-21T04:16:41.708Z",
- "lastPollAttemptAt": "2026-09-21T04:16:41.307Z",
+ "generatedAt": "2026-09-21T05:20:06.700Z",
+ "lastPollAt": "2026-09-21T05:19:53.301Z",
+ "lastPollAttemptAt": "2026-09-21T05:19:52.657Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-21T05:01:16.485Z"
+  "referenceAsOf": "2026-09-21T05:20:05.875Z"
  },
  "news": {
   "version": 92,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-21T05:01:16.834Z",
+   "asOf": "2026-09-21T05:20:06.306Z",
    "windowDays": 14,
-   "windowStart": "2026-09-07T05:01:16.834Z",
+   "windowStart": "2026-09-07T05:20:06.306Z",
    "eligibleItems": 1010,
    "withExcerpts": 120,
    "headlineOrSummary": 890,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": "2026-09-15",
-  "capturedIn24h": 322,
+  "capturedIn24h": 325,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 322,
+  "pendingIn24h": 325,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-21T04:16:51.523Z",
+   "lastAttemptAt": "2026-09-21T05:20:03.173Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 322,
+   "capturedIn24h": 325,
    "classifiedIn24h": 0,
-   "pendingIn24h": 322,
+   "pendingIn24h": 325,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 3,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 26,
+    "perPost": 9,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3355,
+    "posts": 3358,
     "mix": [
      82,
      5,
@@ -6861,64 +6861,64 @@
     "unidentifiedAccounts": 0,
     "classified": 3,
     "tagged": 3,
-    "pending": 3352,
+    "pending": 3355,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 893219,
+    "eng": 893245,
     "perPost": 266,
     "top10Share": 56,
     "engDelta": 0
    },
    "curve48": [
     1,
-    3,
-    31,
-    55,
-    65,
-    40,
+    4,
+    35,
+    56,
+    61,
     44,
-    10,
+    40,
+    8,
     0,
     0,
-    26,
-    59,
-    78,
-    75,
-    74,
-    10
+    30,
+    60,
+    81,
+    80,
+    63,
+    11
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 24,
+    "perPost": 24,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1576,
+    "posts": 1577,
     "mix": [
      79,
      5,
@@ -6929,64 +6929,64 @@
     "unidentifiedAccounts": 0,
     "classified": 3,
     "tagged": 3,
-    "pending": 1573,
+    "pending": 1574,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 700113,
+    "eng": 700137,
     "perPost": 444,
     "top10Share": 72,
     "engDelta": 0
    },
    "curve48": [
     1,
-    3,
-    14,
-    21,
+    4,
+    16,
+    19,
     30,
     18,
-    21,
-    7,
+    22,
+    5,
     0,
     0,
-    9,
+    10,
     24,
     40,
-    35,
-    38,
-    6
+    42,
+    32,
+    5
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 2,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 2,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1899,
+    "posts": 1901,
     "mix": [
      82,
      7,
@@ -6997,14 +6997,14 @@
     "unidentifiedAccounts": 0,
     "classified": 2,
     "tagged": 2,
-    "pending": 1897,
+    "pending": 1899,
     "corePosts": 1,
     "coreCounts": {
      "Affordability": 1,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 272344,
+    "eng": 272346,
     "perPost": 143,
     "top10Share": 76,
     "engDelta": 0
@@ -7012,20 +7012,20 @@
    "curve48": [
     0,
     0,
-    20,
-    38,
-    38,
     21,
-    25,
-    9,
-    0,
-    0,
+    41,
+    36,
     23,
-    33,
-    47,
-    46,
+    23,
+    7,
+    0,
+    0,
+    26,
     35,
-    6
+    47,
+    45,
+    32,
+    7
    ]
   },
   "CBC": {
@@ -7079,20 +7079,20 @@
    },
    "curve48": [
     0,
-    3,
+    4,
+    5,
+    5,
+    4,
     4,
     6,
-    5,
-    3,
-    5,
-    3,
+    1,
     0,
     0,
     3,
-    7,
-    13,
-    16,
-    23,
+    8,
+    15,
+    18,
+    18,
     4
    ]
   },
@@ -7148,36 +7148,36 @@
    "curve48": [
     0,
     0,
+    6,
+    11,
+    8,
     5,
-    11,
-    9,
-    4,
-    11,
+    10,
     3,
     0,
     0,
     6,
     6,
-    18,
-    16,
-    12,
+    21,
+    14,
+    11,
     3
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7190,7 +7190,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 342,
+    "posts": 343,
     "mix": [
      86,
      5,
@@ -7201,7 +7201,7 @@
     "unidentifiedAccounts": 0,
     "classified": 1,
     "tagged": 1,
-    "pending": 341,
+    "pending": 342,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7209,7 +7209,7 @@
      "Corruption": 0
     },
     "eng": 221309,
-    "perPost": 647,
+    "perPost": 645,
     "top10Share": 99,
     "engDelta": 0
    },
@@ -7218,18 +7218,18 @@
     0,
     2,
     3,
-    7,
+    8,
     5,
-    5,
+    4,
     0,
     0,
     0,
     2,
     7,
-    9,
+    10,
     7,
-    6,
-    0
+    5,
+    1
    ]
   }
  },
@@ -8544,14 +8544,15 @@
     "2101860146041299082",
     "2101862306451710187",
     "2101868227533955100",
-    "2101871816931225640"
+    "2101871816931225640",
+    "2101888703853424918"
    ],
    "firstSeen": "2026-09-15",
    "leadership": false,
-   "spread": 89,
-   "accounts": 102,
+   "spread": 90,
+   "accounts": 103,
    "cm": [
-    38,
+    39,
     51,
     25,
     12,
@@ -8564,11 +8565,11 @@
     1,
     1,
     89,
-    89
+    90
    ],
    "exact": 1,
-   "total": 104,
-   "eng": 1473
+   "total": 105,
+   "eng": 1497
   },
   {
    "text": "donald trump",
@@ -9305,9 +9306,9 @@
    "eng": 25300
   },
   {
-   "text": "easy fast",
+   "text": "meaningful fast",
    "variants": [
-    "meaningful fast"
+    "easy fast"
    ],
    "pillar": null,
    "topic": null,
@@ -9376,14 +9377,15 @@
     "2101843830706167860",
     "2101846397477687799",
     "2101854013557752183",
-    "2101857948616257717"
+    "2101857948616257717",
+    "2101888703853424918"
    ],
    "firstSeen": "2026-09-20",
    "leadership": false,
-   "spread": 56,
-   "accounts": 62,
+   "spread": 57,
+   "accounts": 63,
    "cm": [
-    23,
+    24,
     33,
     10,
     6,
@@ -9396,11 +9398,11 @@
     0,
     0,
     56,
-    56
+    57
    ],
-   "exact": 0.51,
-   "total": 63,
-   "eng": 556
+   "exact": 0.5,
+   "total": 64,
+   "eng": 580
   },
   {
    "text": "trump administration",
@@ -10217,6 +10219,79 @@
  ],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2101899225940304045",
+   "handle": "@RepJoshG",
+   "member": "Josh Gottheimer",
+   "district": "NJ-05",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Energy isn’t a luxury — it’s a necessity, and Jersey families shouldn’t be punished just for keeping the lights on. We need an all-of-the-above approach to get energy prices down: more nuclear, more natural gas, and more renewables. We have to cut the red tape and make sure families aren’t getting squeezed every time they flip on a light switch.",
+   "topics": [],
+   "time": "2026-09-21T05:00:01.000Z",
+   "date": "2026-09-21",
+   "engN": 2,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z",
+   "isNew": false
+  },
+  {
+   "id": "2101893133688873322",
+   "handle": "@DerekTranCA45",
+   "member": "Derek Tran",
+   "district": "CA-45",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "Sunday Spotlight: #TeamTran Interns\n\nWe have dozens of amazing interns who are helping us take back the House. Meet a few of them! https://t.co/XGFVXtZzGZ",
+   "topics": [],
+   "time": "2026-09-21T04:35:49.000Z",
+   "date": "2026-09-21",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z",
+   "isNew": false
+  },
+  {
+   "id": "2101888703853424918",
+   "handle": "@Rep_Stansbury",
+   "member": "Melanie A. Stansbury",
+   "district": "NM-01",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "G’mar Chatimah Tovah.\n\nTo all those observing, I wish you and yours an easy and meaningful fast. May this sacred day be a time for reflection, renewal, and hope.\n\nWishing you peace and a blessed Yom Kippur.",
+   "topics": [],
+   "time": "2026-09-21T04:18:12.000Z",
+   "date": "2026-09-21",
+   "engN": 24,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z",
+   "isNew": false
+  },
   {
    "id": "2101871816931225640",
    "handle": "@RepKweisiMfume",
@@ -15127,80 +15202,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-20T19:31:21.109Z",
    "isNew": false
-  },
-  {
-   "id": "2101740985390698716",
-   "handle": "@RepRobertGarcia",
-   "member": "Robert Garcia",
-   "district": "CA-42",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Trump's trade wars are hurting not only our economy and our workers; they are impacting entire cities that are dependent on Canadian tourism, including Las Vegas and my hometown of Long Beach.\n\nThe President must stop attacking our neighbors and allies. https://t.co/xfzavYDIaG",
-   "topics": [],
-   "time": "2026-09-20T18:31:14.000Z",
-   "date": "2026-09-20",
-   "engN": 76,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-20T19:31:21.109Z",
-   "isNew": false
-  },
-  {
-   "id": "2101739547654496419",
-   "handle": "@RepRobertGarcia",
-   "member": "Robert Garcia",
-   "district": "CA-42",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "RT @marceelias: 🚨BREAKING: California Gov. Gavin Newsom (D) signed a sweeping package of election laws Saturday, including a measure making…",
-   "topics": [],
-   "time": "2026-09-20T18:25:31.000Z",
-   "date": "2026-09-20",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2101406445690318883",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-20T19:31:21.109Z",
-   "isNew": false
-  },
-  {
-   "id": "2101739456537514223",
-   "handle": "@RepRobinKelly",
-   "member": "Robin L. Kelly",
-   "district": "IL-02",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "Who you love does not impact your ability to serve.\n\n15 years ago, the homophobic “Don’t Ask, Don’t Tell” policy was finally repealed.\n\nDespite this, President Trump and Secretary Hegseth continue to discriminate against transgender service members, and I will fight for their recognition.",
-   "topics": [],
-   "time": "2026-09-20T18:25:09.000Z",
-   "date": "2026-09-20",
-   "engN": 8,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-20T19:31:21.109Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -15372,6 +15373,9 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "815310506596691968": "@RepJoshG",
+  "1707910391844769792": "@DerekTranCA45",
+  "1404519992582942724": "@Rep_Stansbury",
   "1276209702322438148": "@RepKweisiMfume",
   "1191327658124165123": "@Mfume4Congress",
   "1874831517706256384": "@RepGoodlander",
@@ -15416,7 +15420,6 @@
   "1875008939714056192": "@RepLiccardo",
   "1080885078425784320": "@RepGregStanton",
   "1858226214269272064": "@RepJohnnyO",
-  "1404519992582942724": "@Rep_Stansbury",
   "1608494113174822925": "@RepMaxwellFrost",
   "1092782048157331456": "@GregMeeksNYC",
   "1343646545955213312": "@RepStricklandWA",
@@ -15450,7 +15453,6 @@
   "917408119222923264": "@LindaTSanchez",
   "1876279166565515264": "@RepNellie",
   "1569400849130049537": "@RepPatRyanNY",
-  "815310506596691968": "@RepJoshG",
   "1602792195878047744": "@RepRobertGarcia",
   "1080986167003230208": "@RepGilCisneros",
   "1081350574589833221": "@RepEdCase",
@@ -15488,7 +15490,6 @@
   "816157667882373120": "@RepCarbajal",
   "1493294940708696069": "@MGPforCongress",
   "1861770594108289025": "@RepRileyNY",
-  "1707910391844769792": "@DerekTranCA45",
   "815985039485837312": "@RepLouCorrea",
   "1608934316779921408": "@RepDeluzio",
   "1603127874512453632": "@RepMGP",
@@ -15528,6 +15529,57 @@
   "912822519136161793": "@LamonicaMciver"
  },
  "feedAll": [
+  {
+   "id": "2101899225940304045",
+   "authorId": "815310506596691968",
+   "createdAt": "2026-09-21T05:00:01.000Z",
+   "date": "2026-09-21",
+   "type": "tweet",
+   "text": "Energy isn’t a luxury — it’s a necessity, and Jersey families shouldn’t be punished just for keeping the lights on. We need an all-of-the-above approach to get energy prices down: more nuclear, more natural gas, and more renewables. We have to cut the red tape and make sure families aren’t getting squeezed every time they flip on a light switch.",
+   "engN": 2,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z"
+  },
+  {
+   "id": "2101893133688873322",
+   "authorId": "1707910391844769792",
+   "createdAt": "2026-09-21T04:35:49.000Z",
+   "date": "2026-09-21",
+   "type": "tweet",
+   "text": "Sunday Spotlight: #TeamTran Interns\n\nWe have dozens of amazing interns who are helping us take back the House. Meet a few of them! https://t.co/XGFVXtZzGZ",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z"
+  },
+  {
+   "id": "2101888703853424918",
+   "authorId": "1404519992582942724",
+   "createdAt": "2026-09-21T04:18:12.000Z",
+   "date": "2026-09-21",
+   "type": "tweet",
+   "text": "G’mar Chatimah Tovah.\n\nTo all those observing, I wish you and yours an easy and meaningful fast. May this sacred day be a time for reflection, renewal, and hope.\n\nWishing you peace and a blessed Yom Kippur.",
+   "engN": 24,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-21T05:19:53.294Z"
+  },
   {
    "id": "2101871816931225640",
    "authorId": "1276209702322438148",
@@ -64689,53 +64741,19 @@
    "sourceReferenceId": "2099967995175174251",
    "provenance": null,
    "metricsObservedAt": "2026-09-15T22:23:56.258Z"
-  },
-  {
-   "id": "2099981847312891927",
-   "authorId": "174332143",
-   "createdAt": "2026-09-15T22:01:02.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "In #AZ03, thousands of people who are eligible to vote aren’t registered. So we’re doing something about it.\n\nMy campaign is contacting 13,000 eligible voters — we’re knocking doors, making phone calls, and ensuring that our community has the tools they need to register to vote. \n\nIt only takes 5 minutes to fight for our democracy. Go to https://t.co/Q8eHRrMlpo to register or check the status of your registration today.",
-   "engN": 42,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
-  },
-  {
-   "id": "2099981336949723388",
-   "authorId": "1877088040453079040",
-   "createdAt": "2026-09-15T21:59:01.000Z",
-   "date": "2026-09-15",
-   "type": "tweet",
-   "text": "Military families serve too — holding down the home front while their loved ones serve our country. It was an honor to meet Blue Star families with @BipartisanVets  to discuss how we can strengthen resources for military and veteran families. https://t.co/3q3xRalld3",
-   "engN": 2,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-16T08:42:31.246Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3355,
+ "feedAllTotal": 3358,
  "feedAllFiles": [
-  "feed-0-d9884d1f96fa4a90.json",
-  "feed-1-630177fd66bb913b.json",
-  "feed-2-7854c00c2c8a2749.json",
-  "feed-3-7f72232743532c06.json",
-  "feed-4-92a09713801ba32b.json",
-  "feed-5-3e669ee7cb35b33d.json",
-  "feed-6-875a608044fde604.json",
-  "feed-7-87f3216550d4f70d.json",
-  "feed-8-ac64fde153d38839.json"
+  "feed-0-b574ff688a67cf09.json",
+  "feed-1-4613c2afc13b6dda.json",
+  "feed-2-2d65a22a32d26b0b.json",
+  "feed-3-4024b5a58afc6c5e.json",
+  "feed-4-efa92247279198e8.json",
+  "feed-5-e1cc2030c78ce31c.json",
+  "feed-6-0559d2964d53dc7f.json",
+  "feed-7-410daa3102d0bc11.json",
+  "feed-8-5ec6aea18d12694c.json"
  ]
 }
