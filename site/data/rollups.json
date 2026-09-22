@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-22T12:02:46.116Z",
- "lastPollAt": "2026-09-22T09:53:48.631Z",
- "lastPollAttemptAt": "2026-09-22T09:53:48.211Z",
+ "generatedAt": "2026-09-22T12:03:27.428Z",
+ "lastPollAt": "2026-09-22T12:03:06.269Z",
+ "lastPollAttemptAt": "2026-09-22T12:03:05.772Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-22T12:02:45.598Z"
+  "referenceAsOf": "2026-09-22T12:03:26.710Z"
  },
  "news": {
   "version": 111,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-22T12:02:45.891Z",
+   "asOf": "2026-09-22T12:03:27.096Z",
    "windowDays": 14,
-   "windowStart": "2026-09-08T12:02:45.891Z",
+   "windowStart": "2026-09-08T12:03:27.096Z",
    "eligibleItems": 1153,
    "withExcerpts": 136,
    "headlineOrSummary": 1017,
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 127,
-  "t": 0
+  "posts": 129,
+  "t": 2
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 531,
+  "capturedIn24h": 534,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 531,
+  "pendingIn24h": 534,
   "momentumPaused": true,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
+   "status": "blocked",
+   "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-22T12:02:43.522Z",
+   "lastAttemptAt": "2026-09-22T12:03:24.080Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 531,
+   "capturedIn24h": 534,
    "classifiedIn24h": 0,
-   "pendingIn24h": 531,
+   "pendingIn24h": 534,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 1,
+    "posts": 4,
     "mix": [
      100,
      0,
      0
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 4,
+    "members": 4,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 17,
-    "perPost": 17,
+    "eng": 24,
+    "perPost": 6,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3084,
+    "posts": 3087,
     "mix": [
      82,
      5,
@@ -6861,35 +6861,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3084,
+    "pending": 3087,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 1005627,
+    "eng": 1005634,
     "perPost": 326,
     "top10Share": 56,
     "engDelta": 0
    },
    "curve48": [
     38,
-    70,
-    81,
+    71,
+    80,
     76,
     52,
     4,
     2,
     3,
     79,
-    144,
-    148,
-    98,
-    49,
+    145,
+    147,
+    99,
+    48,
     13,
     0,
-    0
+    3
    ]
   },
   "CPC": {
@@ -6943,8 +6943,8 @@
    },
    "curve48": [
     14,
-    26,
-    43,
+    27,
+    42,
     38,
     28,
     2,
@@ -6962,31 +6962,31 @@
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 3,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 7,
+    "perPost": 2,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1734,
+    "posts": 1737,
     "mix": [
      82,
      6,
@@ -6997,35 +6997,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1734,
+    "pending": 1737,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 287973,
+    "eng": 287980,
     "perPost": 166,
     "top10Share": 79,
     "engDelta": 0
    },
    "curve48": [
     27,
-    45,
-    47,
+    46,
+    46,
     39,
     28,
     2,
     2,
     1,
     47,
-    69,
-    84,
-    49,
-    24,
+    70,
+    83,
+    50,
+    23,
     9,
     0,
-    0
+    3
    ]
   },
   "CBC": {
@@ -7147,16 +7147,16 @@
    },
    "curve48": [
     6,
-    13,
-    17,
+    14,
+    16,
     13,
     11,
     0,
     1,
     0,
     15,
-    28,
     29,
+    28,
     20,
     11,
     0,
@@ -8568,7 +8568,8 @@
     "2102147138776183101",
     "2102162976442663156",
     "2102185635255611853",
-    "2102191088349880396"
+    "2102191088349880396",
+    "2102353408283832633"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
@@ -8591,8 +8592,8 @@
     84
    ],
    "exact": 1,
-   "total": 44,
-   "eng": 1463
+   "total": 45,
+   "eng": 1467
   }
  ],
  "clusters": [],
@@ -8604,6 +8605,78 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2102367305019650422",
+   "handle": "@RepTomSuozzi",
+   "member": "Thomas R. Suozzi",
+   "district": "NY-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Yesterday I awarded the first \nU.S. Chamber of Commerce’s “Advocate for American Business” Award during its national Opportunity Bus Tour.\n\nIt was especially meaningful to receive it right here in Glen Cove at Standard Bots — the nation’s largest manufacturer of industrial robots.\n\nWe need Democrats and Republicans working together to bring down costs, support our small and growing businesses, and make sure American innovation and high wage creation can thrive. That’s how we grow our economy and keep the American Dream alive for working families.",
+   "topics": [],
+   "time": "2026-09-22T12:00:00.000Z",
+   "date": "2026-09-22",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z",
+   "isNew": false
+  },
+  {
+   "id": "2102360939517366410",
+   "handle": "@Morrison4MN",
+   "member": "Kelly Morrison",
+   "district": "MN-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Early voting is happening now! 🗳️💙 https://t.co/Qmz2LC1H4S",
+   "topics": [],
+   "time": "2026-09-22T11:34:42.000Z",
+   "date": "2026-09-22",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z",
+   "isNew": false
+  },
+  {
+   "id": "2102353408283832633",
+   "handle": "@RepJoshG",
+   "member": "Josh Gottheimer",
+   "district": "NJ-05",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Bob Garrett has spent more than 44 years making sure the people of New Jersey are taken care of when they need it most. Walking into @HMHNewJersey you can feel the care, the compassion, and the pride Bob built into every corner and in hospitals across our state.  \n\nBeyond everything he's built, Bob has been a great friend to me and to families across our state. He's the kind of person who makes Jersey such a special place to live, work, and raise a family.   \n\nThank you, Bob, for giving so much of yourself to patients, to doctors, nurses, techs, to health care, and to our state! Enjoy this next chapter!\nhttps://t.co/AbDQC7Qmu6",
+   "topics": [],
+   "time": "2026-09-22T11:04:47.000Z",
+   "date": "2026-09-22",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z",
+   "isNew": false
+  },
   {
    "id": "2102248065734463572",
    "handle": "@RepYassAnsari",
@@ -13594,82 +13667,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-22T12:01:24.171Z",
    "isNew": false
-  },
-  {
-   "id": "2102131028185727475",
-   "handle": "@AyannaPressley",
-   "member": "Ayanna Pressley",
-   "district": "MA-07",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "Emmett Till was robbed of his life but also of his own unique Black future. And to remember him is to honor not only the life stolen from him, but the one he deserved to live.\n\nThis weekend, I visited \"If Emmett Till Lived,\" the powerful new exhibition in Chicago that affirms the fullness of the man he could have become.\n\nI was honored to select a work of art and contribute a reflection for this exhibit, and it was a joy to spend time with the visionary @sarahelizalewis and Rev. Wheeler Parker Jr., Emmett's cousin, best friend, and last surviving witness to his kidnapping, who helped bring it to life.\n\nFor the first time, I invoked Emmett Till's name and didn't feel heaviness. Instead, I was immersed in blissful opportunities to imagine him as a father, a husband, and a Black man who loved softball and dreamed of being a police officer.\n\nWhile the strange fruit of Black bodies hang from trees across America and Black history is under attack, exhibitions like these are a necessary reminder not only of America's legacy of lynching and racial terror—but also of the Black futures that are lost when Black lives are stolen.\n\nIt's why I'll continue demanding a thorough, transparent, and comprehensive federal investigation into the suspicious deaths of Black folks found hanging across the country, as authorized by the Emmett Till Antilynching Act of 2022.\n\nIt's why I'll continue defending Black history and our museums—including the Smithsonian and other cultural institutions—from the unprecedented, anti-Black, and fascist assault from the occupant of the White House.\n\nAnd it's why I'll always fight for Black lives, Black families, Black futures, and our collective liberation.\n\n\"If Emmett Till Lived\" will be on display until December 19th and you can check it out at the Museum of Contemporary Photography on S Michigan Ave in Chicago.",
-   "topics": [],
-   "time": "2026-09-21T20:21:07.000Z",
-   "date": "2026-09-21",
-   "engN": 1260,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.171Z",
-   "isNew": false
-  },
-  {
-   "id": "2102130884501721288",
-   "handle": "@MikeLevin",
-   "member": "Mike Levin",
-   "district": "CA-49",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Donald Trump says the only guardrail America needs on AI is a \"High IQ” president. Translation, just trust him and do nothing.\n\nWhat he's offering is his own discretion, which conveniently binds no one and expires when he leaves. What he doesn’t say is this is worth a fortune to him.\n\nTrump’s accounts have made nearly 30,000 stock trades since he took office, including chipmakers and data center suppliers whose value moves with whatever he says about AI. His sons are pouring money into AI startups and data centers.\n\nHe wants to be the safeguard against the industry he's deeply invested in.\n\nEither we end the corruption or the corruption will be the end of us.\nhttps://t.co/goy6SQViW1",
-   "topics": [],
-   "time": "2026-09-21T20:20:33.000Z",
-   "date": "2026-09-21",
-   "engN": 123,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.171Z",
-   "isNew": false
-  },
-  {
-   "id": "2102130849105723416",
-   "handle": "@RepValHoyle",
-   "member": "Val T. Hoyle",
-   "district": "OR-04",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "I’m joining over 100 of my colleagues in demanding that no more data centers be built unless strong guardrails are developed that protect our environment, support workers, decrease energy costs and give consumers a voice in the process. https://t.co/MSu5Vv442Q",
-   "topics": [],
-   "time": "2026-09-21T20:20:24.000Z",
-   "date": "2026-09-21",
-   "engN": 17,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.171Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13839,6 +13836,9 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "816705409486618624": "@RepTomSuozzi",
+  "988135719951626240": "@Morrison4MN",
+  "815310506596691968": "@RepJoshG",
   "1871623075822772224": "@RepYassAnsari",
   "1078749802765139968": "@RepJoeNeguse",
   "1079061579973439488": "@RepSusieLee",
@@ -13854,7 +13854,6 @@
   "1603468242852397057": "@RepMenendez",
   "806906355214852096": "@RepRaskin",
   "816157667882373120": "@RepCarbajal",
-  "815310506596691968": "@RepJoshG",
   "872156132688711681": "@LaurenUnderwood",
   "1404519992582942724": "@Rep_Stansbury",
   "1074354529787895808": "@repdeliaramirez",
@@ -13871,7 +13870,6 @@
   "1611800554614755328": "@RepSalinas",
   "1092782048157331456": "@GregMeeksNYC",
   "1875208198166122496": "@RepWesleyBellMO",
-  "816705409486618624": "@RepTomSuozzi",
   "1869140751512391681": "@RepLuzRivas",
   "1080885078425784320": "@RepGregStanton",
   "1611471154732060692": "@ValerieFoushee",
@@ -13952,7 +13950,6 @@
   "1875008939714056192": "@RepLiccardo",
   "1610014478405406720": "@RepPettersen",
   "1079104563280527364": "@RepAOC",
-  "988135719951626240": "@Morrison4MN",
   "1874580463752196096": "@RepAprilDelaney",
   "756123897783808000": "@KathyCastorFL",
   "1276209702322438148": "@RepKweisiMfume",
@@ -13993,6 +13990,57 @@
   "1610019555371372544": "@RepDanGoldman"
  },
  "feedAll": [
+  {
+   "id": "2102367305019650422",
+   "authorId": "816705409486618624",
+   "createdAt": "2026-09-22T12:00:00.000Z",
+   "date": "2026-09-22",
+   "type": "tweet",
+   "text": "Yesterday I awarded the first \nU.S. Chamber of Commerce’s “Advocate for American Business” Award during its national Opportunity Bus Tour.\n\nIt was especially meaningful to receive it right here in Glen Cove at Standard Bots — the nation’s largest manufacturer of industrial robots.\n\nWe need Democrats and Republicans working together to bring down costs, support our small and growing businesses, and make sure American innovation and high wage creation can thrive. That’s how we grow our economy and keep the American Dream alive for working families.",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z"
+  },
+  {
+   "id": "2102360939517366410",
+   "authorId": "988135719951626240",
+   "createdAt": "2026-09-22T11:34:42.000Z",
+   "date": "2026-09-22",
+   "type": "tweet",
+   "text": "Early voting is happening now! 🗳️💙 https://t.co/Qmz2LC1H4S",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z"
+  },
+  {
+   "id": "2102353408283832633",
+   "authorId": "815310506596691968",
+   "createdAt": "2026-09-22T11:04:47.000Z",
+   "date": "2026-09-22",
+   "type": "tweet",
+   "text": "Bob Garrett has spent more than 44 years making sure the people of New Jersey are taken care of when they need it most. Walking into @HMHNewJersey you can feel the care, the compassion, and the pride Bob built into every corner and in hospitals across our state.  \n\nBeyond everything he's built, Bob has been a great friend to me and to families across our state. He's the kind of person who makes Jersey such a special place to live, work, and raise a family.   \n\nThank you, Bob, for giving so much of yourself to patients, to doctors, nurses, techs, to health care, and to our state! Enjoy this next chapter!\nhttps://t.co/AbDQC7Qmu6",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-22T12:03:06.258Z"
+  },
   {
    "id": "2102248065734463572",
    "authorId": "1871623075822772224",
@@ -63093,57 +63141,18 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-17T08:51:55.508Z"
-  },
-  {
-   "id": "2100284815987601716",
-   "authorId": "20688358",
-   "createdAt": "2026-09-16T18:04:56.000Z",
-   "date": "2026-09-16",
-   "type": "quote",
-   "text": "Keep it going strong Jon! You are easily the most qualified for the job! 🇺🇸💪🏾 https://t.co/GLcgv5OxCR",
-   "engN": 22,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-17T08:51:55.508Z",
-   "quoted": {
-    "id": "2100265964218515543",
-    "handle": "@Jon_RosenthalTX",
-    "text": "The national spotlight is on Texas.\n\nCatch me on @CNN tonight at 5:35PM CT to discuss how our grassroots movement is closing the gap, building a bipartisan coalition, combatting racism, and fighting…"
-   }
-  },
-  {
-   "id": "2100284763177112001",
-   "authorId": "3044993235",
-   "createdAt": "2026-09-16T18:04:43.000Z",
-   "date": "2026-09-16",
-   "type": "tweet",
-   "text": "There is no time to waste.\n\nRepublican leadership needs to call Congress back from vacation so we can work on passing AI legislation. https://t.co/UfkXrtwo2a",
-   "engN": 129,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-17T08:51:55.508Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3084,
+ "feedAllTotal": 3087,
  "feedAllFiles": [
-  "feed-0-8aec7ee876561f48.json",
-  "feed-1-40736a6b2e060df9.json",
-  "feed-2-0305f72d0ba5c603.json",
-  "feed-3-25aa9757a213f3c7.json",
-  "feed-4-ab9154a2253474a0.json",
-  "feed-5-159d3cddf62ea0a0.json",
-  "feed-6-1bc67eb6a3be0d3c.json",
-  "feed-7-01bc40ca9365cee1.json"
+  "feed-0-5b0d041aea1c054a.json",
+  "feed-1-92710e906681938c.json",
+  "feed-2-a9e36a834e84fd31.json",
+  "feed-3-e11adb2db31abae9.json",
+  "feed-4-05b876d02e5729e3.json",
+  "feed-5-0deee6f246fbc017.json",
+  "feed-6-b6c30ba9c741ef60.json",
+  "feed-7-8725a969bf93debe.json"
  ]
 }
