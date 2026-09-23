@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-23T12:04:20.938Z",
- "lastPollAt": "2026-09-23T10:47:00.529Z",
- "lastPollAttemptAt": "2026-09-23T10:46:59.926Z",
+ "generatedAt": "2026-09-23T12:05:07.408Z",
+ "lastPollAt": "2026-09-23T12:04:44.324Z",
+ "lastPollAttemptAt": "2026-09-23T12:04:43.587Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-23T12:04:20.162Z"
+  "referenceAsOf": "2026-09-23T12:05:06.685Z"
  },
  "news": {
   "version": 132,
-  "items": 1242,
+  "items": 1240,
   "latestPublishedAt": "2026-09-23T11:19:04.000Z",
   "latestFetchedAt": "2026-09-23T11:34:10.067Z",
   "latest": [
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-23T12:04:20.542Z",
+   "asOf": "2026-09-23T12:05:07.035Z",
    "windowDays": 14,
-   "windowStart": "2026-09-09T12:04:20.542Z",
+   "windowStart": "2026-09-09T12:05:07.035Z",
    "eligibleItems": 1328,
    "withExcerpts": 155,
    "headlineOrSummary": 1173,
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 139,
-  "t": 0
+  "posts": 141,
+  "t": 2
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 543,
+  "capturedIn24h": 550,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 543,
+  "pendingIn24h": 550,
   "momentumPaused": true,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
+   "status": "blocked",
+   "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-23T12:04:17.317Z",
+   "lastAttemptAt": "2026-09-23T12:05:03.950Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 543,
+   "capturedIn24h": 550,
    "classifiedIn24h": 0,
-   "pendingIn24h": 543,
+   "pendingIn24h": 550,
    "coverageComplete": false
   }
  },
@@ -6826,6 +6826,74 @@
  "stats": {
   "All": {
    "t": {
+    "posts": 10,
+    "mix": [
+     100,
+     0,
+     0
+    ],
+    "accounts": 7,
+    "members": 7,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 10,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 397,
+    "perPost": 40,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 2803,
+    "mix": [
+     83,
+     5,
+     12
+    ],
+    "accounts": 317,
+    "members": 205,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 2803,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 693779,
+    "perPost": 248,
+    "top10Share": 52,
+    "engDelta": 0
+   },
+   "curve48": [
+    81,
+    145,
+    146,
+    99,
+    50,
+    10,
+    0,
+    3,
+    77,
+    137,
+    162,
+    122,
+    37,
+    8,
+    0,
+    7
+   ]
+  },
+  "CPC": {
+   "t": {
     "posts": 3,
     "mix": [
      100,
@@ -6844,81 +6912,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 349,
-    "perPost": 116,
+    "eng": 358,
+    "perPost": 119,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2796,
-    "mix": [
-     83,
-     5,
-     12
-    ],
-    "accounts": 316,
-    "members": 205,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 2796,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 693731,
-    "perPost": 248,
-    "top10Share": 52,
-    "engDelta": 0
-   },
-   "curve48": [
-    81,
-    144,
-    147,
-    99,
-    50,
-    10,
-    0,
-    3,
-    77,
-    136,
-    163,
-    122,
-    37,
-    8,
-    0,
-    0
-   ]
-  },
-  "CPC": {
-   "t": {
-    "posts": 2,
-    "mix": [
-     100,
-     0,
-     0
-    ],
-    "accounts": 2,
-    "members": 2,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 2,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 346,
-    "perPost": 173,
-    "top10Share": 100,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 1336,
+    "posts": 1337,
     "mix": [
      80,
      4,
@@ -6929,14 +6929,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1336,
+    "pending": 1337,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 538262,
+    "eng": 538274,
     "perPost": 403,
     "top10Share": 66,
     "engDelta": 0
@@ -6951,81 +6951,81 @@
     0,
     0,
     34,
-    73,
-    81,
+    74,
+    80,
     65,
     18,
     5,
     0,
-    0
+    1
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 6,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 6,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 36,
+    "perPost": 6,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1585,
+    "posts": 1591,
     "mix": [
      83,
      5,
      12
     ],
-    "accounts": 174,
+    "accounts": 175,
     "members": 109,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1585,
+    "pending": 1591,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 175004,
+    "eng": 175040,
     "perPost": 110,
     "top10Share": 67,
     "engDelta": 0
    },
    "curve48": [
     48,
-    70,
-    83,
+    71,
+    82,
     49,
     26,
     6,
     0,
     3,
     47,
-    76,
-    95,
+    77,
+    94,
     53,
     18,
     3,
     0,
-    0
+    6
    ]
   },
   "CBC": {
@@ -8542,6 +8542,190 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2102728686114119980",
+   "handle": "@repkmr",
+   "member": "Kristen McDonald Rivet",
+   "district": "MI-08",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "A little rain couldn’t stop Flint from shining at the pride festival this year! Thank you to Flint Pride for putting on another great event, and to everybody who showed up to say that everyone has a home in mid-Michigan. https://t.co/UJppROuku0",
+   "topics": [],
+   "time": "2026-09-23T11:56:00.000Z",
+   "date": "2026-09-23",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102726581399801865",
+   "handle": "@HoulahanForPa",
+   "member": "Chrissy Houlahan",
+   "district": "PA-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "https://t.co/aiNUVKkgQG https://t.co/qr0eyTTFiY",
+   "topics": [],
+   "time": "2026-09-23T11:47:38.000Z",
+   "date": "2026-09-23",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102119169789428097",
+    "handle": "@TheDemocrats",
+    "text": "Senator, here is a video of you voting against the most recent Iran War Powers Resolution.\n\nYou have had 13 chances to oppose the war, but you voted with Trump every single time. You and your party…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102726289861824707",
+   "handle": "@HoulahanForPa",
+   "member": "Chrissy Houlahan",
+   "district": "PA-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Diesel is $6.60 per gallon in PA. No farms, no food.",
+   "topics": [],
+   "time": "2026-09-23T11:46:28.000Z",
+   "date": "2026-09-23",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102725301604438394",
+   "handle": "@MarkPocan",
+   "member": "Mark Pocan",
+   "district": "WI-02",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "How do I know @TomTiffanyWI is losing for Governor in WI?\n\nWhen he wants you to believe he wants the US to get out of Iran to lower gas prices after he’s voted at least 5 times against doing what he says.\n\nAnd if he’s dumb enough to not know you can look that up, even worse. https://t.co/zTuiBHJHpL",
+   "topics": [],
+   "time": "2026-09-23T11:42:33.000Z",
+   "date": "2026-09-23",
+   "engN": 12,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102500483671769161",
+    "handle": "@mattsmith_news",
+    "text": "Wisconsin GOP candidate for governor Rep. Tom Tiffany today on rising gas prices and Iran: \"I just believe we should be exiting Iran, that it's time to move on ... Time to come home, take care of…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102720779133804995",
+   "handle": "@SeanCasten",
+   "member": "Sean Casten",
+   "district": "IL-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "The ocean may not be big enough to accommodate all of them. https://t.co/psrvSmPf5r",
+   "topics": [],
+   "time": "2026-09-23T11:24:35.000Z",
+   "date": "2026-09-23",
+   "engN": 4,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102115999025672433",
+    "handle": "@MikeRogersForMI",
+    "text": "The war in Iran needs to end to bring costs down — but Michigan families can’t afford to wait. \n\nHere’s what we can do now: place a temporary embargo on Diesel exports. American energy should…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102720055716835771",
+   "handle": "@SeanCasten",
+   "member": "Sean Casten",
+   "district": "IL-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Please, rats.  Form an orderly line. https://t.co/vrevUkkusv",
+   "topics": [],
+   "time": "2026-09-23T11:21:42.000Z",
+   "date": "2026-09-23",
+   "engN": 7,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102046188249719095",
+    "handle": "@hinsonashley",
+    "text": "Iowans are being squeezed and shouldn’t have to foot the bill at the pump or the checkout line for the war in Iran. We need to use every option at our disposal to provide some relief from high…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
+  {
+   "id": "2102718848168268106",
+   "handle": "@SeanCasten",
+   "member": "Sean Casten",
+   "district": "IL-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Today in sycophantic rats on sinking ships.  https://t.co/6h7GVubpks",
+   "topics": [],
+   "time": "2026-09-23T11:16:54.000Z",
+   "date": "2026-09-23",
+   "engN": 24,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "isNew": false
+  },
   {
    "id": "2102627915410428332",
    "handle": "@tedlieu",
@@ -13398,176 +13582,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-23T12:01:33.897Z",
    "isNew": false
-  },
-  {
-   "id": "2102496000791457889",
-   "handle": "@DorisMatsui",
-   "member": "Doris O. Matsui",
-   "district": "CA-07",
-   "caucus": [
-    "CAPAC"
-   ],
-   "text": "I voted for the Affordable Care Act and helped create marketplaces to ensure every American had access to healthcare. The White House’s continued attacks on the ACA and Medi-Cal put families’ health and financial security at risk.\n \nI am deeply concerned about what these cuts will mean for Californians who access their care through Covered California plans. I will oppose these cuts at every step, fight to protect Medicaid, work to lower costs and keep families covered.\n\nhttps://t.co/FlQm1PrGig",
-   "topics": [],
-   "time": "2026-09-22T20:31:23.000Z",
-   "date": "2026-09-22",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
-  },
-  {
-   "id": "2102495939655033020",
-   "handle": "@RepWilson",
-   "member": "Frederica S. Wilson",
-   "district": "FL-24",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "I want a world where a Black boy’s smile is an ordinary sight, where he can walk into a classroom, down his street and toward his future without fear.\n\nAt our CBCF Annual Legislative Conference gathering, I saw that joy in the faces of the 5000 Role Models. It is precious, and it is ours to protect.",
-   "topics": [],
-   "time": "2026-09-22T20:31:09.000Z",
-   "date": "2026-09-22",
-   "engN": 39,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
-  },
-  {
-   "id": "2102495093047386491",
-   "handle": "@RepZoeLofgren",
-   "member": "Zoe Lofgren",
-   "district": "CA-18",
-   "caucus": [],
-   "text": "Great to meet with @SantaCruzMETRO to discuss their work to get folks where they need to go safely and efficiently. I voted for the Bipartisan Infrastructure Law that funded many of these projects, and I’ll continue to support investments that improve mass transportation. https://t.co/3mL8JyKHfS",
-   "topics": [],
-   "time": "2026-09-22T20:27:47.000Z",
-   "date": "2026-09-22",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
-  },
-  {
-   "id": "2102495051452756165",
-   "handle": "@YVindman",
-   "member": "Eugene Simon Vindman",
-   "district": "VA-07",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Thank you to everyone who braved the rain to cast your ballot at the Woodbridge DMV this morning! 🌧️🗳️\n\nGreat to be out talking with so many voters and seeing the energy firsthand.\n\nEarly voting is OPEN. Don’t wait until Election Day. Make your plan, bring your friends and family, and go cast your ballot today!",
-   "topics": [],
-   "time": "2026-09-22T20:27:37.000Z",
-   "date": "2026-09-22",
-   "engN": 34,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
-  },
-  {
-   "id": "2102495000772665688",
-   "handle": "@RepChrisPappas",
-   "member": "Chris Pappas",
-   "district": "NH-01",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "President Trump’s reckless Iran war has cost the American people over $40 billion and counting according to the nonpartisan Congressional Budget Office. \n\nThis is money that could have gone to health care, housing, and more to make life better for Granite Staters. Instead, it's funding the President's war of choice that continues to substantially raise costs.\n\nhttps://t.co/jclcWj7oB1",
-   "topics": [],
-   "time": "2026-09-22T20:27:25.000Z",
-   "date": "2026-09-22",
-   "engN": 50,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
-  },
-  {
-   "id": "2102494762926297204",
-   "handle": "@JoaquinCastrotx",
-   "member": "Joaquin Castro",
-   "district": "TX-20",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "RT @MikeBoard1200: Texas is on the verge of $4 gas. There are growing calls to suspend the state's gas tax ($.20/gallon).  \n\n@GovHotWheels_…",
-   "topics": [],
-   "time": "2026-09-22T20:26:28.000Z",
-   "date": "2026-09-22",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2102430697801617640",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T21:32:22.106Z",
-   "isNew": false
-  },
-  {
-   "id": "2102494740096725220",
-   "handle": "@RepPeteAguilar",
-   "member": "Pete Aguilar",
-   "district": "CA-33",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "It was great to visit Nine Eight Five Coffee in the heart of San Bernardino this morning!\n\nAbraham, his family and his team have created a community space that fuels CA-33 every day. Be sure to stop by, get some great coffee and catch-up with your neighbors. https://t.co/2H9bN1HlZS",
-   "topics": [],
-   "time": "2026-09-22T20:26:23.000Z",
-   "date": "2026-09-22",
-   "engN": 11,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T12:01:33.897Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13736,6 +13750,8 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1871605623496097792": "@repkmr",
+  "847098017274613761": "@HoulahanForPa",
   "1874831517706256384": "@RepGoodlander",
   "756123897783808000": "@KathyCastorFL",
   "1871623075822772224": "@RepYassAnsari",
@@ -13822,7 +13838,6 @@
   "1075517806551154689": "@RepEscobar",
   "1610730477563805699": "@RepJillTokuda",
   "816833925456789505": "@RepBarragan",
-  "1871605623496097792": "@repkmr",
   "1633610542584659970": "@RepMcClellan",
   "1067541214671577093": "@RepMGS",
   "816705409486618624": "@RepTomSuozzi",
@@ -13889,6 +13904,145 @@
   "1080891667308298240": "@RepGolden"
  },
  "feedAll": [
+  {
+   "id": "2102728686114119980",
+   "authorId": "1871605623496097792",
+   "createdAt": "2026-09-23T11:56:00.000Z",
+   "date": "2026-09-23",
+   "type": "tweet",
+   "text": "A little rain couldn’t stop Flint from shining at the pride festival this year! Thank you to Flint Pride for putting on another great event, and to everybody who showed up to say that everyone has a home in mid-Michigan. https://t.co/UJppROuku0",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z"
+  },
+  {
+   "id": "2102726581399801865",
+   "authorId": "847098017274613761",
+   "createdAt": "2026-09-23T11:47:38.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "https://t.co/aiNUVKkgQG https://t.co/qr0eyTTFiY",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "quoted": {
+    "id": "2102119169789428097",
+    "handle": "@TheDemocrats",
+    "text": "Senator, here is a video of you voting against the most recent Iran War Powers Resolution.\n\nYou have had 13 chances to oppose the war, but you voted with Trump every single time. You and your party…"
+   }
+  },
+  {
+   "id": "2102726289861824707",
+   "authorId": "847098017274613761",
+   "createdAt": "2026-09-23T11:46:28.000Z",
+   "date": "2026-09-23",
+   "type": "tweet",
+   "text": "Diesel is $6.60 per gallon in PA. No farms, no food.",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z"
+  },
+  {
+   "id": "2102725301604438394",
+   "authorId": "309070309",
+   "createdAt": "2026-09-23T11:42:33.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "How do I know @TomTiffanyWI is losing for Governor in WI?\n\nWhen he wants you to believe he wants the US to get out of Iran to lower gas prices after he’s voted at least 5 times against doing what he says.\n\nAnd if he’s dumb enough to not know you can look that up, even worse. https://t.co/zTuiBHJHpL",
+   "engN": 12,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "quoted": {
+    "id": "2102500483671769161",
+    "handle": "@mattsmith_news",
+    "text": "Wisconsin GOP candidate for governor Rep. Tom Tiffany today on rising gas prices and Iran: \"I just believe we should be exiting Iran, that it's time to move on ... Time to come home, take care of…"
+   }
+  },
+  {
+   "id": "2102720779133804995",
+   "authorId": "66804351",
+   "createdAt": "2026-09-23T11:24:35.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "The ocean may not be big enough to accommodate all of them. https://t.co/psrvSmPf5r",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "quoted": {
+    "id": "2102115999025672433",
+    "handle": "@MikeRogersForMI",
+    "text": "The war in Iran needs to end to bring costs down — but Michigan families can’t afford to wait. \n\nHere’s what we can do now: place a temporary embargo on Diesel exports. American energy should…"
+   }
+  },
+  {
+   "id": "2102720055716835771",
+   "authorId": "66804351",
+   "createdAt": "2026-09-23T11:21:42.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "Please, rats.  Form an orderly line. https://t.co/vrevUkkusv",
+   "engN": 7,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z",
+   "quoted": {
+    "id": "2102046188249719095",
+    "handle": "@hinsonashley",
+    "text": "Iowans are being squeezed and shouldn’t have to foot the bill at the pump or the checkout line for the war in Iran. We need to use every option at our disposal to provide some relief from high…"
+   }
+  },
+  {
+   "id": "2102718848168268106",
+   "authorId": "66804351",
+   "createdAt": "2026-09-23T11:16:54.000Z",
+   "date": "2026-09-23",
+   "type": "tweet",
+   "text": "Today in sycophantic rats on sinking ships.  https://t.co/6h7GVubpks",
+   "engN": 24,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T12:04:44.308Z"
+  },
   {
    "id": "2102627915410428332",
    "authorId": "21059255",
@@ -63378,112 +63532,18 @@
    "sourceReferenceId": "2100402457775931525",
    "provenance": null,
    "metricsObservedAt": "2026-09-17T15:19:57.048Z"
-  },
-  {
-   "id": "2100576416098030041",
-   "authorId": "1569400849130049537",
-   "createdAt": "2026-09-17T13:23:39.000Z",
-   "date": "2026-09-17",
-   "type": "reply",
-   "text": "I’m proud to lead so many of my fellow veterans in Congress to make it clear we will not stand for the Trump Administration’s disgraceful disrespect of American heroes – before, during, or after their deployments.\n\nhttps://t.co/44ZkjGkByM",
-   "engN": 2,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.930Z",
-   "quoted": {
-    "id": "2100576414068060387",
-    "handle": "@RepPatRyanNY",
-    "text": "Instead, their sacrifices are being swept under the rug by a President and SecDef so humiliated by their failure that they’d rather dishonor the troops than tell the truth.\n\nIt’s a total betrayal of…"
-   }
-  },
-  {
-   "id": "2100576414068060387",
-   "authorId": "1569400849130049537",
-   "createdAt": "2026-09-17T13:23:38.000Z",
-   "date": "2026-09-17",
-   "type": "reply",
-   "text": "Instead, their sacrifices are being swept under the rug by a President and SecDef so humiliated by their failure that they’d rather dishonor the troops than tell the truth.\n\nIt’s a total betrayal of our armed forces by the very people that swore to protect and do right by them.",
-   "engN": 3,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.930Z",
-   "quoted": {
-    "id": "2100576412570632542",
-    "handle": "@RepPatRyanNY",
-    "text": "Every Patriot deployed to this war in Iran – the 50,000 still in theater, the hundreds wounded, and especially the 18 killed – are American heroes.\n\nThey deserve to be honored as such.…"
-   }
-  },
-  {
-   "id": "2100576412570632542",
-   "authorId": "1569400849130049537",
-   "createdAt": "2026-09-17T13:23:38.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "Every Patriot deployed to this war in Iran – the 50,000 still in theater, the hundreds wounded, and especially the 18 killed – are American heroes.\n\nThey deserve to be honored as such. https://t.co/P9dxJz6H2A",
-   "engN": 9,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.930Z"
-  },
-  {
-   "id": "2100575344214372748",
-   "authorId": "1611527835742519297",
-   "createdAt": "2026-09-17T13:19:23.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "\"We the People.\" Those three words open our Constitution and define who we are as a nation. Today, on Constitution Day, I'm reflecting on this founding document, the framework of our democracy, and the guarantee of our fundamental rights and freedoms. I will always work to protect the Constitution and hold our government accountable to the people it serves.",
-   "engN": 8,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.930Z"
-  },
-  {
-   "id": "2100575128560050428",
-   "authorId": "815733290955112448",
-   "createdAt": "2026-09-17T13:18:32.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "Top researchers and executives are speaking out, forcing AI companies to claim they want regulation.\n\nBut let’s be clear: AI companies have the power to shut down their dangerous models, pause development, and stop pouring billions into data centers RIGHT NOW. https://t.co/b13uIbdI1l",
-   "engN": 240,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.930Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2796,
+ "feedAllTotal": 2803,
  "feedAllFiles": [
-  "feed-0-fcaa9ac8a9587400.json",
-  "feed-1-acecee8e9fbccdbe.json",
-  "feed-2-ba24506d50ac2325.json",
-  "feed-3-9de1aa48ab4774bb.json",
-  "feed-4-07cdf795992f5fc6.json",
-  "feed-5-cf018b8f4a012d28.json",
-  "feed-6-c24d81ad2df9527d.json"
+  "feed-0-110cad8e0b140592.json",
+  "feed-1-1448109b3c7327b9.json",
+  "feed-2-4a48f64a5820205c.json",
+  "feed-3-5b21cdc329a17109.json",
+  "feed-4-edf41f25108033cd.json",
+  "feed-5-ca866b0f20a329b5.json",
+  "feed-6-0704e29f4ba2c340.json",
+  "feed-7-fac4ef2b68e0549a.json"
  ]
 }
