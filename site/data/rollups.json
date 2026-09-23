@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-23T05:58:18.337Z",
- "lastPollAt": "2026-09-23T05:04:33.288Z",
- "lastPollAttemptAt": "2026-09-23T05:04:32.473Z",
+ "generatedAt": "2026-09-23T06:31:43.631Z",
+ "lastPollAt": "2026-09-23T06:31:21.783Z",
+ "lastPollAttemptAt": "2026-09-23T06:31:21.346Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-23T05:58:17.596Z"
+  "referenceAsOf": "2026-09-23T06:31:42.916Z"
  },
  "news": {
   "version": 128,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-23T05:58:17.964Z",
+   "asOf": "2026-09-23T06:31:43.276Z",
    "windowDays": 14,
-   "windowStart": "2026-09-09T05:58:17.964Z",
+   "windowStart": "2026-09-09T06:31:43.276Z",
    "eligibleItems": 1306,
    "withExcerpts": 149,
    "headlineOrSummary": 1157,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 544,
+  "capturedIn24h": 546,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 544,
+  "pendingIn24h": 546,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-23T05:04:51.779Z",
+   "lastAttemptAt": "2026-09-23T06:31:40.459Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 544,
+   "capturedIn24h": 546,
    "classifiedIn24h": 0,
-   "pendingIn24h": 544,
+   "pendingIn24h": 546,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 1,
+    "posts": 3,
     "mix": [
      100,
      0,
      0
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 3,
-    "perPost": 3,
+    "eng": 349,
+    "perPost": 116,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2794,
+    "posts": 2796,
     "mix": [
      83,
      5,
@@ -6861,64 +6861,64 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2794,
+    "pending": 2796,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 587299,
+    "eng": 587645,
     "perPost": 210,
     "top10Share": 52,
     "engDelta": 0
    },
    "curve48": [
-    2,
-    2,
-    75,
+    1,
+    5,
+    99,
     146,
-    145,
-    101,
-    52,
-    13,
+    137,
+    99,
+    45,
+    3,
     0,
-    2,
-    72,
-    134,
-    167,
-    120,
-    42,
+    3,
+    102,
+    133,
+    172,
+    95,
+    34,
     7
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 2,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 346,
+    "perPost": 173,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1334,
+    "posts": 1336,
     "mix": [
      80,
      4,
@@ -6929,35 +6929,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1334,
+    "pending": 1336,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 455212,
+    "eng": 455558,
     "perPost": 341,
     "top10Share": 67,
     "engDelta": 0
    },
    "curve48": [
-    1,
-    1,
-    35,
-    80,
-    73,
+    0,
+    3,
     45,
-    31,
-    5,
-    0,
-    0,
-    32,
+    77,
     72,
-    82,
-    65,
-    20,
-    3
+    47,
+    23,
+    3,
+    0,
+    0,
+    44,
+    71,
+    93,
+    48,
+    15,
+    5
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
     1,
-    45,
-    68,
-    84,
-    51,
-    25,
-    9,
-    0,
     2,
-    44,
-    77,
-    95,
     56,
+    77,
+    72,
+    50,
+    25,
+    1,
+    0,
+    3,
+    64,
+    73,
+    96,
+    40,
     17,
-    4
+    2
    ]
   },
   "CBC": {
@@ -7080,19 +7080,19 @@
    "curve48": [
     0,
     0,
-    15,
-    40,
+    24,
+    33,
     25,
-    19,
-    16,
-    7,
-    0,
-    0,
-    10,
-    25,
-    31,
-    20,
+    22,
     17,
+    1,
+    0,
+    0,
+    14,
+    26,
+    31,
+    21,
+    11,
     0
    ]
   },
@@ -7146,51 +7146,51 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    0,
-    13,
-    29,
-    30,
-    19,
-    12,
     0,
     0,
+    20,
+    28,
+    25,
+    24,
+    6,
     0,
-    14,
+    0,
+    0,
+    18,
     21,
-    32,
-    23,
-    13,
-    2
+    35,
+    21,
+    9,
+    1
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
+    "eng": 343,
+    "perPost": 343,
+    "top10Share": 100,
+    "engDelta": -98
    },
    "w": {
-    "posts": 291,
+    "posts": 292,
     "mix": [
      86,
      5,
@@ -7201,14 +7201,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 291,
+    "pending": 292,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 131212,
+    "eng": 131555,
     "perPost": 451,
     "top10Share": 99,
     "engDelta": 0
@@ -7217,19 +7217,19 @@
     0,
     0,
     9,
-    11,
-    17,
-    19,
-    7,
-    0,
-    0,
-    0,
-    7,
-    9,
     14,
     18,
+    15,
+    7,
+    0,
+    0,
+    0,
+    10,
+    7,
+    19,
+    12,
     1,
-    0
+    1
    ]
   }
  },
@@ -8542,6 +8542,59 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2102627915410428332",
+   "handle": "@tedlieu",
+   "member": "Ted Lieu",
+   "district": "CA-36",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "Um, have you tried calling your GOP Speaker? https://t.co/UIk2w8vSka",
+   "topics": [],
+   "time": "2026-09-23T05:15:34.000Z",
+   "date": "2026-09-23",
+   "engN": 343,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102528022100222076",
+    "handle": "@hinsonashley",
+    "text": "The House should return to DC immediately to work to pause diesel exports, suspend the gas tax, fully unleash E15 and biodiesel, and work on a diesel relief program for truckers and farmers.…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T06:31:21.774Z",
+   "isNew": false
+  },
+  {
+   "id": "2102627795377823780",
+   "handle": "@RepBonamici",
+   "member": "Suzanne Bonamici",
+   "district": "OR-01",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Let's Go Fire! 🔥 What an amazing final game of the inaugural season— glad to cheer on our team from the fire pit. ❤️‍🔥✨ https://t.co/rg01Bir47e",
+   "topics": [],
+   "time": "2026-09-23T05:15:06.000Z",
+   "date": "2026-09-23",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T06:31:21.774Z",
+   "isNew": false
+  },
   {
    "id": "2102618764982308939",
    "handle": "@RepStephenLynch",
@@ -13515,57 +13568,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-22T21:32:22.106Z",
    "isNew": false
-  },
-  {
-   "id": "2102494734728278134",
-   "handle": "@JoaquinCastrotx",
-   "member": "Joaquin Castro",
-   "district": "TX-20",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "RT @priscialva: SCOOP: The Trump administration has informed Congress it intends to accept 17,500 refugees, primarily White South Africans,…",
-   "topics": [],
-   "time": "2026-09-22T20:26:21.000Z",
-   "date": "2026-09-22",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2102482924277027161",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T21:32:22.106Z",
-   "isNew": false
-  },
-  {
-   "id": "2102494616024945013",
-   "handle": "@RepPressley",
-   "member": "Ayanna Pressley",
-   "district": "MA-07",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "Black folks are being pushed out of the workforce &amp; unemployment rates are at their highest since the pandemic.\n\nThat's why we need a Federal Job Guarantee now more than ever.\n\nMy bill will help America reach full employment &amp; help achieve long-term economic security for all. https://t.co/VJsVca7WDC",
-   "topics": [],
-   "time": "2026-09-22T20:25:53.000Z",
-   "date": "2026-09-22",
-   "engN": 41,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T21:32:22.106Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13887,6 +13889,45 @@
   "1080891667308298240": "@RepGolden"
  },
  "feedAll": [
+  {
+   "id": "2102627915410428332",
+   "authorId": "21059255",
+   "createdAt": "2026-09-23T05:15:34.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "Um, have you tried calling your GOP Speaker? https://t.co/UIk2w8vSka",
+   "engN": 343,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T06:31:21.774Z",
+   "quoted": {
+    "id": "2102528022100222076",
+    "handle": "@hinsonashley",
+    "text": "The House should return to DC immediately to work to pause diesel exports, suspend the gas tax, fully unleash E15 and biodiesel, and work on a diesel relief program for truckers and farmers.…"
+   }
+  },
+  {
+   "id": "2102627795377823780",
+   "authorId": "558769636",
+   "createdAt": "2026-09-23T05:15:06.000Z",
+   "date": "2026-09-23",
+   "type": "tweet",
+   "text": "Let's Go Fire! 🔥 What an amazing final game of the inaugural season— glad to cheer on our team from the fire pit. ❤️‍🔥✨ https://t.co/rg01Bir47e",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T06:31:21.774Z"
+  },
   {
    "id": "2102618764982308939",
    "authorId": "310310133",
@@ -63449,51 +63490,17 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-18T08:26:50.930Z"
-  },
-  {
-   "id": "2100573389530272095",
-   "authorId": "1210894642465501184",
-   "createdAt": "2026-09-17T13:11:37.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "Can we all agree to not elect another narcissist? https://t.co/bfS6BfdV3D",
-   "engN": 11,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.617Z"
-  },
-  {
-   "id": "2100573321947484433",
-   "authorId": "221176170",
-   "createdAt": "2026-09-17T13:11:21.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "Happy Hispanic Heritage Month!\n\nGenerations of Hispanic Americans have enriched our communities and brought life to our neighborhoods through their culture, traditions, and contributions.\n\nThis month we celebrate the rich history, culture, and contributions of Hispanic and Latino communities across our nation.",
-   "engN": 17,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.617Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2794,
+ "feedAllTotal": 2796,
  "feedAllFiles": [
-  "feed-0-ba3178994b7d652b.json",
-  "feed-1-175ae88405ef293a.json",
-  "feed-2-5ee0a8fee01119c7.json",
-  "feed-3-fe485bbb3c491964.json",
-  "feed-4-93a019e503e385b4.json",
-  "feed-5-840e980c3d38ee62.json",
-  "feed-6-1a87474f6c0a26d9.json"
+  "feed-0-6b543e04d62c6950.json",
+  "feed-1-1e1acae687786bec.json",
+  "feed-2-ba24506d50ac2325.json",
+  "feed-3-9de1aa48ab4774bb.json",
+  "feed-4-07cdf795992f5fc6.json",
+  "feed-5-cf018b8f4a012d28.json",
+  "feed-6-c24d81ad2df9527d.json"
  ]
 }
