@@ -1,7 +1,7 @@
 {
  "date": "2026-09-22",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-23T09:32:18.472Z",
+ "classifiedAt": "2026-09-23T09:56:55.064Z",
  "assignments": {},
  "incidents": {},
  "provenance": {},
@@ -1209,24 +1209,24 @@
     "2102385092639293951",
     "2102385944917684458",
     "2102386187180888343",
-    "2102386189575590367",
-    "2102386484351230312"
+    "2102386189575590367"
    ],
-   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfL941kbncvt4roZJWSUT\"}",
+   "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfLAvrtLSrB2rE7Ji2xQ3\"}",
    "reasonCode": "provider-credits",
    "inference": {
-    "attemptedAt": "2026-09-23T09:32:17.570Z",
-    "observedAt": "2026-09-23T09:32:18.468Z",
+    "attemptedAt": "2026-09-23T09:56:54.471Z",
+    "observedAt": "2026-09-23T09:56:55.058Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "provider-credits",
     "acceptedCount": 0,
-    "retryCount": 26
+    "retryCount": 25
    }
   },
   "live_chunk-1": {
    "acceptedIds": [],
    "retryIds": [
+    "2102386484351230312",
     "2102386815483400557",
     "2102387148913824169",
     "2102387603269980199",
@@ -1238,13 +1238,7 @@
     "2102389781779059186",
     "2102390134062686404",
     "2102390332629655558",
-    "2102391602996240829",
-    "2102393650600890413",
-    "2102394276743376961",
-    "2102394389339267395",
-    "2102394867007582590",
-    "2102395430260879535",
-    "2102396759842431079"
+    "2102391602996240829"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -1252,6 +1246,12 @@
   "live_chunk-2": {
    "acceptedIds": [],
    "retryIds": [
+    "2102393650600890413",
+    "2102394276743376961",
+    "2102394389339267395",
+    "2102394867007582590",
+    "2102395430260879535",
+    "2102396759842431079",
     "2102397698364305861",
     "2102398152804602123",
     "2102398194634154428",
@@ -1267,9 +1267,7 @@
     "2102402649270231433",
     "2102403007178551524",
     "2102403153522008505",
-    "2102403203157397573",
-    "2102403296996519980",
-    "2102403541121818994"
+    "2102403203157397573"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -1277,6 +1275,8 @@
   "live_chunk-3": {
    "acceptedIds": [],
    "retryIds": [
+    "2102403296996519980",
+    "2102403541121818994",
     "2102403762736579025",
     "2102403967108133355",
     "2102404247358710121",
@@ -1294,10 +1294,7 @@
     "2102409699530248284",
     "2102410218726621653",
     "2102410231875543049",
-    "2102410695690072109",
-    "2102410746491699510",
-    "2102411634882842640",
-    "2102411804748222860"
+    "2102410695690072109"
    ],
    "deferred": true,
    "reasonCode": "provider-credits"
@@ -1305,6 +1302,9 @@
   "live_chunk-4": {
    "acceptedIds": [],
    "retryIds": [
+    "2102410746491699510",
+    "2102411634882842640",
+    "2102411804748222860",
     "2102411815087169767",
     "2102412531209818525",
     "2102412640240738649",
@@ -1324,7 +1324,14 @@
     "2102417487371325877",
     "2102418103325843707",
     "2102418922071060822",
-    "2102418997123621306",
+    "2102418997123621306"
+   ],
+   "deferred": true,
+   "reasonCode": "provider-credits"
+  },
+  "live_chunk-5": {
+   "acceptedIds": [],
+   "retryIds": [
     "2102418998637764648",
     "2102419000466506199",
     "2102419002421100744",
@@ -1337,14 +1344,7 @@
     "2102419585328877787",
     "2102420155682689097",
     "2102420338755715101",
-    "2102420486072176870"
-   ],
-   "deferred": true,
-   "reasonCode": "provider-credits"
-  },
-  "live_chunk-5": {
-   "acceptedIds": [],
-   "retryIds": [
+    "2102420486072176870",
     "2102421978627940794",
     "2102421980817379814",
     "2102422177035489288",
@@ -1357,24 +1357,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-23T09:32:17.570Z",
-   "observedAt": "2026-09-23T09:32:18.468Z",
+   "attemptedAt": "2026-09-23T09:56:54.471Z",
+   "observedAt": "2026-09-23T09:56:55.058Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 26
+   "retryCount": 25
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-23T09:32:17.570Z",
-   "observedAt": "2026-09-23T09:32:18.468Z",
+   "attemptedAt": "2026-09-23T09:56:54.471Z",
+   "observedAt": "2026-09-23T09:56:55.058Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "provider-credits",
    "acceptedCount": 0,
-   "retryCount": 26
+   "retryCount": 25
   }
  },
- "updatedAt": "2026-09-23T09:32:18.473Z"
+ "updatedAt": "2026-09-23T09:56:55.065Z"
 }
