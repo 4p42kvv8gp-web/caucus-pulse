@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-23T04:02:57.472Z",
- "lastPollAt": "2026-09-23T04:02:05.892Z",
- "lastPollAttemptAt": "2026-09-23T04:02:05.330Z",
+ "generatedAt": "2026-09-23T05:04:55.129Z",
+ "lastPollAt": "2026-09-23T05:04:33.288Z",
+ "lastPollAttemptAt": "2026-09-23T05:04:32.473Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-23T04:02:56.906Z"
+  "referenceAsOf": "2026-09-23T05:04:54.382Z"
  },
  "news": {
   "version": 127,
-  "items": 1228,
+  "items": 1227,
   "latestPublishedAt": "2026-09-23T03:26:47.000Z",
   "latestFetchedAt": "2026-09-23T04:02:06.356Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-23T04:02:57.191Z",
+   "asOf": "2026-09-23T05:04:54.744Z",
    "windowDays": 14,
-   "windowStart": "2026-09-09T04:02:57.191Z",
-   "eligibleItems": 1306,
+   "windowStart": "2026-09-09T05:04:54.744Z",
+   "eligibleItems": 1305,
    "withExcerpts": 149,
-   "headlineOrSummary": 1157,
+   "headlineOrSummary": 1156,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3395,9 +3395,9 @@
      "id": "politico-politics",
      "publisher": "Politico",
      "sourceUrl": "https://rss.politico.com/politics-news.xml",
-     "eligibleItems": 35,
+     "eligibleItems": 34,
      "withExcerpts": 0,
-     "headlineOrSummary": 35,
+     "headlineOrSummary": 34,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-22T21:48:54.000Z",
      "latestItem": {
@@ -3555,7 +3555,7 @@
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-23T04:02:24.429Z",
+   "lastAttemptAt": "2026-09-23T05:04:51.779Z",
    "lastSuccessAt": null,
    "capturedIn24h": 544,
    "classifiedIn24h": 0,
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 3,
+    "perPost": 3,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2793,
+    "posts": 2794,
     "mix": [
      83,
      5,
@@ -6861,35 +6861,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2793,
+    "pending": 2794,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 587296,
+    "eng": 587299,
     "perPost": 210,
     "top10Share": 52,
     "engDelta": 0
    },
    "curve48": [
-    5,
+    2,
     0,
-    15,
-    113,
-    144,
-    136,
-    84,
-    41,
+    39,
+    148,
+    134,
+    121,
+    71,
+    21,
+    0,
     1,
-    0,
-    13,
-    108,
-    144,
-    161,
-    91,
-    26
+    43,
+    124,
+    155,
+    141,
+    62,
+    18
    ]
   },
   "CPC": {
@@ -6942,22 +6942,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    0,
-    4,
-    58,
-    73,
-    73,
-    40,
-    21,
     1,
     0,
-    6,
-    45,
-    82,
-    80,
-    48,
-    13
+    16,
+    79,
+    66,
+    65,
+    34,
+    10,
+    0,
+    0,
+    20,
+    60,
+    81,
+    70,
+    35,
+    8
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
+    2,
     0,
-    8,
-    64,
-    76,
-    69,
-    42,
-    24,
-    0,
-    0,
-    8,
+    26,
     70,
     76,
-    92,
-    36,
-    13
+    61,
+    38,
+    12,
+    0,
+    1,
+    25,
+    77,
+    87,
+    73,
+    22,
+    10
    ]
   },
   "CBC": {
@@ -7080,20 +7080,20 @@
    "curve48": [
     0,
     0,
-    1,
-    31,
-    29,
-    25,
-    19,
-    17,
-    0,
-    0,
-    2,
-    13,
-    30,
-    27,
+    7,
+    42,
     24,
-    7
+    18,
+    21,
+    10,
+    0,
+    0,
+    7,
+    21,
+    29,
+    24,
+    18,
+    4
    ]
   },
   "CHC": {
@@ -7148,20 +7148,20 @@
    "curve48": [
     1,
     0,
-    2,
-    21,
-    27,
-    25,
+    9,
     24,
-    4,
+    27,
+    28,
+    15,
     0,
     0,
-    2,
-    17,
-    26,
-    34,
-    18,
-    8
+    0,
+    8,
+    22,
+    27,
+    29,
+    16,
+    3
    ]
   },
   "CAPAC": {
@@ -7214,21 +7214,21 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
     0,
-    1,
-    9,
-    15,
-    21,
+    0,
+    2,
     12,
-    5,
-    0,
-    0,
-    1,
-    9,
-    9,
+    18,
     19,
     11,
+    1,
+    0,
+    0,
+    4,
+    7,
+    12,
+    21,
+    5,
     0
    ]
   }
@@ -8505,12 +8505,13 @@
     "2102521009899237511",
     "2102534407735193623",
     "2102545877906710946",
-    "2102559892879851907"
+    "2102559892879851907",
+    "2102618764982308939"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
-   "spread": 32,
-   "accounts": 34,
+   "spread": 33,
+   "accounts": 35,
    "cm": [
     15,
     20,
@@ -8528,8 +8529,8 @@
     85
    ],
    "exact": 1,
-   "total": 44,
-   "eng": 1146
+   "total": 45,
+   "eng": 1149
   }
  ],
  "clusters": [],
@@ -8541,6 +8542,32 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2102618764982308939",
+   "handle": "@RepStephenLynch",
+   "member": "Stephen F. Lynch",
+   "district": "MA-08",
+   "caucus": [],
+   "text": "Union Strong!\n\nIt was an honor to join our hardworking Nurses and clinicians from @MassNurses on the picket line this morning to demand that Mass General/Brigham Hospital return to the bargaining table and reach a fair and equitable contract with the MNA. My thanks to @RepRichardNeal, @EdforBoston, Democratic nominee for Congress @dank, and MNA leadership for fighting for affordable and reliable health care for all. \n\nOur nurses and clinicians are the heart and soul of our healthcare system - they are always there for us, and I’m proud to stand in solidarity with them!",
+   "topics": [],
+   "time": "2026-09-23T04:39:12.000Z",
+   "date": "2026-09-23",
+   "engN": 3,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102435772817436736",
+    "handle": "@MassNurses",
+    "text": "Thank you @repstephenlynch @RepRichardNeal, @GBLCBoston @1199mass @EdforBoston and everyone else who is supporting @MassGenBrigham nurses and clinicians fighting to protect their patients from…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T05:04:33.280Z",
+   "isNew": false
+  },
   {
    "id": "2102608367696949312",
    "handle": "@MikeLevin",
@@ -13539,34 +13566,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-22T21:32:22.106Z",
    "isNew": false
-  },
-  {
-   "id": "2102494611637772344",
-   "handle": "@RepFriedmanCA",
-   "member": "Laura Friedman",
-   "district": "CA-30",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "Escalating prices are a choice. This administration is deciding to throw money at an endless war with Iran instead of lowering the cost of gas or healthcare.\n\nhttps://t.co/4VbkN4dnzP",
-   "topics": [],
-   "time": "2026-09-22T20:25:52.000Z",
-   "date": "2026-09-22",
-   "engN": 5,
-   "kind": "quote",
-   "quoted": {
-    "id": "2098325079968911405",
-    "handle": "@NBCNews",
-    "text": "BREAKING: Diesel hits a record $6 per gallon, an ominous mark of the Iran war that will drive prices higher for groceries and other essentials. https://t.co/PhiZQkaqhv"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T21:32:22.106Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13888,6 +13887,28 @@
   "1080891667308298240": "@RepGolden"
  },
  "feedAll": [
+  {
+   "id": "2102618764982308939",
+   "authorId": "310310133",
+   "createdAt": "2026-09-23T04:39:12.000Z",
+   "date": "2026-09-23",
+   "type": "quote",
+   "text": "Union Strong!\n\nIt was an honor to join our hardworking Nurses and clinicians from @MassNurses on the picket line this morning to demand that Mass General/Brigham Hospital return to the bargaining table and reach a fair and equitable contract with the MNA. My thanks to @RepRichardNeal, @EdforBoston, Democratic nominee for Congress @dank, and MNA leadership for fighting for affordable and reliable health care for all. \n\nOur nurses and clinicians are the heart and soul of our healthcare system - they are always there for us, and I’m proud to stand in solidarity with them!",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-23T05:04:33.280Z",
+   "quoted": {
+    "id": "2102435772817436736",
+    "handle": "@MassNurses",
+    "text": "Thank you @repstephenlynch @RepRichardNeal, @GBLCBoston @1199mass @EdforBoston and everyone else who is supporting @MassGenBrigham nurses and clinicians fighting to protect their patients from…"
+   }
+  },
   {
    "id": "2102608367696949312",
    "authorId": "14573926",
@@ -63462,73 +63483,17 @@
    "sourceReferenceId": null,
    "provenance": null,
    "metricsObservedAt": "2026-09-18T08:26:50.617Z"
-  },
-  {
-   "id": "2100571887289897267",
-   "authorId": "172377413",
-   "createdAt": "2026-09-17T13:05:39.000Z",
-   "date": "2026-09-17",
-   "type": "quote",
-   "text": "⬇️⬇️⬇️ https://t.co/qFoWfibg8F",
-   "engN": 369,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.617Z",
-   "quoted": {
-    "id": "2100344812536778913",
-    "handle": "@PatRyanUC",
-    "text": "Congress was ready to impeach Pete Hegseth TODAY.\n\nInstead, Trump had SPINELESS SPEAKER JOHNSON cancel votes through November.\n\nWe have to be louder now than ever: FIRE PETE HEGSETH.…"
-   }
-  },
-  {
-   "id": "2100571336317829301",
-   "authorId": "1078749802765139968",
-   "createdAt": "2026-09-17T13:03:27.000Z",
-   "date": "2026-09-17",
-   "type": "tweet",
-   "text": "No Attorney General in the modern history of our country has participated in such brazen and blatantly political activity. \n\nUntil Todd Blanche. https://t.co/RBB3jEkCIQ",
-   "engN": 1867,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-18T08:26:50.617Z"
-  },
-  {
-   "id": "2100571078997286963",
-   "authorId": "2409478435",
-   "createdAt": "2026-09-17T13:02:26.000Z",
-   "date": "2026-09-17",
-   "type": "retweet",
-   "text": "RT @Acyn: Massie: We’re in the majority. Why are we whining about The Save Act? We won the elections. Why are we saying the elections were…",
-   "engN": 0,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2100290826551304696",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-17T15:19:57.048Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2793,
+ "feedAllTotal": 2794,
  "feedAllFiles": [
-  "feed-0-4079fe23d12bfe20.json",
-  "feed-1-ea2a1e9ab65f6d3a.json",
-  "feed-2-51a9dfb7b4d187f9.json",
-  "feed-3-eab95c7645d8d943.json",
-  "feed-4-ce4f50ef5b2189fa.json",
-  "feed-5-4e104faec792252b.json",
-  "feed-6-ae7bedd047633d53.json"
+  "feed-0-ba3178994b7d652b.json",
+  "feed-1-175ae88405ef293a.json",
+  "feed-2-5ee0a8fee01119c7.json",
+  "feed-3-fe485bbb3c491964.json",
+  "feed-4-93a019e503e385b4.json",
+  "feed-5-840e980c3d38ee62.json",
+  "feed-6-1a87474f6c0a26d9.json"
  ]
 }
