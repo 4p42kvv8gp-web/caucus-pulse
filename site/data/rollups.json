@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-24T12:50:23.535Z",
- "lastPollAt": "2026-09-24T11:37:11.144Z",
- "lastPollAttemptAt": "2026-09-24T11:37:10.016Z",
+ "generatedAt": "2026-09-24T12:51:08.009Z",
+ "lastPollAt": "2026-09-24T12:50:49.600Z",
+ "lastPollAttemptAt": "2026-09-24T12:50:49.082Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-24T12:50:22.778Z"
+  "referenceAsOf": "2026-09-24T12:51:07.476Z"
  },
  "news": {
   "version": 155,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-24T12:50:23.143Z",
+   "asOf": "2026-09-24T12:51:07.730Z",
    "windowDays": 14,
-   "windowStart": "2026-09-10T12:50:23.143Z",
+   "windowStart": "2026-09-10T12:51:07.730Z",
    "eligibleItems": 1485,
    "withExcerpts": 165,
    "headlineOrSummary": 1320,
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 145,
-  "t": 1
+  "posts": 150,
+  "t": 6
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 553,
+  "capturedIn24h": 554,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 553,
+  "pendingIn24h": 554,
   "momentumPaused": true,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
+   "status": "blocked",
+   "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-24T12:50:19.698Z",
+   "lastAttemptAt": "2026-09-24T12:51:04.562Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 553,
+   "capturedIn24h": 554,
    "classifiedIn24h": 0,
-   "pendingIn24h": 553,
+   "pendingIn24h": 554,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 9,
+    "posts": 10,
     "mix": [
-     67,
+     70,
      0,
-     33
+     30
     ],
-    "accounts": 5,
-    "members": 5,
+    "accounts": 6,
+    "members": 6,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 9,
+    "pending": 10,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 204,
-    "perPost": 23,
+    "eng": 219,
+    "perPost": 22,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2754,
+    "posts": 2755,
     "mix": [
      84,
      5,
@@ -6861,14 +6861,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2754,
+    "pending": 2755,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 669731,
+    "eng": 669746,
     "perPost": 243,
     "top10Share": 54,
     "engDelta": 0
@@ -6876,20 +6876,20 @@
    "curve48": [
     108,
     141,
-    159,
-    95,
+    160,
+    94,
     31,
     4,
     0,
     10,
-    104,
-    164,
+    107,
+    161,
     160,
     91,
     24,
     9,
     0,
-    1
+    2
    ]
   },
   "CPC": {
@@ -6950,8 +6950,8 @@
     3,
     0,
     2,
-    60,
-    83,
+    61,
+    82,
     81,
     49,
     13,
@@ -6962,31 +6962,31 @@
   },
   "NewDem": {
    "t": {
-    "posts": 2,
+    "posts": 3,
     "mix": [
+     33,
      0,
-     0,
-     100
+     67
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 15,
+    "perPost": 5,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1527,
+    "posts": 1528,
     "mix": [
      84,
      4,
@@ -6997,14 +6997,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1527,
+    "pending": 1528,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 157054,
+    "eng": 157069,
     "perPost": 103,
     "top10Share": 70,
     "engDelta": 0
@@ -7012,20 +7012,20 @@
    "curve48": [
     70,
     76,
-    89,
-    39,
+    90,
+    38,
     15,
     1,
     0,
     7,
-    53,
-    83,
+    54,
+    82,
     93,
     39,
     17,
     2,
     0,
-    0
+    1
    ]
   },
   "CBC": {
@@ -7086,8 +7086,8 @@
     0,
     0,
     1,
-    17,
-    34,
+    19,
+    32,
     34,
     20,
     3,
@@ -7148,8 +7148,8 @@
    "curve48": [
     18,
     24,
-    33,
-    19,
+    34,
+    18,
     9,
     1,
     0,
@@ -7166,31 +7166,31 @@
   },
   "CAPAC": {
    "t": {
-    "posts": 4,
+    "posts": 5,
     "mix": [
-     75,
+     80,
      0,
-     25
+     20
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 4,
+    "pending": 5,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 199,
-    "perPost": 50,
+    "eng": 214,
+    "perPost": 43,
     "top10Share": 100,
     "engDelta": -99
    },
    "w": {
-    "posts": 281,
+    "posts": 282,
     "mix": [
      86,
      3,
@@ -7201,15 +7201,15 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 281,
+    "pending": 282,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 133039,
-    "perPost": 473,
+    "eng": 133054,
+    "perPost": 472,
     "top10Share": 98,
     "engDelta": 0
    },
@@ -7229,7 +7229,7 @@
     2,
     5,
     0,
-    0
+    1
    ]
   }
  },
@@ -8134,7 +8134,8 @@
     "2102900426659995785",
     "2102903038344343842",
     "2102921892063506599",
-    "2102970155710169367"
+    "2102970155710169367",
+    "2103098403349524720"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
@@ -8157,8 +8158,8 @@
     128
    ],
    "exact": 1,
-   "total": 76,
-   "eng": 14401
+   "total": 77,
+   "eng": 14416
   },
   {
    "text": "loved ones",
@@ -8560,6 +8561,31 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2103098403349524720",
+   "handle": "@CongressmanRaja",
+   "member": "Raja Krishnamoorthi",
+   "district": "IL-08",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "The Trump Administration is burying the truth: millions of Epstein-related documents still have not been released, while more than a thousand survivors are still waiting for justice.\nCongress must keep pressing for the full truth and accountability. https://t.co/PzDqd2O34P",
+   "topics": [],
+   "time": "2026-09-24T12:25:07.000Z",
+   "date": "2026-09-24",
+   "engN": 15,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T12:50:49.582Z",
+   "isNew": false
+  },
   {
    "id": "2103081452686778583",
    "handle": "@RepMenendez",
@@ -13593,30 +13619,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-24T09:16:58.282Z",
    "isNew": false
-  },
-  {
-   "id": "2102854858076549229",
-   "handle": "@RepMcGovern",
-   "member": "James P. McGovern",
-   "district": "MA-02",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "When America lives up to its promise of moral leadership, the world is a freer and safer place. https://t.co/g7IGJrVR3d",
-   "topics": [],
-   "time": "2026-09-23T20:17:21.000Z",
-   "date": "2026-09-23",
-   "engN": 153,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-24T09:16:58.282Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13788,6 +13790,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "814179031956488192": "@CongressmanRaja",
   "1603468242852397057": "@RepMenendez",
   "1080885078425784320": "@RepGregStanton",
   "912822519136161793": "@LamonicaMciver",
@@ -13832,7 +13835,6 @@
   "1603476713995911168": "@RepNikkiB",
   "1067541214671577093": "@RepMGS",
   "1606115178210365448": "@RepBeccaB",
-  "814179031956488192": "@CongressmanRaja",
   "818536152588238849": "@RepGonzalez",
   "1875014393613688832": "@RepBynum",
   "1869024914738483200": "@RepPabloJose",
@@ -13942,6 +13944,23 @@
   "1868715744579489792": "@RepFields"
  },
  "feedAll": [
+  {
+   "id": "2103098403349524720",
+   "authorId": "814179031956488192",
+   "createdAt": "2026-09-24T12:25:07.000Z",
+   "date": "2026-09-24",
+   "type": "tweet",
+   "text": "The Trump Administration is burying the truth: millions of Epstein-related documents still have not been released, while more than a thousand survivors are still waiting for justice.\nCongress must keep pressing for the full truth and accountability. https://t.co/PzDqd2O34P",
+   "engN": 15,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T12:50:49.582Z"
+  },
   {
    "id": "2103081452686778583",
    "authorId": "1603468242852397057",
@@ -63239,34 +63258,17 @@
    "sourceReferenceId": "2100686820627374530",
    "provenance": null,
    "metricsObservedAt": "2026-09-18T14:27:45.052Z"
-  },
-  {
-   "id": "2100926812113010740",
-   "authorId": "1611441794704674828",
-   "createdAt": "2026-09-18T12:35:59.000Z",
-   "date": "2026-09-18",
-   "type": "tweet",
-   "text": "Summer’s storms were devastating for so many families across Illinois.\n\nProud to join @SenatorDurbin, @SenDuckworth, and our delegation to support @GovPritzker's request for federal support to help these people rebuild their lives.\n\nI will work diligently to get this Federal money home to help. https://t.co/qHQJR5BDyI…",
-   "engN": 5,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T08:17:06.707Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2754,
+ "feedAllTotal": 2755,
  "feedAllFiles": [
-  "feed-0-6d1aaf53eea954c4.json",
-  "feed-1-701e80b6745b3374.json",
-  "feed-2-aeec5fb3c8138662.json",
-  "feed-3-2920b990d1d29062.json",
-  "feed-4-07346b3c384986fc.json",
-  "feed-5-4a83ea651cf7d5a6.json",
-  "feed-6-b682fd373816ad33.json"
+  "feed-0-7fb5219619d7eaa4.json",
+  "feed-1-136836735633a680.json",
+  "feed-2-f36e6f0c97034f27.json",
+  "feed-3-88350f7c1bca17d1.json",
+  "feed-4-0ac83740ef846ff7.json",
+  "feed-5-29299ac4b997f15d.json",
+  "feed-6-3b2c1b84b438a070.json"
  ]
 }
