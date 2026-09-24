@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-24T04:49:50.635Z",
- "lastPollAt": "2026-09-24T04:22:42.933Z",
- "lastPollAttemptAt": "2026-09-24T04:22:42.372Z",
+ "generatedAt": "2026-09-24T05:31:25.685Z",
+ "lastPollAt": "2026-09-24T05:31:03.909Z",
+ "lastPollAttemptAt": "2026-09-24T05:31:03.215Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-24T04:49:49.972Z"
+  "referenceAsOf": "2026-09-24T05:31:24.948Z"
  },
  "news": {
   "version": 149,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-24T04:49:50.294Z",
+   "asOf": "2026-09-24T05:31:25.310Z",
    "windowDays": 14,
-   "windowStart": "2026-09-10T04:49:50.294Z",
+   "windowStart": "2026-09-10T05:31:25.310Z",
    "eligibleItems": 1459,
    "withExcerpts": 166,
    "headlineOrSummary": 1293,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 556,
+  "capturedIn24h": 557,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 556,
+  "pendingIn24h": 557,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-24T04:23:01.217Z",
+   "lastAttemptAt": "2026-09-24T05:31:22.525Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 556,
+   "capturedIn24h": 557,
    "classifiedIn24h": 0,
-   "pendingIn24h": 556,
+   "pendingIn24h": 557,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 3,
     "mix": [
+     67,
      0,
-     0,
-     0
+     33
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 197,
+    "perPost": 66,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2745,
+    "posts": 2748,
     "mix": [
      84,
      5,
@@ -6861,64 +6861,64 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2745,
+    "pending": 2748,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 560958,
+    "eng": 561155,
     "perPost": 204,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
     0,
+    1,
+    62,
+    122,
+    168,
+    129,
+    53,
+    11,
     0,
-    37,
-    116,
-    156,
-    142,
-    74,
-    19,
-    2,
-    0,
-    30,
-    153,
-    160,
-    127,
-    73,
+    3,
+    45,
+    164,
+    162,
+    121,
+    51,
     11
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 2,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 197,
+    "perPost": 99,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1340,
+    "posts": 1342,
     "mix": [
      80,
      5,
@@ -6929,14 +6929,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1340,
+    "pending": 1342,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 431696,
+    "eng": 431893,
     "perPost": 322,
     "top10Share": 67,
     "engDelta": 0
@@ -6944,36 +6944,36 @@
    "curve48": [
     0,
     0,
-    18,
-    52,
-    87,
-    68,
-    41,
-    8,
-    2,
+    26,
+    64,
+    88,
+    65,
+    28,
+    5,
     0,
-    16,
-    83,
-    75,
-    71,
-    36,
+    0,
+    28,
+    82,
+    80,
+    69,
+    24,
     8
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6986,18 +6986,18 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1525,
+    "posts": 1526,
     "mix": [
-     85,
+     84,
      4,
-     11
+     12
     ],
     "accounts": 174,
     "members": 108,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1525,
+    "pending": 1526,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7011,20 +7011,20 @@
    },
    "curve48": [
     0,
-    0,
+    1,
+    37,
+    73,
+    95,
+    62,
     21,
-    74,
-    87,
-    73,
-    29,
-    11,
+    6,
     0,
-    0,
-    18,
-    73,
-    91,
-    71,
-    34,
+    3,
+    21,
+    82,
+    96,
+    60,
+    26,
     5
    ]
   },
@@ -7080,19 +7080,19 @@
    "curve48": [
     0,
     0,
-    5,
-    19,
-    30,
-    24,
+    10,
+    20,
+    33,
     21,
-    4,
+    19,
     0,
     0,
-    5,
-    31,
-    31,
-    25,
-    15,
+    0,
+    7,
+    35,
+    33,
+    24,
+    8,
     2
    ]
   },
@@ -7148,49 +7148,49 @@
    "curve48": [
     0,
     0,
-    8,
-    18,
-    29,
+    11,
+    23,
+    30,
     26,
-    20,
-    4,
+    12,
+    3,
     0,
     0,
-    5,
-    38,
-    27,
-    27,
-    14,
-    2
+    8,
+    41,
+    26,
+    24,
+    13,
+    1
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 0,
+    "posts": 3,
     "mix": [
+     67,
      0,
-     0,
-     0
+     33
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
+    "eng": 197,
+    "perPost": 66,
+    "top10Share": 100,
+    "engDelta": -99
    },
    "w": {
-    "posts": 277,
+    "posts": 280,
     "mix": [
      86,
      3,
@@ -7201,35 +7201,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 277,
+    "pending": 280,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 102870,
-    "perPost": 371,
+    "eng": 103067,
+    "perPost": 368,
     "top10Share": 98,
     "engDelta": 0
    },
    "curve48": [
     0,
     0,
-    3,
-    7,
-    11,
-    21,
-    7,
-    0,
+    6,
+    8,
+    14,
+    20,
+    1,
     1,
     0,
-    3,
-    17,
+    0,
+    7,
+    15,
+    15,
     16,
-    12,
-    9,
-    3
+    4,
+    6
    ]
   }
  },
@@ -8560,6 +8560,89 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2102989657705464199",
+   "handle": "@tedlieu",
+   "member": "Ted Lieu",
+   "district": "CA-36",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "Oh I see, Republican Paul LePage supports trump’s fascist ICE policies until it affects one of his relatives. https://t.co/RjBbK7wnP2",
+   "topics": [],
+   "time": "2026-09-24T05:13:00.000Z",
+   "date": "2026-09-24",
+   "engN": 72,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102809148220219831",
+    "handle": "@RonFilipkowski",
+    "text": "Republican nominee for Maine’s 2nd congressional district Paul LePage says he supports Trump and ICE but is outraged they are deporting one of his relatives: “He’s being deported because he came…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z",
+   "isNew": false
+  },
+  {
+   "id": "2102979790546579694",
+   "handle": "@tedlieu",
+   "member": "Ted Lieu",
+   "district": "CA-36",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "This is one hell of a regulatory capture scheme by OpenAI. https://t.co/h3sqAOeTnD",
+   "topics": [],
+   "time": "2026-09-24T04:33:48.000Z",
+   "date": "2026-09-24",
+   "engN": 125,
+   "kind": "quote",
+   "quoted": {
+    "id": "2102971963400446078",
+    "handle": "@AISafetyMemes",
+    "text": "🚩🚩🚩 It appears rogue OpenAI agents, without OpenAI's knowledge, tried to break into a crypto exchange.\n\n1) THEY'RE STILL OUT THERE: \"This traffic extends as recently as 9/16, suggesting agents…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z",
+   "isNew": false
+  },
+  {
+   "id": "2102977780166345152",
+   "handle": "@RepBera",
+   "member": "Ami Bera",
+   "district": "CA-06",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "RT @SylviaMinZin: Thank you, @RepBera, for raising my husband Min Zin’s case and urging President Trump to press for his release. Your supp…",
+   "topics": [],
+   "time": "2026-09-24T04:25:48.000Z",
+   "date": "2026-09-24",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2102970026407931943",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z",
+   "isNew": false
+  },
   {
    "id": "2102970155710169367",
    "handle": "@tedlieu",
@@ -13539,81 +13622,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-23T20:21:30.037Z",
    "isNew": false
-  },
-  {
-   "id": "2102853508550549887",
-   "handle": "@RepRichardNeal",
-   "member": "Richard E. Neal",
-   "district": "MA-01",
-   "caucus": [],
-   "text": "You read that right. American families have spent $100 BILLION MORE on fuel thanks to Donald Trump's war of choice.\n\nNo strategy, no endgame, and no authorization from Congress.\n\nEnough is enough.\n\nhttps://t.co/LynCLeJjME",
-   "topics": [],
-   "time": "2026-09-23T20:12:00.000Z",
-   "date": "2026-09-23",
-   "engN": 6,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T20:21:30.037Z",
-   "isNew": false
-  },
-  {
-   "id": "2102853412333470056",
-   "handle": "@RepPatRyanNY",
-   "member": "Patrick Ryan",
-   "district": "NY-18",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "New York apples on top!\n\nCongratulations to Minard’s Family Farm in Clintondale\n\nOur Hudson Valley family farms are the pride of our community, and deserve this national recognition 🍎!\n\nhttps://t.co/v9NwI6naCK https://t.co/z4PiWTarFM",
-   "topics": [],
-   "time": "2026-09-23T20:11:37.000Z",
-   "date": "2026-09-23",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T20:21:30.037Z",
-   "isNew": false
-  },
-  {
-   "id": "2102852264956252602",
-   "handle": "@RepDonBeyer",
-   "member": "Donald S. Beyer, Jr.",
-   "district": "VA-08",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "Millions of Americans are already losing their health insurance because of massive cuts enacted by Trump and Republicans. Now, they want to kick another 760,000 Americans off the ACA marketplace.\n\nThis administration created this health care crisis and now it’s making it even worse.",
-   "topics": [],
-   "time": "2026-09-23T20:07:03.000Z",
-   "date": "2026-09-23",
-   "engN": 4,
-   "kind": "quote",
-   "quoted": {
-    "id": "2102447916648431916",
-    "handle": "@nytimes",
-    "text": "Breaking News: The Trump administration has cut 750,000 enrollees from Obamacare, Vice President JD Vance said, claiming that many were receiving premium subsidies they did not qualify for and that…"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-23T20:21:30.037Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13939,6 +13947,67 @@
   "1868715744579489792": "@RepFields"
  },
  "feedAll": [
+  {
+   "id": "2102989657705464199",
+   "authorId": "21059255",
+   "createdAt": "2026-09-24T05:13:00.000Z",
+   "date": "2026-09-24",
+   "type": "quote",
+   "text": "Oh I see, Republican Paul LePage supports trump’s fascist ICE policies until it affects one of his relatives. https://t.co/RjBbK7wnP2",
+   "engN": 72,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z",
+   "quoted": {
+    "id": "2102809148220219831",
+    "handle": "@RonFilipkowski",
+    "text": "Republican nominee for Maine’s 2nd congressional district Paul LePage says he supports Trump and ICE but is outraged they are deporting one of his relatives: “He’s being deported because he came…"
+   }
+  },
+  {
+   "id": "2102979790546579694",
+   "authorId": "21059255",
+   "createdAt": "2026-09-24T04:33:48.000Z",
+   "date": "2026-09-24",
+   "type": "quote",
+   "text": "This is one hell of a regulatory capture scheme by OpenAI. https://t.co/h3sqAOeTnD",
+   "engN": 125,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z",
+   "quoted": {
+    "id": "2102971963400446078",
+    "handle": "@AISafetyMemes",
+    "text": "🚩🚩🚩 It appears rogue OpenAI agents, without OpenAI's knowledge, tried to break into a crypto exchange.\n\n1) THEY'RE STILL OUT THERE: \"This traffic extends as recently as 9/16, suggesting agents…"
+   }
+  },
+  {
+   "id": "2102977780166345152",
+   "authorId": "950783972",
+   "createdAt": "2026-09-24T04:25:48.000Z",
+   "date": "2026-09-24",
+   "type": "retweet",
+   "text": "RT @SylviaMinZin: Thank you, @RepBera, for raising my husband Min Zin’s case and urging President Trump to press for his release. Your supp…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2102970026407931943",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-24T05:31:03.897Z"
+  },
   {
    "id": "2102970155710169367",
    "authorId": "21059255",
@@ -63165,73 +63234,17 @@
     "handle": "@allenanalysis",
     "text": "TRUMP EXPLAINS TRADE DEFICITS: “If we buy $2 billion worth of bananas from Brazil, we’re actually losing $2 billion. So if we stop eating bananas, we actually save $2 billion.” https://t.co/ycr9mhQRU0"
    }
-  },
-  {
-   "id": "2100919731846787438",
-   "authorId": "2962868158",
-   "createdAt": "2026-09-18T12:07:51.000Z",
-   "date": "2026-09-18",
-   "type": "reply",
-   "text": "You can also apply to vote by mail!\n \nGet more information or check your registration status here: https://t.co/XLNJMvrzYo",
-   "engN": 6,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T08:17:06.707Z",
-   "quoted": {
-    "id": "2100919728566862246",
-    "handle": "@RepDonBeyer",
-    "text": "Early voting for the upcoming 2026 Midterm Election begins today, and early voting sites are open from 9am-5pm at locations across Northern Virginia!\n \nLocations in Alexandria:…"
-   }
-  },
-  {
-   "id": "2100919728566862246",
-   "authorId": "2962868158",
-   "createdAt": "2026-09-18T12:07:51.000Z",
-   "date": "2026-09-18",
-   "type": "tweet",
-   "text": "Early voting for the upcoming 2026 Midterm Election begins today, and early voting sites are open from 9am-5pm at locations across Northern Virginia!\n \nLocations in Alexandria: https://t.co/UgM3vfRZ8K\n \nLocations in Arlington: https://t.co/NoVxmF5buR\n \nLocations in Falls Church: https://t.co/i8dPysOvFc\n \nLocations in Fairfax County: https://t.co/HKrPFxko3v",
-   "engN": 58,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T08:17:06.707Z"
-  },
-  {
-   "id": "2100917773501088139",
-   "authorId": "816705409486618624",
-   "createdAt": "2026-09-18T12:00:05.000Z",
-   "date": "2026-09-18",
-   "type": "tweet",
-   "text": "Happy Birthday to the United States Air Force! 🇺🇸✈️\n\nFor 79 years, the men and women of the Air Force have defended our nation with courage, skill, and an unwavering commitment to service.\n\nToday, we honor all who have worn the uniform—and thank those serving around the world today.\n\nAim High!",
-   "engN": 12,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-19T08:17:06.707Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2745,
+ "feedAllTotal": 2748,
  "feedAllFiles": [
-  "feed-0-629dbaa04e85b44d.json",
-  "feed-1-8ba706a8562268a6.json",
-  "feed-2-ea9d137a5984c6d9.json",
-  "feed-3-f3ba2cd9a1565ec9.json",
-  "feed-4-f4907e4a8a41fe9c.json",
-  "feed-5-cb159079b2bdab19.json",
-  "feed-6-87d28ea89c842acb.json"
+  "feed-0-0f2c2a89f601bf4e.json",
+  "feed-1-0a10bd7df821b17a.json",
+  "feed-2-faea922578080638.json",
+  "feed-3-1d9667080f338beb.json",
+  "feed-4-79b805a7087cd2db.json",
+  "feed-5-c0ee39f1cb14c709.json",
+  "feed-6-1648cdd0d5eb766d.json"
  ]
 }
