@@ -11323,5 +11323,25 @@
     "other": 24
    }
   }
+ },
+ "2026-09-25": {
+  "_requests": {
+   "live:93b53215-65e4-4216-bb9e-3f4673fa48ee": {
+    "id": "live:93b53215-65e4-4216-bb9e-3f4673fa48ee",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.54021,
+    "status": "rejected",
+    "createdAt": "2026-09-25T04:47:25.817Z",
+    "completedAt": "2026-09-25T04:47:26.356Z"
+   }
+  },
+  "poll": {
+   "_errors": {
+    "auth": 0,
+    "other": 1
+   }
+  }
  }
 }
