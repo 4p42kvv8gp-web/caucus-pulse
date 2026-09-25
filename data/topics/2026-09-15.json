@@ -1,7 +1,7 @@
 {
  "date": "2026-09-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-25T08:22:00.225Z",
+ "classifiedAt": "2026-09-25T12:54:00.870Z",
  "assignments": {},
  "incidents": {},
  "provenance": {},
@@ -7605,11 +7605,11 @@
     "2103329473240174630",
     "2103331106539839944"
    ],
-   "error": "Anthropic request would exceed budget: $0.49 committed + $76.08 reserved exceeds $40",
+   "error": "Anthropic request would exceed budget: $0.49 committed + $76.25 reserved exceeds $40",
    "reasonCode": "inference-error",
    "inference": {
-    "attemptedAt": "2026-09-25T08:22:00.120Z",
-    "observedAt": "2026-09-25T08:22:00.167Z",
+    "attemptedAt": "2026-09-25T12:54:00.766Z",
+    "observedAt": "2026-09-25T12:54:00.813Z",
     "kind": "sync",
     "status": "failed",
     "reasonCode": "inference-error",
@@ -7621,8 +7621,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-25T08:22:00.120Z",
-   "observedAt": "2026-09-25T08:22:00.167Z",
+   "attemptedAt": "2026-09-25T12:54:00.766Z",
+   "observedAt": "2026-09-25T12:54:00.813Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "inference-error",
@@ -7631,8 +7631,8 @@
   },
   "lastSuccess": null,
   "lastFailure": {
-   "attemptedAt": "2026-09-25T08:22:00.120Z",
-   "observedAt": "2026-09-25T08:22:00.167Z",
+   "attemptedAt": "2026-09-25T12:54:00.766Z",
+   "observedAt": "2026-09-25T12:54:00.813Z",
    "kind": "sync",
    "status": "failed",
    "reasonCode": "inference-error",
