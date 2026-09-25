@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-25T12:54:04.553Z",
- "lastPollAt": "2026-09-25T12:04:31.476Z",
- "lastPollAttemptAt": "2026-09-25T12:04:31.121Z",
+ "generatedAt": "2026-09-25T12:57:07.299Z",
+ "lastPollAt": "2026-09-25T12:56:43.862Z",
+ "lastPollAttemptAt": "2026-09-25T12:56:42.701Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-25T12:54:03.798Z"
+  "referenceAsOf": "2026-09-25T12:57:06.525Z"
  },
  "news": {
   "version": 177,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-25T12:54:04.150Z",
+   "asOf": "2026-09-25T12:57:06.892Z",
    "windowDays": 14,
-   "windowStart": "2026-09-11T12:54:04.150Z",
+   "windowStart": "2026-09-11T12:57:06.892Z",
    "eligibleItems": 1651,
    "withExcerpts": 179,
    "headlineOrSummary": 1472,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 510,
+  "capturedIn24h": 516,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 510,
+  "pendingIn24h": 516,
   "momentumPaused": true,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
+   "status": "blocked",
+   "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-25T12:54:00.766Z",
+   "lastAttemptAt": "2026-09-25T12:57:04.056Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 510,
+   "capturedIn24h": 516,
    "classifiedIn24h": 0,
-   "pendingIn24h": 510,
+   "pendingIn24h": 516,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 7,
+    "posts": 13,
     "mix": [
-     29,
-     0,
-     71
+     54,
+     8,
+     38
     ],
-    "accounts": 7,
-    "members": 7,
+    "accounts": 12,
+    "members": 12,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 7,
+    "pending": 13,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 8,
-    "perPost": 1,
+    "eng": 298,
+    "perPost": 23,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2734,
+    "posts": 2740,
     "mix": [
      84,
      4,
@@ -6861,93 +6861,93 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2734,
+    "pending": 2740,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 709446,
+    "eng": 709736,
     "perPost": 259,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
-    110,
-    159,
-    160,
-    91,
-    23,
-    9,
+    112,
+    161,
+    157,
+    90,
+    24,
+    8,
     0,
     3,
-    113,
+    114,
     144,
     136,
     82,
-    28,
+    27,
     3,
     0,
-    4
+    10
    ]
   },
   "CPC": {
    "t": {
-    "posts": 6,
+    "posts": 9,
     "mix": [
-     17,
-     0,
-     83
+     33,
+     11,
+     56
     ],
-    "accounts": 6,
-    "members": 6,
+    "accounts": 8,
+    "members": 8,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 6,
+    "pending": 9,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 271,
+    "perPost": 30,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1345,
+    "posts": 1348,
     "mix": [
-     79,
+     78,
      5,
-     16
+     17
     ],
     "accounts": 143,
     "members": 93,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1345,
+    "pending": 1348,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 564017,
+    "eng": 564288,
     "perPost": 419,
     "top10Share": 68,
     "engDelta": 0
    },
    "curve48": [
     64,
-    79,
     82,
+    79,
     48,
-    13,
-    4,
+    14,
+    3,
     0,
     1,
     55,
@@ -6957,10 +6957,78 @@
     13,
     3,
     0,
-    3
+    6
    ]
   },
   "NewDem": {
+   "t": {
+    "posts": 3,
+    "mix": [
+     100,
+     0,
+     0
+    ],
+    "accounts": 3,
+    "members": 3,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 3,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 25,
+    "perPost": 8,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 1510,
+    "mix": [
+     85,
+     3,
+     12
+    ],
+    "accounts": 176,
+    "members": 107,
+    "unidentifiedAccounts": 0,
+    "classified": 0,
+    "tagged": 0,
+    "pending": 1510,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 154562,
+    "perPost": 102,
+    "top10Share": 69,
+    "engDelta": 0
+   },
+   "curve48": [
+    57,
+    81,
+    92,
+    38,
+    17,
+    2,
+    0,
+    2,
+    67,
+    80,
+    79,
+    42,
+    20,
+    0,
+    0,
+    3
+   ]
+  },
+  "CBC": {
    "t": {
     "posts": 1,
     "mix": [
@@ -6980,81 +7048,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 8,
-    "perPost": 8,
+    "eng": 2,
+    "perPost": 2,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1508,
-    "mix": [
-     85,
-     3,
-     12
-    ],
-    "accounts": 176,
-    "members": 107,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 1508,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 154545,
-    "perPost": 102,
-    "top10Share": 69,
-    "engDelta": 0
-   },
-   "curve48": [
-    55,
-    81,
-    93,
-    39,
-    17,
-    2,
-    0,
-    2,
-    66,
-    80,
-    79,
-    42,
-    21,
-    0,
-    0,
-    1
-   ]
-  },
-  "CBC": {
-   "t": {
-    "posts": 0,
-    "mix": [
-     0,
-     0,
-     0
-    ],
-    "accounts": 0,
-    "members": 0,
-    "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
-    "pending": 0,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 518,
+    "posts": 519,
     "mix": [
      83,
      6,
@@ -7065,35 +7065,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 518,
+    "pending": 519,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 99439,
+    "eng": 99441,
     "perPost": 192,
     "top10Share": 78,
     "engDelta": 0
    },
    "curve48": [
     19,
-    33,
-    33,
+    34,
+    32,
     20,
     3,
     1,
     0,
     0,
-    23,
+    24,
     22,
-    21,
+    20,
     18,
     4,
     0,
     0,
-    0
+    1
    ]
   },
   "CHC": {
@@ -7147,8 +7147,8 @@
    },
    "curve48": [
     25,
-    35,
-    25,
+    37,
+    23,
     23,
     5,
     0,
@@ -7166,34 +7166,34 @@
   },
   "CAPAC": {
    "t": {
-    "posts": 1,
+    "posts": 4,
     "mix": [
-     0,
-     0,
-     100
+     50,
+     25,
+     25
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
+    "eng": 278,
+    "perPost": 70,
+    "top10Share": 100,
+    "engDelta": -99
    },
    "w": {
-    "posts": 280,
+    "posts": 283,
     "mix": [
-     85,
-     3,
+     84,
+     4,
      12
     ],
     "accounts": 26,
@@ -7201,15 +7201,15 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 280,
+    "pending": 283,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 145221,
-    "perPost": 519,
+    "eng": 145499,
+    "perPost": 514,
     "top10Share": 98,
     "engDelta": 0
    },
@@ -7218,8 +7218,8 @@
     17,
     16,
     10,
-    2,
-    5,
+    3,
+    4,
     0,
     1,
     6,
@@ -7229,7 +7229,7 @@
     2,
     0,
     0,
-    1
+    4
    ]
   }
  },
@@ -7802,7 +7802,8 @@
     "2103232489309290715",
     "2103236322991198527",
     "2103246118536589821",
-    "2103258441724604431"
+    "2103258441724604431",
+    "2103463282082304258"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
@@ -7824,9 +7825,9 @@
     132,
     132
    ],
-   "exact": 0.57,
-   "total": 105,
-   "eng": 55632
+   "exact": 0.58,
+   "total": 106,
+   "eng": 55645
   },
   {
    "text": "white house",
@@ -8389,16 +8390,17 @@
     "2103212512363548754",
     "2103214804047716851",
     "2103234591255666836",
-    "2103254979578380781"
+    "2103254979578380781",
+    "2103463801454493707"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
-   "spread": 40,
-   "accounts": 43,
+   "spread": 41,
+   "accounts": 44,
    "cm": [
     18,
     24,
-    5,
+    6,
     8,
     3
    ],
@@ -8412,8 +8414,8 @@
     89
    ],
    "exact": 1,
-   "total": 54,
-   "eng": 6544
+   "total": 55,
+   "eng": 6546
   },
   {
    "text": "wishing a meaningful",
@@ -8565,6 +8567,157 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2103467158932009306",
+   "handle": "@SeanCasten",
+   "member": "Sean Casten",
+   "district": "IL-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "\"I guess the look I'm best known for is orange steel.\" https://t.co/vZqp4Uz2T9",
+   "topics": [],
+   "time": "2026-09-25T12:50:25.000Z",
+   "date": "2026-09-25",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
+  {
+   "id": "2103463801454493707",
+   "handle": "@RepGabeAmo",
+   "member": "Gabe Amo",
+   "district": "RI-01",
+   "caucus": [
+    "CBC"
+   ],
+   "text": "Thank you to RI Occupational Therapy students for visiting my office to discuss expanding access to care.\n\nOccupational therapists help people get back into their lives &amp; routines. I’m working to ensure all health care workers have the tools they need to care for our communities. https://t.co/kco1L5PdKb",
+   "topics": [],
+   "time": "2026-09-25T12:37:05.000Z",
+   "date": "2026-09-25",
+   "engN": 2,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
+  {
+   "id": "2103463282082304258",
+   "handle": "@CongressmanRaja",
+   "member": "Raja Krishnamoorthi",
+   "district": "IL-08",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "President Trump is rolling out the red carpet for Xi Jinping while China dumps goods into our markets, fuels the Iranian and Russian war machines, and helps Iran target our troops.\nXi should be answering for China’s actions, not getting the red-carpet treatment. https://t.co/gbpiGdKftY",
+   "topics": [],
+   "time": "2026-09-25T12:35:01.000Z",
+   "date": "2026-09-25",
+   "engN": 13,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
+  {
+   "id": "2103461587885666413",
+   "handle": "@RoKhanna",
+   "member": "Ro Khanna",
+   "district": "CA-17",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "Instead of a $200 billion a year increase in the Pentagon budget, we could have free childcare in America, free college, and fully fund the IDEA act for special needs in public schools.",
+   "topics": [],
+   "time": "2026-09-25T12:28:17.000Z",
+   "date": "2026-09-25",
+   "engN": 38,
+   "kind": "reply",
+   "quoted": {
+    "id": "2103458596805808489",
+    "handle": "@RoKhanna",
+    "text": "It is time for Democrats to offer a bold vision for free childcare. My bill would pay make childcare free, pay workers a living wage, compensate friends, family &amp; neighbors who provide care,…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
+  {
+   "id": "2103459668936827231",
+   "handle": "@RepJerryNadler",
+   "member": "Jerrold Nadler",
+   "district": "NY-12",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "This Suicide Prevention Month, remember that you don’t have to be in crisis to reach out for help for yourself or a loved one. If you are struggling, stressed, or worried about someone you love – don’t wait. Reaching out early can make all the difference. Call or text 9-8-8 for free, compassionate, and confidential support 24/7/365.",
+   "topics": [],
+   "time": "2026-09-25T12:20:40.000Z",
+   "date": "2026-09-25",
+   "engN": 6,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
+  {
+   "id": "2103458596805808489",
+   "handle": "@RoKhanna",
+   "member": "Ro Khanna",
+   "district": "CA-17",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "It is time for Democrats to offer a bold vision for free childcare. My bill would pay make childcare free, pay workers a living wage, compensate friends, family &amp; neighbors who provide care, &amp; give working class parents who stay at home a $1000 stipend. https://t.co/NJwWdWo5sb",
+   "topics": [],
+   "time": "2026-09-25T12:16:24.000Z",
+   "date": "2026-09-25",
+   "engN": 227,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "isNew": false
+  },
   {
    "id": "2103453690350739860",
    "handle": "@Rep_McBride",
@@ -13452,154 +13605,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-25T08:18:40.176Z",
    "isNew": false
-  },
-  {
-   "id": "2103214726541160675",
-   "handle": "@PatRyanUC",
-   "member": "Patrick Ryan",
-   "district": "NY-18",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Fighting for the next generation means safe communities, good schools, ensuring every child has the opportunity to thrive.\n\nLast weekend, I had some help opening our new office in Saugerties alongside our youngest volunteer! https://t.co/nRYN8LidfI",
-   "topics": [],
-   "time": "2026-09-24T20:07:21.000Z",
-   "date": "2026-09-24",
-   "engN": 34,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
-  },
-  {
-   "id": "2103214723416178818",
-   "handle": "@RepAdamSmith",
-   "member": "Adam Smith",
-   "district": "WA-09",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "RT @TheHillSunday: Mark your calendars for this week's edition of The Hill Sunday as @ChrisStirewalt talks all the latest with @RepRickCraw…",
-   "topics": [],
-   "time": "2026-09-24T20:07:20.000Z",
-   "date": "2026-09-24",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2103212882334769522",
-   "provenance": null,
-   "metricsObservedAt": "2026-09-24T20:51:35.525Z",
-   "isNew": false
-  },
-  {
-   "id": "2103214509850591296",
-   "handle": "@RepDeborahRoss",
-   "member": "Deborah K. Ross",
-   "district": "NC-02",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "A non-partisan report found that the Trump admin delayed disaster-proofing efforts that could help prevent the worst effects of disasters like Helene—with no real justification.  \n \nThis is a slap in the face to communities in North Carolina and all over the country. https://t.co/e34tCW6a7g",
-   "topics": [],
-   "time": "2026-09-24T20:06:29.000Z",
-   "date": "2026-09-24",
-   "engN": 10,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
-  },
-  {
-   "id": "2103213902360449301",
-   "handle": "@RepAndreCarson",
-   "member": "André Carson",
-   "district": "IN-07",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "When it comes to Al, capability is not the same as judgment. Some decisions are simply too important to hand over to a machine.\n\nMy @CmteOnCCPDems colleagues and I held a first-of-its-kind hearing on the rapid development of Al. We need Al regulations, and we need them now. https://t.co/122X45FMFh",
-   "topics": [],
-   "time": "2026-09-24T20:04:04.000Z",
-   "date": "2026-09-24",
-   "engN": 4,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
-  },
-  {
-   "id": "2103213335722553665",
-   "handle": "@DonDavisNC",
-   "member": "Donald G. Davis",
-   "district": "NC-01",
-   "caucus": [
-    "NewDem",
-    "CBC"
-   ],
-   "text": "Faith has always been part of my life since my upbringing. \n\nI remember helping my grandmother put up flowers for Sunday morning worship service and the peppermint candy between hymns. Our church is where I learned Bible verses, attended Sunday School, and Vacation Bible School. It’s where I often got my brand-new Easter suits dirty looking for eggs, learned the Apostles’ Creed and about the fruit of the Spirit, and was baptized. It’s also where I declared Jesus as my Savior, and this foundation still guides me today. \n\nProverbs 22:6, “Train up a child in the way he should go: and when he is old, he will not depart from it.”",
-   "topics": [],
-   "time": "2026-09-24T20:01:49.000Z",
-   "date": "2026-09-24",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
-  },
-  {
-   "id": "2103212879096820106",
-   "handle": "@RepTomSuozzi",
-   "member": "Thomas R. Suozzi",
-   "district": "NY-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "A nor’easter is expected to impact Long Island beginning tomorrow, bringing strong winds and the potential for coastal flooding. With a full moon this weekend and higher-than-normal tides, our waterfront communities should be especially prepared.\n\nIf you live in a flood-prone area, keep an eye on high-tide times, secure outdoor items, and move vehicles to higher ground if necessary.\n\nPlease stay alert, check on your neighbors, and follow local emergency officials and the National Weather Service for the latest updates. Stay safe, NY-03.",
-   "topics": [],
-   "time": "2026-09-24T20:00:00.000Z",
-   "date": "2026-09-24",
-   "engN": 9,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13774,6 +13779,8 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1724849796496924672": "@RepGabeAmo",
+  "814179031956488192": "@CongressmanRaja",
   "1874886856942452736": "@Rep_McBride",
   "1499512178013057032": "@RepCasar",
   "1869140751512391681": "@RepLuzRivas",
@@ -13812,7 +13819,6 @@
   "1079769536730140672": "@RepRashida",
   "1871605623496097792": "@repkmr",
   "1079061579973439488": "@RepSusieLee",
-  "814179031956488192": "@CongressmanRaja",
   "1612865196489412608": "@RepValHoyle",
   "806906355214852096": "@RepRaskin",
   "822521744661458944": "@FousheeforNC",
@@ -13852,7 +13858,6 @@
   "1610300298303787008": "@RepMcGarvey",
   "1876279166565515264": "@RepNellie",
   "1873797020143804416": "@RepDexterOR",
-  "1724849796496924672": "@RepGabeAmo",
   "1611441794704674828": "@RepEricSorensen",
   "872156132688711681": "@LaurenUnderwood",
   "1352760304271241218": "@RepTroyCarter",
@@ -13929,6 +13934,113 @@
   "4870048156": "@JakeAuch"
  },
  "feedAll": [
+  {
+   "id": "2103467158932009306",
+   "authorId": "66804351",
+   "createdAt": "2026-09-25T12:50:25.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "\"I guess the look I'm best known for is orange steel.\" https://t.co/vZqp4Uz2T9",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z"
+  },
+  {
+   "id": "2103463801454493707",
+   "authorId": "1724849796496924672",
+   "createdAt": "2026-09-25T12:37:05.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "Thank you to RI Occupational Therapy students for visiting my office to discuss expanding access to care.\n\nOccupational therapists help people get back into their lives &amp; routines. I’m working to ensure all health care workers have the tools they need to care for our communities. https://t.co/kco1L5PdKb",
+   "engN": 2,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z"
+  },
+  {
+   "id": "2103463282082304258",
+   "authorId": "814179031956488192",
+   "createdAt": "2026-09-25T12:35:01.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "President Trump is rolling out the red carpet for Xi Jinping while China dumps goods into our markets, fuels the Iranian and Russian war machines, and helps Iran target our troops.\nXi should be answering for China’s actions, not getting the red-carpet treatment. https://t.co/gbpiGdKftY",
+   "engN": 13,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z"
+  },
+  {
+   "id": "2103461587885666413",
+   "authorId": "771152516",
+   "createdAt": "2026-09-25T12:28:17.000Z",
+   "date": "2026-09-25",
+   "type": "reply",
+   "text": "Instead of a $200 billion a year increase in the Pentagon budget, we could have free childcare in America, free college, and fully fund the IDEA act for special needs in public schools.",
+   "engN": 38,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z",
+   "quoted": {
+    "id": "2103458596805808489",
+    "handle": "@RoKhanna",
+    "text": "It is time for Democrats to offer a bold vision for free childcare. My bill would pay make childcare free, pay workers a living wage, compensate friends, family &amp; neighbors who provide care,…"
+   }
+  },
+  {
+   "id": "2103459668936827231",
+   "authorId": "40302336",
+   "createdAt": "2026-09-25T12:20:40.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "This Suicide Prevention Month, remember that you don’t have to be in crisis to reach out for help for yourself or a loved one. If you are struggling, stressed, or worried about someone you love – don’t wait. Reaching out early can make all the difference. Call or text 9-8-8 for free, compassionate, and confidential support 24/7/365.",
+   "engN": 6,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z"
+  },
+  {
+   "id": "2103458596805808489",
+   "authorId": "771152516",
+   "createdAt": "2026-09-25T12:16:24.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "It is time for Democrats to offer a bold vision for free childcare. My bill would pay make childcare free, pay workers a living wage, compensate friends, family &amp; neighbors who provide care, &amp; give working class parents who stay at home a $1000 stipend. https://t.co/NJwWdWo5sb",
+   "engN": 227,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:56:43.849Z"
+  },
   {
    "id": "2103453690350739860",
    "authorId": "1874886856942452736",
@@ -62994,6 +63106,6 @@
   }
  ],
  "feedAllTruncated": false,
- "feedAllTotal": 2734,
+ "feedAllTotal": 2740,
  "feedAllFiles": []
 }
