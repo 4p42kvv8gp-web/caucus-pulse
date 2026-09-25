@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-25T11:47:00.913Z",
- "lastPollAt": "2026-09-25T11:46:02.971Z",
- "lastPollAttemptAt": "2026-09-25T11:46:02.094Z",
+ "generatedAt": "2026-09-25T12:04:54.566Z",
+ "lastPollAt": "2026-09-25T12:04:31.476Z",
+ "lastPollAttemptAt": "2026-09-25T12:04:31.121Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-25T11:47:00.148Z"
+  "referenceAsOf": "2026-09-25T12:04:53.821Z"
  },
  "news": {
   "version": 177,
-  "items": 1354,
+  "items": 1350,
   "latestPublishedAt": "2026-09-25T11:30:30.000Z",
   "latestFetchedAt": "2026-09-25T11:45:59.893Z",
   "latest": [
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-25T11:47:00.500Z",
+   "asOf": "2026-09-25T12:04:54.170Z",
    "windowDays": 14,
-   "windowStart": "2026-09-11T11:47:00.500Z",
+   "windowStart": "2026-09-11T12:04:54.170Z",
    "eligibleItems": 1652,
    "withExcerpts": 180,
    "headlineOrSummary": 1472,
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 164,
-  "t": 0
+  "posts": 165,
+  "t": 1
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 510,
+  "capturedIn24h": 512,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 510,
+  "pendingIn24h": 512,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-25T11:46:22.231Z",
+   "lastAttemptAt": "2026-09-25T12:04:51.281Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 510,
+   "capturedIn24h": 512,
    "classifiedIn24h": 0,
-   "pendingIn24h": 510,
+   "pendingIn24h": 512,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 5,
+    "posts": 7,
     "mix": [
-     20,
+     29,
      0,
-     80
+     71
     ],
-    "accounts": 5,
-    "members": 5,
+    "accounts": 7,
+    "members": 7,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 5,
+    "pending": 7,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 8,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2732,
+    "posts": 2734,
     "mix": [
      84,
      4,
@@ -6861,51 +6861,51 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2732,
+    "pending": 2734,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 709438,
-    "perPost": 260,
+    "eng": 709446,
+    "perPost": 259,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
-    57,
-    165,
-    164,
-    108,
-    48,
-    11,
-    4,
+    71,
+    169,
+    160,
+    105,
+    38,
+    9,
+    3,
     1,
-    59,
+    68,
     152,
-    140,
-    101,
-    44,
-    12,
+    142,
+    97,
+    41,
+    8,
     0,
-    2
+    4
    ]
   },
   "CPC": {
    "t": {
-    "posts": 5,
+    "posts": 6,
     "mix": [
-     20,
+     17,
      0,
-     80
+     83
     ],
-    "accounts": 5,
-    "members": 5,
+    "accounts": 6,
+    "members": 6,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 5,
+    "pending": 6,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6918,7 +6918,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1344,
+    "posts": 1345,
     "mix": [
      79,
      5,
@@ -6929,7 +6929,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1344,
+    "pending": 1345,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6937,56 +6937,56 @@
      "Corruption": 0
     },
     "eng": 564017,
-    "perPost": 420,
+    "perPost": 419,
     "top10Share": 68,
     "engDelta": 0
    },
    "curve48": [
-    38,
-    80,
-    80,
-    62,
-    23,
-    8,
-    0,
-    0,
-    29,
-    66,
-    58,
-    51,
-    23,
+    44,
+    82,
+    82,
+    59,
+    18,
     6,
     0,
-    2
+    0,
+    34,
+    67,
+    57,
+    46,
+    25,
+    4,
+    0,
+    3
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 8,
+    "perPost": 8,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1507,
+    "posts": 1508,
     "mix": [
      85,
      3,
@@ -6997,35 +6997,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1507,
+    "pending": 1508,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 154537,
-    "perPost": 103,
+    "eng": 154545,
+    "perPost": 102,
     "top10Share": 69,
     "engDelta": 0
    },
    "curve48": [
-    24,
-    88,
+    31,
+    90,
     96,
-    52,
-    24,
-    5,
+    45,
+    22,
+    3,
     1,
     0,
-    40,
-    81,
-    84,
-    52,
-    26,
-    7,
+    44,
+    83,
+    85,
+    51,
+    23,
+    4,
     0,
-    0
+    1
    ]
   },
   "CBC": {
@@ -7078,18 +7078,18 @@
     "engDelta": 0
    },
    "curve48": [
-    10,
-    34,
-    34,
-    21,
-    8,
-    2,
+    13,
+    35,
+    31,
+    23,
+    6,
+    1,
     1,
     0,
-    9,
+    11,
     26,
-    24,
-    18,
+    23,
+    17,
     10,
     1,
     0,
@@ -7146,20 +7146,20 @@
     "engDelta": 0
    },
    "curve48": [
-    9,
-    43,
-    25,
-    25,
-    10,
-    1,
+    12,
+    41,
+    30,
+    22,
+    8,
+    0,
     0,
     1,
-    11,
-    24,
-    18,
-    19,
-    9,
-    5,
+    12,
+    26,
+    17,
+    22,
+    6,
+    3,
     0,
     1
    ]
@@ -7214,19 +7214,19 @@
     "engDelta": 0
    },
    "curve48": [
-    10,
-    14,
+    11,
+    15,
     17,
-    12,
-    5,
+    13,
+    2,
     6,
     0,
     0,
-    4,
-    11,
+    6,
+    10,
     14,
     14,
-    3,
+    2,
     2,
     0,
     1
@@ -8565,6 +8565,54 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2103453690350739860",
+   "handle": "@Rep_McBride",
+   "member": "Sarah McBride",
+   "district": "DE-AL",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "RT @ChrisCoons: Americans are struggling to afford groceries.\n\nMeanwhile, Donald Trump is feeding a dictator Squash Velouté and Sesame Crus…",
+   "topics": [],
+   "time": "2026-09-25T11:56:54.000Z",
+   "date": "2026-09-25",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103215943346241576",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:04:31.467Z",
+   "isNew": false
+  },
+  {
+   "id": "2103452625685381564",
+   "handle": "@ChrisPappasNH",
+   "member": "Chris Pappas",
+   "district": "NH-01",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Trump’s tariffs are screwing Granite Staters. I’m fighting to end his chaos and bring costs down.\n\nWatch our new ad here: https://t.co/8AkWXcaVFJ",
+   "topics": [],
+   "time": "2026-09-25T11:52:40.000Z",
+   "date": "2026-09-25",
+   "engN": 8,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:04:31.467Z",
+   "isNew": false
+  },
   {
    "id": "2103440772754538887",
    "handle": "@RepCasar",
@@ -13552,53 +13600,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-25T08:18:40.176Z",
    "isNew": false
-  },
-  {
-   "id": "2103212512363548754",
-   "handle": "@RepCuellar",
-   "member": "Henry Cuellar",
-   "district": "TX-28",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "I am saddened by the passing of my friend and former colleague, Garnet Coleman.\n\nGarnet and I served together in the Texas House, and I had the privilege of knowing him not only as a dedicated public servant, but as a friend. For more than 30 years, he represented the people of Houston and worked to improve health care, mental health services, and opportunities for families across our state.\n\nGarnet cared deeply about the people he represented and dedicated much of his life to serving Texas.\n\nMy prayers are with his family, friends, and all those who knew and loved him. May he rest in peace.\n\nhttps://t.co/uFBWQWo4P8",
-   "topics": [],
-   "time": "2026-09-24T19:58:33.000Z",
-   "date": "2026-09-24",
-   "engN": 24,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
-  },
-  {
-   "id": "2103212446513303797",
-   "handle": "@RepLoisFrankel",
-   "member": "Lois Frankel",
-   "district": "FL-22",
-   "caucus": [],
-   "text": "1 in 4 Americans ages 65+ fall each year. I’ve seen firsthand how a fall can change someone’s life in an instant. But the good news is that many are preventable! \n\nThat is why I joined @RepCarolMiller, @RepJoeMorelle, @RepGusBilirakis & @Rep_Magaziner to introduce a bipartisan resolution recognizing Fall Prevention Awareness Week and to promote resources that keep seniors safe. \n\nCheck your fall risk and learn about simple steps you can take to stay safe, healthy, and independent here: https://t.co/ITeqtuRkZy",
-   "topics": [],
-   "time": "2026-09-24T19:58:17.000Z",
-   "date": "2026-09-24",
-   "engN": 1,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-25T08:18:40.176Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13773,6 +13774,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1874886856942452736": "@Rep_McBride",
   "1499512178013057032": "@RepCasar",
   "1869140751512391681": "@RepLuzRivas",
   "1610096539577487360": "@RepGabeVasquez",
@@ -13877,7 +13879,6 @@
   "4304448314": "@CongBoyle",
   "1080539438508400642": "@RepUnderwood",
   "1106949340197801986": "@HillaryScholten",
-  "1874886856942452736": "@Rep_McBride",
   "768489333393272832": "@PeteAguilar",
   "950952511556538368": "@sharicedavids",
   "1346205046036377601": "@RepMrvan",
@@ -13928,6 +13929,40 @@
   "4870048156": "@JakeAuch"
  },
  "feedAll": [
+  {
+   "id": "2103453690350739860",
+   "authorId": "1874886856942452736",
+   "createdAt": "2026-09-25T11:56:54.000Z",
+   "date": "2026-09-25",
+   "type": "retweet",
+   "text": "RT @ChrisCoons: Americans are struggling to afford groceries.\n\nMeanwhile, Donald Trump is feeding a dictator Squash Velouté and Sesame Crus…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103215943346241576",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:04:31.467Z"
+  },
+  {
+   "id": "2103452625685381564",
+   "authorId": "574799823",
+   "createdAt": "2026-09-25T11:52:40.000Z",
+   "date": "2026-09-25",
+   "type": "tweet",
+   "text": "Trump’s tariffs are screwing Granite Staters. I’m fighting to end his chaos and bring costs down.\n\nWatch our new ad here: https://t.co/8AkWXcaVFJ",
+   "engN": 8,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-25T12:04:31.467Z"
+  },
   {
    "id": "2103440772754538887",
    "authorId": "1499512178013057032",
@@ -62959,6 +62994,6 @@
   }
  ],
  "feedAllTruncated": false,
- "feedAllTotal": 2732,
+ "feedAllTotal": 2734,
  "feedAllFiles": []
 }
