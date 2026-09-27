@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-27T04:11:30.730Z",
- "lastPollAt": "2026-09-27T04:10:40.884Z",
- "lastPollAttemptAt": "2026-09-27T04:10:40.338Z",
+ "generatedAt": "2026-09-27T05:21:43.006Z",
+ "lastPollAt": "2026-09-27T05:21:29.347Z",
+ "lastPollAttemptAt": "2026-09-27T05:21:28.584Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-27T04:11:29.917Z"
+  "referenceAsOf": "2026-09-27T05:21:42.180Z"
  },
  "news": {
   "version": 213,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-27T04:11:30.313Z",
+   "asOf": "2026-09-27T05:21:42.589Z",
    "windowDays": 14,
-   "windowStart": "2026-09-13T04:11:30.313Z",
+   "windowStart": "2026-09-13T05:21:42.589Z",
    "eligibleItems": 1751,
    "withExcerpts": 190,
    "headlineOrSummary": 1561,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 269,
+  "capturedIn24h": 272,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 269,
+  "pendingIn24h": 272,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-27T04:10:50.855Z",
+   "lastAttemptAt": "2026-09-27T05:21:39.476Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 269,
+   "capturedIn24h": 272,
    "classifiedIn24h": 0,
-   "pendingIn24h": 269,
+   "pendingIn24h": 272,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 3,
     "mix": [
+     33,
      0,
-     0,
-     0
+     67
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 7,
+    "perPost": 2,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3025,
+    "posts": 3028,
     "mix": [
      83,
      4,
@@ -6861,64 +6861,64 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3025,
+    "pending": 3028,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 600439,
+    "eng": 600446,
     "perPost": 198,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
-    3,
-    1,
-    19,
-    128,
-    172,
-    171,
-    80,
-    29,
+    0,
+    2,
+    58,
+    157,
+    181,
+    129,
+    60,
+    13,
     0,
     0,
-    10,
-    67,
-    72,
-    55,
-    48,
+    27,
+    76,
+    69,
+    59,
+    24,
     17
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
+     50,
      0,
-     0,
-     0
+     50
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 2,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 7,
+    "perPost": 4,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1475,
+    "posts": 1477,
     "mix": [
      78,
      5,
@@ -6929,51 +6929,51 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1475,
+    "pending": 1477,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 477176,
-    "perPost": 324,
+    "eng": 477183,
+    "perPost": 323,
     "top10Share": 67,
     "engDelta": 0
    },
    "curve48": [
-    3,
-    1,
+    0,
+    2,
+    24,
+    67,
+    89,
+    65,
+    27,
     8,
-    56,
-    78,
-    86,
-    40,
-    13,
     0,
     0,
-    3,
-    22,
-    34,
-    28,
+    8,
     23,
-    10
+    40,
+    26,
+    13,
+    12
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6986,7 +6986,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1644,
+    "posts": 1645,
     "mix": [
      86,
      3,
@@ -6997,7 +6997,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1644,
+    "pending": 1645,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7012,36 +7012,36 @@
    "curve48": [
     0,
     0,
-    10,
-    73,
-    95,
-    88,
+    33,
+    87,
+    108,
+    48,
     38,
-    19,
+    9,
     0,
     0,
-    5,
-    44,
-    45,
-    31,
-    23,
-    7
+    18,
+    50,
+    38,
+    33,
+    11,
+    6
    ]
   },
   "CBC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7054,7 +7054,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 590,
+    "posts": 591,
     "mix": [
      82,
      6,
@@ -7065,7 +7065,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 590,
+    "pending": 591,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7073,27 +7073,27 @@
      "Corruption": 0
     },
     "eng": 103605,
-    "perPost": 176,
+    "perPost": 175,
     "top10Share": 84,
     "engDelta": 0
    },
    "curve48": [
     0,
     0,
-    2,
-    27,
-    33,
-    30,
-    23,
-    6,
+    14,
+    26,
+    29,
+    32,
+    19,
+    1,
     0,
     0,
-    4,
-    6,
+    7,
     10,
-    11,
-    12,
-    3
+    5,
+    16,
+    7,
+    2
    ]
   },
   "CHC": {
@@ -7146,21 +7146,21 @@
     "engDelta": 0
    },
    "curve48": [
+    0,
     1,
+    4,
+    35,
+    30,
+    26,
+    9,
+    4,
+    0,
     0,
     3,
-    20,
-    33,
-    34,
-    14,
-    5,
-    0,
-    0,
-    2,
-    7,
-    12,
-    8,
     11,
+    11,
+    12,
+    3,
     4
    ]
   },
@@ -7216,19 +7216,19 @@
    "curve48": [
     0,
     1,
-    3,
+    7,
     10,
-    15,
-    14,
-    8,
+    20,
+    11,
     5,
-    0,
-    0,
     2,
+    0,
+    0,
     3,
-    6,
-    8,
+    3,
+    9,
     10,
+    4,
     4
    ]
   }
@@ -8458,6 +8458,79 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2104069721532571971",
+   "handle": "@yassaminansari",
+   "member": "Yassamin Ansari",
+   "district": "AZ-03",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "RT @mehdirhasan: Insane that we allow this. Sleepwalking into disaster or worse",
+   "topics": [],
+   "time": "2026-09-27T04:44:47.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103996584484642894",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z",
+   "isNew": false
+  },
+  {
+   "id": "2104066965770056085",
+   "handle": "@yassaminansari",
+   "member": "Yassamin Ansari",
+   "district": "AZ-03",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Tonight, I joined the @azdemparty annual Hall of Fame Dinner to celebrate committed leaders from across our state. And thank you to @JBPritzker for joining us here on the frontlines. \n\nI had the privilege of presenting Rasean Clayton with the Outstanding Labor Leader award. A proud Navy veteran and longtime union organizer, Rasean has made a profound impact on the labor movement in Arizona. \n\n38 days until the midterms. Change only happens from the ground up. So do not sit this moment out. Do not let cynicism win. Let’s fight like hell for the future of our country.",
+   "topics": [],
+   "time": "2026-09-27T04:33:50.000Z",
+   "date": "2026-09-27",
+   "engN": 7,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z",
+   "isNew": false
+  },
+  {
+   "id": "2104062820358734230",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @donnabrazile: This woman is on fire. Gina is going to win. Take a moment and please ask your Texas friends or family members to give he…",
+   "topics": [],
+   "time": "2026-09-27T04:17:22.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103534564127744008",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z",
+   "isNew": false
+  },
   {
    "id": "2104055321153122308",
    "handle": "@tedlieu",
@@ -13423,79 +13496,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-26T16:31:41.394Z",
    "isNew": false
-  },
-  {
-   "id": "2103877317810401414",
-   "handle": "@LizziePFletcher",
-   "member": "Lizzie Fletcher",
-   "district": "TX-07",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Join us tomorrow as we talk to voters! https://t.co/rfpC8PlP69 https://t.co/NV9kPgQXVb",
-   "topics": [],
-   "time": "2026-09-26T16:00:15.000Z",
-   "date": "2026-09-26",
-   "engN": 8,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-26T16:31:41.394Z",
-   "isNew": false
-  },
-  {
-   "id": "2103877258238726173",
-   "handle": "@RepDean",
-   "member": "Madeleine Dean",
-   "district": "PA-04",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "The survivors of Jeffrey Epstein deserve justice.\n \nWhile in Dallas, I viewed an exhibit of more than 300 million pages of the Epstein Files. It is a brave and urgent project that aims to uncover the despicable crimes of Epstein and his associates, and to give voice to the women and girls who suffered their abuse.\n \nMy visit, and the fearless organizers who I met, will stay with me for a long time. We must never stop pursuing justice.",
-   "topics": [],
-   "time": "2026-09-26T16:00:01.000Z",
-   "date": "2026-09-26",
-   "engN": 16,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-26T16:31:41.394Z",
-   "isNew": false
-  },
-  {
-   "id": "2103877255793660222",
-   "handle": "@RepJoshG",
-   "member": "Josh Gottheimer",
-   "district": "NJ-05",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Our seniors built this country. Great to celebrate them at Bergen County's Annual Senior Citizens Festival! I'll never stop working to lower their taxes, cut prescription drug costs, and protect Social Security benefits that they earned. https://t.co/C05oWyaaKN",
-   "topics": [],
-   "time": "2026-09-26T16:00:00.000Z",
-   "date": "2026-09-26",
-   "engN": 1,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-26T16:31:41.394Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13826,6 +13826,57 @@
   "965235634053894147": "@bynum4thewin"
  },
  "feedAll": [
+  {
+   "id": "2104069721532571971",
+   "authorId": "174332143",
+   "createdAt": "2026-09-27T04:44:47.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @mehdirhasan: Insane that we allow this. Sleepwalking into disaster or worse",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103996584484642894",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z"
+  },
+  {
+   "id": "2104066965770056085",
+   "authorId": "174332143",
+   "createdAt": "2026-09-27T04:33:50.000Z",
+   "date": "2026-09-27",
+   "type": "tweet",
+   "text": "Tonight, I joined the @azdemparty annual Hall of Fame Dinner to celebrate committed leaders from across our state. And thank you to @JBPritzker for joining us here on the frontlines. \n\nI had the privilege of presenting Rasean Clayton with the Outstanding Labor Leader award. A proud Navy veteran and longtime union organizer, Rasean has made a profound impact on the labor movement in Arizona. \n\n38 days until the midterms. Change only happens from the ground up. So do not sit this moment out. Do not let cynicism win. Let’s fight like hell for the future of our country.",
+   "engN": 7,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z"
+  },
+  {
+   "id": "2104062820358734230",
+   "authorId": "20688358",
+   "createdAt": "2026-09-27T04:17:22.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @donnabrazile: This woman is on fire. Gina is going to win. Take a moment and please ask your Texas friends or family members to give he…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103534564127744008",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T05:21:29.337Z"
+  },
   {
    "id": "2104055321153122308",
    "authorId": "21059255",
@@ -63011,57 +63062,18 @@
     "handle": "@KVALnews",
     "text": "Prices in Eugene are 43.6 cents per gallon higher than a month ago and stand $1.01 per gallon higher than a year ago.\n\nRead More: https://t.co/Smy0skrbMR\n\n#LiveonKVAL #LocalNews #Eugene #GasPrices…"
    }
-  },
-  {
-   "id": "2102115540714049598",
-   "authorId": "1345461797361504259",
-   "createdAt": "2026-09-21T19:19:34.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "Colorectal cancer is the third most common cancer in the United States, affecting thousands of families every year, including my own.\n \nI lost my mama way too early to colon cancer. I know what it means for a family to lose someone they love, and I will never stop fighting for the proper resources and policies to ensure that patients can get the treatment they need so that families celebrate more birthdays.\n \nThat’s why I’m urging Secretary Kennedy and HHS to align ACA policy with Medicare and classify follow-up colonoscopies as “screenings” so they can be covered by insurance.\n \nNo family should have to choose between getting the care they need and being able to afford it.",
-   "engN": 8,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:23.905Z"
-  },
-  {
-   "id": "2102115182830882933",
-   "authorId": "23201727",
-   "createdAt": "2026-09-21T19:18:09.000Z",
-   "date": "2026-09-21",
-   "type": "quote",
-   "text": "They’re bragging about throwing 6 million people off their food assistance — including children.\n\nHow much sicker can you get? https://t.co/913xjCPqWZ",
-   "engN": 316,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:23.905Z",
-   "quoted": {
-    "id": "2102050633155051668",
-    "handle": "@atrupar",
-    "text": "Brooke Rollins: \"This is the magic of Trump 2. We learned our lesson in Trump one. We had four years to prepare. And then we were able to come back and just start deconstructing the administrative…"
-   }
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3025,
+ "feedAllTotal": 3028,
  "feedAllFiles": [
-  "feed-0-c4f479f9448291ab.json",
-  "feed-1-5013851874a11e60.json",
-  "feed-2-a0ae7160836c66b8.json",
-  "feed-3-f5ca7f4e6600f515.json",
-  "feed-4-4288eeb8339ea272.json",
-  "feed-5-787be665a66e10bc.json",
-  "feed-6-bc8db56e9c69fd17.json",
-  "feed-7-ba61473a17ed42f9.json"
+  "feed-0-965053b2a7d95a68.json",
+  "feed-1-c48a7dafe43de984.json",
+  "feed-2-136d24c00b6587b6.json",
+  "feed-3-114497fc16a7b82d.json",
+  "feed-4-0405ad0abd629b4b.json",
+  "feed-5-8eefbdfe087e4d97.json",
+  "feed-6-10cabc7a7c98b51e.json",
+  "feed-7-d7791bc94e2a4f2e.json"
  ]
 }
