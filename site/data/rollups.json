@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-27T11:20:33.973Z",
- "lastPollAt": "2026-09-27T11:19:57.542Z",
- "lastPollAttemptAt": "2026-09-27T11:19:56.918Z",
+ "generatedAt": "2026-09-27T12:30:53.796Z",
+ "lastPollAt": "2026-09-27T12:30:39.907Z",
+ "lastPollAttemptAt": "2026-09-27T12:30:39.163Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-27T11:20:33.121Z"
+  "referenceAsOf": "2026-09-27T12:30:52.915Z"
  },
  "news": {
   "version": 215,
-  "items": 1203,
+  "items": 1195,
   "latestPublishedAt": "2026-09-27T11:07:43.000Z",
   "latestFetchedAt": "2026-09-27T11:19:55.293Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-27T11:20:33.544Z",
+   "asOf": "2026-09-27T12:30:53.337Z",
    "windowDays": 14,
-   "windowStart": "2026-09-13T11:20:33.544Z",
-   "eligibleItems": 1755,
-   "withExcerpts": 190,
-   "headlineOrSummary": 1565,
+   "windowStart": "2026-09-13T12:30:53.337Z",
+   "eligibleItems": 1751,
+   "withExcerpts": 188,
+   "headlineOrSummary": 1563,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3379,8 +3379,8 @@
      "id": "npr-politics",
      "publisher": "NPR",
      "sourceUrl": "https://feeds.npr.org/1014/rss.xml",
-     "eligibleItems": 110,
-     "withExcerpts": 100,
+     "eligibleItems": 108,
+     "withExcerpts": 98,
      "headlineOrSummary": 10,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-27T10:00:00.000Z",
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1024,
+     "eligibleItems": 1022,
      "withExcerpts": 0,
-     "headlineOrSummary": 1024,
+     "headlineOrSummary": 1022,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-27T11:07:43.000Z",
      "latestItem": {
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 184,
-  "t": 0
+  "posts": 185,
+  "t": 1
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 274,
+  "capturedIn24h": 271,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 274,
+  "pendingIn24h": 271,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-27T11:20:04.883Z",
+   "lastAttemptAt": "2026-09-27T12:30:50.052Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 274,
+   "capturedIn24h": 271,
    "classifiedIn24h": 0,
-   "pendingIn24h": 274,
+   "pendingIn24h": 271,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 5,
+    "posts": 6,
     "mix": [
-     20,
+     33,
      0,
-     80
+     67
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 5,
+    "pending": 6,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 7,
-    "perPost": 1,
+    "eng": 10,
+    "perPost": 2,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3030,
+    "posts": 3031,
     "mix": [
      83,
      4,
@@ -6861,35 +6861,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3030,
+    "pending": 3031,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 653740,
+    "eng": 653743,
     "perPost": 216,
     "top10Share": 52,
     "engDelta": 0
    },
    "curve48": [
-    58,
-    157,
-    180,
-    130,
-    60,
-    13,
+    114,
+    152,
+    192,
+    94,
+    37,
+    4,
     0,
+    4,
+    53,
+    74,
+    61,
+    56,
+    20,
+    6,
     0,
-    27,
-    76,
-    68,
-    59,
-    25,
-    17,
-    2,
-    0
+    1
    ]
   },
   "CPC": {
@@ -6942,51 +6942,51 @@
     "engDelta": 0
    },
    "curve48": [
-    24,
-    67,
+    43,
+    75,
     88,
-    66,
-    27,
-    8,
+    49,
+    20,
+    1,
     0,
-    0,
-    8,
-    23,
-    40,
+    1,
+    18,
     26,
-    13,
+    35,
+    27,
     12,
+    3,
     0,
     0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 3,
+    "posts": 4,
     "mix": [
+     25,
      0,
-     0,
-     100
+     75
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 3,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1647,
+    "posts": 1648,
     "mix": [
      86,
      3,
@@ -6997,35 +6997,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1647,
+    "pending": 1648,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 141171,
+    "eng": 141174,
     "perPost": 86,
     "top10Share": 68,
     "engDelta": 0
    },
    "curve48": [
-    33,
-    87,
-    107,
-    49,
-    38,
-    9,
+    69,
+    79,
+    105,
+    43,
+    23,
+    3,
     0,
-    0,
-    18,
-    50,
-    37,
-    33,
-    12,
-    6,
     2,
-    0
+    35,
+    48,
+    34,
+    28,
+    8,
+    3,
+    0,
+    1
    ]
   },
   "CBC": {
@@ -7078,21 +7078,21 @@
     "engDelta": 0
    },
    "curve48": [
-    14,
-    26,
+    21,
     28,
-    33,
-    19,
+    35,
+    25,
+    12,
+    0,
+    0,
     1,
+    8,
+    9,
+    11,
+    14,
+    3,
+    3,
     0,
-    0,
-    7,
-    10,
-    5,
-    16,
-    7,
-    2,
-    2,
     0
    ]
   },
@@ -7146,51 +7146,51 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    35,
+    20,
     30,
-    26,
-    9,
+    35,
+    18,
     4,
+    1,
     0,
     0,
-    3,
+    5,
+    15,
+    7,
     11,
-    11,
-    12,
-    3,
-    4,
+    6,
+    0,
     0,
     0
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 0,
+    "pending": 1,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 3,
+    "perPost": 3,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 315,
+    "posts": 316,
     "mix": [
      86,
      3,
@@ -7201,35 +7201,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 315,
+    "pending": 316,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 166838,
-    "perPost": 530,
+    "eng": 166841,
+    "perPost": 528,
     "top10Share": 98,
     "engDelta": 0
    },
    "curve48": [
-    7,
+    8,
+    12,
+    18,
     10,
-    20,
-    11,
     5,
+    0,
+    0,
     2,
-    0,
-    0,
-    3,
-    3,
-    9,
-    9,
+    2,
     5,
-    4,
+    8,
+    12,
+    3,
+    1,
     0,
-    0
+    1
    ]
   }
  },
@@ -8458,6 +8458,31 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2104185555105763422",
+   "handle": "@CongressmanRaja",
+   "member": "Raja Krishnamoorthi",
+   "district": "IL-08",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "AI pioneer Geoffrey Hinton estimates there is still a 10–20% chance that artificial intelligence could lead to human extinction within the next three decades.\nI asked him whether that risk has grown as AI capabilities continue to advance. https://t.co/ZwYInwI1Pj",
+   "topics": [],
+   "time": "2026-09-27T12:25:04.000Z",
+   "date": "2026-09-27",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T12:30:39.899Z",
+   "isNew": false
+  },
   {
    "id": "2104081285278740636",
    "handle": "@MarcVeasey",
@@ -13468,30 +13493,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-27T07:45:11.005Z",
    "isNew": false
-  },
-  {
-   "id": "2103879221953392857",
-   "handle": "@SusieLeeNV",
-   "member": "Susie Lee",
-   "district": "NV-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "These lands are not for sale. I will always fight to protect them 💪\n\n#NationalPublicLandsDay https://t.co/iv0sJgRRtm",
-   "topics": [],
-   "time": "2026-09-26T16:07:49.000Z",
-   "date": "2026-09-26",
-   "engN": 68,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T07:45:11.005Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13664,6 +13665,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "814179031956488192": "@CongressmanRaja",
   "1404519992582942724": "@Rep_Stansbury",
   "1874831517706256384": "@RepGoodlander",
   "1610323296360210433": "@RepDonDavis",
@@ -13750,7 +13752,6 @@
   "1195472282329735169": "@mrvan4congress",
   "1106949340197801986": "@HillaryScholten",
   "818713465653051392": "@RepDarrenSoto",
-  "814179031956488192": "@CongressmanRaja",
   "1080462532815532032": "@RepKimSchrier",
   "1872709283634397185": "@Rep_Whitesides",
   "1092782048157331456": "@GregMeeksNYC",
@@ -13822,6 +13823,23 @@
   "965235634053894147": "@bynum4thewin"
  },
  "feedAll": [
+  {
+   "id": "2104185555105763422",
+   "authorId": "814179031956488192",
+   "createdAt": "2026-09-27T12:25:04.000Z",
+   "date": "2026-09-27",
+   "type": "tweet",
+   "text": "AI pioneer Geoffrey Hinton estimates there is still a 10–20% chance that artificial intelligence could lead to human extinction within the next three decades.\nI asked him whether that risk has grown as AI capabilities continue to advance. https://t.co/ZwYInwI1Pj",
+   "engN": 3,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-27T12:30:39.899Z"
+  },
   {
    "id": "2104081285278740636",
    "authorId": "20688358",
@@ -63053,35 +63071,18 @@
    "sourceReferenceId": "2102092065924346104",
    "provenance": null,
    "metricsObservedAt": "2026-09-21T19:32:21.173Z"
-  },
-  {
-   "id": "2102115646456967578",
-   "authorId": "793208286",
-   "createdAt": "2026-09-21T19:20:00.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "Trump says gas prices are an “inexpensive price to pay” for his never-ending war with Iran. Tell that to the families living paycheck to paycheck, skipping doctor’s appointments to fill up their cars with gas.\nhttps://t.co/Px2rAcn4hX",
-   "engN": 1,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:23.905Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3030,
+ "feedAllTotal": 3031,
  "feedAllFiles": [
-  "feed-0-30a6318fa2273cc2.json",
-  "feed-1-4c9a3b44130788f2.json",
-  "feed-2-fa638f298bb78388.json",
-  "feed-3-33b5ae7afa957e96.json",
-  "feed-4-8b3f1a3a9b8db820.json",
-  "feed-5-8bdfff9717926aa8.json",
-  "feed-6-672bee2c7dc936b0.json",
-  "feed-7-3412dc96a141007e.json"
+  "feed-0-73785b32fb0a33d8.json",
+  "feed-1-a41fc03370f264ea.json",
+  "feed-2-1628b931c9223a55.json",
+  "feed-3-0d7d3ab40650deb5.json",
+  "feed-4-1d888b4e3f3664e8.json",
+  "feed-5-651a3333ef5ad3f4.json",
+  "feed-6-8ca23d5737e93e9d.json",
+  "feed-7-0d79efd41f924ab4.json"
  ]
 }
