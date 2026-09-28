@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-28T01:51:40.721Z",
- "lastPollAt": "2026-09-28T01:51:13.360Z",
- "lastPollAttemptAt": "2026-09-28T01:51:12.709Z",
+ "generatedAt": "2026-09-28T02:40:16.731Z",
+ "lastPollAt": "2026-09-28T02:39:55.613Z",
+ "lastPollAttemptAt": "2026-09-28T02:39:55.147Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-28T01:51:39.850Z"
+  "referenceAsOf": "2026-09-28T02:40:15.855Z"
  },
  "news": {
   "version": 228,
-  "items": 1125,
+  "items": 1123,
   "latestPublishedAt": "2026-09-28T00:21:00.000Z",
   "latestFetchedAt": "2026-09-28T00:44:27.459Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-28T01:51:40.292Z",
+   "asOf": "2026-09-28T02:40:16.277Z",
    "windowDays": 14,
-   "windowStart": "2026-09-14T01:51:40.292Z",
-   "eligibleItems": 1749,
+   "windowStart": "2026-09-14T02:40:16.277Z",
+   "eligibleItems": 1747,
    "withExcerpts": 187,
-   "headlineOrSummary": 1562,
+   "headlineOrSummary": 1560,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1023,
+     "eligibleItems": 1022,
      "withExcerpts": 0,
-     "headlineOrSummary": 1023,
+     "headlineOrSummary": 1022,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-28T00:21:00.000Z",
      "latestItem": {
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 279,
+     "eligibleItems": 278,
      "withExcerpts": 0,
-     "headlineOrSummary": 279,
+     "headlineOrSummary": 278,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-27T23:33:39.000Z",
      "latestItem": {
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 203,
-  "t": 19
+  "posts": 204,
+  "t": 20
  },
  "caucusKeys": [
   "CPC",
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 241,
+  "capturedIn24h": 242,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 241,
+  "pendingIn24h": 242,
   "momentumPaused": true,
   "health": {
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-28T01:51:30.304Z",
+   "lastAttemptAt": "2026-09-28T02:40:12.937Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 241,
+   "capturedIn24h": 242,
    "classifiedIn24h": 0,
-   "pendingIn24h": 241,
+   "pendingIn24h": 242,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 227,
+    "posts": 233,
     "mix": [
-     83,
+     82,
      4,
-     13
+     14
     ],
     "accounts": 132,
     "members": 105,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 227,
+    "pending": 233,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 4532,
-    "perPost": 20,
+    "eng": 4538,
+    "perPost": 19,
     "top10Share": 75,
     "engDelta": -96
    },
    "w": {
-    "posts": 3252,
+    "posts": 3258,
     "mix": [
      83,
      4,
@@ -6861,35 +6861,35 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3252,
+    "pending": 3258,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 658265,
+    "eng": 658271,
     "perPost": 202,
     "top10Share": 52,
     "engDelta": 0
    },
    "curve48": [
-    18,
+    10,
     0,
     0,
-    16,
+    35,
     74,
     69,
-    61,
-    35,
-    17,
-    2,
+    63,
+    19,
+    14,
     0,
-    11,
+    0,
+    22,
     58,
-    64,
-    53,
-    36
+    72,
+    43,
+    33
    ]
   },
   "CPC": {
@@ -6942,106 +6942,106 @@
     "engDelta": 0
    },
    "curve48": [
+    5,
+    0,
+    0,
+    11,
+    24,
+    38,
+    31,
+    9,
     9,
     0,
     0,
-    4,
-    26,
-    34,
-    30,
-    16,
-    12,
-    0,
-    0,
-    5,
-    27,
-    26,
-    26,
-    16
+    10,
+    28,
+    31,
+    20,
+    11
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 131,
+    "posts": 137,
     "mix": [
-     83,
+     81,
      1,
-     16
+     18
     ],
     "accounts": 81,
     "members": 63,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 131,
+    "pending": 137,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 900,
+    "eng": 906,
     "perPost": 7,
-    "top10Share": 71,
+    "top10Share": 70,
     "engDelta": -96
    },
    "w": {
-    "posts": 1775,
+    "posts": 1781,
     "mix": [
-     86,
+     85,
      3,
-     11
+     12
     ],
     "accounts": 180,
     "members": 107,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1775,
+    "pending": 1781,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 142071,
+    "eng": 142077,
     "perPost": 80,
     "top10Share": 68,
     "engDelta": 0
    },
    "curve48": [
-    12,
+    7,
     0,
     0,
-    11,
-    47,
-    41,
-    31,
-    20,
-    6,
-    2,
+    23,
+    48,
+    37,
+    34,
+    8,
+    8,
     0,
-    10,
-    29,
-    39,
-    29,
-    21
+    0,
+    14,
+    32,
+    42,
+    24,
+    22
    ]
   },
   "CBC": {
    "t": {
-    "posts": 35,
+    "posts": 40,
     "mix": [
-     71,
+     65,
      3,
-     26
+     32
     ],
     "accounts": 25,
     "members": 22,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 35,
+    "pending": 40,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7049,12 +7049,12 @@
      "Corruption": 0
     },
     "eng": 898,
-    "perPost": 26,
+    "perPost": 22,
     "top10Share": 99,
     "engDelta": -95
    },
    "w": {
-    "posts": 625,
+    "posts": 630,
     "mix": [
      81,
      6,
@@ -7065,7 +7065,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 625,
+    "pending": 630,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7073,27 +7073,27 @@
      "Corruption": 0
     },
     "eng": 113770,
-    "perPost": 182,
+    "perPost": 181,
     "top10Share": 82,
     "engDelta": 0
    },
    "curve48": [
-    2,
+    1,
+    0,
+    0,
+    8,
+    9,
+    7,
+    18,
+    3,
+    4,
     0,
     0,
     5,
-    9,
     6,
-    17,
-    8,
-    2,
-    2,
-    0,
-    2,
-    8,
     10,
     9,
-    3
+    7
    ]
   },
   "CHC": {
@@ -7146,22 +7146,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
+    3,
     0,
     0,
     3,
-    8,
-    14,
-    7,
-    8,
-    4,
-    0,
-    0,
-    3,
-    7,
     11,
-    13,
-    6
+    11,
+    12,
+    3,
+    4,
+    0,
+    0,
+    4,
+    10,
+    11,
+    11,
+    4
    ]
   },
   "CAPAC": {
@@ -7214,22 +7214,22 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
-    0,
-    0,
-    2,
-    4,
-    6,
-    10,
-    7,
-    4,
-    0,
-    0,
     1,
+    0,
+    0,
+    3,
+    4,
+    9,
+    11,
+    4,
+    2,
+    0,
+    0,
+    3,
     11,
     5,
-    4,
-    2
+    3,
+    1
    ]
   }
  },
@@ -7408,15 +7408,16 @@
     "2104257262722179105",
     "2104278828906397736",
     "2104279259321966718",
-    "2104297642272366965"
+    "2104297642272366965",
+    "2104389908429181102"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
-   "spread": 81,
-   "accounts": 90,
+   "spread": 82,
+   "accounts": 91,
    "cm": [
     39,
-    43,
+    44,
     17,
     16,
     7
@@ -7430,9 +7431,9 @@
     149,
     149
    ],
-   "exact": 0.66,
-   "total": 163,
-   "eng": 26353
+   "exact": 0.65,
+   "total": 164,
+   "eng": 26359
   },
   {
    "text": "president trump",
@@ -8493,6 +8494,159 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2104396849566065134",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @TVietor08: Donated to @GinaHinojosaTX and @DavidCCrowley today because this could be a historic opportunity to win back Congress, gover…",
+   "topics": [],
+   "time": "2026-09-28T02:24:41.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104334272626855979",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
+  {
+   "id": "2104396766280036590",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @TeamTalaricoHQ: James Talarico pulled up to the State Fair Classic 🔥 https://t.co/ps0edKDU0H",
+   "topics": [],
+   "time": "2026-09-28T02:24:21.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104304601734193349",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
+  {
+   "id": "2104396741453697056",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "No doubt https://t.co/BYuBlZMNPX",
+   "topics": [],
+   "time": "2026-09-28T02:24:15.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2104356971239649647",
+    "handle": "@clarencehilljr",
+    "text": "This is on Dak"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
+  {
+   "id": "2104391057140056192",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @HoustonChron: Bo French’s racist comments spark outrage while opponent Jon Rosenthal, an oil and gas engineer, proposes smarter policie…",
+   "topics": [],
+   "time": "2026-09-28T02:01:40.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103786718335733985",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
+  {
+   "id": "2104391016925237481",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @Jon_RosenthalTX: Closing out a busy weekend campaigning across Texas, joining leaders like @SarahEckhardtTX &amp; @VikkiGoodwinTX at #TribF…",
+   "topics": [],
+   "time": "2026-09-28T02:01:30.000Z",
+   "date": "2026-09-27",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104336901968646571",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
+  {
+   "id": "2104389908429181102",
+   "handle": "@MaggieG603",
+   "member": "Maggie Goodlander",
+   "district": "NH-02",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "A nor’easter couldn’t keep Hillsborough County Democrats home. \n\nIn Peterborough, Our Town, I was reminded: every big fight has a home address. It’s a grandmother raising her grandkids through sky-high costs and red tape. It’s the young dad facing the most painful choices imaginable: filling the gas tank or filling his kid’s prescription.\n\nI’m fighting to:\n✅ Lower costs: end Trump’s war in Iran and his unconstitutional trade wars, and break up the price-gouging monopolies jacking up what you pay.\n✅ Protect your healthcare: in the richest country in history, every American deserves care when and where they need it.\n✅ Clean house: ban stock trading, set term limits, end corporate PAC money. I’ve never taken a penny.\n\nOur anthem asks if that banner yet waves. Look at our candidates. The answer is YES.\n\n36 days.🇺🇸",
+   "topics": [],
+   "time": "2026-09-28T01:57:06.000Z",
+   "date": "2026-09-27",
+   "engN": 6,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "isNew": false
+  },
   {
    "id": "2104387633682018318",
    "handle": "@LaCongresista",
@@ -13321,157 +13475,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-27T16:04:32.187Z",
    "isNew": false
-  },
-  {
-   "id": "2104224749094044050",
-   "handle": "@RepRashida",
-   "member": "Rashida Tlaib",
-   "district": "MI-12",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "This #HispanicHeritageMonth is a time to honor the generations of Latinos whose hard work, culture, and resilience have helped build our country’s story.\n\nWe know the U.S. wouldn’t be the country it is today without the contributions of our Latino neighbors. https://t.co/Z7xL3J0ICy",
-   "topics": [],
-   "time": "2026-09-27T15:00:49.000Z",
-   "date": "2026-09-27",
-   "engN": 70,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T16:04:32.187Z",
-   "isNew": false
-  },
-  {
-   "id": "2104224632425386278",
-   "handle": "@RepPettersen",
-   "member": "Brittany Pettersen",
-   "district": "CO-07",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Everyone deserves a place to call home—and for those with intellectual and developmental disabilities, having independent living options is crucial.\n\nThe Grove is an innovative housing community built specifically to empower young adults to live independently with community-based support. The Grove shows us what's possible when we put human needs first. I will keep pushing for federal investments to support even more Coloradans!",
-   "topics": [],
-   "time": "2026-09-27T15:00:21.000Z",
-   "date": "2026-09-27",
-   "engN": 16,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T16:04:32.187Z",
-   "isNew": false
-  },
-  {
-   "id": "2104224608865947720",
-   "handle": "@RepJayapal",
-   "member": "Pramila Jayapal",
-   "district": "WA-07",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "This week, I reintroduced the Students Not Profits Act because our taxpayer dollars should not be going to for-profit colleges that continue to fail students. https://t.co/hB6KSNiZdD",
-   "topics": [],
-   "time": "2026-09-27T15:00:16.000Z",
-   "date": "2026-09-27",
-   "engN": 49,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T16:04:32.187Z",
-   "isNew": false
-  },
-  {
-   "id": "2104221822203888095",
-   "handle": "@SuhasforVA",
-   "member": "Suhas Subramanyam",
-   "district": "VA-10",
-   "caucus": [
-    "NewDem",
-    "CAPAC"
-   ],
-   "text": "We can do better. Vote Democrat up and down the ballot to hold this Administration and Republicans accountable. \n\nEarly voting is open through October 31st, Virginia. https://t.co/eteT3orAlD",
-   "topics": [],
-   "time": "2026-09-27T14:49:11.000Z",
-   "date": "2026-09-27",
-   "engN": 1,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T14:51:50.194Z",
-   "isNew": false
-  },
-  {
-   "id": "2104220726446403599",
-   "handle": "@tedlieu",
-   "member": "Ted Lieu",
-   "district": "CA-36",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "Dear OpenAI: Respectfully, you are taking the wrong approach. Pausing and adding more “safeguards” won’t solve your problem: your AI model is depraved and dangerous.\n\nYou need to destroy your model and start over. You must build models that at their core are good, not criminal. https://t.co/Rbwi6KsCUN",
-   "topics": [],
-   "time": "2026-09-27T14:44:50.000Z",
-   "date": "2026-09-27",
-   "engN": 41,
-   "kind": "quote",
-   "quoted": {
-    "id": "2104018034738274313",
-    "handle": "@JesseRodriguez",
-    "text": "OpenAI paused training its latest models after disclosing unexpected agent activity involving federal websites. OpenAI says additional safeguards are needed before resuming."
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T14:51:50.194Z",
-   "isNew": false
-  },
-  {
-   "id": "2104220516349350126",
-   "handle": "@PatRyanUC",
-   "member": "Patrick Ryan",
-   "district": "NY-18",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "“The blood and treasure we’ve expended is infuriating.\"\n\nTrump was elected to stop wars and lower costs. Two years in, costs have skyrocketed and we’re stuck in a disastrous war with Iran. https://t.co/Rh7hJ011jq",
-   "topics": [],
-   "time": "2026-09-27T14:44:00.000Z",
-   "date": "2026-09-27",
-   "engN": 6,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T14:51:50.194Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13807,6 +13810,113 @@
   "965235634053894147": "@bynum4thewin"
  },
  "feedAll": [
+  {
+   "id": "2104396849566065134",
+   "authorId": "20688358",
+   "createdAt": "2026-09-28T02:24:41.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @TVietor08: Donated to @GinaHinojosaTX and @DavidCCrowley today because this could be a historic opportunity to win back Congress, gover…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104334272626855979",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z"
+  },
+  {
+   "id": "2104396766280036590",
+   "authorId": "20688358",
+   "createdAt": "2026-09-28T02:24:21.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @TeamTalaricoHQ: James Talarico pulled up to the State Fair Classic 🔥 https://t.co/ps0edKDU0H",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104304601734193349",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z"
+  },
+  {
+   "id": "2104396741453697056",
+   "authorId": "20688358",
+   "createdAt": "2026-09-28T02:24:15.000Z",
+   "date": "2026-09-27",
+   "type": "quote",
+   "text": "No doubt https://t.co/BYuBlZMNPX",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z",
+   "quoted": {
+    "id": "2104356971239649647",
+    "handle": "@clarencehilljr",
+    "text": "This is on Dak"
+   }
+  },
+  {
+   "id": "2104391057140056192",
+   "authorId": "20688358",
+   "createdAt": "2026-09-28T02:01:40.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @HoustonChron: Bo French’s racist comments spark outrage while opponent Jon Rosenthal, an oil and gas engineer, proposes smarter policie…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103786718335733985",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z"
+  },
+  {
+   "id": "2104391016925237481",
+   "authorId": "20688358",
+   "createdAt": "2026-09-28T02:01:30.000Z",
+   "date": "2026-09-27",
+   "type": "retweet",
+   "text": "RT @Jon_RosenthalTX: Closing out a busy weekend campaigning across Texas, joining leaders like @SarahEckhardtTX &amp; @VikkiGoodwinTX at #TribF…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104336901968646571",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z"
+  },
+  {
+   "id": "2104389908429181102",
+   "authorId": "2252635728",
+   "createdAt": "2026-09-28T01:57:06.000Z",
+   "date": "2026-09-27",
+   "type": "tweet",
+   "text": "A nor’easter couldn’t keep Hillsborough County Democrats home. \n\nIn Peterborough, Our Town, I was reminded: every big fight has a home address. It’s a grandmother raising her grandkids through sky-high costs and red tape. It’s the young dad facing the most painful choices imaginable: filling the gas tank or filling his kid’s prescription.\n\nI’m fighting to:\n✅ Lower costs: end Trump’s war in Iran and his unconstitutional trade wars, and break up the price-gouging monopolies jacking up what you pay.\n✅ Protect your healthcare: in the richest country in history, every American deserves care when and where they need it.\n✅ Clean house: ban stock trading, set term limits, end corporate PAC money. I’ve never taken a penny.\n\nOur anthem asks if that banner yet waves. Look at our candidates. The answer is YES.\n\n36 days.🇺🇸",
+   "engN": 6,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T02:39:55.584Z"
+  },
   {
    "id": "2104387633682018318",
    "authorId": "40557819",
@@ -63218,126 +63328,19 @@
     "handle": "@SuhasforVA",
     "text": "This is what Trump’s war of choice looks like for Virginia families.\n\n$4.19/gallon for gas.\n$6.39/gallon for diesel.\n\nDiesel just hit an all-time record high in Virginia."
    }
-  },
-  {
-   "id": "2102203179912052926",
-   "authorId": "3017738772",
-   "createdAt": "2026-09-22T01:07:49.000Z",
-   "date": "2026-09-21",
-   "type": "reply",
-   "text": "This is what Trump’s war of choice looks like for Virginia families.\n\n$4.19/gallon for gas.\n$6.39/gallon for diesel.\n\nDiesel just hit an all-time record high in Virginia.",
-   "engN": 7,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z",
-   "quoted": {
-    "id": "2102203177336516932",
-    "handle": "@SuhasforVA",
-    "text": "😳 https://t.co/iW4ROfCnwF"
-   }
-  },
-  {
-   "id": "2102203177336516932",
-   "authorId": "3017738772",
-   "createdAt": "2026-09-22T01:07:49.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "😳 https://t.co/iW4ROfCnwF",
-   "engN": 13,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z"
-  },
-  {
-   "id": "2102202217419985058",
-   "authorId": "58928690",
-   "createdAt": "2026-09-22T01:04:00.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "Expanding crisis response can connect those in need with trained, community-based teams. If mental health professionals can help at a scene, they should be there.\n\nhttps://t.co/RlNkr5D7IZ",
-   "engN": 9,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z"
-  },
-  {
-   "id": "2102201961504186473",
-   "authorId": "1071840474",
-   "createdAt": "2026-09-22T01:02:59.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "Another shooting outside a synagogue, this time in Belleville, Ontario, Canada, as the congregation gathered for Yom Kippur prayers. Thankful for heroic response of Belleville police, and I pray for the full recovery of Constable Jeff Smith. \n\nAll people, including Jews, deserve to pray free of fear or assault. Everyone must condemn this violence and the climate of hate that fuels it. https://t.co/j0SCKmbmTR",
-   "engN": 29,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z"
-  },
-  {
-   "id": "2102201465343213972",
-   "authorId": "571214272",
-   "createdAt": "2026-09-22T01:01:01.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "Americans are being priced out of their health insurance. And even if they're covered, they're still facing medical debt. We need affordable, accessible healthcare for all. https://t.co/dtDQw6FC8C",
-   "engN": 15,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z"
-  },
-  {
-   "id": "2102201394144878959",
-   "authorId": "38254095",
-   "createdAt": "2026-09-22T01:00:44.000Z",
-   "date": "2026-09-21",
-   "type": "tweet",
-   "text": "As Jewish families across Sacramento and our region observe Yom Kippur, I wish all who are fasting and reflecting a meaningful day of atonement.\n\nMay this sacred day bring peace, renewal, and strength, and may we continue to build a Sacramento rooted in compassion, understanding, and care for one another.",
-   "engN": 13,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-22T12:01:24.361Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3252,
+ "feedAllTotal": 3258,
  "feedAllFiles": [
-  "feed-0-78394a89cb9de3a8.json",
-  "feed-1-b6cbca8ee4a09e68.json",
-  "feed-2-de0ff5ec2cedf327.json",
-  "feed-3-c11c951edd205ce5.json",
-  "feed-4-31657a021a44e543.json",
-  "feed-5-f4e117177e2867d3.json",
-  "feed-6-ce3f4e49dde15a2c.json",
-  "feed-7-e8d32591f942f4db.json",
-  "feed-8-2d9ae2bbaf6cee6d.json"
+  "feed-0-30a6fa171009d515.json",
+  "feed-1-36344e93b6c8b54f.json",
+  "feed-2-9a3111e81600de32.json",
+  "feed-3-4b4d9d8971539b7a.json",
+  "feed-4-60701254fc6f5b44.json",
+  "feed-5-d160a7e759c23ed7.json",
+  "feed-6-6e3c343d810c7bd4.json",
+  "feed-7-5f65762c4a05048d.json",
+  "feed-8-6f6abd7f5cc54fe8.json"
  ]
 }
