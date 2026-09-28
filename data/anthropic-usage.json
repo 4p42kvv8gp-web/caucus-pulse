@@ -12235,6 +12235,74 @@
     "status": "rejected",
     "createdAt": "2026-09-28T19:20:07.735Z",
     "completedAt": "2026-09-28T19:20:08.371Z"
+   },
+   "live:0fbaad33-19c0-4de3-8b5b-a68f671bd5af": {
+    "id": "live:0fbaad33-19c0-4de3-8b5b-a68f671bd5af",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.60431,
+    "status": "settled",
+    "createdAt": "2026-09-28T20:50:45.049Z",
+    "usage": {
+     "calls": 1,
+     "input": 9529,
+     "output": 5458,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-09-28T20:51:46.624Z"
+   },
+   "live:c8c5ad25-5a22-48f6-bd4e-3130da57d74b": {
+    "id": "live:c8c5ad25-5a22-48f6-bd4e-3130da57d74b",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.65643,
+    "status": "settled",
+    "createdAt": "2026-09-28T20:51:46.643Z",
+    "usage": {
+     "calls": 1,
+     "input": 11185,
+     "output": 5200,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-09-28T20:52:35.689Z"
+   },
+   "live:cc084f32-8909-4b8f-975a-6ff614b972f2": {
+    "id": "live:cc084f32-8909-4b8f-975a-6ff614b972f2",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.62579,
+    "status": "settled",
+    "createdAt": "2026-09-28T20:52:35.705Z",
+    "usage": {
+     "calls": 1,
+     "input": 10549,
+     "output": 4596,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-09-28T20:53:28.923Z"
+   },
+   "live:4b4666b2-8f64-463b-aa24-866413e8fc4c": {
+    "id": "live:4b4666b2-8f64-463b-aa24-866413e8fc4c",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.48083,
+    "status": "settled",
+    "createdAt": "2026-09-28T20:53:28.939Z",
+    "usage": {
+     "calls": 1,
+     "input": 4522,
+     "output": 2369,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-09-28T20:53:55.394Z"
    }
   },
   "poll": {
