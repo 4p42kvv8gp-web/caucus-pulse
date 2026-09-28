@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-28T07:51:36.941Z",
- "lastPollAt": "2026-09-28T06:15:08.210Z",
- "lastPollAttemptAt": "2026-09-28T06:15:07.646Z",
+ "generatedAt": "2026-09-28T07:52:12.545Z",
+ "lastPollAt": "2026-09-28T07:52:00.287Z",
+ "lastPollAttemptAt": "2026-09-28T07:51:59.763Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-28T07:51:36.130Z"
+  "referenceAsOf": "2026-09-28T07:52:11.741Z"
  },
  "news": {
   "version": 231,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-28T07:51:36.507Z",
+   "asOf": "2026-09-28T07:52:12.122Z",
    "windowDays": 14,
-   "windowStart": "2026-09-14T07:51:36.507Z",
+   "windowStart": "2026-09-14T07:52:12.122Z",
    "eligibleItems": 1747,
    "withExcerpts": 188,
    "headlineOrSummary": 1559,
@@ -3546,20 +3546,20 @@
  },
  "classification": {
   "through": null,
-  "capturedIn24h": 236,
+  "capturedIn24h": 238,
   "classifiedIn24h": 0,
   "taggedIn24h": 0,
-  "pendingIn24h": 236,
+  "pendingIn24h": 238,
   "momentumPaused": true,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
+   "status": "blocked",
+   "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-28T07:51:32.952Z",
+   "lastAttemptAt": "2026-09-28T07:52:09.169Z",
    "lastSuccessAt": null,
-   "capturedIn24h": 236,
+   "capturedIn24h": 238,
    "classifiedIn24h": 0,
-   "pendingIn24h": 236,
+   "pendingIn24h": 238,
    "coverageComplete": false
   }
  },
@@ -6826,31 +6826,31 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 2,
+    "posts": 4,
     "mix": [
-     50,
+     75,
      0,
-     50
+     25
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 4,
-    "perPost": 2,
+    "eng": 13,
+    "perPost": 3,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2728,
+    "posts": 2730,
     "mix": [
      83,
      4,
@@ -6861,15 +6861,15 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2728,
+    "pending": 2730,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 555303,
-    "perPost": 204,
+    "eng": 555312,
+    "perPost": 203,
     "top10Share": 54,
     "engDelta": 0
    },
@@ -6878,8 +6878,8 @@
     16,
     74,
     69,
-    61,
-    35,
+    62,
+    34,
     17,
     2,
     0,
@@ -6889,7 +6889,7 @@
     53,
     36,
     14,
-    0
+    2
    ]
   },
   "CPC": {
@@ -6946,8 +6946,8 @@
     4,
     26,
     34,
-    30,
-    16,
+    31,
+    15,
     12,
     0,
     0,
@@ -6962,31 +6962,31 @@
   },
   "NewDem": {
    "t": {
-    "posts": 1,
+    "posts": 3,
     "mix": [
      100,
      0,
      0
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 3,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 4,
+    "eng": 13,
     "perPost": 4,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1498,
+    "posts": 1500,
     "mix": [
      85,
      2,
@@ -6997,14 +6997,14 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1498,
+    "pending": 1500,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 118767,
+    "eng": 118776,
     "perPost": 79,
     "top10Share": 65,
     "engDelta": 0
@@ -7014,8 +7014,8 @@
     11,
     47,
     41,
-    31,
-    20,
+    32,
+    19,
     6,
     2,
     0,
@@ -7025,7 +7025,7 @@
     29,
     21,
     10,
-    0
+    2
    ]
   },
   "CBC": {
@@ -7150,8 +7150,8 @@
     3,
     8,
     14,
-    7,
     8,
+    7,
     4,
     0,
     0,
@@ -7736,15 +7736,16 @@
     "2104202646210953348",
     "2104239400695513141",
     "2104281679443710409",
-    "2104404295320060401"
+    "2104404295320060401",
+    "2104462183245754790"
    ],
    "firstSeen": "2026-08-21",
    "leadership": false,
-   "spread": 48,
-   "accounts": 50,
+   "spread": 49,
+   "accounts": 51,
    "cm": [
     22,
-    32,
+    33,
     14,
     5,
     2
@@ -7756,11 +7757,11 @@
     91,
     91,
     92,
-    92
+    93
    ],
-   "exact": 0.57,
-   "total": 56,
-   "eng": 11144
+   "exact": 0.58,
+   "total": 57,
+   "eng": 11145
   },
   {
    "text": "american people",
@@ -8371,6 +8372,62 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2104462183245754790",
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "district": "CA-27",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "It is not at all an exaggeration to say that we get fresher information from this site than the department. \n\nFor example, these posts from last week: \nhttps://t.co/xiZy5WmpBc",
+   "topics": [],
+   "time": "2026-09-28T06:44:18.000Z",
+   "date": "2026-09-28",
+   "engN": 1,
+   "kind": "quote",
+   "quoted": {
+    "id": "2103623372659929470",
+    "handle": "@imetatronink",
+    "text": "⚓️‼️ US Fleet Update\n\n\"Sailors\" and \"Marines\" are typically found in warships. \n\nSomehow 37 of them became casualties in recent weeks, and have now been added to the butcher's bill.\n\nThis strongly…"
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T07:52:00.279Z",
+   "isNew": false
+  },
+  {
+   "id": "2104460916033253557",
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "district": "CA-27",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "I am on the committee of jurisdiction (Armed Services), and this is news to me. \n\nThe lack of communication between Secretary Hegseth's dep't and Congress is a total departure from past administrations (of both parties) and is totally unacceptable. https://t.co/egiSZ3GLSZ",
+   "topics": [],
+   "time": "2026-09-28T06:39:16.000Z",
+   "date": "2026-09-28",
+   "engN": 8,
+   "kind": "quote",
+   "quoted": {
+    "id": "2104397762024399265",
+    "handle": "@Osinttechnical",
+    "text": "Eight U.S. Marines were injured on September 14th when an Iranian cruise missile hit the vessel they were operating on in the Strait of Hormuz -NBC\n\nThe Marines were not on a U.S. Navy ship."
+   },
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T07:52:00.279Z",
+   "isNew": false
+  },
   {
    "id": "2104428267965231476",
    "handle": "@sliccardo",
@@ -13317,54 +13374,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-28T07:47:46.158Z",
    "isNew": false
-  },
-  {
-   "id": "2104232189915255285",
-   "handle": "@HillaryScholten",
-   "member": "Hillary J. Scholten",
-   "district": "MI-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Campaigns are only as strong as the people behind them, and our community keeps showing up.\n\nTeam Scholten was glad to join the Ottawa Dems for their Ballot Blitz and spend the evening talking with voters and getting out the vote. https://t.co/efnuC2jM83",
-   "topics": [],
-   "time": "2026-09-27T15:30:23.000Z",
-   "date": "2026-09-27",
-   "engN": 4,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-28T07:47:46.158Z",
-   "isNew": false
-  },
-  {
-   "id": "2104232186874364016",
-   "handle": "@RepMikeQuigley",
-   "member": "Mike Quigley",
-   "district": "IL-05",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "I recently attended Budlong Elementary’s Curriculum Night & Back-to-School Picnic! With the school year already up and running, it’s critical to hear from teachers, staff, and parents on the ground about their schools and their communities need.\n \nThank you to everyone for continuing the vital work of educating the next generation!✏️📚🍎",
-   "topics": [],
-   "time": "2026-09-27T15:30:22.000Z",
-   "date": "2026-09-27",
-   "engN": 0,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-28T07:47:46.158Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13694,6 +13703,50 @@
   "988135719951626240": "@Morrison4MN"
  },
  "feedAll": [
+  {
+   "id": "2104462183245754790",
+   "authorId": "5408852",
+   "createdAt": "2026-09-28T06:44:18.000Z",
+   "date": "2026-09-28",
+   "type": "quote",
+   "text": "It is not at all an exaggeration to say that we get fresher information from this site than the department. \n\nFor example, these posts from last week: \nhttps://t.co/xiZy5WmpBc",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T07:52:00.279Z",
+   "quoted": {
+    "id": "2103623372659929470",
+    "handle": "@imetatronink",
+    "text": "⚓️‼️ US Fleet Update\n\n\"Sailors\" and \"Marines\" are typically found in warships. \n\nSomehow 37 of them became casualties in recent weeks, and have now been added to the butcher's bill.\n\nThis strongly…"
+   }
+  },
+  {
+   "id": "2104460916033253557",
+   "authorId": "5408852",
+   "createdAt": "2026-09-28T06:39:16.000Z",
+   "date": "2026-09-28",
+   "type": "quote",
+   "text": "I am on the committee of jurisdiction (Armed Services), and this is news to me. \n\nThe lack of communication between Secretary Hegseth's dep't and Congress is a total departure from past administrations (of both parties) and is totally unacceptable. https://t.co/egiSZ3GLSZ",
+   "engN": 8,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T07:52:00.279Z",
+   "quoted": {
+    "id": "2104397762024399265",
+    "handle": "@Osinttechnical",
+    "text": "Eight U.S. Marines were injured on September 14th when an Iranian cruise missile hit the vessel they were operating on in the Strait of Hormuz -NBC\n\nThe Marines were not on a U.S. Navy ship."
+   }
+  },
   {
    "id": "2104428267965231476",
    "authorId": "61822673",
@@ -62712,6 +62765,6 @@
   }
  ],
  "feedAllTruncated": false,
- "feedAllTotal": 2728,
+ "feedAllTotal": 2730,
  "feedAllFiles": []
 }
