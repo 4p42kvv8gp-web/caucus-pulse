@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-28T11:31:57.123Z",
- "lastPollAt": "2026-09-28T10:06:55.362Z",
- "lastPollAttemptAt": "2026-09-28T10:06:54.821Z",
+ "generatedAt": "2026-09-28T12:44:00.430Z",
+ "lastPollAt": "2026-09-28T12:43:51.985Z",
+ "lastPollAttemptAt": "2026-09-28T12:43:51.454Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-28T11:31:56.265Z"
+  "referenceAsOf": "2026-09-28T12:43:59.914Z"
  },
  "news": {
   "version": 234,
-  "items": 1112,
+  "items": 1104,
   "latestPublishedAt": "2026-09-28T11:00:00.000Z",
   "latestFetchedAt": "2026-09-28T11:31:20.696Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-28T11:31:56.671Z",
+   "asOf": "2026-09-28T12:44:00.157Z",
    "windowDays": 14,
-   "windowStart": "2026-09-14T11:31:56.671Z",
-   "eligibleItems": 1746,
+   "windowStart": "2026-09-14T12:44:00.157Z",
+   "eligibleItems": 1740,
    "withExcerpts": 185,
-   "headlineOrSummary": 1561,
+   "headlineOrSummary": 1555,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1024,
+     "eligibleItems": 1019,
      "withExcerpts": 0,
-     "headlineOrSummary": 1024,
+     "headlineOrSummary": 1019,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-28T11:00:00.000Z",
      "latestItem": {
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 281,
+     "eligibleItems": 280,
      "withExcerpts": 0,
-     "headlineOrSummary": 281,
+     "headlineOrSummary": 280,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-28T10:04:09.000Z",
      "latestItem": {
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 191,
-  "t": 0
+  "posts": 193,
+  "t": 2
  },
  "caucusKeys": [
   "CPC",
@@ -3555,7 +3555,7 @@
    "status": "blocked",
    "reasonCode": "provider-credits",
    "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-28T10:07:03.409Z",
+   "lastAttemptAt": "2026-09-28T12:43:57.645Z",
    "lastSuccessAt": null,
    "capturedIn24h": 238,
    "classifiedIn24h": 0,
@@ -6826,18 +6826,18 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 4,
+    "posts": 6,
     "mix": [
-     75,
+     50,
      0,
-     25
+     50
     ],
-    "accounts": 3,
-    "members": 3,
+    "accounts": 5,
+    "members": 5,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 4,
+    "pending": 6,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6845,12 +6845,12 @@
      "Corruption": 0
     },
     "eng": 13,
-    "perPost": 3,
+    "perPost": 2,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2730,
+    "posts": 2732,
     "mix": [
      83,
      4,
@@ -6861,7 +6861,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 2730,
+    "pending": 2732,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    31,
-    74,
-    69,
-    65,
-    17,
-    18,
-    0,
-    0,
-    20,
+    56,
+    75,
     57,
-    73,
-    41,
-    37,
-    8,
+    56,
+    19,
+    6,
+    0,
     2,
-    0
+    42,
+    65,
+    62,
+    40,
+    22,
+    4,
+    1,
+    2
    ]
   },
   "CPC": {
@@ -6942,38 +6942,38 @@
     "engDelta": 0
    },
    "curve48": [
-    9,
-    24,
-    39,
+    17,
     30,
-    9,
-    11,
-    0,
-    0,
-    10,
-    27,
     31,
-    19,
-    13,
-    5,
+    27,
+    12,
+    3,
+    0,
+    1,
+    20,
+    29,
+    25,
+    20,
+    8,
+    2,
     0,
     0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 3,
+    "posts": 4,
     "mix": [
-     100,
+     75,
      0,
-     0
+     25
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 3,
+    "pending": 4,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -6981,12 +6981,12 @@
      "Corruption": 0
     },
     "eng": 13,
-    "perPost": 4,
+    "perPost": 3,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1500,
+    "posts": 1501,
     "mix": [
      85,
      2,
@@ -6997,7 +6997,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1500,
+    "pending": 1501,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    21,
-    48,
     37,
-    35,
-    9,
-    8,
+    46,
+    34,
+    28,
+    7,
+    3,
     0,
-    0,
-    12,
-    32,
-    42,
-    24,
-    24,
-    4,
     2,
-    0
+    23,
+    38,
+    37,
+    21,
+    15,
+    3,
+    1,
+    1
    ]
   },
   "CBC": {
@@ -7078,38 +7078,38 @@
     "engDelta": 0
    },
    "curve48": [
-    7,
-    10,
-    7,
-    17,
-    4,
-    4,
-    0,
-    0,
-    5,
-    6,
-    10,
     8,
-    8,
+    9,
+    12,
+    13,
     3,
+    3,
+    0,
+    1,
+    6,
+    11,
+    7,
+    7,
+    6,
+    2,
     0,
     0
    ]
   },
   "CHC": {
    "t": {
-    "posts": 1,
+    "posts": 2,
     "mix": [
-     100,
+     50,
      0,
-     0
+     50
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 1,
+    "pending": 2,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7117,12 +7117,12 @@
      "Corruption": 0
     },
     "eng": 4,
-    "perPost": 4,
+    "perPost": 2,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 499,
+    "posts": 500,
     "mix": [
      75,
      7,
@@ -7133,7 +7133,7 @@
     "unidentifiedAccounts": 0,
     "classified": 0,
     "tagged": 0,
-    "pending": 499,
+    "pending": 500,
     "corePosts": 0,
     "coreCounts": {
      "Affordability": 0,
@@ -7141,27 +7141,27 @@
      "Corruption": 0
     },
     "eng": 70219,
-    "perPost": 141,
+    "perPost": 140,
     "top10Share": 91,
     "engDelta": 0
    },
    "curve48": [
-    3,
+    6,
+    14,
+    7,
     11,
-    11,
-    12,
-    3,
-    4,
+    6,
     0,
     0,
-    4,
-    10,
-    11,
-    10,
+    0,
     5,
+    14,
+    10,
+    9,
+    2,
     1,
     0,
-    0
+    1
    ]
   },
   "CAPAC": {
@@ -7214,19 +7214,19 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
-    3,
-    9,
-    11,
-    3,
-    4,
-    0,
-    0,
-    3,
-    10,
+    2,
     6,
+    7,
+    12,
     3,
     1,
+    0,
+    1,
+    7,
+    7,
+    4,
+    4,
+    0,
     0,
     0,
     0
@@ -8372,6 +8372,54 @@
  "incidents": [],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2104551185164186025",
+   "handle": "@LaCongresista",
+   "member": "Sylvia R. Garcia",
+   "district": "TX-29",
+   "caucus": [
+    "CHC"
+   ],
+   "text": "RT @ChristopherHale: NEW: Washington’s Cardinal McElroy told Catholics on Sunday to “fight every dimension” of the Trump administration’s w…",
+   "topics": [],
+   "time": "2026-09-28T12:37:57.000Z",
+   "date": "2026-09-28",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104363067651793286",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T12:43:51.978Z",
+   "isNew": false
+  },
+  {
+   "id": "2104536625212768425",
+   "handle": "@YVindman",
+   "member": "Eugene Simon Vindman",
+   "district": "VA-07",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "RT @WellmanForMO: 📺 We’re on the air!\n\nCheck out our new TV ad running across #MO02 now. Watch, share, and help us spread the word today.…",
+   "topics": [],
+   "time": "2026-09-28T11:40:06.000Z",
+   "date": "2026-09-28",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103887144163188934",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T12:43:51.978Z",
+   "isNew": false
+  },
   {
    "id": "2104462183245754790",
    "handle": "@gtwhitesides",
@@ -13321,59 +13369,6 @@
    "provenance": null,
    "metricsObservedAt": "2026-09-28T07:47:46.158Z",
    "isNew": false
-  },
-  {
-   "id": "2104233165745201429",
-   "handle": "@RepSusieLee",
-   "member": "Susie Lee",
-   "district": "NV-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "I worked with @RepHorsford to secure $360,000 for our Nevada State Police to invest in training for de-escalation and critical incidents. \n\nI’ll keep working to make sure our law enforcement have the resources they need to keep us safe. https://t.co/Ht8D8JVA4p",
-   "topics": [],
-   "time": "2026-09-27T15:34:16.000Z",
-   "date": "2026-09-27",
-   "engN": 46,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-28T07:47:46.158Z",
-   "isNew": false
-  },
-  {
-   "id": "2104233149156975055",
-   "handle": "@tedlieu",
-   "member": "Ted Lieu",
-   "district": "CA-36",
-   "caucus": [
-    "CPC",
-    "CAPAC"
-   ],
-   "text": "AI agents are extensions of the Mothership. The problem is not just that AI agents go rogue. The main problem is the core AI model is depraved and immoral.\n\nDestroy the Mothership model. Start over.\n\nAI companies must build models that at their core are good, not criminal. https://t.co/fniEm7KvZ5",
-   "topics": [],
-   "time": "2026-09-27T15:34:12.000Z",
-   "date": "2026-09-27",
-   "engN": 528,
-   "kind": "quote",
-   "quoted": {
-    "id": "2104046298840420674",
-    "handle": "@adamscochran",
-    "text": "The OpenAI agents that attacked HuggingFace ignored their own instructions, terms of service, prompts as well as external prompt warnings.\n\nThey, on their own, decided they needed to achieve their…"
-   },
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-28T07:47:46.158Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -13546,6 +13541,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1225929222839046144": "@YVindman",
   "1345461797361504259": "@RepNikema",
   "1404519992582942724": "@Rep_Stansbury",
   "730899167740989441": "@JaredEMoskowitz",
@@ -13636,7 +13632,6 @@
   "1875208198166122496": "@RepWesleyBellMO",
   "1858226214269272064": "@RepJohnnyO",
   "993539467817373696": "@sydneykamlager",
-  "1225929222839046144": "@YVindman",
   "857009033882083329": "@LizziePFletcher",
   "1080891667308298240": "@RepGolden",
   "1873797020143804416": "@RepDexterOR",
@@ -13703,6 +13698,40 @@
   "988135719951626240": "@Morrison4MN"
  },
  "feedAll": [
+  {
+   "id": "2104551185164186025",
+   "authorId": "40557819",
+   "createdAt": "2026-09-28T12:37:57.000Z",
+   "date": "2026-09-28",
+   "type": "retweet",
+   "text": "RT @ChristopherHale: NEW: Washington’s Cardinal McElroy told Catholics on Sunday to “fight every dimension” of the Trump administration’s w…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2104363067651793286",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T12:43:51.978Z"
+  },
+  {
+   "id": "2104536625212768425",
+   "authorId": "1225929222839046144",
+   "createdAt": "2026-09-28T11:40:06.000Z",
+   "date": "2026-09-28",
+   "type": "retweet",
+   "text": "RT @WellmanForMO: 📺 We’re on the air!\n\nCheck out our new TV ad running across #MO02 now. Watch, share, and help us spread the word today.…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "pending",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103887144163188934",
+   "provenance": null,
+   "metricsObservedAt": "2026-09-28T12:43:51.978Z"
+  },
   {
    "id": "2104462183245754790",
    "authorId": "5408852",
@@ -62765,6 +62794,6 @@
   }
  ],
  "feedAllTruncated": false,
- "feedAllTotal": 2730,
+ "feedAllTotal": 2732,
  "feedAllFiles": []
 }
