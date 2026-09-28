@@ -1,7 +1,7 @@
 {
  "date": "2026-09-27",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-28T22:35:05.298Z",
+ "classifiedAt": "2026-09-28T23:54:03.663Z",
  "assignments": {
   "2104062820358734230": [
    [
@@ -3935,28 +3935,6 @@
    "evidenceUsed": [],
    "inputHash": "828fb8ad784fbc893b5692ca629127d2863d5b5124cd6890e647c14bc4d4e2bf"
   },
-  "2104301803785339280": {
-   "contextVersion": 241,
-   "evidenceSupplied": [
-    {
-     "id": "n_dd130cb7b0079d7c",
-     "publisher": "NPR",
-     "date": "2026-09-28",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/28/nx-s1-5982739/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-     "text": "The move, called a pocket rescission, is illegal, according to the Government Accountability Office , an independent, non-partisan watchdog agency charged with providing federal agencies fact-based information.",
-     "title": "What to know about the $810 million in spending canceled by President Trump",
-     "publishedAt": "2026-09-28T09:00:00.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "828fb8ad784fbc893b5692ca629127d2863d5b5124cd6890e647c14bc4d4e2bf"
-  },
   "2104302074825461902": {
    "contextVersion": 241,
    "evidenceSupplied": [],
@@ -5371,6 +5349,28 @@
     "textChars": 116,
     "textHash": "2226153f18c0fdeb1d4acd7cfa64aa1139a8b47a1c9eb1f21c830ce9cbfadbe6"
    }
+  },
+  "2104301803785339280": {
+   "contextVersion": 242,
+   "evidenceSupplied": [
+    {
+     "id": "n_dd130cb7b0079d7c",
+     "publisher": "NPR",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5982739/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+     "text": "The move, called a pocket rescission, is illegal, according to the Government Accountability Office , an independent, nonpartisan watchdog agency charged with providing federal agencies fact-based information.",
+     "title": "What to know about the $810 million in spending canceled by President Trump",
+     "publishedAt": "2026-09-28T09:00:00.000Z",
+     "fetchedAt": "2026-09-28T23:05:57.404Z",
+     "version": 242,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7efc0cc898413e7c4e27ccf2ce601db9affe765f0e43616d7375643c179edb9a"
   }
  },
  "needsContext": {
@@ -5532,7 +5532,6 @@
   "2104301001520165077": false,
   "2104301361240146395": false,
   "2104301667436904950": false,
-  "2104301803785339280": false,
   "2104302074825461902": false,
   "2104302695423127804": false,
   "2104302808166195647": false,
@@ -5632,10 +5631,11 @@
   "2104404872548487546": false,
   "2104413419105341646": false,
   "2104414827322147269": false,
-  "2104419233627291888": false
+  "2104419233627291888": false,
+  "2104301803785339280": false
  },
  "inputBlocks": {},
- "contextVersion": 241,
+ "contextVersion": 242,
  "emerging": [
   {
    "label": "Venezuela TPS restoration and Trump Venezuela policy",
@@ -5771,41 +5771,40 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104378267272634408",
-    "2104378684862013873",
-    "2104379942599627031",
-    "2104379992133992681",
-    "2104380503390322973",
-    "2104381301998469202",
-    "2104381577732206597",
-    "2104381962383155315",
-    "2104385437326356785",
-    "2104387633682018318",
-    "2104389373450162661",
-    "2104389908429181102",
-    "2104391016925237481",
-    "2104391057140056192",
-    "2104396741453697056",
-    "2104396766280036590",
-    "2104396849566065134",
-    "2104403000563249652",
-    "2104404295320060401",
-    "2104404872548487546",
-    "2104413419105341646",
-    "2104414827322147269",
-    "2104419233627291888",
-    "2104424725355360387",
-    "2104428267965231476"
+    "2104301803785339280",
+    "2104598658201031139",
+    "2104598803164827837",
+    "2104598894868836522",
+    "2104599264244768974",
+    "2104599932087001236",
+    "2104600051553128938",
+    "2104600952560861340",
+    "2104601200230601130",
+    "2104602031801741772",
+    "2104602238576623853",
+    "2104602326686396429",
+    "2104602549886013690",
+    "2104602796045590922",
+    "2104603324964274416",
+    "2104603659007111671",
+    "2104603908584706268",
+    "2104604929293984142",
+    "2104605022189187420",
+    "2104605038337237223",
+    "2104605344223650153",
+    "2104605512067420219",
+    "2104605537669161106",
+    "2104605642497605980"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-28T22:31:47.559Z",
-    "observedAt": "2026-09-28T22:32:20.956Z",
+    "attemptedAt": "2026-09-28T23:50:14.445Z",
+    "observedAt": "2026-09-28T23:51:06.900Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 25,
+    "acceptedCount": 24,
     "retryCount": 0
    }
   }
@@ -5813,21 +5812,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-28T22:31:47.559Z",
-   "observedAt": "2026-09-28T22:32:20.956Z",
+   "attemptedAt": "2026-09-28T23:50:14.445Z",
+   "observedAt": "2026-09-28T23:51:06.900Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-28T22:31:47.559Z",
-   "observedAt": "2026-09-28T22:32:20.956Z",
+   "attemptedAt": "2026-09-28T23:50:14.445Z",
+   "observedAt": "2026-09-28T23:51:06.900Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastFailure": {
@@ -5840,5 +5839,5 @@
    "retryCount": 31
   }
  },
- "updatedAt": "2026-09-28T22:35:05.302Z"
+ "updatedAt": "2026-09-28T23:54:03.667Z"
 }

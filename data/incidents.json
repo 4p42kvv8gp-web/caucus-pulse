@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-09-28T22:35:05.414Z",
+ "generatedAt": "2026-09-28T23:54:03.789Z",
  "incidents": [
+  {
+   "id": "sea-bright-nj--severe-storm--source-2104608271084515666",
+   "kind": "severe storm",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "severe storm"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Sea Bright, NJ · NJ-06",
+   "placeRaw": "Sea Bright, NJ",
+   "district": "NJ-06",
+   "districtMatch": true,
+   "handle": "@FrankPallone",
+   "member": "Frank Pallone, Jr.",
+   "since": "2026-09-28T16:24:48.000Z",
+   "last": "2026-09-28T16:24:48.000Z",
+   "updates": 1,
+   "engN": 7,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Severe storm · Sea Bright, NJ",
+   "evidence": {
+    "span": "Today I’m on the ground with the Mayor of Sea Bright to assess the damage to our community. While I'm grateful that the damage isn't as seve",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2104608271084515666",
+    "url": "https://x.com/i/web/status/2104608271084515666"
+   },
+   "timeline": [
+    {
+     "id": "2104608271084515666",
+     "sourceId": "2104608271084515666",
+     "url": "https://x.com/i/web/status/2104608271084515666",
+     "authorId": "31801993",
+     "personId": "member:frank pallone, jr.",
+     "referenceIds": [],
+     "time": "2026-09-28T16:24:48.000Z",
+     "who": "@FrankPallone",
+     "tag": "member",
+     "text": "Today I’m on the ground with the Mayor of Sea Bright to assess the damage to our community. While I'm grateful that the damage isn't as severe as it could have been, we need State and Federal officials to conduct an official survey before we can have a federal disaster declaration.\n\nStay safe and dry, New Jersey.",
+     "engN": 7,
+     "isNew": false,
+     "flag": {
+      "kind": "severe storm",
+      "place": "Sea Bright, NJ",
+      "name": null
+     },
+     "evidence": {
+      "span": "Today I’m on the ground with the Mayor of Sea Bright to assess the damage to our community. While I'm grateful that the damage isn't as seve",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2104608271084515666",
+      "url": "https://x.com/i/web/status/2104608271084515666"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2104608271084515666"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2104608271084515666"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "new-haven-county-ct--severe-storm--source-2104246240309325846",
    "kind": "severe storm",
@@ -192,5 +287,15 @@
    }
   }
  ],
- "filtered": []
+ "filtered": [
+  {
+   "id": "2104605022189187420",
+   "kind": "flooding",
+   "place": "Atlantic County, NJ",
+   "who": "@GovSherrillNJ",
+   "time": "2026-09-28T16:11:53.000Z",
+   "reason": "non-House account",
+   "cue": null
+  }
+ ]
 }
