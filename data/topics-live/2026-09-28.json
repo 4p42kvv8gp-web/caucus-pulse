@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T13:26:06.025Z",
+ "classifiedAt": "2026-09-29T16:34:00.374Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -3303,6 +3303,10 @@
   "2104712312095457363": [
    [
     "education",
+    null
+   ],
+   [
+    "budget-appropriations",
     null
    ]
   ],
@@ -11222,12 +11226,6 @@
     "textHash": "69fa0fa521f848731569a2db2b9991544e7444b9045b507cb019f27681ec5dcc"
    }
   },
-  "2104752973951758648": {
-   "contextVersion": 244,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "29fcce2601b496cdb7cc7027d53b565783d987f0381db6d3c5d1b0051758609e"
-  },
   "2104753209944244644": {
    "contextVersion": 244,
    "evidenceSupplied": [],
@@ -11326,43 +11324,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "29fcce2601b496cdb7cc7027d53b565783d987f0381db6d3c5d1b0051758609e"
-  },
-  "2104676002160861687": {
-   "contextVersion": 245,
-   "evidenceSupplied": [
-    {
-     "id": "n_08e38c583f7a95c0",
-     "publisher": "The Hill",
-     "date": "2026-09-29",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
-     "text": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
-     "title": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
-     "publishedAt": "2026-09-29T02:08:17.000Z",
-     "fetchedAt": "2026-09-29T02:52:27.704Z",
-     "version": 245,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_06826863b07a828f",
-     "publisher": "NPR",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
-     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
-     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
-     "publishedAt": "2026-09-29T02:16:19.000Z",
-     "fetchedAt": "2026-09-29T02:52:27.704Z",
-     "version": 245,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
   },
   "2104760486831231342": {
    "contextVersion": 245,
@@ -11656,28 +11617,6 @@
    ],
    "inputHash": "7ab145a382b9925c3b62f089e077129ba1ec8d1cf09f371cc39b473a6e2ed094"
   },
-  "2104602549886013690": {
-   "contextVersion": 252,
-   "evidenceSupplied": [
-    {
-     "id": "n_f35f7936a39fabef",
-     "publisher": "Roll Call",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/senators-press-adminstration-for-answers-on-broadband-funds/",
-     "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Vt.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
-     "title": "Senators press administration for answers on broadband funds",
-     "publishedAt": "2026-09-29T06:29:54.000Z",
-     "fetchedAt": "2026-09-29T12:29:53.998Z",
-     "version": 252,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "364c5521e09914844ed4e2a6ce50637e37ce8f80b93ca7ba4d977a84c8ad5ccc"
-  },
   "2104647908331225538": {
    "contextVersion": 252,
    "evidenceSupplied": [
@@ -11725,8 +11664,30 @@
     "textHash": "4220c2c0be359bdf9fb71cdf7519898d3901a2b6e405887b936cad8bee5a0448"
    }
   },
+  "2104602549886013690": {
+   "contextVersion": 254,
+   "evidenceSupplied": [
+    {
+     "id": "n_f35f7936a39fabef",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/senators-press-adminstration-for-answers-on-broadband-funds/",
+     "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Vt.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
+     "title": "Senators press administration for answers on broadband funds",
+     "publishedAt": "2026-09-29T06:29:54.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
+  },
   "2104665433555304699": {
-   "contextVersion": 252,
+   "contextVersion": 254,
    "evidenceSupplied": [
     {
      "id": "n_5c7c30026dd7af16",
@@ -11744,26 +11705,63 @@
      "truncated": false
     },
     {
-     "id": "n_f35f7936a39fabef",
-     "publisher": "Roll Call",
+     "id": "n_bc63c23ed2010983",
+     "publisher": "The Hill",
      "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/senators-press-adminstration-for-answers-on-broadband-funds/",
-     "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Vt.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
-     "title": "Senators press administration for answers on broadband funds",
-     "publishedAt": "2026-09-29T06:29:54.000Z",
-     "fetchedAt": "2026-09-29T12:29:53.998Z",
-     "version": 252,
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6117022-lawmakers-launch-ovarian-cancer-impact-act/",
+     "text": "Bipartisan team in Congress looks to expand insurance coverage for ovarian cancer screening",
+     "title": "Bipartisan team in Congress looks to expand insurance coverage for ovarian cancer screening",
+     "publishedAt": "2026-09-29T13:19:18.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "364c5521e09914844ed4e2a6ce50637e37ce8f80b93ca7ba4d977a84c8ad5ccc"
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
+  },
+  "2104676002160861687": {
+   "contextVersion": 254,
+   "evidenceSupplied": [
+    {
+     "id": "n_08e38c583f7a95c0",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
+     "text": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "title": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "publishedAt": "2026-09-29T02:08:17.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
   },
   "2104711975779344866": {
-   "contextVersion": 252,
+   "contextVersion": 254,
    "evidenceSupplied": [
     {
      "id": "n_f35f7936a39fabef",
@@ -11774,18 +11772,18 @@
      "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Vt.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
      "title": "Senators press administration for answers on broadband funds",
      "publishedAt": "2026-09-29T06:29:54.000Z",
-     "fetchedAt": "2026-09-29T12:29:53.998Z",
-     "version": 252,
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "364c5521e09914844ed4e2a6ce50637e37ce8f80b93ca7ba4d977a84c8ad5ccc"
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
   },
   "2104712312095457363": {
-   "contextVersion": 252,
+   "contextVersion": 254,
    "evidenceSupplied": [
     {
      "id": "n_4b16de771a0652c6",
@@ -11811,15 +11809,37 @@
      "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Vt.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
      "title": "Senators press administration for answers on broadband funds",
      "publishedAt": "2026-09-29T06:29:54.000Z",
-     "fetchedAt": "2026-09-29T12:29:53.998Z",
-     "version": 252,
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "364c5521e09914844ed4e2a6ce50637e37ce8f80b93ca7ba4d977a84c8ad5ccc"
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
+  },
+  "2104752973951758648": {
+   "contextVersion": 254,
+   "evidenceSupplied": [
+    {
+     "id": "n_856c45aa79d76eed",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6116961-openai-artificial-intelligence-anxieties-new-model-delayed/",
+     "text": "OpenAI halts releasing newest model over safety concerns",
+     "title": "OpenAI halts releasing newest model over safety concerns",
+     "publishedAt": "2026-09-29T13:52:05.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
   }
  },
  "needsContext": {
@@ -12315,14 +12335,12 @@
   "2104746665358094689": false,
   "2104751534294909144": false,
   "2104751569044693209": false,
-  "2104752973951758648": false,
   "2104753209944244644": true,
   "2104754451840213266": false,
   "2104754976014925943": false,
   "2104755671531217240": false,
   "2104756440179396957": false,
   "2104756932271882607": false,
-  "2104676002160861687": false,
   "2104760486831231342": false,
   "2104763884041060753": false,
   "2104764295619960872": false,
@@ -12341,14 +12359,16 @@
   "2104781497550946750": false,
   "2104572245905391987": false,
   "2104683828602142901": false,
-  "2104602549886013690": false,
   "2104647908331225538": false,
+  "2104602549886013690": false,
   "2104665433555304699": false,
+  "2104676002160861687": false,
   "2104711975779344866": false,
-  "2104712312095457363": false
+  "2104712312095457363": false,
+  "2104752973951758648": false
  },
  "inputBlocks": {},
- "contextVersion": 252,
+ "contextVersion": 254,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12763,69 +12783,24 @@
   "live_chunk-0": {
    "acceptedIds": [
     "2104602549886013690",
-    "2104647908331225538",
     "2104665433555304699",
+    "2104676002160861687",
     "2104711975779344866",
     "2104712312095457363",
-    "2104901412886835288",
-    "2104901575785517102",
-    "2104902996492743041",
-    "2104906134717084129",
-    "2104910312503738719",
-    "2104911622552576259",
-    "2104915944371872050",
-    "2104916540936372427",
-    "2104917432343171196",
-    "2104917915963428981",
-    "2104918036239028350",
-    "2104919073507143841",
-    "2104919122647912738",
-    "2104919372858864112",
-    "2104919513615434164",
+    "2104752973951758648",
     "2104919877677175035",
-    "2104920559461224651"
+    "2104940424888521138",
+    "2104944545062690819"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T13:25:08.889Z",
-    "observedAt": "2026-09-29T13:25:46.901Z",
+    "attemptedAt": "2026-09-29T16:32:19.170Z",
+    "observedAt": "2026-09-29T16:32:36.348Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 22,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2104687569636409409",
-    "2104687756547117535",
-    "2104687840479109434",
-    "2104687887836913850",
-    "2104688183904444860",
-    "2104688186567823666",
-    "2104688579029139710",
-    "2104688604312207500",
-    "2104689009410601332",
-    "2104689021339545944",
-    "2104689489339994264",
-    "2104689567689257378",
-    "2104691389879484788",
-    "2104692134825652382",
-    "2104692616533070061",
-    "2104692656836170223",
-    "2104693521244668379"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-29T02:07:31.655Z",
-    "observedAt": "2026-09-29T02:07:59.160Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 9,
     "retryCount": 0
    }
   },
@@ -12907,24 +12882,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T13:25:08.889Z",
-   "observedAt": "2026-09-29T13:25:46.901Z",
+   "attemptedAt": "2026-09-29T16:32:19.170Z",
+   "observedAt": "2026-09-29T16:32:36.348Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T13:25:08.889Z",
-   "observedAt": "2026-09-29T13:25:46.901Z",
+   "attemptedAt": "2026-09-29T16:32:19.170Z",
+   "observedAt": "2026-09-29T16:32:36.348Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T13:26:06.028Z"
+ "updatedAt": "2026-09-29T16:34:00.378Z"
 }
