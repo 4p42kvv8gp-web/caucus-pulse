@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T02:21:55.273Z",
+ "classifiedAt": "2026-09-29T03:38:46.743Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -3653,6 +3653,78 @@
     "economy",
     "taxes"
    ]
+  ],
+  "2104760486831231342": [],
+  "2104763884041060753": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104764295619960872": [],
+  "2104765360331501645": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2104765917284466994": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104766510916898896": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2104768437918847140": [],
+  "2104768788952764537": [],
+  "2104769580736585990": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2104769826753564950": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104770654012846272": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2104770802902286411": [
+   [
+    "climate",
+    "disasters"
+   ],
+   [
+    "education",
+    "higher-ed"
+   ]
   ]
  },
  "incidents": {
@@ -3674,6 +3746,11 @@
   "2104680670672888202": {
    "kind": "power outage",
    "place": "Nassau County, NY",
+   "name": null
+  },
+  "2104760486831231342": {
+   "kind": "flooding",
+   "place": "Socorro County, NM",
    "name": null
   }
  },
@@ -9200,28 +9277,6 @@
     "fingerprint": "5243d7bb23c7efc9d32c6e942495923ea392c12f171a424424a5ff7087d36391"
    }
   },
-  "2104676002160861687": {
-   "contextVersion": 244,
-   "evidenceSupplied": [
-    {
-     "id": "n_811e02c2bfae0328",
-     "publisher": "NPR",
-     "date": "2026-09-27",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/27/nx-s1-5978973/protect-college-sports-act-senators-athletes",
-     "text": "WASHINGTON — With a major college sports reform bill on the brink of a milestone in Congress, some former athletes have a special place in the debate: the handful of U.S. Senators who played college sports themselves.",
-     "title": "As Congress debates college sports, athletes-turned-senators have a seat at the table",
-     "publishedAt": "2026-09-27T12:06:24.000Z",
-     "fetchedAt": "2026-09-27T17:16:14.227Z",
-     "version": 220,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f96e013053e7c23325d101e22738c00db1e1b306d15f5d072f45ee8aa0e8f187"
-  },
   "2104676069504696561": {
    "contextVersion": 244,
    "evidenceSupplied": [
@@ -11413,6 +11468,226 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "29fcce2601b496cdb7cc7027d53b565783d987f0381db6d3c5d1b0051758609e"
+  },
+  "2104676002160861687": {
+   "contextVersion": 245,
+   "evidenceSupplied": [
+    {
+     "id": "n_08e38c583f7a95c0",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
+     "text": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
+     "title": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
+     "publishedAt": "2026-09-29T02:08:17.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104760486831231342": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104763884041060753": {
+   "contextVersion": 245,
+   "evidenceSupplied": [
+    {
+     "id": "n_af9bd59fce50c69b",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/permitting-bill-off-until-after-midterms-even-as-talks-close-in/",
+     "text": "Speaking at a news conference, Whitehouse said that negotiators are “over the hump on the deal-break issues” and that text of a deal “should be finalized within a matter of days, maybe even hours.” Once text is released, Whitehouse added, senators will need a chance to take a look at the legislation and seek feedback from “major stakeholders.”",
+     "title": "Permitting bill off until after midterms even as talks close in",
+     "publishedAt": "2026-09-24T12:18:28.000Z",
+     "fetchedAt": "2026-09-24T17:27:19.214Z",
+     "version": 160,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104764295619960872": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104636890196705450",
+    "fingerprint": "44e4f3ba39cecbcc47a1a199f020bc9cdf847d161cf6b12a93cb4866c520ebef"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104636890196705450",
+    "fingerprint": "44e4f3ba39cecbcc47a1a199f020bc9cdf847d161cf6b12a93cb4866c520ebef"
+   }
+  },
+  "2104765360331501645": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104718145328226493",
+    "fingerprint": "ed6bf206fbf7ddc3445f7358d2b86a3105db1fd91aab447f4d93d86f8ba1bf08"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104718145328226493",
+    "fingerprint": "ed6bf206fbf7ddc3445f7358d2b86a3105db1fd91aab447f4d93d86f8ba1bf08"
+   }
+  },
+  "2104765917284466994": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "quotedContext": {
+    "id": "2104568678763139458",
+    "authorId": "737131740",
+    "handle": "GinaHinojosaTX",
+    "createdAt": "2026-09-28T13:47:28.000Z",
+    "textChars": 86,
+    "textHash": "f2c7c60fee4e17f657f2902bbc0b8f6429bd1de67e8550518859fcb08865bd17"
+   }
+  },
+  "2104766510916898896": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104768437918847140": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "quotedContext": {
+    "id": "2104759138400227394",
+    "authorId": "937422446323314688",
+    "handle": "Elex_Michaelson",
+    "createdAt": "2026-09-29T02:24:17.000Z",
+    "textChars": 249,
+    "textHash": "7f43ff6ef61d848d9eb840fb18a8713048365227dfde3c594e5677edafb4725a"
+   }
+  },
+  "2104768788952764537": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104638309029064760",
+    "fingerprint": "c4353423a554737e149fb6be9205d8ba4ee7a8551fbefe3fd5f2d4ab0171cc45"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104638309029064760",
+    "fingerprint": "c4353423a554737e149fb6be9205d8ba4ee7a8551fbefe3fd5f2d4ab0171cc45"
+   }
+  },
+  "2104769580736585990": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104762958215795191",
+    "fingerprint": "9f701cdb94e55ee46d4b79ab92ad37138a585a5b2ad828c79c3d4df809a92066"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104762958215795191",
+    "fingerprint": "9f701cdb94e55ee46d4b79ab92ad37138a585a5b2ad828c79c3d4df809a92066"
+   }
+  },
+  "2104769826753564950": {
+   "contextVersion": 245,
+   "evidenceSupplied": [
+    {
+     "id": "n_dfc674efcfdfbed5",
+     "publisher": "The Hill",
+     "date": "2026-09-22",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6103943-donald-trump-jack-keane-us-military-strikes-iran-war/",
+     "text": "Trump return to combat operations in Iran ‘inevitable’: Keane",
+     "title": "Trump return to combat operations in Iran ‘inevitable’: Keane",
+     "publishedAt": "2026-09-22T15:47:50.000Z",
+     "fetchedAt": "2026-09-22T17:02:30.864Z",
+     "version": 117,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_13a3796fcad77d3e",
+     "publisher": "NPR",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/25/nx-s1-5978096/republicans-trump-midterm-elections",
+     "text": "The president has long insisted on loyalty, but in recent weeks, a growing number of Republican candidates and elected officials have distanced themselves from core pieces of his agenda: from calling for an end to the U.S. war with Iran and relief from high prices, to criticizing his handling of key agenda issues like immigration.",
+     "title": "As election enters its final stretch, some Republicans are distancing from Trump",
+     "publishedAt": "2026-09-25T09:00:00.000Z",
+     "fetchedAt": "2026-09-25T09:26:50.072Z",
+     "version": 175,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104770654012846272": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104770802902286411": {
+   "contextVersion": 245,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
   }
  },
  "needsContext": {
@@ -11773,7 +12048,6 @@
   "2104675652616241265": false,
   "2104675751257833969": false,
   "2104675984423387641": false,
-  "2104676002160861687": false,
   "2104676069504696561": false,
   "2104676071262073298": false,
   "2104676325659173170": false,
@@ -11922,10 +12196,23 @@
   "2104754976014925943": false,
   "2104755671531217240": false,
   "2104756440179396957": false,
-  "2104756932271882607": false
+  "2104756932271882607": false,
+  "2104676002160861687": false,
+  "2104760486831231342": false,
+  "2104763884041060753": false,
+  "2104764295619960872": false,
+  "2104765360331501645": false,
+  "2104765917284466994": false,
+  "2104766510916898896": false,
+  "2104768437918847140": false,
+  "2104768788952764537": false,
+  "2104769580736585990": true,
+  "2104769826753564950": false,
+  "2104770654012846272": false,
+  "2104770802902286411": false
  },
  "inputBlocks": {},
- "contextVersion": 244,
+ "contextVersion": 245,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12333,56 +12620,29 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104713563155927418",
-    "2104713871797932196",
-    "2104713874960421185",
-    "2104714106943021095",
-    "2104714801733882175",
-    "2104715085847417158",
-    "2104715300499296330",
-    "2104715491965276668",
-    "2104716242892312636",
-    "2104716739141628117",
-    "2104717085406589057",
-    "2104717289543102910",
-    "2104718339365081493",
-    "2104719112756666654",
-    "2104721255035515170",
-    "2104722853379588495",
-    "2104722986137776519",
-    "2104725462341542352",
-    "2104725537960702340",
-    "2104726185003598008",
-    "2104726218784309445",
-    "2104726763787985075",
-    "2104728099090845950",
-    "2104730010380603676",
-    "2104730398089461968",
-    "2104730487373611248",
-    "2104731088685875350",
-    "2104731385105699087",
-    "2104731639951601959",
-    "2104731980592189827",
-    "2104732475700428914",
-    "2104733724453564622",
-    "2104733911700124064",
-    "2104735357371592704",
-    "2104736293116670295",
-    "2104739677194342504",
-    "2104740297678733441",
-    "2104740679314256338",
-    "2104741328835801495",
-    "2104741390433636655"
+    "2104676002160861687",
+    "2104760486831231342",
+    "2104763884041060753",
+    "2104764295619960872",
+    "2104765360331501645",
+    "2104765917284466994",
+    "2104766510916898896",
+    "2104768437918847140",
+    "2104768788952764537",
+    "2104769580736585990",
+    "2104769826753564950",
+    "2104770654012846272",
+    "2104770802902286411"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T02:20:25.485Z",
-    "observedAt": "2026-09-29T02:21:36.368Z",
+    "attemptedAt": "2026-09-29T03:38:23.045Z",
+    "observedAt": "2026-09-29T03:38:46.728Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 13,
     "retryCount": 0
    }
   },
@@ -12522,24 +12782,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T02:21:36.382Z",
-   "observedAt": "2026-09-29T02:21:55.257Z",
+   "attemptedAt": "2026-09-29T03:38:23.045Z",
+   "observedAt": "2026-09-29T03:38:46.728Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T02:21:36.382Z",
-   "observedAt": "2026-09-29T02:21:55.257Z",
+   "attemptedAt": "2026-09-29T03:38:23.045Z",
+   "observedAt": "2026-09-29T03:38:46.728Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T02:21:55.277Z"
+ "updatedAt": "2026-09-29T03:38:46.746Z"
 }
