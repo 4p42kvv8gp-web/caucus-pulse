@@ -1,6 +1,200 @@
 {
- "generatedAt": "2026-09-29T18:06:37.554Z",
+ "generatedAt": "2026-09-29T19:36:17.150Z",
  "incidents": [
+  {
+   "id": "montgomery-county-md--water-outage--source-2104979275375903077",
+   "kind": "water outage",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "water outage"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Montgomery County, MD · MD-06",
+   "placeRaw": "Montgomery County, MD",
+   "district": "MD-06",
+   "districtMatch": true,
+   "handle": "@RepAprilDelaney",
+   "member": "April McClain Delaney",
+   "since": "2026-09-29T19:12:51.000Z",
+   "last": "2026-09-29T19:12:51.000Z",
+   "updates": 1,
+   "engN": 0,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Water outage · Montgomery County, MD",
+   "evidence": {
+    "span": "WSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.",
+    "exact": true,
+    "start": 36,
+    "end": 166,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2105012950830404086",
+    "url": "https://x.com/i/web/status/2105012950830404086"
+   },
+   "timeline": [
+    {
+     "id": "2105012950830404086",
+     "sourceId": "2105012950830404086",
+     "url": "https://x.com/i/web/status/2105012950830404086",
+     "authorId": "1874580463752196096",
+     "personId": "member:april mcclain delaney",
+     "referenceIds": [
+      "2104979275375903077"
+     ],
+     "time": "2026-09-29T19:12:51.000Z",
+     "who": "@RepAprilDelaney",
+     "tag": "member",
+     "text": "🚨 URGENT WATER CONSERVATION ALERT\n\nWSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.\n\nWater remains safe to drink. There is currently no need to boil it.\n\nPlease take shorter showers, limit flushing, avoid outdoor water use, and hold off on laundry and dishwashing. Conserving now could help avoid a boil water advisory and preserve water for firefighters.\n\nUpdates: @WSSCWaterNews",
+     "engN": 0,
+     "isNew": false,
+     "flag": {
+      "kind": "water outage",
+      "place": "Montgomery County, MD",
+      "name": null
+     },
+     "evidence": {
+      "span": "WSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.",
+      "exact": true,
+      "start": 36,
+      "end": 166,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2105012950830404086",
+      "url": "https://x.com/i/web/status/2105012950830404086"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105012950830404086"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105012950830404086"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "new-york-city-ny--severe-storm--noreaster--2026-09-29",
+   "kind": "severe storm",
+   "name": "Nor'easter",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "severe storm"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "New York City, NY · NY-06",
+   "placeRaw": "New York City, NY",
+   "district": "NY-06",
+   "districtMatch": true,
+   "handle": "@RepGraceMeng",
+   "member": "Grace Meng",
+   "since": "2026-09-29T18:47:58.000Z",
+   "last": "2026-09-29T18:47:58.000Z",
+   "updates": 1,
+   "engN": 33,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Nor'easter · New York City, NY",
+   "evidence": {
+    "span": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": false
+    },
+    "sourceId": "2105006689728463013",
+    "url": "https://x.com/i/web/status/2105006689728463013"
+   },
+   "timeline": [
+    {
+     "id": "2105006689728463013",
+     "sourceId": "2105006689728463013",
+     "url": "https://x.com/i/web/status/2105006689728463013",
+     "authorId": "1051127714",
+     "personId": "member:grace meng",
+     "referenceIds": [
+      "2103884640482103425"
+     ],
+     "time": "2026-09-29T18:47:58.000Z",
+     "who": "@RepGraceMeng",
+     "tag": "repost",
+     "text": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s…",
+     "engN": 33,
+     "isNew": false,
+     "flag": {
+      "kind": "severe storm",
+      "place": "New York City, NY",
+      "name": "Nor'easter"
+     },
+     "evidence": {
+      "span": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": false
+      },
+      "sourceId": "2105006689728463013",
+      "url": "https://x.com/i/web/status/2105006689728463013"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105006689728463013"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105006689728463013"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "montgomery-county-md--infrastructure-failure--source-2104982188718448839",
    "kind": "infrastructure failure",
