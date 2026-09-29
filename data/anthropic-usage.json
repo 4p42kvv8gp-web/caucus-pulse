@@ -12770,5 +12770,26 @@
     "other": 12
    }
   }
+ },
+ "2026-09-29": {
+  "_requests": {
+   "live:da165b90-ac78-4edb-947f-ca99a5b3bf4c": {
+    "id": "live:da165b90-ac78-4edb-947f-ca99a5b3bf4c",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.4074,
+    "status": "settled",
+    "createdAt": "2026-09-29T05:10:14.827Z",
+    "usage": {
+     "calls": 1,
+     "input": 1839,
+     "output": 1271,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-09-29T05:10:28.701Z"
+   }
+  }
  }
 }

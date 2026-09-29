@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T03:38:46.743Z",
+ "classifiedAt": "2026-09-29T05:10:28.737Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -3724,6 +3724,29 @@
    [
     "education",
     "higher-ed"
+   ]
+  ],
+  "2104777846488977728": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2104778093349294181": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2104779341947109885": [],
+  "2104781497550946750": [
+   [
+    "congress-politics",
+    null
    ]
   ]
  },
@@ -11688,6 +11711,54 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "fcdb84d8139d1aa5032da5976a1ee9341c00955a381ef389a882c0da483384a0"
+  },
+  "2104777846488977728": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104668136956215532",
+    "fingerprint": "3d3282d56f5f457c32723e9d681ab870cb4afbd33838d05e19c2d9ff0316bc86"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104668136956215532",
+    "fingerprint": "3d3282d56f5f457c32723e9d681ab870cb4afbd33838d05e19c2d9ff0316bc86"
+   }
+  },
+  "2104778093349294181": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734"
+  },
+  "2104779341947109885": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734"
+  },
+  "2104781497550946750": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104677940793585711",
+    "fingerprint": "b717a67388b3f81d13c7e06d611912bbee73b26be4b4207fe4c79ca6fb7f7b04"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104677940793585711",
+    "fingerprint": "b717a67388b3f81d13c7e06d611912bbee73b26be4b4207fe4c79ca6fb7f7b04"
+   }
   }
  },
  "needsContext": {
@@ -12209,10 +12280,14 @@
   "2104769580736585990": true,
   "2104769826753564950": false,
   "2104770654012846272": false,
-  "2104770802902286411": false
+  "2104770802902286411": false,
+  "2104777846488977728": false,
+  "2104778093349294181": false,
+  "2104779341947109885": false,
+  "2104781497550946750": false
  },
  "inputBlocks": {},
- "contextVersion": 245,
+ "contextVersion": 246,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12620,29 +12695,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104676002160861687",
-    "2104760486831231342",
-    "2104763884041060753",
-    "2104764295619960872",
-    "2104765360331501645",
-    "2104765917284466994",
-    "2104766510916898896",
-    "2104768437918847140",
-    "2104768788952764537",
-    "2104769580736585990",
-    "2104769826753564950",
-    "2104770654012846272",
-    "2104770802902286411"
+    "2104777846488977728",
+    "2104778093349294181",
+    "2104779341947109885",
+    "2104781497550946750",
+    "2104783788471726311",
+    "2104784670105989128",
+    "2104799465270096128"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T03:38:23.045Z",
-    "observedAt": "2026-09-29T03:38:46.728Z",
+    "attemptedAt": "2026-09-29T05:10:14.823Z",
+    "observedAt": "2026-09-29T05:10:28.717Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 13,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -12782,24 +12851,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T03:38:23.045Z",
-   "observedAt": "2026-09-29T03:38:46.728Z",
+   "attemptedAt": "2026-09-29T05:10:14.823Z",
+   "observedAt": "2026-09-29T05:10:28.717Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T03:38:23.045Z",
-   "observedAt": "2026-09-29T03:38:46.728Z",
+   "attemptedAt": "2026-09-29T05:10:14.823Z",
+   "observedAt": "2026-09-29T05:10:28.717Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T03:38:46.746Z"
+ "updatedAt": "2026-09-29T05:10:28.741Z"
 }

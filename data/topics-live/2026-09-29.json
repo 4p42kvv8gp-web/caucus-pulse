@@ -1,0 +1,143 @@
+{
+ "date": "2026-09-29",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-09-29T05:10:28.745Z",
+ "assignments": {
+  "2104783788471726311": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104784670105989128": [
+   [
+    "foreign-policy",
+    null
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2104799465270096128": []
+ },
+ "incidents": {},
+ "provenance": {
+  "2104783788471726311": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734",
+   "quotedContext": {
+    "id": "2104697663794917611",
+    "authorId": "16012783",
+    "handle": "thedailybeast",
+    "createdAt": "2026-09-28T22:20:01.000Z",
+    "textChars": 147,
+    "textHash": "547e13b6f532842013360ab0217074472055a79961c4f048324f714ca63b9b4f"
+   }
+  },
+  "2104784670105989128": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104615131434914128",
+    "fingerprint": "6a51adf008c34f2e6448469da80456a27407a8a6b5b7962ed9af1e6d6599af08"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104615131434914128",
+    "fingerprint": "6a51adf008c34f2e6448469da80456a27407a8a6b5b7962ed9af1e6d6599af08"
+   }
+  },
+  "2104799465270096128": {
+   "contextVersion": 246,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "be5a3e8dbc92f9bc8175f428d6cccb9c014fbd311dc60cb9c4d0ef63fe2e6734"
+  }
+ },
+ "needsContext": {
+  "2104783788471726311": false,
+  "2104784670105989128": false,
+  "2104799465270096128": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 246,
+ "emerging": [
+  {
+   "label": "Venezuelan oil fund transparency letter to State Dept",
+   "ids": [
+    "2104784670105989128"
+   ]
+  }
+ ],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2104777846488977728",
+    "2104778093349294181",
+    "2104779341947109885",
+    "2104781497550946750",
+    "2104783788471726311",
+    "2104784670105989128",
+    "2104799465270096128"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-09-29T05:10:14.823Z",
+    "observedAt": "2026-09-29T05:10:28.717Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 7,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-09-29T05:10:14.823Z",
+   "observedAt": "2026-09-29T05:10:28.717Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 7,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-09-29T05:10:14.823Z",
+   "observedAt": "2026-09-29T05:10:28.717Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 7,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-09-29T05:10:28.747Z"
+}
