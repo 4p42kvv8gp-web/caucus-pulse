@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T06:42:14.628Z",
+ "classifiedAt": "2026-09-29T11:39:53.302Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -9725,43 +9725,6 @@
    "evidenceUsed": [],
    "inputHash": "6315f7a415ae268c3f8b6a26fd36f276b290b278e4bad90d269f1f9846ce8cac"
   },
-  "2104683828602142901": {
-   "contextVersion": 244,
-   "evidenceSupplied": [
-    {
-     "id": "n_272ae7aafd14e410",
-     "publisher": "The Hill",
-     "date": "2026-09-23",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6106642-unga-marco-rubio-taiwan-arms-sale-us-constraints/",
-     "text": "Rubio: Taiwan arms sales constrained by US needs, industrial base",
-     "title": "Rubio: Taiwan arms sales constrained by US needs, industrial base",
-     "publishedAt": "2026-09-23T16:26:00.000Z",
-     "fetchedAt": "2026-09-23T16:56:38.922Z",
-     "version": 136,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_b0797c58e588a334",
-     "publisher": "The Hill",
-     "date": "2026-09-23",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6106280-gop-senators-demand-taiwan-aid/",
-     "text": "McConnell leads 4 GOP senators in calling for Trump to release Taiwan arms funding",
-     "title": "McConnell leads 4 GOP senators in calling for Trump to release Taiwan arms funding",
-     "publishedAt": "2026-09-23T14:24:16.000Z",
-     "fetchedAt": "2026-09-23T15:47:05.795Z",
-     "version": 135,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "6315f7a415ae268c3f8b6a26fd36f276b290b278e4bad90d269f1f9846ce8cac"
-  },
   "2104684835910631592": {
    "contextVersion": 244,
    "evidenceSupplied": [],
@@ -11775,6 +11738,45 @@
    ],
    "evidenceUsed": [],
    "inputHash": "adaa299235ad78a550d324226d5fd6be9358db0c33f9a74569d5ea08f4707076"
+  },
+  "2104683828602142901": {
+   "contextVersion": 251,
+   "evidenceSupplied": [
+    {
+     "id": "n_272ae7aafd14e410",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6106642-unga-marco-rubio-taiwan-arms-sale-us-constraints/",
+     "text": "Rubio: Taiwan arms sales constrained by US needs, industrial base",
+     "title": "Rubio: Taiwan arms sales constrained by US needs, industrial base",
+     "publishedAt": "2026-09-23T16:26:00.000Z",
+     "fetchedAt": "2026-09-23T16:56:38.922Z",
+     "version": 136,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_98c573f5ab76fdf5",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6116335-perdue-remarks-trigger-us-china-debate/",
+     "text": "Trump, China and the question of selling arms to Beijing",
+     "title": "Trump, China and the question of selling arms to Beijing",
+     "publishedAt": "2026-09-29T10:00:00.000Z",
+     "fetchedAt": "2026-09-29T10:54:30.814Z",
+     "version": 251,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_272ae7aafd14e410"
+   ],
+   "inputHash": "7ab145a382b9925c3b62f089e077129ba1ec8d1cf09f371cc39b473a6e2ed094"
   }
  },
  "needsContext": {
@@ -12164,7 +12166,6 @@
   "2104683542265696675": false,
   "2104683664781295905": false,
   "2104683699711438896": false,
-  "2104683828602142901": false,
   "2104684835910631592": false,
   "2104684981155168737": false,
   "2104687099962388846": false,
@@ -12300,10 +12301,11 @@
   "2104778093349294181": false,
   "2104779341947109885": false,
   "2104781497550946750": false,
-  "2104572245905391987": false
+  "2104572245905391987": false,
+  "2104683828602142901": false
  },
  "inputBlocks": {},
- "contextVersion": 247,
+ "contextVersion": 251,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12711,18 +12713,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104572245905391987",
-    "2104801717564977317"
+    "2104683828602142901",
+    "2104892486954979720",
+    "2104893423316504737",
+    "2104895047757918587"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T06:42:08.818Z",
-    "observedAt": "2026-09-29T06:42:14.611Z",
+    "attemptedAt": "2026-09-29T11:39:45.099Z",
+    "observedAt": "2026-09-29T11:39:53.279Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   },
@@ -12862,24 +12866,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T06:42:08.818Z",
-   "observedAt": "2026-09-29T06:42:14.611Z",
+   "attemptedAt": "2026-09-29T11:39:45.099Z",
+   "observedAt": "2026-09-29T11:39:53.279Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T06:42:08.818Z",
-   "observedAt": "2026-09-29T06:42:14.611Z",
+   "attemptedAt": "2026-09-29T11:39:45.099Z",
+   "observedAt": "2026-09-29T11:39:53.279Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T06:42:14.633Z"
+ "updatedAt": "2026-09-29T11:39:53.305Z"
 }

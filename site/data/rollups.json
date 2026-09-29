@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-29T10:55:15.328Z",
- "lastPollAt": "2026-09-29T10:09:26.791Z",
- "lastPollAttemptAt": "2026-09-29T10:09:26.393Z",
+ "generatedAt": "2026-09-29T11:39:57.522Z",
+ "lastPollAt": "2026-09-29T11:39:41.975Z",
+ "lastPollAttemptAt": "2026-09-29T11:39:41.535Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-29T10:55:13.941Z"
+  "referenceAsOf": "2026-09-29T11:39:56.133Z"
  },
  "news": {
   "version": 251,
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-29T10:55:14.360Z",
+   "asOf": "2026-09-29T11:39:56.551Z",
    "windowDays": 14,
-   "windowStart": "2026-09-15T10:55:14.360Z",
-   "eligibleItems": 1721,
-   "withExcerpts": 182,
-   "headlineOrSummary": 1539,
+   "windowStart": "2026-09-15T11:39:56.551Z",
+   "eligibleItems": 1718,
+   "withExcerpts": 181,
+   "headlineOrSummary": 1537,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1014,
+     "eligibleItems": 1012,
      "withExcerpts": 0,
-     "headlineOrSummary": 1014,
+     "headlineOrSummary": 1012,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-29T10:00:00.000Z",
      "latestItem": {
@@ -3427,8 +3427,8 @@
      "id": "roll-call",
      "publisher": "Roll Call",
      "sourceUrl": "https://rollcall.com/feed/",
-     "eligibleItems": 94,
-     "withExcerpts": 91,
+     "eligibleItems": 93,
+     "withExcerpts": 90,
      "headlineOrSummary": 3,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-09-29T06:02:55.000Z",
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 179,
-  "t": 0
+  "posts": 180,
+  "t": 1
  },
  "caucusKeys": [
   "CPC",
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-09-29",
-  "capturedIn24h": 498,
-  "classifiedIn24h": 498,
-  "taggedIn24h": 440,
+  "capturedIn24h": 500,
+  "classifiedIn24h": 500,
+  "taggedIn24h": 442,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-29T07:50:22.637Z",
-   "lastSuccessAt": "2026-09-29T06:42:14.611Z",
-   "capturedIn24h": 498,
-   "classifiedIn24h": 498,
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-09-29T11:39:45.099Z",
+   "lastSuccessAt": "2026-09-29T11:39:53.279Z",
+   "capturedIn24h": 500,
+   "classifiedIn24h": 500,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 4,
+    "posts": 6,
     "mix": [
      50,
      0,
      50
     ],
-    "accounts": 4,
-    "members": 4,
+    "accounts": 6,
+    "members": 6,
     "unidentifiedAccounts": 0,
-    "classified": 4,
-    "tagged": 2,
+    "classified": 6,
+    "tagged": 4,
     "pending": 0,
     "corePosts": 2,
     "coreCounts": {
@@ -6844,13 +6844,13 @@
      "Healthcare": 0,
      "Corruption": 1
     },
-    "eng": 634,
-    "perPost": 159,
+    "eng": 636,
+    "perPost": 106,
     "top10Share": 100,
     "engDelta": -99
    },
    "w": {
-    "posts": 2684,
+    "posts": 2686,
     "mix": [
      83,
      5,
@@ -6859,8 +6859,8 @@
     "accounts": 313,
     "members": 199,
     "unidentifiedAccounts": 0,
-    "classified": 741,
-    "tagged": 651,
+    "classified": 743,
+    "tagged": 653,
     "pending": 1943,
     "corePosts": 283,
     "coreCounts": {
@@ -6868,43 +6868,43 @@
      "Healthcare": 50,
      "Corruption": 132
     },
-    "eng": 518363,
+    "eng": 518365,
     "perPost": 193,
     "top10Share": 55,
     "engDelta": 0
    },
    "curve48": [
-    11,
-    59,
-    63,
-    53,
-    36,
-    14,
+    22,
+    58,
+    72,
+    43,
+    33,
+    8,
     2,
     0,
-    29,
-    120,
+    56,
+    129,
     145,
-    121,
-    57,
-    24,
-    2,
-    0
+    112,
+    38,
+    18,
+    0,
+    2
    ]
   },
   "CPC": {
    "t": {
-    "posts": 4,
+    "posts": 5,
     "mix": [
-     50,
+     40,
      0,
-     50
+     60
     ],
-    "accounts": 4,
-    "members": 4,
+    "accounts": 5,
+    "members": 5,
     "unidentifiedAccounts": 0,
-    "classified": 4,
-    "tagged": 2,
+    "classified": 5,
+    "tagged": 3,
     "pending": 0,
     "corePosts": 2,
     "coreCounts": {
@@ -6913,12 +6913,12 @@
      "Corruption": 1
     },
     "eng": 634,
-    "perPost": 159,
+    "perPost": 127,
     "top10Share": 100,
     "engDelta": -99
    },
    "w": {
-    "posts": 1268,
+    "posts": 1269,
     "mix": [
      77,
      7,
@@ -6927,8 +6927,8 @@
     "accounts": 135,
     "members": 90,
     "unidentifiedAccounts": 0,
-    "classified": 339,
-    "tagged": 294,
+    "classified": 340,
+    "tagged": 295,
     "pending": 929,
     "corePosts": 140,
     "coreCounts": {
@@ -6942,37 +6942,37 @@
     "engDelta": 0
    },
    "curve48": [
-    5,
+    10,
     28,
-    25,
-    26,
-    16,
+    31,
+    20,
+    11,
     5,
     0,
     0,
-    8,
+    23,
     67,
-    57,
-    58,
-    26,
+    59,
+    50,
+    19,
     14,
-    2,
-    0
+    0,
+    1
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 2,
+    "posts": 3,
     "mix": [
+     33,
      0,
-     0,
-     100
+     67
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
-    "classified": 2,
-    "tagged": 1,
+    "classified": 3,
+    "tagged": 2,
     "pending": 0,
     "corePosts": 1,
     "coreCounts": {
@@ -6980,13 +6980,13 @@
      "Healthcare": 0,
      "Corruption": 1
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 2,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1495,
+    "posts": 1496,
     "mix": [
      84,
      3,
@@ -6995,8 +6995,8 @@
     "accounts": 170,
     "members": 105,
     "unidentifiedAccounts": 0,
-    "classified": 433,
-    "tagged": 378,
+    "classified": 434,
+    "tagged": 379,
     "pending": 1062,
     "corePosts": 158,
     "coreCounts": {
@@ -7004,43 +7004,43 @@
      "Healthcare": 32,
      "Corruption": 73
     },
-    "eng": 109699,
+    "eng": 109701,
     "perPost": 73,
     "top10Share": 65,
     "engDelta": 0
    },
    "curve48": [
-    10,
-    30,
-    38,
-    29,
-    21,
-    10,
+    14,
+    32,
+    42,
+    24,
+    22,
+    4,
     2,
     0,
-    24,
-    67,
-    91,
-    65,
-    27,
-    15,
-    1,
-    0
+    39,
+    74,
+    93,
+    56,
+    16,
+    12,
+    0,
+    1
    ]
   },
   "CBC": {
    "t": {
-    "posts": 0,
+    "posts": 1,
     "mix": [
      0,
      0,
-     0
+     100
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
+    "classified": 1,
+    "tagged": 1,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -7054,17 +7054,17 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 480,
+    "posts": 481,
     "mix": [
-     83,
+     82,
      5,
-     12
+     13
     ],
     "accounts": 77,
     "members": 50,
     "unidentifiedAccounts": 0,
-    "classified": 115,
-    "tagged": 105,
+    "classified": 116,
+    "tagged": 106,
     "pending": 365,
     "corePosts": 39,
     "coreCounts": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    8,
+    5,
+    6,
     10,
     9,
-    3,
-    8,
-    0,
-    0,
-    3,
-    19,
-    21,
-    18,
     7,
+    3,
+    0,
+    0,
+    6,
+    20,
+    25,
+    15,
+    2,
     4,
     0,
-    0
+    1
    ]
   },
   "CHC": {
@@ -7146,20 +7146,20 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
-    8,
+    4,
     10,
-    13,
-    6,
+    11,
+    11,
+    4,
     1,
     0,
     0,
-    4,
-    21,
-    31,
-    20,
     9,
-    6,
+    22,
+    30,
+    18,
+    8,
+    4,
     0,
     0
    ]
@@ -7214,19 +7214,19 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
+    3,
     11,
     5,
-    4,
-    2,
-    0,
-    0,
-    0,
+    3,
     1,
-    12,
-    9,
-    14,
-    9,
+    0,
+    0,
+    0,
+    3,
+    13,
+    8,
+    15,
+    6,
     2,
     0,
     0
@@ -7239,16 +7239,16 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 1,
+     "n": 2,
      "eng": 633,
-     "m": 1,
-     "a": 1
+     "m": 2,
+     "a": 2
     },
     "CPC": {
-     "n": 1,
+     "n": 2,
      "eng": 633,
-     "m": 1,
-     "a": 1
+     "m": 2,
+     "a": 2
     },
     "NewDem": {
      "n": 0,
@@ -7257,10 +7257,10 @@
      "a": 0
     },
     "CBC": {
-     "n": 0,
+     "n": 1,
      "eng": 0,
-     "m": 0,
-     "a": 0
+     "m": 1,
+     "a": 1
     },
     "CHC": {
      "n": 0,
@@ -7277,13 +7277,13 @@
    },
    "w": {
     "All": {
-     "n": 172,
+     "n": 173,
      "eng": 14907,
      "m": 88,
      "a": 106
     },
     "CPC": {
-     "n": 64,
+     "n": 65,
      "eng": 7324,
      "m": 36,
      "a": 44
@@ -7295,7 +7295,7 @@
      "a": 64
     },
     "CBC": {
-     "n": 34,
+     "n": 35,
      "eng": 4377,
      "m": 19,
      "a": 23
@@ -7320,11 +7320,11 @@
     0,
     78,
     93,
-    1
+    2
    ],
-   "d": 230,
+   "d": 233,
    "mAvg": 18.7,
-   "epAvg": 87,
+   "epAvg": 86,
    "momentum": {
     "score": 66,
     "drivers": [
@@ -7334,7 +7334,7 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 3.4,
+    "eff": 3.5,
     "engLift": 0
    },
    "subs": [
@@ -7541,16 +7541,16 @@
      "key": "town-halls",
      "t": {
       "All": {
-       "n": 0,
+       "n": 1,
        "eng": 0,
-       "m": 0,
-       "a": 0
+       "m": 1,
+       "a": 1
       },
       "CPC": {
-       "n": 0,
+       "n": 1,
        "eng": 0,
-       "m": 0,
-       "a": 0
+       "m": 1,
+       "a": 1
       },
       "NewDem": {
        "n": 0,
@@ -7559,10 +7559,10 @@
        "a": 0
       },
       "CBC": {
-       "n": 0,
+       "n": 1,
        "eng": 0,
-       "m": 0,
-       "a": 0
+       "m": 1,
+       "a": 1
       },
       "CHC": {
        "n": 0,
@@ -7579,13 +7579,13 @@
      },
      "w": {
       "All": {
-       "n": 46,
+       "n": 47,
        "eng": 1423,
        "m": 34,
        "a": 38
       },
       "CPC": {
-       "n": 14,
+       "n": 15,
        "eng": 1076,
        "m": 12,
        "a": 14
@@ -7597,7 +7597,7 @@
        "a": 23
       },
       "CBC": {
-       "n": 11,
+       "n": 12,
        "eng": 361,
        "m": 9,
        "a": 11
@@ -7618,8 +7618,11 @@
      "lead": "@RepRaskin",
      "leadPostId": "2104375334179385390",
      "postIds": {
-      "t": [],
+      "t": [
+       "2104892486954979720"
+      ],
       "w": [
+       "2104892486954979720",
        "2104770654012846272",
        "2104755671531217240",
        "2104741390433636655",
@@ -7769,9 +7772,11 @@
    ],
    "postIds": {
     "t": [
+     "2104892486954979720",
      "2104783788471726311"
     ],
     "w": [
+     "2104892486954979720",
      "2104783788471726311",
      "2104781497550946750",
      "2104778093349294181",
@@ -10372,6 +10377,634 @@
    }
   },
   {
+   "key": "immigration",
+   "name": "Immigration",
+   "t": {
+    "All": {
+     "n": 1,
+     "eng": 2,
+     "m": 1,
+     "a": 1
+    },
+    "CPC": {
+     "n": 0,
+     "eng": 0,
+     "m": 0,
+     "a": 0
+    },
+    "NewDem": {
+     "n": 1,
+     "eng": 2,
+     "m": 1,
+     "a": 1
+    },
+    "CBC": {
+     "n": 0,
+     "eng": 0,
+     "m": 0,
+     "a": 0
+    },
+    "CHC": {
+     "n": 0,
+     "eng": 0,
+     "m": 0,
+     "a": 0
+    },
+    "CAPAC": {
+     "n": 0,
+     "eng": 0,
+     "m": 0,
+     "a": 0
+    }
+   },
+   "w": {
+    "All": {
+     "n": 43,
+     "eng": 8393,
+     "m": 23,
+     "a": 24
+    },
+    "CPC": {
+     "n": 28,
+     "eng": 4917,
+     "m": 15,
+     "a": 15
+    },
+    "NewDem": {
+     "n": 25,
+     "eng": 3908,
+     "m": 10,
+     "a": 10
+    },
+    "CBC": {
+     "n": 1,
+     "eng": 2,
+     "m": 1,
+     "a": 1
+    },
+    "CHC": {
+     "n": 24,
+     "eng": 3027,
+     "m": 10,
+     "a": 11
+    },
+    "CAPAC": {
+     "n": 4,
+     "eng": 1915,
+     "m": 3,
+     "a": 3
+    }
+   },
+   "trend": [
+    0,
+    0,
+    0,
+    0,
+    10,
+    32,
+    1
+   ],
+   "d": 371,
+   "mAvg": 4.5,
+   "epAvg": 195,
+   "momentum": {
+    "score": 66,
+    "drivers": [
+     "volume",
+     "adoption"
+    ],
+    "volume": 1,
+    "accel": 0,
+    "adoption": 1,
+    "eff": 3.3,
+    "engLift": 0
+   },
+   "subs": [
+    {
+     "key": "asylum-refugees",
+     "t": {
+      "All": {
+       "n": 1,
+       "eng": 2,
+       "m": 1,
+       "a": 1
+      },
+      "CPC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "NewDem": {
+       "n": 1,
+       "eng": 2,
+       "m": 1,
+       "a": 1
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 8,
+       "eng": 1746,
+       "m": 5,
+       "a": 5
+      },
+      "CPC": {
+       "n": 2,
+       "eng": 13,
+       "m": 2,
+       "a": 2
+      },
+      "NewDem": {
+       "n": 6,
+       "eng": 1733,
+       "m": 3,
+       "a": 3
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 3,
+       "eng": 13,
+       "m": 3,
+       "a": 3
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "lead": "@RepDWStweets",
+     "leadPostId": "2104209737482928361",
+     "postIds": {
+      "t": [
+       "2104893423316504737"
+      ],
+      "w": [
+       "2104893423316504737",
+       "2104742441433911364",
+       "2104725462341542352",
+       "2104648624235753929",
+       "2104569760285622427",
+       "2104569569901998223",
+       "2104551185164186025",
+       "2104209737482928361"
+      ]
+     }
+    },
+    {
+     "key": "ice-enforcement",
+     "t": {
+      "All": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CPC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 28,
+       "eng": 5935,
+       "m": 17,
+       "a": 17
+      },
+      "CPC": {
+       "n": 21,
+       "eng": 4525,
+       "m": 12,
+       "a": 12
+      },
+      "NewDem": {
+       "n": 16,
+       "eng": 2166,
+       "m": 7,
+       "a": 7
+      },
+      "CBC": {
+       "n": 1,
+       "eng": 2,
+       "m": 1,
+       "a": 1
+      },
+      "CHC": {
+       "n": 18,
+       "eng": 3014,
+       "m": 8,
+       "a": 8
+      },
+      "CAPAC": {
+       "n": 3,
+       "eng": 1538,
+       "m": 3,
+       "a": 3
+      }
+     },
+     "lead": "@JoaquinCastrotx",
+     "leadPostId": "2104611654461690200",
+     "postIds": {
+      "t": [],
+      "w": [
+       "2104769826753564950",
+       "2104741328835801495",
+       "2104688604312207500",
+       "2104687840479109434",
+       "2104687756547117535",
+       "2104687331387084858",
+       "2104676069504696561",
+       "2104654681373057517",
+       "2104654672732541413",
+       "2104645415379587505",
+       "2104645335393903065",
+       "2104632345458307276",
+       "2104617909720911974",
+       "2104614054736388505",
+       "2104614052664168555",
+       "2104614051104109019",
+       "2104614048864301412",
+       "2104614046691385751",
+       "2104611654461690200",
+       "2104608116499173638",
+       "2104600952560861340",
+       "2104575643572691087",
+       "2104301803785339280",
+       "2104301001520165077",
+       "2104263553129566503",
+       "2104217383288050059",
+       "2104210406319489485",
+       "2104204087202103751"
+      ]
+     }
+    },
+    {
+     "key": "dilley-detention",
+     "t": {
+      "All": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CPC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 2,
+       "eng": 4,
+       "m": 1,
+       "a": 1
+      },
+      "CPC": {
+       "n": 2,
+       "eng": 4,
+       "m": 1,
+       "a": 1
+      },
+      "NewDem": {
+       "n": 2,
+       "eng": 4,
+       "m": 1,
+       "a": 1
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 2,
+       "eng": 4,
+       "m": 1,
+       "a": 1
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "lead": "@RepNellie",
+     "leadPostId": "2104645335393903065",
+     "postIds": {
+      "t": [],
+      "w": [
+       "2104645415379587505",
+       "2104645335393903065"
+      ]
+     }
+    },
+    {
+     "key": "border-policy",
+     "t": {
+      "All": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CPC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 1,
+       "eng": 0,
+       "m": 1,
+       "a": 1
+      },
+      "CPC": {
+       "n": 1,
+       "eng": 0,
+       "m": 1,
+       "a": 1
+      },
+      "NewDem": {
+       "n": 1,
+       "eng": 0,
+       "m": 1,
+       "a": 1
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 1,
+       "eng": 0,
+       "m": 1,
+       "a": 1
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "lead": null,
+     "leadPostId": null,
+     "postIds": {
+      "t": [],
+      "w": [
+       "2104234235825647900"
+      ]
+     }
+    },
+    {
+     "key": "dreamers-daca",
+     "t": {
+      "All": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CPC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 1,
+       "eng": 23,
+       "m": 1,
+       "a": 1
+      },
+      "CPC": {
+       "n": 1,
+       "eng": 23,
+       "m": 1,
+       "a": 1
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 1,
+       "eng": 23,
+       "m": 1,
+       "a": 1
+      }
+     },
+     "lead": "@RepGraceMeng",
+     "leadPostId": "2104676069504696561",
+     "postIds": {
+      "t": [],
+      "w": [
+       "2104676069504696561"
+      ]
+     }
+    }
+   ],
+   "postIds": {
+    "t": [
+     "2104893423316504737"
+    ],
+    "w": [
+     "2104893423316504737",
+     "2104769826753564950",
+     "2104742441433911364",
+     "2104741328835801495",
+     "2104725462341542352",
+     "2104688604312207500",
+     "2104687840479109434",
+     "2104687756547117535",
+     "2104687331387084858",
+     "2104684835910631592",
+     "2104676069504696561",
+     "2104660038816317518",
+     "2104654681373057517",
+     "2104654672732541413",
+     "2104648624235753929",
+     "2104645415379587505",
+     "2104645335393903065",
+     "2104632345458307276",
+     "2104627615927607367",
+     "2104617909720911974",
+     "2104614054736388505",
+     "2104614052664168555",
+     "2104614051104109019",
+     "2104614048864301412",
+     "2104614046691385751",
+     "2104611654461690200",
+     "2104608116499173638",
+     "2104600952560861340",
+     "2104583177880657966",
+     "2104575643572691087",
+     "2104569760285622427",
+     "2104569569901998223",
+     "2104551185164186025",
+     "2104301803785339280",
+     "2104301001520165077",
+     "2104297642272366965",
+     "2104263553129566503",
+     "2104237556908888404",
+     "2104234235825647900",
+     "2104217383288050059",
+     "2104210406319489485",
+     "2104209737482928361",
+     "2104204087202103751"
+    ]
+   }
+  },
+  {
    "key": "climate",
    "name": "Climate & environment",
    "t": {
@@ -11609,628 +12242,6 @@
      "2104225802980040739",
      "2104211426839519434",
      "2104194346249556092"
-    ]
-   }
-  },
-  {
-   "key": "immigration",
-   "name": "Immigration",
-   "t": {
-    "All": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    },
-    "CPC": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    },
-    "NewDem": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    },
-    "CBC": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    },
-    "CHC": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    },
-    "CAPAC": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
-    }
-   },
-   "w": {
-    "All": {
-     "n": 42,
-     "eng": 8391,
-     "m": 22,
-     "a": 23
-    },
-    "CPC": {
-     "n": 28,
-     "eng": 4917,
-     "m": 15,
-     "a": 15
-    },
-    "NewDem": {
-     "n": 24,
-     "eng": 3906,
-     "m": 9,
-     "a": 9
-    },
-    "CBC": {
-     "n": 1,
-     "eng": 2,
-     "m": 1,
-     "a": 1
-    },
-    "CHC": {
-     "n": 24,
-     "eng": 3027,
-     "m": 10,
-     "a": 11
-    },
-    "CAPAC": {
-     "n": 4,
-     "eng": 1915,
-     "m": 3,
-     "a": 3
-    }
-   },
-   "trend": [
-    0,
-    0,
-    0,
-    0,
-    10,
-    32,
-    0
-   ],
-   "d": 357,
-   "mAvg": 4.5,
-   "epAvg": 200,
-   "momentum": {
-    "score": 66,
-    "drivers": [
-     "volume",
-     "adoption"
-    ],
-    "volume": 1,
-    "accel": 0,
-    "adoption": 1,
-    "eff": 3.3,
-    "engLift": 0
-   },
-   "subs": [
-    {
-     "key": "ice-enforcement",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 28,
-       "eng": 5935,
-       "m": 17,
-       "a": 17
-      },
-      "CPC": {
-       "n": 21,
-       "eng": 4525,
-       "m": 12,
-       "a": 12
-      },
-      "NewDem": {
-       "n": 16,
-       "eng": 2166,
-       "m": 7,
-       "a": 7
-      },
-      "CBC": {
-       "n": 1,
-       "eng": 2,
-       "m": 1,
-       "a": 1
-      },
-      "CHC": {
-       "n": 18,
-       "eng": 3014,
-       "m": 8,
-       "a": 8
-      },
-      "CAPAC": {
-       "n": 3,
-       "eng": 1538,
-       "m": 3,
-       "a": 3
-      }
-     },
-     "lead": "@JoaquinCastrotx",
-     "leadPostId": "2104611654461690200",
-     "postIds": {
-      "t": [],
-      "w": [
-       "2104769826753564950",
-       "2104741328835801495",
-       "2104688604312207500",
-       "2104687840479109434",
-       "2104687756547117535",
-       "2104687331387084858",
-       "2104676069504696561",
-       "2104654681373057517",
-       "2104654672732541413",
-       "2104645415379587505",
-       "2104645335393903065",
-       "2104632345458307276",
-       "2104617909720911974",
-       "2104614054736388505",
-       "2104614052664168555",
-       "2104614051104109019",
-       "2104614048864301412",
-       "2104614046691385751",
-       "2104611654461690200",
-       "2104608116499173638",
-       "2104600952560861340",
-       "2104575643572691087",
-       "2104301803785339280",
-       "2104301001520165077",
-       "2104263553129566503",
-       "2104217383288050059",
-       "2104210406319489485",
-       "2104204087202103751"
-      ]
-     }
-    },
-    {
-     "key": "asylum-refugees",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 7,
-       "eng": 1744,
-       "m": 4,
-       "a": 4
-      },
-      "CPC": {
-       "n": 2,
-       "eng": 13,
-       "m": 2,
-       "a": 2
-      },
-      "NewDem": {
-       "n": 5,
-       "eng": 1731,
-       "m": 2,
-       "a": 2
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 3,
-       "eng": 13,
-       "m": 3,
-       "a": 3
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "lead": "@RepDWStweets",
-     "leadPostId": "2104209737482928361",
-     "postIds": {
-      "t": [],
-      "w": [
-       "2104742441433911364",
-       "2104725462341542352",
-       "2104648624235753929",
-       "2104569760285622427",
-       "2104569569901998223",
-       "2104551185164186025",
-       "2104209737482928361"
-      ]
-     }
-    },
-    {
-     "key": "dilley-detention",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 2,
-       "eng": 4,
-       "m": 1,
-       "a": 1
-      },
-      "CPC": {
-       "n": 2,
-       "eng": 4,
-       "m": 1,
-       "a": 1
-      },
-      "NewDem": {
-       "n": 2,
-       "eng": 4,
-       "m": 1,
-       "a": 1
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 2,
-       "eng": 4,
-       "m": 1,
-       "a": 1
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "lead": "@RepNellie",
-     "leadPostId": "2104645335393903065",
-     "postIds": {
-      "t": [],
-      "w": [
-       "2104645415379587505",
-       "2104645335393903065"
-      ]
-     }
-    },
-    {
-     "key": "border-policy",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 1,
-       "eng": 0,
-       "m": 1,
-       "a": 1
-      },
-      "CPC": {
-       "n": 1,
-       "eng": 0,
-       "m": 1,
-       "a": 1
-      },
-      "NewDem": {
-       "n": 1,
-       "eng": 0,
-       "m": 1,
-       "a": 1
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 1,
-       "eng": 0,
-       "m": 1,
-       "a": 1
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "lead": null,
-     "leadPostId": null,
-     "postIds": {
-      "t": [],
-      "w": [
-       "2104234235825647900"
-      ]
-     }
-    },
-    {
-     "key": "dreamers-daca",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 1,
-       "eng": 23,
-       "m": 1,
-       "a": 1
-      },
-      "CPC": {
-       "n": 1,
-       "eng": 23,
-       "m": 1,
-       "a": 1
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 1,
-       "eng": 23,
-       "m": 1,
-       "a": 1
-      }
-     },
-     "lead": "@RepGraceMeng",
-     "leadPostId": "2104676069504696561",
-     "postIds": {
-      "t": [],
-      "w": [
-       "2104676069504696561"
-      ]
-     }
-    }
-   ],
-   "postIds": {
-    "t": [],
-    "w": [
-     "2104769826753564950",
-     "2104742441433911364",
-     "2104741328835801495",
-     "2104725462341542352",
-     "2104688604312207500",
-     "2104687840479109434",
-     "2104687756547117535",
-     "2104687331387084858",
-     "2104684835910631592",
-     "2104676069504696561",
-     "2104660038816317518",
-     "2104654681373057517",
-     "2104654672732541413",
-     "2104648624235753929",
-     "2104645415379587505",
-     "2104645335393903065",
-     "2104632345458307276",
-     "2104627615927607367",
-     "2104617909720911974",
-     "2104614054736388505",
-     "2104614052664168555",
-     "2104614051104109019",
-     "2104614048864301412",
-     "2104614046691385751",
-     "2104611654461690200",
-     "2104608116499173638",
-     "2104600952560861340",
-     "2104583177880657966",
-     "2104575643572691087",
-     "2104569760285622427",
-     "2104569569901998223",
-     "2104551185164186025",
-     "2104301803785339280",
-     "2104301001520165077",
-     "2104297642272366965",
-     "2104263553129566503",
-     "2104237556908888404",
-     "2104234235825647900",
-     "2104217383288050059",
-     "2104210406319489485",
-     "2104209737482928361",
-     "2104204087202103751"
     ]
    }
   },
@@ -14790,15 +14801,16 @@
     "2104711525084639647",
     "2104714801733882175",
     "2104721255035515170",
-    "2104730010380603676"
+    "2104730010380603676",
+    "2104893423316504737"
    ],
    "firstSeen": "2026-08-20",
    "leadership": true,
-   "spread": 57,
-   "accounts": 62,
+   "spread": 58,
+   "accounts": 63,
    "cm": [
     26,
-    30,
+    31,
     11,
     10,
     3
@@ -14812,9 +14824,9 @@
     131,
     131
    ],
-   "exact": 0.57,
-   "total": 105,
-   "eng": 50872
+   "exact": 0.58,
+   "total": 106,
+   "eng": 50874
   },
   {
    "text": "last week",
@@ -17561,6 +17573,69 @@
  ],
  "incidentsFiltered": 1,
  "feed": [
+  {
+   "id": "2104893423316504737",
+   "handle": "@RepSchneider",
+   "member": "Bradley Scott Schneider",
+   "district": "IL-10",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "America’s greatness is reflected in the spirit of our people and our age old commitment to care for those less fortunate, including the widow, the orphan, and the stranger. Donald Trump is not making America stronger, and is not improving the lives of American citizens or the people who look to us for support. We are better than this.\nhttps://t.co/LFWupmHivn",
+   "topics": [
+    "immigration/asylum-refugees",
+    "immigration"
+   ],
+   "time": "2026-09-29T11:17:53.000Z",
+   "date": "2026-09-29",
+   "engN": 2,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 251,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-09-29T11:39:41.965Z",
+   "isNew": false
+  },
+  {
+   "id": "2104892486954979720",
+   "handle": "@RepJoeNeguse",
+   "member": "Joe Neguse",
+   "district": "CO-02",
+   "caucus": [
+    "CPC",
+    "CBC"
+   ],
+   "text": "RT @RepJoeNeguse: Every Representative and every Senator should hold monthly, in-person town halls. \n\nLearn more about my bill to make it a…",
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "time": "2026-09-29T11:14:10.000Z",
+   "date": "2026-09-29",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103515480417870280",
+   "provenance": {
+    "contextVersion": 251,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-09-29T11:39:41.965Z",
+   "isNew": false
+  },
   {
    "id": "2104801717564977317",
    "handle": "@RepBrendanBoyle",
@@ -22293,7 +22368,7 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 244,
+    "contextVersion": 251,
     "evidenceSupplied": [
      {
       "id": "n_272ae7aafd14e410",
@@ -22309,20 +22384,22 @@
       "truncated": false
      },
      {
-      "id": "n_b0797c58e588a334",
+      "id": "n_98c573f5ab76fdf5",
       "publisher": "The Hill",
-      "date": "2026-09-23",
+      "date": "2026-09-29",
       "kind": "lead",
-      "url": "https://thehill.com/homenews/senate/6106280-gop-senators-demand-taiwan-aid/",
-      "text": "McConnell leads 4 GOP senators in calling for Trump to release Taiwan arms funding",
-      "publishedAt": "2026-09-23T14:24:16.000Z",
-      "fetchedAt": "2026-09-23T15:47:05.795Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
+      "url": "https://thehill.com/homenews/administration/6116335-perdue-remarks-trigger-us-china-debate/",
+      "text": "Trump, China and the question of selling arms to Beijing",
+      "publishedAt": "2026-09-29T10:00:00.000Z",
+      "fetchedAt": "2026-09-29T10:54:30.814Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
       "truncated": false
      }
     ],
-    "evidenceUsed": []
+    "evidenceUsed": [
+     "n_272ae7aafd14e410"
+    ]
    },
    "metricsObservedAt": "2026-09-29T07:46:38.631Z",
    "isNew": false
@@ -24956,90 +25033,6 @@
    },
    "metricsObservedAt": "2026-09-29T07:46:38.458Z",
    "isNew": false
-  },
-  {
-   "id": "2104663308905394289",
-   "handle": "@RepTroyCarter",
-   "member": "Troy A. Carter",
-   "district": "LA-02",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "#LA02 WINS AGAIN! 💪🏾 Last week, alongside Mayor @HelenaMorenoLA, @CMJasonHughes, and community members, we celebrated a $78 Million VA residential rehab facility coming to New Orleans East in 2029! \n\nThis 60-bed facility will provide veterans access to mental health services, substance-use treatment, counseling, therapy, and a dedicated space for women.\n\nWhile Trump actively cuts VA hospital funding and staffing, we’re fighting and building back even better services for our veterans!\n\n@NOLACityCouncil @NOLAnews",
-   "topics": [
-    "foreign-policy/military-veterans",
-    "foreign-policy",
-    "healthcare/public-health",
-    "healthcare"
-   ],
-   "time": "2026-09-28T20:03:30.000Z",
-   "date": "2026-09-28",
-   "engN": 29,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 243,
-    "evidenceSupplied": [
-     {
-      "id": "n_13a6c34e0846badb",
-      "publisher": "Roll Call",
-      "date": "2026-09-25",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/25/democrats-call-for-hearings-on-suicide-attempts-on-uss-lincoln/",
-      "text": "“That this administration can find endless taxpayer dollars for bombs, ballrooms, and billionaires, but cannot take care of our service members, is completely unacceptable,” Sen. Kirsten Gillibrand, D-N.Y., a member of the Senate Armed Services Committee, said in a statement Friday. “The American people need hearings, accountability and a clear plan to protect our service members and prioritize American families.”",
-      "publishedAt": "2026-09-25T14:46:03.000Z",
-      "fetchedAt": "2026-09-25T19:52:04.988Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-29T07:46:38.458Z",
-   "isNew": false
-  },
-  {
-   "id": "2104662551686426690",
-   "handle": "@repcleaver",
-   "member": "Emanuel Cleaver",
-   "district": "MO-05",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "This is flat-out illegal.\n\nThe president is unlawfully using taxpayer funding to run campaign ads to boost his historically low approval ratings.\n\nThe most corrupt president in American history. https://t.co/Si1SaCtNP9",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-09-28T20:00:29.000Z",
-   "date": "2026-09-28",
-   "engN": 62,
-   "kind": "quote",
-   "quoted": {
-    "id": "2104276687533806040",
-    "handle": "@ddale8",
-    "text": "After claiming its publicly funded campaign-style ads promoting Trump were mere “public service announcements,” the administration uses public money to re-run an actual Trump campaign video from the…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 243,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-29T07:46:38.458Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -25205,6 +25198,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1078749802765139968": "@RepJoeNeguse",
   "1404519992582942724": "@Rep_Stansbury",
   "1080885078425784320": "@RepGregStanton",
   "1610096539577487360": "@RepGabeVasquez",
@@ -25318,7 +25312,6 @@
   "818713465653051392": "@RepDarrenSoto",
   "1106949340197801986": "@HillaryScholten",
   "1611527835742519297": "@RepEmiliaSykes",
-  "1078749802765139968": "@RepJoeNeguse",
   "730899167740989441": "@JaredEMoskowitz",
   "4870048156": "@JakeAuch",
   "918913624395079680": "@JasmineForUS",
@@ -25358,6 +25351,54 @@
   "847098017274613761": "@HoulahanForPa"
  },
  "feedAll": [
+  {
+   "id": "2104893423316504737",
+   "authorId": "1071840474",
+   "createdAt": "2026-09-29T11:17:53.000Z",
+   "date": "2026-09-29",
+   "type": "tweet",
+   "text": "America’s greatness is reflected in the spirit of our people and our age old commitment to care for those less fortunate, including the widow, the orphan, and the stranger. Donald Trump is not making America stronger, and is not improving the lives of American citizens or the people who look to us for support. We are better than this.\nhttps://t.co/LFWupmHivn",
+   "engN": 2,
+   "topics": [
+    "immigration/asylum-refugees",
+    "immigration"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 251,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-09-29T11:39:41.965Z"
+  },
+  {
+   "id": "2104892486954979720",
+   "authorId": "1078749802765139968",
+   "createdAt": "2026-09-29T11:14:10.000Z",
+   "date": "2026-09-29",
+   "type": "retweet",
+   "text": "RT @RepJoeNeguse: Every Representative and every Senator should hold monthly, in-person town halls. \n\nLearn more about my bill to make it a…",
+   "engN": 0,
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2103515480417870280",
+   "provenance": {
+    "contextVersion": 251,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-09-29T11:39:41.965Z"
+  },
   {
    "id": "2104801717564977317",
    "authorId": "231108733",
@@ -29172,7 +29213,7 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 244,
+    "contextVersion": 251,
     "evidenceSupplied": [
      {
       "id": "n_272ae7aafd14e410",
@@ -29188,20 +29229,22 @@
       "truncated": false
      },
      {
-      "id": "n_b0797c58e588a334",
+      "id": "n_98c573f5ab76fdf5",
       "publisher": "The Hill",
-      "date": "2026-09-23",
+      "date": "2026-09-29",
       "kind": "lead",
-      "url": "https://thehill.com/homenews/senate/6106280-gop-senators-demand-taiwan-aid/",
-      "text": "McConnell leads 4 GOP senators in calling for Trump to release Taiwan arms funding",
-      "publishedAt": "2026-09-23T14:24:16.000Z",
-      "fetchedAt": "2026-09-23T15:47:05.795Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
+      "url": "https://thehill.com/homenews/administration/6116335-perdue-remarks-trigger-us-china-debate/",
+      "text": "Trump, China and the question of selling arms to Beijing",
+      "publishedAt": "2026-09-29T10:00:00.000Z",
+      "fetchedAt": "2026-09-29T10:54:30.814Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
       "truncated": false
      }
     ],
-    "evidenceUsed": []
+    "evidenceUsed": [
+     "n_272ae7aafd14e410"
+    ]
    },
    "metricsObservedAt": "2026-09-29T07:46:38.631Z"
   },
@@ -70517,14 +70560,14 @@
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2684,
+ "feedAllTotal": 2686,
  "feedAllFiles": [
-  "feed-0-63f5db0cdd344c46.json",
-  "feed-1-459f6af6c0375c6b.json",
-  "feed-2-2efc5a86ea27dddd.json",
-  "feed-3-81cc0194dd20d928.json",
-  "feed-4-9fa893b5d2cf3a3d.json",
-  "feed-5-793d82e6bba79ee3.json",
-  "feed-6-54ca204bc5bd25f2.json"
+  "feed-0-cad36b5f69c28e34.json",
+  "feed-1-29f56cedb0a2cff0.json",
+  "feed-2-d81a23dca223adcc.json",
+  "feed-3-a4d93a1fe3e1cb35.json",
+  "feed-4-8a01b72d765fd50e.json",
+  "feed-5-0347412627585be6.json",
+  "feed-6-9238bd813ecee5da.json"
  ]
 }
