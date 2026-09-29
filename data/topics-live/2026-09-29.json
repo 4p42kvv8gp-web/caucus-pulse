@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T15:21:15.289Z",
+ "classifiedAt": "2026-09-29T15:45:04.054Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -827,7 +827,135 @@
     "democracy",
     "courts-doj"
    ]
-  ]
+  ],
+  "2104954810554560791": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104954924631052651": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2104955348738027845": [
+   [
+    "healthcare",
+    "drug-prices"
+   ],
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2104955406531309711": [
+   [
+    "public-safety",
+    null
+   ]
+  ],
+  "2104955610454221287": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "china"
+   ]
+  ],
+  "2104955613092745669": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "china"
+   ]
+  ],
+  "2104956595340013619": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2104956675660583034": [
+   [
+    "healthcare",
+    "aca"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2104957580053299397": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2104957783313383926": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "budget-appropriations",
+    null
+   ]
+  ],
+  "2104958295262040407": [],
+  "2104958375679119535": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2104959099653734667": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2104959236450979979": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2104959427300425766": [
+   [
+    "public-safety",
+    null
+   ]
+  ],
+  "2104959576529571941": [
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2104959676852912466": []
  },
  "incidents": {
   "2104944848155353266": {
@@ -2513,6 +2641,371 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "de5aabec2e5bde9575455c2cc03034621c4e27f1e5b7a28a8e8fdcf0909844cb"
+  },
+  "2104954810554560791": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104952978243248342",
+    "fingerprint": "f093174ac3f21b5a0054dfc401f3160d79782203b224093fd6f27598b24d844c"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104952978243248342",
+    "fingerprint": "f093174ac3f21b5a0054dfc401f3160d79782203b224093fd6f27598b24d844c"
+   }
+  },
+  "2104954924631052651": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_7036fc8b4fdb06d5",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/sports-gaming/6114278-mlb-grand-teton-national-park/",
+     "text": "MLB, Trump administration mulling baseball game in National Park: Report",
+     "title": "MLB, Trump administration mulling baseball game in National Park: Report",
+     "publishedAt": "2026-09-28T00:21:00.000Z",
+     "fetchedAt": "2026-09-28T00:44:27.459Z",
+     "version": 228,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7036fc8b4fdb06d5"
+   ],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2104186845479248307",
+    "authorId": "2467791",
+    "handle": "washingtonpost",
+    "createdAt": "2026-09-27T12:30:12.000Z",
+    "textChars": 298,
+    "textHash": "6aa2dd51922317df1a6bccfe91a8ac1aa0e29aa459bfd0d0495b3e35f05dc4ba"
+   }
+  },
+  "2104955348738027845": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104955406531309711": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104955610454221287": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_95ac4e3e3665b734",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6112947-donald-trump-xi-jinping-tariffs/",
+     "text": "US, China agree to cut tariffs on $30 billion worth of goods, set up channel for AI incidents",
+     "title": "US, China agree to cut tariffs on $30 billion worth of goods, set up channel for AI incidents",
+     "publishedAt": "2026-09-26T12:10:22.000Z",
+     "fetchedAt": "2026-09-26T13:02:17.294Z",
+     "version": 198,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_791d302fc115c7b2",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/amid-surreal-scenes-trump-flashes-force-and-friendship-with-chinas-xi/",
+     "text": "The surreal scene all amounted to a show of force by Trump during Xi’s state visit, even as he has pulled the United States away from longtime allies and toward adversaries like China.",
+     "title": "Amid surreal scenes, Trump flashes force and ‘friendship’ with China’s Xi",
+     "publishedAt": "2026-09-24T15:11:03.000Z",
+     "fetchedAt": "2026-09-24T19:47:26.109Z",
+     "version": 163,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_95ac4e3e3665b734"
+   ],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2104586977332842691",
+    "authorId": "14173315",
+    "handle": "NBCNews",
+    "createdAt": "2026-09-28T15:00:11.000Z",
+    "textChars": 223,
+    "textHash": "d1f7ca99c39ff09a88681fb786d3651d44af6847cf634c1e6b36779c52f98432"
+   }
+  },
+  "2104955613092745669": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_791d302fc115c7b2",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/amid-surreal-scenes-trump-flashes-force-and-friendship-with-chinas-xi/",
+     "text": "The surreal scene all amounted to a show of force by Trump during Xi’s state visit, even as he has pulled the United States away from longtime allies and toward adversaries like China.",
+     "title": "Amid surreal scenes, Trump flashes force and ‘friendship’ with China’s Xi",
+     "publishedAt": "2026-09-24T15:11:03.000Z",
+     "fetchedAt": "2026-09-24T19:47:26.109Z",
+     "version": 163,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_98c573f5ab76fdf5",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6116335-perdue-remarks-trigger-us-china-debate/",
+     "text": "Trump, China and the question of selling arms to Beijing",
+     "title": "Trump, China and the question of selling arms to Beijing",
+     "publishedAt": "2026-09-29T10:00:00.000Z",
+     "fetchedAt": "2026-09-29T10:54:30.814Z",
+     "version": 251,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2104955610454221287",
+    "authorId": "442824717",
+    "handle": "RepRichardNeal",
+    "createdAt": "2026-09-29T15:25:00.000Z",
+    "textChars": 299,
+    "textHash": "08c4e5dfeac3852564612bae564dcbdfe495315ec2ef3fd2b7a2c3dd57ec2602"
+   }
+  },
+  "2104956595340013619": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104956675660583034": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_a02f1f6ca36213e1",
+     "publisher": "The Washington Post",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/23/these-midterm-races-have-seen-most-ad-money-spent-so-far/",
+     "text": "Ohio Senate race leads in midterm ad spending at nearly $200 million",
+     "title": "Ohio Senate race leads in midterm ad spending at nearly $200 million",
+     "publishedAt": "2026-09-23T13:00:00.000Z",
+     "fetchedAt": "2026-09-23T14:32:29.058Z",
+     "version": 134,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bbf3fd626147f943",
+     "publisher": "NPR",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5961354/could-a-far-left-candidate-win-a-midterm-race-in-a-red-state-like-florida",
+     "text": "CATHERINE WELCH, BYLINE: To understand the political headwinds Democrats in Florida are facing, just look at voter registration. There are 1.5 million more registered Republicans than Democrats, and a Democrat hasn't won a statewide election since 2018. This is the Florida the Democratic U.S. Senate candidate Angie Nixon faces as she campaigns from the left with a message of Medicare for all and taxing billionaires. Her message got Gabe Henson's vote in the primary.",
+     "title": "Could a far left candidate win a midterm race in a red state like Florida?",
+     "publishedAt": "2026-09-28T22:51:14.000Z",
+     "fetchedAt": "2026-09-29T05:55:02.331Z",
+     "version": 247,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104957580053299397": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f1e42e8d845ec0bb",
+     "publisher": "NPR",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/25/nx-s1-5976940/trump-and-chinas-xi-discuss-ai-trade-and-iran-war-during-state-visit",
+     "text": "LEILA FADEL, HOST: Trump hosted Xi for a lavish state dinner last night. The U.S. president literally rolled out the red carpet for the Chinese leader as they discussed artificial intelligence, trade and the Iran war. In a few moments, we'll discuss what was accomplished with former U.S. Ambassador to China Nicholas Burns. We begin with the news.",
+     "title": "Trump and China's Xi discuss AI, trade and Iran war during state visit",
+     "publishedAt": "2026-09-25T10:48:42.000Z",
+     "fetchedAt": "2026-09-26T11:52:07.815Z",
+     "version": 197,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2104190162158711275",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-27T12:43:23.000Z",
+    "textChars": 300,
+    "textHash": "5599f62be5eeb16e8180fff829584c53193808cf2e4872cbad5e91bd2851672f"
+   }
+  },
+  "2104957783313383926": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104958295262040407": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104958375679119535": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_08e38c583f7a95c0",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
+     "text": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
+     "title": "Senate passes ‘Protect College Sports Act’ with sweeping bipartisan vote",
+     "publishedAt": "2026-09-29T02:08:17.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104959099653734667": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104959236450979979": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2103262341727179028",
+    "authorId": "12737142",
+    "handle": "MattBelloni",
+    "createdAt": "2026-09-24T23:16:33.000Z",
+    "textChars": 236,
+    "textHash": "747106883769a20c1519af888341a0b4d48cb48035e6c31ba78c07c6cc28e64f"
+   }
+  },
+  "2104959427300425766": {
+   "contextVersion": 252,
+   "evidenceSupplied": [
+    {
+     "id": "n_377300daeba41d72",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/who-would-this-independent-caucus-with-everybody/",
+     "text": "Three independent candidates made the trek to Capitol Hill this week to make a point about AI and data centers, calling on Congress to rein in a “real threat.” They also made a case for another reality — their own.",
+     "title": "Who would this independent caucus with? ‘Everybody’",
+     "publishedAt": "2026-09-24T20:03:27.000Z",
+     "fetchedAt": "2026-09-25T01:22:04.748Z",
+     "version": 169,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
+  },
+  "2104959576529571941": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104949133069193649",
+    "fingerprint": "7ed9c16be39f07723b824fe29a50de4934f5bae0c4d9149b9854bc46a80beffb"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104949133069193649",
+    "fingerprint": "7ed9c16be39f07723b824fe29a50de4934f5bae0c4d9149b9854bc46a80beffb"
+   }
+  },
+  "2104959676852912466": {
+   "contextVersion": 252,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf",
+   "quotedContext": {
+    "id": "2104953068249030840",
+    "authorId": "5408852",
+    "handle": "gtwhitesides",
+    "createdAt": "2026-09-29T15:14:54.000Z",
+    "textChars": 287,
+    "textHash": "f4422ed4e5cbdeb888acfcfc5a0caaccc1490d23ff36c149ee8a1d8fd4bbc3ba"
+   }
   }
  },
  "needsContext": {
@@ -2625,7 +3118,24 @@
   "2104952784705495052": false,
   "2104953068249030840": false,
   "2104953106845057074": false,
-  "2104953137177972980": false
+  "2104953137177972980": false,
+  "2104954810554560791": false,
+  "2104954924631052651": false,
+  "2104955348738027845": false,
+  "2104955406531309711": false,
+  "2104955610454221287": false,
+  "2104955613092745669": false,
+  "2104956595340013619": false,
+  "2104956675660583034": false,
+  "2104957580053299397": false,
+  "2104957783313383926": false,
+  "2104958295262040407": true,
+  "2104958375679119535": false,
+  "2104959099653734667": false,
+  "2104959236450979979": false,
+  "2104959427300425766": true,
+  "2104959576529571941": false,
+  "2104959676852912466": false
  },
  "inputBlocks": {},
  "contextVersion": 252,
@@ -2727,6 +3237,36 @@
    "ids": [
     "2104948857498968388"
    ]
+  },
+  {
+   "label": "MLB game / stadium proposal at Grand Teton National Park",
+   "ids": [
+    "2104954924631052651"
+   ]
+  },
+  {
+   "label": "Estrogen patch shortage and FDA response",
+   "ids": [
+    "2104955348738027845"
+   ]
+  },
+  {
+   "label": "Childcare for firefighters and EMS legislation",
+   "ids": [
+    "2104955406531309711"
+   ]
+  },
+  {
+   "label": "Prediction markets / sports betting gambling regulation bill",
+   "ids": [
+    "2104958375679119535"
+   ]
+  },
+  {
+   "label": "Nolan Wells death investigation",
+   "ids": [
+    "2104959427300425766"
+   ]
   }
  ],
  "unclassified": [],
@@ -2740,44 +3280,33 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104925963834319299",
-    "2104926179421458678",
-    "2104926843463757873",
-    "2104928621445906746",
-    "2104928954515607937",
-    "2104928995900878944",
-    "2104929402354360817",
-    "2104929971495985451",
-    "2104930161275592747",
-    "2104930438263275637",
-    "2104931369943970024",
-    "2104931825650913724",
-    "2104931995700838536",
-    "2104932159769199030",
-    "2104932383564967985",
-    "2104932386093858868",
-    "2104932853683540011",
-    "2104933018234130448",
-    "2104934046275076208",
-    "2104934064142590143",
-    "2104934311875006498",
-    "2104934670693511552",
-    "2104934731435454751",
-    "2104934767334449552",
-    "2104935020628754607",
-    "2104935030615122399",
-    "2104935233309282676",
-    "2104935474145939736"
+    "2104954810554560791",
+    "2104954924631052651",
+    "2104955348738027845",
+    "2104955406531309711",
+    "2104955610454221287",
+    "2104955613092745669",
+    "2104956595340013619",
+    "2104956675660583034",
+    "2104957580053299397",
+    "2104957783313383926",
+    "2104958295262040407",
+    "2104958375679119535",
+    "2104959099653734667",
+    "2104959236450979979",
+    "2104959427300425766",
+    "2104959576529571941",
+    "2104959676852912466"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T15:19:04.479Z",
-    "observedAt": "2026-09-29T15:19:48.707Z",
+    "attemptedAt": "2026-09-29T15:44:24.612Z",
+    "observedAt": "2026-09-29T15:45:04.048Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 28,
+    "acceptedCount": 17,
     "retryCount": 0
    }
   },
@@ -2865,24 +3394,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T15:20:58.216Z",
-   "observedAt": "2026-09-29T15:21:15.282Z",
+   "attemptedAt": "2026-09-29T15:44:24.612Z",
+   "observedAt": "2026-09-29T15:45:04.048Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T15:20:58.216Z",
-   "observedAt": "2026-09-29T15:21:15.282Z",
+   "attemptedAt": "2026-09-29T15:44:24.612Z",
+   "observedAt": "2026-09-29T15:45:04.048Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T15:21:15.291Z"
+ "updatedAt": "2026-09-29T15:45:04.055Z"
 }
