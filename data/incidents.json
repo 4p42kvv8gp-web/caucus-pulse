@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-09-29T14:13:50.419Z",
+ "generatedAt": "2026-09-29T15:21:15.403Z",
  "incidents": [
+  {
+   "id": "prince-georges-and-montgomery-counties-md--water-outage--source-2104944848155353266",
+   "kind": "water outage",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "water outage"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Prince George's and Montgomery Counties, MD · MD-04",
+   "placeRaw": "Prince George's and Montgomery Counties, MD",
+   "district": "MD-04",
+   "districtMatch": true,
+   "handle": "@RepGlennIvey",
+   "member": "Glenn Ivey",
+   "since": "2026-09-29T14:42:14.000Z",
+   "last": "2026-09-29T14:42:14.000Z",
+   "updates": 1,
+   "engN": 1,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Water outage · Prince George's and Montgomery Counties, MD",
+   "evidence": {
+    "span": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.",
+    "exact": true,
+    "start": 0,
+    "end": 205,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2104944848155353266",
+    "url": "https://x.com/i/web/status/2104944848155353266"
+   },
+   "timeline": [
+    {
+     "id": "2104944848155353266",
+     "sourceId": "2104944848155353266",
+     "url": "https://x.com/i/web/status/2104944848155353266",
+     "authorId": "1610111693836664834",
+     "personId": "member:glenn ivey",
+     "referenceIds": [],
+     "time": "2026-09-29T14:42:14.000Z",
+     "who": "@RepGlennIvey",
+     "tag": "member",
+     "text": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.\n\nWater is currently safe to drink, but residents should conserve immediately by limiting showers, flushing, outdoor water use, and use of washing machines and dishwashers.\n\nPlease share this information with your neighbors and continue to follow @WSSCWaterNews for updates.",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "water outage",
+      "place": "Prince George's and Montgomery Counties, MD",
+      "name": null
+     },
+     "evidence": {
+      "span": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.",
+      "exact": true,
+      "start": 0,
+      "end": 205,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2104944848155353266",
+      "url": "https://x.com/i/web/status/2104944848155353266"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2104944848155353266"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2104944848155353266"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "socorro-county-nm--flooding--source-2104760486831231342",
    "kind": "flooding",
@@ -10,7 +105,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
