@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T16:34:00.374Z",
+ "classifiedAt": "2026-09-29T18:06:37.405Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -1573,8 +1573,8 @@
     "military-veterans"
    ],
    [
-    "education",
-    "higher-ed"
+    "budget-appropriations",
+    null
    ]
   ],
   "2104631820444684533": [],
@@ -7091,12 +7091,6 @@
    "evidenceUsed": [],
    "inputHash": "7934cc40f0b1dc3390372c27f96b3ce80362cfd4e45fec82e8ff1b4488b69d30"
   },
-  "2104628202614440273": {
-   "contextVersion": 242,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "7934cc40f0b1dc3390372c27f96b3ce80362cfd4e45fec82e8ff1b4488b69d30"
-  },
   "2104628266233381082": {
    "contextVersion": 242,
    "evidenceSupplied": [],
@@ -7265,28 +7259,6 @@
   "2104631485777293339": {
    "contextVersion": 242,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "7934cc40f0b1dc3390372c27f96b3ce80362cfd4e45fec82e8ff1b4488b69d30"
-  },
-  "2104631543310291206": {
-   "contextVersion": 242,
-   "evidenceSupplied": [
-    {
-     "id": "n_e8db80c24ee55b93",
-     "publisher": "NPR",
-     "date": "2026-09-24",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
-     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
-     "title": "Long agenda, short meeting: Trump and Xi meet",
-     "publishedAt": "2026-09-24T22:10:00.000Z",
-     "fetchedAt": "2026-09-26T05:08:06.167Z",
-     "version": 193,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "7934cc40f0b1dc3390372c27f96b3ce80362cfd4e45fec82e8ff1b4488b69d30"
   },
@@ -11840,6 +11812,65 @@
    ],
    "evidenceUsed": [],
    "inputHash": "f1b2da7ef9fbc2baad729a4e518cd9d6da444af80e2c35d6a4f3a461dfc5a590"
+  },
+  "2104628202614440273": {
+   "contextVersion": 255,
+   "evidenceSupplied": [
+    {
+     "id": "n_6c0e4a9d7a5030be",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/madam-speaker-madam-president-yassamin-ansari/",
+     "text": "Back when she was a college student at Stanford University studying international relations, she would hop in her car a couple days a week and drive north to San Francisco, where she interned in Pelosi’s district office, mostly answering the phones.",
+     "title": "Madam speaker, madam president: Ansari looks back on her first congressional job",
+     "publishedAt": "2026-09-29T12:00:00.000Z",
+     "fetchedAt": "2026-09-29T17:17:54.715Z",
+     "version": 255,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1cfc221adf2acd637862c3d5ddc24a0733192db816760c9dd537016799276c07"
+  },
+  "2104631543310291206": {
+   "contextVersion": 255,
+   "evidenceSupplied": [
+    {
+     "id": "n_6c0e4a9d7a5030be",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/madam-speaker-madam-president-yassamin-ansari/",
+     "text": "Back when she was a college student at Stanford University studying international relations, she would hop in her car a couple days a week and drive north to San Francisco, where she interned in Pelosi’s district office, mostly answering the phones.",
+     "title": "Madam speaker, madam president: Ansari looks back on her first congressional job",
+     "publishedAt": "2026-09-29T12:00:00.000Z",
+     "fetchedAt": "2026-09-29T17:17:54.715Z",
+     "version": 255,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e8db80c24ee55b93",
+     "publisher": "NPR",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
+     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
+     "title": "Long agenda, short meeting: Trump and Xi meet",
+     "publishedAt": "2026-09-24T22:10:00.000Z",
+     "fetchedAt": "2026-09-26T05:08:06.167Z",
+     "version": 193,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1cfc221adf2acd637862c3d5ddc24a0733192db816760c9dd537016799276c07"
   }
  },
  "needsContext": {
@@ -12043,7 +12074,6 @@
   "2104627841350725995": false,
   "2104627985504518329": false,
   "2104628081629520101": false,
-  "2104628202614440273": false,
   "2104628266233381082": false,
   "2104628498145186249": false,
   "2104628541782708602": false,
@@ -12056,7 +12086,6 @@
   "2104631264804241418": false,
   "2104631291811680685": false,
   "2104631485777293339": false,
-  "2104631543310291206": false,
   "2104631820444684533": false,
   "2104631953643471060": false,
   "2104632153027883132": false,
@@ -12365,10 +12394,12 @@
   "2104676002160861687": false,
   "2104711975779344866": false,
   "2104712312095457363": false,
-  "2104752973951758648": false
+  "2104752973951758648": false,
+  "2104628202614440273": false,
+  "2104631543310291206": false
  },
  "inputBlocks": {},
- "contextVersion": 254,
+ "contextVersion": 255,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12782,25 +12813,56 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104602549886013690",
-    "2104665433555304699",
-    "2104676002160861687",
-    "2104711975779344866",
-    "2104712312095457363",
-    "2104752973951758648",
-    "2104919877677175035",
-    "2104940424888521138",
-    "2104944545062690819"
+    "2104628202614440273",
+    "2104631543310291206",
+    "2104972585217720376",
+    "2104972743326474726",
+    "2104972885827727395",
+    "2104973098282103117",
+    "2104973159447273984",
+    "2104973264053321958",
+    "2104974238621016134",
+    "2104974736451056034",
+    "2104974878948413563",
+    "2104975128958308561",
+    "2104975203381969261",
+    "2104975225272353246",
+    "2104975240941978093",
+    "2104975497986027741",
+    "2104975780207788430",
+    "2104975900160688453",
+    "2104976505377849813",
+    "2104976506854183114",
+    "2104977009054998836",
+    "2104977190991311245",
+    "2104977234604032005",
+    "2104977258519646327",
+    "2104977548824232223",
+    "2104978017047175288",
+    "2104978342659149833",
+    "2104978498699862303",
+    "2104978966167920813",
+    "2104979380753539187",
+    "2104979458541412623",
+    "2104979520059244653",
+    "2104979522714259728",
+    "2104979528934420764",
+    "2104980031907017179",
+    "2104980140086243733",
+    "2104980326124589365",
+    "2104980421612290325",
+    "2104980630639415347",
+    "2104980897619468736"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T16:32:19.170Z",
-    "observedAt": "2026-09-29T16:32:36.348Z",
+    "attemptedAt": "2026-09-29T18:03:49.004Z",
+    "observedAt": "2026-09-29T18:04:57.074Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   },
@@ -12882,24 +12944,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T16:32:19.170Z",
-   "observedAt": "2026-09-29T16:32:36.348Z",
+   "attemptedAt": "2026-09-29T18:03:49.004Z",
+   "observedAt": "2026-09-29T18:04:57.074Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T16:32:19.170Z",
-   "observedAt": "2026-09-29T16:32:36.348Z",
+   "attemptedAt": "2026-09-29T18:03:49.004Z",
+   "observedAt": "2026-09-29T18:04:57.074Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T16:34:00.378Z"
+ "updatedAt": "2026-09-29T18:06:37.409Z"
 }
