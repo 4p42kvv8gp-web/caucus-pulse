@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T05:10:28.737Z",
+ "classifiedAt": "2026-09-29T06:42:14.628Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -4522,12 +4522,6 @@
    "inputHash": "7a68afc0329dfa2332a42ebfb484642431b8a3a1eb1e5e44e2f9c4c0c81d8fbb"
   },
   "2104571841201447113": {
-   "contextVersion": 241,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "7a68afc0329dfa2332a42ebfb484642431b8a3a1eb1e5e44e2f9c4c0c81d8fbb"
-  },
-  "2104572245905391987": {
    "contextVersion": 241,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -11759,6 +11753,28 @@
     "referenceId": "2104677940793585711",
     "fingerprint": "b717a67388b3f81d13c7e06d611912bbee73b26be4b4207fe4c79ca6fb7f7b04"
    }
+  },
+  "2104572245905391987": {
+   "contextVersion": 247,
+   "evidenceSupplied": [
+    {
+     "id": "n_bbf3fd626147f943",
+     "publisher": "NPR",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5961354/could-a-far-left-candidate-win-a-midterm-race-in-a-red-state-like-florida",
+     "text": "CATHERINE WELCH, BYLINE: To understand the political headwinds Democrats in Florida are facing, just look at voter registration. There are 1.5 million more registered Republicans than Democrats, and a Democrat hasn't won a statewide election since 2018. This is the Florida the Democratic U.S. Senate candidate Angie Nixon faces as she campaigns from the left with a message of Medicare for all and taxing billionaires. Her message got Gabe Henson's vote in the primary.",
+     "title": "Could a far left candidate win a midterm race in a red state like Florida?",
+     "publishedAt": "2026-09-28T22:51:14.000Z",
+     "fetchedAt": "2026-09-29T05:55:02.331Z",
+     "version": 247,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "adaa299235ad78a550d324226d5fd6be9358db0c33f9a74569d5ea08f4707076"
   }
  },
  "needsContext": {
@@ -11800,7 +11816,6 @@
   "2104571479199560033": false,
   "2104571591690428467": false,
   "2104571841201447113": false,
-  "2104572245905391987": false,
   "2104572872056516729": false,
   "2104573585297756487": false,
   "2104573642587648482": false,
@@ -12284,10 +12299,11 @@
   "2104777846488977728": false,
   "2104778093349294181": false,
   "2104779341947109885": false,
-  "2104781497550946750": false
+  "2104781497550946750": false,
+  "2104572245905391987": false
  },
  "inputBlocks": {},
- "contextVersion": 246,
+ "contextVersion": 247,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12695,23 +12711,18 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104777846488977728",
-    "2104778093349294181",
-    "2104779341947109885",
-    "2104781497550946750",
-    "2104783788471726311",
-    "2104784670105989128",
-    "2104799465270096128"
+    "2104572245905391987",
+    "2104801717564977317"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T05:10:14.823Z",
-    "observedAt": "2026-09-29T05:10:28.717Z",
+    "attemptedAt": "2026-09-29T06:42:08.818Z",
+    "observedAt": "2026-09-29T06:42:14.611Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   },
@@ -12851,24 +12862,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T05:10:14.823Z",
-   "observedAt": "2026-09-29T05:10:28.717Z",
+   "attemptedAt": "2026-09-29T06:42:08.818Z",
+   "observedAt": "2026-09-29T06:42:14.611Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T05:10:14.823Z",
-   "observedAt": "2026-09-29T05:10:28.717Z",
+   "attemptedAt": "2026-09-29T06:42:08.818Z",
+   "observedAt": "2026-09-29T06:42:14.611Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T05:10:28.741Z"
+ "updatedAt": "2026-09-29T06:42:14.633Z"
 }
