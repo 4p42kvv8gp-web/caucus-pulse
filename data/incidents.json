@@ -1,6 +1,198 @@
 {
- "generatedAt": "2026-09-29T01:23:49.553Z",
+ "generatedAt": "2026-09-29T02:09:02.909Z",
  "incidents": [
+  {
+   "id": "nassau-county-ny--power-outage--source-2104680670672888202",
+   "kind": "power outage",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "power outage"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Nassau County, NY · NY-04",
+   "placeRaw": "Nassau County, NY",
+   "district": "NY-04",
+   "districtMatch": true,
+   "handle": "@RepLauraGillen",
+   "member": "Laura Gillen",
+   "since": "2026-09-28T21:12:29.000Z",
+   "last": "2026-09-28T21:12:29.000Z",
+   "updates": 1,
+   "engN": 0,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Power outage · Nassau County, NY",
+   "evidence": {
+    "span": "Visit PSEG's website to view a map of outages in Nassau County and estimated restoration times.",
+    "exact": true,
+    "start": 155,
+    "end": 250,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2104680670672888202",
+    "url": "https://x.com/i/web/status/2104680670672888202"
+   },
+   "timeline": [
+    {
+     "id": "2104680670672888202",
+     "sourceId": "2104680670672888202",
+     "url": "https://x.com/i/web/status/2104680670672888202",
+     "authorId": "1854256323547815957",
+     "personId": "member:laura gillen",
+     "referenceIds": [
+      "2104680540846887028"
+     ],
+     "time": "2026-09-28T21:12:29.000Z",
+     "who": "@RepLauraGillen",
+     "tag": "member",
+     "text": "PSEG customers can download the PSEG app to report outages and receive information on restoration times, crew locations and more. https://t.co/cPjh5MFV7L\n\nVisit PSEG's website to view a map of outages in Nassau County and estimated restoration times.https://t.co/awUSsPI54B",
+     "engN": 0,
+     "isNew": false,
+     "flag": {
+      "kind": "power outage",
+      "place": "Nassau County, NY",
+      "name": null
+     },
+     "evidence": {
+      "span": "Visit PSEG's website to view a map of outages in Nassau County and estimated restoration times.",
+      "exact": true,
+      "start": 155,
+      "end": 250,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2104680670672888202",
+      "url": "https://x.com/i/web/status/2104680670672888202"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2104680670672888202"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2104680670672888202"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "nassau-county-ny--power-outage--source-2104680540846887028",
+   "kind": "power outage",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "power outage"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Nassau County, NY · NY-04",
+   "placeRaw": "Nassau County, NY",
+   "district": "NY-04",
+   "districtMatch": true,
+   "handle": "@RepLauraGillen",
+   "member": "Laura Gillen",
+   "since": "2026-09-28T21:11:58.000Z",
+   "last": "2026-09-28T21:11:58.000Z",
+   "updates": 1,
+   "engN": 2,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Power outage · Nassau County, NY",
+   "evidence": {
+    "span": "As we recover from this weekend’s storm, I urge anyone who has lost power to call PSEG at 1-800-490-0075. \n\nReport any Freeport Electric out",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2104680540846887028",
+    "url": "https://x.com/i/web/status/2104680540846887028"
+   },
+   "timeline": [
+    {
+     "id": "2104680540846887028",
+     "sourceId": "2104680540846887028",
+     "url": "https://x.com/i/web/status/2104680540846887028",
+     "authorId": "1854256323547815957",
+     "personId": "member:laura gillen",
+     "referenceIds": [],
+     "time": "2026-09-28T21:11:58.000Z",
+     "who": "@RepLauraGillen",
+     "tag": "member",
+     "text": "As we recover from this weekend’s storm, I urge anyone who has lost power to call PSEG at 1-800-490-0075. \n\nReport any Freeport Electric outages at https://t.co/6AKIc1UWAu or call (516) 378-0146.\n\nReport any Rockville Centre Power outages to 516-766-5800.\n\nThank you to all the emergency responders who have been working around the clock to clean up and ensure our safety.",
+     "engN": 2,
+     "isNew": false,
+     "flag": {
+      "kind": "power outage",
+      "place": "Nassau County, NY",
+      "name": null
+     },
+     "evidence": {
+      "span": "As we recover from this weekend’s storm, I urge anyone who has lost power to call PSEG at 1-800-490-0075. \n\nReport any Freeport Electric out",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2104680540846887028",
+      "url": "https://x.com/i/web/status/2104680540846887028"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2104680540846887028"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2104680540846887028"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "sea-bright-nj--severe-storm--source-2104608271084515666",
    "kind": "severe storm",
