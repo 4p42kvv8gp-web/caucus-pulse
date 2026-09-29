@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-09-29T20:16:56.370Z",
+ "generatedAt": "2026-09-29T21:08:29.132Z",
  "incidents": [
+  {
+   "id": "ruidoso-nm--other--source-2105039011475562985",
+   "kind": "other",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "other"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Ruidoso, NM · NM-01",
+   "placeRaw": "Ruidoso, NM",
+   "district": "NM-01",
+   "districtMatch": true,
+   "handle": "@Rep_Stansbury",
+   "member": "Melanie A. Stansbury",
+   "since": "2026-09-29T20:56:24.000Z",
+   "last": "2026-09-29T20:56:24.000Z",
+   "updates": 1,
+   "engN": 4,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Other · Ruidoso, NM",
+   "evidence": {
+    "span": "Ruidoso family and friends, please stay safe!\n\nResidents in the Upper Canyon area are being advised to prepare for possible evacuations due",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2105039011475562985",
+    "url": "https://x.com/i/web/status/2105039011475562985"
+   },
+   "timeline": [
+    {
+     "id": "2105039011475562985",
+     "sourceId": "2105039011475562985",
+     "url": "https://x.com/i/web/status/2105039011475562985",
+     "authorId": "1404519992582942724",
+     "personId": "member:melanie a. stansbury",
+     "referenceIds": [],
+     "time": "2026-09-29T20:56:24.000Z",
+     "who": "@Rep_Stansbury",
+     "tag": "member",
+     "text": "Ruidoso family and friends, please stay safe!\n\nResidents in the Upper Canyon area are being advised to prepare for possible evacuations due to landslide risk. Please follow guidance from local emergency officials, have a plan, and be ready to evacuate if instructed. \n\nIf you’re in need of shelter, please head to Gateway Church. Thinking of our Ruidoso community and first responders. ❤️\n\nhttps://t.co/e1tuKZ9X5o",
+     "engN": 4,
+     "isNew": false,
+     "flag": {
+      "kind": "other",
+      "place": "Ruidoso, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "Ruidoso family and friends, please stay safe!\n\nResidents in the Upper Canyon area are being advised to prepare for possible evacuations due",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2105039011475562985",
+      "url": "https://x.com/i/web/status/2105039011475562985"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105039011475562985"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105039011475562985"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "montgomery-county-md--water-outage--source-2104979275375903077",
    "kind": "water outage",
@@ -1127,6 +1222,15 @@
   }
  ],
  "filtered": [
+  {
+   "id": "2105031689189671250",
+   "kind": "severe storm",
+   "place": "Brigantine, NJ",
+   "who": "@GovSherrillNJ",
+   "time": "2026-09-29T20:27:18.000Z",
+   "reason": "non-House account",
+   "cue": null
+  },
   {
    "id": "2105024579093876926",
    "kind": "severe storm",

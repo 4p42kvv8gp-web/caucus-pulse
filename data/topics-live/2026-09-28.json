@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T19:36:17.000Z",
+ "classifiedAt": "2026-09-29T21:08:28.999Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -5461,45 +5461,6 @@
    "contextVersion": 242,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "7efc0cc898413e7c4e27ccf2ce601db9affe765f0e43616d7375643c179edb9a"
-  },
-  "2104600952560861340": {
-   "contextVersion": 242,
-   "evidenceSupplied": [
-    {
-     "id": "n_5d8bc59252c7628c",
-     "publisher": "The Hill",
-     "date": "2026-09-21",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6102194-austin-officials-condemn-ice-shooting-of-venezuelan-man-call-for-independent-investigation/",
-     "text": "Austin officials condemn ICE shooting of Venezuelan man, call for independent investigation",
-     "title": "Austin officials condemn ICE shooting of Venezuelan man, call for independent investigation",
-     "publishedAt": "2026-09-21T20:58:40.000Z",
-     "fetchedAt": "2026-09-21T21:03:24.547Z",
-     "version": 102,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_415a0995616ae6cf",
-     "publisher": "The Hill",
-     "date": "2026-09-23",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6107260-ice-officer-shooting-austin-body-camera/",
-     "text": "ICE officer who shot Austin man wasn’t wearing body camera: Reports",
-     "title": "ICE officer who shot Austin man wasn’t wearing body camera: Reports",
-     "publishedAt": "2026-09-23T20:58:00.000Z",
-     "fetchedAt": "2026-09-23T21:31:35.403Z",
-     "version": 142,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_5d8bc59252c7628c"
-   ],
    "inputHash": "7efc0cc898413e7c4e27ccf2ce601db9affe765f0e43616d7375643c179edb9a"
   },
   "2104601200230601130": {
@@ -11869,6 +11830,46 @@
     "n_856c45aa79d76eed"
    ],
    "inputHash": "26e07cf861b7dfb7051aa754f6e8c2b40c00fea71308f2f51cdd59283672abf7"
+  },
+  "2104600952560861340": {
+   "contextVersion": 258,
+   "evidenceSupplied": [
+    {
+     "id": "n_5d8bc59252c7628c",
+     "publisher": "The Hill",
+     "date": "2026-09-21",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6102194-austin-officials-condemn-ice-shooting-of-venezuelan-man-call-for-independent-investigation/",
+     "text": "Austin officials condemn ICE shooting of Venezuelan man, call for independent investigation",
+     "title": "Austin officials condemn ICE shooting of Venezuelan man, call for independent investigation",
+     "publishedAt": "2026-09-21T20:58:40.000Z",
+     "fetchedAt": "2026-09-21T21:03:24.547Z",
+     "version": 102,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_415a0995616ae6cf",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6107260-ice-officer-shooting-austin-body-camera/",
+     "text": "ICE officer who shot Austin man wasn’t wearing body camera: Reports",
+     "title": "ICE officer who shot Austin man wasn’t wearing body camera: Reports",
+     "publishedAt": "2026-09-23T20:58:00.000Z",
+     "fetchedAt": "2026-09-23T21:31:35.403Z",
+     "version": 142,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5d8bc59252c7628c",
+    "n_415a0995616ae6cf"
+   ],
+   "inputHash": "d5b60e637ec95dbb06a51f2060701b590379fa3d2dc2f77533d58a71eb73a8b9"
   }
  },
  "needsContext": {
@@ -11974,7 +11975,6 @@
   "2104599264244768974": false,
   "2104599932087001236": false,
   "2104600051553128938": false,
-  "2104600952560861340": false,
   "2104601200230601130": false,
   "2104602031801741772": false,
   "2104602238576623853": false,
@@ -12394,10 +12394,11 @@
   "2104683828602142901": false,
   "2104711975779344866": false,
   "2104712312095457363": false,
-  "2104752973951758648": false
+  "2104752973951758648": false,
+  "2104600952560861340": false
  },
  "inputBlocks": {},
- "contextVersion": 256,
+ "contextVersion": 258,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12810,6 +12811,12 @@
    "ids": [
     "2104712312095457363"
    ]
+  },
+  {
+   "label": "ICE shootings of civilians in Austin and Illinois",
+   "ids": [
+    "2104600952560861340"
+   ]
   }
  ],
  "unclassified": [],
@@ -12823,23 +12830,35 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104602549886013690",
-    "2104627985504518329",
-    "2104665433555304699",
-    "2104683828602142901",
-    "2104711975779344866",
-    "2104712312095457363",
-    "2104752973951758648"
+    "2104600952560861340",
+    "2105023895392973056",
+    "2105029063069094143",
+    "2105029495178559719",
+    "2105029983752143019",
+    "2105030211033313771",
+    "2105030252590452797",
+    "2105030411659424081",
+    "2105030637782520011",
+    "2105030679935291542",
+    "2105030852740534578",
+    "2105031215203889229",
+    "2105031689189671250",
+    "2105031693363241000",
+    "2105032001422286902",
+    "2105032132775080245",
+    "2105032546819928474",
+    "2105032902769615211",
+    "2105032950643364162"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T19:34:02.110Z",
-    "observedAt": "2026-09-29T19:34:14.941Z",
+    "attemptedAt": "2026-09-29T21:06:42.878Z",
+    "observedAt": "2026-09-29T21:07:32.572Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 19,
     "retryCount": 0
    }
   },
@@ -12891,24 +12910,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T19:34:02.110Z",
-   "observedAt": "2026-09-29T19:34:14.941Z",
+   "attemptedAt": "2026-09-29T21:06:42.878Z",
+   "observedAt": "2026-09-29T21:07:32.572Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T19:34:02.110Z",
-   "observedAt": "2026-09-29T19:34:14.941Z",
+   "attemptedAt": "2026-09-29T21:06:42.878Z",
+   "observedAt": "2026-09-29T21:07:32.572Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T19:36:17.005Z"
+ "updatedAt": "2026-09-29T21:08:29.003Z"
 }
