@@ -1,6 +1,392 @@
 {
- "generatedAt": "2026-09-29T21:08:29.132Z",
+ "generatedAt": "2026-09-29T22:39:13.929Z",
  "incidents": [
+  {
+   "id": "doa-ana-county-nm--flooding--source-2105037516701331772",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Doña Ana County, NM · NM-02",
+   "placeRaw": "Doña Ana County, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-09-29T22:04:56.000Z",
+   "last": "2026-09-29T22:04:56.000Z",
+   "updates": 1,
+   "engN": 6,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Doña Ana County, NM",
+   "evidence": {
+    "span": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept.",
+    "exact": true,
+    "start": 0,
+    "end": 125,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2105056257476292746",
+    "url": "https://x.com/i/web/status/2105056257476292746"
+   },
+   "timeline": [
+    {
+     "id": "2105056257476292746",
+     "sourceId": "2105056257476292746",
+     "url": "https://x.com/i/web/status/2105056257476292746",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [
+      "2105037516701331772"
+     ],
+     "time": "2026-09-29T22:04:56.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "repost",
+     "text": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept. 29.\n\nMORE: ht…",
+     "engN": 6,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Doña Ana County, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept.",
+      "exact": true,
+      "start": 0,
+      "end": 125,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2105056257476292746",
+      "url": "https://x.com/i/web/status/2105056257476292746"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105056257476292746"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105056257476292746"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "ruidoso-nm--flooding--source-2105012626162098202",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Ruidoso, NM · NM-02",
+   "placeRaw": "Ruidoso, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-09-29T22:00:17.000Z",
+   "last": "2026-09-29T22:00:17.000Z",
+   "updates": 1,
+   "engN": 7,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Ruidoso, NM",
+   "evidence": {
+    "span": "RT @KOB4: The Village of Ruidoso advised people in the Upper Canyon area to get ready to evacuate due to the risk of landslides.",
+    "exact": false,
+    "start": 0,
+    "end": 128,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2105055085319639080",
+    "url": "https://x.com/i/web/status/2105055085319639080"
+   },
+   "timeline": [
+    {
+     "id": "2105055085319639080",
+     "sourceId": "2105055085319639080",
+     "url": "https://x.com/i/web/status/2105055085319639080",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [
+      "2105012626162098202"
+     ],
+     "time": "2026-09-29T22:00:17.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "repost",
+     "text": "RT @KOB4: The Village of Ruidoso advised people in the Upper Canyon area to get ready to evacuate due to the risk of landslides. https://t.…",
+     "engN": 7,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Ruidoso, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @KOB4: The Village of Ruidoso advised people in the Upper Canyon area to get ready to evacuate due to the risk of landslides.",
+      "exact": false,
+      "start": 0,
+      "end": 128,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2105055085319639080",
+      "url": "https://x.com/i/web/status/2105055085319639080"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105055085319639080"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105055085319639080"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "doa-ana-county-nm--flooding--source-2105047862933610747",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Doña Ana County, NM · NM-02",
+   "placeRaw": "Doña Ana County, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-09-29T21:55:42.000Z",
+   "last": "2026-09-29T21:55:42.000Z",
+   "updates": 1,
+   "engN": 3,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Doña Ana County, NM",
+   "evidence": {
+    "span": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather.",
+    "exact": false,
+    "start": 0,
+    "end": 64,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2105053934649745666",
+    "url": "https://x.com/i/web/status/2105053934649745666"
+   },
+   "timeline": [
+    {
+     "id": "2105053934649745666",
+     "sourceId": "2105053934649745666",
+     "url": "https://x.com/i/web/status/2105053934649745666",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [
+      "2105047862933610747"
+     ],
+     "time": "2026-09-29T21:55:42.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "repost",
+     "text": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather. https://t.co/k5dRivevMe",
+     "engN": 3,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Doña Ana County, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather.",
+      "exact": false,
+      "start": 0,
+      "end": 64,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2105053934649745666",
+      "url": "https://x.com/i/web/status/2105053934649745666"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105053934649745666"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105053934649745666"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "prince-georges-and-montgomery-counties-md--water-outage--source-2105046654017524074",
+   "kind": "water outage",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "water outage"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Prince George's and Montgomery Counties, MD · MD-05",
+   "placeRaw": "Prince George's and Montgomery Counties, MD",
+   "district": "MD-05",
+   "districtMatch": true,
+   "handle": "@RepStenyHoyer",
+   "member": "Steny H. Hoyer",
+   "since": "2026-09-29T21:26:46.000Z",
+   "last": "2026-09-29T21:26:46.000Z",
+   "updates": 1,
+   "engN": 0,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Water outage · Prince George's and Montgomery Counties, MD",
+   "evidence": {
+    "span": "Due to a power outage at the Potomac Water Filtration Plant, @WSSCWaterNews has requested customers in Prince George's & Montgomery Counties to use water for essential purposes only.",
+    "exact": true,
+    "start": 0,
+    "end": 182,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2105046654017524074",
+    "url": "https://x.com/i/web/status/2105046654017524074"
+   },
+   "timeline": [
+    {
+     "id": "2105046654017524074",
+     "sourceId": "2105046654017524074",
+     "url": "https://x.com/i/web/status/2105046654017524074",
+     "authorId": "22012091",
+     "personId": "member:steny h. hoyer",
+     "referenceIds": [],
+     "time": "2026-09-29T21:26:46.000Z",
+     "who": "@RepStenyHoyer",
+     "tag": "member",
+     "text": "Due to a power outage at the Potomac Water Filtration Plant, @WSSCWaterNews has requested customers in Prince George's & Montgomery Counties to use water for essential purposes only.\n\nWater is still safe to drink, however Marylanders in the impacted regions are advised to restrict their water use. Learn more here: \n\nhttps://t.co/S25L8MF9Ol",
+     "engN": 0,
+     "isNew": false,
+     "flag": {
+      "kind": "water outage",
+      "place": "Prince George's and Montgomery Counties, MD",
+      "name": null
+     },
+     "evidence": {
+      "span": "Due to a power outage at the Potomac Water Filtration Plant, @WSSCWaterNews has requested customers in Prince George's & Montgomery Counties to use water for essential purposes only.",
+      "exact": true,
+      "start": 0,
+      "end": 182,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2105046654017524074",
+      "url": "https://x.com/i/web/status/2105046654017524074"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105046654017524074"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105046654017524074"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "ruidoso-nm--other--source-2105039011475562985",
    "kind": "other",
