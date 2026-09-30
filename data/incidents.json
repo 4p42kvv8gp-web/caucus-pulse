@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-30T06:51:39.892Z",
+ "generatedAt": "2026-09-30T07:50:53.189Z",
  "incidents": [
   {
    "id": "doa-ana-county-nm--flooding--source-2105071983486468505",
@@ -86,7 +86,19 @@
    "tweetIds": [
     "2105091205633618099"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [],
+    "updates": [],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:49:26.462Z",
+    "posts": 1,
+    "inputHash": "c35ab75ce566df2fbf71323f6ee704925fbbbebc2b1d2c34fc5a42efce6d3025",
+    "rejectedItems": 2
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -183,7 +195,35 @@
    "tweetIds": [
     "2105089195668877748"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield.",
+      "sourceId": "2105089195668877748",
+      "url": "https://x.com/i/web/status/2105089195668877748",
+      "evidenceQuote": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield.",
+      "src": "@RepGabeVasquez, 2026-09-30T00:15:49.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield.",
+      "sourceId": "2105089195668877748",
+      "url": "https://x.com/i/web/status/2105089195668877748",
+      "evidenceQuote": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield.",
+      "src": "@RepGabeVasquez, 2026-09-30T00:15:49.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:49:33.558Z",
+    "posts": 1,
+    "inputHash": "c0424a1bdbc1f31e128d835f23d07d4dcdde1f3cbf17202d73a106dddb1ac39c",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -226,7 +266,7 @@
    "since": "2026-09-29T22:49:30.000Z",
    "last": "2026-09-29T22:49:30.000Z",
    "updates": 1,
-   "engN": 1,
+   "engN": 3,
    "amplifiers": 0,
    "others": [],
    "title": "Flooding · Doña Ana County, NM",
@@ -254,7 +294,7 @@
      "who": "@RepGabeVasquez",
      "tag": "member",
      "text": "🚨 FLASH FLOOD EMERGENCY: Officials are warning of the imminent failure of McLeod Dam, with potentially life-threatening flooding downstream.\n\n🏃 EVACUATE: Residents in Garfield and Salem are being advised to evacuate immediately and move to higher ground.\n\n🎒 TAKE ESSENTIALS: If you live in an evacuation area, bring medications, identification, important documents, necessary supplies, and items for children and pets.\n\n🏫 GARFIELD ELEMENTARY: Students have been safely transported to Hatch Valley High School, where parents can pick them up.\n\n🏠 SHELTER: Shelters are open at the Radium Springs Community Center and Doña Ana Community Resource Center for families displaced by the evacuation.\n\n📱 STAY INFORMED: Follow updates from Doña Ana County and local emergency officials, and do not wait to evacuate if you are in an affected area. Click here to track road closures: https://t.co/TvrxEj3uZe",
-     "engN": 1,
+     "engN": 3,
      "isNew": false,
      "flag": {
       "kind": "flooding",
@@ -278,7 +318,64 @@
    "tweetIds": [
     "2105067474278572301"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "🏃 EVACUATE: Residents in Garfield and Salem are being advised to evacuate immediately and move to higher ground.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "🏃 EVACUATE: Residents in Garfield and Salem are being advised to evacuate immediately and move to higher ground.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     },
+     {
+      "text": "🏫 GARFIELD ELEMENTARY: Students have been safely transported to Hatch Valley High School, where parents can pick them up.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "🏫 GARFIELD ELEMENTARY: Students have been safely transported to Hatch Valley High School, where parents can pick them up.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     },
+     {
+      "text": "🏠 SHELTER: Shelters are open at the Radium Springs Community Center and Doña Ana Community Resource Center for families displaced by the evacuation.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "🏠 SHELTER: Shelters are open at the Radium Springs Community Center and Doña Ana Community Resource Center for families displaced by the evacuation.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     }
+    ],
+    "unverified": [
+     {
+      "text": "🚨 FLASH FLOOD EMERGENCY: Officials are warning of the imminent failure of McLeod Dam, with potentially life-threatening flooding downstream.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "🚨 FLASH FLOOD EMERGENCY: Officials are warning of the imminent failure of McLeod Dam, with potentially life-threatening flooding downstream.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "🚨 FLASH FLOOD EMERGENCY: Officials are warning of the imminent failure of McLeod Dam, with potentially life-threatening flooding downstream.\n\n🏃 EVACUATE: Residents in Garfield and Salem are being advised to evacuate immediately and move to higher ground.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "🚨 FLASH FLOOD EMERGENCY: Officials are warning of the imminent failure of McLeod Dam, with potentially life-threatening flooding downstream.\n\n🏃 EVACUATE: Residents in Garfield and Salem are being advised to evacuate immediately and move to higher ground.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     },
+     {
+      "text": "📱 STAY INFORMED: Follow updates from Doña Ana County and local emergency officials, and do not wait to evacuate if you are in an affected area.",
+      "sourceId": "2105067474278572301",
+      "url": "https://x.com/i/web/status/2105067474278572301",
+      "evidenceQuote": "📱 STAY INFORMED: Follow updates from Doña Ana County and local emergency officials, and do not wait to evacuate if you are in an affected area.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:49:30.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:49:45.938Z",
+    "posts": 1,
+    "inputHash": "d61001dfa7aff8cb0630da1de01a916f9ea216b0ffbf4b099460f62cb118d1e6",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -375,7 +472,35 @@
    "tweetIds": [
     "2105056257476292746"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept. 29.",
+      "sourceId": "2105056257476292746",
+      "url": "https://x.com/i/web/status/2105056257476292746",
+      "evidenceQuote": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept. 29.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:04:56.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept. 29.",
+      "sourceId": "2105056257476292746",
+      "url": "https://x.com/i/web/status/2105056257476292746",
+      "evidenceQuote": "RT @KTSMtv: A flash flood emergency and an evacuation notice have been issued for Doña Ana County on Tuesday afternoon, Sept. 29.",
+      "src": "@RepGabeVasquez, 2026-09-29T22:04:56.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:49:53.892Z",
+    "posts": 1,
+    "inputHash": "f862e4cf9c7f6213cf6098dac62ac0340bdbc0b97e735dd8de3dfd37a979233d",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -472,7 +597,19 @@
    "tweetIds": [
     "2105055085319639080"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [],
+    "updates": [],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:49:59.990Z",
+    "posts": 1,
+    "inputHash": "ed58ec4c030fd2db904918df1e7e544942a85e5c071b7b8e294bc5b9a167d38c",
+    "rejectedItems": 2
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -569,7 +706,35 @@
    "tweetIds": [
     "2105053934649745666"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather. https://t.co/k5dRivevMe",
+      "sourceId": "2105053934649745666",
+      "url": "https://x.com/i/web/status/2105053934649745666",
+      "evidenceQuote": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather. https://t.co/k5dRivevMe",
+      "src": "@RepGabeVasquez, 2026-09-29T21:55:42.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather. https://t.co/k5dRivevMe",
+      "sourceId": "2105053934649745666",
+      "url": "https://x.com/i/web/status/2105053934649745666",
+      "evidenceQuote": "RT @KOB4: Evacuations ordered in Doña Ana County due to weather. https://t.co/k5dRivevMe",
+      "src": "@RepGabeVasquez, 2026-09-29T21:55:42.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:06.660Z",
+    "posts": 1,
+    "inputHash": "6c851cfd1f740748c240c78668d3988944231a5e6fb8ba3d33c2f86a128d11a1",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -664,7 +829,35 @@
    "tweetIds": [
     "2105046654017524074"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "Due to a power outage at the Potomac Water Filtration Plant, @WSSCWaterNews has requested customers in Prince George's & Montgomery Counties to use water for essential purposes only.",
+      "sourceId": "2105046654017524074",
+      "url": "https://x.com/i/web/status/2105046654017524074",
+      "evidenceQuote": "Due to a power outage at the Potomac Water Filtration Plant, @WSSCWaterNews has requested customers in Prince George's & Montgomery Counties to use water for essential purposes only.",
+      "src": "@RepStenyHoyer, 2026-09-29T21:26:46.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "Water is still safe to drink, however Marylanders in the impacted regions are advised to restrict their water use.",
+      "sourceId": "2105046654017524074",
+      "url": "https://x.com/i/web/status/2105046654017524074",
+      "evidenceQuote": "Water is still safe to drink, however Marylanders in the impacted regions are advised to restrict their water use.",
+      "src": "@RepStenyHoyer, 2026-09-29T21:26:46.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:14.718Z",
+    "posts": 1,
+    "inputHash": "d5b2623ae60f8d57417284814bc335d7508bb7a973061b2de344af34adad7dd1",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -707,7 +900,7 @@
    "since": "2026-09-29T20:56:24.000Z",
    "last": "2026-09-29T20:56:24.000Z",
    "updates": 1,
-   "engN": 4,
+   "engN": 73,
    "amplifiers": 0,
    "others": [],
    "title": "Other · Ruidoso, NM",
@@ -735,7 +928,7 @@
      "who": "@Rep_Stansbury",
      "tag": "member",
      "text": "Ruidoso family and friends, please stay safe!\n\nResidents in the Upper Canyon area are being advised to prepare for possible evacuations due to landslide risk. Please follow guidance from local emergency officials, have a plan, and be ready to evacuate if instructed. \n\nIf you’re in need of shelter, please head to Gateway Church. Thinking of our Ruidoso community and first responders. ❤️\n\nhttps://t.co/e1tuKZ9X5o",
-     "engN": 4,
+     "engN": 73,
      "isNew": false,
      "flag": {
       "kind": "other",
@@ -759,7 +952,35 @@
    "tweetIds": [
     "2105039011475562985"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "Residents in the Upper Canyon area are being advised to prepare for possible evacuations due to landslide risk. Please follow guidance from local emergency officials, have a plan, and be ready to evacuate if instructed.",
+      "sourceId": "2105039011475562985",
+      "url": "https://x.com/i/web/status/2105039011475562985",
+      "evidenceQuote": "Residents in the Upper Canyon area are being advised to prepare for possible evacuations due to landslide risk. Please follow guidance from local emergency officials, have a plan, and be ready to evacuate if instructed.",
+      "src": "@Rep_Stansbury, 2026-09-29T20:56:24.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "If you’re in need of shelter, please head to Gateway Church. Thinking of our Ruidoso community and first responders.",
+      "sourceId": "2105039011475562985",
+      "url": "https://x.com/i/web/status/2105039011475562985",
+      "evidenceQuote": "If you’re in need of shelter, please head to Gateway Church. Thinking of our Ruidoso community and first responders.",
+      "src": "@Rep_Stansbury, 2026-09-29T20:56:24.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:21.450Z",
+    "posts": 1,
+    "inputHash": "fe83583624e85a04e7d1d8361a0c25f3f23af62e542050d2a969032ce8f6f9b4",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -780,7 +1001,7 @@
     "water outage"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -802,7 +1023,7 @@
    "since": "2026-09-29T19:12:51.000Z",
    "last": "2026-09-29T19:12:51.000Z",
    "updates": 1,
-   "engN": 0,
+   "engN": 5,
    "amplifiers": 0,
    "others": [],
    "title": "Water outage · Montgomery County, MD",
@@ -832,7 +1053,7 @@
      "who": "@RepAprilDelaney",
      "tag": "member",
      "text": "🚨 URGENT WATER CONSERVATION ALERT\n\nWSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.\n\nWater remains safe to drink. There is currently no need to boil it.\n\nPlease take shorter showers, limit flushing, avoid outdoor water use, and hold off on laundry and dishwashing. Conserving now could help avoid a boil water advisory and preserve water for firefighters.\n\nUpdates: @WSSCWaterNews",
-     "engN": 0,
+     "engN": 5,
      "isNew": false,
      "flag": {
       "kind": "water outage",
@@ -856,7 +1077,49 @@
    "tweetIds": [
     "2105012950830404086"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "WSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.",
+      "sourceId": "2105012950830404086",
+      "url": "https://x.com/i/web/status/2105012950830404086",
+      "evidenceQuote": "WSSC Water customers in Montgomery and Prince George’s counties should use water for essential purposes only until further notice.",
+      "src": "@RepAprilDelaney, 2026-09-29T19:12:51.000Z"
+     },
+     {
+      "text": "Conserving now could help avoid a boil water advisory and preserve water for firefighters.",
+      "sourceId": "2105012950830404086",
+      "url": "https://x.com/i/web/status/2105012950830404086",
+      "evidenceQuote": "Conserving now could help avoid a boil water advisory and preserve water for firefighters.",
+      "src": "@RepAprilDelaney, 2026-09-29T19:12:51.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "Water remains safe to drink. There is currently no need to boil it.",
+      "sourceId": "2105012950830404086",
+      "url": "https://x.com/i/web/status/2105012950830404086",
+      "evidenceQuote": "Water remains safe to drink. There is currently no need to boil it.",
+      "src": "@RepAprilDelaney, 2026-09-29T19:12:51.000Z"
+     },
+     {
+      "text": "Please take shorter showers, limit flushing, avoid outdoor water use, and hold off on laundry and dishwashing.",
+      "sourceId": "2105012950830404086",
+      "url": "https://x.com/i/web/status/2105012950830404086",
+      "evidenceQuote": "Please take shorter showers, limit flushing, avoid outdoor water use, and hold off on laundry and dishwashing.",
+      "src": "@RepAprilDelaney, 2026-09-29T19:12:51.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:29.693Z",
+    "posts": 1,
+    "inputHash": "7722e200497e0489285e1bd65ef36084fb868e2cf02e89a06686234fae285651",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -953,7 +1216,35 @@
    "tweetIds": [
     "2105006689728463013"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s…",
+      "sourceId": "2105006689728463013",
+      "url": "https://x.com/i/web/status/2105006689728463013",
+      "evidenceQuote": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s…",
+      "src": "@RepGraceMeng, 2026-09-29T18:47:58.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s…",
+      "sourceId": "2105006689728463013",
+      "url": "https://x.com/i/web/status/2105006689728463013",
+      "evidenceQuote": "RT @nycemergencymgt: Did you experience damage from this weekend’s Nor’easter? 🌧️\n\nIf your home, business, or property was damaged by the s…",
+      "src": "@RepGraceMeng, 2026-09-29T18:47:58.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:41.173Z",
+    "posts": 1,
+    "inputHash": "829ef48112f3b812cefd9f10f6f075c0675588a23241832422a1ba8211c058ee",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -996,7 +1287,7 @@
    "since": "2026-09-29T17:10:37.000Z",
    "last": "2026-09-29T17:10:37.000Z",
    "updates": 1,
-   "engN": 78,
+   "engN": 152,
    "amplifiers": 0,
    "others": [],
    "title": "Infrastructure failure · Montgomery County, MD",
@@ -1024,7 +1315,7 @@
      "who": "@RepRaskin",
      "tag": "member",
      "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
-     "engN": 78,
+     "engN": 152,
      "isNew": false,
      "flag": {
       "kind": "infrastructure failure",
@@ -1048,7 +1339,43 @@
    "tweetIds": [
     "2104982188718448839"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility.",
+      "sourceId": "2104982188718448839",
+      "url": "https://x.com/i/web/status/2104982188718448839",
+      "evidenceQuote": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility.",
+      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
+     }
+    ],
+    "unverified": [
+     {
+      "text": "Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory.",
+      "sourceId": "2104982188718448839",
+      "url": "https://x.com/i/web/status/2104982188718448839",
+      "evidenceQuote": "Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory.",
+      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
+      "sourceId": "2104982188718448839",
+      "url": "https://x.com/i/web/status/2104982188718448839",
+      "evidenceQuote": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
+      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:45.858Z",
+    "posts": 1,
+    "inputHash": "595b17ccfd4d93551cae542f0d1eff49b5769810ab36a73e54f96d7ba0fb494d",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -1091,7 +1418,7 @@
    "since": "2026-09-29T14:42:14.000Z",
    "last": "2026-09-29T14:42:14.000Z",
    "updates": 1,
-   "engN": 1,
+   "engN": 9,
    "amplifiers": 0,
    "others": [],
    "title": "Water outage · Prince George's and Montgomery Counties, MD",
@@ -1119,7 +1446,7 @@
      "who": "@RepGlennIvey",
      "tag": "member",
      "text": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.\n\nWater is currently safe to drink, but residents should conserve immediately by limiting showers, flushing, outdoor water use, and use of washing machines and dishwashers.\n\nPlease share this information with your neighbors and continue to follow @WSSCWaterNews for updates.",
-     "engN": 1,
+     "engN": 9,
      "isNew": false,
      "flag": {
       "kind": "water outage",
@@ -1143,7 +1470,35 @@
    "tweetIds": [
     "2104944848155353266"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.",
+      "sourceId": "2104944848155353266",
+      "url": "https://x.com/i/web/status/2104944848155353266",
+      "evidenceQuote": "🚨 URGENT WATER ALERT: WSSC Water is asking customers in Prince George’s and Montgomery counties to use water for essential purposes only due to a power outage impacting the Potomac Water Filtration Plant.",
+      "src": "@RepGlennIvey, 2026-09-29T14:42:14.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "Water is currently safe to drink, but residents should conserve immediately by limiting showers, flushing, outdoor water use, and use of washing machines and dishwashers.",
+      "sourceId": "2104944848155353266",
+      "url": "https://x.com/i/web/status/2104944848155353266",
+      "evidenceQuote": "Water is currently safe to drink, but residents should conserve immediately by limiting showers, flushing, outdoor water use, and use of washing machines and dishwashers.",
+      "src": "@RepGlennIvey, 2026-09-29T14:42:14.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-09-30T07:50:53.189Z",
+    "posts": 1,
+    "inputHash": "c9d12d490231c6dbe1ba1d4e23088e9e8758fc73d4c224cc98d0e7cab70b40da",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
