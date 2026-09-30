@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T16:56:35.788Z",
+ "classifiedAt": "2026-09-30T18:03:14.810Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -4971,12 +4971,6 @@
    "inputHash": "1d2c7ef97f855716dc7ea8cc72c1a6f71f8a23452a1e29e51139fd08c89e43ac"
   },
   "2104929971495985451": {
-   "contextVersion": 252,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "1d2c7ef97f855716dc7ea8cc72c1a6f71f8a23452a1e29e51139fd08c89e43ac"
-  },
-  "2104930161275592747": {
    "contextVersion": 252,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -13442,53 +13436,6 @@
     "textHash": "2047346c18c56559f3773a92f5d9c5b977776f7d21be9b82be0c7b94e4c9959f"
    }
   },
-  "2104983744566137293": {
-   "contextVersion": 270,
-   "evidenceSupplied": [
-    {
-     "id": "n_879b1ffe00dc8a0a",
-     "publisher": "Roll Call",
-     "date": "2026-09-28",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/28/senators-gear-up-for-judiciary-clash-with-jack-smith/",
-     "text": "Even the title of the hearing — “Oversight of Jack Smith’s Abuse of Authority and the Targeting of Republicans and Related Matters” — gives a hint of the tone former special counsel John L. “Jack” Smith will likely face from majority Republicans when he sits as the sole witness Tuesday.",
-     "title": "Senators gear up for Judiciary clash with Jack Smith",
-     "publishedAt": "2026-09-28T12:12:27.000Z",
-     "fetchedAt": "2026-09-28T17:01:20.117Z",
-     "version": 237,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_61939787b04b4ae6",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
-     "text": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
-     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
-     "publishedAt": "2026-09-30T10:46:14.000Z",
-     "fetchedAt": "2026-09-30T11:11:55.774Z",
-     "version": 270,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_879b1ffe00dc8a0a"
-   ],
-   "inputHash": "e5d6fe7cb28c90cdb0997858ccf58420b991e4e30de0238082575725ac07c282",
-   "quotedContext": {
-    "id": "2104937062675738654",
-    "authorId": "4486093643",
-    "handle": "factpostnews",
-    "createdAt": "2026-09-29T14:11:18.000Z",
-    "textChars": 283,
-    "textHash": "c85f7036b668ff77bbdf4952106f7234c21320ca6bc19babcec9cba1f0e7376b"
-   }
-  },
   "2104995321088520246": {
    "contextVersion": 270,
    "evidenceSupplied": [
@@ -14054,6 +14001,75 @@
    ],
    "evidenceUsed": [],
    "inputHash": "765ac2ba5cb723dec00deb299d55361c20589b340b3785309e95b36ac23e827e"
+  },
+  "2104930161275592747": {
+   "contextVersion": 276,
+   "evidenceSupplied": [
+    {
+     "id": "n_61939787b04b4ae6",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
+     "text": "RYAN LUCAS, BYLINE: Jack Smith led the two federal prosecutions of President Trump - one for allegedly attempting to overturn the results of the 2020 election, the other for allegedly mishandling classified documents and obstructing justice. Neither case made it to trial before Trump returned to office. Testifying before the Senate Judiciary Committee, Smith said politics played no role in his investigation. And he said the decision to bring charges was based on the evidence.",
+     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+     "publishedAt": "2026-09-30T10:46:14.000Z",
+     "fetchedAt": "2026-09-30T17:16:34.469Z",
+     "version": 276,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "283d11c92eef83143a2a01560bced9b0ab5309774243503c098e876828a7dac9"
+  },
+  "2104983744566137293": {
+   "contextVersion": 276,
+   "evidenceSupplied": [
+    {
+     "id": "n_61939787b04b4ae6",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
+     "text": "JACK SMITH: Our investigation developed proof beyond a reasonable doubt. President Trump engaged in serious crimes against our nation.",
+     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+     "publishedAt": "2026-09-30T10:46:14.000Z",
+     "fetchedAt": "2026-09-30T17:16:34.469Z",
+     "version": 276,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_879b1ffe00dc8a0a",
+     "publisher": "Roll Call",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/28/senators-gear-up-for-judiciary-clash-with-jack-smith/",
+     "text": "Even the title of the hearing — “Oversight of Jack Smith’s Abuse of Authority and the Targeting of Republicans and Related Matters” — gives a hint of the tone former special counsel John L. “Jack” Smith will likely face from majority Republicans when he sits as the sole witness Tuesday.",
+     "title": "Senators gear up for Judiciary clash with Jack Smith",
+     "publishedAt": "2026-09-28T12:12:27.000Z",
+     "fetchedAt": "2026-09-28T17:01:20.117Z",
+     "version": 237,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_879b1ffe00dc8a0a"
+   ],
+   "inputHash": "283d11c92eef83143a2a01560bced9b0ab5309774243503c098e876828a7dac9",
+   "quotedContext": {
+    "id": "2104937062675738654",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-09-29T14:11:18.000Z",
+    "textChars": 283,
+    "textHash": "c85f7036b668ff77bbdf4952106f7234c21320ca6bc19babcec9cba1f0e7376b"
+   }
   }
  },
  "needsContext": {
@@ -14096,7 +14112,6 @@
   "2104928995900878944": false,
   "2104929402354360817": false,
   "2104929971495985451": false,
-  "2104930161275592747": false,
   "2104930438263275637": false,
   "2104931369943970024": false,
   "2104931825650913724": false,
@@ -14655,7 +14670,6 @@
   "2105034866832109756": false,
   "2105070676218347976": false,
   "2104942546808115465": false,
-  "2104983744566137293": false,
   "2104995321088520246": false,
   "2105061474594889792": false,
   "2104970908683178389": false,
@@ -14671,10 +14685,12 @@
   "2105091464501850281": false,
   "2105097580741066881": false,
   "2104967866336350555": false,
-  "2105008782187090378": false
+  "2105008782187090378": false,
+  "2104930161275592747": false,
+  "2104983744566137293": false
  },
  "inputBlocks": {},
- "contextVersion": 275,
+ "contextVersion": 276,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -15174,56 +15190,38 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104967866336350555",
-    "2105008782187090378",
-    "2105323609849790780",
-    "2105323787914739716",
-    "2105324522895540420",
-    "2105325817148682613",
-    "2105325914833961195",
-    "2105326097306935653",
-    "2105326617031504317",
-    "2105326747835129933",
-    "2105326813375308118",
-    "2105326841095504291",
-    "2105326911161323975",
-    "2105326916467138914",
-    "2105326969931858394",
-    "2105327081085116491",
-    "2105327692652646487",
-    "2105327921095155767",
-    "2105328064892752017",
-    "2105328109071511727",
-    "2105329513966043424",
-    "2105330057082261882",
-    "2105330610235457618",
-    "2105331001723609342",
-    "2105331120158257425",
-    "2105331361934389567",
-    "2105332094847332863",
-    "2105332648524517789",
-    "2105332780184093041",
-    "2105332785531502877",
-    "2105332787108622591",
-    "2105333364173758784",
-    "2105333688653230232",
-    "2105334383393513790",
-    "2105334598813319388",
-    "2105334632489042242",
-    "2105334870096707612",
-    "2105335216181068240",
-    "2105335218827837736",
-    "2105335536550342727"
+    "2104930161275592747",
+    "2104983744566137293",
+    "2105281437964341387",
+    "2105340713055510529",
+    "2105340851857883578",
+    "2105341575798604143",
+    "2105341842279497878",
+    "2105342061218283723",
+    "2105342806810124719",
+    "2105342818835431701",
+    "2105343007302320421",
+    "2105343398601171306",
+    "2105343610371838290",
+    "2105343975204732983",
+    "2105343998986498339",
+    "2105344164485353943",
+    "2105344605801861392",
+    "2105344615469752751",
+    "2105344882814406716",
+    "2105345154609537467",
+    "2105345193738371447",
+    "2105345197878165788"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T16:55:05.450Z",
-    "observedAt": "2026-09-30T16:56:16.406Z",
+    "attemptedAt": "2026-09-30T18:01:43.216Z",
+    "observedAt": "2026-09-30T18:02:12.777Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 22,
     "retryCount": 0
    }
   }
@@ -15231,24 +15229,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T16:55:05.450Z",
-   "observedAt": "2026-09-30T16:56:16.406Z",
+   "attemptedAt": "2026-09-30T18:01:43.216Z",
+   "observedAt": "2026-09-30T18:02:12.777Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 22,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T16:55:05.450Z",
-   "observedAt": "2026-09-30T16:56:16.406Z",
+   "attemptedAt": "2026-09-30T18:01:43.216Z",
+   "observedAt": "2026-09-30T18:02:12.777Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 22,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T16:56:35.794Z"
+ "updatedAt": "2026-09-30T18:03:14.821Z"
 }
