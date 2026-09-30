@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T19:35:12.547Z",
+ "classifiedAt": "2026-09-30T21:04:37.820Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -13410,51 +13410,6 @@
     "textHash": "2047346c18c56559f3773a92f5d9c5b977776f7d21be9b82be0c7b94e4c9959f"
    }
   },
-  "2104995321088520246": {
-   "contextVersion": 270,
-   "evidenceSupplied": [
-    {
-     "id": "n_3e04a6cb3282aba5",
-     "publisher": "NPR",
-     "date": "2026-09-27",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/27/nx-s1-5979946/these-democrats-are-running-for-congress-on-christian-faith-will-it-pay-off",
-     "text": "A state representative in the Texas House, Talarico is a former middle school teacher, a student at Austin Presbyterian Theological Seminary and the Democratic nominee for U.S. Senate.",
-     "title": "These Democrats are making Christianity a centerpiece of their midterm campaigns",
-     "publishedAt": "2026-09-27T10:00:00.000Z",
-     "fetchedAt": "2026-09-27T16:04:42.569Z",
-     "version": 219,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f59e7e9eb276c6cf",
-     "publisher": "The New York Times",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/30/us/politics/ken-paxton-trump-midterm-convention.html",
-     "text": "Ken Paxton, G.O.P. Nominee in Texas, Privately Said Trump’s Convention Hurt Him",
-     "title": "Ken Paxton, G.O.P. Nominee in Texas, Privately Said Trump’s Convention Hurt Him",
-     "publishedAt": "2026-09-30T09:03:21.000Z",
-     "fetchedAt": "2026-09-30T11:11:55.774Z",
-     "version": 270,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "e5d6fe7cb28c90cdb0997858ccf58420b991e4e30de0238082575725ac07c282",
-   "quotedContext": {
-    "id": "2029190814518177900",
-    "authorId": "918913624395079680",
-    "handle": "JasmineForUS",
-    "createdAt": "2026-03-04T13:42:45.000Z",
-    "textChars": 443,
-    "textHash": "e9d5c2eea681deca1f9e7981e7d0e19afe02483977f46ddea40ac6f232d79f35"
-   }
-  },
   "2105061474594889792": {
    "contextVersion": 270,
    "evidenceSupplied": [
@@ -14130,6 +14085,51 @@
    ],
    "evidenceUsed": [],
    "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea"
+  },
+  "2104995321088520246": {
+   "contextVersion": 279,
+   "evidenceSupplied": [
+    {
+     "id": "n_3e04a6cb3282aba5",
+     "publisher": "NPR",
+     "date": "2026-09-27",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/27/nx-s1-5979946/these-democrats-are-running-for-congress-on-christian-faith-will-it-pay-off",
+     "text": "A state representative in the Texas House, Talarico is a former middle school teacher, a student at Austin Presbyterian Theological Seminary and the Democratic nominee for U.S. Senate.",
+     "title": "These Democrats are making Christianity a centerpiece of their midterm campaigns",
+     "publishedAt": "2026-09-27T10:00:00.000Z",
+     "fetchedAt": "2026-09-27T16:04:42.569Z",
+     "version": 219,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_d767f64718bda0b7",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6121339-paxton-misses-vance-rally/",
+     "text": "Paxton misses Vance rally; will stump with Trump on Thursday",
+     "title": "Paxton misses Vance rally; will stump with Trump on Thursday",
+     "publishedAt": "2026-09-30T19:57:36.000Z",
+     "fetchedAt": "2026-09-30T20:16:12.834Z",
+     "version": 279,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b4169100a1c895b393b1890afa1f1b7dc9775444b34b3c0f3016df9f63628e8a",
+   "quotedContext": {
+    "id": "2029190814518177900",
+    "authorId": "918913624395079680",
+    "handle": "JasmineForUS",
+    "createdAt": "2026-03-04T13:42:45.000Z",
+    "textChars": 443,
+    "textHash": "e9d5c2eea681deca1f9e7981e7d0e19afe02483977f46ddea40ac6f232d79f35"
+   }
   }
  },
  "needsContext": {
@@ -14727,7 +14727,6 @@
   "2105034866832109756": false,
   "2105070676218347976": false,
   "2104942546808115465": false,
-  "2104995321088520246": false,
   "2105061474594889792": false,
   "2104970908683178389": false,
   "2105038458372903169": false,
@@ -14747,10 +14746,11 @@
   "2105081440589525370": false,
   "2105088996271333782": false,
   "2105091464501850281": false,
-  "2105097580741066881": false
+  "2105097580741066881": false,
+  "2104995321088520246": false
  },
  "inputBlocks": {},
- "contextVersion": 278,
+ "contextVersion": 279,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -15264,44 +15264,56 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104944351277396232",
-    "2104944419233235207",
-    "2104968974702166186",
-    "2104988326889452019",
-    "2105034131516100782",
-    "2105067224826606073",
-    "2105073718762618958"
+    "2104995321088520246",
+    "2105357694253072448",
+    "2105357883600695375",
+    "2105358134063632811",
+    "2105358638428660020",
+    "2105358675602976825",
+    "2105359017031954507",
+    "2105359206026993803",
+    "2105359293721776192",
+    "2105359366207476138",
+    "2105359532033515950",
+    "2105360414158582152",
+    "2105360942662131785",
+    "2105361023813468462",
+    "2105361565549470112",
+    "2105361713826562304",
+    "2105361828717240432",
+    "2105380160409055682",
+    "2105380222937776497",
+    "2105380882227872067",
+    "2105380916314976667",
+    "2105381091536421096",
+    "2105381093490757975",
+    "2105381094384414798",
+    "2105381275859145033",
+    "2105381327847485490",
+    "2105381405530234928",
+    "2105381421065920949",
+    "2105381499025453366",
+    "2105382716162129939",
+    "2105383327335084173",
+    "2105383417735250243",
+    "2105383449385148430",
+    "2105383986893906096",
+    "2105384102736396449",
+    "2105384953689075764",
+    "2105384985276600436",
+    "2105385299291320737",
+    "2105385586643046600",
+    "2105383717392855259"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T19:31:40.888Z",
-    "observedAt": "2026-09-30T19:31:49.764Z",
+    "attemptedAt": "2026-09-30T21:02:08.171Z",
+    "observedAt": "2026-09-30T21:03:02.086Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105074146115731687",
-    "2105081440589525370",
-    "2105088996271333782",
-    "2105091464501850281",
-    "2105097580741066881",
-    "2105279198285709394"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-30T19:31:49.776Z",
-    "observedAt": "2026-09-30T19:32:13.251Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   }
@@ -15309,24 +15321,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T19:31:49.776Z",
-   "observedAt": "2026-09-30T19:32:13.251Z",
+   "attemptedAt": "2026-09-30T21:02:08.171Z",
+   "observedAt": "2026-09-30T21:03:02.086Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T19:31:49.776Z",
-   "observedAt": "2026-09-30T19:32:13.251Z",
+   "attemptedAt": "2026-09-30T21:02:08.171Z",
+   "observedAt": "2026-09-30T21:03:02.086Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T19:35:12.551Z"
+ "updatedAt": "2026-09-30T21:04:37.825Z"
 }
