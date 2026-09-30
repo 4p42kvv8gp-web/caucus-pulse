@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T11:19:52.761Z",
+ "classifiedAt": "2026-09-30T12:41:45.733Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -42,6 +42,38 @@
     "democracy",
     "voting-rights"
    ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105273136858148916": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105273895502635381": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2105275838774071641": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105276769028944324": [
    [
     "congress-politics",
     "elections-2026"
@@ -137,6 +169,106 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "e5d6fe7cb28c90cdb0997858ccf58420b991e4e30de0238082575725ac07c282"
+  },
+  "2105273136858148916": {
+   "contextVersion": 271,
+   "evidenceSupplied": [
+    {
+     "id": "n_f59e7e9eb276c6cf",
+     "publisher": "The New York Times",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/30/us/politics/ken-paxton-trump-midterm-convention.html",
+     "text": "Ken Paxton, G.O.P. Nominee in Texas, Privately Said Trump’s Convention Hurt Him",
+     "title": "Ken Paxton, G.O.P. Nominee in Texas, Privately Said Trump’s Convention Hurt Him",
+     "publishedAt": "2026-09-30T09:03:21.000Z",
+     "fetchedAt": "2026-09-30T11:11:55.774Z",
+     "version": 270,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1a7bbc1151554bcc",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6105901-angela-paxton-urges-gop-ken-paxton/",
+     "text": "Ken Paxton’s estranged wife tells GOP women: Vote Republican ‘even if we’re mad’",
+     "title": "Ken Paxton’s estranged wife tells GOP women: Vote Republican ‘even if we’re mad’",
+     "publishedAt": "2026-09-23T13:37:16.000Z",
+     "fetchedAt": "2026-09-23T14:32:29.058Z",
+     "version": 134,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_f59e7e9eb276c6cf",
+    "n_1a7bbc1151554bcc"
+   ],
+   "inputHash": "2ea0432f50266ac967b3eeeca09ffc10d619df9d8aed0b753ae7c82d2c2a1426",
+   "quotedContext": {
+    "id": "2105241837493502412",
+    "authorId": "286432534",
+    "handle": "teddyschleifer",
+    "createdAt": "2026-09-30T10:22:22.000Z",
+    "textChars": 272,
+    "textHash": "ed7fd2213d5cdc8bd3b5009605c6e8fe178a07ae8d3c6027005b23737704f023"
+   }
+  },
+  "2105273895502635381": {
+   "contextVersion": 271,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2ea0432f50266ac967b3eeeca09ffc10d619df9d8aed0b753ae7c82d2c2a1426"
+  },
+  "2105275838774071641": {
+   "contextVersion": 271,
+   "evidenceSupplied": [
+    {
+     "id": "n_5f7cae26b86afa3a",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6107676-navy-secretary-letter-uss-lincoln/",
+     "text": "Acting Navy secretary says 8 sailors on USS Abraham Lincoln carrier strike group attempted suicide",
+     "title": "Acting Navy secretary says 8 sailors on USS Abraham Lincoln carrier strike group attempted suicide",
+     "publishedAt": "2026-09-23T22:41:36.000Z",
+     "fetchedAt": "2026-09-24T13:57:21.863Z",
+     "version": 157,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_13a6c34e0846badb",
+     "publisher": "Roll Call",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/25/democrats-call-for-hearings-on-suicide-attempts-on-uss-lincoln/",
+     "text": "A pair of Democratic lawmakers is calling for hearings after the Navy disclosed that there were eight suicide attempts during the USS Abraham Lincoln carrier strike group’s record-long time at sea.",
+     "title": "Democrats call for hearings on suicide attempts on USS Lincoln",
+     "publishedAt": "2026-09-25T14:46:03.000Z",
+     "fetchedAt": "2026-09-25T19:52:04.988Z",
+     "version": 184,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5f7cae26b86afa3a",
+    "n_13a6c34e0846badb"
+   ],
+   "inputHash": "2ea0432f50266ac967b3eeeca09ffc10d619df9d8aed0b753ae7c82d2c2a1426"
+  },
+  "2105276769028944324": {
+   "contextVersion": 271,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2ea0432f50266ac967b3eeeca09ffc10d619df9d8aed0b753ae7c82d2c2a1426"
   }
  },
  "needsContext": {
@@ -145,15 +277,25 @@
   "2105160937015750780": false,
   "2105169327385100545": false,
   "2105176041014935854": false,
-  "2105251583449579779": false
+  "2105251583449579779": false,
+  "2105273136858148916": false,
+  "2105273895502635381": false,
+  "2105275838774071641": false,
+  "2105276769028944324": false
  },
  "inputBlocks": {},
- "contextVersion": 270,
+ "contextVersion": 271,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
    "ids": [
     "2105156402893521370"
+   ]
+  },
+  {
+   "label": "USS Abraham Lincoln sailor suicide attempts oversight",
+   "ids": [
+    "2105275838774071641"
    ]
   }
  ],
@@ -168,21 +310,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104942546808115465",
-    "2104983744566137293",
-    "2104995321088520246",
-    "2105061474594889792",
-    "2105251583449579779"
+    "2105273136858148916",
+    "2105273895502635381",
+    "2105275838774071641",
+    "2105276769028944324"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T11:19:38.036Z",
-    "observedAt": "2026-09-30T11:19:52.720Z",
+    "attemptedAt": "2026-09-30T12:41:37.666Z",
+    "observedAt": "2026-09-30T12:41:45.729Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -190,24 +331,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T11:19:38.036Z",
-   "observedAt": "2026-09-30T11:19:52.720Z",
+   "attemptedAt": "2026-09-30T12:41:37.666Z",
+   "observedAt": "2026-09-30T12:41:45.729Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T11:19:38.036Z",
-   "observedAt": "2026-09-30T11:19:52.720Z",
+   "attemptedAt": "2026-09-30T12:41:37.666Z",
+   "observedAt": "2026-09-30T12:41:45.729Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T11:19:52.763Z"
+ "updatedAt": "2026-09-30T12:41:45.735Z"
 }
