@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T15:49:10.133Z",
+ "classifiedAt": "2026-09-30T16:56:35.788Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -6843,12 +6843,6 @@
     "fingerprint": "8a7a75970db6eddff5c5303272044676cdc2612432af2e70cd5f0b26d7b04ff3"
    }
   },
-  "2104967866336350555": {
-   "contextVersion": 254,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "91da1941b192fa439eb50b5c789d7637ae20a32046681d4322c6cd121d9a0305"
-  },
   "2104968281551446141": {
    "contextVersion": 254,
    "evidenceSupplied": [],
@@ -8685,12 +8679,6 @@
     "referenceId": "2104678858632929604",
     "fingerprint": "70db97bc5596fb5641a2194b8c254873c9344a3ef3173fc837892d6a220a9cd5"
    }
-  },
-  "2105008782187090378": {
-   "contextVersion": 256,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "d8e98b2e32ae552adfb72cd1f948991ad180e46ffac5ad31506d6d020e50bee4"
   },
   "2105009213080793527": {
    "contextVersion": 256,
@@ -14022,6 +14010,50 @@
    ],
    "evidenceUsed": [],
    "inputHash": "f960d33f21f3d35beda2c3ce55ec356f36445ab6666cee4dd0f278030748e665"
+  },
+  "2104967866336350555": {
+   "contextVersion": 275,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6201eac4a073264",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5983539/outside-groups-are-spending-millions-on-races-that-could-determine-senate-control",
+     "text": "A MARTÍNEZ, HOST: New Hampshire's Senate race is one of a handful that will determine which party controls Congress. Democratic Congressman Chris Pappas is facing former Republican Senator John E. Sununu. Outside groups are spending a lot of money on it - about 50 million bucks so far. Josh Rogers of NHPR has a story.",
+     "title": "Outside groups are spending millions on races that could determine Senate control",
+     "publishedAt": "2026-09-30T08:43:34.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "765ac2ba5cb723dec00deb299d55361c20589b340b3785309e95b36ac23e827e"
+  },
+  "2105008782187090378": {
+   "contextVersion": 275,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6201eac4a073264",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5983539/outside-groups-are-spending-millions-on-races-that-could-determine-senate-control",
+     "text": "JOSH ROGERS, BYLINE: It's no stretch to see Pappas and Sununu as two of New Hampshire's most successful politicians. Exhibits A are their records. Pappas is 4-and-0 in his congressional runs, while Sununu has only lost once during five bids for federal office. But that either man could have ever prevailed in any election can feel surprising, given the glut of negative ads.",
+     "title": "Outside groups are spending millions on races that could determine Senate control",
+     "publishedAt": "2026-09-30T08:43:34.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "765ac2ba5cb723dec00deb299d55361c20589b340b3785309e95b36ac23e827e"
   }
  },
  "needsContext": {
@@ -14173,7 +14205,6 @@
   "2104967554682769494": false,
   "2104967631723958408": false,
   "2104967819951485106": false,
-  "2104967866336350555": false,
   "2104968281551446141": false,
   "2104968511147708677": false,
   "2104968784951804358": false,
@@ -14313,7 +14344,6 @@
   "2105008173690290371": false,
   "2105008333933457700": false,
   "2105008687928750488": false,
-  "2105008782187090378": false,
   "2105009213080793527": false,
   "2105009530417623396": false,
   "2105009629759451282": true,
@@ -14639,10 +14669,12 @@
   "2105074146115731687": false,
   "2105088996271333782": false,
   "2105091464501850281": false,
-  "2105097580741066881": false
+  "2105097580741066881": false,
+  "2104967866336350555": false,
+  "2105008782187090378": false
  },
  "inputBlocks": {},
- "contextVersion": 274,
+ "contextVersion": 275,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -15142,43 +15174,56 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104944351277396232",
-    "2104944419233235207",
-    "2104988326889452019",
-    "2105034131516100782",
-    "2105048523058106677",
-    "2105073718762618958"
+    "2104967866336350555",
+    "2105008782187090378",
+    "2105323609849790780",
+    "2105323787914739716",
+    "2105324522895540420",
+    "2105325817148682613",
+    "2105325914833961195",
+    "2105326097306935653",
+    "2105326617031504317",
+    "2105326747835129933",
+    "2105326813375308118",
+    "2105326841095504291",
+    "2105326911161323975",
+    "2105326916467138914",
+    "2105326969931858394",
+    "2105327081085116491",
+    "2105327692652646487",
+    "2105327921095155767",
+    "2105328064892752017",
+    "2105328109071511727",
+    "2105329513966043424",
+    "2105330057082261882",
+    "2105330610235457618",
+    "2105331001723609342",
+    "2105331120158257425",
+    "2105331361934389567",
+    "2105332094847332863",
+    "2105332648524517789",
+    "2105332780184093041",
+    "2105332785531502877",
+    "2105332787108622591",
+    "2105333364173758784",
+    "2105333688653230232",
+    "2105334383393513790",
+    "2105334598813319388",
+    "2105334632489042242",
+    "2105334870096707612",
+    "2105335216181068240",
+    "2105335218827837736",
+    "2105335536550342727"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T15:47:16.226Z",
-    "observedAt": "2026-09-30T15:47:28.659Z",
+    "attemptedAt": "2026-09-30T16:55:05.450Z",
+    "observedAt": "2026-09-30T16:56:16.406Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105074146115731687",
-    "2105088996271333782",
-    "2105091464501850281",
-    "2105097580741066881",
-    "2105279198285709394",
-    "2105288664221978999"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-30T15:47:28.676Z",
-    "observedAt": "2026-09-30T15:47:43.429Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   }
@@ -15186,24 +15231,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T15:47:28.676Z",
-   "observedAt": "2026-09-30T15:47:43.429Z",
+   "attemptedAt": "2026-09-30T16:55:05.450Z",
+   "observedAt": "2026-09-30T16:56:16.406Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T15:47:28.676Z",
-   "observedAt": "2026-09-30T15:47:43.429Z",
+   "attemptedAt": "2026-09-30T16:55:05.450Z",
+   "observedAt": "2026-09-30T16:56:16.406Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T15:49:10.142Z"
+ "updatedAt": "2026-09-30T16:56:35.794Z"
 }
