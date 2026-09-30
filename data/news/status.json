@@ -1,27 +1,27 @@
 {
- "contextVersion": 274,
- "lastRefreshAt": "2026-09-30T15:02:01.461Z",
+ "contextVersion": 275,
+ "lastRefreshAt": "2026-09-30T16:31:05.836Z",
  "sources": {
   "npr-politics": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 4,
+   "bodies": 2,
    "error": null
   },
   "politico-politics": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
-   "ok": true,
-   "httpStatus": 200,
-   "format": "rss",
-   "feedItems": 30,
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
+   "ok": false,
+   "httpStatus": 404,
+   "format": null,
+   "feedItems": 0,
    "bodies": 0,
-   "error": null
+   "error": "feed HTTP 404"
   },
   "the-hill": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -30,16 +30,16 @@
    "error": null
   },
   "roll-call": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 1,
+   "bodies": 2,
    "error": null
   },
   "cnn-politics": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -48,7 +48,7 @@
    "error": null
   },
   "nyt-politics": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -57,16 +57,16 @@
    "error": null
   },
   "wapo-politics": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
-   "feedItems": 36,
+   "feedItems": 38,
    "bodies": 0,
    "error": null
   },
   "govinfo-crec": {
-   "lastFetchAt": "2026-09-30T15:02:01.461Z",
+   "lastFetchAt": "2026-09-30T16:31:05.836Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
