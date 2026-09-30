@@ -1,27 +1,27 @@
 {
- "contextVersion": 270,
- "lastRefreshAt": "2026-09-30T11:11:55.774Z",
+ "contextVersion": 271,
+ "lastRefreshAt": "2026-09-30T11:56:30.531Z",
  "sources": {
   "npr-politics": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 5,
-   "error": null
-  },
-  "politico-politics": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
-   "ok": true,
-   "httpStatus": 200,
-   "format": "rss",
-   "feedItems": 30,
    "bodies": 0,
    "error": null
   },
+  "politico-politics": {
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
+   "ok": false,
+   "httpStatus": 404,
+   "format": null,
+   "feedItems": 0,
+   "bodies": 0,
+   "error": "feed HTTP 404"
+  },
   "the-hill": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -30,25 +30,25 @@
    "error": null
   },
   "roll-call": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 2,
+   "bodies": 1,
    "error": null
   },
   "cnn-politics": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 18,
-   "bodies": 3,
+   "bodies": 0,
    "error": null
   },
   "nyt-politics": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -57,7 +57,7 @@
    "error": null
   },
   "wapo-politics": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -66,7 +66,7 @@
    "error": null
   },
   "govinfo-crec": {
-   "lastFetchAt": "2026-09-30T11:11:55.774Z",
+   "lastFetchAt": "2026-09-30T11:56:30.531Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
