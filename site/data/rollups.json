@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-09-30T08:13:18.556Z",
- "lastPollAt": "2026-09-30T06:51:30.338Z",
- "lastPollAttemptAt": "2026-09-30T06:51:28.975Z",
+ "generatedAt": "2026-09-30T08:56:57.142Z",
+ "lastPollAt": "2026-09-30T08:56:46.364Z",
+ "lastPollAttemptAt": "2026-09-30T08:56:44.496Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-09-30T08:13:17.663Z"
+  "referenceAsOf": "2026-09-30T08:56:55.791Z"
  },
  "news": {
   "version": 268,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-09-30T08:13:17.947Z",
+   "asOf": "2026-09-30T08:56:56.202Z",
    "windowDays": 14,
-   "windowStart": "2026-09-16T08:13:17.947Z",
+   "windowStart": "2026-09-16T08:56:56.202Z",
    "eligibleItems": 1697,
    "withExcerpts": 179,
    "headlineOrSummary": 1518,
@@ -3550,13 +3550,13 @@
   "classifiedIn24h": 573,
   "taggedIn24h": 510,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-09-30T07:49:10.122Z",
-   "lastSuccessAt": "2026-09-30T06:51:39.775Z",
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-09-30T08:56:48.774Z",
+   "lastSuccessAt": "2026-09-30T08:56:52.894Z",
    "capturedIn24h": 573,
    "classifiedIn24h": 573,
    "pendingIn24h": 0,
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    39,
-    128,
-    139,
-    116,
-    55,
-    20,
     1,
+    61,
+    140,
+    142,
+    101,
+    39,
+    14,
     0,
-    56,
-    136,
-    145,
-    149,
-    66,
-    19,
-    2
+    5,
+    78,
+    141,
+    153,
+    130,
+    53,
+    12,
+    1
    ]
   },
   "CPC": {
@@ -6943,21 +6943,21 @@
    },
    "curve48": [
     0,
-    15,
-    63,
-    59,
-    56,
     25,
-    13,
-    1,
+    71,
+    61,
+    44,
+    20,
+    11,
     0,
-    21,
-    67,
-    64,
-    67,
-    25,
-    8,
-    2
+    1,
+    35,
+    63,
+    75,
+    57,
+    15,
+    7,
+    1
    ]
   },
   "NewDem": {
@@ -7010,21 +7010,21 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    30,
-    71,
-    90,
-    60,
-    25,
-    13,
     1,
+    42,
+    80,
+    88,
+    51,
+    19,
+    9,
     0,
-    36,
-    81,
+    3,
+    49,
+    84,
     86,
-    85,
+    73,
     38,
-    11,
+    4,
     0
    ]
   },
@@ -7079,21 +7079,21 @@
    },
    "curve48": [
     0,
+    6,
+    22,
+    23,
+    15,
     3,
-    21,
-    24,
-    13,
-    7,
-    4,
+    3,
     0,
-    0,
-    12,
-    24,
-    26,
-    24,
+    1,
     19,
+    25,
+    23,
+    24,
+    14,
     3,
-    1
+    0
    ]
   },
   "CHC": {
@@ -7147,21 +7147,21 @@
    },
    "curve48": [
     0,
-    5,
-    22,
-    31,
-    19,
     9,
-    5,
+    24,
+    30,
+    17,
+    9,
+    2,
     0,
     0,
-    6,
-    28,
-    29,
-    34,
+    14,
+    25,
+    31,
+    31,
     12,
-    5,
-    1
+    2,
+    0
    ]
   },
   "CAPAC": {
@@ -7215,19 +7215,19 @@
    },
    "curve48": [
     0,
-    3,
-    11,
-    8,
-    16,
-    7,
-    2,
-    0,
-    0,
-    2,
-    16,
-    18,
+    4,
     14,
-    8,
+    11,
+    11,
+    5,
+    2,
+    0,
+    0,
+    5,
+    17,
+    16,
+    15,
+    5,
     2,
     1
    ]
@@ -18158,7 +18158,7 @@
     "extractedAt": "2026-09-30T07:49:26.462Z",
     "posts": 1,
     "inputHash": "c35ab75ce566df2fbf71323f6ee704925fbbbebc2b1d2c34fc5a42efce6d3025",
-    "rejectedItems": 2
+    "rejectedItems": 0
    },
    "verification": {
     "status": "unverified",
@@ -18669,7 +18669,7 @@
     "extractedAt": "2026-09-30T07:49:59.990Z",
     "posts": 1,
     "inputHash": "ed58ec4c030fd2db904918df1e7e544942a85e5c071b7b8e294bc5b9a167d38c",
-    "rejectedItems": 2
+    "rejectedItems": 0
    },
    "verification": {
     "status": "unverified",
@@ -18939,7 +18939,7 @@
     "other"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -37054,8 +37054,22 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 256,
-    "evidenceSupplied": [],
+    "contextVersion": 268,
+    "evidenceSupplied": [
+     {
+      "id": "n_07e49402e0965764",
+      "publisher": "NPR",
+      "date": "2026-09-30",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/09/30/nx-s1-5985699/trump-self-police-ai-development",
+      "text": "Trump and House Speaker Mike Johnson met with leading executives from top tech firms that are spending hundreds of billions of dollars to build out AI infrastructure, including data centers in communities across the country, which have sparked grassroots, bipartisan opposition.",
+      "publishedAt": "2026-09-30T06:54:43.000Z",
+      "fetchedAt": "2026-09-30T08:12:35.668Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
+      "truncated": false
+     }
+    ],
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-09-30T07:46:19.392Z"
@@ -72991,46 +73005,12 @@
    "sourceReferenceId": "2103656385322074478",
    "provenance": null,
    "metricsObservedAt": "2026-09-26T12:29:44.352Z"
-  },
-  {
-   "id": "2103818897329659980",
-   "authorId": "467823431",
-   "createdAt": "2026-09-26T12:08:06.000Z",
-   "date": "2026-09-26",
-   "type": "tweet",
-   "text": "Republican policies have tanked the economy.\n\nAnd the American people know it. \n\nTime for dramatic change.",
-   "engN": 4135,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-27T07:45:11.005Z"
-  },
-  {
-   "id": "2103692703129076142",
-   "authorId": "1080462532815532032",
-   "createdAt": "2026-09-26T03:46:39.000Z",
-   "date": "2026-09-25",
-   "type": "tweet",
-   "text": "Here is this week’s Schrier Flyer! https://t.co/wSmhbcKDdd",
-   "engN": 2,
-   "topics": [],
-   "classificationStatus": "pending",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": null,
-   "metricsObservedAt": "2026-09-26T08:21:18.354Z"
   }
  ],
  "feedAllTruncated": true,
  "feedAllTotal": 2700,
  "feedAllFiles": [
-  "feed-0-ff396c20ddd626c0.json",
+  "feed-0-4e6c70dfab8f396f.json",
   "feed-1-ca510678826dd2f1.json",
   "feed-2-906d94ebcdd31dd2.json",
   "feed-3-1fe983b48e81175a.json",
