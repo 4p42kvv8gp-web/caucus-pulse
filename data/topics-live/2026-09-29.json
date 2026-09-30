@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T23:53:57.888Z",
+ "classifiedAt": "2026-09-30T00:52:34.061Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -3082,11 +3082,11 @@
   "2105041938692861968": [
    [
     "public-safety",
-    "gun-violence"
+    "crime-policing"
    ],
    [
     "public-safety",
-    "crime-policing"
+    "gun-violence"
    ]
   ],
   "2105042248001900846": [
@@ -3942,6 +3942,168 @@
     "democracy",
     "courts-doj"
    ]
+  ],
+  "2105083608796942610": [
+   [
+    "healthcare",
+    "aca"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105084015246225902": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2105084823589040453": [],
+  "2105084886323511693": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105085233242812813": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2105085239840133476": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2105087806481514872": [
+   [
+    "immigration",
+    "asylum-refugees"
+   ],
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2105088003664499092": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "tech",
+    "big-tech"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2105088158463324368": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2105088275685978508": [
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2105088996271333782": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2105089057302720527": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2105089195668877748": [],
+  "2105089741372961032": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2105090242793681256": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105091172331122948": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ],
+   [
+    "labor",
+    "federal-workforce"
+   ]
+  ],
+  "2105091184565596598": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105091205633618099": [],
+  "2105091445593927759": [],
+  "2105091464501850281": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "labor",
+    "federal-workforce"
+   ]
+  ],
+  "2105096792249430180": [],
+  "2105096880820826297": [],
+  "2105096969018581462": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2105097580741066881": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
   ]
  },
  "incidents": {
@@ -4004,6 +4166,16 @@
    "kind": "flooding",
    "place": "Doña Ana County, NM",
    "name": "McLeod Dam flash flood emergency"
+  },
+  "2105089195668877748": {
+   "kind": "flooding",
+   "place": "Doña Ana County, NM",
+   "name": null
+  },
+  "2105091205633618099": {
+   "kind": "flooding",
+   "place": "Doña Ana County, NM",
+   "name": null
   }
  },
  "provenance": {
@@ -5887,12 +6059,6 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [],
-   "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
-  },
-  "2104959099653734667": {
-   "contextVersion": 252,
-   "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "bc84cc70087c787616adb6e3e146d095d2ebfa5565e772d21f88a517a52f1edf"
   },
@@ -11513,51 +11679,6 @@
    "evidenceUsed": [],
    "inputHash": "0aab5fbf9a048075e0080cf86a1c95a2f83e03c657c15795441b33ccbd3b79d7"
   },
-  "2105061101461516730": {
-   "contextVersion": 259,
-   "evidenceSupplied": [
-    {
-     "id": "n_410c71f85c60c4ef",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/overnights/6112699-gop-senators-dismay-trump-xi-welcome/",
-     "text": "GOP senators not happy with Trump’s embrace of Xi after China helped Iran",
-     "title": "GOP senators not happy with Trump’s embrace of Xi after China helped Iran",
-     "publishedAt": "2026-09-25T23:36:03.000Z",
-     "fetchedAt": "2026-09-26T00:31:41.265Z",
-     "version": 189,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_9f1560b5f2c18fd3",
-     "publisher": "NPR",
-     "date": "2026-09-23",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/23/nx-s1-5978691/from-cybersecurity-to-ai-what-at-stake-in-trumps-meeting-with-and-president-xiwhy-the-us-and-china-are-at-a-precarious-moment-in-their-relationship",
-     "text": "To help us understand all this and set the stage for the summit, our guest is Rush Doshi, a senior fellow at the Council on Foreign Relations and the director of its China Strategy Initiative. He's the author of the book \"The Long Game: China's Grand Strategy To Displace American Order.\" He's also an assistant professor in the School of Foreign Service at Georgetown University. During the Biden administration, Doshi was the deputy senior director for China and Taiwan affairs at the National Security Council. In that capacity, he negotiated with his Chinese counterpart and helped arrange summi…",
-     "title": "From cybersecurity to AI to Taiwan, what's at stake in Trump's summit with Xi",
-     "publishedAt": "2026-09-23T16:13:52.000Z",
-     "fetchedAt": "2026-09-24T19:09:11.023Z",
-     "version": 162,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "0aab5fbf9a048075e0080cf86a1c95a2f83e03c657c15795441b33ccbd3b79d7",
-   "quotedContext": {
-    "id": "2105027125392879972",
-    "authorId": "763094579491008512",
-    "handle": "EricLDaugh",
-    "createdAt": "2026-09-29T20:09:10.000Z",
-    "textChars": 460,
-    "textHash": "53a9fbc798f2599fb6e54e36345fee2cea14f13f4bd227b01731f88f604417be"
-   }
-  },
   "2105061209049534961": {
    "contextVersion": 259,
    "evidenceSupplied": [],
@@ -11654,43 +11775,6 @@
      "publishedAt": "2026-09-22T17:12:48.000Z",
      "fetchedAt": "2026-09-22T21:32:23.090Z",
      "version": 121,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f97bd5cec6ff17a22706ee647330e203f2687ea993af69bcc628ebbddc84f228"
-  },
-  "2105041938692861968": {
-   "contextVersion": 260,
-   "evidenceSupplied": [
-    {
-     "id": "n_46a7f893b6e41a06",
-     "publisher": "Roll Call",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
-     "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
-     "title": "Trump’s funding cancellation violates budget law, GAO says",
-     "publishedAt": "2026-09-29T17:43:30.000Z",
-     "fetchedAt": "2026-09-29T23:21:33.385Z",
-     "version": 260,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_3a65752da240d556",
-     "publisher": "Roll Call",
-     "date": "2026-09-24",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/24/at-the-races-pivot-time-for-republicans/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
-     "title": "At the Races: Pivot time for Republicans",
-     "publishedAt": "2026-09-24T16:00:00.000Z",
-     "fetchedAt": "2026-09-24T20:51:31.699Z",
-     "version": 164,
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
@@ -12307,6 +12391,557 @@
     "textChars": 284,
     "textHash": "b3b2f8282397f5b93e1bdfd89dfab79f1f289398685dd2e153d49aeb0f73eff3"
    }
+  },
+  "2104959099653734667": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "Standing in the White House’s north driveway, Johnson declared that Congress would “keep steady hands at the wheel on this” but did not commit to crafting any legislation. Instead, he pledged that lawmakers would “continue to assess and further deliberate in the days ahead.”",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a0939999fc09434d"
+   ],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105041938692861968": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_46a7f893b6e41a06",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
+     "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
+     "title": "Trump’s funding cancellation violates budget law, GAO says",
+     "publishedAt": "2026-09-29T17:43:30.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_3a65752da240d556",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/at-the-races-pivot-time-for-republicans/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Pivot time for Republicans",
+     "publishedAt": "2026-09-24T16:00:00.000Z",
+     "fetchedAt": "2026-09-24T20:51:31.699Z",
+     "version": 164,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105061101461516730": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_410c71f85c60c4ef",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/overnights/6112699-gop-senators-dismay-trump-xi-welcome/",
+     "text": "GOP senators not happy with Trump’s embrace of Xi after China helped Iran",
+     "title": "GOP senators not happy with Trump’s embrace of Xi after China helped Iran",
+     "publishedAt": "2026-09-25T23:36:03.000Z",
+     "fetchedAt": "2026-09-26T00:31:41.265Z",
+     "version": 189,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9f1560b5f2c18fd3",
+     "publisher": "NPR",
+     "date": "2026-09-23",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/23/nx-s1-5978691/from-cybersecurity-to-ai-what-at-stake-in-trumps-meeting-with-and-president-xiwhy-the-us-and-china-are-at-a-precarious-moment-in-their-relationship",
+     "text": "To help us understand all this and set the stage for the summit, our guest is Rush Doshi, a senior fellow at the Council on Foreign Relations and the director of its China Strategy Initiative. He's the author of the book \"The Long Game: China's Grand Strategy To Displace American Order.\" He's also an assistant professor in the School of Foreign Service at Georgetown University. During the Biden administration, Doshi was the deputy senior director for China and Taiwan affairs at the National Security Council. In that capacity, he negotiated with his Chinese counterpart and helped arrange summi…",
+     "title": "From cybersecurity to AI to Taiwan, what's at stake in Trump's summit with Xi",
+     "publishedAt": "2026-09-23T16:13:52.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b",
+   "quotedContext": {
+    "id": "2105027125392879972",
+    "authorId": "763094579491008512",
+    "handle": "EricLDaugh",
+    "createdAt": "2026-09-29T20:09:10.000Z",
+    "textChars": 460,
+    "textHash": "53a9fbc798f2599fb6e54e36345fee2cea14f13f4bd227b01731f88f604417be"
+   }
+  },
+  "2105083608796942610": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105084015246225902": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105084823589040453": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105084886323511693": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105085233242812813": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105085239840133476": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105087806481514872": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b",
+   "quotedContext": {
+    "id": "2105012784165425165",
+    "authorId": "14173315",
+    "handle": "NBCNews",
+    "createdAt": "2026-09-29T19:12:11.000Z",
+    "textChars": 180,
+    "textHash": "115c47a947e899813f9bf55b1fe59bd2591e5fc0c002fff98d19458bc4f5588e"
+   }
+  },
+  "2105088003664499092": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b",
+   "quotedContext": {
+    "id": "2104883299428770111",
+    "authorId": "1652541",
+    "handle": "Reuters",
+    "createdAt": "2026-09-29T10:37:40.000Z",
+    "textChars": 252,
+    "textHash": "1ced5340c1255d55d94467f17cd8642708cda7dec4709dae6f3fdadf96d22c70"
+   }
+  },
+  "2105088158463324368": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_08e38c583f7a95c0",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
+     "text": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "title": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "publishedAt": "2026-09-29T02:08:17.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2105088275685978508": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_855629d1aa8ccc45",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6117781-eric-schmitt-jack-smith-hawks-hawkeyes-fani-willis/",
+     "text": "Eric Schmitt seems to confuse basketball teams in attempt to link Jack Smith, Fani Willis",
+     "title": "Eric Schmitt seems to confuse basketball teams in attempt to link Jack Smith, Fani Willis",
+     "publishedAt": "2026-09-29T15:56:47.000Z",
+     "fetchedAt": "2026-09-29T17:17:54.715Z",
+     "version": 255,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_879b1ffe00dc8a0a",
+     "publisher": "Roll Call",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/28/senators-gear-up-for-judiciary-clash-with-jack-smith/",
+     "text": "Even the title of the hearing — “Oversight of Jack Smith’s Abuse of Authority and the Targeting of Republicans and Related Matters” — gives a hint of the tone former special counsel John L. “Jack” Smith will likely face from majority Republicans when he sits as the sole witness Tuesday.",
+     "title": "Senators gear up for Judiciary clash with Jack Smith",
+     "publishedAt": "2026-09-28T12:12:27.000Z",
+     "fetchedAt": "2026-09-28T17:01:20.117Z",
+     "version": 237,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_855629d1aa8ccc45",
+    "n_879b1ffe00dc8a0a"
+   ],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104950614429925690",
+    "fingerprint": "c62e5b47cd1f60256c8eee4c2516a5910a40715afc4cede33bb3c4c623590591"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104950614429925690",
+    "fingerprint": "c62e5b47cd1f60256c8eee4c2516a5910a40715afc4cede33bb3c4c623590591"
+   }
+  },
+  "2105088996271333782": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c04f99d347d297c2",
+     "publisher": "The Hill",
+     "date": "2026-09-27",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
+     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "publishedAt": "2026-09-27T16:26:42.000Z",
+     "fetchedAt": "2026-09-27T17:16:14.227Z",
+     "version": 220,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105089057302720527": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105089195668877748": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105073433877139752",
+    "fingerprint": "2566d2e9088f480771a1e54f8bf1718fd191c6a3a6c8d6995b0b2555146ab92f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105073433877139752",
+    "fingerprint": "2566d2e9088f480771a1e54f8bf1718fd191c6a3a6c8d6995b0b2555146ab92f"
+   }
+  },
+  "2105089741372961032": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105090242793681256": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105091172331122948": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_3431a658e4179b6c",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6115908-democrats-attack-collins-medicaid-cuts/",
+     "text": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
+     "title": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
+     "publishedAt": "2026-09-28T21:16:14.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105091184565596598": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_8a7119fcff4febe1",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6105122-trump-administration-iran-war-controversy/",
+     "text": "Pete Hegseth confronts House with a lame-duck impeachment dilemma",
+     "title": "Pete Hegseth confronts House with a lame-duck impeachment dilemma",
+     "publishedAt": "2026-09-23T10:00:00.000Z",
+     "fetchedAt": "2026-09-23T10:47:00.248Z",
+     "version": 131,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9fced3ad72f4a8c8",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6111626-pete-hegseth-dod-register-to-vote-2026-midterms/",
+     "text": "Pete Hegseth urges troops to register to vote",
+     "title": "Pete Hegseth urges troops to register to vote",
+     "publishedAt": "2026-09-25T16:22:15.000Z",
+     "fetchedAt": "2026-09-25T17:36:54.654Z",
+     "version": 182,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105091205633618099": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105071983486468505",
+    "fingerprint": "3412da94c80747f4349ea0d7b2b089ba8a8735f8bd7babe37bda28179c5e2036"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105071983486468505",
+    "fingerprint": "3412da94c80747f4349ea0d7b2b089ba8a8735f8bd7babe37bda28179c5e2036"
+   }
+  },
+  "2105091445593927759": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_92d729642fb42e8b",
+     "publisher": "Roll Call",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/25/senate-plots-its-final-week-before-elections-with-potential-data-center-electricity-vote/",
+     "text": "Senate Majority Leader John Thune, R-S.D., told reporters Thursday that a wide array of bills could potentially come to the floor next week. He specifically noted a test vote on legislation known as the Ratepayer Protection Act, which is intended to address rising electricity prices by requiring state regulators to consider adopting standards to ensure that large data centers pay for needed electric grid upgrades.",
+     "title": "Senate plots its final week before elections with potential data center electricity vote",
+     "publishedAt": "2026-09-25T06:02:24.000Z",
+     "fetchedAt": "2026-09-25T17:36:54.654Z",
+     "version": 182,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105091464501850281": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_cf4dc07398f480da",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6110883-live-updates-trump-xi-summit-dc-iran-war-affordability-gop-midterms/",
+     "text": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "title": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "publishedAt": "2026-09-25T19:17:14.000Z",
+     "fetchedAt": "2026-09-25T19:52:04.988Z",
+     "version": 184,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f1e42e8d845ec0bb",
+     "publisher": "NPR",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/25/nx-s1-5976940/trump-and-chinas-xi-discuss-ai-trade-and-iran-war-during-state-visit",
+     "text": "LEILA FADEL, HOST: Trump hosted Xi for a lavish state dinner last night. The U.S. president literally rolled out the red carpet for the Chinese leader as they discussed artificial intelligence, trade and the Iran war. In a few moments, we'll discuss what was accomplished with former U.S. Ambassador to China Nicholas Burns. We begin with the news.",
+     "title": "Trump and China's Xi discuss AI, trade and Iran war during state visit",
+     "publishedAt": "2026-09-25T10:48:42.000Z",
+     "fetchedAt": "2026-09-26T11:52:07.815Z",
+     "version": 197,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105096792249430180": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105096880820826297": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_5333c85e1819a5af",
+     "publisher": "Roll Call",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://rollcall.com/2026/09/23/journalists-win-high-scoring-congressional-softball-game/",
+     "text": "Journalists get the win in high-scoring Congressional Women’s Softball Game",
+     "title": "Journalists get the win in high-scoring Congressional Women’s Softball Game",
+     "publishedAt": "2026-09-23T22:23:23.000Z",
+     "fetchedAt": "2026-09-24T03:12:04.130Z",
+     "version": 147,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2"
+  },
+  "2105096969018581462": {
+   "contextVersion": 262,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1036cc958d63eef68d0123ff62f06cad1837f409da00fd5e835919e91a8ef8d2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105093902961147979",
+    "fingerprint": "a7eb14cf2ba20478358af2bed64fc245a8be22f01661c1e024ca10b21cdf66d3"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105093902961147979",
+    "fingerprint": "a7eb14cf2ba20478358af2bed64fc245a8be22f01661c1e024ca10b21cdf66d3"
+   }
+  },
+  "2105097580741066881": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_eb83929a9ecf71ae",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6110895-pezeshkian-us-conflict-iran/",
+     "text": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "title": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "publishedAt": "2026-09-25T02:46:47.000Z",
+     "fetchedAt": "2026-09-25T03:37:08.431Z",
+     "version": 171,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_d4f057d856808035",
+     "publisher": "The Hill",
+     "date": "2026-09-23",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6107442-mike-johnson-iran-war-resolution/",
+     "text": "Johnson calls for ‘resolution’ of Iran war",
+     "title": "Johnson calls for ‘resolution’ of Iran war",
+     "publishedAt": "2026-09-23T21:23:12.000Z",
+     "fetchedAt": "2026-09-23T22:41:05.299Z",
+     "version": 143,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "2e43a327de8e5bca7fe6a8c7d6d31f3c4215805754da022415a19dcd9c90cf15"
   }
  },
  "needsContext": {
@@ -12427,7 +13062,6 @@
   "2104957783313383926": false,
   "2104958295262040407": true,
   "2104958375679119535": false,
-  "2104959099653734667": false,
   "2104959236450979979": false,
   "2104959427300425766": true,
   "2104959576529571941": false,
@@ -12804,7 +13438,6 @@
   "2105057737373815232": true,
   "2105058681561944339": false,
   "2105059426109432002": false,
-  "2105061101461516730": false,
   "2105061209049534961": false,
   "2105061474594889792": false,
   "2105062606650118621": false,
@@ -12812,7 +13445,6 @@
   "2105062790847435165": false,
   "2105063389881905631": false,
   "2104948078285295619": false,
-  "2105041938692861968": false,
   "2105064274544456080": false,
   "2105065584530759986": false,
   "2105065745218674989": true,
@@ -12856,10 +13488,37 @@
   "2105080684419166219": false,
   "2105081440589525370": false,
   "2105081447535055264": false,
-  "2105082269631152276": false
+  "2105082269631152276": false,
+  "2104959099653734667": false,
+  "2105041938692861968": false,
+  "2105061101461516730": false,
+  "2105083608796942610": false,
+  "2105084015246225902": false,
+  "2105084823589040453": false,
+  "2105084886323511693": false,
+  "2105085233242812813": false,
+  "2105085239840133476": false,
+  "2105087806481514872": false,
+  "2105088003664499092": false,
+  "2105088158463324368": false,
+  "2105088275685978508": false,
+  "2105088996271333782": false,
+  "2105089057302720527": false,
+  "2105089195668877748": false,
+  "2105089741372961032": true,
+  "2105090242793681256": false,
+  "2105091172331122948": false,
+  "2105091184565596598": false,
+  "2105091205633618099": false,
+  "2105091445593927759": false,
+  "2105091464501850281": false,
+  "2105096792249430180": false,
+  "2105096880820826297": false,
+  "2105096969018581462": false,
+  "2105097580741066881": false
  },
  "inputBlocks": {},
- "contextVersion": 260,
+ "contextVersion": 262,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -13274,6 +13933,43 @@
    "ids": [
     "2105081447535055264"
    ]
+  },
+  {
+   "label": "Speaker Johnson cancels remaining September votes",
+   "ids": [
+    "2104959099653734667"
+   ]
+  },
+  {
+   "label": "Cornell University sexual assault report",
+   "ids": [
+    "2105084015246225902"
+   ]
+  },
+  {
+   "label": "Sports-betting prediction markets regulation",
+   "ids": [
+    "2105088158463324368"
+   ]
+  },
+  {
+   "label": "Animal Welfare Enforcement Improvement Act reintroduction",
+   "ids": [
+    "2105091445593927759"
+   ]
+  },
+  {
+   "label": "Bill to sanction Israel over West Bank/Gaza settlements",
+   "ids": [
+    "2105096969018581462"
+   ]
+  },
+  {
+   "label": "Rincon, NM dam/levee failure flooding",
+   "ids": [
+    "2105089195668877748",
+    "2105091205633618099"
+   ]
   }
  ],
  "unclassified": [],
@@ -13287,67 +13983,46 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2105068410400800980",
-    "2105068955282894872",
-    "2105069974369005898",
-    "2105070122948014509",
-    "2105070466574487887",
-    "2105070676218347976",
-    "2105071725687779624",
-    "2105071968835768615",
-    "2105072378325922198",
-    "2105072631326122059",
-    "2105072908737695888",
-    "2105073118733533581",
-    "2105073718762618958",
-    "2105074146115731687",
-    "2105074408809177137",
-    "2105074462785736903",
-    "2105075123619545224",
-    "2105075426271916377",
-    "2105076628481270244",
-    "2105077664151187942",
-    "2105077692534288585",
-    "2105078095866696144",
-    "2105078098693902451",
-    "2105078914834219201",
-    "2105079061668061508",
-    "2105079481262293326",
-    "2105079492628853134",
-    "2105080235519598840",
-    "2105080684419166219",
-    "2105081440589525370",
-    "2105081447535055264",
-    "2105082269631152276"
+    "2105088275685978508",
+    "2105088996271333782",
+    "2105089057302720527",
+    "2105089195668877748",
+    "2105089741372961032",
+    "2105090242793681256",
+    "2105091172331122948",
+    "2105091184565596598",
+    "2105091205633618099",
+    "2105091445593927759",
+    "2105091464501850281",
+    "2105096792249430180",
+    "2105096880820826297",
+    "2105096969018581462"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T23:53:04.182Z",
-    "observedAt": "2026-09-29T23:53:57.842Z",
+    "attemptedAt": "2026-09-30T00:52:00.184Z",
+    "observedAt": "2026-09-30T00:52:31.258Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 32,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2105062606650118621",
-    "2105062718713528649",
-    "2105062790847435165",
-    "2105063389881905631"
+    "2105097580741066881"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T22:39:07.856Z",
-    "observedAt": "2026-09-29T22:39:13.799Z",
+    "attemptedAt": "2026-09-30T00:52:31.284Z",
+    "observedAt": "2026-09-30T00:52:34.025Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   },
@@ -13379,33 +14054,32 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2104621713288020258",
-    "2104683542265696675",
+    "2104619376460611675",
+    "2104636653994180753",
+    "2104704387797164408",
     "2104715085847417158",
-    "2104948078285295619",
+    "2104959099653734667",
     "2105041938692861968",
-    "2105064274544456080",
-    "2105065584530759986",
-    "2105065745218674989",
-    "2105066357322616906",
-    "2105066526214644057",
-    "2105066742888431883",
-    "2105066911168172384",
-    "2105067035877339441",
-    "2105067037873873227",
-    "2105067224826606073",
-    "2105067474278572301",
-    "2105067956443152456"
+    "2105061101461516730",
+    "2105083608796942610",
+    "2105084015246225902",
+    "2105084823589040453",
+    "2105084886323511693",
+    "2105085233242812813",
+    "2105085239840133476",
+    "2105087806481514872",
+    "2105088003664499092",
+    "2105088158463324368"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T23:52:34.873Z",
-    "observedAt": "2026-09-29T23:53:04.153Z",
+    "attemptedAt": "2026-09-30T00:51:34.946Z",
+    "observedAt": "2026-09-30T00:52:00.163Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -13413,24 +14087,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T23:53:04.182Z",
-   "observedAt": "2026-09-29T23:53:57.842Z",
+   "attemptedAt": "2026-09-30T00:52:31.284Z",
+   "observedAt": "2026-09-30T00:52:34.025Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 32,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T23:53:04.182Z",
-   "observedAt": "2026-09-29T23:53:57.842Z",
+   "attemptedAt": "2026-09-30T00:52:31.284Z",
+   "observedAt": "2026-09-30T00:52:34.025Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 32,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T23:53:57.893Z"
+ "updatedAt": "2026-09-30T00:52:34.065Z"
 }

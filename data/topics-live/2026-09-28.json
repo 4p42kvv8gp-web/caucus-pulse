@@ -1,7 +1,7 @@
 {
  "date": "2026-09-28",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-29T23:53:57.877Z",
+ "classifiedAt": "2026-09-30T00:52:34.051Z",
  "assignments": {
   "2104424725355360387": [
    [
@@ -3367,11 +3367,11 @@
   "2104715085847417158": [
    [
     "public-safety",
-    "gun-violence"
+    "crime-policing"
    ],
    [
     "public-safety",
-    "crime-policing"
+    "gun-violence"
    ]
   ],
   "2104715300499296330": [],
@@ -6486,12 +6486,6 @@
    "evidenceUsed": [],
    "inputHash": "a30e6ef08e59d53e984df745f0ac791be1f35fb8bae61a239ed9c5e2124e1ce5"
   },
-  "2104619376460611675": {
-   "contextVersion": 242,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "a30e6ef08e59d53e984df745f0ac791be1f35fb8bae61a239ed9c5e2124e1ce5"
-  },
   "2104619402293297439": {
    "contextVersion": 242,
    "evidenceSupplied": [
@@ -7316,12 +7310,6 @@
     "textChars": 121,
     "textHash": "a54c375b8c0701e06133fbfb2a6e2b1a63fdb7fe034a42f3f2f40ad0a7755ddc"
    }
-  },
-  "2104636653994180753": {
-   "contextVersion": 243,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "483b6cf1c050172408d9e7fcaa111fce250044d4d6d7e82238f4a1e74b80506c"
   },
   "2104637325066092942": {
    "contextVersion": 243,
@@ -10365,12 +10353,6 @@
    "evidenceUsed": [],
    "inputHash": "bfa876503f9e1c3252cac4b86d30aead376787ab86eace9e7ca64f42767e185f"
   },
-  "2104704387797164408": {
-   "contextVersion": 244,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "bfa876503f9e1c3252cac4b86d30aead376787ab86eace9e7ca64f42767e185f"
-  },
   "2104705208013963471": {
    "contextVersion": 244,
    "evidenceSupplied": [],
@@ -11838,8 +11820,74 @@
    ],
    "inputHash": "f97bd5cec6ff17a22706ee647330e203f2687ea993af69bcc628ebbddc84f228"
   },
+  "2104619376460611675": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_e793f78504c4dbb6",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/wildfire-bill-to-ease-path-for-controlled-burns-passes-senate/",
+     "text": "The Senate passed legislation that would amend the Clean Air Act to ensure states would not be penalized for conducting prescribed burns intended to prevent larger, uncontrolled wildfires by unanimous consent on Tuesday.",
+     "title": "Wildfire bill to ease path for controlled burns passes Senate",
+     "publishedAt": "2026-09-29T19:06:51.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2104636653994180753": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "Standing in the White House’s north driveway, Johnson declared that Congress would “keep steady hands at the wheel on this” but did not commit to crafting any legislation. Instead, he pledged that lawmakers would “continue to assess and further deliberate in the days ahead.”",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
+  "2104704387797164408": {
+   "contextVersion": 262,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "And while Trump, several members of his Cabinet and Johnson lunched with a group that included Nvidia’s Jensen Huang, Meta’s Mark Zuckerberg, Anthropic’s Dario Amodei, Amazon’s Jeff Bezos and others, the Senate took a pass on even considering a Democratic-backed regulatory bill.",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
+  },
   "2104715085847417158": {
-   "contextVersion": 260,
+   "contextVersion": 262,
    "evidenceSupplied": [
     {
      "id": "n_46a7f893b6e41a06",
@@ -11850,8 +11898,8 @@
      "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
      "title": "Trump’s funding cancellation violates budget law, GAO says",
      "publishedAt": "2026-09-29T17:43:30.000Z",
-     "fetchedAt": "2026-09-29T23:21:33.385Z",
-     "version": 260,
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
@@ -11873,7 +11921,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "f97bd5cec6ff17a22706ee647330e203f2687ea993af69bcc628ebbddc84f228"
+   "inputHash": "b714ba5d335712e1e6ff9e64aaa5857b8815bc811771cf8f200e31cce0aed65b"
   }
  },
  "needsContext": {
@@ -12049,7 +12097,6 @@
   "2104618724464451706": false,
   "2104618777560453521": false,
   "2104618956824977512": false,
-  "2104619376460611675": false,
   "2104619402293297439": true,
   "2104620007950885086": false,
   "2104620617316159987": false,
@@ -12100,7 +12147,6 @@
   "2104635988551045264": true,
   "2104636105366573246": false,
   "2104636564416676202": false,
-  "2104636653994180753": false,
   "2104637325066092942": false,
   "2104637456259940793": false,
   "2104637980577329551": false,
@@ -12300,7 +12346,6 @@
   "2104703869028835680": false,
   "2104703924833862027": false,
   "2104703965916996067": false,
-  "2104704387797164408": false,
   "2104705208013963471": false,
   "2104705781652226184": false,
   "2104706405727170679": false,
@@ -12399,10 +12444,13 @@
   "2104600952560861340": false,
   "2104621713288020258": false,
   "2104683542265696675": false,
+  "2104619376460611675": false,
+  "2104636653994180753": false,
+  "2104704387797164408": false,
   "2104715085847417158": false
  },
  "inputBlocks": {},
- "contextVersion": 260,
+ "contextVersion": 262,
  "emerging": [
   {
    "label": "Family farm losses & farm bill funding",
@@ -12821,6 +12869,13 @@
    "ids": [
     "2104600952560861340"
    ]
+  },
+  {
+   "label": "Speaker Johnson cancels remaining September votes",
+   "ids": [
+    "2104636653994180753",
+    "2104704387797164408"
+   ]
   }
  ],
  "unclassified": [],
@@ -12834,33 +12889,32 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104621713288020258",
-    "2104683542265696675",
+    "2104619376460611675",
+    "2104636653994180753",
+    "2104704387797164408",
     "2104715085847417158",
-    "2104948078285295619",
+    "2104959099653734667",
     "2105041938692861968",
-    "2105064274544456080",
-    "2105065584530759986",
-    "2105065745218674989",
-    "2105066357322616906",
-    "2105066526214644057",
-    "2105066742888431883",
-    "2105066911168172384",
-    "2105067035877339441",
-    "2105067037873873227",
-    "2105067224826606073",
-    "2105067474278572301",
-    "2105067956443152456"
+    "2105061101461516730",
+    "2105083608796942610",
+    "2105084015246225902",
+    "2105084823589040453",
+    "2105084886323511693",
+    "2105085233242812813",
+    "2105085239840133476",
+    "2105087806481514872",
+    "2105088003664499092",
+    "2105088158463324368"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-29T23:52:34.873Z",
-    "observedAt": "2026-09-29T23:53:04.153Z",
+    "attemptedAt": "2026-09-30T00:51:34.946Z",
+    "observedAt": "2026-09-30T00:52:00.163Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   },
@@ -12912,24 +12966,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-29T23:52:34.873Z",
-   "observedAt": "2026-09-29T23:53:04.153Z",
+   "attemptedAt": "2026-09-30T00:51:34.946Z",
+   "observedAt": "2026-09-30T00:52:00.163Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-29T23:52:34.873Z",
-   "observedAt": "2026-09-29T23:53:04.153Z",
+   "attemptedAt": "2026-09-30T00:51:34.946Z",
+   "observedAt": "2026-09-30T00:52:00.163Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-29T23:53:57.881Z"
+ "updatedAt": "2026-09-30T00:52:34.055Z"
 }

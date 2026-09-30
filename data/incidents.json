@@ -1,6 +1,200 @@
 {
- "generatedAt": "2026-09-29T23:53:58.028Z",
+ "generatedAt": "2026-09-30T00:52:34.182Z",
  "incidents": [
+  {
+   "id": "doa-ana-county-nm--flooding--source-2105071983486468505",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Doña Ana County, NM · NM-02",
+   "placeRaw": "Doña Ana County, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-09-30T00:23:48.000Z",
+   "last": "2026-09-30T00:23:48.000Z",
+   "updates": 1,
+   "engN": 1,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Doña Ana County, NM",
+   "evidence": {
+    "span": "RT @KFOX14: The National Weather Service has issued a flash flood emergency for Rincon, New Mexico, warning that the Rincon arroyo is breac…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2105091205633618099",
+    "url": "https://x.com/i/web/status/2105091205633618099"
+   },
+   "timeline": [
+    {
+     "id": "2105091205633618099",
+     "sourceId": "2105091205633618099",
+     "url": "https://x.com/i/web/status/2105091205633618099",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [
+      "2105071983486468505"
+     ],
+     "time": "2026-09-30T00:23:48.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "repost",
+     "text": "RT @KFOX14: The National Weather Service has issued a flash flood emergency for Rincon, New Mexico, warning that the Rincon arroyo is breac…",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Doña Ana County, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @KFOX14: The National Weather Service has issued a flash flood emergency for Rincon, New Mexico, warning that the Rincon arroyo is breac…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2105091205633618099",
+      "url": "https://x.com/i/web/status/2105091205633618099"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105091205633618099"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105091205633618099"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
+  {
+   "id": "doa-ana-county-nm--flooding--source-2105073433877139752",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Doña Ana County, NM · NM-02",
+   "placeRaw": "Doña Ana County, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-09-30T00:15:49.000Z",
+   "last": "2026-09-30T00:15:49.000Z",
+   "updates": 1,
+   "engN": 6,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Doña Ana County, NM",
+   "evidence": {
+    "span": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield. This also comes as re…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2105089195668877748",
+    "url": "https://x.com/i/web/status/2105089195668877748"
+   },
+   "timeline": [
+    {
+     "id": "2105089195668877748",
+     "sourceId": "2105089195668877748",
+     "url": "https://x.com/i/web/status/2105089195668877748",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [
+      "2105073433877139752"
+     ],
+     "time": "2026-09-30T00:15:49.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "repost",
+     "text": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield. This also comes as re…",
+     "engN": 6,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Doña Ana County, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @KTSMtv: Due to worsening conditions, Doña Ana County has issued evacuation orders for Rincon, Salem and Garfield. This also comes as re…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2105089195668877748",
+      "url": "https://x.com/i/web/status/2105089195668877748"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105089195668877748"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105089195668877748"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "doa-ana-county-nm--flooding--source-2105067474278572301",
    "kind": "flooding",
