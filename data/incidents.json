@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-09-30T18:03:14.962Z",
+ "generatedAt": "2026-09-30T19:35:12.641Z",
  "incidents": [
+  {
+   "id": "monterey-county-ca--wildfire--timberfire--2026-09-30",
+   "kind": "wildfire",
+   "name": "Timber Fire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Monterey County, CA · CA-19",
+   "placeRaw": "Monterey County, CA",
+   "district": "CA-19",
+   "districtMatch": true,
+   "handle": "@RepJimmyPanetta",
+   "member": "Jimmy Panetta",
+   "since": "2026-09-30T19:18:41.000Z",
+   "last": "2026-09-30T19:18:41.000Z",
+   "updates": 1,
+   "engN": 0,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Timber Fire · Monterey County, CA",
+   "evidence": {
+    "span": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091,",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2105376807629279413",
+    "url": "https://x.com/i/web/status/2105376807629279413"
+   },
+   "timeline": [
+    {
+     "id": "2105376807629279413",
+     "sourceId": "2105376807629279413",
+     "url": "https://x.com/i/web/status/2105376807629279413",
+     "authorId": "796736612554117120",
+     "personId": "member:jimmy panetta",
+     "referenceIds": [],
+     "time": "2026-09-30T19:18:41.000Z",
+     "who": "@RepJimmyPanetta",
+     "tag": "member",
+     "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
+     "engN": 0,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Monterey County, CA",
+      "name": "Timber Fire"
+     },
+     "evidence": {
+      "span": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091,",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2105376807629279413",
+      "url": "https://x.com/i/web/status/2105376807629279413"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105376807629279413"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105376807629279413"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "doa-ana-county-nm--flooding--source-2105071983486468505",
    "kind": "flooding",

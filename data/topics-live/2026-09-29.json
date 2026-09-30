@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T18:03:14.810Z",
+ "classifiedAt": "2026-09-30T19:35:12.547Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -595,6 +595,10 @@
   ],
   "2104944351277396232": [
    [
+    "budget-appropriations",
+    null
+   ],
+   [
     "foreign-policy",
     "middle-east"
    ],
@@ -608,6 +612,10 @@
    ]
   ],
   "2104944419233235207": [
+   [
+    "budget-appropriations",
+    null
+   ],
    [
     "foreign-policy",
     "middle-east"
@@ -1198,19 +1206,19 @@
   "2104968974702166186": [
    [
     "congress-politics",
-    "elections-2026"
+    null
    ],
    [
     "economy",
     "taxes"
    ],
    [
-    "budget-appropriations",
-    "snap-benefits"
+    "foreign-policy",
+    "middle-east"
    ],
    [
-    "healthcare",
-    null
+    "economy",
+    "tariffs-trade"
    ]
   ],
   "2104969114049511820": [
@@ -1749,11 +1757,11 @@
   "2104988326889452019": [
    [
     "economy",
-    "prices-inflation"
+    "tariffs-trade"
    ],
    [
     "economy",
-    "tariffs-trade"
+    "prices-inflation"
    ],
    [
     "foreign-policy",
@@ -2833,16 +2841,12 @@
   ],
   "2105034131516100782": [
    [
-    "economy",
-    "prices-inflation"
-   ],
-   [
     "climate",
     "epa-rollbacks"
    ],
    [
     "economy",
-    "tariffs-trade"
+    "prices-inflation"
    ],
    [
     "foreign-policy",
@@ -3803,22 +3807,22 @@
   ],
   "2105073718762618958": [
    [
-    "economy",
-    "prices-inflation"
-   ],
-   [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2105074146115731687": [
    [
-    "economy",
-    "prices-inflation"
-   ],
-   [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2105074408809177137": [
@@ -3928,7 +3932,11 @@
    ],
    [
     "economy",
-    "prices-inflation"
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
    ]
   ],
   "2105081447535055264": [
@@ -6868,20 +6876,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "91da1941b192fa439eb50b5c789d7637ae20a32046681d4322c6cd121d9a0305"
-  },
-  "2104968974702166186": {
-   "contextVersion": 254,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "91da1941b192fa439eb50b5c789d7637ae20a32046681d4322c6cd121d9a0305",
-   "quotedContext": {
-    "id": "2104912245914227110",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-09-29T12:32:41.000Z",
-    "textChars": 172,
-    "textHash": "255d711081ea6e47d842109ed9d5e29418b223bc01403de60155ae063472cad6"
-   }
   },
   "2104969114049511820": {
    "contextVersion": 254,
@@ -11642,12 +11636,6 @@
     "textHash": "22c2a17a2f05e6b8de1267b50ada11093e7c851244d37579d3989838dfe81504"
    }
   },
-  "2105067224826606073": {
-   "contextVersion": 260,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "f97bd5cec6ff17a22706ee647330e203f2687ea993af69bcc628ebbddc84f228"
-  },
   "2105067474278572301": {
    "contextVersion": 260,
    "evidenceSupplied": [],
@@ -12026,20 +12014,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "eef80b63726514b1c776507ff7b81f2bad9a58d34a4cdc7a80d8029646175956"
-  },
-  "2105081440589525370": {
-   "contextVersion": 260,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "eef80b63726514b1c776507ff7b81f2bad9a58d34a4cdc7a80d8029646175956",
-   "quotedContext": {
-    "id": "2104912245914227110",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-09-29T12:32:41.000Z",
-    "textChars": 172,
-    "textHash": "255d711081ea6e47d842109ed9d5e29418b223bc01403de60155ae063472cad6"
-   }
   },
   "2105081447535055264": {
    "contextVersion": 260,
@@ -13562,170 +13536,6 @@
    "evidenceUsed": [],
    "inputHash": "13328a59afa6e1d32f6fbb5a07d3c649fa72a327a63057b1a1c78c4cf87bb984"
   },
-  "2104944351277396232": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_679027588c3d7710",
-     "publisher": "The Hill",
-     "date": "2026-09-24",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
-     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "publishedAt": "2026-09-24T19:01:10.000Z",
-     "fetchedAt": "2026-09-24T19:09:11.023Z",
-     "version": 162,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a3e57858896b262a",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
-     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
-     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
-     "publishedAt": "2026-09-30T08:42:46.000Z",
-     "fetchedAt": "2026-09-30T15:02:01.461Z",
-     "version": 274,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_679027588c3d7710"
-   ],
-   "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463"
-  },
-  "2104944419233235207": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_679027588c3d7710",
-     "publisher": "The Hill",
-     "date": "2026-09-24",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
-     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "publishedAt": "2026-09-24T19:01:10.000Z",
-     "fetchedAt": "2026-09-24T19:09:11.023Z",
-     "version": 162,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_c35aa9ef7607e2a8",
-     "publisher": "The Washington Post",
-     "date": "2026-09-22",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/09/22/us-iran-had-very-good-meeting-over-ongoing-war-trump-says/",
-     "text": "U.S. and Iran had ‘very good meeting’ over ongoing war, Trump says",
-     "title": "U.S. and Iran had ‘very good meeting’ over ongoing war, Trump says",
-     "publishedAt": "2026-09-22T19:30:00.000Z",
-     "fetchedAt": "2026-09-22T20:17:22.496Z",
-     "version": 120,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_679027588c3d7710"
-   ],
-   "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463",
-   "quotedContext": {
-    "id": "2104944351277396232",
-    "authorId": "1876279166565515264",
-    "handle": "RepNellie",
-    "createdAt": "2026-09-29T14:40:15.000Z",
-    "textChars": 263,
-    "textHash": "46306e03f3ea98094f057f4912584fdc7cc8b9e04cf55fe20eeab0d7814ae40f"
-   }
-  },
-  "2104988326889452019": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_fed362db8fe0f556",
-     "publisher": "The Hill",
-     "date": "2026-09-26",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
-     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "publishedAt": "2026-09-26T13:33:10.000Z",
-     "fetchedAt": "2026-09-26T16:31:46.784Z",
-     "version": 201,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4dbf7998a849a7fa"
-   ],
-   "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463"
-  },
-  "2105034131516100782": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_c04f99d347d297c2",
-     "publisher": "The Hill",
-     "date": "2026-09-27",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
-     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "publishedAt": "2026-09-27T16:26:42.000Z",
-     "fetchedAt": "2026-09-27T17:16:14.227Z",
-     "version": 220,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_c04f99d347d297c2"
-   ],
-   "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463"
-  },
   "2105048523058106677": {
    "contextVersion": 274,
    "evidenceSupplied": [
@@ -13762,201 +13572,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463"
-  },
-  "2105073718762618958": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_679027588c3d7710",
-     "publisher": "The Hill",
-     "date": "2026-09-24",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
-     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
-     "publishedAt": "2026-09-24T19:01:10.000Z",
-     "fetchedAt": "2026-09-24T19:09:11.023Z",
-     "version": 162,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4dbf7998a849a7fa"
-   ],
-   "inputHash": "ca5cf2c6ae2023657d19655a386c700031f09cb38404b17751653493d9917463",
-   "quotedContext": {
-    "id": "2104960562547269869",
-    "authorId": "913508226",
-    "handle": "KRISH_EH",
-    "createdAt": "2026-09-29T15:44:41.000Z",
-    "textChars": 265,
-    "textHash": "b2ac776efedb7bcf693bf614cb83d872e25d55140349d85879e7ef92da1d34a5"
-   }
-  },
-  "2105074146115731687": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_449fcae9f33aa473",
-     "publisher": "The Hill",
-     "date": "2026-09-26",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/sunday-talk-shows/6113249-sunday-shows-trump-rejects-iran-proposal/",
-     "text": "Sunday shows preview: Trump rejects Iran deal after week of high-stakes meetings; GOP clammers to keep Congress",
-     "title": "Sunday shows preview: Trump rejects Iran deal after week of high-stakes meetings; GOP clammers to keep Congress",
-     "publishedAt": "2026-09-26T21:02:36.000Z",
-     "fetchedAt": "2026-09-27T21:55:32.852Z",
-     "version": 224,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_fed362db8fe0f556",
-     "publisher": "The Hill",
-     "date": "2026-09-26",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
-     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "publishedAt": "2026-09-26T13:33:10.000Z",
-     "fetchedAt": "2026-09-26T16:31:46.784Z",
-     "version": 201,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f960d33f21f3d35beda2c3ce55ec356f36445ab6666cee4dd0f278030748e665"
-  },
-  "2105088996271333782": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_c04f99d347d297c2",
-     "publisher": "The Hill",
-     "date": "2026-09-27",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
-     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "publishedAt": "2026-09-27T16:26:42.000Z",
-     "fetchedAt": "2026-09-27T17:16:14.227Z",
-     "version": 220,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f960d33f21f3d35beda2c3ce55ec356f36445ab6666cee4dd0f278030748e665"
-  },
-  "2105091464501850281": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_cf4dc07398f480da",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/6110883-live-updates-trump-xi-summit-dc-iran-war-affordability-gop-midterms/",
-     "text": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
-     "title": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
-     "publishedAt": "2026-09-25T19:17:14.000Z",
-     "fetchedAt": "2026-09-25T19:52:04.988Z",
-     "version": 184,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f1e42e8d845ec0bb",
-     "publisher": "NPR",
-     "date": "2026-09-25",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/25/nx-s1-5976940/trump-and-chinas-xi-discuss-ai-trade-and-iran-war-during-state-visit",
-     "text": "LEILA FADEL, HOST: Trump hosted Xi for a lavish state dinner last night. The U.S. president literally rolled out the red carpet for the Chinese leader as they discussed artificial intelligence, trade and the Iran war. In a few moments, we'll discuss what was accomplished with former U.S. Ambassador to China Nicholas Burns. We begin with the news.",
-     "title": "Trump and China's Xi discuss AI, trade and Iran war during state visit",
-     "publishedAt": "2026-09-25T10:48:42.000Z",
-     "fetchedAt": "2026-09-26T11:52:07.815Z",
-     "version": 197,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f960d33f21f3d35beda2c3ce55ec356f36445ab6666cee4dd0f278030748e665"
-  },
-  "2105097580741066881": {
-   "contextVersion": 274,
-   "evidenceSupplied": [
-    {
-     "id": "n_a3e57858896b262a",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
-     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
-     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
-     "publishedAt": "2026-09-30T08:42:46.000Z",
-     "fetchedAt": "2026-09-30T15:02:01.461Z",
-     "version": 274,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_eb83929a9ecf71ae",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6110895-pezeshkian-us-conflict-iran/",
-     "text": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
-     "title": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
-     "publishedAt": "2026-09-25T02:46:47.000Z",
-     "fetchedAt": "2026-09-25T03:37:08.431Z",
-     "version": 171,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f960d33f21f3d35beda2c3ce55ec356f36445ab6666cee4dd0f278030748e665"
   },
   "2104967866336350555": {
    "contextVersion": 275,
@@ -14070,6 +13685,451 @@
     "textChars": 283,
     "textHash": "c85f7036b668ff77bbdf4952106f7234c21320ca6bc19babcec9cba1f0e7376b"
    }
+  },
+  "2104944351277396232": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_679027588c3d7710",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
+     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "publishedAt": "2026-09-24T19:01:10.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3e57858896b262a",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
+     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
+     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+     "publishedAt": "2026-09-30T08:42:46.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_679027588c3d7710"
+   ],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f"
+  },
+  "2104944419233235207": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_679027588c3d7710",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
+     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "publishedAt": "2026-09-24T19:01:10.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c35aa9ef7607e2a8",
+     "publisher": "The Washington Post",
+     "date": "2026-09-22",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/09/22/us-iran-had-very-good-meeting-over-ongoing-war-trump-says/",
+     "text": "U.S. and Iran had ‘very good meeting’ over ongoing war, Trump says",
+     "title": "U.S. and Iran had ‘very good meeting’ over ongoing war, Trump says",
+     "publishedAt": "2026-09-22T19:30:00.000Z",
+     "fetchedAt": "2026-09-22T20:17:22.496Z",
+     "version": 120,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_679027588c3d7710"
+   ],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f",
+   "quotedContext": {
+    "id": "2104944351277396232",
+    "authorId": "1876279166565515264",
+    "handle": "RepNellie",
+    "createdAt": "2026-09-29T14:40:15.000Z",
+    "textChars": 263,
+    "textHash": "46306e03f3ea98094f057f4912584fdc7cc8b9e04cf55fe20eeab0d7814ae40f"
+   }
+  },
+  "2104968974702166186": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f",
+   "quotedContext": {
+    "id": "2104912245914227110",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-29T12:32:41.000Z",
+    "textChars": 172,
+    "textHash": "255d711081ea6e47d842109ed9d5e29418b223bc01403de60155ae063472cad6"
+   }
+  },
+  "2104988326889452019": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fed362db8fe0f556",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
+     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "publishedAt": "2026-09-26T13:33:10.000Z",
+     "fetchedAt": "2026-09-26T16:31:46.784Z",
+     "version": 201,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f"
+  },
+  "2105034131516100782": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_c04f99d347d297c2",
+     "publisher": "The Hill",
+     "date": "2026-09-27",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
+     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "publishedAt": "2026-09-27T16:26:42.000Z",
+     "fetchedAt": "2026-09-27T17:16:14.227Z",
+     "version": 220,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c04f99d347d297c2"
+   ],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f"
+  },
+  "2105067224826606073": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f"
+  },
+  "2105073718762618958": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_679027588c3d7710",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
+     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "publishedAt": "2026-09-24T19:01:10.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ],
+   "inputHash": "49d62ef1fa91253d8dbac34be1b2fc8c15dc01b63d5d6f08b58d6372502c434f",
+   "quotedContext": {
+    "id": "2104960562547269869",
+    "authorId": "913508226",
+    "handle": "KRISH_EH",
+    "createdAt": "2026-09-29T15:44:41.000Z",
+    "textChars": 265,
+    "textHash": "b2ac776efedb7bcf693bf614cb83d872e25d55140349d85879e7ef92da1d34a5"
+   }
+  },
+  "2105074146115731687": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_449fcae9f33aa473",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/sunday-talk-shows/6113249-sunday-shows-trump-rejects-iran-proposal/",
+     "text": "Sunday shows preview: Trump rejects Iran deal after week of high-stakes meetings; GOP clammers to keep Congress",
+     "title": "Sunday shows preview: Trump rejects Iran deal after week of high-stakes meetings; GOP clammers to keep Congress",
+     "publishedAt": "2026-09-26T21:02:36.000Z",
+     "fetchedAt": "2026-09-27T21:55:32.852Z",
+     "version": 224,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fed362db8fe0f556",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
+     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "publishedAt": "2026-09-26T13:33:10.000Z",
+     "fetchedAt": "2026-09-26T16:31:46.784Z",
+     "version": 201,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_fed362db8fe0f556"
+   ],
+   "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea"
+  },
+  "2105081440589525370": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea",
+   "quotedContext": {
+    "id": "2104912245914227110",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-29T12:32:41.000Z",
+    "textChars": 172,
+    "textHash": "255d711081ea6e47d842109ed9d5e29418b223bc01403de60155ae063472cad6"
+   }
+  },
+  "2105088996271333782": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c04f99d347d297c2",
+     "publisher": "The Hill",
+     "date": "2026-09-27",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
+     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "publishedAt": "2026-09-27T16:26:42.000Z",
+     "fetchedAt": "2026-09-27T17:16:14.227Z",
+     "version": 220,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ],
+   "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea"
+  },
+  "2105091464501850281": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_cf4dc07398f480da",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6110883-live-updates-trump-xi-summit-dc-iran-war-affordability-gop-midterms/",
+     "text": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "title": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "publishedAt": "2026-09-25T19:17:14.000Z",
+     "fetchedAt": "2026-09-25T19:52:04.988Z",
+     "version": 184,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b3d2fed35eb7e264",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
+     "text": "Lara Trump says Iran war could cost Trump the midterms",
+     "title": "Lara Trump says Iran war could cost Trump the midterms",
+     "publishedAt": "2026-09-30T18:34:18.000Z",
+     "fetchedAt": "2026-09-30T19:18:23.645Z",
+     "version": 278,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea"
+  },
+  "2105097580741066881": {
+   "contextVersion": 278,
+   "evidenceSupplied": [
+    {
+     "id": "n_a3e57858896b262a",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
+     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
+     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+     "publishedAt": "2026-09-30T08:42:46.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_eb83929a9ecf71ae",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6110895-pezeshkian-us-conflict-iran/",
+     "text": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "title": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "publishedAt": "2026-09-25T02:46:47.000Z",
+     "fetchedAt": "2026-09-25T03:37:08.431Z",
+     "version": 171,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dac12020bfbda59825c9e78fff39f9e85067d36edd365e21fc9ec03ab3dedaea"
   }
  },
  "needsContext": {
@@ -14224,7 +14284,6 @@
   "2104968511147708677": false,
   "2104968784951804358": false,
   "2104968938907935136": false,
-  "2104968974702166186": false,
   "2104969114049511820": false,
   "2104969451406078105": false,
   "2104969878331404406": false,
@@ -14561,7 +14620,6 @@
   "2105066911168172384": false,
   "2105067035877339441": false,
   "2105067037873873227": false,
-  "2105067224826606073": false,
   "2105067474278572301": false,
   "2105067956443152456": false,
   "2105068410400800980": false,
@@ -14590,7 +14648,6 @@
   "2105079492628853134": true,
   "2105080235519598840": false,
   "2105080684419166219": false,
-  "2105081440589525370": false,
   "2105081447535055264": false,
   "2105082269631152276": false,
   "2104959099653734667": false,
@@ -14674,23 +14731,26 @@
   "2105061474594889792": false,
   "2104970908683178389": false,
   "2105038458372903169": false,
-  "2104944351277396232": false,
-  "2104944419233235207": false,
-  "2104988326889452019": false,
-  "2105034131516100782": false,
   "2105048523058106677": false,
-  "2105073718762618958": false,
-  "2105074146115731687": false,
-  "2105088996271333782": false,
-  "2105091464501850281": false,
-  "2105097580741066881": false,
   "2104967866336350555": false,
   "2105008782187090378": false,
   "2104930161275592747": false,
-  "2104983744566137293": false
+  "2104983744566137293": false,
+  "2104944351277396232": false,
+  "2104944419233235207": false,
+  "2104968974702166186": false,
+  "2104988326889452019": false,
+  "2105034131516100782": false,
+  "2105067224826606073": false,
+  "2105073718762618958": false,
+  "2105074146115731687": false,
+  "2105081440589525370": false,
+  "2105088996271333782": false,
+  "2105091464501850281": false,
+  "2105097580741066881": false
  },
  "inputBlocks": {},
- "contextVersion": 276,
+ "contextVersion": 278,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -15177,6 +15237,20 @@
    "ids": [
     "2105048523058106677"
    ]
+  },
+  {
+   "label": "ACA coverage terminations for alleged 'phantom' enrollees",
+   "ids": [
+    "2105067224826606073"
+   ]
+  },
+  {
+   "label": "Iran war driving diesel and fuel price spikes",
+   "ids": [
+    "2104988326889452019",
+    "2105034131516100782",
+    "2105073718762618958"
+   ]
   }
  ],
  "unclassified": [],
@@ -15190,38 +15264,44 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2104930161275592747",
-    "2104983744566137293",
-    "2105281437964341387",
-    "2105340713055510529",
-    "2105340851857883578",
-    "2105341575798604143",
-    "2105341842279497878",
-    "2105342061218283723",
-    "2105342806810124719",
-    "2105342818835431701",
-    "2105343007302320421",
-    "2105343398601171306",
-    "2105343610371838290",
-    "2105343975204732983",
-    "2105343998986498339",
-    "2105344164485353943",
-    "2105344605801861392",
-    "2105344615469752751",
-    "2105344882814406716",
-    "2105345154609537467",
-    "2105345193738371447",
-    "2105345197878165788"
+    "2104944351277396232",
+    "2104944419233235207",
+    "2104968974702166186",
+    "2104988326889452019",
+    "2105034131516100782",
+    "2105067224826606073",
+    "2105073718762618958"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T18:01:43.216Z",
-    "observedAt": "2026-09-30T18:02:12.777Z",
+    "attemptedAt": "2026-09-30T19:31:40.888Z",
+    "observedAt": "2026-09-30T19:31:49.764Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 22,
+    "acceptedCount": 7,
+    "retryCount": 0
+   }
+  },
+  "live_chunk-1": {
+   "acceptedIds": [
+    "2105074146115731687",
+    "2105081440589525370",
+    "2105088996271333782",
+    "2105091464501850281",
+    "2105097580741066881",
+    "2105279198285709394"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-09-30T19:31:49.776Z",
+    "observedAt": "2026-09-30T19:32:13.251Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -15229,24 +15309,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T18:01:43.216Z",
-   "observedAt": "2026-09-30T18:02:12.777Z",
+   "attemptedAt": "2026-09-30T19:31:49.776Z",
+   "observedAt": "2026-09-30T19:32:13.251Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T18:01:43.216Z",
-   "observedAt": "2026-09-30T18:02:12.777Z",
+   "attemptedAt": "2026-09-30T19:31:49.776Z",
+   "observedAt": "2026-09-30T19:32:13.251Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T18:03:14.821Z"
+ "updatedAt": "2026-09-30T19:35:12.551Z"
 }
