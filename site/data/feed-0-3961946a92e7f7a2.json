@@ -1345,7 +1345,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 262,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_eb83929a9ecf71ae",
@@ -1467,12 +1467,14 @@
   "text": "LIHEAP helps over 6M households across the nation afford their energy bills & manage rising costs due to Trump's war of choice in Iran.\n\nMy colleagues & I call on Sec. Kennedy to distribute critical LIHEAP funding & reinstate the staff who ensure the program's success in assisting American families.\n\nhttps://t.co/DE9UuWtzVK",
   "engN": 6,
   "topics": [
-   "economy/prices-inflation",
-   "economy",
    "budget-appropriations/snap-benefits",
    "budget-appropriations",
    "labor/federal-workforce",
-   "labor"
+   "labor",
+   "economy/prices-inflation",
+   "economy",
+   "foreign-policy/middle-east",
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -1480,7 +1482,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 262,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_cf4dc07398f480da",
@@ -1750,7 +1752,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 262,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -1779,7 +1781,10 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": []
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa",
+    "n_c04f99d347d297c2"
+   ]
   },
   "metricsObservedAt": "2026-09-30T07:46:19.915Z"
  },
@@ -2588,7 +2593,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 260,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_449fcae9f33aa473",
@@ -2632,10 +2637,10 @@
   "text": "Trump’s reckless war of choice with Iran is driving up the price of diesel. \n\nRI’s public transit now faces millions in unexpected fuel costs to keep buses running.\n\nWe need to stop the price hikes of Trump’s chaos and end the war. https://t.co/IWcCkaUvV5",
   "engN": 9,
   "topics": [
-   "foreign-policy/middle-east",
-   "foreign-policy",
    "economy/prices-inflation",
-   "economy"
+   "economy",
+   "foreign-policy/middle-east",
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -2643,7 +2648,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 260,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_679027588c3d7710",
@@ -2673,6 +2678,7 @@
     }
    ],
    "evidenceUsed": [
+    "n_4dbf7998a849a7fa",
     "n_679027588c3d7710"
    ]
   },
@@ -2871,8 +2877,22 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 260,
-   "evidenceSupplied": [],
+   "contextVersion": 269,
+   "evidenceSupplied": [
+    {
+     "id": "n_899c8579fe5292d4",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+     "text": "Since announcing Robert F. Kennedy Jr. as his pick for Health and Human Services secretary last year, President Trump and Kennedy have touted their dedication to \" Gold Standard Scientific Research\" and making federal health agencies \"beacons of Transparency.\"",
+     "publishedAt": "2026-09-30T09:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
    "evidenceUsed": []
   },
   "metricsObservedAt": "2026-09-30T07:46:19.915Z",
@@ -6398,8 +6418,21 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 258,
+   "contextVersion": 269,
    "evidenceSupplied": [
+    {
+     "id": "n_899c8579fe5292d4",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+     "text": "But a recent report released by the agency has left some experts with substantial doubts about its researchers' methods, its claims about its findings and its authors' political intentions. The report , titled \"Where the Clinic Meets the Movement: Does Gender Ideology Arm Left-Wing Authoritarian Psychology?\" was not peer reviewed and its underlying data and funding have also not been made available. All are common best practices for research. (One author says its data will be released \"soon.\")",
+     "publishedAt": "2026-09-30T09:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
     {
      "id": "n_011548860229541c",
      "publisher": "The Hill",
@@ -6409,19 +6442,6 @@
      "text": "Lawmakers across Americas urge US to end drug boat strike campaign",
      "publishedAt": "2026-09-22T23:54:41.000Z",
      "fetchedAt": "2026-09-23T00:31:48.155Z",
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f35f7936a39fabef",
-     "publisher": "Roll Call",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/senators-press-adminstration-for-answers-on-broadband-funds/",
-     "text": "In a letter first shared with CQ Roll Call, Sen. Jeanne Shaheen, D-N.H., with Senate Appropriations Chair Susan Collins, R-Maine; Angus King, I-Maine.; Bill Cassidy, R-La.; Catherine Cortez Masto, D-Nev.; and Mark Warner, D-Va., urge the National Telecommunications and Information Administration to tell states what uses will be approved for “non-deployment” funding under the Broadband Equity, Access and Deployment program.",
-     "publishedAt": "2026-09-29T06:29:54.000Z",
-     "fetchedAt": "2026-09-29T18:48:16.339Z",
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
@@ -6493,11 +6513,13 @@
   "text": "Trump’s response to high gas prices is to roll back fuel efficiency standards. Car prices have gone up because of tariffs, interest rates, and Trump's war in Iran. \n\nThis will make filling your tank more expensive and our air dirtier.\nhttps://t.co/YyqN3mLHXv",
   "engN": 0,
   "topics": [
-   "economy/prices-inflation",
-   "economy",
    "climate/epa-rollbacks",
    "climate",
-   "economy/tariffs-trade"
+   "economy/prices-inflation",
+   "economy",
+   "economy/tariffs-trade",
+   "foreign-policy/middle-east",
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -6505,7 +6527,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 258,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_c04f99d347d297c2",
@@ -6534,7 +6556,9 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": []
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ]
   },
   "metricsObservedAt": "2026-09-30T07:46:19.698Z"
  },
@@ -8621,8 +8645,22 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 256,
-   "evidenceSupplied": [],
+   "contextVersion": 269,
+   "evidenceSupplied": [
+    {
+     "id": "n_899c8579fe5292d4",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+     "text": "Since announcing Robert F. Kennedy Jr. as his pick for Health and Human Services secretary last year, President Trump and Kennedy have touted their dedication to \" Gold Standard Scientific Research\" and making federal health agencies \"beacons of Transparency.\"",
+     "publishedAt": "2026-09-30T09:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
    "evidenceUsed": []
   },
   "metricsObservedAt": "2026-09-30T07:46:19.392Z"
@@ -10333,9 +10371,7 @@
   "engN": 4530,
   "topics": [
    "congress-politics/elections-2026",
-   "congress-politics",
-   "democracy/press-speech",
-   "democracy"
+   "congress-politics"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -10343,7 +10379,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 259,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_3e04a6cb3282aba5",
@@ -10359,14 +10395,14 @@
      "truncated": false
     },
     {
-     "id": "n_08045419bccbeb31",
-     "publisher": "The Washington Post",
-     "date": "2026-09-29",
+     "id": "n_f59e7e9eb276c6cf",
+     "publisher": "The New York Times",
+     "date": "2026-09-30",
      "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/09/29/fox-news-agrees-host-texas-senate-debate-no-word-paxton-yet/",
-     "text": "Fox News agrees to host Texas Senate debate; no word from Paxton yet",
-     "publishedAt": "2026-09-29T21:15:00.000Z",
-     "fetchedAt": "2026-09-29T21:51:15.220Z",
+     "url": "https://www.nytimes.com/2026/09/30/us/politics/ken-paxton-trump-midterm-convention.html",
+     "text": "Ken Paxton, G.O.P. Nominee in Texas, Privately Said Trump’s Convention Hurt Him",
+     "publishedAt": "2026-09-30T09:03:20.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
@@ -10940,9 +10976,9 @@
   "text": "From skyrocketing diesel prices due to the war in Iran to senseless tariffs, farmers in WA &amp; across the country are paying the price for Trump’s disastrous policies. https://t.co/U4xVpJV053",
   "engN": 61,
   "topics": [
-   "economy/tariffs-trade",
-   "economy",
    "economy/prices-inflation",
+   "economy",
+   "economy/tariffs-trade",
    "foreign-policy/middle-east",
    "foreign-policy"
   ],
@@ -10952,7 +10988,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 255,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -10981,7 +11017,9 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": []
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ]
   },
   "metricsObservedAt": "2026-09-30T07:46:18.939Z"
  },
@@ -11463,7 +11501,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 255,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_7d5e66898134a555",
@@ -12092,7 +12130,8 @@
    "economy",
    "foreign-policy/middle-east",
    "foreign-policy",
-   "economy/jobs-wages"
+   "labor/unions",
+   "labor"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -12100,7 +12139,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 255,
+   "contextVersion": 269,
    "evidenceSupplied": [
     {
      "id": "n_cf4dc07398f480da",
@@ -12129,9 +12168,7 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_2cff636e32c017cf"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-09-30T07:46:18.939Z"
  }
