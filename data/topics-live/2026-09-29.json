@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T11:19:52.751Z",
+ "classifiedAt": "2026-09-30T14:17:49.775Z",
  "assignments": {
   "2104783788471726311": [
    [
@@ -1259,15 +1259,15 @@
   "2104970908683178389": [
    [
     "climate",
-    "disasters"
-   ],
-   [
-    "economy",
-    "prices-inflation"
+    null
    ],
    [
     "economy",
     "housing"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2104971325785755763": [
@@ -6947,12 +6947,6 @@
    "evidenceUsed": [],
    "inputHash": "aaed8fa9b1573f60990366b52772a99f4b29d7d82f492b89400c85ff597ea64b"
   },
-  "2104970908683178389": {
-   "contextVersion": 254,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "aaed8fa9b1573f60990366b52772a99f4b29d7d82f492b89400c85ff597ea64b"
-  },
   "2104971325785755763": {
    "contextVersion": 254,
    "evidenceSupplied": [],
@@ -10275,43 +10269,6 @@
    "evidenceUsed": [],
    "inputHash": "9a0ca53222896b15596a6c4436097eb54d069eed94d68f22037b798193ece4a2"
   },
-  "2105038458372903169": {
-   "contextVersion": 258,
-   "evidenceSupplied": [
-    {
-     "id": "n_e3fe9a2ac0d6b469",
-     "publisher": "The New York Times",
-     "date": "2026-09-24",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/23/us/politics/trump-xi-china-visit.html",
-     "text": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
-     "title": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
-     "publishedAt": "2026-09-24T16:48:01.000Z",
-     "fetchedAt": "2026-09-24T17:27:19.214Z",
-     "version": 160,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_00d7f6450bac88ef",
-     "publisher": "The New York Times",
-     "date": "2026-09-23",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/09/23/us/politics/as-xi-visits-washington-trump-plays-down-chinas-actions-against-us-interests.html",
-     "text": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
-     "title": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
-     "publishedAt": "2026-09-23T19:18:25.000Z",
-     "fetchedAt": "2026-09-23T19:22:02.879Z",
-     "version": 139,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "9a0ca53222896b15596a6c4436097eb54d069eed94d68f22037b798193ece4a2"
-  },
   "2105039004567486541": {
    "contextVersion": 258,
    "evidenceSupplied": [],
@@ -12533,45 +12490,6 @@
     "fingerprint": "a7eb14cf2ba20478358af2bed64fc245a8be22f01661c1e024ca10b21cdf66d3"
    }
   },
-  "2105048523058106677": {
-   "contextVersion": 263,
-   "evidenceSupplied": [
-    {
-     "id": "n_ee5255a9816e84a2",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6119354-senate-blocks-west-bank-resolution/",
-     "text": "Senate blocks Democratic effort to force report on West Bank violence",
-     "title": "Senate blocks Democratic effort to force report on West Bank violence",
-     "publishedAt": "2026-09-30T00:37:21.000Z",
-     "fetchedAt": "2026-09-30T01:36:44.716Z",
-     "version": 263,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_b2c05c75658b6e8e",
-     "publisher": "The Hill",
-     "date": "2026-09-27",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6112471-democrats-to-confront-netanyahu-israel-west-bank/",
-     "text": "Dems vow to confront Israel on violence against Palestinians: ‘Out of control’",
-     "title": "Dems vow to confront Israel on violence against Palestinians: ‘Out of control’",
-     "publishedAt": "2026-09-27T21:00:00.000Z",
-     "fetchedAt": "2026-09-27T21:55:32.852Z",
-     "version": 224,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_b2c05c75658b6e8e"
-   ],
-   "inputHash": "5055d6d91ccc5ce0c7545367ed73e34bf00fa1d00ccd6088c9aef56d99deb57f"
-  },
   "2105100226025468265": {
    "contextVersion": 263,
    "evidenceSupplied": [],
@@ -14018,6 +13936,102 @@
    ],
    "evidenceUsed": [],
    "inputHash": "e5d6fe7cb28c90cdb0997858ccf58420b991e4e30de0238082575725ac07c282"
+  },
+  "2104970908683178389": {
+   "contextVersion": 273,
+   "evidenceSupplied": [
+    {
+     "id": "n_a995c7305d750c6a",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6119754-newsom-signs-electric-shock-gloves-ban/",
+     "text": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
+     "title": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
+     "publishedAt": "2026-09-30T13:04:17.000Z",
+     "fetchedAt": "2026-09-30T13:26:40.475Z",
+     "version": 272,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "13328a59afa6e1d32f6fbb5a07d3c649fa72a327a63057b1a1c78c4cf87bb984"
+  },
+  "2105038458372903169": {
+   "contextVersion": 273,
+   "evidenceSupplied": [
+    {
+     "id": "n_df13e51905a960c6",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6119676-iran-protest-americans-donald-trump-2026-midterms/",
+     "text": "Iran urges Americans to rally against Trump ahead of midterms",
+     "title": "Iran urges Americans to rally against Trump ahead of midterms",
+     "publishedAt": "2026-09-30T13:27:17.000Z",
+     "fetchedAt": "2026-09-30T13:41:56.196Z",
+     "version": 273,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e3fe9a2ac0d6b469",
+     "publisher": "The New York Times",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/23/us/politics/trump-xi-china-visit.html",
+     "text": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
+     "title": "As Xi Visits Washington, Trump Plays Down China’s Actions Against U.S. Interests",
+     "publishedAt": "2026-09-24T16:48:01.000Z",
+     "fetchedAt": "2026-09-24T17:27:19.214Z",
+     "version": 160,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "13328a59afa6e1d32f6fbb5a07d3c649fa72a327a63057b1a1c78c4cf87bb984"
+  },
+  "2105048523058106677": {
+   "contextVersion": 273,
+   "evidenceSupplied": [
+    {
+     "id": "n_ee5255a9816e84a2",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6119354-senate-blocks-west-bank-resolution/",
+     "text": "Senate blocks Democratic effort to force report on West Bank violence",
+     "title": "Senate blocks Democratic effort to force report on West Bank violence",
+     "publishedAt": "2026-09-30T00:37:21.000Z",
+     "fetchedAt": "2026-09-30T01:36:44.716Z",
+     "version": 263,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_d6ceb04ec70a1d31",
+     "publisher": "The Washington Post",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/01/senate-blocks-measure-requiring-report-israeli-violence-west-bank/",
+     "text": "Senate blocks measure requiring report on Israeli violence in West Bank",
+     "title": "Senate blocks measure requiring report on Israeli violence in West Bank",
+     "publishedAt": "2026-09-30T12:45:00.000Z",
+     "fetchedAt": "2026-09-30T13:26:40.475Z",
+     "version": 272,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "13328a59afa6e1d32f6fbb5a07d3c649fa72a327a63057b1a1c78c4cf87bb984"
   }
  },
  "needsContext": {
@@ -14181,7 +14195,6 @@
   "2104970273984274691": false,
   "2104970744405110839": false,
   "2104970747102061015": false,
-  "2104970908683178389": false,
   "2104971325785755763": false,
   "2104972006202781741": false,
   "2104972035248021979": false,
@@ -14412,7 +14425,6 @@
   "2105038210594177388": false,
   "2105038399006708026": false,
   "2105038426999226836": false,
-  "2105038458372903169": false,
   "2105039004567486541": false,
   "2105039011475562985": false,
   "2105039105096626199": false,
@@ -14569,7 +14581,6 @@
   "2105096792249430180": false,
   "2105096880820826297": false,
   "2105096969018581462": false,
-  "2105048523058106677": false,
   "2105100226025468265": false,
   "2105101768623263749": false,
   "2105102035364479467": true,
@@ -14635,10 +14646,13 @@
   "2104942546808115465": false,
   "2104983744566137293": false,
   "2104995321088520246": false,
-  "2105061474594889792": false
+  "2105061474594889792": false,
+  "2104970908683178389": false,
+  "2105038458372903169": false,
+  "2105048523058106677": false
  },
  "inputBlocks": {},
- "contextVersion": 270,
+ "contextVersion": 273,
  "emerging": [
   {
    "label": "Venezuelan oil fund transparency letter to State Dept",
@@ -15130,47 +15144,6 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2104988326889452019",
-    "2104995321088520246",
-    "2105014022991167907",
-    "2105034131516100782",
-    "2105034866832109756",
-    "2105070676218347976",
-    "2105073718762618958"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-30T10:27:03.966Z",
-    "observedAt": "2026-09-30T10:27:19.144Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 7,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2105074146115731687",
-    "2105088996271333782",
-    "2105091464501850281",
-    "2105097580741066881"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-30T10:27:19.165Z",
-    "observedAt": "2026-09-30T10:27:31.544Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 4,
-    "retryCount": 0
-   }
-  },
   "live_chunk-3": {
    "acceptedIds": [
     "2105015631431045409",
@@ -15199,21 +15172,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2104942546808115465",
-    "2104983744566137293",
-    "2104995321088520246",
-    "2105061474594889792",
-    "2105251583449579779"
+    "2104970908683178389",
+    "2105038458372903169",
+    "2105048523058106677",
+    "2105278408225661169",
+    "2105279198285709394",
+    "2105281431144628601",
+    "2105281433967190249"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T11:19:38.036Z",
-    "observedAt": "2026-09-30T11:19:52.720Z",
+    "attemptedAt": "2026-09-30T14:16:12.974Z",
+    "observedAt": "2026-09-30T14:16:30.035Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -15221,24 +15196,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T11:19:38.036Z",
-   "observedAt": "2026-09-30T11:19:52.720Z",
+   "attemptedAt": "2026-09-30T14:16:12.974Z",
+   "observedAt": "2026-09-30T14:16:30.035Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T11:19:38.036Z",
-   "observedAt": "2026-09-30T11:19:52.720Z",
+   "attemptedAt": "2026-09-30T14:16:12.974Z",
+   "observedAt": "2026-09-30T14:16:30.035Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T11:19:52.757Z"
+ "updatedAt": "2026-09-30T14:17:49.780Z"
 }
