@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T05:21:12.017Z",
+ "classifiedAt": "2026-09-30T06:51:39.797Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -19,6 +19,22 @@
    [
     "immigration",
     null
+   ]
+  ],
+  "2105169327385100545": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105176041014935854": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -73,15 +89,49 @@
     "referenceId": "2104938603142860850",
     "fingerprint": "ab1da7f4bb8661091b469ad63c424ed533b408104abf8ff7946826f7a789464f"
    }
+  },
+  "2105169327385100545": {
+   "contextVersion": 267,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2c3d7edb0f9bc4d4b10fefdbe07c1ba326d527d7a6880afbedbdc021d95cc334",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105064284653043893",
+    "fingerprint": "52f9b8c6eac10e930e4a3bc3f490877c3236da97014b7f47d095e8ad4f71eee0"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105064284653043893",
+    "fingerprint": "52f9b8c6eac10e930e4a3bc3f490877c3236da97014b7f47d095e8ad4f71eee0"
+   }
+  },
+  "2105176041014935854": {
+   "contextVersion": 267,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2c3d7edb0f9bc4d4b10fefdbe07c1ba326d527d7a6880afbedbdc021d95cc334",
+   "quotedContext": {
+    "id": "2105038200477475156",
+    "authorId": "800707492346925056",
+    "handle": "axios",
+    "createdAt": "2026-09-29T20:53:11.000Z",
+    "textChars": 96,
+    "textHash": "429a75a06b194da61d72d098b08e01900e5a2ffc07791544766c1ed0555dac8d"
+   }
   }
  },
  "needsContext": {
   "2105154903760904452": false,
   "2105156402893521370": false,
-  "2105160937015750780": false
+  "2105160937015750780": false,
+  "2105169327385100545": false,
+  "2105176041014935854": false
  },
  "inputBlocks": {},
- "contextVersion": 265,
+ "contextVersion": 267,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -101,15 +151,15 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105154903760904452",
-    "2105156402893521370",
-    "2105160937015750780"
+    "2105041938692861968",
+    "2105169327385100545",
+    "2105176041014935854"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T05:21:04.051Z",
-    "observedAt": "2026-09-30T05:21:12.014Z",
+    "attemptedAt": "2026-09-30T06:51:34.240Z",
+    "observedAt": "2026-09-30T06:51:39.775Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -121,8 +171,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T05:21:04.051Z",
-   "observedAt": "2026-09-30T05:21:12.014Z",
+   "attemptedAt": "2026-09-30T06:51:34.240Z",
+   "observedAt": "2026-09-30T06:51:39.775Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -130,8 +180,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T05:21:04.051Z",
-   "observedAt": "2026-09-30T05:21:12.014Z",
+   "attemptedAt": "2026-09-30T06:51:34.240Z",
+   "observedAt": "2026-09-30T06:51:39.775Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -140,5 +190,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T05:21:12.018Z"
+ "updatedAt": "2026-09-30T06:51:39.798Z"
 }
