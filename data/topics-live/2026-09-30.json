@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-09-30T06:51:39.797Z",
+ "classifiedAt": "2026-09-30T11:19:52.761Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -31,6 +31,16 @@
    [
     "tech",
     "ai-policy"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105251583449579779": [
+   [
+    "democracy",
+    "voting-rights"
    ],
    [
     "congress-politics",
@@ -121,6 +131,12 @@
     "textChars": 96,
     "textHash": "429a75a06b194da61d72d098b08e01900e5a2ffc07791544766c1ed0555dac8d"
    }
+  },
+  "2105251583449579779": {
+   "contextVersion": 270,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e5d6fe7cb28c90cdb0997858ccf58420b991e4e30de0238082575725ac07c282"
   }
  },
  "needsContext": {
@@ -128,10 +144,11 @@
   "2105156402893521370": false,
   "2105160937015750780": false,
   "2105169327385100545": false,
-  "2105176041014935854": false
+  "2105176041014935854": false,
+  "2105251583449579779": false
  },
  "inputBlocks": {},
- "contextVersion": 267,
+ "contextVersion": 270,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -151,19 +168,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105041938692861968",
-    "2105169327385100545",
-    "2105176041014935854"
+    "2104942546808115465",
+    "2104983744566137293",
+    "2104995321088520246",
+    "2105061474594889792",
+    "2105251583449579779"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-09-30T06:51:34.240Z",
-    "observedAt": "2026-09-30T06:51:39.775Z",
+    "attemptedAt": "2026-09-30T11:19:38.036Z",
+    "observedAt": "2026-09-30T11:19:52.720Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   }
@@ -171,24 +190,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-09-30T06:51:34.240Z",
-   "observedAt": "2026-09-30T06:51:39.775Z",
+   "attemptedAt": "2026-09-30T11:19:38.036Z",
+   "observedAt": "2026-09-30T11:19:52.720Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-09-30T06:51:34.240Z",
-   "observedAt": "2026-09-30T06:51:39.775Z",
+   "attemptedAt": "2026-09-30T11:19:38.036Z",
+   "observedAt": "2026-09-30T11:19:52.720Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-09-30T06:51:39.798Z"
+ "updatedAt": "2026-09-30T11:19:52.763Z"
 }
