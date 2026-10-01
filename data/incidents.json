@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-01T17:59:17.574Z",
+ "generatedAt": "2026-10-01T19:29:14.009Z",
  "incidents": [
+  {
+   "id": "hatch-nm--flooding--source-2105721837619667398",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Hatch, NM · NM-02",
+   "placeRaw": "Hatch, NM",
+   "district": "NM-02",
+   "districtMatch": true,
+   "handle": "@RepGabeVasquez",
+   "member": "Gabe Vasquez",
+   "since": "2026-10-01T18:09:43.000Z",
+   "last": "2026-10-01T18:09:43.000Z",
+   "updates": 1,
+   "engN": 6,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Hatch, NM",
+   "evidence": {
+    "span": "I stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.",
+    "exact": true,
+    "start": 278,
+    "end": 423,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2105721837619667398",
+    "url": "https://x.com/i/web/status/2105721837619667398"
+   },
+   "timeline": [
+    {
+     "id": "2105721837619667398",
+     "sourceId": "2105721837619667398",
+     "url": "https://x.com/i/web/status/2105721837619667398",
+     "authorId": "1610096539577487360",
+     "personId": "member:gabe vasquez",
+     "referenceIds": [],
+     "time": "2026-10-01T18:09:43.000Z",
+     "who": "@RepGabeVasquez",
+     "tag": "member",
+     "text": "I am monitoring the flood damage across our state and closely working with state and local officials to move disaster efforts along as efficiently as possible, including re-opening key transportation routes and ensuring our communities are safe as the road to recovery begins.\n\nI stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.\n\nhttps://t.co/Sdu0ihG6cN",
+     "engN": 6,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Hatch, NM",
+      "name": null
+     },
+     "evidence": {
+      "span": "I stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.",
+      "exact": true,
+      "start": 278,
+      "end": 423,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2105721837619667398",
+      "url": "https://x.com/i/web/status/2105721837619667398"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2105721837619667398"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2105721837619667398"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "monterey-county-ca--wildfire--timberfire--2026-09-30",
    "kind": "wildfire",
