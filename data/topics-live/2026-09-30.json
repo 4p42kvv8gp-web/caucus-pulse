@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T01:32:44.286Z",
+ "classifiedAt": "2026-10-01T03:01:37.770Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -4154,6 +4154,114 @@
    [
     "democracy",
     "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105471653102616856": [
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2105471706756448339": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105472242154979821": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2105474780724158512": [
+   [
+    "climate",
+    null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2105476100604428377": [],
+  "2105477802019700856": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2105478126046151001": [
+   [
+    "civil-rights",
+    "disability"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ]
+  ],
+  "2105479049271488726": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2105479097975456197": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2105483335749279911": [],
+  "2105486099888091498": [
+   [
+    "civil-rights",
+    null
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105489696788828530": [
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2105490814537441405": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105491956088619069": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2105493018266517713": [
+   [
+    "civil-rights",
+    "lgbtq"
    ],
    [
     "congress-politics",
@@ -13652,6 +13760,295 @@
     "textChars": 321,
     "textHash": "a939ceaa04d98ec47ddf5149f3db37468ae098c0aa8fbc45e2fcd57dad1b52d2"
    }
+  },
+  "2105471653102616856": {
+   "contextVersion": 284,
+   "evidenceSupplied": [
+    {
+     "id": "n_61939787b04b4ae6",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
+     "text": "RYAN LUCAS, BYLINE: Jack Smith led the two federal prosecutions of President Trump - one for allegedly attempting to overturn the results of the 2020 election, the other for allegedly mishandling classified documents and obstructing justice. Neither case made it to trial before Trump returned to office. Testifying before the Senate Judiciary Committee, Smith said politics played no role in his investigation, and he said the decision to bring charges was based on the evidence.",
+     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+     "publishedAt": "2026-09-30T10:46:14.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_61939787b04b4ae6"
+   ],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105460008406372453",
+    "fingerprint": "33ea6679fe6d737e8657662752ae87a4cc18b9b67e74d09bdbff9dd11856d052"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105460008406372453",
+    "fingerprint": "33ea6679fe6d737e8657662752ae87a4cc18b9b67e74d09bdbff9dd11856d052"
+   }
+  },
+  "2105471706756448339": {
+   "contextVersion": 284,
+   "evidenceSupplied": [
+    {
+     "id": "n_879b1ffe00dc8a0a",
+     "publisher": "Roll Call",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/28/senators-gear-up-for-judiciary-clash-with-jack-smith/",
+     "text": "Even the title of the hearing — “Oversight of Jack Smith’s Abuse of Authority and the Targeting of Republicans and Related Matters” — gives a hint of the tone former special counsel John L. “Jack” Smith will likely face from majority Republicans when he sits as the sole witness Tuesday.",
+     "title": "Senators gear up for Judiciary clash with Jack Smith",
+     "publishedAt": "2026-09-28T12:12:27.000Z",
+     "fetchedAt": "2026-09-28T17:01:20.117Z",
+     "version": 237,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_61939787b04b4ae6",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
+     "text": "JACK SMITH: Our investigation developed proof beyond a reasonable doubt that President Trump engaged in serious crimes against our nation.",
+     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+     "publishedAt": "2026-09-30T10:46:14.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_61939787b04b4ae6",
+    "n_879b1ffe00dc8a0a"
+   ],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105444702195679452",
+    "fingerprint": "4a667122884c5505c83503165ab12970ee6e12ffacb21dfe88b8d754f1c4779e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105444702195679452",
+    "fingerprint": "4a667122884c5505c83503165ab12970ee6e12ffacb21dfe88b8d754f1c4779e"
+   }
+  },
+  "2105472242154979821": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "quotedContext": {
+    "id": "2105394036773458223",
+    "authorId": "193732179",
+    "handle": "RepJudyChu",
+    "createdAt": "2026-09-30T20:27:09.000Z",
+    "textChars": 755,
+    "textHash": "bd5c39a6b5c7400a3d72e3f98b5c85072f15d98cf71879f8894c48de36c358e4"
+   }
+  },
+  "2105474780724158512": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
+  },
+  "2105476100604428377": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "quotedContext": {
+    "id": "2105433644139463123",
+    "authorId": "15813928",
+    "handle": "VRubinObs",
+    "createdAt": "2026-09-30T23:04:32.000Z",
+    "textChars": 295,
+    "textHash": "b2e861a45de412a08ba5dc49b9307e6f5d05df0b85e8b6016178dda49b2fe9f7"
+   }
+  },
+  "2105477802019700856": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
+  },
+  "2105478126046151001": {
+   "contextVersion": 284,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_13a6c34e0846badb",
+     "publisher": "Roll Call",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/25/democrats-call-for-hearings-on-suicide-attempts-on-uss-lincoln/",
+     "text": "“That this administration can find endless taxpayer dollars for bombs, ballrooms, and billionaires, but cannot take care of our service members, is completely unacceptable,” Sen. Kirsten Gillibrand, D-N.Y., a member of the Senate Armed Services Committee, said in a statement Friday. “The American people need hearings, accountability and a clear plan to protect our service members and prioritize American families.”",
+     "title": "Democrats call for hearings on suicide attempts on USS Lincoln",
+     "publishedAt": "2026-09-25T14:46:03.000Z",
+     "fetchedAt": "2026-09-25T19:52:04.988Z",
+     "version": 184,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
+  },
+  "2105479049271488726": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "quotedContext": {
+    "id": "2105406881971818803",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-09-30T21:18:11.000Z",
+    "textChars": 160,
+    "textHash": "51f89c02e448c5b205eeef0b58617922416962c76b0485f9b09b27921c3808e2"
+   }
+  },
+  "2105479097975456197": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
+  },
+  "2105483335749279911": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "quotedContext": {
+    "id": "2105482658998268291",
+    "authorId": "40927173",
+    "handle": "Yankees",
+    "createdAt": "2026-10-01T02:19:18.000Z",
+    "textChars": 71,
+    "textHash": "37de101c60c3f62b756fa3e6038fe1cafd9dc6bb158c7df87299256ee277aaba"
+   }
+  },
+  "2105486099888091498": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105393350950142032",
+    "fingerprint": "a0f0126562eaa06b96c602733585ae242673fb4ee664189eeafb3e650c811f3f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105393350950142032",
+    "fingerprint": "a0f0126562eaa06b96c602733585ae242673fb4ee664189eeafb3e650c811f3f"
+   }
+  },
+  "2105489696788828530": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105354606901404134",
+    "fingerprint": "44a3ddc2ed99e531b4614de37fbde9aebcc01de294fc4deeeda7e938f6d39969"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105354606901404134",
+    "fingerprint": "44a3ddc2ed99e531b4614de37fbde9aebcc01de294fc4deeeda7e938f6d39969"
+   }
+  },
+  "2105490814537441405": {
+   "contextVersion": 284,
+   "evidenceSupplied": [
+    {
+     "id": "n_d203b665dc7e23c6",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/national-security/6110700-homan-defends-ice-operations-doj-event/",
+     "text": "Homan: ICE isn’t ‘going anywhere’ amid immigration enforcement scrutiny",
+     "title": "Homan: ICE isn’t ‘going anywhere’ amid immigration enforcement scrutiny",
+     "publishedAt": "2026-09-24T23:44:52.000Z",
+     "fetchedAt": "2026-09-25T01:22:04.748Z",
+     "version": 169,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "quotedContext": {
+    "id": "2105469054278586530",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-01T01:25:14.000Z",
+    "textChars": 469,
+    "textHash": "a5087a3d6a5344cc6b63d77eb29f0106a3891812e44670449f43df51d3fb60dd"
+   }
+  },
+  "2105491956088619069": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105358146176700853",
+    "fingerprint": "0474387ba61d4cea7d853c375fe06694d92afd119172c7616a15cf41526191db"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105358146176700853",
+    "fingerprint": "0474387ba61d4cea7d853c375fe06694d92afd119172c7616a15cf41526191db"
+   }
+  },
+  "2105493018266517713": {
+   "contextVersion": 284,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
   }
  },
  "needsContext": {
@@ -14256,10 +14653,25 @@
   "2105468970354815326": false,
   "2105469059123056823": false,
   "2105469242774851990": false,
-  "2105470482900197783": false
+  "2105470482900197783": false,
+  "2105471653102616856": false,
+  "2105471706756448339": false,
+  "2105472242154979821": false,
+  "2105474780724158512": false,
+  "2105476100604428377": false,
+  "2105477802019700856": false,
+  "2105478126046151001": false,
+  "2105479049271488726": false,
+  "2105479097975456197": false,
+  "2105483335749279911": false,
+  "2105486099888091498": false,
+  "2105489696788828530": false,
+  "2105490814537441405": false,
+  "2105491956088619069": false,
+  "2105493018266517713": false
  },
  "inputBlocks": {},
- "contextVersion": 283,
+ "contextVersion": 284,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -14770,6 +15182,18 @@
    "ids": [
     "2105470482900197783"
    ]
+  },
+  {
+   "label": "Albuquerque Indian School Act land return to Pueblos",
+   "ids": [
+    "2105477802019700856"
+   ]
+  },
+  {
+   "label": "Hegseth Pentagon Office of Religious Affairs",
+   "ids": [
+    "2105486099888091498"
+   ]
   }
  ],
  "unclassified": [],
@@ -15002,28 +15426,31 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105459872833892586",
-    "2105461417482788897",
-    "2105461631065202710",
-    "2105463037654106286",
-    "2105464230468104250",
-    "2105465164334002291",
-    "2105467595847520427",
-    "2105468370409640267",
-    "2105468970354815326",
-    "2105469059123056823",
-    "2105469242774851990",
-    "2105470482900197783"
+    "2105471653102616856",
+    "2105471706756448339",
+    "2105472242154979821",
+    "2105474780724158512",
+    "2105476100604428377",
+    "2105477802019700856",
+    "2105478126046151001",
+    "2105479049271488726",
+    "2105479097975456197",
+    "2105483335749279911",
+    "2105486099888091498",
+    "2105489696788828530",
+    "2105490814537441405",
+    "2105491956088619069",
+    "2105493018266517713"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T01:32:18.104Z",
-    "observedAt": "2026-10-01T01:32:44.267Z",
+    "attemptedAt": "2026-10-01T03:01:12.371Z",
+    "observedAt": "2026-10-01T03:01:37.753Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 12,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   }
@@ -15031,21 +15458,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T01:32:18.104Z",
-   "observedAt": "2026-10-01T01:32:44.267Z",
+   "attemptedAt": "2026-10-01T03:01:12.371Z",
+   "observedAt": "2026-10-01T03:01:37.753Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T01:32:18.104Z",
-   "observedAt": "2026-10-01T01:32:44.267Z",
+   "attemptedAt": "2026-10-01T03:01:12.371Z",
+   "observedAt": "2026-10-01T03:01:37.753Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15058,5 +15485,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T01:32:44.289Z"
+ "updatedAt": "2026-10-01T03:01:37.773Z"
 }
