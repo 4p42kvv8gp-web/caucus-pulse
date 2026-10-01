@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T03:01:37.770Z",
+ "classifiedAt": "2026-10-01T04:31:44.131Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -4267,7 +4267,36 @@
     "congress-politics",
     "elections-2026"
    ]
-  ]
+  ],
+  "2105493312165773635": [
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2105497247219937527": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2105500569532059807": [
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2105500604533821477": [
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2105501167413350636": []
  },
  "incidents": {
   "2105376807629279413": {
@@ -14049,6 +14078,101 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "bbf0dc4533850cc8e94b3071e5c68dd07cfef832b70d845a02688b5e0db0d335"
+  },
+  "2105493312165773635": {
+   "contextVersion": 285,
+   "evidenceSupplied": [
+    {
+     "id": "n_7ea33f5bf4a07190",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+     "title": "Housing groups challenge Trump funding clawback",
+     "publishedAt": "2026-09-30T16:01:01.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c70c45e5c8dcd67b",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/blackburn-sues-jack-smith-over-phone-records/",
+     "text": "The lawsuit, filed in the U.S. District Court for the Middle District of Tennessee, moves a political fight over the sweep of Smith’s investigation into the courthouse. The complaint alleges that Smith targeted Blackburn for her politics and unconstitutionally obtained her phone records as he probed Donald Trump’s alleged attempt to overturn his loss in the 2020 election.",
+     "title": "Blackburn sues Jack Smith over phone records",
+     "publishedAt": "2026-09-30T15:59:15.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7ea33f5bf4a07190"
+   ],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395"
+  },
+  "2105497247219937527": {
+   "contextVersion": 285,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395",
+   "quotedContext": {
+    "id": "2101118049944543545",
+    "authorId": "1472967441533706244",
+    "handle": "chooi_jeq",
+    "createdAt": "2026-09-19T01:15:54.000Z",
+    "textChars": 279,
+    "textHash": "f3535ce00bf2b71e8de313676d3f3a6f7ad2301028403f191d5da7984b8d86b4"
+   }
+  },
+  "2105500569532059807": {
+   "contextVersion": 285,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105107865791000869",
+    "fingerprint": "ef4aa081025c6d45bfa1614a9899ed9b27b0c745883174f5f5f6a6ff03c9226d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105107865791000869",
+    "fingerprint": "ef4aa081025c6d45bfa1614a9899ed9b27b0c745883174f5f5f6a6ff03c9226d"
+   }
+  },
+  "2105500604533821477": {
+   "contextVersion": 285,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104957937672478803",
+    "fingerprint": "4ad9fa62ffca5fcf5ee45337a3915d04115573800e8a28d6b4abbe56df8cc5e2"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2104957937672478803",
+    "fingerprint": "4ad9fa62ffca5fcf5ee45337a3915d04115573800e8a28d6b4abbe56df8cc5e2"
+   }
+  },
+  "2105501167413350636": {
+   "contextVersion": 285,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395"
   }
  },
  "needsContext": {
@@ -14668,10 +14792,15 @@
   "2105489696788828530": false,
   "2105490814537441405": false,
   "2105491956088619069": false,
-  "2105493018266517713": false
+  "2105493018266517713": false,
+  "2105493312165773635": false,
+  "2105497247219937527": false,
+  "2105500569532059807": false,
+  "2105500604533821477": false,
+  "2105501167413350636": false
  },
  "inputBlocks": {},
- "contextVersion": 284,
+ "contextVersion": 285,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -15194,6 +15323,13 @@
    "ids": [
     "2105486099888091498"
    ]
+  },
+  {
+   "label": "Christian nationalism & church-state separation (Huffman book 'No Prophets')",
+   "ids": [
+    "2105500569532059807",
+    "2105500604533821477"
+   ]
   }
  ],
  "unclassified": [],
@@ -15426,31 +15562,22 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105471653102616856",
-    "2105471706756448339",
-    "2105472242154979821",
-    "2105474780724158512",
-    "2105476100604428377",
-    "2105477802019700856",
-    "2105478126046151001",
-    "2105479049271488726",
-    "2105479097975456197",
-    "2105483335749279911",
-    "2105486099888091498",
-    "2105489696788828530",
-    "2105490814537441405",
-    "2105491956088619069",
-    "2105493018266517713"
+    "2105493312165773635",
+    "2105497247219937527",
+    "2105500569532059807",
+    "2105500604533821477",
+    "2105501167413350636",
+    "2105511614468206914"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T03:01:12.371Z",
-    "observedAt": "2026-10-01T03:01:37.753Z",
+    "attemptedAt": "2026-10-01T04:31:33.263Z",
+    "observedAt": "2026-10-01T04:31:44.109Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 15,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -15458,21 +15585,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T03:01:12.371Z",
-   "observedAt": "2026-10-01T03:01:37.753Z",
+   "attemptedAt": "2026-10-01T04:31:33.263Z",
+   "observedAt": "2026-10-01T04:31:44.109Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T03:01:12.371Z",
-   "observedAt": "2026-10-01T03:01:37.753Z",
+   "attemptedAt": "2026-10-01T04:31:33.263Z",
+   "observedAt": "2026-10-01T04:31:44.109Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15485,5 +15612,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T03:01:37.773Z"
+ "updatedAt": "2026-10-01T04:31:44.135Z"
 }

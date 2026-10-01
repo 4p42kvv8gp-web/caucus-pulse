@@ -1,0 +1,98 @@
+{
+ "date": "2026-10-01",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-01T04:31:44.139Z",
+ "assignments": {
+  "2105511614468206914": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2105511614468206914": {
+   "contextVersion": 285,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105422940334403604",
+    "fingerprint": "3ef1010d8864ff4dd5ce85e4d3b735923d845b7b9e346d4df1453d1ded5a2d22"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105422940334403604",
+    "fingerprint": "3ef1010d8864ff4dd5ce85e4d3b735923d845b7b9e346d4df1453d1ded5a2d22"
+   }
+  }
+ },
+ "needsContext": {
+  "2105511614468206914": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 285,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2105493312165773635",
+    "2105497247219937527",
+    "2105500569532059807",
+    "2105500604533821477",
+    "2105501167413350636",
+    "2105511614468206914"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-01T04:31:33.263Z",
+    "observedAt": "2026-10-01T04:31:44.109Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 6,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-01T04:31:33.263Z",
+   "observedAt": "2026-10-01T04:31:44.109Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 6,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-01T04:31:33.263Z",
+   "observedAt": "2026-10-01T04:31:44.109Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 6,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-01T04:31:44.140Z"
+}
