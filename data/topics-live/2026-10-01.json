@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T11:12:16.531Z",
+ "classifiedAt": "2026-10-01T12:42:16.626Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -28,6 +28,98 @@
    [
     "economy",
     null
+   ]
+  ],
+  "2105621671084261441": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2105623945366102141": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2105626961355640840": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105628811517964386": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2105628813241803201": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2105632379112968610": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105633938467172377": [
+   [
+    "education",
+    "higher-ed"
+   ],
+   [
+    "civil-rights",
+    null
+   ]
+  ],
+  "2105635366531211614": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105635532118323307": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2105637063559205307": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "foreign-policy",
+    "china"
+   ]
+  ],
+  "2105637626577301723": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2105638420697817488": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "housing"
    ]
   ]
  },
@@ -68,17 +160,369 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "dfe9dfe07b5cee8b2bb4e650be315487f41ed477335ab6b1b3fdb635a17e241d"
+  },
+  "2105621671084261441": {
+   "contextVersion": 289,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105623945366102141": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_811e02c2bfae0328",
+     "publisher": "NPR",
+     "date": "2026-09-27",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/27/nx-s1-5978973/protect-college-sports-act-senators-athletes",
+     "text": "Supporters of the Protect College Sports Act , which is poised to pass the Senate on Monday, say the bill is needed to fix what they call an era of chaos in Division I athletics, characterized by ballooning pay for athletes, unlimited transfers between schools, constant lawsuits over eligibility rules and runaway athletic department budgets.",
+     "title": "As Congress debates college sports, athletes-turned-senators have a seat at the table",
+     "publishedAt": "2026-09-27T12:06:24.000Z",
+     "fetchedAt": "2026-09-27T17:16:14.227Z",
+     "version": 220,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_811e02c2bfae0328"
+   ],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
+   "quotedContext": {
+    "id": "2104972223912054922",
+    "authorId": "67926628",
+    "handle": "RossDellenger",
+    "createdAt": "2026-09-29T16:31:01.000Z",
+    "textChars": 150,
+    "textHash": "70d51206b07f5a66ab49bc8bd23d3c3b83a52c4b665bcc75040c3346bb157fcd"
+   }
+  },
+  "2105626961355640840": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_a68b978bc1b99e19",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
+     "text": "At a gathering at U.S. Marine Corps Base Quantico in Virginia, Secretary of Defense Pete Hegseth told hundreds of junior military officers and enlisted leaders that the Trump administration has achieved a cultural shift in the military.",
+     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "publishedAt": "2026-09-30T21:51:20.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_983bcafa9c520e5e",
+     "publisher": "NPR",
+     "date": "2026-09-26",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/26/nx-s1-5981494/press-pool-dispute-escalates-as-white-house-cuts-cnn-from-air-force-one-travel",
+     "text": "FOLKENFLIK: So what we're told now is that last night, the White House made clear that CNN's crew would not be allowed to take the trip with the president and his entourage on Air Force One today to Tennessee for a big college football match - Tennessee versus the University of Texas. You know, smart thing to do, perhaps, right in the midterm. You're trying to appeal to voters of all sides. That's not exactly the same as White House access. In this moment, CNN's crew was serving as the video pool. What happens is five big television networks share the cost and logistical burden of...",
+     "title": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
+     "publishedAt": "2026-09-26T11:38:03.000Z",
+     "fetchedAt": "2026-09-27T01:26:53.361Z",
+     "version": 211,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a68b978bc1b99e19"
+   ],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105485371806998890",
+    "fingerprint": "a1c82b242987519ce6ee251d9a5ccd690e652e6b74265ab735432fb194d6fd33"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105485371806998890",
+    "fingerprint": "a1c82b242987519ce6ee251d9a5ccd690e652e6b74265ab735432fb194d6fd33"
+   }
+  },
+  "2105628811517964386": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6af48ad824aefc1",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6110597-texas-voter-registration-application-backlog/",
+     "text": "Error causes backlog of thousands of Texas voter registration applications",
+     "title": "Error causes backlog of thousands of Texas voter registration applications",
+     "publishedAt": "2026-09-24T22:49:25.000Z",
+     "fetchedAt": "2026-09-24T23:12:07.319Z",
+     "version": 167,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105628813241803201": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_3a65752da240d556",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/at-the-races-pivot-time-for-republicans/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Pivot time for Republicans",
+     "publishedAt": "2026-09-24T16:00:00.000Z",
+     "fetchedAt": "2026-09-24T20:51:31.699Z",
+     "version": 164,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105632379112968610": {
+   "contextVersion": 289,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105633938467172377": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_4222ace62f1fc447",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/29/nx-s1-5984611/n-y-sen-gillibrand-says-new-allegations-in-cornell-case-are-serious-and-horrific",
+     "text": "SACHA PFEIFFER, HOST: The alleged assault at Cornell happened in 2024. Campus police investigated but no criminal charges were ever filed. Cornell defends its handling of the case. Now, the woman - identified as Jane Doe - has brought a civil case against the university, and the seven male students she says assaulted her. That has prompted prosecutors to reopen the case, and the details of these allegations have sparked national outrage.",
+     "title": "N.Y. Sen. Gillibrand says new allegations in Cornell case are 'serious and horrific'",
+     "publishedAt": "2026-09-29T20:47:41.000Z",
+     "fetchedAt": "2026-09-30T04:37:09.174Z",
+     "version": 265,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b09216c3bd875d53",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6121915-dwc-criticizes-trump-titleix/",
+     "text": "Democratic Women’s Caucus blasts Trump over Title IX rollback after Cornell rape allegations",
+     "title": "Democratic Women’s Caucus blasts Trump over Title IX rollback after Cornell rape allegations",
+     "publishedAt": "2026-09-30T23:02:49.000Z",
+     "fetchedAt": "2026-09-30T23:48:00.838Z",
+     "version": 282,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4222ace62f1fc447",
+    "n_b09216c3bd875d53"
+   ],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105635366531211614": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_7f6e6d4d6e182c8a",
+     "publisher": "The New York Times",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/09/30/technology/openai-brockman-super-pac-leading-the-future.html",
+     "text": "OpenAI’s Greg Brockman Backs Out of Second $25 Million Donation to A.I. Super PAC",
+     "title": "OpenAI’s Greg Brockman Backs Out of Second $25 Million Donation to A.I. Super PAC",
+     "publishedAt": "2026-09-30T22:27:26.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7f6e6d4d6e182c8a"
+   ],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
+   "quotedContext": {
+    "id": "2105405198185459821",
+    "authorId": "286432534",
+    "handle": "teddyschleifer",
+    "createdAt": "2026-09-30T21:11:30.000Z",
+    "textChars": 231,
+    "textHash": "42843f8f7fce84becbea91eca1eda3e225b7b0a7add56c904f24503a28d9eed4"
+   }
+  },
+  "2105635532118323307": {
+   "contextVersion": 289,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
+   "quotedContext": {
+    "id": "2105627869619630569",
+    "authorId": "28785486",
+    "handle": "ABC",
+    "createdAt": "2026-10-01T11:56:19.000Z",
+    "textChars": 203,
+    "textHash": "7cd1afbb8261a3ff5201e9d3bd725a6d2deda4bd89e41b2d42ec1b5d4b33c7de"
+   }
+  },
+  "2105637063559205307": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_5abdb98d3f833ebc",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6109283-xi-china-us-ai-responsibility-trump/",
+     "text": "Xi says China, US have ‘responsibility’ to keep AI under human control",
+     "title": "Xi says China, US have ‘responsibility’ to keep AI under human control",
+     "publishedAt": "2026-09-24T16:22:23.000Z",
+     "fetchedAt": "2026-09-24T17:27:19.214Z",
+     "version": 160,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_2c3ba1d00400e881",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6110534-gen-z-china-press-freedom-healthcare-employment/",
+     "text": "Why Generation Z is less likely to view China as a threat",
+     "title": "Why Generation Z is less likely to view China as a threat",
+     "publishedAt": "2026-09-25T10:00:00.000Z",
+     "fetchedAt": "2026-09-25T10:36:48.443Z",
+     "version": 176,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
+   "quotedContext": {
+    "id": "2105407832950456816",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-30T21:21:58.000Z",
+    "textChars": 200,
+    "textHash": "58ee7ff8a02636451086a034398c3cf0b114223b7bdfe3c79fc5194eee6bf73c"
+   }
+  },
+  "2105637626577301723": {
+   "contextVersion": 289,
+   "evidenceSupplied": [
+    {
+     "id": "n_18f155d991d22223",
+     "publisher": "Roll Call",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/24/schumer-jeffries-sue-to-block-federal-agents-at-polls-in-november/",
+     "text": "The suit, filed in the U.S. District Court for the District of Columbia by Senate Minority Leader Charles E. Schumer, D-N.Y., House Minority Leader Hakeem Jeffries, D-N.Y., the national Democratic Party and Democratic campaign groups, alleges the Trump administration plans to send agents from Immigration and Customs Enforcement and the Federal Bureau of Investigation to the polls this fall.",
+     "title": "Schumer, Jeffries sue to block federal agents at polls in November",
+     "publishedAt": "2026-09-24T16:36:29.000Z",
+     "fetchedAt": "2026-09-24T22:02:06.220Z",
+     "version": 165,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_18f155d991d22223"
+   ],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105638420697817488": {
+   "contextVersion": 289,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
   }
  },
  "needsContext": {
   "2105511614468206914": false,
   "2105580604381114803": true,
   "2105583646610542846": false,
-  "2105608587758235943": true
+  "2105608587758235943": true,
+  "2105621671084261441": false,
+  "2105623945366102141": false,
+  "2105626961355640840": false,
+  "2105628811517964386": false,
+  "2105628813241803201": false,
+  "2105632379112968610": false,
+  "2105633938467172377": false,
+  "2105635366531211614": false,
+  "2105635532118323307": false,
+  "2105637063559205307": false,
+  "2105637626577301723": false,
+  "2105638420697817488": false
  },
  "inputBlocks": {},
- "contextVersion": 288,
- "emerging": [],
+ "contextVersion": 289,
+ "emerging": [
+  {
+   "label": "NEST Act newborn supplies bill",
+   "ids": [
+    "2105621671084261441"
+   ]
+  },
+  {
+   "label": "Protect College Sports Act",
+   "ids": [
+    "2105623945366102141"
+   ]
+  },
+  {
+   "label": "Hegseth 'State of the Force' speech",
+   "ids": [
+    "2105626961355640840"
+   ]
+  },
+  {
+   "label": "Cornell sexual assault case and Title IX handling",
+   "ids": [
+    "2105633938467172377"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -90,18 +534,28 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105443705133978042",
-    "2105608587758235943"
+    "2105621671084261441",
+    "2105623945366102141",
+    "2105626961355640840",
+    "2105628811517964386",
+    "2105628813241803201",
+    "2105632379112968610",
+    "2105633938467172377",
+    "2105635366531211614",
+    "2105635532118323307",
+    "2105637063559205307",
+    "2105637626577301723",
+    "2105638420697817488"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T11:12:12.131Z",
-    "observedAt": "2026-10-01T11:12:16.498Z",
+    "attemptedAt": "2026-10-01T12:41:51.164Z",
+    "observedAt": "2026-10-01T12:42:16.622Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 12,
     "retryCount": 0
    }
   }
@@ -109,24 +563,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T11:12:12.131Z",
-   "observedAt": "2026-10-01T11:12:16.498Z",
+   "attemptedAt": "2026-10-01T12:41:51.164Z",
+   "observedAt": "2026-10-01T12:42:16.622Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T11:12:12.131Z",
-   "observedAt": "2026-10-01T11:12:16.498Z",
+   "attemptedAt": "2026-10-01T12:41:51.164Z",
+   "observedAt": "2026-10-01T12:42:16.622Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-01T11:12:16.532Z"
+ "updatedAt": "2026-10-01T12:42:16.629Z"
 }
