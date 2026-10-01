@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T14:13:50.362Z",
+ "generatedAt": "2026-10-01T14:39:24.665Z",
  "lastPollAt": "2026-10-01T13:57:23.740Z",
  "lastPollAttemptAt": "2026-10-01T13:57:22.847Z",
  "lastPollOutcome": "complete",
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-01T14:13:49.391Z"
+  "referenceAsOf": "2026-10-01T14:39:23.703Z"
  },
  "news": {
   "version": 291,
-  "items": 1338,
+  "items": 1337,
   "latestPublishedAt": "2026-10-01T14:05:51.000Z",
   "latestFetchedAt": "2026-10-01T14:13:10.026Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-01T14:13:49.687Z",
+   "asOf": "2026-10-01T14:39:24.036Z",
    "windowDays": 14,
-   "windowStart": "2026-09-17T14:13:49.687Z",
-   "eligibleItems": 1722,
+   "windowStart": "2026-09-17T14:39:24.036Z",
+   "eligibleItems": 1717,
    "withExcerpts": 179,
-   "headlineOrSummary": 1543,
+   "headlineOrSummary": 1538,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1015,
+     "eligibleItems": 1011,
      "withExcerpts": 0,
-     "headlineOrSummary": 1015,
+     "headlineOrSummary": 1011,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-01T14:05:51.000Z",
      "latestItem": {
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 275,
+     "eligibleItems": 274,
      "withExcerpts": 0,
-     "headlineOrSummary": 275,
+     "headlineOrSummary": 274,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-01T13:58:02.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-01",
-  "capturedIn24h": 572,
-  "classifiedIn24h": 572,
-  "taggedIn24h": 516,
+  "capturedIn24h": 556,
+  "classifiedIn24h": 556,
+  "taggedIn24h": 503,
   "pendingIn24h": 0,
-  "momentumPaused": false,
+  "momentumPaused": true,
   "health": {
-   "status": "healthy",
-   "reasonCode": null,
-   "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-01T13:57:27.570Z",
+   "status": "degraded",
+   "reasonCode": "inference-error",
+   "hasCurrentFailure": true,
+   "lastAttemptAt": "2026-10-01T14:39:21.431Z",
    "lastSuccessAt": "2026-10-01T13:57:47.291Z",
-   "capturedIn24h": 572,
-   "classifiedIn24h": 572,
+   "capturedIn24h": 556,
+   "classifiedIn24h": 556,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,19 +6874,19 @@
     "engDelta": 0
    },
    "curve48": [
-    136,
-    147,
-    147,
-    66,
-    19,
-    2,
+    144,
+    146,
+    140,
+    55,
+    17,
     1,
-    51,
-    116,
-    198,
-    154,
-    50,
-    12,
+    1,
+    67,
+    119,
+    205,
+    136,
+    44,
+    10,
     0,
     3,
     39
@@ -6942,19 +6942,19 @@
     "engDelta": 0
    },
    "curve48": [
-    67,
+    63,
+    68,
     65,
-    66,
-    25,
+    17,
     8,
-    2,
     1,
-    21,
-    50,
-    94,
-    78,
-    20,
-    5,
+    1,
+    26,
+    55,
+    93,
+    71,
+    19,
+    4,
     0,
     1,
     14
@@ -7010,19 +7010,19 @@
     "engDelta": 0
    },
    "curve48": [
-    81,
     87,
     84,
-    38,
-    11,
+    78,
+    37,
+    8,
     0,
     0,
-    34,
-    70,
-    128,
-    83,
-    28,
-    7,
+    45,
+    72,
+    129,
+    75,
+    23,
+    6,
     0,
     3,
     26
@@ -7078,17 +7078,17 @@
     "engDelta": 0
    },
    "curve48": [
-    24,
+    27,
+    22,
     26,
-    24,
-    19,
-    3,
-    1,
+    13,
+    4,
     0,
-    6,
+    0,
+    9,
     21,
-    35,
-    34,
+    37,
+    29,
     6,
     2,
     0,
@@ -7146,17 +7146,17 @@
     "engDelta": 0
    },
    "curve48": [
-    28,
-    29,
-    34,
+    27,
+    30,
+    33,
     12,
-    5,
-    1,
+    4,
     0,
-    13,
-    22,
+    0,
+    16,
+    24,
     34,
-    32,
+    27,
     5,
     3,
     0,
@@ -7214,17 +7214,17 @@
     "engDelta": 0
    },
    "curve48": [
+    15,
+    17,
     16,
-    18,
-    14,
-    8,
+    5,
     2,
     1,
     0,
     2,
-    7,
-    17,
-    14,
+    9,
+    19,
+    10,
     7,
     0,
     0,
@@ -7322,11 +7322,11 @@
     68,
     8
    ],
-   "d": 56,
+   "d": 54,
    "mAvg": 31.3,
    "epAvg": 251,
    "momentum": {
-    "score": 67,
+    "score": 68,
     "drivers": [
      "volume",
      "adoption"
@@ -7335,7 +7335,7 @@
     "accel": 0,
     "adoption": 1,
     "eff": 3.2,
-    "engLift": 0.19533083853453004
+    "engLift": 0.19875936259268723
    },
    "subs": [
     {
@@ -8310,7 +8310,7 @@
     97,
     7
    ],
-   "d": 70,
+   "d": 62,
    "mAvg": 36,
    "epAvg": 164,
    "momentum": {
@@ -8323,7 +8323,7 @@
     "accel": 0,
     "adoption": 1,
     "eff": 3.5,
-    "engLift": 0.16885103630008913
+    "engLift": 0.18837166173371322
    },
    "subs": [
     {
@@ -9565,7 +9565,7 @@
     87,
     7
    ],
-   "d": 54,
+   "d": 50,
    "mAvg": 36.2,
    "epAvg": 272,
    "momentum": {
@@ -10923,18 +10923,18 @@
     91,
     6
    ],
-   "d": 19,
+   "d": 18,
    "mAvg": 41,
    "epAvg": 106,
    "momentum": {
-    "score": 53,
+    "score": 52,
     "drivers": [
      "adoption",
      "volume"
     ],
-    "volume": 0.69,
+    "volume": 0.6799999999999999,
     "accel": 0,
-    "adoption": 0.9390243902439024,
+    "adoption": 0.9146341463414633,
     "eff": 3.5,
     "engLift": 0
    },
@@ -12099,7 +12099,7 @@
     43,
     5
    ],
-   "d": 96,
+   "d": 92,
    "mAvg": 19.7,
    "epAvg": 46,
    "momentum": {
@@ -13332,7 +13332,7 @@
     45,
     3
    ],
-   "d": 125,
+   "d": 120,
    "mAvg": 14.5,
    "epAvg": 197,
    "momentum": {
@@ -13345,7 +13345,7 @@
     "accel": 0,
     "adoption": 1,
     "eff": 3.5,
-    "engLift": 0.427810634829489
+    "engLift": 0.44109824222638805
    },
    "subs": [
     {
@@ -13873,7 +13873,7 @@
     27,
     3
    ],
-   "d": 181,
+   "d": 172,
    "mAvg": 8.3,
    "epAvg": 232,
    "momentum": {
@@ -14368,7 +14368,7 @@
     56,
     2
    ],
-   "d": 111,
+   "d": 107,
    "mAvg": 20,
    "epAvg": 11,
    "momentum": {
@@ -14381,7 +14381,7 @@
     "accel": 0,
     "adoption": 1,
     "eff": 3.7,
-    "engLift": 0.15718961821447197
+    "engLift": 0.1669388361045131
    },
    "subs": [],
    "postIds": {
@@ -14631,19 +14631,19 @@
     35,
     2
    ],
-   "d": 58,
+   "d": 47,
    "mAvg": 13,
    "epAvg": 195,
    "momentum": {
-    "score": 66,
+    "score": 65,
     "drivers": [
-     "volume",
-     "adoption"
+     "adoption",
+     "volume"
     ],
-    "volume": 1,
+    "volume": 0.97,
     "accel": 0,
     "adoption": 1,
-    "eff": 3.3,
+    "eff": 3.4,
     "engLift": 0
    },
    "subs": [
@@ -16641,7 +16641,7 @@
     37,
     0
    ],
-   "d": 90,
+   "d": 79,
    "mAvg": 13.7,
    "epAvg": 28,
    "momentum": {
@@ -16653,8 +16653,8 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 2.5,
-    "engLift": 0.005722978846711024
+    "eff": 2.6,
+    "engLift": 0
    },
    "subs": [
     {
