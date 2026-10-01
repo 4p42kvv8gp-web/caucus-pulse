@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T22:28:57.882Z",
+ "classifiedAt": "2026-10-01T23:28:36.560Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -10826,43 +10826,6 @@
    "evidenceUsed": [],
    "inputHash": "cf922f2c881cee97dd66cea71ab4d0a61d771781a00fc0275cd3dd795dbd44fd"
   },
-  "2105389652777844932": {
-   "contextVersion": 280,
-   "evidenceSupplied": [
-    {
-     "id": "n_7ea33f5bf4a07190",
-     "publisher": "Roll Call",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
-     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
-     "title": "Housing groups challenge Trump funding clawback",
-     "publishedAt": "2026-09-30T16:01:01.000Z",
-     "fetchedAt": "2026-09-30T21:46:34.754Z",
-     "version": 280,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_46a7f893b6e41a06",
-     "publisher": "Roll Call",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
-     "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
-     "title": "Trump’s funding cancellation violates budget law, GAO says",
-     "publishedAt": "2026-09-29T17:43:30.000Z",
-     "fetchedAt": "2026-09-30T06:07:02.630Z",
-     "version": 266,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "71dab1942bf207bb4f7a5d408c9d60caa9af1ffe0847af6631289302503bfca0"
-  },
   "2105402303750795267": {
    "contextVersion": 280,
    "evidenceSupplied": [
@@ -14287,6 +14250,43 @@
     "textChars": 85,
     "textHash": "87f71d3539c3eb46584f0210b9af9c7195e8d821e116a58ea5c4dd2631a06698"
    }
+  },
+  "2105389652777844932": {
+   "contextVersion": 297,
+   "evidenceSupplied": [
+    {
+     "id": "n_7ea33f5bf4a07190",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+     "title": "Housing groups challenge Trump funding clawback",
+     "publishedAt": "2026-09-30T16:01:01.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_46a7f893b6e41a06",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
+     "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
+     "title": "Trump’s funding cancellation violates budget law, GAO says",
+     "publishedAt": "2026-09-29T17:43:30.000Z",
+     "fetchedAt": "2026-09-30T06:07:02.630Z",
+     "version": 266,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e0ebc8235bbeab379035d63aef8bedaf6f4541b59d8abcdb6be3b72b78f2ceff"
   }
  },
  "needsContext": {
@@ -14738,7 +14738,6 @@
   "2105365823351058559": false,
   "2105359532033515950": false,
   "2105360942662131785": false,
-  "2105389652777844932": false,
   "2105402303750795267": false,
   "2105403958206337208": false,
   "2105409854844133656": false,
@@ -14911,10 +14910,11 @@
   "2105369609599664503": false,
   "2105444271260098606": false,
   "2105457190974922945": false,
-  "2105465164334002291": false
+  "2105465164334002291": false,
+  "2105389652777844932": false
  },
  "inputBlocks": {},
- "contextVersion": 296,
+ "contextVersion": 297,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -15512,43 +15512,27 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105279198285709394",
-    "2105288664221978999",
-    "2105303281174274091",
-    "2105308767969825003",
-    "2105346162903695517",
-    "2105366247311614261"
+    "2105389652777844932",
+    "2105744081028526197",
+    "2105765738258551278",
+    "2105783320995058102",
+    "2105786695530774882",
+    "2105787487285330247",
+    "2105788521101365620",
+    "2105788708100161809",
+    "2105789614141395269",
+    "2105789615328448916",
+    "2105790112453845388"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T22:26:30.572Z",
-    "observedAt": "2026-10-01T22:26:40.853Z",
+    "attemptedAt": "2026-10-01T23:27:29.479Z",
+    "observedAt": "2026-10-01T23:27:50.843Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105366990739157082",
-    "2105369609599664503",
-    "2105444271260098606",
-    "2105457190974922945",
-    "2105465164334002291",
-    "2105696292336796078"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-01T22:26:40.878Z",
-    "observedAt": "2026-10-01T22:26:44.896Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 11,
     "retryCount": 0
    }
   }
@@ -15556,21 +15540,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T22:26:40.878Z",
-   "observedAt": "2026-10-01T22:26:44.896Z",
+   "attemptedAt": "2026-10-01T23:27:29.479Z",
+   "observedAt": "2026-10-01T23:27:50.843Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 11,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T22:26:40.878Z",
-   "observedAt": "2026-10-01T22:26:44.896Z",
+   "attemptedAt": "2026-10-01T23:27:29.479Z",
+   "observedAt": "2026-10-01T23:27:50.843Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 11,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15583,5 +15567,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T22:28:57.886Z"
+ "updatedAt": "2026-10-01T23:28:36.564Z"
 }
