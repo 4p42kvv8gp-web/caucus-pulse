@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T00:45:51.192Z",
+ "classifiedAt": "2026-10-01T01:32:44.286Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -4071,6 +4071,93 @@
    [
     "foreign-policy",
     "middle-east"
+   ]
+  ],
+  "2105459872833892586": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105461417482788897": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2105461631065202710": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2105463037654106286": [
+   [
+    "reproductive-rights",
+    "abortion-access"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ]
+  ],
+  "2105464230468104250": [
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2105465164334002291": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2105467595847520427": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2105468370409640267": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2105468970354815326": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2105469059123056823": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2105469242774851990": [],
+  "2105470482900197783": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -13319,6 +13406,252 @@
     "n_7d5e66898134a555"
    ],
    "inputHash": "525ac2a5411125fa0d662baea80cf171679aca1145f97c962cb895d5eeddcbfd"
+  },
+  "2105459872833892586": {
+   "contextVersion": 283,
+   "evidenceSupplied": [
+    {
+     "id": "n_a3e57858896b262a",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
+     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
+     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+     "publishedAt": "2026-09-30T08:42:46.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_679027588c3d7710",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6109995-senate-gop-defeats-donald-trump-iran-war-powers-resolution/",
+     "text": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "title": "Senate GOP defeats resolution directing Trump to end Iran war as more Republicans sour on conflict",
+     "publishedAt": "2026-09-24T19:01:10.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a3e57858896b262a",
+    "n_679027588c3d7710"
+   ],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105461417482788897": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105461631065202710": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105463037654106286": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105398995992633595",
+    "fingerprint": "72ec992b0efde85adfa46cf129065f5b8764c0c0d4cca23945059d6b6e280798"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105398995992633595",
+    "fingerprint": "72ec992b0efde85adfa46cf129065f5b8764c0c0d4cca23945059d6b6e280798"
+   }
+  },
+  "2105464230468104250": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105465164334002291": {
+   "contextVersion": 283,
+   "evidenceSupplied": [
+    {
+     "id": "n_bab91416a221ace6",
+     "publisher": "The Washington Post",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/interactive/2026/09/24/how-every-senator-voted-iran-war-powers-resolution/",
+     "text": "How every senator voted on the Iran war powers resolution",
+     "title": "How every senator voted on the Iran war powers resolution",
+     "publishedAt": "2026-09-24T19:00:00.000Z",
+     "fetchedAt": "2026-09-24T19:09:11.023Z",
+     "version": 162,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6ea7b2cb4990b014",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6108255-watch-live-benjamin-netanyahu-israel-us-iran-gaza-unga/",
+     "text": "Watch live: Netanyahu to address UN amid US-Israel war in Iran",
+     "title": "Watch live: Netanyahu to address UN amid US-Israel war in Iran",
+     "publishedAt": "2026-09-24T13:09:03.000Z",
+     "fetchedAt": "2026-09-24T15:04:56.774Z",
+     "version": 158,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_6ea7b2cb4990b014"
+   ],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec",
+   "quotedContext": {
+    "id": "2105428735843299542",
+    "authorId": "16544024",
+    "handle": "journalsentinel",
+    "createdAt": "2026-09-30T22:45:02.000Z",
+    "textChars": 85,
+    "textHash": "87f71d3539c3eb46584f0210b9af9c7195e8d821e116a58ea5c4dd2631a06698"
+   }
+  },
+  "2105467595847520427": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105468370409640267": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105468970354815326": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105469059123056823": {
+   "contextVersion": 283,
+   "evidenceSupplied": [
+    {
+     "id": "n_a68b978bc1b99e19",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
+     "text": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "publishedAt": "2026-09-30T21:51:20.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3e57858896b262a",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
+     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
+     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+     "publishedAt": "2026-09-30T08:42:46.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a68b978bc1b99e19"
+   ],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105456001264787667",
+    "fingerprint": "c0cf85b222064166285ab2fef4add212880eb80b0e23700b91299804dc7377d8"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105456001264787667",
+    "fingerprint": "c0cf85b222064166285ab2fef4add212880eb80b0e23700b91299804dc7377d8"
+   }
+  },
+  "2105469242774851990": {
+   "contextVersion": 283,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec"
+  },
+  "2105470482900197783": {
+   "contextVersion": 283,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "A bill to rein in stock trading by members of Congress did not clear a first procedural hurdle to advance in the Senate on Wednesday, after passing the House on a mostly party-line vote in July.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f5573e9633cf0902",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6120528-senate-blocks-gop-stock-bill/",
+     "text": "Democrats block bill restricting lawmakers from trading stocks",
+     "title": "Democrats block bill restricting lawmakers from trading stocks",
+     "publishedAt": "2026-09-30T16:56:19.000Z",
+     "fetchedAt": "2026-09-30T17:16:34.469Z",
+     "version": 276,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_d54af4b4ede282e4",
+    "n_f5573e9633cf0902"
+   ],
+   "inputHash": "3919c1586269c1ac4027adc9a71704fb8fed527e66e51d89bc729ddac7b0d5ec",
+   "quotedContext": {
+    "id": "2105381944556970484",
+    "authorId": "2580992246",
+    "handle": "derrickvanorden",
+    "createdAt": "2026-09-30T19:39:06.000Z",
+    "textChars": 321,
+    "textHash": "a939ceaa04d98ec47ddf5149f3db37468ae098c0aa8fbc45e2fcd57dad1b52d2"
+   }
   }
  },
  "needsContext": {
@@ -13911,10 +14244,22 @@
   "2105454651910816032": false,
   "2105455009546609074": false,
   "2105455637605830842": false,
-  "2105457190974922945": false
+  "2105457190974922945": false,
+  "2105459872833892586": false,
+  "2105461417482788897": false,
+  "2105461631065202710": false,
+  "2105463037654106286": false,
+  "2105464230468104250": false,
+  "2105465164334002291": false,
+  "2105467595847520427": true,
+  "2105468370409640267": false,
+  "2105468970354815326": false,
+  "2105469059123056823": false,
+  "2105469242774851990": false,
+  "2105470482900197783": false
  },
  "inputBlocks": {},
- "contextVersion": 282,
+ "contextVersion": 283,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -14395,6 +14740,36 @@
    "ids": [
     "2105455637605830842"
    ]
+  },
+  {
+   "label": "Final US troop withdrawal from Iraq",
+   "ids": [
+    "2105459872833892586"
+   ]
+  },
+  {
+   "label": "Trump administration government AI chatbot",
+   "ids": [
+    "2105461631065202710"
+   ]
+  },
+  {
+   "label": "flyDubai 1073 in-flight emergency",
+   "ids": [
+    "2105467595847520427"
+   ]
+  },
+  {
+   "label": "Hegseth military religious affairs office",
+   "ids": [
+    "2105469059123056823"
+   ]
+  },
+  {
+   "label": "Congressional stock trading ban bill blocked in Senate",
+   "ids": [
+    "2105470482900197783"
+   ]
   }
  ],
  "unclassified": [],
@@ -14627,30 +15002,28 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105448101423276128",
-    "2105448676852367492",
-    "2105449731799322876",
-    "2105450440192401484",
-    "2105451206848164322",
-    "2105451881484927220",
-    "2105452855620464855",
-    "2105452984356229606",
-    "2105453665129759094",
-    "2105454260813287623",
-    "2105454651910816032",
-    "2105455009546609074",
-    "2105455637605830842",
-    "2105457190974922945"
+    "2105459872833892586",
+    "2105461417482788897",
+    "2105461631065202710",
+    "2105463037654106286",
+    "2105464230468104250",
+    "2105465164334002291",
+    "2105467595847520427",
+    "2105468370409640267",
+    "2105468970354815326",
+    "2105469059123056823",
+    "2105469242774851990",
+    "2105470482900197783"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T00:45:22.003Z",
-    "observedAt": "2026-10-01T00:45:51.171Z",
+    "attemptedAt": "2026-10-01T01:32:18.104Z",
+    "observedAt": "2026-10-01T01:32:44.267Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 14,
+    "acceptedCount": 12,
     "retryCount": 0
    }
   }
@@ -14658,21 +15031,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T00:45:22.003Z",
-   "observedAt": "2026-10-01T00:45:51.171Z",
+   "attemptedAt": "2026-10-01T01:32:18.104Z",
+   "observedAt": "2026-10-01T01:32:44.267Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T00:45:22.003Z",
-   "observedAt": "2026-10-01T00:45:51.171Z",
+   "attemptedAt": "2026-10-01T01:32:18.104Z",
+   "observedAt": "2026-10-01T01:32:44.267Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastFailure": {
@@ -14685,5 +15058,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T00:45:51.197Z"
+ "updatedAt": "2026-10-01T01:32:44.289Z"
 }
