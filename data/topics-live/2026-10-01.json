@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T12:42:16.626Z",
+ "classifiedAt": "2026-10-01T13:27:29.214Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -120,6 +120,114 @@
    [
     "economy",
     "housing"
+   ]
+  ],
+  "2105640739870794202": [
+   [
+    "immigration",
+    "dilley-detention"
+   ]
+  ],
+  "2105640920976949621": [],
+  "2105641453804470369": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105643902476910955": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2105644018650509426": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2105644048648159587": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2105644115195199784": [
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2105646113785020675": [],
+  "2105646362331066738": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2105647370763452531": [
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2105647381735698613": [
+   [
+    "public-safety",
+    "crime-policing"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2105647644718559709": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2105648611845378558": [
+   [
+    "tech",
+    "big-tech"
+   ],
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2105648950489288957": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2105649880236425308": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2105650219673072120": [
+   [
+    "immigration",
+    "asylum-refugees"
+   ]
+  ],
+  "2105650480357544155": [
+   [
+    "economy",
+    "tariffs-trade"
    ]
   ]
  },
@@ -475,6 +583,261 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878"
+  },
+  "2105640739870794202": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105640920976949621": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105640421124870308",
+    "fingerprint": "185df08a5462fe99c41f5358cfb71866f37284799d07fe547fb8cbd09a111188"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105640421124870308",
+    "fingerprint": "185df08a5462fe99c41f5358cfb71866f37284799d07fe547fb8cbd09a111188"
+   }
+  },
+  "2105641453804470369": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105423366517620944",
+    "fingerprint": "1ea55578bdad76dd9b9615949839eb3f2b96aee188f9d5c8d525ffe7b4b06add"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105423366517620944",
+    "fingerprint": "1ea55578bdad76dd9b9615949839eb3f2b96aee188f9d5c8d525ffe7b4b06add"
+   }
+  },
+  "2105643902476910955": {
+   "contextVersion": 290,
+   "evidenceSupplied": [
+    {
+     "id": "n_bc63c23ed2010983",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6117022-lawmakers-launch-ovarian-cancer-impact-act/",
+     "text": "Bipartisan team in Congress looks to expand insurance coverage for ovarian cancer screening",
+     "title": "Bipartisan team in Congress looks to expand insurance coverage for ovarian cancer screening",
+     "publishedAt": "2026-09-29T13:19:18.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105644018650509426": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105644048648159587": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "quotedContext": {
+    "id": "2105416144408514912",
+    "authorId": "216776631",
+    "handle": "BernieSanders",
+    "createdAt": "2026-09-30T21:55:00.000Z",
+    "textChars": 229,
+    "textHash": "5a87661e2e7249309491039cf2bf4f0f3e40e6f13eb33c7cb69e78a284501a95"
+   }
+  },
+  "2105644115195199784": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105620867841655187",
+    "fingerprint": "e043e63c702d5e347b9f5af69171fe5bbf2d02a5e8a82157b6e75309775b5350"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105620867841655187",
+    "fingerprint": "e043e63c702d5e347b9f5af69171fe5bbf2d02a5e8a82157b6e75309775b5350"
+   }
+  },
+  "2105646113785020675": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105374782208286955",
+    "fingerprint": "7fb3fffefd895c334c37b22d90c15061a451995b5aa70b829d8fb99a4279a78c"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105374782208286955",
+    "fingerprint": "7fb3fffefd895c334c37b22d90c15061a451995b5aa70b829d8fb99a4279a78c"
+   }
+  },
+  "2105646362331066738": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "quotedContext": {
+    "id": "2105625045078884671",
+    "authorId": "20269833",
+    "handle": "TribLIVE",
+    "createdAt": "2026-10-01T11:45:06.000Z",
+    "textChars": 83,
+    "textHash": "d83053616f239c622476075d1f3905a26424de5c929b6ce7dd07ff095dc985de"
+   }
+  },
+  "2105647370763452531": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105647381735698613": {
+   "contextVersion": 290,
+   "evidenceSupplied": [
+    {
+     "id": "n_7ea33f5bf4a07190",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+     "title": "Housing groups challenge Trump funding clawback",
+     "publishedAt": "2026-09-30T16:01:01.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "quotedContext": {
+    "id": "1693999211623411739",
+    "authorId": "1610096539577487360",
+    "handle": "RepGabeVasquez",
+    "createdAt": "2023-08-22T14:50:59.000Z",
+    "textChars": 304,
+    "textHash": "8287bd3de07cd9f580e0d2dd8d8982104171fb4685b7cb52875439d07c2c2f5d"
+   }
+  },
+  "2105647644718559709": {
+   "contextVersion": 290,
+   "evidenceSupplied": [
+    {
+     "id": "n_abb186e9501f0e59",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6113061-openai-access-government-websites/",
+     "text": "OpenAI agent made unauthorized attempts to access federal agencies’ websites",
+     "title": "OpenAI agent made unauthorized attempts to access federal agencies’ websites",
+     "publishedAt": "2026-09-26T14:52:14.000Z",
+     "fetchedAt": "2026-09-26T15:22:25.606Z",
+     "version": 200,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_899c8579fe5292d4",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+     "text": "Since announcing Robert F. Kennedy Jr. as his pick for Health and Human Services secretary last year, President Trump and Kennedy have touted their dedication to \" Gold Standard Scientific Research\" and making federal health agencies \"beacons of Transparency.\"",
+     "title": "What's behind HHS claims that gender-affirming care 'may' radicalize",
+     "publishedAt": "2026-09-30T09:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "version": 269,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_abb186e9501f0e59"
+   ],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "quotedContext": {
+    "id": "2105569727611351304",
+    "authorId": "18949452",
+    "handle": "FT",
+    "createdAt": "2026-10-01T08:05:17.000Z",
+    "textChars": 304,
+    "textHash": "2a631627228b8e3cb4c5c8d938f49a092b875a6cd6ababac78d6ac14561a8f2f"
+   }
+  },
+  "2105648611845378558": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc",
+   "quotedContext": {
+    "id": "2105407832950456816",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-30T21:21:58.000Z",
+    "textChars": 200,
+    "textHash": "58ee7ff8a02636451086a034398c3cf0b114223b7bdfe3c79fc5194eee6bf73c"
+   }
+  },
+  "2105648950489288957": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105649880236425308": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105650219673072120": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
+  },
+  "2105650480357544155": {
+   "contextVersion": 290,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6324a95709d664368b2e9c70ba45493c000c928470b4ea616be284dab92cc5cc"
   }
  },
  "needsContext": {
@@ -493,10 +856,27 @@
   "2105635532118323307": false,
   "2105637063559205307": false,
   "2105637626577301723": false,
-  "2105638420697817488": false
+  "2105638420697817488": false,
+  "2105640739870794202": false,
+  "2105640920976949621": true,
+  "2105641453804470369": false,
+  "2105643902476910955": false,
+  "2105644018650509426": false,
+  "2105644048648159587": false,
+  "2105644115195199784": false,
+  "2105646113785020675": true,
+  "2105646362331066738": false,
+  "2105647370763452531": false,
+  "2105647381735698613": false,
+  "2105647644718559709": false,
+  "2105648611845378558": false,
+  "2105648950489288957": false,
+  "2105649880236425308": false,
+  "2105650219673072120": false,
+  "2105650480357544155": false
  },
  "inputBlocks": {},
- "contextVersion": 289,
+ "contextVersion": 290,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -521,6 +901,12 @@
    "ids": [
     "2105633938467172377"
    ]
+  },
+  {
+   "label": "Trump Arch construction site in DC",
+   "ids": [
+    "2105640920976949621"
+   ]
   }
  ],
  "unclassified": [],
@@ -534,28 +920,33 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105621671084261441",
-    "2105623945366102141",
-    "2105626961355640840",
-    "2105628811517964386",
-    "2105628813241803201",
-    "2105632379112968610",
-    "2105633938467172377",
-    "2105635366531211614",
-    "2105635532118323307",
-    "2105637063559205307",
-    "2105637626577301723",
-    "2105638420697817488"
+    "2105640739870794202",
+    "2105640920976949621",
+    "2105641453804470369",
+    "2105643902476910955",
+    "2105644018650509426",
+    "2105644048648159587",
+    "2105644115195199784",
+    "2105646113785020675",
+    "2105646362331066738",
+    "2105647370763452531",
+    "2105647381735698613",
+    "2105647644718559709",
+    "2105648611845378558",
+    "2105648950489288957",
+    "2105649880236425308",
+    "2105650219673072120",
+    "2105650480357544155"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T12:41:51.164Z",
-    "observedAt": "2026-10-01T12:42:16.622Z",
+    "attemptedAt": "2026-10-01T13:26:57.897Z",
+    "observedAt": "2026-10-01T13:27:29.210Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 12,
+    "acceptedCount": 17,
     "retryCount": 0
    }
   }
@@ -563,24 +954,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T12:41:51.164Z",
-   "observedAt": "2026-10-01T12:42:16.622Z",
+   "attemptedAt": "2026-10-01T13:26:57.897Z",
+   "observedAt": "2026-10-01T13:27:29.210Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T12:41:51.164Z",
-   "observedAt": "2026-10-01T12:42:16.622Z",
+   "attemptedAt": "2026-10-01T13:26:57.897Z",
+   "observedAt": "2026-10-01T13:27:29.210Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-01T12:42:16.629Z"
+ "updatedAt": "2026-10-01T13:27:29.216Z"
 }
