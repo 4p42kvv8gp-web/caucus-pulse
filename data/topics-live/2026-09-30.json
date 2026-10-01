@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T16:28:50.766Z",
+ "classifiedAt": "2026-10-01T17:59:17.418Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -6706,12 +6706,6 @@
    "inputHash": "22fc789376fadf12e1a6670f836fde8b6b636241821e03b3a2ed22f27a02d939"
   },
   "2105339401312108737": {
-   "contextVersion": 275,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "22fc789376fadf12e1a6670f836fde8b6b636241821e03b3a2ed22f27a02d939"
-  },
-  "2105339734432108599": {
    "contextVersion": 275,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -14197,6 +14191,28 @@
     "textChars": 85,
     "textHash": "87f71d3539c3eb46584f0210b9af9c7195e8d821e116a58ea5c4dd2631a06698"
    }
+  },
+  "2105339734432108599": {
+   "contextVersion": 293,
+   "evidenceSupplied": [
+    {
+     "id": "n_0b9719b1769f1d8f",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5984949/data-centers-ai-ratepayers-congress",
+     "text": "On Capitol Hill this week, Republicans have been trying to push through the Ratepayer Protection Act , sponsored by Ohio Republican Sen. Jon Husted. The bill would have state utilities consider holding \"large-load\" customers responsible for the increased costs.",
+     "title": "AI data centers: How much are ratepayers on the hook for?",
+     "publishedAt": "2026-10-01T16:47:53.000Z",
+     "fetchedAt": "2026-10-01T17:11:42.566Z",
+     "version": 293,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "44ce2fde8565d12a2d496d5720af9be0e10df3daad3cc9ee9acf3f9f7a07341b"
   }
  },
  "needsContext": {
@@ -14352,7 +14368,6 @@
   "2105337750949974091": false,
   "2105337987294765312": false,
   "2105339401312108737": false,
-  "2105339734432108599": false,
   "2105339870793150934": false,
   "2105339923171524652": false,
   "2105340713055510529": false,
@@ -14821,10 +14836,11 @@
   "2105390624778199245": false,
   "2105444271260098606": false,
   "2105457190974922945": false,
-  "2105465164334002291": false
+  "2105465164334002291": false,
+  "2105339734432108599": false
  },
  "inputBlocks": {},
- "contextVersion": 292,
+ "contextVersion": 293,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -15373,36 +15389,6 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105390624778199245",
-    "2105444271260098606",
-    "2105457190974922945",
-    "2105465164334002291",
-    "2105673439046414452",
-    "2105673439654637776",
-    "2105673937049063549",
-    "2105674108508012588",
-    "2105674269779017733",
-    "2105674287537402170",
-    "2105674801503412695",
-    "2105674831899279529",
-    "2105675273480155562",
-    "2105675730839347379",
-    "2105676018425950345"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-01T16:26:52.708Z",
-    "observedAt": "2026-10-01T16:27:14.139Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 15,
-    "retryCount": 0
-   }
-  },
   "live_chunk-5": {
    "acceptedIds": [
     "2105371144173900080",
@@ -15489,22 +15475,31 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105279198285709394",
-    "2105288664221978999",
-    "2105303281174274091",
-    "2105345430485946376",
-    "2105366247311614261",
-    "2105369609599664503"
+    "2105339734432108599",
+    "2105671734573609356",
+    "2105696292336796078",
+    "2105696346594263313",
+    "2105696573938385183",
+    "2105696785444258095",
+    "2105697523834798100",
+    "2105698022101512518",
+    "2105698681965961220",
+    "2105698729642647673",
+    "2105698764317200673",
+    "2105698877345001807",
+    "2105698926628159810",
+    "2105699071813939674",
+    "2105699540661923840"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T16:26:41.090Z",
-    "observedAt": "2026-10-01T16:26:52.689Z",
+    "attemptedAt": "2026-10-01T17:56:43.975Z",
+    "observedAt": "2026-10-01T17:57:18.223Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   }
@@ -15512,8 +15507,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T16:26:52.708Z",
-   "observedAt": "2026-10-01T16:27:14.139Z",
+   "attemptedAt": "2026-10-01T17:56:43.975Z",
+   "observedAt": "2026-10-01T17:57:18.223Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -15521,8 +15516,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T16:26:52.708Z",
-   "observedAt": "2026-10-01T16:27:14.139Z",
+   "attemptedAt": "2026-10-01T17:56:43.975Z",
+   "observedAt": "2026-10-01T17:57:18.223Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -15539,5 +15534,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T16:28:50.771Z"
+ "updatedAt": "2026-10-01T17:59:17.423Z"
 }
