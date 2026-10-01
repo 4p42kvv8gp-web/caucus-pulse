@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T19:29:13.904Z",
+ "classifiedAt": "2026-10-01T19:30:14.304Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -2364,7 +2364,18 @@
     "foreign-policy",
     "middle-east"
    ]
-  ]
+  ],
+  "2105741673632305411": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2105741756260303319": []
  },
  "incidents": {
   "2105721837619667398": {
@@ -8002,6 +8013,46 @@
    ],
    "evidenceUsed": [],
    "inputHash": "fd4dd6383446c6b1b972d54dda61b6d13839a1c518319755bf51ba11a8eda761"
+  },
+  "2105741673632305411": {
+   "contextVersion": 294,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e04e321337698bf18a5876f943fa92e6adf8a5de795e36a4642bf9f33cdab408"
+  },
+  "2105741756260303319": {
+   "contextVersion": 294,
+   "evidenceSupplied": [
+    {
+     "id": "n_cca167d3b7d97d12",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6116889-protect-college-sports-act-senate-trump/",
+     "text": "Trump touts Senate passage of Protect College Sports Act: ‘Really big deal’",
+     "title": "Trump touts Senate passage of Protect College Sports Act: ‘Really big deal’",
+     "publishedAt": "2026-09-29T12:42:16.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e04e321337698bf18a5876f943fa92e6adf8a5de795e36a4642bf9f33cdab408",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105715500055761283",
+    "fingerprint": "a70e978af23d5918991b1a20f4bf49046bccdf8560c5b46e211544a9617f95ed"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105715500055761283",
+    "fingerprint": "a70e978af23d5918991b1a20f4bf49046bccdf8560c5b46e211544a9617f95ed"
+   }
   }
  },
  "needsContext": {
@@ -8341,7 +8392,9 @@
   "2105740457707769910": false,
   "2105740461914620195": false,
   "2105740751883895019": false,
-  "2105741059787833366": false
+  "2105741059787833366": false,
+  "2105741673632305411": false,
+  "2105741756260303319": false
  },
  "inputBlocks": {},
  "contextVersion": 294,
@@ -8645,6 +8698,12 @@
    "ids": [
     "2105740457707769910"
    ]
+  },
+  {
+   "label": "sports betting promotion in pro sports",
+   "ids": [
+    "2105741756260303319"
+   ]
   }
  ],
  "unclassified": [],
@@ -8811,22 +8870,18 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105273136858148916",
-    "2105286470475165731",
-    "2105316510520766489",
-    "2105366990739157082",
-    "2105381405530234928",
-    "2105637063559205307"
+    "2105741673632305411",
+    "2105741756260303319"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T19:26:38.954Z",
-    "observedAt": "2026-10-01T19:26:50.863Z",
+    "attemptedAt": "2026-10-01T19:30:07.664Z",
+    "observedAt": "2026-10-01T19:30:14.294Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -8834,24 +8889,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T19:29:00.936Z",
-   "observedAt": "2026-10-01T19:29:13.823Z",
+   "attemptedAt": "2026-10-01T19:30:07.664Z",
+   "observedAt": "2026-10-01T19:30:14.294Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T19:29:00.936Z",
-   "observedAt": "2026-10-01T19:29:13.823Z",
+   "attemptedAt": "2026-10-01T19:30:07.664Z",
+   "observedAt": "2026-10-01T19:30:14.294Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-01T19:29:13.907Z"
+ "updatedAt": "2026-10-01T19:30:14.306Z"
 }
