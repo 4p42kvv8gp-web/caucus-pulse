@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-01T06:37:30.412Z",
+ "generatedAt": "2026-10-01T07:50:36.630Z",
  "incidents": [
   {
    "id": "monterey-county-ca--wildfire--timberfire--2026-09-30",
@@ -10,7 +10,7 @@
     "wildfire"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -32,7 +32,7 @@
    "since": "2026-09-30T19:18:41.000Z",
    "last": "2026-09-30T19:18:41.000Z",
    "updates": 1,
-   "engN": 0,
+   "engN": 1,
    "amplifiers": 0,
    "others": [],
    "title": "Timber Fire · Monterey County, CA",
@@ -60,7 +60,7 @@
      "who": "@RepJimmyPanetta",
      "tag": "member",
      "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
-     "engN": 0,
+     "engN": 1,
      "isNew": false,
      "flag": {
       "kind": "wildfire",
@@ -84,7 +84,35 @@
    "tweetIds": [
     "2105376807629279413"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted.",
+      "sourceId": "2105376807629279413",
+      "url": "https://x.com/i/web/status/2105376807629279413",
+      "evidenceQuote": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted.",
+      "src": "@RepJimmyPanetta, 2026-09-30T19:18:41.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
+      "sourceId": "2105376807629279413",
+      "url": "https://x.com/i/web/status/2105376807629279413",
+      "evidenceQuote": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
+      "src": "@RepJimmyPanetta, 2026-09-30T19:18:41.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-01T07:50:36.629Z",
+    "posts": 1,
+    "inputHash": "3ef90640f08d34dc3ddbead4a88399fb0a8f6cb1f568e7a85081024bf120954e",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -1096,7 +1124,7 @@
     "water outage"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -1235,7 +1263,7 @@
     "severe storm"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
