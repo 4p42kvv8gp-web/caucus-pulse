@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T04:31:44.131Z",
+ "classifiedAt": "2026-10-01T11:12:16.521Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -13062,12 +13062,6 @@
     "textHash": "27fa176abc5dd1be78f98158d1e9adbee14cac7a6612facc923556814e3384ca"
    }
   },
-  "2105443705133978042": {
-   "contextVersion": 282,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "eb84cd9d449cd54a7f078582cea5428f6fa1980b95804aced2a9e8d129306c4b"
-  },
   "2105444146651480367": {
    "contextVersion": 282,
    "evidenceSupplied": [],
@@ -14173,6 +14167,28 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "214925bd7c3a54b972d92649a961685c770fd49433f5a36ae458487d987f8395"
+  },
+  "2105443705133978042": {
+   "contextVersion": 288,
+   "evidenceSupplied": [
+    {
+     "id": "n_92cc3616ad3651e5",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5971507/trade-tensions-fewer-canadians-south-florida",
+     "text": "But Clavet, a Quebec native himself, said the trade war between the United States and Canada that began last year brought a flurry of cancellations. Some guests feigned illness. But one caller was blunt, blaming politics.",
+     "title": "Trade tensions mean fewer Canadians flocking to South Florida",
+     "publishedAt": "2026-10-01T09:00:00.000Z",
+     "fetchedAt": "2026-10-01T10:26:39.588Z",
+     "version": 288,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dfe9dfe07b5cee8b2bb4e650be315487f41ed477335ab6b1b3fdb635a17e241d"
   }
  },
  "needsContext": {
@@ -14740,7 +14756,6 @@
   "2105442915703038263": false,
   "2105443006119551352": false,
   "2105443148633678228": false,
-  "2105443705133978042": false,
   "2105444146651480367": false,
   "2105444271260098606": false,
   "2105445013253415094": true,
@@ -14797,10 +14812,11 @@
   "2105497247219937527": false,
   "2105500569532059807": false,
   "2105500604533821477": false,
-  "2105501167413350636": false
+  "2105501167413350636": false,
+  "2105443705133978042": false
  },
  "inputBlocks": {},
- "contextVersion": 285,
+ "contextVersion": 288,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -15562,22 +15578,18 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105493312165773635",
-    "2105497247219937527",
-    "2105500569532059807",
-    "2105500604533821477",
-    "2105501167413350636",
-    "2105511614468206914"
+    "2105443705133978042",
+    "2105608587758235943"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T04:31:33.263Z",
-    "observedAt": "2026-10-01T04:31:44.109Z",
+    "attemptedAt": "2026-10-01T11:12:12.131Z",
+    "observedAt": "2026-10-01T11:12:16.498Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -15585,21 +15597,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T04:31:33.263Z",
-   "observedAt": "2026-10-01T04:31:44.109Z",
+   "attemptedAt": "2026-10-01T11:12:12.131Z",
+   "observedAt": "2026-10-01T11:12:16.498Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T04:31:33.263Z",
-   "observedAt": "2026-10-01T04:31:44.109Z",
+   "attemptedAt": "2026-10-01T11:12:12.131Z",
+   "observedAt": "2026-10-01T11:12:16.498Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15612,5 +15624,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T04:31:44.135Z"
+ "updatedAt": "2026-10-01T11:12:16.527Z"
 }

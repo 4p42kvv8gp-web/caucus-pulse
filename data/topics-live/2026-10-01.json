@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T09:41:51.660Z",
+ "classifiedAt": "2026-10-01T11:12:16.531Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -22,6 +22,12 @@
    [
     "labor",
     "unions"
+   ]
+  ],
+  "2105608587758235943": [
+   [
+    "economy",
+    null
    ]
   ]
  },
@@ -56,15 +62,22 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "01a4c8c41ecd68060df462c1a0bbfcacb4bff1f876b827cf92c08e95b3f73a86"
+  },
+  "2105608587758235943": {
+   "contextVersion": 288,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "dfe9dfe07b5cee8b2bb4e650be315487f41ed477335ab6b1b3fdb635a17e241d"
   }
  },
  "needsContext": {
   "2105511614468206914": false,
   "2105580604381114803": true,
-  "2105583646610542846": false
+  "2105583646610542846": false,
+  "2105608587758235943": true
  },
  "inputBlocks": {},
- "contextVersion": 287,
+ "contextVersion": 288,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -77,14 +90,14 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105580604381114803",
-    "2105583646610542846"
+    "2105443705133978042",
+    "2105608587758235943"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T09:41:45.411Z",
-    "observedAt": "2026-10-01T09:41:51.657Z",
+    "attemptedAt": "2026-10-01T11:12:12.131Z",
+    "observedAt": "2026-10-01T11:12:16.498Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -96,8 +109,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T09:41:45.411Z",
-   "observedAt": "2026-10-01T09:41:51.657Z",
+   "attemptedAt": "2026-10-01T11:12:12.131Z",
+   "observedAt": "2026-10-01T11:12:16.498Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -105,8 +118,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T09:41:45.411Z",
-   "observedAt": "2026-10-01T09:41:51.657Z",
+   "attemptedAt": "2026-10-01T11:12:12.131Z",
+   "observedAt": "2026-10-01T11:12:16.498Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -115,5 +128,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-01T09:41:51.662Z"
+ "updatedAt": "2026-10-01T11:12:16.532Z"
 }
