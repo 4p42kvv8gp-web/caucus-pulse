@@ -1,7 +1,7 @@
 {
  "date": "2026-09-30",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-01T14:58:26.642Z",
+ "classifiedAt": "2026-10-01T16:28:50.766Z",
  "assignments": {
   "2105154903760904452": [
    [
@@ -507,6 +507,10 @@
    [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
    ]
   ],
   "2105303298958041406": [
@@ -1316,16 +1320,16 @@
   ],
   "2105345430485946376": [
    [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
     "economy",
     "prices-inflation"
    ],
    [
     "economy",
     "taxes"
-   ],
-   [
-    "foreign-policy",
-    "middle-east"
    ]
   ],
   "2105345495925399683": [
@@ -4063,10 +4067,6 @@
    [
     "economy",
     "prices-inflation"
-   ],
-   [
-    "economy",
-    "taxes"
    ],
    [
     "foreign-policy",
@@ -9885,36 +9885,6 @@
     "textHash": "53a9ab2b75a50f9e68d97574b40b3b40f8db1267e0990b17e700cd17f6caf307"
    }
   },
-  "2105390624778199245": {
-   "contextVersion": 279,
-   "evidenceSupplied": [
-    {
-     "id": "n_899c8579fe5292d4",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
-     "text": "Since announcing Robert F. Kennedy Jr. as his pick for Health and Human Services secretary last year, President Trump and Kennedy have touted their dedication to \" Gold Standard Scientific Research\" and making federal health agencies \"beacons of Transparency.\"",
-     "title": "What's behind HHS claims that gender-affirming care 'may' radicalize",
-     "publishedAt": "2026-09-30T09:00:00.000Z",
-     "fetchedAt": "2026-09-30T09:41:25.152Z",
-     "version": 269,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ee45732903e0c4d317dd3ec62827f59ae05f5f04e848a0c3fa718ac4ff37caef",
-   "quotedContext": {
-    "id": "2104562098852274614",
-    "authorId": "1120633726478823425",
-    "handle": "ZelenskyyUa",
-    "createdAt": "2026-09-28T13:21:19.000Z",
-    "textChars": 928,
-    "textHash": "c736e3277015b1ed647e3ddba07fea1ee327b65f326b69cb89c0356a0ea15ac6"
-   }
-  },
   "2105390823248638133": {
    "contextVersion": 279,
    "evidenceSupplied": [],
@@ -13699,90 +13669,6 @@
    "evidenceUsed": [],
    "inputHash": "dfe9dfe07b5cee8b2bb4e650be315487f41ed477335ab6b1b3fdb635a17e241d"
   },
-  "2105279198285709394": {
-   "contextVersion": 291,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_fed362db8fe0f556",
-     "publisher": "The Hill",
-     "date": "2026-09-26",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
-     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
-     "publishedAt": "2026-09-26T13:33:10.000Z",
-     "fetchedAt": "2026-09-26T16:31:46.784Z",
-     "version": 201,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4dbf7998a849a7fa"
-   ],
-   "inputHash": "24d45e15458a256f40dcbd37deb527a3ecc40263a330fbd34849fc64a70e5c88"
-  },
-  "2105288664221978999": {
-   "contextVersion": 291,
-   "evidenceSupplied": [
-    {
-     "id": "n_cf4dc07398f480da",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/6110883-live-updates-trump-xi-summit-dc-iran-war-affordability-gop-midterms/",
-     "text": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
-     "title": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
-     "publishedAt": "2026-09-25T19:17:14.000Z",
-     "fetchedAt": "2026-09-25T19:52:04.988Z",
-     "version": 184,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7d5e66898134a555",
-     "publisher": "The Hill",
-     "date": "2026-09-24",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6107478-gop-support-iran-war-drops/",
-     "text": "GOP breaks ranks on Iran as voters fume over war’s costs",
-     "title": "GOP breaks ranks on Iran as voters fume over war’s costs",
-     "publishedAt": "2026-09-24T10:00:00.000Z",
-     "fetchedAt": "2026-09-24T10:26:30.187Z",
-     "version": 154,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "24d45e15458a256f40dcbd37deb527a3ecc40263a330fbd34849fc64a70e5c88",
-   "quotedContext": {
-    "id": "2105288398533447925",
-    "authorId": "151963505",
-    "handle": "HouseBudgetDems",
-    "createdAt": "2026-09-30T13:27:23.000Z",
-    "textChars": 254,
-    "textHash": "90df24f56117283612825f44ceec079116ada1d2863bc021da2cca500088cbfd"
-   }
-  },
   "2105294891550957593": {
    "contextVersion": 291,
    "evidenceSupplied": [
@@ -13820,43 +13706,6 @@
    "evidenceUsed": [
     "n_4dbf7998a849a7fa"
    ],
-   "inputHash": "24d45e15458a256f40dcbd37deb527a3ecc40263a330fbd34849fc64a70e5c88"
-  },
-  "2105303281174274091": {
-   "contextVersion": 291,
-   "evidenceSupplied": [
-    {
-     "id": "n_eb83929a9ecf71ae",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6110895-pezeshkian-us-conflict-iran/",
-     "text": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
-     "title": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
-     "publishedAt": "2026-09-25T02:46:47.000Z",
-     "fetchedAt": "2026-09-25T03:37:08.431Z",
-     "version": 171,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_c04f99d347d297c2",
-     "publisher": "The Hill",
-     "date": "2026-09-27",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
-     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
-     "publishedAt": "2026-09-27T16:26:42.000Z",
-     "fetchedAt": "2026-09-27T17:16:14.227Z",
-     "version": 220,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
    "inputHash": "24d45e15458a256f40dcbd37deb527a3ecc40263a330fbd34849fc64a70e5c88"
   },
   "2105321090184544356": {
@@ -13933,8 +13782,134 @@
    "evidenceUsed": [],
    "inputHash": "24d45e15458a256f40dcbd37deb527a3ecc40263a330fbd34849fc64a70e5c88"
   },
+  "2105279198285709394": {
+   "contextVersion": 292,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fed362db8fe0f556",
+     "publisher": "The Hill",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6113000-trump-iran-proposal-ceasefire/",
+     "text": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "title": "Trump rejects Iran’s 7-day plan to end war, expects bombing to resume post-midterms",
+     "publishedAt": "2026-09-26T13:33:10.000Z",
+     "fetchedAt": "2026-09-26T16:31:46.784Z",
+     "version": 201,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa",
+    "n_fed362db8fe0f556"
+   ],
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758"
+  },
+  "2105288664221978999": {
+   "contextVersion": 292,
+   "evidenceSupplied": [
+    {
+     "id": "n_cf4dc07398f480da",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6110883-live-updates-trump-xi-summit-dc-iran-war-affordability-gop-midterms/",
+     "text": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "title": "Live updates: Xi departs after 3-day Trump visit; Iran war, economic squeeze weigh on GOP",
+     "publishedAt": "2026-09-25T19:17:14.000Z",
+     "fetchedAt": "2026-09-25T19:52:04.988Z",
+     "version": 184,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7d5e66898134a555",
+     "publisher": "The Hill",
+     "date": "2026-09-24",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6107478-gop-support-iran-war-drops/",
+     "text": "GOP breaks ranks on Iran as voters fume over war’s costs",
+     "title": "GOP breaks ranks on Iran as voters fume over war’s costs",
+     "publishedAt": "2026-09-24T10:00:00.000Z",
+     "fetchedAt": "2026-09-24T10:26:30.187Z",
+     "version": 154,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_cf4dc07398f480da"
+   ],
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758",
+   "quotedContext": {
+    "id": "2105288398533447925",
+    "authorId": "151963505",
+    "handle": "HouseBudgetDems",
+    "createdAt": "2026-09-30T13:27:23.000Z",
+    "textChars": 254,
+    "textHash": "90df24f56117283612825f44ceec079116ada1d2863bc021da2cca500088cbfd"
+   }
+  },
+  "2105303281174274091": {
+   "contextVersion": 292,
+   "evidenceSupplied": [
+    {
+     "id": "n_eb83929a9ecf71ae",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6110895-pezeshkian-us-conflict-iran/",
+     "text": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "title": "Iran’s president tells Fox anchor the war was ‘imposed on us’",
+     "publishedAt": "2026-09-25T02:46:47.000Z",
+     "fetchedAt": "2026-09-25T03:37:08.431Z",
+     "version": 171,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c04f99d347d297c2",
+     "publisher": "The Hill",
+     "date": "2026-09-27",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6113679-mark-kelly-criticizes-trump-iran-war/",
+     "text": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "title": "Mark Kelly: Trump ‘stuck’ with Iran and wants to ‘get back to where he was before’ war started",
+     "publishedAt": "2026-09-27T16:26:42.000Z",
+     "fetchedAt": "2026-09-27T17:16:14.227Z",
+     "version": 220,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c04f99d347d297c2"
+   ],
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758"
+  },
   "2105345430485946376": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_679027588c3d7710",
@@ -13970,10 +13945,10 @@
    "evidenceUsed": [
     "n_fb042d9979857a6e"
    ],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43"
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758"
   },
   "2105366247311614261": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_c04f99d347d297c2",
@@ -14006,8 +13981,10 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43",
+   "evidenceUsed": [
+    "n_c04f99d347d297c2"
+   ],
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758",
    "quotedContext": {
     "id": "2104984457723674894",
     "authorId": "1916941152411865088",
@@ -14018,7 +13995,7 @@
    }
   },
   "2105369609599664503": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_9b0f964d00452b05",
@@ -14052,12 +14029,58 @@
     }
    ],
    "evidenceUsed": [
-    "n_9b0f964d00452b05"
+    "n_9b0f964d00452b05",
+    "n_f1e42e8d845ec0bb"
    ],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43"
+   "inputHash": "306d364fea51be88e79e5699f4ce0df4fb258a6c31316db6b9d1f0366af03758"
+  },
+  "2105390624778199245": {
+   "contextVersion": 292,
+   "evidenceSupplied": [
+    {
+     "id": "n_bae91bc1844274b6",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6123393-trump-usip-name-blocked/",
+     "text": "Appeals court rules Trump’s name can’t be carved into Institute of Peace building",
+     "title": "Appeals court rules Trump’s name can’t be carved into Institute of Peace building",
+     "publishedAt": "2026-10-01T15:14:03.000Z",
+     "fetchedAt": "2026-10-01T15:42:02.407Z",
+     "version": 292,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_899c8579fe5292d4",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+     "text": "Since announcing Robert F. Kennedy Jr. as his pick for Health and Human Services secretary last year, President Trump and Kennedy have touted their dedication to \" Gold Standard Scientific Research\" and making federal health agencies \"beacons of Transparency.\"",
+     "title": "What's behind HHS claims that gender-affirming care 'may' radicalize",
+     "publishedAt": "2026-09-30T09:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "version": 269,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "bf2f8894ad64fa2329d663dadb5144d2e22172a2dcc49f8fcde54b26f6c97332",
+   "quotedContext": {
+    "id": "2104562098852274614",
+    "authorId": "1120633726478823425",
+    "handle": "ZelenskyyUa",
+    "createdAt": "2026-09-28T13:21:19.000Z",
+    "textChars": 928,
+    "textHash": "c736e3277015b1ed647e3ddba07fea1ee327b65f326b69cb89c0356a0ea15ac6"
+   }
   },
   "2105444271260098606": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_679027588c3d7710",
@@ -14091,10 +14114,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43"
+   "inputHash": "bf2f8894ad64fa2329d663dadb5144d2e22172a2dcc49f8fcde54b26f6c97332"
   },
   "2105457190974922945": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -14128,10 +14151,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43"
+   "inputHash": "bf2f8894ad64fa2329d663dadb5144d2e22172a2dcc49f8fcde54b26f6c97332"
   },
   "2105465164334002291": {
-   "contextVersion": 291,
+   "contextVersion": 292,
    "evidenceSupplied": [
     {
      "id": "n_bab91416a221ace6",
@@ -14165,7 +14188,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "cfcf16a434c260071c5ad8578298035e49f96fff8a975c42da370900883f9c43",
+   "inputHash": "bf2f8894ad64fa2329d663dadb5144d2e22172a2dcc49f8fcde54b26f6c97332",
    "quotedContext": {
     "id": "2105428735843299542",
     "authorId": "16544024",
@@ -14549,7 +14572,6 @@
   "2105389290481963117": false,
   "2105389418773156324": false,
   "2105390100817576092": false,
-  "2105390624778199245": false,
   "2105390823248638133": false,
   "2105391223477342328": false,
   "2105391599765368914": false,
@@ -14787,21 +14809,22 @@
   "2105500604533821477": false,
   "2105501167413350636": false,
   "2105443705133978042": false,
-  "2105279198285709394": false,
-  "2105288664221978999": false,
   "2105294891550957593": false,
-  "2105303281174274091": false,
   "2105321090184544356": false,
   "2105342818835431701": false,
+  "2105279198285709394": false,
+  "2105288664221978999": false,
+  "2105303281174274091": false,
   "2105345430485946376": false,
   "2105366247311614261": false,
   "2105369609599664503": false,
+  "2105390624778199245": false,
   "2105444271260098606": false,
   "2105457190974922945": false,
   "2105465164334002291": false
  },
  "inputBlocks": {},
- "contextVersion": 291,
+ "contextVersion": 292,
  "emerging": [
   {
    "label": "Ridglan Farms animal cruelty case prosecutions (Dane County DA)",
@@ -15352,48 +15375,31 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2105345430485946376",
-    "2105366247311614261",
-    "2105369609599664503",
+    "2105390624778199245",
     "2105444271260098606",
     "2105457190974922945",
     "2105465164334002291",
-    "2105659282137977046",
-    "2105659377621598389",
-    "2105659478058082353"
+    "2105673439046414452",
+    "2105673439654637776",
+    "2105673937049063549",
+    "2105674108508012588",
+    "2105674269779017733",
+    "2105674287537402170",
+    "2105674801503412695",
+    "2105674831899279529",
+    "2105675273480155562",
+    "2105675730839347379",
+    "2105676018425950345"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T14:57:03.376Z",
-    "observedAt": "2026-10-01T14:57:21.984Z",
+    "attemptedAt": "2026-10-01T16:26:52.708Z",
+    "observedAt": "2026-10-01T16:27:14.139Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-4": {
-   "acceptedIds": [
-    "2105423477364732147",
-    "2105424538322485592",
-    "2105424727971909989",
-    "2105424915369255060",
-    "2105424953873224101",
-    "2105425527615934716",
-    "2105425736349700210",
-    "2105425994039304259"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-09-30T22:36:53.048Z",
-    "observedAt": "2026-09-30T22:37:07.275Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 8,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   },
@@ -15485,16 +15491,16 @@
    "acceptedIds": [
     "2105279198285709394",
     "2105288664221978999",
-    "2105294891550957593",
     "2105303281174274091",
-    "2105321090184544356",
-    "2105342818835431701"
+    "2105345430485946376",
+    "2105366247311614261",
+    "2105369609599664503"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-01T14:56:56.319Z",
-    "observedAt": "2026-10-01T14:57:03.354Z",
+    "attemptedAt": "2026-10-01T16:26:41.090Z",
+    "observedAt": "2026-10-01T16:26:52.689Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -15506,21 +15512,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-01T14:57:03.376Z",
-   "observedAt": "2026-10-01T14:57:21.984Z",
+   "attemptedAt": "2026-10-01T16:26:52.708Z",
+   "observedAt": "2026-10-01T16:27:14.139Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-01T14:57:03.376Z",
-   "observedAt": "2026-10-01T14:57:21.984Z",
+   "attemptedAt": "2026-10-01T16:26:52.708Z",
+   "observedAt": "2026-10-01T16:27:14.139Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15533,5 +15539,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-01T14:58:26.652Z"
+ "updatedAt": "2026-10-01T16:28:50.771Z"
 }
