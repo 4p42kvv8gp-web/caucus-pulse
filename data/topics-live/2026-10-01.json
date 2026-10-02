@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T22:31:33.397Z",
+ "classifiedAt": "2026-10-02T23:58:17.371Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -3051,7 +3051,7 @@
   "2105742612443369967": [
    [
     "foreign-policy",
-    "military-veterans"
+    null
    ]
   ],
   "2105742796808421705": [
@@ -4781,20 +4781,6 @@
     "createdAt": "2026-09-30T21:11:30.000Z",
     "textChars": 231,
     "textHash": "42843f8f7fce84becbea91eca1eda3e225b7b0a7add56c904f24503a28d9eed4"
-   }
-  },
-  "2105635532118323307": {
-   "contextVersion": 289,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "9cc37025cbf28a33640ce06226ccfdae56c19f5dbffaf6ff97a238548463c878",
-   "quotedContext": {
-    "id": "2105627869619630569",
-    "authorId": "28785486",
-    "handle": "ABC",
-    "createdAt": "2026-10-01T11:56:19.000Z",
-    "textChars": 203,
-    "textHash": "7cd1afbb8261a3ff5201e9d3bd725a6d2deda4bd89e41b2d42ec1b5d4b33c7de"
    }
   },
   "2105637626577301723": {
@@ -11118,12 +11104,6 @@
    "evidenceUsed": [],
    "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
   },
-  "2105742155772035177": {
-   "contextVersion": 295,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
-  },
   "2105742198964658277": {
    "contextVersion": 295,
    "evidenceSupplied": [],
@@ -11199,43 +11179,6 @@
     "textChars": 107,
     "textHash": "47777e160864f59ce3a558f75ef5c6db914781ba7b3fd70649dccc919686edbb"
    }
-  },
-  "2105742612443369967": {
-   "contextVersion": 295,
-   "evidenceSupplied": [
-    {
-     "id": "n_9fced3ad72f4a8c8",
-     "publisher": "The Hill",
-     "date": "2026-09-25",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6111626-pete-hegseth-dod-register-to-vote-2026-midterms/",
-     "text": "Pete Hegseth urges troops to register to vote",
-     "title": "Pete Hegseth urges troops to register to vote",
-     "publishedAt": "2026-09-25T16:22:15.000Z",
-     "fetchedAt": "2026-09-25T17:36:54.654Z",
-     "version": 182,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a68b978bc1b99e19",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
-     "text": "At a gathering at U.S. Marine Corps Base Quantico in Virginia, Secretary of Defense Pete Hegseth told hundreds of junior military officers and enlisted leaders that the Trump administration has achieved a cultural shift in the military.",
-     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
-     "publishedAt": "2026-09-30T21:51:20.000Z",
-     "fetchedAt": "2026-09-30T23:16:37.557Z",
-     "version": 281,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
   },
   "2105742796808421705": {
    "contextVersion": 295,
@@ -14701,88 +14644,6 @@
     "textHash": "70e1303f64f25d6181d040d388aef95b445d5e2309936ee52c72c837aed1f5cf"
    }
   },
-  "2105699923349963096": {
-   "contextVersion": 313,
-   "evidenceSupplied": [
-    {
-     "id": "n_4ac051f3d30b5026",
-     "publisher": "The Hill",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6126882-trump-criticizes-letitia-james-appointment/",
-     "text": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
-     "title": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
-     "publishedAt": "2026-10-02T20:36:10.000Z",
-     "fetchedAt": "2026-10-02T20:43:52.857Z",
-     "version": 313,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_e8db80c24ee55b93",
-     "publisher": "NPR",
-     "date": "2026-09-24",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
-     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
-     "title": "Long agenda, short meeting: Trump and Xi meet",
-     "publishedAt": "2026-09-24T22:10:00.000Z",
-     "fetchedAt": "2026-09-26T05:08:06.167Z",
-     "version": 193,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c73fdd58dd42b94021362946bc8bef0c1316797a685ed2be7bbb9b331bbafe5f"
-  },
-  "2105699925224808793": {
-   "contextVersion": 313,
-   "evidenceSupplied": [
-    {
-     "id": "n_4ac051f3d30b5026",
-     "publisher": "The Hill",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6126882-trump-criticizes-letitia-james-appointment/",
-     "text": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
-     "title": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
-     "publishedAt": "2026-10-02T20:36:10.000Z",
-     "fetchedAt": "2026-10-02T20:43:52.857Z",
-     "version": 313,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_e8db80c24ee55b93",
-     "publisher": "NPR",
-     "date": "2026-09-24",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
-     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
-     "title": "Long agenda, short meeting: Trump and Xi meet",
-     "publishedAt": "2026-09-24T22:10:00.000Z",
-     "fetchedAt": "2026-09-26T05:08:06.167Z",
-     "version": 193,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c73fdd58dd42b94021362946bc8bef0c1316797a685ed2be7bbb9b331bbafe5f",
-   "quotedContext": {
-    "id": "2105699923349963096",
-    "authorId": "1067748650485497862",
-    "handle": "RepChrisPappas",
-    "createdAt": "2026-10-01T16:42:38.000Z",
-    "textChars": 394,
-    "textHash": "e449edc2c06a1b69d6cb24ffc1ddef0c3a7a242ab5dd5f36ed4023fe4eefd2d5"
-   }
-  },
   "2105662366348095922": {
    "contextVersion": 314,
    "evidenceSupplied": [
@@ -15095,6 +14956,181 @@
    ],
    "evidenceUsed": [],
    "inputHash": "f207a035a93cb997741c65963b596651a9ccbd7a2e6b7206629e492f154d576f"
+  },
+  "2105635532118323307": {
+   "contextVersion": 315,
+   "evidenceSupplied": [
+    {
+     "id": "n_f08519ed983fce52",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5985789/trump-arch-protest-veterans-midterms",
+     "text": "\"It's the wrong monument, in the wrong place, at the wrong time, dedicated to the wrong man,\" said Jon Gundersen, a retired Army veteran and former Foreign Service officer who is one of the Vietnam War veterans suing the Trump administration over the arch.",
+     "title": "As Trump's proposed arch looms over D.C., protesters pin their hopes on the midterms",
+     "publishedAt": "2026-10-02T21:44:07.000Z",
+     "fetchedAt": "2026-10-02T23:15:47.414Z",
+     "version": 315,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "19c789d63f56af21ae42ed2b80ff28f78e0596727df54a229f60f04db788da5c",
+   "quotedContext": {
+    "id": "2105627869619630569",
+    "authorId": "28785486",
+    "handle": "ABC",
+    "createdAt": "2026-10-01T11:56:19.000Z",
+    "textChars": 203,
+    "textHash": "7cd1afbb8261a3ff5201e9d3bd725a6d2deda4bd89e41b2d42ec1b5d4b33c7de"
+   }
+  },
+  "2105699923349963096": {
+   "contextVersion": 315,
+   "evidenceSupplied": [
+    {
+     "id": "n_4ac051f3d30b5026",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6126882-trump-criticizes-letitia-james-appointment/",
+     "text": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "title": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "publishedAt": "2026-10-02T20:36:10.000Z",
+     "fetchedAt": "2026-10-02T20:43:52.857Z",
+     "version": 313,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e8db80c24ee55b93",
+     "publisher": "NPR",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
+     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
+     "title": "Long agenda, short meeting: Trump and Xi meet",
+     "publishedAt": "2026-09-24T22:10:00.000Z",
+     "fetchedAt": "2026-09-26T05:08:06.167Z",
+     "version": 193,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e8db80c24ee55b93"
+   ],
+   "inputHash": "19c789d63f56af21ae42ed2b80ff28f78e0596727df54a229f60f04db788da5c"
+  },
+  "2105699925224808793": {
+   "contextVersion": 315,
+   "evidenceSupplied": [
+    {
+     "id": "n_4ac051f3d30b5026",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6126882-trump-criticizes-letitia-james-appointment/",
+     "text": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "title": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "publishedAt": "2026-10-02T20:36:10.000Z",
+     "fetchedAt": "2026-10-02T20:43:52.857Z",
+     "version": 313,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e8db80c24ee55b93",
+     "publisher": "NPR",
+     "date": "2026-09-24",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/24/nx-s1-5973112/long-agenda-short-meeting-trump-and-xi-meet",
+     "text": "MARY LOUISE KELLY, HOST: Two of the world's biggest powers and biggest adversaries just walked a red carpet together. President Trump met China's President Xi Jinping on the tarmac at Joint Base Andrews just outside Washington - a rare diplomatic gesture. The agenda for the state visit is long. The two leaders have been at odds on trade, on the U.S. war with Iran, artificial intelligence and more. Yet the meeting itself was short, clocking in at about an hour and change. Xi and Trump meet again this evening in the East Room of the White House for a state dinner.",
+     "title": "Long agenda, short meeting: Trump and Xi meet",
+     "publishedAt": "2026-09-24T22:10:00.000Z",
+     "fetchedAt": "2026-09-26T05:08:06.167Z",
+     "version": 193,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "19c789d63f56af21ae42ed2b80ff28f78e0596727df54a229f60f04db788da5c",
+   "quotedContext": {
+    "id": "2105699923349963096",
+    "authorId": "1067748650485497862",
+    "handle": "RepChrisPappas",
+    "createdAt": "2026-10-01T16:42:38.000Z",
+    "textChars": 394,
+    "textHash": "e449edc2c06a1b69d6cb24ffc1ddef0c3a7a242ab5dd5f36ed4023fe4eefd2d5"
+   }
+  },
+  "2105742155772035177": {
+   "contextVersion": 315,
+   "evidenceSupplied": [
+    {
+     "id": "n_95ab93b928b606b2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6127113-kushner-denies-cnn-israel-investment-report/",
+     "text": "Kushner pushes back on CNN report about Israeli investments tied to military",
+     "title": "Kushner pushes back on CNN report about Israeli investments tied to military",
+     "publishedAt": "2026-10-02T22:33:40.000Z",
+     "fetchedAt": "2026-10-02T23:15:47.414Z",
+     "version": 315,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "19c789d63f56af21ae42ed2b80ff28f78e0596727df54a229f60f04db788da5c"
+  },
+  "2105742612443369967": {
+   "contextVersion": 315,
+   "evidenceSupplied": [
+    {
+     "id": "n_9fced3ad72f4a8c8",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6111626-pete-hegseth-dod-register-to-vote-2026-midterms/",
+     "text": "Pete Hegseth urges troops to register to vote",
+     "title": "Pete Hegseth urges troops to register to vote",
+     "publishedAt": "2026-09-25T16:22:15.000Z",
+     "fetchedAt": "2026-09-25T17:36:54.654Z",
+     "version": 182,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a68b978bc1b99e19",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
+     "text": "At a gathering at U.S. Marine Corps Base Quantico in Virginia, Secretary of Defense Pete Hegseth told hundreds of junior military officers and enlisted leaders that the Trump administration has achieved a cultural shift in the military.",
+     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "publishedAt": "2026-09-30T21:51:20.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a68b978bc1b99e19"
+   ],
+   "inputHash": "19c789d63f56af21ae42ed2b80ff28f78e0596727df54a229f60f04db788da5c"
   }
  },
  "needsContext": {
@@ -15110,7 +15146,6 @@
   "2105632379112968610": false,
   "2105633938467172377": false,
   "2105635366531211614": false,
-  "2105635532118323307": false,
   "2105637626577301723": false,
   "2105638420697817488": false,
   "2105640739870794202": false,
@@ -15510,14 +15545,12 @@
   "2105763504510861774": false,
   "2105763719188021706": false,
   "2105742041892483306": false,
-  "2105742155772035177": false,
   "2105742198964658277": false,
   "2105742579299967446": false,
   "2105742579606470908": false,
   "2105742581758108044": false,
   "2105742585289482672": false,
   "2105742587189752145": false,
-  "2105742612443369967": true,
   "2105742796808421705": false,
   "2105743163491299504": false,
   "2105696292336796078": false,
@@ -15734,8 +15767,6 @@
   "2105869622998430190": false,
   "2105761870053548255": false,
   "2105752905491894485": false,
-  "2105699923349963096": false,
-  "2105699925224808793": false,
   "2105662366348095922": false,
   "2105697523834798100": false,
   "2105704005573750898": false,
@@ -15744,10 +15775,15 @@
   "2105761899681927218": false,
   "2105763296141877753": false,
   "2105742583918141859": false,
-  "2105826350615445530": false
+  "2105826350615445530": false,
+  "2105635532118323307": false,
+  "2105699923349963096": false,
+  "2105699925224808793": false,
+  "2105742155772035177": false,
+  "2105742612443369967": true
  },
  "inputBlocks": {},
- "contextVersion": 314,
+ "contextVersion": 315,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -16361,60 +16397,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105662366348095922",
-    "2105697523834798100",
-    "2105704005573750898",
-    "2105710239508988390",
-    "2105713427242987974",
-    "2105761899681927218",
-    "2105763296141877753",
-    "2105742583918141859"
+    "2105635532118323307",
+    "2105699923349963096",
+    "2105699925224808793",
+    "2105742155772035177",
+    "2105742612443369967",
+    "2106012875856728426",
+    "2106082167512072647"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T22:29:45.435Z",
-    "observedAt": "2026-10-02T22:29:59.622Z",
+    "attemptedAt": "2026-10-02T23:56:51.796Z",
+    "observedAt": "2026-10-02T23:57:05.284Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 8,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105826350615445530",
-    "2106016873980858731",
-    "2106033805643464750",
-    "2106053784296100240",
-    "2106072786863087724",
-    "2106126761633460540",
-    "2106126827530146093",
-    "2106126896488452370",
-    "2106127209937424750",
-    "2106128031702302980",
-    "2106128102531170668",
-    "2106128803734954190",
-    "2106128898643677417",
-    "2106129298826424747",
-    "2106129351733658065",
-    "2106129553588375847",
-    "2106129595854360722",
-    "2106130149854892534",
-    "2106131426781618229",
-    "2106131486843814391",
-    "2106133007778070915"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-02T22:29:59.648Z",
-    "observedAt": "2026-10-02T22:30:34.676Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 21,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -16422,24 +16421,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T22:29:59.648Z",
-   "observedAt": "2026-10-02T22:30:34.676Z",
+   "attemptedAt": "2026-10-02T23:56:51.796Z",
+   "observedAt": "2026-10-02T23:57:05.284Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T22:29:59.648Z",
-   "observedAt": "2026-10-02T22:30:34.676Z",
+   "attemptedAt": "2026-10-02T23:56:51.796Z",
+   "observedAt": "2026-10-02T23:57:05.284Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T22:31:33.403Z"
+ "updatedAt": "2026-10-02T23:58:17.376Z"
 }
