@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T20:59:08.368Z",
+ "classifiedAt": "2026-10-02T22:31:33.397Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -1546,7 +1546,7 @@
    ],
    [
     "healthcare",
-    null
+    "medicaid"
    ],
    [
     "economy",
@@ -2877,6 +2877,10 @@
    [
     "constituent-services",
     null
+   ],
+   [
+    "healthcare",
+    "medicaid"
    ]
   ],
   "2105761900956880923": [
@@ -2949,6 +2953,10 @@
    [
     "budget-appropriations",
     "snap-benefits"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2105763435644596287": [
@@ -5512,20 +5520,6 @@
     "textHash": "b05d0572cbcb5f93a241bd1d9da0531d7f2c8dd99092020ea465c33746d6d375"
    }
   },
-  "2105662366348095922": {
-   "contextVersion": 291,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "cf71e2cd9c9d9fb435b927d07445dc4c3e85bda833e4300660650a4a34801811",
-   "quotedContext": {
-    "id": "2105322488469365000",
-    "authorId": "2310862562",
-    "handle": "LaikenJordahl",
-    "createdAt": "2026-09-30T15:42:50.000Z",
-    "textChars": 292,
-    "textHash": "945d23919260d31f1c39b94cf9ff2cab9d8274a5b45b4cba48ec78c633699324"
-   }
-  },
   "2105662542609801254": {
    "contextVersion": 291,
    "evidenceSupplied": [],
@@ -7153,36 +7147,6 @@
    "evidenceUsed": [],
    "inputHash": "44ce2fde8565d12a2d496d5720af9be0e10df3daad3cc9ee9acf3f9f7a07341b"
   },
-  "2105697523834798100": {
-   "contextVersion": 293,
-   "evidenceSupplied": [
-    {
-     "id": "n_5e27b61fb26f9ba3",
-     "publisher": "Roll Call",
-     "date": "2026-09-25",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/25/supreme-court-revives-expansion-of-federal-voter-database/",
-     "text": "The order set aside a decision from the U.S. Court of Appeals for the District of Columbia Circuit which paused the changes, and said the database could be used to check voter eligibility ahead of the midterms.",
-     "title": "Supreme Court revives expansion of federal voter database",
-     "publishedAt": "2026-09-25T13:14:13.000Z",
-     "fetchedAt": "2026-09-25T17:36:54.654Z",
-     "version": 182,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "44ce2fde8565d12a2d496d5720af9be0e10df3daad3cc9ee9acf3f9f7a07341b",
-   "quotedContext": {
-    "id": "2105284484027351502",
-    "authorId": "8216772",
-    "handle": "denverpost",
-    "createdAt": "2026-09-30T13:11:49.000Z",
-    "textChars": 248,
-    "textHash": "7c7f48460bf20299ab5d4a77c7507887ca810672a826fa1cbff96a0628e8ceb7"
-   }
-  },
   "2105698022101512518": {
    "contextVersion": 293,
    "evidenceSupplied": [],
@@ -7415,51 +7379,6 @@
     "textHash": "fa1fa2f40e0a36463d9218d9b9cb10f94d89188f2014d12fd6c3371cb516c9cd"
    }
   },
-  "2105704005573750898": {
-   "contextVersion": 293,
-   "evidenceSupplied": [
-    {
-     "id": "n_7717ef3da9b2063f",
-     "publisher": "The Hill",
-     "date": "2026-09-29",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6117962-trump-rally-nebraska-midterms/",
-     "text": "Trump extends red state midterm tour to Nebraska",
-     "title": "Trump extends red state midterm tour to Nebraska",
-     "publishedAt": "2026-09-29T16:16:31.000Z",
-     "fetchedAt": "2026-09-29T17:17:54.715Z",
-     "version": 255,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_3431a658e4179b6c",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/healthcare/6115908-democrats-attack-collins-medicaid-cuts/",
-     "text": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
-     "title": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
-     "publishedAt": "2026-09-28T21:16:14.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "17558a0716bdc5cba8f928e5856bbcdfb62ff9161a4d77ded06ae25e1e65c4c3",
-   "quotedContext": {
-    "id": "2105476325377024438",
-    "authorId": "637241319",
-    "handle": "JoanAlker1",
-    "createdAt": "2026-10-01T01:54:08.000Z",
-    "textChars": 279,
-    "textHash": "04bdc5de92b8155b2521156b2809e0bddb26e6ca0c680982a097246cde0af24a"
-   }
-  },
   "2105704068870250583": {
    "contextVersion": 293,
    "evidenceSupplied": [
@@ -7689,43 +7608,6 @@
    "evidenceUsed": [],
    "inputHash": "17558a0716bdc5cba8f928e5856bbcdfb62ff9161a4d77ded06ae25e1e65c4c3"
   },
-  "2105710239508988390": {
-   "contextVersion": 293,
-   "evidenceSupplied": [
-    {
-     "id": "n_3431a658e4179b6c",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/healthcare/6115908-democrats-attack-collins-medicaid-cuts/",
-     "text": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
-     "title": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
-     "publishedAt": "2026-09-28T21:16:14.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7ea33f5bf4a07190",
-     "publisher": "Roll Call",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
-     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
-     "title": "Housing groups challenge Trump funding clawback",
-     "publishedAt": "2026-09-30T16:01:01.000Z",
-     "fetchedAt": "2026-09-30T21:46:34.754Z",
-     "version": 280,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "17558a0716bdc5cba8f928e5856bbcdfb62ff9161a4d77ded06ae25e1e65c4c3"
-  },
   "2105710242566692964": {
    "contextVersion": 293,
    "evidenceSupplied": [],
@@ -7924,12 +7806,6 @@
     "textChars": 286,
     "textHash": "b68e067da4d4da873e75d29a5502b6207938bd78d3c7e4d16d0866db375c2576"
    }
-  },
-  "2105713427242987974": {
-   "contextVersion": 293,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "05cc38851579af959f1e948a847b412cf906f104f22d570ae7da38ccc99f99c7"
   },
   "2105713625549697432": {
    "contextVersion": 293,
@@ -11073,20 +10949,6 @@
     "textHash": "4ca43d505c36bd49e3289f7221cdbc0951a6eccf3fd308a83927911e77b8770b"
    }
   },
-  "2105761899681927218": {
-   "contextVersion": 295,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c",
-   "quotedContext": {
-    "id": "2105761898490703989",
-    "authorId": "1873797020143804416",
-    "handle": "RepDexterOR",
-    "createdAt": "2026-10-01T20:48:54.000Z",
-    "textChars": 149,
-    "textHash": "c67aafe798ad02ced78fe4247c4239ce987bfaae95a4ac0d5b2dbad4f774bfca"
-   }
-  },
   "2105761900956880923": {
    "contextVersion": 295,
    "evidenceSupplied": [],
@@ -11212,28 +11074,6 @@
    "evidenceUsed": [],
    "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
   },
-  "2105763296141877753": {
-   "contextVersion": 295,
-   "evidenceSupplied": [
-    {
-     "id": "n_983bcafa9c520e5e",
-     "publisher": "NPR",
-     "date": "2026-09-26",
-     "kind": "lead",
-     "url": "https://www.npr.org/2026/09/26/nx-s1-5981494/press-pool-dispute-escalates-as-white-house-cuts-cnn-from-air-force-one-travel",
-     "text": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
-     "title": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
-     "publishedAt": "2026-09-26T11:38:03.000Z",
-     "fetchedAt": "2026-09-27T01:26:53.361Z",
-     "version": 211,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
-  },
   "2105763435644596287": {
    "contextVersion": 295,
    "evidenceSupplied": [],
@@ -11314,20 +11154,6 @@
     "createdAt": "2026-10-01T19:32:08.000Z",
     "textChars": 124,
     "textHash": "8628ae394a2d652d9e88351fc247da561da6f1c48d7f18d33fda9fc9653a509f"
-   }
-  },
-  "2105742583918141859": {
-   "contextVersion": 295,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c",
-   "quotedContext": {
-    "id": "2105742581758108044",
-    "authorId": "1082334352711790593",
-    "handle": "Ilhan",
-    "createdAt": "2026-10-01T19:32:08.000Z",
-    "textChars": 62,
-    "textHash": "9635a27402045e65bd479923564390aafe99385762917d76c7f8fbe99b460899"
    }
   },
   "2105742585289482672": {
@@ -14321,43 +14147,6 @@
    "evidenceUsed": [],
    "inputHash": "dda84fcc4647d2bef245d209a912ebbcb6f9211b064550d4bb9616d7c865df5b"
   },
-  "2105826350615445530": {
-   "contextVersion": 299,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_eeff9577407e8b4a",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6115660-thune-iran-war-midterm-voters/",
-     "text": "Thune says Iran war has ‘trumped everything else’ for voters",
-     "title": "Thune says Iran war has ‘trumped everything else’ for voters",
-     "publishedAt": "2026-09-28T17:21:23.000Z",
-     "fetchedAt": "2026-09-28T18:35:39.134Z",
-     "version": 238,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "dda84fcc4647d2bef245d209a912ebbcb6f9211b064550d4bb9616d7c865df5b"
-  },
   "2105827079291871675": {
    "contextVersion": 299,
    "evidenceSupplied": [],
@@ -14993,6 +14782,319 @@
     "textChars": 394,
     "textHash": "e449edc2c06a1b69d6cb24ffc1ddef0c3a7a242ab5dd5f36ed4023fe4eefd2d5"
    }
+  },
+  "2105662366348095922": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_c6e32ee41668c456",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6127037-trump-administration-border-halted-texas/",
+     "text": "Judge halts contentious border construction in and near Texas’s Big Bend National Park",
+     "title": "Judge halts contentious border construction in and near Texas’s Big Bend National Park",
+     "publishedAt": "2026-10-02T21:09:48.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632",
+   "quotedContext": {
+    "id": "2105322488469365000",
+    "authorId": "2310862562",
+    "handle": "LaikenJordahl",
+    "createdAt": "2026-09-30T15:42:50.000Z",
+    "textChars": 292,
+    "textHash": "945d23919260d31f1c39b94cf9ff2cab9d8274a5b45b4cba48ec78c633699324"
+   }
+  },
+  "2105697523834798100": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_5e27b61fb26f9ba3",
+     "publisher": "Roll Call",
+     "date": "2026-09-25",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/25/supreme-court-revives-expansion-of-federal-voter-database/",
+     "text": "The order set aside a decision from the U.S. Court of Appeals for the District of Columbia Circuit which paused the changes, and said the database could be used to check voter eligibility ahead of the midterms.",
+     "title": "Supreme Court revives expansion of federal voter database",
+     "publishedAt": "2026-09-25T13:14:13.000Z",
+     "fetchedAt": "2026-09-25T17:36:54.654Z",
+     "version": 182,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632",
+   "quotedContext": {
+    "id": "2105284484027351502",
+    "authorId": "8216772",
+    "handle": "denverpost",
+    "createdAt": "2026-09-30T13:11:49.000Z",
+    "textChars": 248,
+    "textHash": "7c7f48460bf20299ab5d4a77c7507887ca810672a826fa1cbff96a0628e8ceb7"
+   }
+  },
+  "2105704005573750898": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_7717ef3da9b2063f",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6117962-trump-rally-nebraska-midterms/",
+     "text": "Trump extends red state midterm tour to Nebraska",
+     "title": "Trump extends red state midterm tour to Nebraska",
+     "publishedAt": "2026-09-29T16:16:31.000Z",
+     "fetchedAt": "2026-09-29T17:17:54.715Z",
+     "version": 255,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632",
+   "quotedContext": {
+    "id": "2105476325377024438",
+    "authorId": "637241319",
+    "handle": "JoanAlker1",
+    "createdAt": "2026-10-01T01:54:08.000Z",
+    "textChars": 279,
+    "textHash": "04bdc5de92b8155b2521156b2809e0bddb26e6ca0c680982a097246cde0af24a"
+   }
+  },
+  "2105710239508988390": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_3431a658e4179b6c",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6115908-democrats-attack-collins-medicaid-cuts/",
+     "text": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
+     "title": "Senate Democratic PAC hits Collins over Medicaid cuts she voted against",
+     "publishedAt": "2026-09-28T21:16:14.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632"
+  },
+  "2105713427242987974": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632"
+  },
+  "2105761899681927218": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632",
+   "quotedContext": {
+    "id": "2105761898490703989",
+    "authorId": "1873797020143804416",
+    "handle": "RepDexterOR",
+    "createdAt": "2026-10-01T20:48:54.000Z",
+    "textChars": 149,
+    "textHash": "c67aafe798ad02ced78fe4247c4239ce987bfaae95a4ac0d5b2dbad4f774bfca"
+   }
+  },
+  "2105763296141877753": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_983bcafa9c520e5e",
+     "publisher": "NPR",
+     "date": "2026-09-26",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/09/26/nx-s1-5981494/press-pool-dispute-escalates-as-white-house-cuts-cnn-from-air-force-one-travel",
+     "text": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
+     "title": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
+     "publishedAt": "2026-09-26T11:38:03.000Z",
+     "fetchedAt": "2026-09-27T01:26:53.361Z",
+     "version": 211,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632"
+  },
+  "2105742583918141859": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_8312685969577df2",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6126910-refugees-legal-immigrants-lose-medicaid-coverage/",
+     "text": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "title": "Thousands of immigrants with legal status lose Medicaid coverage as ‘big, beautiful’ cuts begin",
+     "publishedAt": "2026-10-02T20:45:59.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "876868d3d22816ca4b813b94a0ca1e62c96e207eb244c097e56e35d58ad83632",
+   "quotedContext": {
+    "id": "2105742581758108044",
+    "authorId": "1082334352711790593",
+    "handle": "Ilhan",
+    "createdAt": "2026-10-01T19:32:08.000Z",
+    "textChars": 62,
+    "textHash": "9635a27402045e65bd479923564390aafe99385762917d76c7f8fbe99b460899"
+   }
+  },
+  "2105826350615445530": {
+   "contextVersion": 314,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_eeff9577407e8b4a",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115660-thune-iran-war-midterm-voters/",
+     "text": "Thune says Iran war has ‘trumped everything else’ for voters",
+     "title": "Thune says Iran war has ‘trumped everything else’ for voters",
+     "publishedAt": "2026-09-28T17:21:23.000Z",
+     "fetchedAt": "2026-09-28T18:35:39.134Z",
+     "version": 238,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f207a035a93cb997741c65963b596651a9ccbd7a2e6b7206629e492f154d576f"
   }
  },
  "needsContext": {
@@ -15052,7 +15154,6 @@
   "2105661992887267631": false,
   "2105662003729604958": false,
   "2105662236907946361": false,
-  "2105662366348095922": false,
   "2105662542609801254": false,
   "2105662994206081409": false,
   "2105663008529617170": false,
@@ -15152,7 +15253,6 @@
   "2105696346594263313": false,
   "2105696573938385183": false,
   "2105696785444258095": false,
-  "2105697523834798100": false,
   "2105698022101512518": true,
   "2105698681965961220": false,
   "2105698729642647673": false,
@@ -15174,7 +15274,6 @@
   "2105702339248001272": false,
   "2105702825070084358": false,
   "2105703483525792069": false,
-  "2105704005573750898": false,
   "2105704068870250583": false,
   "2105704736037232827": false,
   "2105705938682290676": true,
@@ -15192,7 +15291,6 @@
   "2105709087480819915": false,
   "2105709655112528362": false,
   "2105709951653904659": false,
-  "2105710239508988390": false,
   "2105710242566692964": false,
   "2105710433625649395": false,
   "2105710484754153905": false,
@@ -15205,7 +15303,6 @@
   "2105712841311572369": false,
   "2105712969971626179": false,
   "2105713135889875193": false,
-  "2105713427242987974": false,
   "2105713625549697432": false,
   "2105714206179725650": false,
   "2105714350535197122": false,
@@ -15400,7 +15497,6 @@
   "2105761842114986035": false,
   "2105761897261772804": false,
   "2105761898490703989": false,
-  "2105761899681927218": false,
   "2105761900956880923": false,
   "2105762071392534539": false,
   "2105762148647346249": false,
@@ -15410,7 +15506,6 @@
   "2105762838476210431": false,
   "2105762962342559760": false,
   "2105763104315613362": false,
-  "2105763296141877753": false,
   "2105763435644596287": false,
   "2105763504510861774": false,
   "2105763719188021706": false,
@@ -15420,7 +15515,6 @@
   "2105742579299967446": false,
   "2105742579606470908": false,
   "2105742581758108044": false,
-  "2105742583918141859": false,
   "2105742585289482672": false,
   "2105742587189752145": false,
   "2105742612443369967": true,
@@ -15608,7 +15702,6 @@
   "2105823330301345931": false,
   "2105824437689872737": false,
   "2105825358243139831": false,
-  "2105826350615445530": false,
   "2105827079291871675": false,
   "2105827579391332695": false,
   "2105830360802042250": false,
@@ -15642,10 +15735,19 @@
   "2105761870053548255": false,
   "2105752905491894485": false,
   "2105699923349963096": false,
-  "2105699925224808793": false
+  "2105699925224808793": false,
+  "2105662366348095922": false,
+  "2105697523834798100": false,
+  "2105704005573750898": false,
+  "2105710239508988390": false,
+  "2105713427242987974": false,
+  "2105761899681927218": false,
+  "2105763296141877753": false,
+  "2105742583918141859": false,
+  "2105826350615445530": false
  },
  "inputBlocks": {},
- "contextVersion": 313,
+ "contextVersion": 314,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -16153,6 +16255,12 @@
    "ids": [
     "2105850143866286255"
    ]
+  },
+  {
+   "label": "Big Bend National Park border wall construction resumed",
+   "ids": [
+    "2105662366348095922"
+   ]
   }
  ],
  "unclassified": [],
@@ -16164,55 +16272,6 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2105742333656302048",
-    "2105743357460832432",
-    "2105743551720268086",
-    "2105743571877802158",
-    "2105744081028526197",
-    "2105764297406398733",
-    "2105764351781073328",
-    "2105764405208060369",
-    "2105764505670074452",
-    "2105764569566024108",
-    "2105764715112583341",
-    "2105764869505270041",
-    "2105764882377330912",
-    "2105764901985898984",
-    "2105765048551436669",
-    "2105765134564246003",
-    "2105765570926817473",
-    "2105765650169839931",
-    "2105765738258551278",
-    "2105766684066037930",
-    "2105767497647653173",
-    "2105767658352460192",
-    "2105767682003882174",
-    "2105768016000745852",
-    "2105768274550219076",
-    "2105770153883381960",
-    "2105770186917990836",
-    "2105770237471727706",
-    "2105770327405904327",
-    "2105770481773129905",
-    "2105770730944434411",
-    "2105771127511687359",
-    "2105771828413182186",
-    "2105772019828592728"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-01T22:26:54.016Z",
-    "observedAt": "2026-10-01T22:27:35.862Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 34,
-    "retryCount": 0
-   }
-  },
   "live_chunk-4": {
    "acceptedIds": [
     "2105772108412510528",
@@ -16302,22 +16361,60 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105699923349963096",
-    "2105699925224808793",
-    "2106061848629915968",
-    "2106072955721515104",
-    "2106074735045992688",
-    "2106074896694456482"
+    "2105662366348095922",
+    "2105697523834798100",
+    "2105704005573750898",
+    "2105710239508988390",
+    "2105713427242987974",
+    "2105761899681927218",
+    "2105763296141877753",
+    "2105742583918141859"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T20:57:35.988Z",
-    "observedAt": "2026-10-02T20:57:49.312Z",
+    "attemptedAt": "2026-10-02T22:29:45.435Z",
+    "observedAt": "2026-10-02T22:29:59.622Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 8,
+    "retryCount": 0
+   }
+  },
+  "live_chunk-1": {
+   "acceptedIds": [
+    "2105826350615445530",
+    "2106016873980858731",
+    "2106033805643464750",
+    "2106053784296100240",
+    "2106072786863087724",
+    "2106126761633460540",
+    "2106126827530146093",
+    "2106126896488452370",
+    "2106127209937424750",
+    "2106128031702302980",
+    "2106128102531170668",
+    "2106128803734954190",
+    "2106128898643677417",
+    "2106129298826424747",
+    "2106129351733658065",
+    "2106129553588375847",
+    "2106129595854360722",
+    "2106130149854892534",
+    "2106131426781618229",
+    "2106131486843814391",
+    "2106133007778070915"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-02T22:29:59.648Z",
+    "observedAt": "2026-10-02T22:30:34.676Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 21,
     "retryCount": 0
    }
   }
@@ -16325,24 +16422,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T20:57:35.988Z",
-   "observedAt": "2026-10-02T20:57:49.312Z",
+   "attemptedAt": "2026-10-02T22:29:59.648Z",
+   "observedAt": "2026-10-02T22:30:34.676Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 21,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T20:57:35.988Z",
-   "observedAt": "2026-10-02T20:57:49.312Z",
+   "attemptedAt": "2026-10-02T22:29:59.648Z",
+   "observedAt": "2026-10-02T22:30:34.676Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 21,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T20:59:08.372Z"
+ "updatedAt": "2026-10-02T22:31:33.403Z"
 }
