@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T11:34:36.474Z",
+ "classifiedAt": "2026-10-02T17:58:09.336Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -11724,53 +11724,6 @@
    "evidenceUsed": [],
    "inputHash": "610ad2e586c476558f9ccc29b9db45d36f76c91d69d412ad5c59ba50e6e42a8e"
   },
-  "2105752905491894485": {
-   "contextVersion": 296,
-   "evidenceSupplied": [
-    {
-     "id": "n_a68b978bc1b99e19",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
-     "text": "\"No fatties, no trannies, no beardos, no weirdos, no wimps, no radicals. Just warriors,\" Hegseth said on Wednesday. \"The ideological clowns are out. The patriotic cowboys are in, with testosterone testing on top.\"",
-     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
-     "publishedAt": "2026-09-30T21:51:20.000Z",
-     "fetchedAt": "2026-09-30T23:16:37.557Z",
-     "version": 281,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a3e57858896b262a",
-     "publisher": "NPR",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
-     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
-     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
-     "publishedAt": "2026-09-30T08:42:46.000Z",
-     "fetchedAt": "2026-09-30T15:02:01.461Z",
-     "version": 274,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_a68b978bc1b99e19"
-   ],
-   "inputHash": "610ad2e586c476558f9ccc29b9db45d36f76c91d69d412ad5c59ba50e6e42a8e",
-   "quotedContext": {
-    "id": "2105374273665687931",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-09-30T19:08:37.000Z",
-    "textChars": 264,
-    "textHash": "70e1303f64f25d6181d040d388aef95b445d5e2309936ee52c72c837aed1f5cf"
-   }
-  },
   "2105760857892528182": {
    "contextVersion": 296,
    "evidenceSupplied": [
@@ -14965,6 +14918,53 @@
    ],
    "evidenceUsed": [],
    "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
+  },
+  "2105752905491894485": {
+   "contextVersion": 310,
+   "evidenceSupplied": [
+    {
+     "id": "n_a68b978bc1b99e19",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
+     "text": "\"No fatties, no trannies, no beardos, no weirdos, no wimps, no radicals. Just warriors,\" Hegseth said on Wednesday. \"The ideological clowns are out. The patriotic cowboys are in, with testosterone testing on top.\"",
+     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "publishedAt": "2026-09-30T21:51:20.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3e57858896b262a",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984953/mcmaster-us-troop-withdrawal-iraq-iran-isis",
+     "text": "The last U.S. troops have left Iraq, more than two decades after the U.S.-led invasion and as the United States and Israel are at war with neighboring Iran.",
+     "title": "Retired general who led troops in Iraq warns U.S. exit may give Iran, ISIS an opening",
+     "publishedAt": "2026-09-30T08:42:46.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a68b978bc1b99e19"
+   ],
+   "inputHash": "9ee2048d865dbb3758e099b785c7035dbae51000abca4ebeb24e272b7e00ace8",
+   "quotedContext": {
+    "id": "2105374273665687931",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-09-30T19:08:37.000Z",
+    "textChars": 264,
+    "textHash": "70e1303f64f25d6181d040d388aef95b445d5e2309936ee52c72c837aed1f5cf"
+   }
   }
  },
  "needsContext": {
@@ -15406,7 +15406,6 @@
   "2105711635243339940": false,
   "2105734144772759974": false,
   "2105741059787833366": false,
-  "2105752905491894485": false,
   "2105760857892528182": false,
   "2105742333656302048": false,
   "2105743357460832432": false,
@@ -15614,10 +15613,11 @@
   "2105862483823194468": false,
   "2105866368046559741": false,
   "2105869622998430190": false,
-  "2105761870053548255": false
+  "2105761870053548255": false,
+  "2105752905491894485": false
  },
  "inputBlocks": {},
- "contextVersion": 305,
+ "contextVersion": 310,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -16131,87 +16131,16 @@
  "pendingIds": [],
  "complete": true,
  "anchored": {},
- "failedChunks": 0,
+ "failedChunks": 1,
  "droppedSubs": [],
  "echoedSubs": [],
- "validationErrors": [],
+ "validationErrors": [
+  {
+   "code": "invalid-evidence-reference",
+   "id": "2106072957718016350"
+  }
+ ],
  "requestStatus": {
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2105792853100110264",
-    "2105801780378661109",
-    "2105802400498065489",
-    "2105802566755893374",
-    "2105802911255032063",
-    "2105804102366269498",
-    "2105804983304073461",
-    "2105805045900194060",
-    "2105805085460799963",
-    "2105805151093010844",
-    "2105805962955346429",
-    "2105806365256036821",
-    "2105806952890523686",
-    "2105807223326662717",
-    "2105807335193239626",
-    "2105808354975027540",
-    "2105808547539808479",
-    "2105809887527899317",
-    "2105810022492164433",
-    "2105810166075531473",
-    "2105810251958407249",
-    "2105810262376767730",
-    "2105810469982241088",
-    "2105811337125175626",
-    "2105814554076967301",
-    "2105814609009459492",
-    "2105815104818200662",
-    "2105815323706605818",
-    "2105815785650180341",
-    "2105815936561488252",
-    "2105816195110957266",
-    "2105816608488763439",
-    "2105816997409780221",
-    "2105817587745522132",
-    "2105817591277383761",
-    "2105817593009311929",
-    "2105817595895287808",
-    "2105817598248288516",
-    "2105817599917363469",
-    "2105817601536311539"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-02T00:42:11.073Z",
-    "observedAt": "2026-10-02T00:43:10.680Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 40,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2105817604359365016",
-    "2105817606808834455",
-    "2105817609434550725",
-    "2105817611199975784",
-    "2105818189582274742",
-    "2105819483688317111"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-02T00:43:10.718Z",
-    "observedAt": "2026-10-02T00:43:24.582Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
   "live_chunk-3": {
    "acceptedIds": [
     "2105742333656302048",
@@ -16350,23 +16279,40 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105761870053548255",
-    "2105964930876760512",
-    "2105968917352984903",
-    "2105977555798888529",
-    "2105981954713907594",
-    "2105984554888495260",
-    "2105984614833537467"
+    "2105752905491894485",
+    "2106058084489502927",
+    "2106059031387230371",
+    "2106059095065117125",
+    "2106059241517617621",
+    "2106059427912540259",
+    "2106059625376219471",
+    "2106059643604598967",
+    "2106059861318643832",
+    "2106060110862725359",
+    "2106060234179428436",
+    "2106060341587427581",
+    "2106060860233769357",
+    "2106060902743359699",
+    "2106061530689114523",
+    "2106061848629915968",
+    "2106062078239027278",
+    "2106062381805679008",
+    "2106062476127453366",
+    "2106062790821806348",
+    "2106063409490116807",
+    "2106063521985569114",
+    "2106063556571467807",
+    "2106063817298026915"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T11:34:26.135Z",
-    "observedAt": "2026-10-02T11:34:36.101Z",
+    "attemptedAt": "2026-10-02T17:55:41.932Z",
+    "observedAt": "2026-10-02T17:56:28.144Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 24,
     "retryCount": 0
    }
   }
@@ -16374,24 +16320,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T11:34:26.135Z",
-   "observedAt": "2026-10-02T11:34:36.101Z",
+   "attemptedAt": "2026-10-02T17:55:41.932Z",
+   "observedAt": "2026-10-02T17:56:28.144Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T11:34:26.135Z",
-   "observedAt": "2026-10-02T11:34:36.101Z",
+   "attemptedAt": "2026-10-02T17:55:41.932Z",
+   "observedAt": "2026-10-02T17:56:28.144Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T11:34:36.478Z"
+ "updatedAt": "2026-10-02T17:58:09.347Z"
 }
