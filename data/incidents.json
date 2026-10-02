@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T06:41:24.120Z",
+ "generatedAt": "2026-10-02T07:50:42.951Z",
  "incidents": [
   {
    "id": "hatch-nm--flooding--source-2105721837619667398",
@@ -32,7 +32,7 @@
    "since": "2026-10-01T18:09:43.000Z",
    "last": "2026-10-01T18:09:43.000Z",
    "updates": 1,
-   "engN": 6,
+   "engN": 10,
    "amplifiers": 0,
    "others": [],
    "title": "Flooding · Hatch, NM",
@@ -60,7 +60,7 @@
      "who": "@RepGabeVasquez",
      "tag": "member",
      "text": "I am monitoring the flood damage across our state and closely working with state and local officials to move disaster efforts along as efficiently as possible, including re-opening key transportation routes and ensuring our communities are safe as the road to recovery begins.\n\nI stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.\n\nhttps://t.co/Sdu0ihG6cN",
-     "engN": 6,
+     "engN": 10,
      "isNew": false,
      "flag": {
       "kind": "flooding",
@@ -84,7 +84,35 @@
    "tweetIds": [
     "2105721837619667398"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "I am monitoring the flood damage across our state and closely working with state and local officials to move disaster efforts along as efficiently as possible, including re-opening key transportation routes and ensuring our communities are safe as the road to recovery begins.",
+      "sourceId": "2105721837619667398",
+      "url": "https://x.com/i/web/status/2105721837619667398",
+      "evidenceQuote": "I am monitoring the flood damage across our state and closely working with state and local officials to move disaster efforts along as efficiently as possible, including re-opening key transportation routes and ensuring our communities are safe as the road to recovery begins.",
+      "src": "@RepGabeVasquez, 2026-10-01T18:09:43.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "I stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.",
+      "sourceId": "2105721837619667398",
+      "url": "https://x.com/i/web/status/2105721837619667398",
+      "evidenceQuote": "I stand with the communities of Hatch, Rincon, Socorro, Magdalena, Salem, Garfield and the rest of our district affected by the floods this week.",
+      "src": "@RepGabeVasquez, 2026-10-01T18:09:43.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-02T07:50:42.951Z",
+    "posts": 1,
+    "inputHash": "ad996324550e0572f3d03472db758068e60c7c0b07bd39ec24f645d674271e0a",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -105,7 +133,7 @@
     "wildfire"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
