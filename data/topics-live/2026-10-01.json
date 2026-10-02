@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T03:42:13.084Z",
+ "classifiedAt": "2026-10-02T05:12:24.698Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -4490,6 +4490,18 @@
    [
     "immigration",
     "asylum-refugees"
+   ]
+  ],
+  "2105866368046559741": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2105869622998430190": [
+   [
+    "healthcare",
+    "medicaid"
    ]
   ]
  },
@@ -14901,6 +14913,42 @@
     "referenceId": "2105755378663166089",
     "fingerprint": "971ac861cd6444a4a218080e629829fc2f4b7e675914bda9429a06e18cb280d2"
    }
+  },
+  "2105866368046559741": {
+   "contextVersion": 302,
+   "evidenceSupplied": [
+    {
+     "id": "n_3c5b1bb15ab6c697",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/6118290-china-supplied-iran-nuclear-tech/",
+     "text": "Bessent is wrong: China armed Iran’s nuclear weapons ambitions",
+     "title": "Bessent is wrong: China armed Iran’s nuclear weapons ambitions",
+     "publishedAt": "2026-09-30T15:00:00.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e",
+   "quotedContext": {
+    "id": "2105841492564623696",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-10-02T02:05:11.000Z",
+    "textChars": 190,
+    "textHash": "e8271587d79796f53d5f78c529a18306f9de0403af7cf4afe04a342ae79e907d"
+   }
+  },
+  "2105869622998430190": {
+   "contextVersion": 302,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e"
   }
  },
  "needsContext": {
@@ -15548,10 +15596,12 @@
   "2105860507546873973": false,
   "2105860779354300487": false,
   "2105862253450760420": false,
-  "2105862483823194468": false
+  "2105862483823194468": false,
+  "2105866368046559741": false,
+  "2105869622998430190": false
  },
  "inputBlocks": {},
- "contextVersion": 301,
+ "contextVersion": 302,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -16284,26 +16334,20 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105850143866286255",
-    "2105851876864303433",
-    "2105851979608297597",
-    "2105854908499186020",
-    "2105855426411524597",
-    "2105857979019079723",
-    "2105860507546873973",
-    "2105860779354300487",
-    "2105862253450760420",
-    "2105862483823194468"
+    "2105866368046559741",
+    "2105869622998430190",
+    "2105875281143550187",
+    "2105882881587638663"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T03:41:57.399Z",
-    "observedAt": "2026-10-02T03:42:13.067Z",
+    "attemptedAt": "2026-10-02T05:12:17.065Z",
+    "observedAt": "2026-10-02T05:12:24.677Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -16311,24 +16355,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T03:41:57.399Z",
-   "observedAt": "2026-10-02T03:42:13.067Z",
+   "attemptedAt": "2026-10-02T05:12:17.065Z",
+   "observedAt": "2026-10-02T05:12:24.677Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T03:41:57.399Z",
-   "observedAt": "2026-10-02T03:42:13.067Z",
+   "attemptedAt": "2026-10-02T05:12:17.065Z",
+   "observedAt": "2026-10-02T05:12:24.677Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T03:42:13.090Z"
+ "updatedAt": "2026-10-02T05:12:24.702Z"
 }

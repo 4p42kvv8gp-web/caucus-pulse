@@ -1,0 +1,93 @@
+{
+ "date": "2026-10-02",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-02T05:12:24.706Z",
+ "assignments": {
+  "2105875281143550187": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2105882881587638663": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2105875281143550187": {
+   "contextVersion": 302,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e"
+  },
+  "2105882881587638663": {
+   "contextVersion": 302,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e"
+  }
+ },
+ "needsContext": {
+  "2105875281143550187": false,
+  "2105882881587638663": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 302,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2105866368046559741",
+    "2105869622998430190",
+    "2105875281143550187",
+    "2105882881587638663"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-02T05:12:17.065Z",
+    "observedAt": "2026-10-02T05:12:24.677Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 4,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-02T05:12:17.065Z",
+   "observedAt": "2026-10-02T05:12:24.677Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 4,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-02T05:12:17.065Z",
+   "observedAt": "2026-10-02T05:12:24.677Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 4,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-02T05:12:24.706Z"
+}
