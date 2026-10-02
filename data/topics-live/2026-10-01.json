@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T05:12:24.698Z",
+ "classifiedAt": "2026-10-02T11:34:36.474Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -11107,12 +11107,6 @@
    "evidenceUsed": [],
    "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
   },
-  "2105761870053548255": {
-   "contextVersion": 295,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c9c6f1da24f5018988c4767bd47348c01cd0ec916c632fff0378951b90f53e3c"
-  },
   "2105761897261772804": {
    "contextVersion": 295,
    "evidenceSupplied": [],
@@ -14949,6 +14943,28 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e"
+  },
+  "2105761870053548255": {
+   "contextVersion": 305,
+   "evidenceSupplied": [
+    {
+     "id": "n_211e21558135eb3d",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/guns-voting-and-immigration-on-deck-for-supreme-court/",
+     "text": "While it may look like fewer blockbuster cases this time around, experts like Brianne Gorod of the Constitutional Accountability Center say they are still on the way.",
+     "title": "Guns, voting and immigration on deck for Supreme Court",
+     "publishedAt": "2026-10-02T05:00:00.000Z",
+     "fetchedAt": "2026-10-02T10:49:42.298Z",
+     "version": 305,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
   }
  },
  "needsContext": {
@@ -15356,7 +15372,6 @@
   "2105760778812854628": false,
   "2105761544554586178": false,
   "2105761842114986035": false,
-  "2105761870053548255": false,
   "2105761897261772804": false,
   "2105761898490703989": false,
   "2105761899681927218": false,
@@ -15598,10 +15613,11 @@
   "2105862253450760420": false,
   "2105862483823194468": false,
   "2105866368046559741": false,
-  "2105869622998430190": false
+  "2105869622998430190": false,
+  "2105761870053548255": false
  },
  "inputBlocks": {},
- "contextVersion": 302,
+ "contextVersion": 305,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -16334,20 +16350,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105866368046559741",
-    "2105869622998430190",
-    "2105875281143550187",
-    "2105882881587638663"
+    "2105761870053548255",
+    "2105964930876760512",
+    "2105968917352984903",
+    "2105977555798888529",
+    "2105981954713907594",
+    "2105984554888495260",
+    "2105984614833537467"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T05:12:17.065Z",
-    "observedAt": "2026-10-02T05:12:24.677Z",
+    "attemptedAt": "2026-10-02T11:34:26.135Z",
+    "observedAt": "2026-10-02T11:34:36.101Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -16355,24 +16374,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T05:12:17.065Z",
-   "observedAt": "2026-10-02T05:12:24.677Z",
+   "attemptedAt": "2026-10-02T11:34:26.135Z",
+   "observedAt": "2026-10-02T11:34:36.101Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T05:12:17.065Z",
-   "observedAt": "2026-10-02T05:12:24.677Z",
+   "attemptedAt": "2026-10-02T11:34:26.135Z",
+   "observedAt": "2026-10-02T11:34:36.101Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T05:12:24.702Z"
+ "updatedAt": "2026-10-02T11:34:36.478Z"
 }

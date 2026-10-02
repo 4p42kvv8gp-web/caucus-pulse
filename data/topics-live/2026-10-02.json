@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T09:02:29.399Z",
+ "classifiedAt": "2026-10-02T11:34:36.720Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -31,6 +31,41 @@
    [
     "tech",
     "ai-policy"
+   ]
+  ],
+  "2105964930876760512": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2105968917352984903": [],
+  "2105977555798888529": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2105981954713907594": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "budget-appropriations",
+    "social-security"
+   ]
+  ],
+  "2105984554888495260": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2105984614833537467": [
+   [
+    "constituent-services",
+    null
    ]
   ]
  },
@@ -97,6 +132,106 @@
     "textChars": 84,
     "textHash": "ae9d7abc4de333489c8b18f0871efd636c75447e70c2fc44074c0f887064215f"
    }
+  },
+  "2105964930876760512": {
+   "contextVersion": 305,
+   "evidenceSupplied": [
+    {
+     "id": "n_78c28c4acf51b573",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/at-the-races-debate-demands-and-dodges/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Debate demands and dodges",
+     "publishedAt": "2026-10-01T15:45:00.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
+  },
+  "2105968917352984903": {
+   "contextVersion": 305,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68",
+   "quotedContext": {
+    "id": "2105700936857333913",
+    "authorId": "1844608219865354246",
+    "handle": "RepLaMonica",
+    "createdAt": "2026-10-01T16:46:40.000Z",
+    "textChars": 280,
+    "textHash": "5f40a0f44ecc0ffc10155b24fae13d706fa7275b6929954650fa292502083246"
+   }
+  },
+  "2105977555798888529": {
+   "contextVersion": 305,
+   "evidenceSupplied": [
+    {
+     "id": "n_9fced3ad72f4a8c8",
+     "publisher": "The Hill",
+     "date": "2026-09-25",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6111626-pete-hegseth-dod-register-to-vote-2026-midterms/",
+     "text": "Pete Hegseth urges troops to register to vote",
+     "title": "Pete Hegseth urges troops to register to vote",
+     "publishedAt": "2026-09-25T16:22:15.000Z",
+     "fetchedAt": "2026-09-25T17:36:54.654Z",
+     "version": 182,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
+  },
+  "2105981954713907594": {
+   "contextVersion": 305,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68",
+   "quotedContext": {
+    "id": "2105767269796089917",
+    "authorId": "2811924896",
+    "handle": "Fla_Pol",
+    "createdAt": "2026-10-01T21:10:15.000Z",
+    "textChars": 143,
+    "textHash": "9052f09f0fea77a238b5a3f6a1cb77d830364d58197f9ef4dbebcda779c76557"
+   }
+  },
+  "2105984554888495260": {
+   "contextVersion": 305,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
+  },
+  "2105984614833537467": {
+   "contextVersion": 305,
+   "evidenceSupplied": [
+    {
+     "id": "n_b0f52a65fd5150ef",
+     "publisher": "Roll Call",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/28/senate-laterals-college-sports-bill-to-house-but-forward-progress-uncertain/",
+     "text": "Sponsored by Commerce Chairman Ted Cruz, R-Texas, with key cosponsors including ranking member Maria Cantwell, D-Wash., and committee members Eric Schmitt, R-Mo., and Chris Coons, D-Del., the bill’s passage comes after months of negotiations that stretched beyond the committee room and into high-stakes talks with the leaders of the Southeastern and Big Ten conferences, as well as other influential college sports stakeholders.",
+     "title": "Senate laterals college sports bill to House, but forward progress uncertain",
+     "publishedAt": "2026-09-28T22:20:42.000Z",
+     "fetchedAt": "2026-09-29T09:23:19.614Z",
+     "version": 250,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e5326e1f6198861c7669916379d3f04cd5af5ff6e8095f564094cf2b9c275e68"
   }
  },
  "needsContext": {
@@ -104,10 +239,16 @@
   "2105882881587638663": false,
   "2105908738024690046": false,
   "2105926154498756712": false,
-  "2105940812349763609": false
+  "2105940812349763609": false,
+  "2105964930876760512": false,
+  "2105968917352984903": false,
+  "2105977555798888529": false,
+  "2105981954713907594": false,
+  "2105984554888495260": false,
+  "2105984614833537467": false
  },
  "inputBlocks": {},
- "contextVersion": 303,
+ "contextVersion": 305,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -120,17 +261,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105940812349763609"
+    "2105761870053548255",
+    "2105964930876760512",
+    "2105968917352984903",
+    "2105977555798888529",
+    "2105981954713907594",
+    "2105984554888495260",
+    "2105984614833537467"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T09:02:26.718Z",
-    "observedAt": "2026-10-02T09:02:29.397Z",
+    "attemptedAt": "2026-10-02T11:34:26.135Z",
+    "observedAt": "2026-10-02T11:34:36.101Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -138,24 +285,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T09:02:26.718Z",
-   "observedAt": "2026-10-02T09:02:29.397Z",
+   "attemptedAt": "2026-10-02T11:34:26.135Z",
+   "observedAt": "2026-10-02T11:34:36.101Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T09:02:26.718Z",
-   "observedAt": "2026-10-02T09:02:29.397Z",
+   "attemptedAt": "2026-10-02T11:34:26.135Z",
+   "observedAt": "2026-10-02T11:34:36.101Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T09:02:29.399Z"
+ "updatedAt": "2026-10-02T11:34:36.720Z"
 }
