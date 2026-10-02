@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T06:41:23.998Z",
+ "classifiedAt": "2026-10-02T08:34:22.700Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -16,6 +16,12 @@
    ]
   ],
   "2105908738024690046": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2105926154498756712": [
    [
     "tech",
     "ai-policy"
@@ -41,15 +47,46 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ce8b0b525fca160b683d50d55ff2227fb96d61484375d8e133c83c921f99da63"
+  },
+  "2105926154498756712": {
+   "contextVersion": 303,
+   "evidenceSupplied": [
+    {
+     "id": "n_926e87abd3421ad5",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5986313/california-gubernatorial-candidates-face-off-in-debate",
+     "text": "GUY MARZORATI, BYLINE: Becerra came into the debate with a wide lead in public polling. The former Health and Human Services secretary in the Biden administration had a clear strategy, invoke President Trump, who has endorsed Hilton.",
+     "title": "California gubernatorial candidates face off in debate",
+     "publishedAt": "2026-10-01T10:48:03.000Z",
+     "fetchedAt": "2026-10-01T18:41:06.469Z",
+     "version": 294,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f2b7942c05ec837aab91364ce642b030d8202fe2ce193d3d0ccaf5ab27ad2465",
+   "quotedContext": {
+    "id": "2105669324258283613",
+    "authorId": "1353037496263860225",
+    "handle": "gmkurtzer",
+    "createdAt": "2026-10-01T14:41:03.000Z",
+    "textChars": 4550,
+    "textHash": "3be9f236c84494302d34c4b022fe815a8406782be32e4cdae02f49ff65072d0f"
+   }
   }
  },
  "needsContext": {
   "2105875281143550187": false,
   "2105882881587638663": false,
-  "2105908738024690046": false
+  "2105908738024690046": false,
+  "2105926154498756712": false
  },
  "inputBlocks": {},
- "contextVersion": 302,
+ "contextVersion": 303,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -62,13 +99,13 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2105908738024690046"
+    "2105926154498756712"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T06:41:22.210Z",
-    "observedAt": "2026-10-02T06:41:23.997Z",
+    "attemptedAt": "2026-10-02T08:34:19.758Z",
+    "observedAt": "2026-10-02T08:34:22.699Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -80,8 +117,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T06:41:22.210Z",
-   "observedAt": "2026-10-02T06:41:23.997Z",
+   "attemptedAt": "2026-10-02T08:34:19.758Z",
+   "observedAt": "2026-10-02T08:34:22.699Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -89,8 +126,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T06:41:22.210Z",
-   "observedAt": "2026-10-02T06:41:23.997Z",
+   "attemptedAt": "2026-10-02T08:34:19.758Z",
+   "observedAt": "2026-10-02T08:34:22.699Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -99,5 +136,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T06:41:23.998Z"
+ "updatedAt": "2026-10-02T08:34:22.700Z"
 }
