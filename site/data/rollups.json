@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-02T08:34:59.645Z",
- "lastPollAt": "2026-10-02T08:34:16.630Z",
- "lastPollAttemptAt": "2026-10-02T08:34:16.205Z",
+ "generatedAt": "2026-10-02T09:02:34.216Z",
+ "lastPollAt": "2026-10-02T09:02:23.761Z",
+ "lastPollAttemptAt": "2026-10-02T09:02:23.308Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-02T08:34:58.320Z"
+  "referenceAsOf": "2026-10-02T09:02:32.718Z"
  },
  "news": {
   "version": 303,
-  "items": 1349,
+  "items": 1342,
   "latestPublishedAt": "2026-10-02T08:00:40.000Z",
   "latestFetchedAt": "2026-10-02T08:09:03.934Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-02T08:34:58.759Z",
+   "asOf": "2026-10-02T09:02:33.215Z",
    "windowDays": 14,
-   "windowStart": "2026-09-18T08:34:58.759Z",
-   "eligibleItems": 1721,
-   "withExcerpts": 184,
-   "headlineOrSummary": 1537,
+   "windowStart": "2026-09-18T09:02:33.215Z",
+   "eligibleItems": 1708,
+   "withExcerpts": 175,
+   "headlineOrSummary": 1533,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3379,8 +3379,8 @@
      "id": "npr-politics",
      "publisher": "NPR",
      "sourceUrl": "https://feeds.npr.org/1014/rss.xml",
-     "eligibleItems": 100,
-     "withExcerpts": 90,
+     "eligibleItems": 92,
+     "withExcerpts": 82,
      "headlineOrSummary": 10,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-01T18:22:59.000Z",
@@ -3395,9 +3395,9 @@
      "id": "politico-politics",
      "publisher": "Politico",
      "sourceUrl": "https://rss.politico.com/politics-news.xml",
-     "eligibleItems": 34,
+     "eligibleItems": 33,
      "withExcerpts": 0,
-     "headlineOrSummary": 34,
+     "headlineOrSummary": 33,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-02T03:59:00.000Z",
      "latestItem": {
@@ -3427,8 +3427,8 @@
      "id": "roll-call",
      "publisher": "Roll Call",
      "sourceUrl": "https://rollcall.com/feed/",
-     "eligibleItems": 97,
-     "withExcerpts": 94,
+     "eligibleItems": 96,
+     "withExcerpts": 93,
      "headlineOrSummary": 3,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-01T19:01:00.000Z",
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 274,
+     "eligibleItems": 272,
      "withExcerpts": 0,
-     "headlineOrSummary": 274,
+     "headlineOrSummary": 272,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-02T08:00:40.000Z",
      "latestItem": {
@@ -3475,9 +3475,9 @@
      "id": "wapo-politics",
      "publisher": "The Washington Post",
      "sourceUrl": "https://feeds.washingtonpost.com/rss/politics",
-     "eligibleItems": 213,
+     "eligibleItems": 212,
      "withExcerpts": 0,
-     "headlineOrSummary": 213,
+     "headlineOrSummary": 212,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-02T02:41:43.000Z",
      "latestItem": {
@@ -3546,8 +3546,8 @@
  },
  "classification": {
   "through": "2026-10-02",
-  "capturedIn24h": 616,
-  "classifiedIn24h": 616,
+  "capturedIn24h": 615,
+  "classifiedIn24h": 615,
   "taggedIn24h": 548,
   "pendingIn24h": 0,
   "momentumPaused": false,
@@ -3555,10 +3555,10 @@
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-02T08:34:19.758Z",
-   "lastSuccessAt": "2026-10-02T08:34:22.699Z",
-   "capturedIn24h": 616,
-   "classifiedIn24h": 616,
+   "lastAttemptAt": "2026-10-02T09:02:26.718Z",
+   "lastSuccessAt": "2026-10-02T09:02:29.397Z",
+   "capturedIn24h": 615,
+   "classifiedIn24h": 615,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,7 +6826,7 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 4,
+    "posts": 5,
     "mix": [
      100,
      0,
@@ -6834,6 +6834,74 @@
     ],
     "accounts": 3,
     "members": 3,
+    "unidentifiedAccounts": 0,
+    "classified": 5,
+    "tagged": 5,
+    "pending": 0,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 155,
+    "perPost": 31,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 2782,
+    "mix": [
+     82,
+     6,
+     12
+    ],
+    "accounts": 322,
+    "members": 198,
+    "unidentifiedAccounts": 0,
+    "classified": 2513,
+    "tagged": 2238,
+    "pending": 269,
+    "corePosts": 982,
+    "coreCounts": {
+     "Affordability": 427,
+     "Healthcare": 215,
+     "Corruption": 401
+    },
+    "eng": 464933,
+    "perPost": 167,
+    "top10Share": 50,
+    "engDelta": 0
+   },
+   "curve48": [
+    1,
+    82,
+    132,
+    201,
+    128,
+    33,
+    5,
+    2,
+    5,
+    78,
+    152,
+    194,
+    123,
+    51,
+    9,
+    3
+   ]
+  },
+  "CPC": {
+   "t": {
+    "posts": 4,
+    "mix": [
+     100,
+     0,
+     0
+    ],
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
     "classified": 4,
     "tagged": 4,
@@ -6844,81 +6912,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 79,
-    "perPost": 20,
+    "eng": 151,
+    "perPost": 38,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2781,
-    "mix": [
-     82,
-     6,
-     12
-    ],
-    "accounts": 322,
-    "members": 198,
-    "unidentifiedAccounts": 0,
-    "classified": 2512,
-    "tagged": 2237,
-    "pending": 269,
-    "corePosts": 982,
-    "coreCounts": {
-     "Affordability": 427,
-     "Healthcare": 215,
-     "Corruption": 401
-    },
-    "eng": 464857,
-    "perPost": 167,
-    "top10Share": 50,
-    "engDelta": 0
-   },
-   "curve48": [
-    1,
-    64,
-    118,
-    205,
-    139,
-    45,
-    10,
-    0,
-    3,
-    59,
-    138,
-    192,
-    145,
-    64,
-    13,
-    2
-   ]
-  },
-  "CPC": {
-   "t": {
-    "posts": 3,
-    "mix": [
-     100,
-     0,
-     0
-    ],
-    "accounts": 2,
-    "members": 2,
-    "unidentifiedAccounts": 0,
-    "classified": 3,
-    "tagged": 3,
-    "pending": 0,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 75,
-    "perPost": 25,
-    "top10Share": 100,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 1284,
+    "posts": 1285,
     "mix": [
      78,
      7,
@@ -6927,8 +6927,8 @@
     "accounts": 137,
     "members": 88,
     "unidentifiedAccounts": 0,
-    "classified": 1164,
-    "tagged": 1026,
+    "classified": 1165,
+    "tagged": 1027,
     "pending": 120,
     "corePosts": 466,
     "coreCounts": {
@@ -6936,28 +6936,28 @@
      "Healthcare": 97,
      "Corruption": 224
     },
-    "eng": 339743,
-    "perPost": 265,
+    "eng": 339819,
+    "perPost": 264,
     "top10Share": 65,
     "engDelta": 0
    },
    "curve48": [
     1,
-    24,
-    55,
-    95,
-    70,
-    20,
-    4,
-    0,
+    32,
+    64,
+    91,
+    63,
+    16,
+    2,
     1,
-    24,
-    62,
-    104,
-    65,
-    36,
-    8,
-    2
+    0,
+    34,
+    70,
+    107,
+    52,
+    30,
+    6,
+    3
    ]
   },
   "NewDem": {
@@ -7011,20 +7011,20 @@
    },
    "curve48": [
     0,
-    44,
-    71,
-    129,
+    57,
     77,
-    23,
-    6,
-    0,
+    128,
+    66,
+    19,
     3,
-    39,
-    74,
-    105,
-    71,
-    31,
-    9,
+    2,
+    5,
+    49,
+    86,
+    97,
+    63,
+    24,
+    6,
     0
    ]
   },
@@ -7079,19 +7079,19 @@
    },
    "curve48": [
     0,
-    7,
+    10,
     23,
-    36,
-    30,
+    39,
+    25,
     6,
+    1,
     2,
-    0,
     2,
     12,
-    28,
-    55,
-    21,
-    15,
+    37,
+    50,
+    17,
+    13,
     2,
     0
    ]
@@ -7147,26 +7147,26 @@
    },
    "curve48": [
     0,
-    16,
-    22,
-    36,
+    18,
     27,
-    5,
-    3,
-    0,
-    0,
-    13,
     30,
-    34,
-    33,
-    6,
+    29,
+    3,
+    2,
+    0,
+    0,
+    16,
+    36,
+    35,
+    26,
     4,
+    3,
     0
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 2,
+    "posts": 3,
     "mix": [
      100,
      0,
@@ -7175,8 +7175,8 @@
     "accounts": 1,
     "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 2,
-    "tagged": 2,
+    "classified": 3,
+    "tagged": 3,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -7184,13 +7184,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 71,
-    "perPost": 36,
+    "eng": 147,
+    "perPost": 49,
     "top10Share": 100,
-    "engDelta": -100
+    "engDelta": -99
    },
    "w": {
-    "posts": 278,
+    "posts": 279,
     "mix": [
      91,
      5,
@@ -7199,8 +7199,8 @@
     "accounts": 24,
     "members": 14,
     "unidentifiedAccounts": 0,
-    "classified": 245,
-    "tagged": 229,
+    "classified": 246,
+    "tagged": 230,
     "pending": 33,
     "corePosts": 102,
     "coreCounts": {
@@ -7208,28 +7208,28 @@
      "Healthcare": 19,
      "Corruption": 35
     },
-    "eng": 163146,
-    "perPost": 587,
+    "eng": 163222,
+    "perPost": 585,
     "top10Share": 99,
     "engDelta": 0
    },
    "curve48": [
     0,
-    2,
+    4,
     8,
-    20,
-    10,
-    7,
-    0,
-    0,
-    0,
-    5,
-    13,
     19,
-    14,
     13,
+    3,
+    0,
+    0,
+    0,
+    10,
+    11,
+    22,
+    10,
+    11,
     1,
-    2
+    3
    ]
   }
  },
@@ -7239,14 +7239,14 @@
    "name": "Technology",
    "t": {
     "All": {
-     "n": 2,
-     "eng": 71,
+     "n": 3,
+     "eng": 147,
      "m": 1,
      "a": 1
     },
     "CPC": {
-     "n": 2,
-     "eng": 71,
+     "n": 3,
+     "eng": 147,
      "m": 1,
      "a": 1
     },
@@ -7269,22 +7269,22 @@
      "a": 0
     },
     "CAPAC": {
-     "n": 2,
-     "eng": 71,
+     "n": 3,
+     "eng": 147,
      "m": 1,
      "a": 1
     }
    },
    "w": {
     "All": {
-     "n": 163,
-     "eng": 29221,
+     "n": 164,
+     "eng": 29297,
      "m": 61,
      "a": 70
     },
     "CPC": {
-     "n": 99,
-     "eng": 26480,
+     "n": 100,
+     "eng": 26556,
      "m": 28,
      "a": 32
     },
@@ -7307,8 +7307,8 @@
      "a": 8
     },
     "CAPAC": {
-     "n": 56,
-     "eng": 16020,
+     "n": 57,
+     "eng": 16096,
      "m": 9,
      "a": 12
     }
@@ -7320,9 +7320,9 @@
     44,
     45,
     41,
-    2
+    3
    ],
-   "d": 60,
+   "d": 64,
    "mAvg": 17.5,
    "epAvg": 179,
    "momentum": {
@@ -7342,14 +7342,14 @@
      "key": "ai-policy",
      "t": {
       "All": {
-       "n": 2,
-       "eng": 71,
+       "n": 3,
+       "eng": 147,
        "m": 1,
        "a": 1
       },
       "CPC": {
-       "n": 2,
-       "eng": 71,
+       "n": 3,
+       "eng": 147,
        "m": 1,
        "a": 1
       },
@@ -7372,22 +7372,22 @@
        "a": 0
       },
       "CAPAC": {
-       "n": 2,
-       "eng": 71,
+       "n": 3,
+       "eng": 147,
        "m": 1,
        "a": 1
       }
      },
      "w": {
       "All": {
-       "n": 139,
-       "eng": 28554,
+       "n": 140,
+       "eng": 28630,
        "m": 52,
        "a": 59
       },
       "CPC": {
-       "n": 88,
-       "eng": 26220,
+       "n": 89,
+       "eng": 26296,
        "m": 24,
        "a": 28
       },
@@ -7410,8 +7410,8 @@
        "a": 8
       },
       "CAPAC": {
-       "n": 50,
-       "eng": 15674,
+       "n": 51,
+       "eng": 15750,
        "m": 6,
        "a": 9
       }
@@ -7420,10 +7420,12 @@
      "leadPostId": "2105176041014935854",
      "postIds": {
       "t": [
+       "2105940812349763609",
        "2105926154498756712",
        "2105908738024690046"
       ],
       "w": [
+       "2105940812349763609",
        "2105926154498756712",
        "2105908738024690046",
        "2105817611199975784",
@@ -7690,10 +7692,12 @@
    ],
    "postIds": {
     "t": [
+     "2105940812349763609",
      "2105926154498756712",
      "2105908738024690046"
     ],
     "w": [
+     "2105940812349763609",
      "2105926154498756712",
      "2105908738024690046",
      "2105817611199975784",
@@ -17174,7 +17178,7 @@
     26,
     0
    ],
-   "d": 73,
+   "d": 67,
    "mAvg": 12.3,
    "epAvg": 463,
    "momentum": {
@@ -17187,7 +17191,7 @@
     "accel": 0,
     "adoption": 1,
     "eff": 3.6,
-    "engLift": 0.7266332114219209
+    "engLift": 0.7802795894470358
    },
    "subs": [
     {
@@ -18140,11 +18144,11 @@
     18,
     0
    ],
-   "d": 83,
+   "d": 73,
    "mAvg": 8.7,
    "epAvg": 39,
    "momentum": {
-    "score": 74,
+    "score": 73,
     "drivers": [
      "volume",
      "adoption"
@@ -18152,7 +18156,7 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 2.5,
+    "eff": 2.4,
     "engLift": 1
    },
    "subs": [
@@ -23512,6 +23516,42 @@
  ],
  "incidentsFiltered": 3,
  "feed": [
+  {
+   "id": "2105940812349763609",
+   "handle": "@tedlieu",
+   "member": "Ted Lieu",
+   "district": "CA-36",
+   "caucus": [
+    "CPC",
+    "CAPAC"
+   ],
+   "text": "The funny thing about the trump meeting with AI CEOs is that all the purportedly stable geniuses seem fundamentally unaware of how federalism works.\n\n50 States and 50 Attorneys Generals will also have their say.\n\nAbdicating the federal role on AI just means states will regulate. https://t.co/Y9LM2MidCD",
+   "topics": [
+    "tech/ai-policy",
+    "tech"
+   ],
+   "time": "2026-10-02T08:39:50.000Z",
+   "date": "2026-10-02",
+   "engN": 76,
+   "kind": "quote",
+   "quoted": {
+    "id": "2105771076026310718",
+    "handle": "@newrepublic",
+    "text": "Trump Just Pledged to Let AI Companies Do Whatever They Want https://t.co/I6RN1XwSUY"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 303,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-02T09:02:23.751Z",
+   "isNew": false
+  },
   {
    "id": "2105926154498756712",
    "handle": "@tedlieu",
@@ -30976,51 +31016,6 @@
    },
    "metricsObservedAt": "2026-10-02T07:46:43.920Z",
    "isNew": false
-  },
-  {
-   "id": "2105763296141877753",
-   "handle": "@RepJamesClyburn",
-   "member": "James E. Clyburn",
-   "district": "SC-06",
-   "caucus": [
-    "CBC"
-   ],
-   "text": "Some new changes to SNAP go into effect today thanks to Trump and Republicans’ “big, beautiful bill.”\n\nStates are going to have to pick up more of the cost of administering the program, which could force some states to make additional cuts to benefits.\n\nThis is no way to treat the American people as they already struggle with high costs.",
-   "topics": [
-    "budget-appropriations/snap-benefits",
-    "budget-appropriations"
-   ],
-   "time": "2026-10-01T20:54:27.000Z",
-   "date": "2026-10-01",
-   "engN": 258,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 295,
-    "evidenceSupplied": [
-     {
-      "id": "n_983bcafa9c520e5e",
-      "publisher": "NPR",
-      "date": "2026-09-26",
-      "kind": "lead",
-      "url": "https://www.npr.org/2026/09/26/nx-s1-5981494/press-pool-dispute-escalates-as-white-house-cuts-cnn-from-air-force-one-travel",
-      "text": "Press pool dispute escalates as White House cuts CNN from Air Force One travel",
-      "publishedAt": "2026-09-26T11:38:03.000Z",
-      "fetchedAt": "2026-09-27T01:26:53.361Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-02T07:46:43.920Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -31348,6 +31343,35 @@
   "4669604480": "@AndreaRSalinas"
  },
  "feedAll": [
+  {
+   "id": "2105940812349763609",
+   "authorId": "21059255",
+   "createdAt": "2026-10-02T08:39:50.000Z",
+   "date": "2026-10-02",
+   "type": "quote",
+   "text": "The funny thing about the trump meeting with AI CEOs is that all the purportedly stable geniuses seem fundamentally unaware of how federalism works.\n\n50 States and 50 Attorneys Generals will also have their say.\n\nAbdicating the federal role on AI just means states will regulate. https://t.co/Y9LM2MidCD",
+   "engN": 76,
+   "topics": [
+    "tech/ai-policy",
+    "tech"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 303,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-02T09:02:23.751Z",
+   "quoted": {
+    "id": "2105771076026310718",
+    "handle": "@newrepublic",
+    "text": "Trump Just Pledged to Let AI Companies Do Whatever They Want https://t.co/I6RN1XwSUY"
+   }
+  },
   {
    "id": "2105926154498756712",
    "authorId": "21059255",
@@ -73930,41 +73954,17 @@
     ]
    },
    "metricsObservedAt": "2026-09-30T07:46:19.698Z"
-  },
-  {
-   "id": "2105044382684479627",
-   "authorId": "3122099613",
-   "createdAt": "2026-09-29T21:17:45.000Z",
-   "date": "2026-09-29",
-   "type": "tweet",
-   "text": "Everybody deserves to live a life that's fulfilling &amp; rewarding, and that's exactly what the good folks at Abilities Solutions provide each &amp; every day.\n \nIt was great touring their facility in Westville and meeting some of the incredible people working there: https://t.co/FCRtRmCtf3",
-   "engN": 1,
-   "topics": [
-    "civil-rights/disability",
-    "civil-rights"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 259,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-09-30T07:46:19.698Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2781,
+ "feedAllTotal": 2782,
  "feedAllFiles": [
-  "feed-0-1937fcd4c232eeb5.json",
-  "feed-1-f1aa8e519dee6b68.json",
-  "feed-2-97bb3e2daf8d8a69.json",
-  "feed-3-e549c9c029a68569.json",
-  "feed-4-88e6a8c9a7d3b744.json",
-  "feed-5-c70837dccb190cfc.json",
-  "feed-6-1bc680f8262bb909.json"
+  "feed-0-b4485d61bd04a916.json",
+  "feed-1-4ab0c7f8fafa4ed8.json",
+  "feed-2-00538c1fa4d588f4.json",
+  "feed-3-c68ea4cb1c6602e4.json",
+  "feed-4-7de2debb00bd0a87.json",
+  "feed-5-248511410630f179.json",
+  "feed-6-6a9db6a842168327.json"
  ]
 }
