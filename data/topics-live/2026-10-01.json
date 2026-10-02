@@ -1,7 +1,7 @@
 {
  "date": "2026-10-01",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T02:11:56.203Z",
+ "classifiedAt": "2026-10-02T02:36:21.066Z",
  "assignments": {
   "2105511614468206914": [
    [
@@ -4407,6 +4407,32 @@
    [
     "immigration",
     "ice-enforcement"
+   ]
+  ],
+  "2105845796633792841": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2105846385299931171": [
+   [
+    "climate",
+    null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2105847818107728105": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "labor",
+    "unions"
    ]
   ]
  },
@@ -14614,6 +14640,24 @@
     "referenceId": "2105823383862612242",
     "fingerprint": "a555cb42059489cccb344ce983db0e9e42f3f614ef2b6538c2236058a6e21133"
    }
+  },
+  "2105845796633792841": {
+   "contextVersion": 300,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4510b919718b7102f0da40e423c2b9cb569420655e2513177b42313da832fc7"
+  },
+  "2105846385299931171": {
+   "contextVersion": 300,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4510b919718b7102f0da40e423c2b9cb569420655e2513177b42313da832fc7"
+  },
+  "2105847818107728105": {
+   "contextVersion": 300,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "a4510b919718b7102f0da40e423c2b9cb569420655e2513177b42313da832fc7"
   }
  },
  "needsContext": {
@@ -15248,10 +15292,13 @@
   "2105838130578268347": false,
   "2105838545898512409": true,
   "2105840593809395988": false,
-  "2105841814712533072": false
+  "2105841814712533072": false,
+  "2105845796633792841": false,
+  "2105846385299931171": false,
+  "2105847818107728105": false
  },
  "inputBlocks": {},
- "contextVersion": 299,
+ "contextVersion": 300,
  "emerging": [
   {
    "label": "NEST Act newborn supplies bill",
@@ -15972,38 +16019,19 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105820731468660838",
-    "2105822790653776112",
-    "2105823149635801454",
-    "2105823330301345931",
-    "2105824437689872737",
-    "2105825358243139831",
-    "2105826350615445530",
-    "2105827079291871675",
-    "2105827579391332695",
-    "2105830360802042250",
-    "2105831629998673929",
-    "2105833571243966517",
-    "2105834487242276907",
-    "2105834501389873311",
-    "2105837680051265808",
-    "2105837799719010685",
-    "2105837820317442212",
-    "2105837926609256816",
-    "2105838130578268347",
-    "2105838545898512409",
-    "2105840593809395988",
-    "2105841814712533072"
+    "2105845796633792841",
+    "2105846385299931171",
+    "2105847818107728105"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T02:11:21.629Z",
-    "observedAt": "2026-10-02T02:11:56.102Z",
+    "attemptedAt": "2026-10-02T02:36:16.707Z",
+    "observedAt": "2026-10-02T02:36:21.050Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 22,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   }
@@ -16011,24 +16039,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T02:11:21.629Z",
-   "observedAt": "2026-10-02T02:11:56.102Z",
+   "attemptedAt": "2026-10-02T02:36:16.707Z",
+   "observedAt": "2026-10-02T02:36:21.050Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T02:11:21.629Z",
-   "observedAt": "2026-10-02T02:11:56.102Z",
+   "attemptedAt": "2026-10-02T02:36:16.707Z",
+   "observedAt": "2026-10-02T02:36:21.050Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 22,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-02T02:11:56.207Z"
+ "updatedAt": "2026-10-02T02:36:21.072Z"
 }
