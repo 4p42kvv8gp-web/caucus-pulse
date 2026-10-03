@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T10:07:01.045Z",
+ "classifiedAt": "2026-10-03T11:37:53.613Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -65,6 +65,12 @@
    [
     "tech",
     "ai-policy"
+   ]
+  ],
+  "2106339284412449083": [
+   [
+    "foreign-policy",
+    null
    ]
   ]
  },
@@ -203,6 +209,20 @@
     "textChars": 176,
     "textHash": "c4fc2d2fbff7defcbb9c21d4360404ca2523943deb1338c091cb1254b5328529"
    }
+  },
+  "2106339284412449083": {
+   "contextVersion": 322,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "773d441dfac2ce3db00cfed516b2582627151d2767cb93798d1040de56d07d3d",
+   "quotedContext": {
+    "id": "2105679985298043376",
+    "authorId": "254082173",
+    "handle": "RepJoeWilson",
+    "createdAt": "2026-10-01T15:23:24.000Z",
+    "textChars": 243,
+    "textHash": "db919ff275b549687f10bd6c4211db6d95070b519c07c51ed43274b87e964cce"
+   }
   }
  },
  "needsContext": {
@@ -213,10 +233,11 @@
   "2106288740641722722": false,
   "2106297808747921807": false,
   "2106302158622855313": false,
-  "2106305086381232208": false
+  "2106305086381232208": false,
+  "2106339284412449083": false
  },
  "inputBlocks": {},
- "contextVersion": 321,
+ "contextVersion": 322,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -236,6 +257,12 @@
     "2106288740641722722",
     "2106297808747921807"
    ]
+  },
+  {
+   "label": "SRBIJA Act / Serbia free elections",
+   "ids": [
+    "2106339284412449083"
+   ]
   }
  ],
  "unclassified": [],
@@ -249,18 +276,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106302158622855313",
-    "2106305086381232208"
+    "2106339284412449083"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T10:06:59.108Z",
-    "observedAt": "2026-10-03T10:07:01.041Z",
+    "attemptedAt": "2026-10-03T11:37:49.581Z",
+    "observedAt": "2026-10-03T11:37:53.609Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -268,24 +294,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T10:06:59.108Z",
-   "observedAt": "2026-10-03T10:07:01.041Z",
+   "attemptedAt": "2026-10-03T11:37:49.581Z",
+   "observedAt": "2026-10-03T11:37:53.609Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T10:06:59.108Z",
-   "observedAt": "2026-10-03T10:07:01.041Z",
+   "attemptedAt": "2026-10-03T11:37:49.581Z",
+   "observedAt": "2026-10-03T11:37:53.609Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-03T10:07:01.047Z"
+ "updatedAt": "2026-10-03T11:37:53.615Z"
 }
