@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T01:05:56.521Z",
+ "classifiedAt": "2026-10-03T02:19:45.059Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -4090,6 +4090,58 @@
    [
     "public-safety",
     null
+   ]
+  ],
+  "2106189643620253808": [
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2106195957104939462": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106197915303555291": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2106198725081133326": [
+   [
+    "healthcare",
+    "medicare"
+   ],
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106199255375310878": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106202604891971706": [
+   [
+    "economy",
+    "prices-inflation"
    ]
   ]
  },
@@ -8744,28 +8796,6 @@
    "evidenceUsed": [],
    "inputHash": "9fa4c477e850640550ab3ef4af0d61accfdfeffb99d53be584b37d50f0cbed85"
   },
-  "2106096885563904492": {
-   "contextVersion": 311,
-   "evidenceSupplied": [
-    {
-     "id": "n_7ea33f5bf4a07190",
-     "publisher": "Roll Call",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
-     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
-     "title": "Housing groups challenge Trump funding clawback",
-     "publishedAt": "2026-09-30T16:01:01.000Z",
-     "fetchedAt": "2026-09-30T21:46:34.754Z",
-     "version": 280,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "9fa4c477e850640550ab3ef4af0d61accfdfeffb99d53be584b37d50f0cbed85"
-  },
   "2106096888021688417": {
    "contextVersion": 311,
    "evidenceSupplied": [
@@ -9172,12 +9202,6 @@
    "inputHash": "581a35f428c178dd9d8bb36010deb34d956212c2a972faaecae881f5a4dda994"
   },
   "2106105912478040409": {
-   "contextVersion": 311,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "581a35f428c178dd9d8bb36010deb34d956212c2a972faaecae881f5a4dda994"
-  },
-  "2106106100252905498": {
    "contextVersion": 311,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -12498,6 +12522,202 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106096885563904492": {
+   "contextVersion": 318,
+   "evidenceSupplied": [
+    {
+     "id": "n_7ea33f5bf4a07190",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+     "title": "Housing groups challenge Trump funding clawback",
+     "publishedAt": "2026-09-30T16:01:01.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8"
+  },
+  "2106106100252905498": {
+   "contextVersion": 318,
+   "evidenceSupplied": [
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8"
+  },
+  "2106189643620253808": {
+   "contextVersion": 318,
+   "evidenceSupplied": [
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8",
+   "quotedContext": {
+    "id": "2105658799524634705",
+    "authorId": "247334603",
+    "handle": "SenatorDurbin",
+    "createdAt": "2026-10-01T13:59:13.000Z",
+    "textChars": 221,
+    "textHash": "d5e1a71fdefb59540981e03eef169fd65ef7d569736f14416a59aa1e425ada25"
+   }
+  },
+  "2106195957104939462": {
+   "contextVersion": 318,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8"
+  },
+  "2106197915303555291": {
+   "contextVersion": 318,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8"
+  },
+  "2106198725081133326": {
+   "contextVersion": 318,
+   "evidenceSupplied": [
+    {
+     "id": "n_71a904a8f2d2b0db",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/healthcare/6118336-medicare-advantage-healthy-food/",
+     "text": "Medicare should help doctors prevent disease, not just pay for it",
+     "title": "Medicare should help doctors prevent disease, not just pay for it",
+     "publishedAt": "2026-09-30T16:00:00.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4c78f13fff85d9f0",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/bill-easing-seniors-wheelchair-upgrade-costs-clears-senate/",
+     "text": "Due to a 2016 change in billing policies made by Medicare Part B’s contractors that process durable medical equipment payments, seniors who wanted to buy the lighter wheelchairs had to pay the full cost upfront and then seek reimbursement later.",
+     "title": "Bill easing seniors’ wheelchair upgrade costs clears Senate",
+     "publishedAt": "2026-10-01T16:16:49.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "255f2b2a4a0b6a223817c2f2669aa290d1688075c293ecc1e258c6f563ef68b8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105772284992512086",
+    "fingerprint": "cacf99516629e4998ebf145467a8c1598cf9f76930e7a703e1b312d84d7356e4"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105772284992512086",
+    "fingerprint": "cacf99516629e4998ebf145467a8c1598cf9f76930e7a703e1b312d84d7356e4"
+   }
+  },
+  "2106199255375310878": {
+   "contextVersion": 318,
+   "evidenceSupplied": [
+    {
+     "id": "n_3af3dc284483b21e",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5987947/reflecting-pool-vandalism-hearn-charges-dismissed",
+     "text": "A judge permanently dismisses former Olympian's Reflecting Pool charges",
+     "title": "A judge permanently dismisses former Olympian's Reflecting Pool charges",
+     "publishedAt": "2026-10-01T18:22:59.000Z",
+     "fetchedAt": "2026-10-01T18:41:06.469Z",
+     "version": 294,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7bbe8ca576ae05d5",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6123554-federal-judge-david-hearn-donald-trump-reflecting-pool-case-dismissed/",
+     "text": "Judge bars future Reflecting Pool charges against former Olympian",
+     "title": "Judge bars future Reflecting Pool charges against former Olympian",
+     "publishedAt": "2026-10-01T15:44:18.000Z",
+     "fetchedAt": "2026-10-01T17:11:42.566Z",
+     "version": 293,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_3af3dc284483b21e",
+    "n_7bbe8ca576ae05d5"
+   ],
+   "inputHash": "fac5b65e8017f5dbe36e496d76bedb46f99330617534a74859fae3da16534f58"
+  },
+  "2106202604891971706": {
+   "contextVersion": 318,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fac5b65e8017f5dbe36e496d76bedb46f99330617534a74859fae3da16534f58"
   }
  },
  "needsContext": {
@@ -12807,7 +13027,6 @@
   "2106096449813377384": false,
   "2106096628163891215": false,
   "2106096832099262922": false,
-  "2106096885563904492": false,
   "2106096888021688417": false,
   "2106096923119628288": false,
   "2106096925648769105": false,
@@ -12839,7 +13058,6 @@
   "2106104727930888663": false,
   "2106105418577805548": false,
   "2106105912478040409": false,
-  "2106106100252905498": false,
   "2106106193206714841": false,
   "2106106448795115573": false,
   "2106106596124406248": false,
@@ -13051,10 +13269,18 @@
   "2106183860874567718": false,
   "2106184458651021379": false,
   "2106187255907824111": false,
-  "2106187500376961024": false
+  "2106187500376961024": false,
+  "2106096885563904492": false,
+  "2106106100252905498": false,
+  "2106189643620253808": false,
+  "2106195957104939462": false,
+  "2106197915303555291": false,
+  "2106198725081133326": false,
+  "2106199255375310878": false,
+  "2106202604891971706": false
  },
  "inputBlocks": {},
- "contextVersion": 317,
+ "contextVersion": 318,
  "emerging": [
   {
    "label": "Hasan Piker condemnation fight",
@@ -13422,6 +13648,12 @@
    "ids": [
     "2106179800138436934"
    ]
+  },
+  {
+   "label": "National Archives facility closures & records access",
+   "ids": [
+    "2106189643620253808"
+   ]
   }
  ],
  "unclassified": [],
@@ -13435,43 +13667,18 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2106125247166795983",
-    "2106149729545380002",
-    "2106149759060680893",
-    "2106149863888945360",
-    "2106149947359834574",
-    "2106149952699380154",
-    "2106150065580454334",
-    "2106150100305125773",
-    "2106150497749287316",
-    "2106150523200245867",
-    "2106150902797316328",
-    "2106151026957107599",
-    "2106151040219246917",
-    "2106151508043764011",
-    "2106151583910125775",
-    "2106152847025029123",
-    "2106153253796807089",
-    "2106156928640459175",
-    "2106157281385582757",
-    "2106157283071721612",
-    "2106157988033462580",
-    "2106158335233769619",
-    "2106159346736390545",
-    "2106160618331935223",
-    "2106161082960068976",
-    "2106161128753745921",
-    "2106161460527153195"
+    "2106199255375310878",
+    "2106202604891971706"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T23:57:05.500Z",
-    "observedAt": "2026-10-02T23:57:41.092Z",
+    "attemptedAt": "2026-10-03T02:19:42.082Z",
+    "observedAt": "2026-10-03T02:19:45.012Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 27,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   },
@@ -13537,32 +13744,26 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106172404355518599",
-    "2106172467894968602",
-    "2106173513250091095",
-    "2106173828397490298",
-    "2106173904519848302",
-    "2106173955765670210",
-    "2106174125937184879",
-    "2106174454237663733",
-    "2106177916379804104",
-    "2106178757383901472",
-    "2106179800138436934",
-    "2106182438057882074",
-    "2106183860874567718",
-    "2106184458651021379",
-    "2106187255907824111",
-    "2106187500376961024"
+    "2105657792988057697",
+    "2105773513269535224",
+    "2105834487242276907",
+    "2105838545898512409",
+    "2106096885563904492",
+    "2106106100252905498",
+    "2106189643620253808",
+    "2106195957104939462",
+    "2106197915303555291",
+    "2106198725081133326"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T01:05:28.027Z",
-    "observedAt": "2026-10-03T01:05:56.505Z",
+    "attemptedAt": "2026-10-03T02:19:21.028Z",
+    "observedAt": "2026-10-03T02:19:42.054Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 10,
     "retryCount": 0
    }
   }
@@ -13570,21 +13771,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T01:05:28.027Z",
-   "observedAt": "2026-10-03T01:05:56.505Z",
+   "attemptedAt": "2026-10-03T02:19:42.082Z",
+   "observedAt": "2026-10-03T02:19:45.012Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T01:05:28.027Z",
-   "observedAt": "2026-10-03T01:05:56.505Z",
+   "attemptedAt": "2026-10-03T02:19:42.082Z",
+   "observedAt": "2026-10-03T02:19:45.012Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": {
@@ -13597,5 +13798,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-03T01:05:56.524Z"
+ "updatedAt": "2026-10-03T02:19:45.065Z"
 }
