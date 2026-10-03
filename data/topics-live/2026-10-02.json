@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T13:11:36.461Z",
+ "classifiedAt": "2026-10-03T16:17:07.787Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -12689,43 +12689,6 @@
     "textHash": "c582e5caff43188c2631c7df6e1f56acdb298deadd59af523f667519a1cb0823"
    }
   },
-  "2106074735045992688": {
-   "contextVersion": 323,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4067b40223a40ee6",
-     "publisher": "The Hill",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
-     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "publishedAt": "2026-10-02T19:25:14.000Z",
-     "fetchedAt": "2026-10-02T20:11:38.306Z",
-     "version": 312,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f2380437460e54582b7d2789bf45e63b27510539db2e681005069b561bdaa005"
-  },
   "2106074896694456482": {
    "contextVersion": 323,
    "evidenceSupplied": [
@@ -12992,6 +12955,43 @@
    ],
    "evidenceUsed": [],
    "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106074735045992688": {
+   "contextVersion": 325,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4067b40223a40ee6",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
+     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "publishedAt": "2026-10-02T19:25:14.000Z",
+     "fetchedAt": "2026-10-02T20:11:38.306Z",
+     "version": 312,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3acbd883a9371a0dbdde6a159e094d5ee62a11f2fc907884a14da19ca0c5397f"
   }
  },
  "needsContext": {
@@ -13556,17 +13556,17 @@
   "2106062476127453366": false,
   "2106072955721515104": false,
   "2106072957718016350": false,
-  "2106074735045992688": false,
   "2106074896694456482": false,
   "2106090517096177768": false,
   "2106096449813377384": false,
   "2106096923119628288": false,
   "2106116025410265316": false,
   "2106116857975427200": false,
-  "2106169277464162605": false
+  "2106169277464162605": false,
+  "2106074735045992688": false
  },
  "inputBlocks": {},
- "contextVersion": 323,
+ "contextVersion": 325,
  "emerging": [
   {
    "label": "September 2026 jobs report",
@@ -13951,27 +13951,6 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2106062476127453366",
-    "2106072955721515104",
-    "2106072957718016350",
-    "2106074735045992688",
-    "2106074896694456482",
-    "2106090517096177768"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-03T13:11:02.225Z",
-    "observedAt": "2026-10-03T13:11:10.302Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
   "live_chunk-2": {
    "acceptedIds": [
     "2106096449813377384",
@@ -14028,22 +14007,34 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106005741618512131",
-    "2106005810350592479",
-    "2106011552608313807",
-    "2106047707018387647",
-    "2106055984292475005",
-    "2106061848629915968"
+    "2106074735045992688",
+    "2106398515207532902",
+    "2106398518906687709",
+    "2106398880028065952",
+    "2106398949410009100",
+    "2106399186677608629",
+    "2106399352151322665",
+    "2106399722785390643",
+    "2106399726992228560",
+    "2106401374615560622",
+    "2106402333685166489",
+    "2106402651889905689",
+    "2106403807680708702",
+    "2106403904581726535",
+    "2106403927952588901",
+    "2106404162422595741",
+    "2106404679970140283",
+    "2106404680318456110"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T13:10:48.138Z",
-    "observedAt": "2026-10-03T13:11:02.208Z",
+    "attemptedAt": "2026-10-03T16:15:55.206Z",
+    "observedAt": "2026-10-03T16:16:29.832Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 18,
     "retryCount": 0
    }
   }
@@ -14051,8 +14042,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T13:11:10.326Z",
-   "observedAt": "2026-10-03T13:11:36.429Z",
+   "attemptedAt": "2026-10-03T16:15:55.206Z",
+   "observedAt": "2026-10-03T16:16:29.832Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14060,8 +14051,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T13:11:10.326Z",
-   "observedAt": "2026-10-03T13:11:36.429Z",
+   "attemptedAt": "2026-10-03T16:15:55.206Z",
+   "observedAt": "2026-10-03T16:16:29.832Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14078,5 +14069,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-03T13:11:36.468Z"
+ "updatedAt": "2026-10-03T16:17:07.795Z"
 }
