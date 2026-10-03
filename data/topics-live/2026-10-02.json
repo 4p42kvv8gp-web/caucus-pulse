@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T02:19:45.059Z",
+ "classifiedAt": "2026-10-03T03:51:51.546Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -4143,7 +4143,44 @@
     "economy",
     "prices-inflation"
    ]
-  ]
+  ],
+  "2106207825160532120": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2106208556617982369": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106208625219833998": [],
+  "2106209037809537076": [],
+  "2106216298397016196": [],
+  "2106216380731212083": [],
+  "2106216550059606520": [],
+  "2106216765558579465": [],
+  "2106218437022232597": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106218491200012427": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2106223919627960826": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106230320270041406": []
  },
  "incidents": {},
  "provenance": {
@@ -12718,6 +12755,241 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "fac5b65e8017f5dbe36e496d76bedb46f99330617534a74859fae3da16534f58"
+  },
+  "2106207825160532120": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "quotedContext": {
+    "id": "2106066872462618897",
+    "authorId": "233737858",
+    "handle": "SenRonJohnson",
+    "createdAt": "2026-10-02T17:00:45.000Z",
+    "textChars": 284,
+    "textHash": "705b6aa5db343d291d223d748b5044985c92cb7980ceae97dfddc37dcc6ce1a2"
+   }
+  },
+  "2106208556617982369": {
+   "contextVersion": 319,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6201eac4a073264",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5983539/outside-groups-are-spending-millions-on-races-that-could-determine-senate-control",
+     "text": "A MARTÍNEZ, HOST: New Hampshire's Senate race is one of a handful that will determine which party controls Congress. Democratic Congressman Chris Pappas is facing former Republican Senator John E. Sununu. Outside groups are spending a lot of money on it - about 50 million bucks so far. Josh Rogers of NHPR has a story.",
+     "title": "Outside groups are spending millions on races that could determine Senate control",
+     "publishedAt": "2026-09-30T08:43:34.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_212711f9ee954fb2",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5985087/trump-visits-deep-red-oklahoma-to-campaign-for-gop-candidates-ahead-of-midterms",
+     "text": "A MARTÍNEZ, HOST: But instead of going to battleground states such as New Hampshire, Maine or Michigan, Trump is first heading today to the more reliably red state of Oklahoma. The White House removed CNN from the press pool for this trip just days after a federal judge stopped President Trump's efforts to ban CNN, MS NOW and Politico from the presidential office.",
+     "title": "Trump visits deep red Oklahoma to campaign for GOP candidates ahead of midterms",
+     "publishedAt": "2026-10-01T08:41:58.000Z",
+     "fetchedAt": "2026-10-01T23:11:37.594Z",
+     "version": 297,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8"
+  },
+  "2106208625219833998": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105987826839941480",
+    "fingerprint": "58821811f24398c5cba3874037c3445662abe2b35fb96213acd0ba4cd23a5011"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105987826839941480",
+    "fingerprint": "58821811f24398c5cba3874037c3445662abe2b35fb96213acd0ba4cd23a5011"
+   }
+  },
+  "2106209037809537076": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106119820940906598",
+    "fingerprint": "d8958a7e3a9b03b6c5c7cf9161c5720dbc973fecb741fd8fc6dd3fba28406b89"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106119820940906598",
+    "fingerprint": "d8958a7e3a9b03b6c5c7cf9161c5720dbc973fecb741fd8fc6dd3fba28406b89"
+   }
+  },
+  "2106216298397016196": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "quotedContext": {
+    "id": "2105745986215964954",
+    "authorId": "2293131060",
+    "handle": "WhipKClark",
+    "createdAt": "2026-10-01T19:45:40.000Z",
+    "textChars": 196,
+    "textHash": "ff4c82129e66fc7cd130612c5b3068388d794ef9990c7fb2df641a1036ebb0a6"
+   }
+  },
+  "2106216380731212083": {
+   "contextVersion": 319,
+   "evidenceSupplied": [
+    {
+     "id": "n_6c30b3d6ae702c56",
+     "publisher": "The Washington Post",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/02/dems-are-running-against-one-big-beautiful-bill-what-can-they-if-they-win/",
+     "text": "Dems are running against the One Big Beautiful Bill. What can they do if they win?",
+     "title": "Dems are running against the One Big Beautiful Bill. What can they do if they win?",
+     "publishedAt": "2026-10-02T09:19:28.000Z",
+     "fetchedAt": "2026-10-02T10:49:42.298Z",
+     "version": 305,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "quotedContext": {
+    "id": "2106097589313474681",
+    "authorId": "1871623075822772224",
+    "handle": "RepYassAnsari",
+    "createdAt": "2026-10-02T19:02:49.000Z",
+    "textChars": 387,
+    "textHash": "6d9b2af629206333e83d18f67d0fe308257d6c632dbbf922869a877441602dac"
+   }
+  },
+  "2106216550059606520": {
+   "contextVersion": 319,
+   "evidenceSupplied": [
+    {
+     "id": "n_27250b93b2447236",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/rep-mciver-rare-group-given-birth-in-congress/",
+     "text": "Rep. LaMonica McIver, D-N.J., announced the arrival of her daughter this week, boosting the ranks of congresswomen who have given birth in office.",
+     "title": "Rep. McIver joins rare group who have given birth in Congress",
+     "publishedAt": "2026-10-01T15:53:29.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "quotedContext": {
+    "id": "2105708567902769393",
+    "authorId": "381152398",
+    "handle": "RepTerriSewell",
+    "createdAt": "2026-10-01T17:16:59.000Z",
+    "textChars": 240,
+    "textHash": "7d013bc6cecc6b8bd83ed48973b5969e98e52f7a9f2e2ddbeb31514730c9b98f"
+   }
+  },
+  "2106216765558579465": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "quotedContext": {
+    "id": "2105968917352984903",
+    "authorId": "240812994",
+    "handle": "RepYvetteClarke",
+    "createdAt": "2026-10-02T10:31:31.000Z",
+    "textChars": 396,
+    "textHash": "3fb401a1f7fcd8d1e301e5b42a268fc2e0ff952f0bba5b3c96435fa057b904da"
+   }
+  },
+  "2106218437022232597": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105324522895540420",
+    "fingerprint": "215b934249301de2c9b87d887cf1fbaf7ea579f86b3583229d262d9b2b67f0fd"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105324522895540420",
+    "fingerprint": "215b934249301de2c9b87d887cf1fbaf7ea579f86b3583229d262d9b2b67f0fd"
+   }
+  },
+  "2106218491200012427": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8"
+  },
+  "2106223919627960826": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106191293172822245",
+    "fingerprint": "26ea28d3ba175240b6446f3bddeb0a3a0977ce92515b1d3987c4e611b94502c5"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106191293172822245",
+    "fingerprint": "26ea28d3ba175240b6446f3bddeb0a3a0977ce92515b1d3987c4e611b94502c5"
+   }
+  },
+  "2106230320270041406": {
+   "contextVersion": 319,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad20717da1f60eff9d238dda2fbad8124fe94641b5a5097d68f1cad6c98f26d8",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106223355372421425",
+    "fingerprint": "85bdad24183b5128fb55acdcc088d5cded1b7cf5e4b8d97465d53a62cb9d2080"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106223355372421425",
+    "fingerprint": "85bdad24183b5128fb55acdcc088d5cded1b7cf5e4b8d97465d53a62cb9d2080"
+   }
   }
  },
  "needsContext": {
@@ -13277,10 +13549,22 @@
   "2106197915303555291": false,
   "2106198725081133326": false,
   "2106199255375310878": false,
-  "2106202604891971706": false
+  "2106202604891971706": false,
+  "2106207825160532120": false,
+  "2106208556617982369": false,
+  "2106208625219833998": false,
+  "2106209037809537076": false,
+  "2106216298397016196": false,
+  "2106216380731212083": false,
+  "2106216550059606520": false,
+  "2106216765558579465": false,
+  "2106218437022232597": false,
+  "2106218491200012427": false,
+  "2106223919627960826": false,
+  "2106230320270041406": false
  },
  "inputBlocks": {},
- "contextVersion": 318,
+ "contextVersion": 319,
  "emerging": [
   {
    "label": "Hasan Piker condemnation fight",
@@ -13654,6 +13938,12 @@
    "ids": [
     "2106189643620253808"
    ]
+  },
+  {
+   "label": "Route 91 Harvest Festival shooting memorial groundbreaking",
+   "ids": [
+    "2106218491200012427"
+   ]
   }
  ],
  "unclassified": [],
@@ -13744,26 +14034,30 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105657792988057697",
-    "2105773513269535224",
-    "2105834487242276907",
-    "2105838545898512409",
-    "2106096885563904492",
-    "2106106100252905498",
-    "2106189643620253808",
-    "2106195957104939462",
-    "2106197915303555291",
-    "2106198725081133326"
+    "2105687669917245697",
+    "2105734144772759974",
+    "2106207825160532120",
+    "2106208556617982369",
+    "2106208625219833998",
+    "2106209037809537076",
+    "2106216298397016196",
+    "2106216380731212083",
+    "2106216550059606520",
+    "2106216765558579465",
+    "2106218437022232597",
+    "2106218491200012427",
+    "2106223919627960826",
+    "2106230320270041406"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T02:19:21.028Z",
-    "observedAt": "2026-10-03T02:19:42.054Z",
+    "attemptedAt": "2026-10-03T03:51:36.038Z",
+    "observedAt": "2026-10-03T03:51:51.497Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   }
@@ -13771,21 +14065,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T02:19:42.082Z",
-   "observedAt": "2026-10-03T02:19:45.012Z",
+   "attemptedAt": "2026-10-03T03:51:36.038Z",
+   "observedAt": "2026-10-03T03:51:51.497Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T02:19:42.082Z",
-   "observedAt": "2026-10-03T02:19:45.012Z",
+   "attemptedAt": "2026-10-03T03:51:36.038Z",
+   "observedAt": "2026-10-03T03:51:51.497Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastFailure": {
@@ -13798,5 +14092,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-03T02:19:45.065Z"
+ "updatedAt": "2026-10-03T03:51:51.550Z"
 }
