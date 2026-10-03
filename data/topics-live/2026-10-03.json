@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T14:42:20.364Z",
+ "classifiedAt": "2026-10-03T14:57:14.226Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -367,6 +367,23 @@
    [
     "education",
     "public-schools"
+   ]
+  ],
+  "2106394413521862894": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106394629616619907": [],
+  "2106394672876666918": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -1156,6 +1173,48 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "bd36897efb53fa6aa2cf35ff4374eac9d07003a974524064d6b014412a8e16fe"
+  },
+  "2106394413521862894": {
+   "contextVersion": 324,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b2355ff557ca4dc73ae080edd84b075662c8954d2e6f910f9fe49f6190ef2b09"
+  },
+  "2106394629616619907": {
+   "contextVersion": 324,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b2355ff557ca4dc73ae080edd84b075662c8954d2e6f910f9fe49f6190ef2b09",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106223415367553350",
+    "fingerprint": "bd302dcb342fd63f6f42849791183fabf994019e7325bbff722126bbab9facb6"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106223415367553350",
+    "fingerprint": "bd302dcb342fd63f6f42849791183fabf994019e7325bbff722126bbab9facb6"
+   }
+  },
+  "2106394672876666918": {
+   "contextVersion": 324,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b2355ff557ca4dc73ae080edd84b075662c8954d2e6f910f9fe49f6190ef2b09",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106142180469354584",
+    "fingerprint": "269764fab8296a5880bef90e18233d0232c9553803b81eeb70962808a26c82a3"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106142180469354584",
+    "fingerprint": "269764fab8296a5880bef90e18233d0232c9553803b81eeb70962808a26c82a3"
+   }
   }
  },
  "needsContext": {
@@ -1214,7 +1273,10 @@
   "2106392118633611618": false,
   "2106392343272161368": true,
   "2106393338496622774": false,
-  "2106394088966693280": false
+  "2106394088966693280": false,
+  "2106394413521862894": false,
+  "2106394629616619907": false,
+  "2106394672876666918": false
  },
  "inputBlocks": {},
  "contextVersion": 324,
@@ -1268,6 +1330,18 @@
    "ids": [
     "2106390723142484121"
    ]
+  },
+  {
+   "label": "Tucker Carlson remarks on UK and Nazi Germany",
+   "ids": [
+    "2106394629616619907"
+   ]
+  },
+  {
+   "label": "Protecting Kids from Human-Like Chatbots Act",
+   "ids": [
+    "2106394413521862894"
+   ]
   }
  ],
  "unclassified": [],
@@ -1314,50 +1388,19 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106371542322122792",
-    "2106372568785551656",
-    "2106372964962767272",
-    "2106374359871000595",
-    "2106376176755183987",
-    "2106376224683561232",
-    "2106377409436303836",
-    "2106377559009341568",
-    "2106380400083775539",
-    "2106380685485183421",
-    "2106380737234747416",
-    "2106381278232956994",
-    "2106382366423793747",
-    "2106382599354749229",
-    "2106383780994863330",
-    "2106383972645196191",
-    "2106384112994980221",
-    "2106385080989987186",
-    "2106385191589560674",
-    "2106385908245426525",
-    "2106385984854331609",
-    "2106386420956807341",
-    "2106386468536975740",
-    "2106386615421522258",
-    "2106386671956562170",
-    "2106386679447626130",
-    "2106388777442660377",
-    "2106390723142484121",
-    "2106391199330279894",
-    "2106391829822251275",
-    "2106392118633611618",
-    "2106392343272161368",
-    "2106393338496622774",
-    "2106394088966693280"
+    "2106394413521862894",
+    "2106394629616619907",
+    "2106394672876666918"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T14:41:28.987Z",
-    "observedAt": "2026-10-03T14:42:20.357Z",
+    "attemptedAt": "2026-10-03T14:57:06.339Z",
+    "observedAt": "2026-10-03T14:57:14.221Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 34,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   }
@@ -1365,24 +1408,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T14:41:28.987Z",
-   "observedAt": "2026-10-03T14:42:20.357Z",
+   "attemptedAt": "2026-10-03T14:57:06.339Z",
+   "observedAt": "2026-10-03T14:57:14.221Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 34,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T14:41:28.987Z",
-   "observedAt": "2026-10-03T14:42:20.357Z",
+   "attemptedAt": "2026-10-03T14:57:06.339Z",
+   "observedAt": "2026-10-03T14:57:14.221Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 34,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-03T14:42:20.367Z"
+ "updatedAt": "2026-10-03T14:57:14.228Z"
 }
