@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T22:58:33.452Z",
+ "classifiedAt": "2026-10-03T23:43:44.979Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -1759,7 +1759,66 @@
     "constituent-services",
     null
    ]
-  ]
+  ],
+  "2106521611918868716": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2106521880534675728": [],
+  "2106521923358187813": [
+   [
+    "climate",
+    "disasters"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2106522436246049248": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106523198514684319": [],
+  "2106523451485823031": [
+   [
+    "public-safety",
+    null
+   ]
+  ],
+  "2106523650539106702": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106524442155430299": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106525203425612014": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2106525448972767737": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106527652949512546": []
  },
  "incidents": {},
  "provenance": {
@@ -5146,6 +5205,108 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "dbbf67e0afeca3c8891861f0e8debfd82c15429eba446ee99258f586bc8107e0"
+  },
+  "2106521611918868716": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106521880534675728": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106521923358187813": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106522436246049248": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106523198514684319": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a",
+   "quotedContext": {
+    "id": "2106507025274569114",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-03T22:09:46.000Z",
+    "textChars": 79,
+    "textHash": "bc914316bf3a4a5245205ca7ffb02b64b00b74f3300f059d781d4ac215865ee4"
+   }
+  },
+  "2106523451485823031": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106523650539106702": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106524442155430299": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106525203425612014": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106525448972767737": {
+   "contextVersion": 333,
+   "evidenceSupplied": [
+    {
+     "id": "n_35665d80d856d9fc",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/29/nx-s1-5984989/digital-archives-trump-xi",
+     "text": "But the entire display was removed, due to a \"last minute\" change in the event, according to a Chinese diplomat granted anonymity because they were not authorized to speak publicly.",
+     "title": "Potential Taiwan tension sparked 'last minute' change in Trump-Xi National Archives visit",
+     "publishedAt": "2026-09-29T17:17:04.000Z",
+     "fetchedAt": "2026-09-29T18:48:16.339Z",
+     "version": 256,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a"
+  },
+  "2106527652949512546": {
+   "contextVersion": 333,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "2f70c73d81e459292769824a753256e6892537fa5ebcb9c50f67b1cee817aa8a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106507025274569114",
+    "fingerprint": "debd33072b8b23a99c78fd3a9675e1a288f52d7004c85cc8d0d231942e166172"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106507025274569114",
+    "fingerprint": "debd33072b8b23a99c78fd3a9675e1a288f52d7004c85cc8d0d231942e166172"
+   }
   }
  },
  "needsContext": {
@@ -5399,10 +5560,21 @@
   "2106516255390007356": false,
   "2106516403432149234": false,
   "2106517832162783534": false,
-  "2106517968339308725": false
+  "2106517968339308725": false,
+  "2106521611918868716": false,
+  "2106521880534675728": false,
+  "2106521923358187813": false,
+  "2106522436246049248": false,
+  "2106523198514684319": false,
+  "2106523451485823031": false,
+  "2106523650539106702": false,
+  "2106524442155430299": false,
+  "2106525203425612014": false,
+  "2106525448972767737": false,
+  "2106527652949512546": false
  },
  "inputBlocks": {},
- "contextVersion": 332,
+ "contextVersion": 333,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -5687,44 +5859,27 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106502884871274943",
-    "2106503141135192326",
-    "2106503772541272276",
-    "2106504568838455387",
-    "2106505206359904308",
-    "2106505235380519006",
-    "2106505238966349925",
-    "2106506083288195476",
-    "2106506399995847107",
-    "2106506814385013067",
-    "2106506840528019699",
-    "2106508454735269898",
-    "2106509262151172466",
-    "2106509544709095860",
-    "2106509595686416657",
-    "2106510613094760945",
-    "2106510642090053959",
-    "2106511053693853847",
-    "2106512117490696439",
-    "2106512526200680687",
-    "2106512607188316327",
-    "2106512979889963213",
-    "2106514552464740394",
-    "2106515831807189147",
-    "2106516255390007356",
-    "2106516403432149234",
-    "2106517832162783534",
-    "2106517968339308725"
+    "2106521611918868716",
+    "2106521880534675728",
+    "2106521923358187813",
+    "2106522436246049248",
+    "2106523198514684319",
+    "2106523451485823031",
+    "2106523650539106702",
+    "2106524442155430299",
+    "2106525203425612014",
+    "2106525448972767737",
+    "2106527652949512546"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T22:58:00.582Z",
-    "observedAt": "2026-10-03T22:58:33.438Z",
+    "attemptedAt": "2026-10-03T23:43:31.605Z",
+    "observedAt": "2026-10-03T23:43:44.970Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 28,
+    "acceptedCount": 11,
     "retryCount": 0
    }
   }
@@ -5732,24 +5887,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T22:58:00.582Z",
-   "observedAt": "2026-10-03T22:58:33.438Z",
+   "attemptedAt": "2026-10-03T23:43:31.605Z",
+   "observedAt": "2026-10-03T23:43:44.970Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 28,
+   "acceptedCount": 11,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T22:58:00.582Z",
-   "observedAt": "2026-10-03T22:58:33.438Z",
+   "attemptedAt": "2026-10-03T23:43:31.605Z",
+   "observedAt": "2026-10-03T23:43:44.970Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 28,
+   "acceptedCount": 11,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-03T22:58:33.454Z"
+ "updatedAt": "2026-10-03T23:43:44.982Z"
 }
