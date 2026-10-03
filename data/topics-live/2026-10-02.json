@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T16:17:07.787Z",
+ "classifiedAt": "2026-10-03T17:45:03.586Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -4193,12 +4193,6 @@
  "incidents": {},
  "provenance": {
   "2105875281143550187": {
-   "contextVersion": 302,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "9d51ecb56f80b5970ee6ba359c247a772d34477ee0530a819839e84b443aad4e"
-  },
-  "2105882881587638663": {
    "contextVersion": 302,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -12992,11 +12986,32 @@
    ],
    "evidenceUsed": [],
    "inputHash": "3acbd883a9371a0dbdde6a159e094d5ee62a11f2fc907884a14da19ca0c5397f"
+  },
+  "2105882881587638663": {
+   "contextVersion": 327,
+   "evidenceSupplied": [
+    {
+     "id": "n_b33be4ec97dbbdda",
+     "publisher": "The Hill",
+     "date": "2026-10-03",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6127540-trump-praises-yaniv-hayoun/",
+     "text": "Trump thanks man who helped save Flydubai flight: ‘What a job he did, he’s a hero’",
+     "title": "Trump thanks man who helped save Flydubai flight: ‘What a job he did, he’s a hero’",
+     "publishedAt": "2026-10-03T15:19:26.000Z",
+     "fetchedAt": "2026-10-03T16:58:55.812Z",
+     "version": 326,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "2f87648d258e07f2ab1cc28bc40e48e7f168f6aa960366550bb97d6ed45c9366"
   }
  },
  "needsContext": {
   "2105875281143550187": false,
-  "2105882881587638663": false,
   "2105908738024690046": false,
   "2105940812349763609": false,
   "2105964930876760512": false,
@@ -13563,10 +13578,11 @@
   "2106116025410265316": false,
   "2106116857975427200": false,
   "2106169277464162605": false,
-  "2106074735045992688": false
+  "2106074735045992688": false,
+  "2105882881587638663": false
  },
  "inputBlocks": {},
- "contextVersion": 325,
+ "contextVersion": 327,
  "emerging": [
   {
    "label": "September 2026 jobs report",
@@ -14007,34 +14023,56 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106074735045992688",
-    "2106398515207532902",
-    "2106398518906687709",
-    "2106398880028065952",
-    "2106398949410009100",
-    "2106399186677608629",
-    "2106399352151322665",
-    "2106399722785390643",
-    "2106399726992228560",
-    "2106401374615560622",
-    "2106402333685166489",
-    "2106402651889905689",
-    "2106403807680708702",
-    "2106403904581726535",
-    "2106403927952588901",
-    "2106404162422595741",
-    "2106404679970140283",
-    "2106404680318456110"
+    "2105882881587638663",
+    "2106418020113437083",
+    "2106418287643181325",
+    "2106418859658096758",
+    "2106418959767437448",
+    "2106419927183684023",
+    "2106420380345028834",
+    "2106421262264537422",
+    "2106421519890997308",
+    "2106421615491698795",
+    "2106421923710181884",
+    "2106422476561334470",
+    "2106423537661772108",
+    "2106424014898188718",
+    "2106424103703871854",
+    "2106424236684288280",
+    "2106424607737839864",
+    "2106425140666056890",
+    "2106425404080964039",
+    "2106425864703328256",
+    "2106426558097338643",
+    "2106428397723222042",
+    "2106428560252576226",
+    "2106429073803092380",
+    "2106429289289634008",
+    "2106429297221050467",
+    "2106430059812982787",
+    "2106430336041124194",
+    "2106430844306956439",
+    "2106431468511834208",
+    "2106432844016898452",
+    "2106432848932622706",
+    "2106433742093087193",
+    "2106434815054807530",
+    "2106434959154065849",
+    "2106435443864613068",
+    "2106435596671647788",
+    "2106436564301537503",
+    "2106436620140662999",
+    "2106436651874459966"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T16:15:55.206Z",
-    "observedAt": "2026-10-03T16:16:29.832Z",
+    "attemptedAt": "2026-10-03T17:44:04.046Z",
+    "observedAt": "2026-10-03T17:45:01.488Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 18,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   }
@@ -14042,21 +14080,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T16:15:55.206Z",
-   "observedAt": "2026-10-03T16:16:29.832Z",
+   "attemptedAt": "2026-10-03T17:44:04.046Z",
+   "observedAt": "2026-10-03T17:45:01.488Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T16:15:55.206Z",
-   "observedAt": "2026-10-03T16:16:29.832Z",
+   "attemptedAt": "2026-10-03T17:44:04.046Z",
+   "observedAt": "2026-10-03T17:45:01.488Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": {
@@ -14069,5 +14107,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-03T16:17:07.795Z"
+ "updatedAt": "2026-10-03T17:45:03.591Z"
 }
