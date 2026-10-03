@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T12:34:06.458Z",
+ "generatedAt": "2026-10-03T12:42:25.382Z",
  "lastPollAt": "2026-10-03T11:37:46.510Z",
  "lastPollAttemptAt": "2026-10-03T11:37:46.116Z",
  "lastPollOutcome": "complete",
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-03T12:34:04.877Z"
+  "referenceAsOf": "2026-10-03T12:42:23.795Z"
  },
  "news": {
   "version": 323,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-03T12:34:05.424Z",
+   "asOf": "2026-10-03T12:42:24.328Z",
    "windowDays": 14,
-   "windowStart": "2026-09-19T12:34:05.424Z",
+   "windowStart": "2026-09-19T12:42:24.328Z",
    "eligibleItems": 1688,
    "withExcerpts": 179,
    "headlineOrSummary": 1509,
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-03",
-  "capturedIn24h": 547,
-  "classifiedIn24h": 547,
-  "taggedIn24h": 500,
+  "capturedIn24h": 545,
+  "classifiedIn24h": 545,
+  "taggedIn24h": 498,
   "pendingIn24h": 0,
-  "momentumPaused": false,
+  "momentumPaused": true,
   "health": {
-   "status": "healthy",
-   "reasonCode": null,
-   "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-03T11:37:49.581Z",
+   "status": "degraded",
+   "reasonCode": "inference-error",
+   "hasCurrentFailure": true,
+   "lastAttemptAt": "2026-10-03T12:42:19.959Z",
    "lastSuccessAt": "2026-10-03T11:37:53.609Z",
-   "capturedIn24h": 547,
-   "classifiedIn24h": 547,
+   "capturedIn24h": 545,
+   "classifiedIn24h": 545,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6875,18 +6875,18 @@
    },
    "curve48": [
     95,
-    164,
-    187,
-    119,
-    34,
+    170,
+    193,
+    106,
+    33,
     5,
     2,
-    13,
-    123,
-    141,
-    163,
-    89,
-    21,
+    15,
+    124,
+    145,
+    162,
+    84,
+    20,
     4,
     5,
     1
@@ -6942,19 +6942,19 @@
     "engDelta": 0
    },
    "curve48": [
-    40,
-    81,
-    95,
-    59,
+    41,
+    83,
+    96,
+    55,
     21,
     2,
     2,
-    8,
-    53,
-    73,
+    10,
+    52,
+    76,
     78,
-    38,
-    14,
+    35,
+    13,
     2,
     5,
     0
@@ -7011,18 +7011,18 @@
    },
    "curve48": [
     57,
-    92,
-    92,
-    62,
-    16,
+    97,
+    91,
+    58,
+    15,
     4,
     0,
-    9,
-    85,
-    78,
-    92,
-    56,
     11,
+    86,
+    81,
+    90,
+    53,
+    10,
     3,
     0,
     1
@@ -7080,17 +7080,17 @@
    "curve48": [
     19,
     41,
-    40,
-    17,
-    13,
+    42,
+    15,
+    12,
     1,
     0,
     2,
     21,
-    25,
-    32,
-    15,
-    8,
+    26,
+    31,
+    16,
+    7,
     1,
     0,
     1
@@ -7147,17 +7147,17 @@
    },
    "curve48": [
     20,
-    36,
+    37,
     35,
-    23,
+    22,
     5,
     1,
     0,
     6,
     21,
-    27,
-    33,
-    16,
+    29,
+    32,
+    15,
     2,
     0,
     0,
@@ -7214,9 +7214,9 @@
     "engDelta": 0
    },
    "curve48": [
-    10,
-    14,
-    21,
+    9,
+    15,
+    20,
     19,
     1,
     1,
@@ -7224,8 +7224,8 @@
     1,
     10,
     12,
-    14,
-    11,
+    15,
+    10,
     1,
     1,
     5,
@@ -9916,20 +9916,20 @@
     134,
     1
    ],
-   "d": 43,
+   "d": 41,
    "mAvg": 62,
    "epAvg": 176,
    "momentum": {
-    "score": 64,
+    "score": 63,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.9299999999999999,
+    "volume": 0.9099999999999999,
     "accel": 0,
     "adoption": 0.8387096774193548,
-    "eff": 3.8,
-    "engLift": 0.27498065086934986
+    "eff": 3.9,
+    "engLift": 0.28988412492452953
    },
    "subs": [
     {
@@ -21476,140 +21476,6 @@
    ]
   },
   {
-   "label": "September 2026 jobs report",
-   "lastSeen": "2026-10-02T17:25:19.000Z",
-   "thresholdMet": true,
-   "activeMembers": 3,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 4,
-   "members": 3,
-   "accounts": 3,
-   "postIds": [
-    "2106001502636843250",
-    "2106001518587433421",
-    "2106002957602783328",
-    "2106073052874219921"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2106001502636843250",
-     "handle": "@RepDonBeyer",
-     "time": "2026-10-02T12:41:00.000Z"
-    },
-    {
-     "id": "2106001518587433421",
-     "handle": "@RepDonBeyer",
-     "time": "2026-10-02T12:41:04.000Z"
-    },
-    {
-     "id": "2106002957602783328",
-     "handle": "@CongBoyle",
-     "time": "2026-10-02T12:46:47.000Z"
-    },
-    {
-     "id": "2106073052874219921",
-     "handle": "@RepAngieCraig",
-     "time": "2026-10-02T17:25:19.000Z"
-    }
-   ],
-   "sampleId": "2106073052874219921",
-   "sampleHandle": "@RepAngieCraig",
-   "who": [
-    "@RepDonBeyer",
-    "@CongBoyle",
-    "@RepAngieCraig"
-   ],
-   "cm": [
-    2,
-    3,
-    0,
-    0,
-    0
-   ],
-   "eng": 229,
-   "phrase": "jobs report",
-   "coherence": 50,
-   "since": "2026-10-02T12:41:00.000Z",
-   "shape": [
-    3,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4,
-    4
-   ],
-   "sample": "Another disappointing jobs report. Unemployment ticked up to 4.2%, job growth slowed (again) and Minnesotans are feeling it.\n\nPresident Trump promised a…",
-   "suggest": "september_2026_jobs_report",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [],
-   "related": [
-    {
-     "id": "2106018288589263013",
-     "sim": 0.8895,
-     "handle": "@RepJasonCrow",
-     "text": "Another disappointing jobs report.\n\nUnemployment is up. Jobs are down. Costs are through the roof.\n\nTrump’s economy is not working for working people. https://t.co/6GxbxG8qcP",
-     "time": "2026-10-02T13:47:42.000Z",
-     "topics": [
-      "economy/jobs-wages",
-      "economy/prices-inflation"
-     ]
-    },
-    {
-     "id": "2106153253796807089",
-     "sim": 0.8737,
-     "handle": "@JudyChuCampaign",
-     "text": "The job market slowed: with less job growth, higher unemployment, and wages tracking under inflation for the 6th straight month. Trump’s economy is hurting us all.\nhttps://t.co/ZMa09hkoVL",
-     "time": "2026-10-02T22:44:00.000Z",
-     "topics": [
-      "economy/jobs-wages",
-      "economy/prices-inflation"
-     ]
-    },
-    {
-     "id": "2106114515976835521",
-     "sim": 0.873,
-     "handle": "@RepLindaSanchez",
-     "text": "Another shitty jobs report for the supposed businessman who said “he alone can fix” the economy.\n \nOnly 29K jobs created, with unemployment rising to 4.2%.\n \nTell us more about how everything is…",
-     "time": "2026-10-02T20:10:04.000Z",
-     "topics": [
-      "economy/jobs-wages"
-     ]
-    },
-    {
-     "id": "2106029920703205787",
-     "sim": 0.8676,
-     "handle": "@tedlieu",
-     "text": "Another bad jobs report.\n\n-Only 29k jobs added, far below expectations of 90k\n\n-July and August jobs revised downwards by 60k\n\n-Unemployment rate rose to 4.2%\n\nWhat have trump and Republicans been…",
-     "time": "2026-10-02T14:33:55.000Z",
-     "topics": [
-      "economy/jobs-wages",
-      "democracy/lake-america-renaming",
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2106033139093274696",
-     "sim": 0.8661,
-     "handle": "@RepDarrenSoto",
-     "text": "Another lackluster US Jobs Report as unemployment rises. 📈 \n\nPres Trump’s tariffs, Iran War and corruption are to blame. Meanwhile the GOP Congress sent us home and did nothing to help. America…",
-     "time": "2026-10-02T14:46:43.000Z",
-     "topics": [
-      "economy/jobs-wages",
-      "economy/tariffs-trade",
-      "foreign-policy/middle-east",
-      "democracy/corruption-ethics"
-     ]
-    }
-   ]
-  },
-  {
    "label": "September 2026 jobs report (29,000 jobs, 4.2% unemployment)",
    "lastSeen": "2026-10-02T14:51:24.000Z",
    "thresholdMet": true,
@@ -21867,6 +21733,140 @@
      "topics": [
       "foreign-policy/military-veterans",
       "civil-rights/lgbtq"
+     ]
+    }
+   ]
+  },
+  {
+   "label": "September 2026 jobs report",
+   "lastSeen": "2026-10-02T17:25:19.000Z",
+   "thresholdMet": true,
+   "activeMembers": 2,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 4,
+   "members": 3,
+   "accounts": 3,
+   "postIds": [
+    "2106001502636843250",
+    "2106001518587433421",
+    "2106002957602783328",
+    "2106073052874219921"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2106001502636843250",
+     "handle": "@RepDonBeyer",
+     "time": "2026-10-02T12:41:00.000Z"
+    },
+    {
+     "id": "2106001518587433421",
+     "handle": "@RepDonBeyer",
+     "time": "2026-10-02T12:41:04.000Z"
+    },
+    {
+     "id": "2106002957602783328",
+     "handle": "@CongBoyle",
+     "time": "2026-10-02T12:46:47.000Z"
+    },
+    {
+     "id": "2106073052874219921",
+     "handle": "@RepAngieCraig",
+     "time": "2026-10-02T17:25:19.000Z"
+    }
+   ],
+   "sampleId": "2106073052874219921",
+   "sampleHandle": "@RepAngieCraig",
+   "who": [
+    "@RepDonBeyer",
+    "@CongBoyle",
+    "@RepAngieCraig"
+   ],
+   "cm": [
+    2,
+    3,
+    0,
+    0,
+    0
+   ],
+   "eng": 229,
+   "phrase": "jobs report",
+   "coherence": 50,
+   "since": "2026-10-02T12:41:00.000Z",
+   "shape": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "sample": "Another disappointing jobs report. Unemployment ticked up to 4.2%, job growth slowed (again) and Minnesotans are feeling it.\n\nPresident Trump promised a…",
+   "suggest": "september_2026_jobs_report",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [],
+   "related": [
+    {
+     "id": "2106018288589263013",
+     "sim": 0.8895,
+     "handle": "@RepJasonCrow",
+     "text": "Another disappointing jobs report.\n\nUnemployment is up. Jobs are down. Costs are through the roof.\n\nTrump’s economy is not working for working people. https://t.co/6GxbxG8qcP",
+     "time": "2026-10-02T13:47:42.000Z",
+     "topics": [
+      "economy/jobs-wages",
+      "economy/prices-inflation"
+     ]
+    },
+    {
+     "id": "2106153253796807089",
+     "sim": 0.8737,
+     "handle": "@JudyChuCampaign",
+     "text": "The job market slowed: with less job growth, higher unemployment, and wages tracking under inflation for the 6th straight month. Trump’s economy is hurting us all.\nhttps://t.co/ZMa09hkoVL",
+     "time": "2026-10-02T22:44:00.000Z",
+     "topics": [
+      "economy/jobs-wages",
+      "economy/prices-inflation"
+     ]
+    },
+    {
+     "id": "2106114515976835521",
+     "sim": 0.873,
+     "handle": "@RepLindaSanchez",
+     "text": "Another shitty jobs report for the supposed businessman who said “he alone can fix” the economy.\n \nOnly 29K jobs created, with unemployment rising to 4.2%.\n \nTell us more about how everything is…",
+     "time": "2026-10-02T20:10:04.000Z",
+     "topics": [
+      "economy/jobs-wages"
+     ]
+    },
+    {
+     "id": "2106029920703205787",
+     "sim": 0.8676,
+     "handle": "@tedlieu",
+     "text": "Another bad jobs report.\n\n-Only 29k jobs added, far below expectations of 90k\n\n-July and August jobs revised downwards by 60k\n\n-Unemployment rate rose to 4.2%\n\nWhat have trump and Republicans been…",
+     "time": "2026-10-02T14:33:55.000Z",
+     "topics": [
+      "economy/jobs-wages",
+      "democracy/lake-america-renaming",
+      "congress-politics/elections-2026"
+     ]
+    },
+    {
+     "id": "2106033139093274696",
+     "sim": 0.8661,
+     "handle": "@RepDarrenSoto",
+     "text": "Another lackluster US Jobs Report as unemployment rises. 📈 \n\nPres Trump’s tariffs, Iran War and corruption are to blame. Meanwhile the GOP Congress sent us home and did nothing to help. America…",
+     "time": "2026-10-02T14:46:43.000Z",
+     "topics": [
+      "economy/jobs-wages",
+      "economy/tariffs-trade",
+      "foreign-policy/middle-east",
+      "democracy/corruption-ethics"
      ]
     }
    ]
