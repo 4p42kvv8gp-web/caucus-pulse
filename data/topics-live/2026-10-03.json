@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T11:37:53.613Z",
+ "classifiedAt": "2026-10-03T13:11:36.472Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -68,6 +68,82 @@
    ]
   ],
   "2106339284412449083": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2106350055087088082": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106351305031574006": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2106352349254205674": [],
+  "2106353958197313581": [],
+  "2106362915762602482": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106364896271389149": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106365222000971858": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106365339260883254": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2106366077358010433": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106368070101160018": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106368679524880444": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106369025588506977": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2106369678000156923": [
    [
     "foreign-policy",
     null
@@ -223,6 +299,127 @@
     "textChars": 243,
     "textHash": "db919ff275b549687f10bd6c4211db6d95070b519c07c51ed43274b87e964cce"
    }
+  },
+  "2106350055087088082": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106351305031574006": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106352349254205674": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106353958197313581": {
+   "contextVersion": 323,
+   "evidenceSupplied": [
+    {
+     "id": "n_08e38c583f7a95c0",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6115892-senate-passes-protect-college-sports-act/",
+     "text": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "title": "Senate passes Protect College Sports Act with sweeping bipartisan vote",
+     "publishedAt": "2026-09-29T02:08:17.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "WASHINGTON — The Protect College Sports Act , a bill aiming to rein in what its supporters call a \"Wild West\" era of college athletics , cleared its most significant hurdle yet on Monday when the Senate passed it by a bipartisan vote of 77-22.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106362915762602482": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106364896271389149": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106365222000971858": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106080642807283802",
+    "fingerprint": "05abc35d57a69e007ffa1327ee917da80134ee92b8d7ee77125f19d8c5b12718"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106080642807283802",
+    "fingerprint": "05abc35d57a69e007ffa1327ee917da80134ee92b8d7ee77125f19d8c5b12718"
+   }
+  },
+  "2106365339260883254": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106366077358010433": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106368070101160018": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106368679524880444": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106369025588506977": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
+  },
+  "2106369678000156923": {
+   "contextVersion": 323,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
   }
  },
  "needsContext": {
@@ -234,10 +431,23 @@
   "2106297808747921807": false,
   "2106302158622855313": false,
   "2106305086381232208": false,
-  "2106339284412449083": false
+  "2106339284412449083": false,
+  "2106350055087088082": false,
+  "2106351305031574006": false,
+  "2106352349254205674": false,
+  "2106353958197313581": false,
+  "2106362915762602482": false,
+  "2106364896271389149": false,
+  "2106365222000971858": false,
+  "2106365339260883254": false,
+  "2106366077358010433": false,
+  "2106368070101160018": false,
+  "2106368679524880444": false,
+  "2106369025588506977": false,
+  "2106369678000156923": false
  },
  "inputBlocks": {},
- "contextVersion": 322,
+ "contextVersion": 323,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -263,6 +473,12 @@
    "ids": [
     "2106339284412449083"
    ]
+  },
+  {
+   "label": "Prediction Markets Are Gambling Act / sports betting on prediction markets",
+   "ids": [
+    "2106353958197313581"
+   ]
   }
  ],
  "unclassified": [],
@@ -274,19 +490,36 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-0": {
+  "live_chunk-2": {
    "acceptedIds": [
-    "2106339284412449083"
+    "2106096449813377384",
+    "2106096923119628288",
+    "2106116025410265316",
+    "2106116857975427200",
+    "2106169277464162605",
+    "2106350055087088082",
+    "2106351305031574006",
+    "2106352349254205674",
+    "2106353958197313581",
+    "2106362915762602482",
+    "2106364896271389149",
+    "2106365222000971858",
+    "2106365339260883254",
+    "2106366077358010433",
+    "2106368070101160018",
+    "2106368679524880444",
+    "2106369025588506977",
+    "2106369678000156923"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T11:37:49.581Z",
-    "observedAt": "2026-10-03T11:37:53.609Z",
+    "attemptedAt": "2026-10-03T13:11:10.326Z",
+    "observedAt": "2026-10-03T13:11:36.429Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 18,
     "retryCount": 0
    }
   }
@@ -294,24 +527,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T11:37:49.581Z",
-   "observedAt": "2026-10-03T11:37:53.609Z",
+   "attemptedAt": "2026-10-03T13:11:10.326Z",
+   "observedAt": "2026-10-03T13:11:36.429Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 18,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T11:37:49.581Z",
-   "observedAt": "2026-10-03T11:37:53.609Z",
+   "attemptedAt": "2026-10-03T13:11:10.326Z",
+   "observedAt": "2026-10-03T13:11:36.429Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 18,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-03T11:37:53.615Z"
+ "updatedAt": "2026-10-03T13:11:36.475Z"
 }
