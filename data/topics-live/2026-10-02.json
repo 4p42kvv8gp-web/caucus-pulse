@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-02T23:58:17.384Z",
+ "classifiedAt": "2026-10-03T01:05:56.521Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -3986,6 +3986,109 @@
   "2106169750954860792": [
    [
     "constituent-services",
+    null
+   ]
+  ],
+  "2106172404355518599": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106172467894968602": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2106173513250091095": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106173828397490298": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106173904519848302": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106173955765670210": [
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2106174125937184879": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106174454237663733": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2106177916379804104": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2106178757383901472": [],
+  "2106179800138436934": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2106182438057882074": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2106183860874567718": [
+   [
+    "climate",
+    "clean-energy"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106184458651021379": [
+   [
+    "healthcare",
+    "medicare"
+   ]
+  ],
+  "2106187255907824111": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106187500376961024": [
+   [
+    "public-safety",
     null
    ]
   ]
@@ -12132,6 +12235,269 @@
     "textChars": 121,
     "textHash": "05cf127d290b8cbeeee9c2c5d4a2198911ed92713d92e285c499f7d7b565d10f"
    }
+  },
+  "2106172404355518599": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106172467894968602": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106173513250091095": {
+   "contextVersion": 317,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f5573e9633cf0902",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6120528-senate-blocks-gop-stock-bill/",
+     "text": "Democrats block bill restricting lawmakers from trading stocks",
+     "title": "Democrats block bill restricting lawmakers from trading stocks",
+     "publishedAt": "2026-09-30T16:56:19.000Z",
+     "fetchedAt": "2026-09-30T17:16:34.469Z",
+     "version": 276,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395",
+   "quotedContext": {
+    "id": "2102811490877091969",
+    "authorId": "986423555025002497",
+    "handle": "BryanSteil",
+    "createdAt": "2026-09-23T17:25:02.000Z",
+    "textChars": 149,
+    "textHash": "feaaf68961eeebba736e74d13f6ef405f27b73c33258302766bf628fa8eb5a88"
+   }
+  },
+  "2106173828397490298": {
+   "contextVersion": 317,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f5573e9633cf0902",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6120528-senate-blocks-gop-stock-bill/",
+     "text": "Democrats block bill restricting lawmakers from trading stocks",
+     "title": "Democrats block bill restricting lawmakers from trading stocks",
+     "publishedAt": "2026-09-30T16:56:19.000Z",
+     "fetchedAt": "2026-09-30T17:16:34.469Z",
+     "version": 276,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395",
+   "quotedContext": {
+    "id": "2106173513250091095",
+    "authorId": "309070309",
+    "handle": "MarkPocan",
+    "createdAt": "2026-10-03T00:04:31.000Z",
+    "textChars": 309,
+    "textHash": "03597c315e1a8b08854ee7ded017dd96999dd997d2b0182b0850ebea9eb3d1bd"
+   }
+  },
+  "2106173904519848302": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106173955765670210": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106174125937184879": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106174454237663733": {
+   "contextVersion": 317,
+   "evidenceSupplied": [
+    {
+     "id": "n_da22c1fe9efcf0ca",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/most-vulnerable-senators-election-day/",
+     "text": "New to the top of CQ Roll Call’s list of the most vulnerable senators is Ohio Republican Jon Husted, who’s running for the remaining term of Sen.-turned-Vice President JD Vance. He faces a challenge from former Sen. Sherrod Brown, who lost reelection just two years ago and retains high name ID and fundraising prowess.",
+     "title": "The most vulnerable senators of 2026, about a month out from Election Day",
+     "publishedAt": "2026-09-30T05:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "version": 269,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106177916379804104": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106178757383901472": {
+   "contextVersion": 317,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6201eac4a073264",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5983539/outside-groups-are-spending-millions-on-races-that-could-determine-senate-control",
+     "text": "A MARTÍNEZ, HOST: New Hampshire's Senate race is one of a handful that will determine which party controls Congress. Democratic Congressman Chris Pappas is facing former Republican Senator John E. Sununu. Outside groups are spending a lot of money on it - about 50 million bucks so far. Josh Rogers of NHPR has a story.",
+     "title": "Outside groups are spending millions on races that could determine Senate control",
+     "publishedAt": "2026-09-30T08:43:34.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_212711f9ee954fb2",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5985087/trump-visits-deep-red-oklahoma-to-campaign-for-gop-candidates-ahead-of-midterms",
+     "text": "A MARTÍNEZ, HOST: But instead of going to battleground states such as New Hampshire, Maine or Michigan, Trump is first heading today to the more reliably red state of Oklahoma. The White House removed CNN from the press pool for this trip just days after a federal judge stopped President Trump's efforts to ban CNN, MS NOW and Politico from the presidential office.",
+     "title": "Trump visits deep red Oklahoma to campaign for GOP candidates ahead of midterms",
+     "publishedAt": "2026-10-01T08:41:58.000Z",
+     "fetchedAt": "2026-10-01T23:11:37.594Z",
+     "version": 297,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106179800138436934": {
+   "contextVersion": 317,
+   "evidenceSupplied": [
+    {
+     "id": "n_4ac051f3d30b5026",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6126882-trump-criticizes-letitia-james-appointment/",
+     "text": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "title": "Trump: Cornell students ‘won’t get a fair shake’ with James leading probe",
+     "publishedAt": "2026-10-02T20:36:10.000Z",
+     "fetchedAt": "2026-10-02T20:43:52.857Z",
+     "version": 313,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4222ace62f1fc447",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/29/nx-s1-5984611/n-y-sen-gillibrand-says-new-allegations-in-cornell-case-are-serious-and-horrific",
+     "text": "SACHA PFEIFFER, HOST: The alleged assault at Cornell happened in 2024. Campus police investigated but no criminal charges were ever filed. Cornell defends its handling of the case. Now, the woman - identified as Jane Doe - has brought a civil case against the university, and the seven male students she says assaulted her. That has prompted prosecutors to reopen the case, and the details of these allegations have sparked national outrage.",
+     "title": "N.Y. Sen. Gillibrand says new allegations in Cornell case are 'serious and horrific'",
+     "publishedAt": "2026-09-29T20:47:41.000Z",
+     "fetchedAt": "2026-09-30T04:37:09.174Z",
+     "version": 265,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4ac051f3d30b5026",
+    "n_4222ace62f1fc447"
+   ],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395",
+   "quotedContext": {
+    "id": "2106118805353107457",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-02T20:27:07.000Z",
+    "textChars": 141,
+    "textHash": "58432316ba35fbfd827f35ecf2c3520dde26e26c75565cfcdaaa983fdadf8958"
+   }
+  },
+  "2106182438057882074": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106183860874567718": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106184458651021379": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106187255907824111": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
+  },
+  "2106187500376961024": {
+   "contextVersion": 317,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b913cacbf6818b6d119ae200149f21967fea2fbf73e2371ce0cf5bacf8f41395"
   }
  },
  "needsContext": {
@@ -12669,10 +13035,26 @@
   "2106169135906652402": false,
   "2106169277464162605": false,
   "2106169537934889453": false,
-  "2106169750954860792": false
+  "2106169750954860792": false,
+  "2106172404355518599": false,
+  "2106172467894968602": false,
+  "2106173513250091095": false,
+  "2106173828397490298": false,
+  "2106173904519848302": false,
+  "2106173955765670210": false,
+  "2106174125937184879": false,
+  "2106174454237663733": false,
+  "2106177916379804104": false,
+  "2106178757383901472": true,
+  "2106179800138436934": false,
+  "2106182438057882074": false,
+  "2106183860874567718": false,
+  "2106184458651021379": false,
+  "2106187255907824111": false,
+  "2106187500376961024": false
  },
  "inputBlocks": {},
- "contextVersion": 315,
+ "contextVersion": 317,
  "emerging": [
   {
    "label": "Hasan Piker condemnation fight",
@@ -13028,6 +13410,18 @@
    "ids": [
     "2106157283071721612"
    ]
+  },
+  {
+   "label": "Trump administration AI chatbot launch",
+   "ids": [
+    "2106172404355518599"
+   ]
+  },
+  {
+   "label": "Cornell gang rape case investigation",
+   "ids": [
+    "2106179800138436934"
+   ]
   }
  ],
  "unclassified": [],
@@ -13143,23 +13537,32 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2105635532118323307",
-    "2105699923349963096",
-    "2105699925224808793",
-    "2105742155772035177",
-    "2105742612443369967",
-    "2106012875856728426",
-    "2106082167512072647"
+    "2106172404355518599",
+    "2106172467894968602",
+    "2106173513250091095",
+    "2106173828397490298",
+    "2106173904519848302",
+    "2106173955765670210",
+    "2106174125937184879",
+    "2106174454237663733",
+    "2106177916379804104",
+    "2106178757383901472",
+    "2106179800138436934",
+    "2106182438057882074",
+    "2106183860874567718",
+    "2106184458651021379",
+    "2106187255907824111",
+    "2106187500376961024"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-02T23:56:51.796Z",
-    "observedAt": "2026-10-02T23:57:05.284Z",
+    "attemptedAt": "2026-10-03T01:05:28.027Z",
+    "observedAt": "2026-10-03T01:05:56.505Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -13167,21 +13570,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-02T23:57:41.129Z",
-   "observedAt": "2026-10-02T23:58:17.333Z",
+   "attemptedAt": "2026-10-03T01:05:28.027Z",
+   "observedAt": "2026-10-03T01:05:56.505Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 24,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-02T23:57:41.129Z",
-   "observedAt": "2026-10-02T23:58:17.333Z",
+   "attemptedAt": "2026-10-03T01:05:28.027Z",
+   "observedAt": "2026-10-03T01:05:56.505Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 24,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": {
@@ -13194,5 +13597,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-02T23:58:17.388Z"
+ "updatedAt": "2026-10-03T01:05:56.524Z"
 }
