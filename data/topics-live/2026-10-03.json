@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T08:34:33.025Z",
+ "classifiedAt": "2026-10-03T10:07:01.045Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -50,6 +50,18 @@
    ]
   ],
   "2106297808747921807": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106302158622855313": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106305086381232208": [
    [
     "tech",
     "ai-policy"
@@ -163,6 +175,34 @@
     "textChars": 106,
     "textHash": "b9ffa2f61913a2c29daf8708f86c689830ab9b4591585a44ca71583f3182b618"
    }
+  },
+  "2106302158622855313": {
+   "contextVersion": 321,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "46d25f54d32ab3f65e6ec179c09a5be1acc28ee50839bdd1e12c4d370c354c58",
+   "quotedContext": {
+    "id": "2106081293142516145",
+    "authorId": "1618023072292012034",
+    "handle": "Benthamsbulldog",
+    "createdAt": "2026-10-02T17:58:04.000Z",
+    "textChars": 108,
+    "textHash": "4698bfb8932fad8deb205dbc32a2e4f117a166c772e9d37e2c3a15d0e4f4b57b"
+   }
+  },
+  "2106305086381232208": {
+   "contextVersion": 321,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "46d25f54d32ab3f65e6ec179c09a5be1acc28ee50839bdd1e12c4d370c354c58",
+   "quotedContext": {
+    "id": "2105778989998678444",
+    "authorId": "4846823272",
+    "handle": "Michael_Druggan",
+    "createdAt": "2026-10-01T21:56:49.000Z",
+    "textChars": 176,
+    "textHash": "c4fc2d2fbff7defcbb9c21d4360404ca2523943deb1338c091cb1254b5328529"
+   }
   }
  },
  "needsContext": {
@@ -171,10 +211,12 @@
   "2106259199512727625": false,
   "2106281642830803025": false,
   "2106288740641722722": false,
-  "2106297808747921807": false
+  "2106297808747921807": false,
+  "2106302158622855313": false,
+  "2106305086381232208": false
  },
  "inputBlocks": {},
- "contextVersion": 320,
+ "contextVersion": 321,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -207,19 +249,18 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106281642830803025",
-    "2106288740641722722",
-    "2106297808747921807"
+    "2106302158622855313",
+    "2106305086381232208"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T08:34:20.886Z",
-    "observedAt": "2026-10-03T08:34:33.019Z",
+    "attemptedAt": "2026-10-03T10:06:59.108Z",
+    "observedAt": "2026-10-03T10:07:01.041Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -227,24 +268,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T08:34:20.886Z",
-   "observedAt": "2026-10-03T08:34:33.019Z",
+   "attemptedAt": "2026-10-03T10:06:59.108Z",
+   "observedAt": "2026-10-03T10:07:01.041Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T08:34:20.886Z",
-   "observedAt": "2026-10-03T08:34:33.019Z",
+   "attemptedAt": "2026-10-03T10:06:59.108Z",
+   "observedAt": "2026-10-03T10:07:01.041Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-03T08:34:33.029Z"
+ "updatedAt": "2026-10-03T10:07:01.047Z"
 }
