@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-04",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-04T05:43:10.223Z",
+ "assignments": {
+  "2106608554777956617": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2106608554777956617": {
+   "contextVersion": 338,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "30aa595ebbc0047c89295d22fadf6963ea87ffbd8ef7179c15a0097b695b04f4"
+  }
+ },
+ "needsContext": {
+  "2106608554777956617": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 338,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2106608554777956617"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-04T05:43:08.355Z",
+    "observedAt": "2026-10-04T05:43:10.222Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 1,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-04T05:43:08.355Z",
+   "observedAt": "2026-10-04T05:43:10.222Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 1,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-04T05:43:08.355Z",
+   "observedAt": "2026-10-04T05:43:10.222Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 1,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-04T05:43:10.223Z"
+}
