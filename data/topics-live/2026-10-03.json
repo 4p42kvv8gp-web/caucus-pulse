@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T04:13:24.713Z",
+ "classifiedAt": "2026-10-04T19:50:22.652Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -6280,43 +6280,6 @@
     "fingerprint": "1a017cd53e28d9f468f2283d8d10d75383ecd5815f771ad9acfad5cfa7eda0bf"
    }
   },
-  "2106552372730212597": {
-   "contextVersion": 337,
-   "evidenceSupplied": [
-    {
-     "id": "n_f52e8ac1d161a20b",
-     "publisher": "NPR",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
-     "text": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
-     "title": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
-     "publishedAt": "2026-10-02T09:00:00.000Z",
-     "fetchedAt": "2026-10-02T21:43:42.353Z",
-     "version": 314,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_818c168997890483",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6127929-trump-defends-ohio-data-centers/",
-     "text": "Trump backs data centers in Ohio amid tight Senate race",
-     "title": "Trump backs data centers in Ohio amid tight Senate race",
-     "publishedAt": "2026-10-04T02:39:12.000Z",
-     "fetchedAt": "2026-10-04T03:28:44.253Z",
-     "version": 337,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
-  },
   "2106576099279032399": {
    "contextVersion": 337,
    "evidenceSupplied": [],
@@ -6358,6 +6321,43 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
+  },
+  "2106552372730212597": {
+   "contextVersion": 348,
+   "evidenceSupplied": [
+    {
+     "id": "n_f52e8ac1d161a20b",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
+     "text": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "title": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "publishedAt": "2026-10-02T09:00:00.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_818c168997890483",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6127929-trump-defends-ohio-data-centers/",
+     "text": "Trump backs data centers in Ohio amid tight Senate race",
+     "title": "Trump backs data centers in Ohio amid tight Senate race",
+     "publishedAt": "2026-10-04T02:39:12.000Z",
+     "fetchedAt": "2026-10-04T19:04:26.586Z",
+     "version": 347,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "13148adc9781ad7b60b6b06594576ddd4d6f2e2f38a1491f52639d4b54ff0761"
   }
  },
  "needsContext": {
@@ -6666,15 +6666,15 @@
   "2106574527316591016": false,
   "2106574560619327549": false,
   "2106575040796135634": false,
-  "2106552372730212597": false,
   "2106576099279032399": true,
   "2106579634003271923": false,
   "2106580569853214813": false,
   "2106582795891994693": false,
-  "2106583683948024115": false
+  "2106583683948024115": false,
+  "2106552372730212597": false
  },
  "inputBlocks": {},
- "contextVersion": 337,
+ "contextVersion": 348,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -6984,21 +6984,42 @@
   "live_chunk-0": {
    "acceptedIds": [
     "2106552372730212597",
-    "2106576099279032399",
-    "2106579634003271923",
-    "2106580569853214813",
-    "2106582795891994693",
-    "2106583683948024115"
+    "2106811465915068417",
+    "2106811524153061522",
+    "2106814010029228345",
+    "2106815443130347966",
+    "2106816461746708986",
+    "2106816477122723894",
+    "2106818948293685548",
+    "2106819415610204640",
+    "2106821144418377838",
+    "2106821722611585267",
+    "2106821756262457745",
+    "2106822154809696596",
+    "2106822764329947440",
+    "2106823165766746401",
+    "2106823665476161547",
+    "2106826263646118333",
+    "2106826306298245374",
+    "2106828527106720061",
+    "2106829265635295646",
+    "2106829356169355380",
+    "2106829769006518563",
+    "2106830438505312319",
+    "2106830539160428619",
+    "2106831629541142881",
+    "2106832273030963605",
+    "2106832927929848310"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T04:13:14.530Z",
-    "observedAt": "2026-10-04T04:13:24.704Z",
+    "attemptedAt": "2026-10-04T19:49:36.585Z",
+    "observedAt": "2026-10-04T19:50:22.641Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 27,
     "retryCount": 0
    }
   },
@@ -7037,24 +7058,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T04:13:14.530Z",
-   "observedAt": "2026-10-04T04:13:24.704Z",
+   "attemptedAt": "2026-10-04T19:49:36.585Z",
+   "observedAt": "2026-10-04T19:50:22.641Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 27,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T04:13:14.530Z",
-   "observedAt": "2026-10-04T04:13:24.704Z",
+   "attemptedAt": "2026-10-04T19:49:36.585Z",
+   "observedAt": "2026-10-04T19:50:22.641Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 27,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T04:13:24.717Z"
+ "updatedAt": "2026-10-04T19:50:22.654Z"
 }
