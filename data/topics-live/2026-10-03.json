@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T01:59:05.855Z",
+ "classifiedAt": "2026-10-04T02:43:55.492Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -2068,6 +2068,58 @@
    [
     "congress-politics",
     "town-halls"
+   ]
+  ],
+  "2106565830603669860": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "civil-rights",
+    null
+   ]
+  ],
+  "2106566095872438461": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106571179507298441": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106574527316591016": [
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2106574560619327549": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106575040796135634": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ]
  },
@@ -6163,6 +6215,62 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106565830603669860": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0"
+  },
+  "2106566095872438461": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0",
+   "quotedContext": {
+    "id": "2106507025274569114",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-03T22:09:46.000Z",
+    "textChars": 79,
+    "textHash": "bc914316bf3a4a5245205ca7ffb02b64b00b74f3300f059d781d4ac215865ee4"
+   }
+  },
+  "2106571179507298441": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0"
+  },
+  "2106574527316591016": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0"
+  },
+  "2106574560619327549": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0"
+  },
+  "2106575040796135634": {
+   "contextVersion": 336,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9d04cf2f776a3943ce1ea60fad79f71293091d9997ec6c8bd8c0c3c305b269d0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106503916087034079",
+    "fingerprint": "1a017cd53e28d9f468f2283d8d10d75383ecd5815f771ad9acfad5cfa7eda0bf"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106503916087034079",
+    "fingerprint": "1a017cd53e28d9f468f2283d8d10d75383ecd5815f771ad9acfad5cfa7eda0bf"
+   }
   }
  },
  "needsContext": {
@@ -6465,10 +6573,16 @@
   "2106561331554107580": false,
   "2106561805124341885": false,
   "2106564292409770307": false,
-  "2106564457551826947": false
+  "2106564457551826947": false,
+  "2106565830603669860": false,
+  "2106566095872438461": false,
+  "2106571179507298441": false,
+  "2106574527316591016": false,
+  "2106574560619327549": false,
+  "2106575040796135634": false
  },
  "inputBlocks": {},
- "contextVersion": 335,
+ "contextVersion": 336,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -6777,30 +6891,22 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106072410713719231",
-    "2106351305031574006",
-    "2106404679970140283",
-    "2106404682893812133",
-    "2106424607737839864",
-    "2106490728301904236",
-    "2106544450319343983",
-    "2106544855383949359",
-    "2106546075297583539",
-    "2106546307355545870",
-    "2106546950069977437",
-    "2106547811470680361",
-    "2106548357392965772",
-    "2106549335471133019"
+    "2106565830603669860",
+    "2106566095872438461",
+    "2106571179507298441",
+    "2106574527316591016",
+    "2106574560619327549",
+    "2106575040796135634"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T01:58:23.629Z",
-    "observedAt": "2026-10-04T01:58:45.041Z",
+    "attemptedAt": "2026-10-04T02:43:44.014Z",
+    "observedAt": "2026-10-04T02:43:55.482Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 14,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
@@ -6839,24 +6945,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T01:58:45.064Z",
-   "observedAt": "2026-10-04T01:59:05.810Z",
+   "attemptedAt": "2026-10-04T02:43:44.014Z",
+   "observedAt": "2026-10-04T02:43:55.482Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T01:58:45.064Z",
-   "observedAt": "2026-10-04T01:59:05.810Z",
+   "attemptedAt": "2026-10-04T02:43:44.014Z",
+   "observedAt": "2026-10-04T02:43:55.482Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T01:59:05.859Z"
+ "updatedAt": "2026-10-04T02:43:55.494Z"
 }
