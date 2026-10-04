@@ -1,12 +1,24 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T05:43:10.223Z",
+ "classifiedAt": "2026-10-04T08:09:14.396Z",
  "assignments": {
   "2106608554777956617": [
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2106632323945099736": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106643836449800223": [
+   [
+    "tech",
+    "ai-policy"
    ]
   ]
  },
@@ -17,14 +29,52 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "30aa595ebbc0047c89295d22fadf6963ea87ffbd8ef7179c15a0097b695b04f4"
+  },
+  "2106632323945099736": {
+   "contextVersion": 338,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "8bbfdaf5b7589aa3837ef07b0386a1d222d917b1e06a2e290b6b1ac5cf28bdde",
+   "quotedContext": {
+    "id": "2106476760657432945",
+    "authorId": "68746721",
+    "handle": "fchollet",
+    "createdAt": "2026-10-03T20:09:30.000Z",
+    "textChars": 930,
+    "textHash": "7e4cd8bed8ca7dfbc29a9156d6a1cd9f5de7996d924baaa1a71d550f4d2b827d"
+   }
+  },
+  "2106643836449800223": {
+   "contextVersion": 338,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "8bbfdaf5b7589aa3837ef07b0386a1d222d917b1e06a2e290b6b1ac5cf28bdde",
+   "quotedContext": {
+    "id": "2106585653798429012",
+    "authorId": "1608667045058560000",
+    "handle": "UnmarredReality",
+    "createdAt": "2026-10-04T03:22:12.000Z",
+    "textChars": 203,
+    "textHash": "c59ae7334f686a06a0f46cd42cb52892f19f5440970650f2097b97f61fb7c131"
+   }
   }
  },
  "needsContext": {
-  "2106608554777956617": false
+  "2106608554777956617": false,
+  "2106632323945099736": false,
+  "2106643836449800223": false
  },
  "inputBlocks": {},
  "contextVersion": 338,
- "emerging": [],
+ "emerging": [
+  {
+   "label": "AI sentience/consciousness debate",
+   "ids": [
+    "2106632323945099736",
+    "2106643836449800223"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -36,17 +86,18 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106608554777956617"
+    "2106632323945099736",
+    "2106643836449800223"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T05:43:08.355Z",
-    "observedAt": "2026-10-04T05:43:10.222Z",
+    "attemptedAt": "2026-10-04T08:09:10.063Z",
+    "observedAt": "2026-10-04T08:09:14.394Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -54,24 +105,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T05:43:08.355Z",
-   "observedAt": "2026-10-04T05:43:10.222Z",
+   "attemptedAt": "2026-10-04T08:09:10.063Z",
+   "observedAt": "2026-10-04T08:09:14.394Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T05:43:08.355Z",
-   "observedAt": "2026-10-04T05:43:10.222Z",
+   "attemptedAt": "2026-10-04T08:09:10.063Z",
+   "observedAt": "2026-10-04T08:09:14.394Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T05:43:10.223Z"
+ "updatedAt": "2026-10-04T08:09:14.396Z"
 }
