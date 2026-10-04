@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T13:49:25.591Z",
+ "classifiedAt": "2026-10-04T15:20:22.364Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -129,9 +129,185 @@
     "economy",
     "tariffs-trade"
    ]
-  ]
+  ],
+  "2106745988853682297": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106746165073268758": [
+   [
+    "reproductive-rights",
+    "abortion-access"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2106746339082092926": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2106746339367190834": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2106746396225183810": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106746435702038644": [
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2106747399003668659": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106747417626579266": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2106747886843338908": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106750013619437976": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106755265613746478": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106757672389288359": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106761259169284485": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106761260490530971": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106761265247097035": [
+   [
+    "public-safety",
+    null
+   ]
+  ],
+  "2106761388056039664": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2106761605681684679": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2106761806794350796": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106762013154357581": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2106762182621041043": [],
+  "2106762528332415257": [
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106763740050046983": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2106764330699984940": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106764404066852890": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106764755348427151": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106765236313485495": []
  },
- "incidents": {},
+ "incidents": {
+  "2106763740050046983": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "Bouquet Fire"
+  }
+ },
  "provenance": {
   "2106608554777956617": {
    "contextVersion": 338,
@@ -318,6 +494,356 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106745988853682297": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106746165073268758": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "quotedContext": {
+    "id": "2105993116717085118",
+    "authorId": "804831368",
+    "handle": "ReporterOriana",
+    "createdAt": "2026-10-02T12:07:41.000Z",
+    "textChars": 279,
+    "textHash": "28bddd74591d16eabbd8fba2cca0d75ce16275b8cd81c2b9cf4a006b5df1c083"
+   }
+  },
+  "2106746339082092926": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106746339367190834": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_b3d2fed35eb7e264",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
+     "text": "Lara Trump says Iran war could cost Trump the midterms",
+     "title": "Lara Trump says Iran war could cost Trump the midterms",
+     "publishedAt": "2026-09-30T18:34:18.000Z",
+     "fetchedAt": "2026-09-30T19:18:23.645Z",
+     "version": 278,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "quotedContext": {
+    "id": "2106718967880442229",
+    "authorId": "989317210463186946",
+    "handle": "HouseAgDems",
+    "createdAt": "2026-10-04T12:11:57.000Z",
+    "textChars": 163,
+    "textHash": "207c6bd8c14385e1069796d520f3cd113e23e035fb344d0875fde901aee8c1c0"
+   }
+  },
+  "2106746396225183810": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106746435702038644": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106747399003668659": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106747417626579266": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106747886843338908": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106750013619437976": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106755265613746478": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106757672389288359": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761259169284485": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761260490530971": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_dd130cb7b0079d7c",
+     "publisher": "NPR",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5982739/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+     "text": "The move, called a pocket rescission, is illegal, according to the Government Accountability Office , an independent, nonpartisan watchdog agency charged with providing federal agencies fact-based information.",
+     "title": "What to know about the $810 million in spending canceled by President Trump",
+     "publishedAt": "2026-09-28T09:00:00.000Z",
+     "fetchedAt": "2026-09-28T23:05:57.404Z",
+     "version": 242,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761265247097035": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761388056039664": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761605681684679": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106761806794350796": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106762013154357581": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_a2ddbbbe59618a78",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5986032/political-analyst-on-trumps-campaign-stop-in-reliably-red-oklahoma",
+     "text": "STEVE INSKEEP, BYLINE: Let's hear more about this from Ron Brownstein. He's a senior political analyst at CNN, a Bloomberg opinion columnist and an occasional guest here. Ron, welcome back.",
+     "title": "Political analyst on Trump's campaign stop in reliably red Oklahoma",
+     "publishedAt": "2026-10-01T08:41:52.000Z",
+     "fetchedAt": "2026-10-01T23:11:37.594Z",
+     "version": 297,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "quotedContext": {
+    "id": "2106075181827723482",
+    "authorId": "1569400849130049537",
+    "handle": "RepPatRyanNY",
+    "createdAt": "2026-10-02T17:33:46.000Z",
+    "textChars": 308,
+    "textHash": "7a0b32397648f402f2012ce1569a0687b6bba6b8318f680e69ff6b6a998e69a1"
+   }
+  },
+  "2106762182621041043": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_6c30b3d6ae702c56",
+     "publisher": "The Washington Post",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/02/dems-are-running-against-one-big-beautiful-bill-what-can-they-if-they-win/",
+     "text": "Dems are running against the One Big Beautiful Bill. What can they do if they win?",
+     "title": "Dems are running against the One Big Beautiful Bill. What can they do if they win?",
+     "publishedAt": "2026-10-02T09:19:28.000Z",
+     "fetchedAt": "2026-10-02T10:49:42.298Z",
+     "version": 305,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106762528332415257": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106763740050046983": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "quotedContext": {
+    "id": "2106739631647760392",
+    "authorId": "606625312",
+    "handle": "Angeles_NF",
+    "createdAt": "2026-10-04T13:34:04.000Z",
+    "textChars": 527,
+    "textHash": "1fff3cfc60d087332d6b8d88ea9d157ef09c126b183446f353ebd5fdba924475"
+   }
+  },
+  "2106764330699984940": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106764404066852890": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633"
+  },
+  "2106764755348427151": {
+   "contextVersion": 343,
+   "evidenceSupplied": [
+    {
+     "id": "n_212711f9ee954fb2",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5985087/trump-visits-deep-red-oklahoma-to-campaign-for-gop-candidates-ahead-of-midterms",
+     "text": "A MARTÍNEZ, HOST: But instead of going to battleground states such as New Hampshire, Maine or Michigan, Trump is first heading today to the more reliably red state of Oklahoma. The White House removed CNN from the press pool for this trip just days after a federal judge stopped President Trump's efforts to ban CNN, MS NOW and Politico from the presidential office.",
+     "title": "Trump visits deep red Oklahoma to campaign for GOP candidates ahead of midterms",
+     "publishedAt": "2026-10-01T08:41:58.000Z",
+     "fetchedAt": "2026-10-01T23:11:37.594Z",
+     "version": 297,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_d54af4b4ede282e4",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/lawmakers-stock-trading-bill-falls-short-in-senate/",
+     "text": "Dubbed the Stop Insider Trading Act, the bill would prohibit members of Congress, their spouses and dependent children from buying new stocks. It would allow lawmakers to keep the stocks they already own and continue to sell them, but would require them to give public notice at least seven days and no more than 14 days in advance.",
+     "title": "Lawmakers’ stock trading bill falls short in Senate",
+     "publishedAt": "2026-09-30T13:55:32.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "quotedContext": {
+    "id": "2106737992937168916",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-04T13:27:33.000Z",
+    "textChars": 1685,
+    "textHash": "6621e1a1d671563013ae839b92d82a2bd96b3d4435c823ada37f61df0241801e"
+   }
+  },
+  "2106765236313485495": {
+   "contextVersion": 343,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e987eae76e66ccc26cf27e6d821bcd0acbc5b82002cbc6fafe202e89a5781633",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106492486638252485",
+    "fingerprint": "8feb2c33b9cb0c9e9eabeee3a1b58e8ae63681629c3526673abeba76edfd04bd"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106492486638252485",
+    "fingerprint": "8feb2c33b9cb0c9e9eabeee3a1b58e8ae63681629c3526673abeba76edfd04bd"
+   }
   }
  },
  "needsContext": {
@@ -338,10 +864,36 @@
   "2106732977086480422": false,
   "2106738638679670829": false,
   "2106741511828263407": false,
-  "2106741984991846811": false
+  "2106741984991846811": false,
+  "2106745988853682297": false,
+  "2106746165073268758": false,
+  "2106746339082092926": false,
+  "2106746339367190834": false,
+  "2106746396225183810": false,
+  "2106746435702038644": false,
+  "2106747399003668659": false,
+  "2106747417626579266": false,
+  "2106747886843338908": false,
+  "2106750013619437976": false,
+  "2106755265613746478": false,
+  "2106757672389288359": false,
+  "2106761259169284485": false,
+  "2106761260490530971": false,
+  "2106761265247097035": false,
+  "2106761388056039664": false,
+  "2106761605681684679": false,
+  "2106761806794350796": false,
+  "2106762013154357581": false,
+  "2106762182621041043": false,
+  "2106762528332415257": false,
+  "2106763740050046983": false,
+  "2106764330699984940": false,
+  "2106764404066852890": false,
+  "2106764755348427151": false,
+  "2106765236313485495": false
  },
  "inputBlocks": {},
- "contextVersion": 342,
+ "contextVersion": 343,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -354,6 +906,12 @@
    "label": "California 5% wealth tax ballot measure",
    "ids": [
     "2106679925113806930"
+   ]
+  },
+  {
+   "label": "Trump DC vanity arch project",
+   "ids": [
+    "2106761259169284485"
    ]
   }
  ],
@@ -368,25 +926,42 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106731062948934137",
-    "2106731068464529898",
-    "2106731407070372144",
-    "2106731411570917603",
-    "2106732150594695288",
-    "2106732977086480422",
-    "2106738638679670829",
-    "2106741511828263407",
-    "2106741984991846811"
+    "2106745988853682297",
+    "2106746165073268758",
+    "2106746339082092926",
+    "2106746339367190834",
+    "2106746396225183810",
+    "2106746435702038644",
+    "2106747399003668659",
+    "2106747417626579266",
+    "2106747886843338908",
+    "2106750013619437976",
+    "2106755265613746478",
+    "2106757672389288359",
+    "2106761259169284485",
+    "2106761260490530971",
+    "2106761265247097035",
+    "2106761388056039664",
+    "2106761605681684679",
+    "2106761806794350796",
+    "2106762013154357581",
+    "2106762182621041043",
+    "2106762528332415257",
+    "2106763740050046983",
+    "2106764330699984940",
+    "2106764404066852890",
+    "2106764755348427151",
+    "2106765236313485495"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T13:49:08.421Z",
-    "observedAt": "2026-10-04T13:49:25.586Z",
+    "attemptedAt": "2026-10-04T15:19:47.089Z",
+    "observedAt": "2026-10-04T15:20:22.359Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
+    "acceptedCount": 26,
     "retryCount": 0
    }
   }
@@ -394,24 +969,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T13:49:08.421Z",
-   "observedAt": "2026-10-04T13:49:25.586Z",
+   "attemptedAt": "2026-10-04T15:19:47.089Z",
+   "observedAt": "2026-10-04T15:20:22.359Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 26,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T13:49:08.421Z",
-   "observedAt": "2026-10-04T13:49:25.586Z",
+   "attemptedAt": "2026-10-04T15:19:47.089Z",
+   "observedAt": "2026-10-04T15:20:22.359Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 26,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T13:49:25.593Z"
+ "updatedAt": "2026-10-04T15:20:22.368Z"
 }

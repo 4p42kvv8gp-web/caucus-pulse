@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-04T13:49:25.731Z",
+ "generatedAt": "2026-10-04T15:20:22.495Z",
  "incidents": [
+  {
+   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
+   "kind": "wildfire",
+   "name": "Bouquet Fire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Los Angeles County, CA · CA-27",
+   "placeRaw": "Los Angeles County, CA",
+   "district": "CA-27",
+   "districtMatch": true,
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "since": "2026-10-04T15:09:52.000Z",
+   "last": "2026-10-04T15:09:52.000Z",
+   "updates": 1,
+   "engN": 2,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Bouquet Fire · Los Angeles County, CA",
+   "evidence": {
+    "span": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the Co",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2106763740050046983",
+    "url": "https://x.com/i/web/status/2106763740050046983"
+   },
+   "timeline": [
+    {
+     "id": "2106763740050046983",
+     "sourceId": "2106763740050046983",
+     "url": "https://x.com/i/web/status/2106763740050046983",
+     "authorId": "5408852",
+     "personId": "member:george whitesides",
+     "referenceIds": [
+      "2106739631647760392"
+     ],
+     "time": "2026-10-04T15:09:52.000Z",
+     "who": "@gtwhitesides",
+     "tag": "member",
+     "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
+     "engN": 2,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "Bouquet Fire"
+     },
+     "evidence": {
+      "span": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the Co",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2106763740050046983",
+      "url": "https://x.com/i/web/status/2106763740050046983"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2106763740050046983"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2106763740050046983"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "hatch-nm--flooding--source-2105721837619667398",
    "kind": "flooding",
@@ -2368,129 +2465,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2104246240309325846"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "queens-ny--power-outage--source-2104214010702766251",
-   "kind": "power outage",
-   "name": null,
-   "eventIdentity": "unresolved-source-specific",
-   "kinds": [
-    "power outage"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Queens, NY · NY-06",
-   "placeRaw": "Queens, NY",
-   "district": "NY-06",
-   "districtMatch": true,
-   "handle": "@RepGraceMeng",
-   "member": "Grace Meng",
-   "since": "2026-09-27T14:18:09.000Z",
-   "last": "2026-09-27T14:18:09.000Z",
-   "updates": 1,
-   "engN": 21,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Power outage · Queens, NY",
-   "evidence": {
-    "span": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for",
-    "exact": false,
-    "start": 0,
-    "end": 139,
-    "matched": {
-     "kind": true,
-     "place": false
-    },
-    "sourceId": "2104214010702766251",
-    "url": "https://x.com/i/web/status/2104214010702766251"
-   },
-   "timeline": [
-    {
-     "id": "2104214010702766251",
-     "sourceId": "2104214010702766251",
-     "url": "https://x.com/i/web/status/2104214010702766251",
-     "authorId": "1051127714",
-     "personId": "member:grace meng",
-     "referenceIds": [],
-     "time": "2026-09-27T14:18:09.000Z",
-     "who": "@RepGraceMeng",
-     "tag": "member",
-     "text": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for further details.   \n\nIf you experience a loss of service, be sure to report it at https://t.co/35wju9UwvG or 800-75-CONED. Multilingual and ASL Link: https://t.co/MdSAzPscaI.",
-     "engN": 21,
-     "isNew": false,
-     "flag": {
-      "kind": "power outage",
-      "place": "Queens, NY",
-      "name": null
-     },
-     "evidence": {
-      "span": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for",
-      "exact": false,
-      "start": 0,
-      "end": 139,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2104214010702766251",
-      "url": "https://x.com/i/web/status/2104214010702766251"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2104214010702766251"
-   ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for further details.",
-      "sourceId": "2104214010702766251",
-      "url": "https://x.com/i/web/status/2104214010702766251",
-      "evidenceQuote": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for further details.",
-      "src": "@RepGraceMeng, 2026-09-27T14:18:09.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for further details.",
-      "sourceId": "2104214010702766251",
-      "url": "https://x.com/i/web/status/2104214010702766251",
-      "evidenceQuote": "I’ve been informed by the city that there are power outages in Elmhurst, Rego Park and Middle Village. I have reached out to Con Edison for further details.",
-      "src": "@RepGraceMeng, 2026-09-27T14:18:09.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-09-29T07:51:06.579Z",
-    "posts": 1,
-    "inputHash": "a36c3ecff14a278e23e77ffbdbc2c838a60f4fe320f8e69dc047f6edf00e83f7",
-    "rejectedItems": 0
-   },
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2104214010702766251"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
