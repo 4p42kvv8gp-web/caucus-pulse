@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T12:46:56.853Z",
+ "classifiedAt": "2026-10-04T13:49:25.591Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -58,6 +58,76 @@
    [
     "public-safety",
     null
+   ]
+  ],
+  "2106731062948934137": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2106731068464529898": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106731407070372144": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2106731411570917603": [
+   [
+    "climate",
+    "disasters"
+   ],
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2106732150594695288": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106732977086480422": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106738638679670829": [
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2106741511828263407": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106741984991846811": [
+   [
+    "economy",
+    "tariffs-trade"
    ]
   ]
  },
@@ -162,6 +232,92 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "d67987ca10d7f27ddebac810ae0563cd156c2bd5cc498053248a9a50bd83b6e5"
+  },
+  "2106731062948934137": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106731068464529898": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106731407070372144": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106731411570917603": {
+   "contextVersion": 342,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "Following a meeting at the White House with President Donald Trump and technology moguls, Speaker Mike Johnson, R-La., on Tuesday pushed back on calls to impose regulations on artificial intelligence, even as news of worrisome AI models hacking into government databases become increasingly common and the public grows more skeptical of the technology.",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106732150594695288": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106732977086480422": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106738638679670829": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106741511828263407": {
+   "contextVersion": 342,
+   "evidenceSupplied": [
+    {
+     "id": "n_fdfda61176875bb5",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/bale-dalton-florida-democrat-anticorruption-plan/",
+     "text": "A Democrat running for a Central Florida seat on the edge of the House battleground unveiled an anti-corruption plan Thursday that calls for overhauling the Ethics Committee, joining other candidates who’ve made fighting corruption a campaign focal point this year.",
+     "title": "Florida Democrat is latest candidate to unveil anticorruption plan",
+     "publishedAt": "2026-10-01T06:00:00.000Z",
+     "fetchedAt": "2026-10-01T11:56:39.964Z",
+     "version": 289,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
+  },
+  "2106741984991846811": {
+   "contextVersion": 342,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f71356e0da9239e4f1fe78207b38f08686e94a48fbed1a85cd491b51df0f16f0"
   }
  },
  "needsContext": {
@@ -173,10 +329,19 @@
   "2106701077726855307": false,
   "2106712560690983325": false,
   "2106716086812987493": false,
-  "2106716281978175973": false
+  "2106716281978175973": false,
+  "2106731062948934137": false,
+  "2106731068464529898": false,
+  "2106731407070372144": true,
+  "2106731411570917603": false,
+  "2106732150594695288": false,
+  "2106732977086480422": false,
+  "2106738638679670829": false,
+  "2106741511828263407": false,
+  "2106741984991846811": false
  },
  "inputBlocks": {},
- "contextVersion": 341,
+ "contextVersion": 342,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -203,19 +368,25 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106712560690983325",
-    "2106716086812987493",
-    "2106716281978175973"
+    "2106731062948934137",
+    "2106731068464529898",
+    "2106731407070372144",
+    "2106731411570917603",
+    "2106732150594695288",
+    "2106732977086480422",
+    "2106738638679670829",
+    "2106741511828263407",
+    "2106741984991846811"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T12:46:49.380Z",
-    "observedAt": "2026-10-04T12:46:56.850Z",
+    "attemptedAt": "2026-10-04T13:49:08.421Z",
+    "observedAt": "2026-10-04T13:49:25.586Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 9,
     "retryCount": 0
    }
   }
@@ -223,24 +394,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T12:46:49.380Z",
-   "observedAt": "2026-10-04T12:46:56.850Z",
+   "attemptedAt": "2026-10-04T13:49:08.421Z",
+   "observedAt": "2026-10-04T13:49:25.586Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T12:46:49.380Z",
-   "observedAt": "2026-10-04T12:46:56.850Z",
+   "attemptedAt": "2026-10-04T13:49:08.421Z",
+   "observedAt": "2026-10-04T13:49:25.586Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T12:46:56.856Z"
+ "updatedAt": "2026-10-04T13:49:25.593Z"
 }
