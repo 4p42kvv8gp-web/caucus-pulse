@@ -1,7 +1,7 @@
 {
  "date": "2026-10-02",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-03T18:41:10.865Z",
+ "classifiedAt": "2026-10-04T01:59:05.844Z",
  "assignments": {
   "2105875281143550187": [
    [
@@ -1678,6 +1678,10 @@
    [
     "economy",
     "prices-inflation"
+   ],
+   [
+    "economy",
+    "taxes"
    ]
   ],
   "2106072560932700268": [
@@ -7141,28 +7145,6 @@
   "2106072287589896682": {
    "contextVersion": 310,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "e3adfd8d15b144b23885377f717a0f97c29e19afe207287512037632eb185710"
-  },
-  "2106072410713719231": {
-   "contextVersion": 310,
-   "evidenceSupplied": [
-    {
-     "id": "n_0e7bb1303b15b4a4",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/6120452-california-tracks-forever-chemicals/",
-     "text": "California to track pesticides containing ‘forever chemicals’",
-     "title": "California to track pesticides containing ‘forever chemicals’",
-     "publishedAt": "2026-09-30T15:23:11.000Z",
-     "fetchedAt": "2026-09-30T16:31:05.836Z",
-     "version": 275,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "e3adfd8d15b144b23885377f717a0f97c29e19afe207287512037632eb185710"
   },
@@ -13028,6 +13010,43 @@
    ],
    "evidenceUsed": [],
    "inputHash": "be975cf19bfc14166f11b91d09860ba98307e5e814765038e7e710b743a1f1b3"
+  },
+  "2106072410713719231": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_0e7bb1303b15b4a4",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6120452-california-tracks-forever-chemicals/",
+     "text": "California to track pesticides containing ‘forever chemicals’",
+     "title": "California to track pesticides containing ‘forever chemicals’",
+     "publishedAt": "2026-09-30T15:23:11.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
   }
  },
  "needsContext": {
@@ -13242,7 +13261,6 @@
   "2106072254329372691": false,
   "2106072274617209321": false,
   "2106072287589896682": false,
-  "2106072410713719231": false,
   "2106072560932700268": false,
   "2106072691417452676": true,
   "2106072950101147670": false,
@@ -13599,10 +13617,11 @@
   "2106096923119628288": false,
   "2106116025410265316": false,
   "2106116857975427200": false,
-  "2106169277464162605": false
+  "2106169277464162605": false,
+  "2106072410713719231": false
  },
  "inputBlocks": {},
- "contextVersion": 328,
+ "contextVersion": 335,
  "emerging": [
   {
    "label": "September 2026 jobs report",
@@ -14025,43 +14044,30 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106005741618512131",
-    "2106005810350592479",
-    "2106011552608313807",
-    "2106047707018387647",
-    "2106055984292475005",
-    "2106061848629915968"
+    "2106072410713719231",
+    "2106351305031574006",
+    "2106404679970140283",
+    "2106404682893812133",
+    "2106424607737839864",
+    "2106490728301904236",
+    "2106544450319343983",
+    "2106544855383949359",
+    "2106546075297583539",
+    "2106546307355545870",
+    "2106546950069977437",
+    "2106547811470680361",
+    "2106548357392965772",
+    "2106549335471133019"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-03T18:39:56.711Z",
-    "observedAt": "2026-10-03T18:40:11.878Z",
+    "attemptedAt": "2026-10-04T01:58:23.629Z",
+    "observedAt": "2026-10-04T01:58:45.041Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2106062476127453366",
-    "2106072955721515104",
-    "2106072957718016350",
-    "2106074735045992688",
-    "2106074896694456482",
-    "2106090517096177768"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-03T18:40:11.905Z",
-    "observedAt": "2026-10-03T18:40:25.730Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   }
@@ -14069,21 +14075,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-03T18:40:25.750Z",
-   "observedAt": "2026-10-03T18:40:37.107Z",
+   "attemptedAt": "2026-10-04T01:58:23.629Z",
+   "observedAt": "2026-10-04T01:58:45.041Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-03T18:40:25.750Z",
-   "observedAt": "2026-10-03T18:40:37.107Z",
+   "attemptedAt": "2026-10-04T01:58:23.629Z",
+   "observedAt": "2026-10-04T01:58:45.041Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastFailure": {
@@ -14096,5 +14102,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-03T18:41:10.870Z"
+ "updatedAt": "2026-10-04T01:59:05.849Z"
 }

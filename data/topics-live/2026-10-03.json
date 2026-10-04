@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T00:34:07.932Z",
+ "classifiedAt": "2026-10-04T01:59:05.855Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -526,10 +526,6 @@
    [
     "climate",
     "clean-energy"
-   ],
-   [
-    "climate",
-    null
    ]
   ],
   "2106404743061147784": [
@@ -1917,7 +1913,163 @@
    ]
   ],
   "2106541531423257078": [],
-  "2106542003500753144": []
+  "2106542003500753144": [],
+  "2106544450319343983": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106544855383949359": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106546075297583539": [],
+  "2106546307355545870": [],
+  "2106546950069977437": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106547811470680361": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106548357392965772": [
+   [
+    "healthcare",
+    "medicare"
+   ],
+   [
+    "civil-rights",
+    "disability"
+   ]
+  ],
+  "2106549335471133019": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2106551197939470408": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2106551690078150948": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106552240475693469": [
+   [
+    "immigration",
+    "dilley-detention"
+   ]
+  ],
+  "2106552372730212597": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106554833817751867": [],
+  "2106556036232642683": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2106557765552418959": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106558532623417521": [],
+  "2106558813679624578": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2106559300483051896": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106559604192608620": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2106561325887566282": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106561331554107580": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106561805124341885": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2106564292409770307": [
+   [
+    "climate",
+    "clean-energy"
+   ]
+  ],
+  "2106564457551826947": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ]
  },
  "incidents": {},
  "provenance": {
@@ -2070,12 +2222,6 @@
    }
   },
   "2106350055087088082": {
-   "contextVersion": 323,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "f37f9dcb03fba586cb95aeb68717c96f302276fb29f0e4cdbe9e982b915386f5"
-  },
-  "2106351305031574006": {
    "contextVersion": 323,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -2934,93 +3080,11 @@
     "textHash": "7c87d4f57d2eb8865ca1f358e8d157b8dce57a08b1511753d63258a5aec20caa"
    }
   },
-  "2106404679970140283": {
-   "contextVersion": 325,
-   "evidenceSupplied": [
-    {
-     "id": "n_926e87abd3421ad5",
-     "publisher": "NPR",
-     "date": "2026-10-01",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/01/nx-s1-5986313/california-gubernatorial-candidates-face-off-in-debate",
-     "text": "XAVIER BECERRA: Who's never balanced a budget the size of California, who's never actually been there to defend people against a tyrant like Donald Trump.",
-     "title": "California gubernatorial candidates face off in debate",
-     "publishedAt": "2026-10-01T10:48:03.000Z",
-     "fetchedAt": "2026-10-01T18:41:06.469Z",
-     "version": 294,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_16b20ff339de0227",
-     "publisher": "Roll Call",
-     "date": "2026-10-02",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
-     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
-     "title": "Court challenges mount over Trump’s funding clawback",
-     "publishedAt": "2026-10-02T19:47:15.000Z",
-     "fetchedAt": "2026-10-03T01:33:16.772Z",
-     "version": 318,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "3acbd883a9371a0dbdde6a159e094d5ee62a11f2fc907884a14da19ca0c5397f"
-  },
   "2106404680318456110": {
    "contextVersion": 325,
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3acbd883a9371a0dbdde6a159e094d5ee62a11f2fc907884a14da19ca0c5397f"
-  },
-  "2106404682893812133": {
-   "contextVersion": 325,
-   "evidenceSupplied": [
-    {
-     "id": "n_926e87abd3421ad5",
-     "publisher": "NPR",
-     "date": "2026-10-01",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/01/nx-s1-5986313/california-gubernatorial-candidates-face-off-in-debate",
-     "text": "XAVIER BECERRA: Who's never balanced a budget the size of California, who's never actually been there to defend people against a tyrant like Donald Trump.",
-     "title": "California gubernatorial candidates face off in debate",
-     "publishedAt": "2026-10-01T10:48:03.000Z",
-     "fetchedAt": "2026-10-01T18:41:06.469Z",
-     "version": 294,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_16b20ff339de0227",
-     "publisher": "Roll Call",
-     "date": "2026-10-02",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
-     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
-     "title": "Court challenges mount over Trump’s funding clawback",
-     "publishedAt": "2026-10-02T19:47:15.000Z",
-     "fetchedAt": "2026-10-03T01:33:16.772Z",
-     "version": 318,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "40742ffec45decdea706af41fd6a6d33f717e0155418c84f4ece047294a1525d",
-   "quotedContext": {
-    "id": "2106404679970140283",
-    "authorId": "29501253",
-    "handle": "SenAdamSchiff",
-    "createdAt": "2026-10-03T15:23:05.000Z",
-    "textChars": 277,
-    "textHash": "07aef06c1d924aa5ccfa70b7fa2c517a60b2dfc1338f4544f195d3e29c556d11"
-   }
   },
   "2106404743061147784": {
    "contextVersion": 325,
@@ -3504,20 +3568,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "2f87648d258e07f2ab1cc28bc40e48e7f168f6aa960366550bb97d6ed45c9366"
-  },
-  "2106424607737839864": {
-   "contextVersion": 327,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "2f87648d258e07f2ab1cc28bc40e48e7f168f6aa960366550bb97d6ed45c9366",
-   "quotedContext": {
-    "id": "2106409529512808548",
-    "authorId": "752608758476468224",
-    "handle": "AdImpact_Pol",
-    "createdAt": "2026-10-03T15:42:21.000Z",
-    "textChars": 286,
-    "textHash": "3984c1a289cf8933fcc70329020ef1601cf5839100858c4198d25d50f1b32568"
-   }
   },
   "2106425140666056890": {
    "contextVersion": 327,
@@ -4706,30 +4756,6 @@
     "fingerprint": "90f9d8e5470e8f17d8955adb4de6094193d1ca0d8304733703e498df9a791581"
    }
   },
-  "2106490728301904236": {
-   "contextVersion": 331,
-   "evidenceSupplied": [
-    {
-     "id": "n_a995c7305d750c6a",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6119754-newsom-signs-electric-shock-gloves-ban/",
-     "text": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
-     "title": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
-     "publishedAt": "2026-09-30T13:04:17.000Z",
-     "fetchedAt": "2026-09-30T13:26:40.475Z",
-     "version": 272,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_a995c7305d750c6a"
-   ],
-   "inputHash": "82c57add39a43e1d92f6351b92c247b2e7ef5dd61d42c7d44c7eac29e89f5bc2"
-  },
   "2106493002147414054": {
    "contextVersion": 331,
    "evidenceSupplied": [],
@@ -5624,6 +5650,519 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "37ef4b380c880061c81b08930bfc3853c99e1f1f91037dd4f649d7cb306fb598"
+  },
+  "2106351305031574006": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5b135251933808e2"
+   ],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106404679970140283": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_926e87abd3421ad5",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5986313/california-gubernatorial-candidates-face-off-in-debate",
+     "text": "XAVIER BECERRA: Who's never balanced a budget the size of California, who's never actually been there to defend people against a tyrant like Donald Trump.",
+     "title": "California gubernatorial candidates face off in debate",
+     "publishedAt": "2026-10-01T10:48:03.000Z",
+     "fetchedAt": "2026-10-01T18:41:06.469Z",
+     "version": 294,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106404682893812133": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_926e87abd3421ad5",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5986313/california-gubernatorial-candidates-face-off-in-debate",
+     "text": "XAVIER BECERRA: Who's never balanced a budget the size of California, who's never actually been there to defend people against a tyrant like Donald Trump.",
+     "title": "California gubernatorial candidates face off in debate",
+     "publishedAt": "2026-10-01T10:48:03.000Z",
+     "fetchedAt": "2026-10-01T18:41:06.469Z",
+     "version": 294,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "quotedContext": {
+    "id": "2106404679970140283",
+    "authorId": "29501253",
+    "handle": "SenAdamSchiff",
+    "createdAt": "2026-10-03T15:23:05.000Z",
+    "textChars": 277,
+    "textHash": "07aef06c1d924aa5ccfa70b7fa2c517a60b2dfc1338f4544f195d3e29c556d11"
+   }
+  },
+  "2106424607737839864": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_b755b3b61749d166",
+     "publisher": "The New York Times",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/03/us/politics/as-she-divorces-ken-paxton-his-wife-urges-texans-to-vote-for-him.html",
+     "text": "Without Saying His Name, Ken Paxton’s Estranged Wife Tells Texans to Vote For Him",
+     "title": "Without Saying His Name, Ken Paxton’s Estranged Wife Tells Texans to Vote For Him",
+     "publishedAt": "2026-10-04T01:03:10.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_b755b3b61749d166"
+   ],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "quotedContext": {
+    "id": "2106409529512808548",
+    "authorId": "752608758476468224",
+    "handle": "AdImpact_Pol",
+    "createdAt": "2026-10-03T15:42:21.000Z",
+    "textChars": 286,
+    "textHash": "3984c1a289cf8933fcc70329020ef1601cf5839100858c4198d25d50f1b32568"
+   }
+  },
+  "2106490728301904236": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_a995c7305d750c6a",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6119754-newsom-signs-electric-shock-gloves-ban/",
+     "text": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
+     "title": "Newsom bars ICE from using shock gloves, other ‘Orwellian’ tactics in California",
+     "publishedAt": "2026-09-30T13:04:17.000Z",
+     "fetchedAt": "2026-09-30T13:26:40.475Z",
+     "version": 272,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a995c7305d750c6a"
+   ],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106544450319343983": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_b755b3b61749d166",
+     "publisher": "The New York Times",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/03/us/politics/as-she-divorces-ken-paxton-his-wife-urges-texans-to-vote-for-him.html",
+     "text": "Without Saying His Name, Ken Paxton’s Estranged Wife Tells Texans to Vote For Him",
+     "title": "Without Saying His Name, Ken Paxton’s Estranged Wife Tells Texans to Vote For Him",
+     "publishedAt": "2026-10-04T01:03:10.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_b755b3b61749d166"
+   ],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "quotedContext": {
+    "id": "2106409529512808548",
+    "authorId": "752608758476468224",
+    "handle": "AdImpact_Pol",
+    "createdAt": "2026-10-03T15:42:21.000Z",
+    "textChars": 286,
+    "textHash": "3984c1a289cf8933fcc70329020ef1601cf5839100858c4198d25d50f1b32568"
+   }
+  },
+  "2106544855383949359": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106546075297583539": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "quotedContext": {
+    "id": "2106507025274569114",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-03T22:09:46.000Z",
+    "textChars": 79,
+    "textHash": "bc914316bf3a4a5245205ca7ffb02b64b00b74f3300f059d781d4ac215865ee4"
+   }
+  },
+  "2106546307355545870": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106546950069977437": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "quotedContext": {
+    "id": "2106535128465899959",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-04T00:01:26.000Z",
+    "textChars": 91,
+    "textHash": "4dd4ecdc7afb8bbcb47b2d25b0a367a7c2c401e191957d16e52ef5fc59df4dbf"
+   }
+  },
+  "2106547811470680361": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106138689185399241",
+    "fingerprint": "d2d95e0fed219081d9bb59398afea3f48e90f4d56333eb3eeec16887b830b924"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106138689185399241",
+    "fingerprint": "d2d95e0fed219081d9bb59398afea3f48e90f4d56333eb3eeec16887b830b924"
+   }
+  },
+  "2106548357392965772": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_71a904a8f2d2b0db",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/healthcare/6118336-medicare-advantage-healthy-food/",
+     "text": "Medicare should help doctors prevent disease, not just pay for it",
+     "title": "Medicare should help doctors prevent disease, not just pay for it",
+     "publishedAt": "2026-09-30T16:00:00.000Z",
+     "fetchedAt": "2026-09-30T16:31:05.836Z",
+     "version": 275,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106549335471133019": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "af164f421721fd1207458fcc776344630d17e129ebd76e298a3c0736f616a648"
+  },
+  "2106551197939470408": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_da22c1fe9efcf0ca",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/most-vulnerable-senators-election-day/",
+     "text": "New to the top of CQ Roll Call’s list of the most vulnerable senators is Ohio Republican Jon Husted, who’s running for the remaining term of Sen.-turned-Vice President JD Vance. He faces a challenge from former Sen. Sherrod Brown, who lost reelection just two years ago and retains high name ID and fundraising prowess.",
+     "title": "The most vulnerable senators of 2026, about a month out from Election Day",
+     "publishedAt": "2026-09-30T05:00:00.000Z",
+     "fetchedAt": "2026-09-30T09:41:25.152Z",
+     "version": 269,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106551690078150948": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106552240475693469": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106552372730212597": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_f52e8ac1d161a20b",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
+     "text": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "title": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "publishedAt": "2026-10-02T09:00:00.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106554833817751867": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106370569243361563",
+    "fingerprint": "66723adaa021305420a1636e364e3a7f54e754ee02c5af84553d874f8cafb6cd"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106370569243361563",
+    "fingerprint": "66723adaa021305420a1636e364e3a7f54e754ee02c5af84553d874f8cafb6cd"
+   }
+  },
+  "2106556036232642683": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5b135251933808e2"
+   ],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106555895169888457",
+    "fingerprint": "6e4d589c7e546e7633a29c51c28fa59e53a146f8eb8b4f277a15f36995b29c78"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106555895169888457",
+    "fingerprint": "6e4d589c7e546e7633a29c51c28fa59e53a146f8eb8b4f277a15f36995b29c78"
+   }
+  },
+  "2106557765552418959": {
+   "contextVersion": 335,
+   "evidenceSupplied": [
+    {
+     "id": "n_879b1ffe00dc8a0a",
+     "publisher": "Roll Call",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/28/senators-gear-up-for-judiciary-clash-with-jack-smith/",
+     "text": "Even the title of the hearing — “Oversight of Jack Smith’s Abuse of Authority and the Targeting of Republicans and Related Matters” — gives a hint of the tone former special counsel John L. “Jack” Smith will likely face from majority Republicans when he sits as the sole witness Tuesday.",
+     "title": "Senators gear up for Judiciary clash with Jack Smith",
+     "publishedAt": "2026-09-28T12:12:27.000Z",
+     "fetchedAt": "2026-09-28T17:01:20.117Z",
+     "version": 237,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106558532623417521": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106202576299475048",
+    "fingerprint": "56074ec93ee24cf9e851d587a9e01a96ec16ddc303916f1e72667fd1d801df3f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106202576299475048",
+    "fingerprint": "56074ec93ee24cf9e851d587a9e01a96ec16ddc303916f1e72667fd1d801df3f"
+   }
+  },
+  "2106558813679624578": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106559300483051896": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106559604192608620": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106561325887566282": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106561331554107580": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805",
+   "quotedContext": {
+    "id": "2106561325887566282",
+    "authorId": "1225929222839046144",
+    "handle": "YVindman",
+    "createdAt": "2026-10-04T01:45:32.000Z",
+    "textChars": 258,
+    "textHash": "d780f0d2565788915c17ba8ea978e72d0e1c8e4a3905fda0a4c7608a111b9a07"
+   }
+  },
+  "2106561805124341885": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
+  },
+  "2106564292409770307": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106278004402073848",
+    "fingerprint": "bc3c21448306281fbe7e8061aee6975990eb9e85d22fb61ed81714302be3f048"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106278004402073848",
+    "fingerprint": "bc3c21448306281fbe7e8061aee6975990eb9e85d22fb61ed81714302be3f048"
+   }
+  },
+  "2106564457551826947": {
+   "contextVersion": 335,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
   }
  },
  "needsContext": {
@@ -5637,7 +6176,6 @@
   "2106305086381232208": false,
   "2106339284412449083": false,
   "2106350055087088082": false,
-  "2106351305031574006": false,
   "2106352349254205674": false,
   "2106353958197313581": false,
   "2106362915762602482": false,
@@ -5699,9 +6237,7 @@
   "2106403807680708702": false,
   "2106403927952588901": false,
   "2106404162422595741": false,
-  "2106404679970140283": false,
   "2106404680318456110": false,
-  "2106404682893812133": false,
   "2106404743061147784": false,
   "2106405174302404745": false,
   "2106405898935734457": false,
@@ -5742,7 +6278,6 @@
   "2106424014898188718": false,
   "2106424103703871854": false,
   "2106424236684288280": false,
-  "2106424607737839864": false,
   "2106425140666056890": false,
   "2106425404080964039": false,
   "2106425864703328256": false,
@@ -5838,7 +6373,6 @@
   "2106490217356243350": false,
   "2106490491357315458": false,
   "2106490527562727664": false,
-  "2106490728301904236": false,
   "2106493002147414054": false,
   "2106493937804525701": false,
   "2106494219875455404": false,
@@ -5902,10 +6436,39 @@
   "2106539013871903211": false,
   "2106540533162136061": false,
   "2106541531423257078": true,
-  "2106542003500753144": false
+  "2106542003500753144": false,
+  "2106351305031574006": false,
+  "2106404679970140283": false,
+  "2106404682893812133": false,
+  "2106424607737839864": false,
+  "2106490728301904236": false,
+  "2106544450319343983": false,
+  "2106544855383949359": false,
+  "2106546075297583539": false,
+  "2106546307355545870": false,
+  "2106546950069977437": false,
+  "2106547811470680361": true,
+  "2106548357392965772": false,
+  "2106549335471133019": false,
+  "2106551197939470408": false,
+  "2106551690078150948": false,
+  "2106552240475693469": false,
+  "2106552372730212597": false,
+  "2106554833817751867": false,
+  "2106556036232642683": false,
+  "2106557765552418959": false,
+  "2106558532623417521": false,
+  "2106558813679624578": false,
+  "2106559300483051896": false,
+  "2106559604192608620": false,
+  "2106561325887566282": false,
+  "2106561331554107580": false,
+  "2106561805124341885": false,
+  "2106564292409770307": false,
+  "2106564457551826947": false
  },
  "inputBlocks": {},
- "contextVersion": 334,
+ "contextVersion": 335,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -6116,6 +6679,30 @@
    "ids": [
     "2106503772541272276"
    ]
+  },
+  {
+   "label": "California billionaire tax ballot measure",
+   "ids": [
+    "2106351305031574006"
+   ]
+  },
+  {
+   "label": "California ban on ICE electric shock gloves",
+   "ids": [
+    "2106490728301904236"
+   ]
+  },
+  {
+   "label": "California billionaire wealth tax ballot measure",
+   "ids": [
+    "2106556036232642683"
+   ]
+  },
+  {
+   "label": "Mom Economy Resolution",
+   "ids": [
+    "2106558813679624578"
+   ]
   }
  ],
  "unclassified": [],
@@ -6190,30 +6777,61 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106532542115651586",
-    "2106533008236818773",
-    "2106533159483658604",
-    "2106533545178988982",
-    "2106533682790183287",
-    "2106534012734836907",
-    "2106535524613636097",
-    "2106535817208606949",
-    "2106536500192035026",
-    "2106538336693489851",
-    "2106539013871903211",
-    "2106540533162136061",
-    "2106541531423257078",
-    "2106542003500753144"
+    "2106072410713719231",
+    "2106351305031574006",
+    "2106404679970140283",
+    "2106404682893812133",
+    "2106424607737839864",
+    "2106490728301904236",
+    "2106544450319343983",
+    "2106544855383949359",
+    "2106546075297583539",
+    "2106546307355545870",
+    "2106546950069977437",
+    "2106547811470680361",
+    "2106548357392965772",
+    "2106549335471133019"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T00:33:50.918Z",
-    "observedAt": "2026-10-04T00:34:07.922Z",
+    "attemptedAt": "2026-10-04T01:58:23.629Z",
+    "observedAt": "2026-10-04T01:58:45.041Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
     "acceptedCount": 14,
+    "retryCount": 0
+   }
+  },
+  "live_chunk-1": {
+   "acceptedIds": [
+    "2106551197939470408",
+    "2106551690078150948",
+    "2106552240475693469",
+    "2106552372730212597",
+    "2106554833817751867",
+    "2106556036232642683",
+    "2106557765552418959",
+    "2106558532623417521",
+    "2106558813679624578",
+    "2106559300483051896",
+    "2106559604192608620",
+    "2106561325887566282",
+    "2106561331554107580",
+    "2106561805124341885",
+    "2106564292409770307",
+    "2106564457551826947"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-04T01:58:45.064Z",
+    "observedAt": "2026-10-04T01:59:05.810Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -6221,24 +6839,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T00:33:50.918Z",
-   "observedAt": "2026-10-04T00:34:07.922Z",
+   "attemptedAt": "2026-10-04T01:58:45.064Z",
+   "observedAt": "2026-10-04T01:59:05.810Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T00:33:50.918Z",
-   "observedAt": "2026-10-04T00:34:07.922Z",
+   "attemptedAt": "2026-10-04T01:58:45.064Z",
+   "observedAt": "2026-10-04T01:59:05.810Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T00:34:07.935Z"
+ "updatedAt": "2026-10-04T01:59:05.859Z"
 }
