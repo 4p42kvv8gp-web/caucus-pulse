@@ -1,7 +1,7 @@
 {
  "date": "2026-10-03",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T02:43:55.492Z",
+ "classifiedAt": "2026-10-04T04:13:24.713Z",
  "assignments": {
   "2106251012466266375": [
    [
@@ -2120,6 +2120,36 @@
    [
     "economy",
     "prices-inflation"
+   ]
+  ],
+  "2106576099279032399": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2106579634003271923": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106580569853214813": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2106582795891994693": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2106583683948024115": [
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -6032,28 +6062,6 @@
    "evidenceUsed": [],
    "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
   },
-  "2106552372730212597": {
-   "contextVersion": 335,
-   "evidenceSupplied": [
-    {
-     "id": "n_f52e8ac1d161a20b",
-     "publisher": "NPR",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
-     "text": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
-     "title": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
-     "publishedAt": "2026-10-02T09:00:00.000Z",
-     "fetchedAt": "2026-10-02T21:43:42.353Z",
-     "version": 314,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "32aabb06a51fc5901bf0bb8a4911567e3888cd8123c3c53e132b9552ffa5c805"
-  },
   "2106554833817751867": {
    "contextVersion": 335,
    "evidenceSupplied": [],
@@ -6271,6 +6279,85 @@
     "referenceId": "2106503916087034079",
     "fingerprint": "1a017cd53e28d9f468f2283d8d10d75383ecd5815f771ad9acfad5cfa7eda0bf"
    }
+  },
+  "2106552372730212597": {
+   "contextVersion": 337,
+   "evidenceSupplied": [
+    {
+     "id": "n_f52e8ac1d161a20b",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5981096/ohio-senate-sherrod-brown-labor-workers",
+     "text": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "title": "The U.S. Senate is up for grabs. Can this Ohio Democrat win back working class votes?",
+     "publishedAt": "2026-10-02T09:00:00.000Z",
+     "fetchedAt": "2026-10-02T21:43:42.353Z",
+     "version": 314,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_818c168997890483",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6127929-trump-defends-ohio-data-centers/",
+     "text": "Trump backs data centers in Ohio amid tight Senate race",
+     "title": "Trump backs data centers in Ohio amid tight Senate race",
+     "publishedAt": "2026-10-04T02:39:12.000Z",
+     "fetchedAt": "2026-10-04T03:28:44.253Z",
+     "version": 337,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
+  },
+  "2106576099279032399": {
+   "contextVersion": 337,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106533037827924120",
+    "fingerprint": "8c2f55922f6b6f72d312142e48055c722f9d1b53ede5f86a49d5833687668392"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106533037827924120",
+    "fingerprint": "8c2f55922f6b6f72d312142e48055c722f9d1b53ede5f86a49d5833687668392"
+   }
+  },
+  "2106579634003271923": {
+   "contextVersion": 337,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
+  },
+  "2106580569853214813": {
+   "contextVersion": 337,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
+  },
+  "2106582795891994693": {
+   "contextVersion": 337,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
+  },
+  "2106583683948024115": {
+   "contextVersion": 337,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f3b45cdaa403647b2088da752c9761e4e10889ba2752a23adcaff5b686752a6e"
   }
  },
  "needsContext": {
@@ -6561,7 +6648,6 @@
   "2106551197939470408": false,
   "2106551690078150948": false,
   "2106552240475693469": false,
-  "2106552372730212597": false,
   "2106554833817751867": false,
   "2106556036232642683": false,
   "2106557765552418959": false,
@@ -6579,10 +6665,16 @@
   "2106571179507298441": false,
   "2106574527316591016": false,
   "2106574560619327549": false,
-  "2106575040796135634": false
+  "2106575040796135634": false,
+  "2106552372730212597": false,
+  "2106576099279032399": true,
+  "2106579634003271923": false,
+  "2106580569853214813": false,
+  "2106582795891994693": false,
+  "2106583683948024115": false
  },
  "inputBlocks": {},
- "contextVersion": 336,
+ "contextVersion": 337,
  "emerging": [
   {
    "label": "California wealth tax proposal",
@@ -6891,18 +6983,18 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2106565830603669860",
-    "2106566095872438461",
-    "2106571179507298441",
-    "2106574527316591016",
-    "2106574560619327549",
-    "2106575040796135634"
+    "2106552372730212597",
+    "2106576099279032399",
+    "2106579634003271923",
+    "2106580569853214813",
+    "2106582795891994693",
+    "2106583683948024115"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T02:43:44.014Z",
-    "observedAt": "2026-10-04T02:43:55.482Z",
+    "attemptedAt": "2026-10-04T04:13:14.530Z",
+    "observedAt": "2026-10-04T04:13:24.704Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -6945,8 +7037,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T02:43:44.014Z",
-   "observedAt": "2026-10-04T02:43:55.482Z",
+   "attemptedAt": "2026-10-04T04:13:14.530Z",
+   "observedAt": "2026-10-04T04:13:24.704Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -6954,8 +7046,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T02:43:44.014Z",
-   "observedAt": "2026-10-04T02:43:55.482Z",
+   "attemptedAt": "2026-10-04T04:13:14.530Z",
+   "observedAt": "2026-10-04T04:13:24.704Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -6964,5 +7056,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T02:43:55.494Z"
+ "updatedAt": "2026-10-04T04:13:24.717Z"
 }
