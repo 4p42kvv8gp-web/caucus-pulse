@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T16:05:05.757Z",
+ "generatedAt": "2026-10-04T17:07:19.327Z",
  "incidents": [
   {
    "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
@@ -15,13 +15,22 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 1,
+    "statements": 2,
     "resolvedPeople": 1,
-    "accounts": 1,
+    "accounts": 2,
     "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "repeated": true,
+    "repeatedSourceGroups": [
+     {
+      "sourceId": "2106739631647760392",
+      "url": "https://x.com/i/web/status/2106739631647760392",
+      "repeatedBy": [
+       "2106763740050046983",
+       "2106792686778994766"
+      ]
+     }
+    ],
+    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Los Angeles County, CA · CA-27",
    "placeRaw": "Los Angeles County, CA",
@@ -30,11 +39,13 @@
    "handle": "@gtwhitesides",
    "member": "George Whitesides",
    "since": "2026-10-04T15:09:52.000Z",
-   "last": "2026-10-04T15:09:52.000Z",
-   "updates": 1,
-   "engN": 2,
+   "last": "2026-10-04T17:04:53.000Z",
+   "updates": 2,
+   "engN": 14,
    "amplifiers": 0,
-   "others": [],
+   "others": [
+    "@Rep_Whitesides"
+   ],
    "title": "Bouquet Fire · Los Angeles County, CA",
    "evidence": {
     "span": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the Co",
@@ -81,10 +92,44 @@
       "sourceId": "2106763740050046983",
       "url": "https://x.com/i/web/status/2106763740050046983"
      }
+    },
+    {
+     "id": "2106792686778994766",
+     "sourceId": "2106792686778994766",
+     "url": "https://x.com/i/web/status/2106792686778994766",
+     "authorId": "1872709283634397185",
+     "personId": "member:george whitesides",
+     "referenceIds": [
+      "2106739631647760392"
+     ],
+     "time": "2026-10-04T17:04:53.000Z",
+     "who": "@Rep_Whitesides",
+     "tag": "repost",
+     "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+     "engN": 12,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "Bouquet Fire"
+     },
+     "evidence": {
+      "span": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2106792686778994766",
+      "url": "https://x.com/i/web/status/2106792686778994766"
+     }
     }
    ],
    "tweetIds": [
-    "2106763740050046983"
+    "2106763740050046983",
+    "2106792686778994766"
    ],
    "intel": null,
    "verification": {
@@ -92,9 +137,19 @@
     "basis": "source-statements",
     "independentSourceCount": 0,
     "sourceIds": [
-     "2106763740050046983"
+     "2106763740050046983",
+     "2106792686778994766"
     ],
-    "repeatedSourceGroups": [],
+    "repeatedSourceGroups": [
+     {
+      "sourceId": "2106739631647760392",
+      "url": "https://x.com/i/web/status/2106739631647760392",
+      "repeatedBy": [
+       "2106763740050046983",
+       "2106792686778994766"
+      ]
+     }
+    ],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   },
@@ -2342,129 +2397,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2104608271084515666"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "new-haven-county-ct--severe-storm--source-2104246240309325846",
-   "kind": "severe storm",
-   "name": null,
-   "eventIdentity": "unresolved-source-specific",
-   "kinds": [
-    "severe storm"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "New Haven County, CT · CT-03",
-   "placeRaw": "New Haven County, CT",
-   "district": "CT-03",
-   "districtMatch": true,
-   "handle": "@Rosa_DeLauro",
-   "member": "Rosa L. DeLauro",
-   "since": "2026-09-27T16:26:13.000Z",
-   "last": "2026-09-27T16:26:13.000Z",
-   "updates": 1,
-   "engN": 2,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Severe storm · New Haven County, CT",
-   "evidence": {
-    "span": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high. \n\nStay off the roads if you can, secu",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": false,
-     "place": true
-    },
-    "sourceId": "2104246240309325846",
-    "url": "https://x.com/i/web/status/2104246240309325846"
-   },
-   "timeline": [
-    {
-     "id": "2104246240309325846",
-     "sourceId": "2104246240309325846",
-     "url": "https://x.com/i/web/status/2104246240309325846",
-     "authorId": "893496121",
-     "personId": "member:rosa l. delauro",
-     "referenceIds": [],
-     "time": "2026-09-27T16:26:13.000Z",
-     "who": "@Rosa_DeLauro",
-     "tag": "member",
-     "text": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high. \n\nStay off the roads if you can, secure loose items, avoid downed lines, check in on your neighbors and friends.\n\nThis is when families need FEMA fully staffed, not cut by 292 jobs. Stay safe.",
-     "engN": 2,
-     "isNew": false,
-     "flag": {
-      "kind": "severe storm",
-      "place": "New Haven County, CT",
-      "name": null
-     },
-     "evidence": {
-      "span": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high. \n\nStay off the roads if you can, secu",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": false,
-       "place": true
-      },
-      "sourceId": "2104246240309325846",
-      "url": "https://x.com/i/web/status/2104246240309325846"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2104246240309325846"
-   ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high.",
-      "sourceId": "2104246240309325846",
-      "url": "https://x.com/i/web/status/2104246240309325846",
-      "evidenceQuote": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high.",
-      "src": "@Rosa_DeLauro, 2026-09-27T16:26:13.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high. \n\nStay off the roads if you can, secure loose items, avoid downed lines, check in on your neighbors and friends.",
-      "sourceId": "2104246240309325846",
-      "url": "https://x.com/i/web/status/2104246240309325846",
-      "evidenceQuote": "Nor'easter still moving through New Haven County— heavy wind, debris down, coastal tides running high. \n\nStay off the roads if you can, secure loose items, avoid downed lines, check in on your neighbors and friends.",
-      "src": "@Rosa_DeLauro, 2026-09-27T16:26:13.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-09-29T07:50:57.184Z",
-    "posts": 1,
-    "inputHash": "51bfb4ee2c489390ff89cab83f162168c01340c6c9666ad70613f62d110a9870",
-    "rejectedItems": 0
-   },
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2104246240309325846"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."

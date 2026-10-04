@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-04T16:05:05.659Z",
+ "classifiedAt": "2026-10-04T17:07:19.238Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -425,10 +425,167 @@
     "democracy",
     "corruption-ethics"
    ]
-  ]
+  ],
+  "2106778238747844903": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2106779378457760014": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106780154504626503": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2106780246297260337": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106780387678572816": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106783238953845180": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2106784633903788392": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2106784690698854721": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2106784782436733093": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2106786418416558480": [
+   [
+    "public-safety",
+    "crime-policing"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106786637308903678": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2106786657924210867": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106786682338947428": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2106786826207777058": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2106790508253114404": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2106791402575425975": [
+   [
+    "public-safety",
+    "crime-policing"
+   ],
+   [
+    "tech",
+    "big-tech"
+   ]
+  ],
+  "2106791488776736809": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2106791593122615748": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2106791796332536083": [],
+  "2106791890074874235": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106792686778994766": []
  },
  "incidents": {
   "2106763740050046983": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "Bouquet Fire"
+  },
+  "2106792686778994766": {
    "kind": "wildfire",
    "place": "Los Angeles County, CA",
    "name": "Bouquet Fire"
@@ -1199,6 +1356,343 @@
    ],
    "evidenceUsed": [],
    "inputHash": "b4104f8a4015939c90f70fb7d2873c5ed4fb19b856539a08ab7ededce28c9668"
+  },
+  "2106778238747844903": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "quotedContext": {
+    "id": "2105701919083897209",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-01T16:50:34.000Z",
+    "textChars": 220,
+    "textHash": "70584cd8aee502162d0fe9c91ea9c62452967459dd849c8506640a1fb9b52eda"
+   }
+  },
+  "2106779378457760014": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106780154504626503": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106780246297260337": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106780387678572816": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106783238953845180": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106784633903788392": {
+   "contextVersion": 345,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bba7bc03dad63fc4",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/6122170-becerra-hilton-california-governor-debate/",
+     "text": "Becerra, Hilton tangle over ‘Trump, Trump, Trump’ in California governor debate",
+     "title": "Becerra, Hilton tangle over ‘Trump, Trump, Trump’ in California governor debate",
+     "publishedAt": "2026-10-01T04:13:57.000Z",
+     "fetchedAt": "2026-10-01T05:17:00.959Z",
+     "version": 286,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5b135251933808e2"
+   ],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106777124514218222",
+    "fingerprint": "76c3243a1537ad28f178e59b5dc8d91dd4b5f946c85ee62c3ebdac5ffce35afa"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106777124514218222",
+    "fingerprint": "76c3243a1537ad28f178e59b5dc8d91dd4b5f946c85ee62c3ebdac5ffce35afa"
+   }
+  },
+  "2106784690698854721": {
+   "contextVersion": 345,
+   "evidenceSupplied": [
+    {
+     "id": "n_5b135251933808e2",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5987701/california-voters-to-decide-on-controversial-one-time-tax-on-billionaires",
+     "text": "SCOTT SIMON, HOST: A proposal on the ballot in California would charge that state's billionaires a one-time tax worth tens of billions of dollars in revenue. Senator Bernie Sanders is scheduled to be in California this weekend at rallies for the proposal. But other Democrats, including California's governor, Gavin Newsom, are campaigning against it. We're joined now by Marisa Lagos from KQED in San Francisco. Marisa, thanks so much for being with us.",
+     "title": "California voters to decide on controversial one-time tax on billionaires",
+     "publishedAt": "2026-10-03T11:47:02.000Z",
+     "fetchedAt": "2026-10-04T01:13:33.508Z",
+     "version": 335,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_5b135251933808e2"
+   ],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106784782436733093": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106786418416558480": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106786637308903678": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106786657924210867": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106786682338947428": {
+   "contextVersion": 345,
+   "evidenceSupplied": [
+    {
+     "id": "n_74996ddfe7e63abe",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6119432-nyc-mayor-appeals-pied-a-terre-tax/",
+     "text": "New York City appeals Staten Island judge’s ruling against Mamdani’s pied-à-terre tax",
+     "title": "New York City appeals Staten Island judge’s ruling against Mamdani’s pied-à-terre tax",
+     "publishedAt": "2026-09-30T02:28:17.000Z",
+     "fetchedAt": "2026-09-30T15:02:01.461Z",
+     "version": 274,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106786826207777058": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106790508253114404": {
+   "contextVersion": 345,
+   "evidenceSupplied": [
+    {
+     "id": "n_75c2b2126d47498d",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/newsletters/business-economy/6124486-mortgage-rates-surge-once-again/",
+     "text": "Mortgage rates surge once again",
+     "title": "Mortgage rates surge once again",
+     "publishedAt": "2026-10-01T20:47:38.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b3a211e707565bd7",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/rare-out-of-session-hearing-draws-top-banking-democrats-ire/",
+     "text": "But a handful of Banking panel members stuck around to question four White House nominees — Matthew Jones to be assistant secretary of the Department of Housing and Urban Development; Jeremy Wiggins to be assistant Treasury secretary; David Slade to be first vice president of the Export-Import Bank; and Michael Rigas to be a member of the Export-Import Bank board.",
+     "title": "Rare out-of-session hearing draws top Banking Democrat’s ire",
+     "publishedAt": "2026-10-01T16:35:43.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_75c2b2126d47498d"
+   ],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "quotedContext": {
+    "id": "2106735446147350855",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-04T13:17:26.000Z",
+    "textChars": 327,
+    "textHash": "fef54403225ed7acf7f3ef583727ba86fdcdae96873b1ba93f59712c30ce955e"
+   }
+  },
+  "2106791402575425975": {
+   "contextVersion": 345,
+   "evidenceSupplied": [
+    {
+     "id": "n_5e0b6e3c4b4f72c0",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6126259-sanders-merkley-ocasio-cortez-surveillance-ban/",
+     "text": "Progressives unveil legislation cracking down on Flock cameras",
+     "title": "Progressives unveil legislation cracking down on Flock cameras",
+     "publishedAt": "2026-10-02T17:32:34.000Z",
+     "fetchedAt": "2026-10-02T18:40:16.808Z",
+     "version": 311,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b473ed9fa2f60801",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/civil-rights/6119337-flock-safety-utility/",
+     "text": "Why opponents mistake Flock cameras for tools of totalitarian control",
+     "title": "Why opponents mistake Flock cameras for tools of totalitarian control",
+     "publishedAt": "2026-09-30T17:30:00.000Z",
+     "fetchedAt": "2026-09-30T18:46:01.014Z",
+     "version": 277,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106783154568589391",
+    "fingerprint": "5f8c225f7a117c2ccfe1e5a8f80cd72c503edeb1e6756fad5bc27e431319851d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106783154568589391",
+    "fingerprint": "5f8c225f7a117c2ccfe1e5a8f80cd72c503edeb1e6756fad5bc27e431319851d"
+   }
+  },
+  "2106791488776736809": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106758074815963421",
+    "fingerprint": "770d3d97692b90e6292f731658b4003ce086b28021f8650b7f3bfe5ca41c4116"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106758074815963421",
+    "fingerprint": "770d3d97692b90e6292f731658b4003ce086b28021f8650b7f3bfe5ca41c4116"
+   }
+  },
+  "2106791593122615748": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "quotedContext": {
+    "id": "2106758074815963421",
+    "authorId": "10069612",
+    "handle": "AFLCIO",
+    "createdAt": "2026-10-04T14:47:21.000Z",
+    "textChars": 273,
+    "textHash": "fb7b36750cce416b95a5779629e7af7743c3d100e351d70ff95ecc33fa0610ed"
+   }
+  },
+  "2106791796332536083": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "quotedContext": {
+    "id": "2106777030020755910",
+    "authorId": "1674924377375141888",
+    "handle": "NotTheJeffOlsen",
+    "createdAt": "2026-10-04T16:02:40.000Z",
+    "textChars": 43,
+    "textHash": "7f659c7a2f8e6c75341cd839587e9532fdd638759df7353e7bab3eb05307845d"
+   }
+  },
+  "2106791890074874235": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9"
+  },
+  "2106792686778994766": {
+   "contextVersion": 345,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b7fcd651c3a744d50f883713f7450f881a10204ae9a5f132659e1e573f373d9",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106739631647760392",
+    "fingerprint": "6c661e4c12458fa2a05189a176c02e4e7532bb09882ced06a26ca98fd5576635"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106739631647760392",
+    "fingerprint": "6c661e4c12458fa2a05189a176c02e4e7532bb09882ced06a26ca98fd5576635"
+   }
   }
  },
  "needsContext": {
@@ -1263,10 +1757,31 @@
   "2106776609189744943": false,
   "2106777277757612376": false,
   "2106777284078108854": false,
-  "2106777304282145244": false
+  "2106777304282145244": false,
+  "2106778238747844903": false,
+  "2106779378457760014": false,
+  "2106780154504626503": false,
+  "2106780246297260337": false,
+  "2106780387678572816": false,
+  "2106783238953845180": false,
+  "2106784633903788392": false,
+  "2106784690698854721": false,
+  "2106784782436733093": false,
+  "2106786418416558480": false,
+  "2106786637308903678": false,
+  "2106786657924210867": false,
+  "2106786682338947428": false,
+  "2106786826207777058": true,
+  "2106790508253114404": false,
+  "2106791402575425975": false,
+  "2106791488776736809": false,
+  "2106791593122615748": false,
+  "2106791796332536083": false,
+  "2106791890074874235": false,
+  "2106792686778994766": false
  },
  "inputBlocks": {},
- "contextVersion": 344,
+ "contextVersion": 345,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -1286,6 +1801,19 @@
    "ids": [
     "2106761259169284485"
    ]
+  },
+  {
+   "label": "California Proposition 40 billionaire tax ballot measure",
+   "ids": [
+    "2106784633903788392",
+    "2106784690698854721"
+   ]
+  },
+  {
+   "label": "Texas Flock surveillance camera funding",
+   "ids": [
+    "2106791402575425975"
+   ]
   }
  ],
  "unclassified": [],
@@ -1299,34 +1827,37 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106769299348353177",
-    "2106769997871862065",
-    "2106770331956363283",
-    "2106770438957474135",
-    "2106770643190440403",
-    "2106770968278663194",
-    "2106771575643185396",
-    "2106774055416209803",
-    "2106774354763936089",
-    "2106775054075974039",
-    "2106775142537867462",
-    "2106776365114765381",
-    "2106776367509516385",
-    "2106776427412500905",
-    "2106776609189744943",
-    "2106777277757612376",
-    "2106777284078108854",
-    "2106777304282145244"
+    "2106778238747844903",
+    "2106779378457760014",
+    "2106780154504626503",
+    "2106780246297260337",
+    "2106780387678572816",
+    "2106783238953845180",
+    "2106784633903788392",
+    "2106784690698854721",
+    "2106784782436733093",
+    "2106786418416558480",
+    "2106786637308903678",
+    "2106786657924210867",
+    "2106786682338947428",
+    "2106786826207777058",
+    "2106790508253114404",
+    "2106791402575425975",
+    "2106791488776736809",
+    "2106791593122615748",
+    "2106791796332536083",
+    "2106791890074874235",
+    "2106792686778994766"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-04T16:04:47.209Z",
-    "observedAt": "2026-10-04T16:05:05.651Z",
+    "attemptedAt": "2026-10-04T17:06:42.380Z",
+    "observedAt": "2026-10-04T17:07:19.233Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 18,
+    "acceptedCount": 21,
     "retryCount": 0
    }
   }
@@ -1334,24 +1865,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-04T16:04:47.209Z",
-   "observedAt": "2026-10-04T16:05:05.651Z",
+   "attemptedAt": "2026-10-04T17:06:42.380Z",
+   "observedAt": "2026-10-04T17:07:19.233Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 21,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-04T16:04:47.209Z",
-   "observedAt": "2026-10-04T16:05:05.651Z",
+   "attemptedAt": "2026-10-04T17:06:42.380Z",
+   "observedAt": "2026-10-04T17:07:19.233Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 21,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-04T16:05:05.661Z"
+ "updatedAt": "2026-10-04T17:07:19.240Z"
 }
