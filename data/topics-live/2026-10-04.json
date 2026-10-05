@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T19:48:07.194Z",
+ "classifiedAt": "2026-10-05T21:48:39.209Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -4882,42 +4882,6 @@
     "fingerprint": "4f8746e7bf5504dcafcb9795e7aab0d26540afc12dbd83d21062219723771089"
    }
   },
-  "2106923179255976288": {
-   "contextVersion": 353,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "29a1368fc13b23689d9d02ea7872a3543867efdf472dfe7a868d9e5bd905ace3"
-  },
-  "2106923181000843575": {
-   "contextVersion": 353,
-   "evidenceSupplied": [
-    {
-     "id": "n_7ea33f5bf4a07190",
-     "publisher": "Roll Call",
-     "date": "2026-09-30",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
-     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
-     "title": "Housing groups challenge Trump funding clawback",
-     "publishedAt": "2026-09-30T16:01:01.000Z",
-     "fetchedAt": "2026-09-30T21:46:34.754Z",
-     "version": 280,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "29a1368fc13b23689d9d02ea7872a3543867efdf472dfe7a868d9e5bd905ace3",
-   "quotedContext": {
-    "id": "2106923179255976288",
-    "authorId": "1612865196489412608",
-    "handle": "RepValHoyle",
-    "createdAt": "2026-10-05T01:43:25.000Z",
-    "textChars": 342,
-    "textHash": "800d35d2db008141e0cb91dbf6af4b0c28208994623eda25c1b55da13ae56ad2"
-   }
-  },
   "2106924037121404969": {
    "contextVersion": 353,
    "evidenceSupplied": [],
@@ -5380,6 +5344,73 @@
     "textChars": 302,
     "textHash": "50339eb0856a21d9645999218bdea2d9280263a021919220577acfa243fa9ba1"
    }
+  },
+  "2106923179255976288": {
+   "contextVersion": 366,
+   "evidenceSupplied": [
+    {
+     "id": "n_616ddbcd2048ed35",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/05crypto/",
+     "text": "The three Democrats to whom Fairshake is donating $1 million each are Reps. Janelle Bynum of Oregon, Steven Horsford of Nevada, and Derek Tran of California.",
+     "title": "Crypto industry PAC gives to 32 House incumbents, on both sides",
+     "publishedAt": "2026-10-05T15:33:02.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "082fb5462e2cff67f45b70186bcd59ba1f2eafd0b6593c97847929269d04e17c"
+  },
+  "2106923181000843575": {
+   "contextVersion": 366,
+   "evidenceSupplied": [
+    {
+     "id": "n_616ddbcd2048ed35",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/05crypto/",
+     "text": "Fairshake PAC said it is giving $1 million each to three top House Financial Services panel Republicans — French Hill of Arkansas, the full committee chairman; Bryan Steil of Wisconsin, chairman of the Digital Assets, Financial Technology and Artificial Intelligence Subcommittee; and Bill Huizenga of Michigan, the committee’s vice chair.",
+     "title": "Crypto industry PAC gives to 32 House incumbents, on both sides",
+     "publishedAt": "2026-10-05T15:33:02.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7ea33f5bf4a07190",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+     "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+     "title": "Housing groups challenge Trump funding clawback",
+     "publishedAt": "2026-09-30T16:01:01.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "082fb5462e2cff67f45b70186bcd59ba1f2eafd0b6593c97847929269d04e17c",
+   "quotedContext": {
+    "id": "2106923179255976288",
+    "authorId": "1612865196489412608",
+    "handle": "RepValHoyle",
+    "createdAt": "2026-10-05T01:43:25.000Z",
+    "textChars": 342,
+    "textHash": "800d35d2db008141e0cb91dbf6af4b0c28208994623eda25c1b55da13ae56ad2"
+   }
   }
  },
  "needsContext": {
@@ -5632,8 +5663,6 @@
   "2106921815859679315": false,
   "2106921972890554684": false,
   "2106922171042037900": false,
-  "2106923179255976288": false,
-  "2106923181000843575": false,
   "2106924037121404969": true,
   "2106925618180886959": false,
   "2106928884092735523": false,
@@ -5653,10 +5682,12 @@
   "2106946970405212624": false,
   "2106847828005851444": false,
   "2106764755348427151": false,
-  "2106863865858338890": false
+  "2106863865858338890": false,
+  "2106923179255976288": false,
+  "2106923181000843575": false
  },
  "inputBlocks": {},
- "contextVersion": 365,
+ "contextVersion": 366,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -5781,56 +5812,40 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106764755348427151",
-    "2106863865858338890",
-    "2107161772595556480",
-    "2107182431669236202",
-    "2107182706434216114",
-    "2107183205426282626",
-    "2107183341988446527",
-    "2107183959507648861",
-    "2107184044291109262",
-    "2107184048946778533",
-    "2107184158145712632",
+    "2106923179255976288",
+    "2106923181000843575",
+    "2107153711143539090",
     "2107184233836171757",
-    "2107184421363462361",
-    "2107184504683045368",
-    "2107184517161062870",
-    "2107184641816011174",
-    "2107184713270247613",
-    "2107184717460062716",
-    "2107184943743008945",
-    "2107185497210528101",
-    "2107185657114136710",
-    "2107186065316438117",
-    "2107187540558303520",
-    "2107187543930540282",
-    "2107188063906722180",
-    "2107188457126961615",
-    "2107188723020689693",
-    "2107188835411276094",
-    "2107189062302159094",
-    "2107189070543905196",
-    "2107189449675149582",
-    "2107190177479418227",
-    "2107190593323499758",
-    "2107190627083391417",
-    "2107191177942282659",
-    "2107191370892878239",
-    "2107191621263433730",
-    "2107191838327136738",
-    "2107192233057476851",
-    "2107192461160566874"
+    "2107199847325380849",
+    "2107200063789314107",
+    "2107200116859773094",
+    "2107200386247598337",
+    "2107200890381766721",
+    "2107201037040038363",
+    "2107201552888848750",
+    "2107201820061810885",
+    "2107201902215909680",
+    "2107202088568824310",
+    "2107202419088126252",
+    "2107202565590949981",
+    "2107202623296196674",
+    "2107202889366040740",
+    "2107203331965731009",
+    "2107203428057538786",
+    "2107203766017569038",
+    "2107204031290745296",
+    "2107204227961323670",
+    "2107204228641182125"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T19:47:02.899Z",
-    "observedAt": "2026-10-05T19:47:49.941Z",
+    "attemptedAt": "2026-10-05T21:45:34.204Z",
+    "observedAt": "2026-10-05T21:46:07.032Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 24,
     "retryCount": 0
    }
   }
@@ -5838,24 +5853,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T19:47:02.899Z",
-   "observedAt": "2026-10-05T19:47:49.941Z",
+   "attemptedAt": "2026-10-05T21:45:34.204Z",
+   "observedAt": "2026-10-05T21:46:07.032Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T19:47:02.899Z",
-   "observedAt": "2026-10-05T19:47:49.941Z",
+   "attemptedAt": "2026-10-05T21:45:34.204Z",
+   "observedAt": "2026-10-05T21:46:07.032Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T19:48:07.197Z"
+ "updatedAt": "2026-10-05T21:48:39.213Z"
 }
