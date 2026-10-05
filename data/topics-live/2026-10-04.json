@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T01:50:13.998Z",
+ "classifiedAt": "2026-10-05T02:26:17.257Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -1724,7 +1724,40 @@
     "jobs-wages"
    ]
   ],
-  "2106924037121404969": []
+  "2106924037121404969": [],
+  "2106925618180886959": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2106928884092735523": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106930250307510779": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106931163826982951": [],
+  "2106932840856220145": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ]
  },
  "incidents": {
   "2106763740050046983": {
@@ -4886,6 +4919,105 @@
     "referenceId": "2106790776705310764",
     "fingerprint": "618ee79447be5843ed3156778b3b20c7f01164bd80d59ad52fb1d4fec3dacc2b"
    }
+  },
+  "2106925618180886959": {
+   "contextVersion": 354,
+   "evidenceSupplied": [
+    {
+     "id": "n_bbf3fd626147f943",
+     "publisher": "NPR",
+     "date": "2026-09-28",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5961354/could-a-far-left-candidate-win-a-midterm-race-in-a-red-state-like-florida",
+     "text": "CATHERINE WELCH, BYLINE: To understand the political headwinds Democrats in Florida are facing, just look at voter registration. There are 1.5 million more registered Republicans than Democrats, and a Democrat hasn't won a statewide election since 2018. This is the Florida the Democratic U.S. Senate candidate Angie Nixon faces as she campaigns from the left with a message of Medicare for all and taxing billionaires. Her message got Gabe Henson's vote in the primary.",
+     "title": "Could a far left candidate win a midterm race in a red state like Florida?",
+     "publishedAt": "2026-09-28T22:51:14.000Z",
+     "fetchedAt": "2026-09-29T05:55:02.331Z",
+     "version": 247,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fdfda61176875bb5",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/bale-dalton-florida-democrat-anticorruption-plan/",
+     "text": "A Democrat running for a Central Florida seat on the edge of the House battleground unveiled an anti-corruption plan Thursday that calls for overhauling the Ethics Committee, joining other candidates who’ve made fighting corruption a campaign focal point this year.",
+     "title": "Florida Democrat is latest candidate to unveil anticorruption plan",
+     "publishedAt": "2026-10-01T06:00:00.000Z",
+     "fetchedAt": "2026-10-01T11:56:39.964Z",
+     "version": 289,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bbf3fd626147f943"
+   ],
+   "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27"
+  },
+  "2106928884092735523": {
+   "contextVersion": 354,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106916908272611373",
+    "fingerprint": "41e91c663c20eab07ab124121bd0dcd15fd560165f8cf14d91e23e10f5c6b34e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106916908272611373",
+    "fingerprint": "41e91c663c20eab07ab124121bd0dcd15fd560165f8cf14d91e23e10f5c6b34e"
+   }
+  },
+  "2106930250307510779": {
+   "contextVersion": 354,
+   "evidenceSupplied": [
+    {
+     "id": "n_279da38ba2b1151c",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/pain-in-the-ass-trump-again-shows-annoyance-with-paxton-after-leaked-audio/",
+     "text": "“For decades, you were heartlessly betrayed by politicians — lousy politicians who let foreign trade cheaters plunder your wages, loot your factories, close up your jobs, and they robbed our country blind. They’d still be doing it if I wasn’t here, believe me,” Trump said during rally-style remarks at the truck factory. “And they’ll do it again if you don’t get guys like Ken Paxton elected.”",
+     "title": "‘Pain in the ass’: Trump again shows annoyance with Paxton after leaked audio",
+     "publishedAt": "2026-10-01T19:01:00.000Z",
+     "fetchedAt": "2026-10-01T23:56:58.723Z",
+     "version": 298,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27",
+   "quotedContext": {
+    "id": "2106112153107226880",
+    "authorId": "44513878",
+    "handle": "TexasTribune",
+    "createdAt": "2026-10-02T20:00:41.000Z",
+    "textChars": 304,
+    "textHash": "e0869cf64e9e471ca4e18e1fdda54f870dac102f308f17ded801e07f29c3217f"
+   }
+  },
+  "2106931163826982951": {
+   "contextVersion": 354,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27"
+  },
+  "2106932840856220145": {
+   "contextVersion": 354,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27"
   }
  },
  "needsContext": {
@@ -5143,10 +5275,15 @@
   "2106922171042037900": false,
   "2106923179255976288": false,
   "2106923181000843575": false,
-  "2106924037121404969": true
+  "2106924037121404969": true,
+  "2106925618180886959": false,
+  "2106928884092735523": false,
+  "2106930250307510779": false,
+  "2106931163826982951": false,
+  "2106932840856220145": false
  },
  "inputBlocks": {},
- "contextVersion": 353,
+ "contextVersion": 354,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -5271,41 +5408,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106902157496668535",
-    "2106902404385964298",
-    "2106903211705782567",
-    "2106903290743337003",
-    "2106903434884501941",
-    "2106903918001483836",
-    "2106903989669204392",
-    "2106905614223913049",
-    "2106906064708862314",
-    "2106907031672422499",
-    "2106908222137499796",
-    "2106910206466912454",
-    "2106910222061322751",
-    "2106910861361356809",
-    "2106912231413649661",
-    "2106913542880276863",
-    "2106914513442533456",
-    "2106915339833413736",
-    "2106915839253356695",
-    "2106921815859679315",
-    "2106921972890554684",
-    "2106922171042037900",
-    "2106923179255976288",
-    "2106923181000843575",
-    "2106924037121404969"
+    "2106925618180886959",
+    "2106928884092735523",
+    "2106930250307510779",
+    "2106931163826982951",
+    "2106932840856220145"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T01:49:37.426Z",
-    "observedAt": "2026-10-05T01:50:13.989Z",
+    "attemptedAt": "2026-10-05T02:26:07.974Z",
+    "observedAt": "2026-10-05T02:26:17.247Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 25,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   },
@@ -5329,24 +5446,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T01:49:37.426Z",
-   "observedAt": "2026-10-05T01:50:13.989Z",
+   "attemptedAt": "2026-10-05T02:26:07.974Z",
+   "observedAt": "2026-10-05T02:26:17.247Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T01:49:37.426Z",
-   "observedAt": "2026-10-05T01:50:13.989Z",
+   "attemptedAt": "2026-10-05T02:26:07.974Z",
+   "observedAt": "2026-10-05T02:26:17.247Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T01:50:14.000Z"
+ "updatedAt": "2026-10-05T02:26:17.261Z"
 }
