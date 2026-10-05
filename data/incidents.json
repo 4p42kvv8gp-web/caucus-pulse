@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-05T06:29:28.039Z",
+ "generatedAt": "2026-10-05T07:51:29.643Z",
  "incidents": [
   {
    "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
@@ -41,7 +41,7 @@
    "since": "2026-10-04T15:09:52.000Z",
    "last": "2026-10-04T17:04:53.000Z",
    "updates": 2,
-   "engN": 14,
+   "engN": 20,
    "amplifiers": 0,
    "others": [
     "@Rep_Whitesides"
@@ -73,7 +73,7 @@
      "who": "@gtwhitesides",
      "tag": "member",
      "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-     "engN": 2,
+     "engN": 8,
      "isNew": false,
      "flag": {
       "kind": "wildfire",
@@ -131,7 +131,49 @@
     "2106763740050046983",
     "2106792686778994766"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
+      "sourceId": "2106763740050046983",
+      "url": "https://x.com/i/web/status/2106763740050046983",
+      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
+      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
+     },
+     {
+      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+      "sourceId": "2106792686778994766",
+      "url": "https://x.com/i/web/status/2106792686778994766",
+      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+      "sourceId": "2106792686778994766",
+      "url": "https://x.com/i/web/status/2106792686778994766",
+      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
+      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
+     },
+     {
+      "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
+      "sourceId": "2106763740050046983",
+      "url": "https://x.com/i/web/status/2106763740050046983",
+      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
+      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-05T07:51:29.643Z",
+    "posts": 2,
+    "inputHash": "0764f0c0868e8e0de0242a631e28d0b820a251ba2d1b33e9970e4d2890076ea8",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
