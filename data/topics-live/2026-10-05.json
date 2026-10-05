@@ -1,0 +1,97 @@
+{
+ "date": "2026-10-05",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-05T06:29:27.914Z",
+ "assignments": {
+  "2106975038498873363": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    null
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2106975038498873363": {
+   "contextVersion": 356,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "cd338254184b348f9f6f607081d486c21a70f143692056c8cf607324d326c435",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106794236469256284",
+    "fingerprint": "b705fe9cbe4bee22f749e74149c2b81831bec7db150c036b805c4719fd8a3638"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106794236469256284",
+    "fingerprint": "b705fe9cbe4bee22f749e74149c2b81831bec7db150c036b805c4719fd8a3638"
+   }
+  }
+ },
+ "needsContext": {
+  "2106975038498873363": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 356,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2106975038498873363"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-05T06:29:23.514Z",
+    "observedAt": "2026-10-05T06:29:27.905Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 1,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-05T06:29:23.514Z",
+   "observedAt": "2026-10-05T06:29:27.905Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 1,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-05T06:29:23.514Z",
+   "observedAt": "2026-10-05T06:29:27.905Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 1,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-05T06:29:27.915Z"
+}
