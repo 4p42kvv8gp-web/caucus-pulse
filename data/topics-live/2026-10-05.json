@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T06:29:27.914Z",
+ "classifiedAt": "2026-10-05T08:36:54.399Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -14,6 +14,24 @@
    ],
    [
     "congress-politics",
+    null
+   ]
+  ],
+  "2107013248365252946": [
+   [
+    "tech",
+    null
+   ]
+  ],
+  "2107014885842558989": [
+   [
+    "tech",
+    null
+   ]
+  ],
+  "2107021452939821498": [
+   [
+    "tech",
     null
    ]
   ]
@@ -37,14 +55,84 @@
     "referenceId": "2106794236469256284",
     "fingerprint": "b705fe9cbe4bee22f749e74149c2b81831bec7db150c036b805c4719fd8a3638"
    }
+  },
+  "2107013248365252946": {
+   "contextVersion": 356,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d5f319335488c0347a2c028cf3d3842012f3abdb33d1f77a1b85a4bbb24e61ee",
+   "quotedContext": {
+    "id": "2106909680157303293",
+    "authorId": "1408408813032574983",
+    "handle": "spicey_lemonade",
+    "createdAt": "2026-10-05T00:49:46.000Z",
+    "textChars": 182,
+    "textHash": "f428813960d4f4fdc70bc02d78719975ba44c7f6b7c6ceb651ff1de2620c2b7a"
+   }
+  },
+  "2107014885842558989": {
+   "contextVersion": 356,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d5f319335488c0347a2c028cf3d3842012f3abdb33d1f77a1b85a4bbb24e61ee",
+   "quotedContext": {
+    "id": "2106912512570720498",
+    "authorId": "4846823272",
+    "handle": "Michael_Druggan",
+    "createdAt": "2026-10-05T01:01:02.000Z",
+    "textChars": 283,
+    "textHash": "dae9a948482d135c97796e09b8c23f191c204d587d97907385771cc59e69cdf0"
+   }
+  },
+  "2107021452939821498": {
+   "contextVersion": 356,
+   "evidenceSupplied": [
+    {
+     "id": "n_e3b234ade77f0d87",
+     "publisher": "NPR",
+     "date": "2026-10-04",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/04/nx-s1-5990781/jay-clayton-ai-czar-trump",
+     "text": "Trump prefers the term \"super intelligence\" to \"artificial intelligence.\" He said his \"Super Intelligence Force\" will \"coordinate the Federal Government's engagement with Consumers, Public Interest Groups, Religious Organizations, Critical Infrastructure Providers, and Super Intelligence Companies.\"",
+     "title": "Trump names national intelligence chief Jay Clayton as new AI czar",
+     "publishedAt": "2026-10-04T18:36:48.000Z",
+     "fetchedAt": "2026-10-04T19:04:26.586Z",
+     "version": 347,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d5f319335488c0347a2c028cf3d3842012f3abdb33d1f77a1b85a4bbb24e61ee",
+   "quotedContext": {
+    "id": "2106157658847740324",
+    "authorId": "958374804",
+    "handle": "getjonwithit",
+    "createdAt": "2026-10-02T23:01:31.000Z",
+    "textChars": 485,
+    "textHash": "6dad60d10f2228205aa9c6ddc5fc0c78c117bca56951726b506f95ae517d3d83"
+   }
   }
  },
  "needsContext": {
-  "2106975038498873363": false
+  "2106975038498873363": false,
+  "2107013248365252946": false,
+  "2107014885842558989": false,
+  "2107021452939821498": false
  },
  "inputBlocks": {},
  "contextVersion": 356,
- "emerging": [],
+ "emerging": [
+  {
+   "label": "AI consciousness / sentience debate",
+   "ids": [
+    "2107013248365252946",
+    "2107014885842558989",
+    "2107021452939821498"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -56,17 +144,19 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106975038498873363"
+    "2107013248365252946",
+    "2107014885842558989",
+    "2107021452939821498"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T06:29:23.514Z",
-    "observedAt": "2026-10-05T06:29:27.905Z",
+    "attemptedAt": "2026-10-05T08:36:46.743Z",
+    "observedAt": "2026-10-05T08:36:54.395Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   }
@@ -74,24 +164,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T06:29:23.514Z",
-   "observedAt": "2026-10-05T06:29:27.905Z",
+   "attemptedAt": "2026-10-05T08:36:46.743Z",
+   "observedAt": "2026-10-05T08:36:54.395Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T06:29:23.514Z",
-   "observedAt": "2026-10-05T06:29:27.905Z",
+   "attemptedAt": "2026-10-05T08:36:46.743Z",
+   "observedAt": "2026-10-05T08:36:54.395Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T06:29:27.915Z"
+ "updatedAt": "2026-10-05T08:36:54.400Z"
 }
