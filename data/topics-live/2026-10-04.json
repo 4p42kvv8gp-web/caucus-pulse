@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T03:19:23.829Z",
+ "classifiedAt": "2026-10-05T04:49:32.816Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -1837,7 +1837,8 @@
     "tech",
     "ai-policy"
    ]
-  ]
+  ],
+  "2106948337308238164": []
  },
  "incidents": {
   "2106763740050046983": {
@@ -5292,6 +5293,43 @@
     "textChars": 417,
     "textHash": "437c489d1d1f0e90315e52030876f4c84ead5eab490b309ac68a97471e4a41c8"
    }
+  },
+  "2106948337308238164": {
+   "contextVersion": 356,
+   "evidenceSupplied": [
+    {
+     "id": "n_90a0ec2635d8a226",
+     "publisher": "The Hill",
+     "date": "2026-09-29",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6117427-roadrunner-venture-studios-unveils-quantum-lab/",
+     "text": "New Mexico venture studio unveils quantum lab to boost US tech edge",
+     "title": "New Mexico venture studio unveils quantum lab to boost US tech edge",
+     "publishedAt": "2026-09-29T14:40:01.000Z",
+     "fetchedAt": "2026-09-29T15:47:03.352Z",
+     "version": 253,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "A coalition of states, including California, Maine, Maryland, Michigan, New Mexico, Nevada and Oregon, filed suit against the administration Wednesday in the U.S. District Court for the Northern District of California. That lawsuit argues the funding clawback violates federal spending law, the 1974 Impoundment Control Act, and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dc6a5293c4ec36b632bb651d52d379b12c2183421d50bdb0293e9f7dd41a670b"
   }
  },
  "needsContext": {
@@ -5564,10 +5602,11 @@
   "2106942497897234807": false,
   "2106942672791572882": false,
   "2106945498741616749": false,
-  "2106946970405212624": false
+  "2106946970405212624": false,
+  "2106948337308238164": false
  },
  "inputBlocks": {},
- "contextVersion": 355,
+ "contextVersion": 356,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -5692,26 +5731,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106934081728520543",
-    "2106934310569996742",
-    "2106935357883244660",
-    "2106937438811938950",
-    "2106938365878689908",
-    "2106939468011958597",
-    "2106942497897234807",
-    "2106942672791572882",
-    "2106945498741616749",
-    "2106946970405212624"
+    "2106948337308238164"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T03:19:06.023Z",
-    "observedAt": "2026-10-05T03:19:23.820Z",
+    "attemptedAt": "2026-10-05T04:49:31.371Z",
+    "observedAt": "2026-10-05T04:49:32.808Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   },
@@ -5735,24 +5765,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T03:19:06.023Z",
-   "observedAt": "2026-10-05T03:19:23.820Z",
+   "attemptedAt": "2026-10-05T04:49:31.371Z",
+   "observedAt": "2026-10-05T04:49:32.808Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T03:19:06.023Z",
-   "observedAt": "2026-10-05T03:19:23.820Z",
+   "attemptedAt": "2026-10-05T04:49:31.371Z",
+   "observedAt": "2026-10-05T04:49:32.808Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T03:19:23.832Z"
+ "updatedAt": "2026-10-05T04:49:32.819Z"
 }
