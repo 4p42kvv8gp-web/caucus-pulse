@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T10:39:37.458Z",
+ "classifiedAt": "2026-10-05T13:45:41.453Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -5318,7 +5318,7 @@
    "inputHash": "dc6a5293c4ec36b632bb651d52d379b12c2183421d50bdb0293e9f7dd41a670b"
   },
   "2106946970405212624": {
-   "contextVersion": 358,
+   "contextVersion": 360,
    "evidenceSupplied": [
     {
      "id": "n_72236f657ed4f59e",
@@ -5327,17 +5327,17 @@
      "kind": "report",
      "url": "https://www.npr.org/2026/10/05/nx-s1-5977852/ai-chatbots-midterm-election",
      "text": "Chatting through all the races and the different candidates, he worked to figure out who best represented his values. But rather than discussing it with a friend or family member, he held an hours-long discussion with ChatGPT — a chatbot powered by a large language model (LLM) owned by OpenAI, an AI research company.",
-     "title": "Voters are increasingly using AI chatbots to fact-check and compare candidates",
+     "title": "People are asking ChatGPT to help them decide how to vote in the midterms",
      "publishedAt": "2026-10-05T09:00:00.000Z",
-     "fetchedAt": "2026-10-05T09:53:26.761Z",
-     "version": 358,
+     "fetchedAt": "2026-10-05T12:58:24.573Z",
+     "version": 360,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "a152c6428a0e895db009a9e269b7cff65316c0bdb8c210cd03d0b00b25eaf113",
+   "inputHash": "5724aa9fc317872b75ed5632fb738253c5662da98cd0722c708898579bdca3fb",
    "quotedContext": {
     "id": "2106851857423282648",
     "authorId": "9300262",
@@ -5622,7 +5622,7 @@
   "2106946970405212624": false
  },
  "inputBlocks": {},
- "contextVersion": 358,
+ "contextVersion": 360,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -5747,33 +5747,38 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106946970405212624"
+    "2106946970405212624",
+    "2107082176864932227",
+    "2107083647870222445",
+    "2107086003689173335",
+    "2107086538777514040",
+    "2107092455887867971",
+    "2107092774181065179",
+    "2107093053211074985",
+    "2107093086325133655",
+    "2107093453842812941",
+    "2107093986947309942",
+    "2107094018928566573",
+    "2107094407346327592",
+    "2107094957731311993",
+    "2107095929589215347",
+    "2107096255633441030",
+    "2107096948343803946",
+    "2107097523366293783",
+    "2107099247610941909",
+    "2107100782390604106",
+    "2107101496395386968",
+    "2107101603010335206"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T10:39:34.919Z",
-    "observedAt": "2026-10-05T10:39:37.450Z",
+    "attemptedAt": "2026-10-05T13:44:55.534Z",
+    "observedAt": "2026-10-05T13:45:28.008Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2106879437367284043"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-04T22:50:47.311Z",
-    "observedAt": "2026-10-04T22:50:49.130Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 22,
     "retryCount": 0
    }
   }
@@ -5781,24 +5786,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T10:39:34.919Z",
-   "observedAt": "2026-10-05T10:39:37.450Z",
+   "attemptedAt": "2026-10-05T13:44:55.534Z",
+   "observedAt": "2026-10-05T13:45:28.008Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 22,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T10:39:34.919Z",
-   "observedAt": "2026-10-05T10:39:37.450Z",
+   "attemptedAt": "2026-10-05T13:44:55.534Z",
+   "observedAt": "2026-10-05T13:45:28.008Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 22,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T10:39:37.461Z"
+ "updatedAt": "2026-10-05T13:45:41.457Z"
 }
