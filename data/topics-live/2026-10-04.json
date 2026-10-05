@@ -1,7 +1,7 @@
 {
  "date": "2026-10-04",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-05T02:26:17.257Z",
+ "classifiedAt": "2026-10-05T03:19:23.829Z",
  "assignments": {
   "2106608554777956617": [
    [
@@ -1756,6 +1756,86 @@
    [
     "democracy",
     "voting-rights"
+   ]
+  ],
+  "2106934081728520543": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106934310569996742": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2106935357883244660": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106937438811938950": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2106938365878689908": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2106939468011958597": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2106942497897234807": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106942672791572882": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "labor",
+    null
+   ]
+  ],
+  "2106945498741616749": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2106946970405212624": [
+   [
+    "tech",
+    "ai-policy"
    ]
   ]
  },
@@ -5018,6 +5098,200 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "c0d7febb0ff0cf2f820db3cdd031f2c60bb487d6775fb26b329b5c5d8ef46d27"
+  },
+  "2106934081728520543": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "quotedContext": {
+    "id": "2106893686810567105",
+    "authorId": "14325500",
+    "handle": "jwclark",
+    "createdAt": "2026-10-04T23:46:13.000Z",
+    "textChars": 197,
+    "textHash": "ba5381939edb253ce68eed1a315b8eaf6dd742e0e4d78a3ce090437b52e8ff45"
+   }
+  },
+  "2106934310569996742": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106747872431559154",
+    "fingerprint": "3f02e0f4bac8e275b3703d0656890066733713cdcb76a7e96fccfa937bb074fb"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106747872431559154",
+    "fingerprint": "3f02e0f4bac8e275b3703d0656890066733713cdcb76a7e96fccfa937bb074fb"
+   }
+  },
+  "2106935357883244660": {
+   "contextVersion": 355,
+   "evidenceSupplied": [
+    {
+     "id": "n_c70c45e5c8dcd67b",
+     "publisher": "Roll Call",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/30/blackburn-sues-jack-smith-over-phone-records/",
+     "text": "The lawsuit, filed in the U.S. District Court for the Middle District of Tennessee, moves a political fight over the sweep of Smith’s investigation into the courthouse. The complaint alleges that Smith targeted Blackburn for her politics and unconstitutionally obtained her phone records as he probed Donald Trump’s alleged attempt to overturn his loss in the 2020 election.",
+     "title": "Blackburn sues Jack Smith over phone records",
+     "publishedAt": "2026-09-30T15:59:15.000Z",
+     "fetchedAt": "2026-09-30T21:46:34.754Z",
+     "version": 280,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_61939787b04b4ae6",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
+     "text": "RYAN LUCAS, BYLINE: Jack Smith led the two federal prosecutions of President Trump - one for allegedly attempting to overturn the results of the 2020 election, the other for allegedly mishandling classified documents and obstructing justice. Neither case made it to trial before Trump returned to office. Testifying before the Senate Judiciary Committee, Smith said politics played no role in his investigation, and he said the decision to bring charges was based on the evidence.",
+     "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+     "publishedAt": "2026-09-30T10:46:14.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106857978812871014",
+    "fingerprint": "20029a4a545ba7ca2e01447e839a5c8f23f4d3d3651dc53e14aebd6e50c52ef6"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106857978812871014",
+    "fingerprint": "20029a4a545ba7ca2e01447e839a5c8f23f4d3d3651dc53e14aebd6e50c52ef6"
+   }
+  },
+  "2106937438811938950": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478"
+  },
+  "2106938365878689908": {
+   "contextVersion": 355,
+   "evidenceSupplied": [
+    {
+     "id": "n_3af3dc284483b21e",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5987947/reflecting-pool-vandalism-hearn-charges-dismissed",
+     "text": "\"While the prosecutors admit that the evidence indicates that he committed no crime, the President's statements create a risk that Mr. Hearn will be prosecuted nonetheless, either because the current United States Attorney and her assistants will eventually yield to his public pressure campaign or because the President will replace them with prosecutors more likely to carry out his wishes,\" wrote Edelman, an Obama appointee.",
+     "title": "A judge permanently dismisses former Olympian's Reflecting Pool charges",
+     "publishedAt": "2026-10-01T18:22:59.000Z",
+     "fetchedAt": "2026-10-01T18:41:06.469Z",
+     "version": 294,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "quotedContext": {
+    "id": "2050015469185487151",
+    "authorId": "140010098",
+    "handle": "JaneKim",
+    "createdAt": "2026-05-01T00:52:29.000Z",
+    "textChars": 214,
+    "textHash": "1fc9ef5444afd184b8945850e1f1e554bb2acb962a5f38ab35d6c2a00c5eabe4"
+   }
+  },
+  "2106939468011958597": {
+   "contextVersion": 355,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "Following a meeting at the White House with President Donald Trump and technology moguls, Speaker Mike Johnson, R-La., on Tuesday pushed back on calls to impose regulations on artificial intelligence, even as news of worrisome AI models hacking into government databases become increasingly common and the public grows more skeptical of the technology.",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b6e3fedab0599e30",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6115451-trump-attacks-obama-women-governments-comment/",
+     "text": "Trump blasts Obama’s ‘ridiculous’ take all-women governments would ‘be better’",
+     "title": "Trump blasts Obama’s ‘ridiculous’ take all-women governments would ‘be better’",
+     "publishedAt": "2026-09-28T16:26:36.000Z",
+     "fetchedAt": "2026-09-28T17:01:20.117Z",
+     "version": 237,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "quotedContext": {
+    "id": "2101346293805412529",
+    "authorId": "1243560408025198593",
+    "handle": "MeidasTouch",
+    "createdAt": "2026-09-19T16:22:52.000Z",
+    "textChars": 912,
+    "textHash": "32c5f6623dd64f4bbcfbe17f2bf7712fdc0d56c7030b733b69431a6db66450e3"
+   }
+  },
+  "2106942497897234807": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478"
+  },
+  "2106942672791572882": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478"
+  },
+  "2106945498741616749": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478"
+  },
+  "2106946970405212624": {
+   "contextVersion": 355,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7d732c7a307b65bae329e4e80bd5a05136bebcf0eb5672d8c5e6933951bb0478",
+   "quotedContext": {
+    "id": "2106851857423282648",
+    "authorId": "9300262",
+    "handle": "politico",
+    "createdAt": "2026-10-04T21:00:00.000Z",
+    "textChars": 417,
+    "textHash": "437c489d1d1f0e90315e52030876f4c84ead5eab490b309ac68a97471e4a41c8"
+   }
   }
  },
  "needsContext": {
@@ -5280,10 +5554,20 @@
   "2106928884092735523": false,
   "2106930250307510779": false,
   "2106931163826982951": false,
-  "2106932840856220145": false
+  "2106932840856220145": false,
+  "2106934081728520543": false,
+  "2106934310569996742": true,
+  "2106935357883244660": false,
+  "2106937438811938950": false,
+  "2106938365878689908": false,
+  "2106939468011958597": false,
+  "2106942497897234807": false,
+  "2106942672791572882": false,
+  "2106945498741616749": false,
+  "2106946970405212624": false
  },
  "inputBlocks": {},
- "contextVersion": 354,
+ "contextVersion": 355,
  "emerging": [
   {
    "label": "AI sentience/consciousness debate",
@@ -5408,21 +5692,26 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2106925618180886959",
-    "2106928884092735523",
-    "2106930250307510779",
-    "2106931163826982951",
-    "2106932840856220145"
+    "2106934081728520543",
+    "2106934310569996742",
+    "2106935357883244660",
+    "2106937438811938950",
+    "2106938365878689908",
+    "2106939468011958597",
+    "2106942497897234807",
+    "2106942672791572882",
+    "2106945498741616749",
+    "2106946970405212624"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T02:26:07.974Z",
-    "observedAt": "2026-10-05T02:26:17.247Z",
+    "attemptedAt": "2026-10-05T03:19:06.023Z",
+    "observedAt": "2026-10-05T03:19:23.820Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 10,
     "retryCount": 0
    }
   },
@@ -5446,24 +5735,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-05T02:26:07.974Z",
-   "observedAt": "2026-10-05T02:26:17.247Z",
+   "attemptedAt": "2026-10-05T03:19:06.023Z",
+   "observedAt": "2026-10-05T03:19:23.820Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-05T02:26:07.974Z",
-   "observedAt": "2026-10-05T02:26:17.247Z",
+   "attemptedAt": "2026-10-05T03:19:06.023Z",
+   "observedAt": "2026-10-05T03:19:23.820Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-05T02:26:17.261Z"
+ "updatedAt": "2026-10-05T03:19:23.832Z"
 }
