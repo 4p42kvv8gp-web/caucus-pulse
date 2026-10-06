@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T04:24:52.538Z",
+ "classifiedAt": "2026-10-06T11:09:40.369Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -533,6 +533,10 @@
    [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2107116685732069418": [
@@ -1087,12 +1091,12 @@
   "2107147344945037624": [],
   "2107147403274969391": [
    [
-    "foreign-policy",
-    "middle-east"
-   ],
-   [
     "economy",
     "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
    ],
    [
     "economy",
@@ -1235,8 +1239,8 @@
     "public-schools"
    ],
    [
-    "democracy",
-    "press-speech"
+    "foreign-policy",
+    "military-veterans"
    ]
   ],
   "2107153155175641537": [
@@ -1708,6 +1712,10 @@
    [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "healthcare",
+    null
    ]
   ],
   "2107167543966273734": [
@@ -2867,6 +2875,10 @@
    [
     "congress-politics",
     "house-floor"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
    ]
   ],
   "2107217456477421882": [
@@ -4503,51 +4515,6 @@
     "textHash": "04d98e0e8df03b2064eba307f69578f23131fd7bbca5c7cff41a08e01884bc39"
    }
   },
-  "2107095929589215347": {
-   "contextVersion": 360,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_210de89c86685a1b",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
-     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
-     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
-     "publishedAt": "2026-10-01T13:23:18.000Z",
-     "fetchedAt": "2026-10-01T15:42:02.407Z",
-     "version": 292,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "5724aa9fc317872b75ed5632fb738253c5662da98cd0722c708898579bdca3fb",
-   "quotedContext": {
-    "id": "2106761261534863466",
-    "authorId": "31128529",
-    "handle": "WaysMeansCmte",
-    "createdAt": "2026-10-04T15:00:01.000Z",
-    "textChars": 144,
-    "textHash": "d534938bcb33725da8b7f72085473781c3ea66d041dfaeb8578c5732cb02f6d4"
-   }
-  },
   "2107096255633441030": {
    "contextVersion": 360,
    "evidenceSupplied": [
@@ -4581,45 +4548,6 @@
     "referenceId": "2107089342305067039",
     "fingerprint": "bda715dce93852babc99fc4ace6ca316898286f4cf1ea115938c8d9cf98a16b4"
    }
-  },
-  "2107096948343803946": {
-   "contextVersion": 360,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4ea6be05a8979a92"
-   ],
-   "inputHash": "5724aa9fc317872b75ed5632fb738253c5662da98cd0722c708898579bdca3fb"
   },
   "2107097523366293783": {
    "contextVersion": 360,
@@ -4778,20 +4706,6 @@
     "reason": null,
     "referenceId": "2106858033036845256",
     "fingerprint": "a386c600d39819c3a15dfc3e61d8a3b3440a0a50c575e01491a6b36587d57c8d"
-   }
-  },
-  "2107108467722846369": {
-   "contextVersion": 361,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ffb94e4ab0750e21dcec32d37a9d9ff97575b5d1d9d5c92fc247c639a3beb83d",
-   "quotedContext": {
-    "id": "2105372224236445917",
-    "authorId": "15754281",
-    "handle": "USATODAY",
-    "createdAt": "2026-09-30T19:00:28.000Z",
-    "textChars": 174,
-    "textHash": "82717d8c80c10cdcdf358f96ef20ac3a6f148db9cbe4c0720b2095f030547655"
    }
   },
   "2107108913334059146": {
@@ -5216,45 +5130,6 @@
    "contextVersion": 361,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "ffb94e4ab0750e21dcec32d37a9d9ff97575b5d1d9d5c92fc247c639a3beb83d"
-  },
-  "2107114754355409229": {
-   "contextVersion": 361,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_e26e0c9e584afacd"
-   ],
    "inputHash": "ffb94e4ab0750e21dcec32d37a9d9ff97575b5d1d9d5c92fc247c639a3beb83d"
   },
   "2107116685732069418": {
@@ -6263,43 +6138,6 @@
     "textHash": "17d76ca09de9f86446372cdaeae639cc9799bd39f895ccda873ce4ca8430ed4d"
    }
   },
-  "2107147403274969391": {
-   "contextVersion": 362,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4067b40223a40ee6",
-     "publisher": "The Hill",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
-     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "publishedAt": "2026-10-02T19:25:14.000Z",
-     "fetchedAt": "2026-10-02T20:11:38.306Z",
-     "version": 312,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "31a34636bf56ac2c878dd027b8290f633f8e2b15fccd6f02804cf470487f7328"
-  },
   "2107147433096470596": {
    "contextVersion": 362,
    "evidenceSupplied": [],
@@ -6445,12 +6283,6 @@
     "textChars": 176,
     "textHash": "b18df0c7be6ed1734ec5af982bef635bf73cdc536ea5674bfaa0ac67be052d2b"
    }
-  },
-  "2107152925000671299": {
-   "contextVersion": 363,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0c47023b90370deea1583f898d54572afc59f4940205a9c3c83ab9e6e60ba1e5"
   },
   "2107153155175641537": {
    "contextVersion": 363,
@@ -7248,80 +7080,6 @@
    "evidenceUsed": [],
    "inputHash": "aeb1e87e4f0ca7ebfa6b233d97d0d300b9bda334b701dd88f0fb1e4cf59df61d"
   },
-  "2107167429231276369": {
-   "contextVersion": 363,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4067b40223a40ee6",
-     "publisher": "The Hill",
-     "date": "2026-10-02",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
-     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
-     "publishedAt": "2026-10-02T19:25:14.000Z",
-     "fetchedAt": "2026-10-02T20:11:38.306Z",
-     "version": 312,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "aeb1e87e4f0ca7ebfa6b233d97d0d300b9bda334b701dd88f0fb1e4cf59df61d"
-  },
-  "2107167543966273734": {
-   "contextVersion": 363,
-   "evidenceSupplied": [
-    {
-     "id": "n_b3d2fed35eb7e264",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
-     "text": "Lara Trump says Iran war could cost Trump the midterms",
-     "title": "Lara Trump says Iran war could cost Trump the midterms",
-     "publishedAt": "2026-09-30T18:34:18.000Z",
-     "fetchedAt": "2026-09-30T19:18:23.645Z",
-     "version": 278,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "aeb1e87e4f0ca7ebfa6b233d97d0d300b9bda334b701dd88f0fb1e4cf59df61d"
-  },
   "2107168923104026936": {
    "contextVersion": 363,
    "evidenceSupplied": [],
@@ -7666,53 +7424,6 @@
     "textHash": "de5d33ffdfdc0fd45269535b6904a2afdf12ba02be5b252869818798a3655612"
    }
   },
-  "2107175281241067931": {
-   "contextVersion": 364,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_e26e0c9e584afacd"
-   ],
-   "inputHash": "9d8702efc6b9c71954d20160fefe1e32c953fabb794b0e8a90726c670517e599",
-   "quotedContext": {
-    "id": "2105926154154623444",
-    "authorId": "28785486",
-    "handle": "ABC",
-    "createdAt": "2026-10-02T07:41:36.000Z",
-    "textChars": 268,
-    "textHash": "f57a2773fc701577cd49cef9ce19877c05b7df9f8e01dac6076a7f0a4a16c372"
-   }
-  },
   "2107175482709983681": {
    "contextVersion": 364,
    "evidenceSupplied": [
@@ -7882,45 +7593,6 @@
     "referenceId": "2107174975866057038",
     "fingerprint": "f1b050f18fab8356e5cd1a538cae14ea7c5c38cc28c3294033d9b023113197e3"
    }
-  },
-  "2107179290802434068": {
-   "contextVersion": 364,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_e26e0c9e584afacd"
-   ],
-   "inputHash": "9d8702efc6b9c71954d20160fefe1e32c953fabb794b0e8a90726c670517e599"
   },
   "2107179511309582518": {
    "contextVersion": 364,
@@ -8449,45 +8121,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "cdf4032eb5e8b479fe99c0b5ebda8459979c41b6b6d7d22879e48813ae037252"
-  },
-  "2107192817139253377": {
-   "contextVersion": 365,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_b3d2fed35eb7e264",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
-     "text": "Lara Trump says Iran war could cost Trump the midterms",
-     "title": "Lara Trump says Iran war could cost Trump the midterms",
-     "publishedAt": "2026-09-30T18:34:18.000Z",
-     "fetchedAt": "2026-09-30T19:18:23.645Z",
-     "version": 278,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4dbf7998a849a7fa"
-   ],
-   "inputHash": "e0f1a31084b40ff27d4bef5600680f417196530db2ba3615ec64cfe413685a9f"
   },
   "2107193122207801814": {
    "contextVersion": 365,
@@ -9590,51 +9223,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ed2a82c066ba4e4a31ef88c790f359cc513b274d3bcd5908d31bef0507a6215d"
-  },
-  "2107216256063414680": {
-   "contextVersion": 366,
-   "evidenceSupplied": [
-    {
-     "id": "n_a0939999fc09434d",
-     "publisher": "Roll Call",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
-     "text": "Standing in the White House’s north driveway, Johnson declared that Congress would “keep steady hands at the wheel on this” but did not commit to crafting any legislation. Instead, he pledged that lawmakers would “continue to assess and further deliberate in the days ahead.”",
-     "title": "Congress continues back-seat role as AI execs feted at White House",
-     "publishedAt": "2026-09-29T18:38:11.000Z",
-     "fetchedAt": "2026-09-30T00:07:41.962Z",
-     "version": 261,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ed2a82c066ba4e4a31ef88c790f359cc513b274d3bcd5908d31bef0507a6215d",
-   "quotedContext": {
-    "id": "2104621955672629505",
-    "authorId": "151519500",
-    "handle": "VetAffairsDems",
-    "createdAt": "2026-09-28T17:19:10.000Z",
-    "textChars": 296,
-    "textHash": "75c7966937dfa8ef25645038442afa62d818f9f869ed0e0e7bbc9dc13ea1a5a8"
-   }
   },
   "2107217456477421882": {
    "contextVersion": 366,
@@ -12380,6 +11968,462 @@
    ],
    "evidenceUsed": [],
    "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a"
+  },
+  "2107095929589215347": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_210de89c86685a1b",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
+     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "publishedAt": "2026-10-01T13:23:18.000Z",
+     "fetchedAt": "2026-10-01T15:42:02.407Z",
+     "version": 292,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833",
+   "quotedContext": {
+    "id": "2106761261534863466",
+    "authorId": "31128529",
+    "handle": "WaysMeansCmte",
+    "createdAt": "2026-10-04T15:00:01.000Z",
+    "textChars": 144,
+    "textHash": "d534938bcb33725da8b7f72085473781c3ea66d041dfaeb8578c5732cb02f6d4"
+   }
+  },
+  "2107096948343803946": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833"
+  },
+  "2107108467722846369": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_5acf3c7c379a9dbb",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai",
+     "text": "In addition to former House Speaker Newt Gingrich, the other two leaders of the project are SpaceX CEO Elon Musk and Palmer Luckey, the co-founder of defense technology firm Anduril . The study is expected to take 120 days.",
+     "title": "Elon Musk and Palmer Luckey's new Pentagon roles raise ethics worries",
+     "publishedAt": "2026-10-06T09:00:00.000Z",
+     "fetchedAt": "2026-10-06T10:23:20.402Z",
+     "version": 376,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833",
+   "quotedContext": {
+    "id": "2105372224236445917",
+    "authorId": "15754281",
+    "handle": "USATODAY",
+    "createdAt": "2026-09-30T19:00:28.000Z",
+    "textChars": 174,
+    "textHash": "82717d8c80c10cdcdf358f96ef20ac3a6f148db9cbe4c0720b2095f030547655"
+   }
+  },
+  "2107114754355409229": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4ea6be05a8979a92"
+   ],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833"
+  },
+  "2107147403274969391": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4067b40223a40ee6",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
+     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "publishedAt": "2026-10-02T19:25:14.000Z",
+     "fetchedAt": "2026-10-02T20:11:38.306Z",
+     "version": 312,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4067b40223a40ee6"
+   ],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833"
+  },
+  "2107152925000671299": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_5acf3c7c379a9dbb",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai",
+     "text": "In addition to former House Speaker Newt Gingrich, the other two leaders of the project are SpaceX CEO Elon Musk and Palmer Luckey, the co-founder of defense technology firm Anduril . The study is expected to take 120 days.",
+     "title": "Elon Musk and Palmer Luckey's new Pentagon roles raise ethics worries",
+     "publishedAt": "2026-10-06T09:00:00.000Z",
+     "fetchedAt": "2026-10-06T10:23:20.402Z",
+     "version": 376,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833"
+  },
+  "2107167429231276369": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4067b40223a40ee6",
+     "publisher": "The Hill",
+     "date": "2026-10-02",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
+     "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "title": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+     "publishedAt": "2026-10-02T19:25:14.000Z",
+     "fetchedAt": "2026-10-02T20:11:38.306Z",
+     "version": 312,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "1150f9ebb86bf440d3b67b2dcd547b7d0e88dc5b7bddcb0d797a5e3455699833"
+  },
+  "2107167543966273734": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_b3d2fed35eb7e264",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
+     "text": "Lara Trump says Iran war could cost Trump the midterms",
+     "title": "Lara Trump says Iran war could cost Trump the midterms",
+     "publishedAt": "2026-09-30T18:34:18.000Z",
+     "fetchedAt": "2026-09-30T19:18:23.645Z",
+     "version": 278,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "efa4b7cb3ac13ca38d074e8bd1a54461ab561eb0fe56851ced8133927448484d"
+  },
+  "2107175281241067931": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "efa4b7cb3ac13ca38d074e8bd1a54461ab561eb0fe56851ced8133927448484d",
+   "quotedContext": {
+    "id": "2105926154154623444",
+    "authorId": "28785486",
+    "handle": "ABC",
+    "createdAt": "2026-10-02T07:41:36.000Z",
+    "textChars": 268,
+    "textHash": "f57a2773fc701577cd49cef9ce19877c05b7df9f8e01dac6076a7f0a4a16c372"
+   }
+  },
+  "2107179290802434068": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "efa4b7cb3ac13ca38d074e8bd1a54461ab561eb0fe56851ced8133927448484d"
+  },
+  "2107192817139253377": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_b3d2fed35eb7e264",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6120920-lara-trump-iran-war-midterms/",
+     "text": "Lara Trump says Iran war could cost Trump the midterms",
+     "title": "Lara Trump says Iran war could cost Trump the midterms",
+     "publishedAt": "2026-09-30T18:34:18.000Z",
+     "fetchedAt": "2026-09-30T19:18:23.645Z",
+     "version": 278,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "efa4b7cb3ac13ca38d074e8bd1a54461ab561eb0fe56851ced8133927448484d"
+  },
+  "2107216256063414680": {
+   "contextVersion": 376,
+   "evidenceSupplied": [
+    {
+     "id": "n_a0939999fc09434d",
+     "publisher": "Roll Call",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/09/29/congress-continues-back-seat-role-as-ai-execs-feted-at-white-house/",
+     "text": "Standing in the White House’s north driveway, Johnson declared that Congress would “keep steady hands at the wheel on this” but did not commit to crafting any legislation. Instead, he pledged that lawmakers would “continue to assess and further deliberate in the days ahead.”",
+     "title": "Congress continues back-seat role as AI execs feted at White House",
+     "publishedAt": "2026-09-29T18:38:11.000Z",
+     "fetchedAt": "2026-09-30T00:07:41.962Z",
+     "version": 261,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "efa4b7cb3ac13ca38d074e8bd1a54461ab561eb0fe56851ced8133927448484d",
+   "quotedContext": {
+    "id": "2104621955672629505",
+    "authorId": "151519500",
+    "handle": "VetAffairsDems",
+    "createdAt": "2026-09-28T17:19:10.000Z",
+    "textChars": 296,
+    "textHash": "75c7966937dfa8ef25645038442afa62d818f9f869ed0e0e7bbc9dc13ea1a5a8"
+   }
   }
  },
  "needsContext": {
@@ -12412,9 +12456,7 @@
   "2107094018928566573": false,
   "2107094407346327592": false,
   "2107094957731311993": false,
-  "2107095929589215347": false,
   "2107096255633441030": false,
-  "2107096948343803946": false,
   "2107097523366293783": false,
   "2107099247610941909": false,
   "2107100782390604106": false,
@@ -12427,7 +12469,6 @@
   "2107104764425085349": true,
   "2107106460312244337": false,
   "2107106871526256928": false,
-  "2107108467722846369": false,
   "2107108913334059146": false,
   "2107108997681877503": false,
   "2107109048231383410": false,
@@ -12458,7 +12499,6 @@
   "2107114217652330944": false,
   "2107114332899176822": false,
   "2107114337181798775": false,
-  "2107114754355409229": false,
   "2107116685732069418": false,
   "2107119621488935409": false,
   "2107119986200158405": false,
@@ -12537,7 +12577,6 @@
   "2107146160939122914": false,
   "2107146913699271151": false,
   "2107147344945037624": false,
-  "2107147403274969391": false,
   "2107147433096470596": false,
   "2107147636721459348": false,
   "2107147855945150554": false,
@@ -12555,7 +12594,6 @@
   "2107152341027704862": false,
   "2107152389367115981": false,
   "2107152682893136134": false,
-  "2107152925000671299": false,
   "2107153155175641537": false,
   "2107153921516908722": false,
   "2107153964785365194": false,
@@ -12612,8 +12650,6 @@
   "2107166431284449632": false,
   "2107167284297113997": false,
   "2107167398814273780": false,
-  "2107167429231276369": false,
-  "2107167543966273734": false,
   "2107168923104026936": false,
   "2107168979429036193": false,
   "2107169092968862183": false,
@@ -12640,7 +12676,6 @@
   "2107174854130630788": false,
   "2107174923265572952": false,
   "2107175242426687618": false,
-  "2107175281241067931": false,
   "2107175482709983681": false,
   "2107175840664695259": false,
   "2107176148635398181": false,
@@ -12654,7 +12689,6 @@
   "2107178894256169123": false,
   "2107179063915790643": false,
   "2107179092810584340": false,
-  "2107179290802434068": false,
   "2107179511309582518": false,
   "2107179746576744588": false,
   "2107180995921232145": false,
@@ -12702,7 +12736,6 @@
   "2107191838327136738": false,
   "2107192233057476851": false,
   "2107192461160566874": false,
-  "2107192817139253377": false,
   "2107193122207801814": false,
   "2107193333525459153": false,
   "2107193867262902399": false,
@@ -12783,7 +12816,6 @@
   "2107215271731630210": false,
   "2107216048193773606": false,
   "2107216122655510726": false,
-  "2107216256063414680": false,
   "2107217456477421882": false,
   "2107218297045516783": false,
   "2107218578512781339": false,
@@ -12955,10 +12987,22 @@
   "2107313183736402269": false,
   "2107317701488017529": false,
   "2107318431456579810": false,
-  "2107319743426560476": false
+  "2107319743426560476": false,
+  "2107095929589215347": false,
+  "2107096948343803946": false,
+  "2107108467722846369": false,
+  "2107114754355409229": false,
+  "2107147403274969391": false,
+  "2107152925000671299": false,
+  "2107167429231276369": false,
+  "2107167543966273734": false,
+  "2107175281241067931": false,
+  "2107179290802434068": false,
+  "2107192817139253377": false,
+  "2107216256063414680": false
  },
  "inputBlocks": {},
- "contextVersion": 371,
+ "contextVersion": 376,
  "emerging": [
   {
    "label": "AI consciousness / sentience debate",
@@ -13283,6 +13327,18 @@
     "2107307634080825530",
     "2107317701488017529"
    ]
+  },
+  {
+   "label": "TSA union contract/collective bargaining termination",
+   "ids": [
+    "2107108467722846369"
+   ]
+  },
+  {
+   "label": "Hegseth DoD schools curriculum overhaul",
+   "ids": [
+    "2107152925000671299"
+   ]
   }
  ],
  "unclassified": [],
@@ -13296,62 +13352,44 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107154275440754812",
-    "2107303556994965656",
-    "2107304603494555894",
-    "2107305694936318017",
-    "2107305754525159840",
-    "2107306890883457201",
-    "2107307543391556020",
-    "2107307634080825530",
-    "2107312589806162149",
-    "2107313183736402269",
-    "2107317701488017529",
-    "2107318431456579810",
-    "2107319743426560476",
-    "2107320063070269807"
+    "2107095929589215347",
+    "2107096948343803946",
+    "2107108467722846369",
+    "2107114754355409229",
+    "2107147403274969391",
+    "2107152925000671299",
+    "2107167429231276369"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T04:24:23.692Z",
-    "observedAt": "2026-10-06T04:24:52.514Z",
+    "attemptedAt": "2026-10-06T11:09:15.067Z",
+    "observedAt": "2026-10-06T11:09:31.584Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 14,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2107255864365396162",
-    "2107256214539149769",
-    "2107256468349001788",
-    "2107258867788702158",
-    "2107259495927668957",
-    "2107260044718797209",
-    "2107260045033410724",
-    "2107260124028961182",
-    "2107260232347103334",
-    "2107260484164464716",
-    "2107261059421663613",
-    "2107261418093355455",
-    "2107262067271197050",
-    "2107262779409486234",
-    "2107264908056580340",
-    "2107267051639185727",
-    "2107267077564444725"
+    "2107167543966273734",
+    "2107175281241067931",
+    "2107179290802434068",
+    "2107192817139253377",
+    "2107216256063414680",
+    "2107421740234371496"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T00:35:43.471Z",
-    "observedAt": "2026-10-06T00:36:15.405Z",
+    "attemptedAt": "2026-10-06T11:09:31.600Z",
+    "observedAt": "2026-10-06T11:09:40.337Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
@@ -13460,24 +13498,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T04:24:23.692Z",
-   "observedAt": "2026-10-06T04:24:52.514Z",
+   "attemptedAt": "2026-10-06T11:09:31.600Z",
+   "observedAt": "2026-10-06T11:09:40.337Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T04:24:23.692Z",
-   "observedAt": "2026-10-06T04:24:52.514Z",
+   "attemptedAt": "2026-10-06T11:09:31.600Z",
+   "observedAt": "2026-10-06T11:09:40.337Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T04:24:52.543Z"
+ "updatedAt": "2026-10-06T11:09:40.375Z"
 }
