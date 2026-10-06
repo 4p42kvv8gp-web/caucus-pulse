@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T14:10:34.865Z",
+ "classifiedAt": "2026-10-06T19:45:15.246Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -535,8 +535,8 @@
     "middle-east"
    ],
    [
-    "economy",
-    "prices-inflation"
+    "budget-appropriations",
+    null
    ]
   ],
   "2107116685732069418": [
@@ -1091,16 +1091,16 @@
   "2107147344945037624": [],
   "2107147403274969391": [
    [
-    "economy",
-    "prices-inflation"
+    "foreign-policy",
+    "middle-east"
    ],
    [
     "economy",
     "tariffs-trade"
    ],
    [
-    "foreign-policy",
-    "middle-east"
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2107147433096470596": [
@@ -1897,12 +1897,12 @@
     "prices-inflation"
    ],
    [
-    "economy",
-    "tariffs-trade"
-   ],
-   [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
    ]
   ],
   "2107175482709983681": [
@@ -3075,12 +3075,12 @@
   ],
   "2107198873911304532": [
    [
-    "foreign-policy",
-    "middle-east"
-   ],
-   [
     "economy",
     "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
    ]
   ],
   "2107199113246753047": [
@@ -9712,45 +9712,6 @@
     "textHash": "162bdf6f4f52f7238f34819251dea513173e4df45260d50880f2e1485ae28387"
    }
   },
-  "2107198873911304532": {
-   "contextVersion": 366,
-   "evidenceSupplied": [
-    {
-     "id": "n_4dbf7998a849a7fa",
-     "publisher": "The Hill",
-     "date": "2026-09-28",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-     "text": "GOP senator says Trump should bring Iran war to an end",
-     "title": "GOP senator says Trump should bring Iran war to an end",
-     "publishedAt": "2026-09-28T21:10:34.000Z",
-     "fetchedAt": "2026-09-28T21:36:32.151Z",
-     "version": 240,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1"
-   ],
-   "inputHash": "7adb53970e964db9c8903365db7b00eac3f984d70322ca7dd2d6f969c941e936"
-  },
   "2107199113246753047": {
    "contextVersion": 366,
    "evidenceSupplied": [],
@@ -12037,7 +11998,7 @@
    "inputHash": "9fa10c83bb9de6f685dace79771f96716c5bb2bce983cc305702267bd566adf6"
   },
   "2107095929589215347": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -12071,7 +12032,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c",
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684",
    "quotedContext": {
     "id": "2106761261534863466",
     "authorId": "31128529",
@@ -12082,7 +12043,7 @@
    }
   },
   "2107096948343803946": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -12116,10 +12077,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c"
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684"
   },
   "2107114754355409229": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -12153,10 +12114,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c"
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684"
   },
   "2107147403274969391": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -12190,10 +12151,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c"
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684"
   },
   "2107167429231276369": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -12227,10 +12188,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c"
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684"
   },
   "2107167543966273734": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_b3d2fed35eb7e264",
@@ -12264,10 +12225,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "3468abb7f7567424515853c86e61903169d1e5187c130a813473bd26c3510e4c"
+   "inputHash": "bcf7e779ef68c7d330ace27e9ae44044814cb5ec0d96a3e98a9326057b3b9684"
   },
   "2107175281241067931": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -12301,10 +12262,9 @@
     }
    ],
    "evidenceUsed": [
-    "n_e26e0c9e584afacd",
-    "n_4dbf7998a849a7fa"
+    "n_e26e0c9e584afacd"
    ],
-   "inputHash": "5ec860fa882ef807a4e380433b6993ec18879b5b38ead6640fcabb98fa9f8d43",
+   "inputHash": "b6a36026a1abf34eab71c37cd10c2af0d98989b505b5b0f96f97348da3688b2a",
    "quotedContext": {
     "id": "2105926154154623444",
     "authorId": "28785486",
@@ -12315,7 +12275,7 @@
    }
   },
   "2107179290802434068": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -12351,10 +12311,10 @@
    "evidenceUsed": [
     "n_4dbf7998a849a7fa"
    ],
-   "inputHash": "5ec860fa882ef807a4e380433b6993ec18879b5b38ead6640fcabb98fa9f8d43"
+   "inputHash": "b6a36026a1abf34eab71c37cd10c2af0d98989b505b5b0f96f97348da3688b2a"
   },
   "2107192817139253377": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_4dbf7998a849a7fa",
@@ -12388,13 +12348,12 @@
     }
    ],
    "evidenceUsed": [
-    "n_4dbf7998a849a7fa",
-    "n_b3d2fed35eb7e264"
+    "n_4dbf7998a849a7fa"
    ],
-   "inputHash": "5ec860fa882ef807a4e380433b6993ec18879b5b38ead6640fcabb98fa9f8d43"
+   "inputHash": "b6a36026a1abf34eab71c37cd10c2af0d98989b505b5b0f96f97348da3688b2a"
   },
   "2107216256063414680": {
-   "contextVersion": 378,
+   "contextVersion": 383,
    "evidenceSupplied": [
     {
      "id": "n_a0939999fc09434d",
@@ -12427,10 +12386,8 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_4dbf7998a849a7fa"
-   ],
-   "inputHash": "5ec860fa882ef807a4e380433b6993ec18879b5b38ead6640fcabb98fa9f8d43",
+   "evidenceUsed": [],
+   "inputHash": "b6a36026a1abf34eab71c37cd10c2af0d98989b505b5b0f96f97348da3688b2a",
    "quotedContext": {
     "id": "2104621955672629505",
     "authorId": "151519500",
@@ -12439,6 +12396,45 @@
     "textChars": 296,
     "textHash": "75c7966937dfa8ef25645038442afa62d818f9f869ed0e0e7bbc9dc13ea1a5a8"
    }
+  },
+  "2107198873911304532": {
+   "contextVersion": 383,
+   "evidenceSupplied": [
+    {
+     "id": "n_4dbf7998a849a7fa",
+     "publisher": "The Hill",
+     "date": "2026-09-28",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
+     "text": "GOP senator says Trump should bring Iran war to an end",
+     "title": "GOP senator says Trump should bring Iran war to an end",
+     "publishedAt": "2026-09-28T21:10:34.000Z",
+     "fetchedAt": "2026-09-28T21:36:32.151Z",
+     "version": 240,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bcb6f7b1882047a1",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
+     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
+     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
+     "publishedAt": "2026-10-03T11:47:06.000Z",
+     "fetchedAt": "2026-10-03T18:28:44.327Z",
+     "version": 328,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4dbf7998a849a7fa"
+   ],
+   "inputHash": "b6a36026a1abf34eab71c37cd10c2af0d98989b505b5b0f96f97348da3688b2a"
   }
  },
  "needsContext": {
@@ -12859,7 +12855,6 @@
   "2107197466214809733": false,
   "2107198213044191524": false,
   "2107198797180752188": false,
-  "2107198873911304532": false,
   "2107199113246753047": false,
   "2107199128971235495": false,
   "2107199143785492710": true,
@@ -13014,10 +13009,11 @@
   "2107175281241067931": false,
   "2107179290802434068": false,
   "2107192817139253377": false,
-  "2107216256063414680": false
+  "2107216256063414680": false,
+  "2107198873911304532": false
  },
  "inputBlocks": {},
- "contextVersion": 378,
+ "contextVersion": 383,
  "emerging": [
   {
    "label": "AI consciousness / sentience debate",
@@ -13354,6 +13350,17 @@
    "ids": [
     "2107152925000671299"
    ]
+  },
+  {
+   "label": "Trump war with Iran",
+   "ids": [
+    "2107095929589215347",
+    "2107096948343803946",
+    "2107114754355409229",
+    "2107147403274969391",
+    "2107167429231276369",
+    "2107167543966273734"
+   ]
   }
  ],
  "unclassified": [],
@@ -13377,8 +13384,8 @@
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T14:08:39.940Z",
-    "observedAt": "2026-10-06T14:08:54.028Z",
+    "attemptedAt": "2026-10-06T19:42:35.730Z",
+    "observedAt": "2026-10-06T19:42:50.360Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -13392,48 +13399,18 @@
     "2107179290802434068",
     "2107192817139253377",
     "2107216256063414680",
-    "2107448295857496321",
-    "2107452762300825870",
-    "2107453762205855974",
-    "2107456552755921175",
-    "2107456614731309310",
-    "2107456801293971493",
-    "2107458079428313445"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-06T14:08:54.057Z",
-    "observedAt": "2026-10-06T14:09:16.469Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 11,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-4": {
-   "acceptedIds": [
     "2107198873911304532",
-    "2107199113246753047",
-    "2107199128971235495",
-    "2107199143785492710",
-    "2107199145585094775",
-    "2107199181358322023",
-    "2107199184315277548",
-    "2107199628114534870",
-    "2107199644296192011",
-    "2107199711035945090"
+    "2107448295857496321"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-05T21:48:25.392Z",
-    "observedAt": "2026-10-05T21:48:39.182Z",
+    "attemptedAt": "2026-10-06T19:42:50.381Z",
+    "observedAt": "2026-10-06T19:43:02.335Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -13441,24 +13418,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T14:08:54.057Z",
-   "observedAt": "2026-10-06T14:09:16.469Z",
+   "attemptedAt": "2026-10-06T19:42:50.381Z",
+   "observedAt": "2026-10-06T19:43:02.335Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T14:08:54.057Z",
-   "observedAt": "2026-10-06T14:09:16.469Z",
+   "attemptedAt": "2026-10-06T19:42:50.381Z",
+   "observedAt": "2026-10-06T19:43:02.335Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T14:10:34.869Z"
+ "updatedAt": "2026-10-06T19:45:15.251Z"
 }
