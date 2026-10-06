@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T15:44:50.964Z",
+ "generatedAt": "2026-10-06T17:20:49.435Z",
  "incidents": [
   {
    "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
@@ -10,7 +10,7 @@
     "wildfire"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -1789,137 +1789,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2105006689728463013"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "montgomery-county-md--infrastructure-failure--source-2104982188718448839",
-   "kind": "infrastructure failure",
-   "name": null,
-   "eventIdentity": "unresolved-source-specific",
-   "kinds": [
-    "infrastructure failure"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Montgomery County, MD · MD-08",
-   "placeRaw": "Montgomery County, MD",
-   "district": "MD-08",
-   "districtMatch": true,
-   "handle": "@RepRaskin",
-   "member": "Jamie Raskin",
-   "since": "2026-09-29T17:10:37.000Z",
-   "last": "2026-09-29T17:10:37.000Z",
-   "updates": 1,
-   "engN": 152,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Infrastructure failure · Montgomery County, MD",
-   "evidence": {
-    "span": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": false,
-     "place": true
-    },
-    "sourceId": "2104982188718448839",
-    "url": "https://x.com/i/web/status/2104982188718448839"
-   },
-   "timeline": [
-    {
-     "id": "2104982188718448839",
-     "sourceId": "2104982188718448839",
-     "url": "https://x.com/i/web/status/2104982188718448839",
-     "authorId": "806906355214852096",
-     "personId": "member:jamie raskin",
-     "referenceIds": [],
-     "time": "2026-09-29T17:10:37.000Z",
-     "who": "@RepRaskin",
-     "tag": "member",
-     "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
-     "engN": 152,
-     "isNew": false,
-     "flag": {
-      "kind": "infrastructure failure",
-      "place": "Montgomery County, MD",
-      "name": null
-     },
-     "evidence": {
-      "span": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": false,
-       "place": true
-      },
-      "sourceId": "2104982188718448839",
-      "url": "https://x.com/i/web/status/2104982188718448839"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2104982188718448839"
-   ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility.",
-      "sourceId": "2104982188718448839",
-      "url": "https://x.com/i/web/status/2104982188718448839",
-      "evidenceQuote": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility.",
-      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
-     }
-    ],
-    "unverified": [
-     {
-      "text": "Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory.",
-      "sourceId": "2104982188718448839",
-      "url": "https://x.com/i/web/status/2104982188718448839",
-      "evidenceQuote": "Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory.",
-      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
-     }
-    ],
-    "updates": [
-     {
-      "text": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
-      "sourceId": "2104982188718448839",
-      "url": "https://x.com/i/web/status/2104982188718448839",
-      "evidenceQuote": "WSSC Water is urging all customers in Montgomery and Prince George’s counties to only use water for essential purposes as WSSC responds to a power outage at their Potomac facility. Water is currently safe and reducing water consumption could avoid a future Boil Water Advisory. Please check their website or social media for updates. https://t.co/MN8Fa9X2LY",
-      "src": "@RepRaskin, 2026-09-29T17:10:37.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-09-30T07:50:45.858Z",
-    "posts": 1,
-    "inputHash": "595b17ccfd4d93551cae542f0d1eff49b5769810ab36a73e54f96d7ba0fb494d",
-    "rejectedItems": 0
-   },
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2104982188718448839"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
