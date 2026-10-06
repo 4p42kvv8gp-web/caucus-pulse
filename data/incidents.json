@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-06T04:24:52.685Z",
+ "generatedAt": "2026-10-06T05:56:27.547Z",
  "incidents": [
   {
    "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
@@ -15,7 +15,7 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 3,
+    "statements": 4,
     "resolvedPeople": 1,
     "accounts": 2,
     "unresolvedAccounts": 0,
@@ -30,7 +30,7 @@
       ]
      }
     ],
-    "note": "3 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "note": "4 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Los Angeles County, CA · CA-27",
    "placeRaw": "Los Angeles County, CA",
@@ -39,9 +39,9 @@
    "handle": "@gtwhitesides",
    "member": "George Whitesides",
    "since": "2026-10-04T15:09:52.000Z",
-   "last": "2026-10-05T21:31:24.000Z",
-   "updates": 3,
-   "engN": 25,
+   "last": "2026-10-06T04:36:47.000Z",
+   "updates": 4,
+   "engN": 33,
    "amplifiers": 0,
    "others": [
     "@Rep_Whitesides"
@@ -158,12 +158,46 @@
       "sourceId": "2107222147492106506",
       "url": "https://x.com/i/web/status/2107222147492106506"
      }
+    },
+    {
+     "id": "2107329196406272338",
+     "sourceId": "2107329196406272338",
+     "url": "https://x.com/i/web/status/2107329196406272338",
+     "authorId": "5408852",
+     "personId": "member:george whitesides",
+     "referenceIds": [
+      "2107299622641365127"
+     ],
+     "time": "2026-10-06T04:36:47.000Z",
+     "who": "@gtwhitesides",
+     "tag": "repost",
+     "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+     "engN": 8,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "#Bouquetfire"
+     },
+     "evidence": {
+      "span": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2107329196406272338",
+      "url": "https://x.com/i/web/status/2107329196406272338"
+     }
     }
    ],
    "tweetIds": [
     "2106763740050046983",
     "2106792686778994766",
-    "2107222147492106506"
+    "2107222147492106506",
+    "2107329196406272338"
    ],
    "intel": null,
    "verification": {
@@ -173,7 +207,8 @@
     "sourceIds": [
      "2106763740050046983",
      "2106792686778994766",
-     "2107222147492106506"
+     "2107222147492106506",
+     "2107329196406272338"
     ],
     "repeatedSourceGroups": [
      {

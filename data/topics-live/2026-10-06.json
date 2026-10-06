@@ -1,16 +1,61 @@
 {
  "date": "2026-10-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T04:24:52.546Z",
+ "classifiedAt": "2026-10-06T05:56:27.464Z",
  "assignments": {
   "2107320063070269807": [
    [
     "economy",
     "taxes"
    ]
+  ],
+  "2107329196406272338": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2107330433658839180": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107331175924773038": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2107339855189668306": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2107342176959271265": [],
+  "2107343552049266881": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2107329196406272338": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "#Bouquetfire"
+  }
+ },
  "provenance": {
   "2107320063070269807": {
    "contextVersion": 371,
@@ -43,14 +88,115 @@
     "textChars": 202,
     "textHash": "90b681fcd5667f241960e9191c030049a169f041ad9550cf416ee05469329421"
    }
+  },
+  "2107329196406272338": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107299622641365127",
+    "fingerprint": "e7d8eefdd6573eec605049f7d7f0246f0d727b022d7691b73a77d973c757c9aa"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107299622641365127",
+    "fingerprint": "e7d8eefdd6573eec605049f7d7f0246f0d727b022d7691b73a77d973c757c9aa"
+   }
+  },
+  "2107330433658839180": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84",
+   "quotedContext": {
+    "id": "2107261648339702108",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-06T00:08:22.000Z",
+    "textChars": 108,
+    "textHash": "4b6d6d4f2b304002492656f8f748d0321fa973ca39b58d61461a22c1bdb20646"
+   }
+  },
+  "2107331175924773038": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84",
+   "quotedContext": {
+    "id": "2107261648339702108",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-06T00:08:22.000Z",
+    "textChars": 108,
+    "textHash": "4b6d6d4f2b304002492656f8f748d0321fa973ca39b58d61461a22c1bdb20646"
+   }
+  },
+  "2107339855189668306": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84",
+   "quotedContext": {
+    "id": "2107261648339702108",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-06T00:08:22.000Z",
+    "textChars": 108,
+    "textHash": "4b6d6d4f2b304002492656f8f748d0321fa973ca39b58d61461a22c1bdb20646"
+   }
+  },
+  "2107342176959271265": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84"
+  },
+  "2107343552049266881": {
+   "contextVersion": 372,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3b3486ed9ca55f72247dd8761f87233dab1eb89095c86f4727b328817863fd84",
+   "quotedContext": {
+    "id": "2107251253894123996",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-05T23:27:04.000Z",
+    "textChars": 140,
+    "textHash": "adfd8139a7c49df6254b534a9132b45acbd1aec84be9f5a5736e8705b0017431"
+   }
   }
  },
  "needsContext": {
-  "2107320063070269807": false
+  "2107320063070269807": false,
+  "2107329196406272338": false,
+  "2107330433658839180": false,
+  "2107331175924773038": false,
+  "2107339855189668306": false,
+  "2107342176959271265": false,
+  "2107343552049266881": false
  },
  "inputBlocks": {},
- "contextVersion": 371,
- "emerging": [],
+ "contextVersion": 372,
+ "emerging": [
+  {
+   "label": "Trump 'small price to pay' remark on Iran striking LA/San Diego",
+   "ids": [
+    "2107330433658839180",
+    "2107331175924773038",
+    "2107339855189668306"
+   ]
+  },
+  {
+   "label": "Bouquet Fire (Angeles National Forest)",
+   "ids": [
+    "2107329196406272338"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -62,30 +208,22 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107154275440754812",
-    "2107303556994965656",
-    "2107304603494555894",
-    "2107305694936318017",
-    "2107305754525159840",
-    "2107306890883457201",
-    "2107307543391556020",
-    "2107307634080825530",
-    "2107312589806162149",
-    "2107313183736402269",
-    "2107317701488017529",
-    "2107318431456579810",
-    "2107319743426560476",
-    "2107320063070269807"
+    "2107329196406272338",
+    "2107330433658839180",
+    "2107331175924773038",
+    "2107339855189668306",
+    "2107342176959271265",
+    "2107343552049266881"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T04:24:23.692Z",
-    "observedAt": "2026-10-06T04:24:52.514Z",
+    "attemptedAt": "2026-10-06T05:56:13.038Z",
+    "observedAt": "2026-10-06T05:56:27.461Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 14,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -93,24 +231,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T04:24:23.692Z",
-   "observedAt": "2026-10-06T04:24:52.514Z",
+   "attemptedAt": "2026-10-06T05:56:13.038Z",
+   "observedAt": "2026-10-06T05:56:27.461Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T04:24:23.692Z",
-   "observedAt": "2026-10-06T04:24:52.514Z",
+   "attemptedAt": "2026-10-06T05:56:13.038Z",
+   "observedAt": "2026-10-06T05:56:27.461Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T04:24:52.546Z"
+ "updatedAt": "2026-10-06T05:56:27.465Z"
 }
