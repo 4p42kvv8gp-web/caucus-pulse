@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T02:52:57.768Z",
+ "classifiedAt": "2026-10-06T04:24:52.538Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -1319,8 +1319,12 @@
   ],
   "2107154275440754812": [
    [
-    "congress-politics",
-    null
+    "economy",
+    "housing"
+   ],
+   [
+    "climate",
+    "clean-energy"
    ]
   ],
   "2107154279018738060": [
@@ -3987,6 +3991,93 @@
     "foreign-policy",
     "middle-east"
    ]
+  ],
+  "2107303556994965656": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2107304603494555894": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2107305694936318017": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "immigration",
+    "asylum-refugees"
+   ]
+  ],
+  "2107305754525159840": [],
+  "2107306890883457201": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2107307543391556020": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2107307634080825530": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2107312589806162149": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107313183736402269": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2107317701488017529": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2107318431456579810": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2107319743426560476": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
   ]
  },
  "incidents": {
@@ -6455,36 +6546,6 @@
     "createdAt": "2026-10-05T17:01:40.000Z",
     "textChars": 319,
     "textHash": "281853bc4e4b0583fefffbd9deead7851ab15fceadd38447ea3b0e20215bec18"
-   }
-  },
-  "2107154275440754812": {
-   "contextVersion": 363,
-   "evidenceSupplied": [
-    {
-     "id": "n_06826863b07a828f",
-     "publisher": "NPR",
-     "date": "2026-09-29",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
-     "text": "Among the bill's most vocal supporters are the NCAA itself, a long list of powerhouse schools and conferences and President Trump, who on Sept. 17 called for the bill's passage on Truth Social. Negotiations led by Sens. Ted Cruz, R-Texas, and Maria Cantwell, D-Wash., lasted for more than a year and picked up co-sponsors from both parties along the way.",
-     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
-     "publishedAt": "2026-09-29T02:16:19.000Z",
-     "fetchedAt": "2026-09-29T02:52:27.704Z",
-     "version": 245,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "0c47023b90370deea1583f898d54572afc59f4940205a9c3c83ab9e6e60ba1e5",
-   "quotedContext": {
-    "id": "2107154267509305851",
-    "authorId": "1080851152151953410",
-    "handle": "RepJoshHarder",
-    "createdAt": "2026-10-05T17:01:41.000Z",
-    "textChars": 266,
-    "textHash": "6bb91bdabc764eb9a2435aa864dff9a91dbd1758ab681f626044faaff9b346bf"
    }
   },
   "2107154279018738060": {
@@ -11991,6 +12052,334 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "d0301266d7c2afe9bde761e6f5ce2984de25f5f7b57a6ce22977ef2ce4436dbd"
+  },
+  "2107154275440754812": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_e413b3270802827e",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-reverses-course-on-publicly-funded-tv-political-ads/",
+     "text": "Facing a public backlash from lawmakers of both parties, Trump said in a post on his Truth Social site that he would in part use money raised by a super PAC, MAGA Inc., to fund the ads instead of relying on tax dollars.",
+     "title": "Trump reverses course on publicly funded TV political ads",
+     "publishedAt": "2026-10-05T21:44:14.000Z",
+     "fetchedAt": "2026-10-06T03:38:23.302Z",
+     "version": 371,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_06826863b07a828f",
+     "publisher": "NPR",
+     "date": "2026-09-29",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/28/nx-s1-5977851/protect-college-sports-act-senate-bill-vote",
+     "text": "Among the bill's most vocal supporters are the NCAA itself, a long list of powerhouse schools and conferences and President Trump, who on Sept. 17 called for the bill's passage on Truth Social. Negotiations led by Sens. Ted Cruz, R-Texas, and Maria Cantwell, D-Wash., lasted for more than a year and picked up co-sponsors from both parties along the way.",
+     "title": "The Senate passes the Protect College Sports Act, but the bill's future is unclear",
+     "publishedAt": "2026-09-29T02:16:19.000Z",
+     "fetchedAt": "2026-09-29T02:52:27.704Z",
+     "version": 245,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "quotedContext": {
+    "id": "2107154267509305851",
+    "authorId": "1080851152151953410",
+    "handle": "RepJoshHarder",
+    "createdAt": "2026-10-05T17:01:41.000Z",
+    "textChars": 266,
+    "textHash": "6bb91bdabc764eb9a2435aa864dff9a91dbd1758ab681f626044faaff9b346bf"
+   }
+  },
+  "2107303556994965656": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "quotedContext": {
+    "id": "2107261648339702108",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-06T00:08:22.000Z",
+    "textChars": 108,
+    "textHash": "4b6d6d4f2b304002492656f8f748d0321fa973ca39b58d61461a22c1bdb20646"
+   }
+  },
+  "2107304603494555894": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107295637058494706",
+    "fingerprint": "75625b6dbce6961a890a6d0ef44991bb2a9fb6381f5b3da1f398cbdc9f81de68"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107295637058494706",
+    "fingerprint": "75625b6dbce6961a890a6d0ef44991bb2a9fb6381f5b3da1f398cbdc9f81de68"
+   }
+  },
+  "2107305694936318017": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107129264575594613",
+    "fingerprint": "2e1e672fe4a7b887caf29664b99269db591b99d4389846c4eac4d1e06bbb0b3f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107129264575594613",
+    "fingerprint": "2e1e672fe4a7b887caf29664b99269db591b99d4389846c4eac4d1e06bbb0b3f"
+   }
+  },
+  "2107305754525159840": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_616ddbcd2048ed35",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/05crypto/",
+     "text": "Fairshake PAC said it is giving $1 million each to three top House Financial Services panel Republicans — French Hill of Arkansas, the full committee chairman; Bryan Steil of Wisconsin, chairman of the Digital Assets, Financial Technology and Artificial Intelligence Subcommittee; and Bill Huizenga of Michigan, the committee’s vice chair.",
+     "title": "Crypto industry PAC gives to 32 House incumbents, on both sides",
+     "publishedAt": "2026-10-05T15:33:02.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a"
+  },
+  "2107306890883457201": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a"
+  },
+  "2107307543391556020": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107186554770743584",
+    "fingerprint": "d1c718481aea4358125106109d85b8efed525a38bf642823d62a95904af74706"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107186554770743584",
+    "fingerprint": "d1c718481aea4358125106109d85b8efed525a38bf642823d62a95904af74706"
+   }
+  },
+  "2107307634080825530": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_e413b3270802827e",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-reverses-course-on-publicly-funded-tv-political-ads/",
+     "text": "Facing a public backlash from lawmakers of both parties, Trump said in a post on his Truth Social site that he would in part use money raised by a super PAC, MAGA Inc., to fund the ads instead of relying on tax dollars.",
+     "title": "Trump reverses course on publicly funded TV political ads",
+     "publishedAt": "2026-10-05T21:44:14.000Z",
+     "fetchedAt": "2026-10-06T03:38:23.302Z",
+     "version": 371,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_00f25f5a0fa124d5",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6130848-trump-to-pay-patriotic-ads-backlash/",
+     "text": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "title": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "publishedAt": "2026-10-06T01:58:51.000Z",
+     "fetchedAt": "2026-10-06T02:06:37.557Z",
+     "version": 370,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e413b3270802827e",
+    "n_00f25f5a0fa124d5"
+   ],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "quotedContext": {
+    "id": "2107263826852786469",
+    "authorId": "759251",
+    "handle": "CNN",
+    "createdAt": "2026-10-06T00:17:02.000Z",
+    "textChars": 256,
+    "textHash": "b52c4a454bcee794da3339b869d283e9ab0be793905c7fe7d97729f010616cfb"
+   }
+  },
+  "2107312589806162149": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_00f25f5a0fa124d5",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6130848-trump-to-pay-patriotic-ads-backlash/",
+     "text": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "title": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "publishedAt": "2026-10-06T01:58:51.000Z",
+     "fetchedAt": "2026-10-06T02:06:37.557Z",
+     "version": 370,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "quotedContext": {
+    "id": "2107261648339702108",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-06T00:08:22.000Z",
+    "textChars": 108,
+    "textHash": "4b6d6d4f2b304002492656f8f748d0321fa973ca39b58d61461a22c1bdb20646"
+   }
+  },
+  "2107313183736402269": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_210de89c86685a1b",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
+     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "publishedAt": "2026-10-01T13:23:18.000Z",
+     "fetchedAt": "2026-10-01T15:42:02.407Z",
+     "version": 292,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "quotedContext": {
+    "id": "2107255686094623001",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-05T23:44:41.000Z",
+    "textChars": 217,
+    "textHash": "f57730918e9b979d7e52f07d92b27faa5927dcb4a925e2a5072eda66b15d1a19"
+   }
+  },
+  "2107317701488017529": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_00f25f5a0fa124d5",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6130848-trump-to-pay-patriotic-ads-backlash/",
+     "text": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "title": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "publishedAt": "2026-10-06T01:58:51.000Z",
+     "fetchedAt": "2026-10-06T02:06:37.557Z",
+     "version": 370,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_00f25f5a0fa124d5"
+   ],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a"
+  },
+  "2107318431456579810": {
+   "contextVersion": 371,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107236978169381185",
+    "fingerprint": "8a035ce2a401a6d6bc2aa759be9e856797fb975ade56a7628805e25bfbc55e27"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107236978169381185",
+    "fingerprint": "8a035ce2a401a6d6bc2aa759be9e856797fb975ade56a7628805e25bfbc55e27"
+   }
+  },
+  "2107319743426560476": {
+   "contextVersion": 371,
+   "evidenceSupplied": [
+    {
+     "id": "n_df13e51905a960c6",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6119676-iran-protest-americans-donald-trump-2026-midterms/",
+     "text": "Iran urges Americans to rally against Trump ahead of midterms",
+     "title": "Iran urges Americans to rally against Trump ahead of midterms",
+     "publishedAt": "2026-09-30T13:27:17.000Z",
+     "fetchedAt": "2026-09-30T13:41:56.196Z",
+     "version": 273,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f0647bd946a6d2eb85c477918db147e0f7aa869e9ba053335c4a64e48759266a"
   }
  },
  "needsContext": {
@@ -12175,7 +12564,6 @@
   "2107154262145056883": false,
   "2107154265160483287": false,
   "2107154267509305851": false,
-  "2107154275440754812": false,
   "2107154279018738060": false,
   "2107154284013842747": false,
   "2107154286857670983": false,
@@ -12554,10 +12942,23 @@
   "2107298302802690363": false,
   "2107298897458565132": false,
   "2107301883639459860": false,
-  "2107302193690706092": false
+  "2107302193690706092": false,
+  "2107154275440754812": false,
+  "2107303556994965656": false,
+  "2107304603494555894": false,
+  "2107305694936318017": false,
+  "2107305754525159840": false,
+  "2107306890883457201": false,
+  "2107307543391556020": false,
+  "2107307634080825530": false,
+  "2107312589806162149": false,
+  "2107313183736402269": false,
+  "2107317701488017529": false,
+  "2107318431456579810": false,
+  "2107319743426560476": false
  },
  "inputBlocks": {},
- "contextVersion": 370,
+ "contextVersion": 371,
  "emerging": [
   {
    "label": "AI consciousness / sentience debate",
@@ -12865,6 +13266,23 @@
    "ids": [
     "2107298897458565132"
    ]
+  },
+  {
+   "label": "Trump 'small price to pay' remark about Los Angeles and San Diego",
+   "ids": [
+    "2107303556994965656",
+    "2107304603494555894",
+    "2107312589806162149",
+    "2107313183736402269",
+    "2107319743426560476"
+   ]
+  },
+  {
+   "label": "Trump taxpayer-funded political ads reversal",
+   "ids": [
+    "2107307634080825530",
+    "2107317701488017529"
+   ]
   }
  ],
  "unclassified": [],
@@ -12878,27 +13296,30 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107103248821744122",
-    "2107281202000368005",
-    "2107283147901862358",
-    "2107289066936897829",
-    "2107291619942904265",
-    "2107294409083515256",
-    "2107294579410301224",
-    "2107298302802690363",
-    "2107298897458565132",
-    "2107301883639459860",
-    "2107302193690706092"
+    "2107154275440754812",
+    "2107303556994965656",
+    "2107304603494555894",
+    "2107305694936318017",
+    "2107305754525159840",
+    "2107306890883457201",
+    "2107307543391556020",
+    "2107307634080825530",
+    "2107312589806162149",
+    "2107313183736402269",
+    "2107317701488017529",
+    "2107318431456579810",
+    "2107319743426560476",
+    "2107320063070269807"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T02:52:34.724Z",
-    "observedAt": "2026-10-06T02:52:57.747Z",
+    "attemptedAt": "2026-10-06T04:24:23.692Z",
+    "observedAt": "2026-10-06T04:24:52.514Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 11,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   },
@@ -13039,24 +13460,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T02:52:34.724Z",
-   "observedAt": "2026-10-06T02:52:57.747Z",
+   "attemptedAt": "2026-10-06T04:24:23.692Z",
+   "observedAt": "2026-10-06T04:24:52.514Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T02:52:34.724Z",
-   "observedAt": "2026-10-06T02:52:57.747Z",
+   "attemptedAt": "2026-10-06T04:24:23.692Z",
+   "observedAt": "2026-10-06T04:24:52.514Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 11,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T02:52:57.772Z"
+ "updatedAt": "2026-10-06T04:24:52.543Z"
 }
