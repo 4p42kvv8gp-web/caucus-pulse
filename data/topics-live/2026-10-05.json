@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T11:09:40.369Z",
+ "classifiedAt": "2026-10-06T12:39:52.449Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -4601,28 +4601,6 @@
   "2107101496395386968": {
    "contextVersion": 360,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "5724aa9fc317872b75ed5632fb738253c5662da98cd0722c708898579bdca3fb"
-  },
-  "2107101603010335206": {
-   "contextVersion": 360,
-   "evidenceSupplied": [
-    {
-     "id": "n_a2ddbbbe59618a78",
-     "publisher": "NPR",
-     "date": "2026-10-01",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/01/nx-s1-5986032/political-analyst-on-trumps-campaign-stop-in-reliably-red-oklahoma",
-     "text": "STEVE INSKEEP, BYLINE: Let's hear more about this from Ron Brownstein. He's a senior political analyst at CNN, a Bloomberg opinion columnist and an occasional guest here. Ron, welcome back.",
-     "title": "Political analyst on Trump's campaign stop in reliably red Oklahoma",
-     "publishedAt": "2026-10-01T08:41:52.000Z",
-     "fetchedAt": "2026-10-01T23:11:37.594Z",
-     "version": 297,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "5724aa9fc317872b75ed5632fb738253c5662da98cd0722c708898579bdca3fb"
   },
@@ -12424,6 +12402,43 @@
     "textChars": 296,
     "textHash": "75c7966937dfa8ef25645038442afa62d818f9f869ed0e0e7bbc9dc13ea1a5a8"
    }
+  },
+  "2107101603010335206": {
+   "contextVersion": 377,
+   "evidenceSupplied": [
+    {
+     "id": "n_e3140a270e5aca8a",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/g-s1-146626/up-first-newsletter-election-day-skydance-christa-pike-russia-plague-scare",
+     "text": "In four weeks, Election Day will be here , and a series of new polls show Democrats have a decided advantage in the midterms. They are favored to win the House with a narrow majority. Democrats need 218 seats for a majority, and the Cook Political Report forecasts a net gain of five to 15 seats, which would give them between 220 and 230 seats in January. The Senate has shifted more dramatically. Six seats have moved toward the Democrats' direction since June, according to Cook's ratings. Initially seen as a long shot for Democrats, the Senate is now within reach. These projections come as Pre…",
+     "title": "Dems have edge in midterms, poll shows. And, Paramount-Warner Bros. merger to close",
+     "publishedAt": "2026-10-06T11:19:25.000Z",
+     "fetchedAt": "2026-10-06T11:53:58.364Z",
+     "version": 377,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_a2ddbbbe59618a78",
+     "publisher": "NPR",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/01/nx-s1-5986032/political-analyst-on-trumps-campaign-stop-in-reliably-red-oklahoma",
+     "text": "STEVE INSKEEP, BYLINE: Let's hear more about this from Ron Brownstein. He's a senior political analyst at CNN, a Bloomberg opinion columnist and an occasional guest here. Ron, welcome back.",
+     "title": "Political analyst on Trump's campaign stop in reliably red Oklahoma",
+     "publishedAt": "2026-10-01T08:41:52.000Z",
+     "fetchedAt": "2026-10-01T23:11:37.594Z",
+     "version": 297,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9fa10c83bb9de6f685dace79771f96716c5bb2bce983cc305702267bd566adf6"
   }
  },
  "needsContext": {
@@ -12461,7 +12476,6 @@
   "2107099247610941909": false,
   "2107100782390604106": false,
   "2107101496395386968": false,
-  "2107101603010335206": false,
   "2107102733790769545": true,
   "2107102937264922916": false,
   "2107103004851667017": false,
@@ -12999,10 +13013,11 @@
   "2107175281241067931": false,
   "2107179290802434068": false,
   "2107192817139253377": false,
-  "2107216256063414680": false
+  "2107216256063414680": false,
+  "2107101603010335206": false
  },
  "inputBlocks": {},
- "contextVersion": 376,
+ "contextVersion": 377,
  "emerging": [
   {
    "label": "AI consciousness / sentience debate",
@@ -13352,23 +13367,28 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107095929589215347",
-    "2107096948343803946",
-    "2107108467722846369",
-    "2107114754355409229",
-    "2107147403274969391",
-    "2107152925000671299",
-    "2107167429231276369"
+    "2107101603010335206",
+    "2107432961465352693",
+    "2107434456638161152",
+    "2107439245963211009",
+    "2107439248383287609",
+    "2107440292156583957",
+    "2107440980429341074",
+    "2107441279449588200",
+    "2107444260312121742",
+    "2107446630211293268",
+    "2107448295857496321",
+    "2107448398001717284"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T11:09:15.067Z",
-    "observedAt": "2026-10-06T11:09:31.584Z",
+    "attemptedAt": "2026-10-06T12:39:31.064Z",
+    "observedAt": "2026-10-06T12:39:52.425Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 12,
     "retryCount": 0
    }
   },
@@ -13498,24 +13518,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T11:09:31.600Z",
-   "observedAt": "2026-10-06T11:09:40.337Z",
+   "attemptedAt": "2026-10-06T12:39:31.064Z",
+   "observedAt": "2026-10-06T12:39:52.425Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T11:09:31.600Z",
-   "observedAt": "2026-10-06T11:09:40.337Z",
+   "attemptedAt": "2026-10-06T12:39:31.064Z",
+   "observedAt": "2026-10-06T12:39:52.425Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T11:09:40.375Z"
+ "updatedAt": "2026-10-06T12:39:52.454Z"
 }
