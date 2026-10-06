@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-06T00:49:02.517Z",
- "lastPollAt": "2026-10-06T00:46:09.632Z",
- "lastPollAttemptAt": "2026-10-06T00:46:09.259Z",
+ "generatedAt": "2026-10-06T01:21:00.448Z",
+ "lastPollAt": "2026-10-06T01:20:32.445Z",
+ "lastPollAttemptAt": "2026-10-06T01:20:31.750Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-06T00:49:01.386Z"
+  "referenceAsOf": "2026-10-06T01:20:59.380Z"
  },
  "news": {
   "version": 369,
-  "items": 1050,
+  "items": 1049,
   "latestPublishedAt": "2026-10-06T00:31:38.000Z",
   "latestFetchedAt": "2026-10-06T00:48:25.756Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-06T00:49:01.773Z",
+   "asOf": "2026-10-06T01:20:59.753Z",
    "windowDays": 14,
-   "windowStart": "2026-09-22T00:49:01.773Z",
-   "eligibleItems": 1697,
+   "windowStart": "2026-09-22T01:20:59.753Z",
+   "eligibleItems": 1696,
    "withExcerpts": 174,
-   "headlineOrSummary": 1523,
+   "headlineOrSummary": 1522,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1003,
+     "eligibleItems": 1002,
      "withExcerpts": 0,
-     "headlineOrSummary": 1003,
+     "headlineOrSummary": 1002,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-06T00:21:26.000Z",
      "latestItem": {
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 167,
-  "t": 13
+  "posts": 170,
+  "t": 16
  },
  "caucusKeys": [
   "CPC",
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-05",
-  "capturedIn24h": 550,
-  "classifiedIn24h": 550,
-  "taggedIn24h": 508,
+  "capturedIn24h": 556,
+  "classifiedIn24h": 556,
+  "taggedIn24h": 514,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-06T00:46:13.191Z",
-   "lastSuccessAt": "2026-10-06T00:46:20.231Z",
-   "capturedIn24h": 550,
-   "classifiedIn24h": 550,
+   "lastAttemptAt": "2026-10-06T01:20:35.637Z",
+   "lastSuccessAt": "2026-10-06T01:20:57.198Z",
+   "capturedIn24h": 556,
+   "classifiedIn24h": 556,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,99 +6826,99 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 525,
+    "posts": 535,
     "mix": [
      81,
      7,
      12
     ],
-    "accounts": 224,
-    "members": 169,
+    "accounts": 227,
+    "members": 172,
     "unidentifiedAccounts": 0,
-    "classified": 525,
-    "tagged": 488,
+    "classified": 535,
+    "tagged": 497,
     "pending": 0,
-    "corePosts": 219,
+    "corePosts": 221,
     "coreCounts": {
      "Affordability": 95,
      "Healthcare": 41,
-     "Corruption": 98
+     "Corruption": 100
     },
-    "eng": 9244,
-    "perPost": 18,
-    "top10Share": 62,
+    "eng": 9321,
+    "perPost": 17,
+    "top10Share": 61,
     "engDelta": -89
    },
    "w": {
-    "posts": 3406,
+    "posts": 3416,
     "mix": [
-     82,
+     83,
      5,
-     13
+     12
     ],
     "accounts": 338,
     "members": 204,
     "unidentifiedAccounts": 0,
-    "classified": 3406,
-    "tagged": 3071,
+    "classified": 3416,
+    "tagged": 3080,
     "pending": 0,
-    "corePosts": 1363,
+    "corePosts": 1365,
     "coreCounts": {
      "Affordability": 629,
      "Healthcare": 282,
-     "Corruption": 540
+     "Corruption": 542
     },
-    "eng": 529174,
+    "eng": 529251,
     "perPost": 155,
     "top10Share": 50,
     "engDelta": 0
    },
    "curve48": [
-    30,
-    2,
-    2,
-    4,
-    42,
+    22,
+    3,
+    1,
+    10,
+    49,
+    49,
+    70,
     51,
-    67,
-    61,
-    25,
+    21,
     1,
     3,
-    14,
-    94,
-    163,
-    156,
-    94
+    27,
+    109,
+    167,
+    150,
+    78
    ]
   },
   "CPC": {
    "t": {
-    "posts": 223,
+    "posts": 225,
     "mix": [
      79,
      4,
      17
     ],
-    "accounts": 91,
-    "members": 70,
+    "accounts": 92,
+    "members": 71,
     "unidentifiedAccounts": 0,
-    "classified": 223,
-    "tagged": 209,
+    "classified": 225,
+    "tagged": 211,
     "pending": 0,
-    "corePosts": 92,
+    "corePosts": 93,
     "coreCounts": {
      "Affordability": 37,
      "Healthcare": 15,
-     "Corruption": 46
+     "Corruption": 47
     },
-    "eng": 6417,
+    "eng": 6449,
     "perPost": 29,
     "top10Share": 78,
     "engDelta": -90
    },
    "w": {
-    "posts": 1558,
+    "posts": 1560,
     "mix": [
      79,
      5,
@@ -6927,52 +6927,52 @@
     "accounts": 145,
     "members": 90,
     "unidentifiedAccounts": 0,
-    "classified": 1558,
-    "tagged": 1400,
+    "classified": 1560,
+    "tagged": 1402,
     "pending": 0,
-    "corePosts": 658,
+    "corePosts": 659,
     "coreCounts": {
      "Affordability": 275,
      "Healthcare": 131,
-     "Corruption": 299
+     "Corruption": 300
     },
-    "eng": 391015,
+    "eng": 391047,
     "perPost": 251,
     "top10Share": 64,
     "engDelta": 0
    },
    "curve48": [
-    13,
-    2,
-    2,
+    10,
     3,
+    1,
+    7,
+    21,
     22,
-    21,
-    23,
-    21,
-    13,
+    25,
+    17,
+    11,
     1,
     3,
-    3,
-    46,
-    61,
-    72,
-    37
+    12,
+    50,
+    59,
+    70,
+    30
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 316,
+    "posts": 322,
     "mix": [
-     78,
+     79,
      10,
-     12
+     11
     ],
-    "accounts": 129,
-    "members": 97,
+    "accounts": 131,
+    "members": 99,
     "unidentifiedAccounts": 0,
-    "classified": 316,
-    "tagged": 293,
+    "classified": 322,
+    "tagged": 298,
     "pending": 0,
     "corePosts": 134,
     "coreCounts": {
@@ -6980,13 +6980,13 @@
      "Healthcare": 24,
      "Corruption": 56
     },
-    "eng": 2547,
+    "eng": 2585,
     "perPost": 8,
-    "top10Share": 64,
-    "engDelta": -88
+    "top10Share": 63,
+    "engDelta": -87
    },
    "w": {
-    "posts": 1997,
+    "posts": 2003,
     "mix": [
      82,
      5,
@@ -6995,8 +6995,8 @@
     "accounts": 189,
     "members": 110,
     "unidentifiedAccounts": 0,
-    "classified": 1997,
-    "tagged": 1794,
+    "classified": 2003,
+    "tagged": 1799,
     "pending": 0,
     "corePosts": 785,
     "coreCounts": {
@@ -7004,28 +7004,28 @@
      "Healthcare": 160,
      "Corruption": 291
     },
-    "eng": 126305,
+    "eng": 126343,
     "perPost": 63,
     "top10Share": 59,
     "engDelta": 0
    },
    "curve48": [
-    20,
+    15,
     0,
     0,
-    2,
-    26,
-    29,
-    40,
-    39,
-    18,
+    6,
+    32,
+    24,
+    44,
+    34,
+    14,
     0,
     0,
-    10,
-    61,
-    102,
-    93,
-    50
+    16,
+    72,
+    108,
+    81,
+    45
    ]
   },
   "CBC": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    0,
-    0,
     3,
-    9,
-    6,
-    14,
-    15,
+    0,
+    0,
     5,
-    0,
-    0,
+    9,
+    5,
+    15,
+    15,
     3,
+    0,
+    0,
+    8,
     19,
-    26,
-    22,
-    13
+    28,
+    18,
+    10
    ]
   },
   "CHC": {
@@ -7146,22 +7146,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    0,
-    0,
-    0,
-    3,
-    6,
-    5,
-    9,
     2,
     0,
     0,
-    1,
-    12,
-    22,
+    2,
+    2,
+    5,
+    7,
+    7,
+    2,
+    0,
+    0,
+    3,
+    13,
+    24,
     28,
-    18
+    13
    ]
   },
   "CAPAC": {
@@ -7214,22 +7214,22 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
+    2,
+    2,
     1,
-    2,
     0,
-    2,
+    3,
     8,
     9,
-    4,
+    3,
     3,
     1,
     3,
-    2,
-    7,
+    4,
+    8,
     13,
-    20,
-    14
+    22,
+    9
    ]
   }
  },
@@ -7239,22 +7239,22 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 114,
-     "eng": 2306,
-     "m": 73,
-     "a": 79
+     "n": 119,
+     "eng": 2329,
+     "m": 75,
+     "a": 82
     },
     "CPC": {
-     "n": 37,
-     "eng": 1528,
-     "m": 27,
-     "a": 28
+     "n": 38,
+     "eng": 1530,
+     "m": 28,
+     "a": 29
     },
     "NewDem": {
-     "n": 71,
-     "eng": 645,
+     "n": 74,
+     "eng": 663,
      "m": 46,
-     "a": 49
+     "a": 50
     },
     "CBC": {
      "n": 15,
@@ -7277,20 +7277,20 @@
    },
    "w": {
     "All": {
-     "n": 708,
-     "eng": 132646,
+     "n": 713,
+     "eng": 132669,
      "m": 159,
      "a": 220
     },
     "CPC": {
-     "n": 264,
-     "eng": 98709,
+     "n": 265,
+     "eng": 98711,
      "m": 68,
      "a": 85
     },
     "NewDem": {
-     "n": 397,
-     "eng": 21995,
+     "n": 400,
+     "eng": 22013,
      "m": 92,
      "a": 131
     },
@@ -7320,20 +7320,20 @@
     80,
     91,
     96,
-    114
+    119
    ],
-   "d": 26,
+   "d": 31,
    "mAvg": 61.3,
-   "epAvg": 187,
+   "epAvg": 186,
    "momentum": {
-    "score": 71,
+    "score": 74,
     "drivers": [
      "acceleration",
      "volume"
     ],
-    "volume": 0.76,
+    "volume": 0.81,
     "accel": 1,
-    "adoption": 0.7391304347826086,
+    "adoption": 0.7717391304347825,
     "eff": 3.3,
     "engLift": 0
    },
@@ -7342,20 +7342,20 @@
      "key": "elections-2026",
      "t": {
       "All": {
-       "n": 66,
-       "eng": 1793,
-       "m": 46,
-       "a": 48
+       "n": 70,
+       "eng": 1815,
+       "m": 48,
+       "a": 50
       },
       "CPC": {
-       "n": 21,
-       "eng": 1348,
-       "m": 15,
-       "a": 16
+       "n": 22,
+       "eng": 1350,
+       "m": 16,
+       "a": 17
       },
       "NewDem": {
-       "n": 48,
-       "eng": 354,
+       "n": 50,
+       "eng": 371,
        "m": 33,
        "a": 35
       },
@@ -7380,20 +7380,20 @@
      },
      "w": {
       "All": {
-       "n": 448,
-       "eng": 107812,
+       "n": 452,
+       "eng": 107834,
        "m": 121,
        "a": 138
       },
       "CPC": {
-       "n": 165,
-       "eng": 79677,
+       "n": 166,
+       "eng": 79679,
        "m": 47,
        "a": 53
       },
       "NewDem": {
-       "n": 248,
-       "eng": 19354,
+       "n": 250,
+       "eng": 19371,
        "m": 73,
        "a": 83
       },
@@ -7420,6 +7420,10 @@
      "leadPostId": "2106074332380487782",
      "postIds": {
       "t": [
+       "2107274829351059482",
+       "2107272964785701375",
+       "2107272673080275107",
+       "2107272023890088007",
        "2107268631566401560",
        "2107262779409486234",
        "2107255864365396162",
@@ -7488,6 +7492,10 @@
        "2107061012025512323"
       ],
       "w": [
+       "2107274829351059482",
+       "2107272964785701375",
+       "2107272673080275107",
+       "2107272023890088007",
        "2107268631566401560",
        "2107262779409486234",
        "2107255864365396162",
@@ -7943,10 +7951,10 @@
      "key": "town-halls",
      "t": {
       "All": {
-       "n": 31,
-       "eng": 146,
-       "m": 29,
-       "a": 30
+       "n": 32,
+       "eng": 147,
+       "m": 30,
+       "a": 31
       },
       "CPC": {
        "n": 11,
@@ -7955,10 +7963,10 @@
        "a": 11
       },
       "NewDem": {
-       "n": 13,
-       "eng": 18,
-       "m": 13,
-       "a": 13
+       "n": 14,
+       "eng": 19,
+       "m": 14,
+       "a": 14
       },
       "CBC": {
        "n": 5,
@@ -7981,8 +7989,8 @@
      },
      "w": {
       "All": {
-       "n": 187,
-       "eng": 3706,
+       "n": 188,
+       "eng": 3707,
        "m": 88,
        "a": 104
       },
@@ -7993,8 +8001,8 @@
        "a": 42
       },
       "NewDem": {
-       "n": 113,
-       "eng": 1897,
+       "n": 114,
+       "eng": 1898,
        "m": 54,
        "a": 64
       },
@@ -8021,6 +8029,7 @@
      "leadPostId": "2106133955904700685",
      "postIds": {
       "t": [
+       "2107273208361628058",
        "2107270347514904997",
        "2107264908056580340",
        "2107260124028961182",
@@ -8054,6 +8063,7 @@
        "2107116685732069418"
       ],
       "w": [
+       "2107273208361628058",
        "2107270347514904997",
        "2107264908056580340",
        "2107260124028961182",
@@ -8370,6 +8380,11 @@
    ],
    "postIds": {
     "t": [
+     "2107274829351059482",
+     "2107273208361628058",
+     "2107272964785701375",
+     "2107272673080275107",
+     "2107272023890088007",
      "2107270347514904997",
      "2107268631566401560",
      "2107264908056580340",
@@ -8486,6 +8501,11 @@
      "2106975038498873363"
     ],
     "w": [
+     "2107274829351059482",
+     "2107273208361628058",
+     "2107272964785701375",
+     "2107272673080275107",
+     "2107272023890088007",
      "2107270347514904997",
      "2107268631566401560",
      "2107264908056580340",
@@ -9202,16 +9222,16 @@
    "name": "Democracy & rule of law",
    "t": {
     "All": {
-     "n": 98,
-     "eng": 1541,
-     "m": 65,
-     "a": 70
+     "n": 100,
+     "eng": 1546,
+     "m": 66,
+     "a": 71
     },
     "CPC": {
-     "n": 46,
-     "eng": 760,
-     "m": 30,
-     "a": 33
+     "n": 47,
+     "eng": 762,
+     "m": 31,
+     "a": 34
     },
     "NewDem": {
      "n": 56,
@@ -9240,14 +9260,14 @@
    },
    "w": {
     "All": {
-     "n": 540,
-     "eng": 145958,
+     "n": 542,
+     "eng": 145963,
      "m": 150,
      "a": 204
     },
     "CPC": {
-     "n": 299,
-     "eng": 112266,
+     "n": 300,
+     "eng": 112268,
      "m": 70,
      "a": 98
     },
@@ -9283,21 +9303,21 @@
     85,
     36,
     51,
-    98
+    100
    ],
-   "d": 41,
+   "d": 43,
    "mAvg": 53.3,
-   "epAvg": 270,
+   "epAvg": 269,
    "momentum": {
     "score": 79,
     "drivers": [
      "acceleration",
      "volume"
     ],
-    "volume": 0.9099999999999999,
+    "volume": 0.9299999999999999,
     "accel": 1,
     "adoption": 0.79375,
-    "eff": 3.6,
+    "eff": 3.5,
     "engLift": 0
    },
    "subs": [
@@ -9305,16 +9325,16 @@
      "key": "voting-rights",
      "t": {
       "All": {
-       "n": 52,
-       "eng": 388,
-       "m": 40,
-       "a": 43
+       "n": 54,
+       "eng": 393,
+       "m": 41,
+       "a": 44
       },
       "CPC": {
-       "n": 22,
-       "eng": 294,
-       "m": 18,
-       "a": 19
+       "n": 23,
+       "eng": 296,
+       "m": 19,
+       "a": 20
       },
       "NewDem": {
        "n": 31,
@@ -9343,16 +9363,16 @@
      },
      "w": {
       "All": {
-       "n": 186,
-       "eng": 14233,
-       "m": 95,
-       "a": 112
+       "n": 188,
+       "eng": 14238,
+       "m": 96,
+       "a": 113
       },
       "CPC": {
-       "n": 74,
-       "eng": 4122,
-       "m": 43,
-       "a": 49
+       "n": 75,
+       "eng": 4124,
+       "m": 44,
+       "a": 50
       },
       "NewDem": {
        "n": 115,
@@ -9383,6 +9403,8 @@
      "leadPostId": "2105068410400800980",
      "postIds": {
       "t": [
+       "2107274829351059482",
+       "2107272964785701375",
        "2107255864365396162",
        "2107249338909130864",
        "2107243226469941614",
@@ -9437,6 +9459,8 @@
        "2107063257387393427"
       ],
       "w": [
+       "2107274829351059482",
+       "2107272964785701375",
        "2107255864365396162",
        "2107249338909130864",
        "2107243226469941614",
@@ -10690,6 +10714,8 @@
    ],
    "postIds": {
     "t": [
+     "2107274829351059482",
+     "2107272964785701375",
      "2107261418093355455",
      "2107258867788702158",
      "2107256468349001788",
@@ -10790,6 +10816,8 @@
      "2106975038498873363"
     ],
     "w": [
+     "2107274829351059482",
+     "2107272964785701375",
      "2107261418093355455",
      "2107258867788702158",
      "2107256468349001788",
@@ -11421,18 +11449,18 @@
     44,
     95
    ],
-   "d": 13,
+   "d": 11,
    "mAvg": 58.7,
    "epAvg": 164,
    "momentum": {
-    "score": 60,
+    "score": 59,
     "drivers": [
      "acceleration",
      "volume"
     ],
-    "volume": 0.63,
+    "volume": 0.61,
     "accel": 1,
-    "adoption": 0.4715909090909091,
+    "adoption": 0.4545454545454546,
     "eff": 3.1,
     "engLift": 0
    },
@@ -13418,10 +13446,10 @@
    "name": "Education",
    "t": {
     "All": {
-     "n": 57,
-     "eng": 477,
+     "n": 58,
+     "eng": 478,
      "m": 46,
-     "a": 47
+     "a": 48
     },
     "CPC": {
      "n": 24,
@@ -13430,10 +13458,10 @@
      "a": 19
     },
     "NewDem": {
-     "n": 32,
-     "eng": 68,
+     "n": 33,
+     "eng": 69,
      "m": 26,
-     "a": 26
+     "a": 27
     },
     "CBC": {
      "n": 8,
@@ -13456,10 +13484,10 @@
    },
    "w": {
     "All": {
-     "n": 167,
-     "eng": 5643,
+     "n": 168,
+     "eng": 5644,
      "m": 98,
-     "a": 104
+     "a": 105
     },
     "CPC": {
      "n": 70,
@@ -13468,10 +13496,10 @@
      "a": 44
     },
     "NewDem": {
-     "n": 100,
-     "eng": 1261,
+     "n": 101,
+     "eng": 1262,
      "m": 56,
-     "a": 59
+     "a": 60
     },
     "CBC": {
      "n": 50,
@@ -13499,9 +13527,9 @@
     15,
     13,
     4,
-    57
+    58
    ],
-   "d": 222,
+   "d": 227,
    "mAvg": 16.5,
    "epAvg": 34,
    "momentum": {
@@ -13521,10 +13549,10 @@
      "key": "public-schools",
      "t": {
       "All": {
-       "n": 43,
-       "eng": 371,
+       "n": 44,
+       "eng": 372,
        "m": 36,
-       "a": 37
+       "a": 38
       },
       "CPC": {
        "n": 18,
@@ -13533,10 +13561,10 @@
        "a": 15
       },
       "NewDem": {
-       "n": 24,
-       "eng": 51,
+       "n": 25,
+       "eng": 52,
        "m": 21,
-       "a": 21
+       "a": 22
       },
       "CBC": {
        "n": 2,
@@ -13559,10 +13587,10 @@
      },
      "w": {
       "All": {
-       "n": 87,
-       "eng": 1814,
+       "n": 88,
+       "eng": 1815,
        "m": 62,
-       "a": 65
+       "a": 66
       },
       "CPC": {
        "n": 43,
@@ -13571,10 +13599,10 @@
        "a": 33
       },
       "NewDem": {
-       "n": 45,
-       "eng": 371,
+       "n": 46,
+       "eng": 372,
        "m": 32,
-       "a": 33
+       "a": 34
       },
       "CBC": {
        "n": 21,
@@ -13599,6 +13627,7 @@
      "leadPostId": "2104995953644310963",
      "postIds": {
       "t": [
+       "2107274722790801693",
        "2107261418093355455",
        "2107252132051083539",
        "2107251487978209390",
@@ -13644,6 +13673,7 @@
        "2107076460783587356"
       ],
       "w": [
+       "2107274722790801693",
        "2107261418093355455",
        "2107252132051083539",
        "2107251487978209390",
@@ -13898,6 +13928,7 @@
    ],
    "postIds": {
     "t": [
+     "2107274722790801693",
      "2107261418093355455",
      "2107252132051083539",
      "2107251487978209390",
@@ -13957,6 +13988,7 @@
      "2107076460783587356"
     ],
     "w": [
+     "2107274722790801693",
      "2107261418093355455",
      "2107252132051083539",
      "2107251487978209390",
@@ -14132,8 +14164,8 @@
    "name": "District & constituent services",
    "t": {
     "All": {
-     "n": 47,
-     "eng": 254,
+     "n": 48,
+     "eng": 258,
      "m": 35,
      "a": 35
     },
@@ -14170,8 +14202,8 @@
    },
    "w": {
     "All": {
-     "n": 294,
-     "eng": 6408,
+     "n": 295,
+     "eng": 6412,
      "m": 114,
      "a": 120
     },
@@ -14213,18 +14245,18 @@
     57,
     22,
     17,
-    47
+    48
    ],
-   "d": 14,
+   "d": 17,
    "mAvg": 33,
    "epAvg": 22,
    "momentum": {
-    "score": 63,
+    "score": 65,
     "drivers": [
      "acceleration",
-     "caucus spread"
+     "volume"
     ],
-    "volume": 0.64,
+    "volume": 0.67,
     "accel": 1,
     "adoption": 0.5606060606060606,
     "eff": 3.6,
@@ -14233,6 +14265,7 @@
    "subs": [],
    "postIds": {
     "t": [
+     "2107276118810366327",
      "2107261059421663613",
      "2107253400421237046",
      "2107249162991612007",
@@ -14282,6 +14315,7 @@
      "2107109048231383410"
     ],
     "w": [
+     "2107276118810366327",
      "2107261059421663613",
      "2107253400421237046",
      "2107249162991612007",
@@ -14584,16 +14618,16 @@
    "name": "Foreign policy & national security",
    "t": {
     "All": {
-     "n": 45,
-     "eng": 2427,
-     "m": 38,
-     "a": 38
+     "n": 46,
+     "eng": 2457,
+     "m": 39,
+     "a": 39
     },
     "CPC": {
-     "n": 27,
-     "eng": 2110,
-     "m": 22,
-     "a": 22
+     "n": 28,
+     "eng": 2140,
+     "m": 23,
+     "a": 23
     },
     "NewDem": {
      "n": 23,
@@ -14622,14 +14656,14 @@
    },
    "w": {
     "All": {
-     "n": 353,
-     "eng": 92835,
+     "n": 354,
+     "eng": 92865,
      "m": 130,
      "a": 154
     },
     "CPC": {
-     "n": 154,
-     "eng": 69576,
+     "n": 155,
+     "eng": 69606,
      "m": 55,
      "a": 64
     },
@@ -14665,11 +14699,11 @@
     65,
     22,
     13,
-    45
+    46
    ],
    "d": -10,
    "mAvg": 38,
-   "epAvg": 263,
+   "epAvg": 262,
    "momentum": {
     "score": 53,
     "drivers": [
@@ -15397,6 +15431,7 @@
    ],
    "postIds": {
     "t": [
+     "2107276685439914369",
      "2107245642028572808",
      "2107242270814560560",
      "2107228498372825140",
@@ -15444,6 +15479,7 @@
      "2106975038498873363"
     ],
     "w": [
+     "2107276685439914369",
      "2107245642028572808",
      "2107242270814560560",
      "2107228498372825140",
@@ -19912,10 +19948,10 @@
    "name": "Civil rights & equality",
    "t": {
     "All": {
-     "n": 19,
-     "eng": 358,
-     "m": 16,
-     "a": 16
+     "n": 20,
+     "eng": 359,
+     "m": 17,
+     "a": 17
     },
     "CPC": {
      "n": 7,
@@ -19924,10 +19960,10 @@
      "a": 6
     },
     "NewDem": {
-     "n": 12,
-     "eng": 305,
-     "m": 10,
-     "a": 10
+     "n": 13,
+     "eng": 306,
+     "m": 11,
+     "a": 11
     },
     "CBC": {
      "n": 5,
@@ -19950,8 +19986,8 @@
    },
    "w": {
     "All": {
-     "n": 138,
-     "eng": 53142,
+     "n": 139,
+     "eng": 53143,
      "m": 80,
      "a": 90
     },
@@ -19962,8 +19998,8 @@
      "a": 47
     },
     "NewDem": {
-     "n": 72,
-     "eng": 9266,
+     "n": 73,
+     "eng": 9267,
      "m": 42,
      "a": 47
     },
@@ -19993,21 +20029,21 @@
     29,
     17,
     4,
-    19
+    20
    ],
-   "d": -4,
+   "d": 1,
    "mAvg": 17,
-   "epAvg": 385,
+   "epAvg": 382,
    "momentum": {
-    "score": 48,
+    "score": 53,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.46,
-    "accel": 0.6902173913043478,
-    "adoption": 0.4411764705882353,
-    "eff": 3.6,
+    "volume": 0.51,
+    "accel": 0.814748201438849,
+    "adoption": 0.5,
+    "eff": 3.5,
     "engLift": 0
    },
    "subs": [
@@ -20396,6 +20432,7 @@
    ],
    "postIds": {
     "t": [
+     "2107278810366500968",
      "2107251994188542426",
      "2107250159222714564",
      "2107209761263341617",
@@ -20417,6 +20454,7 @@
      "2107082176864932227"
     ],
     "w": [
+     "2107278810366500968",
      "2107251994188542426",
      "2107250159222714564",
      "2107209761263341617",
@@ -20646,19 +20684,19 @@
     10,
     16
    ],
-   "d": -33,
+   "d": -37,
    "mAvg": 22,
    "epAvg": 107,
    "momentum": {
-    "score": 36,
+    "score": 34,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.16999999999999998,
+    "volume": 0.13,
     "accel": 1,
     "adoption": 0.13636363636363635,
-    "eff": 3.7,
+    "eff": 3.6,
     "engLift": 0
    },
    "subs": [
@@ -22503,12 +22541,13 @@
     "2107188723020689693",
     "2107193122207801814",
     "2107208570257162611",
-    "2107240830675116108"
+    "2107240830675116108",
+    "2107278810366500968"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
    "spread": 47,
-   "accounts": 48,
+   "accounts": 49,
    "cm": [
     20,
     25,
@@ -22526,8 +22565,8 @@
     101
    ],
    "exact": 1,
-   "total": 69,
-   "eng": 9954
+   "total": 70,
+   "eng": 9955
   },
   {
    "text": "tax dollars",
@@ -22619,6 +22658,96 @@
    "exact": 0.54,
    "total": 56,
    "eng": 10737
+  },
+  {
+   "text": "register to vote",
+   "variants": [
+    "plan to vote"
+   ],
+   "pillar": "Corruption",
+   "topic": "Voting rights & elections",
+   "first": "@Mfume4Congress",
+   "firstPostId": null,
+   "postIds": [
+    "2104970747102061015",
+    "2104975225272353246",
+    "2104987020267597827",
+    "2105026472893108323",
+    "2105041018240303511",
+    "2105112298624843914",
+    "2105251583449579779",
+    "2105305102512799895",
+    "2105345193738371447",
+    "2105353230016565640",
+    "2105361023813468462",
+    "2105754780719038495",
+    "2105780151623528837",
+    "2105808547539808479",
+    "2105834501389873311",
+    "2105855426411524597",
+    "2105996818878484867",
+    "2106125563366871214",
+    "2106393338496622774",
+    "2106401374615560622",
+    "2106478142600675462",
+    "2106731068464529898",
+    "2106764404066852890",
+    "2106769997871862065",
+    "2106776427412500905",
+    "2106805526722224496",
+    "2106864440511492421",
+    "2106878848625463576",
+    "2106895055269040253",
+    "2106903211705782567",
+    "2106925618180886959",
+    "2106932840856220145",
+    "2107092774181065179",
+    "2107093453842812941",
+    "2107093986947309942",
+    "2107097523366293783",
+    "2107106460312244337",
+    "2107119986200158405",
+    "2107122351036936284",
+    "2107126791148011865",
+    "2107135154875519110",
+    "2107140267585294709",
+    "2107143839693615341",
+    "2107144399951929467",
+    "2107144686670393614",
+    "2107153155175641537",
+    "2107156652872839389",
+    "2107161772595556480",
+    "2107165934116901290",
+    "2107174264822706412",
+    "2107189449675149582",
+    "2107192233057476851",
+    "2107268631566401560",
+    "2107272964785701375",
+    "2107274829351059482"
+   ],
+   "firstSeen": "2026-09-15",
+   "leadership": false,
+   "spread": 43,
+   "accounts": 45,
+   "cm": [
+    20,
+    25,
+    11,
+    4,
+    1
+   ],
+   "adopt": [
+    55,
+    59,
+    63,
+    65,
+    67,
+    73,
+    85
+   ],
+   "exact": 0.64,
+   "total": 55,
+   "eng": 1840
   },
   {
    "text": "high school",
@@ -23007,9 +23136,7 @@
   },
   {
    "text": "big ugly",
-   "variants": [
-    "big ugly bill"
-   ],
+   "variants": [],
    "pillar": null,
    "topic": "SNAP & safety net",
    "first": "@repcleaver",
@@ -23073,75 +23200,86 @@
    "exact": 1,
    "total": 34,
    "eng": 7828
-  },
-  {
-   "text": "next generation",
-   "variants": [],
-   "pillar": null,
-   "topic": "Public K-12 schools",
-   "first": "@GovSherrillNJ",
-   "firstPostId": null,
-   "postIds": [
-    "2105352663688749405",
-    "2105707061355196527",
-    "2105729251135938855",
-    "2105764505670074452",
-    "2105768274550219076",
-    "2105774735951052959",
-    "2106021732888834461",
-    "2106033805643464750",
-    "2106124553982451915",
-    "2106126270866075983",
-    "2106135027495157831",
-    "2106161460527153195",
-    "2106352349254205674",
-    "2106369025588506977",
-    "2106435596671647788",
-    "2106905614223913049",
-    "2107076460783587356",
-    "2107094018928566573",
-    "2107109151692279810",
-    "2107123647630430459",
-    "2107126422678769799",
-    "2107133220504396272",
-    "2107134350898729127",
-    "2107144573780697540",
-    "2107173295711715401",
-    "2107174923265572952",
-    "2107192461160566874",
-    "2107194309124444162",
-    "2107219885344657886",
-    "2107221792330768455",
-    "2107196330552484233",
-    "2107226706654175242",
-    "2107234375595065805"
-   ],
-   "firstSeen": "2026-08-24",
-   "leadership": false,
-   "spread": 29,
-   "accounts": 30,
-   "cm": [
-    7,
-    20,
-    7,
-    4,
-    1
-   ],
-   "adopt": [
-    9,
-    10,
-    15,
-    20,
-    22,
-    23,
-    38
-   ],
-   "exact": 1,
-   "total": 33,
-   "eng": 255
   }
  ],
  "clusters": [
+  {
+   "label": "Pakistan pro-democracy protests & Imran Khan detention",
+   "lastSeen": "2026-10-06T01:08:07.000Z",
+   "thresholdMet": false,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 1,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2107276685439914369"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2107276685439914369",
+     "handle": "@RepYassAnsari",
+     "time": "2026-10-06T01:08:07.000Z"
+    }
+   ],
+   "sampleId": "2107276685439914369",
+   "sampleHandle": "@RepYassAnsari",
+   "who": [
+    "@RepYassAnsari"
+   ],
+   "cm": [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "eng": 30,
+   "phrase": "brave people",
+   "coherence": 100,
+   "since": "2026-10-06T01:08:07.000Z",
+   "shape": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sample": "Right now, there are thousands of brave people in Pakistan demanding the release of political prisoners, including Imran Khan. \n\nI stand with the…",
+   "suggest": "pakistan_pro_democracy_protests_imran_khan_detention",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [],
+   "related": [
+    {
+     "id": "2107215174637908448",
+     "sim": 0.8354,
+     "handle": "@RepRashida",
+     "text": "Free Imran Khan and Bushra Bibi.\n\nThey’ve been held in inhumane conditions without medical attention, and both have reported significant eye damage. No one should be treated this way.\n\nI stand with…",
+     "time": "2026-10-05T21:03:42.000Z",
+     "topics": [
+      "foreign-policy"
+     ]
+    },
+    {
+     "id": "2107219689906815208",
+     "sim": 0.8012,
+     "handle": "@RoKhanna",
+     "text": "I'm proud to stand with the inspiring Pakistani-American movement that is calling on the U.S. to support human rights in Pakistan\n\nTrump must tell Asim Munir to respect peaceful protest, free all…",
+     "time": "2026-10-05T21:21:38.000Z",
+     "topics": [
+      "foreign-policy"
+     ]
+    }
+   ]
+  },
   {
    "label": "Data center siting & community guardrails",
    "lastSeen": "2026-10-06T00:44:58.000Z",
@@ -23270,7 +23408,7 @@
    "coherence": 33,
    "since": "2026-10-06T00:02:00.000Z",
    "shape": [
-    2,
+    3,
     3,
     3,
     3,
@@ -24021,72 +24159,10 @@
      ]
     }
    ]
-  },
-  {
-   "label": "Bouquet Fire, Angeles National Forest",
-   "lastSeen": "2026-10-05T21:31:24.000Z",
-   "thresholdMet": false,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 2,
-   "members": 1,
-   "accounts": 1,
-   "postIds": [
-    "2107220792358613031",
-    "2107222147492106506"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2107220792358613031",
-     "handle": "@gtwhitesides",
-     "time": "2026-10-05T21:26:01.000Z"
-    },
-    {
-     "id": "2107222147492106506",
-     "handle": "@gtwhitesides",
-     "time": "2026-10-05T21:31:24.000Z"
-    }
-   ],
-   "sampleId": "2107220792358613031",
-   "sampleHandle": "@gtwhitesides",
-   "who": [
-    "@gtwhitesides"
-   ],
-   "cm": [
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "eng": 0,
-   "phrase": "best public",
-   "coherence": 50,
-   "since": "2026-10-05T21:26:01.000Z",
-   "shape": [
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "sample": "RT @firechiefanf: Our firefighters are some of the best public servants we can ever hope for. After the large smoke column and flame front…",
-   "suggest": "bouquet_fire_angeles_national_forest",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [],
-   "related": []
   }
  ],
  "emergingCoverage": {
-  "total": 379,
+  "total": 380,
   "displayed": 12,
   "activeThresholdClusters": 0
  },
@@ -26159,6 +26235,359 @@
  ],
  "incidentsFiltered": 3,
  "feed": [
+  {
+   "id": "2107278810366500968",
+   "handle": "@RepSusieLee",
+   "member": "Susie Lee",
+   "district": "NV-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "October is Filipino American History Month!\n\nTogether, let’s honor generations of Filipino Americans whose leadership in health care, labor, public service, and the arts enriches our nation. https://t.co/3vbQsLoPr6",
+   "topics": [
+    "civil-rights"
+   ],
+   "time": "2026-10-06T01:16:34.000Z",
+   "date": "2026-10-05",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107276685439914369",
+   "handle": "@RepYassAnsari",
+   "member": "Yassamin Ansari",
+   "district": "AZ-03",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Right now, there are thousands of brave people in Pakistan demanding the release of political prisoners, including Imran Khan. \n\nI stand with the Pakistani-American community advocating for human rights in Pakistan, free and fair elections, and the right to protest peacefully. https://t.co/9pw10qsCdo",
+   "topics": [
+    "foreign-policy"
+   ],
+   "time": "2026-10-06T01:08:07.000Z",
+   "date": "2026-10-05",
+   "engN": 30,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107095467213668845",
+    "handle": "@ErikSperling",
+    "text": "Everyone should pay attention to Pakistan's pro-democracy movement\n\nThis is the biggest challenge to the US-backed military regime in years\n\n\"Field Marshal\" Asim Munir badly lost the last elections…"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [
+     {
+      "id": "n_899c8579fe5292d4",
+      "publisher": "NPR",
+      "date": "2026-09-30",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+      "text": "But a recent report released by the agency has left some experts with substantial doubts about its researchers' methods, its claims about its findings and its authors' political intentions. The report , titled \"Where the Clinic Meets the Movement: Does Gender Ideology Arm Left-Wing Authoritarian Psychology?\" was not peer reviewed and its underlying data and funding have also not been made available. All are common best practices for research. (One author says its data will be released \"soon.\")",
+      "publishedAt": "2026-09-30T09:00:00.000Z",
+      "fetchedAt": "2026-09-30T09:41:25.152Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107276118810366327",
+   "handle": "@repdinatitus",
+   "member": "Dina Titus",
+   "district": "NV-01",
+   "caucus": [],
+   "text": "Already this year, #TeamTitus has returned over $10 million to constituents #OnlyInDistrictOne in benefits like Social Security, Veterans Assistance, retirement funds, and Small Business aid. Please call on my office if you need anything, and we will be happy to help. https://t.co/Jkxn6jlppl",
+   "topics": [
+    "constituent-services"
+   ],
+   "time": "2026-10-06T01:05:52.000Z",
+   "date": "2026-10-05",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [
+     {
+      "id": "n_46a7f893b6e41a06",
+      "publisher": "Roll Call",
+      "date": "2026-09-29",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
+      "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
+      "publishedAt": "2026-09-29T17:43:30.000Z",
+      "fetchedAt": "2026-09-30T06:07:02.630Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     },
+     {
+      "id": "n_7ea33f5bf4a07190",
+      "publisher": "Roll Call",
+      "date": "2026-09-30",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+      "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+      "publishedAt": "2026-09-30T16:01:01.000Z",
+      "fetchedAt": "2026-09-30T21:46:34.754Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107274829351059482",
+   "handle": "@JaredHuffman",
+   "member": "Jared Huffman",
+   "district": "CA-02",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "The MAGA election fraud playbook runs right through Northern California, unfolding in front of our eyes in Shasta County. \n\nIt goes like this:\n1. MAGA loyalist local election officials like Clint Curtis make false accusations of election fraud\n\n2. In a close election, Trump and his MAGA loyalists use these accusations to falsely claim that the election was rigged\n\n3. Then they contest the results and try to prevent your votes from being counted so that this corrupt, incompetent MAGA Congress stays in power even after the people vote them out\n\nHere's the best way to defeat this insidious plan:  vote, vote, vote. Make a plan to vote. Make sure your family and friends vote.  And try to get someone who usually doesn't vote to show up at the polls this time. If we make our voices loud enough - if we make this victory too big to rig - their plan won't stand a chance and democracy will prevail.",
+   "topics": [
+    "democracy/voting-rights",
+    "democracy",
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-06T01:00:45.000Z",
+   "date": "2026-10-05",
+   "engN": 2,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107274722790801693",
+   "handle": "@Schneider4IL10",
+   "member": "Bradley Scott Schneider",
+   "district": "IL-10",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Happy World Teachers’ Day! To the teachers across the 10th District, thank you for your dedication to our children and for helping them learn the skills and lessons they’ll carry throughout their lives. https://t.co/c8wPqXfe0d",
+   "topics": [
+    "education/public-schools",
+    "education"
+   ],
+   "time": "2026-10-06T01:00:19.000Z",
+   "date": "2026-10-05",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107273208361628058",
+   "handle": "@RepTomSuozzi",
+   "member": "Thomas R. Suozzi",
+   "district": "NY-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "It was great to be with so many friends and neighbors tonight at the Friends of Arts & Music Enrichment celebration honoring Chris Barry and 50 years of Glen Cove TV. Chris’s dedication to expanding opportunities for youth to experience music and the arts has left a lasting mark on our community. Congratulations and thank you for all you do at FAME!",
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "time": "2026-10-06T00:54:18.000Z",
+   "date": "2026-10-05",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107273074227741050",
+   "handle": "@HaleyforMI",
+   "member": "Haley M. Stevens",
+   "district": "MI-11",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Stay tuned to see how well a midwestern gal does 🍗🥺🤪❣️ https://t.co/cjZgnMu8xw",
+   "topics": [],
+   "time": "2026-10-06T00:53:46.000Z",
+   "date": "2026-10-05",
+   "engN": 18,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107140915945254994",
+    "handle": "@gtwhitesides",
+    "text": "The fourth wing had @HaleyforMI on the floor! 🔥\n\nFind out how Haley handles the spice by tuning into our next Capitol Heat episode on 10/6 at https://t.co/8NiTNkscQD https://t.co/bcHyIWDGZH"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107272964785701375",
+   "handle": "@Marcy_Kaptur",
+   "member": "Marcy Kaptur",
+   "district": "OH-09",
+   "caucus": [],
+   "text": "Thank you to the League of Women Voters of Bowling Green and Perrysburg Area for hosting the Candidates Round Table yesterday afternoon. With early voting just a day away, voters want to hear directly from those on the ballot. Make your plan to vote, and I'll see you at the polls!",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics",
+    "democracy/voting-rights",
+    "democracy"
+   ],
+   "time": "2026-10-06T00:53:20.000Z",
+   "date": "2026-10-05",
+   "engN": 3,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107272673080275107",
+   "handle": "@mrvan4congress",
+   "member": "Frank J. Mrvan",
+   "district": "IN-01",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Join us on Monday, October 12th for a Get Out The Vote Rally with Congressman Pete Aguilar. Click below to RSVP: https://t.co/xwqBxuR4zT",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-06T00:52:11.000Z",
+   "date": "2026-10-05",
+   "engN": 2,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
+  {
+   "id": "2107272023890088007",
+   "handle": "@MaggieG603",
+   "member": "Maggie Goodlander",
+   "district": "NH-02",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Granite Staters are speaking out and showing up — and that’s what gives me so much hope. 29 more days.🇺🇸 https://t.co/pMDsgybYr6",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-06T00:49:36.000Z",
+   "date": "2026-10-05",
+   "engN": 15,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "isNew": false
+  },
   {
    "id": "2107270858180108459",
    "handle": "@RepDebDingell",
@@ -33209,448 +33638,6 @@
    },
    "metricsObservedAt": "2026-10-05T21:45:25.361Z",
    "isNew": false
-  },
-  {
-   "id": "2107199113246753047",
-   "handle": "@RepDebDingell",
-   "member": "Debbie Dingell",
-   "district": "MI-06",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "RT @AudieCornish: Senate blocks bill to address AI data center costs.\n@RepDebDingell (Michigan-D) reacts.\n#AI #datacenters #democrats #repu…",
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "time": "2026-10-05T19:59:53.000Z",
-   "date": "2026-10-05",
-   "engN": 0,
-   "kind": "repost",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2107198867955400870",
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107198873911304532",
-   "handle": "@RepTeresaLF",
-   "member": "Teresa Leger Fernandez",
-   "district": "NM-03",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Farmers, big and small, are struggling with the high price of diesel that came from the Iran war. \n\nLet’s end this costly and illegal war NOW. https://t.co/eh6Y8yXj5i",
-   "topics": [
-    "foreign-policy/middle-east",
-    "foreign-policy",
-    "economy/prices-inflation",
-    "economy"
-   ],
-   "time": "2026-10-05T19:58:56.000Z",
-   "date": "2026-10-05",
-   "engN": 7,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [
-     {
-      "id": "n_4dbf7998a849a7fa",
-      "publisher": "The Hill",
-      "date": "2026-09-28",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/senate/6116123-senator-calls-end-iran-conflict/",
-      "text": "GOP senator says Trump should bring Iran war to an end",
-      "publishedAt": "2026-09-28T21:10:34.000Z",
-      "fetchedAt": "2026-09-28T21:36:32.151Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_bcb6f7b1882047a1",
-      "publisher": "NPR",
-      "date": "2026-10-03",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-      "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-      "publishedAt": "2026-10-03T11:47:06.000Z",
-      "fetchedAt": "2026-10-03T18:28:44.327Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_bcb6f7b1882047a1"
-    ]
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107198797180752188",
-   "handle": "@RepChuyGarcia",
-   "member": "Jesús G. \"Chuy\" García",
-   "district": "IL-04",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "Trump and Miller’s DHS almost killed Marimar Martinez, and then lied about what happened and falsely smeared her as a terrorist. Marimar deserves justice. I will continue to stand with her to demand accountability for all the atrocities committed by Border Patrol and ICE agents in Chicago.",
-   "topics": [
-    "immigration/ice-enforcement",
-    "immigration",
-    "public-safety/crime-policing",
-    "public-safety"
-   ],
-   "time": "2026-10-05T19:58:37.000Z",
-   "date": "2026-10-05",
-   "engN": 15,
-   "kind": "quote",
-   "quoted": {
-    "id": "2107183069824155753",
-    "handle": "@jmetr22b",
-    "text": "NEW: Lawyers for Chicago woman shot by Border Patrol agent call for criminal charges, saying it's \"not a political issue.\"\n“It’s the Department of Justice. It’s not the Department of Republicans.…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [
-     {
-      "id": "n_7c38416e83adf0ad",
-      "publisher": "The Hill",
-      "date": "2026-10-02",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6126569-justice-department-sues-maryland-over-federal-agent-mask-ban/",
-      "text": "Justice Department sues Maryland over federal agent mask ban",
-      "publishedAt": "2026-10-02T18:14:15.000Z",
-      "fetchedAt": "2026-10-02T18:40:16.808Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_61939787b04b4ae6",
-      "publisher": "NPR",
-      "date": "2026-09-30",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill",
-      "text": "A MARTÍNEZ, HOST: A former Justice Department special counsel is defending two criminal indictments against President Trump and telling lawmakers he won't be silenced by prosecution threats. Here's NPR's Ryan Lucas.",
-      "publishedAt": "2026-09-30T10:46:14.000Z",
-      "fetchedAt": "2026-09-30T23:16:37.557Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107198213044191524",
-   "handle": "@RepMGS",
-   "member": "Mary Gay Scanlon",
-   "district": "PA-05",
-   "caucus": [
-    "CPC",
-    "NewDem"
-   ],
-   "text": "Children deserve strong legal representation and to be treated with respect as they navigate our broken and challenging immigration system. Proud to stand with @RepLouCorrea in demanding answers from Trump Administration officials about the legal process to which unaccompanied migrant children are subjected and the quality of their legal representation.",
-   "topics": [
-    "immigration/asylum-refugees",
-    "immigration"
-   ],
-   "time": "2026-10-05T19:56:18.000Z",
-   "date": "2026-10-05",
-   "engN": 7,
-   "kind": "quote",
-   "quoted": {
-    "id": "2105650219673072120",
-    "handle": "@RepLouCorrea",
-    "text": "Children deserve to be treated with decency and have strong legal representation in our nation’s immigration courts. \n\nThat’s why I sent a letter to Trump Administration officials DEMANDING…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107197466214809733",
-   "handle": "@RepShontelBrown",
-   "member": "Shontel M. Brown",
-   "district": "OH-11",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "As if Trump cutting SNAP benefits and leaving more than 120,000 Ohioans struggling to feed their families wasn't bad enough, last week another $38 million in cuts to Ohio's SNAP program kicked in. \n \nBy slashing SNAP resources, Republicans are putting millions of Americans at risk. This administration should be ashamed.",
-   "topics": [
-    "budget-appropriations/snap-benefits",
-    "budget-appropriations"
-   ],
-   "time": "2026-10-05T19:53:20.000Z",
-   "date": "2026-10-05",
-   "engN": 36,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107197195145629917",
-   "handle": "@NikkiBudzinski",
-   "member": "Nikki Budzinski",
-   "district": "IL-13",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Join me and State Senator Doris Turner as we knock on doors in Chatham THIS SATURDAY!\n\nWe’re talking to voters right here in our community about what’s at stake and making sure that Democrats turn out to win in November. To sign up, click HERE: https://t.co/hpI2sk3AkP",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-10-05T19:52:15.000Z",
-   "date": "2026-10-05",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107196997090357282",
-   "handle": "@RepAngieCraig",
-   "member": "Angie Craig",
-   "district": "MN-02",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "October is LGBTQ+ history month, a chance for us to celebrate the brave folks who have stood up and fought for equal rights, protections and acceptance for our community. We’ve come a long way in this fight, but there’s still more work to do. Together, we’ll keep working toward a future where every Minnesotan can be who they are and love who they love. 🌈🩷",
-   "topics": [
-    "civil-rights/lgbtq",
-    "civil-rights"
-   ],
-   "time": "2026-10-05T19:51:28.000Z",
-   "date": "2026-10-05",
-   "engN": 163,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107196803515040135",
-   "handle": "@ChrisForPA",
-   "member": "Christopher R. Deluzio",
-   "district": "PA-17",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "A huge win for Post-Gazette workers! https://t.co/iEqwkuxSzi",
-   "topics": [
-    "labor/unions",
-    "labor"
-   ],
-   "time": "2026-10-05T19:50:42.000Z",
-   "date": "2026-10-05",
-   "engN": 25,
-   "kind": "quote",
-   "quoted": {
-    "id": "2107166500947910828",
-    "handle": "@CWAUnion",
-    "text": "Breaking: Post-Gazette union-busters have hit a dead end at Supreme Court and must pay back millions to @newsguild-CWA journalists.\nhttps://t.co/4ZZPxey81S"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107196340400951576",
-   "handle": "@RepYassAnsari",
-   "member": "Yassamin Ansari",
-   "district": "AZ-03",
-   "caucus": [
-    "CPC"
-   ],
-   "text": "Orphaned wells threaten our water, wildlife, and air, and are leaving Americans to foot the bill for the damage that oil and gas executives leave behind.\n\nI’m proud to lead the effort alongside @SenatorBennet to make the oil and gas industry clean up its own mess. Our bill would ensure oil and gas companies pay to clean up the wells they abandon.",
-   "topics": [
-    "climate"
-   ],
-   "time": "2026-10-05T19:48:52.000Z",
-   "date": "2026-10-05",
-   "engN": 28,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [
-     {
-      "id": "n_253a221eb302a38a",
-      "publisher": "The Hill",
-      "date": "2026-09-29",
-      "kind": "lead",
-      "url": "https://thehill.com/opinion/energy-environment/6115910-supreme-court-suncor-boulder/",
-      "text": "Big Oil can’t hide behind the Clean Air Act",
-      "publishedAt": "2026-09-29T14:00:00.000Z",
-      "fetchedAt": "2026-09-29T15:47:03.352Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_e793f78504c4dbb6",
-      "publisher": "Roll Call",
-      "date": "2026-09-29",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/09/29/wildfire-bill-to-ease-path-for-controlled-burns-passes-senate/",
-      "text": "The Senate passed legislation that would amend the Clean Air Act to ensure states would not be penalized for conducting prescribed burns intended to prevent larger, uncontrolled wildfires by unanimous consent on Tuesday.",
-      "publishedAt": "2026-09-29T19:06:51.000Z",
-      "fetchedAt": "2026-09-30T00:07:41.962Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
-  },
-  {
-   "id": "2107196330552484233",
-   "handle": "@RepCarbajal",
-   "member": "Salud O. Carbajal",
-   "district": "CA-24",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Hey Central Coast, my office is accepting Military Academy Applications until Wednesday, October 7th! Each year, it is an honor to nominate 10 outstanding individuals from our community to attend one of our nation's service academies. These applications are an important investment in our future and empower the next generation of leaders dedicated to serving our nation. \n\nFor more information on Military Academy Nominations, please visit https://t.co/IqM6wBAJs7",
-   "topics": [
-    "constituent-services",
-    "foreign-policy/military-veterans",
-    "foreign-policy"
-   ],
-   "time": "2026-10-05T19:48:49.000Z",
-   "date": "2026-10-05",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [
-     {
-      "id": "n_77ac750f269c34fa",
-      "publisher": "Roll Call",
-      "date": "2026-10-02",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/10/02/photos-of-the-week-september-25-october-1-2026/",
-      "text": "The Senate closed up shop Wednesday night to head home until after the midterm elections in November. Before leaving town, clouds appeared in the Hart Senate Office Building, and former special counsel Jack Smith appeared before the Senate Judiciary Committee. Here are photographs of the action captured by CQ Roll Call photojournalists this week.",
-      "publishedAt": "2026-10-02T10:24:32.000Z",
-      "fetchedAt": "2026-10-02T15:40:19.336Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_f08519ed983fce52",
-      "publisher": "NPR",
-      "date": "2026-10-02",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/02/nx-s1-5985789/trump-arch-protest-veterans-midterms",
-      "text": "\"It's the wrong monument, in the wrong place, at the wrong time, dedicated to the wrong man,\" said Jon Gundersen, a retired Army veteran and former Foreign Service officer who is one of the Vietnam War veterans suing the Trump administration over the arch.",
-      "publishedAt": "2026-10-02T21:44:07.000Z",
-      "fetchedAt": "2026-10-02T23:15:47.414Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-05T21:45:25.361Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -33829,6 +33816,10 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "1079061579973439488": "@RepSusieLee",
+  "1871623075822772224": "@RepYassAnsari",
+  "816705409486618624": "@RepTomSuozzi",
+  "1195472282329735169": "@mrvan4congress",
   "862393019173003264": "@DrKimSchrier",
   "1080885078425784320": "@RepGregStanton",
   "872156132688711681": "@LaurenUnderwood",
@@ -33895,7 +33886,6 @@
   "1082427779583541248": "@RepChuyGarcia",
   "1456381091598700556": "@RepShontelBrown",
   "1080222360643485698": "@RepAngieCraig",
-  "1871623075822772224": "@RepYassAnsari",
   "816157667882373120": "@RepCarbajal",
   "988135719951626240": "@Morrison4MN",
   "1080516116395499522": "@RepDavids",
@@ -33903,7 +33893,6 @@
   "1052896620797460481": "@RepHoulahan",
   "1872709283634397185": "@Rep_Whitesides",
   "1106949340197801986": "@HillaryScholten",
-  "816705409486618624": "@RepTomSuozzi",
   "1352760304271241218": "@RepTroyCarter",
   "1861777824463376384": "@RepJulieJohnson",
   "1872681063597887488": "@RepHerbConaway",
@@ -33912,7 +33901,6 @@
   "1858226214269272064": "@RepJohnnyO",
   "1082086081238102018": "@RepJahanaHayes",
   "1877088040453079040": "@RepDerekTranCA",
-  "1195472282329735169": "@mrvan4congress",
   "1610719275265802253": "@RepShriThanedar",
   "1082380458976051202": "@RepLucyMcBath",
   "806906355214852096": "@RepRaskin",
@@ -33946,7 +33934,6 @@
   "1610019555371372544": "@RepDanGoldman",
   "1610014478405406720": "@RepPettersen",
   "730899167740989441": "@JaredEMoskowitz",
-  "1079061579973439488": "@RepSusieLee",
   "1128147829606600706": "@TeresaForNM",
   "1609941568869335041": "@RepScholten",
   "991721030631780354": "@JahanaHayesCT",
@@ -33994,6 +33981,295 @@
   "1121495273514176512": "@realCleoFields"
  },
  "feedAll": [
+  {
+   "id": "2107278810366500968",
+   "authorId": "1079061579973439488",
+   "createdAt": "2026-10-06T01:16:34.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "October is Filipino American History Month!\n\nTogether, let’s honor generations of Filipino Americans whose leadership in health care, labor, public service, and the arts enriches our nation. https://t.co/3vbQsLoPr6",
+   "engN": 1,
+   "topics": [
+    "civil-rights"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107276685439914369",
+   "authorId": "1871623075822772224",
+   "createdAt": "2026-10-06T01:08:07.000Z",
+   "date": "2026-10-05",
+   "type": "quote",
+   "text": "Right now, there are thousands of brave people in Pakistan demanding the release of political prisoners, including Imran Khan. \n\nI stand with the Pakistani-American community advocating for human rights in Pakistan, free and fair elections, and the right to protest peacefully. https://t.co/9pw10qsCdo",
+   "engN": 30,
+   "topics": [
+    "foreign-policy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [
+     {
+      "id": "n_899c8579fe5292d4",
+      "publisher": "NPR",
+      "date": "2026-09-30",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/09/30/nx-s1-5962843/hhs-study-gender-ideology-flaws-missing-context",
+      "text": "But a recent report released by the agency has left some experts with substantial doubts about its researchers' methods, its claims about its findings and its authors' political intentions. The report , titled \"Where the Clinic Meets the Movement: Does Gender Ideology Arm Left-Wing Authoritarian Psychology?\" was not peer reviewed and its underlying data and funding have also not been made available. All are common best practices for research. (One author says its data will be released \"soon.\")",
+      "publishedAt": "2026-09-30T09:00:00.000Z",
+      "fetchedAt": "2026-09-30T09:41:25.152Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "quoted": {
+    "id": "2107095467213668845",
+    "handle": "@ErikSperling",
+    "text": "Everyone should pay attention to Pakistan's pro-democracy movement\n\nThis is the biggest challenge to the US-backed military regime in years\n\n\"Field Marshal\" Asim Munir badly lost the last elections…"
+   }
+  },
+  {
+   "id": "2107276118810366327",
+   "authorId": "122174004",
+   "createdAt": "2026-10-06T01:05:52.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Already this year, #TeamTitus has returned over $10 million to constituents #OnlyInDistrictOne in benefits like Social Security, Veterans Assistance, retirement funds, and Small Business aid. Please call on my office if you need anything, and we will be happy to help. https://t.co/Jkxn6jlppl",
+   "engN": 4,
+   "topics": [
+    "constituent-services"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [
+     {
+      "id": "n_46a7f893b6e41a06",
+      "publisher": "Roll Call",
+      "date": "2026-09-29",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/09/29/trumps-funding-cancellation-violates-budget-law-gao-says/",
+      "text": "The Government Accountability Office reaffirmed its opinion Tuesday that “pocket rescissions” are illegal, dealing a modest blow to President Donald Trump’s announcement last week of plans to cancel $810 million in spending without the approval of Congress.",
+      "publishedAt": "2026-09-29T17:43:30.000Z",
+      "fetchedAt": "2026-09-30T06:07:02.630Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     },
+     {
+      "id": "n_7ea33f5bf4a07190",
+      "publisher": "Roll Call",
+      "date": "2026-09-30",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/09/30/housing-groups-challenge-trump-funding-clawback/",
+      "text": "The lawsuit, filed Tuesday night in the U.S. District Court for the District of Columbia, focuses on one portion of the $810 million cancellation the Trump administration announced last week, a $56 million cut within the Department of Housing and Urban Development. The filing is the first of likely others over the sweeping cuts, which the Government Accountability Office has said are illegal .",
+      "publishedAt": "2026-09-30T16:01:01.000Z",
+      "fetchedAt": "2026-09-30T21:46:34.754Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107274829351059482",
+   "authorId": "334894942",
+   "createdAt": "2026-10-06T01:00:45.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "The MAGA election fraud playbook runs right through Northern California, unfolding in front of our eyes in Shasta County. \n\nIt goes like this:\n1. MAGA loyalist local election officials like Clint Curtis make false accusations of election fraud\n\n2. In a close election, Trump and his MAGA loyalists use these accusations to falsely claim that the election was rigged\n\n3. Then they contest the results and try to prevent your votes from being counted so that this corrupt, incompetent MAGA Congress stays in power even after the people vote them out\n\nHere's the best way to defeat this insidious plan:  vote, vote, vote. Make a plan to vote. Make sure your family and friends vote.  And try to get someone who usually doesn't vote to show up at the polls this time. If we make our voices loud enough - if we make this victory too big to rig - their plan won't stand a chance and democracy will prevail.",
+   "engN": 2,
+   "topics": [
+    "democracy/voting-rights",
+    "democracy",
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107274722790801693",
+   "authorId": "278005891",
+   "createdAt": "2026-10-06T01:00:19.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Happy World Teachers’ Day! To the teachers across the 10th District, thank you for your dedication to our children and for helping them learn the skills and lessons they’ll carry throughout their lives. https://t.co/c8wPqXfe0d",
+   "engN": 1,
+   "topics": [
+    "education/public-schools",
+    "education"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107273208361628058",
+   "authorId": "816705409486618624",
+   "createdAt": "2026-10-06T00:54:18.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "It was great to be with so many friends and neighbors tonight at the Friends of Arts & Music Enrichment celebration honoring Chris Barry and 50 years of Glen Cove TV. Chris’s dedication to expanding opportunities for youth to experience music and the arts has left a lasting mark on our community. Congratulations and thank you for all you do at FAME!",
+   "engN": 1,
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107273074227741050",
+   "authorId": "391445643",
+   "createdAt": "2026-10-06T00:53:46.000Z",
+   "date": "2026-10-05",
+   "type": "quote",
+   "text": "Stay tuned to see how well a midwestern gal does 🍗🥺🤪❣️ https://t.co/cjZgnMu8xw",
+   "engN": 18,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z",
+   "quoted": {
+    "id": "2107140915945254994",
+    "handle": "@gtwhitesides",
+    "text": "The fourth wing had @HaleyforMI on the floor! 🔥\n\nFind out how Haley handles the spice by tuning into our next Capitol Heat episode on 10/6 at https://t.co/8NiTNkscQD https://t.co/bcHyIWDGZH"
+   }
+  },
+  {
+   "id": "2107272964785701375",
+   "authorId": "480872337",
+   "createdAt": "2026-10-06T00:53:20.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Thank you to the League of Women Voters of Bowling Green and Perrysburg Area for hosting the Candidates Round Table yesterday afternoon. With early voting just a day away, voters want to hear directly from those on the ballot. Make your plan to vote, and I'll see you at the polls!",
+   "engN": 3,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics",
+    "democracy/voting-rights",
+    "democracy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107272673080275107",
+   "authorId": "1195472282329735169",
+   "createdAt": "2026-10-06T00:52:11.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Join us on Monday, October 12th for a Get Out The Vote Rally with Congressman Pete Aguilar. Click below to RSVP: https://t.co/xwqBxuR4zT",
+   "engN": 2,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
+  {
+   "id": "2107272023890088007",
+   "authorId": "2252635728",
+   "createdAt": "2026-10-06T00:49:36.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Granite Staters are speaking out and showing up — and that’s what gives me so much hope. 29 more days.🇺🇸 https://t.co/pMDsgybYr6",
+   "engN": 15,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 369,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T01:20:32.413Z"
+  },
   {
    "id": "2107270858180108459",
    "authorId": "2970279814",
@@ -75099,281 +75375,19 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106077311955271778",
-   "authorId": "61822673",
-   "createdAt": "2026-10-02T17:42:14.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "Election Day is just over a month away. Now is the time to make sure you’re registered, know your options, and are ready to vote. \n\nCheck your registration status, find an early voting location, and learn more at https://t.co/SvVm4dArlB. https://t.co/6aC58Sc9Bp",
-   "engN": 20,
-   "topics": [
-    "democracy/voting-rights",
-    "democracy",
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106077019264135654",
-   "authorId": "58928690",
-   "createdAt": "2026-10-02T17:41:05.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "Special thanks to our local representatives for sitting down with me yesterday for an immigration round table. We must work together to make sure than ICE detention facilities uphold the rights of all detainees, including legal representation, medical care, general hygiene, and safe entry.\n\nI’ve introduced the Dignity for Detained Immigrants Act with Rep. Jayapal because every individual deserves to be treated with basic respect, regardless of immigration status. I will continue to work with our state partners to address ongoing concerns about ICE detention facilities and ensure fair treatment of those in our immigration system.",
-   "engN": 30,
-   "topics": [
-    "immigration/ice-enforcement",
-    "immigration"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106076802649121051",
-   "authorId": "814179031956488192",
-   "createdAt": "2026-10-02T17:40:13.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "Trump says the AI industry can “self-police.” For technology this powerful, an honor system is not a safety policy. We need real oversight and enforceable safeguards.\nhttps://t.co/mW3aFsO7Ev",
-   "engN": 39,
-   "topics": [
-    "tech/ai-policy",
-    "tech"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106076663150760223",
-   "authorId": "18907639",
-   "createdAt": "2026-10-02T17:39:40.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "Clean water is a top priority for Long Islanders and it's always been mine, too. I've secured $58 million in federal funding to keep our drinking water clean, and I'll keep fighting to protect our water, the Sound, and our air. https://t.co/jys66L24Gh",
-   "engN": 23,
-   "topics": [
-    "climate"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106076602735923502",
-   "authorId": "1225929222839046144",
-   "createdAt": "2026-10-02T17:39:25.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "I always enjoy participating in the Arc of Northern Virginia candidate forum!\n\nDisability issues are deeply personal to me, and I was grateful for the opportunity to share my vision for a community where people with disabilities have every opportunity to live, learn, work, and thrive.\n\nEveryone deserves a seat at the table.",
-   "engN": 26,
-   "topics": [
-    "civil-rights/disability",
-    "civil-rights",
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106076144361431357",
-   "authorId": "1854256323547815957",
-   "createdAt": "2026-10-02T17:37:36.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "I led a bipartisan effort to stop the administration from politicizing lifesaving medical research grants and I’m glad they finally reversed course.\n\nWe cannot allow partisan politics to stand between groundbreaking research and the patients whose lives depend on it.\n\nhttps://t.co/YAezLRTQpx",
-   "engN": 18,
-   "topics": [
-    "healthcare/public-health",
-    "healthcare"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106075735320674346",
-   "authorId": "309070309",
-   "createdAt": "2026-10-02T17:35:58.000Z",
-   "date": "2026-10-02",
-   "type": "quote",
-   "text": "A vote for @BryanSteil is a vote for @realDonaldTrump.\n\nSteil’s fake stock ban bill makes sure that Trump could continue to profit off the White House by buying and selling stocks, just like members of Congress could still own, buy with dividends, and sell stock.\n\nSo swampy. 🦎 https://t.co/EFIF4g6soe",
-   "engN": 33,
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy",
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z",
-   "quoted": {
-    "id": "2105964800048009498",
-    "handle": "@journalsentinel",
-    "text": "Trump super PAC boosts Steil as race forecast moves more competitive https://t.co/djvyxilCK5"
-   }
-  },
-  {
-   "id": "2106075713354842624",
-   "authorId": "1051127714",
-   "createdAt": "2026-10-02T17:35:53.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "\"Unfortunately this is not the first time that the DOJ is weaponizing the agency to target our communities, and our LGBTQ+ community, especially our young people, are unfortunately yet another victim of that. The real victims are the actual patients and families who are losing a trusted provider.”\n\nRead more in @WashingtonBlade👇\nhttps://t.co/hzwZDU1y6d",
-   "engN": 18,
-   "topics": [
-    "civil-rights/lgbtq",
-    "civil-rights",
-    "democracy/courts-doj",
-    "democracy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106075336199078385",
-   "authorId": "1456381091598700556",
-   "createdAt": "2026-10-02T17:34:23.000Z",
-   "date": "2026-10-02",
-   "type": "tweet",
-   "text": "Very alarmed that the Trump and Patel-led FBI plan to acquire nationwide access to automatic license plate readers, such as those operated by Flock. \n\nProgressive Caucus Chair Greg Casar and I are demanding answers and using every tool we have to conduct congressional oversight. https://t.co/O2Di0FnFhg",
-   "engN": 53,
-   "topics": [
-    "public-safety/crime-policing",
-    "public-safety",
-    "democracy/executive-overreach",
-    "democracy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z"
-  },
-  {
-   "id": "2106075187699470552",
-   "authorId": "1569400849130049537",
-   "createdAt": "2026-10-02T17:33:48.000Z",
-   "date": "2026-10-02",
-   "type": "reply",
-   "text": "We won’t let this chickenhawk president exploit our servicemembers just because he can’t face the fact that the American people are fed up with his failed agenda of higher costs and unprecedented corruption. \n\nhttps://t.co/N5ILwIF6P3",
-   "engN": 1,
-   "topics": [
-    "foreign-policy/military-veterans",
-    "foreign-policy",
-    "democracy/executive-overreach",
-    "democracy",
-    "democracy/corruption-ethics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 310,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-03T07:47:06.151Z",
-   "quoted": {
-    "id": "2106075185040277986",
-    "handle": "@RepPatRyanNY",
-    "text": "Instead of working to lower costs, they’re cooking up ways to intimidate voters, refusing to rule out domestic troop deployments. \n\nThis bill provides a necessary check on the President. If he…"
-   }
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3406,
+ "feedAllTotal": 3416,
  "feedAllFiles": [
-  "feed-0-4e1d14d78197dd54.json",
-  "feed-1-9fcf571120d29966.json",
-  "feed-2-6ea1db64b18c4b68.json",
-  "feed-3-953e7c8ce6102ea8.json",
-  "feed-4-41c4f40fd63e4793.json",
-  "feed-5-b4b76b7766b871e2.json",
-  "feed-6-e7ef1338f60afbc3.json",
-  "feed-7-e3847e1bd6b4a934.json",
-  "feed-8-bc53f9480fe7e15b.json"
+  "feed-0-6f43071a84de19fb.json",
+  "feed-1-5f23a970bcf4dec6.json",
+  "feed-2-b8b1acff26c77295.json",
+  "feed-3-a2a0025c1c2ede9a.json",
+  "feed-4-8b03afcef9a29ab2.json",
+  "feed-5-6cc17387f4f169f1.json",
+  "feed-6-ec6be1079ae536a5.json",
+  "feed-7-637eaa8c45f02c26.json",
+  "feed-8-56eb4c687f3a3945.json"
  ]
 }
