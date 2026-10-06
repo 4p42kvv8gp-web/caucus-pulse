@@ -1,7 +1,7 @@
 {
  "date": "2026-10-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T05:56:27.464Z",
+ "classifiedAt": "2026-10-06T08:08:41.974Z",
  "assignments": {
   "2107320063070269807": [
    [
@@ -46,6 +46,34 @@
    [
     "economy",
     "prices-inflation"
+   ]
+  ],
+  "2107373983129842093": [
+   [
+    "tech",
+    null
+   ]
+  ],
+  "2107373992726364538": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107381598660546561": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107381715434094917": [
+   [
+    "tech",
+    "big-tech"
+   ],
+   [
+    "democracy",
+    "press-speech"
    ]
   ]
  },
@@ -168,6 +196,82 @@
     "textChars": 140,
     "textHash": "adfd8139a7c49df6254b534a9132b45acbd1aec84be9f5a5736e8705b0017431"
    }
+  },
+  "2107373983129842093": {
+   "contextVersion": 374,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b60a73f4e8ce72750bfe952ebef3aafc6f93757c2ff181422e053ceaf0b228c",
+   "quotedContext": {
+    "id": "2107101997056836085",
+    "authorId": "1248939194",
+    "handle": "ChombaBupe",
+    "createdAt": "2026-10-05T13:33:58.000Z",
+    "textChars": 312,
+    "textHash": "d9fb8d40a680118da62e548c9814f9cf71f334e7cc04b6950c55753630ab7cd5"
+   }
+  },
+  "2107373992726364538": {
+   "contextVersion": 374,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b60a73f4e8ce72750bfe952ebef3aafc6f93757c2ff181422e053ceaf0b228c",
+   "quotedContext": {
+    "id": "2107265696610783708",
+    "authorId": "1061102195003809793",
+    "handle": "Jon_RosenthalTX",
+    "createdAt": "2026-10-06T00:24:27.000Z",
+    "textChars": 292,
+    "textHash": "b9c0fd16582e68a2ca3d89a8d5ed47539b3aeee630eaa77f971d877c1f7d57e4"
+   }
+  },
+  "2107381598660546561": {
+   "contextVersion": 374,
+   "evidenceSupplied": [
+    {
+     "id": "n_6cfa688fff886c81",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-expressing-concern-about-gop-midterm-chances/",
+     "text": "During a stop in Denton, Texas, on Friday, Trump called “affordability” a “phony” word concocted by Democrats for purely political reasons. But he also called lingering inflation “very real” and said his party has to find a way to explain it, just weeks before Election Day.",
+     "title": "Trump expressing concern about GOP midterm chances",
+     "publishedAt": "2026-10-05T14:27:38.000Z",
+     "fetchedAt": "2026-10-05T19:04:45.931Z",
+     "version": 365,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9b60a73f4e8ce72750bfe952ebef3aafc6f93757c2ff181422e053ceaf0b228c",
+   "quotedContext": {
+    "id": "2107078705285869745",
+    "authorId": "859111834183401476",
+    "handle": "NathanForTexas",
+    "createdAt": "2026-10-05T12:01:25.000Z",
+    "textChars": 294,
+    "textHash": "353efe5d0b467a742936d9e6945d8eff4ef20a8e6119480e6919bffe057d6607"
+   }
+  },
+  "2107381715434094917": {
+   "contextVersion": 374,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9b60a73f4e8ce72750bfe952ebef3aafc6f93757c2ff181422e053ceaf0b228c",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107275213180121524",
+    "fingerprint": "4b16ed8099493a685a671f7e2684fdeddc271ba259f39e45fe2b09297fdb5cae"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107275213180121524",
+    "fingerprint": "4b16ed8099493a685a671f7e2684fdeddc271ba259f39e45fe2b09297fdb5cae"
+   }
   }
  },
  "needsContext": {
@@ -177,10 +281,14 @@
   "2107331175924773038": false,
   "2107339855189668306": false,
   "2107342176959271265": false,
-  "2107343552049266881": false
+  "2107343552049266881": false,
+  "2107373983129842093": false,
+  "2107373992726364538": false,
+  "2107381598660546561": false,
+  "2107381715434094917": false
  },
  "inputBlocks": {},
- "contextVersion": 372,
+ "contextVersion": 374,
  "emerging": [
   {
    "label": "Trump 'small price to pay' remark on Iran striking LA/San Diego",
@@ -208,22 +316,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107329196406272338",
-    "2107330433658839180",
-    "2107331175924773038",
-    "2107339855189668306",
-    "2107342176959271265",
-    "2107343552049266881"
+    "2107373983129842093",
+    "2107373992726364538",
+    "2107381598660546561",
+    "2107381715434094917"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T05:56:13.038Z",
-    "observedAt": "2026-10-06T05:56:27.461Z",
+    "attemptedAt": "2026-10-06T08:08:30.364Z",
+    "observedAt": "2026-10-06T08:08:41.970Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -231,24 +337,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T05:56:13.038Z",
-   "observedAt": "2026-10-06T05:56:27.461Z",
+   "attemptedAt": "2026-10-06T08:08:30.364Z",
+   "observedAt": "2026-10-06T08:08:41.970Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T05:56:13.038Z",
-   "observedAt": "2026-10-06T05:56:27.461Z",
+   "attemptedAt": "2026-10-06T08:08:30.364Z",
+   "observedAt": "2026-10-06T08:08:41.970Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T05:56:27.465Z"
+ "updatedAt": "2026-10-06T08:08:41.976Z"
 }
