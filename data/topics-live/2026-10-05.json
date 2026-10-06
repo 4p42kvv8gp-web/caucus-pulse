@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T00:36:15.421Z",
+ "classifiedAt": "2026-10-06T00:46:20.249Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -3797,6 +3797,31 @@
    [
     "immigration",
     "ice-enforcement"
+   ]
+  ],
+  "2107268631566401560": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107269766524113287": [],
+  "2107270054979252415": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2107270347514904997": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2107270858180108459": [
+   [
+    "tech",
+    "ai-policy"
    ]
   ]
  },
@@ -11387,6 +11412,36 @@
     "referenceId": "2107241335728283701",
     "fingerprint": "01cd10b005e482d73bbd7ee43bb06ea5521797fb46caf92ad200ce680e9e0ff6"
    }
+  },
+  "2107268631566401560": {
+   "contextVersion": 368,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e6e199e6151fcf379489f54673216e032dde97637d689d1130d0c5e15e5e158"
+  },
+  "2107269766524113287": {
+   "contextVersion": 368,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e6e199e6151fcf379489f54673216e032dde97637d689d1130d0c5e15e5e158"
+  },
+  "2107270054979252415": {
+   "contextVersion": 368,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e6e199e6151fcf379489f54673216e032dde97637d689d1130d0c5e15e5e158"
+  },
+  "2107270347514904997": {
+   "contextVersion": 368,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e6e199e6151fcf379489f54673216e032dde97637d689d1130d0c5e15e5e158"
+  },
+  "2107270858180108459": {
+   "contextVersion": 368,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e6e199e6151fcf379489f54673216e032dde97637d689d1130d0c5e15e5e158"
   }
  },
  "needsContext": {
@@ -11922,7 +11977,12 @@
   "2107262779409486234": false,
   "2107264908056580340": false,
   "2107267051639185727": false,
-  "2107267077564444725": false
+  "2107267077564444725": false,
+  "2107268631566401560": false,
+  "2107269766524113287": false,
+  "2107270054979252415": false,
+  "2107270347514904997": false,
+  "2107270858180108459": false
  },
  "inputBlocks": {},
  "contextVersion": 368,
@@ -12208,6 +12268,12 @@
    "ids": [
     "2107260484164464716"
    ]
+  },
+  {
+   "label": "Data center siting & community guardrails",
+   "ids": [
+    "2107270858180108459"
+   ]
   }
  ],
  "unclassified": [],
@@ -12221,47 +12287,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107244843189850543",
-    "2107244993505108023",
-    "2107245145427218463",
-    "2107245642028572808",
-    "2107246231970107482",
-    "2107246465282084933",
-    "2107246793948078299",
-    "2107246940849066230",
-    "2107246944737431627",
-    "2107246948797575592",
-    "2107247234131603882",
-    "2107247650626298009",
-    "2107247695073095799",
-    "2107248215062188215",
-    "2107248364127449440",
-    "2107248463536656667",
-    "2107248470692188452",
-    "2107249080036712675",
-    "2107249162991612007",
-    "2107249338909130864",
-    "2107250105053028620",
-    "2107250110027436037",
-    "2107250159222714564",
-    "2107251003817066726",
-    "2107251487978209390",
-    "2107251994188542426",
-    "2107252132051083539",
-    "2107252903190892973",
-    "2107253249644663091",
-    "2107253400421237046",
-    "2107253986717991213"
+    "2107268631566401560",
+    "2107269766524113287",
+    "2107270054979252415",
+    "2107270347514904997",
+    "2107270858180108459"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T00:34:57.782Z",
-    "observedAt": "2026-10-06T00:35:43.458Z",
+    "attemptedAt": "2026-10-06T00:46:13.191Z",
+    "observedAt": "2026-10-06T00:46:20.231Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 31,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   },
@@ -12402,24 +12442,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T00:35:43.471Z",
-   "observedAt": "2026-10-06T00:36:15.405Z",
+   "attemptedAt": "2026-10-06T00:46:13.191Z",
+   "observedAt": "2026-10-06T00:46:20.231Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T00:35:43.471Z",
-   "observedAt": "2026-10-06T00:36:15.405Z",
+   "attemptedAt": "2026-10-06T00:46:13.191Z",
+   "observedAt": "2026-10-06T00:46:20.231Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T00:36:15.425Z"
+ "updatedAt": "2026-10-06T00:46:20.252Z"
 }
