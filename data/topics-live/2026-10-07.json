@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T10:28:26.961Z",
+ "classifiedAt": "2026-10-07T11:59:50.188Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -67,6 +67,44 @@
    [
     "congress-politics",
     null
+   ]
+  ],
+  "2107784854762852608": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107788040290844752": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2107788292192096342": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2107790965263974789": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107792398164406349": [],
+  "2107793120213573983": [],
+  "2107794422129926635": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107800646581661701": [
+   [
+    "foreign-policy",
+    "middle-east"
    ]
   ]
  },
@@ -289,6 +327,161 @@
     "referenceId": "2107686895614300252",
     "fingerprint": "0187ab3ee1356088d9bf25dc8b2476e2dce0358fb642b226ec3f500891638ab3"
    }
+  },
+  "2107784854762852608": {
+   "contextVersion": 394,
+   "evidenceSupplied": [
+    {
+     "id": "n_71c36f13df82991e",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5984671/nevada-midterm-election-valor-carpetbagger-reno",
+     "text": "RENO, Nev. — The race for Nevada's 2nd Congressional District shouldn't be competitive, just based on history and math. But the Republican Party's nominee, David Flippo, is facing an unusually tough race despite having President Trump's endorsement, bogged down by allegations that he exaggerated his military service and lacks real ties to the district.",
+     "title": "Carpetbagger allegation, misplaced valor make Nevada's safe red House seat competitive",
+     "publishedAt": "2026-10-07T09:00:00.000Z",
+     "fetchedAt": "2026-10-07T09:42:24.142Z",
+     "version": 393,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fde2b735fc5ddc1d",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991646/what-challenges-lie-ahead-for-the-democratic-party-as-midterms-approach",
+     "text": "A MARTÍNEZ, HOST: Let's hear from someone who's working to elect Democrats in these midterms. Devan Barber is executive director of the Democratic Senatorial Campaign Committee, and she's on the line with us. Devan, we just heard from Domenico Montanaro that the super PAC affiliated with Senate Republicans is moving money into usually unfamiliar territories such as Kansas. Why do you think that is?",
+     "title": "What challenges lie ahead for the Democratic Party as midterms approach",
+     "publishedAt": "2026-10-06T10:53:02.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "quotedContext": {
+    "id": "2107632518618866173",
+    "authorId": "73754019",
+    "handle": "harrisonjaime",
+    "createdAt": "2026-10-07T00:42:05.000Z",
+    "textChars": 879,
+    "textHash": "d4fa8eba381c27287501b9282b269ef8cad9056bfce5511f7c53c12db23d152e"
+   }
+  },
+  "2107788040290844752": {
+   "contextVersion": 394,
+   "evidenceSupplied": [
+    {
+     "id": "n_deb19bdbff3c1dac",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/international/6129674-trump-saudi-israel-nuclear-deal/",
+     "text": "Saudi-Israel normalization may come, but don’t expect a warm peace",
+     "title": "Saudi-Israel normalization may come, but don’t expect a warm peace",
+     "publishedAt": "2026-10-06T16:00:00.000Z",
+     "fetchedAt": "2026-10-06T16:29:19.035Z",
+     "version": 381,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e"
+  },
+  "2107788292192096342": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e"
+  },
+  "2107790965263974789": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107581638318391479",
+    "fingerprint": "3a1043f2ad520166693de1e3f958902a5afc36ccc7ae242326c2ac3e35084df6"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107581638318391479",
+    "fingerprint": "3a1043f2ad520166693de1e3f958902a5afc36ccc7ae242326c2ac3e35084df6"
+   }
+  },
+  "2107792398164406349": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107633053954916520",
+    "fingerprint": "72a7c3a53571ed10d7937f3a8da8d710d7fbfc0ba855722e7ed5d71bd51f5914"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107633053954916520",
+    "fingerprint": "72a7c3a53571ed10d7937f3a8da8d710d7fbfc0ba855722e7ed5d71bd51f5914"
+   }
+  },
+  "2107793120213573983": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "quotedContext": {
+    "id": "2107787491231322566",
+    "authorId": "125453969",
+    "handle": "neeratanden",
+    "createdAt": "2026-10-07T10:57:53.000Z",
+    "textChars": 37,
+    "textHash": "4d35de6e780d3f6edc9ed19ab41779dacb817d2db66d2c0202613fd52b1e690d"
+   }
+  },
+  "2107794422129926635": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107588590108873135",
+    "fingerprint": "59c978aea78c0738b2dec42871a67439fd5141f9075612268833504dc0a46461"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107588590108873135",
+    "fingerprint": "59c978aea78c0738b2dec42871a67439fd5141f9075612268833504dc0a46461"
+   }
+  },
+  "2107800646581661701": {
+   "contextVersion": 394,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1683b4bd798617431ec10797fdd7f0bf45da8d522f1832f6a89a617ca6b3010e",
+   "quotedContext": {
+    "id": "2107123649165643988",
+    "authorId": "52660746",
+    "handle": "Israel",
+    "createdAt": "2026-10-05T15:00:01.000Z",
+    "textChars": 195,
+    "textHash": "3b82e656dc4a72a3a82689112935f120b839ec135c93aa81d2198297fdc6b81c"
+   }
   }
  },
  "needsContext": {
@@ -305,10 +498,18 @@
   "2107764161534939641": false,
   "2107764904157749516": false,
   "2107773265758613555": false,
-  "2107779031546646816": false
+  "2107779031546646816": false,
+  "2107784854762852608": false,
+  "2107788040290844752": false,
+  "2107788292192096342": false,
+  "2107790965263974789": false,
+  "2107792398164406349": true,
+  "2107793120213573983": true,
+  "2107794422129926635": false,
+  "2107800646581661701": false
  },
  "inputBlocks": {},
- "contextVersion": 393,
+ "contextVersion": 394,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -321,20 +522,25 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107764161534939641",
-    "2107764904157749516",
-    "2107773265758613555",
-    "2107779031546646816"
+    "2107613570896965797",
+    "2107784854762852608",
+    "2107788040290844752",
+    "2107788292192096342",
+    "2107790965263974789",
+    "2107792398164406349",
+    "2107793120213573983",
+    "2107794422129926635",
+    "2107800646581661701"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T10:28:16.643Z",
-    "observedAt": "2026-10-07T10:28:26.956Z",
+    "attemptedAt": "2026-10-07T11:59:35.740Z",
+    "observedAt": "2026-10-07T11:59:50.155Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 9,
     "retryCount": 0
    }
   }
@@ -342,24 +548,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T10:28:16.643Z",
-   "observedAt": "2026-10-07T10:28:26.956Z",
+   "attemptedAt": "2026-10-07T11:59:35.740Z",
+   "observedAt": "2026-10-07T11:59:50.155Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T10:28:16.643Z",
-   "observedAt": "2026-10-07T10:28:26.956Z",
+   "attemptedAt": "2026-10-07T11:59:35.740Z",
+   "observedAt": "2026-10-07T11:59:50.155Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T10:28:26.963Z"
+ "updatedAt": "2026-10-07T11:59:50.190Z"
 }
