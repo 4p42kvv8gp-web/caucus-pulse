@@ -1,0 +1,136 @@
+{
+ "date": "2026-10-07",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-07T05:39:32.335Z",
+ "assignments": {
+  "2107699073218457986": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2107700714491551884": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2107701072265625984": [],
+  "2107702549050700283": []
+ },
+ "incidents": {
+  "2107701072265625984": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "Bouquet Fire"
+  }
+ },
+ "provenance": {
+  "2107699073218457986": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1a41a3531901ac658843255bc31ee486ebdab97aec324addc3784e45eb68fe0d"
+  },
+  "2107700714491551884": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1a41a3531901ac658843255bc31ee486ebdab97aec324addc3784e45eb68fe0d"
+  },
+  "2107701072265625984": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1a41a3531901ac658843255bc31ee486ebdab97aec324addc3784e45eb68fe0d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107646905220256191",
+    "fingerprint": "85ae5d7b1723d4ef556d0c1891ab2ff67a7ab5e855a535a251af5a1360aa3072"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107646905220256191",
+    "fingerprint": "85ae5d7b1723d4ef556d0c1891ab2ff67a7ab5e855a535a251af5a1360aa3072"
+   }
+  },
+  "2107702549050700283": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1a41a3531901ac658843255bc31ee486ebdab97aec324addc3784e45eb68fe0d",
+   "quotedContext": {
+    "id": "2107639674907107436",
+    "authorId": "2233347469",
+    "handle": "SportsNetLA",
+    "createdAt": "2026-10-07T01:10:31.000Z",
+    "textChars": 80,
+    "textHash": "68f10c924f61f2cbdbf0cd28c4e1d10c7ce2dc1d2eb34e87f64eba42401eb124"
+   }
+  }
+ },
+ "needsContext": {
+  "2107699073218457986": false,
+  "2107700714491551884": false,
+  "2107701072265625984": false,
+  "2107702549050700283": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 391,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2107613570896965797",
+    "2107699073218457986",
+    "2107700714491551884",
+    "2107701072265625984",
+    "2107702549050700283"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-07T05:39:20.630Z",
+    "observedAt": "2026-10-07T05:39:32.307Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 5,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-07T05:39:20.630Z",
+   "observedAt": "2026-10-07T05:39:32.307Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 5,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-07T05:39:20.630Z",
+   "observedAt": "2026-10-07T05:39:32.307Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 5,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-07T05:39:32.336Z"
+}

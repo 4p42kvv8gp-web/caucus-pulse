@@ -1,7 +1,7 @@
 {
  "date": "2026-10-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T04:07:46.081Z",
+ "classifiedAt": "2026-10-07T05:39:32.328Z",
  "assignments": {
   "2107320063070269807": [
    [
@@ -12898,51 +12898,6 @@
    "evidenceUsed": [],
    "inputHash": "3e04c1496c321397a59aba25bd3d60508d544e7e80eefa53445e7f929bc82767"
   },
-  "2107613570896965797": {
-   "contextVersion": 390,
-   "evidenceSupplied": [
-    {
-     "id": "n_8f642b355cfed8f9",
-     "publisher": "The New York Times",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/10/06/us/politics/maine-senate-debate-takeaways.html",
-     "text": "Takeaways From the First Maine Senate Debate Between Susan Collins and Troy Jackson",
-     "title": "Takeaways From the First Maine Senate Debate Between Susan Collins and Troy Jackson",
-     "publishedAt": "2026-10-07T02:43:16.000Z",
-     "fetchedAt": "2026-10-07T03:15:40.989Z",
-     "version": 390,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_052df57b3b69db64",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6132984-maine-senate-debate-collins-jackson/",
-     "text": "Collins, Jackson clash in first Maine Senate debate: 3 takeaways",
-     "title": "Collins, Jackson clash in first Maine Senate debate: 3 takeaways",
-     "publishedAt": "2026-10-07T01:34:17.000Z",
-     "fetchedAt": "2026-10-07T03:15:40.989Z",
-     "version": 390,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "8db8012eeccfb3b6966d3c29c61e38d6916d3197422a4242b2e34f23fe4a52cb",
-   "quotedContext": {
-    "id": "2107611793153790238",
-    "authorId": "505079765",
-    "handle": "sambrodey",
-    "createdAt": "2026-10-06T23:19:43.000Z",
-    "textChars": 265,
-    "textHash": "b0dfe67c101e816e1be56cc4d8ea4486128a0fdbfef3dd645612755fc7c81e77"
-   }
-  },
   "2107661631261958397": {
    "contextVersion": 390,
    "evidenceSupplied": [],
@@ -13293,6 +13248,54 @@
    ],
    "evidenceUsed": [],
    "inputHash": "8db8012eeccfb3b6966d3c29c61e38d6916d3197422a4242b2e34f23fe4a52cb"
+  },
+  "2107613570896965797": {
+   "contextVersion": 391,
+   "evidenceSupplied": [
+    {
+     "id": "n_8f642b355cfed8f9",
+     "publisher": "The New York Times",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/06/us/politics/maine-senate-debate-takeaways.html",
+     "text": "Takeaways From the First Maine Senate Debate Between Susan Collins and Troy Jackson",
+     "title": "Takeaways From the First Maine Senate Debate Between Susan Collins and Troy Jackson",
+     "publishedAt": "2026-10-07T02:43:16.000Z",
+     "fetchedAt": "2026-10-07T03:15:40.989Z",
+     "version": 390,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_052df57b3b69db64",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6132984-maine-senate-debate-collins-jackson/",
+     "text": "Collins, Jackson clash in first Maine Senate debate: 4 takeaways",
+     "title": "Collins, Jackson clash in first Maine Senate debate: 4 takeaways",
+     "publishedAt": "2026-10-07T01:34:17.000Z",
+     "fetchedAt": "2026-10-07T04:53:48.036Z",
+     "version": 391,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8f642b355cfed8f9",
+    "n_052df57b3b69db64"
+   ],
+   "inputHash": "1a41a3531901ac658843255bc31ee486ebdab97aec324addc3784e45eb68fe0d",
+   "quotedContext": {
+    "id": "2107611793153790238",
+    "authorId": "505079765",
+    "handle": "sambrodey",
+    "createdAt": "2026-10-06T23:19:43.000Z",
+    "textChars": 265,
+    "textHash": "b0dfe67c101e816e1be56cc4d8ea4486128a0fdbfef3dd645612755fc7c81e77"
+   }
   }
  },
  "needsContext": {
@@ -13883,7 +13886,6 @@
   "2107657656655602015": false,
   "2107658452369633394": false,
   "2107659555551257047": false,
-  "2107613570896965797": false,
   "2107661631261958397": false,
   "2107662803104321713": false,
   "2107665352024904129": false,
@@ -13901,10 +13903,11 @@
   "2107673729257935277": false,
   "2107673869628956686": false,
   "2107675060576321559": false,
-  "2107675344304238997": false
+  "2107675344304238997": false,
+  "2107613570896965797": false
  },
  "inputBlocks": {},
- "contextVersion": 390,
+ "contextVersion": 391,
  "emerging": [
   {
    "label": "Trump 'small price to pay' remark on Iran striking LA/San Diego",
@@ -14493,34 +14496,20 @@
   "live_chunk-0": {
    "acceptedIds": [
     "2107613570896965797",
-    "2107661631261958397",
-    "2107662803104321713",
-    "2107665352024904129",
-    "2107666274990092417",
-    "2107667253462269977",
-    "2107667286824022121",
-    "2107668617127158138",
-    "2107668889580769784",
-    "2107669362035626086",
-    "2107669381572595815",
-    "2107670973382271093",
-    "2107672027872264465",
-    "2107672272240558461",
-    "2107672512746475583",
-    "2107673729257935277",
-    "2107673869628956686",
-    "2107675060576321559",
-    "2107675344304238997"
+    "2107699073218457986",
+    "2107700714491551884",
+    "2107701072265625984",
+    "2107702549050700283"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T04:07:06.769Z",
-    "observedAt": "2026-10-07T04:07:46.060Z",
+    "attemptedAt": "2026-10-07T05:39:20.630Z",
+    "observedAt": "2026-10-07T05:39:32.307Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 19,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   }
@@ -14528,24 +14517,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T04:07:06.769Z",
-   "observedAt": "2026-10-07T04:07:46.060Z",
+   "attemptedAt": "2026-10-07T05:39:20.630Z",
+   "observedAt": "2026-10-07T05:39:32.307Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T04:07:06.769Z",
-   "observedAt": "2026-10-07T04:07:46.060Z",
+   "attemptedAt": "2026-10-07T05:39:20.630Z",
+   "observedAt": "2026-10-07T05:39:32.307Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T04:07:46.085Z"
+ "updatedAt": "2026-10-07T05:39:32.332Z"
 }

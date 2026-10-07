@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-07T04:54:32.352Z",
- "lastPollAt": "2026-10-07T04:07:02.582Z",
- "lastPollAttemptAt": "2026-10-07T04:07:01.774Z",
+ "generatedAt": "2026-10-07T05:39:37.549Z",
+ "lastPollAt": "2026-10-07T05:39:16.795Z",
+ "lastPollAttemptAt": "2026-10-07T05:39:16.301Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-07T04:54:30.665Z"
+  "referenceAsOf": "2026-10-07T05:39:35.835Z"
  },
  "news": {
   "version": 391,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-07T04:54:31.168Z",
+   "asOf": "2026-10-07T05:39:36.360Z",
    "windowDays": 14,
-   "windowStart": "2026-09-23T04:54:31.168Z",
+   "windowStart": "2026-09-23T05:39:36.360Z",
    "eligibleItems": 1681,
    "withExcerpts": 170,
    "headlineOrSummary": 1511,
@@ -3545,9 +3545,9 @@
   "CAPAC": 15
  },
  "classification": {
-  "through": "2026-10-06",
-  "capturedIn24h": 582,
-  "classifiedIn24h": 582,
+  "through": "2026-10-07",
+  "capturedIn24h": 583,
+  "classifiedIn24h": 583,
   "taggedIn24h": 535,
   "pendingIn24h": 0,
   "momentumPaused": false,
@@ -3555,10 +3555,10 @@
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-07T04:07:06.769Z",
-   "lastSuccessAt": "2026-10-07T04:07:46.060Z",
-   "capturedIn24h": 582,
-   "classifiedIn24h": 582,
+   "lastAttemptAt": "2026-10-07T05:39:20.630Z",
+   "lastSuccessAt": "2026-10-07T05:39:32.307Z",
+   "capturedIn24h": 583,
+   "classifiedIn24h": 583,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 0,
+    "posts": 4,
     "mix": [
+     75,
      0,
-     0,
-     0
+     25
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
+    "classified": 4,
+    "tagged": 2,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -6844,13 +6844,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 4,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2864,
+    "posts": 2868,
     "mix": [
      83,
      5,
@@ -6859,8 +6859,8 @@
     "accounts": 333,
     "members": 203,
     "unidentifiedAccounts": 0,
-    "classified": 2864,
-    "tagged": 2599,
+    "classified": 2868,
+    "tagged": 2601,
     "pending": 0,
     "corePosts": 1165,
     "coreCounts": {
@@ -6868,43 +6868,43 @@
      "Healthcare": 245,
      "Corruption": 477
     },
-    "eng": 463498,
+    "eng": 463502,
     "perPost": 162,
     "top10Share": 55,
     "engDelta": 0
    },
    "curve48": [
     3,
-    3,
-    36,
-    125,
-    164,
-    139,
-    67,
-    22,
-    5,
     4,
-    40,
-    135,
-    192,
-    121,
-    62,
-    23
+    67,
+    146,
+    157,
+    126,
+    39,
+    19,
+    5,
+    3,
+    70,
+    153,
+    185,
+    95,
+    53,
+    19
    ]
   },
   "CPC": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
-     0,
+     100,
      0,
      0
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 0,
-    "tagged": 0,
+    "classified": 2,
+    "tagged": 2,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -6912,13 +6912,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 2,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1308,
+    "posts": 1310,
     "mix": [
      79,
      5,
@@ -6927,8 +6927,8 @@
     "accounts": 141,
     "members": 90,
     "unidentifiedAccounts": 0,
-    "classified": 1308,
-    "tagged": 1188,
+    "classified": 1310,
+    "tagged": 1190,
     "pending": 0,
     "corePosts": 575,
     "coreCounts": {
@@ -6936,42 +6936,42 @@
      "Healthcare": 107,
      "Corruption": 264
     },
-    "eng": 357320,
+    "eng": 357322,
     "perPost": 273,
     "top10Share": 68,
     "engDelta": 0
    },
    "curve48": [
     3,
-    1,
-    18,
-    54,
-    58,
-    70,
-    22,
-    11,
-    3,
+    0,
+    30,
+    57,
+    65,
+    59,
+    15,
+    9,
     2,
-    18,
-    60,
-    88,
-    49,
+    1,
     32,
-    11
+    65,
+    81,
+    45,
+    25,
+    12
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 0,
+    "posts": 2,
     "mix": [
+     50,
      0,
-     0,
-     0
+     50
     ],
-    "accounts": 0,
-    "members": 0,
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 0,
+    "classified": 2,
     "tagged": 0,
     "pending": 0,
     "corePosts": 0,
@@ -6980,13 +6980,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
+    "eng": 2,
+    "perPost": 1,
+    "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1666,
+    "posts": 1668,
     "mix": [
      82,
      5,
@@ -6995,7 +6995,7 @@
     "accounts": 188,
     "members": 110,
     "unidentifiedAccounts": 0,
-    "classified": 1666,
+    "classified": 1668,
     "tagged": 1507,
     "pending": 0,
     "corePosts": 650,
@@ -7004,28 +7004,28 @@
      "Healthcare": 137,
      "Corruption": 259
     },
-    "eng": 84534,
+    "eng": 84536,
     "perPost": 51,
     "top10Share": 51,
     "engDelta": 0
    },
    "curve48": [
     0,
-    2,
-    21,
-    82,
-    104,
-    72,
-    42,
-    14,
-    2,
     3,
-    25,
-    83,
-    112,
-    72,
-    28,
-    11
+    43,
+    94,
+    97,
+    67,
+    22,
+    12,
+    3,
+    2,
+    46,
+    89,
+    108,
+    53,
+    29,
+    7
    ]
   },
   "CBC": {
@@ -7080,20 +7080,20 @@
    "curve48": [
     0,
     0,
-    9,
-    23,
+    16,
     26,
-    17,
-    8,
+    20,
+    19,
+    2,
+    2,
+    3,
     1,
-    2,
-    2,
-    10,
-    27,
-    31,
-    22,
-    7,
-    3
+    15,
+    30,
+    29,
+    17,
+    6,
+    2
    ]
   },
   "CHC": {
@@ -7147,21 +7147,21 @@
    },
    "curve48": [
     0,
-    0,
+    1,
+    7,
+    22,
+    24,
+    25,
     4,
-    21,
-    18,
-    29,
-    9,
-    7,
+    5,
     0,
     0,
-    7,
-    21,
-    49,
-    26,
+    10,
+    27,
+    47,
+    22,
     16,
-    9
+    6
    ]
   },
   "CAPAC": {
@@ -7215,20 +7215,20 @@
    },
    "curve48": [
     3,
-    1,
-    4,
+    0,
+    6,
     8,
-    16,
-    21,
-    7,
+    17,
+    23,
+    3,
     4,
     2,
-    1,
+    0,
     2,
-    11,
-    18,
-    11,
-    5,
+    17,
+    15,
+    9,
+    4,
     0
    ]
   }
@@ -7239,16 +7239,16 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
+     "n": 2,
+     "eng": 2,
+     "m": 1,
+     "a": 1
     },
     "CPC": {
-     "n": 0,
-     "eng": 0,
-     "m": 0,
-     "a": 0
+     "n": 2,
+     "eng": 2,
+     "m": 1,
+     "a": 1
     },
     "NewDem": {
      "n": 0,
@@ -7277,14 +7277,14 @@
    },
    "w": {
     "All": {
-     "n": 615,
-     "eng": 120443,
+     "n": 617,
+     "eng": 120445,
      "m": 152,
      "a": 206
     },
     "CPC": {
-     "n": 226,
-     "eng": 90064,
+     "n": 228,
+     "eng": 90066,
      "m": 63,
      "a": 80
     },
@@ -7320,24 +7320,281 @@
     96,
     124,
     125,
-    0
+    2
    ],
-   "d": 21,
+   "d": 23,
    "mAvg": 65.2,
-   "epAvg": 196,
+   "epAvg": 195,
    "momentum": {
-    "score": 49,
+    "score": 50,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.71,
+    "volume": 0.73,
     "accel": 0,
     "adoption": 0.69693094629156,
     "eff": 3.6,
     "engLift": 0
    },
    "subs": [
+    {
+     "key": "town-halls",
+     "t": {
+      "All": {
+       "n": 2,
+       "eng": 2,
+       "m": 1,
+       "a": 1
+      },
+      "CPC": {
+       "n": 2,
+       "eng": 2,
+       "m": 1,
+       "a": 1
+      },
+      "NewDem": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CBC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CHC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      },
+      "CAPAC": {
+       "n": 0,
+       "eng": 0,
+       "m": 0,
+       "a": 0
+      }
+     },
+     "w": {
+      "All": {
+       "n": 168,
+       "eng": 3423,
+       "m": 83,
+       "a": 96
+      },
+      "CPC": {
+       "n": 62,
+       "eng": 1918,
+       "m": 36,
+       "a": 39
+      },
+      "NewDem": {
+       "n": 91,
+       "eng": 1575,
+       "m": 47,
+       "a": 56
+      },
+      "CBC": {
+       "n": 23,
+       "eng": 435,
+       "m": 13,
+       "a": 16
+      },
+      "CHC": {
+       "n": 30,
+       "eng": 596,
+       "m": 17,
+       "a": 17
+      },
+      "CAPAC": {
+       "n": 9,
+       "eng": 518,
+       "m": 6,
+       "a": 6
+      }
+     },
+     "lead": "@JoaquinCastrotx",
+     "leadPostId": "2106133955904700685",
+     "postIds": {
+      "t": [
+       "2107700714491551884",
+       "2107699073218457986"
+      ],
+      "w": [
+       "2107700714491551884",
+       "2107699073218457986",
+       "2107667286824022121",
+       "2107662803104321713",
+       "2107658452369633394",
+       "2107649987744059399",
+       "2107647857763241988",
+       "2107643898482864334",
+       "2107630412558368956",
+       "2107616669787111849",
+       "2107614653010632708",
+       "2107584099544334369",
+       "2107575244588564974",
+       "2107574937359892581",
+       "2107567967542419616",
+       "2107563932378337571",
+       "2107562161656807498",
+       "2107559659301191731",
+       "2107557639605322104",
+       "2107552367075799129",
+       "2107548728852886002",
+       "2107540745267691602",
+       "2107539636838953160",
+       "2107538794098618581",
+       "2107534910873641454",
+       "2107525273977532860",
+       "2107524613974733213",
+       "2107524579887649105",
+       "2107520371033530746",
+       "2107518310476603532",
+       "2107508386925523382",
+       "2107494713469370690",
+       "2107479394922967221",
+       "2107467866148856296",
+       "2107456801293971493",
+       "2107444260312121742",
+       "2107289066936897829",
+       "2107273208361628058",
+       "2107270347514904997",
+       "2107264908056580340",
+       "2107260124028961182",
+       "2107246793948078299",
+       "2107240830675116108",
+       "2107240811608084620",
+       "2107239275980820781",
+       "2107232808330752057",
+       "2107226706654175242",
+       "2107222382557728988",
+       "2107211186748174733",
+       "2107210540154077601",
+       "2107208787920896472",
+       "2107204031290745296",
+       "2107200063789314107",
+       "2107194277176488108",
+       "2107190177479418227",
+       "2107185497210528101",
+       "2107184048946778533",
+       "2107184044291109262",
+       "2107182008195833993",
+       "2107165287946883537",
+       "2107160274557911257",
+       "2107160060929490970",
+       "2107157093019001285",
+       "2107147928678625406",
+       "2107147855945150554",
+       "2107147636721459348",
+       "2107139142723273004",
+       "2107123763871383994",
+       "2107116685732069418",
+       "2106945498741616749",
+       "2106942497897234807",
+       "2106903989669204392",
+       "2106902404385964298",
+       "2106900456924422291",
+       "2106897366032978210",
+       "2106896069296861508",
+       "2106894593002262745",
+       "2106891030196858972",
+       "2106882509871145290",
+       "2106880354460025215",
+       "2106857909611274437",
+       "2106851689491734774",
+       "2106848257104331208",
+       "2106847753615851737",
+       "2106846084077375582",
+       "2106845231304106365",
+       "2106837543761101278",
+       "2106823165766746401",
+       "2106822154809696596",
+       "2106818948293685548",
+       "2106815443130347966",
+       "2106803465573765443",
+       "2106798899306406157",
+       "2106779378457760014",
+       "2106769299348353177",
+       "2106764330699984940",
+       "2106745988853682297",
+       "2106564457551826947",
+       "2106551690078150948",
+       "2106544855383949359",
+       "2106525448972767737",
+       "2106475364969062704",
+       "2106474537948750076",
+       "2106472420945109458",
+       "2106462735063990460",
+       "2106459273849176254",
+       "2106458712881938533",
+       "2106445968073801914",
+       "2106440781330555371",
+       "2106415673106645280",
+       "2106412391617773824",
+       "2106406523291230356",
+       "2106386679447626130",
+       "2106386420956807341",
+       "2106383972645196191",
+       "2106381278232956994",
+       "2106195957104939462",
+       "2106183860874567718",
+       "2106164777953456461",
+       "2106164559090434390",
+       "2106163607209677252",
+       "2106151508043764011",
+       "2106150100305125773",
+       "2106149947359834574",
+       "2106149759060680893",
+       "2106133955904700685",
+       "2106126761633460540",
+       "2106117304295800994",
+       "2106103182258536806",
+       "2106095643265532025",
+       "2106080094976450587",
+       "2106076602735923502",
+       "2106068138794102799",
+       "2106062078239027278",
+       "2106058084489502927",
+       "2106049641053642819",
+       "2106038667307335772",
+       "2106036489281036561",
+       "2106017239073685778",
+       "2105846385299931171",
+       "2105807335193239626",
+       "2105805085460799963",
+       "2105805045900194060",
+       "2105802911255032063",
+       "2105799783692874154",
+       "2105799444872774011",
+       "2105791781702873280",
+       "2105770186917990836",
+       "2105767682003882174",
+       "2105765738258551278",
+       "2105765570926817473",
+       "2105765048551436669",
+       "2105764505670074452",
+       "2105764405208060369",
+       "2105763719188021706",
+       "2105761842114986035",
+       "2105759561122496715",
+       "2105746079874478294",
+       "2105740461914620195",
+       "2105725431982735539",
+       "2105717175155658816",
+       "2105706498445967839",
+       "2105690679389118824",
+       "2105690453396099143",
+       "2105686138543632658",
+       "2105669991031095680",
+       "2105663186619801760",
+       "2105658240524554240"
+      ]
+     }
+    },
     {
      "key": "elections-2026",
      "t": {
@@ -7818,258 +8075,6 @@
      }
     },
     {
-     "key": "town-halls",
-     "t": {
-      "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CPC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CBC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CHC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      },
-      "CAPAC": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
-      }
-     },
-     "w": {
-      "All": {
-       "n": 166,
-       "eng": 3421,
-       "m": 83,
-       "a": 96
-      },
-      "CPC": {
-       "n": 60,
-       "eng": 1916,
-       "m": 36,
-       "a": 39
-      },
-      "NewDem": {
-       "n": 91,
-       "eng": 1575,
-       "m": 47,
-       "a": 56
-      },
-      "CBC": {
-       "n": 23,
-       "eng": 435,
-       "m": 13,
-       "a": 16
-      },
-      "CHC": {
-       "n": 30,
-       "eng": 596,
-       "m": 17,
-       "a": 17
-      },
-      "CAPAC": {
-       "n": 9,
-       "eng": 518,
-       "m": 6,
-       "a": 6
-      }
-     },
-     "lead": "@JoaquinCastrotx",
-     "leadPostId": "2106133955904700685",
-     "postIds": {
-      "t": [],
-      "w": [
-       "2107667286824022121",
-       "2107662803104321713",
-       "2107658452369633394",
-       "2107649987744059399",
-       "2107647857763241988",
-       "2107643898482864334",
-       "2107630412558368956",
-       "2107616669787111849",
-       "2107614653010632708",
-       "2107584099544334369",
-       "2107575244588564974",
-       "2107574937359892581",
-       "2107567967542419616",
-       "2107563932378337571",
-       "2107562161656807498",
-       "2107559659301191731",
-       "2107557639605322104",
-       "2107552367075799129",
-       "2107548728852886002",
-       "2107540745267691602",
-       "2107539636838953160",
-       "2107538794098618581",
-       "2107534910873641454",
-       "2107525273977532860",
-       "2107524613974733213",
-       "2107524579887649105",
-       "2107520371033530746",
-       "2107518310476603532",
-       "2107508386925523382",
-       "2107494713469370690",
-       "2107479394922967221",
-       "2107467866148856296",
-       "2107456801293971493",
-       "2107444260312121742",
-       "2107289066936897829",
-       "2107273208361628058",
-       "2107270347514904997",
-       "2107264908056580340",
-       "2107260124028961182",
-       "2107246793948078299",
-       "2107240830675116108",
-       "2107240811608084620",
-       "2107239275980820781",
-       "2107232808330752057",
-       "2107226706654175242",
-       "2107222382557728988",
-       "2107211186748174733",
-       "2107210540154077601",
-       "2107208787920896472",
-       "2107204031290745296",
-       "2107200063789314107",
-       "2107194277176488108",
-       "2107190177479418227",
-       "2107185497210528101",
-       "2107184048946778533",
-       "2107184044291109262",
-       "2107182008195833993",
-       "2107165287946883537",
-       "2107160274557911257",
-       "2107160060929490970",
-       "2107157093019001285",
-       "2107147928678625406",
-       "2107147855945150554",
-       "2107147636721459348",
-       "2107139142723273004",
-       "2107123763871383994",
-       "2107116685732069418",
-       "2106945498741616749",
-       "2106942497897234807",
-       "2106903989669204392",
-       "2106902404385964298",
-       "2106900456924422291",
-       "2106897366032978210",
-       "2106896069296861508",
-       "2106894593002262745",
-       "2106891030196858972",
-       "2106882509871145290",
-       "2106880354460025215",
-       "2106857909611274437",
-       "2106851689491734774",
-       "2106848257104331208",
-       "2106847753615851737",
-       "2106846084077375582",
-       "2106845231304106365",
-       "2106837543761101278",
-       "2106823165766746401",
-       "2106822154809696596",
-       "2106818948293685548",
-       "2106815443130347966",
-       "2106803465573765443",
-       "2106798899306406157",
-       "2106779378457760014",
-       "2106769299348353177",
-       "2106764330699984940",
-       "2106745988853682297",
-       "2106564457551826947",
-       "2106551690078150948",
-       "2106544855383949359",
-       "2106525448972767737",
-       "2106475364969062704",
-       "2106474537948750076",
-       "2106472420945109458",
-       "2106462735063990460",
-       "2106459273849176254",
-       "2106458712881938533",
-       "2106445968073801914",
-       "2106440781330555371",
-       "2106415673106645280",
-       "2106412391617773824",
-       "2106406523291230356",
-       "2106386679447626130",
-       "2106386420956807341",
-       "2106383972645196191",
-       "2106381278232956994",
-       "2106195957104939462",
-       "2106183860874567718",
-       "2106164777953456461",
-       "2106164559090434390",
-       "2106163607209677252",
-       "2106151508043764011",
-       "2106150100305125773",
-       "2106149947359834574",
-       "2106149759060680893",
-       "2106133955904700685",
-       "2106126761633460540",
-       "2106117304295800994",
-       "2106103182258536806",
-       "2106095643265532025",
-       "2106080094976450587",
-       "2106076602735923502",
-       "2106068138794102799",
-       "2106062078239027278",
-       "2106058084489502927",
-       "2106049641053642819",
-       "2106038667307335772",
-       "2106036489281036561",
-       "2106017239073685778",
-       "2105846385299931171",
-       "2105807335193239626",
-       "2105805085460799963",
-       "2105805045900194060",
-       "2105802911255032063",
-       "2105799783692874154",
-       "2105799444872774011",
-       "2105791781702873280",
-       "2105770186917990836",
-       "2105767682003882174",
-       "2105765738258551278",
-       "2105765570926817473",
-       "2105765048551436669",
-       "2105764505670074452",
-       "2105764405208060369",
-       "2105763719188021706",
-       "2105761842114986035",
-       "2105759561122496715",
-       "2105746079874478294",
-       "2105740461914620195",
-       "2105725431982735539",
-       "2105717175155658816",
-       "2105706498445967839",
-       "2105690679389118824",
-       "2105690453396099143",
-       "2105686138543632658",
-       "2105669991031095680",
-       "2105663186619801760",
-       "2105658240524554240"
-      ]
-     }
-    },
-    {
      "key": "house-floor",
      "t": {
       "All": {
@@ -8180,8 +8185,13 @@
     }
    ],
    "postIds": {
-    "t": [],
+    "t": [
+     "2107700714491551884",
+     "2107699073218457986"
+    ],
     "w": [
+     "2107700714491551884",
+     "2107699073218457986",
      "2107675344304238997",
      "2107669381572595815",
      "2107669362035626086",
@@ -8888,18 +8898,18 @@
     99,
     0
    ],
-   "d": 11,
+   "d": 9,
    "mAvg": 57.8,
    "epAvg": 151,
    "momentum": {
-    "score": 46,
+    "score": 45,
     "drivers": [
      "adoption",
      "caucus spread"
     ],
-    "volume": 0.61,
+    "volume": 0.59,
     "accel": 0,
-    "adoption": 0.7449567723342939,
+    "adoption": 0.7276657060518732,
     "eff": 3.7,
     "engLift": 0
    },
@@ -12352,7 +12362,7 @@
     108,
     0
    ],
-   "d": 96,
+   "d": 94,
    "mAvg": 41.2,
    "epAvg": 382,
    "momentum": {
@@ -21965,130 +21975,6 @@
    ]
   },
   {
-   "label": "Trump 'small price to pay' remark on Iran striking LA/San Diego",
-   "lastSeen": "2026-10-06T05:19:08.000Z",
-   "thresholdMet": true,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 3,
-   "members": 3,
-   "accounts": 3,
-   "postIds": [
-    "2107330433658839180",
-    "2107331175924773038",
-    "2107339855189668306"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2107330433658839180",
-     "handle": "@gtwhitesides",
-     "time": "2026-10-06T04:41:42.000Z"
-    },
-    {
-     "id": "2107331175924773038",
-     "handle": "@RobertGarcia",
-     "time": "2026-10-06T04:44:39.000Z"
-    },
-    {
-     "id": "2107339855189668306",
-     "handle": "@RepZoeLofgren",
-     "time": "2026-10-06T05:19:08.000Z"
-    }
-   ],
-   "sampleId": "2107331175924773038",
-   "sampleHandle": "@RobertGarcia",
-   "who": [
-    "@gtwhitesides",
-    "@RobertGarcia",
-    "@RepZoeLofgren"
-   ],
-   "cm": [
-    1,
-    1,
-    0,
-    1,
-    0
-   ],
-   "eng": 332,
-   "phrase": "profoundly dangerous",
-   "coherence": 33,
-   "since": "2026-10-06T04:41:42.000Z",
-   "shape": [
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3
-   ],
-   "sample": "This man is a lunatic and hard to understand how anyone can support him or his movement anymore. https://t.co/VV5mEWKtnd",
-   "suggest": "trump_small_price_to_pay_remark_on_iran_striking_la_san_diego",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [],
-   "related": [
-    {
-     "id": "2107512972251951110",
-     "sim": 0.8352,
-     "handle": "@RepGaramendi",
-     "text": "This man is not well. \n\nI'm outraged that Trump would say this about California. \n\nWe are not collateral damage in Trump’s quagmire in Iran, and voters will show him that in November.…",
-     "time": "2026-10-06T16:47:02.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2107535836694655018",
-     "sim": 0.8303,
-     "handle": "@RepGaramendi",
-     "text": "We had a deal that kept Iran from a nuclear weapon. Trump ripped it up, and now we're in a war.\n\nThis man is not well, and I'm outraged he'd even suggest that Los Angeles and San Diego being bombed…",
-     "time": "2026-10-06T18:17:54.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2107546411021611045",
-     "sim": 0.8277,
-     "handle": "@RepLuzRivas",
-     "text": "Reckless behavior from an unhinged president.\n\nInstead of ending his war in Iran, Trump is openly cheering on violence against the hardworking families who make Los Angeles special.\n\nAngelenos are…",
-     "time": "2026-10-06T18:59:55.000Z",
-     "topics": [
-      "foreign-policy/middle-east"
-     ]
-    },
-    {
-     "id": "2107637767295623520",
-     "sim": 0.827,
-     "handle": "@PeteAguilar",
-     "text": "Trump believes destroying California is a “small price to pay” for his failed war in Iran.\n\nWe can’t give his Republican enablers in Congress another two years. It’s time to vote them out.…",
-     "time": "2026-10-07T01:02:56.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "congress-politics/elections-2026"
-     ]
-    },
-    {
-     "id": "2107575567096910202",
-     "sim": 0.8261,
-     "handle": "@RepRobinKelly",
-     "text": "Did Trump just suggest letting Iran bomb two American cities?\n\nThese are outrageous, reckless, and DANGEROUS comments being made by the President of the United States.\n\nThis is gravely concerning.…",
-     "time": "2026-10-06T20:55:46.000Z",
-     "topics": [
-      "foreign-policy/middle-east"
-     ]
-    }
-   ]
-  },
-  {
    "label": "25th Amendment invocation calls against Trump",
    "lastSeen": "2026-10-07T03:31:07.000Z",
    "thresholdMet": false,
@@ -22220,12 +22106,125 @@
      ]
     }
    ]
+  },
+  {
+   "label": "Taxpayer-funded Trump 'Patriotic Ads'",
+   "lastSeen": "2026-10-07T03:26:23.000Z",
+   "thresholdMet": false,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 1,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2107673869628956686"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2107673869628956686",
+     "handle": "@dinatitus",
+     "time": "2026-10-07T03:26:23.000Z"
+    }
+   ],
+   "sampleId": "2107673869628956686",
+   "sampleHandle": "@dinatitus",
+   "who": [
+    "@dinatitus"
+   ],
+   "cm": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "eng": 21,
+   "phrase": "maga inc",
+   "coherence": 100,
+   "since": "2026-10-07T03:26:23.000Z",
+   "shape": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sample": "Trump says MAGA Inc. will pay for his ads going forward. \n\nNow pay back the nearly $10 million in taxpayer money already spent. \n\nNevada families have better…",
+   "suggest": "taxpayer_funded_trump_patriotic_ads",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [
+    {
+     "id": "n_00f25f5a0fa124d5",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6130848-trump-to-pay-patriotic-ads-backlash/",
+     "text": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "title": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
+     "publishedAt": "2026-10-06T01:58:51.000Z",
+     "fetchedAt": "2026-10-06T02:06:37.557Z",
+     "version": 370,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e413b3270802827e",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-reverses-course-on-publicly-funded-tv-political-ads/",
+     "text": "Facing a public backlash from lawmakers of both parties, Trump said in a post on his Truth Social site that he would in part use money raised by a super PAC, MAGA Inc., to fund the ads instead of relying on tax dollars.",
+     "title": "Trump reverses course on publicly funded TV political ads",
+     "publishedAt": "2026-10-05T21:44:14.000Z",
+     "fetchedAt": "2026-10-06T03:38:23.302Z",
+     "version": 371,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_616ddbcd2048ed35",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/05crypto/",
+     "text": "The three Democrats to whom Fairshake is donating $1 million each are Reps. Janelle Bynum of Oregon, Steven Horsford of Nevada, and Derek Tran of California.",
+     "title": "Crypto industry PAC gives to 32 House incumbents, on both sides",
+     "publishedAt": "2026-10-05T15:33:02.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "related": [
+    {
+     "id": "2105725683918073965",
+     "sim": 0.8295,
+     "handle": "@NikkiBudzinski",
+     "text": "Donald Trump is spending YOUR tax dollars to advertise himself.\n\nMillions in taxpayer money are being spent on ads featuring Trump and promoting his agenda.\n\nYour hard-earned money should be paying…",
+     "time": "2026-10-01T18:25:00.000Z",
+     "topics": [
+      "democracy/corruption-ethics"
+     ]
+    }
+   ]
   }
  ],
  "emergingCoverage": {
   "total": 289,
   "displayed": 12,
-  "activeThresholdClusters": 11
+  "activeThresholdClusters": 10
  },
  "incidents": [
   {
@@ -22237,12 +22236,12 @@
     "wildfire"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "active",
    "corroboration": {
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 4,
+    "statements": 5,
     "resolvedPeople": 1,
     "accounts": 2,
     "unresolvedAccounts": 0,
@@ -22257,7 +22256,7 @@
       ]
      }
     ],
-    "note": "4 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "note": "5 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Los Angeles County, CA · CA-27",
    "placeRaw": "Los Angeles County, CA",
@@ -22266,9 +22265,9 @@
    "handle": "@gtwhitesides",
    "member": "George Whitesides",
    "since": "2026-10-04T15:09:52.000Z",
-   "last": "2026-10-06T04:36:47.000Z",
-   "updates": 4,
-   "engN": 33,
+   "last": "2026-10-07T05:14:29.000Z",
+   "updates": 5,
+   "engN": 38,
    "amplifiers": 0,
    "others": [
     "@Rep_Whitesides"
@@ -22418,85 +22417,49 @@
       "sourceId": "2107329196406272338",
       "url": "https://x.com/i/web/status/2107329196406272338"
      }
+    },
+    {
+     "id": "2107701072265625984",
+     "sourceId": "2107701072265625984",
+     "url": "https://x.com/i/web/status/2107701072265625984",
+     "authorId": "5408852",
+     "personId": "member:george whitesides",
+     "referenceIds": [
+      "2107646905220256191"
+     ],
+     "time": "2026-10-07T05:14:29.000Z",
+     "who": "@gtwhitesides",
+     "tag": "repost",
+     "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+     "engN": 5,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "Bouquet Fire"
+     },
+     "evidence": {
+      "span": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2107701072265625984",
+      "url": "https://x.com/i/web/status/2107701072265625984"
+     }
     }
    ],
    "tweetIds": [
     "2106763740050046983",
     "2106792686778994766",
     "2107222147492106506",
-    "2107329196406272338"
+    "2107329196406272338",
+    "2107701072265625984"
    ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "sourceId": "2106792686778994766",
-      "url": "https://x.com/i/web/status/2106792686778994766",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "sourceId": "2107222147492106506",
-      "url": "https://x.com/i/web/status/2107222147492106506",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "src": "@gtwhitesides, 2026-10-05T21:31:24.000Z"
-     },
-     {
-      "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-      "sourceId": "2106763740050046983",
-      "url": "https://x.com/i/web/status/2106763740050046983",
-      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "sourceId": "2107222147492106506",
-      "url": "https://x.com/i/web/status/2107222147492106506",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "src": "@gtwhitesides, 2026-10-05T21:31:24.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "sourceId": "2106792686778994766",
-      "url": "https://x.com/i/web/status/2106792686778994766",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
-     },
-     {
-      "text": "Latest on the fire -- some great progress last night in hot temps.",
-      "sourceId": "2106763740050046983",
-      "url": "https://x.com/i/web/status/2106763740050046983",
-      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps.",
-      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-10-06T07:51:09.898Z",
-    "posts": 4,
-    "inputHash": "380a8c592c8b418a44bc8d1bbb8822af1981a37d1742becae70de181ac19f19c",
-    "rejectedItems": 0
-   },
+   "intel": null,
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -22505,7 +22468,8 @@
      "2106763740050046983",
      "2106792686778994766",
      "2107222147492106506",
-     "2107329196406272338"
+     "2107329196406272338",
+     "2107701072265625984"
     ],
     "repeatedSourceGroups": [
      {
@@ -22769,6 +22733,128 @@
  ],
  "incidentsFiltered": 0,
  "feed": [
+  {
+   "id": "2107702549050700283",
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "district": "CA-27",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Go 🟦! https://t.co/DSKklYMlsS",
+   "topics": [],
+   "time": "2026-10-07T05:20:21.000Z",
+   "date": "2026-10-07",
+   "engN": 2,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107639674907107436",
+    "handle": "@SportsNetLA",
+    "text": "#Dodgers take a 2-1 series lead! 😤\n\n#NLDS | #Postseason https://t.co/h48YmgTdyT"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z",
+   "isNew": false
+  },
+  {
+   "id": "2107701072265625984",
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "district": "CA-27",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+   "topics": [],
+   "time": "2026-10-07T05:14:29.000Z",
+   "date": "2026-10-07",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2107646905220256191",
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z",
+   "isNew": false
+  },
+  {
+   "id": "2107700714491551884",
+   "handle": "@RepBonamici",
+   "member": "Suzanne Bonamici",
+   "district": "OR-01",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Thank you so much to everyone who attended my Beaverton town hall meeting. The next fall town hall meeting will be in St. Helens at the St. Helens Senior Center. Event information below.\n\nSt. Helens Town Hall Meeting\nTomorrow, October 7\nSt. Helens Senior Center\n375 S 15th St, St Helens\n\nFor everyone’s safety and security, large bags and backpacks are not allowed at the town hall meetings. Small purses no larger than 4.5 by 6.5 inches are permitted. Attendees will not be allowed inside if they do not comply with these safety regulations. Doors will open an hour before each event.",
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "time": "2026-10-07T05:13:04.000Z",
+   "date": "2026-10-07",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z",
+   "isNew": false
+  },
+  {
+   "id": "2107699073218457986",
+   "handle": "@RepBonamici",
+   "member": "Suzanne Bonamici",
+   "district": "OR-01",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "Tonight was the inaugural meeting of my Youth Advisory Council. It was wonderful to speak with these civically engaged students from across NW Oregon! https://t.co/Jilru4SzbC",
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "time": "2026-10-07T05:06:32.000Z",
+   "date": "2026-10-07",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z",
+   "isNew": false
+  },
   {
    "id": "2107675344304238997",
    "handle": "@MikeLevin",
@@ -29998,150 +30084,6 @@
    },
    "metricsObservedAt": "2026-10-06T21:03:54.898Z",
    "isNew": false
-  },
-  {
-   "id": "2107563098655822237",
-   "handle": "@Foster4Congress",
-   "member": "Bill Foster",
-   "district": "IL-11",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "https://t.co/q3ftypvMxX",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-10-06T20:06:14.000Z",
-   "date": "2026-10-06",
-   "engN": 0,
-   "kind": "reply",
-   "quoted": {
-    "id": "2107563095128211963",
-    "handle": "@Foster4Congress",
-    "text": "NEW: I’m honored to be endorsed by the Chicago Tribune Editorial Board! \n\n“Our history with the moderate Foster goes back to the beginning of this smart and decent man’s political career and we’ve…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T21:03:54.898Z",
-   "isNew": false
-  },
-  {
-   "id": "2107563095128211963",
-   "handle": "@Foster4Congress",
-   "member": "Bill Foster",
-   "district": "IL-11",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "NEW: I’m honored to be endorsed by the Chicago Tribune Editorial Board! \n\n“Our history with the moderate Foster goes back to the beginning of this smart and decent man’s political career and we’ve endorsed him consistently across the years. We see no reason to stop.” https://t.co/5Mxd4hUODw",
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "time": "2026-10-06T20:06:13.000Z",
-   "date": "2026-10-06",
-   "engN": 4,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T21:03:54.898Z",
-   "isNew": false
-  },
-  {
-   "id": "2107562578197020747",
-   "handle": "@IlhanMN",
-   "member": "Ilhan Omar",
-   "district": "MN-05",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "Two-thirds of Americans support Medicare for All.\n\nAmericans are done with a healthcare system that puts profits before people.\n\nMedicare for All can save 114,000 lives and $1 trillion a year—turns out, progressive policies can be good politics AND good policy.",
-   "topics": [
-    "healthcare/medicare",
-    "healthcare"
-   ],
-   "time": "2026-10-06T20:04:09.000Z",
-   "date": "2026-10-06",
-   "engN": 280,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [
-     {
-      "id": "n_4c78f13fff85d9f0",
-      "publisher": "Roll Call",
-      "date": "2026-10-01",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/10/01/bill-easing-seniors-wheelchair-upgrade-costs-clears-senate/",
-      "text": "Due to a 2016 change in billing policies made by Medicare Part B’s contractors that process durable medical equipment payments, seniors who wanted to buy the lighter wheelchairs had to pay the full cost upfront and then seek reimbursement later.",
-      "publishedAt": "2026-10-01T16:16:49.000Z",
-      "fetchedAt": "2026-10-01T21:41:16.730Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T21:03:54.898Z",
-   "isNew": false
-  },
-  {
-   "id": "2107562165461016751",
-   "handle": "@RepZoeLofgren",
-   "member": "Zoe Lofgren",
-   "district": "CA-18",
-   "caucus": [],
-   "text": "As a former immigration lawyer and law professor, I’m committed to finding solutions to make our system more efficient and reasonable. If you missed our conversation last night, don’t worry! You can watch here: https://t.co/Wx6QvzqLAu",
-   "topics": [
-    "immigration"
-   ],
-   "time": "2026-10-06T20:02:31.000Z",
-   "date": "2026-10-06",
-   "engN": 4,
-   "kind": "reply",
-   "quoted": {
-    "id": "2107562161656807498",
-    "handle": "@RepZoeLofgren",
-    "text": "Thank you to everyone who joined my fireside chat last night in Soledad to discuss immigration, especially our young leaders from the Greenfield Youth Council who read questions from community…"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T21:03:54.898Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -30480,6 +30422,101 @@
   "1191327658124165123": "@Mfume4Congress"
  },
  "feedAll": [
+  {
+   "id": "2107702549050700283",
+   "authorId": "5408852",
+   "createdAt": "2026-10-07T05:20:21.000Z",
+   "date": "2026-10-07",
+   "type": "quote",
+   "text": "Go 🟦! https://t.co/DSKklYMlsS",
+   "engN": 2,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z",
+   "quoted": {
+    "id": "2107639674907107436",
+    "handle": "@SportsNetLA",
+    "text": "#Dodgers take a 2-1 series lead! 😤\n\n#NLDS | #Postseason https://t.co/h48YmgTdyT"
+   }
+  },
+  {
+   "id": "2107701072265625984",
+   "authorId": "5408852",
+   "createdAt": "2026-10-07T05:14:29.000Z",
+   "date": "2026-10-07",
+   "type": "retweet",
+   "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2107646905220256191",
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z"
+  },
+  {
+   "id": "2107700714491551884",
+   "authorId": "558769636",
+   "createdAt": "2026-10-07T05:13:04.000Z",
+   "date": "2026-10-07",
+   "type": "tweet",
+   "text": "Thank you so much to everyone who attended my Beaverton town hall meeting. The next fall town hall meeting will be in St. Helens at the St. Helens Senior Center. Event information below.\n\nSt. Helens Town Hall Meeting\nTomorrow, October 7\nSt. Helens Senior Center\n375 S 15th St, St Helens\n\nFor everyone’s safety and security, large bags and backpacks are not allowed at the town hall meetings. Small purses no larger than 4.5 by 6.5 inches are permitted. Attendees will not be allowed inside if they do not comply with these safety regulations. Doors will open an hour before each event.",
+   "engN": 1,
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z"
+  },
+  {
+   "id": "2107699073218457986",
+   "authorId": "558769636",
+   "createdAt": "2026-10-07T05:06:32.000Z",
+   "date": "2026-10-07",
+   "type": "tweet",
+   "text": "Tonight was the inaugural meeting of my Youth Advisory Council. It was wonderful to speak with these civically engaged students from across NW Oregon! https://t.co/Jilru4SzbC",
+   "engN": 1,
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 391,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T05:39:16.782Z"
+  },
   {
    "id": "2107675344304238997",
    "authorId": "14573926",
@@ -75106,18 +75143,42 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-04T07:47:40.370Z"
+  },
+  {
+   "id": "2106489238149578856",
+   "authorId": "1707910391844769792",
+   "createdAt": "2026-10-03T20:59:05.000Z",
+   "date": "2026-10-03",
+   "type": "tweet",
+   "text": "The LAST DAY to register for the elections is October 19th! 📆 \n\nTo check your registration, visit https://t.co/chO0wJ10Si https://t.co/sZ1xN0Alsd",
+   "engN": 8,
+   "topics": [
+    "democracy/voting-rights",
+    "democracy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 331,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-04T07:47:40.370Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2864,
+ "feedAllTotal": 2868,
  "feedAllFiles": [
-  "feed-0-0988ec0fa20db739.json",
-  "feed-1-0187ee622c9bc470.json",
-  "feed-2-a3857694715b350d.json",
-  "feed-3-87181beb5ffe9197.json",
-  "feed-4-430c8eaf15a594d0.json",
-  "feed-5-df4e20924d7d64d6.json",
-  "feed-6-538983fb2c09d0b2.json",
-  "feed-7-b9668b25ef04ce58.json"
+  "feed-0-bd64f59dd5b2a20f.json",
+  "feed-1-7c21fff1cd12a68d.json",
+  "feed-2-ea49138b1abb7252.json",
+  "feed-3-91e188b7aeb08173.json",
+  "feed-4-0927573e15c58c55.json",
+  "feed-5-08ee0b81817aa12a.json",
+  "feed-6-8af86c573fa178b2.json",
+  "feed-7-58e0676d5e102123.json"
  ]
 }
