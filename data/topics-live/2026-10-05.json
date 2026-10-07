@@ -1,7 +1,7 @@
 {
  "date": "2026-10-05",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-06T21:05:55.085Z",
+ "classifiedAt": "2026-10-07T00:55:58.065Z",
  "assignments": {
   "2106975038498873363": [
    [
@@ -6286,20 +6286,6 @@
    "evidenceUsed": [],
    "inputHash": "0c47023b90370deea1583f898d54572afc59f4940205a9c3c83ab9e6e60ba1e5"
   },
-  "2107154258596704501": {
-   "contextVersion": 363,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0c47023b90370deea1583f898d54572afc59f4940205a9c3c83ab9e6e60ba1e5",
-   "quotedContext": {
-    "id": "2107154255207702984",
-    "authorId": "1080851152151953410",
-    "handle": "RepJoshHarder",
-    "createdAt": "2026-10-05T17:01:38.000Z",
-    "textChars": 272,
-    "textHash": "9ab9d3bf47b40d803f2224596f3108f874873025da551be92902a901994b01d8"
-   }
-  },
   "2107154262145056883": {
    "contextVersion": 363,
    "evidenceSupplied": [],
@@ -12435,6 +12421,36 @@
    ],
    "evidenceUsed": [],
    "inputHash": "3c3d76869539f329657f0eca5445a67061ba3d84fdc28f21a957c778d4189795"
+  },
+  "2107154258596704501": {
+   "contextVersion": 388,
+   "evidenceSupplied": [
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "990c4c8b1b65d68e2c66384e75bf4cb3dd7984bb691b1fe45d036d2253c8cd6d",
+   "quotedContext": {
+    "id": "2107154255207702984",
+    "authorId": "1080851152151953410",
+    "handle": "RepJoshHarder",
+    "createdAt": "2026-10-05T17:01:38.000Z",
+    "textChars": 272,
+    "textHash": "9ab9d3bf47b40d803f2224596f3108f874873025da551be92902a901994b01d8"
+   }
   }
  },
  "needsContext": {
@@ -12608,7 +12624,6 @@
   "2107153921516908722": false,
   "2107153964785365194": false,
   "2107154255207702984": false,
-  "2107154258596704501": false,
   "2107154262145056883": false,
   "2107154265160483287": false,
   "2107154267509305851": false,
@@ -13010,10 +13025,11 @@
   "2107192817139253377": false,
   "2107216256063414680": false,
   "2107198873911304532": false,
-  "2107231642855096734": false
+  "2107231642855096734": false,
+  "2107154258596704501": false
  },
  "inputBlocks": {},
- "contextVersion": 385,
+ "contextVersion": 388,
  "emerging": [
   {
    "label": "AI consciousness / sentience debate",
@@ -13374,56 +13390,31 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107231642855096734",
-    "2107557098187821552",
-    "2107557426832486747",
-    "2107557639605322104",
-    "2107558510833856976",
-    "2107558704753307973",
-    "2107559168483721659",
-    "2107559659301191731",
-    "2107559813513163150",
-    "2107559989292183871",
-    "2107559993645904217",
-    "2107560307367592171",
-    "2107560862336930245",
-    "2107561531257004389",
-    "2107561960900276607",
-    "2107562093389976060",
-    "2107562161656807498",
-    "2107562165461016751",
-    "2107562578197020747",
-    "2107563095128211963",
-    "2107563098655822237",
-    "2107563229929181435",
-    "2107563617256120739",
-    "2107563892289249497",
-    "2107563932378337571",
-    "2107564261308297510",
-    "2107564299119989169",
-    "2107564793729094089",
-    "2107564802524467611",
-    "2107564977582469588",
-    "2107565361415455188",
-    "2107565442579485048",
-    "2107565569755033999",
-    "2107565595168514305",
-    "2107566106462568611",
-    "2107566412533481679",
-    "2107566874687091030",
-    "2107567108251136012",
-    "2107567622115967197",
-    "2107567967542419616"
+    "2107154258596704501",
+    "2107555691699241116",
+    "2107586612058100148",
+    "2107604966332624908",
+    "2107613570896965797",
+    "2107624572547891591",
+    "2107625203492655271",
+    "2107628759427768549",
+    "2107628777966875029",
+    "2107629266695512353",
+    "2107629492672082227",
+    "2107629891675922927",
+    "2107630095599128902",
+    "2107630170890760275",
+    "2107630412558368956"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-06T21:04:01.343Z",
-    "observedAt": "2026-10-06T21:04:57.324Z",
+    "attemptedAt": "2026-10-07T00:55:21.169Z",
+    "observedAt": "2026-10-07T00:55:45.745Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   }
@@ -13431,24 +13422,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-06T21:04:01.343Z",
-   "observedAt": "2026-10-06T21:04:57.324Z",
+   "attemptedAt": "2026-10-07T00:55:21.169Z",
+   "observedAt": "2026-10-07T00:55:45.745Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-06T21:04:01.343Z",
-   "observedAt": "2026-10-06T21:04:57.324Z",
+   "attemptedAt": "2026-10-07T00:55:21.169Z",
+   "observedAt": "2026-10-07T00:55:45.745Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-06T21:05:55.090Z"
+ "updatedAt": "2026-10-07T00:55:58.069Z"
 }
