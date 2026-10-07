@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T05:39:32.335Z",
+ "classifiedAt": "2026-10-07T08:07:42.110Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -16,7 +16,30 @@
    ]
   ],
   "2107701072265625984": [],
-  "2107702549050700283": []
+  "2107702549050700283": [],
+  "2107711828063051994": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107712875523371493": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107740695461052442": [],
+  "2107742602007326929": [
+   [
+    "education",
+    "public-schools"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
  },
  "incidents": {
   "2107701072265625984": {
@@ -69,13 +92,85 @@
     "textChars": 80,
     "textHash": "68f10c924f61f2cbdbf0cd28c4e1d10c7ce2dc1d2eb34e87f64eba42401eb124"
    }
+  },
+  "2107711828063051994": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9a71529ea13b83dba0ec9f64f8482b27a51e980e3ed573f6d911418f6e2691cd",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107460076911071421",
+    "fingerprint": "3723fd3326530ba18dc13fa28c28b18d8088b3c977ef8ed32808a6d64ee2cb22"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107460076911071421",
+    "fingerprint": "3723fd3326530ba18dc13fa28c28b18d8088b3c977ef8ed32808a6d64ee2cb22"
+   }
+  },
+  "2107712875523371493": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9a71529ea13b83dba0ec9f64f8482b27a51e980e3ed573f6d911418f6e2691cd",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107507139501605151",
+    "fingerprint": "34679f9d43cc20924e70c64a5808d6c56ea70ef9e88c043a834ec27a3a33aa1f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107507139501605151",
+    "fingerprint": "34679f9d43cc20924e70c64a5808d6c56ea70ef9e88c043a834ec27a3a33aa1f"
+   }
+  },
+  "2107740695461052442": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9a71529ea13b83dba0ec9f64f8482b27a51e980e3ed573f6d911418f6e2691cd",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107485395491721279",
+    "fingerprint": "6c5b2fcb21077c63a0d32e40c3cb538cbd6875232a4b5e506b74c186395081a0"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107485395491721279",
+    "fingerprint": "6c5b2fcb21077c63a0d32e40c3cb538cbd6875232a4b5e506b74c186395081a0"
+   }
+  },
+  "2107742602007326929": {
+   "contextVersion": 391,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9a71529ea13b83dba0ec9f64f8482b27a51e980e3ed573f6d911418f6e2691cd",
+   "quotedContext": {
+    "id": "2107462608571830602",
+    "authorId": "1725551528",
+    "handle": "LSPmatt",
+    "createdAt": "2026-10-06T13:26:55.000Z",
+    "textChars": 309,
+    "textHash": "b453e2a686b4905258d9d555618f49f281476e9d3176e3bc412eb8b9a2e2b783"
+   }
   }
  },
  "needsContext": {
   "2107699073218457986": false,
   "2107700714491551884": false,
   "2107701072265625984": false,
-  "2107702549050700283": false
+  "2107702549050700283": false,
+  "2107711828063051994": false,
+  "2107712875523371493": false,
+  "2107740695461052442": true,
+  "2107742602007326929": false
  },
  "inputBlocks": {},
  "contextVersion": 391,
@@ -91,21 +186,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107613570896965797",
-    "2107699073218457986",
-    "2107700714491551884",
-    "2107701072265625984",
-    "2107702549050700283"
+    "2107711828063051994",
+    "2107712875523371493",
+    "2107740695461052442",
+    "2107742602007326929"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T05:39:20.630Z",
-    "observedAt": "2026-10-07T05:39:32.307Z",
+    "attemptedAt": "2026-10-07T08:07:32.887Z",
+    "observedAt": "2026-10-07T08:07:42.107Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -113,24 +207,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T05:39:20.630Z",
-   "observedAt": "2026-10-07T05:39:32.307Z",
+   "attemptedAt": "2026-10-07T08:07:32.887Z",
+   "observedAt": "2026-10-07T08:07:42.107Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T05:39:20.630Z",
-   "observedAt": "2026-10-07T05:39:32.307Z",
+   "attemptedAt": "2026-10-07T08:07:32.887Z",
+   "observedAt": "2026-10-07T08:07:42.107Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T05:39:32.336Z"
+ "updatedAt": "2026-10-07T08:07:42.111Z"
 }
