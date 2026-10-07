@@ -1,7 +1,7 @@
 {
  "date": "2026-10-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T02:29:17.172Z",
+ "classifiedAt": "2026-10-07T02:36:00.568Z",
  "assignments": {
   "2107320063070269807": [
    [
@@ -4195,6 +4195,16 @@
    [
     "congress-politics",
     "town-halls"
+   ]
+  ],
+  "2107659555551257047": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "education",
+    "public-schools"
    ]
   ]
  },
@@ -12767,6 +12777,12 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "b435f28b6224d56f03aa03943722f123e0d8450e95ea06711f738b7e8c92fe6e"
+  },
+  "2107659555551257047": {
+   "contextVersion": 389,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3e04c1496c321397a59aba25bd3d60508d544e7e80eefa53445e7f929bc82767"
   }
  },
  "needsContext": {
@@ -13356,7 +13372,8 @@
   "2107654779354628134": false,
   "2107655914807607559": false,
   "2107657656655602015": false,
-  "2107658452369633394": false
+  "2107658452369633394": false,
+  "2107659555551257047": false
  },
  "inputBlocks": {},
  "contextVersion": 389,
@@ -13922,42 +13939,17 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107635997932712263",
-    "2107637053554868647",
-    "2107637767295623520",
-    "2107638795617100182",
-    "2107638950282346536",
-    "2107639085405761635",
-    "2107639649351196866",
-    "2107643898482864334",
-    "2107644724056080854",
-    "2107646326725132361",
-    "2107647712749621725",
-    "2107647715886973222",
-    "2107647857763241988",
-    "2107648365563363738",
-    "2107648981870264432",
-    "2107649213144453332",
-    "2107649794713833792",
-    "2107649935524958406",
-    "2107649987744059399",
-    "2107650665908781242",
-    "2107651447135285757",
-    "2107654174401876069",
-    "2107654779354628134",
-    "2107655914807607559",
-    "2107657656655602015",
-    "2107658452369633394"
+    "2107659555551257047"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T02:28:39.281Z",
-    "observedAt": "2026-10-07T02:29:17.150Z",
+    "attemptedAt": "2026-10-07T02:35:55.533Z",
+    "observedAt": "2026-10-07T02:36:00.257Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 26,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -13965,24 +13957,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T02:28:39.281Z",
-   "observedAt": "2026-10-07T02:29:17.150Z",
+   "attemptedAt": "2026-10-07T02:35:55.533Z",
+   "observedAt": "2026-10-07T02:36:00.257Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 26,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T02:28:39.281Z",
-   "observedAt": "2026-10-07T02:29:17.150Z",
+   "attemptedAt": "2026-10-07T02:35:55.533Z",
+   "observedAt": "2026-10-07T02:36:00.257Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 26,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T02:29:17.181Z"
+ "updatedAt": "2026-10-07T02:36:00.572Z"
 }
