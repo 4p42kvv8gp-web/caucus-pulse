@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-07T08:55:15.261Z",
- "lastPollAt": "2026-10-07T08:07:30.941Z",
- "lastPollAttemptAt": "2026-10-07T08:07:30.485Z",
+ "generatedAt": "2026-10-07T09:23:03.939Z",
+ "lastPollAt": "2026-10-07T09:22:50.285Z",
+ "lastPollAttemptAt": "2026-10-07T09:22:49.796Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-07T08:55:13.481Z"
+  "referenceAsOf": "2026-10-07T09:23:02.241Z"
  },
  "news": {
   "version": 392,
-  "items": 1157,
+  "items": 1156,
   "latestPublishedAt": "2026-10-07T08:44:28.000Z",
   "latestFetchedAt": "2026-10-07T08:54:36.907Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-07T08:55:13.988Z",
+   "asOf": "2026-10-07T09:23:02.740Z",
    "windowDays": 14,
-   "windowStart": "2026-09-23T08:55:13.988Z",
-   "eligibleItems": 1677,
-   "withExcerpts": 170,
-   "headlineOrSummary": 1507,
+   "windowStart": "2026-09-23T09:23:02.740Z",
+   "eligibleItems": 1666,
+   "withExcerpts": 164,
+   "headlineOrSummary": 1502,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3379,8 +3379,8 @@
      "id": "npr-politics",
      "publisher": "NPR",
      "sourceUrl": "https://feeds.npr.org/1014/rss.xml",
-     "eligibleItems": 91,
-     "withExcerpts": 84,
+     "eligibleItems": 85,
+     "withExcerpts": 78,
      "headlineOrSummary": 7,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-07T08:44:28.000Z",
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 991,
+     "eligibleItems": 990,
      "withExcerpts": 0,
-     "headlineOrSummary": 991,
+     "headlineOrSummary": 990,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-07T03:22:18.000Z",
      "latestItem": {
@@ -3475,9 +3475,9 @@
      "id": "wapo-politics",
      "publisher": "The Washington Post",
      "sourceUrl": "https://feeds.washingtonpost.com/rss/politics",
-     "eligibleItems": 201,
+     "eligibleItems": 197,
      "withExcerpts": 0,
-     "headlineOrSummary": 201,
+     "headlineOrSummary": 197,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-07T01:25:23.000Z",
      "latestItem": {
@@ -3546,8 +3546,8 @@
  },
  "classification": {
   "through": "2026-10-07",
-  "capturedIn24h": 582,
-  "classifiedIn24h": 582,
+  "capturedIn24h": 584,
+  "classifiedIn24h": 584,
   "taggedIn24h": 533,
   "pendingIn24h": 0,
   "momentumPaused": false,
@@ -3555,10 +3555,10 @@
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-07T08:07:32.887Z",
-   "lastSuccessAt": "2026-10-07T08:07:42.107Z",
-   "capturedIn24h": 582,
-   "classifiedIn24h": 582,
+   "lastAttemptAt": "2026-10-07T09:22:54.018Z",
+   "lastSuccessAt": "2026-10-07T09:22:58.829Z",
+   "capturedIn24h": 584,
+   "classifiedIn24h": 584,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,16 +6826,16 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 8,
+    "posts": 10,
     "mix": [
-     50,
+     60,
      0,
-     50
+     40
     ],
     "accounts": 3,
     "members": 3,
     "unidentifiedAccounts": 0,
-    "classified": 8,
+    "classified": 10,
     "tagged": 5,
     "pending": 0,
     "corePosts": 0,
@@ -6844,13 +6844,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 4,
+    "eng": 5,
     "perPost": 1,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2872,
+    "posts": 2874,
     "mix": [
      83,
      5,
@@ -6859,7 +6859,7 @@
     "accounts": 333,
     "members": 203,
     "unidentifiedAccounts": 0,
-    "classified": 2872,
+    "classified": 2874,
     "tagged": 2604,
     "pending": 0,
     "corePosts": 1165,
@@ -6868,27 +6868,27 @@
      "Healthcare": 245,
      "Corruption": 477
     },
-    "eng": 639929,
+    "eng": 639930,
     "perPost": 223,
     "top10Share": 54,
     "engDelta": 0
    },
    "curve48": [
-    8,
-    68,
-    150,
+    12,
+    79,
+    158,
+    165,
+    101,
+    31,
+    12,
+    5,
+    9,
+    91,
     168,
-    109,
-    38,
-    17,
-    5,
-    5,
+    175,
     74,
-    163,
-    183,
-    86,
-    49,
-    18,
+    53,
+    10,
     4
    ]
   },
@@ -6942,34 +6942,102 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    34,
-    58,
-    73,
-    48,
-    13,
-    9,
-    2,
     1,
-    36,
-    66,
-    84,
-    39,
-    23,
-    12,
+    44,
+    54,
+    77,
+    41,
+    11,
+    7,
+    2,
+    2,
+    40,
+    77,
+    78,
+    32,
+    27,
+    5,
     0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 6,
+    "posts": 8,
     "mix": [
-     33,
+     50,
      0,
-     67
+     50
     ],
     "accounts": 2,
     "members": 2,
+    "unidentifiedAccounts": 0,
+    "classified": 8,
+    "tagged": 3,
+    "pending": 0,
+    "corePosts": 0,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 0
+    },
+    "eng": 3,
+    "perPost": 0,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 1674,
+    "mix": [
+     82,
+     5,
+     13
+    ],
+    "accounts": 188,
+    "members": 110,
+    "unidentifiedAccounts": 0,
+    "classified": 1674,
+    "tagged": 1510,
+    "pending": 0,
+    "corePosts": 650,
+    "coreCounts": {
+     "Affordability": 291,
+     "Healthcare": 137,
+     "Corruption": 259
+    },
+    "eng": 109518,
+    "perPost": 65,
+    "top10Share": 51,
+    "engDelta": 0
+   },
+   "curve48": [
+    10,
+    49,
+    103,
+    96,
+    54,
+    20,
+    6,
+    3,
+    8,
+    58,
+    93,
+    101,
+    44,
+    27,
+    5,
+    4
+   ]
+  },
+  "CBC": {
+   "t": {
+    "posts": 6,
+    "mix": [
+     50,
+     0,
+     50
+    ],
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 6,
     "tagged": 3,
@@ -6980,81 +7048,13 @@
      "Healthcare": 0,
      "Corruption": 0
     },
-    "eng": 2,
+    "eng": 1,
     "perPost": 0,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1672,
-    "mix": [
-     82,
-     5,
-     13
-    ],
-    "accounts": 188,
-    "members": 110,
-    "unidentifiedAccounts": 0,
-    "classified": 1672,
-    "tagged": 1510,
-    "pending": 0,
-    "corePosts": 650,
-    "coreCounts": {
-     "Affordability": 291,
-     "Healthcare": 137,
-     "Corruption": 259
-    },
-    "eng": 109517,
-    "perPost": 66,
-    "top10Share": 51,
-    "engDelta": 0
-   },
-   "curve48": [
-    6,
-    42,
-    98,
-    102,
-    57,
-    22,
-    11,
-    3,
-    4,
-    47,
-    95,
-    104,
-    50,
-    27,
-    7,
-    4
-   ]
-  },
-  "CBC": {
-   "t": {
-    "posts": 4,
-    "mix": [
-     25,
-     0,
-     75
-    ],
-    "accounts": 1,
-    "members": 1,
-    "unidentifiedAccounts": 0,
-    "classified": 4,
-    "tagged": 3,
-    "pending": 0,
-    "corePosts": 0,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 0
-    },
-    "eng": 0,
-    "perPost": 0,
-    "top10Share": 0,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 543,
+    "posts": 545,
     "mix": [
      84,
      5,
@@ -7063,7 +7063,7 @@
     "accounts": 79,
     "members": 49,
     "unidentifiedAccounts": 0,
-    "classified": 543,
+    "classified": 545,
     "tagged": 468,
     "pending": 0,
     "corePosts": 214,
@@ -7072,27 +7072,27 @@
      "Healthcare": 54,
      "Corruption": 76
     },
-    "eng": 140255,
-    "perPost": 258,
+    "eng": 140256,
+    "perPost": 257,
     "top10Share": 83,
     "engDelta": 0
    },
    "curve48": [
-    2,
-    15,
-    26,
+    3,
+    18,
+    25,
     21,
-    17,
-    3,
-    1,
-    3,
-    1,
     16,
-    31,
-    32,
-    13,
-    5,
+    1,
+    1,
+    3,
     2,
+    22,
+    32,
+    29,
+    10,
+    4,
+    3,
     4
    ]
   },
@@ -7148,19 +7148,19 @@
    "curve48": [
     1,
     7,
-    23,
-    29,
+    25,
+    28,
     19,
     6,
-    3,
+    2,
     0,
     2,
-    9,
-    28,
-    49,
-    19,
-    16,
-    5,
+    12,
+    29,
+    47,
+    17,
+    20,
+    1,
     0
    ]
   },
@@ -7214,20 +7214,20 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    6,
-    11,
-    19,
-    18,
-    3,
+    1,
+    7,
+    12,
+    21,
+    15,
+    1,
     4,
     2,
     0,
-    3,
+    4,
     16,
-    15,
-    10,
-    3,
+    19,
+    7,
+    1,
     0,
     0
    ]
@@ -12227,14 +12227,12 @@
        ]
       },
       {
-       "id": "2106406916708581590",
-       "sim": 0.8133,
-       "handle": "@PatRyanUC",
-       "text": "Trump said he'd focus on violent criminals. Instead, ICE is snatching up people like Gerson Turcios – a beloved Rhinebeck High graduate and law-abiding small business owner. Blatantly wrong and…",
-       "time": "2026-10-03T15:31:58.000Z",
-       "topics": [
-        "immigration/ice-enforcement"
-       ]
+       "id": "2107746336552739242",
+       "sim": 0.8202,
+       "handle": "@MarcVeasey",
+       "text": "Exactly! The world of conspiracies rag! Hilarious he re-tweeted them! 😂 https://t.co/v5fqhZoQ9n",
+       "time": "2026-10-07T08:14:21.000Z",
+       "topics": []
       }
      ]
     },
@@ -22806,6 +22804,72 @@
  "incidentsFiltered": 0,
  "feed": [
   {
+   "id": "2107746336552739242",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Exactly! The world of conspiracies rag! Hilarious he re-tweeted them! 😂 https://t.co/v5fqhZoQ9n",
+   "topics": [],
+   "time": "2026-10-07T08:14:21.000Z",
+   "date": "2026-10-07",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107601754527506750",
+    "handle": "@MakeTexasBlue22",
+    "text": "@KenPaxtonTX The Daily Wire, no National Enquirer article today? https://t.co/H96ICOh7hP"
+   },
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 392,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T09:22:50.275Z",
+   "isNew": false
+  },
+  {
+   "id": "2107745890148708634",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Take it from a long suffering Cowboys fan:owners need to stay away from the sideline&amp;operations side!Check out the last 30 years if you don’t believe me. You wouldn’t know Clark Hunt if he walked up to you rt now. Hunt also has #3rings the last 6 years! https://t.co/4fQZ06k75S",
+   "topics": [],
+   "time": "2026-10-07T08:12:34.000Z",
+   "date": "2026-10-07",
+   "engN": 1,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107689511077786038",
+    "handle": "@jemelehill",
+    "text": "I think this is one of the stupidest controversies. Her wanting to gain insight into how her own organization is run is a great thing. \n\nMeanwhile, y’all complain about owners who are out of touch.…"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 392,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T09:22:50.275Z",
+   "isNew": false
+  },
+  {
    "id": "2107742602007326929",
    "handle": "@MarcVeasey",
    "member": "Marc A. Veasey",
@@ -30062,76 +30126,6 @@
    },
    "metricsObservedAt": "2026-10-07T07:48:03.672Z",
    "isNew": false
-  },
-  {
-   "id": "2107564299119989169",
-   "handle": "@RepDavids",
-   "member": "Sharice Davids",
-   "district": "KS-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "A home you can afford, access to quality healthcare, and an economy that works for everyone — not just the ultra-wealthy. That's what I'm working to get done with the bipartisan Build America Caucus. \n\nhttps://t.co/9MEzKKe8It",
-   "topics": [
-    "economy/housing",
-    "economy",
-    "healthcare"
-   ],
-   "time": "2026-10-06T20:11:00.000Z",
-   "date": "2026-10-06",
-   "engN": 29,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-07T07:48:03.672Z",
-   "isNew": false
-  },
-  {
-   "id": "2107564261308297510",
-   "handle": "@RepBarragan",
-   "member": "Nanette Diaz Barragán",
-   "district": "CA-44",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "The President’s job is to protect Americans — not offer cities that he disagrees with as targets.\n\nThis is reckless, dangerous, disgusting rhetoric that puts millions of Americans in harm’s way. Trump is unfit to be president. https://t.co/HaDZo7f5Cz",
-   "topics": [
-    "foreign-policy/middle-east",
-    "foreign-policy",
-    "democracy/executive-overreach",
-    "democracy"
-   ],
-   "time": "2026-10-06T20:10:51.000Z",
-   "date": "2026-10-06",
-   "engN": 16,
-   "kind": "quote",
-   "quoted": {
-    "id": "2107261648339702108",
-    "handle": "@HQNewsNow",
-    "text": "Trump on Iran: Let 'em take out Los Angeles and San Diego, it's a small price to pay https://t.co/Fc4BcjVDKj"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 385,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-07T07:48:03.672Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -30470,6 +30464,58 @@
   "1191327658124165123": "@Mfume4Congress"
  },
  "feedAll": [
+  {
+   "id": "2107746336552739242",
+   "authorId": "20688358",
+   "createdAt": "2026-10-07T08:14:21.000Z",
+   "date": "2026-10-07",
+   "type": "quote",
+   "text": "Exactly! The world of conspiracies rag! Hilarious he re-tweeted them! 😂 https://t.co/v5fqhZoQ9n",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 392,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T09:22:50.275Z",
+   "quoted": {
+    "id": "2107601754527506750",
+    "handle": "@MakeTexasBlue22",
+    "text": "@KenPaxtonTX The Daily Wire, no National Enquirer article today? https://t.co/H96ICOh7hP"
+   }
+  },
+  {
+   "id": "2107745890148708634",
+   "authorId": "20688358",
+   "createdAt": "2026-10-07T08:12:34.000Z",
+   "date": "2026-10-07",
+   "type": "quote",
+   "text": "Take it from a long suffering Cowboys fan:owners need to stay away from the sideline&amp;operations side!Check out the last 30 years if you don’t believe me. You wouldn’t know Clark Hunt if he walked up to you rt now. Hunt also has #3rings the last 6 years! https://t.co/4fQZ06k75S",
+   "engN": 1,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 392,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-07T09:22:50.275Z",
+   "quoted": {
+    "id": "2107689511077786038",
+    "handle": "@jemelehill",
+    "text": "I think this is one of the stupidest controversies. Her wanting to gain insight into how her own organization is run is a great thing. \n\nMeanwhile, y’all complain about owners who are out of touch.…"
+   }
+  },
   {
    "id": "2107742602007326929",
    "authorId": "20688358",
@@ -75078,64 +75124,18 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-03T21:27:56.719Z"
-  },
-  {
-   "id": "2106493937804525701",
-   "authorId": "555977812",
-   "createdAt": "2026-10-03T21:17:46.000Z",
-   "date": "2026-10-03",
-   "type": "tweet",
-   "text": "Pleased to have been able to attend the Italian flag raising ceremony hosted by the Italian Cultural Center of Western Massachusetts at Springfield City Hall.\n\nIt’s always great celebrating the vibrant communities that make Western and Central Mass so unique. https://t.co/mOgd1pMkxT",
-   "engN": 1,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 331,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-04T07:47:40.370Z"
-  },
-  {
-   "id": "2106493002147414054",
-   "authorId": "796736612554117120",
-   "createdAt": "2026-10-03T21:14:03.000Z",
-   "date": "2026-10-03",
-   "type": "tweet",
-   "text": "Great to convene local leaders and first responders at the San Miguel fire station to announce a significant investment of federal funding for an emergency operations center. \n\nhttps://t.co/zHfXxEZ8xR",
-   "engN": 6,
-   "topics": [
-    "constituent-services",
-    "climate/disasters",
-    "climate"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 331,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-04T07:47:40.370Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2872,
+ "feedAllTotal": 2874,
  "feedAllFiles": [
-  "feed-0-8afe38012e27124d.json",
-  "feed-1-ec46d88894ebbc9c.json",
-  "feed-2-2abddb8f943058a1.json",
-  "feed-3-e5a7c7d7bb063f43.json",
-  "feed-4-d20591cd71bfd81b.json",
-  "feed-5-8fbf81350f9ebf24.json",
-  "feed-6-5bd08cfee598d63f.json",
-  "feed-7-491ca44daf361ae3.json"
+  "feed-0-63282c6f4357ef9c.json",
+  "feed-1-eed3e29515945fd3.json",
+  "feed-2-e0c2b1ab5bf69a67.json",
+  "feed-3-55c347519ea469f6.json",
+  "feed-4-79cf4dbb7bae930d.json",
+  "feed-5-e6c62ef17404bcba.json",
+  "feed-6-9206c0394ba92dd4.json",
+  "feed-7-4cdccd2dd3c8eed6.json"
  ]
 }

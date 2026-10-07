@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T08:07:42.110Z",
+ "classifiedAt": "2026-10-07T09:22:58.833Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -39,7 +39,9 @@
     "congress-politics",
     "elections-2026"
    ]
-  ]
+  ],
+  "2107745890148708634": [],
+  "2107746336552739242": []
  },
  "incidents": {
   "2107701072265625984": {
@@ -160,6 +162,34 @@
     "textChars": 309,
     "textHash": "b453e2a686b4905258d9d555618f49f281476e9d3176e3bc412eb8b9a2e2b783"
    }
+  },
+  "2107745890148708634": {
+   "contextVersion": 392,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d1b1a6f860403fed1acaf604a60490324d003b08fb01beec5b5b3c2d483fd0aa",
+   "quotedContext": {
+    "id": "2107689511077786038",
+    "authorId": "35586563",
+    "handle": "jemelehill",
+    "createdAt": "2026-10-07T04:28:33.000Z",
+    "textChars": 246,
+    "textHash": "4004895eee8252e7d3709e1efbf4f32d1129beab81570c2ae9b86f49af004444"
+   }
+  },
+  "2107746336552739242": {
+   "contextVersion": 392,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d1b1a6f860403fed1acaf604a60490324d003b08fb01beec5b5b3c2d483fd0aa",
+   "quotedContext": {
+    "id": "2107601754527506750",
+    "authorId": "4800796580",
+    "handle": "MakeTexasBlue22",
+    "createdAt": "2026-10-06T22:39:50.000Z",
+    "textChars": 88,
+    "textHash": "4ea03b504715cd2079f27a9cde0c119762f08838978b8c22cc7600a105ddc78a"
+   }
   }
  },
  "needsContext": {
@@ -170,10 +200,12 @@
   "2107711828063051994": false,
   "2107712875523371493": false,
   "2107740695461052442": true,
-  "2107742602007326929": false
+  "2107742602007326929": false,
+  "2107745890148708634": false,
+  "2107746336552739242": true
  },
  "inputBlocks": {},
- "contextVersion": 391,
+ "contextVersion": 392,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -186,20 +218,18 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107711828063051994",
-    "2107712875523371493",
-    "2107740695461052442",
-    "2107742602007326929"
+    "2107745890148708634",
+    "2107746336552739242"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T08:07:32.887Z",
-    "observedAt": "2026-10-07T08:07:42.107Z",
+    "attemptedAt": "2026-10-07T09:22:54.018Z",
+    "observedAt": "2026-10-07T09:22:58.829Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -207,24 +237,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T08:07:32.887Z",
-   "observedAt": "2026-10-07T08:07:42.107Z",
+   "attemptedAt": "2026-10-07T09:22:54.018Z",
+   "observedAt": "2026-10-07T09:22:58.829Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T08:07:32.887Z",
-   "observedAt": "2026-10-07T08:07:42.107Z",
+   "attemptedAt": "2026-10-07T09:22:54.018Z",
+   "observedAt": "2026-10-07T09:22:58.829Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T08:07:42.111Z"
+ "updatedAt": "2026-10-07T09:22:58.835Z"
 }
