@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T16:36:34.741Z",
+ "classifiedAt": "2026-10-07T16:48:03.060Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -1288,6 +1288,70 @@
    [
     "constituent-services",
     null
+   ]
+  ],
+  "2107873050419204151": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2107873062888550824": [
+   [
+    "immigration",
+    "dilley-detention"
+   ],
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2107873068731576517": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2107874161154834910": [
+   [
+    "education",
+    "public-schools"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107874845279330688": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2107875132719149407": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2107875310234743132": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2107875446243438862": [
+   [
+    "foreign-policy",
+    "military-veterans"
    ]
   ]
  },
@@ -4258,6 +4322,137 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "c821bc243c7848c0f55faa78d7b07e2dd2a047d4acd9eac564183b0c54ee0808"
+  },
+  "2107873050419204151": {
+   "contextVersion": 398,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
+  },
+  "2107873062888550824": {
+   "contextVersion": 398,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
+  },
+  "2107873068731576517": {
+   "contextVersion": 398,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
+  },
+  "2107874161154834910": {
+   "contextVersion": 398,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107862689741525140",
+    "fingerprint": "319624d5c253ff1dfd2e96506f9910284897c1e8db7a41e9812d1986baf700a8"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107862689741525140",
+    "fingerprint": "319624d5c253ff1dfd2e96506f9910284897c1e8db7a41e9812d1986baf700a8"
+   }
+  },
+  "2107874845279330688": {
+   "contextVersion": 398,
+   "evidenceSupplied": [
+    {
+     "id": "n_fde2b735fc5ddc1d",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991646/what-challenges-lie-ahead-for-the-democratic-party-as-midterms-approach",
+     "text": "A MARTÍNEZ, HOST: Let's hear from someone who's working to elect Democrats in these midterms. Devan Barber is executive director of the Democratic Senatorial Campaign Committee, and she's on the line with us. Devan, we just heard from Domenico Montanaro that the super PAC affiliated with Senate Republicans is moving money into usually unfamiliar territories such as Kansas. Why do you think that is?",
+     "title": "What challenges lie ahead for the Democratic Party as midterms approach",
+     "publishedAt": "2026-10-06T10:53:02.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
+  },
+  "2107875132719149407": {
+   "contextVersion": 398,
+   "evidenceSupplied": [
+    {
+     "id": "n_25c61345bbfcc42f",
+     "publisher": "The New York Times",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/01/us/politics/gina-hinojosa-andy-beshear-democratic-governors-association.html",
+     "text": "Texas Governor Race Puts Pressure on Andy Beshear and Democratic Governors Association",
+     "title": "Texas Governor Race Puts Pressure on Andy Beshear and Democratic Governors Association",
+     "publishedAt": "2026-10-01T09:03:22.000Z",
+     "fetchedAt": "2026-10-01T10:26:39.588Z",
+     "version": 288,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4",
+   "quotedContext": {
+    "id": "2107827446867468787",
+    "authorId": "603803238",
+    "handle": "BisforBerkshire",
+    "createdAt": "2026-10-07T13:36:39.000Z",
+    "textChars": 183,
+    "textHash": "40e77c1ad930dc39115c207ac9d1d5088c7b9f9b4e6e4bb848d4fe62e2fa9053"
+   }
+  },
+  "2107875310234743132": {
+   "contextVersion": 398,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
+  },
+  "2107875446243438862": {
+   "contextVersion": 398,
+   "evidenceSupplied": [
+    {
+     "id": "n_a68b978bc1b99e19",
+     "publisher": "NPR",
+     "date": "2026-09-30",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/09/30/nx-s1-5986304/hegseth-troops-address",
+     "text": "At a gathering at U.S. Marine Corps Base Quantico in Virginia, Secretary of Defense Pete Hegseth told hundreds of junior military officers and enlisted leaders that the Trump administration has achieved a cultural shift in the military.",
+     "title": "Leaning into culture war flashpoints, Hegseth says he has transformed U.S. military",
+     "publishedAt": "2026-09-30T21:51:20.000Z",
+     "fetchedAt": "2026-09-30T23:16:37.557Z",
+     "version": 281,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5acf3c7c379a9dbb",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai",
+     "text": "Last week, Defense Secretary Pete Hegseth announced \"Project Meridian: The Future of Warfare,\" a study of automated and AI-powered weaponry .",
+     "title": "Elon Musk and Palmer Luckey's new Pentagon roles raise ethics worries",
+     "publishedAt": "2026-10-06T09:00:00.000Z",
+     "fetchedAt": "2026-10-06T10:23:20.402Z",
+     "version": 376,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e32f13152c35c0a82a8fab9f22d36fcdfba01b5f887d657606efeb53c60eb0b4"
   }
  },
  "needsContext": {
@@ -4454,7 +4649,15 @@
   "2107870412872860076": false,
   "2107870415439700363": false,
   "2107870440622354785": false,
-  "2107871891922780402": false
+  "2107871891922780402": false,
+  "2107873050419204151": false,
+  "2107873062888550824": false,
+  "2107873068731576517": false,
+  "2107874161154834910": false,
+  "2107874845279330688": false,
+  "2107875132719149407": false,
+  "2107875310234743132": false,
+  "2107875446243438862": true
  },
  "inputBlocks": {},
  "contextVersion": 398,
@@ -4644,6 +4847,12 @@
    "ids": [
     "2107870135545442658"
    ]
+  },
+  {
+   "label": "Delaney Hall detention center (Newark, NJ) conditions and releases",
+   "ids": [
+    "2107873062888550824"
+   ]
   }
  ],
  "unclassified": [],
@@ -4782,32 +4991,24 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107471603038609534",
-    "2107523467998576803",
-    "2107546508916650219",
-    "2107548838907256883",
-    "2107835138633560477",
-    "2107842273102688709",
-    "2107849941225730133",
-    "2107850038441279961",
-    "2107851437799821798",
-    "2107851577117794620",
-    "2107851698714694081",
-    "2107852699773678050",
-    "2107852798863814743",
-    "2107852806556442713",
-    "2107852812017393790",
-    "2107853017882259926"
+    "2107873050419204151",
+    "2107873062888550824",
+    "2107873068731576517",
+    "2107874161154834910",
+    "2107874845279330688",
+    "2107875132719149407",
+    "2107875310234743132",
+    "2107875446243438862"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T16:34:14.245Z",
-    "observedAt": "2026-10-07T16:34:48.036Z",
+    "attemptedAt": "2026-10-07T16:47:48.668Z",
+    "observedAt": "2026-10-07T16:48:03.051Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 8,
     "retryCount": 0
    }
   }
@@ -4815,24 +5016,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T16:36:20.498Z",
-   "observedAt": "2026-10-07T16:36:34.700Z",
+   "attemptedAt": "2026-10-07T16:47:48.668Z",
+   "observedAt": "2026-10-07T16:48:03.051Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T16:36:20.498Z",
-   "observedAt": "2026-10-07T16:36:34.700Z",
+   "attemptedAt": "2026-10-07T16:47:48.668Z",
+   "observedAt": "2026-10-07T16:48:03.051Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T16:36:34.743Z"
+ "updatedAt": "2026-10-07T16:48:03.065Z"
 }
