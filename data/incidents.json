@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-07T19:38:27.298Z",
+ "generatedAt": "2026-10-07T21:07:29.267Z",
  "incidents": [
+  {
+   "id": "prince-georges-county-md--missing-persons--source-2107620719991365668",
+   "kind": "missing persons",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "missing persons"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Prince George's County, MD · MD-05",
+   "placeRaw": "Prince George's County, MD",
+   "district": "MD-05",
+   "districtMatch": true,
+   "handle": "@RepStenyHoyer",
+   "member": "Steny H. Hoyer",
+   "since": "2026-10-07T20:10:00.000Z",
+   "last": "2026-10-07T20:10:00.000Z",
+   "updates": 1,
+   "engN": 5,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Missing persons · Prince George's County, MD",
+   "evidence": {
+    "span": "I call on Marylanders in the Prince George’s County region and beyond to assist in the efforts to locate missing UMD student Dilan Shaan Ashar.",
+    "exact": true,
+    "start": 0,
+    "end": 143,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2107926437873213883",
+    "url": "https://x.com/i/web/status/2107926437873213883"
+   },
+   "timeline": [
+    {
+     "id": "2107926437873213883",
+     "sourceId": "2107926437873213883",
+     "url": "https://x.com/i/web/status/2107926437873213883",
+     "authorId": "22012091",
+     "personId": "member:steny h. hoyer",
+     "referenceIds": [
+      "2107620719991365668"
+     ],
+     "time": "2026-10-07T20:10:00.000Z",
+     "who": "@RepStenyHoyer",
+     "tag": "member",
+     "text": "I call on Marylanders in the Prince George’s County region and beyond to assist in the efforts to locate missing UMD student Dilan Shaan Ashar.\n\nPlease direct any information you may have with @UMPD at 301-405-3555 and continue to amplify this critical search with your neighbors and within your networks.\n\nI join Dilan’s family and the entire UMD community in praying for his safety and that he is found quickly.",
+     "engN": 5,
+     "isNew": false,
+     "flag": {
+      "kind": "missing persons",
+      "place": "Prince George's County, MD",
+      "name": null
+     },
+     "evidence": {
+      "span": "I call on Marylanders in the Prince George’s County region and beyond to assist in the efforts to locate missing UMD student Dilan Shaan Ashar.",
+      "exact": true,
+      "start": 0,
+      "end": 143,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2107926437873213883",
+      "url": "https://x.com/i/web/status/2107926437873213883"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2107926437873213883"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2107926437873213883"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "coastal-alabama-al--hurricane--isaias--2026-10-07",
    "kind": "hurricane",
