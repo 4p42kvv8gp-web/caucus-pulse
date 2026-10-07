@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-07T18:05:52.220Z",
+ "generatedAt": "2026-10-07T19:38:27.298Z",
  "incidents": [
+  {
+   "id": "coastal-alabama-al--hurricane--isaias--2026-10-07",
+   "kind": "hurricane",
+   "name": "Isaias",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "hurricane"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Coastal Alabama, AL · AL-02",
+   "placeRaw": "Coastal Alabama, AL",
+   "district": "AL-02",
+   "districtMatch": true,
+   "handle": "@repscfigures",
+   "member": "Shomari Figures",
+   "since": "2026-10-07T18:54:36.000Z",
+   "last": "2026-10-07T18:54:36.000Z",
+   "updates": 1,
+   "engN": 23,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Isaias · Coastal Alabama, AL",
+   "evidence": {
+    "span": "RT @NWSMobile: 🌀12pm 10/07 Update - Significant impacts expected from Isaias: damaging winds, life-threatening storm surge, high surf, rip…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2107907462078796219",
+    "url": "https://x.com/i/web/status/2107907462078796219"
+   },
+   "timeline": [
+    {
+     "id": "2107907462078796219",
+     "sourceId": "2107907462078796219",
+     "url": "https://x.com/i/web/status/2107907462078796219",
+     "authorId": "1877805371114635264",
+     "personId": "member:shomari figures",
+     "referenceIds": [
+      "2107889763898515746"
+     ],
+     "time": "2026-10-07T18:54:36.000Z",
+     "who": "@repscfigures",
+     "tag": "repost",
+     "text": "RT @NWSMobile: 🌀12pm 10/07 Update - Significant impacts expected from Isaias: damaging winds, life-threatening storm surge, high surf, rip…",
+     "engN": 23,
+     "isNew": false,
+     "flag": {
+      "kind": "hurricane",
+      "place": "Coastal Alabama, AL",
+      "name": "Isaias"
+     },
+     "evidence": {
+      "span": "RT @NWSMobile: 🌀12pm 10/07 Update - Significant impacts expected from Isaias: damaging winds, life-threatening storm surge, high surf, rip…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2107907462078796219",
+      "url": "https://x.com/i/web/status/2107907462078796219"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2107907462078796219"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2107907462078796219"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
    "kind": "wildfire",
@@ -460,129 +557,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2105721837619667398"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "monterey-county-ca--wildfire--timberfire--2026-09-30",
-   "kind": "wildfire",
-   "name": "Timber Fire",
-   "eventIdentity": "named-source-supported",
-   "kinds": [
-    "wildfire"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Monterey County, CA · CA-19",
-   "placeRaw": "Monterey County, CA",
-   "district": "CA-19",
-   "districtMatch": true,
-   "handle": "@RepJimmyPanetta",
-   "member": "Jimmy Panetta",
-   "since": "2026-09-30T19:18:41.000Z",
-   "last": "2026-09-30T19:18:41.000Z",
-   "updates": 1,
-   "engN": 1,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Timber Fire · Monterey County, CA",
-   "evidence": {
-    "span": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091,",
-    "exact": false,
-    "start": 0,
-    "end": 139,
-    "matched": {
-     "kind": true,
-     "place": false
-    },
-    "sourceId": "2105376807629279413",
-    "url": "https://x.com/i/web/status/2105376807629279413"
-   },
-   "timeline": [
-    {
-     "id": "2105376807629279413",
-     "sourceId": "2105376807629279413",
-     "url": "https://x.com/i/web/status/2105376807629279413",
-     "authorId": "796736612554117120",
-     "personId": "member:jimmy panetta",
-     "referenceIds": [],
-     "time": "2026-09-30T19:18:41.000Z",
-     "who": "@RepJimmyPanetta",
-     "tag": "member",
-     "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
-     "engN": 1,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Monterey County, CA",
-      "name": "Timber Fire"
-     },
-     "evidence": {
-      "span": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091,",
-      "exact": false,
-      "start": 0,
-      "end": 139,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2105376807629279413",
-      "url": "https://x.com/i/web/status/2105376807629279413"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2105376807629279413"
-   ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted.",
-      "sourceId": "2105376807629279413",
-      "url": "https://x.com/i/web/status/2105376807629279413",
-      "evidenceQuote": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted.",
-      "src": "@RepJimmyPanetta, 2026-09-30T19:18:41.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
-      "sourceId": "2105376807629279413",
-      "url": "https://x.com/i/web/status/2105376807629279413",
-      "evidenceQuote": "Good to see continued progress on the Timber Fire. Evacuation warnings for zones MRY-D078, MRY-D085, MRY-D086, MRY-D089, MRY-D090, MRYD091, MRY-F014, MRY-F015-A, MRY-F020, MRY-F029, and MRY-F031-A have been lifted. I’m grateful to the firefighters and first responders working tirelessly in steep terrain to contain the fire and keep our communities safe.",
-      "src": "@RepJimmyPanetta, 2026-09-30T19:18:41.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-10-01T07:50:36.629Z",
-    "posts": 1,
-    "inputHash": "3ef90640f08d34dc3ddbead4a88399fb0a8f6cb1f568e7a85081024bf120954e",
-    "rejectedItems": 0
-   },
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2105376807629279413"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."

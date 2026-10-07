@@ -1,7 +1,7 @@
 {
  "date": "2026-10-06",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T16:36:34.730Z",
+ "classifiedAt": "2026-10-07T19:38:27.125Z",
  "assignments": {
   "2107320063070269807": [
    [
@@ -2442,6 +2442,10 @@
    [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2107548876081439069": [
@@ -12853,28 +12857,6 @@
    "evidenceUsed": [],
    "inputHash": "8db8012eeccfb3b6966d3c29c61e38d6916d3197422a4242b2e34f23fe4a52cb"
   },
-  "2107675344304238997": {
-   "contextVersion": 390,
-   "evidenceSupplied": [
-    {
-     "id": "n_df13e51905a960c6",
-     "publisher": "The Hill",
-     "date": "2026-09-30",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6119676-iran-protest-americans-donald-trump-2026-midterms/",
-     "text": "Iran urges Americans to rally against Trump ahead of midterms",
-     "title": "Iran urges Americans to rally against Trump ahead of midterms",
-     "publishedAt": "2026-09-30T13:27:17.000Z",
-     "fetchedAt": "2026-09-30T13:41:56.196Z",
-     "version": 273,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "8db8012eeccfb3b6966d3c29c61e38d6916d3197422a4242b2e34f23fe4a52cb"
-  },
   "2107613570896965797": {
    "contextVersion": 394,
    "evidenceSupplied": [
@@ -13186,7 +13168,7 @@
    "inputHash": "44bdbd71914632a3d0f6b89c65bf2503cd631a64a23bf038ff4a9b5922ac34db"
   },
   "2107523467998576803": {
-   "contextVersion": 398,
+   "contextVersion": 400,
    "evidenceSupplied": [
     {
      "id": "n_210de89c86685a1b",
@@ -13219,11 +13201,13 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [],
-   "inputHash": "44bdbd71914632a3d0f6b89c65bf2503cd631a64a23bf038ff4a9b5922ac34db"
+   "evidenceUsed": [
+    "n_4ea6be05a8979a92"
+   ],
+   "inputHash": "a171b0800a240c2ca9eb815c1233a17c76daef738a5efd9b291030943c890086"
   },
   "2107546508916650219": {
-   "contextVersion": 398,
+   "contextVersion": 400,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -13257,10 +13241,10 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "44bdbd71914632a3d0f6b89c65bf2503cd631a64a23bf038ff4a9b5922ac34db"
+   "inputHash": "a171b0800a240c2ca9eb815c1233a17c76daef738a5efd9b291030943c890086"
   },
   "2107548838907256883": {
-   "contextVersion": 398,
+   "contextVersion": 400,
    "evidenceSupplied": [
     {
      "id": "n_36d04d53aeb8bd4b",
@@ -13294,7 +13278,44 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "44bdbd71914632a3d0f6b89c65bf2503cd631a64a23bf038ff4a9b5922ac34db"
+   "inputHash": "a171b0800a240c2ca9eb815c1233a17c76daef738a5efd9b291030943c890086"
+  },
+  "2107675344304238997": {
+   "contextVersion": 400,
+   "evidenceSupplied": [
+    {
+     "id": "n_df13e51905a960c6",
+     "publisher": "The Hill",
+     "date": "2026-09-30",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6119676-iran-protest-americans-donald-trump-2026-midterms/",
+     "text": "Iran urges Americans to rally against Trump ahead of midterms",
+     "title": "Iran urges Americans to rally against Trump ahead of midterms",
+     "publishedAt": "2026-09-30T13:27:17.000Z",
+     "fetchedAt": "2026-09-30T13:41:56.196Z",
+     "version": 273,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_01aae5101ac23518",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6134346-us-aircraft-losses-iran-war/",
+     "text": "81 US military aircraft, drones damaged during Iran war: Report",
+     "title": "81 US military aircraft, drones damaged during Iran war: Report",
+     "publishedAt": "2026-10-07T18:13:22.000Z",
+     "fetchedAt": "2026-10-07T18:49:59.947Z",
+     "version": 400,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "a171b0800a240c2ca9eb815c1233a17c76daef738a5efd9b291030943c890086"
   }
  },
  "needsContext": {
@@ -13892,7 +13913,6 @@
   "2107673729257935277": false,
   "2107673869628956686": false,
   "2107675060576321559": false,
-  "2107675344304238997": false,
   "2107613570896965797": false,
   "2107448295857496321": false,
   "2107453762205855974": false,
@@ -13903,10 +13923,11 @@
   "2107471603038609534": false,
   "2107523467998576803": false,
   "2107546508916650219": false,
-  "2107548838907256883": false
+  "2107548838907256883": false,
+  "2107675344304238997": false
  },
  "inputBlocks": {},
- "contextVersion": 398,
+ "contextVersion": 400,
  "emerging": [
   {
    "label": "Trump 'small price to pay' remark on Iran striking LA/San Diego",
@@ -14340,6 +14361,12 @@
     "2107517082380157054",
     "2107517659738743148"
    ]
+  },
+  {
+   "label": "Calls for Defense Secretary Hegseth to resign over Iran war",
+   "ids": [
+    "2107523467998576803"
+   ]
   }
  ],
  "unclassified": [],
@@ -14375,32 +14402,22 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107471603038609534",
     "2107523467998576803",
     "2107546508916650219",
     "2107548838907256883",
+    "2107675344304238997",
     "2107835138633560477",
-    "2107842273102688709",
-    "2107849941225730133",
-    "2107850038441279961",
-    "2107851437799821798",
-    "2107851577117794620",
-    "2107851698714694081",
-    "2107852699773678050",
-    "2107852798863814743",
-    "2107852806556442713",
-    "2107852812017393790",
-    "2107853017882259926"
+    "2107842273102688709"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T16:34:14.245Z",
-    "observedAt": "2026-10-07T16:34:48.036Z",
+    "attemptedAt": "2026-10-07T19:34:42.539Z",
+    "observedAt": "2026-10-07T19:35:12.549Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -14408,24 +14425,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T16:34:14.245Z",
-   "observedAt": "2026-10-07T16:34:48.036Z",
+   "attemptedAt": "2026-10-07T19:34:42.539Z",
+   "observedAt": "2026-10-07T19:35:12.549Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T16:34:14.245Z",
-   "observedAt": "2026-10-07T16:34:48.036Z",
+   "attemptedAt": "2026-10-07T19:34:42.539Z",
+   "observedAt": "2026-10-07T19:35:12.549Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T16:36:34.735Z"
+ "updatedAt": "2026-10-07T19:38:27.130Z"
 }
