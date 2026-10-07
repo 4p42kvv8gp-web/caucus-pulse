@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-07T09:22:58.833Z",
+ "classifiedAt": "2026-10-07T10:28:26.961Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -41,7 +41,34 @@
    ]
   ],
   "2107745890148708634": [],
-  "2107746336552739242": []
+  "2107746336552739242": [],
+  "2107764161534939641": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2107764904157749516": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2107773265758613555": [],
+  "2107779031546646816": [
+   [
+    "congress-politics",
+    null
+   ]
+  ]
  },
  "incidents": {
   "2107701072265625984": {
@@ -190,6 +217,78 @@
     "textChars": 88,
     "textHash": "4ea03b504715cd2079f27a9cde0c119762f08838978b8c22cc7600a105ddc78a"
    }
+  },
+  "2107764161534939641": {
+   "contextVersion": 393,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d83f12b669bb4ebd755672e06c960925da036134550185f1207626a1b179797b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107644372707852625",
+    "fingerprint": "b9f75d1499c1cd5a2aa282c3994d4c4aee297c8c5f1ec093154d1667b03d4a2f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107644372707852625",
+    "fingerprint": "b9f75d1499c1cd5a2aa282c3994d4c4aee297c8c5f1ec093154d1667b03d4a2f"
+   }
+  },
+  "2107764904157749516": {
+   "contextVersion": 393,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d83f12b669bb4ebd755672e06c960925da036134550185f1207626a1b179797b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107585742545498423",
+    "fingerprint": "8446b88acea777fb671dbe61f9af5a8ac41fa934d80f0feb55a4c0e3be7e212f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107585742545498423",
+    "fingerprint": "8446b88acea777fb671dbe61f9af5a8ac41fa934d80f0feb55a4c0e3be7e212f"
+   }
+  },
+  "2107773265758613555": {
+   "contextVersion": 393,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d83f12b669bb4ebd755672e06c960925da036134550185f1207626a1b179797b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107497529357263174",
+    "fingerprint": "1eb10b73e10c0ae1618d1038c6849e20373749114b8333ff34c693929f709b65"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107497529357263174",
+    "fingerprint": "1eb10b73e10c0ae1618d1038c6849e20373749114b8333ff34c693929f709b65"
+   }
+  },
+  "2107779031546646816": {
+   "contextVersion": 393,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d83f12b669bb4ebd755672e06c960925da036134550185f1207626a1b179797b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107686895614300252",
+    "fingerprint": "0187ab3ee1356088d9bf25dc8b2476e2dce0358fb642b226ec3f500891638ab3"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107686895614300252",
+    "fingerprint": "0187ab3ee1356088d9bf25dc8b2476e2dce0358fb642b226ec3f500891638ab3"
+   }
   }
  },
  "needsContext": {
@@ -202,10 +301,14 @@
   "2107740695461052442": true,
   "2107742602007326929": false,
   "2107745890148708634": false,
-  "2107746336552739242": true
+  "2107746336552739242": true,
+  "2107764161534939641": false,
+  "2107764904157749516": false,
+  "2107773265758613555": false,
+  "2107779031546646816": false
  },
  "inputBlocks": {},
- "contextVersion": 392,
+ "contextVersion": 393,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -218,18 +321,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107745890148708634",
-    "2107746336552739242"
+    "2107764161534939641",
+    "2107764904157749516",
+    "2107773265758613555",
+    "2107779031546646816"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-07T09:22:54.018Z",
-    "observedAt": "2026-10-07T09:22:58.829Z",
+    "attemptedAt": "2026-10-07T10:28:16.643Z",
+    "observedAt": "2026-10-07T10:28:26.956Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -237,24 +342,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-07T09:22:54.018Z",
-   "observedAt": "2026-10-07T09:22:58.829Z",
+   "attemptedAt": "2026-10-07T10:28:16.643Z",
+   "observedAt": "2026-10-07T10:28:26.956Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-07T09:22:54.018Z",
-   "observedAt": "2026-10-07T09:22:58.829Z",
+   "attemptedAt": "2026-10-07T10:28:16.643Z",
+   "observedAt": "2026-10-07T10:28:26.956Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-07T09:22:58.835Z"
+ "updatedAt": "2026-10-07T10:28:26.963Z"
 }
