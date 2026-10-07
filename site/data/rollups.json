@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-07T21:59:17.829Z",
+ "generatedAt": "2026-10-07T21:59:31.777Z",
  "lastPollAt": "2026-10-07T21:57:24.125Z",
  "lastPollAttemptAt": "2026-10-07T21:57:23.583Z",
  "lastPollOutcome": "complete",
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-07T21:59:16.080Z"
+  "referenceAsOf": "2026-10-07T21:59:30.074Z"
  },
  "news": {
   "version": 403,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-07T21:59:16.726Z",
+   "asOf": "2026-10-07T21:59:30.697Z",
    "windowDays": 14,
-   "windowStart": "2026-09-23T21:59:16.726Z",
+   "windowStart": "2026-09-23T21:59:30.697Z",
    "eligibleItems": 1669,
    "withExcerpts": 161,
    "headlineOrSummary": 1508,
@@ -3546,9 +3546,9 @@
  },
  "classification": {
   "through": "2026-10-07",
-  "capturedIn24h": 572,
-  "classifiedIn24h": 572,
-  "taggedIn24h": 532,
+  "capturedIn24h": 571,
+  "classifiedIn24h": 571,
+  "taggedIn24h": 531,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
@@ -3557,8 +3557,8 @@
    "hasCurrentFailure": false,
    "lastAttemptAt": "2026-10-07T21:58:41.344Z",
    "lastSuccessAt": "2026-10-07T21:59:12.343Z",
-   "capturedIn24h": 572,
-   "classifiedIn24h": 572,
+   "capturedIn24h": 571,
+   "classifiedIn24h": 571,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6881,8 +6881,8 @@
     14,
     117,
     170,
-    163,
-    68,
+    164,
+    67,
     42,
     6,
     6,
@@ -7017,8 +7017,8 @@
     12,
     72,
     91,
-    99,
-    37,
+    100,
+    36,
     21,
     4,
     4,
@@ -7153,8 +7153,8 @@
     3,
     15,
     38,
-    39,
-    17,
+    40,
+    16,
     16,
     0,
     0,
@@ -7322,7 +7322,7 @@
     108,
     145
    ],
-   "d": 184,
+   "d": 182,
    "mAvg": 41.2,
    "epAvg": 466,
    "momentum": {
@@ -7334,7 +7334,7 @@
     "volume": 1,
     "accel": 1,
     "adoption": 1,
-    "eff": 3.4,
+    "eff": 3.3,
     "engLift": 0
    },
    "subs": [
@@ -22988,7 +22988,7 @@
     6,
     6,
     6,
-    8,
+    9,
     10,
     10,
     10,
@@ -24140,130 +24140,6 @@
    ]
   },
   {
-   "label": "Trump remark inviting Iran to 'take out' Los Angeles and San Diego",
-   "lastSeen": "2026-10-06T21:59:27.000Z",
-   "thresholdMet": true,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 3,
-   "members": 3,
-   "accounts": 3,
-   "postIds": [
-    "2107590657879523379",
-    "2107591459105063340",
-    "2107591590910836768"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2107590657879523379",
-     "handle": "@RepPettersen",
-     "time": "2026-10-06T21:55:44.000Z"
-    },
-    {
-     "id": "2107591459105063340",
-     "handle": "@RepLouCorrea",
-     "time": "2026-10-06T21:58:55.000Z"
-    },
-    {
-     "id": "2107591590910836768",
-     "handle": "@RepCarbajal",
-     "time": "2026-10-06T21:59:27.000Z"
-    }
-   ],
-   "sampleId": "2107590657879523379",
-   "sampleHandle": "@RepPettersen",
-   "who": [
-    "@RepPettersen",
-    "@RepLouCorrea",
-    "@RepCarbajal"
-   ],
-   "cm": [
-    0,
-    3,
-    0,
-    2,
-    0
-   ],
-   "eng": 774,
-   "phrase": "foreign adversary",
-   "coherence": 67,
-   "since": "2026-10-06T21:55:44.000Z",
-   "shape": [
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3
-   ],
-   "sample": "Our president saying a foreign adversary should \"take out\" American cities is dangerous and a complete betrayal of the most crucial responsibility of the…",
-   "suggest": "trump_remark_inviting_iran_to_take_out_los_angeles_and_san_diego",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [],
-   "related": [
-    {
-     "id": "2107564261308297510",
-     "sim": 0.8839,
-     "handle": "@RepBarragan",
-     "text": "The President’s job is to protect Americans — not offer cities that he disagrees with as targets.\n\nThis is reckless, dangerous, disgusting rhetoric that puts millions of Americans in harm’s way.…",
-     "time": "2026-10-06T20:10:51.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "democracy/executive-overreach"
-     ]
-    },
-    {
-     "id": "2107575567096910202",
-     "sim": 0.8825,
-     "handle": "@RepRobinKelly",
-     "text": "Did Trump just suggest letting Iran bomb two American cities?\n\nThese are outrageous, reckless, and DANGEROUS comments being made by the President of the United States.\n\nThis is gravely concerning.…",
-     "time": "2026-10-06T20:55:46.000Z",
-     "topics": [
-      "foreign-policy/middle-east"
-     ]
-    },
-    {
-     "id": "2107558510833856976",
-     "sim": 0.8807,
-     "handle": "@Grace4NY",
-     "text": "Trump's rhetoric has always been dangerous. Telling a foreign government to attack millions of American citizens is a new low.\n\nThe man has no business being president. https://t.co/pFGCE4NGE3",
-     "time": "2026-10-06T19:48:00.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "democracy/executive-overreach"
-     ]
-    },
-    {
-     "id": "2107933520593121793",
-     "sim": 0.8802,
-     "handle": "@RepRobertGarcia",
-     "text": "The President is now telling crowds to \"let\" a foreign adversary \"take out\" Los Angeles and San Diego. These comments are downright crazy.\n\nWe need to stand up to this deranged lunatic in the White…",
-     "time": "2026-10-07T20:38:09.000Z",
-     "topics": [
-      "foreign-policy/middle-east",
-      "democracy/executive-overreach"
-     ]
-    },
-    {
-     "id": "2107585475401695541",
-     "sim": 0.8691,
-     "handle": "@RepHuffman",
-     "text": "Trump casually inviting Iran to “take out” Los Angeles and San Diego is not funny. It is delusional, demented, and dangerous.\n\nHe dragged us into an unnecessary war with no vision for how it would…",
-     "time": "2026-10-06T21:35:09.000Z",
-     "topics": [
-      "foreign-policy/middle-east"
-     ]
-    }
-   ]
-  },
-  {
    "label": "Trump administration declines OSCE midterm election observers",
    "lastSeen": "2026-10-07T21:31:41.000Z",
    "thresholdMet": false,
@@ -24712,12 +24588,100 @@
      ]
     }
    ]
+  },
+  {
+   "label": "ICE agent killing of Renée Good",
+   "lastSeen": "2026-10-07T20:45:47.000Z",
+   "thresholdMet": false,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 1,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2107935443052560814"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2107935443052560814",
+     "handle": "@Ilhan",
+     "time": "2026-10-07T20:45:47.000Z"
+    }
+   ],
+   "sampleId": "2107935443052560814",
+   "sampleHandle": "@Ilhan",
+   "who": [
+    "@Ilhan"
+   ],
+   "cm": [
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "eng": 123,
+   "phrase": "9 months",
+   "coherence": 100,
+   "since": "2026-10-07T20:45:47.000Z",
+   "shape": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sample": "9 months ago, ICE agent Jonathan Ross murdered Renée Good in broad daylight and called her a \"fucking bitch\" as he walked away.\n\nRenée's family and our…",
+   "suggest": "ice_agent_killing_of_ren_e_good",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [],
+   "related": [
+    {
+     "id": "2106088684638306424",
+     "sim": 0.8485,
+     "handle": "@Ilhan",
+     "text": "Renee Good's family deserves accountability and justice.\n\nThe officer responsible for her death must be prosecuted and ICE must be abolished. This is the bare minimum.\n\nNo family should have to…",
+     "time": "2026-10-02T18:27:26.000Z",
+     "topics": [
+      "immigration/ice-enforcement",
+      "democracy/courts-doj"
+     ]
+    },
+    {
+     "id": "2107803131023171596",
+     "sim": 0.8225,
+     "handle": "@RepSylviaGarcia",
+     "text": "Three months ago today, ICE shot and killed Lorenzo Salgado Araujo.\n\nMr. Salgado was a husband, a father of three, and a Houston homebuilder who called this country home for nearly 35 years. He had…",
+     "time": "2026-10-07T12:00:02.000Z",
+     "topics": [
+      "immigration/ice-enforcement"
+     ]
+    },
+    {
+     "id": "2106080167693029832",
+     "sim": 0.8001,
+     "handle": "@RoKhanna",
+     "text": "Our immigration enforcement system is simply broken.\n\nThe deportation of children and innocent families is inhumane and unacceptable. No small child should face a judge without an attorney.\n It’s…",
+     "time": "2026-10-02T17:53:35.000Z",
+     "topics": [
+      "immigration/ice-enforcement"
+     ]
+    }
+   ]
   }
  ],
  "emergingCoverage": {
   "total": 347,
   "displayed": 12,
-  "activeThresholdClusters": 7
+  "activeThresholdClusters": 6
  },
  "incidents": [
   {
@@ -75016,6 +74980,61 @@
       "text": "GOP senator says Trump should bring Iran war to an end",
       "publishedAt": "2026-09-28T21:10:34.000Z",
       "fetchedAt": "2026-09-28T21:36:32.151Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-06T07:47:14.579Z"
+  },
+  {
+   "id": "2107167429231276369",
+   "authorId": "1610300298303787008",
+   "createdAt": "2026-10-05T17:53:59.000Z",
+   "date": "2026-10-05",
+   "type": "tweet",
+   "text": "Everyone sitting down to look at their budget is thinking the same thing right now — where is the money going?\n\nFrom tariffs, to health care cuts, to his war with Iran, Trump has made everything more expensive. https://t.co/640ytHS8lT",
+   "engN": 21,
+   "topics": [
+    "economy/prices-inflation",
+    "economy",
+    "economy/tariffs-trade",
+    "foreign-policy/middle-east",
+    "foreign-policy",
+    "healthcare"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 383,
+    "evidenceSupplied": [
+     {
+      "id": "n_e26e0c9e584afacd",
+      "publisher": "The Hill",
+      "date": "2026-10-01",
+      "kind": "lead",
+      "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+      "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+      "publishedAt": "2026-10-01T20:02:39.000Z",
+      "fetchedAt": "2026-10-01T21:41:16.730Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     },
+     {
+      "id": "n_4067b40223a40ee6",
+      "publisher": "The Hill",
+      "date": "2026-10-02",
+      "kind": "lead",
+      "url": "https://thehill.com/homenews/campaign/6126725-lepage-dunlap-debate-maine/",
+      "text": "LePage breaks with Trump on Iran, Canada tariffs, immigration in Maine House debate",
+      "publishedAt": "2026-10-02T19:25:14.000Z",
+      "fetchedAt": "2026-10-02T20:11:38.306Z",
       "publishedAfterPost": false,
       "acquiredAfterPost": false,
       "truncated": false
