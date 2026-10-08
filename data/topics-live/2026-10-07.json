@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T03:10:56.601Z",
+ "classifiedAt": "2026-10-08T04:54:51.135Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -4216,6 +4216,34 @@
     "economy",
     "prices-inflation"
    ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108036636823142810": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2108039366169997440": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2108042677908574214": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108044634920550682": [
    [
     "foreign-policy",
     "middle-east"
@@ -13114,6 +13142,97 @@
     "referenceId": "2108018692281827743",
     "fingerprint": "2c2bd166448f8a39a29164b4b9dd4e23dfdf33cc0d6c4eeadb0e0d6aa128892a"
    }
+  },
+  "2108036636823142810": {
+   "contextVersion": 408,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "040b7c04f1ed0841793d45af3a5cf84f98b988a78ebe782ff3ed8cc780006adf",
+   "quotedContext": {
+    "id": "2107841558934413755",
+    "authorId": "918291873105510400",
+    "handle": "OscarMDavies",
+    "createdAt": "2026-10-07T14:32:44.000Z",
+    "textChars": 221,
+    "textHash": "b9d81e0ef9e1572a2482fc2d23ae80f9c61b5da61ad8b066288b1979450b4d77"
+   }
+  },
+  "2108039366169997440": {
+   "contextVersion": 408,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "040b7c04f1ed0841793d45af3a5cf84f98b988a78ebe782ff3ed8cc780006adf",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108006980627423290",
+    "fingerprint": "516646c16cc668c580a168fef3e3160a28b051198dedcd7a613e68245649c734"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108006980627423290",
+    "fingerprint": "516646c16cc668c580a168fef3e3160a28b051198dedcd7a613e68245649c734"
+   }
+  },
+  "2108042677908574214": {
+   "contextVersion": 408,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "040b7c04f1ed0841793d45af3a5cf84f98b988a78ebe782ff3ed8cc780006adf",
+   "quotedContext": {
+    "id": "2108026377664344545",
+    "authorId": "1707910391844769792",
+    "handle": "DerekTranCA45",
+    "createdAt": "2026-10-08T02:47:08.000Z",
+    "textChars": 199,
+    "textHash": "f2accf02249fce91b5ca3b2809bd71052df5d03be9bca0afcc5014b0685fa917"
+   }
+  },
+  "2108044634920550682": {
+   "contextVersion": 408,
+   "evidenceSupplied": [
+    {
+     "id": "n_0ca15304e808b308",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6131572-fao-director-qu-political-activism/",
+     "text": "UN food agency official fired after highlighting Gaza hunger",
+     "title": "UN food agency official fired after highlighting Gaza hunger",
+     "publishedAt": "2026-10-06T16:13:47.000Z",
+     "fetchedAt": "2026-10-06T16:29:19.035Z",
+     "version": 381,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_0c686ef412332d64",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5993539/firing-squad-execution-nidal-hasan-fort-hood",
+     "text": "It would be the first U.S. military execution in over six decades — and the first by firing squad since World War II.",
+     "title": "Trump approved the military's 1st firing squad execution since WWII. Why now?",
+     "publishedAt": "2026-10-07T19:08:48.000Z",
+     "fetchedAt": "2026-10-07T20:19:44.976Z",
+     "version": 401,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "040b7c04f1ed0841793d45af3a5cf84f98b988a78ebe782ff3ed8cc780006adf",
+   "quotedContext": {
+    "id": "2107813239585120609",
+    "authorId": "19834403",
+    "handle": "NYCMayor",
+    "createdAt": "2026-10-07T12:40:12.000Z",
+    "textChars": 1313,
+    "textHash": "e43e27f8777a7f7607e455400931994cc7365d510d2f1cf699d2877050660ba1"
+   }
   }
  },
  "needsContext": {
@@ -13727,10 +13846,14 @@
   "2108020716096426066": false,
   "2108026377664344545": false,
   "2108029652191027513": false,
-  "2108029806667596287": false
+  "2108029806667596287": false,
+  "2108036636823142810": false,
+  "2108039366169997440": true,
+  "2108042677908574214": false,
+  "2108044634920550682": false
  },
  "inputBlocks": {},
- "contextVersion": 407,
+ "contextVersion": 408,
  "emerging": [
   {
    "label": "October 7 attack third anniversary",
@@ -14410,24 +14533,24 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107619785001271551",
-    "2107861151359140306",
-    "2108008107309977858",
-    "2108014597664084459",
-    "2108016573180997872",
-    "2108017224665493772",
-    "2108017494145577288",
-    "2108018234205028427",
-    "2108020716096426066",
-    "2108026377664344545",
-    "2108029652191027513",
-    "2108029806667596287"
+    "2108036636823142810",
+    "2108039366169997440",
+    "2108042677908574214",
+    "2108044634920550682",
+    "2108045702102446515",
+    "2108045805462737281",
+    "2108045862060576938",
+    "2108045901050855547",
+    "2108045963319464055",
+    "2108054684204515432",
+    "2108055911835320334",
+    "2108058041337974966"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T03:10:28.758Z",
-    "observedAt": "2026-10-08T03:10:56.539Z",
+    "attemptedAt": "2026-10-08T04:54:32.986Z",
+    "observedAt": "2026-10-08T04:54:51.114Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -14439,8 +14562,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T03:10:28.758Z",
-   "observedAt": "2026-10-08T03:10:56.539Z",
+   "attemptedAt": "2026-10-08T04:54:32.986Z",
+   "observedAt": "2026-10-08T04:54:51.114Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14448,8 +14571,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T03:10:28.758Z",
-   "observedAt": "2026-10-08T03:10:56.539Z",
+   "attemptedAt": "2026-10-08T04:54:32.986Z",
+   "observedAt": "2026-10-08T04:54:51.114Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14458,5 +14581,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T03:10:56.607Z"
+ "updatedAt": "2026-10-08T04:54:51.139Z"
 }
