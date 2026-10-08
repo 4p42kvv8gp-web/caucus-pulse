@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T14:34:41.673Z",
+ "generatedAt": "2026-10-08T14:45:26.077Z",
  "lastPollAt": "2026-10-08T14:32:29.228Z",
  "lastPollAttemptAt": "2026-10-08T14:32:28.419Z",
  "lastPollOutcome": "complete",
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-08T14:34:40.504Z"
+  "referenceAsOf": "2026-10-08T14:45:25.029Z"
  },
  "news": {
   "version": 413,
-  "items": 1231,
+  "items": 1229,
   "latestPublishedAt": "2026-10-08T13:40:22.000Z",
   "latestFetchedAt": "2026-10-08T13:46:59.556Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-08T14:34:40.890Z",
+   "asOf": "2026-10-08T14:45:25.377Z",
    "windowDays": 14,
-   "windowStart": "2026-09-24T14:34:40.890Z",
-   "eligibleItems": 1649,
+   "windowStart": "2026-09-24T14:45:25.377Z",
+   "eligibleItems": 1648,
    "withExcerpts": 160,
-   "headlineOrSummary": 1489,
+   "headlineOrSummary": 1488,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 254,
+     "eligibleItems": 253,
      "withExcerpts": 0,
-     "headlineOrSummary": 254,
+     "headlineOrSummary": 253,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-08T09:03:43.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-08",
-  "capturedIn24h": 572,
-  "classifiedIn24h": 572,
-  "taggedIn24h": 535,
+  "capturedIn24h": 564,
+  "classifiedIn24h": 564,
+  "taggedIn24h": 529,
   "pendingIn24h": 0,
-  "momentumPaused": false,
+  "momentumPaused": true,
   "health": {
-   "status": "healthy",
-   "reasonCode": null,
-   "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-08T14:33:49.428Z",
+   "status": "degraded",
+   "reasonCode": "inference-error",
+   "hasCurrentFailure": true,
+   "lastAttemptAt": "2026-10-08T14:45:16.755Z",
    "lastSuccessAt": "2026-10-08T14:34:28.592Z",
-   "capturedIn24h": 572,
-   "classifiedIn24h": 572,
+   "capturedIn24h": 564,
+   "classifiedIn24h": 564,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    155,
-    182,
-    95,
-    56,
-    20,
+    154,
+    186,
+    94,
+    50,
+    18,
     6,
     11,
-    79,
+    87,
     128,
     164,
-    128,
-    64,
+    125,
+    59,
     16,
     2,
-    3,
-    67
+    4,
+    66
    ]
   },
   "CPC": {
@@ -6942,18 +6942,18 @@
     "engDelta": 0
    },
    "curve48": [
-    66,
-    80,
-    44,
-    26,
-    13,
+    65,
+    82,
+    45,
+    23,
+    12,
     0,
     5,
-    30,
-    60,
-    71,
+    36,
     58,
-    20,
+    73,
+    55,
+    17,
     9,
     0,
     2,
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    91,
-    106,
-    55,
-    29,
-    8,
+    88,
+    108,
+    52,
+    28,
+    7,
     6,
     7,
-    61,
-    78,
-    100,
+    67,
+    76,
+    99,
     60,
-    47,
+    44,
     5,
     2,
-    2,
-    39
+    3,
+    38
    ]
   },
   "CBC": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    32,
-    29,
+    30,
+    30,
     17,
-    6,
+    5,
     2,
     6,
     5,
-    14,
+    17,
     32,
-    34,
+    31,
     28,
     19,
     2,
     0,
-    1,
-    14
+    2,
+    13
    ]
   },
   "CHC": {
@@ -7149,14 +7149,14 @@
     28,
     46,
     23,
-    15,
-    7,
+    16,
+    5,
     0,
     1,
-    10,
+    12,
     24,
-    35,
-    28,
+    37,
+    24,
     11,
     2,
     1,
@@ -7216,16 +7216,16 @@
    "curve48": [
     17,
     15,
-    9,
-    4,
+    10,
+    3,
     0,
     0,
     3,
-    6,
-    9,
+    8,
+    7,
+    17,
     16,
-    15,
-    6,
+    4,
     4,
     0,
     0,
@@ -7322,18 +7322,18 @@
     111,
     27
    ],
-   "d": 8,
+   "d": 6,
    "mAvg": 63.8,
    "epAvg": 221,
    "momentum": {
-    "score": 41,
+    "score": 40,
     "drivers": [
      "caucus spread",
      "adoption"
     ],
-    "volume": 0.58,
+    "volume": 0.56,
     "accel": 0,
-    "adoption": 0.5809399477806788,
+    "adoption": 0.5652741514360313,
     "eff": 3.4,
     "engLift": 0
    },
@@ -10889,18 +10889,18 @@
     80,
     14
    ],
-   "d": 3,
+   "d": 1,
    "mAvg": 55,
    "epAvg": 159,
    "momentum": {
-    "score": 39,
+    "score": 38,
     "drivers": [
      "caucus spread",
      "adoption"
     ],
-    "volume": 0.53,
+    "volume": 0.51,
     "accel": 0,
-    "adoption": 0.5545454545454546,
+    "adoption": 0.5363636363636364,
     "eff": 3.7,
     "engLift": 0
    },
@@ -13521,7 +13521,7 @@
     172,
     12
    ],
-   "d": 111,
+   "d": 109,
    "mAvg": 52.8,
    "epAvg": 531,
    "momentum": {
@@ -17229,19 +17229,19 @@
     15,
     4
    ],
-   "d": 15,
+   "d": 9,
    "mAvg": 14.3,
    "epAvg": 91,
    "momentum": {
-    "score": 41,
+    "score": 37,
     "drivers": [
      "volume",
      "caucus spread"
     ],
-    "volume": 0.65,
+    "volume": 0.59,
     "accel": 0,
-    "adoption": 0.4767441860465116,
-    "eff": 3.4,
+    "adoption": 0.40697674418604646,
+    "eff": 3.3,
     "engLift": 0
    },
    "subs": [
@@ -17673,19 +17673,19 @@
     13,
     2
    ],
-   "d": -40,
+   "d": -44,
    "mAvg": 14.5,
    "epAvg": 195,
    "momentum": {
-    "score": 14,
+    "score": 11,
     "drivers": [
      "caucus spread",
      "adoption"
     ],
-    "volume": 0.09999999999999998,
+    "volume": 0.06,
     "accel": 0.0992366412213741,
-    "adoption": 0.1896551724137931,
-    "eff": 2.8,
+    "adoption": 0.12068965517241381,
+    "eff": 2.5,
     "engLift": 0
    },
    "subs": [
@@ -18671,20 +18671,20 @@
     33,
     1
    ],
-   "d": 22,
+   "d": 18,
    "mAvg": 21.7,
    "epAvg": 40,
    "momentum": {
-    "score": 53,
+    "score": 49,
     "drivers": [
      "adoption",
      "volume"
     ],
-    "volume": 0.72,
+    "volume": 0.6799999999999999,
     "accel": 0,
-    "adoption": 0.7923076923076922,
-    "eff": 3.8,
-    "engLift": 0.18454552664974622
+    "adoption": 0.7461538461538461,
+    "eff": 3.6,
+    "engLift": 0.05847908850143457
    },
    "subs": [
     {
@@ -19257,20 +19257,20 @@
     24,
     1
    ],
-   "d": 21,
+   "d": 16,
    "mAvg": 16.5,
    "epAvg": 69,
    "momentum": {
-    "score": 47,
+    "score": 43,
     "drivers": [
      "volume",
      "caucus spread"
     ],
-    "volume": 0.71,
+    "volume": 0.66,
     "accel": 0,
-    "adoption": 0.5909090909090909,
-    "eff": 3.5,
-    "engLift": 0.08140588688430139
+    "adoption": 0.5303030303030303,
+    "eff": 3.3,
+    "engLift": 0.0006243304652796544
    },
    "subs": [
     {
@@ -22926,7 +22926,35 @@
    "tweetIds": [
     "2108177783343960378"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.",
+      "sourceId": "2108177783343960378",
+      "url": "https://x.com/i/web/status/2108177783343960378",
+      "evidenceQuote": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.",
+      "src": "@RepMoskowitz, 2026-10-08T12:48:46.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.",
+      "sourceId": "2108177783343960378",
+      "url": "https://x.com/i/web/status/2108177783343960378",
+      "evidenceQuote": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.",
+      "src": "@RepMoskowitz, 2026-10-08T12:48:46.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-08T14:45:23.176Z",
+    "posts": 1,
+    "inputHash": "f31cf92e3293c8a6801e0060fd7179383ae4300ca49525029ddc5cfa96309cff",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -74744,70 +74772,6 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-06T07:47:14.786Z"
-  },
-  {
-   "id": "2107209109628129786",
-   "authorId": "210926192",
-   "createdAt": "2026-10-05T20:39:36.000Z",
-   "date": "2026-10-05",
-   "type": "tweet",
-   "text": "Today, I had the honor of recognizing Judge Mercurio Martinez Jr. for more than six decades of service to education and the Laredo community.\n\nFrom teaching at Laredo Junior College to serving on the LISD Board, Laredo City Council, and as Webb County Judge, Judge Martinez has dedicated his career to public service and helping others succeed.\nI entered a tribute honoring Judge Martinez into the Congressional Record, giving his years of service and contributions to South Texas a permanent place in our nation’s congressional history.\n\nCongratulations, Judge Martinez, and thank you for your commitment to Laredo College, our students, and our community. Go Palominos!",
-   "engN": 4,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [
-     {
-      "id": "n_f08519ed983fce52",
-      "publisher": "NPR",
-      "date": "2026-10-02",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/02/nx-s1-5985789/trump-arch-protest-veterans-midterms",
-      "text": "\"It's the wrong monument, in the wrong place, at the wrong time, dedicated to the wrong man,\" said Jon Gundersen, a retired Army veteran and former Foreign Service officer who is one of the Vietnam War veterans suing the Trump administration over the arch.",
-      "publishedAt": "2026-10-02T21:44:07.000Z",
-      "fetchedAt": "2026-10-02T23:15:47.414Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T07:47:14.786Z"
-  },
-  {
-   "id": "2107208868707127648",
-   "authorId": "1140648348",
-   "createdAt": "2026-10-05T20:38:39.000Z",
-   "date": "2026-10-05",
-   "type": "reply",
-   "text": "https://t.co/8zwjObMpZr",
-   "engN": 1,
-   "topics": [
-    "climate/disasters",
-    "climate"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 366,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T07:47:14.786Z",
-   "quoted": {
-    "id": "2107208866551210037",
-    "handle": "@RepDWStweets",
-    "text": "Congress needs to have the back of America’s farmers.\n\nI just introduced a bipartisan bill to make sure the crops that fuel American families are protected from extreme weather threats. We need…"
-   }
   }
  ],
  "feedAllTruncated": true,
