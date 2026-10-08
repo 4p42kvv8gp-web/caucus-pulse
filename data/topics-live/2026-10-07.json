@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T01:39:00.241Z",
+ "classifiedAt": "2026-10-08T01:53:14.803Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -4132,7 +4132,39 @@
     "democracy",
     "executive-overreach"
    ]
-  ]
+  ],
+  "2108009230888309122": [],
+  "2108009830002642957": [
+   [
+    "civil-rights",
+    "disability"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2108010500235899317": [
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108011461012570524": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2108011706152882670": []
  },
  "incidents": {
   "2107701072265625984": {
@@ -12794,6 +12826,88 @@
     "textChars": 323,
     "textHash": "0b32e77b12128d2adcd4a9895d564c918b1b5183daef5fe06ce8e9dc55b381bb"
    }
+  },
+  "2108009230888309122": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ee2c77c47d14b1373bc68def026516631371454e035565869dee9e908fc72f6d"
+  },
+  "2108009830002642957": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ee2c77c47d14b1373bc68def026516631371454e035565869dee9e908fc72f6d"
+  },
+  "2108010500235899317": {
+   "contextVersion": 406,
+   "evidenceSupplied": [
+    {
+     "id": "n_e3b234ade77f0d87",
+     "publisher": "NPR",
+     "date": "2026-10-04",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/04/nx-s1-5990781/jay-clayton-ai-czar-trump",
+     "text": "Trump prefers the term \"super intelligence\" to \"artificial intelligence.\" He said his \"Super Intelligence Force\" will \"coordinate the Federal Government's engagement with Consumers, Public Interest Groups, Religious Organizations, Critical Infrastructure Providers, and Super Intelligence Companies.\"",
+     "title": "Trump names national intelligence chief Jay Clayton as new AI czar",
+     "publishedAt": "2026-10-04T18:36:48.000Z",
+     "fetchedAt": "2026-10-04T19:04:26.586Z",
+     "version": 347,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ee2c77c47d14b1373bc68def026516631371454e035565869dee9e908fc72f6d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107774413370212716",
+    "fingerprint": "3be50814ae9a2fc522c147e568ffb9b2a545d6112e4954a98b808d30016db684"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107774413370212716",
+    "fingerprint": "3be50814ae9a2fc522c147e568ffb9b2a545d6112e4954a98b808d30016db684"
+   }
+  },
+  "2108011461012570524": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ee2c77c47d14b1373bc68def026516631371454e035565869dee9e908fc72f6d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107938177017163883",
+    "fingerprint": "dc62e8c248116a4682841b4c48faa48c6bdce827dc73c0dc5900d74adc12169f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107938177017163883",
+    "fingerprint": "dc62e8c248116a4682841b4c48faa48c6bdce827dc73c0dc5900d74adc12169f"
+   }
+  },
+  "2108011706152882670": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ee2c77c47d14b1373bc68def026516631371454e035565869dee9e908fc72f6d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107997461859930607",
+    "fingerprint": "0c34028e343a8d8441e3cc0ab8c1d981ab010cde199421aa0893ed88e9613618"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107997461859930607",
+    "fingerprint": "0c34028e343a8d8441e3cc0ab8c1d981ab010cde199421aa0893ed88e9613618"
+   }
   }
  },
  "needsContext": {
@@ -13393,7 +13507,12 @@
   "2108004262408245338": true,
   "2108005429682839664": false,
   "2108006202903048530": false,
-  "2108008107309977858": false
+  "2108008107309977858": false,
+  "2108009230888309122": true,
+  "2108009830002642957": false,
+  "2108010500235899317": false,
+  "2108011461012570524": false,
+  "2108011706152882670": true
  },
  "inputBlocks": {},
  "contextVersion": 406,
@@ -14069,32 +14188,21 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107996865295970671",
-    "2107997056807686326",
-    "2107997339373736218",
-    "2107998158617813397",
-    "2107998563883958637",
-    "2107999311631941812",
-    "2107999463994253726",
-    "2107999809651225047",
-    "2107999925740908761",
-    "2108001001688940685",
-    "2108001003702309207",
-    "2108002617440063744",
-    "2108004262408245338",
-    "2108005429682839664",
-    "2108006202903048530",
-    "2108008107309977858"
+    "2108009230888309122",
+    "2108009830002642957",
+    "2108010500235899317",
+    "2108011461012570524",
+    "2108011706152882670"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T01:38:30.537Z",
-    "observedAt": "2026-10-08T01:39:00.217Z",
+    "attemptedAt": "2026-10-08T01:53:03.984Z",
+    "observedAt": "2026-10-08T01:53:14.787Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   }
@@ -14102,24 +14210,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T01:38:30.537Z",
-   "observedAt": "2026-10-08T01:39:00.217Z",
+   "attemptedAt": "2026-10-08T01:53:03.984Z",
+   "observedAt": "2026-10-08T01:53:14.787Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T01:38:30.537Z",
-   "observedAt": "2026-10-08T01:39:00.217Z",
+   "attemptedAt": "2026-10-08T01:53:03.984Z",
+   "observedAt": "2026-10-08T01:53:14.787Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T01:39:00.247Z"
+ "updatedAt": "2026-10-08T01:53:14.809Z"
 }
