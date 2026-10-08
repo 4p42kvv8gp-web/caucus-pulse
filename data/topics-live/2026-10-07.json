@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T19:16:00.183Z",
+ "classifiedAt": "2026-10-08T20:49:20.396Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -3005,6 +3005,10 @@
    [
     "immigration",
     "border-policy"
+   ],
+   [
+    "civil-rights",
+    null
    ]
   ],
   "2107938266523566235": [
@@ -13235,43 +13239,6 @@
    "evidenceUsed": [],
    "inputHash": "47f34e6294eb28b8b91bd53893a27d53a01ac432aa85a4f195554abc1db2b30f"
   },
-  "2107937569262756146": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_deaa7c6bada21f50",
-     "publisher": "Roll Call",
-     "date": "2026-10-01",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/01/trump-immigration-detention-policy-supreme-court/",
-     "text": "The interpretation shifted from prior administrations, including the first Trump administration, and resulted in tens of thousands of immigrants facing indefinite detention for civil immigration violations. Hundreds of immigrants have challenged the policy in federal court since last year, and a majority of lower court judges have found the policy violates federal law and the Constitution.",
-     "title": "Trump’s immigration detention policy to face justices",
-     "publishedAt": "2026-10-01T11:39:33.000Z",
-     "fetchedAt": "2026-10-01T17:11:42.566Z",
-     "version": 293,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_16b20ff339de0227",
-     "publisher": "Roll Call",
-     "date": "2026-10-02",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
-     "text": "The administration announced the cancellation last week, through a maneuver known as a “pocket rescission,” days before the funding expired at the end of the fiscal year Wednesday. Now it faces federal lawsuits over the move from housing groups, education grant recipients and several states, arguing that the rescissions violate federal law and the Constitution.",
-     "title": "Court challenges mount over Trump’s funding clawback",
-     "publishedAt": "2026-10-02T19:47:15.000Z",
-     "fetchedAt": "2026-10-03T01:33:16.772Z",
-     "version": 318,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "2e69c77f1b3a65eb1678da1416610b53c7e2bbd1b5529d92e1a0004b93790627"
-  },
   "2107940815276265775": {
    "contextVersion": 417,
    "evidenceSupplied": [
@@ -13345,6 +13312,43 @@
    ],
    "evidenceUsed": [],
    "inputHash": "2e69c77f1b3a65eb1678da1416610b53c7e2bbd1b5529d92e1a0004b93790627"
+  },
+  "2107937569262756146": {
+   "contextVersion": 418,
+   "evidenceSupplied": [
+    {
+     "id": "n_deaa7c6bada21f50",
+     "publisher": "Roll Call",
+     "date": "2026-10-01",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/01/trump-immigration-detention-policy-supreme-court/",
+     "text": "The interpretation shifted from prior administrations, including the first Trump administration, and resulted in tens of thousands of immigrants facing indefinite detention for civil immigration violations. Hundreds of immigrants have challenged the policy in federal court since last year, and a majority of lower court judges have found the policy violates federal law and the Constitution.",
+     "title": "Trump’s immigration detention policy to face justices",
+     "publishedAt": "2026-10-01T11:39:33.000Z",
+     "fetchedAt": "2026-10-01T17:11:42.566Z",
+     "version": 293,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_16b20ff339de0227",
+     "publisher": "Roll Call",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/02/court-challenges-mount-over-trumps-funding-clawback/",
+     "text": "The administration announced the cancellation last week, through a maneuver known as a “pocket rescission,” days before the funding expired at the end of the fiscal year Wednesday. Now it faces federal lawsuits over the move from housing groups, education grant recipients and several states, arguing that the rescissions violate federal law and the Constitution.",
+     "title": "Court challenges mount over Trump’s funding clawback",
+     "publishedAt": "2026-10-02T19:47:15.000Z",
+     "fetchedAt": "2026-10-03T01:33:16.772Z",
+     "version": 318,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b707f29ce5ea2b71fca8f64930e4b400126bda6c1ac777f62b22aef09dabfcdd"
   }
  },
  "needsContext": {
@@ -13960,12 +13964,12 @@
   "2107838898659262855": false,
   "2107968457979367847": false,
   "2107976518651588840": false,
-  "2107937569262756146": false,
   "2107940815276265775": false,
-  "2107963901283389518": false
+  "2107963901283389518": false,
+  "2107937569262756146": false
  },
  "inputBlocks": {},
- "contextVersion": 417,
+ "contextVersion": 418,
  "emerging": [
   {
    "label": "October 7 attack third anniversary",
@@ -14573,24 +14577,55 @@
   "live_chunk-0": {
    "acceptedIds": [
     "2107937569262756146",
-    "2107940815276265775",
-    "2107963901283389518",
-    "2108193644130058283",
-    "2108193856361582642",
-    "2108218777548562674",
-    "2108218962890678410",
-    "2108251517484490819",
-    "2108251562300543349"
+    "2108192629586346254",
+    "2108206712083665052",
+    "2108223303123120270",
+    "2108245507751428218",
+    "2108269590362861768",
+    "2108275922759741876",
+    "2108275968016011667",
+    "2108276777550246287",
+    "2108276794012942667",
+    "2108276796923806190",
+    "2108276962758205485",
+    "2108277037253230967",
+    "2108277065116225871",
+    "2108277246448345379",
+    "2108277492201234823",
+    "2108277534257271185",
+    "2108277749496549427",
+    "2108277878077227082",
+    "2108277977452535969",
+    "2108278084407320735",
+    "2108278594229108745",
+    "2108278757496586732",
+    "2108278757832147231",
+    "2108278757928968652",
+    "2108278758167769596",
+    "2108278950866919650",
+    "2108279455240089611",
+    "2108280159887356093",
+    "2108281470443799034",
+    "2108281933973127282",
+    "2108282014902440383",
+    "2108282331576279085",
+    "2108282359111983553",
+    "2108282770568986898",
+    "2108283227488321873",
+    "2108283535970959388",
+    "2108283538202104033",
+    "2108283756993765564",
+    "2108283864426922377"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T19:13:50.075Z",
-    "observedAt": "2026-10-08T19:14:08.009Z",
+    "attemptedAt": "2026-10-08T20:46:05.184Z",
+    "observedAt": "2026-10-08T20:47:18.625Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   }
@@ -14598,24 +14633,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T19:13:50.075Z",
-   "observedAt": "2026-10-08T19:14:08.009Z",
+   "attemptedAt": "2026-10-08T20:46:05.184Z",
+   "observedAt": "2026-10-08T20:47:18.625Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T19:13:50.075Z",
-   "observedAt": "2026-10-08T19:14:08.009Z",
+   "attemptedAt": "2026-10-08T20:46:05.184Z",
+   "observedAt": "2026-10-08T20:47:18.625Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T19:16:00.194Z"
+ "updatedAt": "2026-10-08T20:49:20.402Z"
 }

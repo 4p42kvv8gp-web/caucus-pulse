@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-08T19:16:00.343Z",
+ "generatedAt": "2026-10-08T20:49:20.562Z",
  "incidents": [
   {
    "id": "mobile-al--hurricane--hurricaneisaias--2026-10-08",
@@ -15,13 +15,13 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 1,
+    "statements": 2,
     "resolvedPeople": 1,
     "accounts": 1,
     "unresolvedAccounts": 0,
-    "repeated": false,
+    "repeated": true,
     "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Mobile, AL · AL-02",
    "placeRaw": "Mobile, AL",
@@ -30,9 +30,9 @@
    "handle": "@repscfigures",
    "member": "Shomari Figures",
    "since": "2026-10-08T16:50:32.000Z",
-   "last": "2026-10-08T16:50:32.000Z",
-   "updates": 1,
-   "engN": 1,
+   "last": "2026-10-08T19:42:56.000Z",
+   "updates": 2,
+   "engN": 10,
    "amplifiers": 0,
    "others": [],
    "title": "Hurricane Isaias · Mobile, AL",
@@ -81,10 +81,44 @@
       "sourceId": "2108238628644159715",
       "url": "https://x.com/i/web/status/2108238628644159715"
      }
+    },
+    {
+     "id": "2108282014902440383",
+     "sourceId": "2108282014902440383",
+     "url": "https://x.com/i/web/status/2108282014902440383",
+     "authorId": "1877805371114635264",
+     "personId": "member:shomari figures",
+     "referenceIds": [
+      "2108248680025248173"
+     ],
+     "time": "2026-10-08T19:42:56.000Z",
+     "who": "@repscfigures",
+     "tag": "repost",
+     "text": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear…",
+     "engN": 9,
+     "isNew": false,
+     "flag": {
+      "kind": "hurricane",
+      "place": "Mobile, AL",
+      "name": "Hurricane Isaias"
+     },
+     "evidence": {
+      "span": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2108282014902440383",
+      "url": "https://x.com/i/web/status/2108282014902440383"
+     }
     }
    ],
    "tweetIds": [
-    "2108238628644159715"
+    "2108238628644159715",
+    "2108282014902440383"
    ],
    "intel": null,
    "verification": {
@@ -92,7 +126,8 @@
     "basis": "source-statements",
     "independentSourceCount": 0,
     "sourceIds": [
-     "2108238628644159715"
+     "2108238628644159715",
+     "2108282014902440383"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
