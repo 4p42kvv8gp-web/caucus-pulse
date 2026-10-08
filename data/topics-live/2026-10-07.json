@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T14:34:28.623Z",
+ "classifiedAt": "2026-10-08T16:09:32.218Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -1260,15 +1260,19 @@
   ],
   "2107870412872860076": [
    [
-    "congress-politics",
-    "town-halls"
-   ],
-   [
     "democracy",
     "press-speech"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2107870415439700363": [
+   [
+    "democracy",
+    "press-speech"
+   ],
    [
     "congress-politics",
     "town-halls"
@@ -6806,34 +6810,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "c821bc243c7848c0f55faa78d7b07e2dd2a047d4acd9eac564183b0c54ee0808"
-  },
-  "2107870412872860076": {
-   "contextVersion": 398,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c821bc243c7848c0f55faa78d7b07e2dd2a047d4acd9eac564183b0c54ee0808",
-   "quotedContext": {
-    "id": "2105746079874478294",
-    "authorId": "1352760304271241218",
-    "handle": "RepTroyCarter",
-    "createdAt": "2026-10-01T19:46:02.000Z",
-    "textChars": 678,
-    "textHash": "11dd92a0af69965062ccc7c3464007534e9f28dc6fa1c18fb7e9eb173d25cf90"
-   }
-  },
-  "2107870415439700363": {
-   "contextVersion": 398,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c821bc243c7848c0f55faa78d7b07e2dd2a047d4acd9eac564183b0c54ee0808",
-   "quotedContext": {
-    "id": "2107870412872860076",
-    "authorId": "1352760304271241218",
-    "handle": "RepTroyCarter",
-    "createdAt": "2026-10-07T16:27:23.000Z",
-    "textChars": 153,
-    "textHash": "a7c5f8325093fc752847d187262d1829ffee2d0392da44a044efb4a975c2d9f7"
-   }
   },
   "2107870440622354785": {
    "contextVersion": 398,
@@ -13298,6 +13274,66 @@
     "textChars": 417,
     "textHash": "437c489d1d1f0e90315e52030876f4c84ead5eab490b309ac68a97471e4a41c8"
    }
+  },
+  "2107870412872860076": {
+   "contextVersion": 415,
+   "evidenceSupplied": [
+    {
+     "id": "n_a9dc86e24a117201",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5994416/white-house-correspondent-april-ryan-reflects-on-reporting-while-under-attack",
+     "text": "Ryan has spent decades pressing presidents for answers. She talks about access, power, race and how asking questions put her in President Trump's crosshairs. Her new book is Notes on a Blacklash .",
+     "title": "White House correspondent April Ryan reflects on reporting while under attack",
+     "publishedAt": "2026-10-08T15:24:23.000Z",
+     "fetchedAt": "2026-10-08T15:35:35.256Z",
+     "version": 415,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fa64d1d1c45c1334cd042d11cf7c25f7e75d86290e6c69f5d87c81e6f4f39326",
+   "quotedContext": {
+    "id": "2105746079874478294",
+    "authorId": "1352760304271241218",
+    "handle": "RepTroyCarter",
+    "createdAt": "2026-10-01T19:46:02.000Z",
+    "textChars": 678,
+    "textHash": "11dd92a0af69965062ccc7c3464007534e9f28dc6fa1c18fb7e9eb173d25cf90"
+   }
+  },
+  "2107870415439700363": {
+   "contextVersion": 415,
+   "evidenceSupplied": [
+    {
+     "id": "n_a9dc86e24a117201",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5994416/white-house-correspondent-april-ryan-reflects-on-reporting-while-under-attack",
+     "text": "Ryan has spent decades pressing presidents for answers. She talks about access, power, race and how asking questions put her in President Trump's crosshairs. Her new book is Notes on a Blacklash .",
+     "title": "White House correspondent April Ryan reflects on reporting while under attack",
+     "publishedAt": "2026-10-08T15:24:23.000Z",
+     "fetchedAt": "2026-10-08T15:35:35.256Z",
+     "version": 415,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fa64d1d1c45c1334cd042d11cf7c25f7e75d86290e6c69f5d87c81e6f4f39326",
+   "quotedContext": {
+    "id": "2107870412872860076",
+    "authorId": "1352760304271241218",
+    "handle": "RepTroyCarter",
+    "createdAt": "2026-10-07T16:27:23.000Z",
+    "textChars": 153,
+    "textHash": "a7c5f8325093fc752847d187262d1829ffee2d0392da44a044efb4a975c2d9f7"
+   }
   }
  },
  "needsContext": {
@@ -13479,8 +13515,6 @@
   "2107870135545442658": false,
   "2107870169951346889": false,
   "2107870271692513674": false,
-  "2107870412872860076": false,
-  "2107870415439700363": false,
   "2107870440622354785": false,
   "2107871891922780402": false,
   "2107873050419204151": false,
@@ -13915,10 +13949,12 @@
   "2107968457979367847": false,
   "2107976518651588840": false,
   "2107830350604804457": false,
-  "2107902146200924666": false
+  "2107902146200924666": false,
+  "2107870412872860076": false,
+  "2107870415439700363": false
  },
  "inputBlocks": {},
- "contextVersion": 413,
+ "contextVersion": 415,
  "emerging": [
   {
    "label": "October 7 attack third anniversary",
@@ -14552,39 +14588,39 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107830350604804457",
-    "2107902146200924666",
-    "2108174238993526977",
-    "2108181578568344048",
-    "2108182685227086247",
-    "2108182686514704618",
-    "2108182688469311572",
-    "2108182690146992439",
-    "2108183478743568868",
-    "2108184278672814565",
-    "2108184385300443262",
-    "2108184593354629337",
-    "2108184695691419664",
-    "2108185836055405024",
-    "2108186400629891169",
-    "2108187131885597120",
-    "2108187134738018546",
-    "2108188773691318477",
-    "2108188949235560926",
-    "2108191451595120741",
-    "2108191463892713935",
-    "2108192084020875268",
-    "2108192314011099609",
-    "2108192398044020802",
-    "2108192629586346254",
-    "2108193199441183051",
-    "2108193237404144087"
+    "2107870412872860076",
+    "2107870415439700363",
+    "2108204383469293829",
+    "2108204535990951973",
+    "2108205064460410946",
+    "2108205368132395370",
+    "2108206599747653966",
+    "2108206712083665052",
+    "2108206861849694411",
+    "2108207060064030862",
+    "2108207546381021247",
+    "2108208048401715528",
+    "2108208989263786117",
+    "2108209103000518671",
+    "2108209123523231771",
+    "2108209244637962419",
+    "2108210112623939595",
+    "2108210571598499958",
+    "2108210612928987400",
+    "2108210615068282982",
+    "2108210654863671471",
+    "2108210721972433081",
+    "2108210736916771253",
+    "2108210877644087493",
+    "2108210878780743834",
+    "2108210940919574827",
+    "2108210943914127637"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T14:32:34.438Z",
-    "observedAt": "2026-10-08T14:33:22.052Z",
+    "attemptedAt": "2026-10-08T16:07:37.204Z",
+    "observedAt": "2026-10-08T16:08:23.855Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -14596,8 +14632,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T14:32:34.438Z",
-   "observedAt": "2026-10-08T14:33:22.052Z",
+   "attemptedAt": "2026-10-08T16:07:37.204Z",
+   "observedAt": "2026-10-08T16:08:23.855Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14605,8 +14641,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T14:32:34.438Z",
-   "observedAt": "2026-10-08T14:33:22.052Z",
+   "attemptedAt": "2026-10-08T16:07:37.204Z",
+   "observedAt": "2026-10-08T16:08:23.855Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -14615,5 +14651,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T14:34:28.630Z"
+ "updatedAt": "2026-10-08T16:09:32.223Z"
 }
