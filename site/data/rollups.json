@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-08T07:51:15.908Z",
- "lastPollAt": "2026-10-08T06:25:57.427Z",
- "lastPollAttemptAt": "2026-10-08T06:25:57.025Z",
+ "generatedAt": "2026-10-08T08:31:50.723Z",
+ "lastPollAt": "2026-10-08T08:31:31.362Z",
+ "lastPollAttemptAt": "2026-10-08T08:31:30.914Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-08T07:51:14.297Z"
+  "referenceAsOf": "2026-10-08T08:31:49.111Z"
  },
  "news": {
   "version": 409,
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-08T07:51:14.820Z",
+   "asOf": "2026-10-08T08:31:49.634Z",
    "windowDays": 14,
-   "windowStart": "2026-09-24T07:51:14.820Z",
-   "eligibleItems": 1669,
+   "windowStart": "2026-09-24T08:31:49.634Z",
+   "eligibleItems": 1667,
    "withExcerpts": 161,
-   "headlineOrSummary": 1508,
+   "headlineOrSummary": 1506,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 260,
+     "eligibleItems": 258,
      "withExcerpts": 0,
-     "headlineOrSummary": 260,
+     "headlineOrSummary": 258,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-08T03:56:52.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-08",
-  "capturedIn24h": 595,
-  "classifiedIn24h": 595,
+  "capturedIn24h": 592,
+  "classifiedIn24h": 592,
   "taggedIn24h": 548,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-10-08T07:50:50.719Z",
-   "lastSuccessAt": "2026-10-08T06:26:09.614Z",
-   "capturedIn24h": 595,
-   "classifiedIn24h": 595,
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-10-08T08:31:35.932Z",
+   "lastSuccessAt": "2026-10-08T08:31:45.771Z",
+   "capturedIn24h": 592,
+   "classifiedIn24h": 592,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 10,
+    "posts": 11,
     "mix": [
-     60,
-     40,
-     0
+     55,
+     36,
+     9
     ],
-    "accounts": 6,
-    "members": 6,
+    "accounts": 7,
+    "members": 7,
     "unidentifiedAccounts": 0,
-    "classified": 10,
-    "tagged": 6,
+    "classified": 11,
+    "tagged": 7,
     "pending": 0,
     "corePosts": 1,
     "coreCounts": {
@@ -6845,12 +6845,12 @@
      "Corruption": 1
     },
     "eng": 97,
-    "perPost": 10,
+    "perPost": 9,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2852,
+    "posts": 2853,
     "mix": [
      84,
      5,
@@ -6859,8 +6859,8 @@
     "accounts": 331,
     "members": 204,
     "unidentifiedAccounts": 0,
-    "classified": 2852,
-    "tagged": 2606,
+    "classified": 2853,
+    "tagged": 2607,
     "pending": 0,
     "corePosts": 1103,
     "coreCounts": {
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    39,
-    133,
-    191,
-    124,
-    60,
-    26,
-    6,
-    9,
-    48,
-    131,
-    160,
-    136,
-    88,
+    2,
+    63,
+    157,
+    182,
+    97,
+    57,
     20,
-    3
+    6,
+    11,
+    78,
+    127,
+    165,
+    129,
+    64,
+    16,
+    2
    ]
   },
   "CPC": {
@@ -6942,37 +6942,37 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    17,
-    61,
-    85,
-    52,
-    30,
+    1,
+    28,
+    69,
+    78,
+    46,
+    26,
     13,
-    2,
+    0,
     5,
-    15,
-    62,
-    64,
-    67,
-    30,
+    29,
+    60,
+    72,
+    58,
+    20,
     9,
-    1
+    0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 1,
+    "posts": 2,
     "mix": [
-     100,
+     50,
      0,
-     0
+     50
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
-    "classified": 1,
-    "tagged": 0,
+    "classified": 2,
+    "tagged": 1,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -6981,12 +6981,12 @@
      "Corruption": 0
     },
     "eng": 2,
-    "perPost": 2,
+    "perPost": 1,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1702,
+    "posts": 1703,
     "mix": [
      82,
      6,
@@ -6995,8 +6995,8 @@
     "accounts": 186,
     "members": 110,
     "unidentifiedAccounts": 0,
-    "classified": 1702,
-    "tagged": 1548,
+    "classified": 1703,
+    "tagged": 1549,
     "pending": 0,
     "corePosts": 616,
     "coreCounts": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    3,
-    25,
-    82,
-    109,
-    75,
-    26,
-    14,
-    4,
+    1,
+    41,
+    94,
+    105,
+    55,
+    30,
+    8,
     6,
-    34,
-    87,
-    103,
-    65,
-    58,
-    9,
-    1
+    7,
+    60,
+    78,
+    100,
+    61,
+    47,
+    5,
+    2
    ]
   },
   "CBC": {
@@ -7078,37 +7078,37 @@
     "engDelta": 0
    },
    "curve48": [
+    1,
+    12,
+    32,
+    30,
+    17,
+    6,
     2,
-    10,
-    25,
-    31,
-    24,
-    7,
-    3,
-    2,
-    4,
+    6,
+    5,
     14,
-    31,
-    36,
+    32,
+    34,
     28,
-    21,
-    4,
+    19,
+    2,
     0
    ]
   },
   "CHC": {
    "t": {
-    "posts": 1,
+    "posts": 2,
     "mix": [
-     100,
+     50,
      0,
-     0
+     50
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
-    "classified": 1,
-    "tagged": 1,
+    "classified": 2,
+    "tagged": 2,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -7117,22 +7117,22 @@
      "Corruption": 0
     },
     "eng": 18,
-    "perPost": 18,
+    "perPost": 9,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 508,
+    "posts": 509,
     "mix": [
-     79,
+     78,
      5,
-     16
+     17
     ],
     "accounts": 59,
     "members": 38,
     "unidentifiedAccounts": 0,
-    "classified": 508,
-    "tagged": 470,
+    "classified": 509,
+    "tagged": 471,
     "pending": 0,
     "corePosts": 173,
     "coreCounts": {
@@ -7147,20 +7147,20 @@
    },
    "curve48": [
     0,
-    7,
-    21,
-    49,
-    26,
-    14,
-    11,
-    0,
-    0,
-    5,
-    23,
-    37,
+    8,
     29,
+    45,
+    24,
     15,
+    7,
+    0,
     1,
+    10,
+    24,
+    35,
+    28,
+    11,
+    2,
     1
    ]
   },
@@ -7214,20 +7214,20 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    1,
-    12,
-    18,
-    11,
-    5,
+    0,
+    2,
+    17,
+    14,
+    10,
+    4,
     0,
     0,
     3,
-    4,
-    10,
-    13,
-    16,
+    6,
     9,
+    16,
+    15,
+    6,
     4,
     0
    ]
@@ -7239,10 +7239,10 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 3,
+     "n": 4,
      "eng": 2,
-     "m": 2,
-     "a": 2
+     "m": 3,
+     "a": 3
     },
     "CPC": {
      "n": 3,
@@ -7251,10 +7251,10 @@
      "a": 2
     },
     "NewDem": {
-     "n": 0,
+     "n": 1,
      "eng": 0,
-     "m": 0,
-     "a": 0
+     "m": 1,
+     "a": 1
     },
     "CBC": {
      "n": 0,
@@ -7263,10 +7263,10 @@
      "a": 0
     },
     "CHC": {
-     "n": 0,
+     "n": 1,
      "eng": 0,
-     "m": 0,
-     "a": 0
+     "m": 1,
+     "a": 1
     },
     "CAPAC": {
      "n": 0,
@@ -7277,7 +7277,7 @@
    },
    "w": {
     "All": {
-     "n": 630,
+     "n": 631,
      "eng": 144651,
      "m": 152,
      "a": 205
@@ -7289,7 +7289,7 @@
      "a": 77
     },
     "NewDem": {
-     "n": 361,
+     "n": 362,
      "eng": 24657,
      "m": 87,
      "a": 120
@@ -7301,7 +7301,7 @@
      "a": 39
     },
     "CHC": {
-     "n": 100,
+     "n": 101,
      "eng": 25203,
      "m": 26,
      "a": 38
@@ -7320,20 +7320,20 @@
     124,
     125,
     111,
-    3
+    4
    ],
    "d": 5,
    "mAvg": 63.8,
-   "epAvg": 230,
+   "epAvg": 229,
    "momentum": {
-    "score": 37,
+    "score": 38,
     "drivers": [
      "caucus spread",
      "volume"
     ],
     "volume": 0.55,
     "accel": 0,
-    "adoption": 0.4712793733681462,
+    "adoption": 0.48694516971279367,
     "eff": 3.4,
     "engLift": 0
    },
@@ -7342,10 +7342,10 @@
      "key": "elections-2026",
      "t": {
       "All": {
-       "n": 2,
+       "n": 3,
        "eng": 2,
-       "m": 1,
-       "a": 1
+       "m": 2,
+       "a": 2
       },
       "CPC": {
        "n": 2,
@@ -7354,10 +7354,10 @@
        "a": 1
       },
       "NewDem": {
-       "n": 0,
+       "n": 1,
        "eng": 0,
-       "m": 0,
-       "a": 0
+       "m": 1,
+       "a": 1
       },
       "CBC": {
        "n": 0,
@@ -7366,10 +7366,10 @@
        "a": 0
       },
       "CHC": {
-       "n": 0,
+       "n": 1,
        "eng": 0,
-       "m": 0,
-       "a": 0
+       "m": 1,
+       "a": 1
       },
       "CAPAC": {
        "n": 0,
@@ -7380,7 +7380,7 @@
      },
      "w": {
       "All": {
-       "n": 397,
+       "n": 398,
        "eng": 113914,
        "m": 116,
        "a": 131
@@ -7392,7 +7392,7 @@
        "a": 49
       },
       "NewDem": {
-       "n": 242,
+       "n": 243,
        "eng": 22131,
        "m": 70,
        "a": 79
@@ -7404,7 +7404,7 @@
        "a": 23
       },
       "CHC": {
-       "n": 58,
+       "n": 59,
        "eng": 20221,
        "m": 20,
        "a": 24
@@ -7420,10 +7420,12 @@
      "leadPostId": "2107545817552974083",
      "postIds": {
       "t": [
+       "2108098459199021128",
        "2108045901050855547",
        "2108045862060576938"
       ],
       "w": [
+       "2108098459199021128",
        "2108045901050855547",
        "2108045862060576938",
        "2108042677908574214",
@@ -8198,11 +8200,13 @@
    ],
    "postIds": {
     "t": [
+     "2108098459199021128",
      "2108058041337974966",
      "2108045901050855547",
      "2108045862060576938"
     ],
     "w": [
+     "2108098459199021128",
      "2108058041337974966",
      "2108045901050855547",
      "2108045862060576938",
@@ -15946,20 +15950,20 @@
     33,
     0
    ],
-   "d": 26,
+   "d": 22,
    "mAvg": 21.7,
    "epAvg": 40,
    "momentum": {
-    "score": 54,
+    "score": 53,
     "drivers": [
      "adoption",
      "volume"
     ],
-    "volume": 0.76,
+    "volume": 0.72,
     "accel": 0,
     "adoption": 0.7923076923076922,
     "eff": 3.6,
-    "engLift": 0.15784900622671483
+    "engLift": 0.18584258095976647
    },
    "subs": [
     {
@@ -20820,7 +20824,7 @@
     6,
     10,
     10,
-    14,
+    15,
     24,
     24,
     24,
@@ -21136,7 +21140,7 @@
    "shape": [
     6,
     18,
-    22,
+    23,
     31,
     31,
     31,
@@ -22381,7 +22385,7 @@
   }
  ],
  "emergingCoverage": {
-  "total": 287,
+  "total": 288,
   "displayed": 12,
   "activeThresholdClusters": 6
  },
@@ -22395,7 +22399,7 @@
     "missing persons"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -23103,6 +23107,38 @@
  ],
  "incidentsFiltered": 1,
  "feed": [
+  {
+   "id": "2108098459199021128",
+   "handle": "@Norma4Congress",
+   "member": "Norma J. Torres",
+   "district": "CA-35",
+   "caucus": [
+    "NewDem",
+    "CHC"
+   ],
+   "text": "RT @ProjectLincoln: Trump is the first president to call for America to be attacked. And his Republican allies said nothing. \n\nThey don't c…",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-08T07:33:33.000Z",
+   "date": "2026-10-08",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2107642797968818632",
+   "provenance": {
+    "contextVersion": 409,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-08T08:31:31.351Z",
+   "isNew": false
+  },
   {
    "id": "2108076751683527053",
    "handle": "@gtwhitesides",
@@ -27163,8 +27199,21 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 404,
+    "contextVersion": 409,
     "evidenceSupplied": [
+     {
+      "id": "n_51f04690b77a2f94",
+      "publisher": "NPR",
+      "date": "2026-10-08",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/10/08/g-s1-147101/trump-presidential-retreat-golf-club",
+      "text": "The proposal for the retreat on Trump's private golf course in West Palm Beach would comingle the presidency with Trump's business ventures beyond his time in office, and is the the latest example of Trump seeking ways to leave his imprint on the presidency.",
+      "publishedAt": "2026-10-08T06:27:50.000Z",
+      "fetchedAt": "2026-10-08T07:23:19.396Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
+      "truncated": false
+     },
      {
       "id": "n_ddae8fa67037e628",
       "publisher": "The Hill",
@@ -27179,7 +27228,10 @@
       "truncated": false
      }
     ],
-    "evidenceUsed": []
+    "evidenceUsed": [
+     "n_ddae8fa67037e628",
+     "n_51f04690b77a2f94"
+    ]
    },
    "metricsObservedAt": "2026-10-08T07:47:12.676Z",
    "isNew": false
@@ -30289,38 +30341,6 @@
    },
    "metricsObservedAt": "2026-10-08T07:47:12.546Z",
    "isNew": false
-  },
-  {
-   "id": "2107935443052560814",
-   "handle": "@Ilhan",
-   "member": "Ilhan Omar",
-   "district": "MN-05",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "9 months ago, ICE agent Jonathan Ross murdered Renée Good in broad daylight and called her a \"fucking bitch\" as he walked away.\n\nRenée's family and our community have yet to see justice for this senseless murder. It's unacceptable. \n\nWe must prosecute and abolish ICE.",
-   "topics": [
-    "immigration/ice-enforcement",
-    "immigration"
-   ],
-   "time": "2026-10-07T20:45:47.000Z",
-   "date": "2026-10-07",
-   "engN": 13071,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 402,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-08T07:47:12.546Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -30657,6 +30677,30 @@
   "912822519136161793": "@LamonicaMciver"
  },
  "feedAll": [
+  {
+   "id": "2108098459199021128",
+   "authorId": "2409478435",
+   "createdAt": "2026-10-08T07:33:33.000Z",
+   "date": "2026-10-08",
+   "type": "retweet",
+   "text": "RT @ProjectLincoln: Trump is the first president to call for America to be attacked. And his Republican allies said nothing. \n\nThey don't c…",
+   "engN": 0,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2107642797968818632",
+   "provenance": {
+    "contextVersion": 409,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-08T08:31:31.351Z"
+  },
   {
    "id": "2108076751683527053",
    "authorId": "5408852",
@@ -33874,8 +33918,21 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 404,
+    "contextVersion": 409,
     "evidenceSupplied": [
+     {
+      "id": "n_51f04690b77a2f94",
+      "publisher": "NPR",
+      "date": "2026-10-08",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/10/08/g-s1-147101/trump-presidential-retreat-golf-club",
+      "text": "The proposal for the retreat on Trump's private golf course in West Palm Beach would comingle the presidency with Trump's business ventures beyond his time in office, and is the the latest example of Trump seeking ways to leave his imprint on the presidency.",
+      "publishedAt": "2026-10-08T06:27:50.000Z",
+      "fetchedAt": "2026-10-08T07:23:19.396Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
+      "truncated": false
+     },
      {
       "id": "n_ddae8fa67037e628",
       "publisher": "The Hill",
@@ -33890,7 +33947,10 @@
       "truncated": false
      }
     ],
-    "evidenceUsed": []
+    "evidenceUsed": [
+     "n_ddae8fa67037e628",
+     "n_51f04690b77a2f94"
+    ]
    },
    "metricsObservedAt": "2026-10-08T07:47:12.676Z",
    "quoted": {
@@ -48326,7 +48386,7 @@
    "sourceContextReason": null,
    "sourceReferenceId": null,
    "provenance": {
-    "contextVersion": 394,
+    "contextVersion": 409,
     "evidenceSupplied": [
      {
       "id": "n_71c36f13df82991e",
@@ -48342,16 +48402,16 @@
       "truncated": false
      },
      {
-      "id": "n_fde2b735fc5ddc1d",
+      "id": "n_51f04690b77a2f94",
       "publisher": "NPR",
-      "date": "2026-10-06",
+      "date": "2026-10-08",
       "kind": "report",
-      "url": "https://www.npr.org/2026/10/06/nx-s1-5991646/what-challenges-lie-ahead-for-the-democratic-party-as-midterms-approach",
-      "text": "A MARTÍNEZ, HOST: Let's hear from someone who's working to elect Democrats in these midterms. Devan Barber is executive director of the Democratic Senatorial Campaign Committee, and she's on the line with us. Devan, we just heard from Domenico Montanaro that the super PAC affiliated with Senate Republicans is moving money into usually unfamiliar territories such as Kansas. Why do you think that is?",
-      "publishedAt": "2026-10-06T10:53:02.000Z",
-      "fetchedAt": "2026-10-07T00:41:22.631Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
+      "url": "https://www.npr.org/2026/10/08/g-s1-147101/trump-presidential-retreat-golf-club",
+      "text": "FORT LAUDERDALE, Fla. — President Donald Trump on Wednesday said he wants to develop one of his Florida golf courses into a presidential retreat where his successors can spend quiet weekends on the greens, describing it as \"sort of a Camp David \" that he says would already have many of the security features needed to host presidents and world leaders.",
+      "publishedAt": "2026-10-08T06:27:50.000Z",
+      "fetchedAt": "2026-10-08T07:23:19.396Z",
+      "publishedAfterPost": true,
+      "acquiredAfterPost": true,
       "truncated": false
      }
     ],
@@ -74644,88 +74704,18 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-06T07:47:14.579Z"
-  },
-  {
-   "id": "2107183959507648861",
-   "authorId": "1611800554614755328",
-   "createdAt": "2026-10-05T18:59:40.000Z",
-   "date": "2026-10-05",
-   "type": "quote",
-   "text": "Who’s the teacher who changed your life? The one who believed in you, pushed you, or made you feel seen?\n\nThis World Teachers’ Day, let’s thank the educators who work hard and shape our future. As your Congresswoman, I’m fighting to deliver the resources and support you need to succeed.",
-   "engN": 3,
-   "topics": [
-    "education/public-schools",
-    "education"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 365,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-06T07:47:14.579Z",
-   "quoted": {
-    "id": "2107106463453950376",
-    "handle": "@HouseDemocrats",
-    "text": "Happy World Teachers' Day!\n\nToday, House Democrats celebrate all the teachers who open doors, uplift and work tirelessly to educate the next generation of Americans. https://t.co/R6qXipBo23"
-   }
-  },
-  {
-   "id": "2107183341988446527",
-   "authorId": "1861777824463376384",
-   "createdAt": "2026-10-05T18:57:12.000Z",
-   "date": "2026-10-05",
-   "type": "tweet",
-   "text": "Big win for Big Bend: A U.S. District Judge has haulted all border wall construction through our national treasure. Big Bend belongs to the American people, not a construction crew. Protecting our border should never mean destroying the land that makes Texas extraordinary.\n\nhttps://t.co/eeZbs4Co06",
-   "engN": 6,
-   "topics": [
-    "immigration/border-policy",
-    "immigration",
-    "climate"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 365,
-    "evidenceSupplied": [
-     {
-      "id": "n_c6e32ee41668c456",
-      "publisher": "The Hill",
-      "date": "2026-10-02",
-      "kind": "lead",
-      "url": "https://thehill.com/policy/energy-environment/6127037-trump-administration-border-halted-texas/",
-      "text": "Judge halts contentious border construction in and near Texas’s Big Bend National Park",
-      "publishedAt": "2026-10-02T21:09:48.000Z",
-      "fetchedAt": "2026-10-02T21:43:42.353Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_c6e32ee41668c456"
-    ]
-   },
-   "metricsObservedAt": "2026-10-06T07:47:14.579Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2852,
+ "feedAllTotal": 2853,
  "feedAllFiles": [
-  "feed-0-b5f559b3c873bb49.json",
-  "feed-1-74519035f48f7816.json",
-  "feed-2-cfc218a21d3e057d.json",
-  "feed-3-5499dddccd6ba48f.json",
-  "feed-4-7355e1087f39594e.json",
-  "feed-5-8f271cd4aa3a7b3a.json",
-  "feed-6-e8da981e10c891a7.json",
-  "feed-7-cccf164992ce54c8.json"
+  "feed-0-d49ab4d5b4c32ca3.json",
+  "feed-1-8cf8bfbcad283f06.json",
+  "feed-2-2121148fd2d8a24f.json",
+  "feed-3-67e012a3eb7bf85d.json",
+  "feed-4-fa7c6c3d21918596.json",
+  "feed-5-016856c028ef85d9.json",
+  "feed-6-fdcd95eabeaf5f0d.json",
+  "feed-7-0bb58550eb5caa28.json"
  ]
 }

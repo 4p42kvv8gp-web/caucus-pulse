@@ -1,5 +1,29 @@
 [
  {
+  "id": "2108098459199021128",
+  "authorId": "2409478435",
+  "createdAt": "2026-10-08T07:33:33.000Z",
+  "date": "2026-10-08",
+  "type": "retweet",
+  "text": "RT @ProjectLincoln: Trump is the first president to call for America to be attacked. And his Republican allies said nothing. \n\nThey don't c…",
+  "engN": 0,
+  "topics": [
+   "congress-politics/elections-2026",
+   "congress-politics"
+  ],
+  "classificationStatus": "complete",
+  "needsContext": true,
+  "sourceIncomplete": false,
+  "sourceContextReason": null,
+  "sourceReferenceId": "2107642797968818632",
+  "provenance": {
+   "contextVersion": 409,
+   "evidenceSupplied": [],
+   "evidenceUsed": []
+  },
+  "metricsObservedAt": "2026-10-08T08:31:31.351Z"
+ },
+ {
   "id": "2108076751683527053",
   "authorId": "5408852",
   "createdAt": "2026-10-08T06:07:18.000Z",
@@ -3216,8 +3240,21 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 404,
+   "contextVersion": 409,
    "evidenceSupplied": [
+    {
+     "id": "n_51f04690b77a2f94",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/g-s1-147101/trump-presidential-retreat-golf-club",
+     "text": "The proposal for the retreat on Trump's private golf course in West Palm Beach would comingle the presidency with Trump's business ventures beyond his time in office, and is the the latest example of Trump seeking ways to leave his imprint on the presidency.",
+     "publishedAt": "2026-10-08T06:27:50.000Z",
+     "fetchedAt": "2026-10-08T07:23:19.396Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
     {
      "id": "n_ddae8fa67037e628",
      "publisher": "The Hill",
@@ -3232,7 +3269,10 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": []
+   "evidenceUsed": [
+    "n_ddae8fa67037e628",
+    "n_51f04690b77a2f94"
+   ]
   },
   "metricsObservedAt": "2026-10-08T07:47:12.676Z",
   "quoted": {
@@ -11792,51 +11832,5 @@
    "evidenceUsed": []
   },
   "metricsObservedAt": "2026-10-08T07:47:12.246Z"
- },
- {
-  "id": "2107878503324807584",
-  "authorId": "1082427779583541248",
-  "createdAt": "2026-10-07T16:59:32.000Z",
-  "date": "2026-10-07",
-  "type": "quote",
-  "text": "HHS's new proposed Head Start rule would make nearly 1 in 10 enrolled kids ineligible and weaken services for dual language learners and kids with disabilities.\n\nI’m proud to have joined this letter urging @HHSGov to withdraw it and instead protect Head Start, which supports so many working families.",
-  "engN": 7,
-  "topics": [
-   "education",
-   "civil-rights/disability",
-   "civil-rights"
-  ],
-  "classificationStatus": "complete",
-  "needsContext": false,
-  "sourceIncomplete": false,
-  "sourceContextReason": null,
-  "sourceReferenceId": null,
-  "provenance": {
-   "contextVersion": 399,
-   "evidenceSupplied": [
-    {
-     "id": "n_30388e2877c434c1",
-     "publisher": "The Hill",
-     "date": "2026-10-03",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/education/6126823-head-start-programs-trump-reforms-hhs/",
-     "text": "Head Start fight reaches tipping point as advocates push back against proposed Trump changes",
-     "publishedAt": "2026-10-03T21:00:00.000Z",
-     "fetchedAt": "2026-10-04T20:35:14.697Z",
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_30388e2877c434c1"
-   ]
-  },
-  "metricsObservedAt": "2026-10-08T07:47:12.246Z",
-  "quoted": {
-   "id": "2107855970734850114",
-   "handle": "@ABC",
-   "text": "Democrats are urging Secretary Robert F. Kennedy Jr. to stop the Trump administration's proposed changes to Head Start, calling the reforms to the early childcare and education program illegal and…"
-  }
  }
 ]

@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T06:26:09.616Z",
+ "classifiedAt": "2026-10-08T08:31:45.807Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -42,7 +42,13 @@
     "unions"
    ]
   ],
-  "2108076751683527053": []
+  "2108076751683527053": [],
+  "2108098459199021128": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
  },
  "incidents": {},
  "provenance": {
@@ -161,6 +167,24 @@
     "textChars": 312,
     "textHash": "2dd2f6696a395a4f6f10718c65fef7c1ef787ebe2f8b002aa30ed5706dd1528b"
    }
+  },
+  "2108098459199021128": {
+   "contextVersion": 409,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ad8e0993202e80b2c137f6f225f7e9103d616b209db649497a1b8ac06239a03f",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107642797968818632",
+    "fingerprint": "db34472257dcf25489ed543235973ce9a124665d934ae7d40956498d525b3c41"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107642797968818632",
+    "fingerprint": "db34472257dcf25489ed543235973ce9a124665d934ae7d40956498d525b3c41"
+   }
   }
  },
  "needsContext": {
@@ -173,10 +197,11 @@
   "2108055911835320334": false,
   "2108058041337974966": false,
   "2108060841220391416": true,
-  "2108076751683527053": false
+  "2108076751683527053": false,
+  "2108098459199021128": true
  },
  "inputBlocks": {},
- "contextVersion": 408,
+ "contextVersion": 409,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -202,18 +227,19 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108060841220391416",
-    "2108076751683527053"
+    "2107784854762852608",
+    "2107963225354481724",
+    "2108098459199021128"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T06:26:00.542Z",
-    "observedAt": "2026-10-08T06:26:09.614Z",
+    "attemptedAt": "2026-10-08T08:31:35.932Z",
+    "observedAt": "2026-10-08T08:31:45.771Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   }
@@ -221,24 +247,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T06:26:00.542Z",
-   "observedAt": "2026-10-08T06:26:09.614Z",
+   "attemptedAt": "2026-10-08T08:31:35.932Z",
+   "observedAt": "2026-10-08T08:31:45.771Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T06:26:00.542Z",
-   "observedAt": "2026-10-08T06:26:09.614Z",
+   "attemptedAt": "2026-10-08T08:31:35.932Z",
+   "observedAt": "2026-10-08T08:31:45.771Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T06:26:09.616Z"
+ "updatedAt": "2026-10-08T08:31:45.809Z"
 }
