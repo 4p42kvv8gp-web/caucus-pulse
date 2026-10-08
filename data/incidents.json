@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-08T11:32:16.795Z",
+ "generatedAt": "2026-10-08T13:03:00.813Z",
  "incidents": [
+  {
+   "id": "florida-panhandle-fl--hurricane--hurricaneisaias--2026-10-08",
+   "kind": "hurricane",
+   "name": "Hurricane Isaias",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "hurricane"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Florida Panhandle, FL · FL-23",
+   "placeRaw": "Florida Panhandle, FL",
+   "district": "FL-23",
+   "districtMatch": true,
+   "handle": "@RepMoskowitz",
+   "member": "Jared Moskowitz",
+   "since": "2026-10-08T12:48:46.000Z",
+   "last": "2026-10-08T12:48:46.000Z",
+   "updates": 1,
+   "engN": 10,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hurricane Isaias · Florida Panhandle, FL",
+   "evidence": {
+    "span": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2108177783343960378",
+    "url": "https://x.com/i/web/status/2108177783343960378"
+   },
+   "timeline": [
+    {
+     "id": "2108177783343960378",
+     "sourceId": "2108177783343960378",
+     "url": "https://x.com/i/web/status/2108177783343960378",
+     "authorId": "1610009027743830018",
+     "personId": "member:jared moskowitz",
+     "referenceIds": [
+      "2108164516944966087"
+     ],
+     "time": "2026-10-08T12:48:46.000Z",
+     "who": "@RepMoskowitz",
+     "tag": "member",
+     "text": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.\n\n⚠️Check your evacuation zone.\n🐾 Don’t forget to plan for your pets.\n📲Follow @FLSERT for the latest updates.\n\nNot sure where to start? Here’s a checklist for building your emergency kit ⬇️\n\nhttps://t.co/OdovstL3C0",
+     "engN": 10,
+     "isNew": false,
+     "flag": {
+      "kind": "hurricane",
+      "place": "Florida Panhandle, FL",
+      "name": "Hurricane Isaias"
+     },
+     "evidence": {
+      "span": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2108177783343960378",
+      "url": "https://x.com/i/web/status/2108177783343960378"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2108177783343960378"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2108177783343960378"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "prince-georges-county-md--missing-persons--source-2107620719991365668",
    "kind": "missing persons",

@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T11:32:16.712Z",
+ "classifiedAt": "2026-10-08T13:03:00.685Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -82,9 +82,139 @@
     "congress-politics",
     "elections-2026"
    ]
+  ],
+  "2108160079036051925": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2108166500779716671": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2108166574481768551": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108166609395138917": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "tech",
+    "big-tech"
+   ]
+  ],
+  "2108167015781257492": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "civil-rights",
+    null
+   ]
+  ],
+  "2108168532785533027": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108169341443223905": [
+   [
+    "education",
+    null
+   ]
+  ],
+  "2108169342403665955": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2108172022211817723": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2108174238993526977": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "healthcare",
+    "drug-prices"
+   ]
+  ],
+  "2108177783343960378": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2108177966849294524": [
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2108179524320194933": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2108180036264099957": [
+   [
+    "healthcare",
+    "public-health"
+   ]
+  ],
+  "2108180620547600688": [
+   [
+    "climate",
+    "disasters"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2108181018855330006": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2108177783343960378": {
+   "kind": "hurricane",
+   "place": "Florida Panhandle, FL",
+   "name": "Hurricane Isaias"
+  }
+ },
  "provenance": {
   "2108045702102446515": {
    "contextVersion": 408,
@@ -284,6 +414,217 @@
    ],
    "evidenceUsed": [],
    "inputHash": "9382a336d18157fcd5590d051eefbb453cdb00e86eb4587dd296b7b07bbaa22a"
+  },
+  "2108160079036051925": {
+   "contextVersion": 412,
+   "evidenceSupplied": [
+    {
+     "id": "n_fa5354d1f8c7ed16",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5989413/benny-johnson-defamation-lawsuit-ice-protesters",
+     "text": "One plaintiff, Kyle Frankovich, had never heard of Johnson before the podcaster and online influencer posted video of Frankovich and a row of other protesters detained outside an ICE facility in Broadview, Ill. last October. \"These individuals assaulted ICE officers as they were trying to clear out the area behind us over here,\" said Johnson in one video.",
+     "title": "Pro-Trump Influencer Benny Johnson is being sued for defamation by ICE protesters",
+     "publishedAt": "2026-10-02T18:43:30.000Z",
+     "fetchedAt": "2026-10-03T03:05:23.555Z",
+     "version": 319,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb",
+   "quotedContext": {
+    "id": "2108154942641106946",
+    "authorId": "246939630",
+    "handle": "shannonrwatts",
+    "createdAt": "2026-10-08T11:18:00.000Z",
+    "textChars": 213,
+    "textHash": "55d235b0ae8c2f133ce35f5dc60be8f6456c0230a2da7bbd8807d207f4ae90f6"
+   }
+  },
+  "2108166500779716671": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107870268429316604",
+    "fingerprint": "f2099fb79bd4e3336d3de94a8af04d8a03e694474f732e30ac953617fbdd947a"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107870268429316604",
+    "fingerprint": "f2099fb79bd4e3336d3de94a8af04d8a03e694474f732e30ac953617fbdd947a"
+   }
+  },
+  "2108166574481768551": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108150608339337310",
+    "fingerprint": "10908a92d0174e83980ec4fd92608cc36ba5ad5f745ee8f6779e9ac8c6bbe3a4"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108150608339337310",
+    "fingerprint": "10908a92d0174e83980ec4fd92608cc36ba5ad5f745ee8f6779e9ac8c6bbe3a4"
+   }
+  },
+  "2108166609395138917": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108167015781257492": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108168532785533027": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108169341443223905": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108169342403665955": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108172022211817723": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108164900182724704",
+    "fingerprint": "dac68401ed6093267a018351e1780d8c4a96ddaf36ba981ed65430ce0c24f044"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108164900182724704",
+    "fingerprint": "dac68401ed6093267a018351e1780d8c4a96ddaf36ba981ed65430ce0c24f044"
+   }
+  },
+  "2108174238993526977": {
+   "contextVersion": 412,
+   "evidenceSupplied": [
+    {
+     "id": "n_c559e5aabd94a3bc",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5991687/trump-medicare-aca-payments-midterms",
+     "text": "\"I just can't believe it; I mean, that's crazy,\" says Allen, who's the executive director of a small nonprofit called West Virginians for Affordable Health Care . She says, in her opinion, sending out these checks is a \"political stunt.\"",
+     "title": "She got Trump's $500 check for health insurance. To her, it's a 'political stunt'",
+     "publishedAt": "2026-10-07T16:15:26.000Z",
+     "fetchedAt": "2026-10-07T17:18:47.213Z",
+     "version": 399,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108177783343960378": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb",
+   "quotedContext": {
+    "id": "2108164516944966087",
+    "authorId": "299798272",
+    "handle": "NHC_Atlantic",
+    "createdAt": "2026-10-08T11:56:03.000Z",
+    "textChars": 126,
+    "textHash": "390932ecbf2a12d24229191e6dde335337368c9fe72160f35dd3d5935ed46643"
+   }
+  },
+  "2108177966849294524": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108179524320194933": {
+   "contextVersion": 412,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108180036264099957": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108180620547600688": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
+  },
+  "2108181018855330006": {
+   "contextVersion": 412,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
   }
  },
  "needsContext": {
@@ -300,10 +641,26 @@
   "2108098459199021128": true,
   "2108151574443016598": false,
   "2108153213883203933": false,
-  "2108155658088718810": false
+  "2108155658088718810": false,
+  "2108160079036051925": true,
+  "2108166500779716671": false,
+  "2108166574481768551": false,
+  "2108166609395138917": false,
+  "2108167015781257492": false,
+  "2108168532785533027": false,
+  "2108169341443223905": false,
+  "2108169342403665955": false,
+  "2108172022211817723": false,
+  "2108174238993526977": false,
+  "2108177783343960378": false,
+  "2108177966849294524": false,
+  "2108179524320194933": false,
+  "2108180036264099957": false,
+  "2108180620547600688": false,
+  "2108181018855330006": false
  },
  "inputBlocks": {},
- "contextVersion": 411,
+ "contextVersion": 412,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -315,6 +672,30 @@
    "label": "Death of Apollo software pioneer Margaret Hamilton",
    "ids": [
     "2108076751683527053"
+   ]
+  },
+  {
+   "label": "Hurricane Isaias (Florida Panhandle)",
+   "ids": [
+    "2108177783343960378"
+   ]
+  },
+  {
+   "label": "Head Start dismantling proposal",
+   "ids": [
+    "2108169341443223905"
+   ]
+  },
+  {
+   "label": "FROST Relief Act for April 2026 farm freeze",
+   "ids": [
+    "2108180620547600688"
+   ]
+  },
+  {
+   "label": "Private equity in youth sports",
+   "ids": [
+    "2108177966849294524"
    ]
   }
  ],
@@ -329,23 +710,32 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107838898659262855",
-    "2107937569262756146",
-    "2107968457979367847",
-    "2107976518651588840",
-    "2108151574443016598",
-    "2108153213883203933",
-    "2108155658088718810"
+    "2108160079036051925",
+    "2108166500779716671",
+    "2108166574481768551",
+    "2108166609395138917",
+    "2108167015781257492",
+    "2108168532785533027",
+    "2108169341443223905",
+    "2108169342403665955",
+    "2108172022211817723",
+    "2108174238993526977",
+    "2108177783343960378",
+    "2108177966849294524",
+    "2108179524320194933",
+    "2108180036264099957",
+    "2108180620547600688",
+    "2108181018855330006"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T11:32:05.611Z",
-    "observedAt": "2026-10-08T11:32:16.673Z",
+    "attemptedAt": "2026-10-08T13:02:24.162Z",
+    "observedAt": "2026-10-08T13:03:00.680Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -353,24 +743,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T11:32:05.611Z",
-   "observedAt": "2026-10-08T11:32:16.673Z",
+   "attemptedAt": "2026-10-08T13:02:24.162Z",
+   "observedAt": "2026-10-08T13:03:00.680Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T11:32:05.611Z",
-   "observedAt": "2026-10-08T11:32:16.673Z",
+   "attemptedAt": "2026-10-08T13:02:24.162Z",
+   "observedAt": "2026-10-08T13:03:00.680Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T11:32:16.714Z"
+ "updatedAt": "2026-10-08T13:03:00.687Z"
 }
