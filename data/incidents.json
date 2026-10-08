@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-08T20:49:20.562Z",
+ "generatedAt": "2026-10-08T21:28:37.298Z",
  "incidents": [
+  {
+   "id": "mobile-county-al--severe-storm--source-2108304014106362157",
+   "kind": "severe storm",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "severe storm"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Mobile County, AL · AL-02",
+   "placeRaw": "Mobile County, AL",
+   "district": "AL-02",
+   "districtMatch": true,
+   "handle": "@repscfigures",
+   "member": "Shomari Figures",
+   "since": "2026-10-08T21:18:33.000Z",
+   "last": "2026-10-08T21:18:33.000Z",
+   "updates": 1,
+   "engN": 4,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Severe storm · Mobile County, AL",
+   "evidence": {
+    "span": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2108306073572540809",
+    "url": "https://x.com/i/web/status/2108306073572540809"
+   },
+   "timeline": [
+    {
+     "id": "2108306073572540809",
+     "sourceId": "2108306073572540809",
+     "url": "https://x.com/i/web/status/2108306073572540809",
+     "authorId": "1877805371114635264",
+     "personId": "member:shomari figures",
+     "referenceIds": [
+      "2108304014106362157"
+     ],
+     "time": "2026-10-08T21:18:33.000Z",
+     "who": "@repscfigures",
+     "tag": "repost",
+     "text": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+     "engN": 4,
+     "isNew": false,
+     "flag": {
+      "kind": "severe storm",
+      "place": "Mobile County, AL",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2108306073572540809",
+      "url": "https://x.com/i/web/status/2108306073572540809"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2108306073572540809"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2108306073572540809"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "mobile-al--hurricane--hurricaneisaias--2026-10-08",
    "kind": "hurricane",
