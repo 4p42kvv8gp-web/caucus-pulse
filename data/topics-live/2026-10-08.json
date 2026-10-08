@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T08:31:45.807Z",
+ "classifiedAt": "2026-10-08T11:32:16.712Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -44,6 +44,40 @@
   ],
   "2108076751683527053": [],
   "2108098459199021128": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108151574443016598": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "budget-appropriations",
+    null
+   ]
+  ],
+  "2108153213883203933": [
+   [
+    "budget-appropriations",
+    null
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2108155658088718810": [
+   [
+    "economy",
+    null
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
    [
     "congress-politics",
     "elections-2026"
@@ -185,6 +219,71 @@
     "referenceId": "2107642797968818632",
     "fingerprint": "db34472257dcf25489ed543235973ce9a124665d934ae7d40956498d525b3c41"
    }
+  },
+  "2108151574443016598": {
+   "contextVersion": 411,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9382a336d18157fcd5590d051eefbb453cdb00e86eb4587dd296b7b07bbaa22a",
+   "quotedContext": {
+    "id": "2107821495988666687",
+    "authorId": "18949452",
+    "handle": "FT",
+    "createdAt": "2026-10-07T13:13:00.000Z",
+    "textChars": 98,
+    "textHash": "e40cfaee66af08dcd7716db6e59064de10150dbfcdaa842efc9d925fffe25d70"
+   }
+  },
+  "2108153213883203933": {
+   "contextVersion": 411,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9382a336d18157fcd5590d051eefbb453cdb00e86eb4587dd296b7b07bbaa22a",
+   "quotedContext": {
+    "id": "2107821495988666687",
+    "authorId": "18949452",
+    "handle": "FT",
+    "createdAt": "2026-10-07T13:13:00.000Z",
+    "textChars": 98,
+    "textHash": "e40cfaee66af08dcd7716db6e59064de10150dbfcdaa842efc9d925fffe25d70"
+   }
+  },
+  "2108155658088718810": {
+   "contextVersion": 411,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_210de89c86685a1b",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
+     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "publishedAt": "2026-10-01T13:23:18.000Z",
+     "fetchedAt": "2026-10-01T15:42:02.407Z",
+     "version": 292,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9382a336d18157fcd5590d051eefbb453cdb00e86eb4587dd296b7b07bbaa22a"
   }
  },
  "needsContext": {
@@ -198,10 +297,13 @@
   "2108058041337974966": false,
   "2108060841220391416": true,
   "2108076751683527053": false,
-  "2108098459199021128": true
+  "2108098459199021128": true,
+  "2108151574443016598": false,
+  "2108153213883203933": false,
+  "2108155658088718810": false
  },
  "inputBlocks": {},
- "contextVersion": 409,
+ "contextVersion": 411,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -227,19 +329,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2107784854762852608",
-    "2107963225354481724",
-    "2108098459199021128"
+    "2107838898659262855",
+    "2107937569262756146",
+    "2107968457979367847",
+    "2107976518651588840",
+    "2108151574443016598",
+    "2108153213883203933",
+    "2108155658088718810"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T08:31:35.932Z",
-    "observedAt": "2026-10-08T08:31:45.771Z",
+    "attemptedAt": "2026-10-08T11:32:05.611Z",
+    "observedAt": "2026-10-08T11:32:16.673Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -247,24 +353,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T08:31:35.932Z",
-   "observedAt": "2026-10-08T08:31:45.771Z",
+   "attemptedAt": "2026-10-08T11:32:05.611Z",
+   "observedAt": "2026-10-08T11:32:16.673Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T08:31:35.932Z",
-   "observedAt": "2026-10-08T08:31:45.771Z",
+   "attemptedAt": "2026-10-08T11:32:05.611Z",
+   "observedAt": "2026-10-08T11:32:16.673Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T08:31:45.809Z"
+ "updatedAt": "2026-10-08T11:32:16.714Z"
 }
