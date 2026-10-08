@@ -1,7 +1,7 @@
 {
  "date": "2026-10-07",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-08T00:51:12.853Z",
+ "classifiedAt": "2026-10-08T01:39:00.241Z",
  "assignments": {
   "2107699073218457986": [
    [
@@ -4011,6 +4011,126 @@
    [
     "democracy",
     "voting-rights"
+   ]
+  ],
+  "2107996865295970671": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2107997056807686326": [
+   [
+    "climate",
+    "disasters"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2107997339373736218": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2107998158617813397": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2107998563883958637": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2107999311631941812": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2107999463994253726": [
+   [
+    "budget-appropriations",
+    "social-security"
+   ],
+   [
+    "healthcare",
+    "medicare"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2107999809651225047": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2107999925740908761": [
+   [
+    "democracy",
+    null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108001001688940685": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2108001003702309207": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2108002617440063744": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108004262408245338": [
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2108005429682839664": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108006202903048530": [
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2108008107309977858": [
+   [
+    "democracy",
+    "executive-overreach"
    ]
   ]
  },
@@ -12480,6 +12600,200 @@
    ],
    "evidenceUsed": [],
    "inputHash": "8711f50ac1d27d688b7cfa6a80b10eff1442c03b6bb378d5bebe1c17a99027f9"
+  },
+  "2107996865295970671": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107997056807686326": {
+   "contextVersion": 406,
+   "evidenceSupplied": [
+    {
+     "id": "n_e5010556091bf145",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6132331-cook-political-report-democrats-shift/",
+     "text": "Cook Political Report moves three Senate races in Democrats’ favor",
+     "title": "Cook Political Report moves three Senate races in Democrats’ favor",
+     "publishedAt": "2026-10-06T19:54:43.000Z",
+     "fetchedAt": "2026-10-06T20:17:35.166Z",
+     "version": 384,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107997339373736218": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107944357991244026",
+    "fingerprint": "43547cd79848d49b1ce8f68687460f3d750c90609d3a0f5e81da8bf3fce292d0"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2107944357991244026",
+    "fingerprint": "43547cd79848d49b1ce8f68687460f3d750c90609d3a0f5e81da8bf3fce292d0"
+   }
+  },
+  "2107998158617813397": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107998563883958637": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107999311631941812": {
+   "contextVersion": 406,
+   "evidenceSupplied": [
+    {
+     "id": "n_2e5b805e30f2eb0c",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/employee-question-could-stall-senate-college-sports-bill-at-midfield-in-house/",
+     "text": "The Senate on Sept. 28 passed the measure 77-22, running up the score with a bipartisan final tally for the “Protect College Sports Act.” The legislation would establish the nation’s first federal regulatory structure for college athletics, creating national rules governing name, image and likeness (NIL) deal-making and compensation. Among its major provisions, the bill proposes nationwide standards for NIL agreements, establishes guidelines for schools making direct payments to athletes and grants targeted antitrust protections to certain college sports-governing organizations.",
+     "title": "Employee question could stall Senate college sports bill at midfield in House",
+     "publishedAt": "2026-10-05T05:15:00.000Z",
+     "fetchedAt": "2026-10-05T09:53:26.761Z",
+     "version": 358,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_2e5b805e30f2eb0c"
+   ],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105046627769786408",
+    "fingerprint": "e867a347914723dee6ab7dbb7bb1d6ebf4c1d04a5a63068d77806e36c4bfdf8e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2105046627769786408",
+    "fingerprint": "e867a347914723dee6ab7dbb7bb1d6ebf4c1d04a5a63068d77806e36c4bfdf8e"
+   }
+  },
+  "2107999463994253726": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107999809651225047": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2107999925740908761": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2108001001688940685": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2108001003702309207": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b",
+   "quotedContext": {
+    "id": "2108001001688940685",
+    "authorId": "950783972",
+    "handle": "RepBera",
+    "createdAt": "2026-10-08T01:06:18.000Z",
+    "textChars": 200,
+    "textHash": "9cce2945b7c4e3e66a9f720d5d458bd37c61d69e38d1d068da2ab28ae9ac0a78"
+   }
+  },
+  "2108002617440063744": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2108004262408245338": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2108005429682839664": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b",
+   "quotedContext": {
+    "id": "2107981306634068157",
+    "authorId": "3035263158",
+    "handle": "jherrerx",
+    "createdAt": "2026-10-07T23:48:02.000Z",
+    "textChars": 303,
+    "textHash": "7bee35bc80eb3e8c102784f4a84a7e131c714b5f27b17943eeec9ca48eab8bd5"
+   }
+  },
+  "2108006202903048530": {
+   "contextVersion": 406,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b"
+  },
+  "2108008107309977858": {
+   "contextVersion": 406,
+   "evidenceSupplied": [
+    {
+     "id": "n_6cfa688fff886c81",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-expressing-concern-about-gop-midterm-chances/",
+     "text": "Confidence is a hallmark of the 80-year-old chief executive’s presidential persona, so his willingness to acknowledge he and other top Republicans are “worried” about a number of races is uncharacteristic. But during exchanges with reporters in the Oval Office, and at campaign stops in Texas, Oklahoma and Ohio, he has done just that.",
+     "title": "Trump expressing concern about GOP midterm chances",
+     "publishedAt": "2026-10-05T14:27:38.000Z",
+     "fetchedAt": "2026-10-05T19:04:45.931Z",
+     "version": 365,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "755abeccbe0477be3dad8d5097c6525e2c21cbc9e3c1c55f54a12d4a97fa858b",
+   "quotedContext": {
+    "id": "2107992170627989948",
+    "authorId": "3315264553",
+    "handle": "HQNewsNow",
+    "createdAt": "2026-10-08T00:31:12.000Z",
+    "textChars": 323,
+    "textHash": "0b32e77b12128d2adcd4a9895d564c918b1b5183daef5fe06ce8e9dc55b381bb"
+   }
   }
  },
  "needsContext": {
@@ -13063,10 +13377,26 @@
   "2107991695962919423": false,
   "2107995114442485837": false,
   "2107995924438175863": false,
-  "2107996476018200617": false
+  "2107996476018200617": false,
+  "2107996865295970671": false,
+  "2107997056807686326": false,
+  "2107997339373736218": false,
+  "2107998158617813397": false,
+  "2107998563883958637": false,
+  "2107999311631941812": false,
+  "2107999463994253726": false,
+  "2107999809651225047": false,
+  "2107999925740908761": false,
+  "2108001001688940685": false,
+  "2108001003702309207": false,
+  "2108002617440063744": false,
+  "2108004262408245338": true,
+  "2108005429682839664": false,
+  "2108006202903048530": false,
+  "2108008107309977858": false
  },
  "inputBlocks": {},
- "contextVersion": 405,
+ "contextVersion": 406,
  "emerging": [
   {
    "label": "October 7 attack third anniversary",
@@ -13581,6 +13911,18 @@
    "ids": [
     "2107989384679092393"
    ]
+  },
+  {
+   "label": "Christian nationalism / 'No Prophets' book",
+   "ids": [
+    "2107999925740908761"
+   ]
+  },
+  {
+   "label": "Alabama state of emergency ahead of Gulf tropical system",
+   "ids": [
+    "2107997339373736218"
+   ]
   }
  ],
  "unclassified": [],
@@ -13727,56 +14069,32 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2107875132719149407",
-    "2107912288028053873",
-    "2107974986443218974",
-    "2107975031321985141",
-    "2107975760321589293",
-    "2107976518651588840",
-    "2107978181655355446",
-    "2107979035577815088",
-    "2107980308893286590",
-    "2107980549281259741",
-    "2107980632060002657",
-    "2107980914923851824",
-    "2107981080389124381",
-    "2107981086143729818",
-    "2107981354902110617",
-    "2107981448598987210",
-    "2107982308917629326",
-    "2107982811521335779",
-    "2107983447201325304",
-    "2107983535021936910",
-    "2107984051868950663",
-    "2107984187378565476",
-    "2107984189790564459",
-    "2107984193540251968",
-    "2107984196572746125",
-    "2107984198162084308",
-    "2107984199525208165",
-    "2107984362654302295",
-    "2107984603344724353",
-    "2107985279575613913",
-    "2107986968642724039",
-    "2107987182514541024",
-    "2107988091768086567",
-    "2107988141562880186",
-    "2107988351806591052",
-    "2107989001483190361",
-    "2107989197873385867",
-    "2107989384679092393",
-    "2107989578674266538",
-    "2107990448354828357"
+    "2107996865295970671",
+    "2107997056807686326",
+    "2107997339373736218",
+    "2107998158617813397",
+    "2107998563883958637",
+    "2107999311631941812",
+    "2107999463994253726",
+    "2107999809651225047",
+    "2107999925740908761",
+    "2108001001688940685",
+    "2108001003702309207",
+    "2108002617440063744",
+    "2108004262408245338",
+    "2108005429682839664",
+    "2108006202903048530",
+    "2108008107309977858"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T00:49:59.019Z",
-    "observedAt": "2026-10-08T00:51:01.538Z",
+    "attemptedAt": "2026-10-08T01:38:30.537Z",
+    "observedAt": "2026-10-08T01:39:00.217Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -13784,24 +14102,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-08T00:51:01.553Z",
-   "observedAt": "2026-10-08T00:51:12.826Z",
+   "attemptedAt": "2026-10-08T01:38:30.537Z",
+   "observedAt": "2026-10-08T01:39:00.217Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-08T00:51:01.553Z",
-   "observedAt": "2026-10-08T00:51:12.826Z",
+   "attemptedAt": "2026-10-08T01:38:30.537Z",
+   "observedAt": "2026-10-08T01:39:00.217Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-08T00:51:12.861Z"
+ "updatedAt": "2026-10-08T01:39:00.247Z"
 }
