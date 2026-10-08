@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-08T16:26:08.899Z",
+ "generatedAt": "2026-10-08T17:44:08.747Z",
  "incidents": [
+  {
+   "id": "mobile-al--hurricane--hurricaneisaias--2026-10-08",
+   "kind": "hurricane",
+   "name": "Hurricane Isaias",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "hurricane"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Mobile, AL · AL-02",
+   "placeRaw": "Mobile, AL",
+   "district": "AL-02",
+   "districtMatch": true,
+   "handle": "@repscfigures",
+   "member": "Shomari Figures",
+   "since": "2026-10-08T16:50:32.000Z",
+   "last": "2026-10-08T16:50:32.000Z",
+   "updates": 1,
+   "engN": 1,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hurricane Isaias · Mobile, AL",
+   "evidence": {
+    "span": "🚨 Attention Mobile ⬇️",
+    "exact": false,
+    "start": 0,
+    "end": 22,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2108238628644159715",
+    "url": "https://x.com/i/web/status/2108238628644159715"
+   },
+   "timeline": [
+    {
+     "id": "2108238628644159715",
+     "sourceId": "2108238628644159715",
+     "url": "https://x.com/i/web/status/2108238628644159715",
+     "authorId": "1877805371114635264",
+     "personId": "member:shomari figures",
+     "referenceIds": [
+      "2108212880873304454"
+     ],
+     "time": "2026-10-08T16:50:32.000Z",
+     "who": "@repscfigures",
+     "tag": "member",
+     "text": "🚨 Attention Mobile ⬇️ https://t.co/dj9cU9Ra0K",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "hurricane",
+      "place": "Mobile, AL",
+      "name": "Hurricane Isaias"
+     },
+     "evidence": {
+      "span": "🚨 Attention Mobile ⬇️",
+      "exact": false,
+      "start": 0,
+      "end": 22,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2108238628644159715",
+      "url": "https://x.com/i/web/status/2108238628644159715"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2108238628644159715"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2108238628644159715"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "florida-panhandle-fl--hurricane--hurricaneisaias--2026-10-08",
    "kind": "hurricane",
@@ -385,7 +482,7 @@
     "wildfire"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
