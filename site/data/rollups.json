@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-09T06:44:39.650Z",
- "lastPollAt": "2026-10-09T06:44:21.061Z",
- "lastPollAttemptAt": "2026-10-09T06:44:20.518Z",
+ "generatedAt": "2026-10-09T07:45:11.625Z",
+ "lastPollAt": "2026-10-09T07:45:04.893Z",
+ "lastPollAttemptAt": "2026-10-09T07:45:04.148Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-09T06:44:38.551Z"
+  "referenceAsOf": "2026-10-09T07:45:09.766Z"
  },
  "news": {
   "version": 426,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-09T06:44:38.892Z",
+   "asOf": "2026-10-09T07:45:10.409Z",
    "windowDays": 14,
-   "windowStart": "2026-09-25T06:44:38.892Z",
+   "windowStart": "2026-09-25T07:45:10.409Z",
    "eligibleItems": 1623,
    "withExcerpts": 156,
    "headlineOrSummary": 1467,
@@ -3546,9 +3546,9 @@
  },
  "classification": {
   "through": "2026-10-09",
-  "capturedIn24h": 600,
-  "classifiedIn24h": 600,
-  "taggedIn24h": 562,
+  "capturedIn24h": 599,
+  "classifiedIn24h": 599,
+  "taggedIn24h": 561,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
@@ -3557,8 +3557,8 @@
    "hasCurrentFailure": false,
    "lastAttemptAt": "2026-10-09T06:44:23.157Z",
    "lastSuccessAt": "2026-10-09T06:44:28.952Z",
-   "capturedIn24h": 600,
-   "classifiedIn24h": 600,
+   "capturedIn24h": 599,
+   "classifiedIn24h": 599,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    6,
+    8,
+    46,
+    128,
+    165,
+    133,
+    90,
     22,
-    109,
-    142,
-    166,
-    107,
-    31,
-    12,
-    1,
-    13,
-    111,
-    140,
-    178,
-    105,
-    41,
-    11
+    4,
+    0,
+    32,
+    126,
+    165,
+    163,
+    85,
+    25,
+    3
    ]
   },
   "CPC": {
@@ -6942,22 +6942,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    5,
-    51,
-    60,
-    79,
-    38,
-    10,
-    8,
+    4,
+    13,
+    61,
+    67,
+    65,
+    31,
+    11,
+    1,
     0,
-    6,
-    48,
-    63,
-    92,
-    55,
-    24,
-    6
+    15,
+    53,
+    74,
+    88,
+    47,
+    16,
+    1
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    19,
-    76,
-    93,
+    6,
+    33,
     83,
+    108,
     63,
-    22,
-    3,
-    1,
+    58,
     11,
-    63,
-    78,
-    100,
-    53,
-    21,
-    6
+    2,
+    0,
+    19,
+    75,
+    94,
+    84,
+    46,
+    12,
+    2
    ]
   },
   "CBC": {
@@ -7079,21 +7079,21 @@
    },
    "curve48": [
     4,
-    8,
-    22,
-    36,
-    32,
-    27,
-    8,
-    1,
+    14,
+    30,
+    37,
+    28,
+    21,
+    4,
     0,
-    2,
-    25,
-    31,
-    38,
-    17,
-    6,
-    3
+    0,
+    5,
+    29,
+    39,
+    28,
+    16,
+    4,
+    1
    ]
   },
   "CHC": {
@@ -7147,21 +7147,21 @@
    },
    "curve48": [
     0,
+    4,
+    21,
+    39,
+    29,
+    14,
+    3,
     2,
-    17,
+    0,
+    1,
+    24,
     29,
     37,
-    20,
+    15,
     5,
-    1,
-    1,
-    1,
-    17,
-    27,
-    38,
-    17,
-    10,
-    1
+    0
    ]
   },
   "CAPAC": {
@@ -7215,21 +7215,21 @@
    },
    "curve48": [
     2,
-    2,
-    8,
+    4,
     11,
-    19,
+    13,
+    15,
     10,
-    5,
-    2,
+    4,
+    0,
     0,
     1,
-    4,
-    15,
-    16,
-    15,
-    9,
-    2
+    8,
+    17,
+    19,
+    12,
+    5,
+    0
    ]
   }
  },
@@ -9172,18 +9172,18 @@
     123,
     3
    ],
-   "d": 10,
+   "d": 9,
    "mAvg": 66.3,
    "epAvg": 157,
    "momentum": {
-    "score": 41,
+    "score": 40,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.6,
+    "volume": 0.59,
     "accel": 0,
-    "adoption": 0.585427135678392,
+    "adoption": 0.5703517587939699,
     "eff": 3.1,
     "engLift": 0
    },
@@ -21200,7 +21200,7 @@
    "shape": [
     2,
     2,
-    3,
+    4,
     4,
     4,
     4,
@@ -22439,7 +22439,7 @@
     "hurricane"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -22821,7 +22821,7 @@
     "hurricane"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
