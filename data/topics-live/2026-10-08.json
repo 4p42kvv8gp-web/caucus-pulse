@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T09:19:11.615Z",
+ "classifiedAt": "2026-10-09T10:51:03.575Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -9282,45 +9282,6 @@
     "textHash": "a0cd2fc73ba29154632ff7e4eca95bd4ef21044f6bd2bb9c3a05638d29bcb75e"
    }
   },
-  "2108283899982000149": {
-   "contextVersion": 418,
-   "evidenceSupplied": [
-    {
-     "id": "n_f96d0ec5d5f2b481",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/video-clips/6134261-watch-live-pete-hegseth-uss-abraham-lincoln-middle-east-return-us-california/",
-     "text": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
-     "title": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
-     "publishedAt": "2026-10-07T17:47:11.000Z",
-     "fetchedAt": "2026-10-07T18:49:59.947Z",
-     "version": 400,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_e030cbbd1af467fa",
-     "publisher": "The Hill",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6132210-hegseth-welcomes-uss-abraham-lincoln/",
-     "text": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
-     "title": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
-     "publishedAt": "2026-10-06T19:21:28.000Z",
-     "fetchedAt": "2026-10-06T19:31:34.291Z",
-     "version": 383,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_f96d0ec5d5f2b481"
-   ],
-   "inputHash": "9dc44e19ea7add3516b7ecee96099e30b2e79dddd71d3dcb1e1dbd90309c0263"
-  },
   "2108284289792024616": {
    "contextVersion": 418,
    "evidenceSupplied": [],
@@ -14321,6 +14282,46 @@
     "textChars": 178,
     "textHash": "56727560adf8062442f1e772f8bb11d26a06ac2b5f59dcdb5b46a4b25ec47910"
    }
+  },
+  "2108283899982000149": {
+   "contextVersion": 429,
+   "evidenceSupplied": [
+    {
+     "id": "n_f96d0ec5d5f2b481",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6134261-watch-live-pete-hegseth-uss-abraham-lincoln-middle-east-return-us-california/",
+     "text": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
+     "title": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
+     "publishedAt": "2026-10-07T17:47:11.000Z",
+     "fetchedAt": "2026-10-07T18:49:59.947Z",
+     "version": 400,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e030cbbd1af467fa",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132210-hegseth-welcomes-uss-abraham-lincoln/",
+     "text": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "title": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "publishedAt": "2026-10-06T19:21:28.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_f96d0ec5d5f2b481",
+    "n_e030cbbd1af467fa"
+   ],
+   "inputHash": "142853d0870bb1eb4763e7dd121e66e5e851778bc1e61ffe001f910ee9bfc1f2"
   }
  },
  "needsContext": {
@@ -14662,7 +14663,6 @@
   "2108283538202104033": false,
   "2108283756993765564": true,
   "2108283864426922377": false,
-  "2108283899982000149": false,
   "2108284289792024616": true,
   "2108284318321717727": false,
   "2108284379806171250": false,
@@ -14954,10 +14954,11 @@
   "2108256611202375878": false,
   "2108266069781606490": false,
   "2108335109107487075": false,
-  "2108375121006391760": false
+  "2108375121006391760": false,
+  "2108283899982000149": false
  },
  "inputBlocks": {},
- "contextVersion": 428,
+ "contextVersion": 429,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15498,22 +15499,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108155658088718810",
-    "2108179524320194933",
-    "2108210940919574827",
-    "2108210945294020750",
-    "2108212118755369283",
-    "2108213382293938332"
+    "2108283899982000149"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T09:18:37.651Z",
-    "observedAt": "2026-10-09T09:18:52.058Z",
+    "attemptedAt": "2026-10-09T10:51:00.389Z",
+    "observedAt": "2026-10-09T10:51:03.551Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   },
@@ -15581,24 +15577,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T09:19:06.817Z",
-   "observedAt": "2026-10-09T09:19:11.584Z",
+   "attemptedAt": "2026-10-09T10:51:00.389Z",
+   "observedAt": "2026-10-09T10:51:03.551Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T09:19:06.817Z",
-   "observedAt": "2026-10-09T09:19:11.584Z",
+   "attemptedAt": "2026-10-09T10:51:00.389Z",
+   "observedAt": "2026-10-09T10:51:03.551Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T09:19:11.622Z"
+ "updatedAt": "2026-10-09T10:51:03.580Z"
 }
