@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-09T19:51:56.953Z",
+ "generatedAt": "2026-10-09T21:06:53.151Z",
  "incidents": [
+  {
+   "id": "osceola-county-fl--hurricane--hurricaneisaias--2026-10-09",
+   "kind": "hurricane",
+   "name": "Hurricane Isaias",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "hurricane"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Osceola County, FL · FL-09",
+   "placeRaw": "Osceola County, FL",
+   "district": "FL-09",
+   "districtMatch": true,
+   "handle": "@RepDarrenSoto",
+   "member": "Darren Soto",
+   "since": "2026-10-09T20:44:40.000Z",
+   "last": "2026-10-09T20:44:40.000Z",
+   "updates": 1,
+   "engN": 2,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hurricane Isaias · Osceola County, FL",
+   "evidence": {
+    "span": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.",
+    "exact": true,
+    "start": 0,
+    "end": 73,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2108659937899598254",
+    "url": "https://x.com/i/web/status/2108659937899598254"
+   },
+   "timeline": [
+    {
+     "id": "2108659937899598254",
+     "sourceId": "2108659937899598254",
+     "url": "https://x.com/i/web/status/2108659937899598254",
+     "authorId": "818713465653051392",
+     "personId": "member:darren soto",
+     "referenceIds": [],
+     "time": "2026-10-09T20:44:40.000Z",
+     "who": "@RepDarrenSoto",
+     "tag": "member",
+     "text": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.\n\nIn Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed. We stand ready to support @fema to help our region, N Fla and other affected areas. https://t.co/whjnVcK8SK",
+     "engN": 2,
+     "isNew": false,
+     "flag": {
+      "kind": "hurricane",
+      "place": "Osceola County, FL",
+      "name": "Hurricane Isaias"
+     },
+     "evidence": {
+      "span": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.",
+      "exact": true,
+      "start": 0,
+      "end": 73,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2108659937899598254",
+      "url": "https://x.com/i/web/status/2108659937899598254"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2108659937899598254"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2108659937899598254"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "newport-beach-ca--flooding--source-2108625609379447241",
    "kind": "flooding",
