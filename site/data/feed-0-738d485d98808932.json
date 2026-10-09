@@ -1,5 +1,29 @@
 [
  {
+  "id": "2108474617673236925",
+  "authorId": "231510077",
+  "createdAt": "2026-10-09T08:28:17.000Z",
+  "date": "2026-10-09",
+  "type": "retweet",
+  "text": "RT @propublica: Willy Wender Aceituno, a naturalized citizen who voted for Trump twice, supported the president’s immigration crackdown. Th…",
+  "engN": 0,
+  "topics": [
+   "immigration/ice-enforcement",
+   "immigration"
+  ],
+  "classificationStatus": "complete",
+  "needsContext": false,
+  "sourceIncomplete": false,
+  "sourceContextReason": null,
+  "sourceReferenceId": "2108316552420380800",
+  "provenance": {
+   "contextVersion": 428,
+   "evidenceSupplied": [],
+   "evidenceUsed": []
+  },
+  "metricsObservedAt": "2026-10-09T09:18:33.158Z"
+ },
+ {
   "id": "2108439519012045170",
   "authorId": "1404519992582942724",
   "createdAt": "2026-10-09T06:08:48.000Z",
@@ -829,7 +853,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 424,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_01aae5101ac23518",
@@ -2959,6 +2983,8 @@
    "education",
    "foreign-policy/middle-east",
    "foreign-policy",
+   "economy/tariffs-trade",
+   "economy",
    "democracy/corruption-ethics",
    "democracy"
   ],
@@ -2968,7 +2994,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 421,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_184c20b3b504b8f8",
@@ -10422,7 +10448,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 417,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_e26e0c9e584afacd",
@@ -10438,22 +10464,20 @@
      "truncated": false
     },
     {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
      "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T09:02:02.553Z",
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_e26e0c9e584afacd"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-10-09T07:46:23.215Z"
  },
@@ -11141,7 +11165,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 417,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_354d29252bb717eb",
@@ -11170,9 +11194,7 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-10-09T07:46:23.215Z"
  },
@@ -11245,7 +11267,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 417,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_184c20b3b504b8f8",
@@ -11274,10 +11296,7 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_184c20b3b504b8f8",
-    "n_e26e0c9e584afacd"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-10-09T07:46:23.215Z"
  },
@@ -11435,9 +11454,7 @@
    "congress-politics/elections-2026",
    "congress-politics",
    "foreign-policy/middle-east",
-   "foreign-policy",
-   "economy/prices-inflation",
-   "economy"
+   "foreign-policy"
   ],
   "classificationStatus": "complete",
   "needsContext": false,
@@ -11445,7 +11462,7 @@
   "sourceContextReason": null,
   "sourceReferenceId": null,
   "provenance": {
-   "contextVersion": 417,
+   "contextVersion": 428,
    "evidenceSupplied": [
     {
      "id": "n_184c20b3b504b8f8",
@@ -11474,9 +11491,7 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1"
-   ]
+   "evidenceUsed": []
   },
   "metricsObservedAt": "2026-10-09T07:46:23.215Z"
  },
@@ -12199,26 +12214,5 @@
    "handle": "@CNN",
    "text": "Oil prices climbed Thursday on continued worries about global supply following a record number of tanker attacks that sent crossings through the Strait of Hormuz to a two-month low.…"
   }
- },
- {
-  "id": "2108247277512835293",
-  "authorId": "303861808",
-  "createdAt": "2026-10-08T17:24:54.000Z",
-  "date": "2026-10-08",
-  "type": "tweet",
-  "text": "Congratulations, @yolofoodbank, on a successful 4th annual Global Rice Fest! Thank you to the incredible staff, volunteers and local partners who did an amazing job bringing everyone together to celebrate rice for its importance in culture, cuisine, and community impact. https://t.co/ckHmgA3CPN",
-  "engN": 8,
-  "topics": [],
-  "classificationStatus": "complete",
-  "needsContext": false,
-  "sourceIncomplete": false,
-  "sourceContextReason": null,
-  "sourceReferenceId": null,
-  "provenance": {
-   "contextVersion": 416,
-   "evidenceSupplied": [],
-   "evidenceUsed": []
-  },
-  "metricsObservedAt": "2026-10-09T07:46:23.076Z"
  }
 ]

@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T05:14:51.702Z",
+ "classifiedAt": "2026-10-09T09:19:11.615Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -71,12 +71,12 @@
   ],
   "2108155658088718810": [
    [
-    "economy",
-    null
-   ],
-   [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    null
    ],
    [
     "congress-politics",
@@ -182,7 +182,7 @@
    ],
    [
     "economy",
-    "prices-inflation"
+    "taxes"
    ]
   ],
   "2108180036264099957": [
@@ -1838,10 +1838,6 @@
    [
     "foreign-policy",
     "middle-east"
-   ],
-   [
-    "economy",
-    "prices-inflation"
    ]
   ],
   "2108252905497112624": [
@@ -3985,6 +3981,10 @@
     "middle-east"
    ],
    [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
     "democracy",
     "corruption-ethics"
    ]
@@ -4855,43 +4855,6 @@
     "textHash": "e40cfaee66af08dcd7716db6e59064de10150dbfcdaa842efc9d925fffe25d70"
    }
   },
-  "2108155658088718810": {
-   "contextVersion": 411,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_210de89c86685a1b",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
-     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
-     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
-     "publishedAt": "2026-10-01T13:23:18.000Z",
-     "fetchedAt": "2026-10-01T15:42:02.407Z",
-     "version": 292,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "9382a336d18157fcd5590d051eefbb453cdb00e86eb4587dd296b7b07bbaa22a"
-  },
   "2108160079036051925": {
    "contextVersion": 412,
    "evidenceSupplied": [
@@ -5023,43 +4986,6 @@
   "2108177966849294524": {
    "contextVersion": 412,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
-  },
-  "2108179524320194933": {
-   "contextVersion": 412,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "b08ba46e387720117af53a6a5fd32e14f84bb9283f186ee01fcf5d1340caa1fb"
   },
@@ -6365,46 +6291,6 @@
     "fingerprint": "6aa452685df26e7a24fc0634ce3288445964a24b4eab66c221d2480801345b15"
    }
   },
-  "2108212118755369283": {
-   "contextVersion": 415,
-   "evidenceSupplied": [
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_184c20b3b504b8f8",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
-     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "publishedAt": "2026-10-07T14:10:26.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1",
-    "n_184c20b3b504b8f8"
-   ],
-   "inputHash": "acfc54642563a3e3abf9ca5c3fb0d53c05b24662c4338e2f7e586e8ee4360263"
-  },
   "2108212142977511640": {
    "contextVersion": 415,
    "evidenceSupplied": [],
@@ -6944,125 +6830,6 @@
     "textHash": "cdc862b8026757f850406b3c0e73a578a4b3ccf4735034e7307e84e37256879d"
    }
   },
-  "2108210940919574827": {
-   "contextVersion": 416,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "47f34e6294eb28b8b91bd53893a27d53a01ac432aa85a4f195554abc1db2b30f"
-  },
-  "2108210945294020750": {
-   "contextVersion": 416,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "47f34e6294eb28b8b91bd53893a27d53a01ac432aa85a4f195554abc1db2b30f",
-   "quotedContext": {
-    "id": "2108210940919574827",
-    "authorId": "1606115178210365448",
-    "handle": "RepBeccaB",
-    "createdAt": "2026-10-08T15:00:31.000Z",
-    "textChars": 300,
-    "textHash": "65ad391a5b0904168c4a091f73050d2d4bce5e44ef0b2d6ea0a99f79c1c96fe2"
-   }
-  },
-  "2108213382293938332": {
-   "contextVersion": 416,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_6866b9b538de5a8f",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6135050-abdul-el-sayed-netanyahu-iran-war/",
-     "text": "El-Sayed says Netanyahu pushed US into Iran war",
-     "title": "El-Sayed says Netanyahu pushed US into Iran war",
-     "publishedAt": "2026-10-07T21:44:51.000Z",
-     "fetchedAt": "2026-10-07T22:35:37.489Z",
-     "version": 404,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "47f34e6294eb28b8b91bd53893a27d53a01ac432aa85a4f195554abc1db2b30f"
-  },
   "2108232903092007094": {
    "contextVersion": 416,
    "evidenceSupplied": [],
@@ -7313,51 +7080,6 @@
     "reason": null,
     "referenceId": "2108230537080942706",
     "fingerprint": "13e50f95ea0e04274662a8f9f4d1b8d91265d6aad245697ff8efecb181a7423b"
-   }
-  },
-  "2108241102835012086": {
-   "contextVersion": 416,
-   "evidenceSupplied": [
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "b8d9eeb70966a0ae701baa0aff7b1d1a4772106e0da5d47a57ececff773a34ce",
-   "quotedContext": {
-    "id": "2107255302001172716",
-    "authorId": "2811774139",
-    "handle": "Eleanor_Mueller",
-    "createdAt": "2026-10-05T23:43:09.000Z",
-    "textChars": 238,
-    "textHash": "b509d6df6870728c8719bf190834fc264d37fd4ac00a3399afaaa56d39a8703f"
    }
   },
   "2108241154466525424": {
@@ -8156,45 +7878,6 @@
     "textHash": "6ae85d9607a80887785be68005f49d30ff2ea22f5dadcfddc799ba47a847d200"
    }
   },
-  "2108252878821306370": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_184c20b3b504b8f8",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
-     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "publishedAt": "2026-10-07T14:10:26.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1"
-   ],
-   "inputHash": "9080f083c95abdc7ffaa9dd325808cf6eb46b2cee11e703f66d32e50121541dd"
-  },
   "2108252905497112624": {
    "contextVersion": 417,
    "evidenceSupplied": [],
@@ -8295,46 +7978,6 @@
     "textHash": "4af548462c3e269b4c82485fe99f0ed7a6e622119b334ca9afdc2773bee1a3dc"
    }
   },
-  "2108256113950888232": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_184c20b3b504b8f8",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
-     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "publishedAt": "2026-10-07T14:10:26.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_184c20b3b504b8f8",
-    "n_e26e0c9e584afacd"
-   ],
-   "inputHash": "9080f083c95abdc7ffaa9dd325808cf6eb46b2cee11e703f66d32e50121541dd"
-  },
   "2108256458009883051": {
    "contextVersion": 417,
    "evidenceSupplied": [],
@@ -8357,45 +8000,6 @@
    "contextVersion": 417,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "9080f083c95abdc7ffaa9dd325808cf6eb46b2cee11e703f66d32e50121541dd"
-  },
-  "2108256611202375878": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_354d29252bb717eb",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
-     "text": "Paxton: Iran war a drag on Texas Senate campaign",
-     "title": "Paxton: Iran war a drag on Texas Senate campaign",
-     "publishedAt": "2026-10-07T14:49:48.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_bcb6f7b1882047a1"
-   ],
    "inputHash": "9080f083c95abdc7ffaa9dd325808cf6eb46b2cee11e703f66d32e50121541dd"
   },
   "2108256841667141729": {
@@ -8717,45 +8321,6 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "0fe1d209c4ee599b8300e6d4b0148cc733f29bdff4c0eb097fedda20a601534d"
-  },
-  "2108266069781606490": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_e26e0c9e584afacd",
-     "publisher": "The Hill",
-     "date": "2026-10-01",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
-     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
-     "publishedAt": "2026-10-01T20:02:39.000Z",
-     "fetchedAt": "2026-10-01T21:41:16.730Z",
-     "version": 296,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_e26e0c9e584afacd"
-   ],
    "inputHash": "0fe1d209c4ee599b8300e6d4b0148cc733f29bdff4c0eb097fedda20a601534d"
   },
   "2108266195065434296": {
@@ -12622,51 +12187,6 @@
     "fingerprint": "b6ad27c9ffb751a10db00ffc6d34744c5e3b8bc88fae5e48a2bb3bb76ba855d4"
    }
   },
-  "2108335109107487075": {
-   "contextVersion": 421,
-   "evidenceSupplied": [
-    {
-     "id": "n_184c20b3b504b8f8",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
-     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
-     "publishedAt": "2026-10-07T14:10:26.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bcb6f7b1882047a1",
-     "publisher": "NPR",
-     "date": "2026-10-03",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
-     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
-     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
-     "publishedAt": "2026-10-03T11:47:06.000Z",
-     "fetchedAt": "2026-10-03T18:28:44.327Z",
-     "version": 328,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "7f3439e6aa6d93008994dcdfa1350d983dd2e3754c11ffc14162bd8419498b87",
-   "quotedContext": {
-    "id": "2108202246341025945",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-10-08T14:25:58.000Z",
-    "textChars": 312,
-    "textHash": "62f64afbb659ff7309272e182582aa4a4dcd7f16884ca11e654691396ff94ba2"
-   }
-  },
   "2108335423005294659": {
    "contextVersion": 421,
    "evidenceSupplied": [],
@@ -13891,53 +13411,6 @@
    "evidenceUsed": [],
    "inputHash": "7db6133ab0b572615f23d80588a3983024e21155ba83ddcb783ea944f792cf94"
   },
-  "2108375121006391760": {
-   "contextVersion": 424,
-   "evidenceSupplied": [
-    {
-     "id": "n_01aae5101ac23518",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6134346-us-aircraft-losses-iran-war/",
-     "text": "81 US military aircraft, drones damaged during Iran war: Report",
-     "title": "81 US military aircraft, drones damaged during Iran war: Report",
-     "publishedAt": "2026-10-07T18:13:22.000Z",
-     "fetchedAt": "2026-10-07T18:49:59.947Z",
-     "version": 400,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_36d04d53aeb8bd4b",
-     "publisher": "The Hill",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
-     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "publishedAt": "2026-10-06T19:02:27.000Z",
-     "fetchedAt": "2026-10-06T19:31:34.291Z",
-     "version": 383,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_01aae5101ac23518"
-   ],
-   "inputHash": "7db6133ab0b572615f23d80588a3983024e21155ba83ddcb783ea944f792cf94",
-   "quotedContext": {
-    "id": "2108120467894649038",
-    "authorId": "759251",
-    "handle": "CNN",
-    "createdAt": "2026-10-08T09:01:01.000Z",
-    "textChars": 178,
-    "textHash": "56727560adf8062442f1e772f8bb11d26a06ac2b5f59dcdb5b46a4b25ec47910"
-   }
-  },
   "2108376039592173795": {
    "contextVersion": 424,
    "evidenceSupplied": [
@@ -14320,6 +13793,534 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27"
+  },
+  "2108155658088718810": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_210de89c86685a1b",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads/",
+     "text": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
+     "publishedAt": "2026-10-01T13:23:18.000Z",
+     "fetchedAt": "2026-10-01T15:42:02.407Z",
+     "version": 292,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f"
+  },
+  "2108179524320194933": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_4ea6be05a8979a92"
+   ],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f"
+  },
+  "2108210940919574827": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "Trump's War in Iran in spotlight ahead of midterms",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T09:02:02.553Z",
+     "version": 428,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f"
+  },
+  "2108210945294020750": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "Trump's War in Iran in spotlight ahead of midterms",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T09:02:02.553Z",
+     "version": 428,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f",
+   "quotedContext": {
+    "id": "2108210940919574827",
+    "authorId": "1606115178210365448",
+    "handle": "RepBeccaB",
+    "createdAt": "2026-10-08T15:00:31.000Z",
+    "textChars": 300,
+    "textHash": "65ad391a5b0904168c4a091f73050d2d4bce5e44ef0b2d6ea0a99f79c1c96fe2"
+   }
+  },
+  "2108212118755369283": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_bcb6f7b1882047a1",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
+     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
+     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
+     "publishedAt": "2026-10-03T11:47:06.000Z",
+     "fetchedAt": "2026-10-03T18:28:44.327Z",
+     "version": 328,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_184c20b3b504b8f8",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
+     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "publishedAt": "2026-10-07T14:10:26.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bcb6f7b1882047a1",
+    "n_184c20b3b504b8f8"
+   ],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f"
+  },
+  "2108213382293938332": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "Trump's War in Iran in spotlight ahead of midterms",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T09:02:02.553Z",
+     "version": 428,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "3d1965e8fd340d3c5e67421d27dc5a3f651ad0e913d9389917e0dedfef009e6f"
+  },
+  "2108241102835012086": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e26e0c9e584afacd"
+   ],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90",
+   "quotedContext": {
+    "id": "2107255302001172716",
+    "authorId": "2811774139",
+    "handle": "Eleanor_Mueller",
+    "createdAt": "2026-10-05T23:43:09.000Z",
+    "textChars": 238,
+    "textHash": "b509d6df6870728c8719bf190834fc264d37fd4ac00a3399afaaa56d39a8703f"
+   }
+  },
+  "2108252878821306370": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_184c20b3b504b8f8",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
+     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "publishedAt": "2026-10-07T14:10:26.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bcb6f7b1882047a1",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
+     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
+     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
+     "publishedAt": "2026-10-03T11:47:06.000Z",
+     "fetchedAt": "2026-10-03T18:28:44.327Z",
+     "version": 328,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90"
+  },
+  "2108256113950888232": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_184c20b3b504b8f8",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
+     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "publishedAt": "2026-10-07T14:10:26.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90"
+  },
+  "2108256611202375878": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_354d29252bb717eb",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
+     "text": "Paxton: Iran war a drag on Texas Senate campaign",
+     "title": "Paxton: Iran war a drag on Texas Senate campaign",
+     "publishedAt": "2026-10-07T14:49:48.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bcb6f7b1882047a1",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
+     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
+     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
+     "publishedAt": "2026-10-03T11:47:06.000Z",
+     "fetchedAt": "2026-10-03T18:28:44.327Z",
+     "version": 328,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90"
+  },
+  "2108266069781606490": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_e26e0c9e584afacd",
+     "publisher": "The Hill",
+     "date": "2026-10-01",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6124271-trump-iran-midterm-risk/",
+     "text": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "title": "Trump says ‘it’s possible’ Iran war could cost him the midterms",
+     "publishedAt": "2026-10-01T20:02:39.000Z",
+     "fetchedAt": "2026-10-01T21:41:16.730Z",
+     "version": 296,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "Trump's War in Iran in spotlight ahead of midterms",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T09:02:02.553Z",
+     "version": 428,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90"
+  },
+  "2108335109107487075": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_184c20b3b504b8f8",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6133483-vance-iran-nuclear-enrichment/",
+     "text": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "title": "Vance: Iran must make ‘meaningful’ enrichment reduction to end war",
+     "publishedAt": "2026-10-07T14:10:26.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bcb6f7b1882047a1",
+     "publisher": "NPR",
+     "date": "2026-10-03",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/03/nx-s1-5989415/week-in-politics-inflation-pressure-war-in-iran-and-effect-on-midterm-elections",
+     "text": "SCOTT SIMON, HOST: The midterm elections are a month away. Voters have a lot to consider between economic news, ongoing trade wars and over seven months of an actual war with Iran. NPR's Ron Elving joins us. Thanks for being with us.",
+     "title": "Week in Politics: Inflation pressure; war in Iran and effect on midterm elections",
+     "publishedAt": "2026-10-03T11:47:06.000Z",
+     "fetchedAt": "2026-10-03T18:28:44.327Z",
+     "version": 328,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4f7b94a671513f042ea4e79df623932d4fe4fca26c43797b92028391781e6b90",
+   "quotedContext": {
+    "id": "2108202246341025945",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-08T14:25:58.000Z",
+    "textChars": 312,
+    "textHash": "62f64afbb659ff7309272e182582aa4a4dcd7f16884ca11e654691396ff94ba2"
+   }
+  },
+  "2108375121006391760": {
+   "contextVersion": 428,
+   "evidenceSupplied": [
+    {
+     "id": "n_01aae5101ac23518",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6134346-us-aircraft-losses-iran-war/",
+     "text": "81 US military aircraft, drones damaged during Iran war: Report",
+     "title": "81 US military aircraft, drones damaged during Iran war: Report",
+     "publishedAt": "2026-10-07T18:13:22.000Z",
+     "fetchedAt": "2026-10-07T18:49:59.947Z",
+     "version": 400,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_36d04d53aeb8bd4b",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
+     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "publishedAt": "2026-10-06T19:02:27.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_01aae5101ac23518"
+   ],
+   "inputHash": "62e446e3be69d2904a1f73d767a1b1ff9de0cbd55f35a4239d7cb255a57d2123",
+   "quotedContext": {
+    "id": "2108120467894649038",
+    "authorId": "759251",
+    "handle": "CNN",
+    "createdAt": "2026-10-08T09:01:01.000Z",
+    "textChars": 178,
+    "textHash": "56727560adf8062442f1e772f8bb11d26a06ac2b5f59dcdb5b46a4b25ec47910"
+   }
   }
  },
  "needsContext": {
@@ -14336,7 +14337,6 @@
   "2108098459199021128": true,
   "2108151574443016598": false,
   "2108153213883203933": false,
-  "2108155658088718810": false,
   "2108160079036051925": true,
   "2108166500779716671": false,
   "2108166574481768551": false,
@@ -14348,7 +14348,6 @@
   "2108172022211817723": false,
   "2108177783343960378": false,
   "2108177966849294524": false,
-  "2108179524320194933": false,
   "2108180036264099957": false,
   "2108180620547600688": false,
   "2108181018855330006": false,
@@ -14434,7 +14433,6 @@
   "2108211678433153269": false,
   "2108211783660142812": false,
   "2108211901746356286": false,
-  "2108212118755369283": false,
   "2108212142977511640": false,
   "2108212219624263717": false,
   "2108212379729178655": false,
@@ -14481,9 +14479,6 @@
   "2108231874308981132": false,
   "2108231982287126825": false,
   "2108232061463257301": false,
-  "2108210940919574827": false,
-  "2108210945294020750": false,
-  "2108213382293938332": false,
   "2108232903092007094": false,
   "2108234655937741067": false,
   "2108234800423383388": true,
@@ -14504,7 +14499,6 @@
   "2108239231726575666": false,
   "2108239873971036427": false,
   "2108240027654480377": false,
-  "2108241102835012086": false,
   "2108241154466525424": false,
   "2108241479596380284": false,
   "2108241589974020167": false,
@@ -14564,7 +14558,6 @@
   "2108252060558745762": false,
   "2108252254528483685": false,
   "2108252539711873468": false,
-  "2108252878821306370": false,
   "2108252905497112624": false,
   "2108253443542421814": false,
   "2108253694890303735": false,
@@ -14573,10 +14566,8 @@
   "2108254033597071547": false,
   "2108254785749352909": false,
   "2108255063257104469": false,
-  "2108256113950888232": false,
   "2108256458009883051": true,
   "2108256471024619657": false,
-  "2108256611202375878": false,
   "2108256841667141729": false,
   "2108257031702655122": false,
   "2108257536784605295": true,
@@ -14599,7 +14590,6 @@
   "2108263395514605646": false,
   "2108264684499751102": false,
   "2108265426178433268": false,
-  "2108266069781606490": false,
   "2108266195065434296": false,
   "2108266236140277804": false,
   "2108266389874061709": false,
@@ -14860,7 +14850,6 @@
   "2108333834274042282": false,
   "2108334564523565232": false,
   "2108334666868498870": false,
-  "2108335109107487075": false,
   "2108335423005294659": false,
   "2108335838798971365": false,
   "2108336267909808447": false,
@@ -14932,7 +14921,6 @@
   "2108371130037706975": false,
   "2108372493211664745": false,
   "2108374385576833179": false,
-  "2108375121006391760": false,
   "2108376039592173795": false,
   "2108376936535728451": false,
   "2108377009415925768": false,
@@ -14953,10 +14941,23 @@
   "2108403029569335422": false,
   "2108403363851510072": false,
   "2108404799343648945": false,
-  "2108405716671234483": false
+  "2108405716671234483": false,
+  "2108155658088718810": false,
+  "2108179524320194933": false,
+  "2108210940919574827": false,
+  "2108210945294020750": false,
+  "2108212118755369283": false,
+  "2108213382293938332": false,
+  "2108241102835012086": false,
+  "2108252878821306370": false,
+  "2108256113950888232": false,
+  "2108256611202375878": false,
+  "2108266069781606490": false,
+  "2108335109107487075": false,
+  "2108375121006391760": false
  },
  "inputBlocks": {},
- "contextVersion": 426,
+ "contextVersion": 428,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15461,6 +15462,29 @@
     "2108403363851510072",
     "2108405716671234483"
    ]
+  },
+  {
+   "label": "Trump war with Iran: economic costs and war powers votes",
+   "ids": [
+    "2108155658088718810",
+    "2108179524320194933",
+    "2108210940919574827",
+    "2108210945294020750",
+    "2108212118755369283",
+    "2108213382293938332"
+   ]
+  },
+  {
+   "label": "Vance call to investigate nine universities over foreign student hiring",
+   "ids": [
+    "2108335109107487075"
+   ]
+  },
+  {
+   "label": "Trump $90 rebate checks to voters",
+   "ids": [
+    "2108266069781606490"
+   ]
   }
  ],
  "unclassified": [],
@@ -15474,118 +15498,60 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108402755681620397",
-    "2108403029569335422",
-    "2108403363851510072",
-    "2108404799343648945",
-    "2108405716671234483",
-    "2108407157700153802",
-    "2108408724432040096",
-    "2108408726332096834",
-    "2108413241793946067",
-    "2108413550444310742",
-    "2108420600536699018",
-    "2108423876640489565"
+    "2108155658088718810",
+    "2108179524320194933",
+    "2108210940919574827",
+    "2108210945294020750",
+    "2108212118755369283",
+    "2108213382293938332"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T05:14:23.540Z",
-    "observedAt": "2026-10-09T05:14:51.676Z",
+    "attemptedAt": "2026-10-09T09:18:37.651Z",
+    "observedAt": "2026-10-09T09:18:52.058Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 12,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2108356659617886404",
-    "2108356663308931307",
-    "2108356799602803006",
-    "2108356873569333610",
-    "2108357092864385156",
-    "2108357889706373169",
-    "2108358044283281599",
-    "2108360692071813591",
-    "2108360751568036308",
-    "2108360938122514596",
-    "2108360962436939781",
-    "2108361453468278838",
-    "2108361463945433570",
-    "2108361838782251130",
-    "2108362611167461517",
-    "2108362643312685246",
-    "2108362675071615298",
-    "2108362869461205186",
-    "2108363120402170224",
-    "2108363629636522168",
-    "2108364301819871283",
-    "2108366074131435812",
-    "2108366163679875344",
-    "2108367294606835825"
+    "2108241102835012086",
+    "2108252878821306370",
+    "2108256113950888232",
+    "2108256611202375878",
+    "2108266069781606490",
+    "2108335109107487075"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T01:22:57.675Z",
-    "observedAt": "2026-10-09T01:23:38.147Z",
+    "attemptedAt": "2026-10-09T09:18:52.083Z",
+    "observedAt": "2026-10-09T09:19:06.790Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 24,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2108326760232153180",
-    "2108326932936880284",
-    "2108327071545983390",
-    "2108328080548995412",
-    "2108328417527820353",
-    "2108328564177207756",
-    "2108328588613202192",
-    "2108328709384253579",
-    "2108330728643854633",
-    "2108331636945301777",
-    "2108331678775341177",
-    "2108331885328019655",
-    "2108332615157547409",
-    "2108332835711107434",
-    "2108332837028167700",
-    "2108332863670174166",
-    "2108332948239900981",
-    "2108333559488696537",
-    "2108333633698226310",
-    "2108333834274042282",
-    "2108334564523565232",
-    "2108334666868498870",
-    "2108335109107487075",
-    "2108335423005294659",
-    "2108335838798971365",
-    "2108336267909808447",
-    "2108336932430221335",
-    "2108337150945018303",
-    "2108337354729771382",
-    "2108337645273469111",
-    "2108337795907363180",
-    "2108337777636995415",
-    "2108338147096412435",
-    "2108338542598635895",
-    "2108340155622850972",
-    "2108340590358261767"
+    "2108375121006391760",
+    "2108474617673236925"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-08T23:54:06.021Z",
-    "observedAt": "2026-10-08T23:55:06.526Z",
+    "attemptedAt": "2026-10-09T09:19:06.817Z",
+    "observedAt": "2026-10-09T09:19:11.584Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 36,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   },
@@ -15615,24 +15581,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T05:14:23.540Z",
-   "observedAt": "2026-10-09T05:14:51.676Z",
+   "attemptedAt": "2026-10-09T09:19:06.817Z",
+   "observedAt": "2026-10-09T09:19:11.584Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T05:14:23.540Z",
-   "observedAt": "2026-10-09T05:14:51.676Z",
+   "attemptedAt": "2026-10-09T09:19:06.817Z",
+   "observedAt": "2026-10-09T09:19:11.584Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T05:14:51.708Z"
+ "updatedAt": "2026-10-09T09:19:11.622Z"
 }
