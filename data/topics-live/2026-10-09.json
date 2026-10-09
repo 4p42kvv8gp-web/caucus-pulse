@@ -1,7 +1,7 @@
 {
  "date": "2026-10-09",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T09:19:11.626Z",
+ "classifiedAt": "2026-10-09T12:23:53.537Z",
  "assignments": {
   "2108407157700153802": [
    [
@@ -62,6 +62,46 @@
    [
     "immigration",
     "ice-enforcement"
+   ]
+  ],
+  "2108523066414207226": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108524763282858210": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2108526366186684511": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2108528219146129843": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2108530447412232631": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2108531361133072510": [
+   [
+    "constituent-services",
+    null
    ]
   ]
  },
@@ -196,6 +236,126 @@
     "referenceId": "2108316552420380800",
     "fingerprint": "79fa19bf1aade27b503b95457282ce3488a8bf89888c22ce96685c3fc112b484"
    }
+  },
+  "2108523066414207226": {
+   "contextVersion": 430,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d"
+  },
+  "2108524763282858210": {
+   "contextVersion": 430,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108249861376102445",
+    "fingerprint": "de3f042b996bec0f57cff36d3e00e8d099e9f5631618d3a6870c8d4820957478"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108249861376102445",
+    "fingerprint": "de3f042b996bec0f57cff36d3e00e8d099e9f5631618d3a6870c8d4820957478"
+   }
+  },
+  "2108526366186684511": {
+   "contextVersion": 430,
+   "evidenceSupplied": [
+    {
+     "id": "n_0c686ef412332d64",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5993539/firing-squad-execution-nidal-hasan-fort-hood",
+     "text": "It would be the first U.S. military execution in over six decades — and the first by firing squad since World War II.",
+     "title": "Trump approved the military's 1st firing squad execution since WWII. Why now?",
+     "publishedAt": "2026-10-07T19:08:48.000Z",
+     "fetchedAt": "2026-10-07T20:19:44.976Z",
+     "version": 401,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108274914444890385",
+    "fingerprint": "d45419c4dbb39ac3c016915ccd756533ec8d6025edc0bea18064819d749db854"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108274914444890385",
+    "fingerprint": "d45419c4dbb39ac3c016915ccd756533ec8d6025edc0bea18064819d749db854"
+   }
+  },
+  "2108528219146129843": {
+   "contextVersion": 430,
+   "evidenceSupplied": [
+    {
+     "id": "n_fde2b735fc5ddc1d",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991646/what-challenges-lie-ahead-for-the-democratic-party-as-midterms-approach",
+     "text": "A MARTÍNEZ, HOST: Let's hear from someone who's working to elect Democrats in these midterms. Devan Barber is executive director of the Democratic Senatorial Campaign Committee, and she's on the line with us. Devan, we just heard from Domenico Montanaro that the super PAC affiliated with Senate Republicans is moving money into usually unfamiliar territories such as Kansas. Why do you think that is?",
+     "title": "What challenges lie ahead for the Democratic Party as midterms approach",
+     "publishedAt": "2026-10-06T10:53:02.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d"
+  },
+  "2108530447412232631": {
+   "contextVersion": 430,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108406203755761879",
+    "fingerprint": "7ef7a9e65a17de48a14d04b362b7d7f176f48b12aebf2b651d0c59f0fd8a8175"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108406203755761879",
+    "fingerprint": "7ef7a9e65a17de48a14d04b362b7d7f176f48b12aebf2b651d0c59f0fd8a8175"
+   }
+  },
+  "2108531361133072510": {
+   "contextVersion": 430,
+   "evidenceSupplied": [
+    {
+     "id": "n_f1b3b0518b1fc1fb",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/trump-on-the-stump-extreme-lines-vague-threats/",
+     "text": "“Director of the Office of Management and Budget Russ Vought, who is fantastic, he’s done a job,” Trump said, delivering shout-outs while standing in front of a naval combat ship. “We have some big surprises coming up in another few weeks, right, Russ?”",
+     "title": "Trump on the stump: Extreme lines, vague threats",
+     "publishedAt": "2026-10-08T13:14:37.000Z",
+     "fetchedAt": "2026-10-08T18:27:44.230Z",
+     "version": 417,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "fe94e6806c7a7a9358cd931714f19a370ce77a821bfd79f692e50b0f882e5a1d"
   }
  },
  "needsContext": {
@@ -207,16 +367,34 @@
   "2108420600536699018": false,
   "2108423876640489565": false,
   "2108439519012045170": true,
-  "2108474617673236925": false
+  "2108474617673236925": false,
+  "2108523066414207226": false,
+  "2108524763282858210": false,
+  "2108526366186684511": false,
+  "2108528219146129843": false,
+  "2108530447412232631": false,
+  "2108531361133072510": false
  },
  "inputBlocks": {},
- "contextVersion": 428,
+ "contextVersion": 430,
  "emerging": [
   {
    "label": "Pentagon livestream of Nidal Hasan firing-squad execution",
    "ids": [
     "2108407157700153802",
     "2108413241793946067"
+   ]
+  },
+  {
+   "label": "Freedom 250 celebration spending records",
+   "ids": [
+    "2108524763282858210"
+   ]
+  },
+  {
+   "label": "ICE shooting of New Yorker",
+   "ids": [
+    "2108530447412232631"
    ]
   }
  ],
@@ -245,29 +423,50 @@
     "acceptedCount": 2,
     "retryCount": 0
    }
+  },
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2108523066414207226",
+    "2108524763282858210",
+    "2108526366186684511",
+    "2108528219146129843",
+    "2108530447412232631",
+    "2108531361133072510"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-09T12:23:39.542Z",
+    "observedAt": "2026-10-09T12:23:53.534Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 6,
+    "retryCount": 0
+   }
   }
  },
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T09:19:06.817Z",
-   "observedAt": "2026-10-09T09:19:11.584Z",
+   "attemptedAt": "2026-10-09T12:23:39.542Z",
+   "observedAt": "2026-10-09T12:23:53.534Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T09:19:06.817Z",
-   "observedAt": "2026-10-09T09:19:11.584Z",
+   "attemptedAt": "2026-10-09T12:23:39.542Z",
+   "observedAt": "2026-10-09T12:23:53.534Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T09:19:11.630Z"
+ "updatedAt": "2026-10-09T12:23:53.539Z"
 }
