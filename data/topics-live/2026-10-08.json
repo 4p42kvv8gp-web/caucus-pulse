@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T02:11:08.661Z",
+ "classifiedAt": "2026-10-09T03:43:03.262Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -4546,6 +4546,89 @@
    [
     "labor",
     "unions"
+   ]
+  ],
+  "2108380299294036454": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2108380515564921173": [],
+  "2108384002885419111": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2108384195521224735": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108385245280288955": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2108386085307080933": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2108387354759082168": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2108389691376406715": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108391307198775750": [
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2108392774923895190": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108395025855889871": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2108397469436633299": [
+   [
+    "civil-rights",
+    "racial-justice"
    ]
   ]
  },
@@ -13880,6 +13963,234 @@
    ],
    "evidenceUsed": [],
    "inputHash": "7db6133ab0b572615f23d80588a3983024e21155ba83ddcb783ea944f792cf94"
+  },
+  "2108380299294036454": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108380515564921173": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108384002885419111": {
+   "contextVersion": 425,
+   "evidenceSupplied": [
+    {
+     "id": "n_1cc6c0388412d28a",
+     "publisher": "The Washington Post",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/08/hegseth-wants-fort-hood-shooters-execution-by-firing-squad-be-public/",
+     "text": "Fort Hood shooter’s execution will be live-streamed, Defense Dept. says",
+     "title": "Fort Hood shooter’s execution will be live-streamed, Defense Dept. says",
+     "publishedAt": "2026-10-08T23:56:58.000Z",
+     "fetchedAt": "2026-10-09T00:38:50.495Z",
+     "version": 422,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_06e46e5ddfbd8f42",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6133355-nidal-hasan-ft-hood-shooting-texas-execution-date-set/",
+     "text": "Fort Hood shooter Nidal Hasan’s execution set for December",
+     "title": "Fort Hood shooter Nidal Hasan’s execution set for December",
+     "publishedAt": "2026-10-07T13:28:37.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_1cc6c0388412d28a",
+    "n_06e46e5ddfbd8f42"
+   ],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468",
+   "quotedContext": {
+    "id": "2108306315093119299",
+    "authorId": "51241574",
+    "handle": "AP",
+    "createdAt": "2026-10-08T21:19:30.000Z",
+    "textChars": 137,
+    "textHash": "9b3317c12cd54237115b99e35b01fa3b9eedfebf3c79bd6c5f492c3f5c3066a4"
+   }
+  },
+  "2108384195521224735": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108385245280288955": {
+   "contextVersion": 425,
+   "evidenceSupplied": [
+    {
+     "id": "n_a4bf310c9e8eaaac",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6137882-ice-agent-shoots-nyc-man/",
+     "text": "Man shot by ICE in New York City",
+     "title": "Man shot by ICE in New York City",
+     "publishedAt": "2026-10-09T00:12:14.000Z",
+     "fetchedAt": "2026-10-09T01:24:41.529Z",
+     "version": 423,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a4bf310c9e8eaaac"
+   ],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108383535169990901",
+    "fingerprint": "5d46a3e987b7e4188369a7964136740ac421d0922cc29712bf80414d1d630d9e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108383535169990901",
+    "fingerprint": "5d46a3e987b7e4188369a7964136740ac421d0922cc29712bf80414d1d630d9e"
+   }
+  },
+  "2108386085307080933": {
+   "contextVersion": 425,
+   "evidenceSupplied": [
+    {
+     "id": "n_e030cbbd1af467fa",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132210-hegseth-welcomes-uss-abraham-lincoln/",
+     "text": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "title": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "publishedAt": "2026-10-06T19:21:28.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_22cfb4a1361cd1b5",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6137284-uss-abraham-lincoln-ends-deployment-san-diego/",
+     "text": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "title": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "publishedAt": "2026-10-08T19:31:56.000Z",
+     "fetchedAt": "2026-10-08T19:59:50.874Z",
+     "version": 418,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_22cfb4a1361cd1b5"
+   ],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108387354759082168": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108374220778746106",
+    "fingerprint": "9972abe5848459b1c947314ed4e95b50ffedb70109591b9f1a2251ceb3ca60fa"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108374220778746106",
+    "fingerprint": "9972abe5848459b1c947314ed4e95b50ffedb70109591b9f1a2251ceb3ca60fa"
+   }
+  },
+  "2108389691376406715": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108391307198775750": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108392774923895190": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108395025855889871": {
+   "contextVersion": 425,
+   "evidenceSupplied": [
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468",
+   "quotedContext": {
+    "id": "2108228734713036996",
+    "authorId": "54608439",
+    "handle": "AngieNixon",
+    "createdAt": "2026-10-08T16:11:14.000Z",
+    "textChars": 286,
+    "textHash": "c799a91a59888d9436b9cd46a5b31140ad254ed22e935c45f68abe54b6f939f6"
+   }
+  },
+  "2108397469436633299": {
+   "contextVersion": 425,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
   }
  },
  "needsContext": {
@@ -14496,10 +14807,22 @@
   "2108376039592173795": false,
   "2108376936535728451": false,
   "2108377009415925768": false,
-  "2108378873280774489": false
+  "2108378873280774489": false,
+  "2108380299294036454": false,
+  "2108380515564921173": false,
+  "2108384002885419111": false,
+  "2108384195521224735": false,
+  "2108385245280288955": false,
+  "2108386085307080933": false,
+  "2108387354759082168": false,
+  "2108389691376406715": false,
+  "2108391307198775750": false,
+  "2108392774923895190": false,
+  "2108395025855889871": false,
+  "2108397469436633299": false
  },
  "inputBlocks": {},
- "contextVersion": 424,
+ "contextVersion": 425,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -14977,6 +15300,18 @@
    "ids": [
     "2108376936535728451"
    ]
+  },
+  {
+   "label": "Livestreamed firing squad execution of Fort Hood shooter Nidal Hasan",
+   "ids": [
+    "2108384002885419111"
+   ]
+  },
+  {
+   "label": "ICE agent shooting in Marble Hill, NYC",
+   "ids": [
+    "2108385245280288955"
+   ]
   }
  ],
  "unclassified": [],
@@ -14990,29 +15325,28 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108367396738118141",
-    "2108367979503059454",
-    "2108368414247166004",
-    "2108369876763005139",
-    "2108370622338277388",
-    "2108371130037706975",
-    "2108372493211664745",
-    "2108374385576833179",
-    "2108375121006391760",
-    "2108376039592173795",
-    "2108376936535728451",
-    "2108377009415925768",
-    "2108378873280774489"
+    "2108380299294036454",
+    "2108380515564921173",
+    "2108384002885419111",
+    "2108384195521224735",
+    "2108385245280288955",
+    "2108386085307080933",
+    "2108387354759082168",
+    "2108389691376406715",
+    "2108391307198775750",
+    "2108392774923895190",
+    "2108395025855889871",
+    "2108397469436633299"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T02:10:41.313Z",
-    "observedAt": "2026-10-09T02:11:08.647Z",
+    "attemptedAt": "2026-10-09T03:42:40.959Z",
+    "observedAt": "2026-10-09T03:43:03.243Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 13,
+    "acceptedCount": 12,
     "retryCount": 0
    }
   },
@@ -15132,24 +15466,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T02:10:41.313Z",
-   "observedAt": "2026-10-09T02:11:08.647Z",
+   "attemptedAt": "2026-10-09T03:42:40.959Z",
+   "observedAt": "2026-10-09T03:43:03.243Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T02:10:41.313Z",
-   "observedAt": "2026-10-09T02:11:08.647Z",
+   "attemptedAt": "2026-10-09T03:42:40.959Z",
+   "observedAt": "2026-10-09T03:43:03.243Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T02:11:08.663Z"
+ "updatedAt": "2026-10-09T03:43:03.267Z"
 }
