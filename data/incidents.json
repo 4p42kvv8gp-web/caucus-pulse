@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-09T07:45:06.106Z",
+ "generatedAt": "2026-10-09T07:50:23.262Z",
  "incidents": [
   {
    "id": "mobile-county-al--severe-storm--source-2108304014106362157",
@@ -86,7 +86,35 @@
    "tweetIds": [
     "2108306073572540809"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+      "sourceId": "2108306073572540809",
+      "url": "https://x.com/i/web/status/2108306073572540809",
+      "evidenceQuote": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+      "src": "@repscfigures, 2026-10-08T21:18:33.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+      "sourceId": "2108306073572540809",
+      "url": "https://x.com/i/web/status/2108306073572540809",
+      "evidenceQuote": "RT @AlabamaEMA: Beginning 8 a.m. tomorrow, the public shelters for Mobile County are:\n\nTheodore High School: 6201 Swedetown Road North, The…",
+      "src": "@repscfigures, 2026-10-08T21:18:33.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-09T07:50:13.524Z",
+    "posts": 1,
+    "inputHash": "748e004b3390e0ee8eadf5be1ed813845592887619204bcad5636c5545df8cd4",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -129,7 +157,7 @@
    "since": "2026-10-08T16:50:32.000Z",
    "last": "2026-10-08T19:42:56.000Z",
    "updates": 2,
-   "engN": 10,
+   "engN": 11,
    "amplifiers": 0,
    "others": [],
    "title": "Hurricane Isaias · Mobile, AL",
@@ -159,7 +187,7 @@
      "who": "@repscfigures",
      "tag": "member",
      "text": "🚨 Attention Mobile ⬇️ https://t.co/dj9cU9Ra0K",
-     "engN": 1,
+     "engN": 2,
      "isNew": false,
      "flag": {
       "kind": "hurricane",
@@ -217,7 +245,42 @@
     "2108238628644159715",
     "2108282014902440383"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear…",
+      "sourceId": "2108282014902440383",
+      "url": "https://x.com/i/web/status/2108282014902440383",
+      "evidenceQuote": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear…",
+      "src": "@repscfigures, 2026-10-08T19:42:56.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear…",
+      "sourceId": "2108282014902440383",
+      "url": "https://x.com/i/web/status/2108282014902440383",
+      "evidenceQuote": "RT @NWSMobile: 🌀 10/8 12PM Update: Today is the day to complete all preparations for Hurricane Isaias! Impacts are expected to begin as ear…",
+      "src": "@repscfigures, 2026-10-08T19:42:56.000Z"
+     },
+     {
+      "text": "🚨 Attention Mobile ⬇️ https://t.co/dj9cU9Ra0K",
+      "sourceId": "2108238628644159715",
+      "url": "https://x.com/i/web/status/2108238628644159715",
+      "evidenceQuote": "🚨 Attention Mobile ⬇️ https://t.co/dj9cU9Ra0K",
+      "src": "@repscfigures, 2026-10-08T16:50:32.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-09T07:50:23.261Z",
+    "posts": 2,
+    "inputHash": "8a780dabaa6b6b3237ed431484110ffda5a3ba5b3dc1e61950c5d2d35e87039b",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -261,7 +324,7 @@
    "since": "2026-10-08T12:48:46.000Z",
    "last": "2026-10-08T12:48:46.000Z",
    "updates": 1,
-   "engN": 10,
+   "engN": 41,
    "amplifiers": 0,
    "others": [],
    "title": "Hurricane Isaias · Florida Panhandle, FL",
@@ -291,7 +354,7 @@
      "who": "@RepMoskowitz",
      "tag": "member",
      "text": "Floridians: Hurricane Isaias could hit the Panhandle as soon as tomorrow evening. If you’re in its path, please start getting prepared today while stores are still open and roads are clear.\n\n⚠️Check your evacuation zone.\n🐾 Don’t forget to plan for your pets.\n📲Follow @FLSERT for the latest updates.\n\nNot sure where to start? Here’s a checklist for building your emergency kit ⬇️\n\nhttps://t.co/OdovstL3C0",
-     "engN": 10,
+     "engN": 41,
      "isNew": false,
      "flag": {
       "kind": "hurricane",
