@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T18:05:01.202Z",
+ "classifiedAt": "2026-10-09T19:36:57.954Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -8974,12 +8974,6 @@
    "evidenceUsed": [],
    "inputHash": "b707f29ce5ea2b71fca8f64930e4b400126bda6c1ac777f62b22aef09dabfcdd"
   },
-  "2108277534257271185": {
-   "contextVersion": 418,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "b707f29ce5ea2b71fca8f64930e4b400126bda6c1ac777f62b22aef09dabfcdd"
-  },
   "2108277749496549427": {
    "contextVersion": 418,
    "evidenceSupplied": [],
@@ -14337,6 +14331,28 @@
    ],
    "evidenceUsed": [],
    "inputHash": "14ecbe4f75379efcc036eba1ac1b3ebd1d9fe63133d2b811d7c7ec9065280b82"
+  },
+  "2108277534257271185": {
+   "contextVersion": 435,
+   "evidenceSupplied": [
+    {
+     "id": "n_3d20b04d4549ec94",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/plan-for-public-military-execution-sparks-bipartisan-backlash/",
+     "text": "“I absolutely support the sentence of death, but live-streaming executions is what jihadists do. America is better than that,” Rep. Austin Scott, R-Ga., a member of the House Armed Services Committee, posted on social media Friday morning.",
+     "title": "Plan for public military execution sparks bipartisan backlash",
+     "publishedAt": "2026-10-09T14:27:55.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "8b84131368aacb559c897bc82ad7c28d8fb75ec92e676657e544289c2ec1adba"
   }
  },
  "needsContext": {
@@ -14654,7 +14670,6 @@
   "2108277065116225871": false,
   "2108277246448345379": false,
   "2108277492201234823": false,
-  "2108277534257271185": false,
   "2108277749496549427": false,
   "2108277878077227082": false,
   "2108277977452535969": false,
@@ -14970,10 +14985,11 @@
   "2108335109107487075": false,
   "2108375121006391760": false,
   "2108283899982000149": false,
-  "2108367979503059454": false
+  "2108367979503059454": false,
+  "2108277534257271185": false
  },
  "inputBlocks": {},
- "contextVersion": 434,
+ "contextVersion": 435,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15520,78 +15536,51 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108367979503059454",
-    "2108596166417904057",
-    "2108596321414205529",
-    "2108596692849152406",
-    "2108596874009612636",
-    "2108597179141280233",
-    "2108597495777448225",
-    "2108597635888414873",
-    "2108597661914058781",
-    "2108597663402733679",
-    "2108597664845840762",
-    "2108597666187747526",
-    "2108597962519552453",
-    "2108598111962550486",
-    "2108598592273293335",
-    "2108598876269629877",
-    "2108599101675733017",
-    "2108599209846878421",
-    "2108599570384986414",
-    "2108599978583073052",
-    "2108600800230437069",
-    "2108601046050230386",
-    "2108601224769765842",
-    "2108601781379080614",
-    "2108601784193130792",
-    "2108601835397484891",
-    "2108601882235060447",
-    "2108602555244945565",
-    "2108602581589066042",
-    "2108603210978013232",
-    "2108603518521430450",
-    "2108603819953193417",
-    "2108604445244223948",
-    "2108605997002440870",
-    "2108606294168875240",
-    "2108606297109377306",
-    "2108606431968518412",
-    "2108606677670842868",
-    "2108606989198565657",
-    "2108607323165863936"
+    "2108277534257271185",
+    "2108621182090023053",
+    "2108621318170272103",
+    "2108621781196251228",
+    "2108622109723197755",
+    "2108622212668293328",
+    "2108622891503755301",
+    "2108623200804643235",
+    "2108623416555139403",
+    "2108623788665340297",
+    "2108623792629240276",
+    "2108624445774369080",
+    "2108624597256200450",
+    "2108625206587601029",
+    "2108625609379447241",
+    "2108625682766901746",
+    "2108625980298322320",
+    "2108626017552080944",
+    "2108626032714723413",
+    "2108626141338653024",
+    "2108626145855861226",
+    "2108626147319636288",
+    "2108626175341809786",
+    "2108626307076493369",
+    "2108626309882519765",
+    "2108626799940776154",
+    "2108627096264233095",
+    "2108627442311008275",
+    "2108627498946748878",
+    "2108627595164258335",
+    "2108627609860841914",
+    "2108627713334399357",
+    "2108629828052390175",
+    "2108630239425257763",
+    "2108630367473172903"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T18:02:45.423Z",
-    "observedAt": "2026-10-09T18:03:51.830Z",
+    "attemptedAt": "2026-10-09T19:33:53.655Z",
+    "observedAt": "2026-10-09T19:35:04.659Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2108340729600753774",
-    "2108341340144628202",
-    "2108341567853559850",
-    "2108341815262818645",
-    "2108341927921807666",
-    "2108342940351213912",
-    "2108343287887335450"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-08T23:55:06.562Z",
-    "observedAt": "2026-10-08T23:55:27.305Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 35,
     "retryCount": 0
    }
   }
@@ -15599,24 +15588,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T18:02:45.423Z",
-   "observedAt": "2026-10-09T18:03:51.830Z",
+   "attemptedAt": "2026-10-09T19:33:53.655Z",
+   "observedAt": "2026-10-09T19:35:04.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 35,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T18:02:45.423Z",
-   "observedAt": "2026-10-09T18:03:51.830Z",
+   "attemptedAt": "2026-10-09T19:33:53.655Z",
+   "observedAt": "2026-10-09T19:35:04.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 35,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T18:05:01.206Z"
+ "updatedAt": "2026-10-09T19:36:57.963Z"
 }

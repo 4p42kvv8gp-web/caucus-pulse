@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-09T18:05:01.297Z",
+ "generatedAt": "2026-10-09T19:36:58.128Z",
  "incidents": [
+  {
+   "id": "newport-beach-ca--flooding--source-2108625609379447241",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Newport Beach, CA · CA-47",
+   "placeRaw": "Newport Beach, CA",
+   "district": "CA-47",
+   "districtMatch": true,
+   "handle": "@CongressMin",
+   "member": "Dave Min",
+   "since": "2026-10-09T18:28:16.000Z",
+   "last": "2026-10-09T18:28:16.000Z",
+   "updates": 1,
+   "engN": 2,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Newport Beach, CA",
+   "evidence": {
+    "span": "ALERT: Newport Beach Flooding Advisory",
+    "exact": true,
+    "start": 0,
+    "end": 38,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2108625609379447241",
+    "url": "https://x.com/i/web/status/2108625609379447241"
+   },
+   "timeline": [
+    {
+     "id": "2108625609379447241",
+     "sourceId": "2108625609379447241",
+     "url": "https://x.com/i/web/status/2108625609379447241",
+     "authorId": "1858680194112065536",
+     "personId": "member:dave min",
+     "referenceIds": [],
+     "time": "2026-10-09T18:28:16.000Z",
+     "who": "@CongressMin",
+     "tag": "member",
+     "text": "ALERT: Newport Beach Flooding Advisory \n\nThe City of Newport Beach is advising residents and motorists to avoid the Balboa Peninsula due to street flooding caused by recent storm conditions and elevated tides.\n\nOur office is closely monitoring the situation and urges residents to exercise caution, avoid driving through flooded streets, and follow all guidance issued by local authorities and public safety personnel.",
+     "engN": 2,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Newport Beach, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "ALERT: Newport Beach Flooding Advisory",
+      "exact": true,
+      "start": 0,
+      "end": 38,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2108625609379447241",
+      "url": "https://x.com/i/web/status/2108625609379447241"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2108625609379447241"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2108625609379447241"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "mobile-county-al--severe-storm--source-2108304014106362157",
    "kind": "severe storm",
@@ -1011,6 +1106,15 @@
   }
  ],
  "filtered": [
+  {
+   "id": "2108627096264233095",
+   "kind": "hurricane",
+   "place": "Georgia, GA",
+   "who": "@RepLucyMcBath",
+   "time": "2026-10-09T18:34:10.000Z",
+   "reason": "place is a whole state",
+   "cue": "Georgia, GA"
+  },
   {
    "id": "2107989384679092393",
    "kind": "hurricane",
