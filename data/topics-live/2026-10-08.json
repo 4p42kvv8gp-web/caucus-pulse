@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T10:51:03.575Z",
+ "classifiedAt": "2026-10-09T18:05:01.202Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -13242,28 +13242,6 @@
    "evidenceUsed": [],
    "inputHash": "7db6133ab0b572615f23d80588a3983024e21155ba83ddcb783ea944f792cf94"
   },
-  "2108367979503059454": {
-   "contextVersion": 424,
-   "evidenceSupplied": [
-    {
-     "id": "n_e3140a270e5aca8a",
-     "publisher": "NPR",
-     "date": "2026-10-06",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/06/g-s1-146626/up-first-newsletter-election-day-skydance-christa-pike-russia-plague-scare",
-     "text": "In four weeks, Election Day will be here , and a series of new polls show Democrats have a decided advantage in the midterms. They are favored to win the House with a narrow majority. Democrats need 218 seats for a majority, and the Cook Political Report forecasts a net gain of five to 15 seats, which would give them between 220 and 230 seats in January. The Senate has shifted more dramatically. Six seats have moved toward the Democrats' direction since June, according to Cook's ratings. Initially seen as a long shot for Democrats, the Senate is now within reach. These projections come as Pre…",
-     "title": "Dems have edge in midterms, poll shows. And, Paramount-Warner Bros. merger to close",
-     "publishedAt": "2026-10-06T11:19:25.000Z",
-     "fetchedAt": "2026-10-06T11:53:58.364Z",
-     "version": 377,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "7db6133ab0b572615f23d80588a3983024e21155ba83ddcb783ea944f792cf94"
-  },
   "2108368414247166004": {
    "contextVersion": 424,
    "evidenceSupplied": [],
@@ -14322,6 +14300,43 @@
     "n_e030cbbd1af467fa"
    ],
    "inputHash": "142853d0870bb1eb4763e7dd121e66e5e851778bc1e61ffe001f910ee9bfc1f2"
+  },
+  "2108367979503059454": {
+   "contextVersion": 434,
+   "evidenceSupplied": [
+    {
+     "id": "n_01dd575641843d34",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6139090-israel-condemns-navi-pillay-nobel/",
+     "text": "Israel calls Navi Pillay’s win a ‘grotesque weaponization’ of Nobel Peace Prize",
+     "title": "Israel calls Navi Pillay’s win a ‘grotesque weaponization’ of Nobel Peace Prize",
+     "publishedAt": "2026-10-09T16:27:11.000Z",
+     "fetchedAt": "2026-10-09T17:17:27.415Z",
+     "version": 434,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e3140a270e5aca8a",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/g-s1-146626/up-first-newsletter-election-day-skydance-christa-pike-russia-plague-scare",
+     "text": "In four weeks, Election Day will be here , and a series of new polls show Democrats have a decided advantage in the midterms. They are favored to win the House with a narrow majority. Democrats need 218 seats for a majority, and the Cook Political Report forecasts a net gain of five to 15 seats, which would give them between 220 and 230 seats in January. The Senate has shifted more dramatically. Six seats have moved toward the Democrats' direction since June, according to Cook's ratings. Initially seen as a long shot for Democrats, the Senate is now within reach. These projections come as Pre…",
+     "title": "Dems have edge in midterms, poll shows. And, Paramount-Warner Bros. merger to close",
+     "publishedAt": "2026-10-06T11:19:25.000Z",
+     "fetchedAt": "2026-10-06T11:53:58.364Z",
+     "version": 377,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "14ecbe4f75379efcc036eba1ac1b3ebd1d9fe63133d2b811d7c7ec9065280b82"
   }
  },
  "needsContext": {
@@ -14914,7 +14929,6 @@
   "2108366163679875344": false,
   "2108367294606835825": false,
   "2108367396738118141": false,
-  "2108367979503059454": false,
   "2108368414247166004": false,
   "2108369876763005139": false,
   "2108370622338277388": false,
@@ -14955,10 +14969,11 @@
   "2108266069781606490": false,
   "2108335109107487075": false,
   "2108375121006391760": false,
-  "2108283899982000149": false
+  "2108283899982000149": false,
+  "2108367979503059454": false
  },
  "inputBlocks": {},
- "contextVersion": 429,
+ "contextVersion": 434,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15486,6 +15501,12 @@
    "ids": [
     "2108266069781606490"
    ]
+  },
+  {
+   "label": "Morocco's first female prime minister",
+   "ids": [
+    "2108367979503059454"
+   ]
   }
  ],
  "unclassified": [],
@@ -15499,55 +15520,56 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108283899982000149"
+    "2108367979503059454",
+    "2108596166417904057",
+    "2108596321414205529",
+    "2108596692849152406",
+    "2108596874009612636",
+    "2108597179141280233",
+    "2108597495777448225",
+    "2108597635888414873",
+    "2108597661914058781",
+    "2108597663402733679",
+    "2108597664845840762",
+    "2108597666187747526",
+    "2108597962519552453",
+    "2108598111962550486",
+    "2108598592273293335",
+    "2108598876269629877",
+    "2108599101675733017",
+    "2108599209846878421",
+    "2108599570384986414",
+    "2108599978583073052",
+    "2108600800230437069",
+    "2108601046050230386",
+    "2108601224769765842",
+    "2108601781379080614",
+    "2108601784193130792",
+    "2108601835397484891",
+    "2108601882235060447",
+    "2108602555244945565",
+    "2108602581589066042",
+    "2108603210978013232",
+    "2108603518521430450",
+    "2108603819953193417",
+    "2108604445244223948",
+    "2108605997002440870",
+    "2108606294168875240",
+    "2108606297109377306",
+    "2108606431968518412",
+    "2108606677670842868",
+    "2108606989198565657",
+    "2108607323165863936"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T10:51:00.389Z",
-    "observedAt": "2026-10-09T10:51:03.551Z",
+    "attemptedAt": "2026-10-09T18:02:45.423Z",
+    "observedAt": "2026-10-09T18:03:51.830Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2108241102835012086",
-    "2108252878821306370",
-    "2108256113950888232",
-    "2108256611202375878",
-    "2108266069781606490",
-    "2108335109107487075"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-09T09:18:52.083Z",
-    "observedAt": "2026-10-09T09:19:06.790Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2108375121006391760",
-    "2108474617673236925"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-09T09:19:06.817Z",
-    "observedAt": "2026-10-09T09:19:11.584Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 40,
     "retryCount": 0
    }
   },
@@ -15577,24 +15599,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T10:51:00.389Z",
-   "observedAt": "2026-10-09T10:51:03.551Z",
+   "attemptedAt": "2026-10-09T18:02:45.423Z",
+   "observedAt": "2026-10-09T18:03:51.830Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T10:51:00.389Z",
-   "observedAt": "2026-10-09T10:51:03.551Z",
+   "attemptedAt": "2026-10-09T18:02:45.423Z",
+   "observedAt": "2026-10-09T18:03:51.830Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 40,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T10:51:03.580Z"
+ "updatedAt": "2026-10-09T18:05:01.206Z"
 }

@@ -19391,6 +19391,57 @@
      "cacheWrite": 5294
     },
     "completedAt": "2026-10-09T16:32:26.601Z"
+   },
+   "live:098bb504-a951-41be-ad2c-14db204202f4": {
+    "id": "live:098bb504-a951-41be-ad2c-14db204202f4",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.69345,
+    "status": "settled",
+    "createdAt": "2026-10-09T18:02:45.427Z",
+    "usage": {
+     "calls": 1,
+     "input": 12871,
+     "output": 6447,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-10-09T18:03:51.826Z"
+   },
+   "live:1354fde9-b0d2-4f13-a85f-0bb13b75c209": {
+    "id": "live:1354fde9-b0d2-4f13-a85f-0bb13b75c209",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.60453,
+    "status": "settled",
+    "createdAt": "2026-10-09T18:03:51.852Z",
+    "usage": {
+     "calls": 1,
+     "input": 9577,
+     "output": 5972,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-10-09T18:04:53.846Z"
+   },
+   "live:be0a4794-5104-4696-b92b-c071d789af1c": {
+    "id": "live:be0a4794-5104-4696-b92b-c071d789af1c",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.39519,
+    "status": "settled",
+    "createdAt": "2026-10-09T18:04:53.878Z",
+    "usage": {
+     "calls": 1,
+     "input": 1197,
+     "output": 584,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-10-09T18:05:01.167Z"
    }
   }
  }
