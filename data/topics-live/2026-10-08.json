@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T03:43:03.262Z",
+ "classifiedAt": "2026-10-09T05:14:51.702Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -4629,6 +4629,44 @@
    [
     "civil-rights",
     "racial-justice"
+   ]
+  ],
+  "2108402755681620397": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2108403029569335422": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2108403363851510072": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2108404799343648945": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2108405716671234483": [
+   [
+    "immigration",
+    "ice-enforcement"
    ]
   ]
  },
@@ -14191,6 +14229,97 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "b08853909a03f4517bc6c3ff9798b5759cfb5048dcdab6f49ed5fb1d3f00f468"
+  },
+  "2108402755681620397": {
+   "contextVersion": 426,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108377776348688416",
+    "fingerprint": "fbde0433ad9f5e321dacf9bf654b9c928cf0934c0779a8d7662b2dcc2daeddfd"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108377776348688416",
+    "fingerprint": "fbde0433ad9f5e321dacf9bf654b9c928cf0934c0779a8d7662b2dcc2daeddfd"
+   }
+  },
+  "2108403029569335422": {
+   "contextVersion": 426,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27"
+  },
+  "2108403363851510072": {
+   "contextVersion": 426,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27",
+   "quotedContext": {
+    "id": "2108383102301036640",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-10-09T02:24:38.000Z",
+    "textChars": 109,
+    "textHash": "1f99fd3137ad1791883b6590a58f4ceae09e6c6ccdef5ef126075ca0855fc217"
+   }
+  },
+  "2108404799343648945": {
+   "contextVersion": 426,
+   "evidenceSupplied": [
+    {
+     "id": "n_1cc6c0388412d28a",
+     "publisher": "The Washington Post",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/08/hegseth-wants-fort-hood-shooters-execution-by-firing-squad-be-public/",
+     "text": "Fort Hood shooter’s execution will be live-streamed, Defense Dept. says",
+     "title": "Fort Hood shooter’s execution will be live-streamed, Defense Dept. says",
+     "publishedAt": "2026-10-08T23:56:58.000Z",
+     "fetchedAt": "2026-10-09T00:38:50.495Z",
+     "version": 422,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_06e46e5ddfbd8f42",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6133355-nidal-hasan-ft-hood-shooting-texas-execution-date-set/",
+     "text": "Fort Hood shooter Nidal Hasan’s execution set for December",
+     "title": "Fort Hood shooter Nidal Hasan’s execution set for December",
+     "publishedAt": "2026-10-07T13:28:37.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_1cc6c0388412d28a"
+   ],
+   "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27",
+   "quotedContext": {
+    "id": "2108306315093119299",
+    "authorId": "51241574",
+    "handle": "AP",
+    "createdAt": "2026-10-08T21:19:30.000Z",
+    "textChars": 137,
+    "textHash": "9b3317c12cd54237115b99e35b01fa3b9eedfebf3c79bd6c5f492c3f5c3066a4"
+   }
+  },
+  "2108405716671234483": {
+   "contextVersion": 426,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0a8e421d4c39af9c164bdc7938d1c34c91870c9ced45816da8e59709a1daeb27"
   }
  },
  "needsContext": {
@@ -14819,10 +14948,15 @@
   "2108391307198775750": false,
   "2108392774923895190": false,
   "2108395025855889871": false,
-  "2108397469436633299": false
+  "2108397469436633299": false,
+  "2108402755681620397": false,
+  "2108403029569335422": false,
+  "2108403363851510072": false,
+  "2108404799343648945": false,
+  "2108405716671234483": false
  },
  "inputBlocks": {},
- "contextVersion": 425,
+ "contextVersion": 426,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15312,6 +15446,21 @@
    "ids": [
     "2108385245280288955"
    ]
+  },
+  {
+   "label": "Pentagon livestream of Nidal Hasan firing-squad execution",
+   "ids": [
+    "2108402755681620397",
+    "2108404799343648945"
+   ]
+  },
+  {
+   "label": "ICE shooting of man in Marble Hill, NYC",
+   "ids": [
+    "2108403029569335422",
+    "2108403363851510072",
+    "2108405716671234483"
+   ]
   }
  ],
  "unclassified": [],
@@ -15325,24 +15474,24 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108380299294036454",
-    "2108380515564921173",
-    "2108384002885419111",
-    "2108384195521224735",
-    "2108385245280288955",
-    "2108386085307080933",
-    "2108387354759082168",
-    "2108389691376406715",
-    "2108391307198775750",
-    "2108392774923895190",
-    "2108395025855889871",
-    "2108397469436633299"
+    "2108402755681620397",
+    "2108403029569335422",
+    "2108403363851510072",
+    "2108404799343648945",
+    "2108405716671234483",
+    "2108407157700153802",
+    "2108408724432040096",
+    "2108408726332096834",
+    "2108413241793946067",
+    "2108413550444310742",
+    "2108420600536699018",
+    "2108423876640489565"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T03:42:40.959Z",
-    "observedAt": "2026-10-09T03:43:03.243Z",
+    "attemptedAt": "2026-10-09T05:14:23.540Z",
+    "observedAt": "2026-10-09T05:14:51.676Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -15466,8 +15615,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T03:42:40.959Z",
-   "observedAt": "2026-10-09T03:43:03.243Z",
+   "attemptedAt": "2026-10-09T05:14:23.540Z",
+   "observedAt": "2026-10-09T05:14:51.676Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -15475,8 +15624,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T03:42:40.959Z",
-   "observedAt": "2026-10-09T03:43:03.243Z",
+   "attemptedAt": "2026-10-09T05:14:23.540Z",
+   "observedAt": "2026-10-09T05:14:51.676Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -15485,5 +15634,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T03:43:03.267Z"
+ "updatedAt": "2026-10-09T05:14:51.708Z"
 }
