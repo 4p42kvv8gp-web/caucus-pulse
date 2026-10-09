@@ -6167,7 +6167,155 @@
    "requestHash": "3fb3c31dae81a4e9de039a54f18ead29b54a3378bf9f66543b97ad265f4dcb38",
    "startedAt": "2026-10-09T21:07:10.890Z",
    "usageDay": "2026-10-09",
-   "status": "intent"
+   "status": "response-saved",
+   "response": {
+    "tweets": [
+     [
+      "2108647839853408265",
+      {
+       "id": "2108647839853408265",
+       "authorId": "1691435991037579264",
+       "handle": "BrunchBoxing",
+       "text": "🚨 David Benavidez confirms he's done at 175 — staying at cruiserweight. His WBC light heavyweight belt is expected to be vacated, which upgrades Buatsi vs Hutchinson (Nov 7, Manchester) to a FULL world title fight. 👀\n\n#BrunchBoxing #Benavidez #BuatsiHutchinson https://t.co/jJrwlhHLPi",
+       "createdAt": "2026-10-09T19:56:36.000Z",
+       "metrics": {
+        "likes": 11,
+        "retweets": 7,
+        "replies": 1,
+        "quotes": 3,
+        "bookmarks": 2,
+        "impressions": 1385
+       },
+       "source": {
+        "version": 1,
+        "url": "https://x.com/i/web/status/2108647839853408265",
+        "textField": "text",
+        "raw": {
+         "text": "🚨 David Benavidez confirms he's done at 175 — staying at cruiserweight. His WBC light heavyweight belt is expected to be vacated, which upgrades Buatsi vs Hutchinson (Nov 7, Manchester) to a FULL world title fight. 👀\n\n#BrunchBoxing #Benavidez #BuatsiHutchinson https://t.co/jJrwlhHLPi",
+         "entities": {
+          "hashtags": [
+           {
+            "end": 231,
+            "start": 218,
+            "tag": "BrunchBoxing"
+           },
+           {
+            "end": 242,
+            "start": 232,
+            "tag": "Benavidez"
+           },
+           {
+            "end": 260,
+            "start": 243,
+            "tag": "BuatsiHutchinson"
+           }
+          ],
+          "urls": [
+           {
+            "display_url": "pic.x.com/jJrwlhHLPi",
+            "end": 284,
+            "expanded_url": "https://x.com/BrunchBoxing/status/2108647839853408265/photo/1",
+            "media_key": "3_2108647837156421632",
+            "start": 261,
+            "url": "https://t.co/jJrwlhHLPi"
+           }
+          ]
+         },
+         "created_at": "2026-10-09T19:56:36.000Z",
+         "conversation_id": "2108647839853408265",
+         "edit_history_tweet_ids": [
+          "2108647839853408265",
+          "2108659413276152214"
+         ]
+        },
+        "urls": [
+         {
+          "field": "entities",
+          "url": "https://t.co/jJrwlhHLPi",
+          "expandedUrl": "https://x.com/BrunchBoxing/status/2108647839853408265/photo/1",
+          "displayUrl": "pic.x.com/jJrwlhHLPi",
+          "start": 261,
+          "end": 284
+         }
+        ],
+        "references": []
+       }
+      }
+     ]
+    ],
+    "errors": [],
+    "usage": 1,
+    "userReads": 1,
+    "rateLimited": false,
+    "resetAt": null,
+    "raw": {
+     "data": [
+      {
+       "author_id": "1691435991037579264",
+       "conversation_id": "2108647839853408265",
+       "created_at": "2026-10-09T19:56:36.000Z",
+       "edit_history_tweet_ids": [
+        "2108647839853408265",
+        "2108659413276152214"
+       ],
+       "entities": {
+        "hashtags": [
+         {
+          "end": 231,
+          "start": 218,
+          "tag": "BrunchBoxing"
+         },
+         {
+          "end": 242,
+          "start": 232,
+          "tag": "Benavidez"
+         },
+         {
+          "end": 260,
+          "start": 243,
+          "tag": "BuatsiHutchinson"
+         }
+        ],
+        "urls": [
+         {
+          "display_url": "pic.x.com/jJrwlhHLPi",
+          "end": 284,
+          "expanded_url": "https://x.com/BrunchBoxing/status/2108647839853408265/photo/1",
+          "media_key": "3_2108647837156421632",
+          "start": 261,
+          "url": "https://t.co/jJrwlhHLPi"
+         }
+        ]
+       },
+       "id": "2108647839853408265",
+       "lang": "en",
+       "public_metrics": {
+        "bookmark_count": 2,
+        "impression_count": 1385,
+        "like_count": 11,
+        "quote_count": 3,
+        "reply_count": 1,
+        "retweet_count": 7
+       },
+       "text": "🚨 David Benavidez confirms he's done at 175 — staying at cruiserweight. His WBC light heavyweight belt is expected to be vacated, which upgrades Buatsi vs Hutchinson (Nov 7, Manchester) to a FULL world title fight. 👀\n\n#BrunchBoxing #Benavidez #BuatsiHutchinson https://t.co/jJrwlhHLPi"
+      }
+     ],
+     "includes": {
+      "users": [
+       {
+        "id": "1691435991037579264",
+        "name": "Brunch Boxing",
+        "username": "BrunchBoxing"
+       }
+      ]
+     },
+     "meta": {
+      "result_count": 1
+     }
+    }
+   },
+   "respondedAt": "2026-10-09T21:07:12.501Z",
+   "responseHash": "14c5f0c4939f1c39798453afc87a62abfab0af954f09761a9d649b109d600243"
   }
  }
 }
