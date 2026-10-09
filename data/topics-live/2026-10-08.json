@@ -1,7 +1,7 @@
 {
  "date": "2026-10-08",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-09T19:36:57.954Z",
+ "classifiedAt": "2026-10-09T22:37:01.981Z",
  "assignments": {
   "2108045702102446515": [],
   "2108045805462737281": [],
@@ -7656,43 +7656,6 @@
     "textHash": "a30582ca39be271a11cdf33a9ff17eb84bf696add3b807a5ee23f7b98b7b2edc"
    }
   },
-  "2108193856361582642": {
-   "contextVersion": 417,
-   "evidenceSupplied": [
-    {
-     "id": "n_f08519ed983fce52",
-     "publisher": "NPR",
-     "date": "2026-10-02",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/02/nx-s1-5985789/trump-arch-protest-veterans-midterms",
-     "text": "\"It's the wrong monument, in the wrong place, at the wrong time, dedicated to the wrong man,\" said Jon Gundersen, a retired Army veteran and former Foreign Service officer who is one of the Vietnam War veterans suing the Trump administration over the arch.",
-     "title": "As Trump's proposed arch looms over D.C., protesters pin their hopes on the midterms",
-     "publishedAt": "2026-10-02T21:44:07.000Z",
-     "fetchedAt": "2026-10-02T23:15:47.414Z",
-     "version": 315,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f1b3b0518b1fc1fb",
-     "publisher": "Roll Call",
-     "date": "2026-10-08",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/08/trump-on-the-stump-extreme-lines-vague-threats/",
-     "text": "The commander in chief was at Charm City’s Sparrows Point industrial area to announce a $6.6 billion investment in Navy submarine manufacturing, a project that could boost Maryland GOP Rep. Andy Harris’ reelection bid. His nearby 1st District could benefit from the jobs a new defense production factory will deliver.",
-     "title": "Trump on the stump: Extreme lines, vague threats",
-     "publishedAt": "2026-10-08T13:14:37.000Z",
-     "fetchedAt": "2026-10-08T18:27:44.230Z",
-     "version": 417,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "2e69c77f1b3a65eb1678da1416610b53c7e2bbd1b5529d92e1a0004b93790627"
-  },
   "2108218777548562674": {
    "contextVersion": 417,
    "evidenceSupplied": [
@@ -14353,6 +14316,43 @@
    ],
    "evidenceUsed": [],
    "inputHash": "8b84131368aacb559c897bc82ad7c28d8fb75ec92e676657e544289c2ec1adba"
+  },
+  "2108193856361582642": {
+   "contextVersion": 438,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_f08519ed983fce52",
+     "publisher": "NPR",
+     "date": "2026-10-02",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/02/nx-s1-5985789/trump-arch-protest-veterans-midterms",
+     "text": "\"It's the wrong monument, in the wrong place, at the wrong time, dedicated to the wrong man,\" said Jon Gundersen, a retired Army veteran and former Foreign Service officer who is one of the Vietnam War veterans suing the Trump administration over the arch.",
+     "title": "As Trump's proposed arch looms over D.C., protesters pin their hopes on the midterms",
+     "publishedAt": "2026-10-02T21:44:07.000Z",
+     "fetchedAt": "2026-10-02T23:15:47.414Z",
+     "version": 315,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b723120684c1ba001e90e47c0f1cc2eb8fb703829dd57e5b2a549ddf8df4cbd8"
   }
  },
  "needsContext": {
@@ -14581,7 +14581,6 @@
   "2108251361166893315": false,
   "2108251446952988886": false,
   "2108193644130058283": false,
-  "2108193856361582642": false,
   "2108218777548562674": false,
   "2108218962890678410": false,
   "2108251517484490819": true,
@@ -14986,10 +14985,11 @@
   "2108375121006391760": false,
   "2108283899982000149": false,
   "2108367979503059454": false,
-  "2108277534257271185": false
+  "2108277534257271185": false,
+  "2108193856361582642": false
  },
  "inputBlocks": {},
- "contextVersion": 435,
+ "contextVersion": 438,
  "emerging": [
   {
    "label": "Longview workplace accident and worker pay during investigation",
@@ -15523,6 +15523,12 @@
    "ids": [
     "2108367979503059454"
    ]
+  },
+  {
+   "label": "Kushner private-equity conflict of interest in Middle East and Ukraine talks",
+   "ids": [
+    "2108193856361582642"
+   ]
   }
  ],
  "unclassified": [],
@@ -15536,51 +15542,28 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108277534257271185",
-    "2108621182090023053",
-    "2108621318170272103",
-    "2108621781196251228",
-    "2108622109723197755",
-    "2108622212668293328",
-    "2108622891503755301",
-    "2108623200804643235",
-    "2108623416555139403",
-    "2108623788665340297",
-    "2108623792629240276",
-    "2108624445774369080",
-    "2108624597256200450",
-    "2108625206587601029",
-    "2108625609379447241",
-    "2108625682766901746",
-    "2108625980298322320",
-    "2108626017552080944",
-    "2108626032714723413",
-    "2108626141338653024",
-    "2108626145855861226",
-    "2108626147319636288",
-    "2108626175341809786",
-    "2108626307076493369",
-    "2108626309882519765",
-    "2108626799940776154",
-    "2108627096264233095",
-    "2108627442311008275",
-    "2108627498946748878",
-    "2108627595164258335",
-    "2108627609860841914",
-    "2108627713334399357",
-    "2108629828052390175",
-    "2108630239425257763",
-    "2108630367473172903"
+    "2108193856361582642",
+    "2108646589078143246",
+    "2108647332178784334",
+    "2108648107089244261",
+    "2108648905969680477",
+    "2108654926003949790",
+    "2108665097799213195",
+    "2108665243438309417",
+    "2108665708175622462",
+    "2108665729168072980",
+    "2108665814933213673",
+    "2108665969795269083"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-09T19:33:53.655Z",
-    "observedAt": "2026-10-09T19:35:04.659Z",
+    "attemptedAt": "2026-10-09T22:34:58.115Z",
+    "observedAt": "2026-10-09T22:35:17.208Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 35,
+    "acceptedCount": 12,
     "retryCount": 0
    }
   }
@@ -15588,24 +15571,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-09T19:33:53.655Z",
-   "observedAt": "2026-10-09T19:35:04.659Z",
+   "attemptedAt": "2026-10-09T22:34:58.115Z",
+   "observedAt": "2026-10-09T22:35:17.208Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 35,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-09T19:33:53.655Z",
-   "observedAt": "2026-10-09T19:35:04.659Z",
+   "attemptedAt": "2026-10-09T22:34:58.115Z",
+   "observedAt": "2026-10-09T22:35:17.208Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 35,
+   "acceptedCount": 12,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-09T19:36:57.963Z"
+ "updatedAt": "2026-10-09T22:37:01.995Z"
 }
