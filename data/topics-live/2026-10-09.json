@@ -1,7 +1,7 @@
 {
  "date": "2026-10-09",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T13:48:01.887Z",
+ "classifiedAt": "2026-10-10T20:15:18.067Z",
  "assignments": {
   "2108407157700153802": [
    [
@@ -1829,10 +1829,6 @@
    [
     "economy",
     "tariffs-trade"
-   ],
-   [
-    "economy",
-    "prices-inflation"
    ]
   ],
   "2108624597256200450": [
@@ -2241,6 +2237,10 @@
    [
     "budget-appropriations",
     "snap-benefits"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2108638412206911941": [
@@ -6692,38 +6692,6 @@
    ],
    "inputHash": "dc24e7db1ad99196b2e2ecb3531c6ab6279899f271bb40e2e75d876f4c205c6e"
   },
-  "2108590758118699362": {
-   "contextVersion": 433,
-   "evidenceSupplied": [
-    {
-     "id": "n_87aa997a42ec207a",
-     "publisher": "The Hill",
-     "date": "2026-10-09",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6138816-nobel-winner-navi-pillay-donald-trump-comments/",
-     "text": "Nobel winner Navi Pillay gives sarcastic nod to Trump in initial remarks",
-     "title": "Nobel winner Navi Pillay gives sarcastic nod to Trump in initial remarks",
-     "publishedAt": "2026-10-09T15:23:35.000Z",
-     "fetchedAt": "2026-10-09T16:11:11.948Z",
-     "version": 433,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_87aa997a42ec207a"
-   ],
-   "inputHash": "dc24e7db1ad99196b2e2ecb3531c6ab6279899f271bb40e2e75d876f4c205c6e",
-   "quotedContext": {
-    "id": "2108495344283889957",
-    "authorId": "3665198176",
-    "handle": "SaulStaniforth",
-    "createdAt": "2026-10-09T09:50:38.000Z",
-    "textChars": 299,
-    "textHash": "1e21893a54f1ef60dd59d13990e1e42dca12d43834eb68507554499a22793893"
-   }
-  },
   "2108590844911522176": {
    "contextVersion": 433,
    "evidenceSupplied": [
@@ -7978,51 +7946,6 @@
     "textHash": "d928c823e995ae7ed64dabd29e40e1807227a22b70505299f513841a3c25c099"
    }
   },
-  "2108624445774369080": {
-   "contextVersion": 435,
-   "evidenceSupplied": [
-    {
-     "id": "n_e413b3270802827e",
-     "publisher": "Roll Call",
-     "date": "2026-10-05",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/05/trump-reverses-course-on-publicly-funded-tv-political-ads/",
-     "text": "Facing a public backlash from lawmakers of both parties, Trump said in a post on his Truth Social site that he would in part use money raised by a super PAC, MAGA Inc., to fund the ads instead of relying on tax dollars.",
-     "title": "Trump reverses course on publicly funded TV political ads",
-     "publishedAt": "2026-10-05T21:44:14.000Z",
-     "fetchedAt": "2026-10-06T03:38:23.302Z",
-     "version": 371,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_ba288f0ae4381f04",
-     "publisher": "Roll Call",
-     "date": "2026-10-06",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
-     "text": "Trump said in a social media post over the weekend that Sen. Tom Cotton, R-Ark., is the chief obstacle to the measure and gave out Cotton’s cellphone number so proponents could pressure him.",
-     "title": "Time for yet another debate over daylight, spurred by Trump",
-     "publishedAt": "2026-10-06T19:00:12.000Z",
-     "fetchedAt": "2026-10-07T00:41:22.631Z",
-     "version": 388,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "8b84131368aacb559c897bc82ad7c28d8fb75ec92e676657e544289c2ec1adba",
-   "quotedContext": {
-    "id": "2108572181168853236",
-    "authorId": "640893",
-    "handle": "EWErickson",
-    "createdAt": "2026-10-09T14:55:58.000Z",
-    "textChars": 2274,
-    "textHash": "1c0fba8266ad91f6995c8c628cc015cca55a7bda09ed83223f3dd902814a5fca"
-   }
-  },
   "2108624597256200450": {
    "contextVersion": 435,
    "evidenceSupplied": [],
@@ -8902,12 +8825,6 @@
     "fingerprint": "47ecf0f392b9ceca227f2128c3dad0f5580dcbe5ca93def07acd5b2a8fbed864"
    }
   },
-  "2108638404619452895": {
-   "contextVersion": 435,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0a8f725dd2995a822486c2751eaac22be8823e42091dc5256909394b95c651e1"
-  },
   "2108638412206911941": {
    "contextVersion": 435,
    "evidenceSupplied": [],
@@ -9755,12 +9672,6 @@
     "textChars": 201,
     "textHash": "2870742abe56de5ff2231875da4d01541a5c18b374b26373d57432315cbe0bdd"
    }
-  },
-  "2108647674580713686": {
-   "contextVersion": 437,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "591a3084e93112dc4b07437101627bcfa5291e523aa804d8bbf5ece1e7e1f400"
   },
   "2108648121416994842": {
    "contextVersion": 437,
@@ -12136,43 +12047,6 @@
     "textHash": "fbf16393cb7eda541e2e66dffa9a17cd493e78c4eaeb8c9f2b25dd25b42cf87b"
    }
   },
-  "2108637046076264604": {
-   "contextVersion": 439,
-   "evidenceSupplied": [
-    {
-     "id": "n_4ea6be05a8979a92",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
-     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
-     "publishedAt": "2026-10-04T20:53:23.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "46e7f110746a3dfbdb9fc63bd9449aeff754ac0a6850c5b16794b67b144a025d"
-  },
   "2108638462693826635": {
    "contextVersion": 439,
    "evidenceSupplied": [
@@ -12712,58 +12586,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "5b3bf2d44357ad50bc5d4c29c17974999dd54355baab8cc1a5a656ab2914c803"
-  },
-  "2108704179589919208": {
-   "contextVersion": 439,
-   "evidenceSupplied": [
-    {
-     "id": "n_630bc1f4b34da2f4",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/g-s1-147476/trump-third-country-deportation-africa-reverse",
-     "text": "The administration said it is working \"collaboratively\" with Soliman's lawyers to find and contact him, and is \"beginning the process to facilitate\" his return, according to Friday's filings in the case from Timothy Courchaine, the U.S. Attorney for the District of Arizona.",
-     "title": "U.S. working to reverse an Egyptian man's third-country deportation to Africa",
-     "publishedAt": "2026-10-09T17:49:28.000Z",
-     "fetchedAt": "2026-10-09T18:48:11.253Z",
-     "version": 435,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "5b3bf2d44357ad50bc5d4c29c17974999dd54355baab8cc1a5a656ab2914c803"
-  },
-  "2108704184442749285": {
-   "contextVersion": 439,
-   "evidenceSupplied": [
-    {
-     "id": "n_630bc1f4b34da2f4",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/g-s1-147476/trump-third-country-deportation-africa-reverse",
-     "text": "The administration said it is working \"collaboratively\" with Soliman's lawyers to find and contact him, and is \"beginning the process to facilitate\" his return, according to Friday's filings in the case from Timothy Courchaine, the U.S. Attorney for the District of Arizona.",
-     "title": "U.S. working to reverse an Egyptian man's third-country deportation to Africa",
-     "publishedAt": "2026-10-09T17:49:28.000Z",
-     "fetchedAt": "2026-10-09T18:48:11.253Z",
-     "version": 435,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "5b3bf2d44357ad50bc5d4c29c17974999dd54355baab8cc1a5a656ab2914c803",
-   "quotedContext": {
-    "id": "2108704179589919208",
-    "authorId": "1875008939714056192",
-    "handle": "RepLiccardo",
-    "createdAt": "2026-10-09T23:40:28.000Z",
-    "textChars": 782,
-    "textHash": "f3fcb227a9ce369e70970711979a64719fd81578b3ee0b69bc47277ec61c0a02"
-   }
   },
   "2108704573699289418": {
    "contextVersion": 439,
@@ -14020,6 +13842,261 @@
    ],
    "evidenceUsed": [],
    "inputHash": "2a04cb39ad964c1aad7028db0694d7773dd574f68496d809b1ef1a2ed8086647"
+  },
+  "2108590758118699362": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_87aa997a42ec207a",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6138816-nobel-winner-navi-pillay-donald-trump-comments/",
+     "text": "Nobel winner Navi Pillay gives sarcastic nod to Trump in initial remarks",
+     "title": "Nobel winner Navi Pillay gives sarcastic nod to Trump in initial remarks",
+     "publishedAt": "2026-10-09T15:23:35.000Z",
+     "fetchedAt": "2026-10-09T16:11:11.948Z",
+     "version": 433,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_e93d61558a6900cf",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5996606/u-s-imposes-sweeping-sanctions-on-international-criminal-court",
+     "text": "SCOTT SIMON, HOST: This year's Nobel Peace Prize was meant to bolster international humanitarian law and went to a South African jurist who has worked on the International Criminal Court, among other places. But the Trump administration wants to dismantle that court and accuses it of trying to prosecute Americans. NPR's Michele Kelemen reports on new U.S. sanctions against the world's only standing war crimes tribunal.",
+     "title": "U.S. imposes sweeping sanctions on International Criminal Court",
+     "publishedAt": "2026-10-10T11:40:51.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1",
+   "quotedContext": {
+    "id": "2108495344283889957",
+    "authorId": "3665198176",
+    "handle": "SaulStaniforth",
+    "createdAt": "2026-10-09T09:50:38.000Z",
+    "textChars": 299,
+    "textHash": "1e21893a54f1ef60dd59d13990e1e42dca12d43834eb68507554499a22793893"
+   }
+  },
+  "2108624445774369080": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_e413b3270802827e",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-reverses-course-on-publicly-funded-tv-political-ads/",
+     "text": "Facing a public backlash from lawmakers of both parties, Trump said in a post on his Truth Social site that he would in part use money raised by a super PAC, MAGA Inc., to fund the ads instead of relying on tax dollars.",
+     "title": "Trump reverses course on publicly funded TV political ads",
+     "publishedAt": "2026-10-05T21:44:14.000Z",
+     "fetchedAt": "2026-10-06T03:38:23.302Z",
+     "version": 371,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "Trump said in a social media post over the weekend that Sen. Tom Cotton, R-Ark., is the chief obstacle to the measure and gave out Cotton’s cellphone number so proponents could pressure him.",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1",
+   "quotedContext": {
+    "id": "2108572181168853236",
+    "authorId": "640893",
+    "handle": "EWErickson",
+    "createdAt": "2026-10-09T14:55:58.000Z",
+    "textChars": 2274,
+    "textHash": "1c0fba8266ad91f6995c8c628cc015cca55a7bda09ed83223f3dd902814a5fca"
+   }
+  },
+  "2108637046076264604": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1"
+  },
+  "2108638404619452895": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1"
+  },
+  "2108647674580713686": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1"
+  },
+  "2108704179589919208": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_630bc1f4b34da2f4",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/g-s1-147476/trump-third-country-deportation-africa-reverse",
+     "text": "The administration said it is working \"collaboratively\" with Soliman's lawyers to find and contact him, and is \"beginning the process to facilitate\" his return, according to Friday's filings in the case from Timothy Courchaine, the U.S. Attorney for the District of Arizona.",
+     "title": "U.S. working to reverse an Egyptian man's third-country deportation to Africa",
+     "publishedAt": "2026-10-09T17:49:28.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1"
+  },
+  "2108704184442749285": {
+   "contextVersion": 455,
+   "evidenceSupplied": [
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_630bc1f4b34da2f4",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/g-s1-147476/trump-third-country-deportation-africa-reverse",
+     "text": "The administration said it is working \"collaboratively\" with Soliman's lawyers to find and contact him, and is \"beginning the process to facilitate\" his return, according to Friday's filings in the case from Timothy Courchaine, the U.S. Attorney for the District of Arizona.",
+     "title": "U.S. working to reverse an Egyptian man's third-country deportation to Africa",
+     "publishedAt": "2026-10-09T17:49:28.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3b0cf10d4231e5c89fcf55ff0e7650da91b596fcde82344147622a22ec1cdab1",
+   "quotedContext": {
+    "id": "2108704179589919208",
+    "authorId": "1875008939714056192",
+    "handle": "RepLiccardo",
+    "createdAt": "2026-10-09T23:40:28.000Z",
+    "textChars": 782,
+    "textHash": "f3fcb227a9ce369e70970711979a64719fd81578b3ee0b69bc47277ec61c0a02"
+   }
   }
  },
  "needsContext": {
@@ -14183,7 +14260,6 @@
   "2108589252049051959": false,
   "2108589379224735928": false,
   "2108590468330135875": false,
-  "2108590758118699362": false,
   "2108590844911522176": false,
   "2108591455061078245": false,
   "2108591501928501601": false,
@@ -14280,7 +14356,6 @@
   "2108623416555139403": false,
   "2108623788665340297": false,
   "2108623792629240276": false,
-  "2108624445774369080": false,
   "2108624597256200450": false,
   "2108625206587601029": false,
   "2108625609379447241": false,
@@ -14338,7 +14413,6 @@
   "2108638284444540941": false,
   "2108638376618311806": false,
   "2108638402400948392": false,
-  "2108638404619452895": false,
   "2108638412206911941": false,
   "2108638656869093479": false,
   "2108638674258887139": false,
@@ -14382,7 +14456,6 @@
   "2108646523974373502": false,
   "2108647288205914427": false,
   "2108647377154519252": false,
-  "2108647674580713686": false,
   "2108648121416994842": false,
   "2108648262810886154": true,
   "2108648450355306888": false,
@@ -14517,7 +14590,6 @@
   "2108618699917652298": false,
   "2108627442311008275": false,
   "2108631078311497909": false,
-  "2108637046076264604": false,
   "2108638462693826635": false,
   "2108639019961852294": false,
   "2108648335686971552": false,
@@ -14549,8 +14621,6 @@
   "2108703459495096508": false,
   "2108703657503932498": false,
   "2108704003521466461": false,
-  "2108704179589919208": false,
-  "2108704184442749285": false,
   "2108704573699289418": false,
   "2108704977124266429": false,
   "2108705006635598331": false,
@@ -14625,10 +14695,17 @@
   "2108767767050826071": false,
   "2108767905647141222": false,
   "2108622212668293328": false,
-  "2108664697993965830": false
+  "2108664697993965830": false,
+  "2108590758118699362": false,
+  "2108624445774369080": false,
+  "2108637046076264604": false,
+  "2108638404619452895": false,
+  "2108647674580713686": false,
+  "2108704179589919208": false,
+  "2108704184442749285": false
  },
  "inputBlocks": {},
- "contextVersion": 450,
+ "contextVersion": 455,
  "emerging": [
   {
    "label": "Pentagon livestream of Nidal Hasan firing-squad execution",
@@ -15182,62 +15259,6 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2108637046076264604",
-    "2108638462693826635",
-    "2108639019961852294",
-    "2108648335686971552",
-    "2108687687544873390",
-    "2108687806990278830",
-    "2108688046745079934",
-    "2108688304346366091",
-    "2108688774519542192",
-    "2108689717638107263",
-    "2108691567217095120",
-    "2108691731298369954",
-    "2108691994297917599",
-    "2108692132097908980",
-    "2108692529487196507",
-    "2108692558469636441",
-    "2108695445979709792",
-    "2108696005323756025",
-    "2108696074215215426",
-    "2108697012887564796"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-10T00:00:24.164Z",
-    "observedAt": "2026-10-10T00:00:54.652Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 20,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2108584048922665377",
-    "2108603210978013232",
-    "2108615546715636139",
-    "2108618699917652298",
-    "2108627442311008275",
-    "2108631078311497909"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-10T00:00:13.834Z",
-    "observedAt": "2026-10-10T00:00:24.140Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 6,
-    "retryCount": 0
-   }
-  },
   "live_chunk-3": {
    "acceptedIds": [
     "2108697231989563394",
@@ -15296,39 +15317,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2108622212668293328",
-    "2108664697993965830",
-    "2108896681958007011",
-    "2108898321083560436",
-    "2108899851840688590",
-    "2108900510174761195",
-    "2108901258064965669",
-    "2108905396341502268",
-    "2108905398224765208",
-    "2108905398740947350",
-    "2108905628382998980",
-    "2108906556624384490",
-    "2108907049727803493",
-    "2108909185626726866",
-    "2108910397948645485",
-    "2108911381344899554",
-    "2108912939268800885",
-    "2108913027403669968",
-    "2108913299064525012",
-    "2108913905783517417",
-    "2108916563499774256",
-    "2108916735474585878",
-    "2108916743544414675"
+    "2108590758118699362",
+    "2108624445774369080",
+    "2108637046076264604",
+    "2108638404619452895",
+    "2108647674580713686",
+    "2108704179589919208",
+    "2108704184442749285"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T13:47:13.351Z",
-    "observedAt": "2026-10-10T13:48:01.852Z",
+    "attemptedAt": "2026-10-10T20:13:49.701Z",
+    "observedAt": "2026-10-10T20:14:00.707Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 23,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -15336,24 +15341,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T13:47:13.351Z",
-   "observedAt": "2026-10-10T13:48:01.852Z",
+   "attemptedAt": "2026-10-10T20:13:49.701Z",
+   "observedAt": "2026-10-10T20:14:00.707Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 23,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T13:47:13.351Z",
-   "observedAt": "2026-10-10T13:48:01.852Z",
+   "attemptedAt": "2026-10-10T20:13:49.701Z",
+   "observedAt": "2026-10-10T20:14:00.707Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 23,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T13:48:01.894Z"
+ "updatedAt": "2026-10-10T20:15:18.074Z"
 }
