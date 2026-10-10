@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T06:50:05.954Z",
+ "generatedAt": "2026-10-10T07:49:23.078Z",
  "incidents": [
   {
    "id": "osceola-county-fl--hurricane--hurricaneisaias--2026-10-09",
@@ -32,7 +32,7 @@
    "since": "2026-10-09T20:44:40.000Z",
    "last": "2026-10-09T20:44:40.000Z",
    "updates": 1,
-   "engN": 2,
+   "engN": 3,
    "amplifiers": 0,
    "others": [],
    "title": "Hurricane Isaias · Osceola County, FL",
@@ -60,7 +60,7 @@
      "who": "@RepDarrenSoto",
      "tag": "member",
      "text": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.\n\nIn Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed. We stand ready to support @fema to help our region, N Fla and other affected areas. https://t.co/whjnVcK8SK",
-     "engN": 2,
+     "engN": 3,
      "isNew": false,
      "flag": {
       "kind": "hurricane",
@@ -84,7 +84,35 @@
    "tweetIds": [
     "2108659937899598254"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "In Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed.",
+      "sourceId": "2108659937899598254",
+      "url": "https://x.com/i/web/status/2108659937899598254",
+      "evidenceQuote": "In Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed.",
+      "src": "@RepDarrenSoto, 2026-10-09T20:44:40.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.\n\nIn Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed. We stand ready to support @fema to help our region, N Fla and other affected areas. https://t.co/whjnVcK8SK",
+      "sourceId": "2108659937899598254",
+      "url": "https://x.com/i/web/status/2108659937899598254",
+      "evidenceQuote": "Thank you to @OsceolaEOC for the Hurricane #Isaias pre-landfall briefing.\n\nIn Central Florida, we have a tornado watch with some rain expected tonight. Please stay informed. We stand ready to support @fema to help our region, N Fla and other affected areas. https://t.co/whjnVcK8SK",
+      "src": "@RepDarrenSoto, 2026-10-09T20:44:40.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-10T07:49:17.289Z",
+    "posts": 1,
+    "inputHash": "5f2e8426bbbfcd0cc80176b16a24202e861f45f8dc2a8a2979a45e31e8e331e0",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -127,7 +155,7 @@
    "since": "2026-10-09T18:28:16.000Z",
    "last": "2026-10-09T18:28:16.000Z",
    "updates": 1,
-   "engN": 2,
+   "engN": 4,
    "amplifiers": 0,
    "others": [],
    "title": "Flooding · Newport Beach, CA",
@@ -155,7 +183,7 @@
      "who": "@CongressMin",
      "tag": "member",
      "text": "ALERT: Newport Beach Flooding Advisory \n\nThe City of Newport Beach is advising residents and motorists to avoid the Balboa Peninsula due to street flooding caused by recent storm conditions and elevated tides.\n\nOur office is closely monitoring the situation and urges residents to exercise caution, avoid driving through flooded streets, and follow all guidance issued by local authorities and public safety personnel.",
-     "engN": 2,
+     "engN": 4,
      "isNew": false,
      "flag": {
       "kind": "flooding",
@@ -179,7 +207,35 @@
    "tweetIds": [
     "2108625609379447241"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "The City of Newport Beach is advising residents and motorists to avoid the Balboa Peninsula due to street flooding caused by recent storm conditions and elevated tides.",
+      "sourceId": "2108625609379447241",
+      "url": "https://x.com/i/web/status/2108625609379447241",
+      "evidenceQuote": "The City of Newport Beach is advising residents and motorists to avoid the Balboa Peninsula due to street flooding caused by recent storm conditions and elevated tides.",
+      "src": "@CongressMin, 2026-10-09T18:28:16.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "Our office is closely monitoring the situation and urges residents to exercise caution, avoid driving through flooded streets, and follow all guidance issued by local authorities and public safety personnel.",
+      "sourceId": "2108625609379447241",
+      "url": "https://x.com/i/web/status/2108625609379447241",
+      "evidenceQuote": "Our office is closely monitoring the situation and urges residents to exercise caution, avoid driving through flooded streets, and follow all guidance issued by local authorities and public safety personnel.",
+      "src": "@CongressMin, 2026-10-09T18:28:16.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-10T07:49:23.078Z",
+    "posts": 1,
+    "inputHash": "ecbb52ca4b3fc40a0f49de975c2ccf0aad6ab9aee58e54b24834a36083f088d9",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -325,7 +381,7 @@
     "hurricane"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
