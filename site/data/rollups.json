@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-10T07:49:25.930Z",
- "lastPollAt": "2026-10-10T06:49:58.514Z",
- "lastPollAttemptAt": "2026-10-10T06:49:56.636Z",
+ "generatedAt": "2026-10-10T08:31:40.856Z",
+ "lastPollAt": "2026-10-10T08:31:32.327Z",
+ "lastPollAttemptAt": "2026-10-10T08:31:31.355Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-10T07:49:24.881Z"
+  "referenceAsOf": "2026-10-10T08:31:39.732Z"
  },
  "news": {
   "version": 445,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-10T07:49:25.225Z",
+   "asOf": "2026-10-10T08:31:40.091Z",
    "windowDays": 14,
-   "windowStart": "2026-09-26T07:49:25.225Z",
+   "windowStart": "2026-09-26T08:31:40.091Z",
    "eligibleItems": 1602,
    "withExcerpts": 155,
    "headlineOrSummary": 1447,
@@ -3548,15 +3548,15 @@
   "through": "2026-10-10",
   "capturedIn24h": 581,
   "classifiedIn24h": 581,
-  "taggedIn24h": 529,
+  "taggedIn24h": 528,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-10-10T07:49:08.145Z",
-   "lastSuccessAt": "2026-10-10T06:50:05.828Z",
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-10-10T08:31:34.390Z",
+   "lastSuccessAt": "2026-10-10T08:31:37.437Z",
    "capturedIn24h": 581,
    "classifiedIn24h": 581,
    "pendingIn24h": 0,
@@ -6826,16 +6826,16 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 10,
+    "posts": 11,
     "mix": [
-     50,
+     55,
      0,
-     50
+     45
     ],
     "accounts": 4,
     "members": 4,
     "unidentifiedAccounts": 0,
-    "classified": 10,
+    "classified": 11,
     "tagged": 7,
     "pending": 0,
     "corePosts": 1,
@@ -6845,12 +6845,12 @@
      "Corruption": 1
     },
     "eng": 342,
-    "perPost": 34,
+    "perPost": 31,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 3177,
+    "posts": 3178,
     "mix": [
      83,
      5,
@@ -6859,7 +6859,7 @@
     "accounts": 339,
     "members": 205,
     "unidentifiedAccounts": 0,
-    "classified": 3177,
+    "classified": 3178,
     "tagged": 2925,
     "pending": 0,
     "corePosts": 1237,
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    36,
-    127,
-    164,
-    164,
-    80,
-    25,
     3,
-    1,
-    34,
-    148,
-    160,
-    135,
-    68,
-    31,
-    4
+    67,
+    136,
+    172,
+    138,
+    63,
+    19,
+    2,
+    0,
+    61,
+    149,
+    169,
+    117,
+    56,
+    26,
+    3
    ]
   },
   "CPC": {
@@ -6942,34 +6942,102 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    15,
+    2,
+    32,
     56,
-    75,
-    87,
-    44,
-    16,
-    1,
-    1,
-    9,
-    66,
+    82,
+    77,
+    31,
+    13,
+    2,
+    0,
+    19,
     70,
-    64,
-    24,
+    74,
+    56,
     16,
-    3
+    16,
+    1
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 6,
+    "posts": 7,
     "mix": [
-     33,
+     43,
      0,
-     67
+     57
     ],
     "accounts": 2,
     "members": 2,
+    "unidentifiedAccounts": 0,
+    "classified": 7,
+    "tagged": 4,
+    "pending": 0,
+    "corePosts": 1,
+    "coreCounts": {
+     "Affordability": 0,
+     "Healthcare": 0,
+     "Corruption": 1
+    },
+    "eng": 1,
+    "perPost": 0,
+    "top10Share": 100,
+    "engDelta": -100
+   },
+   "w": {
+    "posts": 1870,
+    "mix": [
+     81,
+     6,
+     13
+    ],
+    "accounts": 190,
+    "members": 110,
+    "unidentifiedAccounts": 0,
+    "classified": 1870,
+    "tagged": 1700,
+    "pending": 0,
+    "corePosts": 679,
+    "coreCounts": {
+     "Affordability": 289,
+     "Healthcare": 143,
+     "Corruption": 292
+    },
+    "eng": 151800,
+    "perPost": 81,
+    "top10Share": 54,
+    "engDelta": 0
+   },
+   "curve48": [
+    2,
+    39,
+    76,
+    104,
+    66,
+    35,
+    10,
+    1,
+    0,
+    44,
+    79,
+    102,
+    66,
+    38,
+    11,
+    2
+   ]
+  },
+  "CBC": {
+   "t": {
+    "posts": 6,
+    "mix": [
+     50,
+     0,
+     50
+    ],
+    "accounts": 1,
+    "members": 1,
     "unidentifiedAccounts": 0,
     "classified": 6,
     "tagged": 4,
@@ -6986,75 +7054,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1869,
-    "mix": [
-     81,
-     6,
-     13
-    ],
-    "accounts": 190,
-    "members": 110,
-    "unidentifiedAccounts": 0,
-    "classified": 1869,
-    "tagged": 1700,
-    "pending": 0,
-    "corePosts": 679,
-    "coreCounts": {
-     "Affordability": 289,
-     "Healthcare": 143,
-     "Corruption": 292
-    },
-    "eng": 151800,
-    "perPost": 81,
-    "top10Share": 54,
-    "engDelta": 0
-   },
-   "curve48": [
-    0,
-    21,
-    75,
-    94,
-    85,
-    43,
-    12,
-    2,
-    1,
-    24,
-    85,
-    96,
-    72,
-    48,
-    15,
-    1
-   ]
-  },
-  "CBC": {
-   "t": {
-    "posts": 5,
-    "mix": [
-     40,
-     0,
-     60
-    ],
-    "accounts": 1,
-    "members": 1,
-    "unidentifiedAccounts": 0,
-    "classified": 5,
-    "tagged": 4,
-    "pending": 0,
-    "corePosts": 1,
-    "coreCounts": {
-     "Affordability": 0,
-     "Healthcare": 0,
-     "Corruption": 1
-    },
-    "eng": 1,
-    "perPost": 0,
-    "top10Share": 100,
-    "engDelta": -100
-   },
-   "w": {
-    "posts": 615,
+    "posts": 616,
     "mix": [
      81,
      5,
@@ -7063,7 +7063,7 @@
     "accounts": 83,
     "members": 52,
     "unidentifiedAccounts": 0,
-    "classified": 615,
+    "classified": 616,
     "tagged": 557,
     "pending": 0,
     "corePosts": 236,
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    5,
-    30,
-    39,
-    29,
-    14,
-    4,
     1,
-    0,
-    6,
-    37,
-    31,
-    22,
-    7,
+    14,
+    33,
+    32,
+    28,
     9,
-    1
+    5,
+    0,
+    0,
+    17,
+    30,
+    33,
+    19,
+    4,
+    9,
+    2
    ]
   },
   "CHC": {
@@ -7147,20 +7147,20 @@
    },
    "curve48": [
     0,
-    3,
+    10,
     22,
-    31,
     36,
-    14,
-    5,
-    0,
-    1,
-    2,
     27,
-    35,
-    23,
-    13,
+    12,
+    4,
+    1,
+    0,
     7,
+    29,
+    32,
+    21,
+    13,
+    5,
     0
    ]
   },
@@ -7215,21 +7215,21 @@
    },
    "curve48": [
     0,
-    1,
-    9,
-    16,
+    3,
+    11,
+    14,
     19,
     12,
-    5,
+    3,
     0,
     0,
-    2,
-    6,
-    13,
-    8,
+    3,
+    9,
+    9,
+    10,
+    3,
     5,
-    4,
-    2
+    1
    ]
   }
  },
@@ -16590,7 +16590,7 @@
     79,
     0
    ],
-   "d": 108,
+   "d": 105,
    "mAvg": 24.5,
    "epAvg": 378,
    "momentum": {
@@ -16602,8 +16602,8 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 3.8,
-    "engLift": 0.06229865981552707
+    "eff": 3.9,
+    "engLift": 0.07434791681157404
    },
    "subs": [
     {
@@ -21766,7 +21766,7 @@
     2,
     2,
     2,
-    2,
+    3,
     4,
     4,
     4
@@ -24966,6 +24966,39 @@
  ],
  "incidentsFiltered": 2,
  "feed": [
+  {
+   "id": "2108827335680217364",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Cam’s last 30 or so seconds were really good;rest is junk. Jake Paul is not a good boxer and no MLB HoF w/o a good BA unless you are Ozzie Smith rare. Few of those ever in MLB. Steve won overall. But, look at Bo’s ⚾️ stats last 3 seasons before his injury. https://t.co/N9ivzdBiDz",
+   "topics": [],
+   "time": "2026-10-10T07:49:51.000Z",
+   "date": "2026-10-10",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2107911543497039884",
+    "handle": "@KillaKreww",
+    "text": "A guy got GENUINELY SCARED debating Cam Newton about BASEBALL players being the best athletes after Cam randomly told him he wouldn’t SURVIVE getting punched by him 😭💀\n\n“I don’t know if you’re…"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 445,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-10T08:31:32.320Z",
+   "isNew": false
+  },
   {
    "id": "2108801462012977394",
    "handle": "@tedlieu",
@@ -32598,36 +32631,6 @@
    },
    "metricsObservedAt": "2026-10-10T07:47:02.956Z",
    "isNew": false
-  },
-  {
-   "id": "2108658380420067370",
-   "handle": "@RepNikema",
-   "member": "Nikema Williams",
-   "district": "GA-05",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "I am disturbed that this is even being considered. We must never lose sight of our humanity. https://t.co/1CwUYKZLbb",
-   "topics": [],
-   "time": "2026-10-09T20:38:29.000Z",
-   "date": "2026-10-09",
-   "engN": 10,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 437,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-10T07:47:02.956Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -32972,6 +32975,32 @@
   "955598085526360064": "@VoteCasten"
  },
  "feedAll": [
+  {
+   "id": "2108827335680217364",
+   "authorId": "20688358",
+   "createdAt": "2026-10-10T07:49:51.000Z",
+   "date": "2026-10-10",
+   "type": "quote",
+   "text": "Cam’s last 30 or so seconds were really good;rest is junk. Jake Paul is not a good boxer and no MLB HoF w/o a good BA unless you are Ozzie Smith rare. Few of those ever in MLB. Steve won overall. But, look at Bo’s ⚾️ stats last 3 seasons before his injury. https://t.co/N9ivzdBiDz",
+   "engN": 0,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 445,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-10T08:31:32.320Z",
+   "quoted": {
+    "id": "2107911543497039884",
+    "handle": "@KillaKreww",
+    "text": "A guy got GENUINELY SCARED debating Cam Newton about BASEBALL players being the best athletes after Cam randomly told him he wouldn’t SURVIVE getting punched by him 😭💀\n\n“I don’t know if you’re…"
+   }
+  },
   {
    "id": "2108801462012977394",
    "authorId": "21059255",
@@ -75138,57 +75167,18 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-08T07:47:12.546Z"
-  },
-  {
-   "id": "2107935478649426361",
-   "authorId": "161791703",
-   "createdAt": "2026-10-07T20:45:56.000Z",
-   "date": "2026-10-07",
-   "type": "tweet",
-   "text": "The Trump Administration must end its attack on Head Start families and children.\nhttps://t.co/jCuakm6FM7 https://t.co/ChEd0xBRVI",
-   "engN": 4,
-   "topics": [
-    "education"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 402,
-    "evidenceSupplied": [
-     {
-      "id": "n_30388e2877c434c1",
-      "publisher": "The Hill",
-      "date": "2026-10-03",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/education/6126823-head-start-programs-trump-reforms-hhs/",
-      "text": "Head Start fight reaches tipping point as advocates push back against proposed Trump changes",
-      "publishedAt": "2026-10-03T21:00:00.000Z",
-      "fetchedAt": "2026-10-04T20:35:14.697Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_30388e2877c434c1"
-    ]
-   },
-   "metricsObservedAt": "2026-10-08T07:47:12.546Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3177,
+ "feedAllTotal": 3178,
  "feedAllFiles": [
-  "feed-0-2a4d52896f8d2f7d.json",
-  "feed-1-3656ef4a6f9424bc.json",
-  "feed-2-5b6adc641dab827c.json",
-  "feed-3-3aa6645d62bc05b7.json",
-  "feed-4-59e97adcdc3dd707.json",
-  "feed-5-79e47fca22842efd.json",
-  "feed-6-caf1aba9d64de468.json",
-  "feed-7-4dfe6b33c491f3f9.json"
+  "feed-0-ae32fe1103543d3a.json",
+  "feed-1-d9b174f91efd7466.json",
+  "feed-2-49b8d70dff0eedb3.json",
+  "feed-3-18e2bdeaf2315608.json",
+  "feed-4-ac34db90d693b3cf.json",
+  "feed-5-78ffad87feb2a252.json",
+  "feed-6-f37d8ecdb8ab0091.json",
+  "feed-7-7f85e2987bf442eb.json"
  ]
 }
