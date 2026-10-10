@@ -1,7 +1,7 @@
 {
  "date": "2026-10-09",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T04:34:41.190Z",
+ "classifiedAt": "2026-10-10T13:48:01.887Z",
  "assignments": {
   "2108407157700153802": [
    [
@@ -3102,6 +3102,10 @@
   "2108664697993965830": [
    [
     "foreign-policy",
+    null
+   ],
+   [
+    "civil-rights",
     null
    ]
   ],
@@ -7887,38 +7891,6 @@
    "evidenceUsed": [],
    "inputHash": "8b84131368aacb559c897bc82ad7c28d8fb75ec92e676657e544289c2ec1adba"
   },
-  "2108622212668293328": {
-   "contextVersion": 435,
-   "evidenceSupplied": [
-    {
-     "id": "n_048b41a75c2eaf64",
-     "publisher": "The Hill",
-     "date": "2026-10-08",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6137160-guilfoyle-deters-texting-allegations/",
-     "text": "Who is Eric Deters? The MAGA donor Kimberly Guilfoyle sought $100K from for AmEx bill",
-     "title": "Who is Eric Deters? The MAGA donor Kimberly Guilfoyle sought $100K from for AmEx bill",
-     "publishedAt": "2026-10-08T19:13:33.000Z",
-     "fetchedAt": "2026-10-08T19:59:50.874Z",
-     "version": 418,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_048b41a75c2eaf64"
-   ],
-   "inputHash": "8b84131368aacb559c897bc82ad7c28d8fb75ec92e676657e544289c2ec1adba",
-   "quotedContext": {
-    "id": "2108388234543653115",
-    "authorId": "2467791",
-    "handle": "washingtonpost",
-    "createdAt": "2026-10-09T02:45:01.000Z",
-    "textChars": 282,
-    "textHash": "3636808aca997c86f0cd051a1a5d6196d09ed7a4eedbef2992f01c0318e92600"
-   }
-  },
   "2108622891503755301": {
    "contextVersion": 435,
    "evidenceSupplied": [],
@@ -10649,12 +10621,6 @@
    }
   },
   "2108664536421093843": {
-   "contextVersion": 437,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "d4ca29c969aed640882f8e8278f8938f417b72da8fcdd97c270ae93225791a6d"
-  },
-  "2108664697993965830": {
    "contextVersion": 437,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -13985,6 +13951,75 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "4e757565b16768494ca8104cebfe927481d7cfaa7af8a3de1f5f932292023533"
+  },
+  "2108622212668293328": {
+   "contextVersion": 450,
+   "evidenceSupplied": [
+    {
+     "id": "n_048b41a75c2eaf64",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6137160-guilfoyle-deters-texting-allegations/",
+     "text": "Who is Eric Deters? The MAGA donor Kimberly Guilfoyle sought $100K from for AmEx bill",
+     "title": "Who is Eric Deters? The MAGA donor Kimberly Guilfoyle sought $100K from for AmEx bill",
+     "publishedAt": "2026-10-08T19:13:33.000Z",
+     "fetchedAt": "2026-10-08T19:59:50.874Z",
+     "version": 418,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9038326161eb1db4",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5995114/week-in-politics-hegseths-livestream-backlash-greece-ambassador-guilfoyle-scandal",
+     "text": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "title": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "publishedAt": "2026-10-10T11:40:48.000Z",
+     "fetchedAt": "2026-10-10T13:01:19.922Z",
+     "version": 449,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_048b41a75c2eaf64"
+   ],
+   "inputHash": "2a04cb39ad964c1aad7028db0694d7773dd574f68496d809b1ef1a2ed8086647",
+   "quotedContext": {
+    "id": "2108388234543653115",
+    "authorId": "2467791",
+    "handle": "washingtonpost",
+    "createdAt": "2026-10-09T02:45:01.000Z",
+    "textChars": 282,
+    "textHash": "3636808aca997c86f0cd051a1a5d6196d09ed7a4eedbef2992f01c0318e92600"
+   }
+  },
+  "2108664697993965830": {
+   "contextVersion": 450,
+   "evidenceSupplied": [
+    {
+     "id": "n_679cc1c42ce8e008",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140425-trump-nobel-peace-prize-criticism/",
+     "text": "Trump: I ‘should have won’ Nobel Peace Prize, award is ‘forever discredited’",
+     "title": "Trump: I ‘should have won’ Nobel Peace Prize, award is ‘forever discredited’",
+     "publishedAt": "2026-10-10T11:55:40.000Z",
+     "fetchedAt": "2026-10-10T13:01:19.922Z",
+     "version": 449,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "2a04cb39ad964c1aad7028db0694d7773dd574f68496d809b1ef1a2ed8086647"
   }
  },
  "needsContext": {
@@ -14240,7 +14275,6 @@
   "2108621318170272103": false,
   "2108621781196251228": false,
   "2108622109723197755": false,
-  "2108622212668293328": false,
   "2108622891503755301": false,
   "2108623200804643235": false,
   "2108623416555139403": false,
@@ -14410,7 +14444,6 @@
   "2108664395068784921": false,
   "2108664397031772631": false,
   "2108664536421093843": false,
-  "2108664697993965830": false,
   "2108646589078143246": false,
   "2108647332178784334": false,
   "2108648107089244261": false,
@@ -14590,10 +14623,12 @@
   "2108767468818674145": false,
   "2108767575375057341": false,
   "2108767767050826071": false,
-  "2108767905647141222": false
+  "2108767905647141222": false,
+  "2108622212668293328": false,
+  "2108664697993965830": false
  },
  "inputBlocks": {},
- "contextVersion": 443,
+ "contextVersion": 450,
  "emerging": [
   {
    "label": "Pentagon livestream of Nidal Hasan firing-squad execution",
@@ -15124,6 +15159,18 @@
    "ids": [
     "2108767575375057341"
    ]
+  },
+  {
+   "label": "Guilfoyle $100K donor credit-card payment scandal",
+   "ids": [
+    "2108622212668293328"
+   ]
+  },
+  {
+   "label": "Navi Pillay Nobel Peace Prize award",
+   "ids": [
+    "2108664697993965830"
+   ]
   }
  ],
  "unclassified": [],
@@ -15249,36 +15296,39 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2108755650109161936",
-    "2108757849711210732",
-    "2108757949489320282",
-    "2108758219640480057",
-    "2108759968975605950",
-    "2108761379729768597",
-    "2108761392023290232",
-    "2108761676493226415",
-    "2108762769906626698",
-    "2108763859041329264",
-    "2108767015859343720",
-    "2108767468818674145",
-    "2108767575375057341",
-    "2108767767050826071",
-    "2108767905647141222",
-    "2108770325605253396",
-    "2108770635963146745",
-    "2108772450234429588",
-    "2108772685320786115",
-    "2108777651523514741"
+    "2108622212668293328",
+    "2108664697993965830",
+    "2108896681958007011",
+    "2108898321083560436",
+    "2108899851840688590",
+    "2108900510174761195",
+    "2108901258064965669",
+    "2108905396341502268",
+    "2108905398224765208",
+    "2108905398740947350",
+    "2108905628382998980",
+    "2108906556624384490",
+    "2108907049727803493",
+    "2108909185626726866",
+    "2108910397948645485",
+    "2108911381344899554",
+    "2108912939268800885",
+    "2108913027403669968",
+    "2108913299064525012",
+    "2108913905783517417",
+    "2108916563499774256",
+    "2108916735474585878",
+    "2108916743544414675"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T04:34:14.150Z",
-    "observedAt": "2026-10-10T04:34:41.172Z",
+    "attemptedAt": "2026-10-10T13:47:13.351Z",
+    "observedAt": "2026-10-10T13:48:01.852Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 20,
+    "acceptedCount": 23,
     "retryCount": 0
    }
   }
@@ -15286,24 +15336,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T04:34:14.150Z",
-   "observedAt": "2026-10-10T04:34:41.172Z",
+   "attemptedAt": "2026-10-10T13:47:13.351Z",
+   "observedAt": "2026-10-10T13:48:01.852Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 23,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T04:34:14.150Z",
-   "observedAt": "2026-10-10T04:34:41.172Z",
+   "attemptedAt": "2026-10-10T13:47:13.351Z",
+   "observedAt": "2026-10-10T13:48:01.852Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 23,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T04:34:41.193Z"
+ "updatedAt": "2026-10-10T13:48:01.894Z"
 }
