@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T11:25:07.304Z",
+ "classifiedAt": "2026-10-10T12:17:53.861Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -59,6 +59,36 @@
    [
     "foreign-policy",
     "ukraine-russia"
+   ]
+  ],
+  "2108882892894179518": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2108883143310647740": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2108883409846088008": [],
+  "2108886039989490142": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2108890154475897057": [],
+  "2108890344918053049": [
+   [
+    "healthcare",
+    "public-health"
    ]
   ]
  },
@@ -440,6 +470,146 @@
     "textChars": 1284,
     "textHash": "3be00263220ddeffb8146ab2a8e15a754349f1a8b2a206ed623d0e68abdb6849"
    }
+  },
+  "2108882892894179518": {
+   "contextVersion": 448,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd",
+    "n_62c2e05aebf20a43"
+   ],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897",
+   "quotedContext": {
+    "id": "2108874893597028778",
+    "authorId": "376922057",
+    "handle": "kravchukev",
+    "createdAt": "2026-10-10T10:58:50.000Z",
+    "textChars": 317,
+    "textHash": "552c2322aec86fab70826d7b08e86eefbd5262a7c16be47c8bcfc1fe301d9937"
+   }
+  },
+  "2108883143310647740": {
+   "contextVersion": 448,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108565360010035542",
+    "fingerprint": "16bfc9344440842f036e5f0e97ba8430e60f737fa633ed308793149b7b6139f9"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108565360010035542",
+    "fingerprint": "16bfc9344440842f036e5f0e97ba8430e60f737fa633ed308793149b7b6139f9"
+   }
+  },
+  "2108883409846088008": {
+   "contextVersion": 448,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897"
+  },
+  "2108886039989490142": {
+   "contextVersion": 448,
+   "evidenceSupplied": [
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd",
+    "n_62c2e05aebf20a43"
+   ],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897",
+   "quotedContext": {
+    "id": "2108885168635429298",
+    "authorId": "1115148079",
+    "handle": "AstroTerry",
+    "createdAt": "2026-10-10T11:39:40.000Z",
+    "textChars": 107,
+    "textHash": "41b7b7048715ee24dd51bed380297b952afa5b3a467687926c7db99cedca6b4c"
+   }
+  },
+  "2108890154475897057": {
+   "contextVersion": 448,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897",
+   "quotedContext": {
+    "id": "2108882063684178359",
+    "authorId": "18004222",
+    "handle": "AdamKinzinger",
+    "createdAt": "2026-10-10T11:27:19.000Z",
+    "textChars": 56,
+    "textHash": "e67d460cec79b7373a731516f53df920d03058fb0aaf6ebecf05d2eaedbb2414"
+   }
+  },
+  "2108890344918053049": {
+   "contextVersion": 448,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ecb548d756dd43067f89364216533400e242451db2e5fd29c5cd296ab4d7e897"
   }
  },
  "needsContext": {
@@ -455,10 +625,16 @@
   "2108801462012977394": false,
   "2108827335680217364": false,
   "2108866968602218651": false,
-  "2108869695650885905": false
+  "2108869695650885905": false,
+  "2108882892894179518": false,
+  "2108883143310647740": false,
+  "2108883409846088008": false,
+  "2108886039989490142": false,
+  "2108890154475897057": true,
+  "2108890344918053049": false
  },
  "inputBlocks": {},
- "contextVersion": 447,
+ "contextVersion": 448,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -470,6 +646,13 @@
    "label": "Trump claim to have acquired Greenland",
    "ids": [
     "2108801462012977394"
+   ]
+  },
+  {
+   "label": "Trump-Putin Russian diesel import deal",
+   "ids": [
+    "2108882892894179518",
+    "2108886039989490142"
    ]
   }
  ],
@@ -484,18 +667,22 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108866968602218651",
-    "2108869695650885905"
+    "2108882892894179518",
+    "2108883143310647740",
+    "2108883409846088008",
+    "2108886039989490142",
+    "2108890154475897057",
+    "2108890344918053049"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T11:25:05.321Z",
-    "observedAt": "2026-10-10T11:25:07.300Z",
+    "attemptedAt": "2026-10-10T12:17:43.819Z",
+    "observedAt": "2026-10-10T12:17:53.855Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -503,24 +690,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T11:25:05.321Z",
-   "observedAt": "2026-10-10T11:25:07.300Z",
+   "attemptedAt": "2026-10-10T12:17:43.819Z",
+   "observedAt": "2026-10-10T12:17:53.855Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T11:25:05.321Z",
-   "observedAt": "2026-10-10T11:25:07.300Z",
+   "attemptedAt": "2026-10-10T12:17:43.819Z",
+   "observedAt": "2026-10-10T12:17:53.855Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T11:25:07.306Z"
+ "updatedAt": "2026-10-10T12:17:53.863Z"
 }
