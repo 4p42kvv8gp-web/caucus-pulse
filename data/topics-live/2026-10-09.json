@@ -1,7 +1,7 @@
 {
  "date": "2026-10-09",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T00:49:38.794Z",
+ "classifiedAt": "2026-10-10T01:35:25.965Z",
  "assignments": {
   "2108407157700153802": [
    [
@@ -3974,6 +3974,125 @@
    [
     "constituent-services",
     null
+   ]
+  ],
+  "2108722716731941333": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "immigration",
+    null
+   ]
+  ],
+  "2108722750995214760": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108722757181825442": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108724571306373617": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108725695627038952": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2108726101862240539": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2108726241213727063": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2108726650515116493": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2108727683106357510": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2108727697920897245": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2108728041107046542": [],
+  "2108730673410244918": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2108730762014892155": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2108730773234696619": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2108732439291973837": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2108732774903656703": [
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -12867,6 +12986,295 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "4785bc82b620b8935cada4fe837ec9303f065644594f14bb275c93a49d34a623"
+  },
+  "2108722716731941333": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108722750995214760": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd",
+    "n_62c2e05aebf20a43"
+   ],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108722757181825442": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd",
+    "n_62c2e05aebf20a43"
+   ],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530",
+   "quotedContext": {
+    "id": "2108722750995214760",
+    "authorId": "29501253",
+    "handle": "SenAdamSchiff",
+    "createdAt": "2026-10-10T00:54:16.000Z",
+    "textChars": 301,
+    "textHash": "15716ad86e981e85baa0f0f3a45c4815f6cc78f9fcff33dd3365f828c3611060"
+   }
+  },
+  "2108724571306373617": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108725695627038952": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108678973278306399",
+    "fingerprint": "52532bfbb2bd7a729f19c60ffdace298d14081eb5c741d5d6e04c188fc07d5ac"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108678973278306399",
+    "fingerprint": "52532bfbb2bd7a729f19c60ffdace298d14081eb5c741d5d6e04c188fc07d5ac"
+   }
+  },
+  "2108726101862240539": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108726241213727063": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108726650515116493": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108727683106357510": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_381f6c4a19a5948c",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/barack-obama-michigan-abdul-el-sayed/",
+     "text": "The Michigan Democratic Party announced Monday that Obama would appear at the rally with Benson, El-Sayed and other state Democrats on Oct. 24, 10 days before the midterm elections.",
+     "title": "Obama will campaign with Abdul El-Sayed in Michigan",
+     "publishedAt": "2026-10-05T15:25:55.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108660588851470532",
+    "fingerprint": "4bbb99a053d223928007c6c274daeb55793b7b641a24898b7c175c4a88a37dce"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108660588851470532",
+    "fingerprint": "4bbb99a053d223928007c6c274daeb55793b7b641a24898b7c175c4a88a37dce"
+   }
+  },
+  "2108727697920897245": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108728041107046542": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108730673410244918": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_3f6a93d435f679e3",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5984981/mail-in-ballot-usps-postmark",
+     "text": "Relying on the U.S. Postal Service to return a mail-in ballot close to Election Day now comes with an additional risk for many voters — a late postmark that gets a vote rejected.",
+     "title": "Why mailing a ballot close to Election Day may get it rejected for a late postmark",
+     "publishedAt": "2026-10-09T09:00:00.000Z",
+     "fetchedAt": "2026-10-09T10:05:16.342Z",
+     "version": 429,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108730762014892155": {
+   "contextVersion": 441,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea6be05a8979a92",
+     "publisher": "The Hill",
+     "date": "2026-10-04",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6128484-schneider-criticizes-trump-iran-strategy/",
+     "text": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "title": "Democratic rep: Administration ‘has failed to present a strategy’ in Iran war",
+     "publishedAt": "2026-10-04T20:53:23.000Z",
+     "fetchedAt": "2026-10-04T22:04:45.961Z",
+     "version": 350,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108730773234696619": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108732439291973837": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530"
+  },
+  "2108732774903656703": {
+   "contextVersion": 441,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "754f12018bc8fa0dfb8fcf0a7c8cea5922044d6673722014dca83c23f6974530",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108350566849994963",
+    "fingerprint": "30819a395d18cb41c8b553f6794235eca7824fcda1f1da039ac064e9633d20cc"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108350566849994963",
+    "fingerprint": "30819a395d18cb41c8b553f6794235eca7824fcda1f1da039ac064e9633d20cc"
+   }
   }
  },
  "needsContext": {
@@ -13426,10 +13834,26 @@
   "2108716667467415997": false,
   "2108717812432949545": false,
   "2108720963227394058": false,
-  "2108721182509875650": false
+  "2108721182509875650": false,
+  "2108722716731941333": false,
+  "2108722750995214760": false,
+  "2108722757181825442": false,
+  "2108724571306373617": false,
+  "2108725695627038952": false,
+  "2108726101862240539": false,
+  "2108726241213727063": false,
+  "2108726650515116493": false,
+  "2108727683106357510": false,
+  "2108727697920897245": false,
+  "2108728041107046542": false,
+  "2108730673410244918": false,
+  "2108730762014892155": false,
+  "2108730773234696619": false,
+  "2108732439291973837": false,
+  "2108732774903656703": false
  },
  "inputBlocks": {},
- "contextVersion": 440,
+ "contextVersion": 441,
  "emerging": [
   {
    "label": "Pentagon livestream of Nidal Hasan firing-squad execution",
@@ -13907,7 +14331,9 @@
     "2108699424620745139",
     "2108699615310836043",
     "2108699635066052902",
-    "2108704573699289418"
+    "2108704573699289418",
+    "2108722750995214760",
+    "2108722757181825442"
    ]
   },
   {
@@ -14068,31 +14494,32 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2108710123543949383",
-    "2108710205886283783",
-    "2108710354200981786",
-    "2108710629951656411",
-    "2108710728769196057",
-    "2108710834566533371",
-    "2108711433034739996",
-    "2108711724429766738",
-    "2108713358358720659",
-    "2108716117057270208",
-    "2108716618452766890",
-    "2108716667467415997",
-    "2108717812432949545",
-    "2108720963227394058",
-    "2108721182509875650"
+    "2108722716731941333",
+    "2108722750995214760",
+    "2108722757181825442",
+    "2108724571306373617",
+    "2108725695627038952",
+    "2108726101862240539",
+    "2108726241213727063",
+    "2108726650515116493",
+    "2108727683106357510",
+    "2108727697920897245",
+    "2108728041107046542",
+    "2108730673410244918",
+    "2108730762014892155",
+    "2108730773234696619",
+    "2108732439291973837",
+    "2108732774903656703"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T00:49:14.997Z",
-    "observedAt": "2026-10-10T00:49:38.778Z",
+    "attemptedAt": "2026-10-10T01:34:45.175Z",
+    "observedAt": "2026-10-10T01:35:25.946Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 15,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   }
@@ -14100,24 +14527,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T00:49:14.997Z",
-   "observedAt": "2026-10-10T00:49:38.778Z",
+   "attemptedAt": "2026-10-10T01:34:45.175Z",
+   "observedAt": "2026-10-10T01:35:25.946Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T00:49:14.997Z",
-   "observedAt": "2026-10-10T00:49:38.778Z",
+   "attemptedAt": "2026-10-10T01:34:45.175Z",
+   "observedAt": "2026-10-10T01:35:25.946Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T00:49:38.802Z"
+ "updatedAt": "2026-10-10T01:35:25.968Z"
 }
