@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T04:34:41.196Z",
+ "classifiedAt": "2026-10-10T05:44:23.456Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -23,6 +23,20 @@
    ]
   ],
   "2108777651523514741": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2108781209061151225": [],
+  "2108782589763043626": [],
+  "2108783918711452005": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2108792694629863449": [
    [
     "congress-politics",
     "elections-2026"
@@ -159,6 +173,132 @@
     "referenceId": "2108521995130265703",
     "fingerprint": "eeb826e98235cf531eca63b2b5a342f65f1add0514dda881386b67db68003cf0"
    }
+  },
+  "2108781209061151225": {
+   "contextVersion": 444,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c60a88cf8f77468941b680a7b384a05eed7a5bc36602069b91b3e0ae33a9fe46",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108770158533816657",
+    "fingerprint": "bf49b1a8ea43f3453488d40b90c954e520a4fd0c69f60544434d660259cd050a"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108770158533816657",
+    "fingerprint": "bf49b1a8ea43f3453488d40b90c954e520a4fd0c69f60544434d660259cd050a"
+   }
+  },
+  "2108782589763043626": {
+   "contextVersion": 444,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c60a88cf8f77468941b680a7b384a05eed7a5bc36602069b91b3e0ae33a9fe46",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108642142579261835",
+    "fingerprint": "3e1fe8f521e90d44711ffa90dbf5e25374bd770a96475cf060eac833c1938796"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108642142579261835",
+    "fingerprint": "3e1fe8f521e90d44711ffa90dbf5e25374bd770a96475cf060eac833c1938796"
+   }
+  },
+  "2108783918711452005": {
+   "contextVersion": 444,
+   "evidenceSupplied": [
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bd5a07d765da55b6",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/at-the-races-unleash-obama/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Unleash Obama",
+     "publishedAt": "2026-10-08T17:05:00.000Z",
+     "fetchedAt": "2026-10-08T23:04:42.009Z",
+     "version": 421,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c60a88cf8f77468941b680a7b384a05eed7a5bc36602069b91b3e0ae33a9fe46",
+   "quotedContext": {
+    "id": "2108756295876780127",
+    "authorId": "2066250685512110080",
+    "handle": "firesidealpha",
+    "createdAt": "2026-10-10T03:07:34.000Z",
+    "textChars": 1317,
+    "textHash": "c6bdef5c2d6879210bbfa2b0c7d58832fa14e850ea18c980d9085e73cba23e72"
+   }
+  },
+  "2108792694629863449": {
+   "contextVersion": 444,
+   "evidenceSupplied": [
+    {
+     "id": "n_780c8128fba7898c",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6139406-supreme-court-immigration-policy-texas-doj/",
+     "text": "Cities ask Supreme Court to block Texas-DOJ deal invalidating immigration rule",
+     "title": "Cities ask Supreme Court to block Texas-DOJ deal invalidating immigration rule",
+     "publishedAt": "2026-10-09T18:23:52.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_642a23fde569e0b4",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6134934-jamaal-howard-death-penalty-appeal/",
+     "text": "Lawyers looking to block Texas man’s execution following Christa Pike’s botched execution",
+     "title": "Lawyers looking to block Texas man’s execution following Christa Pike’s botched execution",
+     "publishedAt": "2026-10-07T21:11:01.000Z",
+     "fetchedAt": "2026-10-07T21:49:43.308Z",
+     "version": 403,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c60a88cf8f77468941b680a7b384a05eed7a5bc36602069b91b3e0ae33a9fe46",
+   "quotedContext": {
+    "id": "2108611015415910511",
+    "authorId": "737131740",
+    "handle": "GinaHinojosaTX",
+    "createdAt": "2026-10-09T17:30:16.000Z",
+    "textChars": 106,
+    "textHash": "e150b369c2b9ddec9da7097041f39436773b974dbc8d2be78a5dfa60278446fd"
+   }
   }
  },
  "needsContext": {
@@ -166,10 +306,14 @@
   "2108770635963146745": false,
   "2108772450234429588": true,
   "2108772685320786115": true,
-  "2108777651523514741": false
+  "2108777651523514741": false,
+  "2108781209061151225": false,
+  "2108782589763043626": false,
+  "2108783918711452005": false,
+  "2108792694629863449": false
  },
  "inputBlocks": {},
- "contextVersion": 443,
+ "contextVersion": 444,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -189,36 +333,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108755650109161936",
-    "2108757849711210732",
-    "2108757949489320282",
-    "2108758219640480057",
-    "2108759968975605950",
-    "2108761379729768597",
-    "2108761392023290232",
-    "2108761676493226415",
-    "2108762769906626698",
-    "2108763859041329264",
-    "2108767015859343720",
-    "2108767468818674145",
-    "2108767575375057341",
-    "2108767767050826071",
-    "2108767905647141222",
-    "2108770325605253396",
-    "2108770635963146745",
-    "2108772450234429588",
-    "2108772685320786115",
-    "2108777651523514741"
+    "2108781209061151225",
+    "2108782589763043626",
+    "2108783918711452005",
+    "2108792694629863449"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T04:34:14.150Z",
-    "observedAt": "2026-10-10T04:34:41.172Z",
+    "attemptedAt": "2026-10-10T05:44:17.613Z",
+    "observedAt": "2026-10-10T05:44:23.453Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 20,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -226,24 +354,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T04:34:14.150Z",
-   "observedAt": "2026-10-10T04:34:41.172Z",
+   "attemptedAt": "2026-10-10T05:44:17.613Z",
+   "observedAt": "2026-10-10T05:44:23.453Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T04:34:14.150Z",
-   "observedAt": "2026-10-10T04:34:41.172Z",
+   "attemptedAt": "2026-10-10T05:44:17.613Z",
+   "observedAt": "2026-10-10T05:44:23.453Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T04:34:41.197Z"
+ "updatedAt": "2026-10-10T05:44:23.457Z"
 }
