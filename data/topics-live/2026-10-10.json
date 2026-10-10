@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T05:44:23.456Z",
+ "classifiedAt": "2026-10-10T06:50:05.831Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -40,6 +40,12 @@
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2108801462012977394": [
+   [
+    "foreign-policy",
+    null
    ]
   ]
  },
@@ -299,6 +305,20 @@
     "textChars": 106,
     "textHash": "e150b369c2b9ddec9da7097041f39436773b974dbc8d2be78a5dfa60278446fd"
    }
+  },
+  "2108801462012977394": {
+   "contextVersion": 445,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ffc7d1ea537d4276e44a6b37387458cdf30e6a99d14cef90e8dcbeeb4200d9ed",
+   "quotedContext": {
+    "id": "2108728878625865794",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-10T01:18:37.000Z",
+    "textChars": 170,
+    "textHash": "3545648027a719c4122f74bf24472b6ab1b71a6be9f278aa06df2609c8363073"
+   }
   }
  },
  "needsContext": {
@@ -310,15 +330,22 @@
   "2108781209061151225": false,
   "2108782589763043626": false,
   "2108783918711452005": false,
-  "2108792694629863449": false
+  "2108792694629863449": false,
+  "2108801462012977394": false
  },
  "inputBlocks": {},
- "contextVersion": 444,
+ "contextVersion": 445,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
    "ids": [
     "2108770635963146745"
+   ]
+  },
+  {
+   "label": "Trump claim to have acquired Greenland",
+   "ids": [
+    "2108801462012977394"
    ]
   }
  ],
@@ -333,20 +360,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108781209061151225",
-    "2108782589763043626",
-    "2108783918711452005",
-    "2108792694629863449"
+    "2108801462012977394"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T05:44:17.613Z",
-    "observedAt": "2026-10-10T05:44:23.453Z",
+    "attemptedAt": "2026-10-10T06:50:01.506Z",
+    "observedAt": "2026-10-10T06:50:05.828Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -354,24 +378,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T05:44:17.613Z",
-   "observedAt": "2026-10-10T05:44:23.453Z",
+   "attemptedAt": "2026-10-10T06:50:01.506Z",
+   "observedAt": "2026-10-10T06:50:05.828Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T05:44:17.613Z",
-   "observedAt": "2026-10-10T05:44:23.453Z",
+   "attemptedAt": "2026-10-10T06:50:01.506Z",
+   "observedAt": "2026-10-10T06:50:05.828Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T05:44:23.457Z"
+ "updatedAt": "2026-10-10T06:50:05.833Z"
 }
