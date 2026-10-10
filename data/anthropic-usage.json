@@ -20024,6 +20024,40 @@
      "cacheWrite": 5294
     },
     "completedAt": "2026-10-10T17:32:58.811Z"
+   },
+   "live:db1f630d-9d58-414c-bfef-a60af0038085": {
+    "id": "live:db1f630d-9d58-414c-bfef-a60af0038085",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.61744,
+    "status": "settled",
+    "createdAt": "2026-10-10T19:01:43.113Z",
+    "usage": {
+     "calls": 1,
+     "input": 9790,
+     "output": 4268,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-10-10T19:02:26.327Z"
+   },
+   "live:b6d35931-955f-45be-ba6b-24dce538c6a8": {
+    "id": "live:b6d35931-955f-45be-ba6b-24dce538c6a8",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.44477,
+    "status": "settled",
+    "createdAt": "2026-10-10T19:02:26.343Z",
+    "usage": {
+     "calls": 1,
+     "input": 3097,
+     "output": 1804,
+     "cacheRead": 5294,
+     "cacheWrite": 0
+    },
+    "completedAt": "2026-10-10T19:02:45.634Z"
    }
   }
  }
