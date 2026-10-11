@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T22:07:36.676Z",
+ "classifiedAt": "2026-10-11T23:37:36.026Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -6577,53 +6577,6 @@
    "evidenceUsed": [],
    "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
   },
-  "2109075303289233822": {
-   "contextVersion": 460,
-   "evidenceSupplied": [
-    {
-     "id": "n_a1048d4a1423d226",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/video-clips/6134525-watch-live-donald-trump-san-antonio-texas-rally-paxton-de-la-cruz-gop-midterms/",
-     "text": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
-     "title": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
-     "publishedAt": "2026-10-07T21:00:00.000Z",
-     "fetchedAt": "2026-10-07T21:49:43.308Z",
-     "version": 403,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_80cd98bfc7a4d08a",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6134160-talarico-flu-diagnosis-attack-ads/",
-     "text": "Talarico steps off Texas Senate campaign trail after flu diagnosis",
-     "title": "Talarico steps off Texas Senate campaign trail after flu diagnosis",
-     "publishedAt": "2026-10-07T17:18:51.000Z",
-     "fetchedAt": "2026-10-07T18:49:59.947Z",
-     "version": 400,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_80cd98bfc7a4d08a"
-   ],
-   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
-   "quotedContext": {
-    "id": "2108987933055144086",
-    "authorId": "44513878",
-    "handle": "TexasTribune",
-    "createdAt": "2026-10-10T18:28:00.000Z",
-    "textChars": 235,
-    "textHash": "e7d391d93ed0a12664a522b3a9f18c13c684047f898b8cdf514a61b12a4aa225"
-   }
-  },
   "2109075503328231746": {
    "contextVersion": 460,
    "evidenceSupplied": [],
@@ -7369,6 +7322,51 @@
     "n_8ffcabd8a822b601"
    ],
    "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109075303289233822": {
+   "contextVersion": 475,
+   "evidenceSupplied": [
+    {
+     "id": "n_a1048d4a1423d226",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6134525-watch-live-donald-trump-san-antonio-texas-rally-paxton-de-la-cruz-gop-midterms/",
+     "text": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
+     "title": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
+     "publishedAt": "2026-10-07T21:00:00.000Z",
+     "fetchedAt": "2026-10-07T21:49:43.308Z",
+     "version": 403,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_d6d36eccdd1d410e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6141753-talarico-campaign-full-steam-ahead/",
+     "text": "Chair of Texas Democratic Party says ‘we’re full steam ahead’ after Talarico’s flu recovery",
+     "title": "Chair of Texas Democratic Party says ‘we’re full steam ahead’ after Talarico’s flu recovery",
+     "publishedAt": "2026-10-11T21:40:25.000Z",
+     "fetchedAt": "2026-10-11T22:51:28.236Z",
+     "version": 475,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3ea7107b2b7eb90d602736b3710d47ff83f6381649cd03b42b9ce4d4f0eb589e",
+   "quotedContext": {
+    "id": "2108987933055144086",
+    "authorId": "44513878",
+    "handle": "TexasTribune",
+    "createdAt": "2026-10-10T18:28:00.000Z",
+    "textChars": 235,
+    "textHash": "e7d391d93ed0a12664a522b3a9f18c13c684047f898b8cdf514a61b12a4aa225"
+   }
   }
  },
  "needsContext": {
@@ -7676,7 +7674,6 @@
   "2109071724608172313": false,
   "2109072934551646456": false,
   "2109073238487670874": true,
-  "2109075303289233822": false,
   "2109075503328231746": true,
   "2109076169459208588": false,
   "2109076394001248322": false,
@@ -7713,10 +7710,11 @@
   "2108906556624384490": false,
   "2108920492396564873": false,
   "2108963311660503220": false,
-  "2109015100396810528": false
+  "2109015100396810528": false,
+  "2109075303289233822": false
  },
  "inputBlocks": {},
- "contextVersion": 474,
+ "contextVersion": 475,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -8166,43 +8164,54 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2108906556624384490",
-    "2108920492396564873",
-    "2108963311660503220",
-    "2109015100396810528",
-    "2109371585090228416",
-    "2109383016879652887",
-    "2109384558840058103",
-    "2109385232235344180",
-    "2109386195343966305",
-    "2109386208107495813",
-    "2109386223005597803",
-    "2109387299977077099",
-    "2109388719530844383",
-    "2109388845687210272",
-    "2109389793301852592",
-    "2109393191397134391",
-    "2109395077340749946",
-    "2109396036091310564",
-    "2109396709038247969",
-    "2109398316727587059",
-    "2109400234803474479",
-    "2109400566812013040",
-    "2109401174189469769",
-    "2109401268149961016",
-    "2109402337064157310",
-    "2109402871531733261",
-    "2109403005468508180"
+    "2109075303289233822",
+    "2109405420699931110",
+    "2109405507219861835",
+    "2109405605412692128",
+    "2109406944284852319",
+    "2109407013016920275",
+    "2109407077651403107",
+    "2109407471877992705",
+    "2109407709519073756",
+    "2109407809528041879",
+    "2109410803065770082",
+    "2109410866055806994",
+    "2109410871503954035",
+    "2109411144045605264",
+    "2109411189826769324",
+    "2109411251201753353",
+    "2109411286350184476",
+    "2109411311570260105",
+    "2109411722410807299",
+    "2109412506410078287",
+    "2109413750008688959",
+    "2109413768010883509",
+    "2109414934778171441",
+    "2109415784078508290",
+    "2109416505980952587",
+    "2109418569146806677",
+    "2109418818934059135",
+    "2109419164234338547",
+    "2109420342078767131",
+    "2109420343399969001",
+    "2109420387209707722",
+    "2109420659621159224",
+    "2109420973996867995",
+    "2109422117582467179",
+    "2109422246901284877",
+    "2109422563923317177",
+    "2109423161468961085",
+    "2109426749708591107"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T22:06:40.985Z",
-    "observedAt": "2026-10-11T22:07:25.534Z",
+    "attemptedAt": "2026-10-11T23:36:46.340Z",
+    "observedAt": "2026-10-11T23:37:36.007Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 27,
+    "acceptedCount": 38,
     "retryCount": 0
    }
   }
@@ -8210,24 +8219,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T22:06:40.985Z",
-   "observedAt": "2026-10-11T22:07:25.534Z",
+   "attemptedAt": "2026-10-11T23:36:46.340Z",
+   "observedAt": "2026-10-11T23:37:36.007Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 27,
+   "acceptedCount": 38,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T22:06:40.985Z",
-   "observedAt": "2026-10-11T22:07:25.534Z",
+   "attemptedAt": "2026-10-11T23:36:46.340Z",
+   "observedAt": "2026-10-11T23:37:36.007Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 27,
+   "acceptedCount": 38,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T22:07:36.680Z"
+ "updatedAt": "2026-10-11T23:37:36.030Z"
 }
