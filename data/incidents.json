@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T06:16:51.600Z",
+ "generatedAt": "2026-10-11T07:50:27.038Z",
  "incidents": [
   {
    "id": "long-beach-ny--severe-storm--source-2109075503328231746",
@@ -32,7 +32,7 @@
    "since": "2026-10-11T00:15:59.000Z",
    "last": "2026-10-11T00:15:59.000Z",
    "updates": 1,
-   "engN": 28,
+   "engN": 44,
    "amplifiers": 0,
    "others": [],
    "title": "Severe storm · Long Beach, NY",
@@ -60,7 +60,7 @@
      "who": "@RepRobertGarcia",
      "tag": "member",
      "text": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please sign up at https://t.co/DrGhvUNYl3. Keep impacted residents, and our fire, police and beach personnel in your thoughts and prayers.",
-     "engN": 28,
+     "engN": 44,
      "isNew": false,
      "flag": {
       "kind": "severe storm",
@@ -84,7 +84,35 @@
    "tweetIds": [
     "2109075503328231746"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [],
+    "unverified": [
+     {
+      "text": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city.",
+      "sourceId": "2109075503328231746",
+      "url": "https://x.com/i/web/status/2109075503328231746",
+      "evidenceQuote": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city.",
+      "src": "@RepRobertGarcia, 2026-10-11T00:15:59.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please sign up at https://t.co/DrGhvUNYl3. Keep impacted residents, and our fire, police and beach personnel in your thoughts and prayers.",
+      "sourceId": "2109075503328231746",
+      "url": "https://x.com/i/web/status/2109075503328231746",
+      "evidenceQuote": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please sign up at https://t.co/DrGhvUNYl3. Keep impacted residents, and our fire, police and beach personnel in your thoughts and prayers.",
+      "src": "@RepRobertGarcia, 2026-10-11T00:15:59.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-11T07:50:27.037Z",
+    "posts": 1,
+    "inputHash": "266f9b7e4f7db6ce743775e569b8fbd7d04eb8b8220a3d12e313007b410bbeca",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -228,7 +256,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
