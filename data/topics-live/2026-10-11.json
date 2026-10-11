@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T23:37:36.034Z",
+ "classifiedAt": "2026-10-11T23:50:15.398Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -1664,6 +1664,35 @@
    [
     "labor",
     "unions"
+   ]
+  ],
+  "2109428745463562690": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2109428824811118624": [],
+  "2109430781139354032": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "healthcare",
+    "drug-prices"
    ]
   ]
  },
@@ -4279,38 +4308,6 @@
    "evidenceUsed": [],
    "inputHash": "3b98e73027e273380bd917d9b21dd59e844977970b0196ec99d85e78b7a82889"
   },
-  "2109371585090228416": {
-   "contextVersion": 474,
-   "evidenceSupplied": [
-    {
-     "id": "n_25e804ad7d09dc2b",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
-     "text": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
-     "title": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
-     "publishedAt": "2026-10-10T22:02:33.000Z",
-     "fetchedAt": "2026-10-11T21:21:29.252Z",
-     "version": 474,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_25e804ad7d09dc2b"
-   ],
-   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
-   "quotedContext": {
-    "id": "1499398710446358535",
-    "authorId": "15207668",
-    "handle": "HouseGOP",
-    "createdAt": "2022-03-03T14:58:04.000Z",
-    "textChars": 36,
-    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
-   }
-  },
   "2109383016879652887": {
    "contextVersion": 474,
    "evidenceSupplied": [],
@@ -5130,6 +5127,102 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3ea7107b2b7eb90d602736b3710d47ff83f6381649cd03b42b9ce4d4f0eb589e"
+  },
+  "2109371585090228416": {
+   "contextVersion": 476,
+   "evidenceSupplied": [
+    {
+     "id": "n_08cb571284d701f0",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6141837-senate-lawmakers-condemn-russian-oil-deal/",
+     "text": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
+     "title": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
+     "publishedAt": "2026-10-11T22:54:10.000Z",
+     "fetchedAt": "2026-10-11T23:41:46.396Z",
+     "version": 476,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_25e804ad7d09dc2b",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
+     "text": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "title": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "publishedAt": "2026-10-10T22:02:33.000Z",
+     "fetchedAt": "2026-10-11T21:21:29.252Z",
+     "version": 474,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_25e804ad7d09dc2b"
+   ],
+   "inputHash": "677203827a409a4f726f8ab43bcb6456549b615dfd785e9c7ec6cd6f3e86391c",
+   "quotedContext": {
+    "id": "1499398710446358535",
+    "authorId": "15207668",
+    "handle": "HouseGOP",
+    "createdAt": "2022-03-03T14:58:04.000Z",
+    "textChars": 36,
+    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
+   }
+  },
+  "2109428745463562690": {
+   "contextVersion": 476,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "677203827a409a4f726f8ab43bcb6456549b615dfd785e9c7ec6cd6f3e86391c"
+  },
+  "2109428824811118624": {
+   "contextVersion": 476,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "677203827a409a4f726f8ab43bcb6456549b615dfd785e9c7ec6cd6f3e86391c"
+  },
+  "2109430781139354032": {
+   "contextVersion": 476,
+   "evidenceSupplied": [
+    {
+     "id": "n_4769f9141f237c22",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5903204/crypto-prediction-markets-cftc-weakens",
+     "text": "By the end of 2025, the CFTC had 21% fewer staff on its payroll when compared to the previous 10-year average, according to U.S. Office of Personnel Management data. Between January 2024 and January 2025 alone, staffing dropped 22%. And the number of CFTC enforcement actions dropped even further. The agency made nearly 80% fewer enforcement actions in 2025 when compared to the annual average for the previous decade, according to the agency's annual reports.",
+     "title": "As crypto and prediction markets expand, their regulator shrinks",
+     "publishedAt": "2026-10-08T09:00:00.000Z",
+     "fetchedAt": "2026-10-08T15:20:27.859Z",
+     "version": 414,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fb4911848ce27a7c",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/anthrax-attacks-25-years-later/",
+     "text": "But the panic and uncertainty came roaring back that day in then-Senate Majority Leader Tom Daschle’s office, where Malet was working as a research assistant. An intern opened a letter purportedly from a fourth-grade class, and white powder came spilling out.",
+     "title": "The anthrax attacks, 25 years later",
+     "publishedAt": "2026-10-09T05:00:00.000Z",
+     "fetchedAt": "2026-10-09T10:05:16.342Z",
+     "version": 429,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "677203827a409a4f726f8ab43bcb6456549b615dfd785e9c7ec6cd6f3e86391c"
   }
  },
  "needsContext": {
@@ -5332,7 +5425,6 @@
   "2109382299682836669": false,
   "2109382388921008476": false,
   "2109382532445634952": false,
-  "2109371585090228416": false,
   "2109383016879652887": false,
   "2109384558840058103": false,
   "2109385232235344180": false,
@@ -5398,10 +5490,14 @@
   "2109422246901284877": false,
   "2109422563923317177": false,
   "2109423161468961085": false,
-  "2109426749708591107": false
+  "2109426749708591107": false,
+  "2109371585090228416": false,
+  "2109428745463562690": false,
+  "2109428824811118624": false,
+  "2109430781139354032": false
  },
  "inputBlocks": {},
- "contextVersion": 475,
+ "contextVersion": 476,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -5541,54 +5637,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109075303289233822",
-    "2109405420699931110",
-    "2109405507219861835",
-    "2109405605412692128",
-    "2109406944284852319",
-    "2109407013016920275",
-    "2109407077651403107",
-    "2109407471877992705",
-    "2109407709519073756",
-    "2109407809528041879",
-    "2109410803065770082",
-    "2109410866055806994",
-    "2109410871503954035",
-    "2109411144045605264",
-    "2109411189826769324",
-    "2109411251201753353",
-    "2109411286350184476",
-    "2109411311570260105",
-    "2109411722410807299",
-    "2109412506410078287",
-    "2109413750008688959",
-    "2109413768010883509",
-    "2109414934778171441",
-    "2109415784078508290",
-    "2109416505980952587",
-    "2109418569146806677",
-    "2109418818934059135",
-    "2109419164234338547",
-    "2109420342078767131",
-    "2109420343399969001",
-    "2109420387209707722",
-    "2109420659621159224",
-    "2109420973996867995",
-    "2109422117582467179",
-    "2109422246901284877",
-    "2109422563923317177",
-    "2109423161468961085",
-    "2109426749708591107"
+    "2109371585090228416",
+    "2109428745463562690",
+    "2109428824811118624",
+    "2109430781139354032"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T23:36:46.340Z",
-    "observedAt": "2026-10-11T23:37:36.007Z",
+    "attemptedAt": "2026-10-11T23:50:04.237Z",
+    "observedAt": "2026-10-11T23:50:15.378Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 38,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   },
@@ -5618,21 +5680,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T23:36:46.340Z",
-   "observedAt": "2026-10-11T23:37:36.007Z",
+   "attemptedAt": "2026-10-11T23:50:04.237Z",
+   "observedAt": "2026-10-11T23:50:15.378Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 38,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T23:36:46.340Z",
-   "observedAt": "2026-10-11T23:37:36.007Z",
+   "attemptedAt": "2026-10-11T23:50:04.237Z",
+   "observedAt": "2026-10-11T23:50:15.378Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 38,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": {
@@ -5645,5 +5707,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-11T23:37:36.037Z"
+ "updatedAt": "2026-10-11T23:50:15.401Z"
 }
