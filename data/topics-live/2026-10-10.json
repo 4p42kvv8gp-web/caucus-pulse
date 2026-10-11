@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T13:02:17.839Z",
+ "classifiedAt": "2026-10-11T15:53:29.962Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -1777,10 +1777,6 @@
    [
     "congress-politics",
     "house-floor"
-   ],
-   [
-    "economy",
-    "prices-inflation"
    ]
   ],
   "2109041837348393201": [
@@ -7256,8 +7252,23 @@
    "inputHash": "089539c6708fbf6dfc29a1787404f3d4e1a7ecfb1f08b3fea654f75720002d9d"
   },
   "2109041682398499168": {
-   "contextVersion": 466,
+   "contextVersion": 469,
    "evidenceSupplied": [
+    {
+     "id": "n_1f6046aceb1b6916",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
+     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "publishedAt": "2026-10-11T15:26:00.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
     {
      "id": "n_8c1e4d4a574719cd",
      "publisher": "NPR",
@@ -7272,32 +7283,31 @@
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
-    },
-    {
-     "id": "n_b508cc06ebd06079",
-     "publisher": "The Hill",
-     "date": "2026-10-09",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6139544-trump-putin-us-diesel-supply-high-costs/",
-     "text": "Russia will supply US and global markets with diesel, Trump says",
-     "title": "Russia will supply US and global markets with diesel, Trump says",
-     "publishedAt": "2026-10-09T19:09:34.000Z",
-     "fetchedAt": "2026-10-09T20:53:16.926Z",
-     "version": 437,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
     }
    ],
    "evidenceUsed": [
-    "n_8c1e4d4a574719cd",
-    "n_b508cc06ebd06079"
+    "n_8c1e4d4a574719cd"
    ],
-   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+   "inputHash": "2b04e3738571dd190fc3204e15fb7c4bcf83178620ea62cab32cfbcf07471879"
   },
   "2109046015647216003": {
-   "contextVersion": 466,
+   "contextVersion": 469,
    "evidenceSupplied": [
+    {
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
     {
      "id": "n_8c1e4d4a574719cd",
      "publisher": "NPR",
@@ -7312,30 +7322,15 @@
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
-    },
-    {
-     "id": "n_9d2e662f1863013a",
-     "publisher": "The Washington Post",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/10/10/trump-says-ukraine-should-get-new-president-after-us-russia-diesel-deal/",
-     "text": "Trump says Ukraine should ‘get a new president’ after U.S.-Russia diesel deal",
-     "title": "Trump says Ukraine should ‘get a new president’ after U.S.-Russia diesel deal",
-     "publishedAt": "2026-10-10T20:22:36.000Z",
-     "fetchedAt": "2026-10-10T20:31:50.093Z",
-     "version": 456,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
     }
    ],
    "evidenceUsed": [
     "n_8c1e4d4a574719cd"
    ],
-   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+   "inputHash": "2b04e3738571dd190fc3204e15fb7c4bcf83178620ea62cab32cfbcf07471879"
   },
   "2109050872433185202": {
-   "contextVersion": 466,
+   "contextVersion": 469,
    "evidenceSupplied": [
     {
      "id": "n_9d2e662f1863013a",
@@ -7353,25 +7348,25 @@
      "truncated": false
     },
     {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "WASHINGTON (AP) — President Donald Trump said he has struck a deal to obtain diesel from Russia, a stunning reversal of years of U.S. pressure on Moscow over its war with Ukraine and an attempt to address high fuel prices ahead of the U.S. midterm elections.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [
     "n_9d2e662f1863013a"
    ],
-   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0",
+   "inputHash": "2b04e3738571dd190fc3204e15fb7c4bcf83178620ea62cab32cfbcf07471879",
    "quotedContext": {
     "id": "2108965075084349729",
     "authorId": "16635277",
@@ -7727,7 +7722,7 @@
   "2109050872433185202": false
  },
  "inputBlocks": {},
- "contextVersion": 466,
+ "contextVersion": 469,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -8172,23 +8167,30 @@
     "2109041682398499168",
     "2109046015647216003",
     "2109050872433185202",
-    "2109259204439498873",
-    "2109260865463611760",
-    "2109265844081496163",
-    "2109265940580024662",
-    "2109266559390621776",
-    "2109267037331558911",
-    "2109267779740192955"
+    "2109291432317993329",
+    "2109292267529719922",
+    "2109292957996106088",
+    "2109293446225609096",
+    "2109293874564726908",
+    "2109294137388490941",
+    "2109294754412511423",
+    "2109295039163592941",
+    "2109295129261420761",
+    "2109297722050171096",
+    "2109297976963113053",
+    "2109297978532139222",
+    "2109297978943131779",
+    "2109297979253563553"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T13:02:00.100Z",
-    "observedAt": "2026-10-11T13:02:17.741Z",
+    "attemptedAt": "2026-10-11T15:52:37.866Z",
+    "observedAt": "2026-10-11T15:53:03.148Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 17,
     "retryCount": 0
    }
   }
@@ -8196,24 +8198,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T13:02:00.100Z",
-   "observedAt": "2026-10-11T13:02:17.741Z",
+   "attemptedAt": "2026-10-11T15:52:37.866Z",
+   "observedAt": "2026-10-11T15:53:03.148Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T13:02:00.100Z",
-   "observedAt": "2026-10-11T13:02:17.741Z",
+   "attemptedAt": "2026-10-11T15:52:37.866Z",
+   "observedAt": "2026-10-11T15:53:03.148Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 17,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T13:02:17.843Z"
+ "updatedAt": "2026-10-11T15:53:29.968Z"
 }
