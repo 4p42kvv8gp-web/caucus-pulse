@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T19:52:48.566Z",
+ "classifiedAt": "2026-10-11T20:36:52.190Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -1840,12 +1840,12 @@
   "2109045483306115540": [],
   "2109046015647216003": [
    [
-    "economy",
-    "tariffs-trade"
-   ],
-   [
     "foreign-policy",
     "ukraine-russia"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
    ],
    [
     "congress-politics",
@@ -7252,8 +7252,23 @@
    "inputHash": "089539c6708fbf6dfc29a1787404f3d4e1a7ecfb1f08b3fea654f75720002d9d"
   },
   "2109041682398499168": {
-   "contextVersion": 469,
+   "contextVersion": 473,
    "evidenceSupplied": [
+    {
+     "id": "n_7f2addbd9c4a91b9",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6141263-bipartisan-backlash-russian-fuel/",
+     "text": "Backlash grows against Russia diesel deal as Trump claims Ukraine energy ceasefire",
+     "title": "Backlash grows against Russia diesel deal as Trump claims Ukraine energy ceasefire",
+     "publishedAt": "2026-10-11T19:24:27.000Z",
+     "fetchedAt": "2026-10-11T20:15:30.412Z",
+     "version": 473,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
     {
      "id": "n_1f6046aceb1b6916",
      "publisher": "The Hill",
@@ -7268,30 +7283,13 @@
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
-    },
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
     }
    ],
-   "evidenceUsed": [
-    "n_8c1e4d4a574719cd"
-   ],
-   "inputHash": "2b04e3738571dd190fc3204e15fb7c4bcf83178620ea62cab32cfbcf07471879"
+   "evidenceUsed": [],
+   "inputHash": "3b98e73027e273380bd917d9b21dd59e844977970b0196ec99d85e78b7a82889"
   },
   "2109046015647216003": {
-   "contextVersion": 472,
+   "contextVersion": 473,
    "evidenceSupplied": [
     {
      "id": "n_c6cb34d5401b252e",
@@ -7327,10 +7325,10 @@
    "evidenceUsed": [
     "n_8c1e4d4a574719cd"
    ],
-   "inputHash": "30b1ab571f45df190dd5bddf7710b931d7f89169233ae2aef74292c326f2681a"
+   "inputHash": "3b98e73027e273380bd917d9b21dd59e844977970b0196ec99d85e78b7a82889"
   },
   "2109050872433185202": {
-   "contextVersion": 472,
+   "contextVersion": 473,
    "evidenceSupplied": [
     {
      "id": "n_9d2e662f1863013a",
@@ -7366,7 +7364,7 @@
    "evidenceUsed": [
     "n_9d2e662f1863013a"
    ],
-   "inputHash": "30b1ab571f45df190dd5bddf7710b931d7f89169233ae2aef74292c326f2681a",
+   "inputHash": "3b98e73027e273380bd917d9b21dd59e844977970b0196ec99d85e78b7a82889",
    "quotedContext": {
     "id": "2108965075084349729",
     "authorId": "16635277",
@@ -7722,7 +7720,7 @@
   "2109050872433185202": false
  },
  "inputBlocks": {},
- "contextVersion": 472,
+ "contextVersion": 473,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -8086,6 +8084,14 @@
    "ids": [
     "2109112829609652522"
    ]
+  },
+  {
+   "label": "Trump US-Russia diesel deal",
+   "ids": [
+    "2109041682398499168",
+    "2109046015647216003",
+    "2109050872433185202"
+   ]
   }
  ],
  "unclassified": [],
@@ -8164,56 +8170,31 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
+    "2109041682398499168",
     "2109046015647216003",
     "2109050872433185202",
-    "2109342114446512417",
-    "2109349177008238971",
-    "2109349217538122173",
-    "2109349441844936976",
-    "2109349687014629837",
-    "2109352243388453348",
-    "2109352434141216827",
-    "2109352766623924317",
-    "2109353636841005217",
-    "2109354635441922261",
-    "2109355279787979194",
-    "2109356771412508834",
-    "2109356979894558766",
-    "2109357543118061692",
-    "2109357543524888858",
-    "2109358375150702895",
-    "2109358376412967356",
-    "2109359489967346087",
-    "2109359542018404632",
-    "2109359764899504325",
-    "2109360397148987801",
-    "2109361221556146509",
-    "2109362287148425218",
-    "2109362884694118845",
-    "2109362904193753214",
-    "2109364155287265333",
-    "2109364425631076454",
-    "2109364750966751306",
-    "2109364807615090780",
-    "2109364829454758238",
-    "2109364964750213602",
-    "2109365484848357678",
-    "2109366045391589657",
-    "2109366060222910614",
-    "2109366992884863301",
-    "2109366993270804641",
-    "2109367511112175666",
-    "2109367937425609145"
+    "2109378699229528112",
+    "2109378832201322595",
+    "2109380620594098664",
+    "2109380654634819876",
+    "2109380879328194688",
+    "2109381021514813813",
+    "2109381472159518792",
+    "2109381620331618707",
+    "2109381656830169536",
+    "2109382299682836669",
+    "2109382388921008476",
+    "2109382532445634952"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T19:51:35.242Z",
-    "observedAt": "2026-10-11T19:52:45.339Z",
+    "attemptedAt": "2026-10-11T20:36:28.368Z",
+    "observedAt": "2026-10-11T20:36:52.153Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   }
@@ -8221,24 +8202,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T19:51:35.242Z",
-   "observedAt": "2026-10-11T19:52:45.339Z",
+   "attemptedAt": "2026-10-11T20:36:28.368Z",
+   "observedAt": "2026-10-11T20:36:52.153Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T19:51:35.242Z",
-   "observedAt": "2026-10-11T19:52:45.339Z",
+   "attemptedAt": "2026-10-11T20:36:28.368Z",
+   "observedAt": "2026-10-11T20:36:52.153Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 40,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T19:52:48.570Z"
+ "updatedAt": "2026-10-11T20:36:52.194Z"
 }
