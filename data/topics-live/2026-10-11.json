@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T06:16:51.476Z",
+ "classifiedAt": "2026-10-11T11:32:04.253Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -42,6 +42,16 @@
    ]
   ],
   "2109160279875506505": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109228566919487994": [
+   [
+    "education",
+    "public-schools"
+   ],
    [
     "congress-politics",
     "elections-2026"
@@ -205,6 +215,40 @@
     "referenceId": "2109044856022524387",
     "fingerprint": "1e979fcae0f1439133d125f8445763f785b894c2e89ab33bd1aa0a5568040f89"
    }
+  },
+  "2109228566919487994": {
+   "contextVersion": 465,
+   "evidenceSupplied": [
+    {
+     "id": "n_2e5b805e30f2eb0c",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/employee-question-could-stall-senate-college-sports-bill-at-midfield-in-house/",
+     "text": "A key player in crafting and pushing bipartisan legislation aimed at building guardrails around college sports through the Senate said last week outreach to House members had begun. But it is unclear whether President Donald Trump will help reconcile differences as he focuses on the midterms and other priorities.",
+     "title": "Employee question could stall Senate college sports bill at midfield in House",
+     "publishedAt": "2026-10-05T05:15:00.000Z",
+     "fetchedAt": "2026-10-05T09:53:26.761Z",
+     "version": 358,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7d0dfeb605907b48d9a4901b8ee350736abbd36bb07b01811f504b80a0414364",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109106592524456208",
+    "fingerprint": "0639e3317cdcd258a941691274ffc62b698d358e5369014ab1cd5ed38ba3b918"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109106592524456208",
+    "fingerprint": "0639e3317cdcd258a941691274ffc62b698d358e5369014ab1cd5ed38ba3b918"
+   }
   }
  },
  "needsContext": {
@@ -213,10 +257,11 @@
   "2109138020695970207": false,
   "2109144115317244147": false,
   "2109159480105529511": false,
-  "2109160279875506505": false
+  "2109160279875506505": false,
+  "2109228566919487994": false
  },
  "inputBlocks": {},
- "contextVersion": 463,
+ "contextVersion": 465,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -229,19 +274,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109144115317244147",
-    "2109159480105529511",
-    "2109160279875506505"
+    "2109228566919487994"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T06:16:43.163Z",
-    "observedAt": "2026-10-11T06:16:51.455Z",
+    "attemptedAt": "2026-10-11T11:31:59.990Z",
+    "observedAt": "2026-10-11T11:32:04.250Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -249,24 +292,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T06:16:43.163Z",
-   "observedAt": "2026-10-11T06:16:51.455Z",
+   "attemptedAt": "2026-10-11T11:31:59.990Z",
+   "observedAt": "2026-10-11T11:32:04.250Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T06:16:43.163Z",
-   "observedAt": "2026-10-11T06:16:51.455Z",
+   "attemptedAt": "2026-10-11T11:31:59.990Z",
+   "observedAt": "2026-10-11T11:32:04.250Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T06:16:51.477Z"
+ "updatedAt": "2026-10-11T11:32:04.254Z"
 }
