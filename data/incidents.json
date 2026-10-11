@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-11T20:36:52.288Z",
+ "generatedAt": "2026-10-11T22:07:36.801Z",
  "incidents": [
+  {
+   "id": "santa-clarita-ca--wildfire--bikefire--2026-10-11",
+   "kind": "wildfire",
+   "name": "Bike Fire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Santa Clarita, CA · CA-27",
+   "placeRaw": "Santa Clarita, CA",
+   "district": "CA-27",
+   "districtMatch": true,
+   "handle": "@gtwhitesides",
+   "member": "George Whitesides",
+   "since": "2026-10-11T20:54:57.000Z",
+   "last": "2026-10-11T20:54:57.000Z",
+   "updates": 1,
+   "engN": 7,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Bike Fire · Santa Clarita, CA",
+   "evidence": {
+    "span": "Heads up folks in the Sand Canyon area.  New fire with structures threatened. \n\nHere's the Watch Duty link:\nhttps://t.co/H78waQJbro https://",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2109387299977077099",
+    "url": "https://x.com/i/web/status/2109387299977077099"
+   },
+   "timeline": [
+    {
+     "id": "2109387299977077099",
+     "sourceId": "2109387299977077099",
+     "url": "https://x.com/i/web/status/2109387299977077099",
+     "authorId": "5408852",
+     "personId": "member:george whitesides",
+     "referenceIds": [
+      "2109382557003571205"
+     ],
+     "time": "2026-10-11T20:54:57.000Z",
+     "who": "@gtwhitesides",
+     "tag": "member",
+     "text": "Heads up folks in the Sand Canyon area.  New fire with structures threatened. \n\nHere's the Watch Duty link:\nhttps://t.co/H78waQJbro https://t.co/hC1Ygip5Ft",
+     "engN": 7,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Santa Clarita, CA",
+      "name": "Bike Fire"
+     },
+     "evidence": {
+      "span": "Heads up folks in the Sand Canyon area.  New fire with structures threatened. \n\nHere's the Watch Duty link:\nhttps://t.co/H78waQJbro https://",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2109387299977077099",
+      "url": "https://x.com/i/web/status/2109387299977077099"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2109387299977077099"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2109387299977077099"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "newport-beach-ca--flooding--hurricanemarie--2026-10-11",
    "kind": "flooding",

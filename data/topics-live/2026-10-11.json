@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T20:36:52.206Z",
+ "classifiedAt": "2026-10-11T22:07:36.684Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -1267,6 +1267,170 @@
     "healthcare",
     "public-health"
    ]
+  ],
+  "2109383016879652887": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2109384558840058103": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109385232235344180": [],
+  "2109386195343966305": [
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2109386208107495813": [
+   [
+    "congress-politics",
+    "house-floor"
+   ]
+  ],
+  "2109386223005597803": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109387299977077099": [],
+  "2109388719530844383": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109388845687210272": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109389793301852592": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109393191397134391": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109395077340749946": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109396036091310564": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2109396709038247969": [],
+  "2109398316727587059": [],
+  "2109400234803474479": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109400566812013040": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2109401174189469769": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2109401268149961016": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109402337064157310": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109402871531733261": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109403005468508180": [],
+  "2109403261249716653": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2109403675818967442": [],
+  "2109404001640829112": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109404479678537789": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109404595399082197": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2109404676810481799": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109405246711894312": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
   ]
  },
  "incidents": {
@@ -1279,6 +1443,11 @@
    "kind": "flooding",
    "place": "Newport Beach, CA",
    "name": "Hurricane Marie"
+  },
+  "2109387299977077099": {
+   "kind": "wildfire",
+   "place": "Santa Clarita, CA",
+   "name": "Bike Fire"
   }
  },
  "provenance": {
@@ -3506,38 +3675,6 @@
    "evidenceUsed": [],
    "inputHash": "6ac7fd3b6a0d773343842203d73c9d53a1f3f1b57a8113a8e705dad8e20d9b0b"
   },
-  "2109371585090228416": {
-   "contextVersion": 472,
-   "evidenceSupplied": [
-    {
-     "id": "n_25e804ad7d09dc2b",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
-     "text": "Bipartisan bill barring U.S. purchase of Russian oil on the horizon: Fitzpatrick",
-     "title": "Bipartisan bill barring U.S. purchase of Russian oil on the horizon: Fitzpatrick",
-     "publishedAt": "2026-10-10T22:02:33.000Z",
-     "fetchedAt": "2026-10-10T22:30:39.409Z",
-     "version": 458,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_25e804ad7d09dc2b"
-   ],
-   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
-   "quotedContext": {
-    "id": "1499398710446358535",
-    "authorId": "15207668",
-    "handle": "HouseGOP",
-    "createdAt": "2022-03-03T14:58:04.000Z",
-    "textChars": 36,
-    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
-   }
-  },
   "2109371999554347232": {
    "contextVersion": 472,
    "evidenceSupplied": [],
@@ -3907,6 +4044,421 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3b98e73027e273380bd917d9b21dd59e844977970b0196ec99d85e78b7a82889"
+  },
+  "2109371585090228416": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_25e804ad7d09dc2b",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
+     "text": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "title": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "publishedAt": "2026-10-10T22:02:33.000Z",
+     "fetchedAt": "2026-10-11T21:21:29.252Z",
+     "version": 474,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_25e804ad7d09dc2b"
+   ],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "1499398710446358535",
+    "authorId": "15207668",
+    "handle": "HouseGOP",
+    "createdAt": "2022-03-03T14:58:04.000Z",
+    "textChars": 36,
+    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
+   }
+  },
+  "2109383016879652887": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2108661686731165944",
+    "authorId": "42702116",
+    "handle": "CleFoodBank",
+    "createdAt": "2026-10-09T20:51:37.000Z",
+    "textChars": 302,
+    "textHash": "30f40ec60049e70a7c7e4f1b75bc027ec7a2e514184644c5760b6ea40635fe43"
+   }
+  },
+  "2109384558840058103": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109385232235344180": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109372028205871375",
+    "fingerprint": "fd4c0e3aa7285715799e0ab0f700651f1e0e530648031804233b67392e7269cc"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109372028205871375",
+    "fingerprint": "fd4c0e3aa7285715799e0ab0f700651f1e0e530648031804233b67392e7269cc"
+   }
+  },
+  "2109386195343966305": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109386208107495813": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106380737234747416",
+    "fingerprint": "8199ea258e61fb5478dd76ff98357416823dd431f454db82c130ec5eb412f292"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106380737234747416",
+    "fingerprint": "8199ea258e61fb5478dd76ff98357416823dd431f454db82c130ec5eb412f292"
+   }
+  },
+  "2109386223005597803": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106440781330555371",
+    "fingerprint": "18718c31efa9b08d812161bdca09b19433badd563109d50ee1d67cfb9fbc047b"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2106440781330555371",
+    "fingerprint": "18718c31efa9b08d812161bdca09b19433badd563109d50ee1d67cfb9fbc047b"
+   }
+  },
+  "2109387299977077099": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2109382557003571205",
+    "authorId": "606625312",
+    "handle": "Angeles_NF",
+    "createdAt": "2026-10-11T20:36:06.000Z",
+    "textChars": 266,
+    "textHash": "4202a6a4d582cab6163ff5bcc998e0aeeade96b600a1118b7adfe12893299e2b"
+   }
+  },
+  "2109388719530844383": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2108985954232885400",
+    "authorId": "14173315",
+    "handle": "NBCNews",
+    "createdAt": "2026-10-10T18:20:09.000Z",
+    "textChars": 350,
+    "textHash": "c95971989cbc334ca20e411b3aab2228e5af573caac971e5a15fb833210b3f27"
+   }
+  },
+  "2109388845687210272": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2109382881005142287",
+    "authorId": "125453969",
+    "handle": "neeratanden",
+    "createdAt": "2026-10-11T20:37:23.000Z",
+    "textChars": 217,
+    "textHash": "40377c1a5c62454d0a256a445df36b8b42d2b9a97c471f20cfc7cec99da84f21"
+   }
+  },
+  "2109389793301852592": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_40822e1a132ce73c",
+     "publisher": "The Hill",
+     "date": "2026-10-05",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6129231-scotus-declines-lets-go-brandon-case/",
+     "text": "Supreme Court declines to take up school ban on ‘Let’s Go Brandon’ shirts",
+     "title": "Supreme Court declines to take up school ban on ‘Let’s Go Brandon’ shirts",
+     "publishedAt": "2026-10-05T13:46:00.000Z",
+     "fetchedAt": "2026-10-05T14:29:26.616Z",
+     "version": 361,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109393191397134391": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109395077340749946": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109396036091310564": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109396709038247969": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109398316727587059": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109400234803474479": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109400566812013040": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109401174189469769": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2109058536995213620",
+    "authorId": "1137701",
+    "handle": "DavidSacks",
+    "createdAt": "2026-10-10T23:08:34.000Z",
+    "textChars": 135,
+    "textHash": "02fd49fdc38c17fb2e8802d3d17851a8ecc405724c7a442ea253fa28622dc0dd"
+   }
+  },
+  "2109401268149961016": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109402337064157310": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
+   "quotedContext": {
+    "id": "2108168552393949580",
+    "authorId": "20402945",
+    "handle": "CNBC",
+    "createdAt": "2026-10-08T12:12:05.000Z",
+    "textChars": 97,
+    "textHash": "c59aea9a544303a6f11d1ac3060f175c4629f45ba0af1cd3a5469f29a19d1d78"
+   }
+  },
+  "2109402871531733261": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109403005468508180": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
+  },
+  "2109403261249716653": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_349da678770a8aaa",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
+     "text": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "title": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "publishedAt": "2026-10-11T14:29:49.000Z",
+     "fetchedAt": "2026-10-11T20:15:30.412Z",
+     "version": 473,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd"
+   ],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109403205062803950",
+    "fingerprint": "bab5d10f9241b3cb90a43cf0fec66287fc10c2607b0ce010e50af513a7c22571"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109403205062803950",
+    "fingerprint": "bab5d10f9241b3cb90a43cf0fec66287fc10c2607b0ce010e50af513a7c22571"
+   }
+  },
+  "2109403675818967442": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
+  },
+  "2109404001640829112": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_19aa82ed439c75da",
+     "publisher": "The Hill",
+     "date": "2026-10-05",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6129362-deborah-birx-russia-possible-plague-concerns/",
+     "text": "Death of researcher at Russian plague laboratory ‘particularly concerning’: Birx",
+     "title": "Death of researcher at Russian plague laboratory ‘particularly concerning’: Birx",
+     "publishedAt": "2026-10-05T15:14:04.000Z",
+     "fetchedAt": "2026-10-05T16:00:45.907Z",
+     "version": 362,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
+  },
+  "2109404479678537789": {
+   "contextVersion": 474,
+   "evidenceSupplied": [
+    {
+     "id": "n_fde2b735fc5ddc1d",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991646/what-challenges-lie-ahead-for-the-democratic-party-as-midterms-approach",
+     "text": "A MARTÍNEZ, HOST: Let's hear from someone who's working to elect Democrats in these midterms. Devan Barber is executive director of the Democratic Senatorial Campaign Committee, and she's on the line with us. Devan, we just heard from Domenico Montanaro that the super PAC affiliated with Senate Republicans is moving money into usually unfamiliar territories such as Kansas. Why do you think that is?",
+     "title": "What challenges lie ahead for the Democratic Party as midterms approach",
+     "publishedAt": "2026-10-06T10:53:02.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
+  },
+  "2109404595399082197": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
+  },
+  "2109404676810481799": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
+  },
+  "2109405246711894312": {
+   "contextVersion": 474,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "ae3d5f0157daf29eca31b965a7fddd410392c2c199fbd02350cab184a4425725"
   }
  },
  "needsContext": {
@@ -4085,7 +4637,6 @@
   "2109369792641597919": false,
   "2109370003476631883": false,
   "2109370133432922525": false,
-  "2109371585090228416": false,
   "2109371999554347232": false,
   "2109372530171724171": false,
   "2109373565875224689": false,
@@ -4109,10 +4660,40 @@
   "2109381656830169536": true,
   "2109382299682836669": false,
   "2109382388921008476": false,
-  "2109382532445634952": false
+  "2109382532445634952": false,
+  "2109371585090228416": false,
+  "2109383016879652887": false,
+  "2109384558840058103": false,
+  "2109385232235344180": false,
+  "2109386195343966305": false,
+  "2109386208107495813": false,
+  "2109386223005597803": false,
+  "2109387299977077099": false,
+  "2109388719530844383": false,
+  "2109388845687210272": false,
+  "2109389793301852592": false,
+  "2109393191397134391": false,
+  "2109395077340749946": false,
+  "2109396036091310564": false,
+  "2109396709038247969": false,
+  "2109398316727587059": false,
+  "2109400234803474479": false,
+  "2109400566812013040": false,
+  "2109401174189469769": false,
+  "2109401268149961016": false,
+  "2109402337064157310": false,
+  "2109402871531733261": false,
+  "2109403005468508180": false,
+  "2109403261249716653": false,
+  "2109403675818967442": false,
+  "2109404001640829112": false,
+  "2109404479678537789": false,
+  "2109404595399082197": false,
+  "2109404676810481799": false,
+  "2109405246711894312": false
  },
  "inputBlocks": {},
- "contextVersion": 473,
+ "contextVersion": 474,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -4221,6 +4802,12 @@
    "ids": [
     "2109380879328194688"
    ]
+  },
+  {
+   "label": "Don Jr. wedding paid for by Russian oligarch",
+   "ids": [
+    "2109404001640829112"
+   ]
   }
  ],
  "unclassified": [],
@@ -4234,49 +4821,65 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109041682398499168",
-    "2109046015647216003",
-    "2109050872433185202",
-    "2109378699229528112",
-    "2109378832201322595",
-    "2109380620594098664",
-    "2109380654634819876",
-    "2109380879328194688",
-    "2109381021514813813",
-    "2109381472159518792",
-    "2109381620331618707",
-    "2109381656830169536",
-    "2109382299682836669",
-    "2109382388921008476",
-    "2109382532445634952"
+    "2108906556624384490",
+    "2108920492396564873",
+    "2108963311660503220",
+    "2109015100396810528",
+    "2109371585090228416",
+    "2109383016879652887",
+    "2109384558840058103",
+    "2109385232235344180",
+    "2109386195343966305",
+    "2109386208107495813",
+    "2109386223005597803",
+    "2109387299977077099",
+    "2109388719530844383",
+    "2109388845687210272",
+    "2109389793301852592",
+    "2109393191397134391",
+    "2109395077340749946",
+    "2109396036091310564",
+    "2109396709038247969",
+    "2109398316727587059",
+    "2109400234803474479",
+    "2109400566812013040",
+    "2109401174189469769",
+    "2109401268149961016",
+    "2109402337064157310",
+    "2109402871531733261",
+    "2109403005468508180"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T20:36:28.368Z",
-    "observedAt": "2026-10-11T20:36:52.153Z",
+    "attemptedAt": "2026-10-11T22:06:40.985Z",
+    "observedAt": "2026-10-11T22:07:25.534Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 15,
+    "acceptedCount": 27,
     "retryCount": 0
    }
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2109369792641597919",
-    "2109370003476631883",
-    "2109370133432922525"
+    "2109403261249716653",
+    "2109403675818967442",
+    "2109404001640829112",
+    "2109404479678537789",
+    "2109404595399082197",
+    "2109404676810481799",
+    "2109405246711894312"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T19:52:45.362Z",
-    "observedAt": "2026-10-11T19:52:48.543Z",
+    "attemptedAt": "2026-10-11T22:07:25.553Z",
+    "observedAt": "2026-10-11T22:07:36.654Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -4284,21 +4887,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T20:36:28.368Z",
-   "observedAt": "2026-10-11T20:36:52.153Z",
+   "attemptedAt": "2026-10-11T22:07:25.553Z",
+   "observedAt": "2026-10-11T22:07:36.654Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T20:36:28.368Z",
-   "observedAt": "2026-10-11T20:36:52.153Z",
+   "attemptedAt": "2026-10-11T22:07:25.553Z",
+   "observedAt": "2026-10-11T22:07:36.654Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": {
@@ -4311,5 +4914,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-11T20:36:52.207Z"
+ "updatedAt": "2026-10-11T22:07:36.686Z"
 }
