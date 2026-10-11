@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T03:17:04.774Z",
+ "classifiedAt": "2026-10-11T04:47:10.289Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -2266,7 +2266,14 @@
     "jobs-wages"
    ]
   ],
-  "2109113985907798016": []
+  "2109113985907798016": [],
+  "2109122722374811845": [],
+  "2109129627121975685": [
+   [
+    "budget-appropriations",
+    "social-security"
+   ]
+  ]
  },
  "incidents": {
   "2109075503328231746": {
@@ -7356,6 +7363,18 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109122722374811845": {
+   "contextVersion": 462,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "089539c6708fbf6dfc29a1787404f3d4e1a7ecfb1f08b3fea654f75720002d9d"
+  },
+  "2109129627121975685": {
+   "contextVersion": 462,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "089539c6708fbf6dfc29a1787404f3d4e1a7ecfb1f08b3fea654f75720002d9d"
   }
  },
  "needsContext": {
@@ -7698,10 +7717,12 @@
   "2109111113464140110": false,
   "2109112829609652522": false,
   "2109113257071984900": false,
-  "2109113985907798016": false
+  "2109113985907798016": false,
+  "2109122722374811845": false,
+  "2109129627121975685": false
  },
  "inputBlocks": {},
- "contextVersion": 461,
+ "contextVersion": 462,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -8143,30 +8164,21 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2109106696417407425",
-    "2109106802449084862",
-    "2109106831465611599",
-    "2109109376535433703",
-    "2109109701271072801",
-    "2109110247436775489",
-    "2109110264859934919",
-    "2109110287295258903",
-    "2109110304311575011",
-    "2109110323219452003",
-    "2109111113464140110",
-    "2109112829609652522",
-    "2109113257071984900",
-    "2109113985907798016"
+    "2109122722374811845",
+    "2109129627121975685",
+    "2109133213243490634",
+    "2109138015310221488",
+    "2109138020695970207"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T03:16:35.874Z",
-    "observedAt": "2026-10-11T03:17:04.763Z",
+    "attemptedAt": "2026-10-11T04:47:01.962Z",
+    "observedAt": "2026-10-11T04:47:10.276Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 14,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   }
@@ -8174,24 +8186,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T03:16:35.874Z",
-   "observedAt": "2026-10-11T03:17:04.763Z",
+   "attemptedAt": "2026-10-11T04:47:01.962Z",
+   "observedAt": "2026-10-11T04:47:10.276Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T03:16:35.874Z",
-   "observedAt": "2026-10-11T03:17:04.763Z",
+   "attemptedAt": "2026-10-11T04:47:01.962Z",
+   "observedAt": "2026-10-11T04:47:10.276Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 14,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T03:17:04.780Z"
+ "updatedAt": "2026-10-11T04:47:10.294Z"
 }
