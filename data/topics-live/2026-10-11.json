@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T19:52:48.574Z",
+ "classifiedAt": "2026-10-11T20:13:14.835Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -1125,7 +1125,83 @@
     "lgbtq"
    ]
   ],
-  "2109370133432922525": []
+  "2109370133432922525": [],
+  "2109371585090228416": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2109371999554347232": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109372530171724171": [
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2109373565875224689": [],
+  "2109373571537539374": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109373722079756411": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "labor",
+    null
+   ]
+  ],
+  "2109374313971532177": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2109374669195194475": [],
+  "2109374992702161189": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109375133542461578": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109375443811942603": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109375527114936776": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109376595412877521": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ]
  },
  "incidents": {
   "2109344584849559912": {
@@ -3363,6 +3439,208 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "6ac7fd3b6a0d773343842203d73c9d53a1f3f1b57a8113a8e705dad8e20d9b0b"
+  },
+  "2109371585090228416": {
+   "contextVersion": 472,
+   "evidenceSupplied": [
+    {
+     "id": "n_25e804ad7d09dc2b",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
+     "text": "Bipartisan bill barring U.S. purchase of Russian oil on the horizon: Fitzpatrick",
+     "title": "Bipartisan bill barring U.S. purchase of Russian oil on the horizon: Fitzpatrick",
+     "publishedAt": "2026-10-10T22:02:33.000Z",
+     "fetchedAt": "2026-10-10T22:30:39.409Z",
+     "version": 458,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_25e804ad7d09dc2b"
+   ],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "quotedContext": {
+    "id": "1499398710446358535",
+    "authorId": "15207668",
+    "handle": "HouseGOP",
+    "createdAt": "2022-03-03T14:58:04.000Z",
+    "textChars": 36,
+    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
+   }
+  },
+  "2109371999554347232": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109372530171724171": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109373565875224689": {
+   "contextVersion": 472,
+   "evidenceSupplied": [
+    {
+     "id": "n_40822e1a132ce73c",
+     "publisher": "The Hill",
+     "date": "2026-10-05",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6129231-scotus-declines-lets-go-brandon-case/",
+     "text": "Supreme Court declines to take up school ban on ‘Let’s Go Brandon’ shirts",
+     "title": "Supreme Court declines to take up school ban on ‘Let’s Go Brandon’ shirts",
+     "publishedAt": "2026-10-05T13:46:00.000Z",
+     "fetchedAt": "2026-10-05T14:29:26.616Z",
+     "version": 361,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109373571537539374": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109373722079756411": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109374313971532177": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109374669195194475": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "quotedContext": {
+    "id": "2109303909395165642",
+    "authorId": "1261042310969806849",
+    "handle": "ShelleyLuther",
+    "createdAt": "2026-10-11T15:23:35.000Z",
+    "textChars": 293,
+    "textHash": "22fc50a0fbee9560772f3b80baa424cf5e04de8db3b1d2d6aab3f0675c4e8f41"
+   }
+  },
+  "2109374992702161189": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "quotedContext": {
+    "id": "2109329520247660715",
+    "authorId": "2162812627",
+    "handle": "nicksortor",
+    "createdAt": "2026-10-11T17:05:21.000Z",
+    "textChars": 781,
+    "textHash": "646ec8000d3df36fb5950c04ff4e6d055ca9a396f65db6360be7c5d827645c16"
+   }
+  },
+  "2109375133542461578": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7"
+  },
+  "2109375443811942603": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109347572347187307",
+    "fingerprint": "84e4d2e6867e6ec620ceeef5120fb08b633b5fc178e65cdabd36f7dcfaaf9e1d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109347572347187307",
+    "fingerprint": "84e4d2e6867e6ec620ceeef5120fb08b633b5fc178e65cdabd36f7dcfaaf9e1d"
+   }
+  },
+  "2109375527114936776": {
+   "contextVersion": 472,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109348840755122418",
+    "fingerprint": "916779cff2258f3bbc4659149364f9f76d280c21d63be2e7b86d42cd7b6c7c39"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109348840755122418",
+    "fingerprint": "916779cff2258f3bbc4659149364f9f76d280c21d63be2e7b86d42cd7b6c7c39"
+   }
+  },
+  "2109376595412877521": {
+   "contextVersion": 472,
+   "evidenceSupplied": [
+    {
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3f228cc82c4f94a",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
+     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "publishedAt": "2026-10-11T18:30:39.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c6cb34d5401b252e",
+    "n_a3f228cc82c4f94a"
+   ],
+   "inputHash": "d8cc51dc7abb54ee37bc525cf1d7b070d1dab1f69773331e17a4ebb673d9baf7",
+   "quotedContext": {
+    "id": "2109291090092167567",
+    "authorId": "16827148",
+    "handle": "ChristopherJM",
+    "createdAt": "2026-10-11T14:32:39.000Z",
+    "textChars": 309,
+    "textHash": "4782825ada2490f0a5cf9259b06dded2853f0a644be35ff76b4b4e63585d9c76"
+   }
   }
  },
  "needsContext": {
@@ -3540,7 +3818,20 @@
   "2109367937425609145": false,
   "2109369792641597919": false,
   "2109370003476631883": false,
-  "2109370133432922525": false
+  "2109370133432922525": false,
+  "2109371585090228416": false,
+  "2109371999554347232": false,
+  "2109372530171724171": false,
+  "2109373565875224689": false,
+  "2109373571537539374": false,
+  "2109373722079756411": false,
+  "2109374313971532177": false,
+  "2109374669195194475": false,
+  "2109374992702161189": false,
+  "2109375133542461578": false,
+  "2109375443811942603": false,
+  "2109375527114936776": false,
+  "2109376595412877521": false
  },
  "inputBlocks": {},
  "contextVersion": 472,
@@ -3633,6 +3924,19 @@
    "ids": [
     "2109358375150702895"
    ]
+  },
+  {
+   "label": "Talarico mental-health hospitalization claim",
+   "ids": [
+    "2109374669195194475",
+    "2109374992702161189"
+   ]
+  },
+  {
+   "label": "Trump-claimed Russia-Ukraine energy ceasefire",
+   "ids": [
+    "2109376595412877521"
+   ]
   }
  ],
  "unclassified": [],
@@ -3646,56 +3950,29 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109046015647216003",
-    "2109050872433185202",
-    "2109342114446512417",
-    "2109349177008238971",
-    "2109349217538122173",
-    "2109349441844936976",
-    "2109349687014629837",
-    "2109352243388453348",
-    "2109352434141216827",
-    "2109352766623924317",
-    "2109353636841005217",
-    "2109354635441922261",
-    "2109355279787979194",
-    "2109356771412508834",
-    "2109356979894558766",
-    "2109357543118061692",
-    "2109357543524888858",
-    "2109358375150702895",
-    "2109358376412967356",
-    "2109359489967346087",
-    "2109359542018404632",
-    "2109359764899504325",
-    "2109360397148987801",
-    "2109361221556146509",
-    "2109362287148425218",
-    "2109362884694118845",
-    "2109362904193753214",
-    "2109364155287265333",
-    "2109364425631076454",
-    "2109364750966751306",
-    "2109364807615090780",
-    "2109364829454758238",
-    "2109364964750213602",
-    "2109365484848357678",
-    "2109366045391589657",
-    "2109366060222910614",
-    "2109366992884863301",
-    "2109366993270804641",
-    "2109367511112175666",
-    "2109367937425609145"
+    "2109371585090228416",
+    "2109371999554347232",
+    "2109372530171724171",
+    "2109373565875224689",
+    "2109373571537539374",
+    "2109373722079756411",
+    "2109374313971532177",
+    "2109374669195194475",
+    "2109374992702161189",
+    "2109375133542461578",
+    "2109375443811942603",
+    "2109375527114936776",
+    "2109376595412877521"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T19:51:35.242Z",
-    "observedAt": "2026-10-11T19:52:45.339Z",
+    "attemptedAt": "2026-10-11T20:12:45.978Z",
+    "observedAt": "2026-10-11T20:13:14.829Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 40,
+    "acceptedCount": 13,
     "retryCount": 0
    }
   },
@@ -3721,21 +3998,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T19:52:45.362Z",
-   "observedAt": "2026-10-11T19:52:48.543Z",
+   "attemptedAt": "2026-10-11T20:12:45.978Z",
+   "observedAt": "2026-10-11T20:13:14.829Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T19:52:45.362Z",
-   "observedAt": "2026-10-11T19:52:48.543Z",
+   "attemptedAt": "2026-10-11T20:12:45.978Z",
+   "observedAt": "2026-10-11T20:13:14.829Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastFailure": {
@@ -3748,5 +4025,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-11T19:52:48.578Z"
+ "updatedAt": "2026-10-11T20:13:14.838Z"
 }
