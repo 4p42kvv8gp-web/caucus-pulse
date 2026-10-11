@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T15:53:29.971Z",
+ "classifiedAt": "2026-10-11T16:52:41.690Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -496,7 +496,149 @@
     "elections-2026"
    ]
   ],
-  "2109309313122435302": []
+  "2109309313122435302": [],
+  "2109311736431976508": [
+   [
+    "economy",
+    "jobs-wages"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109312642896605442": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109313076235538769": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109313305001259494": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2109313844069929091": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2109313848629248067": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2109313851183284568": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2109314208554770630": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2109314756532138469": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2109315682181496890": [
+   [
+    "education",
+    "higher-ed"
+   ],
+   [
+    "tech",
+    "ai-policy"
+   ],
+   [
+    "democracy",
+    "press-speech"
+   ]
+  ],
+  "2109316593947681184": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109317889069117928": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109318472077574368": [
+   [
+    "climate",
+    "clean-energy"
+   ]
+  ],
+  "2109320624245977520": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109322741245517941": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2109324204399034624": [
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2109324241753747830": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109324365309616283": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109324963501183232": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ]
  },
  "incidents": {},
  "provenance": {
@@ -1583,6 +1725,248 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "c3e17fe15a320b33727cfaa65f9e4ef8b4e4e18430a5264d560578462d3ff3f7"
+  },
+  "2109311736431976508": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109312642896605442": {
+   "contextVersion": 470,
+   "evidenceSupplied": [
+    {
+     "id": "n_349da678770a8aaa",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
+     "text": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "title": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "publishedAt": "2026-10-11T14:29:49.000Z",
+     "fetchedAt": "2026-10-11T15:20:17.721Z",
+     "version": 468,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1f6046aceb1b6916",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
+     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "publishedAt": "2026-10-11T15:26:00.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_349da678770a8aaa",
+    "n_1f6046aceb1b6916"
+   ],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109313076235538769": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109313305001259494": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109313844069929091": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109313848629248067": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2",
+   "quotedContext": {
+    "id": "2109313844069929091",
+    "authorId": "1569400849130049537",
+    "handle": "RepPatRyanNY",
+    "createdAt": "2026-10-11T16:03:04.000Z",
+    "textChars": 258,
+    "textHash": "d442a26185292a4b41ec48f8c8a84cc3926d2a3cd31dbd9316d15c57ab924a14"
+   }
+  },
+  "2109313851183284568": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2",
+   "quotedContext": {
+    "id": "2109313848629248067",
+    "authorId": "1569400849130049537",
+    "handle": "RepPatRyanNY",
+    "createdAt": "2026-10-11T16:03:05.000Z",
+    "textChars": 238,
+    "textHash": "cea69c413c62e8230f3d45a7834000a937e6a01c0ae79ebb4842dab2fa4e55e2"
+   }
+  },
+  "2109314208554770630": {
+   "contextVersion": 470,
+   "evidenceSupplied": [
+    {
+     "id": "n_3d20b04d4549ec94",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/plan-for-public-military-execution-sparks-bipartisan-backlash/",
+     "text": "Lawmakers in both parties are blasting the Defense Secretary Pete Hegseth’s plan to livestream the execution of the man convicted of carrying out the 2009 mass shooting at Fort Hood.",
+     "title": "Plan for public military execution sparks bipartisan backlash",
+     "publishedAt": "2026-10-09T14:27:55.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9038326161eb1db4",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5995114/week-in-politics-hegseths-livestream-backlash-greece-ambassador-guilfoyle-scandal",
+     "text": "SCOTT SIMON, HOST: There has been pointed and bipartisan objection to Defense Secretary Pete Hegseth's plan to livestream a military execution. The Pentagon announced this week that Nidal Hasan will face a firing squad in December. He is the former Fort Hood Army psychiatrist who fatally shot 13 people and wounded nearly three dozen others in 2009. NPR senior contributor Ron Elving joins us. Ron, thanks so much for being with us.",
+     "title": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "publishedAt": "2026-10-10T11:40:48.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_3d20b04d4549ec94",
+    "n_9038326161eb1db4"
+   ],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2",
+   "quotedContext": {
+    "id": "2108300171331133951",
+    "authorId": "759251",
+    "handle": "CNN",
+    "createdAt": "2026-10-08T20:55:05.000Z",
+    "textChars": 213,
+    "textHash": "fc92a21391a76d971659c7c43dd1f01fef2dac893b60f787dad4ade6f4262194"
+   }
+  },
+  "2109314756532138469": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109315682181496890": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109308297476002258",
+    "fingerprint": "feb31e2bbcced0ff8b2a2d19e582cefb7ff1eb2c690882c166f49306e22426e0"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109308297476002258",
+    "fingerprint": "feb31e2bbcced0ff8b2a2d19e582cefb7ff1eb2c690882c166f49306e22426e0"
+   }
+  },
+  "2109316593947681184": {
+   "contextVersion": 470,
+   "evidenceSupplied": [
+    {
+     "id": "n_72236f657ed4f59e",
+     "publisher": "NPR",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/05/nx-s1-5977852/ai-chatbots-midterm-election",
+     "text": "On a September evening, Adam Johnson, 40, settled on his porch chair in Morgantown, West Virginia, to go over his ballot for the upcoming midterm election.",
+     "title": "People are asking ChatGPT to help them decide how to vote in the midterms",
+     "publishedAt": "2026-10-05T09:00:00.000Z",
+     "fetchedAt": "2026-10-05T12:58:24.573Z",
+     "version": 360,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109317889069117928": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109318472077574368": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109320624245977520": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109322741245517941": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109324204399034624": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109324241753747830": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109324365309616283": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2",
+   "quotedContext": {
+    "id": "2109322239128768719",
+    "authorId": "606625312",
+    "handle": "Angeles_NF",
+    "createdAt": "2026-10-11T16:36:25.000Z",
+    "textChars": 1053,
+    "textHash": "bd6b2c3a0a5b71b454290ac9082bfe757e788faf094676ae2036fed5dcffba42"
+   }
+  },
+  "2109324963501183232": {
+   "contextVersion": 470,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
   }
  },
  "needsContext": {
@@ -1658,10 +2042,29 @@
   "2109307675301351592": false,
   "2109308446105354389": false,
   "2109308702264283402": false,
-  "2109309313122435302": false
+  "2109309313122435302": false,
+  "2109311736431976508": false,
+  "2109312642896605442": false,
+  "2109313076235538769": false,
+  "2109313305001259494": false,
+  "2109313844069929091": false,
+  "2109313848629248067": false,
+  "2109313851183284568": false,
+  "2109314208554770630": false,
+  "2109314756532138469": false,
+  "2109315682181496890": false,
+  "2109316593947681184": false,
+  "2109317889069117928": false,
+  "2109318472077574368": false,
+  "2109320624245977520": false,
+  "2109322741245517941": false,
+  "2109324204399034624": false,
+  "2109324241753747830": false,
+  "2109324365309616283": false,
+  "2109324963501183232": false
  },
  "inputBlocks": {},
- "contextVersion": 469,
+ "contextVersion": 470,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -1696,6 +2099,18 @@
     "2109297978943131779",
     "2109297979253563553"
    ]
+  },
+  {
+   "label": "Hegseth plan to livestream Fort Hood military execution",
+   "ids": [
+    "2109314208554770630"
+   ]
+  },
+  {
+   "label": "Unaccounted Venezuelan oil revenue collected by US",
+   "ids": [
+    "2109322741245517941"
+   ]
   }
  ],
  "unclassified": [],
@@ -1709,33 +2124,35 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109041682398499168",
-    "2109046015647216003",
-    "2109050872433185202",
-    "2109291432317993329",
-    "2109292267529719922",
-    "2109292957996106088",
-    "2109293446225609096",
-    "2109293874564726908",
-    "2109294137388490941",
-    "2109294754412511423",
-    "2109295039163592941",
-    "2109295129261420761",
-    "2109297722050171096",
-    "2109297976963113053",
-    "2109297978532139222",
-    "2109297978943131779",
-    "2109297979253563553"
+    "2109311736431976508",
+    "2109312642896605442",
+    "2109313076235538769",
+    "2109313305001259494",
+    "2109313844069929091",
+    "2109313848629248067",
+    "2109313851183284568",
+    "2109314208554770630",
+    "2109314756532138469",
+    "2109315682181496890",
+    "2109316593947681184",
+    "2109317889069117928",
+    "2109318472077574368",
+    "2109320624245977520",
+    "2109322741245517941",
+    "2109324204399034624",
+    "2109324241753747830",
+    "2109324365309616283",
+    "2109324963501183232"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T15:52:37.866Z",
-    "observedAt": "2026-10-11T15:53:03.148Z",
+    "attemptedAt": "2026-10-11T16:52:11.753Z",
+    "observedAt": "2026-10-11T16:52:41.684Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 19,
     "retryCount": 0
    }
   },
@@ -1778,24 +2195,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T15:53:03.163Z",
-   "observedAt": "2026-10-11T15:53:29.939Z",
+   "attemptedAt": "2026-10-11T16:52:11.753Z",
+   "observedAt": "2026-10-11T16:52:41.684Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T15:53:03.163Z",
-   "observedAt": "2026-10-11T15:53:29.939Z",
+   "attemptedAt": "2026-10-11T16:52:11.753Z",
+   "observedAt": "2026-10-11T16:52:41.684Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T15:53:29.975Z"
+ "updatedAt": "2026-10-11T16:52:41.692Z"
 }
