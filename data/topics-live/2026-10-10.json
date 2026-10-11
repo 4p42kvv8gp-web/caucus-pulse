@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T01:03:12.420Z",
+ "classifiedAt": "2026-10-11T02:15:32.853Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -2121,6 +2121,60 @@
    [
     "economy",
     "prices-inflation"
+   ]
+  ],
+  "2109088342671339950": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "healthcare",
+    "medicare"
+   ]
+  ],
+  "2109088373025731011": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109089600010658103": [
+   [
+    "healthcare",
+    "medicare"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109091308396847570": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109093296861491286": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2109096170547241084": [
+   [
+    "congress-politics",
+    null
+   ]
+  ],
+  "2109103314923356247": [
+   [
+    "democracy",
+    "voting-rights"
    ]
   ]
  },
@@ -6909,6 +6963,117 @@
     "referenceId": "2109032333596918216",
     "fingerprint": "af069484f5276c4c9941cd9be03a810d7814c3db014c6d894ecea426125ceeed"
    }
+  },
+  "2109088342671339950": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
+  },
+  "2109088373025731011": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109056415427916103",
+    "fingerprint": "48e009bdfed91747264e621919eec3e93f269bd055f27f76ae0276362644fc4b"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109056415427916103",
+    "fingerprint": "48e009bdfed91747264e621919eec3e93f269bd055f27f76ae0276362644fc4b"
+   }
+  },
+  "2109089600010658103": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
+  },
+  "2109091308396847570": {
+   "contextVersion": 461,
+   "evidenceSupplied": [
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
+  },
+  "2109093296861491286": {
+   "contextVersion": 461,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_fb4911848ce27a7c",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/anthrax-attacks-25-years-later/",
+     "text": "But the panic and uncertainty came roaring back that day in then-Senate Majority Leader Tom Daschle’s office, where Malet was working as a research assistant. An intern opened a letter purportedly from a fourth-grade class, and white powder came spilling out.",
+     "title": "The anthrax attacks, 25 years later",
+     "publishedAt": "2026-10-09T05:00:00.000Z",
+     "fetchedAt": "2026-10-09T10:05:16.342Z",
+     "version": 429,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd"
+   ],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
+  },
+  "2109096170547241084": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9",
+   "quotedContext": {
+    "id": "2109023282469261805",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-10T20:48:28.000Z",
+    "textChars": 78,
+    "textHash": "89cd86345e8fdeb5554635be2519a361fccb8beb792649a1532fb04140cceaa1"
+   }
+  },
+  "2109103314923356247": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
   }
  },
  "needsContext": {
@@ -7230,10 +7395,17 @@
   "2109080134485455054": false,
   "2109083680324923572": false,
   "2109083929013580198": false,
-  "2109086531004866593": false
+  "2109086531004866593": false,
+  "2109088342671339950": false,
+  "2109088373025731011": false,
+  "2109089600010658103": false,
+  "2109091308396847570": false,
+  "2109093296861491286": false,
+  "2109096170547241084": false,
+  "2109103314923356247": false
  },
  "inputBlocks": {},
- "contextVersion": 460,
+ "contextVersion": 461,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -7567,6 +7739,18 @@
    "ids": [
     "2109060400243253660"
    ]
+  },
+  {
+   "label": "Trump $90 senior rebate checks proposal",
+   "ids": [
+    "2109088342671339950"
+   ]
+  },
+  {
+   "label": "Trump administration purchase of Russian oil/diesel",
+   "ids": [
+    "2109093296861491286"
+   ]
   }
  ],
  "unclassified": [],
@@ -7645,31 +7829,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2109067272425816302",
-    "2109069520006484450",
-    "2109070178361454994",
-    "2109070359488238044",
-    "2109071724608172313",
-    "2109072934551646456",
-    "2109073238487670874",
-    "2109075303289233822",
-    "2109075503328231746",
-    "2109076169459208588",
-    "2109076394001248322",
-    "2109080134485455054",
-    "2109083680324923572",
-    "2109083929013580198",
-    "2109086531004866593"
+    "2109088342671339950",
+    "2109088373025731011",
+    "2109089600010658103",
+    "2109091308396847570",
+    "2109093296861491286",
+    "2109096170547241084",
+    "2109103314923356247"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T01:02:26.845Z",
-    "observedAt": "2026-10-11T01:03:12.408Z",
+    "attemptedAt": "2026-10-11T02:15:17.415Z",
+    "observedAt": "2026-10-11T02:15:32.841Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 15,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -7677,24 +7853,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T01:02:26.845Z",
-   "observedAt": "2026-10-11T01:03:12.408Z",
+   "attemptedAt": "2026-10-11T02:15:17.415Z",
+   "observedAt": "2026-10-11T02:15:32.841Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T01:02:26.845Z",
-   "observedAt": "2026-10-11T01:03:12.408Z",
+   "attemptedAt": "2026-10-11T02:15:17.415Z",
+   "observedAt": "2026-10-11T02:15:32.841Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 15,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T01:03:12.425Z"
+ "updatedAt": "2026-10-11T02:15:32.858Z"
 }
