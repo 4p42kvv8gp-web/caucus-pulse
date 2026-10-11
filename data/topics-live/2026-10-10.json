@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T02:15:32.853Z",
+ "classifiedAt": "2026-10-11T03:17:04.774Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -2176,7 +2176,97 @@
     "democracy",
     "voting-rights"
    ]
-  ]
+  ],
+  "2109106696417407425": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2109106802449084862": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2109106831465611599": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109109376535433703": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2109109701271072801": [],
+  "2109110247436775489": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109110264859934919": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109110287295258903": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109110304311575011": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109110323219452003": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109111113464140110": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109112829609652522": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109113257071984900": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2109113985907798016": []
  },
  "incidents": {
   "2109075503328231746": {
@@ -7074,6 +7164,198 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "7441eaf60858d38d0de3adbac1d99d328581687e726bfbe4461892b070e45ef9"
+  },
+  "2109106696417407425": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109106802449084862": {
+   "contextVersion": 461,
+   "evidenceSupplied": [
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109106831465611599": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109105982769074610",
+    "fingerprint": "ecdaf9b6bf7d70067c7900d4a5b5de31ff0ad65d2ea5042d54feef93197ece50"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109105982769074610",
+    "fingerprint": "ecdaf9b6bf7d70067c7900d4a5b5de31ff0ad65d2ea5042d54feef93197ece50"
+   }
+  },
+  "2109109376535433703": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109109701271072801": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109027772681044405",
+    "fingerprint": "bc81865513bea75d34bb8f22c62e4bfc11115a5a1d8174c91c95887e4175c155"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109027772681044405",
+    "fingerprint": "bc81865513bea75d34bb8f22c62e4bfc11115a5a1d8174c91c95887e4175c155"
+   }
+  },
+  "2109110247436775489": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109110264859934919": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "quotedContext": {
+    "id": "2109110247436775489",
+    "authorId": "961359779003121665",
+    "handle": "MelanieforNM",
+    "createdAt": "2026-10-11T02:34:03.000Z",
+    "textChars": 235,
+    "textHash": "dd599acec2d5ec90c1cfee6a06e2d6ef7b6a580362e585e4ab9468b5ed08ee76"
+   }
+  },
+  "2109110287295258903": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "quotedContext": {
+    "id": "2109110264859934919",
+    "authorId": "961359779003121665",
+    "handle": "MelanieforNM",
+    "createdAt": "2026-10-11T02:34:07.000Z",
+    "textChars": 293,
+    "textHash": "243d896e62cbeba443e5fe9218151d7df4faeaf01cf3ce035a4b01354dbdbefa"
+   }
+  },
+  "2109110304311575011": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "quotedContext": {
+    "id": "2109110287295258903",
+    "authorId": "961359779003121665",
+    "handle": "MelanieforNM",
+    "createdAt": "2026-10-11T02:34:12.000Z",
+    "textChars": 85,
+    "textHash": "732505c41435a24773e44ea35b7213695d0a9eab62356f1e7adb3736d35c8073"
+   }
+  },
+  "2109110323219452003": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "quotedContext": {
+    "id": "2109110304311575011",
+    "authorId": "961359779003121665",
+    "handle": "MelanieforNM",
+    "createdAt": "2026-10-11T02:34:16.000Z",
+    "textChars": 38,
+    "textHash": "3fa0c415fe5461ec5fc1172ebc556782c3e019237aac1713d29e59bae180ee8c"
+   }
+  },
+  "2109111113464140110": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "quotedContext": {
+    "id": "2109002539345871239",
+    "authorId": "986423555025002497",
+    "handle": "BryanSteil",
+    "createdAt": "2026-10-10T19:26:03.000Z",
+    "textChars": 129,
+    "textHash": "a48a26479b152624ab92bba435d20083d0bc34746cdc628b69ca45cd9a95a54f"
+   }
+  },
+  "2109112829609652522": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109071073962787042",
+    "fingerprint": "a0526c2c7fe2fede999ca077cd21f65dad1878e8b8a1bf30ea126cb9ee26cf68"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109071073962787042",
+    "fingerprint": "a0526c2c7fe2fede999ca077cd21f65dad1878e8b8a1bf30ea126cb9ee26cf68"
+   }
+  },
+  "2109113257071984900": {
+   "contextVersion": 461,
+   "evidenceSupplied": [
+    {
+     "id": "n_c8da85eadbfb8318",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/janelle-stelson-dhs-pennsylvania-undocumented-immigrant/",
+     "text": "“We don’t know this individual. Everybody hired goes through me, so I would know,” Stelson said at a news conference focused on Social Security. “He’s not an employee. He’s not a volunteer.”",
+     "title": "Pa. Democrat rejects DHS allegation her campaign hired undocumented immigrant",
+     "publishedAt": "2026-10-08T16:00:08.000Z",
+     "fetchedAt": "2026-10-09T04:27:22.384Z",
+     "version": 426,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
+  },
+  "2109113985907798016": {
+   "contextVersion": 461,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "319672b569ba6b78b25f34dcbb2cd67d64cbe15e2c87db8ef905fa0846cdf13b"
   }
  },
  "needsContext": {
@@ -7402,7 +7684,21 @@
   "2109091308396847570": false,
   "2109093296861491286": false,
   "2109096170547241084": false,
-  "2109103314923356247": false
+  "2109103314923356247": false,
+  "2109106696417407425": false,
+  "2109106802449084862": false,
+  "2109106831465611599": false,
+  "2109109376535433703": false,
+  "2109109701271072801": true,
+  "2109110247436775489": false,
+  "2109110264859934919": false,
+  "2109110287295258903": false,
+  "2109110304311575011": false,
+  "2109110323219452003": false,
+  "2109111113464140110": false,
+  "2109112829609652522": false,
+  "2109113257071984900": false,
+  "2109113985907798016": false
  },
  "inputBlocks": {},
  "contextVersion": 461,
@@ -7751,6 +8047,24 @@
    "ids": [
     "2109093296861491286"
    ]
+  },
+  {
+   "label": "Erie, PA mass shooting (nine killed)",
+   "ids": [
+    "2109106696417407425"
+   ]
+  },
+  {
+   "label": "Kimberly Guilfoyle pay-to-play allegations",
+   "ids": [
+    "2109106831465611599"
+   ]
+  },
+  {
+   "label": "Danny Fire and Bouquet Fire, Angeles National Forest",
+   "ids": [
+    "2109112829609652522"
+   ]
   }
  ],
  "unclassified": [],
@@ -7829,23 +8143,30 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2109088342671339950",
-    "2109088373025731011",
-    "2109089600010658103",
-    "2109091308396847570",
-    "2109093296861491286",
-    "2109096170547241084",
-    "2109103314923356247"
+    "2109106696417407425",
+    "2109106802449084862",
+    "2109106831465611599",
+    "2109109376535433703",
+    "2109109701271072801",
+    "2109110247436775489",
+    "2109110264859934919",
+    "2109110287295258903",
+    "2109110304311575011",
+    "2109110323219452003",
+    "2109111113464140110",
+    "2109112829609652522",
+    "2109113257071984900",
+    "2109113985907798016"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T02:15:17.415Z",
-    "observedAt": "2026-10-11T02:15:32.841Z",
+    "attemptedAt": "2026-10-11T03:16:35.874Z",
+    "observedAt": "2026-10-11T03:17:04.763Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   }
@@ -7853,24 +8174,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T02:15:17.415Z",
-   "observedAt": "2026-10-11T02:15:32.841Z",
+   "attemptedAt": "2026-10-11T03:16:35.874Z",
+   "observedAt": "2026-10-11T03:17:04.763Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T02:15:17.415Z",
-   "observedAt": "2026-10-11T02:15:32.841Z",
+   "attemptedAt": "2026-10-11T03:16:35.874Z",
+   "observedAt": "2026-10-11T03:17:04.763Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T02:15:32.858Z"
+ "updatedAt": "2026-10-11T03:17:04.780Z"
 }
