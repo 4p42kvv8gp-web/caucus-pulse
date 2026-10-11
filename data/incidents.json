@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-11T16:52:41.798Z",
+ "generatedAt": "2026-10-11T18:23:19.361Z",
  "incidents": [
+  {
+   "id": "san-diego-county-ca--flooding--source-2109328225755079066",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "San Diego County, CA · CA-51",
+   "placeRaw": "San Diego County, CA",
+   "district": "CA-51",
+   "districtMatch": true,
+   "handle": "@RepSaraJacobs",
+   "member": "Sara Jacobs",
+   "since": "2026-10-11T18:05:13.000Z",
+   "last": "2026-10-11T18:05:13.000Z",
+   "updates": 1,
+   "engN": 6,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · San Diego County, CA",
+   "evidence": {
+    "span": "RT @SanDiegoCounty: The National Weather Service has issued a Coastal Flood Warning for San Diego County effective until 3 p.m.",
+    "exact": true,
+    "start": 0,
+    "end": 127,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2109344584849559912",
+    "url": "https://x.com/i/web/status/2109344584849559912"
+   },
+   "timeline": [
+    {
+     "id": "2109344584849559912",
+     "sourceId": "2109344584849559912",
+     "url": "https://x.com/i/web/status/2109344584849559912",
+     "authorId": "1345103905869455361",
+     "personId": "member:sara jacobs",
+     "referenceIds": [
+      "2109328225755079066"
+     ],
+     "time": "2026-10-11T18:05:13.000Z",
+     "who": "@RepSaraJacobs",
+     "tag": "repost",
+     "text": "RT @SanDiegoCounty: The National Weather Service has issued a Coastal Flood Warning for San Diego County effective until 3 p.m. today. \n\nIf…",
+     "engN": 6,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "San Diego County, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "RT @SanDiegoCounty: The National Weather Service has issued a Coastal Flood Warning for San Diego County effective until 3 p.m.",
+      "exact": true,
+      "start": 0,
+      "end": 127,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2109344584849559912",
+      "url": "https://x.com/i/web/status/2109344584849559912"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2109344584849559912"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2109344584849559912"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "long-beach-ny--severe-storm--source-2109075503328231746",
    "kind": "severe storm",

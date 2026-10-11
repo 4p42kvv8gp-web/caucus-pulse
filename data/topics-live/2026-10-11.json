@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T16:52:41.690Z",
+ "classifiedAt": "2026-10-11T18:23:19.198Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -510,11 +510,11 @@
   "2109312642896605442": [
    [
     "foreign-policy",
-    "ukraine-russia"
+    "middle-east"
    ],
    [
     "foreign-policy",
-    "middle-east"
+    "ukraine-russia"
    ],
    [
     "economy",
@@ -638,9 +638,265 @@
     "economy",
     "taxes"
    ]
+  ],
+  "2109328312199729220": [],
+  "2109329000506266066": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109329030348435598": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109329082915885543": [
+   [
+    "climate",
+    "epa-rollbacks"
+   ]
+  ],
+  "2109329850943086846": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2109330455782674902": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2109330459578847368": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109330942519128229": [
+   [
+    "democracy",
+    null
+   ],
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2109331077244330456": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "military-veterans"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109331280680583382": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2109331833947095477": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109333001884647629": [],
+  "2109333564542390412": [],
+  "2109333703033803046": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2109333866087407642": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2109333965467267187": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109333976863359013": [
+   [
+    "immigration",
+    "border-policy"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109334214575259808": [
+   [
+    "healthcare",
+    "medicaid"
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109335469637177466": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109335723027435528": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2109335752949539058": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109335799065915435": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109336297441755539": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109336477305909584": [
+   [
+    "labor",
+    "unions"
+   ]
+  ],
+  "2109336524860915863": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "healthcare",
+    null
+   ]
+  ],
+  "2109337550389117086": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109338572956312031": [],
+  "2109338772701655129": [],
+  "2109340019940843781": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109340162857615719": [],
+  "2109340195304702142": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2109341865598149005": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2109341901820453021": [],
+  "2109341950419599485": [],
+  "2109342070179873129": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2109342962501255270": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2109343615512461360": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2109344584849559912": [],
+  "2109344644689547530": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109345270857351594": [],
+  "2109347557772046686": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2109348552195412317": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2109344584849559912": {
+   "kind": "flooding",
+   "place": "San Diego County, CA",
+   "name": null
+  }
+ },
  "provenance": {
   "2109133213243490634": {
    "contextVersion": 462,
@@ -1732,46 +1988,6 @@
    "evidenceUsed": [],
    "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
   },
-  "2109312642896605442": {
-   "contextVersion": 470,
-   "evidenceSupplied": [
-    {
-     "id": "n_349da678770a8aaa",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
-     "text": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
-     "title": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
-     "publishedAt": "2026-10-11T14:29:49.000Z",
-     "fetchedAt": "2026-10-11T15:20:17.721Z",
-     "version": 468,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_1f6046aceb1b6916",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
-     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
-     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
-     "publishedAt": "2026-10-11T15:26:00.000Z",
-     "fetchedAt": "2026-10-11T15:39:23.078Z",
-     "version": 469,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_349da678770a8aaa",
-    "n_1f6046aceb1b6916"
-   ],
-   "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
-  },
   "2109313076235538769": {
    "contextVersion": 470,
    "evidenceSupplied": [],
@@ -1967,6 +2183,560 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "7be559287f6ed8c253dbe2fe1996884b98b6d277b81eec4715cae84ac105efc2"
+  },
+  "2109312642896605442": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_349da678770a8aaa",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
+     "text": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "title": "Zelensky says US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "publishedAt": "2026-10-11T14:29:49.000Z",
+     "fetchedAt": "2026-10-11T15:20:17.721Z",
+     "version": 468,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1f6046aceb1b6916",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
+     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "publishedAt": "2026-10-11T15:26:00.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_349da678770a8aaa",
+    "n_1f6046aceb1b6916"
+   ],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109328312199729220": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109329000506266066": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109329030348435598": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_b52c586eb14c375d",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6131694-sununu-opposes-trump-policies/",
+     "text": "Sununu rattles off disagreements with Trump at New Hampshire town hall",
+     "title": "Sununu rattles off disagreements with Trump at New Hampshire town hall",
+     "publishedAt": "2026-10-06T16:17:00.000Z",
+     "fetchedAt": "2026-10-06T16:29:19.035Z",
+     "version": 381,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109329082915885543": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109329850943086846": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109330455782674902": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_7f4aaa352718d37d",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/army-findings-inject-urgency-into-air-safety-bill-talks/",
+     "text": "This week’s release of a U.S. Army investigation into the deadly 2025 air crash near Ronald Reagan Washington National Airport is fueling calls for congressional negotiators to default to the Senate’s position on aviation safety legislation that’s been stuck in a bicameral standoff.",
+     "title": "Army findings inject urgency into air safety bill talks",
+     "publishedAt": "2026-10-09T16:41:45.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "quotedContext": {
+    "id": "2107873600074117121",
+    "authorId": "14173315",
+    "handle": "NBCNews",
+    "createdAt": "2026-10-07T16:40:03.000Z",
+    "textChars": 104,
+    "textHash": "a8edff5eb261df4bafcf41dfcc4b45e3271752c925b2706b9fc0276f073c4c57"
+   }
+  },
+  "2109330459578847368": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109330942519128229": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109331077244330456": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_36d04d53aeb8bd4b",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
+     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "publishedAt": "2026-10-06T19:02:27.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109331280680583382": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109331833947095477": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109333001884647629": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109333564542390412": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109333703033803046": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109333866087407642": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "quotedContext": {
+    "id": "2108165587545239900",
+    "authorId": "15754281",
+    "handle": "USATODAY",
+    "createdAt": "2026-10-08T12:00:18.000Z",
+    "textChars": 168,
+    "textHash": "b2abfb7ecef84f531f0588809f84dd4d5e24c701e6b3b86ae9be5e4efd9f499a"
+   }
+  },
+  "2109333965467267187": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109333976863359013": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109334214575259808": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109335469637177466": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109335723027435528": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109335752949539058": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109335799065915435": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109336297441755539": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109336477305909584": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "quotedContext": {
+    "id": "2109331280680583382",
+    "authorId": "1854256323547815957",
+    "handle": "RepLauraGillen",
+    "createdAt": "2026-10-11T17:12:21.000Z",
+    "textChars": 227,
+    "textHash": "ff55bf7359c00c57b5d291c90246288e95f69aef83e0e32f0774ab00ad0e0eb7"
+   }
+  },
+  "2109336524860915863": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109337550389117086": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109338572956312031": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109338772701655129": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109340019940843781": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109340162857615719": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109340195304702142": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_e93d61558a6900cf",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5996606/u-s-imposes-sweeping-sanctions-on-international-criminal-court",
+     "text": "SCOTT SIMON, HOST: This year's Nobel Peace Prize was meant to bolster international humanitarian law and went to a South African jurist who has worked on the International Criminal Court, among other places. But the Trump administration wants to dismantle that court and accuses it of trying to prosecute Americans. NPR's Michele Kelemen reports on new U.S. sanctions against the world's only standing war crimes tribunal.",
+     "title": "U.S. imposes sweeping sanctions on International Criminal Court",
+     "publishedAt": "2026-10-10T11:40:51.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8de49424c8ef75d9",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6139686-trump-administration-icc-sanctions-akane-rejects/",
+     "text": "International Criminal Court ‘firmly rejects’ new US sanctions",
+     "title": "International Criminal Court ‘firmly rejects’ new US sanctions",
+     "publishedAt": "2026-10-09T20:25:03.000Z",
+     "fetchedAt": "2026-10-09T20:53:16.926Z",
+     "version": 437,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e93d61558a6900cf",
+    "n_8de49424c8ef75d9"
+   ],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108604461677502805",
+    "fingerprint": "88060b94c37a10fc6f934ebf7e15e387c0d1fee19b51a884f56a28e050e304d8"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2108604461677502805",
+    "fingerprint": "88060b94c37a10fc6f934ebf7e15e387c0d1fee19b51a884f56a28e050e304d8"
+   }
+  },
+  "2109341865598149005": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_e030cbbd1af467fa",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132210-hegseth-welcomes-uss-abraham-lincoln/",
+     "text": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "title": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "publishedAt": "2026-10-06T19:21:28.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_22cfb4a1361cd1b5",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6137284-uss-abraham-lincoln-ends-deployment-san-diego/",
+     "text": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "title": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "publishedAt": "2026-10-08T19:31:56.000Z",
+     "fetchedAt": "2026-10-08T19:59:50.874Z",
+     "version": 418,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e030cbbd1af467fa",
+    "n_22cfb4a1361cd1b5"
+   ],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109341901820453021": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "quotedContext": {
+    "id": "2109081945300762811",
+    "authorId": "15725469",
+    "handle": "wpri12",
+    "createdAt": "2026-10-11T00:41:35.000Z",
+    "textChars": 162,
+    "textHash": "d0a08ffa59d522660a706fa976d9c92146c76dd43b421539852f68c52a82ecf7"
+   }
+  },
+  "2109341950419599485": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109342070179873129": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109342962501255270": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "quotedContext": {
+    "id": "2109342070179873129",
+    "authorId": "1613235716669988871",
+    "handle": "RepKamlagerDove",
+    "createdAt": "2026-10-11T17:55:13.000Z",
+    "textChars": 393,
+    "textHash": "c9ae6b7502201380cd04cfb0ba6b59e76e55663548d0437749a9607031896424"
+   }
+  },
+  "2109343615512461360": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
+  },
+  "2109344584849559912": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109328225755079066",
+    "fingerprint": "c574a03cd46dfb63b5fc0d2a05d756436a1ddcff3dd5e158436769f6438876d1"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109328225755079066",
+    "fingerprint": "c574a03cd46dfb63b5fc0d2a05d756436a1ddcff3dd5e158436769f6438876d1"
+   }
+  },
+  "2109344644689547530": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7fc3b6f4cd1482aabdc17bb510e53d9e34f80233e17261ba68557b039335b8ca",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109338645479965042",
+    "fingerprint": "2ba57de0b908c94d8dad992bd6522264566facec65dc6e94e5a634840adaaf28"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109338645479965042",
+    "fingerprint": "2ba57de0b908c94d8dad992bd6522264566facec65dc6e94e5a634840adaaf28"
+   }
+  },
+  "2109345270857351594": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7fc3b6f4cd1482aabdc17bb510e53d9e34f80233e17261ba68557b039335b8ca",
+   "quotedContext": {
+    "id": "2109097854526497065",
+    "authorId": "16521206",
+    "handle": "NBC10",
+    "createdAt": "2026-10-11T01:44:48.000Z",
+    "textChars": 173,
+    "textHash": "547db67810f8c76e04abf7bf10b83b9f880c92c698b030364d39a9336553dd10"
+   }
+  },
+  "2109347557772046686": {
+   "contextVersion": 471,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7fc3b6f4cd1482aabdc17bb510e53d9e34f80233e17261ba68557b039335b8ca",
+   "quotedContext": {
+    "id": "2109344262274027904",
+    "authorId": "2167066273",
+    "handle": "DonnaWald",
+    "createdAt": "2026-10-11T18:03:56.000Z",
+    "textChars": 277,
+    "textHash": "4e79cf860b066a82681c5280fc253c580e182918c378dc33820cda5770442474"
+   }
+  },
+  "2109348552195412317": {
+   "contextVersion": 471,
+   "evidenceSupplied": [
+    {
+     "id": "n_bd5a07d765da55b6",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/at-the-races-unleash-obama/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Unleash Obama",
+     "publishedAt": "2026-10-08T17:05:00.000Z",
+     "fetchedAt": "2026-10-08T23:04:42.009Z",
+     "version": 421,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7fc3b6f4cd1482aabdc17bb510e53d9e34f80233e17261ba68557b039335b8ca",
+   "quotedContext": {
+    "id": "2108662542172377317",
+    "authorId": "3995778614",
+    "handle": "KamVTV",
+    "createdAt": "2026-10-09T20:55:01.000Z",
+    "textChars": 373,
+    "textHash": "bdfcb2869b7b9b641815fb922a579b06adbd80ab177ead34f42f758f2437fa6e"
+   }
   }
  },
  "needsContext": {
@@ -2044,7 +2814,6 @@
   "2109308702264283402": false,
   "2109309313122435302": false,
   "2109311736431976508": false,
-  "2109312642896605442": false,
   "2109313076235538769": false,
   "2109313305001259494": false,
   "2109313844069929091": false,
@@ -2061,10 +2830,53 @@
   "2109324204399034624": false,
   "2109324241753747830": false,
   "2109324365309616283": false,
-  "2109324963501183232": false
+  "2109324963501183232": false,
+  "2109312642896605442": false,
+  "2109328312199729220": false,
+  "2109329000506266066": false,
+  "2109329030348435598": false,
+  "2109329082915885543": false,
+  "2109329850943086846": false,
+  "2109330455782674902": false,
+  "2109330459578847368": false,
+  "2109330942519128229": false,
+  "2109331077244330456": false,
+  "2109331280680583382": false,
+  "2109331833947095477": false,
+  "2109333001884647629": false,
+  "2109333564542390412": false,
+  "2109333703033803046": false,
+  "2109333866087407642": false,
+  "2109333965467267187": false,
+  "2109333976863359013": false,
+  "2109334214575259808": false,
+  "2109335469637177466": false,
+  "2109335723027435528": false,
+  "2109335752949539058": false,
+  "2109335799065915435": false,
+  "2109336297441755539": false,
+  "2109336477305909584": false,
+  "2109336524860915863": false,
+  "2109337550389117086": false,
+  "2109338572956312031": false,
+  "2109338772701655129": false,
+  "2109340019940843781": false,
+  "2109340162857615719": false,
+  "2109340195304702142": false,
+  "2109341865598149005": false,
+  "2109341901820453021": false,
+  "2109341950419599485": false,
+  "2109342070179873129": false,
+  "2109342962501255270": false,
+  "2109343615512461360": false,
+  "2109344584849559912": false,
+  "2109344644689547530": false,
+  "2109345270857351594": false,
+  "2109347557772046686": false,
+  "2109348552195412317": false
  },
  "inputBlocks": {},
- "contextVersion": 470,
+ "contextVersion": 471,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -2111,83 +2923,128 @@
    "ids": [
     "2109322741245517941"
    ]
+  },
+  {
+   "label": "US-Russia diesel deal",
+   "ids": [
+    "2109312642896605442"
+   ]
+  },
+  {
+   "label": "Riyadh airport attack",
+   "ids": [
+    "2109331077244330456"
+   ]
+  },
+  {
+   "label": "US sanctions on the International Criminal Court",
+   "ids": [
+    "2109340195304702142"
+   ]
+  },
+  {
+   "label": "Brazilian ambassador visa revocation",
+   "ids": [
+    "2109342070179873129",
+    "2109342962501255270"
+   ]
   }
  ],
- "unclassified": [],
- "pendingIds": [],
- "complete": true,
+ "unclassified": [
+  "2109342114446512417"
+ ],
+ "pendingIds": [
+  "2109342114446512417"
+ ],
+ "complete": false,
  "anchored": {},
- "failedChunks": 0,
+ "failedChunks": 1,
  "droppedSubs": [],
  "echoedSubs": [],
- "validationErrors": [],
+ "validationErrors": [
+  {
+   "code": "missing-id",
+   "id": "2109342114446512417"
+  }
+ ],
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109311736431976508",
     "2109312642896605442",
-    "2109313076235538769",
-    "2109313305001259494",
-    "2109313844069929091",
-    "2109313848629248067",
-    "2109313851183284568",
-    "2109314208554770630",
-    "2109314756532138469",
-    "2109315682181496890",
-    "2109316593947681184",
-    "2109317889069117928",
-    "2109318472077574368",
-    "2109320624245977520",
-    "2109322741245517941",
-    "2109324204399034624",
-    "2109324241753747830",
-    "2109324365309616283",
-    "2109324963501183232"
+    "2109328312199729220",
+    "2109329000506266066",
+    "2109329030348435598",
+    "2109329082915885543",
+    "2109329850943086846",
+    "2109330455782674902",
+    "2109330459578847368",
+    "2109330942519128229",
+    "2109331077244330456",
+    "2109331280680583382",
+    "2109331833947095477",
+    "2109333001884647629",
+    "2109333564542390412",
+    "2109333703033803046",
+    "2109333866087407642",
+    "2109333965467267187",
+    "2109333976863359013",
+    "2109334214575259808",
+    "2109335469637177466",
+    "2109335723027435528",
+    "2109335752949539058",
+    "2109335799065915435",
+    "2109336297441755539",
+    "2109336477305909584",
+    "2109336524860915863",
+    "2109337550389117086",
+    "2109338572956312031",
+    "2109338772701655129",
+    "2109340019940843781",
+    "2109340162857615719",
+    "2109340195304702142",
+    "2109341865598149005",
+    "2109341901820453021",
+    "2109341950419599485",
+    "2109342070179873129",
+    "2109342962501255270",
+    "2109343615512461360",
+    "2109344584849559912"
    ],
-   "retryIds": [],
-   "errors": [],
+   "retryIds": [
+    "2109342114446512417"
+   ],
+   "errors": [
+    {
+     "code": "missing-id",
+     "id": "2109342114446512417"
+    }
+   ],
    "inference": {
-    "attemptedAt": "2026-10-11T16:52:11.753Z",
-    "observedAt": "2026-10-11T16:52:41.684Z",
+    "attemptedAt": "2026-10-11T18:22:04.899Z",
+    "observedAt": "2026-10-11T18:23:09.656Z",
     "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 19,
-    "retryCount": 0
+    "status": "partial",
+    "reasonCode": "invalid-response",
+    "acceptedCount": 39,
+    "retryCount": 1
    }
   },
   "live_chunk-1": {
    "acceptedIds": [
-    "2109297984689345020",
-    "2109297985830207621",
-    "2109298322036928886",
-    "2109298656503611573",
-    "2109299408021893614",
-    "2109301630210646146",
-    "2109301640259932424",
-    "2109302027314475141",
-    "2109302084185055585",
-    "2109302935893221743",
-    "2109304728572035095",
-    "2109305508674818466",
-    "2109305543986696690",
-    "2109305706637652125",
-    "2109306104739926106",
-    "2109306780874592761",
-    "2109307675301351592",
-    "2109308446105354389",
-    "2109308702264283402",
-    "2109309313122435302"
+    "2109344644689547530",
+    "2109345270857351594",
+    "2109347557772046686",
+    "2109348552195412317"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T15:53:03.163Z",
-    "observedAt": "2026-10-11T15:53:29.939Z",
+    "attemptedAt": "2026-10-11T18:23:09.666Z",
+    "observedAt": "2026-10-11T18:23:19.188Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 20,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -2195,24 +3052,32 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T16:52:11.753Z",
-   "observedAt": "2026-10-11T16:52:41.684Z",
+   "attemptedAt": "2026-10-11T18:23:09.666Z",
+   "observedAt": "2026-10-11T18:23:19.188Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T16:52:11.753Z",
-   "observedAt": "2026-10-11T16:52:41.684Z",
+   "attemptedAt": "2026-10-11T18:23:09.666Z",
+   "observedAt": "2026-10-11T18:23:19.188Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 4,
    "retryCount": 0
   },
-  "lastFailure": null
+  "lastFailure": {
+   "attemptedAt": "2026-10-11T18:22:04.899Z",
+   "observedAt": "2026-10-11T18:23:09.656Z",
+   "kind": "sync",
+   "status": "partial",
+   "reasonCode": "invalid-response",
+   "acceptedCount": 39,
+   "retryCount": 1
+  }
  },
- "updatedAt": "2026-10-11T16:52:41.692Z"
+ "updatedAt": "2026-10-11T18:23:19.203Z"
 }
