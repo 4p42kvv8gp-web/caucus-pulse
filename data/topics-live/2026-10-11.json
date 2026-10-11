@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-11T11:32:04.253Z",
+ "classifiedAt": "2026-10-11T13:02:17.887Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -55,6 +55,47 @@
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2109259204439498873": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109260865463611760": [],
+  "2109265844081496163": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2109265940580024662": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109266559390621776": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109267037331558911": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109267779740192955": [
+   [
+    "constituent-services",
+    null
    ]
   ]
  },
@@ -249,6 +290,89 @@
     "referenceId": "2109106592524456208",
     "fingerprint": "0639e3317cdcd258a941691274ffc62b698d358e5369014ab1cd5ed38ba3b918"
    }
+  },
+  "2109259204439498873": {
+   "contextVersion": 466,
+   "evidenceSupplied": [
+    {
+     "id": "n_6baae2d36dfa8ca9",
+     "publisher": "The Hill",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6138851-white-house-denies-spacex-conflict-of-interest/",
+     "text": "White House on Trump purchasing SpaceX debt before space order: ‘No conflicts of interest’",
+     "title": "White House on Trump purchasing SpaceX debt before space order: ‘No conflicts of interest’",
+     "publishedAt": "2026-10-09T17:19:00.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5acf3c7c379a9dbb",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/nx-s1-5991899/elon-musk-palmer-luckey-pentagon-drones-ai",
+     "text": "In addition to former House Speaker Newt Gingrich, the other two leaders of the project are SpaceX CEO Elon Musk and Palmer Luckey, the co-founder of defense technology firm Anduril . The study is expected to take 120 days.",
+     "title": "Elon Musk and Palmer Luckey's new Pentagon roles raise ethics worries",
+     "publishedAt": "2026-10-06T09:00:00.000Z",
+     "fetchedAt": "2026-10-06T10:23:20.402Z",
+     "version": 376,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_6baae2d36dfa8ca9"
+   ],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+  },
+  "2109260865463611760": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+  },
+  "2109265844081496163": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+  },
+  "2109265940580024662": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0",
+   "quotedContext": {
+    "id": "2109265844081496163",
+    "authorId": "1730030220",
+    "handle": "DarrenSoto",
+    "createdAt": "2026-10-11T12:52:20.000Z",
+    "textChars": 244,
+    "textHash": "ea295ddd0a42f92e9debe861242386e0772a8d5117c741d3a70588d0ac1e5eb1"
+   }
+  },
+  "2109266559390621776": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+  },
+  "2109267037331558911": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
+  },
+  "2109267779740192955": {
+   "contextVersion": 466,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "fbc4642deac9c7db696d2e419a489e228425bcac4541bd2583a08c077d90c9d0"
   }
  },
  "needsContext": {
@@ -258,11 +382,25 @@
   "2109144115317244147": false,
   "2109159480105529511": false,
   "2109160279875506505": false,
-  "2109228566919487994": false
+  "2109228566919487994": false,
+  "2109259204439498873": false,
+  "2109260865463611760": false,
+  "2109265844081496163": false,
+  "2109265940580024662": false,
+  "2109266559390621776": false,
+  "2109267037331558911": false,
+  "2109267779740192955": false
  },
  "inputBlocks": {},
- "contextVersion": 465,
- "emerging": [],
+ "contextVersion": 466,
+ "emerging": [
+  {
+   "label": "Animal cruelty & welfare legislation",
+   "ids": [
+    "2109260865463611760"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -274,17 +412,26 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109228566919487994"
+    "2109041682398499168",
+    "2109046015647216003",
+    "2109050872433185202",
+    "2109259204439498873",
+    "2109260865463611760",
+    "2109265844081496163",
+    "2109265940580024662",
+    "2109266559390621776",
+    "2109267037331558911",
+    "2109267779740192955"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-11T11:31:59.990Z",
-    "observedAt": "2026-10-11T11:32:04.250Z",
+    "attemptedAt": "2026-10-11T13:02:00.100Z",
+    "observedAt": "2026-10-11T13:02:17.741Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 10,
     "retryCount": 0
    }
   }
@@ -292,24 +439,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-11T11:31:59.990Z",
-   "observedAt": "2026-10-11T11:32:04.250Z",
+   "attemptedAt": "2026-10-11T13:02:00.100Z",
+   "observedAt": "2026-10-11T13:02:17.741Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-11T11:31:59.990Z",
-   "observedAt": "2026-10-11T11:32:04.250Z",
+   "attemptedAt": "2026-10-11T13:02:00.100Z",
+   "observedAt": "2026-10-11T13:02:17.741Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-11T11:32:04.254Z"
+ "updatedAt": "2026-10-11T13:02:17.890Z"
 }
