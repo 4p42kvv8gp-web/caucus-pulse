@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-11T18:23:19.361Z",
+ "generatedAt": "2026-10-11T19:52:48.710Z",
  "incidents": [
+  {
+   "id": "newport-beach-ca--flooding--hurricanemarie--2026-10-11",
+   "kind": "flooding",
+   "name": "Hurricane Marie",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Newport Beach, CA · CA-47",
+   "placeRaw": "Newport Beach, CA",
+   "district": "CA-47",
+   "districtMatch": true,
+   "handle": "@CongressMin",
+   "member": "Dave Min",
+   "since": "2026-10-11T18:53:38.000Z",
+   "last": "2026-10-11T18:53:38.000Z",
+   "updates": 1,
+   "engN": 1,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Hurricane Marie · Newport Beach, CA",
+   "evidence": {
+    "span": "While city beaches remain open, Newport Pier, Balboa Pier, and the Wedge (rock jetty to M Street) remain temporarily closed.\n \nResidents and visitors are urged to observe all posted closures, stay off protective sand berms, and maintain a safe distance from active work areas as City crews continue reinforcing coastal flood protections.",
+    "exact": true,
+    "start": 369,
+    "end": 706,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2109356771412508834",
+    "url": "https://x.com/i/web/status/2109356771412508834"
+   },
+   "timeline": [
+    {
+     "id": "2109356771412508834",
+     "sourceId": "2109356771412508834",
+     "url": "https://x.com/i/web/status/2109356771412508834",
+     "authorId": "1858680194112065536",
+     "personId": "member:dave min",
+     "referenceIds": [],
+     "time": "2026-10-11T18:53:38.000Z",
+     "who": "@CongressMin",
+     "tag": "member",
+     "text": "We are continuing to closely monitor coastal conditions in Newport Beach as elevated surf and unusually high ocean water levels impact our coastline. Governor Newsom’s declaration of a state emergency in response to Hurricane Marie and in anticipation of El Nino means that Orange County and our local cities will be eligible for the federal and state aid they need.\n \nWhile city beaches remain open, Newport Pier, Balboa Pier, and the Wedge (rock jetty to M Street) remain temporarily closed.\n \nResidents and visitors are urged to observe all posted closures, stay off protective sand berms, and maintain a safe distance from active work areas as City crews continue reinforcing coastal flood protections.\n \nPlease continue to exercise caution, follow guidance from local authorities, and prioritize your safety.",
+     "engN": 1,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Newport Beach, CA",
+      "name": "Hurricane Marie"
+     },
+     "evidence": {
+      "span": "While city beaches remain open, Newport Pier, Balboa Pier, and the Wedge (rock jetty to M Street) remain temporarily closed.\n \nResidents and visitors are urged to observe all posted closures, stay off protective sand berms, and maintain a safe distance from active work areas as City crews continue reinforcing coastal flood protections.",
+      "exact": true,
+      "start": 369,
+      "end": 706,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2109356771412508834",
+      "url": "https://x.com/i/web/status/2109356771412508834"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2109356771412508834"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2109356771412508834"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "san-diego-county-ca--flooding--source-2109328225755079066",
    "kind": "flooding",
