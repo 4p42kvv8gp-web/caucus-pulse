@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-10T23:43:24.810Z",
+ "generatedAt": "2026-10-11T01:03:12.577Z",
  "incidents": [
+  {
+   "id": "long-beach-ny--severe-storm--source-2109075503328231746",
+   "kind": "severe storm",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "severe storm"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Long Beach, NY",
+   "placeRaw": "Long Beach, NY",
+   "district": "CA-42",
+   "districtMatch": false,
+   "handle": "@RepRobertGarcia",
+   "member": "Robert Garcia",
+   "since": "2026-10-11T00:15:59.000Z",
+   "last": "2026-10-11T00:15:59.000Z",
+   "updates": 1,
+   "engN": 28,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Severe storm · Long Beach, NY",
+   "evidence": {
+    "span": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please",
+    "exact": false,
+    "start": 0,
+    "end": 139,
+    "matched": {
+     "kind": false,
+     "place": true
+    },
+    "sourceId": "2109075503328231746",
+    "url": "https://x.com/i/web/status/2109075503328231746"
+   },
+   "timeline": [
+    {
+     "id": "2109075503328231746",
+     "sourceId": "2109075503328231746",
+     "url": "https://x.com/i/web/status/2109075503328231746",
+     "authorId": "1602792195878047744",
+     "personId": "member:robert garcia",
+     "referenceIds": [],
+     "time": "2026-10-11T00:15:59.000Z",
+     "who": "@RepRobertGarcia",
+     "tag": "member",
+     "text": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please sign up at https://t.co/DrGhvUNYl3. Keep impacted residents, and our fire, police and beach personnel in your thoughts and prayers.",
+     "engN": 28,
+     "isNew": false,
+     "flag": {
+      "kind": "severe storm",
+      "place": "Long Beach, NY",
+      "name": null
+     },
+     "evidence": {
+      "span": "Long Beach is bracing for a very difficult day ahead. All residents along our coast should be tuned into emergency alerts from city. Please",
+      "exact": false,
+      "start": 0,
+      "end": 139,
+      "matched": {
+       "kind": false,
+       "place": true
+      },
+      "sourceId": "2109075503328231746",
+      "url": "https://x.com/i/web/status/2109075503328231746"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2109075503328231746"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2109075503328231746"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "osceola-county-fl--hurricane--hurricaneisaias--2026-10-09",
    "kind": "hurricane",

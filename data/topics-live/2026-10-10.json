@@ -1,7 +1,7 @@
 {
  "date": "2026-10-10",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-10T23:43:24.673Z",
+ "classifiedAt": "2026-10-11T01:03:12.420Z",
  "assignments": {
   "2108770325605253396": [],
   "2108770635963146745": [
@@ -2022,9 +2022,115 @@
     "democracy",
     "corruption-ethics"
    ]
+  ],
+  "2109067272425816302": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109069520006484450": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2109070178361454994": [],
+  "2109070359488238044": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109071724608172313": [],
+  "2109072934551646456": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109073238487670874": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2109075303289233822": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109075503328231746": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109076169459208588": [
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2109076394001248322": [
+   [
+    "democracy",
+    "press-speech"
+   ]
+  ],
+  "2109080134485455054": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "civil-rights",
+    null
+   ]
+  ],
+  "2109083680324923572": [
+   [
+    "tech",
+    "ai-policy"
+   ]
+  ],
+  "2109083929013580198": [
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109086531004866593": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2109075503328231746": {
+   "kind": "severe storm",
+   "place": "Long Beach, NY",
+   "name": null
+  }
+ },
  "provenance": {
   "2108770325605253396": {
    "contextVersion": 443,
@@ -6550,6 +6656,259 @@
     "textChars": 300,
     "textHash": "5c5fea983e0a12fde4d705af01d08c0649b28570d5009089d120093f0fb5d894"
    }
+  },
+  "2109067272425816302": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109069520006484450": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109070178361454994": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "quotedContext": {
+    "id": "2109023282469261805",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-10T20:48:28.000Z",
+    "textChars": 78,
+    "textHash": "89cd86345e8fdeb5554635be2519a361fccb8beb792649a1532fb04140cceaa1"
+   }
+  },
+  "2109070359488238044": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109071724608172313": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109062646716899475",
+    "fingerprint": "e7b1f4a57e9c77a7fecc11d3385126c90d3349d281065dbc937a480b310dd07f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109062646716899475",
+    "fingerprint": "e7b1f4a57e9c77a7fecc11d3385126c90d3349d281065dbc937a480b310dd07f"
+   }
+  },
+  "2109072934551646456": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109073238487670874": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109075303289233822": {
+   "contextVersion": 460,
+   "evidenceSupplied": [
+    {
+     "id": "n_a1048d4a1423d226",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6134525-watch-live-donald-trump-san-antonio-texas-rally-paxton-de-la-cruz-gop-midterms/",
+     "text": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
+     "title": "Watch live: Trump rallies Texas Republicans amid midterm warning signs",
+     "publishedAt": "2026-10-07T21:00:00.000Z",
+     "fetchedAt": "2026-10-07T21:49:43.308Z",
+     "version": 403,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_80cd98bfc7a4d08a",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6134160-talarico-flu-diagnosis-attack-ads/",
+     "text": "Talarico steps off Texas Senate campaign trail after flu diagnosis",
+     "title": "Talarico steps off Texas Senate campaign trail after flu diagnosis",
+     "publishedAt": "2026-10-07T17:18:51.000Z",
+     "fetchedAt": "2026-10-07T18:49:59.947Z",
+     "version": 400,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_80cd98bfc7a4d08a"
+   ],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "quotedContext": {
+    "id": "2108987933055144086",
+    "authorId": "44513878",
+    "handle": "TexasTribune",
+    "createdAt": "2026-10-10T18:28:00.000Z",
+    "textChars": 235,
+    "textHash": "e7d391d93ed0a12664a522b3a9f18c13c684047f898b8cdf514a61b12a4aa225"
+   }
+  },
+  "2109075503328231746": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109076169459208588": {
+   "contextVersion": 460,
+   "evidenceSupplied": [
+    {
+     "id": "n_616ddbcd2048ed35",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/05crypto/",
+     "text": "Fairshake PAC said it is giving $1 million each to three top House Financial Services panel Republicans — French Hill of Arkansas, the full committee chairman; Bryan Steil of Wisconsin, chairman of the Digital Assets, Financial Technology and Artificial Intelligence Subcommittee; and Bill Huizenga of Michigan, the committee’s vice chair.",
+     "title": "Crypto industry PAC gives to 32 House incumbents, on both sides",
+     "publishedAt": "2026-10-05T15:33:02.000Z",
+     "fetchedAt": "2026-10-05T21:21:42.651Z",
+     "version": 366,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "quotedContext": {
+    "id": "2108182100306284945",
+    "authorId": "2431547652",
+    "handle": "gabriel_zucman",
+    "createdAt": "2026-10-08T13:05:55.000Z",
+    "textChars": 296,
+    "textHash": "cb86f209d1fd3a08f64f3c5ecca61973fc11af00720e32cb7167ba3965cd2b5f"
+   }
+  },
+  "2109076394001248322": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "quotedContext": {
+    "id": "2107843998333169839",
+    "authorId": "10774652",
+    "handle": "theblaze",
+    "createdAt": "2026-10-07T14:42:25.000Z",
+    "textChars": 302,
+    "textHash": "388f9cf170ec42a20b8974230fbc69f539468aa790785c8853767c8f1cda9374"
+   }
+  },
+  "2109080134485455054": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109083680324923572": {
+   "contextVersion": 460,
+   "evidenceSupplied": [
+    {
+     "id": "n_e3140a270e5aca8a",
+     "publisher": "NPR",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/06/g-s1-146626/up-first-newsletter-election-day-skydance-christa-pike-russia-plague-scare",
+     "text": "In four weeks, Election Day will be here , and a series of new polls show Democrats have a decided advantage in the midterms. They are favored to win the House with a narrow majority. Democrats need 218 seats for a majority, and the Cook Political Report forecasts a net gain of five to 15 seats, which would give them between 220 and 230 seats in January. The Senate has shifted more dramatically. Six seats have moved toward the Democrats' direction since June, according to Cook's ratings. Initially seen as a long shot for Democrats, the Senate is now within reach. These projections come as Pre…",
+     "title": "Dems have edge in midterms, poll shows. And, Paramount-Warner Bros. merger to close",
+     "publishedAt": "2026-10-06T11:19:25.000Z",
+     "fetchedAt": "2026-10-06T11:53:58.364Z",
+     "version": 377,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "quotedContext": {
+    "id": "2108495293620650261",
+    "authorId": "244212645",
+    "handle": "JimVandeHei",
+    "createdAt": "2026-10-09T09:50:26.000Z",
+    "textChars": 213,
+    "textHash": "d3ba7ca0a20bb1e02357f0a10013f8a91850a8eb9485dee10fcbfd73d37ba40b"
+   }
+  },
+  "2109083929013580198": {
+   "contextVersion": 460,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510"
+  },
+  "2109086531004866593": {
+   "contextVersion": 460,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "WASHINGTON (AP) — President Donald Trump said he has struck a deal to obtain diesel from Russia, a stunning reversal of years of U.S. pressure on Moscow over its war with Ukraine and an attempt to address high fuel prices ahead of the U.S. midterm elections.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601",
+    "n_8c1e4d4a574719cd"
+   ],
+   "inputHash": "7f94610b3bedcebf001507b43322defa8733803da8e92d20691daefea92f7510",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109032333596918216",
+    "fingerprint": "af069484f5276c4c9941cd9be03a810d7814c3db014c6d894ecea426125ceeed"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109032333596918216",
+    "fingerprint": "af069484f5276c4c9941cd9be03a810d7814c3db014c6d894ecea426125ceeed"
+   }
   }
  },
  "needsContext": {
@@ -6856,10 +7215,25 @@
   "2109061125082108319": false,
   "2109062131102396446": false,
   "2109065151831843306": false,
-  "2109066447247049078": false
+  "2109066447247049078": false,
+  "2109067272425816302": false,
+  "2109069520006484450": false,
+  "2109070178361454994": true,
+  "2109070359488238044": false,
+  "2109071724608172313": false,
+  "2109072934551646456": false,
+  "2109073238487670874": true,
+  "2109075303289233822": false,
+  "2109075503328231746": true,
+  "2109076169459208588": false,
+  "2109076394001248322": false,
+  "2109080134485455054": false,
+  "2109083680324923572": false,
+  "2109083929013580198": false,
+  "2109086531004866593": false
  },
  "inputBlocks": {},
- "contextVersion": 459,
+ "contextVersion": 460,
  "emerging": [
   {
    "label": "AI Kill Switch Act",
@@ -7271,37 +7645,31 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2109053232471593327",
-    "2109054052936094032",
-    "2109054645335416988",
-    "2109055061318127919",
-    "2109055224002548123",
-    "2109055903395680733",
-    "2109056572555174167",
-    "2109056896766247156",
-    "2109056921277780263",
-    "2109057797115596866",
-    "2109057799426875657",
-    "2109058209046479068",
-    "2109058871469711456",
-    "2109059395476713962",
-    "2109059738855968968",
-    "2109060246735859859",
-    "2109060400243253660",
-    "2109061125082108319",
-    "2109062131102396446",
-    "2109065151831843306",
-    "2109066447247049078"
+    "2109067272425816302",
+    "2109069520006484450",
+    "2109070178361454994",
+    "2109070359488238044",
+    "2109071724608172313",
+    "2109072934551646456",
+    "2109073238487670874",
+    "2109075303289233822",
+    "2109075503328231746",
+    "2109076169459208588",
+    "2109076394001248322",
+    "2109080134485455054",
+    "2109083680324923572",
+    "2109083929013580198",
+    "2109086531004866593"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-10T23:42:54.152Z",
-    "observedAt": "2026-10-10T23:43:24.663Z",
+    "attemptedAt": "2026-10-11T01:02:26.845Z",
+    "observedAt": "2026-10-11T01:03:12.408Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 21,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   }
@@ -7309,24 +7677,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-10T23:42:54.152Z",
-   "observedAt": "2026-10-10T23:43:24.663Z",
+   "attemptedAt": "2026-10-11T01:02:26.845Z",
+   "observedAt": "2026-10-11T01:03:12.408Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-10T23:42:54.152Z",
-   "observedAt": "2026-10-10T23:43:24.663Z",
+   "attemptedAt": "2026-10-11T01:02:26.845Z",
+   "observedAt": "2026-10-11T01:03:12.408Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 15,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-10T23:43:24.676Z"
+ "updatedAt": "2026-10-11T01:03:12.425Z"
 }
