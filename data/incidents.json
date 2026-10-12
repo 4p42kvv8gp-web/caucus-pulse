@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-12T02:37:01.748Z",
+ "generatedAt": "2026-10-12T04:06:58.406Z",
  "incidents": [
   {
    "id": "santa-clarita-ca--wildfire--bikefire--2026-10-11",
@@ -1327,7 +1327,7 @@
    }
   },
   {
-   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-04",
+   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-05",
    "kind": "wildfire",
    "name": "Bouquet Fire",
    "eventIdentity": "named-source-supported",
@@ -1340,22 +1340,13 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 5,
+    "statements": 3,
     "resolvedPeople": 1,
-    "accounts": 2,
+    "accounts": 1,
     "unresolvedAccounts": 0,
     "repeated": true,
-    "repeatedSourceGroups": [
-     {
-      "sourceId": "2106739631647760392",
-      "url": "https://x.com/i/web/status/2106739631647760392",
-      "repeatedBy": [
-       "2106763740050046983",
-       "2106792686778994766"
-      ]
-     }
-    ],
-    "note": "5 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "repeatedSourceGroups": [],
+    "note": "3 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Los Angeles County, CA · CA-27",
    "placeRaw": "Los Angeles County, CA",
@@ -1363,94 +1354,26 @@
    "districtMatch": true,
    "handle": "@gtwhitesides",
    "member": "George Whitesides",
-   "since": "2026-10-04T15:09:52.000Z",
+   "since": "2026-10-05T21:31:24.000Z",
    "last": "2026-10-07T05:14:29.000Z",
-   "updates": 5,
-   "engN": 38,
+   "updates": 3,
+   "engN": 18,
    "amplifiers": 0,
-   "others": [
-    "@Rep_Whitesides"
-   ],
+   "others": [],
    "title": "Bouquet Fire · Los Angeles County, CA",
    "evidence": {
-    "span": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the Co",
+    "span": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
     "exact": false,
     "start": 0,
-    "end": 140,
+    "end": 139,
     "matched": {
      "kind": true,
      "place": false
     },
-    "sourceId": "2106763740050046983",
-    "url": "https://x.com/i/web/status/2106763740050046983"
+    "sourceId": "2107222147492106506",
+    "url": "https://x.com/i/web/status/2107222147492106506"
    },
    "timeline": [
-    {
-     "id": "2106763740050046983",
-     "sourceId": "2106763740050046983",
-     "url": "https://x.com/i/web/status/2106763740050046983",
-     "authorId": "5408852",
-     "personId": "member:george whitesides",
-     "referenceIds": [
-      "2106739631647760392"
-     ],
-     "time": "2026-10-04T15:09:52.000Z",
-     "who": "@gtwhitesides",
-     "tag": "member",
-     "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-     "engN": 8,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Los Angeles County, CA",
-      "name": "Bouquet Fire"
-     },
-     "evidence": {
-      "span": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the Co",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2106763740050046983",
-      "url": "https://x.com/i/web/status/2106763740050046983"
-     }
-    },
-    {
-     "id": "2106792686778994766",
-     "sourceId": "2106792686778994766",
-     "url": "https://x.com/i/web/status/2106792686778994766",
-     "authorId": "1872709283634397185",
-     "personId": "member:george whitesides",
-     "referenceIds": [
-      "2106739631647760392"
-     ],
-     "time": "2026-10-04T17:04:53.000Z",
-     "who": "@Rep_Whitesides",
-     "tag": "repost",
-     "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-     "engN": 12,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Los Angeles County, CA",
-      "name": "Bouquet Fire"
-     },
-     "evidence": {
-      "span": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2106792686778994766",
-      "url": "https://x.com/i/web/status/2106792686778994766"
-     }
-    },
     {
      "id": "2107222147492106506",
      "sourceId": "2107222147492106506",
@@ -1552,118 +1475,21 @@
     }
    ],
    "tweetIds": [
-    "2106763740050046983",
-    "2106792686778994766",
     "2107222147492106506",
     "2107329196406272338",
     "2107701072265625984"
    ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "sourceId": "2106792686778994766",
-      "url": "https://x.com/i/web/status/2106792686778994766",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "sourceId": "2107701072265625984",
-      "url": "https://x.com/i/web/status/2107701072265625984",
-      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "sourceId": "2107222147492106506",
-      "url": "https://x.com/i/web/status/2107222147492106506",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "src": "@gtwhitesides, 2026-10-05T21:31:24.000Z"
-     },
-     {
-      "text": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-      "sourceId": "2106763740050046983",
-      "url": "https://x.com/i/web/status/2106763740050046983",
-      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps. \n\nAs always, huge thanks to the Angeles Nat'l Forest firefighters, the County and Coulson pilots, the Sheriff's Deputies, and other first responders who work so hard to keep us safe. https://t.co/YQANU3E0ib",
-      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "sourceId": "2107701072265625984",
-      "url": "https://x.com/i/web/status/2107701072265625984",
-      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "sourceId": "2107222147492106506",
-      "url": "https://x.com/i/web/status/2107222147492106506",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nFire activity was minimal overnight. Firefighters will continue to build and improve fireline throughout the…",
-      "src": "@gtwhitesides, 2026-10-05T21:31:24.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "sourceId": "2106792686778994766",
-      "url": "https://x.com/i/web/status/2106792686778994766",
-      "evidenceQuote": "RT @Angeles_NF: #BouquetFire\n\nContainment rises to 40% overnight on the 1048-acre Bouquet Fire that was reported yesterday afternoon.\n\nBouq…",
-      "src": "@Rep_Whitesides, 2026-10-04T17:04:53.000Z"
-     },
-     {
-      "text": "Latest on the fire -- some great progress last night in hot temps.",
-      "sourceId": "2106763740050046983",
-      "url": "https://x.com/i/web/status/2106763740050046983",
-      "evidenceQuote": "Latest on the fire -- some great progress last night in hot temps.",
-      "src": "@gtwhitesides, 2026-10-04T15:09:52.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-10-07T07:52:09.410Z",
-    "posts": 5,
-    "inputHash": "04ba72007a77c94cb08d94b903464a1980f6b49402a4495274f801fcf549db15",
-    "rejectedItems": 0
-   },
+   "intel": null,
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
     "independentSourceCount": 0,
     "sourceIds": [
-     "2106763740050046983",
-     "2106792686778994766",
      "2107222147492106506",
      "2107329196406272338",
      "2107701072265625984"
     ],
-    "repeatedSourceGroups": [
-     {
-      "sourceId": "2106739631647760392",
-      "url": "https://x.com/i/web/status/2106739631647760392",
-      "repeatedBy": [
-       "2106763740050046983",
-       "2106792686778994766"
-      ]
-     }
-    ],
+    "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
    }
   }

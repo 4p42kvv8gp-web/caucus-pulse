@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T02:37:01.602Z",
+ "classifiedAt": "2026-10-12T04:06:58.277Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -1866,6 +1866,60 @@
    [
     "economy",
     "tariffs-trade"
+   ]
+  ],
+  "2109474198556987548": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109474201920847907": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109474204600995926": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109476235147350396": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109479189275386052": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ]
+  ],
+  "2109479235425280043": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109488050564964372": [
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ]
  },
@@ -5829,6 +5883,76 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109474198556987548": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c"
+  },
+  "2109474201920847907": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c",
+   "quotedContext": {
+    "id": "2109474198556987548",
+    "authorId": "4669604480",
+    "handle": "AndreaRSalinas",
+    "createdAt": "2026-10-12T02:40:15.000Z",
+    "textChars": 262,
+    "textHash": "6f31e31afdda52027a8b3a4d22a62c2fade0cc595706460f0312cc282019d7fa"
+   }
+  },
+  "2109474204600995926": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c",
+   "quotedContext": {
+    "id": "2109474201920847907",
+    "authorId": "4669604480",
+    "handle": "AndreaRSalinas",
+    "createdAt": "2026-10-12T02:40:16.000Z",
+    "textChars": 104,
+    "textHash": "697153b0a7ad094ba14dc4a867d5b28a8bdb778f2bd0af17e3a0315fd36c95b6"
+   }
+  },
+  "2109476235147350396": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c"
+  },
+  "2109479189275386052": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c"
+  },
+  "2109479235425280043": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c"
+  },
+  "2109488050564964372": {
+   "contextVersion": 479,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "18e004eaf779ad273de7245f4b5722875068b1fdefec9b2e64737601a6de404c",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109485256533508100",
+    "fingerprint": "82ce4596fb576437721ac4740e2c8784ec094dcf9452fc825115bc29dc9c8c85"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109485256533508100",
+    "fingerprint": "82ce4596fb576437721ac4740e2c8784ec094dcf9452fc825115bc29dc9c8c85"
+   }
   }
  },
  "needsContext": {
@@ -6130,10 +6254,17 @@
   "2109461663577751642": false,
   "2109462213551653281": false,
   "2109465330099851515": false,
-  "2109467847332184116": false
+  "2109467847332184116": false,
+  "2109474198556987548": false,
+  "2109474201920847907": false,
+  "2109474204600995926": false,
+  "2109476235147350396": false,
+  "2109479189275386052": false,
+  "2109479235425280043": false,
+  "2109488050564964372": false
  },
  "inputBlocks": {},
- "contextVersion": 478,
+ "contextVersion": 479,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6279,29 +6410,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2108869695650885905",
-    "2109291432317993329",
-    "2109401174189469769",
-    "2109451319509422564",
-    "2109452748563321009",
-    "2109453257672188179",
-    "2109457021162701138",
-    "2109459040501649716",
-    "2109461656937861423",
-    "2109461663577751642",
-    "2109462213551653281",
-    "2109465330099851515",
-    "2109467847332184116"
+    "2109474198556987548",
+    "2109474201920847907",
+    "2109474204600995926",
+    "2109476235147350396",
+    "2109479189275386052",
+    "2109479235425280043",
+    "2109488050564964372"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T02:36:44.588Z",
-    "observedAt": "2026-10-12T02:37:01.569Z",
+    "attemptedAt": "2026-10-12T04:06:47.166Z",
+    "observedAt": "2026-10-12T04:06:58.267Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 13,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -6331,21 +6456,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T02:36:44.588Z",
-   "observedAt": "2026-10-12T02:37:01.569Z",
+   "attemptedAt": "2026-10-12T04:06:47.166Z",
+   "observedAt": "2026-10-12T04:06:58.267Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T02:36:44.588Z",
-   "observedAt": "2026-10-12T02:37:01.569Z",
+   "attemptedAt": "2026-10-12T04:06:47.166Z",
+   "observedAt": "2026-10-12T04:06:58.267Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 13,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6358,5 +6483,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T02:37:01.606Z"
+ "updatedAt": "2026-10-12T04:06:58.280Z"
 }
