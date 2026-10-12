@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T01:07:28.212Z",
+ "classifiedAt": "2026-10-12T02:37:01.602Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -1823,6 +1823,50 @@
     "foreign-policy",
     "military-veterans"
    ]
+  ],
+  "2109451319509422564": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109452748563321009": [],
+  "2109453257672188179": [],
+  "2109457021162701138": [
+   [
+    "healthcare",
+    "public-health"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2109459040501649716": [],
+  "2109461656937861423": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2109461663577751642": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109462213551653281": [],
+  "2109465330099851515": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109467847332184116": [
+   [
+    "economy",
+    "tariffs-trade"
+   ]
   ]
  },
  "incidents": {
@@ -2482,53 +2526,6 @@
     "createdAt": "2026-10-11T03:34:43.000Z",
     "textChars": 282,
     "textHash": "1790d1762c74605cec25afda28b1bb3f0a9b56a233213a2ccad61f276e7113df"
-   }
-  },
-  "2109291432317993329": {
-   "contextVersion": 469,
-   "evidenceSupplied": [
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_e47630a7d50a3180",
-     "publisher": "The Hill",
-     "date": "2026-10-04",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6128552-russia-threatens-ukraine-military-strikes/",
-     "text": "Russia threatens more strikes after Zelensky vows to hit oil refineries",
-     "title": "Russia threatens more strikes after Zelensky vows to hit oil refineries",
-     "publishedAt": "2026-10-04T21:45:31.000Z",
-     "fetchedAt": "2026-10-04T22:04:45.961Z",
-     "version": 350,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8c1e4d4a574719cd"
-   ],
-   "inputHash": "2b04e3738571dd190fc3204e15fb7c4bcf83178620ea62cab32cfbcf07471879",
-   "quotedContext": {
-    "id": "2109131984698015978",
-    "authorId": "2037309341649252352",
-    "handle": "RedWisco26",
-    "createdAt": "2026-10-11T04:00:25.000Z",
-    "textChars": 46,
-    "textHash": "927f906a64db351409d2ada255dd042a208c8a1823a7d9bdf559f90bb0ead3e5"
    }
   },
   "2109292267529719922": {
@@ -4639,36 +4636,6 @@
    "evidenceUsed": [],
    "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5"
   },
-  "2109401174189469769": {
-   "contextVersion": 474,
-   "evidenceSupplied": [
-    {
-     "id": "n_62c2e05aebf20a43",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
-     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
-     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
-     "publishedAt": "2026-10-10T00:07:02.000Z",
-     "fetchedAt": "2026-10-10T00:49:36.583Z",
-     "version": 441,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "1b68d9bb8ba608666193bb405b7f12b658b7ea6cd55a62fca6df6cf6b2fba3b5",
-   "quotedContext": {
-    "id": "2109058536995213620",
-    "authorId": "1137701",
-    "handle": "DavidSacks",
-    "createdAt": "2026-10-10T23:08:34.000Z",
-    "textChars": 135,
-    "textHash": "02fd49fdc38c17fb2e8802d3d17851a8ecc405724c7a442ea253fa28622dc0dd"
-   }
-  },
   "2109401268149961016": {
    "contextVersion": 474,
    "evidenceSupplied": [],
@@ -5638,6 +5605,230 @@
    ],
    "evidenceUsed": [],
    "inputHash": "4f70bdfcb851d93ffa9e24a5f51bb3ab076cb41c6aa4a4dd4ea52650c94081d6"
+  },
+  "2109291432317993329": {
+   "contextVersion": 478,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "RASCOE: The president pretty recently signed in new sanctions against Russia. There's a 2022 law against importing any oil or petroleum products until Russia ends its war against Ukraine. So what is the president doing?",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd"
+   ],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07",
+   "quotedContext": {
+    "id": "2109131984698015978",
+    "authorId": "2037309341649252352",
+    "handle": "RedWisco26",
+    "createdAt": "2026-10-11T04:00:25.000Z",
+    "textChars": 46,
+    "textHash": "927f906a64db351409d2ada255dd042a208c8a1823a7d9bdf559f90bb0ead3e5"
+   }
+  },
+  "2109401174189469769": {
+   "contextVersion": 478,
+   "evidenceSupplied": [
+    {
+     "id": "n_62c2e05aebf20a43",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/energy-environment/6140146-zelensky-blasts-trump-russia-diesel-deal/",
+     "text": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "title": "Zelensky decries US-Russia diesel deal: ‘Gifts to Putin will not bring peace’",
+     "publishedAt": "2026-10-10T00:07:02.000Z",
+     "fetchedAt": "2026-10-10T00:49:36.583Z",
+     "version": 441,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07",
+   "quotedContext": {
+    "id": "2109058536995213620",
+    "authorId": "1137701",
+    "handle": "DavidSacks",
+    "createdAt": "2026-10-10T23:08:34.000Z",
+    "textChars": 135,
+    "textHash": "02fd49fdc38c17fb2e8802d3d17851a8ecc405724c7a442ea253fa28622dc0dd"
+   }
+  },
+  "2109451319509422564": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109452748563321009": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109453257672188179": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109457021162701138": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109459040501649716": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109461656937861423": {
+   "contextVersion": 478,
+   "evidenceSupplied": [
+    {
+     "id": "n_e030cbbd1af467fa",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132210-hegseth-welcomes-uss-abraham-lincoln/",
+     "text": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "title": "Hegseth to welcome USS Abraham Lincoln in San Diego after lengthy deployment",
+     "publishedAt": "2026-10-06T19:21:28.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f96d0ec5d5f2b481",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6134261-watch-live-pete-hegseth-uss-abraham-lincoln-middle-east-return-us-california/",
+     "text": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
+     "title": "Watch live: Hegseth delivers remarks as USS Abraham Lincoln returns",
+     "publishedAt": "2026-10-07T17:47:11.000Z",
+     "fetchedAt": "2026-10-07T18:49:59.947Z",
+     "version": 400,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_f96d0ec5d5f2b481"
+   ],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109461663577751642": {
+   "contextVersion": 478,
+   "evidenceSupplied": [
+    {
+     "id": "n_ba288f0ae4381f04",
+     "publisher": "Roll Call",
+     "date": "2026-10-06",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
+     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
+     "title": "Time for yet another debate over daylight, spurred by Trump",
+     "publishedAt": "2026-10-06T19:00:12.000Z",
+     "fetchedAt": "2026-10-07T00:41:22.631Z",
+     "version": 388,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bd5a07d765da55b6",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/at-the-races-unleash-obama/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Unleash Obama",
+     "publishedAt": "2026-10-08T17:05:00.000Z",
+     "fetchedAt": "2026-10-08T23:04:42.009Z",
+     "version": 421,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109462213551653281": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07",
+   "quotedContext": {
+    "id": "2109429189535584637",
+    "authorId": "27063001",
+    "handle": "SunDevilVB",
+    "createdAt": "2026-10-11T23:41:24.000Z",
+    "textChars": 175,
+    "textHash": "1fb5c0148ab1cc659594eac75ce4d94f4d4c93f39a667efac910c7c1e7e70f32"
+   }
+  },
+  "2109465330099851515": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
+  },
+  "2109467847332184116": {
+   "contextVersion": 478,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07"
   }
  },
  "needsContext": {
@@ -5680,7 +5871,6 @@
   "2109290029210272076": false,
   "2109290681055555811": false,
   "2109290787242414552": false,
-  "2109291432317993329": false,
   "2109292267529719922": false,
   "2109292957996106088": false,
   "2109293446225609096": false,
@@ -5857,7 +6047,6 @@
   "2109398316727587059": false,
   "2109400234803474479": false,
   "2109400566812013040": false,
-  "2109401174189469769": false,
   "2109401268149961016": false,
   "2109402337064157310": false,
   "2109402871531733261": false,
@@ -5929,10 +6118,22 @@
   "2109444153117470800": false,
   "2109444450384760982": false,
   "2109444698524037590": false,
-  "2109448976504434748": false
+  "2109448976504434748": false,
+  "2109291432317993329": false,
+  "2109401174189469769": false,
+  "2109451319509422564": false,
+  "2109452748563321009": false,
+  "2109453257672188179": false,
+  "2109457021162701138": false,
+  "2109459040501649716": false,
+  "2109461656937861423": false,
+  "2109461663577751642": false,
+  "2109462213551653281": false,
+  "2109465330099851515": false,
+  "2109467847332184116": false
  },
  "inputBlocks": {},
- "contextVersion": 477,
+ "contextVersion": 478,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6059,6 +6260,12 @@
    "ids": [
     "2109411311570260105"
    ]
+  },
+  {
+   "label": "sports prediction markets gambling regulation bill",
+   "ids": [
+    "2109452748563321009"
+   ]
   }
  ],
  "unclassified": [],
@@ -6072,37 +6279,29 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109075303289233822",
-    "2109431326923477411",
-    "2109431636588744912",
-    "2109433144558702647",
-    "2109434006462996581",
-    "2109436418640519430",
-    "2109437396752138494",
-    "2109437660959760654",
-    "2109437975922663472",
-    "2109438383621619920",
-    "2109438649750233475",
-    "2109438732835185075",
-    "2109439038218256796",
-    "2109439323527684432",
-    "2109443061889835257",
-    "2109443091921084738",
-    "2109443603567378485",
-    "2109444153117470800",
-    "2109444450384760982",
-    "2109444698524037590",
-    "2109448976504434748"
+    "2108869695650885905",
+    "2109291432317993329",
+    "2109401174189469769",
+    "2109451319509422564",
+    "2109452748563321009",
+    "2109453257672188179",
+    "2109457021162701138",
+    "2109459040501649716",
+    "2109461656937861423",
+    "2109461663577751642",
+    "2109462213551653281",
+    "2109465330099851515",
+    "2109467847332184116"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T01:06:57.800Z",
-    "observedAt": "2026-10-12T01:07:28.188Z",
+    "attemptedAt": "2026-10-12T02:36:44.588Z",
+    "observedAt": "2026-10-12T02:37:01.569Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 21,
+    "acceptedCount": 13,
     "retryCount": 0
    }
   },
@@ -6132,21 +6331,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T01:06:57.800Z",
-   "observedAt": "2026-10-12T01:07:28.188Z",
+   "attemptedAt": "2026-10-12T02:36:44.588Z",
+   "observedAt": "2026-10-12T02:37:01.569Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T01:06:57.800Z",
-   "observedAt": "2026-10-12T01:07:28.188Z",
+   "attemptedAt": "2026-10-12T02:36:44.588Z",
+   "observedAt": "2026-10-12T02:37:01.569Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 21,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6159,5 +6358,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T01:07:28.215Z"
+ "updatedAt": "2026-10-12T02:37:01.606Z"
 }
