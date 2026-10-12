@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T04:06:58.277Z",
+ "classifiedAt": "2026-10-12T16:08:42.919Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -5660,53 +5660,6 @@
    "evidenceUsed": [],
    "inputHash": "4f70bdfcb851d93ffa9e24a5f51bb3ab076cb41c6aa4a4dd4ea52650c94081d6"
   },
-  "2109291432317993329": {
-   "contextVersion": 478,
-   "evidenceSupplied": [
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "RASCOE: The president pretty recently signed in new sanctions against Russia. There's a 2022 law against importing any oil or petroleum products until Russia ends its war against Ukraine. So what is the president doing?",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8c1e4d4a574719cd"
-   ],
-   "inputHash": "f35be7e6218d136e2bf130be9e7b46ba12715e6682ff860f6043fc85f7496a07",
-   "quotedContext": {
-    "id": "2109131984698015978",
-    "authorId": "2037309341649252352",
-    "handle": "RedWisco26",
-    "createdAt": "2026-10-11T04:00:25.000Z",
-    "textChars": 46,
-    "textHash": "927f906a64db351409d2ada255dd042a208c8a1823a7d9bdf559f90bb0ead3e5"
-   }
-  },
   "2109401174189469769": {
    "contextVersion": 478,
    "evidenceSupplied": [
@@ -5952,6 +5905,54 @@
     "reason": null,
     "referenceId": "2109485256533508100",
     "fingerprint": "82ce4596fb576437721ac4740e2c8784ec094dcf9452fc825115bc29dc9c8c85"
+   }
+  },
+  "2109291432317993329": {
+   "contextVersion": 485,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "RASCOE: The president pretty recently signed in new sanctions against Russia. There's a 2022 law against importing any oil or petroleum products until Russia ends its war against Ukraine. So what is the president doing?",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd",
+    "n_8ff3d20cec3e8e38"
+   ],
+   "inputHash": "cd55500d50c66867eecbf38830577edce61004d644af80a3568ab96e515b9d2f",
+   "quotedContext": {
+    "id": "2109131984698015978",
+    "authorId": "2037309341649252352",
+    "handle": "RedWisco26",
+    "createdAt": "2026-10-11T04:00:25.000Z",
+    "textChars": 46,
+    "textHash": "927f906a64db351409d2ada255dd042a208c8a1823a7d9bdf559f90bb0ead3e5"
    }
   }
  },
@@ -6243,7 +6244,6 @@
   "2109444450384760982": false,
   "2109444698524037590": false,
   "2109448976504434748": false,
-  "2109291432317993329": false,
   "2109401174189469769": false,
   "2109451319509422564": false,
   "2109452748563321009": false,
@@ -6261,10 +6261,11 @@
   "2109476235147350396": false,
   "2109479189275386052": false,
   "2109479235425280043": false,
-  "2109488050564964372": false
+  "2109488050564964372": false,
+  "2109291432317993329": false
  },
  "inputBlocks": {},
- "contextVersion": 479,
+ "contextVersion": 485,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6410,45 +6411,43 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109474198556987548",
-    "2109474201920847907",
-    "2109474204600995926",
-    "2109476235147350396",
-    "2109479189275386052",
-    "2109479235425280043",
-    "2109488050564964372"
+    "2109291432317993329",
+    "2109664501867974807",
+    "2109664716926648814",
+    "2109665158230331680",
+    "2109665169991479457",
+    "2109665544307605872",
+    "2109666115445997641",
+    "2109666116796846418",
+    "2109666280928322007",
+    "2109666462637945140",
+    "2109666714715934816",
+    "2109666854474076452",
+    "2109667082606407710",
+    "2109667173396341138",
+    "2109667276710363611",
+    "2109667400430031102",
+    "2109667461356265965",
+    "2109667676746621251",
+    "2109667913737117761",
+    "2109667926139973669",
+    "2109668767399604374",
+    "2109670289613185448",
+    "2109670395485761697",
+    "2109670511504466341",
+    "2109670957589618844",
+    "2109671029282947282",
+    "2109671820928688588"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T04:06:47.166Z",
-    "observedAt": "2026-10-12T04:06:58.267Z",
+    "attemptedAt": "2026-10-12T16:07:30.837Z",
+    "observedAt": "2026-10-12T16:08:07.397Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2109403261249716653",
-    "2109403675818967442",
-    "2109404001640829112",
-    "2109404479678537789",
-    "2109404595399082197",
-    "2109404676810481799",
-    "2109405246711894312"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-11T22:07:25.553Z",
-    "observedAt": "2026-10-11T22:07:36.654Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 27,
     "retryCount": 0
    }
   }
@@ -6456,21 +6455,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T04:06:47.166Z",
-   "observedAt": "2026-10-12T04:06:58.267Z",
+   "attemptedAt": "2026-10-12T16:07:30.837Z",
+   "observedAt": "2026-10-12T16:08:07.397Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 27,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T04:06:47.166Z",
-   "observedAt": "2026-10-12T04:06:58.267Z",
+   "attemptedAt": "2026-10-12T16:07:30.837Z",
+   "observedAt": "2026-10-12T16:08:07.397Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 27,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6483,5 +6482,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T04:06:58.280Z"
+ "updatedAt": "2026-10-12T16:08:42.925Z"
 }
