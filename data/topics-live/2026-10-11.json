@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T16:08:42.919Z",
+ "classifiedAt": "2026-10-12T17:39:40.449Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -2243,43 +2243,6 @@
   "2109272867363852653": {
    "contextVersion": 467,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "8342b3df1996026ab6d1a00751373654349f9765bbdefeba12149a7cef037807"
-  },
-  "2109275370948063353": {
-   "contextVersion": 467,
-   "evidenceSupplied": [
-    {
-     "id": "n_bd5a07d765da55b6",
-     "publisher": "Roll Call",
-     "date": "2026-10-08",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/08/at-the-races-unleash-obama/",
-     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
-     "title": "At the Races: Unleash Obama",
-     "publishedAt": "2026-10-08T17:05:00.000Z",
-     "fetchedAt": "2026-10-08T23:04:42.009Z",
-     "version": 421,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_ba288f0ae4381f04",
-     "publisher": "Roll Call",
-     "date": "2026-10-06",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/06/time-for-yet-another-debate-over-daylight-spurred-by-trump/",
-     "text": "“To the Great People of Arkansas, please let your Senator know it would be a GREAT Bipartisan WIN for the United States Senate,” Trump said in a Saturday post on Truth Social. “Call Tom on his cellphone.”",
-     "title": "Time for yet another debate over daylight, spurred by Trump",
-     "publishedAt": "2026-10-06T19:00:12.000Z",
-     "fetchedAt": "2026-10-07T00:41:22.631Z",
-     "version": 388,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "8342b3df1996026ab6d1a00751373654349f9765bbdefeba12149a7cef037807"
   },
@@ -5954,6 +5917,43 @@
     "textChars": 46,
     "textHash": "927f906a64db351409d2ada255dd042a208c8a1823a7d9bdf559f90bb0ead3e5"
    }
+  },
+  "2109275370948063353": {
+   "contextVersion": 486,
+   "evidenceSupplied": [
+    {
+     "id": "n_5eff723e7f7bf1af",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6142951-bisignano-social-security-longevity/",
+     "text": "Social Security commissioner predicts program will last ‘for another 90 years’",
+     "title": "Social Security commissioner predicts program will last ‘for another 90 years’",
+     "publishedAt": "2026-10-12T16:07:54.000Z",
+     "fetchedAt": "2026-10-12T16:51:43.988Z",
+     "version": 486,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_bd5a07d765da55b6",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/at-the-races-unleash-obama/",
+     "text": "Welcome to At the Races! Each week we bring you news and analysis from the CQ Roll Call campaign team. Know someone who’d like to get this newsletter? They can subscribe here .",
+     "title": "At the Races: Unleash Obama",
+     "publishedAt": "2026-10-08T17:05:00.000Z",
+     "fetchedAt": "2026-10-08T23:04:42.009Z",
+     "version": 421,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "b9d9aaadb4092693cdac1e2e7563a99ff4dd7121ebf5ecce59e5f223422a8603"
   }
  },
  "needsContext": {
@@ -5975,7 +5975,6 @@
   "2109271045504917759": false,
   "2109271071404785977": false,
   "2109272867363852653": false,
-  "2109275370948063353": false,
   "2109275662628303231": false,
   "2109276194545758394": false,
   "2109278159409398187": false,
@@ -6262,10 +6261,11 @@
   "2109479189275386052": false,
   "2109479235425280043": false,
   "2109488050564964372": false,
-  "2109291432317993329": false
+  "2109291432317993329": false,
+  "2109275370948063353": false
  },
  "inputBlocks": {},
- "contextVersion": 485,
+ "contextVersion": 486,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6411,43 +6411,46 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109291432317993329",
-    "2109664501867974807",
-    "2109664716926648814",
-    "2109665158230331680",
-    "2109665169991479457",
-    "2109665544307605872",
-    "2109666115445997641",
-    "2109666116796846418",
-    "2109666280928322007",
-    "2109666462637945140",
-    "2109666714715934816",
-    "2109666854474076452",
-    "2109667082606407710",
-    "2109667173396341138",
-    "2109667276710363611",
-    "2109667400430031102",
-    "2109667461356265965",
-    "2109667676746621251",
-    "2109667913737117761",
-    "2109667926139973669",
-    "2109668767399604374",
-    "2109670289613185448",
-    "2109670395485761697",
-    "2109670511504466341",
-    "2109670957589618844",
-    "2109671029282947282",
-    "2109671820928688588"
+    "2109275370948063353",
+    "2109677722783948949",
+    "2109677743549841524",
+    "2109678212020318555",
+    "2109678228956750161",
+    "2109678382707274034",
+    "2109678622638317928",
+    "2109678764938629162",
+    "2109679744945959130",
+    "2109680134907199522",
+    "2109680215924379736",
+    "2109680301350047854",
+    "2109681252747939865",
+    "2109681419945472463",
+    "2109681892681191634",
+    "2109682162387521798",
+    "2109682164019126723",
+    "2109682196462358623",
+    "2109682706846187770",
+    "2109682781227724983",
+    "2109682808213979409",
+    "2109683082374893785",
+    "2109683693891514740",
+    "2109683915468210452",
+    "2109684196012900446",
+    "2109684557901643819",
+    "2109684620266471820",
+    "2109684722976866812",
+    "2109684737292013799",
+    "2109684853423624700"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T16:07:30.837Z",
-    "observedAt": "2026-10-12T16:08:07.397Z",
+    "attemptedAt": "2026-10-12T17:37:06.367Z",
+    "observedAt": "2026-10-12T17:37:44.980Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 27,
+    "acceptedCount": 30,
     "retryCount": 0
    }
   }
@@ -6455,21 +6458,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T16:07:30.837Z",
-   "observedAt": "2026-10-12T16:08:07.397Z",
+   "attemptedAt": "2026-10-12T17:37:06.367Z",
+   "observedAt": "2026-10-12T17:37:44.980Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 27,
+   "acceptedCount": 30,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T16:07:30.837Z",
-   "observedAt": "2026-10-12T16:08:07.397Z",
+   "attemptedAt": "2026-10-12T17:37:06.367Z",
+   "observedAt": "2026-10-12T17:37:44.980Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 27,
+   "acceptedCount": 30,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6482,5 +6485,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T16:08:42.925Z"
+ "updatedAt": "2026-10-12T17:39:40.454Z"
 }
