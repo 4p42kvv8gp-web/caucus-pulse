@@ -1,6 +1,101 @@
 {
- "generatedAt": "2026-10-12T17:39:40.615Z",
+ "generatedAt": "2026-10-12T19:08:38.964Z",
  "incidents": [
+  {
+   "id": "newport-beach-ca--flooding--source-2109715247204295159",
+   "kind": "flooding",
+   "name": null,
+   "eventIdentity": "unresolved-source-specific",
+   "kinds": [
+    "flooding"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Newport Beach, CA · CA-47",
+   "placeRaw": "Newport Beach, CA",
+   "district": "CA-47",
+   "districtMatch": true,
+   "handle": "@CongressMin",
+   "member": "Dave Min",
+   "since": "2026-10-12T18:38:06.000Z",
+   "last": "2026-10-12T18:38:06.000Z",
+   "updates": 1,
+   "engN": 3,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Flooding · Newport Beach, CA",
+   "evidence": {
+    "span": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
+    "exact": true,
+    "start": 0,
+    "end": 84,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2109715247204295159",
+    "url": "https://x.com/i/web/status/2109715247204295159"
+   },
+   "timeline": [
+    {
+     "id": "2109715247204295159",
+     "sourceId": "2109715247204295159",
+     "url": "https://x.com/i/web/status/2109715247204295159",
+     "authorId": "1858680194112065536",
+     "personId": "member:dave min",
+     "referenceIds": [],
+     "time": "2026-10-12T18:38:06.000Z",
+     "who": "@CongressMin",
+     "tag": "member",
+     "text": "A quick update from Newport Beach on the coastal flooding impacting our communities.\n\nThankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.\n\nBut a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.\n\nGovernor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
+     "engN": 3,
+     "isNew": false,
+     "flag": {
+      "kind": "flooding",
+      "place": "Newport Beach, CA",
+      "name": null
+     },
+     "evidence": {
+      "span": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
+      "exact": true,
+      "start": 0,
+      "end": 84,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2109715247204295159",
+      "url": "https://x.com/i/web/status/2109715247204295159"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2109715247204295159"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2109715247204295159"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "santa-clarita-ca--wildfire--bikefire--2026-10-11",
    "kind": "wildfire",

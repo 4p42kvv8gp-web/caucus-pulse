@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T17:39:40.449Z",
+ "classifiedAt": "2026-10-12T19:08:38.814Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -5241,53 +5241,6 @@
    "evidenceUsed": [],
    "inputHash": "3ea7107b2b7eb90d602736b3710d47ff83f6381649cd03b42b9ce4d4f0eb589e"
   },
-  "2109371585090228416": {
-   "contextVersion": 476,
-   "evidenceSupplied": [
-    {
-     "id": "n_08cb571284d701f0",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6141837-senate-lawmakers-condemn-russian-oil-deal/",
-     "text": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
-     "title": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
-     "publishedAt": "2026-10-11T22:54:10.000Z",
-     "fetchedAt": "2026-10-11T23:41:46.396Z",
-     "version": 476,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_25e804ad7d09dc2b",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
-     "text": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
-     "title": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
-     "publishedAt": "2026-10-10T22:02:33.000Z",
-     "fetchedAt": "2026-10-11T21:21:29.252Z",
-     "version": 474,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_25e804ad7d09dc2b"
-   ],
-   "inputHash": "677203827a409a4f726f8ab43bcb6456549b615dfd785e9c7ec6cd6f3e86391c",
-   "quotedContext": {
-    "id": "1499398710446358535",
-    "authorId": "15207668",
-    "handle": "HouseGOP",
-    "createdAt": "2022-03-03T14:58:04.000Z",
-    "textChars": 36,
-    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
-   }
-  },
   "2109428745463562690": {
    "contextVersion": 476,
    "evidenceSupplied": [],
@@ -5954,6 +5907,53 @@
    ],
    "evidenceUsed": [],
    "inputHash": "b9d9aaadb4092693cdac1e2e7563a99ff4dd7121ebf5ecce59e5f223422a8603"
+  },
+  "2109371585090228416": {
+   "contextVersion": 487,
+   "evidenceSupplied": [
+    {
+     "id": "n_08cb571284d701f0",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6141837-senate-lawmakers-condemn-russian-oil-deal/",
+     "text": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
+     "title": "Lawmakers in bipartisan statement push back on Trump over Russian oil",
+     "publishedAt": "2026-10-11T22:54:10.000Z",
+     "fetchedAt": "2026-10-11T23:41:46.396Z",
+     "version": 476,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_25e804ad7d09dc2b",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/house/6140830-fitzpatrick-bill-block-russian-oil/",
+     "text": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "title": "Bipartisan bill barring US purchase of Russian oil on the horizon: Fitzpatrick",
+     "publishedAt": "2026-10-10T22:02:33.000Z",
+     "fetchedAt": "2026-10-11T21:21:29.252Z",
+     "version": 474,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_25e804ad7d09dc2b"
+   ],
+   "inputHash": "bf1db6e02be862388ed0254dbea26b99204771a650534ec0af11d8c0c464ff76",
+   "quotedContext": {
+    "id": "1499398710446358535",
+    "authorId": "15207668",
+    "handle": "HouseGOP",
+    "createdAt": "2022-03-03T14:58:04.000Z",
+    "textChars": 36,
+    "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
+   }
   }
  },
  "needsContext": {
@@ -6219,7 +6219,6 @@
   "2109422563923317177": false,
   "2109423161468961085": false,
   "2109426749708591107": false,
-  "2109371585090228416": false,
   "2109428745463562690": false,
   "2109428824811118624": false,
   "2109430781139354032": false,
@@ -6262,10 +6261,11 @@
   "2109479235425280043": false,
   "2109488050564964372": false,
   "2109291432317993329": false,
-  "2109275370948063353": false
+  "2109275370948063353": false,
+  "2109371585090228416": false
  },
  "inputBlocks": {},
- "contextVersion": 486,
+ "contextVersion": 487,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6398,6 +6398,12 @@
    "ids": [
     "2109452748563321009"
    ]
+  },
+  {
+   "label": "Trump Russian diesel sanctions deal",
+   "ids": [
+    "2109371585090228416"
+   ]
   }
  ],
  "unclassified": [],
@@ -6411,46 +6417,26 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109275370948063353",
-    "2109677722783948949",
-    "2109677743549841524",
-    "2109678212020318555",
-    "2109678228956750161",
-    "2109678382707274034",
-    "2109678622638317928",
-    "2109678764938629162",
-    "2109679744945959130",
-    "2109680134907199522",
-    "2109680215924379736",
-    "2109680301350047854",
-    "2109681252747939865",
-    "2109681419945472463",
-    "2109681892681191634",
-    "2109682162387521798",
-    "2109682164019126723",
-    "2109682196462358623",
-    "2109682706846187770",
-    "2109682781227724983",
-    "2109682808213979409",
-    "2109683082374893785",
-    "2109683693891514740",
-    "2109683915468210452",
+    "2109371585090228416",
+    "2109634275859411192",
+    "2109666115445997641",
     "2109684196012900446",
-    "2109684557901643819",
-    "2109684620266471820",
-    "2109684722976866812",
-    "2109684737292013799",
-    "2109684853423624700"
+    "2109700500367216787",
+    "2109700526518472859",
+    "2109701136085033002",
+    "2109701271548764484",
+    "2109701617607942386",
+    "2109701881698136521"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T17:37:06.367Z",
-    "observedAt": "2026-10-12T17:37:44.980Z",
+    "attemptedAt": "2026-10-12T19:07:04.168Z",
+    "observedAt": "2026-10-12T19:07:25.779Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 30,
+    "acceptedCount": 10,
     "retryCount": 0
    }
   }
@@ -6458,21 +6444,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T17:37:06.367Z",
-   "observedAt": "2026-10-12T17:37:44.980Z",
+   "attemptedAt": "2026-10-12T19:07:04.168Z",
+   "observedAt": "2026-10-12T19:07:25.779Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 30,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T17:37:06.367Z",
-   "observedAt": "2026-10-12T17:37:44.980Z",
+   "attemptedAt": "2026-10-12T19:07:04.168Z",
+   "observedAt": "2026-10-12T19:07:25.779Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 30,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6485,5 +6471,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T17:39:40.454Z"
+ "updatedAt": "2026-10-12T19:08:38.818Z"
 }
