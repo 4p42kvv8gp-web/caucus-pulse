@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T08:32:04.851Z",
+ "classifiedAt": "2026-10-12T11:31:40.229Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -51,7 +51,38 @@
     "congress-politics",
     null
    ]
-  ]
+  ],
+  "2109585456127971518": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2109596381002563779": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109598467240890777": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109599977588592645": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2109600151882916218": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2109607788963901442": []
  },
  "incidents": {},
  "provenance": {
@@ -195,6 +226,137 @@
     "referenceId": "2109481180571766882",
     "fingerprint": "abad3556881af46824445c8f3b779c227a09415844248a651d29bd7f2df7554d"
    }
+  },
+  "2109585456127971518": {
+   "contextVersion": 482,
+   "evidenceSupplied": [
+    {
+     "id": "n_65b45fff56cfd7f9",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5968691/midterm-elections-washington-congressional-district",
+     "text": "The 3rd Congressional District is a mix of urban, industrial and rural communities with inland and coastal areas. It prides itself on its political independence. President Trump won this congressional district three times. But Democratic Rep. Marie Gluesenkamp Perez flipped the district blue in 2022. Now, the Republican nominee, state Sen. John Braun, believes he has a shot at winning it back.",
+     "title": "In one of the country's most competitive districts, a Democrat tries to keep her seat",
+     "publishedAt": "2026-10-11T09:00:00.000Z",
+     "fetchedAt": "2026-10-11T09:17:11.583Z",
+     "version": 464,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760"
+  },
+  "2109596381002563779": {
+   "contextVersion": 482,
+   "evidenceSupplied": [
+    {
+     "id": "n_6cfa688fff886c81",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-expressing-concern-about-gop-midterm-chances/",
+     "text": "Confidence is a hallmark of the 80-year-old chief executive’s presidential persona, so his willingness to acknowledge he and other top Republicans are “worried” about a number of races is uncharacteristic. But during exchanges with reporters in the Oval Office, and at campaign stops in Texas, Oklahoma and Ohio, he has done just that.",
+     "title": "Trump expressing concern about GOP midterm chances",
+     "publishedAt": "2026-10-05T14:27:38.000Z",
+     "fetchedAt": "2026-10-05T19:04:45.931Z",
+     "version": 365,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_df3473ea1ed75433",
+     "publisher": "The New York Times",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/07/us/politics/ken-paxton-texas-senate-race.html",
+     "text": "Who Is Ken Paxton Turning to for Help in the Texas Senate Race?",
+     "title": "Who Is Ken Paxton Turning to for Help in the Texas Senate Race?",
+     "publishedAt": "2026-10-07T22:56:44.000Z",
+     "fetchedAt": "2026-10-08T00:04:41.154Z",
+     "version": 405,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760",
+   "quotedContext": {
+    "id": "2109364373131001925",
+    "authorId": "62644902",
+    "handle": "carlwheless",
+    "createdAt": "2026-10-11T19:23:51.000Z",
+    "textChars": 529,
+    "textHash": "b1955b8628fd93a640ee9b68dee31e741f265a2aa9aa27f40f02c9aa54992c5f"
+   }
+  },
+  "2109598467240890777": {
+   "contextVersion": 482,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109371972345843897",
+    "fingerprint": "fe59018a671252ea8425947519cd9bfc461ae8eb9582c3c5f28d8e503e276605"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109371972345843897",
+    "fingerprint": "fe59018a671252ea8425947519cd9bfc461ae8eb9582c3c5f28d8e503e276605"
+   }
+  },
+  "2109599977588592645": {
+   "contextVersion": 482,
+   "evidenceSupplied": [
+    {
+     "id": "n_39125aabb98e6748",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6135792-donald-trump-texas-rally-protesters-response/",
+     "text": "Trump interrupted by protesters at Texas rally: ‘They’re paid by enemies of our nation’",
+     "title": "Trump interrupted by protesters at Texas rally: ‘They’re paid by enemies of our nation’",
+     "publishedAt": "2026-10-08T11:55:55.000Z",
+     "fetchedAt": "2026-10-08T15:20:27.859Z",
+     "version": 414,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760"
+  },
+  "2109600151882916218": {
+   "contextVersion": 482,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760"
+  },
+  "2109607788963901442": {
+   "contextVersion": 482,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "c363794cff3028b3f31f198fc6f0e14e3d7fc9612a24e9e103ed49cb5b745760",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109607512928379347",
+    "fingerprint": "a19c05548e9d014fb185b5eb30073b11cd1bf1be6e37cd72a008483cabf19587"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109607512928379347",
+    "fingerprint": "a19c05548e9d014fb185b5eb30073b11cd1bf1be6e37cd72a008483cabf19587"
+   }
   }
  },
  "needsContext": {
@@ -204,10 +366,16 @@
   "2109499014978699344": false,
   "2109499078807847377": true,
   "2109504463564091448": false,
-  "2109561792192217126": true
+  "2109561792192217126": true,
+  "2109585456127971518": false,
+  "2109596381002563779": false,
+  "2109598467240890777": false,
+  "2109599977588592645": false,
+  "2109600151882916218": false,
+  "2109607788963901442": true
  },
  "inputBlocks": {},
- "contextVersion": 480,
+ "contextVersion": 482,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -230,17 +398,22 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109561792192217126"
+    "2109585456127971518",
+    "2109596381002563779",
+    "2109598467240890777",
+    "2109599977588592645",
+    "2109600151882916218",
+    "2109607788963901442"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T08:31:59.339Z",
-    "observedAt": "2026-10-12T08:32:04.847Z",
+    "attemptedAt": "2026-10-12T11:31:30.806Z",
+    "observedAt": "2026-10-12T11:31:40.225Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   }
@@ -248,24 +421,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T08:31:59.339Z",
-   "observedAt": "2026-10-12T08:32:04.847Z",
+   "attemptedAt": "2026-10-12T11:31:30.806Z",
+   "observedAt": "2026-10-12T11:31:40.225Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T08:31:59.339Z",
-   "observedAt": "2026-10-12T08:32:04.847Z",
+   "attemptedAt": "2026-10-12T11:31:30.806Z",
+   "observedAt": "2026-10-12T11:31:40.225Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-12T08:32:04.853Z"
+ "updatedAt": "2026-10-12T11:31:40.231Z"
 }
