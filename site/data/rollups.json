@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-12T07:51:29.747Z",
- "lastPollAt": "2026-10-12T06:22:16.374Z",
- "lastPollAttemptAt": "2026-10-12T06:22:16.116Z",
+ "generatedAt": "2026-10-12T08:32:10.957Z",
+ "lastPollAt": "2026-10-12T08:31:57.188Z",
+ "lastPollAttemptAt": "2026-10-12T08:31:56.776Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-12T07:51:28.024Z"
+  "referenceAsOf": "2026-10-12T08:32:09.676Z"
  },
  "news": {
   "version": 480,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-12T07:51:28.576Z",
+   "asOf": "2026-10-12T08:32:10.078Z",
    "windowDays": 14,
-   "windowStart": "2026-09-28T07:51:28.576Z",
+   "windowStart": "2026-09-28T08:32:10.078Z",
    "eligibleItems": 1614,
    "withExcerpts": 152,
    "headlineOrSummary": 1462,
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-12",
-  "capturedIn24h": 292,
-  "classifiedIn24h": 292,
-  "taggedIn24h": 246,
+  "capturedIn24h": 293,
+  "classifiedIn24h": 293,
+  "taggedIn24h": 247,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-10-12T07:50:44.297Z",
-   "lastSuccessAt": "2026-10-12T05:36:57.967Z",
-   "capturedIn24h": 292,
-   "classifiedIn24h": 292,
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-10-12T08:31:59.339Z",
+   "lastSuccessAt": "2026-10-12T08:32:04.847Z",
+   "capturedIn24h": 293,
+   "classifiedIn24h": 293,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 6,
+    "posts": 7,
     "mix": [
-     33,
+     29,
      0,
-     67
+     71
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
-    "classified": 6,
-    "tagged": 5,
+    "classified": 7,
+    "tagged": 6,
     "pending": 0,
     "corePosts": 3,
     "coreCounts": {
@@ -6850,7 +6850,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 2989,
+    "posts": 2990,
     "mix": [
      83,
      5,
@@ -6859,8 +6859,8 @@
     "accounts": 334,
     "members": 203,
     "unidentifiedAccounts": 0,
-    "classified": 2989,
-    "tagged": 2727,
+    "classified": 2990,
+    "tagged": 2728,
     "pending": 0,
     "corePosts": 1114,
     "coreCounts": {
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    28,
-    77,
-    90,
-    68,
-    40,
-    21,
+    4,
+    44,
+    84,
+    81,
+    69,
+    29,
+    15,
     2,
     1,
-    14,
-    65,
-    83,
-    72,
-    41,
-    16,
-    0
+    30,
+    71,
+    78,
+    66,
+    33,
+    13,
+    1
    ]
   },
   "CPC": {
@@ -6942,37 +6942,37 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
-    13,
-    39,
-    31,
-    29,
-    16,
-    12,
-    0,
-    0,
-    6,
-    24,
-    29,
+    1,
+    19,
+    44,
+    25,
     28,
-    21,
-    7,
+    15,
+    8,
+    0,
+    0,
+    12,
+    25,
+    27,
+    28,
+    17,
+    6,
     0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 5,
+    "posts": 6,
     "mix": [
-     20,
+     17,
      0,
-     80
+     83
     ],
-    "accounts": 1,
-    "members": 1,
+    "accounts": 2,
+    "members": 2,
     "unidentifiedAccounts": 0,
-    "classified": 5,
-    "tagged": 4,
+    "classified": 6,
+    "tagged": 5,
     "pending": 0,
     "corePosts": 3,
     "coreCounts": {
@@ -6986,7 +6986,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1758,
+    "posts": 1759,
     "mix": [
      82,
      5,
@@ -6995,8 +6995,8 @@
     "accounts": 186,
     "members": 109,
     "unidentifiedAccounts": 0,
-    "classified": 1758,
-    "tagged": 1578,
+    "classified": 1759,
+    "tagged": 1579,
     "pending": 0,
     "corePosts": 598,
     "coreCounts": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    16,
-    43,
-    53,
-    39,
-    26,
-    9,
+    3,
+    24,
+    45,
+    54,
+    40,
+    15,
+    7,
     2,
     1,
-    9,
-    42,
-    52,
-    44,
-    27,
-    12,
-    0
+    20,
+    46,
+    48,
+    39,
+    23,
+    10,
+    1
    ]
   },
   "CBC": {
@@ -7078,21 +7078,21 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
+    3,
+    7,
+    16,
+    11,
+    15,
     5,
-    13,
-    17,
-    13,
-    6,
-    2,
-    2,
     1,
     2,
-    9,
-    27,
-    21,
-    9,
-    7,
+    1,
+    5,
+    10,
+    28,
+    18,
+    8,
+    6,
     0
    ]
   },
@@ -7147,19 +7147,19 @@
    },
    "curve48": [
     0,
-    6,
-    14,
-    14,
-    12,
     10,
-    2,
-    0,
-    0,
-    3,
-    8,
+    15,
     13,
+    13,
+    7,
+    0,
+    0,
+    0,
+    5,
     10,
-    9,
+    11,
+    10,
+    7,
     4,
     0
    ]
@@ -7214,18 +7214,18 @@
     "engDelta": 0
    },
    "curve48": [
-    0,
+    1,
     1,
     9,
-    8,
     7,
+    7,
+    4,
+    0,
+    0,
+    0,
+    1,
+    5,
     3,
-    1,
-    0,
-    0,
-    1,
-    4,
-    4,
     7,
     1,
     1,
@@ -7239,10 +7239,10 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 4,
+     "n": 5,
      "eng": 25,
-     "m": 2,
-     "a": 2
+     "m": 3,
+     "a": 3
     },
     "CPC": {
      "n": 1,
@@ -7251,10 +7251,10 @@
      "a": 1
     },
     "NewDem": {
-     "n": 3,
+     "n": 4,
      "eng": 1,
-     "m": 1,
-     "a": 1
+     "m": 2,
+     "a": 2
     },
     "CBC": {
      "n": 3,
@@ -7277,10 +7277,10 @@
    },
    "w": {
     "All": {
-     "n": 637,
+     "n": 638,
      "eng": 73767,
-     "m": 148,
-     "a": 200
+     "m": 149,
+     "a": 201
     },
     "CPC": {
      "n": 205,
@@ -7289,10 +7289,10 @@
      "a": 78
     },
     "NewDem": {
-     "n": 394,
+     "n": 395,
      "eng": 16857,
-     "m": 86,
-     "a": 117
+     "m": 87,
+     "a": 118
     },
     "CBC": {
      "n": 132,
@@ -7320,9 +7320,9 @@
     109,
     88,
     77,
-    4
+    5
    ],
-   "d": -24,
+   "d": -23,
    "mAvg": 62.7,
    "epAvg": 116,
    "momentum": {
@@ -7331,9 +7331,9 @@
      "caucus spread",
      "volume"
     ],
-    "volume": 0.26,
+    "volume": 0.27,
     "accel": 0,
-    "adoption": 0.2021276595744681,
+    "adoption": 0.21808510638297873,
     "eff": 3.4,
     "engLift": 0
    },
@@ -8217,12 +8217,14 @@
    ],
    "postIds": {
     "t": [
+     "2109561792192217126",
      "2109504463564091448",
      "2109498917872132456",
      "2109498386990969070",
      "2109497713523818954"
     ],
     "w": [
+     "2109561792192217126",
      "2109504463564091448",
      "2109498917872132456",
      "2109498386990969070",
@@ -22520,7 +22522,7 @@
     "extractedAt": "2026-10-12T07:51:07.968Z",
     "posts": 1,
     "inputHash": "b5947054adcf8618852f6a2f4a8506651894fa0ce2797b27d8929d29c111d1d8",
-    "rejectedItems": 1
+    "rejectedItems": 0
    },
    "verification": {
     "status": "unverified",
@@ -23920,6 +23922,36 @@
  ],
  "incidentsFiltered": 2,
  "feed": [
+  {
+   "id": "2109561792192217126",
+   "handle": "@jahimes",
+   "member": "James A. Himes",
+   "district": "CT-04",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "RT @jamestalarico: Here are the details: literally any time, any place, any network.",
+   "topics": [
+    "congress-politics"
+   ],
+   "time": "2026-10-12T08:28:19.000Z",
+   "date": "2026-10-12",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2109481180571766882",
+   "provenance": {
+    "contextVersion": 480,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-12T08:31:57.181Z",
+   "isNew": false
+  },
   {
    "id": "2109504463564091448",
    "handle": "@yassaminansari",
@@ -30894,34 +30926,6 @@
    },
    "metricsObservedAt": "2026-10-12T07:46:56.542Z",
    "isNew": false
-  },
-  {
-   "id": "2109333564542390412",
-   "handle": "@RepSarahElfreth",
-   "member": "Sarah Elfreth",
-   "district": "MD-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "ICYMI: Last week, @GovWesMoore and @MdAgDept hosted a Buy Local Cookout, bringing together dozens of local farmers, producers, watermen, restaurants, and breweries from across the state. There were tons of incredible vendors from #MD03, including two of my favorite women-owned businesses:  New Roots Farm in Anne Arundel County and Bread and Butter Kitchen located right here in Annapolis. Take a look ➡️",
-   "topics": [],
-   "time": "2026-10-11T17:21:25.000Z",
-   "date": "2026-10-11",
-   "engN": 12,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 471,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-12T07:46:56.542Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -31261,6 +31265,29 @@
   "935717078966964228": "@MadeleineDean"
  },
  "feedAll": [
+  {
+   "id": "2109561792192217126",
+   "authorId": "31611298",
+   "createdAt": "2026-10-12T08:28:19.000Z",
+   "date": "2026-10-12",
+   "type": "retweet",
+   "text": "RT @jamestalarico: Here are the details: literally any time, any place, any network.",
+   "engN": 0,
+   "topics": [
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": true,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2109481180571766882",
+   "provenance": {
+    "contextVersion": 480,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-12T08:31:57.181Z"
+  },
   {
    "id": "2109504463564091448",
    "authorId": "174332143",
@@ -75242,42 +75269,18 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-09T07:46:23.376Z"
-  },
-  {
-   "id": "2108288884400599274",
-   "authorId": "961359779003121665",
-   "createdAt": "2026-10-08T20:10:14.000Z",
-   "date": "2026-10-08",
-   "type": "tweet",
-   "text": "We are back on the road supporting candidates to help flip the House, win with women, and make history! We are laser focused on the work on the ground in every district we can flip!\n\nEverything is on the line this election. NM—early voting has started. If you haven’t voted, go! https://t.co/ULJKVa6i8B",
-   "engN": 70,
-   "topics": [
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 418,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-09T07:46:23.376Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2989,
+ "feedAllTotal": 2990,
  "feedAllFiles": [
-  "feed-0-e94ffcdc709faa8f.json",
-  "feed-1-c0d53036a326d0ec.json",
-  "feed-2-064a928b812a4e46.json",
-  "feed-3-f3ff907e899e5914.json",
-  "feed-4-9126855e1db06b4d.json",
-  "feed-5-3bf3368c505cb0a0.json",
-  "feed-6-7371da6be4b2d255.json",
-  "feed-7-1a7d2c4ed2b5c062.json"
+  "feed-0-53fdef8d436d0648.json",
+  "feed-1-2c9a487830d9cd32.json",
+  "feed-2-8c2525d051abddb8.json",
+  "feed-3-a16b7a180d5c0b2f.json",
+  "feed-4-28692240c79bd23a.json",
+  "feed-5-93c6fd1318b81a57.json",
+  "feed-6-00eff567ee2c2a2e.json",
+  "feed-7-f55dd450084884b8.json"
  ]
 }

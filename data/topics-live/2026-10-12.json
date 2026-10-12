@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T05:36:57.970Z",
+ "classifiedAt": "2026-10-12T08:32:04.851Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -44,6 +44,12 @@
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2109561792192217126": [
+   [
+    "congress-politics",
+    null
    ]
   ]
  },
@@ -171,6 +177,24 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "c2ff0309472e9665569c23bf068f19ee6042a950a884ef33749bf54bfd000f47"
+  },
+  "2109561792192217126": {
+   "contextVersion": 480,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "4f922a50c2439ff3882c913de90951b1f6c5c0b955e1f7a7b5a6283b546be11b",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109481180571766882",
+    "fingerprint": "abad3556881af46824445c8f3b779c227a09415844248a651d29bd7f2df7554d"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109481180571766882",
+    "fingerprint": "abad3556881af46824445c8f3b779c227a09415844248a651d29bd7f2df7554d"
+   }
   }
  },
  "needsContext": {
@@ -179,7 +203,8 @@
   "2109498917872132456": false,
   "2109499014978699344": false,
   "2109499078807847377": true,
-  "2109504463564091448": false
+  "2109504463564091448": false,
+  "2109561792192217126": true
  },
  "inputBlocks": {},
  "contextVersion": 480,
@@ -205,22 +230,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109497713523818954",
-    "2109498386990969070",
-    "2109498917872132456",
-    "2109499014978699344",
-    "2109499078807847377",
-    "2109504463564091448"
+    "2109561792192217126"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T05:36:43.646Z",
-    "observedAt": "2026-10-12T05:36:57.967Z",
+    "attemptedAt": "2026-10-12T08:31:59.339Z",
+    "observedAt": "2026-10-12T08:32:04.847Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -228,24 +248,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T05:36:43.646Z",
-   "observedAt": "2026-10-12T05:36:57.967Z",
+   "attemptedAt": "2026-10-12T08:31:59.339Z",
+   "observedAt": "2026-10-12T08:32:04.847Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T05:36:43.646Z",
-   "observedAt": "2026-10-12T05:36:57.967Z",
+   "attemptedAt": "2026-10-12T08:31:59.339Z",
+   "observedAt": "2026-10-12T08:32:04.847Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-12T05:36:57.971Z"
+ "updatedAt": "2026-10-12T08:32:04.853Z"
 }
