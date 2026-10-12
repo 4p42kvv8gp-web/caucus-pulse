@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T22:07:48.064Z",
+ "classifiedAt": "2026-10-12T23:38:06.855Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -5940,7 +5940,7 @@
    }
   },
   "2109411722410807299": {
-   "contextVersion": 489,
+   "contextVersion": 490,
    "evidenceSupplied": [
     {
      "id": "n_8ffcabd8a822b601",
@@ -5976,7 +5976,7 @@
    "evidenceUsed": [
     "n_8ffcabd8a822b601"
    ],
-   "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b",
+   "inputHash": "bab3761d7489482759d24397dd350e7d5f2d84a5f2408e121caa3424a60ba312",
    "quotedContext": {
     "id": "2108575105479835774",
     "authorId": "43963249",
@@ -6296,7 +6296,7 @@
   "2109411722410807299": false
  },
  "inputBlocks": {},
- "contextVersion": 489,
+ "contextVersion": 490,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6454,23 +6454,29 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109302084185055585",
-    "2109333866087407642",
     "2109411722410807299",
-    "2109599977588592645",
-    "2109615076428628275",
-    "2109684196012900446",
-    "2109709289623617979"
+    "2109658123929587726",
+    "2109666115445997641",
+    "2109704502895067574",
+    "2109709289623617979",
+    "2109727861821386765",
+    "2109774318095974616",
+    "2109774332461228042",
+    "2109775536029331619",
+    "2109776768970187081",
+    "2109777541313491060",
+    "2109778517776859294",
+    "2109779478885097933"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T22:06:45.774Z",
-    "observedAt": "2026-10-12T22:06:57.581Z",
+    "attemptedAt": "2026-10-12T23:36:51.550Z",
+    "observedAt": "2026-10-12T23:37:19.821Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 13,
     "retryCount": 0
    }
   }
@@ -6478,21 +6484,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T22:06:45.774Z",
-   "observedAt": "2026-10-12T22:06:57.581Z",
+   "attemptedAt": "2026-10-12T23:36:51.550Z",
+   "observedAt": "2026-10-12T23:37:19.821Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T22:06:45.774Z",
-   "observedAt": "2026-10-12T22:06:57.581Z",
+   "attemptedAt": "2026-10-12T23:36:51.550Z",
+   "observedAt": "2026-10-12T23:37:19.821Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 13,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6505,5 +6511,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T22:07:48.070Z"
+ "updatedAt": "2026-10-12T23:38:06.860Z"
 }
