@@ -1,7 +1,7 @@
 {
  "date": "2026-10-11",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-12T19:08:38.814Z",
+ "classifiedAt": "2026-10-12T22:07:48.064Z",
  "assignments": {
   "2109133213243490634": [
    [
@@ -421,7 +421,7 @@
   "2109302084185055585": [
    [
     "civil-rights",
-    "racial-justice"
+    null
    ]
   ],
   "2109302935893221743": [
@@ -2853,28 +2853,6 @@
    "evidenceUsed": [],
    "inputHash": "c3e17fe15a320b33727cfaa65f9e4ef8b4e4e18430a5264d560578462d3ff3f7"
   },
-  "2109302084185055585": {
-   "contextVersion": 469,
-   "evidenceSupplied": [
-    {
-     "id": "n_6cfa688fff886c81",
-     "publisher": "Roll Call",
-     "date": "2026-10-05",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/05/trump-expressing-concern-about-gop-midterm-chances/",
-     "text": "During a stop in Denton, Texas, on Friday, Trump called “affordability” a “phony” word concocted by Democrats for purely political reasons. But he also called lingering inflation “very real” and said his party has to find a way to explain it, just weeks before Election Day.",
-     "title": "Trump expressing concern about GOP midterm chances",
-     "publishedAt": "2026-10-05T14:27:38.000Z",
-     "fetchedAt": "2026-10-05T19:04:45.931Z",
-     "version": 365,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c3e17fe15a320b33727cfaa65f9e4ef8b4e4e18430a5264d560578462d3ff3f7"
-  },
   "2109302935893221743": {
    "contextVersion": 469,
    "evidenceSupplied": [],
@@ -3337,20 +3315,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857"
-  },
-  "2109333866087407642": {
-   "contextVersion": 471,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "66f1ce36c5e8f4f9369d277e2976ee0dc985b26eb6fcec4b6346093113589857",
-   "quotedContext": {
-    "id": "2108165587545239900",
-    "authorId": "15754281",
-    "handle": "USATODAY",
-    "createdAt": "2026-10-08T12:00:18.000Z",
-    "textChars": 168,
-    "textHash": "b2abfb7ecef84f531f0588809f84dd4d5e24c701e6b3b86ae9be5e4efd9f499a"
-   }
   },
   "2109333965467267187": {
    "contextVersion": 471,
@@ -4974,53 +4938,6 @@
     "fingerprint": "ed3f5d6faa23e426ba510060e230a6482a8243c46c74464a752a98e91364377d"
    }
   },
-  "2109411722410807299": {
-   "contextVersion": 475,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_354d29252bb717eb",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
-     "text": "Paxton: Iran war a drag on Texas Senate campaign",
-     "title": "Paxton: Iran war a drag on Texas Senate campaign",
-     "publishedAt": "2026-10-07T14:49:48.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "3ea7107b2b7eb90d602736b3710d47ff83f6381649cd03b42b9ce4d4f0eb589e",
-   "quotedContext": {
-    "id": "2108575105479835774",
-    "authorId": "43963249",
-    "handle": "HouseDemocrats",
-    "createdAt": "2026-10-09T15:07:35.000Z",
-    "textChars": 187,
-    "textHash": "8069b9ac7eef2b2467784b63b4249ae6a163940131964511c9d7962e99cb8cb2"
-   }
-  },
   "2109412506410078287": {
    "contextVersion": 475,
    "evidenceSupplied": [],
@@ -5954,6 +5871,120 @@
     "textChars": 36,
     "textHash": "25c537514bf09dc61938d85ad5c8d3839fbe889abccc67893bd758c15b0932d1"
    }
+  },
+  "2109302084185055585": {
+   "contextVersion": 489,
+   "evidenceSupplied": [
+    {
+     "id": "n_cc06db2e413859e2",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5986126/texas-15th-congressional-district-provides-clues-to-states-latino-vote",
+     "text": "MICHEL MARTIN, HOST: Latino voters helped elect Republicans two years ago. A congressional race in south Texas is a test of whether that support holds. Republican Representative Monica De La Cruz is trying for a third term. Her challenger is Democrat Bobby Pulido, a singer, making his first run for office. Texas Public Radio's David Martin Davies takes us to the state's 15th District.",
+     "title": "Texas' 15th Congressional District provides clues to state's Latino vote",
+     "publishedAt": "2026-10-12T08:37:01.000Z",
+     "fetchedAt": "2026-10-12T21:22:04.235Z",
+     "version": 489,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_6cfa688fff886c81",
+     "publisher": "Roll Call",
+     "date": "2026-10-05",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/05/trump-expressing-concern-about-gop-midterm-chances/",
+     "text": "During a stop in Denton, Texas, on Friday, Trump called “affordability” a “phony” word concocted by Democrats for purely political reasons. But he also called lingering inflation “very real” and said his party has to find a way to explain it, just weeks before Election Day.",
+     "title": "Trump expressing concern about GOP midterm chances",
+     "publishedAt": "2026-10-05T14:27:38.000Z",
+     "fetchedAt": "2026-10-05T19:04:45.931Z",
+     "version": 365,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b"
+  },
+  "2109333866087407642": {
+   "contextVersion": 489,
+   "evidenceSupplied": [
+    {
+     "id": "n_42c08695c2a03f89",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5996646/republican-strategist-on-how-trumps-personal-grievances-could-affect-the-gop",
+     "text": "SHAH: Well, I think it's really important to see what this really is. The diesel deal and the energy ceasefire announcement, I believe, are less about immediate relief and more about creating a permission structure for Republican candidates. The volumes are really too small to meaningfully move prices before November 3. I think most analysts are saying that plainly, and most of us kind of get that.",
+     "title": "Republican strategist on how Trump's personal grievances could affect the GOP",
+     "publishedAt": "2026-10-12T08:39:36.000Z",
+     "fetchedAt": "2026-10-12T21:22:04.235Z",
+     "version": 489,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b",
+   "quotedContext": {
+    "id": "2108165587545239900",
+    "authorId": "15754281",
+    "handle": "USATODAY",
+    "createdAt": "2026-10-08T12:00:18.000Z",
+    "textChars": 168,
+    "textHash": "b2abfb7ecef84f531f0588809f84dd4d5e24c701e6b3b86ae9be5e4efd9f499a"
+   }
+  },
+  "2109411722410807299": {
+   "contextVersion": 489,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_354d29252bb717eb",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
+     "text": "Paxton: Iran war a drag on Texas Senate campaign",
+     "title": "Paxton: Iran war a drag on Texas Senate campaign",
+     "publishedAt": "2026-10-07T14:49:48.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b",
+   "quotedContext": {
+    "id": "2108575105479835774",
+    "authorId": "43963249",
+    "handle": "HouseDemocrats",
+    "createdAt": "2026-10-09T15:07:35.000Z",
+    "textChars": 187,
+    "textHash": "8069b9ac7eef2b2467784b63b4249ae6a163940131964511c9d7962e99cb8cb2"
+   }
   }
  },
  "needsContext": {
@@ -6016,7 +6047,6 @@
   "2109301630210646146": true,
   "2109301640259932424": false,
   "2109302027314475141": false,
-  "2109302084185055585": false,
   "2109302935893221743": false,
   "2109304728572035095": true,
   "2109305508674818466": false,
@@ -6061,7 +6091,6 @@
   "2109333001884647629": false,
   "2109333564542390412": false,
   "2109333703033803046": false,
-  "2109333866087407642": false,
   "2109333965467267187": false,
   "2109333976863359013": false,
   "2109334214575259808": false,
@@ -6199,7 +6228,6 @@
   "2109411251201753353": false,
   "2109411286350184476": false,
   "2109411311570260105": false,
-  "2109411722410807299": false,
   "2109412506410078287": false,
   "2109413750008688959": false,
   "2109413768010883509": false,
@@ -6262,10 +6290,13 @@
   "2109488050564964372": false,
   "2109291432317993329": false,
   "2109275370948063353": false,
-  "2109371585090228416": false
+  "2109371585090228416": false,
+  "2109302084185055585": false,
+  "2109333866087407642": false,
+  "2109411722410807299": false
  },
  "inputBlocks": {},
- "contextVersion": 487,
+ "contextVersion": 489,
  "emerging": [
   {
    "label": "Animal cruelty & welfare legislation",
@@ -6404,6 +6435,12 @@
    "ids": [
     "2109371585090228416"
    ]
+  },
+  {
+   "label": "Anti-Muslim targeting in Texas Republican politics",
+   "ids": [
+    "2109302084185055585"
+   ]
   }
  ],
  "unclassified": [],
@@ -6417,26 +6454,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109371585090228416",
-    "2109634275859411192",
-    "2109666115445997641",
+    "2109302084185055585",
+    "2109333866087407642",
+    "2109411722410807299",
+    "2109599977588592645",
+    "2109615076428628275",
     "2109684196012900446",
-    "2109700500367216787",
-    "2109700526518472859",
-    "2109701136085033002",
-    "2109701271548764484",
-    "2109701617607942386",
-    "2109701881698136521"
+    "2109709289623617979"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T19:07:04.168Z",
-    "observedAt": "2026-10-12T19:07:25.779Z",
+    "attemptedAt": "2026-10-12T22:06:45.774Z",
+    "observedAt": "2026-10-12T22:06:57.581Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -6444,21 +6478,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-12T19:07:04.168Z",
-   "observedAt": "2026-10-12T19:07:25.779Z",
+   "attemptedAt": "2026-10-12T22:06:45.774Z",
+   "observedAt": "2026-10-12T22:06:57.581Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-12T19:07:04.168Z",
-   "observedAt": "2026-10-12T19:07:25.779Z",
+   "attemptedAt": "2026-10-12T22:06:45.774Z",
+   "observedAt": "2026-10-12T22:06:57.581Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": {
@@ -6471,5 +6505,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-12T19:08:38.818Z"
+ "updatedAt": "2026-10-12T22:07:48.070Z"
 }
