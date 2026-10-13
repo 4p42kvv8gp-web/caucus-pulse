@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T10:54:22.340Z",
+ "classifiedAt": "2026-10-13T12:16:27.430Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -7807,36 +7807,6 @@
    "evidenceUsed": [],
    "inputHash": "33745ea5dd7bf1f3c650b3659001152f96936463b76f878b9cc131c45a6cc3de"
   },
-  "2109744535475781857": {
-   "contextVersion": 488,
-   "evidenceSupplied": [
-    {
-     "id": "n_e58e921fc4613815",
-     "publisher": "Roll Call",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/09/cyber-information-sharing-law-stuck-in-senate-stalemate/",
-     "text": "A long-term extension of the law, titled the Cybersecurity Information Sharing Act of 2015, has bipartisan backing. If Democrats win control of the Senate – and the Homeland Security and Governmental Affairs Committee – lawmakers could negotiate a future-ready version of the law that responds to artificial intelligence’s impact on cybersecurity.",
-     "title": "Cyber information-sharing law stuck in Senate stalemate",
-     "publishedAt": "2026-10-09T06:30:00.000Z",
-     "fetchedAt": "2026-10-09T11:36:40.413Z",
-     "version": 430,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "33745ea5dd7bf1f3c650b3659001152f96936463b76f878b9cc131c45a6cc3de",
-   "quotedContext": {
-    "id": "2109500403754610700",
-    "authorId": "1720665183188922368",
-    "handle": "grok",
-    "createdAt": "2026-10-12T04:24:23.000Z",
-    "textChars": 600,
-    "textHash": "684d99713ecc8d5eece5205ec1d2ba2fb487cec70d37f45db6b072081e738d38"
-   }
-  },
   "2109744959850942671": {
    "contextVersion": 488,
    "evidenceSupplied": [],
@@ -7901,51 +7871,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b"
-  },
-  "2109684196012900446": {
-   "contextVersion": 489,
-   "evidenceSupplied": [
-    {
-     "id": "n_c6cb34d5401b252e",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
-     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "publishedAt": "2026-10-11T14:51:16.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "33ff2eea21a7311fb764dbbb7994ebe9de10678b032dac128743119f41ec666b",
-   "quotedContext": {
-    "id": "2109602415397749044",
-    "authorId": "1120633726478823425",
-    "handle": "ZelenskyyUa",
-    "createdAt": "2026-10-12T11:09:45.000Z",
-    "textChars": 781,
-    "textHash": "72704d9e255be16e902080922ba81c3aa78629355b11e4e590b99f3f37350f66"
-   }
   },
   "2109746416818221253": {
    "contextVersion": 489,
@@ -10005,6 +9930,96 @@
     "textChars": 257,
     "textHash": "c8cc79b8c77ac9946d26158e5d4103921265d4968889978c67f9ed4b6772f348"
    }
+  },
+  "2109684196012900446": {
+   "contextVersion": 499,
+   "evidenceSupplied": [
+    {
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "888a5912fa6ed7579b3b5e337348bebf76c63adfb827bb3742f8ed0b245841be",
+   "quotedContext": {
+    "id": "2109602415397749044",
+    "authorId": "1120633726478823425",
+    "handle": "ZelenskyyUa",
+    "createdAt": "2026-10-12T11:09:45.000Z",
+    "textChars": 781,
+    "textHash": "72704d9e255be16e902080922ba81c3aa78629355b11e4e590b99f3f37350f66"
+   }
+  },
+  "2109744535475781857": {
+   "contextVersion": 499,
+   "evidenceSupplied": [
+    {
+     "id": "n_e58e921fc4613815",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/cyber-information-sharing-law-stuck-in-senate-stalemate/",
+     "text": "A long-term extension of the law, titled the Cybersecurity Information Sharing Act of 2015, has bipartisan backing. If Democrats win control of the Senate – and the Homeland Security and Governmental Affairs Committee – lawmakers could negotiate a future-ready version of the law that responds to artificial intelligence’s impact on cybersecurity.",
+     "title": "Cyber information-sharing law stuck in Senate stalemate",
+     "publishedAt": "2026-10-09T06:30:00.000Z",
+     "fetchedAt": "2026-10-09T11:36:40.413Z",
+     "version": 430,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "The U.S. government continues to pay for ads promoting President Trump , even after he announced that his MAGA Inc. super PAC would take over funding. A federal judge ordered the ads to be taken down, yet they remained on air. An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer funds have been spent since the campaign began in late September. Almost $10 million of that was spent after Trump pledged on an Oct. 5 Truth Social post to fund the campaign privately. The White House has called the ads public service announcements, but a lawsuit by Common Cause and others …",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "888a5912fa6ed7579b3b5e337348bebf76c63adfb827bb3742f8ed0b245841be",
+   "quotedContext": {
+    "id": "2109500403754610700",
+    "authorId": "1720665183188922368",
+    "handle": "grok",
+    "createdAt": "2026-10-12T04:24:23.000Z",
+    "textChars": 600,
+    "textHash": "684d99713ecc8d5eece5205ec1d2ba2fb487cec70d37f45db6b072081e738d38"
+   }
   }
  },
  "needsContext": {
@@ -10345,11 +10360,9 @@
   "2109743696732410010": false,
   "2109743737027125474": false,
   "2109744016090960036": false,
-  "2109744535475781857": false,
   "2109744959850942671": true,
   "2109599977588592645": false,
   "2109615076428628275": false,
-  "2109684196012900446": false,
   "2109746416818221253": false,
   "2109746631998390410": false,
   "2109746768145698994": false,
@@ -10486,10 +10499,12 @@
   "2109845425176141838": false,
   "2109850797509153123": false,
   "2109780235264856128": false,
-  "2109822848911266257": false
+  "2109822848911266257": false,
+  "2109684196012900446": false,
+  "2109744535475781857": false
  },
  "inputBlocks": {},
- "contextVersion": 497,
+ "contextVersion": 499,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10780,17 +10795,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109822848911266257"
+    "2109684196012900446",
+    "2109744535475781857",
+    "2109973681371759057",
+    "2109979658360164564"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T10:54:20.680Z",
-    "observedAt": "2026-10-13T10:54:22.324Z",
+    "attemptedAt": "2026-10-13T12:16:21.511Z",
+    "observedAt": "2026-10-13T12:16:27.415Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   },
@@ -10851,24 +10869,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T10:54:20.680Z",
-   "observedAt": "2026-10-13T10:54:22.324Z",
+   "attemptedAt": "2026-10-13T12:16:21.511Z",
+   "observedAt": "2026-10-13T12:16:27.415Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T10:54:20.680Z",
-   "observedAt": "2026-10-13T10:54:22.324Z",
+   "attemptedAt": "2026-10-13T12:16:21.511Z",
+   "observedAt": "2026-10-13T12:16:27.415Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T10:54:22.345Z"
+ "updatedAt": "2026-10-13T12:16:27.432Z"
 }

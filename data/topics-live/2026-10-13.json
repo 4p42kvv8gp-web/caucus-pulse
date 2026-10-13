@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T05:37:11.386Z",
+ "classifiedAt": "2026-10-13T12:16:27.435Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -35,7 +35,23 @@
     null
    ]
   ],
-  "2109867667544834398": []
+  "2109867667544834398": [],
+  "2109973681371759057": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109979658360164564": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ]
  },
  "incidents": {},
  "provenance": {
@@ -141,6 +157,30 @@
     "referenceId": "1084841753834868736",
     "fingerprint": "8fb4196e69133fa4639afb47df11f09e345a83c9daede218b6e9eadadcad3ce9"
    }
+  },
+  "2109973681371759057": {
+   "contextVersion": 499,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "888a5912fa6ed7579b3b5e337348bebf76c63adfb827bb3742f8ed0b245841be"
+  },
+  "2109979658360164564": {
+   "contextVersion": 499,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "888a5912fa6ed7579b3b5e337348bebf76c63adfb827bb3742f8ed0b245841be",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109967947712102878",
+    "fingerprint": "41b52338d9ce68a24a953388378544960eaafa795a3cf3912b834b1dda036f09"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109967947712102878",
+    "fingerprint": "41b52338d9ce68a24a953388378544960eaafa795a3cf3912b834b1dda036f09"
+   }
   }
  },
  "needsContext": {
@@ -148,10 +188,12 @@
   "2109858638399705378": false,
   "2109862932708282669": false,
   "2109867413206643194": false,
-  "2109867667544834398": true
+  "2109867667544834398": true,
+  "2109973681371759057": false,
+  "2109979658360164564": false
  },
  "inputBlocks": {},
- "contextVersion": 495,
+ "contextVersion": 499,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -183,21 +225,20 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109780235264856128",
-    "2109858638399705378",
-    "2109862932708282669",
-    "2109867413206643194",
-    "2109867667544834398"
+    "2109684196012900446",
+    "2109744535475781857",
+    "2109973681371759057",
+    "2109979658360164564"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T05:37:00.769Z",
-    "observedAt": "2026-10-13T05:37:11.371Z",
+    "attemptedAt": "2026-10-13T12:16:21.511Z",
+    "observedAt": "2026-10-13T12:16:27.415Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   }
@@ -205,24 +246,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T05:37:00.769Z",
-   "observedAt": "2026-10-13T05:37:11.371Z",
+   "attemptedAt": "2026-10-13T12:16:21.511Z",
+   "observedAt": "2026-10-13T12:16:27.415Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T05:37:00.769Z",
-   "observedAt": "2026-10-13T05:37:11.371Z",
+   "attemptedAt": "2026-10-13T12:16:21.511Z",
+   "observedAt": "2026-10-13T12:16:27.415Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T05:37:11.386Z"
+ "updatedAt": "2026-10-13T12:16:27.436Z"
 }
