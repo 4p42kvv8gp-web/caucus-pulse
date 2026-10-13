@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T02:37:30.891Z",
+ "classifiedAt": "2026-10-13T03:13:32.074Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -3150,6 +3150,48 @@
   "2109827332718391628": [],
   "2109830920220090437": [],
   "2109835097692127382": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109837679999566002": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2109841122118029434": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109841153247870999": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2109842745833758899": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2109843986902925674": [
+   [
+    "congress-politics",
+    "town-halls"
+   ],
    [
     "congress-politics",
     "elections-2026"
@@ -9837,6 +9879,62 @@
     "referenceId": "2109790448889876692",
     "fingerprint": "7d8a3624797d8aef44ea1631deb35f117539bba4c11cdef37a6c22faf431657e"
    }
+  },
+  "2109837679999566002": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5",
+   "quotedContext": {
+    "id": "2109814012250616238",
+    "authorId": "248802911",
+    "handle": "efindell",
+    "createdAt": "2026-10-13T01:10:33.000Z",
+    "textChars": 295,
+    "textHash": "e27d5b1938ffcd2104343545c5625790faa35e35b82b46038f0cd5010db5d516"
+   }
+  },
+  "2109841122118029434": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
+  },
+  "2109841153247870999": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
+  },
+  "2109842745833758899": {
+   "contextVersion": 492,
+   "evidenceSupplied": [
+    {
+     "id": "n_e78caee0efaf6790",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/analysis/6144242-omars-reelection-facing-political-firestorm/",
+     "text": "The Memo: Trump critics allege abuse of power as Ilhan Omar’s home is raided",
+     "title": "The Memo: Trump critics allege abuse of power as Ilhan Omar’s home is raided",
+     "publishedAt": "2026-10-12T22:38:23.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e78caee0efaf6790"
+   ],
+   "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
+  },
+  "2109843986902925674": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
   }
  },
  "needsContext": {
@@ -10311,7 +10409,12 @@
   "2109827172160708893": false,
   "2109827332718391628": false,
   "2109830920220090437": true,
-  "2109835097692127382": false
+  "2109835097692127382": false,
+  "2109837679999566002": false,
+  "2109841122118029434": false,
+  "2109841153247870999": false,
+  "2109842745833758899": false,
+  "2109843986902925674": false
  },
  "inputBlocks": {},
  "contextVersion": 492,
@@ -10360,7 +10463,8 @@
     "2109731310424223975",
     "2109733806550679756",
     "2109783689517498491",
-    "2109785705270362224"
+    "2109785705270362224",
+    "2109842745833758899"
    ]
   },
   {
@@ -10579,6 +10683,12 @@
    "ids": [
     "2109830920220090437"
    ]
+  },
+  {
+   "label": "SNAP Stocking Standards Rule store closures",
+   "ids": [
+    "2109841153247870999"
+   ]
   }
  ],
  "unclassified": [],
@@ -10592,26 +10702,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109819834850750585",
-    "2109819881055207813",
-    "2109821434361000124",
-    "2109822848911266257",
-    "2109824120414232629",
-    "2109825566698602639",
-    "2109827172160708893",
-    "2109827332718391628",
-    "2109830920220090437",
-    "2109835097692127382"
+    "2109837679999566002",
+    "2109841122118029434",
+    "2109841153247870999",
+    "2109842745833758899",
+    "2109843986902925674"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T02:37:05.602Z",
-    "observedAt": "2026-10-13T02:37:30.878Z",
+    "attemptedAt": "2026-10-13T03:13:22.972Z",
+    "observedAt": "2026-10-13T03:13:32.061Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 10,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   },
@@ -10672,24 +10777,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T02:37:05.602Z",
-   "observedAt": "2026-10-13T02:37:30.878Z",
+   "attemptedAt": "2026-10-13T03:13:22.972Z",
+   "observedAt": "2026-10-13T03:13:32.061Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T02:37:05.602Z",
-   "observedAt": "2026-10-13T02:37:30.878Z",
+   "attemptedAt": "2026-10-13T03:13:22.972Z",
+   "observedAt": "2026-10-13T03:13:32.061Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 10,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T02:37:30.895Z"
+ "updatedAt": "2026-10-13T03:13:32.077Z"
 }
