@@ -1,9 +1,9 @@
 {
- "contextVersion": 508,
- "lastRefreshAt": "2026-10-13T23:04:01.042Z",
+ "contextVersion": 509,
+ "lastRefreshAt": "2026-10-13T23:17:53.581Z",
  "sources": {
   "npr-politics": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -12,7 +12,7 @@
    "error": null
   },
   "politico-politics": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -21,7 +21,7 @@
    "error": null
   },
   "the-hill": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -30,16 +30,16 @@
    "error": null
   },
   "roll-call": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 0,
+   "bodies": 1,
    "error": null
   },
   "cnn-politics": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -48,7 +48,7 @@
    "error": null
   },
   "nyt-politics": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -57,16 +57,16 @@
    "error": null
   },
   "wapo-politics": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
-   "ok": true,
-   "httpStatus": 200,
-   "format": "rss",
-   "feedItems": 27,
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
+   "ok": false,
+   "httpStatus": 502,
+   "format": null,
+   "feedItems": 0,
    "bodies": 0,
-   "error": null
+   "error": "feed HTTP 502"
   },
   "govinfo-crec": {
-   "lastFetchAt": "2026-10-13T23:04:01.042Z",
+   "lastFetchAt": "2026-10-13T23:17:53.581Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
