@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T04:07:07.985Z",
+ "classifiedAt": "2026-10-13T05:37:11.386Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -12,7 +12,30 @@
     "congress-politics",
     "elections-2026"
    ]
-  ]
+  ],
+  "2109858638399705378": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2109862932708282669": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2109867413206643194": [
+   [
+    "immigration",
+    null
+   ]
+  ],
+  "2109867667544834398": []
  },
  "incidents": {},
  "provenance": {
@@ -29,18 +52,123 @@
     "textChars": 295,
     "textHash": "e27d5b1938ffcd2104343545c5625790faa35e35b82b46038f0cd5010db5d516"
    }
+  },
+  "2109858638399705378": {
+   "contextVersion": 495,
+   "evidenceSupplied": [
+    {
+     "id": "n_e78caee0efaf6790",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/analysis/6144242-omars-reelection-facing-political-firestorm/",
+     "text": "The Memo: Trump critics allege abuse of power as Ilhan Omar’s home is raided",
+     "title": "The Memo: Trump critics allege abuse of power as Ilhan Omar’s home is raided",
+     "publishedAt": "2026-10-12T22:38:23.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1998a0d8bfbef81c",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5997574/the-doj-is-investigating-5-tv-networks-for-suspending-pool-coverage-of-trump",
+     "text": "The Justice Department has launched a formal anti-trust investigation into five major U.S. television networks for their actions during a court battle over whether several news outlets should have access to the White House despite angering President Trump.",
+     "title": "Justice Department investigates TV networks, citing possible anti-trust violations",
+     "publishedAt": "2026-10-11T12:04:00.000Z",
+     "fetchedAt": "2026-10-11T17:36:41.552Z",
+     "version": 471,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e78caee0efaf6790"
+   ],
+   "inputHash": "cad565234c545af2c6c818c7b756f8054ee4279cd846555ecbdd8ad87a895f45",
+   "quotedContext": {
+    "id": "2109767866257990113",
+    "authorId": "246357149",
+    "handle": "HouseJudiciary",
+    "createdAt": "2026-10-12T22:07:11.000Z",
+    "textChars": 2969,
+    "textHash": "b7e04e944795896bbd16f8cd27f450b235c324c78500b63e56b78cc770967813"
+   }
+  },
+  "2109862932708282669": {
+   "contextVersion": 495,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "cad565234c545af2c6c818c7b756f8054ee4279cd846555ecbdd8ad87a895f45"
+  },
+  "2109867413206643194": {
+   "contextVersion": 495,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "cad565234c545af2c6c818c7b756f8054ee4279cd846555ecbdd8ad87a895f45",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109700106639327251",
+    "fingerprint": "5fd5f3a8f12bf0c1aee9fd6b8af0b3e4272284e5f1908fb68df33aab8144ffb5"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109700106639327251",
+    "fingerprint": "5fd5f3a8f12bf0c1aee9fd6b8af0b3e4272284e5f1908fb68df33aab8144ffb5"
+   }
+  },
+  "2109867667544834398": {
+   "contextVersion": 495,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "cad565234c545af2c6c818c7b756f8054ee4279cd846555ecbdd8ad87a895f45",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "1084841753834868736",
+    "fingerprint": "8fb4196e69133fa4639afb47df11f09e345a83c9daede218b6e9eadadcad3ce9"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "1084841753834868736",
+    "fingerprint": "8fb4196e69133fa4639afb47df11f09e345a83c9daede218b6e9eadadcad3ce9"
+   }
   }
  },
  "needsContext": {
-  "2109857226336682158": false
+  "2109857226336682158": false,
+  "2109858638399705378": false,
+  "2109862932708282669": false,
+  "2109867413206643194": false,
+  "2109867667544834398": true
  },
  "inputBlocks": {},
- "contextVersion": 494,
+ "contextVersion": 495,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
    "ids": [
     "2109857226336682158"
+   ]
+  },
+  {
+   "label": "Federal search of Rep. Ilhan Omar's home",
+   "ids": [
+    "2109858638399705378"
+   ]
+  },
+  {
+   "label": "Forest Service law enforcement coordination with ICE",
+   "ids": [
+    "2109862932708282669"
    ]
   }
  ],
@@ -55,22 +183,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109725037624242648",
-    "2109733898037129587",
     "2109780235264856128",
-    "2109845425176141838",
-    "2109850797509153123",
-    "2109857226336682158"
+    "2109858638399705378",
+    "2109862932708282669",
+    "2109867413206643194",
+    "2109867667544834398"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T04:07:00.073Z",
-    "observedAt": "2026-10-13T04:07:07.964Z",
+    "attemptedAt": "2026-10-13T05:37:00.769Z",
+    "observedAt": "2026-10-13T05:37:11.371Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   }
@@ -78,24 +205,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T04:07:00.073Z",
-   "observedAt": "2026-10-13T04:07:07.964Z",
+   "attemptedAt": "2026-10-13T05:37:00.769Z",
+   "observedAt": "2026-10-13T05:37:11.371Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T04:07:00.073Z",
-   "observedAt": "2026-10-13T04:07:07.964Z",
+   "attemptedAt": "2026-10-13T05:37:00.769Z",
+   "observedAt": "2026-10-13T05:37:11.371Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T04:07:07.985Z"
+ "updatedAt": "2026-10-13T05:37:11.386Z"
 }

@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T04:07:07.977Z",
+ "classifiedAt": "2026-10-13T05:37:11.381Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -9920,54 +9920,6 @@
    "evidenceUsed": [],
    "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
   },
-  "2109780235264856128": {
-   "contextVersion": 494,
-   "evidenceSupplied": [
-    {
-     "id": "n_c6cb34d5401b252e",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
-     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "publishedAt": "2026-10-11T14:51:16.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a3f228cc82c4f94a",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
-     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "publishedAt": "2026-10-11T18:30:39.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_c6cb34d5401b252e",
-    "n_a3f228cc82c4f94a"
-   ],
-   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
-   "quotedContext": {
-    "id": "2109752244115562852",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-10-12T21:05:06.000Z",
-    "textChars": 206,
-    "textHash": "a93907c406392d98dbd89a729c3845897a686efa2ea8b22967ea129189b5e6d8"
-   }
-  },
   "2109845425176141838": {
    "contextVersion": 494,
    "evidenceSupplied": [],
@@ -10007,6 +9959,54 @@
    ],
    "evidenceUsed": [],
    "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
+  },
+  "2109780235264856128": {
+   "contextVersion": 495,
+   "evidenceSupplied": [
+    {
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3f228cc82c4f94a",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
+     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "publishedAt": "2026-10-11T18:30:39.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c6cb34d5401b252e",
+    "n_a3f228cc82c4f94a"
+   ],
+   "inputHash": "cad565234c545af2c6c818c7b756f8054ee4279cd846555ecbdd8ad87a895f45",
+   "quotedContext": {
+    "id": "2109752244115562852",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-12T21:05:06.000Z",
+    "textChars": 206,
+    "textHash": "a93907c406392d98dbd89a729c3845897a686efa2ea8b22967ea129189b5e6d8"
+   }
   }
  },
  "needsContext": {
@@ -10486,12 +10486,12 @@
   "2109843986902925674": false,
   "2109725037624242648": false,
   "2109733898037129587": false,
-  "2109780235264856128": false,
   "2109845425176141838": false,
-  "2109850797509153123": false
+  "2109850797509153123": false,
+  "2109780235264856128": false
  },
  "inputBlocks": {},
- "contextVersion": 494,
+ "contextVersion": 495,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10782,22 +10782,21 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109725037624242648",
-    "2109733898037129587",
     "2109780235264856128",
-    "2109845425176141838",
-    "2109850797509153123",
-    "2109857226336682158"
+    "2109858638399705378",
+    "2109862932708282669",
+    "2109867413206643194",
+    "2109867667544834398"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T04:07:00.073Z",
-    "observedAt": "2026-10-13T04:07:07.964Z",
+    "attemptedAt": "2026-10-13T05:37:00.769Z",
+    "observedAt": "2026-10-13T05:37:11.371Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 5,
     "retryCount": 0
    }
   },
@@ -10858,24 +10857,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T04:07:00.073Z",
-   "observedAt": "2026-10-13T04:07:07.964Z",
+   "attemptedAt": "2026-10-13T05:37:00.769Z",
+   "observedAt": "2026-10-13T05:37:11.371Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T04:07:00.073Z",
-   "observedAt": "2026-10-13T04:07:07.964Z",
+   "attemptedAt": "2026-10-13T05:37:00.769Z",
+   "observedAt": "2026-10-13T05:37:11.371Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 6,
+   "acceptedCount": 5,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T04:07:07.982Z"
+ "updatedAt": "2026-10-13T05:37:11.383Z"
 }
