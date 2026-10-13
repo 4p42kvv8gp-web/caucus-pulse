@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T05:37:11.463Z",
+ "generatedAt": "2026-10-13T07:52:14.800Z",
  "incidents": [
   {
    "id": "newport-beach-ca--flooding--source-2109715247204295159",
@@ -10,7 +10,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "active",
+   "lifecycle": "monitoring",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -32,7 +32,7 @@
    "since": "2026-10-12T18:38:06.000Z",
    "last": "2026-10-12T18:38:06.000Z",
    "updates": 1,
-   "engN": 3,
+   "engN": 8,
    "amplifiers": 0,
    "others": [],
    "title": "Flooding · Newport Beach, CA",
@@ -60,7 +60,7 @@
      "who": "@CongressMin",
      "tag": "member",
      "text": "A quick update from Newport Beach on the coastal flooding impacting our communities.\n\nThankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.\n\nBut a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.\n\nGovernor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
-     "engN": 3,
+     "engN": 8,
      "isNew": false,
      "flag": {
       "kind": "flooding",
@@ -84,7 +84,50 @@
    "tweetIds": [
     "2109715247204295159"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "But a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.",
+      "sourceId": "2109715247204295159",
+      "url": "https://x.com/i/web/status/2109715247204295159",
+      "evidenceQuote": "But a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.",
+      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
+     },
+     {
+      "text": "Governor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
+      "sourceId": "2109715247204295159",
+      "url": "https://x.com/i/web/status/2109715247204295159",
+      "evidenceQuote": "Governor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
+      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
+     }
+    ],
+    "unverified": [
+     {
+      "text": "Thankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.",
+      "sourceId": "2109715247204295159",
+      "url": "https://x.com/i/web/status/2109715247204295159",
+      "evidenceQuote": "Thankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.",
+      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
+     }
+    ],
+    "updates": [
+     {
+      "text": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
+      "sourceId": "2109715247204295159",
+      "url": "https://x.com/i/web/status/2109715247204295159",
+      "evidenceQuote": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
+      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-13T07:52:07.028Z",
+    "posts": 1,
+    "inputHash": "8a07b07bef519e8980bf4fe63b14d00b1f8d46d5a30769946612456e5441b3fb",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
@@ -230,7 +273,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -359,7 +402,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -1630,7 +1673,49 @@
     "2107329196406272338",
     "2107701072265625984"
    ],
-   "intel": null,
+   "intel": {
+    "schemaVersion": 2,
+    "verification": "source-statements-only",
+    "confirmed": [],
+    "reported": [
+     {
+      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+      "sourceId": "2107329196406272338",
+      "url": "https://x.com/i/web/status/2107329196406272338",
+      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
+     },
+     {
+      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+      "sourceId": "2107701072265625984",
+      "url": "https://x.com/i/web/status/2107701072265625984",
+      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
+     }
+    ],
+    "unverified": [],
+    "updates": [
+     {
+      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+      "sourceId": "2107701072265625984",
+      "url": "https://x.com/i/web/status/2107701072265625984",
+      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
+      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
+     },
+     {
+      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+      "sourceId": "2107329196406272338",
+      "url": "https://x.com/i/web/status/2107329196406272338",
+      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
+     }
+    ],
+    "whatsNew": [],
+    "extractedAt": "2026-10-13T07:52:14.800Z",
+    "posts": 2,
+    "inputHash": "87f73b9370f2a62bc2b7c8121f1894c52bf0f79bba5dfb7dec611732c5f52529",
+    "rejectedItems": 0
+   },
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
