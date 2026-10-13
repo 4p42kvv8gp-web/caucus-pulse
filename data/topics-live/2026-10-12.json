@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T21:35:02.054Z",
+ "classifiedAt": "2026-10-13T23:02:01.966Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -1695,16 +1695,16 @@
   ],
   "2109709289623617979": [
    [
-    "congress-politics",
-    "elections-2026"
-   ],
-   [
     "economy",
     "prices-inflation"
    ],
    [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ],
   "2109709329188237588": [
@@ -2709,11 +2709,15 @@
   "2109779840077287438": [
    [
     "foreign-policy",
-    "middle-east"
+    "military-veterans"
    ],
    [
     "foreign-policy",
-    "military-veterans"
+    "middle-east"
+   ],
+   [
+    "budget-appropriations",
+    null
    ]
   ],
   "2109779904480874551": [],
@@ -4731,12 +4735,6 @@
    "evidenceUsed": [],
    "inputHash": "cd55500d50c66867eecbf38830577edce61004d644af80a3568ab96e515b9d2f"
   },
-  "2109665158230331680": {
-   "contextVersion": 485,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "cd55500d50c66867eecbf38830577edce61004d644af80a3568ab96e515b9d2f"
-  },
   "2109665169991479457": {
    "contextVersion": 485,
    "evidenceSupplied": [],
@@ -6673,12 +6671,6 @@
    "inputHash": "58cf5fd65335cf274a73e6812a49413776a33395c96b069fe3669686f125ef6d"
   },
   "2109704982362554680": {
-   "contextVersion": 487,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "58cf5fd65335cf274a73e6812a49413776a33395c96b069fe3669686f125ef6d"
-  },
-  "2109705410727055374": {
    "contextVersion": 487,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -9652,45 +9644,6 @@
    "evidenceUsed": [],
    "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
   },
-  "2109709289623617979": {
-   "contextVersion": 501,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_354d29252bb717eb",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
-     "text": "Paxton: Iran war a drag on Texas Senate campaign",
-     "title": "Paxton: Iran war a drag on Texas Senate campaign",
-     "publishedAt": "2026-10-07T14:49:48.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
-  },
   "2109725037624242648": {
    "contextVersion": 501,
    "evidenceSupplied": [
@@ -9756,45 +9709,6 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
-  },
-  "2109779840077287438": {
-   "contextVersion": 501,
-   "evidenceSupplied": [
-    {
-     "id": "n_36d04d53aeb8bd4b",
-     "publisher": "The Hill",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
-     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "publishedAt": "2026-10-06T19:02:27.000Z",
-     "fetchedAt": "2026-10-06T19:31:34.291Z",
-     "version": 383,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea57f08f1e85c1e",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6140821-pentagon-updates-iran-death-tally/",
-     "text": "Pentagon updates death toll of troops during Iran war to 21",
-     "title": "Pentagon updates death toll of troops during Iran war to 21",
-     "publishedAt": "2026-10-10T21:59:35.000Z",
-     "fetchedAt": "2026-10-11T21:21:29.252Z",
-     "version": 474,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_36d04d53aeb8bd4b"
-   ],
    "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
   },
   "2109850797509153123": {
@@ -9988,8 +9902,30 @@
     "textHash": "c8cc79b8c77ac9946d26158e5d4103921265d4968889978c67f9ed4b6772f348"
    }
   },
+  "2109665158230331680": {
+   "contextVersion": 507,
+   "evidenceSupplied": [
+    {
+     "id": "n_a5c5d759c83a21d7",
+     "publisher": "Roll Call",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/13/house-vulnerable-republicans-trump-support/",
+     "text": "Perhaps surprisingly, this also holds true for the most endangered Republicans, in races that Inside Elections with Nathan L. Gonzales rates either as Toss-ups or as favoring Democrats. While their districts may be down on Trump over his handling of rising prices and the Iran conflict, these Republicans backed the president’s position on 96 percent of votes taken this year.",
+     "title": "House’s most vulnerable Republicans haven’t deviated from Trump on 2026 votes",
+     "publishedAt": "2026-10-13T17:49:37.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "cca758615be5c4a04a0c987d7a922bb9fa8f0e10d3d1f558313cc8451f6a9489"
+  },
   "2109684196012900446": {
-   "contextVersion": 506,
+   "contextVersion": 507,
    "evidenceSupplied": [
     {
      "id": "n_c6cb34d5401b252e",
@@ -10023,7 +9959,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "9d62485b3ce86bd0bc69d62472c1a8dda492064b5d4b307c08c7ac8b3d82ee10",
+   "inputHash": "cca758615be5c4a04a0c987d7a922bb9fa8f0e10d3d1f558313cc8451f6a9489",
    "quotedContext": {
     "id": "2109602415397749044",
     "authorId": "1120633726478823425",
@@ -10032,6 +9968,106 @@
     "textChars": 781,
     "textHash": "72704d9e255be16e902080922ba81c3aa78629355b11e4e590b99f3f37350f66"
    }
+  },
+  "2109705410727055374": {
+   "contextVersion": 507,
+   "evidenceSupplied": [
+    {
+     "id": "n_a5c5d759c83a21d7",
+     "publisher": "Roll Call",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/13/house-vulnerable-republicans-trump-support/",
+     "text": "Perhaps surprisingly, this also holds true for the most endangered Republicans, in races that Inside Elections with Nathan L. Gonzales rates either as Toss-ups or as favoring Democrats. While their districts may be down on Trump over his handling of rising prices and the Iran conflict, these Republicans backed the president’s position on 96 percent of votes taken this year.",
+     "title": "House’s most vulnerable Republicans haven’t deviated from Trump on 2026 votes",
+     "publishedAt": "2026-10-13T17:49:37.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "cca758615be5c4a04a0c987d7a922bb9fa8f0e10d3d1f558313cc8451f6a9489"
+  },
+  "2109709289623617979": {
+   "contextVersion": 507,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_354d29252bb717eb",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
+     "text": "Paxton: Iran war a drag on Texas Senate campaign",
+     "title": "Paxton: Iran war a drag on Texas Senate campaign",
+     "publishedAt": "2026-10-07T14:49:48.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "cca758615be5c4a04a0c987d7a922bb9fa8f0e10d3d1f558313cc8451f6a9489"
+  },
+  "2109779840077287438": {
+   "contextVersion": 507,
+   "evidenceSupplied": [
+    {
+     "id": "n_36d04d53aeb8bd4b",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
+     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "publishedAt": "2026-10-06T19:02:27.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea57f08f1e85c1e",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6140821-pentagon-updates-iran-death-tally/",
+     "text": "Pentagon updates death toll of troops during Iran war to 21",
+     "title": "Pentagon updates death toll of troops during Iran war to 21",
+     "publishedAt": "2026-10-10T21:59:35.000Z",
+     "fetchedAt": "2026-10-11T21:21:29.252Z",
+     "version": 474,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_36d04d53aeb8bd4b"
+   ],
+   "inputHash": "cca758615be5c4a04a0c987d7a922bb9fa8f0e10d3d1f558313cc8451f6a9489"
   }
  },
  "needsContext": {
@@ -10150,7 +10186,6 @@
   "2109663792606925294": false,
   "2109664501867974807": false,
   "2109664716926648814": false,
-  "2109665158230331680": false,
   "2109665169991479457": false,
   "2109665544307605872": false,
   "2109666116796846418": false,
@@ -10279,7 +10314,6 @@
   "2109703421423157361": false,
   "2109704174032093305": false,
   "2109704982362554680": false,
-  "2109705410727055374": false,
   "2109705664788676835": false,
   "2109705665086148695": false,
   "2109706617445036497": false,
@@ -10504,19 +10538,21 @@
   "2109845425176141838": false,
   "2109744535475781857": false,
   "2109504463564091448": false,
-  "2109709289623617979": false,
   "2109725037624242648": false,
   "2109733898037129587": false,
-  "2109779840077287438": false,
   "2109850797509153123": false,
   "2109780235264856128": false,
   "2109785793128505573": false,
   "2109795857579266375": false,
   "2109822848911266257": false,
-  "2109684196012900446": false
+  "2109665158230331680": false,
+  "2109684196012900446": false,
+  "2109705410727055374": false,
+  "2109709289623617979": false,
+  "2109779840077287438": false
  },
  "inputBlocks": {},
- "contextVersion": 506,
+ "contextVersion": 507,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10801,6 +10837,13 @@
     "2109780235264856128",
     "2109822848911266257"
    ]
+  },
+  {
+   "label": "Trump's war in Iran",
+   "ids": [
+    "2109709289623617979",
+    "2109779840077287438"
+   ]
   }
  ],
  "unclassified": [],
@@ -10814,28 +10857,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
+    "2109665158230331680",
     "2109684196012900446",
-    "2110011853879255525",
-    "2110038917827219555",
-    "2110055045261668756",
-    "2110058998359544029",
-    "2110089375778279611",
-    "2110098397797745151",
-    "2110098453652984030",
-    "2110098974778740837",
-    "2110099001320030563",
-    "2110099366471979234",
-    "2110099408113062170"
+    "2109705410727055374",
+    "2109709289623617979",
+    "2109779840077287438",
+    "2110023233579671902",
+    "2110025729979088965"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T21:32:33.141Z",
-    "observedAt": "2026-10-13T21:32:55.862Z",
+    "attemptedAt": "2026-10-13T23:00:32.966Z",
+    "observedAt": "2026-10-13T23:00:47.259Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 12,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -10843,24 +10881,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T21:32:33.141Z",
-   "observedAt": "2026-10-13T21:32:55.862Z",
+   "attemptedAt": "2026-10-13T23:00:32.966Z",
+   "observedAt": "2026-10-13T23:00:47.259Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T21:32:33.141Z",
-   "observedAt": "2026-10-13T21:32:55.862Z",
+   "attemptedAt": "2026-10-13T23:00:32.966Z",
+   "observedAt": "2026-10-13T23:00:47.259Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 12,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T21:35:02.062Z"
+ "updatedAt": "2026-10-13T23:02:01.971Z"
 }
