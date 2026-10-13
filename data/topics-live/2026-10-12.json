@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T12:16:27.430Z",
+ "classifiedAt": "2026-10-13T15:24:15.782Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -1695,16 +1695,16 @@
   ],
   "2109709289623617979": [
    [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
     "economy",
     "prices-inflation"
    ],
    [
     "foreign-policy",
     "middle-east"
-   ],
-   [
-    "congress-politics",
-    "elections-2026"
    ]
   ],
   "2109709329188237588": [
@@ -2149,10 +2149,6 @@
    [
     "congress-politics",
     "elections-2026"
-   ],
-   [
-    "congress-politics",
-    "town-halls"
    ]
   ],
   "2109734851288993910": [
@@ -2716,8 +2712,8 @@
     "middle-east"
    ],
    [
-    "budget-appropriations",
-    null
+    "foreign-policy",
+    "military-veterans"
    ]
   ],
   "2109779904480874551": [],
@@ -3338,12 +3334,6 @@
     "referenceId": "2109485531662840171",
     "fingerprint": "b7ad03d31a3ca5c5bd7fe754ea66a9249ed6c603bb4241015b36681a020eb84b"
    }
-  },
-  "2109504463564091448": {
-   "contextVersion": 480,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "c2ff0309472e9665569c23bf068f19ee6042a950a884ef33749bf54bfd000f47"
   },
   "2109561792192217126": {
    "contextVersion": 480,
@@ -8589,45 +8579,6 @@
    ],
    "inputHash": "bab3761d7489482759d24397dd350e7d5f2d84a5f2408e121caa3424a60ba312"
   },
-  "2109709289623617979": {
-   "contextVersion": 490,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_354d29252bb717eb",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
-     "text": "Paxton: Iran war a drag on Texas Senate campaign",
-     "title": "Paxton: Iran war a drag on Texas Senate campaign",
-     "publishedAt": "2026-10-07T14:49:48.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "bab3761d7489482759d24397dd350e7d5f2d84a5f2408e121caa3424a60ba312"
-  },
   "2109727861821386765": {
    "contextVersion": 490,
    "evidenceSupplied": [
@@ -8732,45 +8683,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "bab3761d7489482759d24397dd350e7d5f2d84a5f2408e121caa3424a60ba312"
-  },
-  "2109779840077287438": {
-   "contextVersion": 490,
-   "evidenceSupplied": [
-    {
-     "id": "n_36d04d53aeb8bd4b",
-     "publisher": "The Hill",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
-     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
-     "publishedAt": "2026-10-06T19:02:27.000Z",
-     "fetchedAt": "2026-10-06T19:31:34.291Z",
-     "version": 383,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4ea57f08f1e85c1e",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6140821-pentagon-updates-iran-death-tally/",
-     "text": "Pentagon updates death toll of troops during Iran war to 21",
-     "title": "Pentagon updates death toll of troops during Iran war to 21",
-     "publishedAt": "2026-10-10T21:59:35.000Z",
-     "fetchedAt": "2026-10-11T21:21:29.252Z",
-     "version": 474,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_4ea57f08f1e85c1e"
-   ],
-   "inputHash": "dffe388338e2966c5022f1812b081a641dc8356c316ed30b22d57a942e920d8f"
   },
   "2109779904480874551": {
    "contextVersion": 490,
@@ -9731,73 +9643,6 @@
    "evidenceUsed": [],
    "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
   },
-  "2109725037624242648": {
-   "contextVersion": 494,
-   "evidenceSupplied": [
-    {
-     "id": "n_533a080247da0192",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
-     "text": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
-     "title": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
-     "publishedAt": "2026-10-13T03:00:52.000Z",
-     "fetchedAt": "2026-10-13T03:21:55.956Z",
-     "version": 493,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
-   "quotedContext": {
-    "id": "2109413307660845356",
-    "authorId": "110899711",
-    "handle": "CA_Dem",
-    "createdAt": "2026-10-11T22:38:18.000Z",
-    "textChars": 312,
-    "textHash": "54c38650405cb9cbdeee77b71c6e3ffde8181aa82ac06594a76b1f05360dd90e"
-   }
-  },
-  "2109733898037129587": {
-   "contextVersion": 494,
-   "evidenceSupplied": [
-    {
-     "id": "n_f9eda089aa35fcc1",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6133278-california-democrats-lofgren-schiff-padilla-trump-iran-attack-remarks-apology-demand/",
-     "text": "California Democrats demand Trump apology for rally remarks",
-     "title": "California Democrats demand Trump apology for rally remarks",
-     "publishedAt": "2026-10-07T12:59:12.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7380d1a6e9df5338",
-     "publisher": "The Washington Post",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/10/06/california-leaders-slam-trump-saying-iran-could-take-out-la-or-san-diego/",
-     "text": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
-     "title": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
-     "publishedAt": "2026-10-06T14:15:00.000Z",
-     "fetchedAt": "2026-10-06T15:10:37.344Z",
-     "version": 380,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
-  },
   "2109845425176141838": {
    "contextVersion": 494,
    "evidenceSupplied": [],
@@ -9815,28 +9660,6 @@
     "referenceId": "2109795658668405047",
     "fingerprint": "35ee605165f884ba63e63e6df3f048f29f976fdc69d0d4a559ff14adf426fce3"
    }
-  },
-  "2109850797509153123": {
-   "contextVersion": 494,
-   "evidenceSupplied": [
-    {
-     "id": "n_533a080247da0192",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
-     "text": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
-     "title": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
-     "publishedAt": "2026-10-13T03:00:52.000Z",
-     "fetchedAt": "2026-10-13T03:21:55.956Z",
-     "version": 493,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
   },
   "2109780235264856128": {
    "contextVersion": 495,
@@ -10020,6 +9843,195 @@
     "textChars": 600,
     "textHash": "684d99713ecc8d5eece5205ec1d2ba2fb487cec70d37f45db6b072081e738d38"
    }
+  },
+  "2109504463564091448": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_b40c5737c792c623",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6144798-supreme-court-kari-lake-lawyer-andrew-parker-appeal/",
+     "text": "Supreme Court turns away Kari Lake lawyer’s challenge to sanctions in Arizona voting machine lawsuit",
+     "title": "Supreme Court turns away Kari Lake lawyer’s challenge to sanctions in Arizona voting machine lawsuit",
+     "publishedAt": "2026-10-13T13:38:31.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
+  },
+  "2109709289623617979": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_354d29252bb717eb",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6133643-paxton-iran-war-campaign/",
+     "text": "Paxton: Iran war a drag on Texas Senate campaign",
+     "title": "Paxton: Iran war a drag on Texas Senate campaign",
+     "publishedAt": "2026-10-07T14:49:48.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
+  },
+  "2109725037624242648": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_533a080247da0192",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
+     "text": "Newsom backs California ballot measure that would cancel out billionaire tax proposal",
+     "title": "Newsom backs California ballot measure that would cancel out billionaire tax proposal",
+     "publishedAt": "2026-10-13T03:00:52.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91",
+   "quotedContext": {
+    "id": "2109413307660845356",
+    "authorId": "110899711",
+    "handle": "CA_Dem",
+    "createdAt": "2026-10-11T22:38:18.000Z",
+    "textChars": 312,
+    "textHash": "54c38650405cb9cbdeee77b71c6e3ffde8181aa82ac06594a76b1f05360dd90e"
+   }
+  },
+  "2109733898037129587": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_f9eda089aa35fcc1",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6133278-california-democrats-lofgren-schiff-padilla-trump-iran-attack-remarks-apology-demand/",
+     "text": "California Democrats demand Trump apology for rally remarks",
+     "title": "California Democrats demand Trump apology for rally remarks",
+     "publishedAt": "2026-10-07T12:59:12.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7380d1a6e9df5338",
+     "publisher": "The Washington Post",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/06/california-leaders-slam-trump-saying-iran-could-take-out-la-or-san-diego/",
+     "text": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
+     "title": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
+     "publishedAt": "2026-10-06T14:15:00.000Z",
+     "fetchedAt": "2026-10-06T15:10:37.344Z",
+     "version": 380,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
+  },
+  "2109779840077287438": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_36d04d53aeb8bd4b",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6132165-murphy-qatar-iran-war-pentagon/",
+     "text": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "title": "Democratic senator says Pentagon denied him access to US base in Qatar ‘to hide the costs’ of Iran war",
+     "publishedAt": "2026-10-06T19:02:27.000Z",
+     "fetchedAt": "2026-10-06T19:31:34.291Z",
+     "version": 383,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4ea57f08f1e85c1e",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6140821-pentagon-updates-iran-death-tally/",
+     "text": "Pentagon updates death toll of troops during Iran war to 21",
+     "title": "Pentagon updates death toll of troops during Iran war to 21",
+     "publishedAt": "2026-10-10T21:59:35.000Z",
+     "fetchedAt": "2026-10-11T21:21:29.252Z",
+     "version": 474,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_36d04d53aeb8bd4b"
+   ],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
+  },
+  "2109850797509153123": {
+   "contextVersion": 501,
+   "evidenceSupplied": [
+    {
+     "id": "n_533a080247da0192",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
+     "text": "Newsom backs California ballot measure that would cancel out billionaire tax proposal",
+     "title": "Newsom backs California ballot measure that would cancel out billionaire tax proposal",
+     "publishedAt": "2026-10-13T03:00:52.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
   }
  },
  "needsContext": {
@@ -10028,7 +10040,6 @@
   "2109498917872132456": false,
   "2109499014978699344": false,
   "2109499078807847377": true,
-  "2109504463564091448": false,
   "2109561792192217126": true,
   "2109585456127971518": false,
   "2109596381002563779": false,
@@ -10417,7 +10428,6 @@
   "2109658123929587726": false,
   "2109666115445997641": false,
   "2109704502895067574": false,
-  "2109709289623617979": false,
   "2109727861821386765": false,
   "2109774318095974616": true,
   "2109774332461228042": false,
@@ -10426,7 +10436,6 @@
   "2109777541313491060": false,
   "2109778517776859294": false,
   "2109779478885097933": false,
-  "2109779840077287438": false,
   "2109779904480874551": true,
   "2109780570150506509": false,
   "2109780914679197790": false,
@@ -10494,17 +10503,20 @@
   "2109841153247870999": false,
   "2109842745833758899": false,
   "2109843986902925674": false,
-  "2109725037624242648": false,
-  "2109733898037129587": false,
   "2109845425176141838": false,
-  "2109850797509153123": false,
   "2109780235264856128": false,
   "2109822848911266257": false,
   "2109684196012900446": false,
-  "2109744535475781857": false
+  "2109744535475781857": false,
+  "2109504463564091448": false,
+  "2109709289623617979": false,
+  "2109725037624242648": false,
+  "2109733898037129587": false,
+  "2109779840077287438": false,
+  "2109850797509153123": false
  },
  "inputBlocks": {},
- "contextVersion": 499,
+ "contextVersion": 501,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10795,73 +10807,51 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109684196012900446",
-    "2109744535475781857",
-    "2109973681371759057",
-    "2109979658360164564"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-13T12:16:21.511Z",
-    "observedAt": "2026-10-13T12:16:27.415Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 4,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
+    "2109504463564091448",
+    "2109709289623617979",
+    "2109725037624242648",
+    "2109733898037129587",
     "2109779840077287438",
-    "2109779904480874551",
-    "2109780235264856128",
-    "2109780570150506509",
-    "2109780914679197790",
-    "2109780919724941742",
-    "2109780964746645897",
-    "2109780976536854735",
-    "2109780986955538599",
-    "2109781201867153833",
-    "2109781379177476223",
-    "2109781721281429716",
-    "2109782044909727846",
-    "2109782245246718031",
-    "2109783049382797585",
-    "2109783689517498491",
-    "2109784944683733263",
-    "2109785169016115508",
-    "2109785222476681411",
-    "2109785705270362224"
+    "2109850797509153123",
+    "2110004776335241455",
+    "2110005118083236232",
+    "2110005161687159081",
+    "2110005261536498080",
+    "2110005978737606790",
+    "2110006490245283845",
+    "2110006494179848315",
+    "2110007168619417930",
+    "2110007304447778917",
+    "2110007307388293221",
+    "2110007368654418101",
+    "2110007386609971207",
+    "2110007901708284294",
+    "2110007982796996667",
+    "2110008301517668453",
+    "2110009090571379020",
+    "2110009343559237876",
+    "2110009978618830973",
+    "2110010958240243817",
+    "2110011145998192813",
+    "2110011262365261853",
+    "2110011441600147961",
+    "2110011445182169089",
+    "2110011785356931402",
+    "2110011853879255525",
+    "2110012090626834902",
+    "2110012092631617545",
+    "2110012143466869076",
+    "2110012577187320025"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-12T23:37:19.842Z",
-    "observedAt": "2026-10-12T23:38:02.084Z",
+    "attemptedAt": "2026-10-13T15:22:12.819Z",
+    "observedAt": "2026-10-13T15:23:01.350Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 20,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2109785793128505573",
-    "2109787813549899889",
-    "2109788395857752536"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-12T23:38:02.114Z",
-    "observedAt": "2026-10-12T23:38:06.826Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 35,
     "retryCount": 0
    }
   }
@@ -10869,24 +10859,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T12:16:21.511Z",
-   "observedAt": "2026-10-13T12:16:27.415Z",
+   "attemptedAt": "2026-10-13T15:22:12.819Z",
+   "observedAt": "2026-10-13T15:23:01.350Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 35,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T12:16:21.511Z",
-   "observedAt": "2026-10-13T12:16:27.415Z",
+   "attemptedAt": "2026-10-13T15:22:12.819Z",
+   "observedAt": "2026-10-13T15:23:01.350Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 35,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T12:16:27.432Z"
+ "updatedAt": "2026-10-13T15:24:15.791Z"
 }
