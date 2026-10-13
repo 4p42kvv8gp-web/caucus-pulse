@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T03:13:32.074Z",
+ "classifiedAt": "2026-10-13T04:07:07.977Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -2149,6 +2149,10 @@
    [
     "congress-politics",
     "elections-2026"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2109734851288993910": [
@@ -3192,6 +3196,18 @@
     "congress-politics",
     "town-halls"
    ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109845425176141838": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2109850797509153123": [
    [
     "congress-politics",
     "elections-2026"
@@ -7188,20 +7204,6 @@
     "textHash": "9648e167bed7377683972268ee30ac6d5965a1519cb4d8c469a9e78c2c108e5d"
    }
   },
-  "2109725037624242648": {
-   "contextVersion": 488,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "e3ce9a8cec2fbc78dcd3a43430769b57146762a0abf77b3191147f488de31764",
-   "quotedContext": {
-    "id": "2109413307660845356",
-    "authorId": "110899711",
-    "handle": "CA_Dem",
-    "createdAt": "2026-10-11T22:38:18.000Z",
-    "textChars": 312,
-    "textHash": "54c38650405cb9cbdeee77b71c6e3ffde8181aa82ac06594a76b1f05360dd90e"
-   }
-  },
   "2109725805286965602": {
    "contextVersion": 488,
    "evidenceSupplied": [],
@@ -7491,43 +7493,6 @@
   "2109733806550679756": {
    "contextVersion": 488,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "e3ce9a8cec2fbc78dcd3a43430769b57146762a0abf77b3191147f488de31764"
-  },
-  "2109733898037129587": {
-   "contextVersion": 488,
-   "evidenceSupplied": [
-    {
-     "id": "n_f9eda089aa35fcc1",
-     "publisher": "The Hill",
-     "date": "2026-10-07",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6133278-california-democrats-lofgren-schiff-padilla-trump-iran-attack-remarks-apology-demand/",
-     "text": "California Democrats demand Trump apology for rally remarks",
-     "title": "California Democrats demand Trump apology for rally remarks",
-     "publishedAt": "2026-10-07T12:59:12.000Z",
-     "fetchedAt": "2026-10-07T15:47:55.376Z",
-     "version": 398,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7380d1a6e9df5338",
-     "publisher": "The Washington Post",
-     "date": "2026-10-06",
-     "kind": "lead",
-     "url": "https://www.washingtonpost.com/politics/2026/10/06/california-leaders-slam-trump-saying-iran-could-take-out-la-or-san-diego/",
-     "text": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
-     "title": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
-     "publishedAt": "2026-10-06T14:15:00.000Z",
-     "fetchedAt": "2026-10-06T15:10:37.344Z",
-     "version": 380,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "e3ce9a8cec2fbc78dcd3a43430769b57146762a0abf77b3191147f488de31764"
   },
@@ -8888,54 +8853,6 @@
    "evidenceUsed": [],
    "inputHash": "dffe388338e2966c5022f1812b081a641dc8356c316ed30b22d57a942e920d8f"
   },
-  "2109780235264856128": {
-   "contextVersion": 490,
-   "evidenceSupplied": [
-    {
-     "id": "n_c6cb34d5401b252e",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
-     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
-     "publishedAt": "2026-10-11T14:51:16.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a3f228cc82c4f94a",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
-     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "publishedAt": "2026-10-11T18:30:39.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_c6cb34d5401b252e",
-    "n_a3f228cc82c4f94a"
-   ],
-   "inputHash": "dffe388338e2966c5022f1812b081a641dc8356c316ed30b22d57a942e920d8f",
-   "quotedContext": {
-    "id": "2109752244115562852",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-10-12T21:05:06.000Z",
-    "textChars": 206,
-    "textHash": "a93907c406392d98dbd89a729c3845897a686efa2ea8b22967ea129189b5e6d8"
-   }
-  },
   "2109780570150506509": {
    "contextVersion": 490,
    "evidenceSupplied": [],
@@ -9935,6 +9852,161 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "22dac4ffefd7dc7023b50ba15269c36e2b6df2dda332635bda7ea2e965162be5"
+  },
+  "2109725037624242648": {
+   "contextVersion": 494,
+   "evidenceSupplied": [
+    {
+     "id": "n_533a080247da0192",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
+     "text": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
+     "title": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
+     "publishedAt": "2026-10-13T03:00:52.000Z",
+     "fetchedAt": "2026-10-13T03:21:55.956Z",
+     "version": 493,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
+   "quotedContext": {
+    "id": "2109413307660845356",
+    "authorId": "110899711",
+    "handle": "CA_Dem",
+    "createdAt": "2026-10-11T22:38:18.000Z",
+    "textChars": 312,
+    "textHash": "54c38650405cb9cbdeee77b71c6e3ffde8181aa82ac06594a76b1f05360dd90e"
+   }
+  },
+  "2109733898037129587": {
+   "contextVersion": 494,
+   "evidenceSupplied": [
+    {
+     "id": "n_f9eda089aa35fcc1",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6133278-california-democrats-lofgren-schiff-padilla-trump-iran-attack-remarks-apology-demand/",
+     "text": "California Democrats demand Trump apology for rally remarks",
+     "title": "California Democrats demand Trump apology for rally remarks",
+     "publishedAt": "2026-10-07T12:59:12.000Z",
+     "fetchedAt": "2026-10-07T15:47:55.376Z",
+     "version": 398,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7380d1a6e9df5338",
+     "publisher": "The Washington Post",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/06/california-leaders-slam-trump-saying-iran-could-take-out-la-or-san-diego/",
+     "text": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
+     "title": "California leaders slam Trump for saying Iran could ‘take out’ L.A. or San Diego",
+     "publishedAt": "2026-10-06T14:15:00.000Z",
+     "fetchedAt": "2026-10-06T15:10:37.344Z",
+     "version": 380,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
+  },
+  "2109780235264856128": {
+   "contextVersion": 494,
+   "evidenceSupplied": [
+    {
+     "id": "n_c6cb34d5401b252e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6141275-trump-russia-ukraine-energy-ceasefire/",
+     "text": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "title": "Trump claims energy ceasefire reached between Russia and Ukraine",
+     "publishedAt": "2026-10-11T14:51:16.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3f228cc82c4f94a",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
+     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "publishedAt": "2026-10-11T18:30:39.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c6cb34d5401b252e",
+    "n_a3f228cc82c4f94a"
+   ],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
+   "quotedContext": {
+    "id": "2109752244115562852",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-12T21:05:06.000Z",
+    "textChars": 206,
+    "textHash": "a93907c406392d98dbd89a729c3845897a686efa2ea8b22967ea129189b5e6d8"
+   }
+  },
+  "2109845425176141838": {
+   "contextVersion": 494,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109795658668405047",
+    "fingerprint": "35ee605165f884ba63e63e6df3f048f29f976fdc69d0d4a559ff14adf426fce3"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109795658668405047",
+    "fingerprint": "35ee605165f884ba63e63e6df3f048f29f976fdc69d0d4a559ff14adf426fce3"
+   }
+  },
+  "2109850797509153123": {
+   "contextVersion": 494,
+   "evidenceSupplied": [
+    {
+     "id": "n_533a080247da0192",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6144461-newsom-endorses-prop42-billionaire-tax/",
+     "text": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
+     "title": "Newsom backs California ballot measure that cancels out billionaire tax proposal",
+     "publishedAt": "2026-10-13T03:00:52.000Z",
+     "fetchedAt": "2026-10-13T03:21:55.956Z",
+     "version": 493,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e"
   }
  },
  "needsContext": {
@@ -10231,7 +10303,6 @@
   "2109723470280134789": false,
   "2109723634772385997": false,
   "2109723638878306664": false,
-  "2109725037624242648": false,
   "2109725805286965602": false,
   "2109726513822154763": false,
   "2109726922376667277": false,
@@ -10251,7 +10322,6 @@
   "2109731310424223975": false,
   "2109733580490657798": false,
   "2109733806550679756": true,
-  "2109733898037129587": false,
   "2109734851288993910": false,
   "2109735108311708091": false,
   "2109735204676096379": false,
@@ -10347,7 +10417,6 @@
   "2109779478885097933": false,
   "2109779840077287438": false,
   "2109779904480874551": true,
-  "2109780235264856128": false,
   "2109780570150506509": false,
   "2109780914679197790": false,
   "2109780919724941742": false,
@@ -10414,10 +10483,15 @@
   "2109841122118029434": false,
   "2109841153247870999": false,
   "2109842745833758899": false,
-  "2109843986902925674": false
+  "2109843986902925674": false,
+  "2109725037624242648": false,
+  "2109733898037129587": false,
+  "2109780235264856128": false,
+  "2109845425176141838": false,
+  "2109850797509153123": false
  },
  "inputBlocks": {},
- "contextVersion": 492,
+ "contextVersion": 494,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10689,6 +10763,12 @@
    "ids": [
     "2109841153247870999"
    ]
+  },
+  {
+   "label": "Hurricane Isaias Florida Panhandle recovery",
+   "ids": [
+    "2109845425176141838"
+   ]
   }
  ],
  "unclassified": [],
@@ -10702,21 +10782,22 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109837679999566002",
-    "2109841122118029434",
-    "2109841153247870999",
-    "2109842745833758899",
-    "2109843986902925674"
+    "2109725037624242648",
+    "2109733898037129587",
+    "2109780235264856128",
+    "2109845425176141838",
+    "2109850797509153123",
+    "2109857226336682158"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T03:13:22.972Z",
-    "observedAt": "2026-10-13T03:13:32.061Z",
+    "attemptedAt": "2026-10-13T04:07:00.073Z",
+    "observedAt": "2026-10-13T04:07:07.964Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
@@ -10777,24 +10858,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T03:13:22.972Z",
-   "observedAt": "2026-10-13T03:13:32.061Z",
+   "attemptedAt": "2026-10-13T04:07:00.073Z",
+   "observedAt": "2026-10-13T04:07:07.964Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T03:13:22.972Z",
-   "observedAt": "2026-10-13T03:13:32.061Z",
+   "attemptedAt": "2026-10-13T04:07:00.073Z",
+   "observedAt": "2026-10-13T04:07:07.964Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 6,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T03:13:32.077Z"
+ "updatedAt": "2026-10-13T04:07:07.982Z"
 }

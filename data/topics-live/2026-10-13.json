@@ -1,0 +1,101 @@
+{
+ "date": "2026-10-13",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-13T04:07:07.985Z",
+ "assignments": {
+  "2109857226336682158": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2109857226336682158": {
+   "contextVersion": 494,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "dddd7cdef61aa5a0c741237530fc0c05699b481bc16929d1026ae713b34ca40e",
+   "quotedContext": {
+    "id": "2109814012250616238",
+    "authorId": "248802911",
+    "handle": "efindell",
+    "createdAt": "2026-10-13T01:10:33.000Z",
+    "textChars": 295,
+    "textHash": "e27d5b1938ffcd2104343545c5625790faa35e35b82b46038f0cd5010db5d516"
+   }
+  }
+ },
+ "needsContext": {
+  "2109857226336682158": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 494,
+ "emerging": [
+  {
+   "label": "Paxton Dubai fugitive donor report",
+   "ids": [
+    "2109857226336682158"
+   ]
+  }
+ ],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2109725037624242648",
+    "2109733898037129587",
+    "2109780235264856128",
+    "2109845425176141838",
+    "2109850797509153123",
+    "2109857226336682158"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-13T04:07:00.073Z",
+    "observedAt": "2026-10-13T04:07:07.964Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 6,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-13T04:07:00.073Z",
+   "observedAt": "2026-10-13T04:07:07.964Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 6,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-13T04:07:00.073Z",
+   "observedAt": "2026-10-13T04:07:07.964Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 6,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-13T04:07:07.985Z"
+}
