@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T01:07:39.080Z",
+ "classifiedAt": "2026-10-13T02:37:30.891Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -3093,6 +3093,63 @@
    ]
   ],
   "2109812770547847678": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109819834850750585": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2109819881055207813": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "democracy",
+    "press-speech"
+   ]
+  ],
+  "2109821434361000124": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2109822848911266257": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2109824120414232629": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2109825566698602639": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2109827172160708893": [],
+  "2109827332718391628": [],
+  "2109830920220090437": [],
+  "2109835097692127382": [
    [
     "congress-politics",
     "elections-2026"
@@ -9555,6 +9612,231 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "e2eff905cb45fe2e1f0bac8bef1f8081c15f6eee93e26da6958c7bb8e0d7928d"
+  },
+  "2109819834850750585": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
+   "quotedContext": {
+    "id": "2109787521194332176",
+    "authorId": "3805581255",
+    "handle": "ELaserDavies",
+    "createdAt": "2026-10-12T23:25:17.000Z",
+    "textChars": 267,
+    "textHash": "3e1bc0f44b787bc31be041cfc68a06986a2540af2ac70bec69446290c2d32f94"
+   }
+  },
+  "2109819881055207813": {
+   "contextVersion": 492,
+   "evidenceSupplied": [
+    {
+     "id": "n_f299c6a17c7eef8e",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6142176-donald-trump-marco-rubio-kimberly-guilfoyle-job-uncertainty-greece/",
+     "text": "Trump, Rubio consider firing Kimberly Guilfoyle as ambassador to Greece: AP source",
+     "title": "Trump, Rubio consider firing Kimberly Guilfoyle as ambassador to Greece: AP source",
+     "publishedAt": "2026-10-12T12:13:00.000Z",
+     "fetchedAt": "2026-10-12T14:34:27.007Z",
+     "version": 484,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9038326161eb1db4",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5995114/week-in-politics-hegseths-livestream-backlash-greece-ambassador-guilfoyle-scandal",
+     "text": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "title": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "publishedAt": "2026-10-10T11:40:48.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_f299c6a17c7eef8e",
+    "n_9038326161eb1db4"
+   ],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
+   "quotedContext": {
+    "id": "2109363799891521782",
+    "authorId": "822702247",
+    "handle": "KenLaCorte",
+    "createdAt": "2026-10-11T19:21:34.000Z",
+    "textChars": 1703,
+    "textHash": "ba65f70400403873881ad2adfb12f5fa795e8bdde548ba23e4ba9a25b7132a88"
+   }
+  },
+  "2109821434361000124": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
+  },
+  "2109822848911266257": {
+   "contextVersion": 492,
+   "evidenceSupplied": [
+    {
+     "id": "n_1f6046aceb1b6916",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
+     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "publishedAt": "2026-10-11T15:26:00.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6710ac7228dd26d8",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
+     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "publishedAt": "2026-10-11T16:07:40.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_1f6046aceb1b6916"
+   ],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
+   "quotedContext": {
+    "id": "2109752856157004156",
+    "authorId": "255804172",
+    "handle": "ralexdc",
+    "createdAt": "2026-10-12T21:07:32.000Z",
+    "textChars": 257,
+    "textHash": "c8cc79b8c77ac9946d26158e5d4103921265d4968889978c67f9ed4b6772f348"
+   }
+  },
+  "2109824120414232629": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
+  },
+  "2109825566698602639": {
+   "contextVersion": 492,
+   "evidenceSupplied": [
+    {
+     "id": "n_3d20b04d4549ec94",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/plan-for-public-military-execution-sparks-bipartisan-backlash/",
+     "text": "Lawmakers in both parties are blasting the Defense Secretary Pete Hegseth’s plan to livestream the execution of the man convicted of carrying out the 2009 mass shooting at Fort Hood.",
+     "title": "Plan for public military execution sparks bipartisan backlash",
+     "publishedAt": "2026-10-09T14:27:55.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9038326161eb1db4",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5995114/week-in-politics-hegseths-livestream-backlash-greece-ambassador-guilfoyle-scandal",
+     "text": "SCOTT SIMON, HOST: There has been pointed and bipartisan objection to Defense Secretary Pete Hegseth's plan to livestream a military execution. The Pentagon announced this week that Nidal Hasan will face a firing squad in December. He is the former Fort Hood Army psychiatrist who fatally shot 13 people and wounded nearly three dozen others in 2009. NPR senior contributor Ron Elving joins us. Ron, thanks so much for being with us.",
+     "title": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "publishedAt": "2026-10-10T11:40:48.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_3d20b04d4549ec94",
+    "n_9038326161eb1db4"
+   ],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109761119841607913",
+    "fingerprint": "30e8a295a217265043128709e37e9abca9a863c5370cbebce800c795ff38f838"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109761119841607913",
+    "fingerprint": "30e8a295a217265043128709e37e9abca9a863c5370cbebce800c795ff38f838"
+   }
+  },
+  "2109827172160708893": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
+  },
+  "2109827332718391628": {
+   "contextVersion": 492,
+   "evidenceSupplied": [
+    {
+     "id": "n_e9948d43cc118691",
+     "publisher": "The Hill",
+     "date": "2026-10-06",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6131612-el-sayed-challenges-trump-michigan/",
+     "text": "El-Sayed asks Trump to come to Michigan: ‘Your candidate can’t speak for himself’",
+     "title": "El-Sayed asks Trump to come to Michigan: ‘Your candidate can’t speak for himself’",
+     "publishedAt": "2026-10-06T15:52:58.000Z",
+     "fetchedAt": "2026-10-06T16:29:19.035Z",
+     "version": 381,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
+  },
+  "2109830920220090437": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
+  },
+  "2109835097692127382": {
+   "contextVersion": 492,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109790448889876692",
+    "fingerprint": "7d8a3624797d8aef44ea1631deb35f117539bba4c11cdef37a6c22faf431657e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109790448889876692",
+    "fingerprint": "7d8a3624797d8aef44ea1631deb35f117539bba4c11cdef37a6c22faf431657e"
+   }
   }
  },
  "needsContext": {
@@ -10019,10 +10301,20 @@
   "2109810331073818824": false,
   "2109810535566836032": false,
   "2109812633956384875": false,
-  "2109812770547847678": false
+  "2109812770547847678": false,
+  "2109819834850750585": false,
+  "2109819881055207813": false,
+  "2109821434361000124": false,
+  "2109822848911266257": false,
+  "2109824120414232629": false,
+  "2109825566698602639": false,
+  "2109827172160708893": false,
+  "2109827332718391628": false,
+  "2109830920220090437": true,
+  "2109835097692127382": false
  },
  "inputBlocks": {},
- "contextVersion": 491,
+ "contextVersion": 492,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10263,6 +10555,30 @@
    "ids": [
     "2109787813549899889"
    ]
+  },
+  {
+   "label": "Kimberly Guilfoyle Greece ambassador scandal",
+   "ids": [
+    "2109819881055207813"
+   ]
+  },
+  {
+   "label": "DHS search of Rep. Ilhan Omar's home",
+   "ids": [
+    "2109821434361000124"
+   ]
+  },
+  {
+   "label": "Hegseth plan to livestream military execution",
+   "ids": [
+    "2109825566698602639"
+   ]
+  },
+  {
+   "label": "GKN $125 million settlement",
+   "ids": [
+    "2109830920220090437"
+   ]
   }
  ],
  "unclassified": [],
@@ -10276,48 +10592,26 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109790475494564278",
-    "2109790792189420019",
-    "2109790817137099204",
-    "2109791255945224204",
-    "2109791474489397408",
-    "2109791523118391527",
-    "2109791985082966349",
-    "2109792538676641910",
-    "2109792545995886665",
-    "2109794444505653407",
-    "2109795857579266375",
-    "2109796415329190058",
-    "2109796735048466568",
-    "2109797856857231386",
-    "2109798865536762124",
-    "2109799024190488944",
-    "2109799624768938054",
-    "2109799986430951489",
-    "2109800891725537576",
-    "2109802143041593587",
-    "2109802416862269600",
-    "2109804097373372589",
-    "2109805157680574588",
-    "2109807453420278201",
-    "2109808889289953495",
-    "2109810177075806261",
-    "2109810221187281400",
-    "2109810236366237730",
-    "2109810331073818824",
-    "2109810535566836032",
-    "2109812633956384875",
-    "2109812770547847678"
+    "2109819834850750585",
+    "2109819881055207813",
+    "2109821434361000124",
+    "2109822848911266257",
+    "2109824120414232629",
+    "2109825566698602639",
+    "2109827172160708893",
+    "2109827332718391628",
+    "2109830920220090437",
+    "2109835097692127382"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T01:06:49.896Z",
-    "observedAt": "2026-10-13T01:07:39.061Z",
+    "attemptedAt": "2026-10-13T02:37:05.602Z",
+    "observedAt": "2026-10-13T02:37:30.878Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 32,
+    "acceptedCount": 10,
     "retryCount": 0
    }
   },
@@ -10378,24 +10672,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T01:06:49.896Z",
-   "observedAt": "2026-10-13T01:07:39.061Z",
+   "attemptedAt": "2026-10-13T02:37:05.602Z",
+   "observedAt": "2026-10-13T02:37:30.878Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 32,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T01:06:49.896Z",
-   "observedAt": "2026-10-13T01:07:39.061Z",
+   "attemptedAt": "2026-10-13T02:37:05.602Z",
+   "observedAt": "2026-10-13T02:37:30.878Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 32,
+   "acceptedCount": 10,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T01:07:39.085Z"
+ "updatedAt": "2026-10-13T02:37:30.895Z"
 }
