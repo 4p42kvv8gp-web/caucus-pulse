@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T14:36:30.740Z",
+ "generatedAt": "2026-10-13T15:13:48.240Z",
  "lastPollAt": "2026-10-13T13:49:49.165Z",
  "lastPollAttemptAt": "2026-10-13T13:49:48.712Z",
  "lastPollOutcome": "complete",
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-13T14:36:28.887Z"
+  "referenceAsOf": "2026-10-13T15:13:46.482Z"
  },
  "news": {
   "version": 501,
-  "items": 1051,
+  "items": 1048,
   "latestPublishedAt": "2026-10-13T14:30:00.000Z",
   "latestFetchedAt": "2026-10-13T14:35:43.461Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-13T14:36:29.478Z",
+   "asOf": "2026-10-13T15:13:47.046Z",
    "windowDays": 14,
-   "windowStart": "2026-09-29T14:36:29.478Z",
-   "eligibleItems": 1600,
+   "windowStart": "2026-09-29T15:13:47.046Z",
+   "eligibleItems": 1592,
    "withExcerpts": 147,
-   "headlineOrSummary": 1453,
+   "headlineOrSummary": 1445,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 976,
+     "eligibleItems": 969,
      "withExcerpts": 0,
-     "headlineOrSummary": 976,
+     "headlineOrSummary": 969,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-13T14:30:00.000Z",
      "latestItem": {
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 221,
+     "eligibleItems": 220,
      "withExcerpts": 0,
-     "headlineOrSummary": 221,
+     "headlineOrSummary": 220,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-13T14:26:28.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-13",
-  "capturedIn24h": 427,
-  "classifiedIn24h": 427,
-  "taggedIn24h": 368,
+  "capturedIn24h": 394,
+  "classifiedIn24h": 394,
+  "taggedIn24h": 344,
   "pendingIn24h": 0,
-  "momentumPaused": false,
+  "momentumPaused": true,
   "health": {
-   "status": "healthy",
-   "reasonCode": null,
-   "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-13T13:49:54.289Z",
+   "status": "degraded",
+   "reasonCode": "inference-error",
+   "hasCurrentFailure": true,
+   "lastAttemptAt": "2026-10-13T15:13:42.112Z",
    "lastSuccessAt": "2026-10-13T13:50:56.665Z",
-   "capturedIn24h": 427,
-   "classifiedIn24h": 427,
+   "capturedIn24h": 394,
+   "classifiedIn24h": 394,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    73,
-    80,
-    61,
-    33,
-    13,
+    75,
+    74,
+    59,
+    31,
+    7,
     1,
-    5,
-    67,
-    153,
-    109,
-    78,
-    42,
-    12,
+    11,
+    94,
+    138,
+    103,
+    83,
+    30,
+    7,
     0,
-    0,
-    33
+    2,
+    31
    ]
   },
   "CPC": {
@@ -6944,20 +6944,20 @@
    "curve48": [
     25,
     30,
-    24,
-    17,
+    20,
+    20,
+    2,
+    0,
+    3,
+    48,
+    77,
+    45,
+    30,
+    11,
     6,
     0,
-    1,
-    31,
-    87,
-    51,
-    27,
-    14,
-    9,
-    0,
-    0,
-    16
+    2,
+    14
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    48,
-    48,
-    37,
+    50,
+    43,
+    36,
     23,
-    10,
+    5,
     1,
+    9,
+    58,
+    77,
+    58,
+    48,
+    13,
     4,
-    44,
-    83,
-    64,
-    47,
-    19,
-    6,
     0,
-    0,
-    24
+    2,
+    22
    ]
   },
   "CBC": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    11,
-    28,
-    17,
-    8,
+    16,
+    26,
+    13,
+    7,
     6,
     0,
-    4,
-    19,
-    28,
+    6,
     25,
-    16,
-    10,
-    3,
+    25,
+    26,
+    15,
+    7,
+    1,
     0,
-    0,
-    5
+    1,
+    4
    ]
   },
   "CHC": {
@@ -7147,18 +7147,18 @@
    },
    "curve48": [
     11,
+    9,
+    9,
     10,
-    10,
-    7,
-    4,
+    1,
     0,
     1,
-    8,
-    32,
-    14,
-    7,
-    12,
+    13,
+    30,
+    11,
+    15,
     6,
+    4,
     0,
     0,
     5
@@ -7217,15 +7217,15 @@
     5,
     6,
     4,
-    1,
-    1,
+    2,
     0,
     0,
-    5,
-    9,
-    12,
-    14,
-    3,
+    0,
+    7,
+    8,
+    13,
+    13,
+    2,
     0,
     0,
     0,
@@ -7322,7 +7322,7 @@
     105,
     10
    ],
-   "d": -5,
+   "d": -6,
    "mAvg": 60,
    "epAvg": 101,
    "momentum": {
@@ -7331,11 +7331,11 @@
      "caucus spread",
      "adoption"
     ],
-    "volume": 0.45,
+    "volume": 0.44,
     "accel": 0,
     "adoption": 0.5666666666666667,
     "eff": 3.5,
-    "engLift": 0.12432254266031273
+    "engLift": 0.13203537769071383
    },
    "subs": [
     {
@@ -8941,19 +8941,19 @@
     135,
     7
    ],
-   "d": 59,
+   "d": 45,
    "mAvg": 56.8,
    "epAvg": 1225,
    "momentum": {
-    "score": 90,
+    "score": 88,
     "drivers": [
-     "volume",
+     "engagement",
      "adoption"
     ],
-    "volume": 1,
+    "volume": 0.95,
     "accel": 0.6705653021442495,
-    "adoption": 1,
-    "eff": 3.6,
+    "adoption": 0.9780058651026393,
+    "eff": 3.7,
     "engLift": 1
    },
    "subs": [
@@ -10883,11 +10883,11 @@
     117,
     7
    ],
-   "d": 122,
+   "d": 100,
    "mAvg": 33.7,
    "epAvg": 342,
    "momentum": {
-    "score": 72,
+    "score": 73,
     "drivers": [
      "volume",
      "adoption"
@@ -10895,8 +10895,8 @@
     "volume": 1,
     "accel": 0,
     "adoption": 1,
-    "eff": 3.8,
-    "engLift": 0.5248260336931609
+    "eff": 3.9,
+    "engLift": 0.6114814424992301
    },
    "subs": [
     {
@@ -11703,11 +11703,11 @@
     26,
     5
    ],
-   "d": -64,
+   "d": -66,
    "mAvg": 51,
    "epAvg": 438,
    "momentum": {
-    "score": 27,
+    "score": 25,
     "drivers": [
      "acceleration",
      "caucus spread"
@@ -11715,8 +11715,8 @@
     "volume": 0,
     "accel": 1,
     "adoption": 0,
-    "eff": 2.6,
-    "engLift": 0.29520496589196976
+    "eff": 2.5,
+    "engLift": 0.08202293766794555
    },
    "subs": [
     {
@@ -15395,7 +15395,7 @@
     17,
     2
    ],
-   "d": -52,
+   "d": -55,
    "mAvg": 28.2,
    "epAvg": 13,
    "momentum": {
@@ -15406,9 +15406,9 @@
     ],
     "volume": 0,
     "accel": 0,
-    "adoption": 0.03254437869822485,
-    "eff": 3.4,
-    "engLift": 0.13769145256917004
+    "adoption": 0,
+    "eff": 3.5,
+    "engLift": 0.16322314049586772
    },
    "subs": [],
    "postIds": {
@@ -16655,19 +16655,19 @@
     18,
     2
    ],
-   "d": -20,
+   "d": -37,
    "mAvg": 17.7,
    "epAvg": 66,
    "momentum": {
-    "score": 37,
+    "score": 29,
     "drivers": [
      "engagement",
      "caucus spread"
     ],
-    "volume": 0.3,
+    "volume": 0.13,
     "accel": 0,
-    "adoption": 0.4622641509433962,
-    "eff": 3.5,
+    "adoption": 0.34905660377358483,
+    "eff": 3.6,
     "engLift": 1
    },
    "subs": [
@@ -18722,19 +18722,19 @@
     3,
     1
    ],
-   "d": -53,
+   "d": -65,
    "mAvg": 7.2,
    "epAvg": 34,
    "momentum": {
     "score": 4,
     "drivers": [
      "caucus spread",
-     "adoption"
+     "volume"
     ],
     "volume": 0,
     "accel": 0,
-    "adoption": 0.05813953488372092,
-    "eff": 2.3,
+    "adoption": 0,
+    "eff": 2.7,
     "engLift": 0
    },
    "subs": [
@@ -20921,7 +20921,7 @@
    "label": "Federal search of Rep. Ilhan Omar's home",
    "lastSeen": "2026-10-13T04:07:53.000Z",
    "thresholdMet": true,
-   "activeMembers": 24,
+   "activeMembers": 21,
    "provisional": true,
    "discoverySources": [
     "live-or-nightly"
@@ -21211,7 +21211,7 @@
    "label": "DHS raid on Rep. Ilhan Omar's home",
    "lastSeen": "2026-10-13T03:04:44.000Z",
    "thresholdMet": true,
-   "activeMembers": 12,
+   "activeMembers": 10,
    "provisional": true,
    "discoverySources": [
     "live-or-nightly"
@@ -21456,7 +21456,7 @@
    "label": "Federal raid on Rep. Ilhan Omar's home",
    "lastSeen": "2026-10-12T23:40:08.000Z",
    "thresholdMet": true,
-   "activeMembers": 41,
+   "activeMembers": 40,
    "provisional": true,
    "discoverySources": [
     "live-or-nightly"
