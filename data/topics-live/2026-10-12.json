@@ -1,7 +1,7 @@
 {
  "date": "2026-10-12",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-13T05:37:11.381Z",
+ "classifiedAt": "2026-10-13T10:54:22.340Z",
  "assignments": {
   "2109497713523818954": [
    [
@@ -9640,53 +9640,6 @@
    "evidenceUsed": [],
    "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc"
   },
-  "2109822848911266257": {
-   "contextVersion": 492,
-   "evidenceSupplied": [
-    {
-     "id": "n_1f6046aceb1b6916",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
-     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
-     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
-     "publishedAt": "2026-10-11T15:26:00.000Z",
-     "fetchedAt": "2026-10-11T15:39:23.078Z",
-     "version": 469,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_6710ac7228dd26d8",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
-     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "publishedAt": "2026-10-11T16:07:40.000Z",
-     "fetchedAt": "2026-10-12T00:21:45.637Z",
-     "version": 477,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_1f6046aceb1b6916"
-   ],
-   "inputHash": "0debfb21f7ab8cba55c14f63881cf234f71fec3ba05c00f56b67d8bc52a271dc",
-   "quotedContext": {
-    "id": "2109752856157004156",
-    "authorId": "255804172",
-    "handle": "ralexdc",
-    "createdAt": "2026-10-12T21:07:32.000Z",
-    "textChars": 257,
-    "textHash": "c8cc79b8c77ac9946d26158e5d4103921265d4968889978c67f9ed4b6772f348"
-   }
-  },
   "2109824120414232629": {
    "contextVersion": 492,
    "evidenceSupplied": [],
@@ -10006,6 +9959,51 @@
     "createdAt": "2026-10-12T21:05:06.000Z",
     "textChars": 206,
     "textHash": "a93907c406392d98dbd89a729c3845897a686efa2ea8b22967ea129189b5e6d8"
+   }
+  },
+  "2109822848911266257": {
+   "contextVersion": 497,
+   "evidenceSupplied": [
+    {
+     "id": "n_1f6046aceb1b6916",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140988-live-updates-zelensky-set-for-sunday-interview-amid-backlash-to-trumps-russia-diesel-deal/",
+     "text": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "title": "Live updates: Trump claims Russia-Ukraine energy ceasefire; Zelensky rips diesel deal",
+     "publishedAt": "2026-10-11T15:26:00.000Z",
+     "fetchedAt": "2026-10-11T15:39:23.078Z",
+     "version": 469,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6710ac7228dd26d8",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
+     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "publishedAt": "2026-10-11T16:07:40.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f398596f273028460bd2f0b031b7687df1badaf7f71ffb62d7f8dd3de97ea5d1",
+   "quotedContext": {
+    "id": "2109752856157004156",
+    "authorId": "255804172",
+    "handle": "ralexdc",
+    "createdAt": "2026-10-12T21:07:32.000Z",
+    "textChars": 257,
+    "textHash": "c8cc79b8c77ac9946d26158e5d4103921265d4968889978c67f9ed4b6772f348"
    }
   }
  },
@@ -10472,7 +10470,6 @@
   "2109819834850750585": false,
   "2109819881055207813": false,
   "2109821434361000124": false,
-  "2109822848911266257": false,
   "2109824120414232629": false,
   "2109825566698602639": false,
   "2109827172160708893": false,
@@ -10488,10 +10485,11 @@
   "2109733898037129587": false,
   "2109845425176141838": false,
   "2109850797509153123": false,
-  "2109780235264856128": false
+  "2109780235264856128": false,
+  "2109822848911266257": false
  },
  "inputBlocks": {},
- "contextVersion": 495,
+ "contextVersion": 497,
  "emerging": [
   {
    "label": "False rumor about Talarico mental-health treatment",
@@ -10782,21 +10780,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2109780235264856128",
-    "2109858638399705378",
-    "2109862932708282669",
-    "2109867413206643194",
-    "2109867667544834398"
+    "2109822848911266257"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-13T05:37:00.769Z",
-    "observedAt": "2026-10-13T05:37:11.371Z",
+    "attemptedAt": "2026-10-13T10:54:20.680Z",
+    "observedAt": "2026-10-13T10:54:22.324Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 5,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   },
@@ -10857,24 +10851,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-13T05:37:00.769Z",
-   "observedAt": "2026-10-13T05:37:11.371Z",
+   "attemptedAt": "2026-10-13T10:54:20.680Z",
+   "observedAt": "2026-10-13T10:54:22.324Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-13T05:37:00.769Z",
-   "observedAt": "2026-10-13T05:37:11.371Z",
+   "attemptedAt": "2026-10-13T10:54:20.680Z",
+   "observedAt": "2026-10-13T10:54:22.324Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 5,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-13T05:37:11.383Z"
+ "updatedAt": "2026-10-13T10:54:22.345Z"
 }
