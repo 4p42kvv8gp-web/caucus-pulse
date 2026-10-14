@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T19:47:23.429Z",
+ "classifiedAt": "2026-10-14T22:48:17.547Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -2953,7 +2953,7 @@
    ],
    [
     "congress-politics",
-    "elections-2026"
+    "house-floor"
    ]
   ],
   "2110119210428883038": [
@@ -9120,51 +9120,6 @@
    "evidenceUsed": [],
    "inputHash": "0b92943303a333c21f4c562308038c5152e4c0fa40d0558692cc0cb8ecc76de3"
   },
-  "2110119122965320144": {
-   "contextVersion": 506,
-   "evidenceSupplied": [
-    {
-     "id": "n_8d752cd3bd0b7a61",
-     "publisher": "The Hill",
-     "date": "2026-10-12",
-     "kind": "lead",
-     "url": "https://thehill.com/blogs/in-the-know/6143268-clinton-obama-nobel-peace-prize/",
-     "text": "Hillary Clinton recalls viral moment with Obama: ‘I really hope that Donald Trump is watching’",
-     "title": "Hillary Clinton recalls viral moment with Obama: ‘I really hope that Donald Trump is watching’",
-     "publishedAt": "2026-10-12T17:16:46.000Z",
-     "fetchedAt": "2026-10-12T18:22:09.547Z",
-     "version": 487,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7b7edbab5831ea64",
-     "publisher": "The Hill",
-     "date": "2026-10-10",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6140233-trump-supreme-court-clinton-lawsuit-appeal/",
-     "text": "Trump asks Supreme Court to look at 2016 election lawsuit against Clinton: Report",
-     "title": "Trump asks Supreme Court to look at 2016 election lawsuit against Clinton: Report",
-     "publishedAt": "2026-10-10T02:47:13.000Z",
-     "fetchedAt": "2026-10-10T03:49:06.202Z",
-     "version": 443,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "0b92943303a333c21f4c562308038c5152e4c0fa40d0558692cc0cb8ecc76de3",
-   "quotedContext": {
-    "id": "2109802803224781230",
-    "authorId": "1841295578724188160",
-    "handle": "em_luetkemeyer",
-    "createdAt": "2026-10-13T00:26:01.000Z",
-    "textChars": 933,
-    "textHash": "6cc7496f698474daf946d8632d9626b8c33334fc9815e69822608c6a9c8c4274"
-   }
-  },
   "2110119210428883038": {
    "contextVersion": 506,
    "evidenceSupplied": [
@@ -11596,6 +11551,51 @@
    ],
    "evidenceUsed": [],
    "inputHash": "dd73af83ce2d47efc4337bd2a1728d704f60b03dd49d2133e396530e9878814f"
+  },
+  "2110119122965320144": {
+   "contextVersion": 526,
+   "evidenceSupplied": [
+    {
+     "id": "n_8d752cd3bd0b7a61",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/blogs/in-the-know/6143268-clinton-obama-nobel-peace-prize/",
+     "text": "Hillary Clinton recalls viral moment with Obama: ‘I really hope that Donald Trump is watching’",
+     "title": "Hillary Clinton recalls viral moment with Obama: ‘I really hope that Donald Trump is watching’",
+     "publishedAt": "2026-10-12T17:16:46.000Z",
+     "fetchedAt": "2026-10-12T18:22:09.547Z",
+     "version": 487,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7b7edbab5831ea64",
+     "publisher": "The Hill",
+     "date": "2026-10-10",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6140233-trump-supreme-court-clinton-lawsuit-appeal/",
+     "text": "Trump asks Supreme Court to look at 2016 election lawsuit against Clinton: Report",
+     "title": "Trump asks Supreme Court to look at 2016 election lawsuit against Clinton: Report",
+     "publishedAt": "2026-10-10T02:47:13.000Z",
+     "fetchedAt": "2026-10-10T03:49:06.202Z",
+     "version": 443,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1462a8a9becd2bebf7b439a2090fca316d832aeed9f0be18ef00bf34543bf07d",
+   "quotedContext": {
+    "id": "2109802803224781230",
+    "authorId": "1841295578724188160",
+    "handle": "em_luetkemeyer",
+    "createdAt": "2026-10-13T00:26:01.000Z",
+    "textChars": 933,
+    "textHash": "6cc7496f698474daf946d8632d9626b8c33334fc9815e69822608c6a9c8c4274"
+   }
   }
  },
  "needsContext": {
@@ -11988,7 +11988,6 @@
   "2110118833084153984": false,
   "2110118837660049816": false,
   "2110119013439111673": false,
-  "2110119122965320144": false,
   "2110119210428883038": false,
   "2110119636880810052": false,
   "2110120213656269190": false,
@@ -12140,10 +12139,11 @@
   "2110093139708940380": false,
   "2110114686318379448": false,
   "2110115075801612522": false,
-  "2110062202426360296": false
+  "2110062202426360296": false,
+  "2110119122965320144": false
  },
  "inputBlocks": {},
- "contextVersion": 524,
+ "contextVersion": 526,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12545,39 +12545,35 @@
  "pendingIds": [],
  "complete": true,
  "anchored": {},
- "failedChunks": 0,
+ "failedChunks": 1,
  "droppedSubs": [],
  "echoedSubs": [],
- "validationErrors": [],
+ "validationErrors": [
+  {
+   "code": "missing-id",
+   "id": "2110500838884118628"
+  }
+ ],
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110062202426360296",
-    "2110446175849718134",
-    "2110446666973057043",
-    "2110446681183707352",
-    "2110446685956759787",
-    "2110446837706764727",
-    "2110446976957608145",
-    "2110446980170150286",
-    "2110447238191423895",
-    "2110447558531088504",
-    "2110448044877427163",
-    "2110448436667396523",
-    "2110449049694601302",
-    "2110449737593684057",
-    "2110450308774052313",
-    "2110450488110178540"
+    "2110119122965320144",
+    "2110359033941029052",
+    "2110383479288467577",
+    "2110386315741020516",
+    "2110404550498672945",
+    "2110411375688155301",
+    "2110460663508205938"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T19:46:28.974Z",
-    "observedAt": "2026-10-14T19:46:53.620Z",
+    "attemptedAt": "2026-10-14T22:46:54.294Z",
+    "observedAt": "2026-10-14T22:47:06.859Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -12603,24 +12599,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T19:46:28.974Z",
-   "observedAt": "2026-10-14T19:46:53.620Z",
+   "attemptedAt": "2026-10-14T22:46:54.294Z",
+   "observedAt": "2026-10-14T22:47:06.859Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T19:46:28.974Z",
-   "observedAt": "2026-10-14T19:46:53.620Z",
+   "attemptedAt": "2026-10-14T22:46:54.294Z",
+   "observedAt": "2026-10-14T22:47:06.859Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T19:47:23.436Z"
+ "updatedAt": "2026-10-14T22:48:17.553Z"
 }
