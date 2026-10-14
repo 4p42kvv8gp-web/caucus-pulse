@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T04:27:37.272Z",
+ "classifiedAt": "2026-10-14T05:12:31.595Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -11,6 +11,18 @@
    [
     "democracy",
     "corruption-ethics"
+   ]
+  ],
+  "2110226646993391931": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2110227505584177579": [
+   [
+    "democracy",
+    null
    ]
   ]
  },
@@ -67,13 +79,47 @@
     "referenceId": "2110116328619028533",
     "fingerprint": "1b7dd228cb4fa527b443289e04a46f0d8c72fee519f612ecb6b8a217e2941080"
    }
+  },
+  "2110226646993391931": {
+   "contextVersion": 513,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9dea06b6cac255dd549d9076cb580a06e4f9e2affb0ec6f9cc6e7366d060cb97",
+   "quotedContext": {
+    "id": "2110183043235455156",
+    "authorId": "45596436",
+    "handle": "cookiesinheaven",
+    "createdAt": "2026-10-14T01:36:57.000Z",
+    "textChars": 101,
+    "textHash": "83881392ca1c0cd93e438c5b02d1ceb34f1506905fc3b64013f8634b24d9af79"
+   }
+  },
+  "2110227505584177579": {
+   "contextVersion": 513,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9dea06b6cac255dd549d9076cb580a06e4f9e2affb0ec6f9cc6e7366d060cb97",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110188428646101380",
+    "fingerprint": "3b26370cc0d74ee5c0e12ed123090742bed5bf5336f75ed012a20939906adebb"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110188428646101380",
+    "fingerprint": "3b26370cc0d74ee5c0e12ed123090742bed5bf5336f75ed012a20939906adebb"
+   }
   }
  },
  "needsContext": {
-  "2110220972829626770": false
+  "2110220972829626770": false,
+  "2110226646993391931": false,
+  "2110227505584177579": false
  },
  "inputBlocks": {},
- "contextVersion": 512,
+ "contextVersion": 513,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -108,29 +154,46 @@
     "acceptedCount": 3,
     "retryCount": 0
    }
+  },
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2110226646993391931",
+    "2110227505584177579"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-14T05:12:26.656Z",
+    "observedAt": "2026-10-14T05:12:31.592Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 2,
+    "retryCount": 0
+   }
   }
  },
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T04:27:29.505Z",
-   "observedAt": "2026-10-14T04:27:37.221Z",
+   "attemptedAt": "2026-10-14T05:12:26.656Z",
+   "observedAt": "2026-10-14T05:12:31.592Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T04:27:29.505Z",
-   "observedAt": "2026-10-14T04:27:37.221Z",
+   "attemptedAt": "2026-10-14T05:12:26.656Z",
+   "observedAt": "2026-10-14T05:12:31.592Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T04:27:37.273Z"
+ "updatedAt": "2026-10-14T05:12:31.596Z"
 }
