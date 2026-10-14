@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T14:33:03.783Z",
+ "classifiedAt": "2026-10-14T18:02:42.275Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -593,6 +593,10 @@
    [
     "democracy",
     "voting-rights"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ],
   "2110020645698535712": [
@@ -1002,10 +1006,6 @@
   "2110037859797545312": [
    [
     "healthcare",
-    null
-   ],
-   [
-    "constituent-services",
     null
    ]
   ],
@@ -2202,12 +2202,12 @@
     "prices-inflation"
    ],
    [
-    "healthcare",
-    "medicare"
-   ],
-   [
     "budget-appropriations",
     "social-security"
+   ],
+   [
+    "healthcare",
+    "medicare"
    ]
   ],
   "2110093372690252221": [
@@ -4354,12 +4354,6 @@
    "evidenceUsed": [],
    "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
   },
-  "2110005161687159081": {
-   "contextVersion": 501,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "560f07be18eed25f9e326b962fda9810e258993f1fef679d842fe0c1c2530b91"
-  },
   "2110005261536498080": {
    "contextVersion": 501,
    "evidenceSupplied": [],
@@ -4989,12 +4983,6 @@
    "evidenceUsed": [],
    "inputHash": "6e7aa11dd947135cc50def30c0223291ff0227b5437f89b422c312ae2b27d7b6"
   },
-  "2110019490503090453": {
-   "contextVersion": 501,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "6e7aa11dd947135cc50def30c0223291ff0227b5437f89b422c312ae2b27d7b6"
-  },
   "2110020645698535712": {
    "contextVersion": 501,
    "evidenceSupplied": [],
@@ -5056,12 +5044,6 @@
    "inputHash": "6e7aa11dd947135cc50def30c0223291ff0227b5437f89b422c312ae2b27d7b6"
   },
   "2110023655438876816": {
-   "contextVersion": 501,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "6e7aa11dd947135cc50def30c0223291ff0227b5437f89b422c312ae2b27d7b6"
-  },
-  "2110023814079812032": {
    "contextVersion": 501,
    "evidenceSupplied": [],
    "evidenceUsed": [],
@@ -5633,28 +5615,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "cbddf5535205b812495e1604d6c965fea601d5a2f20dc0f1977e28d25d6bc85e"
-  },
-  "2110037859797545312": {
-   "contextVersion": 502,
-   "evidenceSupplied": [
-    {
-     "id": "n_3d20b04d4549ec94",
-     "publisher": "Roll Call",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/09/plan-for-public-military-execution-sparks-bipartisan-backlash/",
-     "text": "“I absolutely support the sentence of death, but live-streaming executions is what jihadists do. America is better than that,” Rep. Austin Scott, R-Ga., a member of the House Armed Services Committee, posted on social media Friday morning.",
-     "title": "Plan for public military execution sparks bipartisan backlash",
-     "publishedAt": "2026-10-09T14:27:55.000Z",
-     "fetchedAt": "2026-10-09T18:48:11.253Z",
-     "version": 435,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "be55dca0c6db648704fa929d39610ce428c6eb7f7512ca22819fbb62e7530e64"
   },
   "2110037877186765294": {
    "contextVersion": 502,
@@ -11057,43 +11017,6 @@
    "evidenceUsed": [],
    "inputHash": "925dc1fe0e9305cd9c725b421dd095dd5b7c4deb44a222f3e4d88ba48222a3a9"
   },
-  "2110093139708940380": {
-   "contextVersion": 512,
-   "evidenceSupplied": [
-    {
-     "id": "n_4641a91ce6a48e2d",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/healthcare/6146555-medicare-all-support-midterm-elections/",
-     "text": "Poll: 43 percent support ‘Medicare for all’",
-     "title": "Poll: 43 percent support ‘Medicare for all’",
-     "publishedAt": "2026-10-13T21:27:07.000Z",
-     "fetchedAt": "2026-10-13T22:17:20.862Z",
-     "version": 507,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_0ef1ca1bb43f917b",
-     "publisher": "NPR",
-     "date": "2026-10-07",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/07/nx-s1-5992772/medicare-for-all-midterm-voters-medical-bills-affordability",
-     "text": "Christina Starks-Clay doesn't know how \"Medicare for All\" would work exactly, but she's willing to bet it'd be better than what she has now.",
-     "title": "'Medicare for All' message attracts midterm voters buckling under medical bills",
-     "publishedAt": "2026-10-07T09:00:00.000Z",
-     "fetchedAt": "2026-10-07T09:42:24.142Z",
-     "version": 393,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "2d4a798553fbf37912d49087efc55dad88fe1234c6c6d664c00e2892a024bb43"
-  },
   "2110147300341268793": {
    "contextVersion": 512,
    "evidenceSupplied": [
@@ -11493,6 +11416,146 @@
     "textChars": 106,
     "textHash": "1fb3a7b818b0c0888b1ac56bc5c2b6f68724c0e4cd57b452bb33a389f367a6c5"
    }
+  },
+  "2110005161687159081": {
+   "contextVersion": 522,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
+  },
+  "2110019490503090453": {
+   "contextVersion": 522,
+   "evidenceSupplied": [
+    {
+     "id": "n_ffff2b8166ec5c3e",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6148323-georgia-early-voting-record/",
+     "text": "Georgia shatters its Day 1 early voting record for a midterm",
+     "title": "Georgia shatters its Day 1 early voting record for a midterm",
+     "publishedAt": "2026-10-14T16:31:28.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
+  },
+  "2110023814079812032": {
+   "contextVersion": 522,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
+  },
+  "2110037859797545312": {
+   "contextVersion": 522,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_3d20b04d4549ec94",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/plan-for-public-military-execution-sparks-bipartisan-backlash/",
+     "text": "“I absolutely support the sentence of death, but live-streaming executions is what jihadists do. America is better than that,” Rep. Austin Scott, R-Ga., a member of the House Armed Services Committee, posted on social media Friday morning.",
+     "title": "Plan for public military execution sparks bipartisan backlash",
+     "publishedAt": "2026-10-09T14:27:55.000Z",
+     "fetchedAt": "2026-10-09T18:48:11.253Z",
+     "version": 435,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
+  },
+  "2110093139708940380": {
+   "contextVersion": 522,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_4641a91ce6a48e2d",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6146555-medicare-all-support-midterm-elections/",
+     "text": "Poll: 43 percent support ‘Medicare for all’",
+     "title": "Poll: 43 percent support ‘Medicare for all’",
+     "publishedAt": "2026-10-13T21:27:07.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
   }
  },
  "needsContext": {
@@ -11534,7 +11597,6 @@
   "2110004458277016005": false,
   "2110004933340651816": false,
   "2110005118083236232": false,
-  "2110005161687159081": false,
   "2110005261536498080": false,
   "2110005978737606790": false,
   "2110006490245283845": false,
@@ -11581,7 +11643,6 @@
   "2110017778564382811": false,
   "2110018093024198863": false,
   "2110018531911684573": false,
-  "2110019490503090453": false,
   "2110020645698535712": false,
   "2110021342795825637": false,
   "2110021781226672262": false,
@@ -11591,7 +11652,6 @@
   "2110022856817963221": false,
   "2110023653798908391": true,
   "2110023655438876816": false,
-  "2110023814079812032": false,
   "2110023920409538898": false,
   "2110024052895109123": false,
   "2110024054866317335": false,
@@ -11629,7 +11689,6 @@
   "2110036554282639705": false,
   "2110037458461110589": false,
   "2110037650837033287": false,
-  "2110037859797545312": false,
   "2110037877186765294": false,
   "2110038366779560082": false,
   "2110038645323469162": false,
@@ -12026,7 +12085,6 @@
   "2110194966500917601": false,
   "2110198642611204606": false,
   "2110199787936944463": false,
-  "2110093139708940380": false,
   "2110147300341268793": false,
   "2110153614463263095": false,
   "2110158652027883955": false,
@@ -12037,10 +12095,15 @@
   "2110213262751240523": false,
   "2110032041068671355": false,
   "2110041859473203707": false,
-  "2110118890646978658": false
+  "2110118890646978658": false,
+  "2110005161687159081": false,
+  "2110019490503090453": false,
+  "2110023814079812032": false,
+  "2110037859797545312": false,
+  "2110093139708940380": false
  },
  "inputBlocks": {},
- "contextVersion": 519,
+ "contextVersion": 522,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12437,72 +12500,35 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110118890646978658",
-    "2110356793557700659",
-    "2110356962835841289",
-    "2110357055227785578",
-    "2110357085271556283",
-    "2110357383688196105",
-    "2110357422447677777",
-    "2110358751827898615",
-    "2110358753589514475",
-    "2110358903590621569",
-    "2110358945705468087",
-    "2110358973266194801",
-    "2110359033941029052",
-    "2110359147333943345",
-    "2110359551799132354",
-    "2110359902212247650",
-    "2110360424700850237",
-    "2110360491063116036",
-    "2110360751479120363",
-    "2110360891598459095",
-    "2110362306324340918",
-    "2110362418731749457",
-    "2110362662584406321",
-    "2110362959390122048",
-    "2110363493996347651"
+    "2110005161687159081",
+    "2110019490503090453",
+    "2110023814079812032",
+    "2110037859797545312",
+    "2110093139708940380",
+    "2110411385901387969",
+    "2110412819002700104",
+    "2110413673449598978",
+    "2110413897421508780",
+    "2110413952991863088",
+    "2110414170461986993",
+    "2110414552739307665",
+    "2110414552919920845",
+    "2110414783790948793",
+    "2110414872580166136",
+    "2110414937747267620",
+    "2110415025232081177",
+    "2110415099575910413",
+    "2110415335551811897"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T14:31:36.249Z",
-    "observedAt": "2026-10-14T14:32:07.565Z",
+    "attemptedAt": "2026-10-14T18:00:48.368Z",
+    "observedAt": "2026-10-14T18:01:18.869Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 25,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2110117007517463008",
-    "2110117495957078158",
-    "2110117496712028175",
-    "2110117605050634543",
-    "2110118833084153984",
-    "2110118837660049816",
-    "2110118890646978658",
-    "2110119013439111673",
-    "2110119122965320144",
-    "2110119210428883038",
-    "2110119636880810052",
-    "2110120213656269190",
-    "2110120722916077859",
-    "2110120858786070960",
-    "2110120860396732517",
-    "2110120896589668706"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-13T21:34:42.823Z",
-    "observedAt": "2026-10-13T21:34:53.084Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 16,
+    "acceptedCount": 19,
     "retryCount": 0
    }
   },
@@ -12528,24 +12554,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T14:31:36.249Z",
-   "observedAt": "2026-10-14T14:32:07.565Z",
+   "attemptedAt": "2026-10-14T18:00:48.368Z",
+   "observedAt": "2026-10-14T18:01:18.869Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T14:31:36.249Z",
-   "observedAt": "2026-10-14T14:32:07.565Z",
+   "attemptedAt": "2026-10-14T18:00:48.368Z",
+   "observedAt": "2026-10-14T18:01:18.869Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 25,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T14:33:03.789Z"
+ "updatedAt": "2026-10-14T18:02:42.284Z"
 }
