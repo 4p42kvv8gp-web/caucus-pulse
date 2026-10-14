@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T12:17:22.619Z",
+ "generatedAt": "2026-10-14T13:00:02.688Z",
  "lastPollAt": "2026-10-14T12:16:49.797Z",
  "lastPollAttemptAt": "2026-10-14T12:16:49.013Z",
  "lastPollOutcome": "complete",
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-14T12:17:20.824Z"
+  "referenceAsOf": "2026-10-14T13:00:01.234Z"
  },
  "news": {
   "version": 517,
-  "items": 1127,
+  "items": 1126,
   "latestPublishedAt": "2026-10-14T11:00:00.000Z",
   "latestFetchedAt": "2026-10-14T11:31:14.609Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-14T12:17:21.379Z",
+   "asOf": "2026-10-14T13:00:01.673Z",
    "windowDays": 14,
-   "windowStart": "2026-09-30T12:17:21.379Z",
-   "eligibleItems": 1593,
+   "windowStart": "2026-09-30T13:00:01.673Z",
+   "eligibleItems": 1587,
    "withExcerpts": 151,
-   "headlineOrSummary": 1442,
+   "headlineOrSummary": 1436,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 980,
+     "eligibleItems": 976,
      "withExcerpts": 0,
-     "headlineOrSummary": 980,
+     "headlineOrSummary": 976,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-14T11:00:00.000Z",
      "latestItem": {
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 213,
+     "eligibleItems": 212,
      "withExcerpts": 0,
-     "headlineOrSummary": 213,
+     "headlineOrSummary": 212,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-14T09:02:01.000Z",
      "latestItem": {
@@ -3475,9 +3475,9 @@
      "id": "wapo-politics",
      "publisher": "The Washington Post",
      "sourceUrl": "https://feeds.washingtonpost.com/rss/politics",
-     "eligibleItems": 208,
+     "eligibleItems": 207,
      "withExcerpts": 0,
-     "headlineOrSummary": 208,
+     "headlineOrSummary": 207,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-14T10:00:00.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-14",
-  "capturedIn24h": 530,
-  "classifiedIn24h": 530,
-  "taggedIn24h": 492,
+  "capturedIn24h": 520,
+  "classifiedIn24h": 520,
+  "taggedIn24h": 483,
   "pendingIn24h": 0,
-  "momentumPaused": false,
+  "momentumPaused": true,
   "health": {
-   "status": "healthy",
-   "reasonCode": null,
-   "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-14T12:16:54.703Z",
+   "status": "degraded",
+   "reasonCode": "inference-error",
+   "hasCurrentFailure": true,
+   "lastAttemptAt": "2026-10-14T12:59:57.489Z",
    "lastSuccessAt": "2026-10-14T12:17:07.659Z",
-   "capturedIn24h": 530,
-   "classifiedIn24h": 530,
+   "capturedIn24h": 520,
+   "classifiedIn24h": 520,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    96,
-    143,
-    99,
-    81,
-    30,
-    6,
+    119,
+    134,
+    92,
+    78,
+    19,
+    5,
     0,
-    2,
-    99,
-    137,
-    149,
+    12,
+    119,
+    136,
+    143,
     84,
-    46,
-    6,
-    3,
-    6
+    24,
+    5,
+    4,
+    5
    ]
   },
   "CPC": {
@@ -6942,19 +6942,19 @@
     "engDelta": 0
    },
    "curve48": [
-    50,
-    77,
-    45,
-    28,
-    12,
-    5,
+    65,
+    74,
+    37,
+    25,
+    10,
+    4,
     0,
-    2,
-    43,
-    57,
-    59,
-    39,
-    21,
+    3,
+    56,
+    52,
+    60,
+    36,
+    14,
     3,
     1,
     1
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    59,
-    80,
-    56,
-    46,
-    13,
-    4,
-    0,
-    2,
+    70,
     72,
-    79,
-    92,
-    45,
-    27,
+    55,
+    42,
+    9,
+    3,
+    0,
+    10,
+    83,
+    78,
+    88,
+    42,
+    16,
     2,
-    2,
-    1
+    3,
+    0
    ]
   },
   "CBC": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    26,
-    25,
-    25,
+    31,
+    24,
+    22,
     15,
-    8,
+    6,
     0,
     0,
     1,
-    18,
-    22,
-    17,
-    9,
-    10,
+    21,
+    24,
+    15,
+    11,
+    5,
     2,
-    2,
-    2
+    3,
+    1
    ]
   },
   "CHC": {
@@ -7146,20 +7146,20 @@
     "engDelta": 0
    },
    "curve48": [
-    14,
-    31,
-    10,
-    14,
-    7,
-    3,
+    21,
+    28,
+    6,
+    15,
+    6,
+    2,
     0,
-    0,
-    20,
-    29,
-    24,
-    17,
-    13,
     1,
+    25,
+    26,
+    24,
+    19,
+    9,
+    0,
     1,
     1
    ]
@@ -7214,19 +7214,19 @@
     "engDelta": 0
    },
    "curve48": [
-    7,
+    6,
+    12,
+    13,
+    9,
+    2,
+    0,
+    0,
+    0,
+    4,
+    10,
+    15,
     8,
-    13,
-    13,
     2,
-    0,
-    0,
-    0,
-    2,
-    9,
-    16,
-    9,
-    3,
     1,
     0,
     0
@@ -7322,16 +7322,16 @@
     133,
     10
    ],
-   "d": 33,
+   "d": 32,
    "mAvg": 62,
    "epAvg": 94,
    "momentum": {
-    "score": 53,
+    "score": 52,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.8300000000000001,
+    "volume": 0.8200000000000001,
     "accel": 0,
     "adoption": 0.6935483870967742,
     "eff": 3.3,
@@ -8987,19 +8987,19 @@
     123,
     3
    ],
-   "d": 37,
+   "d": 34,
    "mAvg": 60.3,
    "epAvg": 1324,
    "momentum": {
-    "score": 57,
+    "score": 56,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.87,
+    "volume": 0.8400000000000001,
     "accel": 0,
     "adoption": 0.80939226519337,
-    "eff": 3.5,
+    "eff": 3.6,
     "engLift": 0
    },
    "subs": [
@@ -13330,19 +13330,19 @@
     81,
     0
    ],
-   "d": 41,
+   "d": 37,
    "mAvg": 40.5,
    "epAvg": 487,
    "momentum": {
-    "score": 66,
+    "score": 64,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.9099999999999999,
+    "volume": 0.87,
     "accel": 0.42391304347826086,
-    "adoption": 0.8333333333333333,
-    "eff": 2.8,
+    "adoption": 0.808641975308642,
+    "eff": 2.9,
     "engLift": 0
    },
    "subs": [
@@ -14481,19 +14481,19 @@
     21,
     0
    ],
-   "d": -44,
+   "d": -60,
    "mAvg": 30.7,
    "epAvg": 360,
    "momentum": {
-    "score": 6,
+    "score": 5,
     "drivers": [
      "caucus spread",
      "volume"
     ],
-    "volume": 0.06,
+    "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 2.6,
+    "eff": 3.2,
     "engLift": 0
    },
    "subs": [
@@ -15263,20 +15263,20 @@
     41,
     0
    ],
-   "d": 18,
+   "d": 15,
    "mAvg": 28.7,
    "epAvg": 11,
    "momentum": {
-    "score": 60,
+    "score": 58,
     "drivers": [
      "adoption",
      "volume"
     ],
-    "volume": 0.6799999999999999,
+    "volume": 0.65,
     "accel": 0.5418660287081339,
-    "adoption": 0.7906976744186046,
-    "eff": 3.3,
-    "engLift": 0.028238024151233443
+    "adoption": 0.7558139534883721,
+    "eff": 3.2,
+    "engLift": 0.0359337048149736
    },
    "subs": [],
    "postIds": {
@@ -17115,19 +17115,19 @@
     18,
     0
    ],
-   "d": 16,
+   "d": 10,
    "mAvg": 14,
    "epAvg": 54,
    "momentum": {
-    "score": 66,
+    "score": 62,
     "drivers": [
      "acceleration",
      "adoption"
     ],
-    "volume": 0.66,
+    "volume": 0.6,
     "accel": 1,
-    "adoption": 0.7142857142857143,
-    "eff": 3,
+    "adoption": 0.6428571428571428,
+    "eff": 3.1,
     "engLift": 0
    },
    "subs": [
