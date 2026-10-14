@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-14T06:43:31.337Z",
- "lastPollAt": "2026-10-14T06:43:10.517Z",
- "lastPollAttemptAt": "2026-10-14T06:43:09.923Z",
+ "generatedAt": "2026-10-14T07:31:47.451Z",
+ "lastPollAt": "2026-10-14T07:31:35.994Z",
+ "lastPollAttemptAt": "2026-10-14T07:31:35.325Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-14T06:43:29.814Z"
+  "referenceAsOf": "2026-10-14T07:31:45.669Z"
  },
  "news": {
   "version": 513,
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-14T06:43:30.281Z",
+   "asOf": "2026-10-14T07:31:46.208Z",
    "windowDays": 14,
-   "windowStart": "2026-09-30T06:43:30.281Z",
-   "eligibleItems": 1596,
-   "withExcerpts": 151,
-   "headlineOrSummary": 1445,
+   "windowStart": "2026-09-30T07:31:46.208Z",
+   "eligibleItems": 1594,
+   "withExcerpts": 150,
+   "headlineOrSummary": 1444,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3379,8 +3379,8 @@
      "id": "npr-politics",
      "publisher": "NPR",
      "sourceUrl": "https://feeds.npr.org/1014/rss.xml",
-     "eligibleItems": 89,
-     "withExcerpts": 85,
+     "eligibleItems": 88,
+     "withExcerpts": 84,
      "headlineOrSummary": 4,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-13T20:03:45.000Z",
@@ -3427,9 +3427,9 @@
      "id": "roll-call",
      "publisher": "Roll Call",
      "sourceUrl": "https://rollcall.com/feed/",
-     "eligibleItems": 67,
+     "eligibleItems": 66,
      "withExcerpts": 66,
-     "headlineOrSummary": 1,
+     "headlineOrSummary": 0,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-13T19:38:53.000Z",
      "latestItem": {
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-14",
-  "capturedIn24h": 523,
-  "classifiedIn24h": 523,
-  "taggedIn24h": 485,
+  "capturedIn24h": 524,
+  "classifiedIn24h": 524,
+  "taggedIn24h": 486,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-14T06:43:13.876Z",
-   "lastSuccessAt": "2026-10-14T06:43:16.125Z",
-   "capturedIn24h": 523,
-   "classifiedIn24h": 523,
+   "lastAttemptAt": "2026-10-14T07:31:39.957Z",
+   "lastSuccessAt": "2026-10-14T07:31:42.084Z",
+   "capturedIn24h": 524,
+   "classifiedIn24h": 524,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 5,
+    "posts": 6,
     "mix": [
-     40,
+     50,
      0,
-     60
+     50
     ],
     "accounts": 3,
     "members": 3,
     "unidentifiedAccounts": 0,
-    "classified": 5,
-    "tagged": 5,
+    "classified": 6,
+    "tagged": 6,
     "pending": 0,
     "corePosts": 2,
     "coreCounts": {
@@ -6850,7 +6850,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 2802,
+    "posts": 2803,
     "mix": [
      84,
      4,
@@ -6859,8 +6859,8 @@
     "accounts": 325,
     "members": 202,
     "unidentifiedAccounts": 0,
-    "classified": 2802,
-    "tagged": 2530,
+    "classified": 2803,
+    "tagged": 2531,
     "pending": 0,
     "corePosts": 1073,
     "coreCounts": {
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
-    14,
-    116,
-    131,
-    97,
-    77,
-    26,
-    5,
+    2,
+    40,
+    128,
+    129,
+    84,
+    62,
+    20,
+    2,
     0,
-    4,
-    114,
-    139,
-    146,
-    83,
-    32,
-    5
+    26,
+    134,
+    128,
+    142,
+    67,
+    23,
+    4
    ]
   },
   "CPC": {
@@ -6943,36 +6943,36 @@
    },
    "curve48": [
     0,
-    5,
-    58,
-    75,
-    42,
-    23,
-    13,
-    4,
-    0,
-    2,
-    51,
-    53,
-    64,
-    35,
     16,
-    3
+    75,
+    62,
+    37,
+    17,
+    11,
+    2,
+    0,
+    12,
+    60,
+    46,
+    61,
+    30,
+    14,
+    1
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 2,
+    "posts": 3,
     "mix": [
-     50,
+     67,
      0,
-     50
+     33
     ],
     "accounts": 1,
     "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 2,
-    "tagged": 2,
+    "classified": 3,
+    "tagged": 3,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -6986,7 +6986,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 1641,
+    "posts": 1642,
     "mix": [
      83,
      4,
@@ -6995,8 +6995,8 @@
     "accounts": 182,
     "members": 109,
     "unidentifiedAccounts": 0,
-    "classified": 1641,
-    "tagged": 1461,
+    "classified": 1642,
+    "tagged": 1462,
     "pending": 0,
     "corePosts": 573,
     "coreCounts": {
@@ -7010,37 +7010,37 @@
     "engDelta": 0
    },
    "curve48": [
-    1,
+    2,
+    28,
+    67,
+    77,
+    50,
+    33,
     11,
-    72,
-    69,
-    58,
-    41,
-    13,
-    3,
     0,
-    3,
-    84,
-    79,
-    89,
-    40,
-    22,
-    2
+    0,
+    19,
+    93,
+    75,
+    83,
+    32,
+    15,
+    3
    ]
   },
   "CBC": {
    "t": {
-    "posts": 2,
+    "posts": 3,
     "mix": [
-     50,
+     67,
      0,
-     50
+     33
     ],
     "accounts": 1,
     "members": 1,
     "unidentifiedAccounts": 0,
-    "classified": 2,
-    "tagged": 2,
+    "classified": 3,
+    "tagged": 3,
     "pending": 0,
     "corePosts": 0,
     "coreCounts": {
@@ -7054,7 +7054,7 @@
     "engDelta": -100
    },
    "w": {
-    "posts": 556,
+    "posts": 557,
     "mix": [
      83,
      3,
@@ -7063,8 +7063,8 @@
     "accounts": 80,
     "members": 52,
     "unidentifiedAccounts": 0,
-    "classified": 556,
-    "tagged": 491,
+    "classified": 557,
+    "tagged": 492,
     "pending": 0,
     "corePosts": 205,
     "coreCounts": {
@@ -7073,27 +7073,27 @@
      "Corruption": 104
     },
     "eng": 323142,
-    "perPost": 581,
+    "perPost": 580,
     "top10Share": 92,
     "engDelta": 0
    },
    "curve48": [
-    0,
-    7,
+    1,
+    15,
     28,
     25,
+    16,
+    15,
+    5,
+    0,
+    0,
+    4,
+    24,
     22,
-    16,
+    15,
     7,
-    0,
-    0,
-    1,
-    20,
-    23,
-    16,
-    11,
-    6,
-    2
+    5,
+    3
    ]
   },
   "CHC": {
@@ -7147,20 +7147,20 @@
    },
    "curve48": [
     0,
-    2,
-    20,
-    28,
-    7,
-    13,
-    8,
-    2,
-    0,
-    1,
+    5,
     22,
-    27,
     25,
-    17,
-    12,
+    5,
+    16,
+    7,
+    0,
+    0,
+    3,
+    28,
+    27,
+    21,
+    16,
+    9,
     0
    ]
   },
@@ -7215,21 +7215,21 @@
    },
    "curve48": [
     0,
-    1,
-    6,
-    9,
+    4,
+    7,
+    13,
     15,
-    10,
+    2,
     2,
     0,
     0,
     0,
+    4,
+    11,
+    18,
+    4,
     3,
-    9,
-    17,
-    8,
-    2,
-    1
+    0
    ]
   }
  },
@@ -7239,7 +7239,7 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 3,
+     "n": 4,
      "eng": 5,
      "m": 2,
      "a": 2
@@ -7251,13 +7251,13 @@
      "a": 1
     },
     "NewDem": {
-     "n": 2,
+     "n": 3,
      "eng": 2,
      "m": 1,
      "a": 1
     },
     "CBC": {
-     "n": 2,
+     "n": 3,
      "eng": 2,
      "m": 1,
      "a": 1
@@ -7277,7 +7277,7 @@
    },
    "w": {
     "All": {
-     "n": 638,
+     "n": 639,
      "eng": 53821,
      "m": 136,
      "a": 185
@@ -7289,13 +7289,13 @@
      "a": 72
     },
     "NewDem": {
-     "n": 403,
+     "n": 404,
      "eng": 15289,
      "m": 80,
      "a": 105
     },
     "CBC": {
-     "n": 127,
+     "n": 128,
      "eng": 15514,
      "m": 32,
      "a": 39
@@ -7320,18 +7320,18 @@
     77,
     105,
     133,
-    3
+    4
    ],
-   "d": 28,
+   "d": 29,
    "mAvg": 62,
    "epAvg": 84,
    "momentum": {
-    "score": 50,
+    "score": 51,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.78,
+    "volume": 0.79,
     "accel": 0,
     "adoption": 0.6774193548387097,
     "eff": 3.2,
@@ -7342,7 +7342,7 @@
      "key": "elections-2026",
      "t": {
       "All": {
-       "n": 1,
+       "n": 2,
        "eng": 2,
        "m": 1,
        "a": 1
@@ -7354,13 +7354,13 @@
        "a": 0
       },
       "NewDem": {
-       "n": 1,
+       "n": 2,
        "eng": 2,
        "m": 1,
        "a": 1
       },
       "CBC": {
-       "n": 1,
+       "n": 2,
        "eng": 2,
        "m": 1,
        "a": 1
@@ -7380,7 +7380,7 @@
      },
      "w": {
       "All": {
-       "n": 427,
+       "n": 428,
        "eng": 42023,
        "m": 108,
        "a": 120
@@ -7392,13 +7392,13 @@
        "a": 47
       },
       "NewDem": {
-       "n": 274,
+       "n": 275,
        "eng": 12069,
        "m": 64,
        "a": 68
       },
       "CBC": {
-       "n": 90,
+       "n": 91,
        "eng": 14237,
        "m": 24,
        "a": 27
@@ -7420,9 +7420,11 @@
      "leadPostId": "2109023149186789742",
      "postIds": {
       "t": [
+       "2110269055839977959",
        "2110241174334361961"
       ],
       "w": [
+       "2110269055839977959",
        "2110241174334361961",
        "2110195978867499206",
        "2110194966500917601",
@@ -8227,11 +8229,13 @@
    ],
    "postIds": {
     "t": [
+     "2110269055839977959",
      "2110246648488018264",
      "2110241174334361961",
      "2110226646993391931"
     ],
     "w": [
+     "2110269055839977959",
      "2110246648488018264",
      "2110241174334361961",
      "2110226646993391931",
@@ -20936,8 +20940,8 @@
     47,
     47,
     47,
-    49,
-    57,
+    52,
+    58,
     59,
     60
    ],
@@ -21085,7 +21089,7 @@
     3,
     3,
     3,
-    3,
+    4,
     4,
     4,
     4,
@@ -21220,7 +21224,7 @@
     3,
     3,
     3,
-    3,
+    4,
     4,
     4,
     4
@@ -22055,7 +22059,7 @@
     1,
     1,
     1,
-    1,
+    3,
     3,
     3,
     3,
@@ -24140,6 +24144,42 @@
  ],
  "incidentsFiltered": 2,
  "feed": [
+  {
+   "id": "2110269055839977959",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Someone should put together a 2018 chart (last time we regained the majority) and a 2026 chart. Do a side-by-side comparison. https://t.co/iNfW82muxJ",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-14T07:18:44.000Z",
+   "date": "2026-10-14",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2110097003611074878",
+    "handle": "@ThirdWayTweet",
+    "text": "It's moderate overperformers that make majorities. 💪 https://t.co/QLRcBMADEb"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 513,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:31:35.986Z",
+   "isNew": false
+  },
   {
    "id": "2110246648488018264",
    "handle": "@MarcVeasey",
@@ -31581,39 +31621,6 @@
    },
    "metricsObservedAt": "2026-10-13T21:32:23.669Z",
    "isNew": false
-  },
-  {
-   "id": "2110101046605300166",
-   "handle": "@RepShontelBrown",
-   "member": "Shontel M. Brown",
-   "district": "OH-11",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CBC"
-   ],
-   "text": "It's about time, now the rest of this corrupt administration must be held accountable.\n\nhttps://t.co/4uMnZdoncJ",
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "time": "2026-10-13T20:11:07.000Z",
-   "date": "2026-10-13",
-   "engN": 65,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": true,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 506,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T21:32:23.669Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -31944,6 +31951,35 @@
   "1793758601749614592": "@RitchieTorresNY"
  },
  "feedAll": [
+  {
+   "id": "2110269055839977959",
+   "authorId": "20688358",
+   "createdAt": "2026-10-14T07:18:44.000Z",
+   "date": "2026-10-14",
+   "type": "quote",
+   "text": "Someone should put together a 2018 chart (last time we regained the majority) and a 2026 chart. Do a side-by-side comparison. https://t.co/iNfW82muxJ",
+   "engN": 0,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 513,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:31:35.986Z",
+   "quoted": {
+    "id": "2110097003611074878",
+    "handle": "@ThirdWayTweet",
+    "text": "It's moderate overperformers that make majorities. 💪 https://t.co/QLRcBMADEb"
+   }
+  },
   {
    "id": "2110246648488018264",
    "authorId": "20688358",
@@ -74505,39 +74541,18 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-11T07:46:36.351Z"
-  },
-  {
-   "id": "2108996663515971803",
-   "authorId": "231108733",
-   "createdAt": "2026-10-10T19:02:42.000Z",
-   "date": "2026-10-10",
-   "type": "retweet",
-   "text": "RT @AbdulElSayed: Meanwhile, here’s @stoolpresidente committing an act of athletic terrorism.\n\nLess pizza, more gym, habibi. https://t.co/1…",
-   "engN": 0,
-   "topics": [],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": "2108960477485166814",
-   "provenance": {
-    "contextVersion": 455,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-10T20:13:42.405Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2802,
+ "feedAllTotal": 2803,
  "feedAllFiles": [
-  "feed-0-991ccbbc0f2cf001.json",
-  "feed-1-188df381c037d0f1.json",
-  "feed-2-9950165028b69482.json",
-  "feed-3-154edff529034a65.json",
-  "feed-4-7f3ee48c76e5777b.json",
-  "feed-5-6e2105fd0263cf72.json",
-  "feed-6-1d3d059672946898.json",
-  "feed-7-970761c83c36ca0b.json"
+  "feed-0-38e5aa8eae3f7843.json",
+  "feed-1-1c315d074d69a9bb.json",
+  "feed-2-64e827dde7125d80.json",
+  "feed-3-d31f17882e170bf3.json",
+  "feed-4-ad2f1fcd9a4a202c.json",
+  "feed-5-510a518c0b5e50c5.json",
+  "feed-6-a31c47847576049c.json",
+  "feed-7-ca2c6949c7e3ee4f.json"
  ]
 }
