@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T21:19:19.822Z",
+ "classifiedAt": "2026-10-14T21:37:41.136Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -3320,6 +3320,137 @@
    [
     "economy",
     "housing"
+   ]
+  ],
+  "2110480148378374648": [
+   [
+    "budget-appropriations",
+    "social-security"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110480279534198951": [
+   [
+    "public-safety",
+    "crime-policing"
+   ],
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2110480293341937763": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110480441937453342": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2110481271319339066": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110481521383719050": [
+   [
+    "democracy",
+    "press-speech"
+   ]
+  ],
+  "2110481713071898951": [
+   [
+    "climate",
+    null
+   ]
+  ],
+  "2110481813118333378": [],
+  "2110481858492244133": [
+   [
+    "economy",
+    null
+   ]
+  ],
+  "2110482446949228953": [
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2110482600506834987": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2110482711068442954": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2110482779632730581": [
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110483002719453673": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2110483333230588328": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2110484080986931490": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2110484319491834035": [
+   [
+    "democracy",
+    "voting-rights"
+   ],
+   [
+    "democracy",
+    "courts-doj"
+   ]
+  ],
+  "2110484443668324597": [
+   [
+    "constituent-services",
+    null
    ]
   ]
  },
@@ -11011,6 +11142,320 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "5b2c259bf5541922ffcef668b685583e113ac01e8233aea5867d126a8bdcba6d"
+  },
+  "2110480148378374648": {
+   "contextVersion": 525,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1e1fe792b28fae6a",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+     "text": "Iran war costing US households average of $2K each: Moody’s",
+     "title": "Iran war costing US households average of $2K each: Moody’s",
+     "publishedAt": "2026-10-13T20:38:43.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_82bf5b4cb230565b",
+    "n_1e1fe792b28fae6a"
+   ],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "quotedContext": {
+    "id": "2110366410090156051",
+    "authorId": "51241574",
+    "handle": "AP",
+    "createdAt": "2026-10-14T13:45:35.000Z",
+    "textChars": 155,
+    "textHash": "4cad18b3b4445b37d27177787fefe08edec24d669b940589b30939fbbdd21761"
+   }
+  },
+  "2110480279534198951": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110480293341937763": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110480441937453342": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "quotedContext": {
+    "id": "2110477430905516427",
+    "authorId": "1876279166565515264",
+    "handle": "RepNellie",
+    "createdAt": "2026-10-14T21:06:44.000Z",
+    "textChars": 288,
+    "textHash": "8c562d14deb5d4ece788be9d7e34da9ad9d4e37ce2bc31855dc44b70db978a5d"
+   }
+  },
+  "2110481271319339066": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110481521383719050": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110481713071898951": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110473589581389901",
+    "fingerprint": "8495f56a2b966d888507dccdf9852f4d0768fca3d80f9880df1dbcc7111ced56"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110473589581389901",
+    "fingerprint": "8495f56a2b966d888507dccdf9852f4d0768fca3d80f9880df1dbcc7111ced56"
+   }
+  },
+  "2110481813118333378": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110481858492244133": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110456097207394491",
+    "fingerprint": "e8a5b83aa27985ab0a17f8db68f39027bb9770341c87508809bd851f211a8913"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110456097207394491",
+    "fingerprint": "e8a5b83aa27985ab0a17f8db68f39027bb9770341c87508809bd851f211a8913"
+   }
+  },
+  "2110482446949228953": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109967947712102878",
+    "fingerprint": "41b52338d9ce68a24a953388378544960eaafa795a3cf3912b834b1dda036f09"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2109967947712102878",
+    "fingerprint": "41b52338d9ce68a24a953388378544960eaafa795a3cf3912b834b1dda036f09"
+   }
+  },
+  "2110482600506834987": {
+   "contextVersion": 525,
+   "evidenceSupplied": [
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "The U.S. government continues to pay for ads promoting President Trump , even after he announced that his MAGA Inc. super PAC would take over funding. A federal judge ordered the ads to be taken down, yet they remained on air. An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer funds have been spent since the campaign began in late September. Almost $10 million of that was spent after Trump pledged on an Oct. 5 Truth Social post to fund the campaign privately. The White House has called the ads public service announcements, but a lawsuit by Common Cause and others …",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_a12bf57ead5deebb",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998976/pro-trump-ads-taxpayer-funds-federal-judge",
+     "text": "An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer dollars has been spent to air the ads since the campaign began in late September. Nearly $10 million of that total was spent after Oct. 5, when the president pledged to fund it privately in a post on Truth Social .",
+     "title": "Government spent $10 million on pro-Trump ads after president said super PAC would fund",
+     "publishedAt": "2026-10-12T22:16:47.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110194178189885903",
+    "fingerprint": "9e887e4c62e1d0af9deccd5f7fb95a407628c2cc19824f1d767caea49dfe30f6"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110194178189885903",
+    "fingerprint": "9e887e4c62e1d0af9deccd5f7fb95a407628c2cc19824f1d767caea49dfe30f6"
+   }
+  },
+  "2110482711068442954": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110482779632730581": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110483002719453673": {
+   "contextVersion": 525,
+   "evidenceSupplied": [
+    {
+     "id": "n_a459e434d94e4931",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998040/democratic-senator-talks-trumps-russian-diesel-deal",
+     "text": "STEVE INSKEEP, HOST: A bipartisan group of senators has objected to the president lifting sanctions on Russian energy. One of them is Senator Jeanne Shaheen, Democrat of New Hampshire, and we've reached her while she's on a congressional delegation visit to southeastern Europe. She's in Croatia. Senator, welcome.",
+     "title": "Democratic senator talks Trump's Russian diesel deal",
+     "publishedAt": "2026-10-12T11:37:00.000Z",
+     "fetchedAt": "2026-10-12T18:22:09.547Z",
+     "version": 487,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a5c5d759c83a21d7",
+     "publisher": "Roll Call",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/13/house-vulnerable-republicans-trump-support/",
+     "text": "Perhaps surprisingly, this also holds true for the most endangered Republicans, in races that Inside Elections with Nathan L. Gonzales rates either as Toss-ups or as favoring Democrats. While their districts may be down on Trump over his handling of rising prices and the Iran conflict, these Republicans backed the president’s position on 96 percent of votes taken this year.",
+     "title": "House’s most vulnerable Republicans haven’t deviated from Trump on 2026 votes",
+     "publishedAt": "2026-10-13T17:49:37.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110483333230588328": {
+   "contextVersion": 525,
+   "evidenceSupplied": [
+    {
+     "id": "n_bff5be75ef19a164",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/nx-s1-6000216/kimberly-guilfoyle-has-been-asked-to-resign-among-corruption-allegations",
+     "text": "MICHELE KELEMEN, BYLINE: Kimberly Guilfoyle is a prominent figure in Trump's MAGA movement, a former Fox News commentator once engaged to Donald Trump Jr. Her firing was announced by the new White House press secretary, Katie Zacharia.",
+     "title": "Kimberly Guilfoyle has been asked to resign among corruption allegations",
+     "publishedAt": "2026-10-13T20:03:45.000Z",
+     "fetchedAt": "2026-10-14T03:41:07.660Z",
+     "version": 512,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_ab59beee9b9bfa2d",
+     "publisher": "NPR",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation",
+     "text": "WASHINGTON — The White House publicly asked for U.S. Ambassador to Greece Kimberly Guilfoyle's resignation on Tuesday as she faced mounting accusations of improper conduct, and she announced within two hours that she was quitting, ending days of talk and speculation about her professional fate. Guilfoyle insisted that she would \"vigorously defend\" herself.",
+     "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+     "publishedAt": "2026-10-14T09:09:39.000Z",
+     "fetchedAt": "2026-10-14T10:01:24.806Z",
+     "version": 515,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bff5be75ef19a164",
+    "n_ab59beee9b9bfa2d"
+   ],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110484080986931490": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110432775211778179",
+    "fingerprint": "2a9d231cc6d0a73079e7cec25ef62276f5f37ba9cedf2914fd75efcc3faf57e5"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110432775211778179",
+    "fingerprint": "2a9d231cc6d0a73079e7cec25ef62276f5f37ba9cedf2914fd75efcc3faf57e5"
+   }
+  },
+  "2110484319491834035": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
+  },
+  "2110484443668324597": {
+   "contextVersion": 525,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "5664d6160dc53ee56e49b757cd08136d193bcda418e2cd65987783cb0b0e06f7"
   }
  },
  "needsContext": {
@@ -11450,7 +11895,25 @@
   "2110479513645887554": false,
   "2110479743422169474": false,
   "2110479841527005470": false,
-  "2110479924846891332": false
+  "2110479924846891332": false,
+  "2110480148378374648": false,
+  "2110480279534198951": false,
+  "2110480293341937763": false,
+  "2110480441937453342": false,
+  "2110481271319339066": false,
+  "2110481521383719050": false,
+  "2110481713071898951": false,
+  "2110481813118333378": false,
+  "2110481858492244133": false,
+  "2110482446949228953": false,
+  "2110482600506834987": false,
+  "2110482711068442954": false,
+  "2110482779632730581": false,
+  "2110483002719453673": false,
+  "2110483333230588328": false,
+  "2110484080986931490": false,
+  "2110484319491834035": false,
+  "2110484443668324597": false
  },
  "inputBlocks": {},
  "contextVersion": 525,
@@ -11696,7 +12159,9 @@
   {
    "label": "Secaucus NJ diesel spill cleanup",
    "ids": [
-    "2110477430905516427"
+    "2110477430905516427",
+    "2110480441937453342",
+    "2110481713071898951"
    ]
   },
   {
@@ -11779,27 +12244,34 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110347443804283332",
-    "2110423014126870708",
-    "2110425771034427893",
-    "2110446976957608145",
-    "2110446980170150286",
-    "2110457979275530491",
-    "2110458117217530271",
-    "2110458577907282299",
-    "2110458675466805581",
-    "2110458680500240638",
-    "2110459124706320756"
+    "2110480148378374648",
+    "2110480279534198951",
+    "2110480293341937763",
+    "2110480441937453342",
+    "2110481271319339066",
+    "2110481521383719050",
+    "2110481713071898951",
+    "2110481813118333378",
+    "2110481858492244133",
+    "2110482446949228953",
+    "2110482600506834987",
+    "2110482711068442954",
+    "2110482779632730581",
+    "2110483002719453673",
+    "2110483333230588328",
+    "2110484080986931490",
+    "2110484319491834035",
+    "2110484443668324597"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T21:17:10.178Z",
-    "observedAt": "2026-10-14T21:17:27.008Z",
+    "attemptedAt": "2026-10-14T21:37:14.769Z",
+    "observedAt": "2026-10-14T21:37:41.119Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 11,
+    "acceptedCount": 18,
     "retryCount": 0
    }
   },
@@ -11876,24 +12348,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T21:18:45.985Z",
-   "observedAt": "2026-10-14T21:19:19.802Z",
+   "attemptedAt": "2026-10-14T21:37:14.769Z",
+   "observedAt": "2026-10-14T21:37:41.119Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 18,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T21:18:45.985Z",
-   "observedAt": "2026-10-14T21:19:19.802Z",
+   "attemptedAt": "2026-10-14T21:37:14.769Z",
+   "observedAt": "2026-10-14T21:37:41.119Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 16,
+   "acceptedCount": 18,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T21:19:19.828Z"
+ "updatedAt": "2026-10-14T21:37:41.142Z"
 }
