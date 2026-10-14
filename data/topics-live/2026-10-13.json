@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T01:21:37.828Z",
+ "classifiedAt": "2026-10-14T01:51:13.362Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -3716,6 +3716,32 @@
    [
     "foreign-policy",
     "military-veterans"
+   ]
+  ],
+  "2110184325006426565": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "immigration",
+    "border-policy"
+   ]
+  ],
+  "2110185943751639537": [
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ],
+   [
+    "economy",
+    "taxes"
+   ]
+  ],
+  "2110186357918150770": [
+   [
+    "immigration",
+    "ice-enforcement"
    ]
   ]
  },
@@ -10888,6 +10914,64 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "8ec2f869cf5ac0719a708d42e5e14a3f3dd7b2176c834330f83327ee8acd351b"
+  },
+  "2110184325006426565": {
+   "contextVersion": 510,
+   "evidenceSupplied": [
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "The warehouse in Roxbury was one piece of a billion-dollar plan by the Department of Homeland Security to detain migrants as part of President Trump's mass deportation efforts.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d5f83786db86fd7a278ebcd4df9d600290026513d64640f8d5375f3ec82b8a61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110150414901375459",
+    "fingerprint": "80040fffef957ea9845fc6b2b4286e0308565c7c51f820a393f15fe97a8c2606"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110150414901375459",
+    "fingerprint": "80040fffef957ea9845fc6b2b4286e0308565c7c51f820a393f15fe97a8c2606"
+   }
+  },
+  "2110185943751639537": {
+   "contextVersion": 510,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d5f83786db86fd7a278ebcd4df9d600290026513d64640f8d5375f3ec82b8a61"
+  },
+  "2110186357918150770": {
+   "contextVersion": 510,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d5f83786db86fd7a278ebcd4df9d600290026513d64640f8d5375f3ec82b8a61",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110183921946182055",
+    "fingerprint": "d946b1a1e81a270ef06fe212d39206fffe9028250666a51498f18b0611ab4745"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110183921946182055",
+    "fingerprint": "d946b1a1e81a270ef06fe212d39206fffe9028250666a51498f18b0611ab4745"
+   }
   }
  },
  "needsContext": {
@@ -11411,7 +11495,10 @@
   "2110172417360585159": false,
   "2110175001903013952": false,
   "2110177073390362635": false,
-  "2110177824497917959": false
+  "2110177824497917959": false,
+  "2110184325006426565": false,
+  "2110185943751639537": false,
+  "2110186357918150770": false
  },
  "inputBlocks": {},
  "contextVersion": 510,
@@ -11747,6 +11834,12 @@
    "ids": [
     "2110162066275463243"
    ]
+  },
+  {
+   "label": "Bill to abolish DHS, ICE and CBP",
+   "ids": [
+    "2110184325006426565"
+   ]
   }
  ],
  "unclassified": [],
@@ -11760,53 +11853,19 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110156308985020432",
-    "2110156347656249505",
-    "2110158651977863232",
-    "2110158652027883955",
-    "2110159175670210689",
-    "2110160560163586370",
-    "2110160721753588094",
-    "2110161800096346478",
-    "2110162066275463243",
-    "2110162575426015584",
-    "2110163034417074628",
-    "2110163720047665402",
-    "2110164870565867573",
-    "2110165189307912207",
-    "2110166983568203984",
-    "2110167118184407230",
-    "2110167685392633976",
-    "2110167706481660193",
-    "2110167762454679993",
-    "2110167957154214351",
-    "2110168111051595781",
-    "2110168259370619194",
-    "2110168660127977636",
-    "2110169003364847859",
-    "2110169213864190272",
-    "2110169584519237961",
-    "2110169984433361293",
-    "2110170151127589234",
-    "2110170634118693197",
-    "2110170809050472541",
-    "2110171073341960492",
-    "2110171655351808369",
-    "2110171671625974165",
-    "2110172417360585159",
-    "2110175001903013952",
-    "2110177073390362635",
-    "2110177824497917959"
+    "2110184325006426565",
+    "2110185943751639537",
+    "2110186357918150770"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T01:20:45.581Z",
-    "observedAt": "2026-10-14T01:21:37.813Z",
+    "attemptedAt": "2026-10-14T01:51:08.331Z",
+    "observedAt": "2026-10-14T01:51:13.346Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 37,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   },
@@ -11941,24 +12000,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T01:20:45.581Z",
-   "observedAt": "2026-10-14T01:21:37.813Z",
+   "attemptedAt": "2026-10-14T01:51:08.331Z",
+   "observedAt": "2026-10-14T01:51:13.346Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 37,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T01:20:45.581Z",
-   "observedAt": "2026-10-14T01:21:37.813Z",
+   "attemptedAt": "2026-10-14T01:51:08.331Z",
+   "observedAt": "2026-10-14T01:51:13.346Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 37,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T01:21:37.832Z"
+ "updatedAt": "2026-10-14T01:51:13.368Z"
 }
