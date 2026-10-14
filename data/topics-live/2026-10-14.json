@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T07:31:42.088Z",
+ "classifiedAt": "2026-10-14T09:16:40.078Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -41,6 +41,22 @@
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2110295961104765390": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2110296283189567712": [
+   [
+    "congress-politics",
+    null
    ]
   ]
  },
@@ -191,6 +207,56 @@
     "textChars": 77,
     "textHash": "b6bce6775cde170ad664147a98692008ad999817d3978876b36482b6c0c7c45b"
    }
+  },
+  "2110295961104765390": {
+   "contextVersion": 514,
+   "evidenceSupplied": [
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7962cc899f18c281"
+   ],
+   "inputHash": "4b0c24de9b8c01f3b4b63da023a66eac2f4dfed9f18b327bbcac0b32595ddbd6",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110095371825217759",
+    "fingerprint": "d4cd18c11de6f966ef771948ece1777d6bec3ab414c1a0183c6d7ca57011591f"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110095371825217759",
+    "fingerprint": "d4cd18c11de6f966ef771948ece1777d6bec3ab414c1a0183c6d7ca57011591f"
+   }
+  },
+  "2110296283189567712": {
+   "contextVersion": 514,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "4b0c24de9b8c01f3b4b63da023a66eac2f4dfed9f18b327bbcac0b32595ddbd6",
+   "quotedContext": {
+    "id": "2110040570211025007",
+    "authorId": "77098233",
+    "handle": "jamestalarico",
+    "createdAt": "2026-10-13T16:10:49.000Z",
+    "textChars": 111,
+    "textHash": "6b8ecdb15dfdea4346ce58560037abfe6a659ba5e4a7c030a1998abf9acb2660"
+   }
   }
  },
  "needsContext": {
@@ -199,15 +265,23 @@
   "2110227505584177579": false,
   "2110241174334361961": false,
   "2110246648488018264": false,
-  "2110269055839977959": false
+  "2110269055839977959": false,
+  "2110295961104765390": false,
+  "2110296283189567712": true
  },
  "inputBlocks": {},
- "contextVersion": 513,
+ "contextVersion": 514,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
    "ids": [
     "2110220972829626770"
+   ]
+  },
+  {
+   "label": "Federal raid on Rep. Ilhan Omar's home / bill to abolish DHS",
+   "ids": [
+    "2110295961104765390"
    ]
   }
  ],
@@ -240,17 +314,18 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110269055839977959"
+    "2110295961104765390",
+    "2110296283189567712"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T07:31:39.957Z",
-    "observedAt": "2026-10-14T07:31:42.084Z",
+    "attemptedAt": "2026-10-14T09:16:30.773Z",
+    "observedAt": "2026-10-14T09:16:40.074Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -258,24 +333,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T07:31:39.957Z",
-   "observedAt": "2026-10-14T07:31:42.084Z",
+   "attemptedAt": "2026-10-14T09:16:30.773Z",
+   "observedAt": "2026-10-14T09:16:40.074Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T07:31:39.957Z",
-   "observedAt": "2026-10-14T07:31:42.084Z",
+   "attemptedAt": "2026-10-14T09:16:30.773Z",
+   "observedAt": "2026-10-14T09:16:40.074Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T07:31:42.090Z"
+ "updatedAt": "2026-10-14T09:16:40.081Z"
 }
