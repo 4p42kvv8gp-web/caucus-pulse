@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T12:17:07.695Z",
+ "classifiedAt": "2026-10-14T13:07:38.671Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -99,6 +99,87 @@
    [
     "congress-politics",
     "town-halls"
+   ]
+  ],
+  "2110346372172136940": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110346537255514332": [],
+  "2110347443804283332": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2110347511353520633": [
+   [
+    "democracy",
+    "epstein-files"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110351609951654125": [
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2110352258131014141": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ]
+  ],
+  "2110352395125313870": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110352534191886547": [],
+  "2110352555104673849": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110353881439887859": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2110354089527615633": [],
+  "2110355150174888167": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2110355544498209090": [
+   [
+    "healthcare",
+    "medicare"
+   ],
+   [
+    "healthcare",
+    "aca"
+   ]
+  ],
+  "2110356103145902092": [
+   [
+    "foreign-policy",
+    "middle-east"
    ]
   ]
  },
@@ -414,6 +495,256 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110346372172136940": {
+   "contextVersion": 518,
+   "evidenceSupplied": [
+    {
+     "id": "n_9b23063e221feb95",
+     "publisher": "The Washington Post",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/08/trump-calls-paxton-talarico-debate-texas-senate-race-heats-up/",
+     "text": "Trump calls for Paxton-Talarico debate as Texas Senate race heats up",
+     "title": "Trump calls for Paxton-Talarico debate as Texas Senate race heats up",
+     "publishedAt": "2026-10-08T15:19:20.000Z",
+     "fetchedAt": "2026-10-08T15:35:35.256Z",
+     "version": 415,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110333263772365066",
+    "fingerprint": "ae4bfe308ddb399c7e75c75bc3b2f940908337464e0e4038ff9200526210613b"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110333263772365066",
+    "fingerprint": "ae4bfe308ddb399c7e75c75bc3b2f940908337464e0e4038ff9200526210613b"
+   }
+  },
+  "2110346537255514332": {
+   "contextVersion": 518,
+   "evidenceSupplied": [
+    {
+     "id": "n_e58e921fc4613815",
+     "publisher": "Roll Call",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/09/cyber-information-sharing-law-stuck-in-senate-stalemate/",
+     "text": "A long-term extension of the law, titled the Cybersecurity Information Sharing Act of 2015, has bipartisan backing. If Democrats win control of the Senate – and the Homeland Security and Governmental Affairs Committee – lawmakers could negotiate a future-ready version of the law that responds to artificial intelligence’s impact on cybersecurity.",
+     "title": "Cyber information-sharing law stuck in Senate stalemate",
+     "publishedAt": "2026-10-09T06:30:00.000Z",
+     "fetchedAt": "2026-10-09T11:36:40.413Z",
+     "version": 430,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110347443804283332": {
+   "contextVersion": 518,
+   "evidenceSupplied": [
+    {
+     "id": "n_e5a2346b94bcc5ed",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6142689-russia-targets-ukraine-energy-ceasefire/",
+     "text": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
+     "title": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
+     "publishedAt": "2026-10-12T14:23:01.000Z",
+     "fetchedAt": "2026-10-12T15:19:12.442Z",
+     "version": 485,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3f228cc82c4f94a",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
+     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "publishedAt": "2026-10-11T18:30:39.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e5a2346b94bcc5ed",
+    "n_a3f228cc82c4f94a"
+   ],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "quotedContext": {
+    "id": "2109343174212960390",
+    "authorId": "1120633726478823425",
+    "handle": "ZelenskyyUa",
+    "createdAt": "2026-10-11T17:59:37.000Z",
+    "textChars": 1220,
+    "textHash": "522c150db0955e86045bafcc54ec9abdd29101fed47944713ebc3ee5733921f7"
+   }
+  },
+  "2110347511353520633": {
+   "contextVersion": 518,
+   "evidenceSupplied": [
+    {
+     "id": "n_bbcb0bf7982bd150",
+     "publisher": "The Washington Post",
+     "date": "2026-10-09",
+     "kind": "lead",
+     "url": "https://www.washingtonpost.com/politics/2026/10/08/takeaways-georgia-senate-debate-between-jon-ossoff-mike-collins/",
+     "text": "Takeaways from Georgia Senate debate between Jon Ossoff, Mike Collins",
+     "title": "Takeaways from Georgia Senate debate between Jon Ossoff, Mike Collins",
+     "publishedAt": "2026-10-09T02:49:29.000Z",
+     "fetchedAt": "2026-10-09T02:56:33.956Z",
+     "version": 425,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bbcb0bf7982bd150"
+   ],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110165331083661536",
+    "fingerprint": "a89149995e24823a901867a26151a07404f6afa18b901a46726e408038fc9558"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110165331083661536",
+    "fingerprint": "a89149995e24823a901867a26151a07404f6afa18b901a46726e408038fc9558"
+   }
+  },
+  "2110351609951654125": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110352258131014141": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110154538741293071",
+    "fingerprint": "ba29127f88f4f297905a47cb914308f67c54f4338b9c6d8e0f6c2e714ff9c841"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110154538741293071",
+    "fingerprint": "ba29127f88f4f297905a47cb914308f67c54f4338b9c6d8e0f6c2e714ff9c841"
+   }
+  },
+  "2110352395125313870": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110349432784847335",
+    "fingerprint": "0068567017b1d5f9ddc84c1c9eedfd61c1ebbf4acefb1a2c775381d21f7d03c4"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110349432784847335",
+    "fingerprint": "0068567017b1d5f9ddc84c1c9eedfd61c1ebbf4acefb1a2c775381d21f7d03c4"
+   }
+  },
+  "2110352534191886547": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110352555104673849": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e",
+   "quotedContext": {
+    "id": "2110351924394418460",
+    "authorId": "151963505",
+    "handle": "HouseBudgetDems",
+    "createdAt": "2026-10-14T12:48:01.000Z",
+    "textChars": 197,
+    "textHash": "86a45a5f4d0f6453348d413f528cd8b1efef54ab67f91b66fdfe2db63c60c909"
+   }
+  },
+  "2110353881439887859": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110354089527615633": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110355150174888167": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110355544498209090": {
+   "contextVersion": 518,
+   "evidenceSupplied": [
+    {
+     "id": "n_c559e5aabd94a3bc",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5991687/trump-medicare-aca-payments-midterms",
+     "text": "\"I just can't believe it; I mean, that's crazy,\" says Allen, who's the executive director of a small nonprofit called West Virginians for Affordable Health Care . She says, in her opinion, sending out these checks is a \"political stunt.\"",
+     "title": "She got Trump's $500 check for health insurance. To her, it's a 'political stunt'",
+     "publishedAt": "2026-10-07T16:15:26.000Z",
+     "fetchedAt": "2026-10-08T13:46:59.556Z",
+     "version": 413,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c559e5aabd94a3bc"
+   ],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
+  },
+  "2110356103145902092": {
+   "contextVersion": 518,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
   }
  },
  "needsContext": {
@@ -431,10 +762,24 @@
   "2110336355007881375": false,
   "2110336464139817096": false,
   "2110340276313092353": false,
-  "2110343665457463558": false
+  "2110343665457463558": false,
+  "2110346372172136940": false,
+  "2110346537255514332": false,
+  "2110347443804283332": false,
+  "2110347511353520633": false,
+  "2110351609951654125": false,
+  "2110352258131014141": false,
+  "2110352395125313870": false,
+  "2110352534191886547": true,
+  "2110352555104673849": false,
+  "2110353881439887859": false,
+  "2110354089527615633": false,
+  "2110355150174888167": false,
+  "2110355544498209090": false,
+  "2110356103145902092": false
  },
  "inputBlocks": {},
- "contextVersion": 517,
+ "contextVersion": 518,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -458,6 +803,18 @@
    "label": "Hegseth plan to livestream Fort Hood shooter's execution",
    "ids": [
     "2110340276313092353"
+   ]
+  },
+  {
+   "label": "AM Radio for Every Vehicle Act",
+   "ids": [
+    "2110346537255514332"
+   ]
+  },
+  {
+   "label": "Pakistan political repression / Imran Khan detention",
+   "ids": [
+    "2110355150174888167"
    ]
   }
  ],
@@ -490,23 +847,30 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110041859473203707",
-    "2110335188366725130",
-    "2110335791587115039",
-    "2110336355007881375",
-    "2110336464139817096",
-    "2110340276313092353",
-    "2110343665457463558"
+    "2110346372172136940",
+    "2110346537255514332",
+    "2110347443804283332",
+    "2110347511353520633",
+    "2110351609951654125",
+    "2110352258131014141",
+    "2110352395125313870",
+    "2110352534191886547",
+    "2110352555104673849",
+    "2110353881439887859",
+    "2110354089527615633",
+    "2110355150174888167",
+    "2110355544498209090",
+    "2110356103145902092"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T12:16:54.703Z",
-    "observedAt": "2026-10-14T12:17:07.659Z",
+    "attemptedAt": "2026-10-14T13:07:17.437Z",
+    "observedAt": "2026-10-14T13:07:38.667Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 14,
     "retryCount": 0
    }
   }
@@ -514,24 +878,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T12:16:54.703Z",
-   "observedAt": "2026-10-14T12:17:07.659Z",
+   "attemptedAt": "2026-10-14T13:07:17.437Z",
+   "observedAt": "2026-10-14T13:07:38.667Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T12:16:54.703Z",
-   "observedAt": "2026-10-14T12:17:07.659Z",
+   "attemptedAt": "2026-10-14T13:07:17.437Z",
+   "observedAt": "2026-10-14T13:07:38.667Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 14,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T12:17:07.697Z"
+ "updatedAt": "2026-10-14T13:07:38.673Z"
 }
