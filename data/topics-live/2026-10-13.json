@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T12:17:07.686Z",
+ "classifiedAt": "2026-10-14T14:33:03.783Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -9182,38 +9182,6 @@
     "textHash": "39041a03be5712478679a1612f77b59b10602d87424d49eb833684c998e4ddef"
    }
   },
-  "2110118890646978658": {
-   "contextVersion": 506,
-   "evidenceSupplied": [
-    {
-     "id": "n_a12bf57ead5deebb",
-     "publisher": "NPR",
-     "date": "2026-10-12",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/12/nx-s1-5998976/pro-trump-ads-taxpayer-funds-federal-judge",
-     "text": "An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer dollars has been spent to air the ads since the campaign began in late September. Nearly $10 million of that total was spent after Oct. 5, when the president pledged to fund it privately in a post on Truth Social .",
-     "title": "Government spent $10 million on pro-Trump ads after president said super PAC would fund",
-     "publishedAt": "2026-10-12T22:16:47.000Z",
-     "fetchedAt": "2026-10-12T22:51:58.836Z",
-     "version": 490,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_a12bf57ead5deebb"
-   ],
-   "inputHash": "0b92943303a333c21f4c562308038c5152e4c0fa40d0558692cc0cb8ecc76de3",
-   "quotedContext": {
-    "id": "2109439395308650898",
-    "authorId": "51241574",
-    "handle": "AP",
-    "createdAt": "2026-10-12T00:21:57.000Z",
-    "textChars": 106,
-    "textHash": "1fb3a7b818b0c0888b1ac56bc5c2b6f68724c0e4cd57b452bb33a389f367a6c5"
-   }
-  },
   "2110119013439111673": {
    "contextVersion": 506,
    "evidenceSupplied": [],
@@ -11478,6 +11446,53 @@
    ],
    "evidenceUsed": [],
    "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110118890646978658": {
+   "contextVersion": 519,
+   "evidenceSupplied": [
+    {
+     "id": "n_a12bf57ead5deebb",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998976/pro-trump-ads-taxpayer-funds-federal-judge",
+     "text": "An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer dollars has been spent to air the ads since the campaign began in late September. Nearly $10 million of that total was spent after Oct. 5, when the president pledged to fund it privately in a post on Truth Social .",
+     "title": "Government spent $10 million on pro-Trump ads after president said super PAC would fund",
+     "publishedAt": "2026-10-12T22:16:47.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_deddda05dcdefb5c",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/sports-gaming/6147430-court-ruling-donald-trump-east-potomac-golf-links-project/",
+     "text": "Judge orders Trump administration to halt work at DC golf course until later this month",
+     "title": "Judge orders Trump administration to halt work at DC golf course until later this month",
+     "publishedAt": "2026-10-14T13:21:43.000Z",
+     "fetchedAt": "2026-10-14T13:47:02.159Z",
+     "version": 519,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_a12bf57ead5deebb"
+   ],
+   "inputHash": "05d9c33e69de1d31b5339ae865e42fa3408831844daf985ac7c9c9a1909907c2",
+   "quotedContext": {
+    "id": "2109439395308650898",
+    "authorId": "51241574",
+    "handle": "AP",
+    "createdAt": "2026-10-12T00:21:57.000Z",
+    "textChars": 106,
+    "textHash": "1fb3a7b818b0c0888b1ac56bc5c2b6f68724c0e4cd57b452bb33a389f367a6c5"
+   }
   }
  },
  "needsContext": {
@@ -11875,7 +11890,6 @@
   "2110117605050634543": false,
   "2110118833084153984": false,
   "2110118837660049816": false,
-  "2110118890646978658": false,
   "2110119013439111673": false,
   "2110119122965320144": false,
   "2110119210428883038": false,
@@ -12022,10 +12036,11 @@
   "2110208223211053376": false,
   "2110213262751240523": false,
   "2110032041068671355": false,
-  "2110041859473203707": false
+  "2110041859473203707": false,
+  "2110118890646978658": false
  },
  "inputBlocks": {},
- "contextVersion": 517,
+ "contextVersion": 519,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12403,6 +12418,12 @@
     "2110153614463263095",
     "2110158652027883955"
    ]
+  },
+  {
+   "label": "Court orders cancellation of taxpayer-funded pro-Trump TV ads",
+   "ids": [
+    "2110118890646978658"
+   ]
   }
  ],
  "unclassified": [],
@@ -12416,89 +12437,41 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110041859473203707",
-    "2110335188366725130",
-    "2110335791587115039",
-    "2110336355007881375",
-    "2110336464139817096",
-    "2110340276313092353",
-    "2110343665457463558"
+    "2110118890646978658",
+    "2110356793557700659",
+    "2110356962835841289",
+    "2110357055227785578",
+    "2110357085271556283",
+    "2110357383688196105",
+    "2110357422447677777",
+    "2110358751827898615",
+    "2110358753589514475",
+    "2110358903590621569",
+    "2110358945705468087",
+    "2110358973266194801",
+    "2110359033941029052",
+    "2110359147333943345",
+    "2110359551799132354",
+    "2110359902212247650",
+    "2110360424700850237",
+    "2110360491063116036",
+    "2110360751479120363",
+    "2110360891598459095",
+    "2110362306324340918",
+    "2110362418731749457",
+    "2110362662584406321",
+    "2110362959390122048",
+    "2110363493996347651"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T12:16:54.703Z",
-    "observedAt": "2026-10-14T12:17:07.659Z",
+    "attemptedAt": "2026-10-14T14:31:36.249Z",
+    "observedAt": "2026-10-14T14:32:07.565Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-1": {
-   "acceptedIds": [
-    "2110208223211053376",
-    "2110213262751240523",
-    "2110220972829626770"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-14T04:27:29.505Z",
-    "observedAt": "2026-10-14T04:27:37.221Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 3,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2110125543983059401",
-    "2110126196872618124",
-    "2110127244131598727",
-    "2110131128401052124",
-    "2110131360924872714",
-    "2110131371154845720",
-    "2110131504449815004",
-    "2110131786495713465",
-    "2110131955182567856",
-    "2110132258036236633",
-    "2110132277913256414",
-    "2110132820135886963",
-    "2110132943519650034",
-    "2110132996682432811",
-    "2110133232213901395",
-    "2110134311676788855",
-    "2110134631576084665",
-    "2110134825227006432",
-    "2110134931716448681",
-    "2110134978193608811",
-    "2110135859366281633",
-    "2110136000085422479",
-    "2110136408664838250",
-    "2110136685446975683",
-    "2110136700886499415",
-    "2110138184726192461",
-    "2110139808320270563",
-    "2110140208666608082",
-    "2110140996948554100",
-    "2110141093685997776",
-    "2110141393620353120",
-    "2110142328836862216",
-    "2110143528521073111"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-13T23:01:14.611Z",
-    "observedAt": "2026-10-13T23:02:01.930Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 33,
+    "acceptedCount": 25,
     "retryCount": 0
    }
   },
@@ -12555,24 +12528,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T12:16:54.703Z",
-   "observedAt": "2026-10-14T12:17:07.659Z",
+   "attemptedAt": "2026-10-14T14:31:36.249Z",
+   "observedAt": "2026-10-14T14:32:07.565Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 25,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T12:16:54.703Z",
-   "observedAt": "2026-10-14T12:17:07.659Z",
+   "attemptedAt": "2026-10-14T14:31:36.249Z",
+   "observedAt": "2026-10-14T14:32:07.565Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 25,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T12:17:07.691Z"
+ "updatedAt": "2026-10-14T14:33:03.789Z"
 }
