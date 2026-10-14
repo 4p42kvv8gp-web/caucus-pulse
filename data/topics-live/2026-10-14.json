@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T09:16:40.078Z",
+ "classifiedAt": "2026-10-14T10:47:14.171Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -57,6 +57,12 @@
    [
     "congress-politics",
     null
+   ]
+  ],
+  "2110299448773599669": [
+   [
+    "economy",
+    "jobs-wages"
    ]
   ]
  },
@@ -257,6 +263,20 @@
     "textChars": 111,
     "textHash": "6b8ecdb15dfdea4346ce58560037abfe6a659ba5e4a7c030a1998abf9acb2660"
    }
+  },
+  "2110299448773599669": {
+   "contextVersion": 516,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0b9e3aabfb5564d0419a8490f4fe8f48a9af023890baeeec7c8cf37988a8121f",
+   "quotedContext": {
+    "id": "2110068904777158778",
+    "authorId": "9300262",
+    "handle": "politico",
+    "createdAt": "2026-10-13T18:03:24.000Z",
+    "textChars": 95,
+    "textHash": "a3393f070b3a8d11c51fb867d7f7e79f907de74c82fbfcaacd691d5b01474d91"
+   }
   }
  },
  "needsContext": {
@@ -267,10 +287,11 @@
   "2110246648488018264": false,
   "2110269055839977959": false,
   "2110295961104765390": false,
-  "2110296283189567712": true
+  "2110296283189567712": true,
+  "2110299448773599669": false
  },
  "inputBlocks": {},
- "contextVersion": 514,
+ "contextVersion": 516,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -282,6 +303,12 @@
    "label": "Federal raid on Rep. Ilhan Omar's home / bill to abolish DHS",
    "ids": [
     "2110295961104765390"
+   ]
+  },
+  {
+   "label": "NYC horse carriage industry ban deal",
+   "ids": [
+    "2110299448773599669"
    ]
   }
  ],
@@ -314,18 +341,19 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110295961104765390",
-    "2110296283189567712"
+    "2110032041068671355",
+    "2110041859473203707",
+    "2110299448773599669"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T09:16:30.773Z",
-    "observedAt": "2026-10-14T09:16:40.074Z",
+    "attemptedAt": "2026-10-14T10:47:07.834Z",
+    "observedAt": "2026-10-14T10:47:14.137Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   }
@@ -333,24 +361,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T09:16:30.773Z",
-   "observedAt": "2026-10-14T09:16:40.074Z",
+   "attemptedAt": "2026-10-14T10:47:07.834Z",
+   "observedAt": "2026-10-14T10:47:14.137Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T09:16:30.773Z",
-   "observedAt": "2026-10-14T09:16:40.074Z",
+   "attemptedAt": "2026-10-14T10:47:07.834Z",
+   "observedAt": "2026-10-14T10:47:14.137Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 3,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T09:16:40.081Z"
+ "updatedAt": "2026-10-14T10:47:14.173Z"
 }

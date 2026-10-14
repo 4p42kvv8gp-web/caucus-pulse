@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T04:27:37.262Z",
+ "classifiedAt": "2026-10-14T10:47:14.163Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -5859,43 +5859,6 @@
    "evidenceUsed": [],
    "inputHash": "be55dca0c6db648704fa929d39610ce428c6eb7f7512ca22819fbb62e7530e64"
   },
-  "2110041859473203707": {
-   "contextVersion": 502,
-   "evidenceSupplied": [
-    {
-     "id": "n_75818cab5b9c4a14",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6144357-spicer-worries-kansas-senate/",
-     "text": "Spicer says he’s ‘absolutely’ concerned about Kansas Senate race",
-     "title": "Spicer says he’s ‘absolutely’ concerned about Kansas Senate race",
-     "publishedAt": "2026-10-13T01:03:52.000Z",
-     "fetchedAt": "2026-10-13T01:51:36.850Z",
-     "version": 492,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_b0d09f06c293c405",
-     "publisher": "The New York Times",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/10/10/us/politics/marshall-kansas-baker-bill-senate-midterms.html",
-     "text": "Roger Marshall, a Kansas Senator Facing Re-Election, Settles a Bakery Bill 6 Years Later",
-     "title": "Roger Marshall, a Kansas Senator Facing Re-Election, Settles a Bakery Bill 6 Years Later",
-     "publishedAt": "2026-10-11T14:17:19.000Z",
-     "fetchedAt": "2026-10-11T17:36:41.552Z",
-     "version": 471,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "be55dca0c6db648704fa929d39610ce428c6eb7f7512ca22819fbb62e7530e64"
-  },
   "2110043117433016398": {
    "contextVersion": 502,
    "evidenceSupplied": [],
@@ -10900,36 +10863,6 @@
     "fingerprint": "d946b1a1e81a270ef06fe212d39206fffe9028250666a51498f18b0611ab4745"
    }
   },
-  "2110032041068671355": {
-   "contextVersion": 511,
-   "evidenceSupplied": [
-    {
-     "id": "n_4227246c7fb08a85",
-     "publisher": "NPR",
-     "date": "2026-10-12",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/12/nx-s1-5998948/new-white-house-press-secretary-a-devoted-fan-of-trump-and-maga",
-     "text": "President Trump's new White House press secretary Katie Zacharia faced questions about her credentials as an attorney as she took the podium on Tuesday for her first press briefing. Zacharia stepped in as Trump's chief spokesperson at a moment when his popularity has fallen to record lows and Republicans are scrambling to limit potential losses in the midterm elections.",
-     "title": "New White House press secretary faces questions about credentials after first briefing",
-     "publishedAt": "2026-10-12T22:17:43.000Z",
-     "fetchedAt": "2026-10-14T02:07:13.677Z",
-     "version": 511,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "925dc1fe0e9305cd9c725b421dd095dd5b7c4deb44a222f3e4d88ba48222a3a9",
-   "quotedContext": {
-    "id": "2108916459917226294",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-10-10T13:44:00.000Z",
-    "textChars": 235,
-    "textHash": "58090d62adf77954d35dbbfc62f4d3e6a9b55b6e86b2a173997815fede47c843"
-   }
-  },
   "2110061911559790933": {
    "contextVersion": 511,
    "evidenceSupplied": [
@@ -11463,6 +11396,88 @@
     "n_bfb774979eb4db77"
    ],
    "inputHash": "a54c8025a2f1ee849cde26af11c394d53eb740bdb5fe92b77bc5452c001aa2e0"
+  },
+  "2110032041068671355": {
+   "contextVersion": 516,
+   "evidenceSupplied": [
+    {
+     "id": "n_4227246c7fb08a85",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998948/new-white-house-press-secretary-a-devoted-fan-of-trump-and-maga",
+     "text": "President Trump's new White House press secretary Katie Zacharia faced questions about her credentials as an attorney as she took the podium on Tuesday for her first press briefing. Zacharia stepped in as Trump's chief spokesperson at a moment when his popularity has fallen to record lows and Republicans are scrambling to limit potential losses in the midterm elections.",
+     "title": "New White House press secretary faces questions about credentials after first briefing",
+     "publishedAt": "2026-10-12T22:17:43.000Z",
+     "fetchedAt": "2026-10-14T02:07:13.677Z",
+     "version": 511,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_ab59beee9b9bfa2d",
+     "publisher": "NPR",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/14/g-s1-148027/trump-ambassador-greece-resignation",
+     "text": "That revelation came in response to a question to freshly minted White House press secretary Katie Zacharia at her first media briefing Tuesday morning. Zacharia said Guilfoyle \"has been a wonderful asset to the team, and we wish her well.\"",
+     "title": "Trump's ambassador to Greece, Kimberly Guilfoyle, resigns after allegations of improper conduct",
+     "publishedAt": "2026-10-14T09:09:39.000Z",
+     "fetchedAt": "2026-10-14T10:01:24.806Z",
+     "version": 515,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "0b9e3aabfb5564d0419a8490f4fe8f48a9af023890baeeec7c8cf37988a8121f",
+   "quotedContext": {
+    "id": "2108916459917226294",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-10T13:44:00.000Z",
+    "textChars": 235,
+    "textHash": "58090d62adf77954d35dbbfc62f4d3e6a9b55b6e86b2a173997815fede47c843"
+   }
+  },
+  "2110041859473203707": {
+   "contextVersion": 516,
+   "evidenceSupplied": [
+    {
+     "id": "n_07215a3c9c3d2c78",
+     "publisher": "NPR",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup",
+     "text": "Two years after President Trump earned 57% of the vote, Kansas Republicans are grappling with the possibility that a Democrat could win a U.S. Senate race for the first time in nearly a century.",
+     "title": "In Kansas, a newly-competitive Senate race tests limit of Trump's unpopular policies",
+     "publishedAt": "2026-10-14T09:00:00.000Z",
+     "fetchedAt": "2026-10-14T10:01:24.806Z",
+     "version": 515,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_75818cab5b9c4a14",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6144357-spicer-worries-kansas-senate/",
+     "text": "Spicer says he’s ‘absolutely’ concerned about Kansas Senate race",
+     "title": "Spicer says he’s ‘absolutely’ concerned about Kansas Senate race",
+     "publishedAt": "2026-10-13T01:03:52.000Z",
+     "fetchedAt": "2026-10-13T01:51:36.850Z",
+     "version": 492,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "0b9e3aabfb5564d0419a8490f4fe8f48a9af023890baeeec7c8cf37988a8121f"
   }
  },
  "needsContext": {
@@ -11616,7 +11631,6 @@
   "2110041151013089613": false,
   "2110041174384013672": false,
   "2110041179504918760": false,
-  "2110041859473203707": false,
   "2110043117433016398": false,
   "2110043258097148158": false,
   "2110043356092883247": false,
@@ -11983,7 +11997,6 @@
   "2110184325006426565": false,
   "2110185943751639537": false,
   "2110186357918150770": false,
-  "2110032041068671355": false,
   "2110061911559790933": false,
   "2110087880966299782": false,
   "2110187814381826248": false,
@@ -12007,10 +12020,12 @@
   "2110202915730145576": false,
   "2110203406791094343": false,
   "2110208223211053376": false,
-  "2110213262751240523": false
+  "2110213262751240523": false,
+  "2110032041068671355": false,
+  "2110041859473203707": false
  },
  "inputBlocks": {},
- "contextVersion": 512,
+ "contextVersion": 516,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12401,23 +12416,19 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110093139708940380",
-    "2110147300341268793",
-    "2110153614463263095",
-    "2110158652027883955",
-    "2110195978867499206",
-    "2110202915730145576",
-    "2110203406791094343"
+    "2110032041068671355",
+    "2110041859473203707",
+    "2110299448773599669"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T04:27:16.360Z",
-    "observedAt": "2026-10-14T04:27:29.492Z",
+    "attemptedAt": "2026-10-14T10:47:07.834Z",
+    "observedAt": "2026-10-14T10:47:14.137Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 3,
     "retryCount": 0
    }
   },
@@ -12540,8 +12551,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T04:27:29.505Z",
-   "observedAt": "2026-10-14T04:27:37.221Z",
+   "attemptedAt": "2026-10-14T10:47:07.834Z",
+   "observedAt": "2026-10-14T10:47:14.137Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -12549,8 +12560,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T04:27:29.505Z",
-   "observedAt": "2026-10-14T04:27:37.221Z",
+   "attemptedAt": "2026-10-14T10:47:07.834Z",
+   "observedAt": "2026-10-14T10:47:14.137Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -12559,5 +12570,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T04:27:37.270Z"
+ "updatedAt": "2026-10-14T10:47:14.167Z"
 }
