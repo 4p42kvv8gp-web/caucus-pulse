@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T02:53:27.872Z",
+ "generatedAt": "2026-10-14T04:27:37.366Z",
  "incidents": [
   {
    "id": "newport-beach-ca--flooding--source-2109715247204295159",
@@ -1555,9 +1555,9 @@
    }
   },
   {
-   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-06",
+   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-07",
    "kind": "wildfire",
-   "name": "#Bouquetfire",
+   "name": "Bouquet Fire",
    "eventIdentity": "named-source-supported",
    "kinds": [
     "wildfire"
@@ -1568,13 +1568,13 @@
     "corroborated": false,
     "by": null,
     "independentSourceCount": 0,
-    "statements": 2,
+    "statements": 1,
     "resolvedPeople": 1,
     "accounts": 1,
     "unresolvedAccounts": 0,
-    "repeated": true,
+    "repeated": false,
     "repeatedSourceGroups": [],
-    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
    },
    "place": "Los Angeles County, CA · CA-27",
    "placeRaw": "Los Angeles County, CA",
@@ -1582,15 +1582,15 @@
    "districtMatch": true,
    "handle": "@gtwhitesides",
    "member": "George Whitesides",
-   "since": "2026-10-06T04:36:47.000Z",
+   "since": "2026-10-07T05:14:29.000Z",
    "last": "2026-10-07T05:14:29.000Z",
-   "updates": 2,
-   "engN": 13,
+   "updates": 1,
+   "engN": 5,
    "amplifiers": 0,
    "others": [],
-   "title": "#Bouquetfire · Los Angeles County, CA",
+   "title": "Bouquet Fire · Los Angeles County, CA",
    "evidence": {
-    "span": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
+    "span": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
     "exact": false,
     "start": 0,
     "end": 140,
@@ -1598,43 +1598,10 @@
      "kind": true,
      "place": false
     },
-    "sourceId": "2107329196406272338",
-    "url": "https://x.com/i/web/status/2107329196406272338"
+    "sourceId": "2107701072265625984",
+    "url": "https://x.com/i/web/status/2107701072265625984"
    },
    "timeline": [
-    {
-     "id": "2107329196406272338",
-     "sourceId": "2107329196406272338",
-     "url": "https://x.com/i/web/status/2107329196406272338",
-     "authorId": "5408852",
-     "personId": "member:george whitesides",
-     "referenceIds": [
-      "2107299622641365127"
-     ],
-     "time": "2026-10-06T04:36:47.000Z",
-     "who": "@gtwhitesides",
-     "tag": "repost",
-     "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-     "engN": 8,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Los Angeles County, CA",
-      "name": "#Bouquetfire"
-     },
-     "evidence": {
-      "span": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338"
-     }
-    },
     {
      "id": "2107701072265625984",
      "sourceId": "2107701072265625984",
@@ -1670,58 +1637,14 @@
     }
    ],
    "tweetIds": [
-    "2107329196406272338",
     "2107701072265625984"
    ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "sourceId": "2107701072265625984",
-      "url": "https://x.com/i/web/status/2107701072265625984",
-      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
-     }
-    ],
-    "unverified": [],
-    "updates": [
-     {
-      "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "sourceId": "2107701072265625984",
-      "url": "https://x.com/i/web/status/2107701072265625984",
-      "evidenceQuote": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "src": "@gtwhitesides, 2026-10-07T05:14:29.000Z"
-     },
-     {
-      "text": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "sourceId": "2107329196406272338",
-      "url": "https://x.com/i/web/status/2107329196406272338",
-      "evidenceQuote": "RT @Angeles_NF: #Bouquetfire\n\nAcres: 1,048\nContainment 63%\n\nFirefighters made good progress today on the fireline and containment has risen…",
-      "src": "@gtwhitesides, 2026-10-06T04:36:47.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-10-13T07:52:14.800Z",
-    "posts": 2,
-    "inputHash": "87f73b9370f2a62bc2b7c8121f1894c52bf0f79bba5dfb7dec611732c5f52529",
-    "rejectedItems": 0
-   },
+   "intel": null,
    "verification": {
     "status": "unverified",
     "basis": "source-statements",
     "independentSourceCount": 0,
     "sourceIds": [
-     "2107329196406272338",
      "2107701072265625984"
     ],
     "repeatedSourceGroups": [],

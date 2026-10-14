@@ -1,0 +1,136 @@
+{
+ "date": "2026-10-14",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-14T04:27:37.272Z",
+ "assignments": {
+  "2110220972829626770": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ]
+ },
+ "incidents": {},
+ "provenance": {
+  "2110220972829626770": {
+   "contextVersion": 512,
+   "evidenceSupplied": [
+    {
+     "id": "n_68eed85023799f3a",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6146880-hatch-act-complaint-omar-raid/",
+     "text": "Legal group files Hatch Act complaint over Omar search",
+     "title": "Legal group files Hatch Act complaint over Omar search",
+     "publishedAt": "2026-10-14T00:23:21.000Z",
+     "fetchedAt": "2026-10-14T00:35:21.806Z",
+     "version": 510,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_68eed85023799f3a",
+    "n_7962cc899f18c281"
+   ],
+   "inputHash": "a54c8025a2f1ee849cde26af11c394d53eb740bdb5fe92b77bc5452c001aa2e0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110116328619028533",
+    "fingerprint": "1b7dd228cb4fa527b443289e04a46f0d8c72fee519f612ecb6b8a217e2941080"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110116328619028533",
+    "fingerprint": "1b7dd228cb4fa527b443289e04a46f0d8c72fee519f612ecb6b8a217e2941080"
+   }
+  }
+ },
+ "needsContext": {
+  "2110220972829626770": false
+ },
+ "inputBlocks": {},
+ "contextVersion": 512,
+ "emerging": [
+  {
+   "label": "Federal raid on Rep. Ilhan Omar's home",
+   "ids": [
+    "2110220972829626770"
+   ]
+  }
+ ],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-1": {
+   "acceptedIds": [
+    "2110208223211053376",
+    "2110213262751240523",
+    "2110220972829626770"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-14T04:27:29.505Z",
+    "observedAt": "2026-10-14T04:27:37.221Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 3,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-14T04:27:29.505Z",
+   "observedAt": "2026-10-14T04:27:37.221Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 3,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-14T04:27:29.505Z",
+   "observedAt": "2026-10-14T04:27:37.221Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 3,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-14T04:27:37.273Z"
+}
