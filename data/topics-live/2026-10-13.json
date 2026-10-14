@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T10:47:14.163Z",
+ "classifiedAt": "2026-10-14T12:17:07.686Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -11443,7 +11443,7 @@
    }
   },
   "2110041859473203707": {
-   "contextVersion": 516,
+   "contextVersion": 517,
    "evidenceSupplied": [
     {
      "id": "n_07215a3c9c3d2c78",
@@ -11452,10 +11452,10 @@
      "kind": "report",
      "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup",
      "text": "Two years after President Trump earned 57% of the vote, Kansas Republicans are grappling with the possibility that a Democrat could win a U.S. Senate race for the first time in nearly a century.",
-     "title": "In Kansas, a newly-competitive Senate race tests limit of Trump's unpopular policies",
+     "title": "In Kansas, a newly competitive Senate race tests limit of Trump's unpopular policies",
      "publishedAt": "2026-10-14T09:00:00.000Z",
-     "fetchedAt": "2026-10-14T10:01:24.806Z",
-     "version": 515,
+     "fetchedAt": "2026-10-14T11:31:14.609Z",
+     "version": 517,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
@@ -11477,7 +11477,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "0b9e3aabfb5564d0419a8490f4fe8f48a9af023890baeeec7c8cf37988a8121f"
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
   }
  },
  "needsContext": {
@@ -12025,7 +12025,7 @@
   "2110041859473203707": false
  },
  "inputBlocks": {},
- "contextVersion": 516,
+ "contextVersion": 517,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12416,19 +12416,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110032041068671355",
     "2110041859473203707",
-    "2110299448773599669"
+    "2110335188366725130",
+    "2110335791587115039",
+    "2110336355007881375",
+    "2110336464139817096",
+    "2110340276313092353",
+    "2110343665457463558"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T10:47:07.834Z",
-    "observedAt": "2026-10-14T10:47:14.137Z",
+    "attemptedAt": "2026-10-14T12:16:54.703Z",
+    "observedAt": "2026-10-14T12:17:07.659Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -12551,24 +12555,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T10:47:07.834Z",
-   "observedAt": "2026-10-14T10:47:14.137Z",
+   "attemptedAt": "2026-10-14T12:16:54.703Z",
+   "observedAt": "2026-10-14T12:17:07.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T10:47:07.834Z",
-   "observedAt": "2026-10-14T10:47:14.137Z",
+   "attemptedAt": "2026-10-14T12:16:54.703Z",
+   "observedAt": "2026-10-14T12:17:07.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T10:47:14.167Z"
+ "updatedAt": "2026-10-14T12:17:07.691Z"
 }

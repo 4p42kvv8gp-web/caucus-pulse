@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T10:47:14.171Z",
+ "classifiedAt": "2026-10-14T12:17:07.695Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -63,6 +63,42 @@
    [
     "economy",
     "jobs-wages"
+   ]
+  ],
+  "2110335188366725130": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110335791587115039": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110336355007881375": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110336464139817096": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110340276313092353": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2110343665457463558": [
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ]
  },
@@ -277,6 +313,107 @@
     "textChars": 95,
     "textHash": "a3393f070b3a8d11c51fb867d7f7e79f907de74c82fbfcaacd691d5b01474d91"
    }
+  },
+  "2110335188366725130": {
+   "contextVersion": 517,
+   "evidenceSupplied": [
+    {
+     "id": "n_22cfb4a1361cd1b5",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6137284-uss-abraham-lincoln-ends-deployment-san-diego/",
+     "text": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "title": "USS Abraham Lincoln docks in San Diego after grueling deployment",
+     "publishedAt": "2026-10-08T19:31:56.000Z",
+     "fetchedAt": "2026-10-08T19:59:50.874Z",
+     "version": 418,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bab8814f61d29a06",
+     "publisher": "The Hill",
+     "date": "2026-10-07",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6134620-hegseth-awards-uss-lincoln-iran-deployment/",
+     "text": "Hegseth unveils Presidential Unit Citation to USS Abraham Lincoln crew after lengthy deployment",
+     "title": "Hegseth unveils Presidential Unit Citation to USS Abraham Lincoln crew after lengthy deployment",
+     "publishedAt": "2026-10-07T19:38:15.000Z",
+     "fetchedAt": "2026-10-07T20:19:44.976Z",
+     "version": 401,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110335791587115039": {
+   "contextVersion": 517,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110336355007881375": {
+   "contextVersion": 517,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110336464139817096": {
+   "contextVersion": 517,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110340276313092353": {
+   "contextVersion": 517,
+   "evidenceSupplied": [
+    {
+     "id": "n_90fae4958a49323c",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/nx-s1-5996831/why-does-pete-hegseth-want-to-livestream-an-execution",
+     "text": "AILSA CHANG, HOST: It has been 90 years since the U.S. government publicly executed someone. Since then, the idea of public executions in the U.S. has largely been forgotten. But last week, Secretary of Defense Pete Hegseth announced that the Pentagon would livestream the execution of the man convicted in the 2009 attack on Fort Hood. And some religious scholars see this proposal as one rooted in Hegseth's particular brand of Christian nationalism. NPR domestic extremism correspondent Odette Yousef joins us now to discuss. Hi, Odette.",
+     "title": "Why does Pete Hegseth want to livestream an execution?",
+     "publishedAt": "2026-10-13T20:03:42.000Z",
+     "fetchedAt": "2026-10-14T03:41:07.660Z",
+     "version": 512,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f833e2d3e44e0f23",
+     "publisher": "The Hill",
+     "date": "2026-10-08",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6137747-fort-hood-shooter-firing-squad-execution-livestreamed/",
+     "text": "Hegseth says execution of Fort Hood shooter will be public: What to know",
+     "title": "Hegseth says execution of Fort Hood shooter will be public: What to know",
+     "publishedAt": "2026-10-08T22:36:46.000Z",
+     "fetchedAt": "2026-10-09T10:05:16.342Z",
+     "version": 429,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_90fae4958a49323c",
+    "n_f833e2d3e44e0f23"
+   ],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
+  },
+  "2110343665457463558": {
+   "contextVersion": 517,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "3775f06a38da6f76639b9223cb99a6aa2d6ace6fa23d73ca6ee0285f9cd5d022"
   }
  },
  "needsContext": {
@@ -288,10 +425,16 @@
   "2110269055839977959": false,
   "2110295961104765390": false,
   "2110296283189567712": true,
-  "2110299448773599669": false
+  "2110299448773599669": false,
+  "2110335188366725130": false,
+  "2110335791587115039": false,
+  "2110336355007881375": false,
+  "2110336464139817096": false,
+  "2110340276313092353": false,
+  "2110343665457463558": false
  },
  "inputBlocks": {},
- "contextVersion": 516,
+ "contextVersion": 517,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -309,6 +452,12 @@
    "label": "NYC horse carriage industry ban deal",
    "ids": [
     "2110299448773599669"
+   ]
+  },
+  {
+   "label": "Hegseth plan to livestream Fort Hood shooter's execution",
+   "ids": [
+    "2110340276313092353"
    ]
   }
  ],
@@ -341,19 +490,23 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110032041068671355",
     "2110041859473203707",
-    "2110299448773599669"
+    "2110335188366725130",
+    "2110335791587115039",
+    "2110336355007881375",
+    "2110336464139817096",
+    "2110340276313092353",
+    "2110343665457463558"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T10:47:07.834Z",
-    "observedAt": "2026-10-14T10:47:14.137Z",
+    "attemptedAt": "2026-10-14T12:16:54.703Z",
+    "observedAt": "2026-10-14T12:17:07.659Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   }
@@ -361,24 +514,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T10:47:07.834Z",
-   "observedAt": "2026-10-14T10:47:14.137Z",
+   "attemptedAt": "2026-10-14T12:16:54.703Z",
+   "observedAt": "2026-10-14T12:17:07.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T10:47:07.834Z",
-   "observedAt": "2026-10-14T10:47:14.137Z",
+   "attemptedAt": "2026-10-14T12:16:54.703Z",
+   "observedAt": "2026-10-14T12:17:07.659Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 3,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T10:47:14.173Z"
+ "updatedAt": "2026-10-14T12:17:07.697Z"
 }
