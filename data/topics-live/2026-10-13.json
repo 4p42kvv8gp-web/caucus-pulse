@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T18:02:42.275Z",
+ "classifiedAt": "2026-10-14T19:03:17.553Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -2798,6 +2798,10 @@
    [
     "foreign-policy",
     "ukraine-russia"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
    ]
   ],
   "2110114763846132041": [
@@ -8797,36 +8801,6 @@
    "evidenceUsed": [],
    "inputHash": "461b81c93b6f58ce42845c30cddd10f2eccc68252d8b186d2eea2c6650ec8fff"
   },
-  "2110115075801612522": {
-   "contextVersion": 506,
-   "evidenceSupplied": [
-    {
-     "id": "n_5a9dcd933802076a",
-     "publisher": "NPR",
-     "date": "2026-10-08",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
-     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
-     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
-     "publishedAt": "2026-10-08T10:13:18.000Z",
-     "fetchedAt": "2026-10-08T16:54:31.922Z",
-     "version": 416,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "461b81c93b6f58ce42845c30cddd10f2eccc68252d8b186d2eea2c6650ec8fff",
-   "quotedContext": {
-    "id": "2108417271823516088",
-    "authorId": "15535860",
-    "handle": "nbcsandiego",
-    "createdAt": "2026-10-09T04:40:24.000Z",
-    "textChars": 232,
-    "textHash": "1d7c4a63800629374ba3c6b12806b67531f15156e5d0fe0f9b942586b1540cf6"
-   }
-  },
   "2110115128364650988": {
    "contextVersion": 506,
    "evidenceSupplied": [],
@@ -9566,45 +9540,6 @@
    ],
    "evidenceUsed": [
     "n_906342debdace83e"
-   ],
-   "inputHash": "3c98d692a0c87da52777edd7c022555e5b88f9779584c645bd0684e8376f877f"
-  },
-  "2110114686318379448": {
-   "contextVersion": 507,
-   "evidenceSupplied": [
-    {
-     "id": "n_349da678770a8aaa",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
-     "text": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
-     "title": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
-     "publishedAt": "2026-10-11T14:29:49.000Z",
-     "fetchedAt": "2026-10-11T20:15:30.412Z",
-     "version": 473,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_6710ac7228dd26d8",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
-     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "publishedAt": "2026-10-11T16:07:40.000Z",
-     "fetchedAt": "2026-10-12T00:21:45.637Z",
-     "version": 477,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_349da678770a8aaa"
    ],
    "inputHash": "3c98d692a0c87da52777edd7c022555e5b88f9779584c645bd0684e8376f877f"
   },
@@ -11556,6 +11491,91 @@
    ],
    "evidenceUsed": [],
    "inputHash": "5fdfe0354176c970554ce45f81b767895625f2b750a29ce9b75c970a1c9b0dd0"
+  },
+  "2110114686318379448": {
+   "contextVersion": 523,
+   "evidenceSupplied": [
+    {
+     "id": "n_349da678770a8aaa",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141224-zelensky-criticizes-us-russia-diesel-deal/",
+     "text": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "title": "Zelensky: US-Russia diesel deal is a ‘birthday gift’ to Putin to ‘kill us, kill our children’",
+     "publishedAt": "2026-10-11T14:29:49.000Z",
+     "fetchedAt": "2026-10-11T20:15:30.412Z",
+     "version": 473,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6710ac7228dd26d8",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
+     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "publishedAt": "2026-10-11T16:07:40.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_349da678770a8aaa",
+    "n_6710ac7228dd26d8"
+   ],
+   "inputHash": "326e24e0d042bffda0b253f65313d188f1398388fc36174c8d463d3b9775eb89"
+  },
+  "2110115075801612522": {
+   "contextVersion": 523,
+   "evidenceSupplied": [
+    {
+     "id": "n_512befb403af4c7c",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/regulation/court-battles/6148426-california-immigration-enforcement-id-law-appeals-court-ruling/",
+     "text": "Appeals court rules California can’t require ICE to show visible ID",
+     "title": "Appeals court rules California can’t require ICE to show visible ID",
+     "publishedAt": "2026-10-14T18:08:29.000Z",
+     "fetchedAt": "2026-10-14T18:16:40.517Z",
+     "version": 523,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "326e24e0d042bffda0b253f65313d188f1398388fc36174c8d463d3b9775eb89",
+   "quotedContext": {
+    "id": "2108417271823516088",
+    "authorId": "15535860",
+    "handle": "nbcsandiego",
+    "createdAt": "2026-10-09T04:40:24.000Z",
+    "textChars": 232,
+    "textHash": "1d7c4a63800629374ba3c6b12806b67531f15156e5d0fe0f9b942586b1540cf6"
+   }
   }
  },
  "needsContext": {
@@ -11932,7 +11952,6 @@
   "2110114610292437488": false,
   "2110114657377890550": false,
   "2110114763846132041": false,
-  "2110115075801612522": false,
   "2110115128364650988": false,
   "2110115645807276159": false,
   "2110116075677381102": false,
@@ -11967,7 +11986,6 @@
   "2110070590279184746": false,
   "2110091317531549812": false,
   "2110110459164766638": false,
-  "2110114686318379448": false,
   "2110121469825184106": false,
   "2110121801426653342": false,
   "2110122174677946530": false,
@@ -12100,10 +12118,12 @@
   "2110019490503090453": false,
   "2110023814079812032": false,
   "2110037859797545312": false,
-  "2110093139708940380": false
+  "2110093139708940380": false,
+  "2110114686318379448": false,
+  "2110115075801612522": false
  },
  "inputBlocks": {},
- "contextVersion": 522,
+ "contextVersion": 523,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12487,6 +12507,18 @@
    "ids": [
     "2110118890646978658"
    ]
+  },
+  {
+   "label": "Trump lifting sanctions on Russian diesel / US-Russia fuel deal",
+   "ids": [
+    "2110114686318379448"
+   ]
+  },
+  {
+   "label": "ICE 45-day enforcement surge in California",
+   "ids": [
+    "2110115075801612522"
+   ]
   }
  ],
  "unclassified": [],
@@ -12500,35 +12532,23 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110005161687159081",
-    "2110019490503090453",
-    "2110023814079812032",
-    "2110037859797545312",
-    "2110093139708940380",
-    "2110411385901387969",
-    "2110412819002700104",
-    "2110413673449598978",
-    "2110413897421508780",
-    "2110413952991863088",
-    "2110414170461986993",
-    "2110414552739307665",
-    "2110414552919920845",
-    "2110414783790948793",
-    "2110414872580166136",
-    "2110414937747267620",
-    "2110415025232081177",
-    "2110415099575910413",
-    "2110415335551811897"
+    "2110114686318379448",
+    "2110115075801612522",
+    "2110356962835841289",
+    "2110396493769363546",
+    "2110401431882596741",
+    "2110410863530119262",
+    "2110431199411749318"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T18:00:48.368Z",
-    "observedAt": "2026-10-14T18:01:18.869Z",
+    "attemptedAt": "2026-10-14T19:01:50.741Z",
+    "observedAt": "2026-10-14T19:02:08.222Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 19,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -12554,24 +12574,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T18:00:48.368Z",
-   "observedAt": "2026-10-14T18:01:18.869Z",
+   "attemptedAt": "2026-10-14T19:01:50.741Z",
+   "observedAt": "2026-10-14T19:02:08.222Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T18:00:48.368Z",
-   "observedAt": "2026-10-14T18:01:18.869Z",
+   "attemptedAt": "2026-10-14T19:01:50.741Z",
+   "observedAt": "2026-10-14T19:02:08.222Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 7,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T18:02:42.284Z"
+ "updatedAt": "2026-10-14T19:03:17.559Z"
 }
