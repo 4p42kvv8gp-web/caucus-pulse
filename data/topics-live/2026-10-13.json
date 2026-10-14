@@ -1,7 +1,7 @@
 {
  "date": "2026-10-13",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T19:03:17.553Z",
+ "classifiedAt": "2026-10-14T19:47:23.429Z",
  "assignments": {
   "2109857226336682158": [
    [
@@ -1529,6 +1529,10 @@
    ]
   ],
   "2110062202426360296": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
    [
     "foreign-policy",
     "military-veterans"
@@ -6693,12 +6697,6 @@
    "evidenceUsed": [],
    "inputHash": "f8fde2859b76076c84a47e9152033e50c57f8d1ac22cef60c755ae3f2f766030"
   },
-  "2110062202426360296": {
-   "contextVersion": 503,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "f8fde2859b76076c84a47e9152033e50c57f8d1ac22cef60c755ae3f2f766030"
-  },
   "2110062258680185089": {
    "contextVersion": 503,
    "evidenceSupplied": [],
@@ -11576,6 +11574,28 @@
     "textChars": 232,
     "textHash": "1d7c4a63800629374ba3c6b12806b67531f15156e5d0fe0f9b942586b1540cf6"
    }
+  },
+  "2110062202426360296": {
+   "contextVersion": 524,
+   "evidenceSupplied": [
+    {
+     "id": "n_df66afb5cfea0c49",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6148576-pete-hegseth-protests-army-convention/",
+     "text": "Hegseth heckled by anti-war protesters at Army conference",
+     "title": "Hegseth heckled by anti-war protesters at Army conference",
+     "publishedAt": "2026-10-14T18:20:54.000Z",
+     "fetchedAt": "2026-10-14T19:22:03.579Z",
+     "version": 524,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dd73af83ce2d47efc4337bd2a1728d704f60b03dd49d2133e396530e9878814f"
   }
  },
  "needsContext": {
@@ -11782,7 +11802,6 @@
   "2110061525369082016": false,
   "2110061667992117471": false,
   "2110061838574719171": true,
-  "2110062202426360296": false,
   "2110062258680185089": false,
   "2110062481213170067": false,
   "2110062846109167882": false,
@@ -12120,10 +12139,11 @@
   "2110037859797545312": false,
   "2110093139708940380": false,
   "2110114686318379448": false,
-  "2110115075801612522": false
+  "2110115075801612522": false,
+  "2110062202426360296": false
  },
  "inputBlocks": {},
- "contextVersion": 523,
+ "contextVersion": 524,
  "emerging": [
   {
    "label": "Paxton Dubai fugitive donor report",
@@ -12532,23 +12552,32 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110114686318379448",
-    "2110115075801612522",
-    "2110356962835841289",
-    "2110396493769363546",
-    "2110401431882596741",
-    "2110410863530119262",
-    "2110431199411749318"
+    "2110062202426360296",
+    "2110446175849718134",
+    "2110446666973057043",
+    "2110446681183707352",
+    "2110446685956759787",
+    "2110446837706764727",
+    "2110446976957608145",
+    "2110446980170150286",
+    "2110447238191423895",
+    "2110447558531088504",
+    "2110448044877427163",
+    "2110448436667396523",
+    "2110449049694601302",
+    "2110449737593684057",
+    "2110450308774052313",
+    "2110450488110178540"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T19:01:50.741Z",
-    "observedAt": "2026-10-14T19:02:08.222Z",
+    "attemptedAt": "2026-10-14T19:46:28.974Z",
+    "observedAt": "2026-10-14T19:46:53.620Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 16,
     "retryCount": 0
    }
   },
@@ -12574,24 +12603,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T19:01:50.741Z",
-   "observedAt": "2026-10-14T19:02:08.222Z",
+   "attemptedAt": "2026-10-14T19:46:28.974Z",
+   "observedAt": "2026-10-14T19:46:53.620Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T19:01:50.741Z",
-   "observedAt": "2026-10-14T19:02:08.222Z",
+   "attemptedAt": "2026-10-14T19:46:28.974Z",
+   "observedAt": "2026-10-14T19:46:53.620Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 16,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T19:03:17.559Z"
+ "updatedAt": "2026-10-14T19:47:23.436Z"
 }
