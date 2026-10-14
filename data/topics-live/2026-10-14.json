@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-14T05:12:31.595Z",
+ "classifiedAt": "2026-10-14T06:43:16.128Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -22,6 +22,18 @@
   "2110227505584177579": [
    [
     "democracy",
+    null
+   ]
+  ],
+  "2110241174334361961": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110246648488018264": [
+   [
+    "congress-politics",
     null
    ]
   ]
@@ -111,12 +123,62 @@
     "referenceId": "2110188428646101380",
     "fingerprint": "3b26370cc0d74ee5c0e12ed123090742bed5bf5336f75ed012a20939906adebb"
    }
+  },
+  "2110241174334361961": {
+   "contextVersion": 513,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "8babe0619f7ec3e8b4a2ba1d9662e2187b3b937a824c3588e58cba4b87b35e84",
+   "quotedContext": {
+    "id": "2109994610114118028",
+    "authorId": "2834672145",
+    "handle": "VoteNewDems",
+    "createdAt": "2026-10-13T13:08:11.000Z",
+    "textChars": 248,
+    "textHash": "45e19fbff465b9a99f5588bc1a03e04e2fcb9590f283cd362ac712c7da16f80a"
+   }
+  },
+  "2110246648488018264": {
+   "contextVersion": 513,
+   "evidenceSupplied": [
+    {
+     "id": "n_d6d36eccdd1d410e",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6141753-talarico-campaign-full-steam-ahead/",
+     "text": "Chair of Texas Democratic Party says ‘we’re full steam ahead’ after Talarico’s flu recovery",
+     "title": "Chair of Texas Democratic Party says ‘we’re full steam ahead’ after Talarico’s flu recovery",
+     "publishedAt": "2026-10-11T21:40:25.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "8babe0619f7ec3e8b4a2ba1d9662e2187b3b937a824c3588e58cba4b87b35e84",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110037471551484081",
+    "fingerprint": "3a2f0798fd8ae1ad98ae162fa8873f750375c3534bf7514479b4575bb15da2ab"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110037471551484081",
+    "fingerprint": "3a2f0798fd8ae1ad98ae162fa8873f750375c3534bf7514479b4575bb15da2ab"
+   }
   }
  },
  "needsContext": {
   "2110220972829626770": false,
   "2110226646993391931": false,
-  "2110227505584177579": false
+  "2110227505584177579": false,
+  "2110241174334361961": false,
+  "2110246648488018264": false
  },
  "inputBlocks": {},
  "contextVersion": 513,
@@ -157,14 +219,14 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110226646993391931",
-    "2110227505584177579"
+    "2110241174334361961",
+    "2110246648488018264"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T05:12:26.656Z",
-    "observedAt": "2026-10-14T05:12:31.592Z",
+    "attemptedAt": "2026-10-14T06:43:13.876Z",
+    "observedAt": "2026-10-14T06:43:16.125Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -176,8 +238,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-14T05:12:26.656Z",
-   "observedAt": "2026-10-14T05:12:31.592Z",
+   "attemptedAt": "2026-10-14T06:43:13.876Z",
+   "observedAt": "2026-10-14T06:43:16.125Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -185,8 +247,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-14T05:12:26.656Z",
-   "observedAt": "2026-10-14T05:12:31.592Z",
+   "attemptedAt": "2026-10-14T06:43:13.876Z",
+   "observedAt": "2026-10-14T06:43:16.125Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -195,5 +257,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-14T05:12:31.596Z"
+ "updatedAt": "2026-10-14T06:43:16.129Z"
 }

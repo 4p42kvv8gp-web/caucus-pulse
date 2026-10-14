@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T05:12:31.732Z",
+ "generatedAt": "2026-10-14T06:43:16.238Z",
  "incidents": [
   {
    "id": "newport-beach-ca--flooding--source-2109715247204295159",
@@ -10,7 +10,7 @@
     "flooding"
    ],
    "status": "provisional",
-   "lifecycle": "monitoring",
+   "lifecycle": "resolved",
    "corroboration": {
     "corroborated": false,
     "by": null,
@@ -1549,103 +1549,6 @@
     "independentSourceCount": 0,
     "sourceIds": [
      "2107907462078796219"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "los-angeles-county-ca--wildfire--bouquetfire--2026-10-07",
-   "kind": "wildfire",
-   "name": "Bouquet Fire",
-   "eventIdentity": "named-source-supported",
-   "kinds": [
-    "wildfire"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Los Angeles County, CA · CA-27",
-   "placeRaw": "Los Angeles County, CA",
-   "district": "CA-27",
-   "districtMatch": true,
-   "handle": "@gtwhitesides",
-   "member": "George Whitesides",
-   "since": "2026-10-07T05:14:29.000Z",
-   "last": "2026-10-07T05:14:29.000Z",
-   "updates": 1,
-   "engN": 5,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Bouquet Fire · Los Angeles County, CA",
-   "evidence": {
-    "span": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-    "exact": false,
-    "start": 0,
-    "end": 140,
-    "matched": {
-     "kind": true,
-     "place": false
-    },
-    "sourceId": "2107701072265625984",
-    "url": "https://x.com/i/web/status/2107701072265625984"
-   },
-   "timeline": [
-    {
-     "id": "2107701072265625984",
-     "sourceId": "2107701072265625984",
-     "url": "https://x.com/i/web/status/2107701072265625984",
-     "authorId": "5408852",
-     "personId": "member:george whitesides",
-     "referenceIds": [
-      "2107646905220256191"
-     ],
-     "time": "2026-10-07T05:14:29.000Z",
-     "who": "@gtwhitesides",
-     "tag": "repost",
-     "text": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-     "engN": 5,
-     "isNew": false,
-     "flag": {
-      "kind": "wildfire",
-      "place": "Los Angeles County, CA",
-      "name": "Bouquet Fire"
-     },
-     "evidence": {
-      "span": "RT @Angeles_NF: #bouquetfire\nContainment on the Bouquet Fire is now 71%. Fire behavior has remained minimal, allowing ground crews to conti…",
-      "exact": false,
-      "start": 0,
-      "end": 140,
-      "matched": {
-       "kind": true,
-       "place": false
-      },
-      "sourceId": "2107701072265625984",
-      "url": "https://x.com/i/web/status/2107701072265625984"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2107701072265625984"
-   ],
-   "intel": null,
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2107701072265625984"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
