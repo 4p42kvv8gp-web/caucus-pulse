@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T04:52:12.062Z",
+ "classifiedAt": "2026-10-15T12:17:22.335Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -174,6 +174,10 @@
    [
     "healthcare",
     "aca"
+   ],
+   [
+    "healthcare",
+    "drug-prices"
    ]
   ],
   "2110356103145902092": [
@@ -1180,6 +1184,10 @@
    [
     "immigration",
     "ice-enforcement"
+   ],
+   [
+    "economy",
+    "housing"
    ]
   ],
   "2110399442646163718": [
@@ -3131,6 +3139,10 @@
    [
     "healthcare",
     "medicare"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2110474156294742374": [
@@ -5025,30 +5037,6 @@
    "evidenceUsed": [],
    "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
   },
-  "2110355544498209090": {
-   "contextVersion": 518,
-   "evidenceSupplied": [
-    {
-     "id": "n_c559e5aabd94a3bc",
-     "publisher": "NPR",
-     "date": "2026-10-07",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/07/nx-s1-5991687/trump-medicare-aca-payments-midterms",
-     "text": "\"I just can't believe it; I mean, that's crazy,\" says Allen, who's the executive director of a small nonprofit called West Virginians for Affordable Health Care . She says, in her opinion, sending out these checks is a \"political stunt.\"",
-     "title": "She got Trump's $500 check for health insurance. To her, it's a 'political stunt'",
-     "publishedAt": "2026-10-07T16:15:26.000Z",
-     "fetchedAt": "2026-10-08T13:46:59.556Z",
-     "version": 413,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_c559e5aabd94a3bc"
-   ],
-   "inputHash": "3fc31c0a67f8043999144c7bf167d552e9aef663ad49a8d45b6b5702e0d4141e"
-  },
   "2110356103145902092": {
    "contextVersion": 518,
    "evidenceSupplied": [],
@@ -6224,45 +6212,6 @@
    "evidenceUsed": [],
    "inputHash": "ec742734a1f46beb16d02afb1a212e144382ff2f90659088f6aa376ffcd95c66"
   },
-  "2110380094925815964": {
-   "contextVersion": 520,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f0507226e7636737",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6145657-donald-trump-china-russia-iran-war/",
-     "text": "Trump: China, Russia ‘have too much to lose’ to help Iran",
-     "title": "Trump: China, Russia ‘have too much to lose’ to help Iran",
-     "publishedAt": "2026-10-13T17:32:13.000Z",
-     "fetchedAt": "2026-10-13T17:42:03.724Z",
-     "version": 503,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "ec742734a1f46beb16d02afb1a212e144382ff2f90659088f6aa376ffcd95c66"
-  },
   "2110380378082979935": {
    "contextVersion": 520,
    "evidenceSupplied": [],
@@ -7417,36 +7366,6 @@
     "n_2abe0da9e5c77988"
    ],
    "inputHash": "2cf9668f8b731e837a1d63147a303fabddba0b72c04b9b9ee70b6c6162a89669"
-  },
-  "2110399025224572950": {
-   "contextVersion": 521,
-   "evidenceSupplied": [
-    {
-     "id": "n_5a9dcd933802076a",
-     "publisher": "NPR",
-     "date": "2026-10-08",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
-     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
-     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
-     "publishedAt": "2026-10-08T10:13:18.000Z",
-     "fetchedAt": "2026-10-08T16:54:31.922Z",
-     "version": 416,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "2cf9668f8b731e837a1d63147a303fabddba0b72c04b9b9ee70b6c6162a89669",
-   "quotedContext": {
-    "id": "2110377634332889599",
-    "authorId": "15907432",
-    "handle": "thenewmexican",
-    "createdAt": "2026-10-14T14:30:11.000Z",
-    "textChars": 252,
-    "textHash": "d8f9e15bdd6bf82abdf98141265e479a22448d1b1fe1d0f9d4b08b63ee9b93f8"
-   }
   },
   "2110399442646163718": {
    "contextVersion": 521,
@@ -8848,12 +8767,6 @@
     "textHash": "c282d9c5e25ce568d8400d287a8777a5d0ba4dbcb4254c3730f2a3d0a8c3709a"
    }
   },
-  "2110425555732664424": {
-   "contextVersion": 522,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0969dc732ad2a993334e9e1a08ec9a98a58d9e35ad51087cb05f2db352faafa5"
-  },
   "2110425617770377318": {
    "contextVersion": 522,
    "evidenceSupplied": [],
@@ -9831,20 +9744,6 @@
    "evidenceUsed": [],
    "inputHash": "a0ede2e33610c15334eb2bd4ca229698111ecfbbe081fc32193970cc6f7a03fe"
   },
-  "2110442115721298386": {
-   "contextVersion": 523,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "a0ede2e33610c15334eb2bd4ca229698111ecfbbe081fc32193970cc6f7a03fe",
-   "quotedContext": {
-    "id": "2110389740919038168",
-    "authorId": "818975124460335106",
-    "handle": "RepDonBacon",
-    "createdAt": "2026-10-14T15:18:18.000Z",
-    "textChars": 119,
-    "textHash": "5f8ba050918fd9d26c2a1a7d77f656e5c51748a87eb435b80915f3efa5a08b60"
-   }
-  },
   "2110443316110319770": {
    "contextVersion": 523,
    "evidenceSupplied": [],
@@ -10559,54 +10458,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "9d6c0019dd80615480a10b7a0359fb6eb0720e819a514f1973d6788c7217e376"
-  },
-  "2110347443804283332": {
-   "contextVersion": 525,
-   "evidenceSupplied": [
-    {
-     "id": "n_e5a2346b94bcc5ed",
-     "publisher": "The Hill",
-     "date": "2026-10-12",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6142689-russia-targets-ukraine-energy-ceasefire/",
-     "text": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
-     "title": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
-     "publishedAt": "2026-10-12T14:23:01.000Z",
-     "fetchedAt": "2026-10-12T15:19:12.442Z",
-     "version": 485,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_a3f228cc82c4f94a",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
-     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
-     "publishedAt": "2026-10-11T18:30:39.000Z",
-     "fetchedAt": "2026-10-11T19:06:42.855Z",
-     "version": 472,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_e5a2346b94bcc5ed",
-    "n_a3f228cc82c4f94a"
-   ],
-   "inputHash": "094e9440076d76d08cab7b1d2d4816013676f4e4f30645026e7132c3187771cc",
-   "quotedContext": {
-    "id": "2109343174212960390",
-    "authorId": "1120633726478823425",
-    "handle": "ZelenskyyUa",
-    "createdAt": "2026-10-11T17:59:37.000Z",
-    "textChars": 1220,
-    "textHash": "522c150db0955e86045bafcc54ec9abdd29101fed47944713ebc3ee5733921f7"
-   }
   },
   "2110423014126870708": {
    "contextVersion": 525,
@@ -11513,28 +11364,6 @@
   "2110473349554114705": {
    "contextVersion": 525,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "0660bdb5f437f355fdfc95b17d41b7ed7b44c2e8b9c41c76def7001788ddb2f0"
-  },
-  "2110473521289633911": {
-   "contextVersion": 525,
-   "evidenceSupplied": [
-    {
-     "id": "n_35290f7bc6e9c180",
-     "publisher": "Roll Call",
-     "date": "2026-10-08",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/08/warner-pitches-health-care-expansion-as-he-preps-for-swan-song/",
-     "text": "At a news conference hosted by the 32BJ SEIU property service workers union, Warner advocated for universal health care, saying that effort could take many forms, including Medicare for All, requirements for universal coverage through private insurance or other options.",
-     "title": "Warner pitches health care expansion as he preps for swan song",
-     "publishedAt": "2026-10-08T06:29:55.000Z",
-     "fetchedAt": "2026-10-08T23:04:42.009Z",
-     "version": 421,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "0660bdb5f437f355fdfc95b17d41b7ed7b44c2e8b9c41c76def7001788ddb2f0"
   },
@@ -13077,54 +12906,6 @@
     "textHash": "910d73034b3460f91d879f2a95762fc402eed4efd278828f28ceb0b7e4f323d8"
    }
   },
-  "2110499462095483197": {
-   "contextVersion": 526,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    },
-    {
-     "id": "n_6eaf2eb22b5a01c9",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
-     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "publishedAt": "2026-10-14T17:12:17.000Z",
-     "fetchedAt": "2026-10-14T17:31:55.062Z",
-     "version": 522,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_6eaf2eb22b5a01c9",
-    "n_8ff3d20cec3e8e38"
-   ],
-   "inputHash": "44813651eedaf4e4980f97dad39318e15048541772ed5ad6004639fddf275645",
-   "quotedContext": {
-    "id": "2110436044759781545",
-    "authorId": "244655353",
-    "handle": "davidaxelrod",
-    "createdAt": "2026-10-14T18:22:17.000Z",
-    "textChars": 297,
-    "textHash": "6ef9ae6741b32a3306b03a95be55e807f9af3be67f24ad91b4e2713572bb6c2d"
-   }
-  },
   "2110500161990385783": {
    "contextVersion": 526,
    "evidenceSupplied": [],
@@ -14562,12 +14343,6 @@
     "textHash": "9ac5602822a2cfd5c6a16e46e8ea0fa346b1437cd7bd6cf3e143d67220a6ec52"
    }
   },
-  "2110542963000463851": {
-   "contextVersion": 529,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "329715f259f014ac203770599df336d1672ee13e6181309459455972683161cf"
-  },
   "2110545935528808505": {
    "contextVersion": 529,
    "evidenceSupplied": [],
@@ -14896,6 +14671,336 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2"
+  },
+  "2110347443804283332": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_e5a2346b94bcc5ed",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6142689-russia-targets-ukraine-energy-ceasefire/",
+     "text": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
+     "title": "Russia targets Ukraine energy facilities despite Trump’s energy ceasefire claim",
+     "publishedAt": "2026-10-12T14:23:01.000Z",
+     "fetchedAt": "2026-10-12T15:19:12.442Z",
+     "version": 485,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_a3f228cc82c4f94a",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141551-ukraine-reacts-trump-russia-deal/",
+     "text": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "title": "Zelensky ‘awaiting details’ from US on Russia-Ukraine energy ceasefire claimed by Trump",
+     "publishedAt": "2026-10-11T18:30:39.000Z",
+     "fetchedAt": "2026-10-11T19:06:42.855Z",
+     "version": 472,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_e5a2346b94bcc5ed",
+    "n_a3f228cc82c4f94a"
+   ],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7",
+   "quotedContext": {
+    "id": "2109343174212960390",
+    "authorId": "1120633726478823425",
+    "handle": "ZelenskyyUa",
+    "createdAt": "2026-10-11T17:59:37.000Z",
+    "textChars": 1220,
+    "textHash": "522c150db0955e86045bafcc54ec9abdd29101fed47944713ebc3ee5733921f7"
+   }
+  },
+  "2110355544498209090": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_4df050734ccaaa5b",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002957/aca-fraud-trump-health-insurance",
+     "text": "Not all of those kicked off were fraudulently enrolled, KFF Health News has learned. Insurance industry sources said the Centers for Medicare & Medicaid Services has reinstated a small number of people whose coverage should not have been canceled. More could follow in the coming weeks if enrollees discover they are uninsured when they go to use their coverage.",
+     "title": "After booting 760K off ACA health plans, the Trump administration adds some people back",
+     "publishedAt": "2026-10-15T11:06:21.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_c559e5aabd94a3bc",
+     "publisher": "NPR",
+     "date": "2026-10-07",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/07/nx-s1-5991687/trump-medicare-aca-payments-midterms",
+     "text": "\"I just can't believe it; I mean, that's crazy,\" says Allen, who's the executive director of a small nonprofit called West Virginians for Affordable Health Care . She says, in her opinion, sending out these checks is a \"political stunt.\"",
+     "title": "She got Trump's $500 check for health insurance. To her, it's a 'political stunt'",
+     "publishedAt": "2026-10-07T16:15:26.000Z",
+     "fetchedAt": "2026-10-08T13:46:59.556Z",
+     "version": 413,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_c559e5aabd94a3bc"
+   ],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7"
+  },
+  "2110380094925815964": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f0507226e7636737",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6145657-donald-trump-china-russia-iran-war/",
+     "text": "Trump: China, Russia ‘have too much to lose’ to help Iran",
+     "title": "Trump: China, Russia ‘have too much to lose’ to help Iran",
+     "publishedAt": "2026-10-13T17:32:13.000Z",
+     "fetchedAt": "2026-10-13T17:42:03.724Z",
+     "version": 503,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7"
+  },
+  "2110399025224572950": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_5a9dcd933802076a",
+     "publisher": "NPR",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
+     "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
+     "title": "ICE has quietly used this warehouse as a detention facility all summer, neighbors say",
+     "publishedAt": "2026-10-08T10:13:18.000Z",
+     "fetchedAt": "2026-10-08T16:54:31.922Z",
+     "version": 416,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1919724d0b5975a1",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/homeland-security-investigative-unit-in-spotlight-in-omar-probe/",
+     "text": "But some Republicans hailed HSI last spring, as they sought to end a shutdown of its parent agency, U.S. Immigration and Customs Enforcement, following the fatal shootings of two U.S. citizens by federal immigration agents in Minnesota.",
+     "title": "Homeland Security investigative unit in spotlight in Omar probe",
+     "publishedAt": "2026-10-15T06:28:25.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7",
+   "quotedContext": {
+    "id": "2110377634332889599",
+    "authorId": "15907432",
+    "handle": "thenewmexican",
+    "createdAt": "2026-10-14T14:30:11.000Z",
+    "textChars": 252,
+    "textHash": "d8f9e15bdd6bf82abdf98141265e479a22448d1b1fe1d0f9d4b08b63ee9b93f8"
+   }
+  },
+  "2110425555732664424": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_4df050734ccaaa5b",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002957/aca-fraud-trump-health-insurance",
+     "text": "Not all of those kicked off were fraudulently enrolled, KFF Health News has learned. Insurance industry sources said the Centers for Medicare & Medicaid Services has reinstated a small number of people whose coverage should not have been canceled. More could follow in the coming weeks if enrollees discover they are uninsured when they go to use their coverage.",
+     "title": "After booting 760K off ACA health plans, the Trump administration adds some people back",
+     "publishedAt": "2026-10-15T11:06:21.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7"
+  },
+  "2110442115721298386": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_7de1827b109815c0",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/national-security/6148360-putin-outsmarts-trump-diplomacy/",
+     "text": "Putin is once again playing Trump for a fool",
+     "title": "Putin is once again playing Trump for a fool",
+     "publishedAt": "2026-10-15T11:00:00.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7",
+   "quotedContext": {
+    "id": "2110389740919038168",
+    "authorId": "818975124460335106",
+    "handle": "RepDonBacon",
+    "createdAt": "2026-10-14T15:18:18.000Z",
+    "textChars": 119,
+    "textHash": "5f8ba050918fd9d26c2a1a7d77f656e5c51748a87eb435b80915f3efa5a08b60"
+   }
+  },
+  "2110473521289633911": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_35290f7bc6e9c180",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/warner-pitches-health-care-expansion-as-he-preps-for-swan-song/",
+     "text": "At a news conference hosted by the 32BJ SEIU property service workers union, Warner advocated for universal health care, saying that effort could take many forms, including Medicare for All, requirements for universal coverage through private insurance or other options.",
+     "title": "Warner pitches health care expansion as he preps for swan song",
+     "publishedAt": "2026-10-08T06:29:55.000Z",
+     "fetchedAt": "2026-10-08T23:04:42.009Z",
+     "version": 421,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_4df050734ccaaa5b",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002957/aca-fraud-trump-health-insurance",
+     "text": "Not all of those kicked off were fraudulently enrolled, KFF Health News has learned. Insurance industry sources said the Centers for Medicare & Medicaid Services has reinstated a small number of people whose coverage should not have been canceled. More could follow in the coming weeks if enrollees discover they are uninsured when they go to use their coverage.",
+     "title": "After booting 760K off ACA health plans, the Trump administration adds some people back",
+     "publishedAt": "2026-10-15T11:06:21.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7"
+  },
+  "2110499462095483197": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_6eaf2eb22b5a01c9",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
+     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "publishedAt": "2026-10-14T17:12:17.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ff3d20cec3e8e38",
+    "n_6eaf2eb22b5a01c9"
+   ],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11",
+   "quotedContext": {
+    "id": "2110436044759781545",
+    "authorId": "244655353",
+    "handle": "davidaxelrod",
+    "createdAt": "2026-10-14T18:22:17.000Z",
+    "textChars": 297,
+    "textHash": "6ef9ae6741b32a3306b03a95be55e807f9af3be67f24ad91b4e2713572bb6c2d"
+   }
+  },
+  "2110542963000463851": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_b8043c058a682a5b",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149888-university-of-chicago-sexual-assault/",
+     "text": "Person of interest identified in connection with sexual assault near University of Chicago campus",
+     "title": "Person of interest identified in connection with sexual assault near University of Chicago campus",
+     "publishedAt": "2026-10-15T10:45:48.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11"
   }
  },
  "needsContext": {
@@ -14925,7 +15030,6 @@
   "2110353881439887859": false,
   "2110354089527615633": false,
   "2110355150174888167": false,
-  "2110355544498209090": false,
   "2110356103145902092": false,
   "2110356793557700659": false,
   "2110357055227785578": false,
@@ -14994,7 +15098,6 @@
   "2110379059431473618": false,
   "2110379072866210070": false,
   "2110379630205264232": false,
-  "2110380094925815964": false,
   "2110380378082979935": false,
   "2110380719457640748": false,
   "2110381258400223395": false,
@@ -15058,7 +15161,6 @@
   "2110398237106397401": false,
   "2110398527327347155": false,
   "2110398933134393581": false,
-  "2110399025224572950": false,
   "2110399442646163718": false,
   "2110399489420996711": false,
   "2110399831717949666": false,
@@ -15146,7 +15248,6 @@
   "2110425353529221219": false,
   "2110425455752835369": false,
   "2110425456604262711": false,
-  "2110425555732664424": false,
   "2110425617770377318": false,
   "2110425694635188423": false,
   "2110425991474725208": false,
@@ -15199,7 +15300,6 @@
   "2110441928722677847": false,
   "2110441955738177772": false,
   "2110441971273871506": false,
-  "2110442115721298386": false,
   "2110443316110319770": false,
   "2110443608683811131": false,
   "2110444152999530549": false,
@@ -15240,7 +15340,6 @@
   "2110456659151921163": false,
   "2110456703862940126": false,
   "2110457020126310819": false,
-  "2110347443804283332": false,
   "2110423014126870708": false,
   "2110425771034427893": false,
   "2110446976957608145": true,
@@ -15304,7 +15403,6 @@
   "2110473065112977827": false,
   "2110473219547295853": false,
   "2110473349554114705": false,
-  "2110473521289633911": false,
   "2110474156294742374": false,
   "2110474320975650878": false,
   "2110474666737598779": false,
@@ -15390,7 +15488,6 @@
   "2110498158417420735": false,
   "2110498434939605047": false,
   "2110498461544304997": false,
-  "2110499462095483197": false,
   "2110500161990385783": false,
   "2110500561510436872": false,
   "2110500573569253617": false,
@@ -15479,7 +15576,6 @@
   "2110542632996761751": false,
   "2110542636222472663": false,
   "2110542638822690827": false,
-  "2110542963000463851": false,
   "2110545935528808505": false,
   "2110547111888511122": false,
   "2110547629797183710": false,
@@ -15505,10 +15601,19 @@
   "2110573479619617028": false,
   "2110574131854934300": true,
   "2110575540675452937": false,
-  "2110580012470665675": false
+  "2110580012470665675": false,
+  "2110347443804283332": false,
+  "2110355544498209090": false,
+  "2110380094925815964": false,
+  "2110399025224572950": false,
+  "2110425555732664424": false,
+  "2110442115721298386": false,
+  "2110473521289633911": false,
+  "2110499462095483197": false,
+  "2110542963000463851": false
  },
  "inputBlocks": {},
- "contextVersion": 531,
+ "contextVersion": 536,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -15854,43 +15959,46 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2110521619580141879",
-    "2110522840059421155",
-    "2110523004153205193"
+    "2110499462095483197",
+    "2110542963000463851",
+    "2110693475251343494",
+    "2110693656340693030",
+    "2110696683382472977",
+    "2110697647187063116",
+    "2110701778031239253",
+    "2110703422307459231"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T00:09:02.927Z",
-    "observedAt": "2026-10-15T00:09:11.349Z",
+    "attemptedAt": "2026-10-15T12:17:06.034Z",
+    "observedAt": "2026-10-15T12:17:22.298Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 3,
+    "acceptedCount": 8,
     "retryCount": 0
    }
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110428437726830643",
-    "2110571097112330713",
-    "2110573479619617028",
-    "2110574131854934300",
-    "2110575540675452937",
-    "2110580012470665675",
-    "2110586361384472620",
-    "2110592200015040795",
-    "2110592347872673951"
+    "2110347443804283332",
+    "2110355544498209090",
+    "2110380094925815964",
+    "2110399025224572950",
+    "2110425555732664424",
+    "2110442115721298386",
+    "2110473521289633911"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T04:51:55.113Z",
-    "observedAt": "2026-10-15T04:52:12.035Z",
+    "attemptedAt": "2026-10-15T12:16:52.268Z",
+    "observedAt": "2026-10-15T12:17:06.013Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
@@ -15975,21 +16083,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T04:51:55.113Z",
-   "observedAt": "2026-10-15T04:52:12.035Z",
+   "attemptedAt": "2026-10-15T12:17:06.034Z",
+   "observedAt": "2026-10-15T12:17:22.298Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T04:51:55.113Z",
-   "observedAt": "2026-10-15T04:52:12.035Z",
+   "attemptedAt": "2026-10-15T12:17:06.034Z",
+   "observedAt": "2026-10-15T12:17:22.298Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastFailure": {
@@ -16002,5 +16110,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-15T04:52:12.069Z"
+ "updatedAt": "2026-10-15T12:17:22.343Z"
 }

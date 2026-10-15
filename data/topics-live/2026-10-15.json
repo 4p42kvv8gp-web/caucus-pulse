@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T10:48:05.164Z",
+ "classifiedAt": "2026-10-15T12:17:22.347Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -41,6 +41,46 @@
    [
     "constituent-services",
     null
+   ]
+  ],
+  "2110693475251343494": [
+   [
+    "constituent-services",
+    null
+   ],
+   [
+    "congress-politics",
+    "town-halls"
+   ]
+  ],
+  "2110693656340693030": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2110696683382472977": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110697647187063116": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110701778031239253": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110703422307459231": [
+   [
+    "civil-rights",
+    "racial-justice"
    ]
   ]
  },
@@ -139,6 +179,117 @@
     "textChars": 256,
     "textHash": "c282d9c5e25ce568d8400d287a8777a5d0ba4dbcb4254c3730f2a3d0a8c3709a"
    }
+  },
+  "2110693475251343494": {
+   "contextVersion": 536,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11"
+  },
+  "2110693656340693030": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_1919724d0b5975a1",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/homeland-security-investigative-unit-in-spotlight-in-omar-probe/",
+     "text": "“More than a quarter of ICE’s annual appropriated budget is for Homeland Security Investigations, referred to as HSI,” Collins said in a March 12 floor speech.",
+     "title": "Homeland Security investigative unit in spotlight in Omar probe",
+     "publishedAt": "2026-10-15T06:28:25.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11"
+  },
+  "2110696683382472977": {
+   "contextVersion": 536,
+   "evidenceSupplied": [
+    {
+     "id": "n_cc06db2e413859e2",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5986126/texas-15th-congressional-district-provides-clues-to-states-latino-vote",
+     "text": "MICHEL MARTIN, HOST: Latino voters helped elect Republicans two years ago. A congressional race in south Texas is a test of whether that support holds. Republican Representative Monica De La Cruz is trying for a third term. Her challenger is Democrat Bobby Pulido, a singer, making his first run for office. Texas Public Radio's David Martin Davies takes us to the state's 15th District.",
+     "title": "Texas' 15th Congressional District provides clues to state's Latino vote",
+     "publishedAt": "2026-10-12T08:37:01.000Z",
+     "fetchedAt": "2026-10-12T21:22:04.235Z",
+     "version": 489,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8a7c9fbd38290efa",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5986150/lawler-new-york-congress-trump",
+     "text": "But her pride doesn't stop at her family. It extends to her congressman, Mike Lawler, a two-term Republican running for reelection in New York's 17th district. It is one of the closest races in the country in a seat encompassing a string of commuter towns and suburbs around the Hudson River Valley.",
+     "title": "Republican congressman tries to outrun a potential blue wave in New York toss-up seat",
+     "publishedAt": "2026-10-09T09:00:00.000Z",
+     "fetchedAt": "2026-10-09T10:05:16.342Z",
+     "version": 429,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11",
+   "quotedContext": {
+    "id": "2110546418117103727",
+    "authorId": "1922375842082037760",
+    "handle": "TeamTalaricoHQ",
+    "createdAt": "2026-10-15T01:40:52.000Z",
+    "textChars": 882,
+    "textHash": "6a6208163a574a46d133f9d53e4e26ce03a372626d424a2dbbd4589372f5e546"
+   }
+  },
+  "2110697647187063116": {
+   "contextVersion": 536,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110463678592307480",
+    "fingerprint": "78b2206febf058ba9e38e5453ee9f947475f55538525e6e1760e9b43437a0451"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110463678592307480",
+    "fingerprint": "78b2206febf058ba9e38e5453ee9f947475f55538525e6e1760e9b43437a0451"
+   }
+  },
+  "2110701778031239253": {
+   "contextVersion": 536,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11"
+  },
+  "2110703422307459231": {
+   "contextVersion": 536,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11",
+   "quotedContext": {
+    "id": "2110465436663919045",
+    "authorId": "971841850695979010",
+    "handle": "Savsays",
+    "createdAt": "2026-10-14T20:19:05.000Z",
+    "textChars": 842,
+    "textHash": "4384269c27ae6c6b3cd34c79851a0f8f39fe706851c439f8934a6b1fcb73c835"
+   }
   }
  },
  "needsContext": {
@@ -148,11 +299,24 @@
   "2110595426755735597": true,
   "2110595501330710612": false,
   "2110626732755841120": false,
-  "2110673273176391735": false
+  "2110673273176391735": false,
+  "2110693475251343494": false,
+  "2110693656340693030": false,
+  "2110696683382472977": false,
+  "2110697647187063116": false,
+  "2110701778031239253": false,
+  "2110703422307459231": false
  },
  "inputBlocks": {},
- "contextVersion": 535,
- "emerging": [],
+ "contextVersion": 536,
+ "emerging": [
+  {
+   "label": "ICE shooting of Wilber Garcés-Pérez in Texas",
+   "ids": [
+    "2110693656340693030"
+   ]
+  }
+ ],
  "unclassified": [],
  "pendingIds": [],
  "complete": true,
@@ -162,19 +326,26 @@
  "echoedSubs": [],
  "validationErrors": [],
  "requestStatus": {
-  "live_chunk-0": {
+  "live_chunk-1": {
    "acceptedIds": [
-    "2110673273176391735"
+    "2110499462095483197",
+    "2110542963000463851",
+    "2110693475251343494",
+    "2110693656340693030",
+    "2110696683382472977",
+    "2110697647187063116",
+    "2110701778031239253",
+    "2110703422307459231"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T10:47:59.393Z",
-    "observedAt": "2026-10-15T10:48:05.159Z",
+    "attemptedAt": "2026-10-15T12:17:06.034Z",
+    "observedAt": "2026-10-15T12:17:22.298Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 8,
     "retryCount": 0
    }
   }
@@ -182,24 +353,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T10:47:59.393Z",
-   "observedAt": "2026-10-15T10:48:05.159Z",
+   "attemptedAt": "2026-10-15T12:17:06.034Z",
+   "observedAt": "2026-10-15T12:17:22.298Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T10:47:59.393Z",
-   "observedAt": "2026-10-15T10:48:05.159Z",
+   "attemptedAt": "2026-10-15T12:17:06.034Z",
+   "observedAt": "2026-10-15T12:17:22.298Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 1,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T10:48:05.168Z"
+ "updatedAt": "2026-10-15T12:17:22.350Z"
 }
