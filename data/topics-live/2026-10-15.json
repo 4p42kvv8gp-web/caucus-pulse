@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T19:04:20.104Z",
+ "classifiedAt": "2026-10-15T19:05:33.857Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -2384,6 +2384,46 @@
    [
     "economy",
     "prices-inflation"
+   ]
+  ],
+  "2110808546086436980": [
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110808731390812451": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110808797866492097": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ]
+  ],
+  "2110809134014529792": [
+   [
+    "civil-rights",
+    "lgbtq"
+   ],
+   [
+    "education",
+    "public-schools"
    ]
   ]
  },
@@ -7383,6 +7423,138 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "ca632a97f016dd804937a64cbd2efcefc8f5b6f66f9067685f362553d1f5d36e"
+  },
+  "2110808546086436980": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_778a2abbe2171351",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6151433-fox-news-corruption-concerns-poll-midterms/",
+     "text": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "title": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "publishedAt": "2026-10-15T16:57:20.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4446793d14dc43ac5b5ccb479ae7c7800e0b510bd20dbca70df1afaa016ca708",
+   "quotedContext": {
+    "id": "2110368351830569052",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-10-14T13:53:18.000Z",
+    "textChars": 140,
+    "textHash": "97872d763e5686bc72ffb278cabf976b5372b3da577c9ec5efe1fef6c171f0b6"
+   }
+  },
+  "2110808731390812451": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "4446793d14dc43ac5b5ccb479ae7c7800e0b510bd20dbca70df1afaa016ca708",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110737313055781133",
+    "fingerprint": "8b373ec28b3b65cd5a77db7d18d65aad499ff31c9a6e33a8754ad7f31e7b73f6"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110737313055781133",
+    "fingerprint": "8b373ec28b3b65cd5a77db7d18d65aad499ff31c9a6e33a8754ad7f31e7b73f6"
+   }
+  },
+  "2110808797866492097": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_778a2abbe2171351",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6151433-fox-news-corruption-concerns-poll-midterms/",
+     "text": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "title": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "publishedAt": "2026-10-15T16:57:20.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_06b0888aca681370",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6149735-trumps-approval-rating-hits-record-low-in-fox-news-poll/",
+     "text": "Trump’s approval rating hits record low in Fox News poll",
+     "title": "Trump’s approval rating hits record low in Fox News poll",
+     "publishedAt": "2026-10-15T03:01:10.000Z",
+     "fetchedAt": "2026-10-15T14:31:28.174Z",
+     "version": 539,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_778a2abbe2171351"
+   ],
+   "inputHash": "4446793d14dc43ac5b5ccb479ae7c7800e0b510bd20dbca70df1afaa016ca708",
+   "quotedContext": {
+    "id": "2110730602916036877",
+    "authorId": "21786220",
+    "handle": "kathrynw5",
+    "createdAt": "2026-10-15T13:52:45.000Z",
+    "textChars": 126,
+    "textHash": "d4f0786239d2f03e79f75f57217831c6d81e53986456859eca4987cbda6b1903"
+   }
+  },
+  "2110809134014529792": {
+   "contextVersion": 543,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "4446793d14dc43ac5b5ccb479ae7c7800e0b510bd20dbca70df1afaa016ca708"
   }
  },
  "needsContext": {
@@ -7714,7 +7886,11 @@
   "2110807959320027632": false,
   "2110807968442671527": false,
   "2110808009941147967": false,
-  "2110808161276113207": false
+  "2110808161276113207": false,
+  "2110808546086436980": false,
+  "2110808731390812451": false,
+  "2110808797866492097": false,
+  "2110809134014529792": false
  },
  "inputBlocks": {},
  "contextVersion": 543,
@@ -7941,6 +8117,12 @@
    "ids": [
     "2110808009941147967"
    ]
+  },
+  {
+   "label": "Title IX rollback and Education Dept IG request",
+   "ids": [
+    "2110809134014529792"
+   ]
   }
  ],
  "unclassified": [],
@@ -8005,35 +8187,20 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110381464999047227",
-    "2110489513718112400",
-    "2110508202978640337",
-    "2110542963000463851",
-    "2110785816582590487",
-    "2110785848752980293",
-    "2110786935610655074",
-    "2110787176837394575",
-    "2110787283842637896",
-    "2110787291744457138",
-    "2110788125014524099",
-    "2110788189111873885",
-    "2110789055831257434",
-    "2110789732288323992",
-    "2110789760696639532",
-    "2110789897632276547",
-    "2110790029521846620",
-    "2110790699264127066",
-    "2110791842824376666"
+    "2110808546086436980",
+    "2110808731390812451",
+    "2110808797866492097",
+    "2110809134014529792"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T19:02:08.150Z",
-    "observedAt": "2026-10-15T19:02:33.786Z",
+    "attemptedAt": "2026-10-15T19:05:21.685Z",
+    "observedAt": "2026-10-15T19:05:33.846Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 19,
+    "acceptedCount": 4,
     "retryCount": 0
    }
   },
@@ -8105,24 +8272,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T19:03:46.327Z",
-   "observedAt": "2026-10-15T19:04:20.038Z",
+   "attemptedAt": "2026-10-15T19:05:21.685Z",
+   "observedAt": "2026-10-15T19:05:33.846Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T19:03:46.327Z",
-   "observedAt": "2026-10-15T19:04:20.038Z",
+   "attemptedAt": "2026-10-15T19:05:21.685Z",
+   "observedAt": "2026-10-15T19:05:33.846Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 20,
+   "acceptedCount": 4,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T19:04:20.108Z"
+ "updatedAt": "2026-10-15T19:05:33.864Z"
 }
