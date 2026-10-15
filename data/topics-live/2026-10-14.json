@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T14:58:51.315Z",
+ "classifiedAt": "2026-10-15T19:04:20.083Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -6201,12 +6201,6 @@
     "textChars": 86,
     "textHash": "31a0fd68ec0138cefef06926366cd605216fa3b96cc4b6f00153d2bd80e30093"
    }
-  },
-  "2110381464999047227": {
-   "contextVersion": 520,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "ec742734a1f46beb16d02afb1a212e144382ff2f90659088f6aa376ffcd95c66"
   },
   "2110382080295326094": {
    "contextVersion": 520,
@@ -12577,20 +12571,6 @@
    "evidenceUsed": [],
    "inputHash": "44813651eedaf4e4980f97dad39318e15048541772ed5ad6004639fddf275645"
   },
-  "2110489513718112400": {
-   "contextVersion": 526,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "44813651eedaf4e4980f97dad39318e15048541772ed5ad6004639fddf275645",
-   "quotedContext": {
-    "id": "2110364182465925211",
-    "authorId": "288277167",
-    "handle": "atrupar",
-    "createdAt": "2026-10-14T13:36:44.000Z",
-    "textChars": 201,
-    "textHash": "fd9dec5daab3b2b890c22994f57c24b4d4c1bfcf9e4af620f5cdd68d22fe7b5f"
-   }
-  },
   "2110489535612432582": {
    "contextVersion": 526,
    "evidenceSupplied": [],
@@ -13180,12 +13160,6 @@
     "referenceId": "2110157201474273454",
     "fingerprint": "9008d086b9ececf24bcf3b862e0cc7d9e358fdcbf0fd334facf479586a4b1bef"
    }
-  },
-  "2110508202978640337": {
-   "contextVersion": 527,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "22c3b7feea5db46a1d2ff47b24a9261da23c3bbc477d123522c060bbdcbd5b6e"
   },
   "2110508293710094427": {
    "contextVersion": 527,
@@ -14796,28 +14770,6 @@
    "evidenceUsed": [],
    "inputHash": "dbfe9413d4da1d0a5d4ab04544056c52cbb77189c480f127b02a905f45d8fde7"
   },
-  "2110542963000463851": {
-   "contextVersion": 536,
-   "evidenceSupplied": [
-    {
-     "id": "n_b8043c058a682a5b",
-     "publisher": "The Hill",
-     "date": "2026-10-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6149888-university-of-chicago-sexual-assault/",
-     "text": "Person of interest identified in connection with sexual assault near University of Chicago campus",
-     "title": "Person of interest identified in connection with sexual assault near University of Chicago campus",
-     "publishedAt": "2026-10-15T10:45:48.000Z",
-     "fetchedAt": "2026-10-15T11:31:52.066Z",
-     "version": 536,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "7a891c29a6fa25c4da34a604d44f0eb77e2216b90971ebbd2f892dcbfb5d1f11"
-  },
   "2110347443804283332": {
    "contextVersion": 538,
    "evidenceSupplied": [
@@ -15001,6 +14953,117 @@
     "textChars": 277,
     "textHash": "6674285a610de1218e6a926cb8d51417d03eed2bdcf5285bceaa36be76d5ac89"
    }
+  },
+  "2110381464999047227": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_9dd5ce3c82db98cd",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/congress-blog/6149812-blm-wild-horse-slaughter-oversight/",
+     "text": "Congress banned sending wild horses to slaughter. A loophole is undoing that promise.",
+     "title": "Congress banned sending wild horses to slaughter. A loophole is undoing that promise.",
+     "publishedAt": "2026-10-15T17:00:00.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01"
+  },
+  "2110489513718112400": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_778a2abbe2171351",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6151433-fox-news-corruption-concerns-poll-midterms/",
+     "text": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "title": "Voters in Fox News poll list government corruption as top concern, beating inflation, healthcare",
+     "publishedAt": "2026-10-15T16:57:20.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01",
+   "quotedContext": {
+    "id": "2110364182465925211",
+    "authorId": "288277167",
+    "handle": "atrupar",
+    "createdAt": "2026-10-14T13:36:44.000Z",
+    "textChars": 201,
+    "textHash": "fd9dec5daab3b2b890c22994f57c24b4d4c1bfcf9e4af620f5cdd68d22fe7b5f"
+   }
+  },
+  "2110508202978640337": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_b7d3e384543c7ef7",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/journalists-mourn-press-gallery-laura-lytle/",
+     "text": "She was a fierce advocate for press access at the Capitol and brought a sense of humor to a job that could sometimes feel fraught, according to reporters who got to know her during her time on the Hill.",
+     "title": "Journalists mourn former press gallery director Laura Lytle",
+     "publishedAt": "2026-10-15T12:45:23.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01"
+  },
+  "2110542963000463851": {
+   "contextVersion": 543,
+   "evidenceSupplied": [
+    {
+     "id": "n_b8043c058a682a5b",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149888-university-of-chicago-sexual-assault/",
+     "text": "Person of interest identified in connection with sexual assault near University of Chicago campus",
+     "title": "Person of interest identified in connection with sexual assault near University of Chicago campus",
+     "publishedAt": "2026-10-15T10:45:48.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_b7d3e384543c7ef7",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/journalists-mourn-press-gallery-laura-lytle/",
+     "text": "“She really always put the press corps first and just navigated the tensions of her job really beautifully,” said Emma Dumain, an editor at Politico who once served on the Standing Committee of Correspondents .",
+     "title": "Journalists mourn former press gallery director Laura Lytle",
+     "publishedAt": "2026-10-15T12:45:23.000Z",
+     "fetchedAt": "2026-10-15T18:16:34.497Z",
+     "version": 542,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01"
   }
  },
  "needsContext": {
@@ -15100,7 +15163,6 @@
   "2110380378082979935": false,
   "2110380719457640748": false,
   "2110381258400223395": false,
-  "2110381464999047227": false,
   "2110382080295326094": false,
   "2110382247916499258": false,
   "2110382369320403206": true,
@@ -15463,7 +15525,6 @@
   "2110488408996852131": false,
   "2110488659333963950": false,
   "2110488993024348516": false,
-  "2110489513718112400": false,
   "2110489535612432582": false,
   "2110490325114573180": false,
   "2110490608997638390": true,
@@ -15510,7 +15571,6 @@
   "2110506704660275319": false,
   "2110506831877423267": false,
   "2110507774639841566": false,
-  "2110508202978640337": false,
   "2110508293710094427": false,
   "2110508425222459643": false,
   "2110508565983056358": true,
@@ -15606,14 +15666,17 @@
   "2110425555732664424": false,
   "2110442115721298386": false,
   "2110473521289633911": false,
-  "2110542963000463851": false,
   "2110347443804283332": false,
   "2110499462095483197": false,
   "2110521619580141879": false,
-  "2110370896086958142": false
+  "2110370896086958142": false,
+  "2110381464999047227": false,
+  "2110489513718112400": false,
+  "2110508202978640337": false,
+  "2110542963000463851": false
  },
  "inputBlocks": {},
- "contextVersion": 539,
+ "contextVersion": 543,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -15968,111 +16031,35 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110370896086958142",
-    "2110703422307459231",
-    "2110729968028209517",
-    "2110730345968443889",
-    "2110730618581520749",
-    "2110730656817074440",
-    "2110730873670611034",
-    "2110731753484624145",
-    "2110732062248575469",
-    "2110732299503272117",
-    "2110732299616809305",
-    "2110732564134592833",
-    "2110732944457216245",
-    "2110733295767961839",
-    "2110734368981364885",
-    "2110734419896254577",
-    "2110734516507521324",
-    "2110734556986773917"
-   ],
-   "retryIds": [],
-   "errors": [],
-   "inference": {
-    "attemptedAt": "2026-10-15T14:57:18.928Z",
-    "observedAt": "2026-10-15T14:57:57.246Z",
-    "kind": "sync",
-    "status": "complete",
-    "reasonCode": null,
-    "acceptedCount": 18,
-    "retryCount": 0
-   }
-  },
-  "live_chunk-2": {
-   "acceptedIds": [
-    "2110488659333963950",
-    "2110488993024348516",
+    "2110381464999047227",
     "2110489513718112400",
-    "2110489535612432582",
-    "2110490325114573180",
-    "2110490608997638390",
-    "2110490836181909886",
-    "2110490859099578476",
-    "2110490862962577563",
-    "2110492284508602485",
-    "2110492750974005294",
-    "2110493140587311508",
-    "2110493503180664861",
-    "2110494153822077428",
-    "2110494360475238675",
-    "2110494840756535583",
-    "2110494942011465851",
-    "2110494968091377799",
-    "2110495691890160016",
-    "2110495994869944619",
-    "2110496329080127612",
-    "2110496938344710278",
-    "2110497661946368188",
-    "2110498138817458381",
-    "2110498158417420735",
-    "2110498434939605047",
-    "2110498461544304997",
-    "2110499462095483197",
-    "2110500161990385783",
-    "2110500561510436872",
-    "2110500573569253617",
-    "2110501093947883733",
-    "2110501098058625425",
-    "2110501134473240757",
-    "2110501164240585194",
-    "2110501771743482226",
-    "2110501772074897575",
-    "2110502054116622473",
-    "2110502126367498375"
-   ],
-   "retryIds": [
-    "2110500838884118628"
-   ],
-   "errors": [
-    {
-     "code": "missing-id",
-     "id": "2110500838884118628"
-    }
-   ],
-   "inference": {
-    "attemptedAt": "2026-10-14T22:47:24.069Z",
-    "observedAt": "2026-10-14T22:48:13.438Z",
-    "kind": "sync",
-    "status": "partial",
-    "reasonCode": "invalid-response",
-    "acceptedCount": 39,
-    "retryCount": 1
-   }
-  },
-  "live_chunk-3": {
-   "acceptedIds": [
-    "2110502165118644255"
+    "2110508202978640337",
+    "2110542963000463851",
+    "2110785816582590487",
+    "2110785848752980293",
+    "2110786935610655074",
+    "2110787176837394575",
+    "2110787283842637896",
+    "2110787291744457138",
+    "2110788125014524099",
+    "2110788189111873885",
+    "2110789055831257434",
+    "2110789732288323992",
+    "2110789760696639532",
+    "2110789897632276547",
+    "2110790029521846620",
+    "2110790699264127066",
+    "2110791842824376666"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-14T22:48:13.470Z",
-    "observedAt": "2026-10-14T22:48:17.512Z",
+    "attemptedAt": "2026-10-15T19:02:08.150Z",
+    "observedAt": "2026-10-15T19:02:33.786Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 1,
+    "acceptedCount": 19,
     "retryCount": 0
    }
   }
@@ -16080,21 +16067,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T14:57:18.928Z",
-   "observedAt": "2026-10-15T14:57:57.246Z",
+   "attemptedAt": "2026-10-15T19:02:08.150Z",
+   "observedAt": "2026-10-15T19:02:33.786Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T14:57:18.928Z",
-   "observedAt": "2026-10-15T14:57:57.246Z",
+   "attemptedAt": "2026-10-15T19:02:08.150Z",
+   "observedAt": "2026-10-15T19:02:33.786Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 18,
+   "acceptedCount": 19,
    "retryCount": 0
   },
   "lastFailure": {
@@ -16107,5 +16094,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-15T14:58:51.321Z"
+ "updatedAt": "2026-10-15T19:04:20.094Z"
 }
