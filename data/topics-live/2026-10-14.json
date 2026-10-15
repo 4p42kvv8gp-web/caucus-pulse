@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T19:04:20.083Z",
+ "classifiedAt": "2026-10-15T20:33:54.685Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -3540,11 +3540,11 @@
   "2110488659333963950": [
    [
     "economy",
-    "tariffs-trade"
+    "housing"
    ],
    [
     "economy",
-    "housing"
+    "tariffs-trade"
    ],
    [
     "foreign-policy",
@@ -10555,46 +10555,6 @@
     "textHash": "5384b4ecc6fa1318ae29c66b70edbef120102da780df1cda9e8c071a6da9e3ad"
    }
   },
-  "2110458117217530271": {
-   "contextVersion": 525,
-   "evidenceSupplied": [
-    {
-     "id": "n_843c63a99b20bc17",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/business/6147842-social-security-cola-increase-2027/",
-     "text": "Social Security COLA set to rise by 3.6 percent in 2027",
-     "title": "Social Security COLA set to rise by 3.6 percent in 2027",
-     "publishedAt": "2026-10-14T14:32:37.000Z",
-     "fetchedAt": "2026-10-14T15:07:44.044Z",
-     "version": 520,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_82bf5b4cb230565b",
-     "publisher": "Roll Call",
-     "date": "2026-10-14",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
-     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
-     "title": "Social Security benefits set for a boost next year",
-     "publishedAt": "2026-10-14T12:03:34.000Z",
-     "fetchedAt": "2026-10-14T17:31:55.062Z",
-     "version": 522,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_843c63a99b20bc17",
-    "n_82bf5b4cb230565b"
-   ],
-   "inputHash": "094e9440076d76d08cab7b1d2d4816013676f4e4f30645026e7132c3187771cc"
-  },
   "2110458577907282299": {
    "contextVersion": 525,
    "evidenceSupplied": [],
@@ -12525,45 +12485,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "3a97d513706519bc74c8006816b7947a496683c441c48ae8e4d61bfcc9a914e7"
-  },
-  "2110488659333963950": {
-   "contextVersion": 526,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_f0507226e7636737",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6145657-donald-trump-china-russia-iran-war/",
-     "text": "Trump: China, Russia ‘have too much to lose’ to help Iran",
-     "title": "Trump: China, Russia ‘have too much to lose’ to help Iran",
-     "publishedAt": "2026-10-13T17:32:13.000Z",
-     "fetchedAt": "2026-10-13T17:42:03.724Z",
-     "version": 503,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "44813651eedaf4e4980f97dad39318e15048541772ed5ad6004639fddf275645"
   },
   "2110488993024348516": {
    "contextVersion": 526,
@@ -15064,6 +14985,83 @@
    ],
    "evidenceUsed": [],
    "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01"
+  },
+  "2110458117217530271": {
+   "contextVersion": 544,
+   "evidenceSupplied": [
+    {
+     "id": "n_843c63a99b20bc17",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/business/6147842-social-security-cola-increase-2027/",
+     "text": "Social Security COLA set to rise by 3.6 percent in 2027",
+     "title": "Social Security COLA set to rise by 3.6 percent in 2027",
+     "publishedAt": "2026-10-14T14:32:37.000Z",
+     "fetchedAt": "2026-10-14T15:07:44.044Z",
+     "version": 520,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_843c63a99b20bc17",
+    "n_82bf5b4cb230565b"
+   ],
+   "inputHash": "f7fe4804d7a34cd324e22555f3b0a462bc2f3e6f1b827bbc9c48b8c6975df116"
+  },
+  "2110488659333963950": {
+   "contextVersion": 544,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_f0507226e7636737",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6145657-donald-trump-china-russia-iran-war/",
+     "text": "Trump: China, Russia ‘have too much to lose’ to help Iran",
+     "title": "Trump: China, Russia ‘have too much to lose’ to help Iran",
+     "publishedAt": "2026-10-13T17:32:13.000Z",
+     "fetchedAt": "2026-10-13T17:42:03.724Z",
+     "version": 503,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "f7fe4804d7a34cd324e22555f3b0a462bc2f3e6f1b827bbc9c48b8c6975df116"
   }
  },
  "needsContext": {
@@ -15406,7 +15404,6 @@
   "2110446976957608145": true,
   "2110446980170150286": true,
   "2110457979275530491": false,
-  "2110458117217530271": false,
   "2110458577907282299": false,
   "2110458675466805581": false,
   "2110458680500240638": false,
@@ -15523,7 +15520,6 @@
   "2110487210914976133": false,
   "2110488030461010141": false,
   "2110488408996852131": false,
-  "2110488659333963950": false,
   "2110488993024348516": false,
   "2110489535612432582": false,
   "2110490325114573180": false,
@@ -15673,10 +15669,12 @@
   "2110381464999047227": false,
   "2110489513718112400": false,
   "2110508202978640337": false,
-  "2110542963000463851": false
+  "2110542963000463851": false,
+  "2110458117217530271": false,
+  "2110488659333963950": false
  },
  "inputBlocks": {},
- "contextVersion": 543,
+ "contextVersion": 544,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -16031,35 +16029,47 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110381464999047227",
-    "2110489513718112400",
-    "2110508202978640337",
-    "2110542963000463851",
-    "2110785816582590487",
-    "2110785848752980293",
-    "2110786935610655074",
-    "2110787176837394575",
-    "2110787283842637896",
-    "2110787291744457138",
-    "2110788125014524099",
-    "2110788189111873885",
-    "2110789055831257434",
-    "2110789732288323992",
-    "2110789760696639532",
-    "2110789897632276547",
-    "2110790029521846620",
-    "2110790699264127066",
-    "2110791842824376666"
+    "2110458117217530271",
+    "2110488659333963950",
+    "2110763467539894338",
+    "2110765110348173707",
+    "2110809730121715800",
+    "2110809807527477747",
+    "2110809853786730551",
+    "2110809934808203609",
+    "2110810021365797129",
+    "2110810214416920640",
+    "2110810316435251255",
+    "2110810337389994309",
+    "2110810444378046650",
+    "2110810690420191620",
+    "2110810876538475002",
+    "2110811119246102915",
+    "2110811289765499031",
+    "2110811343901118890",
+    "2110812059440984281",
+    "2110812152907055284",
+    "2110812568113549475",
+    "2110812614326645084",
+    "2110812650297037139",
+    "2110812819293622565",
+    "2110813683068571994",
+    "2110813805135483046",
+    "2110814392241569837",
+    "2110814398692659413",
+    "2110814822291923183",
+    "2110814864776335759",
+    "2110815463286448259"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T19:02:08.150Z",
-    "observedAt": "2026-10-15T19:02:33.786Z",
+    "attemptedAt": "2026-10-15T20:31:22.358Z",
+    "observedAt": "2026-10-15T20:32:04.856Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 19,
+    "acceptedCount": 31,
     "retryCount": 0
    }
   }
@@ -16067,21 +16077,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T19:02:08.150Z",
-   "observedAt": "2026-10-15T19:02:33.786Z",
+   "attemptedAt": "2026-10-15T20:31:22.358Z",
+   "observedAt": "2026-10-15T20:32:04.856Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 31,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T19:02:08.150Z",
-   "observedAt": "2026-10-15T19:02:33.786Z",
+   "attemptedAt": "2026-10-15T20:31:22.358Z",
+   "observedAt": "2026-10-15T20:32:04.856Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 19,
+   "acceptedCount": 31,
    "retryCount": 0
   },
   "lastFailure": {
@@ -16094,5 +16104,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-15T19:04:20.094Z"
+ "updatedAt": "2026-10-15T20:33:54.692Z"
 }
