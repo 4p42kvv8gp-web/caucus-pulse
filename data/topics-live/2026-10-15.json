@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T04:52:12.073Z",
+ "classifiedAt": "2026-10-15T04:59:32.617Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -19,7 +19,18 @@
     "elections-2026"
    ]
   ],
-  "2110592347872673951": []
+  "2110592347872673951": [],
+  "2110595426755735597": [],
+  "2110595501330710612": [
+   [
+    "healthcare",
+    null
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ]
  },
  "incidents": {},
  "provenance": {
@@ -72,12 +83,38 @@
     "referenceId": "2110497938824954001",
     "fingerprint": "a977cd6ea938203a7d7b9e77a4031941382b2ae9803fc4c2663157cfc3c75a2c"
    }
+  },
+  "2110595426755735597": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9ccaba0acfcbb17cf614d1e74981b362c64de3f01dcf86aaf3267962e5e4c803"
+  },
+  "2110595501330710612": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "9ccaba0acfcbb17cf614d1e74981b362c64de3f01dcf86aaf3267962e5e4c803",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110575482764677351",
+    "fingerprint": "ed1890e038d26f868c5e522b1f5ba377556dca8a58e96fe983b2a50c4ec96383"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110575482764677351",
+    "fingerprint": "ed1890e038d26f868c5e522b1f5ba377556dca8a58e96fe983b2a50c4ec96383"
+   }
   }
  },
  "needsContext": {
   "2110586361384472620": false,
   "2110592200015040795": false,
-  "2110592347872673951": true
+  "2110592347872673951": true,
+  "2110595426755735597": true,
+  "2110595501330710612": false
  },
  "inputBlocks": {},
  "contextVersion": 531,
@@ -93,25 +130,18 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110428437726830643",
-    "2110571097112330713",
-    "2110573479619617028",
-    "2110574131854934300",
-    "2110575540675452937",
-    "2110580012470665675",
-    "2110586361384472620",
-    "2110592200015040795",
-    "2110592347872673951"
+    "2110595426755735597",
+    "2110595501330710612"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T04:51:55.113Z",
-    "observedAt": "2026-10-15T04:52:12.035Z",
+    "attemptedAt": "2026-10-15T04:59:26.863Z",
+    "observedAt": "2026-10-15T04:59:32.614Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 9,
+    "acceptedCount": 2,
     "retryCount": 0
    }
   }
@@ -119,24 +149,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T04:51:55.113Z",
-   "observedAt": "2026-10-15T04:52:12.035Z",
+   "attemptedAt": "2026-10-15T04:59:26.863Z",
+   "observedAt": "2026-10-15T04:59:32.614Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T04:51:55.113Z",
-   "observedAt": "2026-10-15T04:52:12.035Z",
+   "attemptedAt": "2026-10-15T04:59:26.863Z",
+   "observedAt": "2026-10-15T04:59:32.614Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 9,
+   "acceptedCount": 2,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T04:52:12.074Z"
+ "updatedAt": "2026-10-15T04:59:32.617Z"
 }
