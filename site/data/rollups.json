@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-15T01:29:12.394Z",
- "lastPollAt": "2026-10-15T01:01:13.868Z",
- "lastPollAttemptAt": "2026-10-15T01:01:13.416Z",
+ "generatedAt": "2026-10-15T01:47:33.206Z",
+ "lastPollAt": "2026-10-15T01:46:56.256Z",
+ "lastPollAttemptAt": "2026-10-15T01:46:55.426Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-15T01:29:10.379Z"
+  "referenceAsOf": "2026-10-15T01:47:31.317Z"
  },
  "news": {
   "version": 529,
-  "items": 1186,
+  "items": 1185,
   "latestPublishedAt": "2026-10-15T01:05:45.000Z",
   "latestFetchedAt": "2026-10-15T01:28:25.297Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-15T01:29:11.018Z",
+   "asOf": "2026-10-15T01:47:31.955Z",
    "windowDays": 14,
-   "windowStart": "2026-10-01T01:29:11.018Z",
-   "eligibleItems": 1568,
+   "windowStart": "2026-10-01T01:47:31.955Z",
+   "eligibleItems": 1567,
    "withExcerpts": 148,
-   "headlineOrSummary": 1420,
+   "headlineOrSummary": 1419,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3459,9 +3459,9 @@
      "id": "nyt-politics",
      "publisher": "The New York Times",
      "sourceUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
-     "eligibleItems": 207,
+     "eligibleItems": 206,
      "withExcerpts": 0,
-     "headlineOrSummary": 207,
+     "headlineOrSummary": 206,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-15T01:05:45.000Z",
      "latestItem": {
@@ -3520,8 +3520,8 @@
  "accounts": 427,
  "excluded": {
   "accounts": 21,
-  "posts": 128,
-  "t": 22
+  "posts": 134,
+  "t": 28
  },
  "caucusKeys": [
   "CPC",
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-14",
-  "capturedIn24h": 568,
-  "classifiedIn24h": 568,
-  "taggedIn24h": 521,
+  "capturedIn24h": 577,
+  "classifiedIn24h": 577,
+  "taggedIn24h": 529,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
    "status": "healthy",
    "reasonCode": null,
    "hasCurrentFailure": false,
-   "lastAttemptAt": "2026-10-15T01:01:20.335Z",
-   "lastSuccessAt": "2026-10-15T01:01:50.035Z",
-   "capturedIn24h": 568,
-   "classifiedIn24h": 568,
+   "lastAttemptAt": "2026-10-15T01:47:03.212Z",
+   "lastSuccessAt": "2026-10-15T01:47:27.420Z",
+   "capturedIn24h": 577,
+   "classifiedIn24h": 577,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,7 +6826,7 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 547,
+    "posts": 557,
     "mix": [
      85,
      3,
@@ -6835,22 +6835,22 @@
     "accounts": 237,
     "members": 170,
     "unidentifiedAccounts": 0,
-    "classified": 547,
-    "tagged": 502,
+    "classified": 557,
+    "tagged": 511,
     "pending": 0,
-    "corePosts": 262,
+    "corePosts": 265,
     "coreCounts": {
-     "Affordability": 171,
+     "Affordability": 173,
      "Healthcare": 36,
-     "Corruption": 65
+     "Corruption": 66
     },
-    "eng": 7471,
+    "eng": 7580,
     "perPost": 14,
-    "top10Share": 50,
+    "top10Share": 49,
     "engDelta": -96
    },
    "w": {
-    "posts": 3344,
+    "posts": 3354,
     "mix": [
      84,
      4,
@@ -6859,42 +6859,42 @@
     "accounts": 335,
     "members": 204,
     "unidentifiedAccounts": 0,
-    "classified": 3344,
-    "tagged": 3027,
+    "classified": 3354,
+    "tagged": 3036,
     "pending": 0,
-    "corePosts": 1334,
+    "corePosts": 1337,
     "coreCounts": {
-     "Affordability": 563,
+     "Affordability": 565,
      "Healthcare": 242,
-     "Corruption": 606
+     "Corruption": 607
     },
-    "eng": 1057790,
-    "perPost": 316,
+    "eng": 1057899,
+    "perPost": 315,
     "top10Share": 59,
     "engDelta": 0
    },
    "curve48": [
-    20,
-    2,
+    18,
     0,
-    25,
+    0,
+    31,
+    139,
+    132,
     133,
-    124,
-    145,
-    70,
-    22,
-    5,
+    63,
+    23,
     3,
-    36,
-    136,
-    146,
+    3,
+    50,
+    133,
     144,
-    76
+    151,
+    70
    ]
   },
   "CPC": {
    "t": {
-    "posts": 241,
+    "posts": 243,
     "mix": [
      82,
      2,
@@ -6903,22 +6903,22 @@
     "accounts": 95,
     "members": 73,
     "unidentifiedAccounts": 0,
-    "classified": 241,
-    "tagged": 222,
+    "classified": 243,
+    "tagged": 224,
     "pending": 0,
-    "corePosts": 125,
+    "corePosts": 127,
     "coreCounts": {
-     "Affordability": 75,
+     "Affordability": 76,
      "Healthcare": 18,
-     "Corruption": 38
+     "Corruption": 39
     },
-    "eng": 4117,
+    "eng": 4157,
     "perPost": 17,
     "top10Share": 66,
     "engDelta": -97
    },
    "w": {
-    "posts": 1492,
+    "posts": 1494,
     "mix": [
      79,
      5,
@@ -6927,66 +6927,66 @@
     "accounts": 144,
     "members": 92,
     "unidentifiedAccounts": 0,
-    "classified": 1492,
-    "tagged": 1370,
+    "classified": 1494,
+    "tagged": 1372,
     "pending": 0,
-    "corePosts": 687,
+    "corePosts": 689,
     "coreCounts": {
-     "Affordability": 234,
+     "Affordability": 235,
      "Healthcare": 114,
-     "Corruption": 376
+     "Corruption": 377
     },
-    "eng": 785070,
+    "eng": 785110,
     "perPost": 526,
     "top10Share": 73,
     "engDelta": 0
    },
    "curve48": [
     11,
-    2,
     0,
-    12,
-    59,
-    44,
-    63,
-    31,
-    13,
-    2,
+    0,
+    15,
+    61,
+    48,
+    58,
+    28,
+    14,
+    0,
     1,
-    17,
-    60,
-    64,
-    64,
-    32
+    22,
+    58,
+    63,
+    68,
+    28
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 315,
+    "posts": 324,
     "mix": [
-     83,
-     3,
+     84,
+     2,
      14
     ],
     "accounts": 132,
     "members": 97,
     "unidentifiedAccounts": 0,
-    "classified": 315,
-    "tagged": 285,
+    "classified": 324,
+    "tagged": 293,
     "pending": 0,
-    "corePosts": 141,
+    "corePosts": 143,
     "coreCounts": {
-     "Affordability": 92,
+     "Affordability": 94,
      "Healthcare": 23,
      "Corruption": 31
     },
-    "eng": 2337,
+    "eng": 2406,
     "perPost": 7,
     "top10Share": 67,
     "engDelta": -93
    },
    "w": {
-    "posts": 1954,
+    "posts": 1963,
     "mix": [
      83,
      4,
@@ -6995,66 +6995,66 @@
     "accounts": 186,
     "members": 109,
     "unidentifiedAccounts": 0,
-    "classified": 1954,
-    "tagged": 1744,
+    "classified": 1963,
+    "tagged": 1752,
     "pending": 0,
-    "corePosts": 714,
+    "corePosts": 716,
     "coreCounts": {
-     "Affordability": 316,
+     "Affordability": 318,
      "Healthcare": 149,
      "Corruption": 291
     },
-    "eng": 198122,
+    "eng": 198191,
     "perPost": 101,
-    "top10Share": 54,
+    "top10Share": 55,
     "engDelta": 0
    },
    "curve48": [
-    11,
+    9,
     0,
     0,
-    18,
-    93,
-    72,
-    86,
-    33,
+    23,
+    95,
+    77,
+    78,
+    29,
     15,
     3,
     2,
-    23,
-    82,
-    79,
-    81,
-    45
+    31,
+    80,
+    78,
+    86,
+    44
    ]
   },
   "CBC": {
    "t": {
-    "posts": 114,
+    "posts": 118,
     "mix": [
-     87,
+     86,
      2,
-     11
+     12
     ],
     "accounts": 53,
     "members": 43,
     "unidentifiedAccounts": 0,
-    "classified": 114,
-    "tagged": 98,
+    "classified": 118,
+    "tagged": 101,
     "pending": 0,
-    "corePosts": 50,
+    "corePosts": 51,
     "coreCounts": {
-     "Affordability": 28,
+     "Affordability": 29,
      "Healthcare": 11,
      "Corruption": 12
     },
-    "eng": 2059,
-    "perPost": 18,
+    "eng": 2063,
+    "perPost": 17,
     "top10Share": 86,
     "engDelta": -96
    },
    "w": {
-    "posts": 668,
+    "posts": 672,
     "mix": [
      84,
      3,
@@ -7063,42 +7063,42 @@
     "accounts": 85,
     "members": 53,
     "unidentifiedAccounts": 0,
-    "classified": 668,
-    "tagged": 587,
+    "classified": 672,
+    "tagged": 590,
     "pending": 0,
-    "corePosts": 255,
+    "corePosts": 256,
     "coreCounts": {
-     "Affordability": 100,
+     "Affordability": 101,
      "Healthcare": 51,
      "Corruption": 116
     },
-    "eng": 352610,
-    "perPost": 528,
+    "eng": 352614,
+    "perPost": 525,
     "top10Share": 91,
     "engDelta": 0
    },
    "curve48": [
-    5,
-    0,
-    0,
     4,
+    0,
+    0,
+    5,
+    23,
     24,
-    20,
-    17,
+    13,
     7,
     5,
     3,
     2,
-    9,
-    32,
+    13,
     30,
-    26,
-    12
+    28,
+    28,
+    14
    ]
   },
   "CHC": {
    "t": {
-    "posts": 98,
+    "posts": 99,
     "mix": [
      77,
      3,
@@ -7107,8 +7107,8 @@
     "accounts": 41,
     "members": 29,
     "unidentifiedAccounts": 0,
-    "classified": 98,
-    "tagged": 92,
+    "classified": 99,
+    "tagged": 93,
     "pending": 0,
     "corePosts": 34,
     "coreCounts": {
@@ -7122,7 +7122,7 @@
     "engDelta": -96
    },
    "w": {
-    "posts": 608,
+    "posts": 609,
     "mix": [
      77,
      5,
@@ -7131,8 +7131,8 @@
     "accounts": 60,
     "members": 38,
     "unidentifiedAccounts": 0,
-    "classified": 608,
-    "tagged": 567,
+    "classified": 609,
+    "tagged": 568,
     "pending": 0,
     "corePosts": 215,
     "coreCounts": {
@@ -7146,27 +7146,27 @@
     "engDelta": 0
    },
    "curve48": [
-    7,
+    6,
     0,
     0,
-    3,
+    5,
     27,
-    25,
-    23,
+    29,
+    18,
     17,
-    9,
+    8,
     0,
     1,
-    8,
-    20,
-    26,
-    29,
-    14
+    12,
+    17,
+    28,
+    28,
+    13
    ]
   },
   "CAPAC": {
    "t": {
-    "posts": 48,
+    "posts": 49,
     "mix": [
      90,
      4,
@@ -7175,8 +7175,8 @@
     "accounts": 16,
     "members": 12,
     "unidentifiedAccounts": 0,
-    "classified": 48,
-    "tagged": 47,
+    "classified": 49,
+    "tagged": 48,
     "pending": 0,
     "corePosts": 27,
     "coreCounts": {
@@ -7184,13 +7184,13 @@
      "Healthcare": 2,
      "Corruption": 11
     },
-    "eng": 1698,
+    "eng": 1711,
     "perPost": 35,
     "top10Share": 99,
-    "engDelta": -96
+    "engDelta": -95
    },
    "w": {
-    "posts": 280,
+    "posts": 281,
     "mix": [
      89,
      5,
@@ -7199,8 +7199,8 @@
     "accounts": 25,
     "members": 14,
     "unidentifiedAccounts": 0,
-    "classified": 280,
-    "tagged": 262,
+    "classified": 281,
+    "tagged": 263,
     "pending": 0,
     "corePosts": 133,
     "coreCounts": {
@@ -7208,28 +7208,28 @@
      "Healthcare": 24,
      "Corruption": 72
     },
-    "eng": 228977,
-    "perPost": 818,
+    "eng": 228990,
+    "perPost": 815,
     "top10Share": 99,
     "engDelta": 0
    },
    "curve48": [
-    2,
+    1,
     0,
     0,
     0,
-    4,
-    11,
-    17,
     5,
+    10,
+    18,
+    4,
     3,
     0,
     0,
-    1,
+    2,
     10,
     14,
-    12,
-    10
+    14,
+    8
    ]
   }
  },
@@ -7239,25 +7239,25 @@
    "name": "Economy & cost of living",
    "t": {
     "All": {
-     "n": 171,
-     "eng": 3369,
+     "n": 173,
+     "eng": 3416,
      "m": 88,
      "a": 107
     },
     "CPC": {
-     "n": 75,
+     "n": 76,
      "eng": 1962,
      "m": 41,
      "a": 47
     },
     "NewDem": {
-     "n": 92,
-     "eng": 1008,
+     "n": 94,
+     "eng": 1055,
      "m": 47,
      "a": 59
     },
     "CBC": {
-     "n": 28,
+     "n": 29,
      "eng": 454,
      "m": 19,
      "a": 19
@@ -7277,25 +7277,25 @@
    },
    "w": {
     "All": {
-     "n": 563,
-     "eng": 88118,
+     "n": 565,
+     "eng": 88165,
      "m": 147,
      "a": 188
     },
     "CPC": {
-     "n": 234,
+     "n": 235,
      "eng": 45245,
      "m": 60,
      "a": 76
     },
     "NewDem": {
-     "n": 316,
-     "eng": 33299,
+     "n": 318,
+     "eng": 33346,
      "m": 83,
      "a": 103
     },
     "CBC": {
-     "n": 100,
+     "n": 101,
      "eng": 12397,
      "m": 32,
      "a": 34
@@ -7320,11 +7320,11 @@
     38,
     28,
     83,
-    171
+    173
    ],
-   "d": 171,
+   "d": 174,
    "mAvg": 46.2,
-   "epAvg": 157,
+   "epAvg": 156,
    "momentum": {
     "score": 86,
     "drivers": [
@@ -7342,8 +7342,8 @@
      "key": "prices-inflation",
      "t": {
       "All": {
-       "n": 143,
-       "eng": 2592,
+       "n": 144,
+       "eng": 2639,
        "m": 74,
        "a": 91
       },
@@ -7354,8 +7354,8 @@
        "a": 40
       },
       "NewDem": {
-       "n": 76,
-       "eng": 853,
+       "n": 77,
+       "eng": 900,
        "m": 40,
        "a": 50
       },
@@ -7380,8 +7380,8 @@
      },
      "w": {
       "All": {
-       "n": 357,
-       "eng": 42511,
+       "n": 358,
+       "eng": 42558,
        "m": 114,
        "a": 149
       },
@@ -7392,8 +7392,8 @@
        "a": 57
       },
       "NewDem": {
-       "n": 201,
-       "eng": 22206,
+       "n": 202,
+       "eng": 22253,
        "m": 68,
        "a": 86
       },
@@ -7420,6 +7420,7 @@
      "leadPostId": "2109312642896605442",
      "postIds": {
       "t": [
+       "2110536634785480915",
        "2110530621567345066",
        "2110521169807867956",
        "2110521097166750072",
@@ -7565,6 +7566,7 @@
        "2110352395125313870"
       ],
       "w": [
+       "2110536634785480915",
        "2110530621567345066",
        "2110521169807867956",
        "2110521097166750072",
@@ -8156,25 +8158,25 @@
      "key": "housing",
      "t": {
       "All": {
-       "n": 12,
+       "n": 13,
        "eng": 67,
        "m": 12,
        "a": 12
       },
       "CPC": {
-       "n": 4,
+       "n": 5,
        "eng": 18,
        "m": 4,
        "a": 4
       },
       "NewDem": {
-       "n": 8,
+       "n": 9,
        "eng": 44,
        "m": 8,
        "a": 8
       },
       "CBC": {
-       "n": 4,
+       "n": 5,
        "eng": 14,
        "m": 4,
        "a": 4
@@ -8194,25 +8196,25 @@
      },
      "w": {
       "All": {
-       "n": 48,
+       "n": 49,
        "eng": 7729,
        "m": 37,
        "a": 40
       },
       "CPC": {
-       "n": 20,
+       "n": 21,
        "eng": 4720,
        "m": 15,
        "a": 15
       },
       "NewDem": {
-       "n": 28,
+       "n": 29,
        "eng": 1234,
        "m": 19,
        "a": 22
       },
       "CBC": {
-       "n": 12,
+       "n": 13,
        "eng": 2615,
        "m": 10,
        "a": 10
@@ -8234,6 +8236,7 @@
      "leadPostId": "2108235842246586750",
      "postIds": {
       "t": [
+       "2110547111888511122",
        "2110521169807867956",
        "2110506831877423267",
        "2110488659333963950",
@@ -8248,6 +8251,7 @@
        "2110363493996347651"
       ],
       "w": [
+       "2110547111888511122",
        "2110521169807867956",
        "2110506831877423267",
        "2110488659333963950",
@@ -8636,6 +8640,8 @@
    ],
    "postIds": {
     "t": [
+     "2110547111888511122",
+     "2110536634785480915",
      "2110530621567345066",
      "2110521169807867956",
      "2110521097166750072",
@@ -8809,6 +8815,8 @@
      "2110299448773599669"
     ],
     "w": [
+     "2110547111888511122",
+     "2110536634785480915",
      "2110530621567345066",
      "2110521169807867956",
      "2110521097166750072",
@@ -9380,76 +9388,76 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 126,
-     "eng": 1460,
+     "n": 131,
+     "eng": 1517,
      "m": 78,
      "a": 87
     },
     "CPC": {
-     "n": 51,
-     "eng": 821,
+     "n": 52,
+     "eng": 861,
      "m": 30,
      "a": 36
     },
     "NewDem": {
-     "n": 62,
-     "eng": 403,
+     "n": 66,
+     "eng": 420,
      "m": 42,
      "a": 43
     },
     "CBC": {
-     "n": 27,
+     "n": 28,
      "eng": 191,
      "m": 16,
      "a": 16
     },
     "CHC": {
-     "n": 26,
+     "n": 27,
      "eng": 127,
      "m": 15,
      "a": 17
     },
     "CAPAC": {
-     "n": 12,
-     "eng": 323,
+     "n": 13,
+     "eng": 336,
      "m": 7,
      "a": 9
     }
    },
    "w": {
     "All": {
-     "n": 762,
-     "eng": 62314,
+     "n": 767,
+     "eng": 62371,
      "m": 145,
      "a": 197
     },
     "CPC": {
-     "n": 250,
-     "eng": 30568,
+     "n": 251,
+     "eng": 30608,
      "m": 59,
      "a": 78
     },
     "NewDem": {
-     "n": 463,
-     "eng": 18136,
+     "n": 467,
+     "eng": 18153,
      "m": 83,
      "a": 110
     },
     "CBC": {
-     "n": 153,
+     "n": 154,
      "eng": 16023,
      "m": 37,
      "a": 46
     },
     "CHC": {
-     "n": 122,
+     "n": 123,
      "eng": 4261,
      "m": 27,
      "a": 34
     },
     "CAPAC": {
-     "n": 57,
-     "eng": 20306,
+     "n": 58,
+     "eng": 20319,
      "m": 12,
      "a": 18
     }
@@ -9461,18 +9469,18 @@
     77,
     105,
     134,
-    126
+    131
    ],
-   "d": 25,
+   "d": 30,
    "mAvg": 62.2,
-   "epAvg": 82,
+   "epAvg": 81,
    "momentum": {
-    "score": 73,
+    "score": 75,
     "drivers": [
      "acceleration",
-     "adoption"
+     "volume"
     ],
-    "volume": 0.75,
+    "volume": 0.8,
     "accel": 1,
     "adoption": 0.7868632707774799,
     "eff": 4,
@@ -9483,76 +9491,76 @@
      "key": "elections-2026",
      "t": {
       "All": {
-       "n": 92,
-       "eng": 1177,
+       "n": 97,
+       "eng": 1234,
        "m": 63,
        "a": 64
       },
       "CPC": {
-       "n": 34,
-       "eng": 572,
+       "n": 35,
+       "eng": 612,
        "m": 25,
        "a": 25
       },
       "NewDem": {
-       "n": 47,
-       "eng": 365,
+       "n": 51,
+       "eng": 382,
        "m": 32,
        "a": 32
       },
       "CBC": {
-       "n": 16,
+       "n": 17,
        "eng": 158,
        "m": 9,
        "a": 9
       },
       "CHC": {
-       "n": 21,
+       "n": 22,
        "eng": 125,
        "m": 14,
        "a": 14
       },
       "CAPAC": {
-       "n": 9,
-       "eng": 286,
+       "n": 10,
+       "eng": 299,
        "m": 6,
        "a": 6
       }
      },
      "w": {
       "All": {
-       "n": 518,
-       "eng": 49226,
+       "n": 523,
+       "eng": 49283,
        "m": 114,
        "a": 126
       },
       "CPC": {
-       "n": 160,
-       "eng": 21761,
+       "n": 161,
+       "eng": 21801,
        "m": 47,
        "a": 51
       },
       "NewDem": {
-       "n": 319,
-       "eng": 14216,
+       "n": 323,
+       "eng": 14233,
        "m": 65,
        "a": 69
       },
       "CBC": {
-       "n": 106,
+       "n": 107,
        "eng": 14571,
        "m": 27,
        "a": 30
       },
       "CHC": {
-       "n": 78,
+       "n": 79,
        "eng": 3841,
        "m": 21,
        "a": 23
       },
       "CAPAC": {
-       "n": 43,
-       "eng": 13798,
+       "n": 44,
+       "eng": 13811,
        "m": 9,
        "a": 10
       }
@@ -9561,6 +9569,11 @@
      "leadPostId": "2109023149186789742",
      "postIds": {
       "t": [
+       "2110547629797183710",
+       "2110542963000463851",
+       "2110539532777001252",
+       "2110536892676518183",
+       "2110536717660725485",
        "2110535573886877769",
        "2110534581233631347",
        "2110534492939043239",
@@ -9655,6 +9668,11 @@
        "2110241174334361961"
       ],
       "w": [
+       "2110547629797183710",
+       "2110542963000463851",
+       "2110539532777001252",
+       "2110536892676518183",
+       "2110536717660725485",
        "2110535573886877769",
        "2110534581233631347",
        "2110534492939043239",
@@ -10600,6 +10618,11 @@
    ],
    "postIds": {
     "t": [
+     "2110547629797183710",
+     "2110542963000463851",
+     "2110539532777001252",
+     "2110536892676518183",
+     "2110536717660725485",
      "2110536252738908662",
      "2110535573886877769",
      "2110534581233631347",
@@ -10728,6 +10751,11 @@
      "2110226646993391931"
     ],
     "w": [
+     "2110547629797183710",
+     "2110542963000463851",
+     "2110539532777001252",
+     "2110536892676518183",
+     "2110536717660725485",
      "2110536252738908662",
      "2110535573886877769",
      "2110534581233631347",
@@ -11498,8 +11526,8 @@
    "name": "Foreign policy & national security",
    "t": {
     "All": {
-     "n": 114,
-     "eng": 2558,
+     "n": 115,
+     "eng": 2605,
      "m": 70,
      "a": 77
     },
@@ -11510,8 +11538,8 @@
      "a": 38
     },
     "NewDem": {
-     "n": 61,
-     "eng": 707,
+     "n": 62,
+     "eng": 754,
      "m": 36,
      "a": 39
     },
@@ -11536,8 +11564,8 @@
    },
    "w": {
     "All": {
-     "n": 459,
-     "eng": 170644,
+     "n": 460,
+     "eng": 170691,
      "m": 145,
      "a": 176
     },
@@ -11548,8 +11576,8 @@
      "a": 75
     },
     "NewDem": {
-     "n": 262,
-     "eng": 55878,
+     "n": 263,
+     "eng": 55925,
      "m": 83,
      "a": 98
     },
@@ -11579,11 +11607,11 @@
     26,
     26,
     81,
-    114
+    115
    ],
-   "d": 105,
+   "d": 107,
    "mAvg": 40.5,
-   "epAvg": 372,
+   "epAvg": 371,
    "momentum": {
     "score": 87,
     "drivers": [
@@ -11601,8 +11629,8 @@
      "key": "middle-east",
      "t": {
       "All": {
-       "n": 73,
-       "eng": 1109,
+       "n": 74,
+       "eng": 1156,
        "m": 56,
        "a": 58
       },
@@ -11613,8 +11641,8 @@
        "a": 30
       },
       "NewDem": {
-       "n": 37,
-       "eng": 410,
+       "n": 38,
+       "eng": 457,
        "m": 30,
        "a": 31
       },
@@ -11639,8 +11667,8 @@
      },
      "w": {
       "All": {
-       "n": 194,
-       "eng": 57622,
+       "n": 195,
+       "eng": 57669,
        "m": 91,
        "a": 111
       },
@@ -11651,8 +11679,8 @@
        "a": 55
       },
       "NewDem": {
-       "n": 90,
-       "eng": 24390,
+       "n": 91,
+       "eng": 24437,
        "m": 47,
        "a": 55
       },
@@ -11679,6 +11707,7 @@
      "leadPostId": "2108949734740119765",
      "postIds": {
       "t": [
+       "2110536634785480915",
        "2110517427385893299",
        "2110516476746567806",
        "2110511379866333320",
@@ -11754,6 +11783,7 @@
        "2110356103145902092"
       ],
       "w": [
+       "2110536634785480915",
        "2110517427385893299",
        "2110516476746567806",
        "2110511379866333320",
@@ -12540,6 +12570,7 @@
    ],
    "postIds": {
     "t": [
+     "2110536634785480915",
      "2110521619580141879",
      "2110517427385893299",
      "2110516476746567806",
@@ -12656,6 +12687,7 @@
      "2110347443804283332"
     ],
     "w": [
+     "2110536634785480915",
      "2110521619580141879",
      "2110517427385893299",
      "2110516476746567806",
@@ -13123,16 +13155,16 @@
    "name": "Democracy & rule of law",
    "t": {
     "All": {
-     "n": 65,
-     "eng": 1401,
-     "m": 49,
-     "a": 53
+     "n": 66,
+     "eng": 1441,
+     "m": 50,
+     "a": 54
     },
     "CPC": {
-     "n": 38,
-     "eng": 1190,
-     "m": 26,
-     "a": 29
+     "n": 39,
+     "eng": 1230,
+     "m": 27,
+     "a": 30
     },
     "NewDem": {
      "n": 31,
@@ -13161,16 +13193,16 @@
    },
    "w": {
     "All": {
-     "n": 606,
-     "eng": 720168,
+     "n": 607,
+     "eng": 720208,
      "m": 162,
-     "a": 210
+     "a": 211
     },
     "CPC": {
-     "n": 376,
-     "eng": 605836,
+     "n": 377,
+     "eng": 605876,
      "m": 80,
-     "a": 105
+     "a": 106
     },
     "NewDem": {
      "n": 291,
@@ -13204,20 +13236,20 @@
     31,
     135,
     124,
-    65
+    66
    ],
-   "d": -26,
+   "d": -25,
    "mAvg": 60.5,
-   "epAvg": 1188,
+   "epAvg": 1187,
    "momentum": {
-    "score": 23,
+    "score": 24,
     "drivers": [
      "caucus spread",
      "adoption"
     ],
-    "volume": 0.24,
+    "volume": 0.25,
     "accel": 0,
-    "adoption": 0.32644628099173556,
+    "adoption": 0.3429752066115702,
     "eff": 3.7,
     "engLift": 0
    },
@@ -14285,16 +14317,16 @@
      "key": "press-speech",
      "t": {
       "All": {
-       "n": 5,
-       "eng": 83,
-       "m": 4,
-       "a": 4
+       "n": 6,
+       "eng": 123,
+       "m": 5,
+       "a": 5
       },
       "CPC": {
-       "n": 2,
-       "eng": 0,
-       "m": 2,
-       "a": 2
+       "n": 3,
+       "eng": 40,
+       "m": 3,
+       "a": 3
       },
       "NewDem": {
        "n": 3,
@@ -14323,16 +14355,16 @@
      },
      "w": {
       "All": {
-       "n": 32,
-       "eng": 11871,
+       "n": 33,
+       "eng": 11911,
        "m": 20,
-       "a": 22
+       "a": 23
       },
       "CPC": {
-       "n": 20,
-       "eng": 11739,
+       "n": 21,
+       "eng": 11779,
        "m": 13,
-       "a": 15
+       "a": 16
       },
       "NewDem": {
        "n": 15,
@@ -14363,6 +14395,7 @@
      "leadPostId": "2110071144791544191",
      "postIds": {
       "t": [
+       "2110542963000463851",
        "2110481521383719050",
        "2110466935704211751",
        "2110464238355701832",
@@ -14370,6 +14403,7 @@
        "2110388977551503767"
       ],
       "w": [
+       "2110542963000463851",
        "2110481521383719050",
        "2110466935704211751",
        "2110464238355701832",
@@ -14715,6 +14749,7 @@
    ],
    "postIds": {
     "t": [
+     "2110542963000463851",
      "2110535704698896667",
      "2110525043797086321",
      "2110518647949332626",
@@ -14782,6 +14817,7 @@
      "2110220972829626770"
     ],
     "w": [
+     "2110542963000463851",
      "2110535704698896667",
      "2110525043797086321",
      "2110518647949332626",
@@ -16870,7 +16906,7 @@
    "name": "Climate & environment",
    "t": {
     "All": {
-     "n": 34,
+     "n": 35,
      "eng": 90,
      "m": 27,
      "a": 28
@@ -16882,13 +16918,13 @@
      "a": 10
     },
     "NewDem": {
-     "n": 25,
+     "n": 26,
      "eng": 41,
      "m": 19,
      "a": 19
     },
     "CBC": {
-     "n": 5,
+     "n": 6,
      "eng": 21,
      "m": 5,
      "a": 5
@@ -16908,7 +16944,7 @@
    },
    "w": {
     "All": {
-     "n": 172,
+     "n": 173,
      "eng": 9612,
      "m": 88,
      "a": 94
@@ -16920,13 +16956,13 @@
      "a": 40
     },
     "NewDem": {
-     "n": 119,
+     "n": 120,
      "eng": 3630,
      "m": 55,
      "a": 59
     },
     "CBC": {
-     "n": 30,
+     "n": 31,
      "eng": 236,
      "m": 18,
      "a": 19
@@ -16951,18 +16987,18 @@
     15,
     18,
     16,
-    34
+    35
    ],
-   "d": 48,
+   "d": 52,
    "mAvg": 18.2,
    "epAvg": 56,
    "momentum": {
     "score": 85,
     "drivers": [
-     "acceleration",
-     "adoption"
+     "volume",
+     "acceleration"
     ],
-    "volume": 0.98,
+    "volume": 1,
     "accel": 1,
     "adoption": 0.9862385321100917,
     "eff": 3.3,
@@ -16973,7 +17009,7 @@
      "key": "clean-energy",
      "t": {
       "All": {
-       "n": 11,
+       "n": 12,
        "eng": 8,
        "m": 9,
        "a": 9
@@ -16985,13 +17021,13 @@
        "a": 3
       },
       "NewDem": {
-       "n": 9,
+       "n": 10,
        "eng": 5,
        "m": 7,
        "a": 7
       },
       "CBC": {
-       "n": 3,
+       "n": 4,
        "eng": 3,
        "m": 3,
        "a": 3
@@ -17011,7 +17047,7 @@
      },
      "w": {
       "All": {
-       "n": 31,
+       "n": 32,
        "eng": 338,
        "m": 19,
        "a": 20
@@ -17023,13 +17059,13 @@
        "a": 6
       },
       "NewDem": {
-       "n": 23,
+       "n": 24,
        "eng": 186,
        "m": 13,
        "a": 14
       },
       "CBC": {
-       "n": 6,
+       "n": 7,
        "eng": 67,
        "m": 6,
        "a": 6
@@ -17051,6 +17087,7 @@
      "leadPostId": "2109318472077574368",
      "postIds": {
       "t": [
+       "2110538051478863987",
        "2110518520484425778",
        "2110518444684878248",
        "2110479508616646832",
@@ -17064,6 +17101,7 @@
        "2110392267437695281"
       ],
       "w": [
+       "2110538051478863987",
        "2110518520484425778",
        "2110518444684878248",
        "2110479508616646832",
@@ -17371,6 +17409,7 @@
    ],
    "postIds": {
     "t": [
+     "2110538051478863987",
      "2110531880714129738",
      "2110531216050950521",
      "2110525415374655636",
@@ -17407,6 +17446,7 @@
      "2110376282018251231"
     ],
     "w": [
+     "2110538051478863987",
      "2110531880714129738",
      "2110531216050950521",
      "2110525415374655636",
@@ -18811,19 +18851,19 @@
     34,
     17
    ],
-   "d": -42,
+   "d": -45,
    "mAvg": 23.7,
    "epAvg": 433,
    "momentum": {
-    "score": 32,
+    "score": 31,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0.08000000000000002,
+    "volume": 0.04999999999999999,
     "accel": 1,
     "adoption": 0.13380281690140844,
-    "eff": 3.6,
+    "eff": 3.7,
     "engLift": 0
    },
    "subs": [
@@ -21508,10 +21548,10 @@
    "name": "Guns & public safety",
    "t": {
     "All": {
-     "n": 7,
-     "eng": 10,
-     "m": 6,
-     "a": 6
+     "n": 8,
+     "eng": 11,
+     "m": 7,
+     "a": 7
     },
     "CPC": {
      "n": 5,
@@ -21520,10 +21560,10 @@
      "a": 4
     },
     "NewDem": {
-     "n": 4,
-     "eng": 6,
-     "m": 4,
-     "a": 4
+     "n": 5,
+     "eng": 7,
+     "m": 5,
+     "a": 5
     },
     "CBC": {
      "n": 1,
@@ -21546,10 +21586,10 @@
    },
    "w": {
     "All": {
-     "n": 96,
-     "eng": 10843,
+     "n": 97,
+     "eng": 10844,
      "m": 65,
-     "a": 73
+     "a": 74
     },
     "CPC": {
      "n": 46,
@@ -21558,10 +21598,10 @@
      "a": 32
     },
     "NewDem": {
-     "n": 54,
-     "eng": 2162,
+     "n": 55,
+     "eng": 2163,
      "m": 37,
-     "a": 42
+     "a": 43
     },
     "CBC": {
      "n": 17,
@@ -21589,20 +21629,20 @@
     6,
     1,
     10,
-    7
+    8
    ],
-   "d": -53,
+   "d": -46,
    "mAvg": 12.2,
-   "epAvg": 113,
+   "epAvg": 112,
    "momentum": {
-    "score": 26,
+    "score": 29,
     "drivers": [
      "acceleration",
      "caucus spread"
     ],
-    "volume": 0,
+    "volume": 0.03999999999999998,
     "accel": 1,
-    "adoption": 0,
+    "adoption": 0.07534246575342468,
     "eff": 3.4,
     "engLift": 0
    },
@@ -21611,10 +21651,10 @@
      "key": "crime-policing",
      "t": {
       "All": {
-       "n": 6,
-       "eng": 9,
-       "m": 5,
-       "a": 5
+       "n": 7,
+       "eng": 10,
+       "m": 6,
+       "a": 6
       },
       "CPC": {
        "n": 4,
@@ -21623,10 +21663,10 @@
        "a": 3
       },
       "NewDem": {
-       "n": 3,
-       "eng": 5,
-       "m": 3,
-       "a": 3
+       "n": 4,
+       "eng": 6,
+       "m": 4,
+       "a": 4
       },
       "CBC": {
        "n": 0,
@@ -21649,10 +21689,10 @@
      },
      "w": {
       "All": {
-       "n": 62,
-       "eng": 9357,
+       "n": 63,
+       "eng": 9358,
        "m": 44,
-       "a": 48
+       "a": 49
       },
       "CPC": {
        "n": 32,
@@ -21661,10 +21701,10 @@
        "a": 24
       },
       "NewDem": {
-       "n": 37,
-       "eng": 1699,
+       "n": 38,
+       "eng": 1700,
        "m": 27,
-       "a": 29
+       "a": 30
       },
       "CBC": {
        "n": 11,
@@ -21689,6 +21729,7 @@
      "leadPostId": "2108337150945018303",
      "postIds": {
       "t": [
+       "2110545935528808505",
        "2110517591823282329",
        "2110508293710094427",
        "2110498158417420735",
@@ -21697,6 +21738,7 @@
        "2110413897421508780"
       ],
       "w": [
+       "2110545935528808505",
        "2110517591823282329",
        "2110508293710094427",
        "2110498158417420735",
@@ -21872,6 +21914,7 @@
    ],
    "postIds": {
     "t": [
+     "2110545935528808505",
      "2110517591823282329",
      "2110508293710094427",
      "2110498158417420735",
@@ -21881,6 +21924,7 @@
      "2110373943861182605"
     ],
     "w": [
+     "2110545935528808505",
      "2110517591823282329",
      "2110508293710094427",
      "2110498158417420735",
@@ -22871,7 +22915,8 @@
     "2110478503808233654",
     "2110480148378374648",
     "2110488659333963950",
-    "2110496938344710278"
+    "2110496938344710278",
+    "2110536634785480915"
    ],
    "firstSeen": "2026-08-20",
    "leadership": false,
@@ -22894,8 +22939,8 @@
     109
    ],
    "exact": 0.51,
-   "total": 68,
-   "eng": 19884
+   "total": 69,
+   "eng": 19931
   },
   {
    "text": "federal government",
@@ -24043,7 +24088,7 @@
     2,
     2,
     2,
-    2,
+    3,
     3,
     3,
     3
@@ -24784,6 +24829,85 @@
    ]
   },
   {
+   "label": "2026 permitting reform bill (BAAJA)",
+   "lastSeen": "2026-10-15T01:07:38.000Z",
+   "thresholdMet": false,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 1,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2110538051478863987"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2110538051478863987",
+     "handle": "@MarcVeasey",
+     "time": "2026-10-15T01:07:38.000Z"
+    }
+   ],
+   "sampleId": "2110538051478863987",
+   "sampleHandle": "@MarcVeasey",
+   "who": [
+    "@MarcVeasey"
+   ],
+   "cm": [
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "eng": 0,
+   "phrase": "yes tanking",
+   "coherence": 100,
+   "since": "2026-10-15T01:07:38.000Z",
+   "shape": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sample": "Yes, tanking the bill b/c it also benefits hydrocarbons would be the epitome of irresponsible behavior. We gotta get this over the finish line! 🇺🇸 #baaja…",
+   "suggest": "2026_permitting_reform_bill_baaja",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [],
+   "related": [
+    {
+     "id": "2108997394645885339",
+     "sim": 0.808,
+     "handle": "@RepStenyHoyer",
+     "text": "It is outrageous for the President to purchase tons of diesel from Russia when he recently signed legislation that imposed the toughest sanctions on its oil and gas.\n\nCongress must take action…",
+     "time": "2026-10-10T19:05:36.000Z",
+     "topics": [
+      "foreign-policy/ukraine-russia",
+      "economy/prices-inflation"
+     ]
+    },
+    {
+     "id": "2108184278672814565",
+     "sim": 0.8061,
+     "handle": "@MarkPocan",
+     "text": "You could lower gas over $1.00 a gallon if you ever voted for a War Powers resolution to take back Congressional authority to end the war Iran. \n\nSeriously, is @derrickvanorden trying to lose?…",
+     "time": "2026-10-08T13:14:34.000Z",
+     "topics": [
+      "foreign-policy/middle-east",
+      "economy/prices-inflation"
+     ]
+    }
+   ]
+  },
+  {
    "label": "Akron Post Office closure before 2026 midterms",
    "lastSeen": "2026-10-15T00:15:56.000Z",
    "thresholdMet": false,
@@ -25137,82 +25261,10 @@
      ]
     }
    ]
-  },
-  {
-   "label": "DOJ demand for California voter citizenship verification",
-   "lastSeen": "2026-10-14T22:07:37.000Z",
-   "thresholdMet": false,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 1,
-   "members": 1,
-   "accounts": 1,
-   "postIds": [
-    "2110492750974005294"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2110492750974005294",
-     "handle": "@NormaJTorres",
-     "time": "2026-10-14T22:07:37.000Z"
-    }
-   ],
-   "sampleId": "2110492750974005294",
-   "sampleHandle": "@NormaJTorres",
-   "who": [
-    "@NormaJTorres"
-   ],
-   "cm": [
-    0,
-    1,
-    0,
-    1,
-    0
-   ],
-   "eng": 8,
-   "phrase": "voter suppression",
-   "coherence": 100,
-   "since": "2026-10-14T22:07:37.000Z",
-   "shape": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-   ],
-   "sample": "This is voter suppression, plain and simple. More than 500,000 Californians have already voted, yet Trump’s DOJ is threatening to put ballots at risk for…",
-   "suggest": "doj_demand_for_california_voter_citizenship_verification",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [
-    {
-     "id": "n_08e75304daa81940",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/state-watch/6149368-voting-rights-group-warns-doj-citizenship-usb-drive/",
-     "text": "DOJ faces legal threats after pushing California to match voter list with USB drive",
-     "title": "DOJ faces legal threats after pushing California to match voter list with USB drive",
-     "publishedAt": "2026-10-14T21:43:38.000Z",
-     "fetchedAt": "2026-10-14T23:13:03.568Z",
-     "version": 527,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "related": []
   }
  ],
  "emergingCoverage": {
-  "total": 356,
+  "total": 357,
   "displayed": 12,
   "activeThresholdClusters": 6
  },
@@ -26523,6 +26575,371 @@
  ],
  "incidentsFiltered": 2,
  "feed": [
+  {
+   "id": "2110547629797183710",
+   "handle": "@Gabe_NM",
+   "member": "Gabe Vasquez",
+   "district": "NM-02",
+   "caucus": [
+    "NewDem",
+    "CHC"
+   ],
+   "text": "Hoy estoy en Los Lunas haciendo campaña y hablando con los votantes del distrito NM-02. Hace poco recibí un mensaje directo de una madre preocupada que me preguntó cómo podemos motivar a los nuevos votantes a la votación. ¡Así que esto es para ustedes! https://t.co/08v67NONOR",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T01:45:41.000Z",
+   "date": "2026-10-14",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110547111888511122",
+   "handle": "@RepHorsford",
+   "member": "Steven Horsford",
+   "district": "NV-04",
+   "caucus": [
+    "CPC",
+    "NewDem",
+    "CBC"
+   ],
+   "text": "I joined the Nevada Housing Justice Alliance at the Regional Justice Center. We called for housing and eviction reform to ensure working people trying to get a roof over their heads are not punished by an unforgiving process. Housing is a human right and I will continue to fight for housing justice for working people.",
+   "topics": [
+    "economy/housing",
+    "economy"
+   ],
+   "time": "2026-10-15T01:43:38.000Z",
+   "date": "2026-10-14",
+   "engN": 0,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110545935528808505",
+   "handle": "@Schneider4IL10",
+   "member": "Bradley Scott Schneider",
+   "district": "IL-10",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "October is Domestic Violence Awareness Month. I stand with survivors and the advocates helping them find safety and support, this month and every month. You are not alone. Call the Illinois Domestic Violence Hotline at 877-863-6338 for free, confidential support 24/7. https://t.co/oOEheGSx4W",
+   "topics": [
+    "public-safety/crime-policing",
+    "public-safety"
+   ],
+   "time": "2026-10-15T01:38:57.000Z",
+   "date": "2026-10-14",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110542963000463851",
+   "handle": "@jamie_raskin",
+   "member": "Jamie Raskin",
+   "district": "MD-08",
+   "caucus": [
+    "CPC"
+   ],
+   "text": "No, it’s not illegal for a journalist to record a politician at a press availability when the politician invited the press! Classic Andy Harris.  We served together in the Maryland State Senate and Congress for two decades — he's an authoritarian through and through, and can be counted on by tyrants all over the world — Trump, Putin, Orban, J6 insurrectionists. How dare he lecture his constituents about the First Amendment when he wanted to cut off all funds to the University of Maryland because he didn’t approve of a movie a student group showed on campus.  If you want to support freedom and progress in Maryland and across America, please help out Dan Schwartz, @Schwartz4_MD1st in these final 20 days!",
+   "topics": [
+    "democracy/press-speech",
+    "democracy",
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T01:27:09.000Z",
+   "date": "2026-10-14",
+   "engN": 40,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110539532777001252",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "RT @TeamTalaricoHQ: Texas GOP voter: The Republican Party has been hijacked. They're not the Republican Party that I was a member of for al…",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T01:13:31.000Z",
+   "date": "2026-10-14",
+   "engN": 0,
+   "kind": "repost",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2110416671357665777",
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110538051478863987",
+   "handle": "@MarcVeasey",
+   "member": "Marc A. Veasey",
+   "district": "TX-33",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Yes, tanking the bill b/c it also benefits hydrocarbons would be the epitome of irresponsible behavior. We gotta get this over the finish line! 🇺🇸 #baaja https://t.co/mNcrvC6ykC",
+   "topics": [
+    "climate/clean-energy",
+    "climate"
+   ],
+   "time": "2026-10-15T01:07:38.000Z",
+   "date": "2026-10-14",
+   "engN": 0,
+   "kind": "quote",
+   "quoted": {
+    "id": "2110484781989568752",
+    "handle": "@JasonBordoff",
+    "text": "My take on the new permitting reform bill @ForeignPolicy. It is among the most important policy measures in decades to advance clean energy, meet rising energy needs, and rein in soaring energy…"
+   },
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110537915382059310",
+   "handle": "@bynum4thewin",
+   "member": "Janelle S. Bynum",
+   "district": "OR-05",
+   "caucus": [
+    "NewDem",
+    "CBC"
+   ],
+   "text": "Debate time! https://t.co/v7nWMexFjB",
+   "topics": [],
+   "time": "2026-10-15T01:07:05.000Z",
+   "date": "2026-10-14",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110536892676518183",
+   "handle": "@DerekTranCA45",
+   "member": "Derek Tran",
+   "district": "CA-45",
+   "caucus": [
+    "NewDem",
+    "CAPAC"
+   ],
+   "text": "CA-45 &amp; CA-48 teamed up to encourage Californians to get out and vote! \n\nWith 20 days until the election, every phone call counts to help Democrats take back the House! https://t.co/5tAuYMIIeU",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T01:03:01.000Z",
+   "date": "2026-10-14",
+   "engN": 13,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110536717660725485",
+   "handle": "@HillaryScholten",
+   "member": "Hillary J. Scholten",
+   "district": "MI-03",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Thank you to everyone who joined us in Grand Rapids, and to my friend Vice Chair @PeteAguilar, for supporting our work to build a Democratic House majority. Majorities are made in Michigan, and I’m proud to be part of the effort to support great Democratic candidates across the country.",
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T01:02:20.000Z",
+   "date": "2026-10-14",
+   "engN": 4,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [
+     {
+      "id": "n_6495655a4156355e",
+      "publisher": "Roll Call",
+      "date": "2026-10-08",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/10/08/midterm-election-battleground-house-senate/",
+      "text": "In January 2025, Inside Elections r ated just five Senate races as competitive: three seats held by Democrats (Georgia, Michigan and New Hampshire) and two held by Republicans (Maine and North Carolina). Considering they need a net gain of four seats for the majority, Democrats didn’t even have enough takeover targets at the beginning of the cycle to realistically talk about them winning control.",
+      "publishedAt": "2026-10-08T13:29:14.000Z",
+      "fetchedAt": "2026-10-08T19:59:50.874Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
+  {
+   "id": "2110536634785480915",
+   "handle": "@RepJasonCrow",
+   "member": "Jason Crow",
+   "district": "CO-06",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "$2,000.\n\nThat’s how much Trump’s war with Iran has cost every American household.\n\nWorking families can’t afford his endless conflicts abroad.\nhttps://t.co/Jb4Y3Hiu57 https://t.co/7UZRykk7H1",
+   "topics": [
+    "foreign-policy/middle-east",
+    "foreign-policy",
+    "economy/prices-inflation",
+    "economy"
+   ],
+   "time": "2026-10-15T01:02:00.000Z",
+   "date": "2026-10-14",
+   "engN": 47,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [
+     {
+      "id": "n_1e1fe792b28fae6a",
+      "publisher": "The Hill",
+      "date": "2026-10-13",
+      "kind": "lead",
+      "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+      "text": "Iran war costing US households average of $2K each: Moody’s",
+      "publishedAt": "2026-10-13T20:38:43.000Z",
+      "fetchedAt": "2026-10-13T22:17:20.862Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     },
+     {
+      "id": "n_8ffcabd8a822b601",
+      "publisher": "NPR",
+      "date": "2026-10-09",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+      "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+      "publishedAt": "2026-10-09T08:23:40.000Z",
+      "fetchedAt": "2026-10-09T23:19:57.746Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": [
+     "n_1e1fe792b28fae6a"
+    ]
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "isNew": false
+  },
   {
    "id": "2110536370867310854",
    "handle": "@RepEspaillat",
@@ -33753,373 +34170,6 @@
    },
    "metricsObservedAt": "2026-10-14T21:17:01.522Z",
    "isNew": false
-  },
-  {
-   "id": "2110463161019048295",
-   "handle": "@RepJoeMorelle",
-   "member": "Joseph D. Morelle",
-   "district": "NY-25",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Congratulations to @RocRedWings' Dan Mason on being named Triple-A Executive of the Year!\n\nDan’s dedication to the Red Wings, fans, and the Rochester community is second to none. This well-deserved recognition is a home run for Dan and all of Rochester.\nhttps://t.co/aoywF63XVk",
-   "topics": [],
-   "time": "2026-10-14T20:10:02.000Z",
-   "date": "2026-10-14",
-   "engN": 3,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110463128517427206",
-   "handle": "@RepPeteAguilar",
-   "member": "Pete Aguilar",
-   "district": "CA-33",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Since the start of Trump’s second term:\n\nGround beef prices are up 17%\nOrange juice prices are up 23.7%\nSandwich bread prices are up 4.7%\n\nLiar. https://t.co/qNBEAG03vt",
-   "topics": [
-    "economy/prices-inflation",
-    "economy"
-   ],
-   "time": "2026-10-14T20:09:55.000Z",
-   "date": "2026-10-14",
-   "engN": 27,
-   "kind": "quote",
-   "quoted": {
-    "id": "2110177805463957508",
-    "handle": "@HQNewsNow",
-    "text": "Trump claims grocery and food prices have gone down since he became president https://t.co/JIncVkVoIR"
-   },
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110463076374045177",
-   "handle": "@RepPressley",
-   "member": "Ayanna Pressley",
-   "district": "MA-07",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "Proud to join Boston Children’s & Franciscan Children’s groundbreaking for their new children’s behavioral & rehabilitative care facility.\n\nThis is what it looks like to invest in our kids' health & happiness.\n\nWhile this Admin traumatizes our children, our community is standing in the gap.",
-   "topics": [
-    "healthcare"
-   ],
-   "time": "2026-10-14T20:09:42.000Z",
-   "date": "2026-10-14",
-   "engN": 29,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110462533173989656",
-   "handle": "@RepJoeNeguse",
-   "member": "Joe Neguse",
-   "district": "CO-02",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "When was the last time your Representative or Senator held a town hall? \n\nLearn more about our legislation requiring regular, public town halls.\n\n👇🏽👇🏽👇🏽 https://t.co/yUHuDvQCQC",
-   "topics": [
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-10-14T20:07:33.000Z",
-   "date": "2026-10-14",
-   "engN": 21,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110462410113122486",
-   "handle": "@RepSalinas",
-   "member": "Andrea Salinas",
-   "district": "OR-06",
-   "caucus": [
-    "CPC",
-    "NewDem",
-    "CHC"
-   ],
-   "text": "What if the water flowing through our pipes could also help power our communities? 💧\n\nIn #Tualatin, it now can! I joined the ribbon cutting for the city’s new in-pipe hydropower project, turning infrastructure we already rely on into clean, affordable energy ⚡️ https://t.co/gltsQPQAAW",
-   "topics": [
-    "climate/clean-energy",
-    "climate"
-   ],
-   "time": "2026-10-14T20:07:03.000Z",
-   "date": "2026-10-14",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110461989373751709",
-   "handle": "@RepEspaillat",
-   "member": "Adriano Espaillat",
-   "district": "NY-13",
-   "caucus": [
-    "CPC",
-    "CHC"
-   ],
-   "text": "The new accessibility upgrades to 137 St-City College Subway means that seniors, people with disabilities, parents with strollers, and the thousands of students who come through this station can access reliable transportation with fewer barriers.\n\nWest Harlem deserves a transit system that works for everyone, and it is crucial every station in our district and across New York City is fully accessible.",
-   "topics": [
-    "civil-rights/disability",
-    "civil-rights",
-    "constituent-services"
-   ],
-   "time": "2026-10-14T20:05:23.000Z",
-   "date": "2026-10-14",
-   "engN": 4,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [
-     {
-      "id": "n_4385296a68ad0d55",
-      "publisher": "Roll Call",
-      "date": "2026-10-13",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/10/13/pentagon-oks-second-destroyer-for-maines-bath-iron-works/",
-      "text": "“After a rigorous review, Bath Iron Works has proven it has the capacity and stability to support construction of a second destroyer,” Deputy Defense Secretary Steve Feinberg said in a statement Monday. “While the operational improvements we have seen at BIW are a significant step in the right direction, the shipyard must continue this momentum to fully resolve legacy production challenges — sustained performance is essential.”",
-      "publishedAt": "2026-10-13T12:57:48.000Z",
-      "fetchedAt": "2026-10-13T17:42:03.724Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110461943412592699",
-   "handle": "@RepDwightEvans",
-   "member": "Dwight Evans",
-   "district": "PA-03",
-   "caucus": [
-    "CPC",
-    "CBC"
-   ],
-   "text": "There are only 20 days until Election Day, but did you know you can submit your ballot early in Philly now? I recently dropped my ballot off at one of @PhillyVotes official drop boxes!\n\nYou can visit one of their Satellite Election offices to request, complete, and return a ballot all in one stop! Learn more here: https://t.co/GwNq6sKQRd",
-   "topics": [
-    "democracy/voting-rights",
-    "democracy"
-   ],
-   "time": "2026-10-14T20:05:12.000Z",
-   "date": "2026-10-14",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110460663508205938",
-   "handle": "@CongressmanRaja",
-   "member": "Raja Krishnamoorthi",
-   "district": "IL-08",
-   "caucus": [
-    "NewDem",
-    "CAPAC"
-   ],
-   "text": "Trump's Russian diesel deal would help bankroll Putin's war machine without meaningfully lowering fuel prices for Americans.\nIt's illegal, ineffective, and no substitute for ending Trump's Iran war. https://t.co/Rdo1sjtD5F",
-   "topics": [
-    "foreign-policy/ukraine-russia",
-    "foreign-policy",
-    "foreign-policy/middle-east",
-    "economy/prices-inflation",
-    "economy"
-   ],
-   "time": "2026-10-14T20:00:07.000Z",
-   "date": "2026-10-14",
-   "engN": 32,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 526,
-    "evidenceSupplied": [
-     {
-      "id": "n_3af7725e1de82d5d",
-      "publisher": "NPR",
-      "date": "2026-10-13",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response",
-      "text": "A bipartisan group of senators is calling on President Trump to rescind his recent diesel deal with Russian President Vladimir Putin, calling it a \"betrayal of the people of Ukraine.\"",
-      "publishedAt": "2026-10-13T19:52:52.000Z",
-      "fetchedAt": "2026-10-13T20:46:54.011Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_8c1e4d4a574719cd",
-      "publisher": "NPR",
-      "date": "2026-10-09",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-      "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
-      "publishedAt": "2026-10-09T21:24:13.000Z",
-      "fetchedAt": "2026-10-09T21:49:27.924Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_3af7725e1de82d5d",
-     "n_8c1e4d4a574719cd"
-    ]
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110460634018046343",
-   "handle": "@LauraAGillen",
-   "member": "Laura Gillen",
-   "district": "NY-04",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "🚨20 DAYS UNTIL ELECTION DAY🚨\n\nRegister now and let your voice be heard!\n\n⭐More info at https://t.co/ToUrqrPZ4C\n⭐Register to vote at https://t.co/4OqfAFfIVk https://t.co/GnQOC33yfn",
-   "topics": [
-    "democracy/voting-rights",
-    "democracy"
-   ],
-   "time": "2026-10-14T20:00:00.000Z",
-   "date": "2026-10-14",
-   "engN": 15,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
-  },
-  {
-   "id": "2110460555123208290",
-   "handle": "@RepGilCisneros",
-   "member": "Gilbert Ray Cisneros, Jr.",
-   "district": "CA-31",
-   "caucus": [
-    "NewDem",
-    "CHC"
-   ],
-   "text": "Thanks to McDonald’s and local franchise owners for hosting me at one of their Baldwin Park locations. It was so fun to see how America’s most iconic fast food is made. https://t.co/Iex8sc2D9m",
-   "topics": [
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-10-14T19:59:41.000Z",
-   "date": "2026-10-14",
-   "engN": 2,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-14T21:17:01.522Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -34298,9 +34348,12 @@
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
   "4228409359": "@JimmyPanetta",
+  "965235634053894147": "@bynum4thewin",
+  "1707910391844769792": "@DerekTranCA45",
+  "1106949340197801986": "@HillaryScholten",
+  "1080191866509901826": "@RepJasonCrow",
   "817076257770835968": "@RepEspaillat",
   "1863695408653889536": "@KellyMorrisonMN",
-  "1106949340197801986": "@HillaryScholten",
   "1615455207713808384": "@Rep_Magaziner",
   "1872709283634397185": "@Rep_Whitesides",
   "1080584229510172678": "@RepPressley",
@@ -34319,12 +34372,10 @@
   "1225929222839046144": "@YVindman",
   "1345103905869455361": "@RepSaraJacobs",
   "1074354529787895808": "@repdeliaramirez",
-  "1707910391844769792": "@DerekTranCA45",
   "1875008939714056192": "@RepLiccardo",
   "1618683941464195072": "@RepFriedmanCA",
   "730899167740989441": "@JaredEMoskowitz",
   "862393019173003264": "@DrKimSchrier",
-  "1080191866509901826": "@RepJasonCrow",
   "1609941568869335041": "@RepScholten",
   "912822519136161793": "@LamonicaMciver",
   "1613235716669988871": "@RepKamlagerDove",
@@ -34338,7 +34389,6 @@
   "814179031956488192": "@CongressmanRaja",
   "1072134139560620033": "@RepMikeLevin",
   "815310506596691968": "@RepJoshG",
-  "965235634053894147": "@bynum4thewin",
   "1608934316779921408": "@RepDeluzio",
   "1064595993222615040": "@RepJoeMorelle",
   "1876279166565515264": "@RepNellie",
@@ -34460,6 +34510,295 @@
   "1793758601749614592": "@RitchieTorresNY"
  },
  "feedAll": [
+  {
+   "id": "2110547629797183710",
+   "authorId": "2151608598",
+   "createdAt": "2026-10-15T01:45:41.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "Hoy estoy en Los Lunas haciendo campaña y hablando con los votantes del distrito NM-02. Hace poco recibí un mensaje directo de una madre preocupada que me preguntó cómo podemos motivar a los nuevos votantes a la votación. ¡Así que esto es para ustedes! https://t.co/08v67NONOR",
+   "engN": 0,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110547111888511122",
+   "authorId": "389840566",
+   "createdAt": "2026-10-15T01:43:38.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "I joined the Nevada Housing Justice Alliance at the Regional Justice Center. We called for housing and eviction reform to ensure working people trying to get a roof over their heads are not punished by an unforgiving process. Housing is a human right and I will continue to fight for housing justice for working people.",
+   "engN": 0,
+   "topics": [
+    "economy/housing",
+    "economy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110545935528808505",
+   "authorId": "278005891",
+   "createdAt": "2026-10-15T01:38:57.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "October is Domestic Violence Awareness Month. I stand with survivors and the advocates helping them find safety and support, this month and every month. You are not alone. Call the Illinois Domestic Violence Hotline at 877-863-6338 for free, confidential support 24/7. https://t.co/oOEheGSx4W",
+   "engN": 1,
+   "topics": [
+    "public-safety/crime-policing",
+    "public-safety"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110542963000463851",
+   "authorId": "549579841",
+   "createdAt": "2026-10-15T01:27:09.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "No, it’s not illegal for a journalist to record a politician at a press availability when the politician invited the press! Classic Andy Harris.  We served together in the Maryland State Senate and Congress for two decades — he's an authoritarian through and through, and can be counted on by tyrants all over the world — Trump, Putin, Orban, J6 insurrectionists. How dare he lecture his constituents about the First Amendment when he wanted to cut off all funds to the University of Maryland because he didn’t approve of a movie a student group showed on campus.  If you want to support freedom and progress in Maryland and across America, please help out Dan Schwartz, @Schwartz4_MD1st in these final 20 days!",
+   "engN": 40,
+   "topics": [
+    "democracy/press-speech",
+    "democracy",
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110539532777001252",
+   "authorId": "20688358",
+   "createdAt": "2026-10-15T01:13:31.000Z",
+   "date": "2026-10-14",
+   "type": "retweet",
+   "text": "RT @TeamTalaricoHQ: Texas GOP voter: The Republican Party has been hijacked. They're not the Republican Party that I was a member of for al…",
+   "engN": 0,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": "2110416671357665777",
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110538051478863987",
+   "authorId": "20688358",
+   "createdAt": "2026-10-15T01:07:38.000Z",
+   "date": "2026-10-14",
+   "type": "quote",
+   "text": "Yes, tanking the bill b/c it also benefits hydrocarbons would be the epitome of irresponsible behavior. We gotta get this over the finish line! 🇺🇸 #baaja https://t.co/mNcrvC6ykC",
+   "engN": 0,
+   "topics": [
+    "climate/clean-energy",
+    "climate"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z",
+   "quoted": {
+    "id": "2110484781989568752",
+    "handle": "@JasonBordoff",
+    "text": "My take on the new permitting reform bill @ForeignPolicy. It is among the most important policy measures in decades to advance clean energy, meet rising energy needs, and rein in soaring energy…"
+   }
+  },
+  {
+   "id": "2110537915382059310",
+   "authorId": "965235634053894147",
+   "createdAt": "2026-10-15T01:07:05.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "Debate time! https://t.co/v7nWMexFjB",
+   "engN": 4,
+   "topics": [],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110536892676518183",
+   "authorId": "1707910391844769792",
+   "createdAt": "2026-10-15T01:03:01.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "CA-45 &amp; CA-48 teamed up to encourage Californians to get out and vote! \n\nWith 20 days until the election, every phone call counts to help Democrats take back the House! https://t.co/5tAuYMIIeU",
+   "engN": 13,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110536717660725485",
+   "authorId": "1106949340197801986",
+   "createdAt": "2026-10-15T01:02:20.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "Thank you to everyone who joined us in Grand Rapids, and to my friend Vice Chair @PeteAguilar, for supporting our work to build a Democratic House majority. Majorities are made in Michigan, and I’m proud to be part of the effort to support great Democratic candidates across the country.",
+   "engN": 4,
+   "topics": [
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [
+     {
+      "id": "n_6495655a4156355e",
+      "publisher": "Roll Call",
+      "date": "2026-10-08",
+      "kind": "report",
+      "url": "https://rollcall.com/2026/10/08/midterm-election-battleground-house-senate/",
+      "text": "In January 2025, Inside Elections r ated just five Senate races as competitive: three seats held by Democrats (Georgia, Michigan and New Hampshire) and two held by Republicans (Maine and North Carolina). Considering they need a net gain of four seats for the majority, Democrats didn’t even have enough takeover targets at the beginning of the cycle to realistically talk about them winning control.",
+      "publishedAt": "2026-10-08T13:29:14.000Z",
+      "fetchedAt": "2026-10-08T19:59:50.874Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
+  {
+   "id": "2110536634785480915",
+   "authorId": "1080191866509901826",
+   "createdAt": "2026-10-15T01:02:00.000Z",
+   "date": "2026-10-14",
+   "type": "tweet",
+   "text": "$2,000.\n\nThat’s how much Trump’s war with Iran has cost every American household.\n\nWorking families can’t afford his endless conflicts abroad.\nhttps://t.co/Jb4Y3Hiu57 https://t.co/7UZRykk7H1",
+   "engN": 47,
+   "topics": [
+    "foreign-policy/middle-east",
+    "foreign-policy",
+    "economy/prices-inflation",
+    "economy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 529,
+    "evidenceSupplied": [
+     {
+      "id": "n_1e1fe792b28fae6a",
+      "publisher": "The Hill",
+      "date": "2026-10-13",
+      "kind": "lead",
+      "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+      "text": "Iran war costing US households average of $2K each: Moody’s",
+      "publishedAt": "2026-10-13T20:38:43.000Z",
+      "fetchedAt": "2026-10-13T22:17:20.862Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     },
+     {
+      "id": "n_8ffcabd8a822b601",
+      "publisher": "NPR",
+      "date": "2026-10-09",
+      "kind": "report",
+      "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+      "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+      "publishedAt": "2026-10-09T08:23:40.000Z",
+      "fetchedAt": "2026-10-09T23:19:57.746Z",
+      "publishedAfterPost": false,
+      "acquiredAfterPost": false,
+      "truncated": false
+     }
+    ],
+    "evidenceUsed": [
+     "n_1e1fe792b28fae6a"
+    ]
+   },
+   "metricsObservedAt": "2026-10-15T01:46:56.196Z"
+  },
   {
    "id": "2110536370867310854",
    "authorId": "817076257770835968",
@@ -74601,334 +74940,19 @@
     "evidenceUsed": []
    },
    "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109704982362554680",
-   "authorId": "22812754",
-   "createdAt": "2026-10-12T17:57:18.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "Trump and Republicans in Congress have thrown out basic human decency, taken their Deportation Machine way too far, and have abused their power yet again. \n\nThis is a blatant disregard for the basic rule of law and a calculated outcome of their radical weaponization of the DOJ and DHS against political opponents.\n \nEvery harmful Republican policy has a human cost, and there are real families who are left to pay it. My heart goes out to @Ilhan and her family who deserve far better than this sinister political obsession.\n \nI stand with Ilhan.\n\nhttps://t.co/gbmeDabXTW",
-   "engN": 318,
-   "topics": [
-    "democracy/executive-overreach",
-    "democracy",
-    "immigration/ice-enforcement",
-    "immigration"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109704502895067574",
-   "authorId": "851477335052140544",
-   "createdAt": "2026-10-12T17:55:24.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "Trump stole millions of taxpayer dollars for ads to promote himself.\n\nNow he’s refusing to pay it back.\n\nIt’s outright corruption. https://t.co/E1TFSIRdmr",
-   "engN": 403,
-   "topics": [
-    "democracy/corruption-ethics",
-    "democracy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 490,
-    "evidenceSupplied": [
-     {
-      "id": "n_00f25f5a0fa124d5",
-      "publisher": "The Hill",
-      "date": "2026-10-06",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/administration/6130848-trump-to-pay-patriotic-ads-backlash/",
-      "text": "Trump says he will pay for ‘Patriotic Ads’ himself after facing backlash from Democrats",
-      "publishedAt": "2026-10-06T01:58:51.000Z",
-      "fetchedAt": "2026-10-06T02:06:37.557Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_a12bf57ead5deebb",
-      "publisher": "NPR",
-      "date": "2026-10-12",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/12/nx-s1-5998976/pro-trump-ads-taxpayer-funds-federal-judge",
-      "text": "\"The Radical Left is upset with the fact that I am taking Ads, which I consider to be a positive promotion for our Great U.S.A., and paying for them with U.S.A. money,\" Trump posted at the time. \"This is a rather standard thing to do but, rather than doing that, although nothing will make them happy, I have decided to do the Patriotic Ads, among others, and pay for them myself, and with money I raised for MAGA, Inc.\"",
-      "publishedAt": "2026-10-12T22:16:47.000Z",
-      "fetchedAt": "2026-10-12T22:51:58.836Z",
-      "publishedAfterPost": true,
-      "acquiredAfterPost": true,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": [
-     "n_00f25f5a0fa124d5",
-     "n_a12bf57ead5deebb"
-    ]
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109704174032093305",
-   "authorId": "1874886856942452736",
-   "createdAt": "2026-10-12T17:54:06.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "Trump cares more about sending his weaponized DOJ after a duly elected member of Congress than he does fixing the issues plaguing his administration.\n\nRep. Omar is a committed public servant — and I stand with her against this atrocious abuse of power by the president.",
-   "engN": 315,
-   "topics": [
-    "democracy/executive-overreach",
-    "democracy",
-    "democracy/courts-doj"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109703421423157361",
-   "authorId": "1225929222839046144",
-   "createdAt": "2026-10-12T17:51:06.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "Early voting is open across the Commonwealth. We have the power to decide Virginia’s future.\n\n📍Woodbridge DMV\n\nFind your polling place at https://t.co/Yrb8FjflbY. https://t.co/8mr67zuxfj",
-   "engN": 57,
-   "topics": [
-    "democracy/voting-rights",
-    "democracy",
-    "congress-politics/elections-2026",
-    "congress-politics"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109702739177681197",
-   "authorId": "818536152588238849",
-   "createdAt": "2026-10-12T17:48:24.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "#TeamGonzalez was excited to attend the Cannery Public Market ribbon-cutting ceremony in the heart of the Mitte Cultural District in Brownsville, made possible by a $700,000 federal investment.\n\nCongratulations to the City of Brownsville, the Brownsville Wellness Coalition, and the Rio Grande Food Bank for creating a welcoming health & wellness space where families can get fresh foods, educational cooking classes, and much more!",
-   "engN": 2,
-   "topics": [
-    "constituent-services"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109702737600327755",
-   "authorId": "1633610542584659970",
-   "createdAt": "2026-10-12T17:48:23.000Z",
-   "date": "2026-10-12",
-   "type": "quote",
-   "text": "Another disturbing example of the Trump Administration weaponizing federal agencies to go after his political enemies… three weeks before an election.\n\nYou expect this outrageous behavior from fascist dictators. It has no place in American democracy. I stand with @Ilhan. https://t.co/mJblqRMzb4",
-   "engN": 409,
-   "topics": [
-    "democracy/executive-overreach",
-    "democracy"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [
-     {
-      "id": "n_f1b3b0518b1fc1fb",
-      "publisher": "Roll Call",
-      "date": "2026-10-08",
-      "kind": "report",
-      "url": "https://rollcall.com/2026/10/08/trump-on-the-stump-extreme-lines-vague-threats/",
-      "text": "“Director of the Office of Management and Budget Russ Vought, who is fantastic, he’s done a job,” Trump said, delivering shout-outs while standing in front of a naval combat ship. “We have some big surprises coming up in another few weeks, right, Russ?”",
-      "publishedAt": "2026-10-08T13:14:37.000Z",
-      "fetchedAt": "2026-10-08T18:27:44.230Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_e5010556091bf145",
-      "publisher": "The Hill",
-      "date": "2026-10-06",
-      "kind": "lead",
-      "url": "https://thehill.com/homenews/campaign/6132331-cook-political-report-democrats-shift/",
-      "text": "Cook Political Report moves three Senate races in Democrats’ favor",
-      "publishedAt": "2026-10-06T19:54:43.000Z",
-      "fetchedAt": "2026-10-06T20:17:35.166Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z",
-   "quoted": {
-    "id": "2109700526518472859",
-    "handle": "@Ilhan",
-    "text": "The Office of Congresswoman Omar released the following statement:\n\n“This raid by Trump’s DHS is an outrageous abuse of power and an unprecedented escalation in the weaponization of federal law…"
-   }
-  },
-  {
-   "id": "2109701881698136521",
-   "authorId": "15949499",
-   "createdAt": "2026-10-12T17:44:59.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "On Indigenous Peoples’ Day, we honor the cultures and contributions of Native Americans and Indigenous Peoples everywhere. Here in Chicago, Indigenous history is woven into our land, waterways and native plants. Today, we celebrate that legacy and continue the fight for justice.",
-   "engN": 1,
-   "topics": [
-    "civil-rights/racial-justice",
-    "civil-rights"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
-  },
-  {
-   "id": "2109701617607942386",
-   "authorId": "1206227149",
-   "createdAt": "2026-10-12T17:43:56.000Z",
-   "date": "2026-10-12",
-   "type": "quote",
-   "text": "The emotionally stunted Narcissist in Chief is abusing his position for revenge against his political opponents. The role of the U.S. president is to serve all the people of the United States, not weaponize federal law enforcement against those with whom he disagrees. https://t.co/vZoDSr3MRk",
-   "engN": 390,
-   "topics": [
-    "democracy/executive-overreach",
-    "democracy",
-    "democracy/courts-doj"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [
-     {
-      "id": "n_5a9dcd933802076a",
-      "publisher": "NPR",
-      "date": "2026-10-08",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/08/nx-s1-5983441/ice-warehouses-new-jersey-roxbury",
-      "text": "Footage of the raids rippled across social media, sent people into hiding and reignited rumors that had been circulating for months: Immigration and Customs Enforcement agents were taking people to a nearby warehouse.",
-      "publishedAt": "2026-10-08T10:13:18.000Z",
-      "fetchedAt": "2026-10-08T16:54:31.922Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     },
-     {
-      "id": "n_e93d61558a6900cf",
-      "publisher": "NPR",
-      "date": "2026-10-10",
-      "kind": "report",
-      "url": "https://www.npr.org/2026/10/10/nx-s1-5996606/u-s-imposes-sweeping-sanctions-on-international-criminal-court",
-      "text": "SCOTT SIMON, HOST: This year's Nobel Peace Prize was meant to bolster international humanitarian law and went to a South African jurist who has worked on the International Criminal Court, among other places. But the Trump administration wants to dismantle that court and accuses it of trying to prosecute Americans. NPR's Michele Kelemen reports on new U.S. sanctions against the world's only standing war crimes tribunal.",
-      "publishedAt": "2026-10-10T11:40:51.000Z",
-      "fetchedAt": "2026-10-10T19:46:51.813Z",
-      "publishedAfterPost": false,
-      "acquiredAfterPost": false,
-      "truncated": false
-     }
-    ],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z",
-   "quoted": {
-    "id": "2109625319212646907",
-    "handle": "@AP",
-    "text": "BREAKING: Federal agents searched Minnesota Rep. Ilhan Omar's home as part of a criminal investigation, AP sources say. https://t.co/67uyHWqjY9"
-   }
-  },
-  {
-   "id": "2109701271548764484",
-   "authorId": "816157667882373120",
-   "createdAt": "2026-10-12T17:42:34.000Z",
-   "date": "2026-10-12",
-   "type": "tweet",
-   "text": "On Indigenous Peoples' Day, we honor and celebrate the history, contributions, and culture of the communities that have called the Americas home for thousands of years. https://t.co/3ZFcmdU3bd",
-   "engN": 29,
-   "topics": [
-    "civil-rights/racial-justice",
-    "civil-rights"
-   ],
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 487,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-13T07:48:15.005Z"
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 3344,
+ "feedAllTotal": 3354,
  "feedAllFiles": [
-  "feed-0-d07076323b8d6c01.json",
-  "feed-1-a65737c4f3c19710.json",
-  "feed-2-3bc818221fbb2243.json",
-  "feed-3-d7d4d0bd697edb15.json",
-  "feed-4-68bf2966ce7ea6ff.json",
-  "feed-5-7ddd69a76e028435.json",
-  "feed-6-b633d191b044f95c.json",
-  "feed-7-1d8707e457e0bb04.json",
-  "feed-8-40c22f2eae93bb7d.json"
+  "feed-0-262c94da5a07fe96.json",
+  "feed-1-a0e6208cf62c5388.json",
+  "feed-2-6434c4d6c6f08cc5.json",
+  "feed-3-ae173ffa3fa90388.json",
+  "feed-4-355e6c160d2a6a1d.json",
+  "feed-5-e908fee487bdb509.json",
+  "feed-6-afc419bb01cede6d.json",
+  "feed-7-0aee68e6b362097d.json",
+  "feed-8-329b2e205730758d.json"
  ]
 }
