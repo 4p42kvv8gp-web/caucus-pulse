@@ -1,0 +1,142 @@
+{
+ "date": "2026-10-15",
+ "model": "claude-opus-5",
+ "classifiedAt": "2026-10-15T04:52:12.073Z",
+ "assignments": {
+  "2110586361384472620": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2110592200015040795": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110592347872673951": []
+ },
+ "incidents": {},
+ "provenance": {
+  "2110586361384472620": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110509680833548797",
+    "fingerprint": "e42c9f715334b539813af4d012c33e87ba7e7445c8571f31463e0c27f005cffa"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110509680833548797",
+    "fingerprint": "e42c9f715334b539813af4d012c33e87ba7e7445c8571f31463e0c27f005cffa"
+   }
+  },
+  "2110592200015040795": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2",
+   "quotedContext": {
+    "id": "2110486850041200872",
+    "authorId": "240504013",
+    "handle": "KatieMiller",
+    "createdAt": "2026-10-14T21:44:10.000Z",
+    "textChars": 76,
+    "textHash": "a415bebba55a9c87c53b7b2c8b6af0ee3e2e2c03766c5a0902f91f05bfaeda5b"
+   }
+  },
+  "2110592347872673951": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110497938824954001",
+    "fingerprint": "a977cd6ea938203a7d7b9e77a4031941382b2ae9803fc4c2663157cfc3c75a2c"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110497938824954001",
+    "fingerprint": "a977cd6ea938203a7d7b9e77a4031941382b2ae9803fc4c2663157cfc3c75a2c"
+   }
+  }
+ },
+ "needsContext": {
+  "2110586361384472620": false,
+  "2110592200015040795": false,
+  "2110592347872673951": true
+ },
+ "inputBlocks": {},
+ "contextVersion": 531,
+ "emerging": [],
+ "unclassified": [],
+ "pendingIds": [],
+ "complete": true,
+ "anchored": {},
+ "failedChunks": 0,
+ "droppedSubs": [],
+ "echoedSubs": [],
+ "validationErrors": [],
+ "requestStatus": {
+  "live_chunk-0": {
+   "acceptedIds": [
+    "2110428437726830643",
+    "2110571097112330713",
+    "2110573479619617028",
+    "2110574131854934300",
+    "2110575540675452937",
+    "2110580012470665675",
+    "2110586361384472620",
+    "2110592200015040795",
+    "2110592347872673951"
+   ],
+   "retryIds": [],
+   "errors": [],
+   "inference": {
+    "attemptedAt": "2026-10-15T04:51:55.113Z",
+    "observedAt": "2026-10-15T04:52:12.035Z",
+    "kind": "sync",
+    "status": "complete",
+    "reasonCode": null,
+    "acceptedCount": 9,
+    "retryCount": 0
+   }
+  }
+ },
+ "inference": {
+  "schemaVersion": 1,
+  "lastAttempt": {
+   "attemptedAt": "2026-10-15T04:51:55.113Z",
+   "observedAt": "2026-10-15T04:52:12.035Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 9,
+   "retryCount": 0
+  },
+  "lastSuccess": {
+   "attemptedAt": "2026-10-15T04:51:55.113Z",
+   "observedAt": "2026-10-15T04:52:12.035Z",
+   "kind": "sync",
+   "status": "complete",
+   "reasonCode": null,
+   "acceptedCount": 9,
+   "retryCount": 0
+  },
+  "lastFailure": null
+ },
+ "updatedAt": "2026-10-15T04:52:12.074Z"
+}

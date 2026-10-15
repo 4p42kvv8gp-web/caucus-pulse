@@ -1,7 +1,7 @@
 {
  "date": "2026-10-14",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T03:17:13.794Z",
+ "classifiedAt": "2026-10-15T04:52:12.062Z",
  "assignments": {
   "2110220972829626770": [
    [
@@ -4505,6 +4505,39 @@
     "climate",
     "disasters"
    ]
+  ],
+  "2110571097112330713": [],
+  "2110573479619617028": [
+   [
+    "economy",
+    "housing"
+   ]
+  ],
+  "2110574131854934300": [
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2110575540675452937": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ],
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2110580012470665675": [
+   [
+    "economy",
+    "housing"
+   ],
+   [
+    "economy",
+    "jobs-wages"
+   ]
   ]
  },
  "incidents": {},
@@ -8956,53 +8989,6 @@
     "n_8ffcabd8a822b601"
    ],
    "inputHash": "0969dc732ad2a993334e9e1a08ec9a98a58d9e35ad51087cb05f2db352faafa5"
-  },
-  "2110428437726830643": {
-   "contextVersion": 522,
-   "evidenceSupplied": [
-    {
-     "id": "n_1e1fe792b28fae6a",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
-     "text": "Iran war costing US households average of $2K each: Moody’s",
-     "title": "Iran war costing US households average of $2K each: Moody’s",
-     "publishedAt": "2026-10-13T20:38:43.000Z",
-     "fetchedAt": "2026-10-13T22:17:20.862Z",
-     "version": 507,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_1e1fe792b28fae6a"
-   ],
-   "inputHash": "ff1f623387259463555e4f304998eb312caf3de33b305f513274a548641fd6c8",
-   "quotedContext": {
-    "id": "2110351924394418460",
-    "authorId": "151963505",
-    "handle": "HouseBudgetDems",
-    "createdAt": "2026-10-14T12:48:01.000Z",
-    "textChars": 197,
-    "textHash": "86a45a5f4d0f6453348d413f528cd8b1efef54ab67f91b66fdfe2db63c60c909"
-   }
   },
   "2110428469586706516": {
    "contextVersion": 522,
@@ -14788,6 +14774,128 @@
     "textChars": 183,
     "textHash": "2b0284e41f5929e0ca92a9fca9e550196191804fb17d0b774a51a0eebf97e269"
    }
+  },
+  "2110428437726830643": {
+   "contextVersion": 531,
+   "evidenceSupplied": [
+    {
+     "id": "n_1e1fe792b28fae6a",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+     "text": "Iran war costing US households average of $2K each: Moody’s",
+     "title": "Iran war costing US households average of $2K each: Moody’s",
+     "publishedAt": "2026-10-13T20:38:43.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_1e1fe792b28fae6a",
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2",
+   "quotedContext": {
+    "id": "2110351924394418460",
+    "authorId": "151963505",
+    "handle": "HouseBudgetDems",
+    "createdAt": "2026-10-14T12:48:01.000Z",
+    "textChars": 197,
+    "textHash": "86a45a5f4d0f6453348d413f528cd8b1efef54ab67f91b66fdfe2db63c60c909"
+   }
+  },
+  "2110571097112330713": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2"
+  },
+  "2110573479619617028": {
+   "contextVersion": 531,
+   "evidenceSupplied": [
+    {
+     "id": "n_cd8825a9be1abdbe",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/nx-s1-5979839/massachusetts-starter-homes-ballot-affordability",
+     "text": "\"It's really hard to find housing, it's extremely expensive, and I can't afford to live alone,\" said renter Jamie Sharken, 34, as she walks her dog in Lexington, north of Boston and near where she shares a home with three others. \"There's four of us in two bathrooms, definitely a run-down old house.\"",
+     "title": "Voters here will decide whether to force cities to build cheaper, smaller homes",
+     "publishedAt": "2026-10-13T09:00:00.000Z",
+     "fetchedAt": "2026-10-13T13:03:48.320Z",
+     "version": 500,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110400345905971660",
+    "fingerprint": "2ff13862ac846952cba3b5324bb829cfa71b24afd15139866dcdb90284a8c387"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110400345905971660",
+    "fingerprint": "2ff13862ac846952cba3b5324bb829cfa71b24afd15139866dcdb90284a8c387"
+   }
+  },
+  "2110574131854934300": {
+   "contextVersion": 531,
+   "evidenceSupplied": [
+    {
+     "id": "n_f1b3b0518b1fc1fb",
+     "publisher": "Roll Call",
+     "date": "2026-10-08",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/08/trump-on-the-stump-extreme-lines-vague-threats/",
+     "text": "“Director of the Office of Management and Budget Russ Vought, who is fantastic, he’s done a job,” Trump said, delivering shout-outs while standing in front of a naval combat ship. “We have some big surprises coming up in another few weeks, right, Russ?”",
+     "title": "Trump on the stump: Extreme lines, vague threats",
+     "publishedAt": "2026-10-08T13:14:37.000Z",
+     "fetchedAt": "2026-10-08T18:27:44.230Z",
+     "version": 417,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2"
+  },
+  "2110575540675452937": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2"
+  },
+  "2110580012470665675": {
+   "contextVersion": 531,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "80e1da75f679347618e0de4da0e0af93990f3616c45afca5fd1d02ce2dbdceb2"
   }
  },
  "needsContext": {
@@ -15046,7 +15154,6 @@
   "2110427432226267249": false,
   "2110427738746343434": false,
   "2110428408702464177": false,
-  "2110428437726830643": false,
   "2110428469586706516": false,
   "2110428776765280433": false,
   "2110429548647195101": false,
@@ -15392,10 +15499,16 @@
   "2110567127430336571": false,
   "2110567256979587571": false,
   "2110568758507078050": false,
-  "2110568846679552214": false
+  "2110568846679552214": false,
+  "2110428437726830643": false,
+  "2110571097112330713": true,
+  "2110573479619617028": false,
+  "2110574131854934300": true,
+  "2110575540675452937": false,
+  "2110580012470665675": false
  },
  "inputBlocks": {},
- "contextVersion": 530,
+ "contextVersion": 531,
  "emerging": [
   {
    "label": "Federal raid on Rep. Ilhan Omar's home",
@@ -15722,6 +15835,12 @@
     "2110542636222472663",
     "2110542638822690827"
    ]
+  },
+  {
+   "label": "Aurora Hindu temple attack plot",
+   "ids": [
+    "2110575540675452937"
+   ]
   }
  ],
  "unclassified": [],
@@ -15753,33 +15872,25 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110550170320474571",
-    "2110550985609527363",
-    "2110551236248506421",
-    "2110553455760744489",
-    "2110554051205267856",
-    "2110554596477485082",
-    "2110554813184295148",
-    "2110555269600362778",
-    "2110555583908598203",
-    "2110556683265020320",
-    "2110557993993658452",
-    "2110559800991846805",
-    "2110561163620614396",
-    "2110567127430336571",
-    "2110567256979587571",
-    "2110568758507078050",
-    "2110568846679552214"
+    "2110428437726830643",
+    "2110571097112330713",
+    "2110573479619617028",
+    "2110574131854934300",
+    "2110575540675452937",
+    "2110580012470665675",
+    "2110586361384472620",
+    "2110592200015040795",
+    "2110592347872673951"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T03:16:40.238Z",
-    "observedAt": "2026-10-15T03:17:13.772Z",
+    "attemptedAt": "2026-10-15T04:51:55.113Z",
+    "observedAt": "2026-10-15T04:52:12.035Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 17,
+    "acceptedCount": 9,
     "retryCount": 0
    }
   },
@@ -15864,21 +15975,21 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T03:16:40.238Z",
-   "observedAt": "2026-10-15T03:17:13.772Z",
+   "attemptedAt": "2026-10-15T04:51:55.113Z",
+   "observedAt": "2026-10-15T04:52:12.035Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T03:16:40.238Z",
-   "observedAt": "2026-10-15T03:17:13.772Z",
+   "attemptedAt": "2026-10-15T04:51:55.113Z",
+   "observedAt": "2026-10-15T04:52:12.035Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 17,
+   "acceptedCount": 9,
    "retryCount": 0
   },
   "lastFailure": {
@@ -15891,5 +16002,5 @@
    "retryCount": 1
   }
  },
- "updatedAt": "2026-10-15T03:17:13.798Z"
+ "updatedAt": "2026-10-15T04:52:12.069Z"
 }

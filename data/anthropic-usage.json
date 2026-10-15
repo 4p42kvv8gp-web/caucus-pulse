@@ -22422,5 +22422,26 @@
     "completedAt": "2026-10-15T03:17:13.766Z"
    }
   }
+ },
+ "2026-10-15": {
+  "_requests": {
+   "live:6ac9c43a-1479-481e-8614-60727c290df0": {
+    "id": "live:6ac9c43a-1479-481e-8614-60727c290df0",
+    "stage": "poll",
+    "model": "claude-opus-5",
+    "batch": false,
+    "reservedUsd": 0.45219,
+    "status": "settled",
+    "createdAt": "2026-10-15T04:51:55.119Z",
+    "usage": {
+     "calls": 1,
+     "input": 3524,
+     "output": 1566,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-10-15T04:52:12.030Z"
+   }
+  }
  }
 }
