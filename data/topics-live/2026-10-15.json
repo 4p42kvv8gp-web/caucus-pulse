@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T22:05:01.384Z",
+ "classifiedAt": "2026-10-15T22:14:16.575Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -3667,6 +3667,57 @@
    [
     "healthcare",
     "medicaid"
+   ]
+  ],
+  "2110853939079873014": [
+   [
+    "democracy",
+    "epstein-files"
+   ]
+  ],
+  "2110854072819413015": [
+   [
+    "democracy",
+    "epstein-files"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110854633123967319": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2110854828276482105": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110855051686400029": [],
+  "2110855213674602974": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2110855240430031337": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2110855717452476794": [
+   [
+    "congress-politics",
+    "elections-2026"
    ]
   ]
  },
@@ -11956,6 +12007,167 @@
    ],
    "evidenceUsed": [],
    "inputHash": "eea91c7e5f35f6a96b2158440da44355c2cb097ec8ac128de991b6c8d7f98e39"
+  },
+  "2110853939079873014": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0",
+   "quotedContext": {
+    "id": "2109799514466836916",
+    "authorId": "4486093643",
+    "handle": "factpostnews",
+    "createdAt": "2026-10-13T00:12:57.000Z",
+    "textChars": 130,
+    "textHash": "0f19004629b325aa10b782e2866d6e3472b845ceab18d0356e61fc692cb4f9d8"
+   }
+  },
+  "2110854072819413015": {
+   "contextVersion": 546,
+   "evidenceSupplied": [
+    {
+     "id": "n_a12bf57ead5deebb",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998976/pro-trump-ads-taxpayer-funds-federal-judge",
+     "text": "An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer dollars has been spent to air the ads since the campaign began in late September. Nearly $10 million of that total was spent after Oct. 5, when the president pledged to fund it privately in a post on Truth Social .",
+     "title": "Government spent $10 million on pro-Trump ads after president said super PAC would fund",
+     "publishedAt": "2026-10-12T22:16:47.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "The U.S. government continues to pay for ads promoting President Trump , even after he announced that his MAGA Inc. super PAC would take over funding. A federal judge ordered the ads to be taken down, yet they remained on air. An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer funds have been spent since the campaign began in late September. Almost $10 million of that was spent after Trump pledged on an Oct. 5 Truth Social post to fund the campaign privately. The White House has called the ads public service announcements, but a lawsuit by Common Cause and others …",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0",
+   "quotedContext": {
+    "id": "2110853939079873014",
+    "authorId": "1724247188165824512",
+    "handle": "kennedyforny26",
+    "createdAt": "2026-10-15T22:02:51.000Z",
+    "textChars": 273,
+    "textHash": "05f20a7fde8720e79e86bd8d8738d1285b528e6c2c9b4b26427e20f1b7492ec9"
+   }
+  },
+  "2110854633123967319": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0"
+  },
+  "2110854828276482105": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0"
+  },
+  "2110855051686400029": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110469703789658163",
+    "fingerprint": "84c9c361dd11611fabc0f26335dc4a6109c942c8e08730a148891f44000f656e"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110469703789658163",
+    "fingerprint": "84c9c361dd11611fabc0f26335dc4a6109c942c8e08730a148891f44000f656e"
+   }
+  },
+  "2110855213674602974": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0"
+  },
+  "2110855240430031337": {
+   "contextVersion": 546,
+   "evidenceSupplied": [
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_569962f217afc77d",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149885-palatine-man-charged-in-alleged-mass-shooting-plot-targeting-hindu-place-of-worship/",
+     "text": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "title": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "publishedAt": "2026-10-15T10:46:15.000Z",
+     "fetchedAt": "2026-10-15T13:01:27.905Z",
+     "version": 537,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_67af9d3a74d0366c",
+    "n_569962f217afc77d"
+   ],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0",
+   "quotedContext": {
+    "id": "2110730618581520749",
+    "authorId": "814179031956488192",
+    "handle": "CongressmanRaja",
+    "createdAt": "2026-10-15T13:52:49.000Z",
+    "textChars": 293,
+    "textHash": "bbb64743954a81aa78589613b07e06da65d2c8eb9e5c30b7fb5764a6d0912168"
+   }
+  },
+  "2110855717452476794": {
+   "contextVersion": 546,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "1add5b638e0aaf84c05296d626fbb529b18125cc374625b7d84007ca4829f2a0",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110849056109138408",
+    "fingerprint": "130f57f82388e5530f86d7d0f177b5d342c88bf365e27265ca0f4af5453047d4"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110849056109138408",
+    "fingerprint": "130f57f82388e5530f86d7d0f177b5d342c88bf365e27265ca0f4af5453047d4"
+   }
   }
  },
  "needsContext": {
@@ -12458,7 +12670,15 @@
   "2110852463171367118": false,
   "2110852715006046257": false,
   "2110853231463256411": false,
-  "2110853407091175846": false
+  "2110853407091175846": false,
+  "2110853939079873014": false,
+  "2110854072819413015": false,
+  "2110854633123967319": false,
+  "2110854828276482105": false,
+  "2110855051686400029": false,
+  "2110855213674602974": false,
+  "2110855240430031337": false,
+  "2110855717452476794": false
  },
  "inputBlocks": {},
  "contextVersion": 546,
@@ -12540,7 +12760,8 @@
     "2110846495779942614",
     "2110846833283244386",
     "2110851565632520549",
-    "2110852301065699508"
+    "2110852301065699508",
+    "2110855240430031337"
    ]
   },
   {
@@ -12817,6 +13038,24 @@
     "2110847589398770000",
     "2110848839535964623"
    ]
+  },
+  {
+   "label": "ICE killing of Ruben Ray Martinez",
+   "ids": [
+    "2110854633123967319"
+   ]
+  },
+  {
+   "label": "Bend, Oregon school shooting",
+   "ids": [
+    "2110854828276482105"
+   ]
+  },
+  {
+   "label": "Musk funding of Texas PAC boosting Paxton",
+   "ids": [
+    "2110855717452476794"
+   ]
   }
  ],
  "unclassified": [],
@@ -12851,23 +13090,24 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110360751479120363",
-    "2110383479288467577",
-    "2110420871714406490",
-    "2110431559626973392",
-    "2110451928337461506",
-    "2110456703862940126",
-    "2110730345968443889"
+    "2110853939079873014",
+    "2110854072819413015",
+    "2110854633123967319",
+    "2110854828276482105",
+    "2110855051686400029",
+    "2110855213674602974",
+    "2110855240430031337",
+    "2110855717452476794"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T22:02:12.986Z",
-    "observedAt": "2026-10-15T22:02:26.150Z",
+    "attemptedAt": "2026-10-15T22:14:00.481Z",
+    "observedAt": "2026-10-15T22:14:16.561Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 7,
+    "acceptedCount": 8,
     "retryCount": 0
    }
   },
@@ -13027,24 +13267,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T22:04:46.867Z",
-   "observedAt": "2026-10-15T22:05:01.309Z",
+   "attemptedAt": "2026-10-15T22:14:00.481Z",
+   "observedAt": "2026-10-15T22:14:16.561Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T22:04:46.867Z",
-   "observedAt": "2026-10-15T22:05:01.309Z",
+   "attemptedAt": "2026-10-15T22:14:00.481Z",
+   "observedAt": "2026-10-15T22:14:16.561Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 7,
+   "acceptedCount": 8,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T22:05:01.389Z"
+ "updatedAt": "2026-10-15T22:14:16.578Z"
 }
