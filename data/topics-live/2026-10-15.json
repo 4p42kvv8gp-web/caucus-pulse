@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T04:59:32.617Z",
+ "classifiedAt": "2026-10-15T08:31:47.832Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -29,6 +29,12 @@
    [
     "congress-politics",
     "elections-2026"
+   ]
+  ],
+  "2110626732755841120": [
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ]
  },
@@ -107,6 +113,12 @@
     "referenceId": "2110575482764677351",
     "fingerprint": "ed1890e038d26f868c5e522b1f5ba377556dca8a58e96fe983b2a50c4ec96383"
    }
+  },
+  "2110626732755841120": {
+   "contextVersion": 533,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "0daba520c57c1ac1eb0b71b115dcc771880794e2b1d2b73d423a8413ca8ab793"
   }
  },
  "needsContext": {
@@ -114,10 +126,11 @@
   "2110592200015040795": false,
   "2110592347872673951": true,
   "2110595426755735597": true,
-  "2110595501330710612": false
+  "2110595501330710612": false,
+  "2110626732755841120": false
  },
  "inputBlocks": {},
- "contextVersion": 531,
+ "contextVersion": 533,
  "emerging": [],
  "unclassified": [],
  "pendingIds": [],
@@ -130,18 +143,17 @@
  "requestStatus": {
   "live_chunk-0": {
    "acceptedIds": [
-    "2110595426755735597",
-    "2110595501330710612"
+    "2110626732755841120"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T04:59:26.863Z",
-    "observedAt": "2026-10-15T04:59:32.614Z",
+    "attemptedAt": "2026-10-15T08:31:45.294Z",
+    "observedAt": "2026-10-15T08:31:47.827Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   }
@@ -149,24 +161,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T04:59:26.863Z",
-   "observedAt": "2026-10-15T04:59:32.614Z",
+   "attemptedAt": "2026-10-15T08:31:45.294Z",
+   "observedAt": "2026-10-15T08:31:47.827Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T04:59:26.863Z",
-   "observedAt": "2026-10-15T04:59:32.614Z",
+   "attemptedAt": "2026-10-15T08:31:45.294Z",
+   "observedAt": "2026-10-15T08:31:47.827Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T04:59:32.617Z"
+ "updatedAt": "2026-10-15T08:31:47.836Z"
 }

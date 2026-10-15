@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-15T07:52:02.622Z",
- "lastPollAt": "2026-10-15T06:21:28.375Z",
- "lastPollAttemptAt": "2026-10-15T06:21:27.962Z",
+ "generatedAt": "2026-10-15T08:31:54.019Z",
+ "lastPollAt": "2026-10-15T08:31:41.444Z",
+ "lastPollAttemptAt": "2026-10-15T08:31:41.018Z",
  "lastPollOutcome": "complete",
  "captureInProgress": false,
  "rosterMembers": 214,
@@ -3234,7 +3234,7 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-15T07:52:00.702Z"
+  "referenceAsOf": "2026-10-15T08:31:51.935Z"
  },
  "news": {
   "version": 533,
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-15T07:52:01.282Z",
+   "asOf": "2026-10-15T08:31:52.581Z",
    "windowDays": 14,
-   "windowStart": "2026-10-01T07:52:01.282Z",
+   "windowStart": "2026-10-01T08:31:52.581Z",
    "eligibleItems": 1564,
    "withExcerpts": 146,
    "headlineOrSummary": 1418,
@@ -3546,19 +3546,19 @@
  },
  "classification": {
   "through": "2026-10-15",
-  "capturedIn24h": 577,
-  "classifiedIn24h": 577,
-  "taggedIn24h": 527,
+  "capturedIn24h": 578,
+  "classifiedIn24h": 578,
+  "taggedIn24h": 528,
   "pendingIn24h": 0,
-  "momentumPaused": true,
+  "momentumPaused": false,
   "health": {
-   "status": "degraded",
-   "reasonCode": "inference-error",
-   "hasCurrentFailure": true,
-   "lastAttemptAt": "2026-10-15T07:51:55.970Z",
-   "lastSuccessAt": "2026-10-15T04:59:32.614Z",
-   "capturedIn24h": 577,
-   "classifiedIn24h": 577,
+   "status": "healthy",
+   "reasonCode": null,
+   "hasCurrentFailure": false,
+   "lastAttemptAt": "2026-10-15T08:31:45.294Z",
+   "lastSuccessAt": "2026-10-15T08:31:47.827Z",
+   "capturedIn24h": 578,
+   "classifiedIn24h": 578,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6826,17 +6826,17 @@
  "stats": {
   "All": {
    "t": {
-    "posts": 5,
+    "posts": 6,
     "mix": [
-     40,
+     50,
      0,
-     60
+     50
     ],
-    "accounts": 4,
-    "members": 4,
+    "accounts": 5,
+    "members": 5,
     "unidentifiedAccounts": 0,
-    "classified": 5,
-    "tagged": 3,
+    "classified": 6,
+    "tagged": 4,
     "pending": 0,
     "corePosts": 2,
     "coreCounts": {
@@ -6844,13 +6844,13 @@
      "Healthcare": 1,
      "Corruption": 0
     },
-    "eng": 37,
-    "perPost": 7,
+    "eng": 38,
+    "perPost": 6,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 2778,
+    "posts": 2779,
     "mix": [
      85,
      4,
@@ -6859,8 +6859,8 @@
     "accounts": 327,
     "members": 202,
     "unidentifiedAccounts": 0,
-    "classified": 2778,
-    "tagged": 2497,
+    "classified": 2779,
+    "tagged": 2498,
     "pending": 0,
     "corePosts": 1080,
     "coreCounts": {
@@ -6868,28 +6868,28 @@
      "Healthcare": 178,
      "Corruption": 505
     },
-    "eng": 1059089,
+    "eng": 1059090,
     "perPost": 381,
     "top10Share": 58,
     "engDelta": 0
    },
    "curve48": [
     0,
-    36,
-    139,
-    129,
+    66,
     134,
-    62,
-    21,
+    141,
+    113,
+    58,
+    10,
+    2,
     3,
-    3,
-    53,
-    131,
-    146,
-    150,
-    68,
-    24,
-    2
+    76,
+    154,
+    135,
+    135,
+    58,
+    16,
+    1
    ]
   },
   "CPC": {
@@ -6943,36 +6943,36 @@
    },
    "curve48": [
     0,
-    18,
-    60,
-    47,
-    59,
-    27,
-    13,
+    31,
+    55,
+    54,
+    54,
+    24,
+    6,
     0,
     1,
-    23,
-    58,
-    63,
-    69,
-    26,
-    10,
+    36,
+    70,
+    54,
+    64,
+    18,
+    7,
     0
    ]
   },
   "NewDem": {
    "t": {
-    "posts": 3,
+    "posts": 4,
     "mix": [
-     33,
+     50,
      0,
-     67
+     50
     ],
-    "accounts": 2,
-    "members": 2,
+    "accounts": 3,
+    "members": 3,
     "unidentifiedAccounts": 0,
-    "classified": 3,
-    "tagged": 2,
+    "classified": 4,
+    "tagged": 3,
     "pending": 0,
     "corePosts": 1,
     "coreCounts": {
@@ -6980,13 +6980,13 @@
      "Healthcare": 1,
      "Corruption": 0
     },
-    "eng": 1,
-    "perPost": 0,
+    "eng": 2,
+    "perPost": 1,
     "top10Share": 100,
     "engDelta": -100
    },
    "w": {
-    "posts": 1650,
+    "posts": 1651,
     "mix": [
      84,
      4,
@@ -6995,8 +6995,8 @@
     "accounts": 183,
     "members": 109,
     "unidentifiedAccounts": 0,
-    "classified": 1650,
-    "tagged": 1465,
+    "classified": 1651,
+    "tagged": 1466,
     "pending": 0,
     "corePosts": 590,
     "coreCounts": {
@@ -7004,28 +7004,28 @@
      "Healthcare": 116,
      "Corruption": 242
     },
-    "eng": 229170,
+    "eng": 229171,
     "perPost": 139,
     "top10Share": 58,
     "engDelta": 0
    },
    "curve48": [
     0,
-    26,
-    94,
-    77,
-    76,
-    31,
-    13,
-    3,
+    48,
+    86,
+    86,
+    60,
+    32,
+    6,
     2,
-    33,
-    78,
-    80,
-    85,
-    43,
-    13,
-    2
+    2,
+    47,
+    94,
+    71,
+    74,
+    39,
+    9,
+    1
    ]
   },
   "CBC": {
@@ -7079,21 +7079,21 @@
    },
    "curve48": [
     0,
-    5,
-    25,
-    22,
-    14,
-    6,
-    5,
+    13,
+    23,
+    19,
+    11,
+    9,
     3,
     2,
-    13,
-    30,
+    2,
+    20,
+    33,
     29,
-    27,
-    14,
+    17,
+    16,
     5,
-    2
+    0
    ]
   },
   "CHC": {
@@ -7148,19 +7148,19 @@
    "curve48": [
     0,
     7,
-    27,
-    28,
-    17,
+    32,
+    26,
     19,
-    6,
+    17,
+    3,
     0,
     1,
-    12,
-    17,
-    29,
+    14,
+    30,
+    20,
     28,
-    12,
-    2,
+    7,
+    1,
     0
    ]
   },
@@ -7215,20 +7215,20 @@
    },
    "curve48": [
     0,
-    0,
+    1,
+    6,
+    11,
+    16,
     5,
-    10,
-    18,
-    4,
-    3,
+    1,
     0,
     0,
     2,
+    16,
     11,
-    13,
     14,
-    8,
-    4,
+    6,
+    3,
     0
    ]
   }
@@ -7239,10 +7239,10 @@
    "name": "Congress & campaign politics",
    "t": {
     "All": {
-     "n": 2,
-     "eng": 36,
-     "m": 2,
-     "a": 2
+     "n": 3,
+     "eng": 37,
+     "m": 3,
+     "a": 3
     },
     "CPC": {
      "n": 1,
@@ -7251,10 +7251,10 @@
      "a": 1
     },
     "NewDem": {
-     "n": 1,
-     "eng": 0,
-     "m": 1,
-     "a": 1
+     "n": 2,
+     "eng": 1,
+     "m": 2,
+     "a": 2
     },
     "CBC": {
      "n": 1,
@@ -7277,8 +7277,8 @@
    },
    "w": {
     "All": {
-     "n": 654,
-     "eng": 59278,
+     "n": 655,
+     "eng": 59279,
      "m": 137,
      "a": 182
     },
@@ -7289,8 +7289,8 @@
      "a": 73
     },
     "NewDem": {
-     "n": 394,
-     "eng": 20033,
+     "n": 395,
+     "eng": 20034,
      "m": 79,
      "a": 102
     },
@@ -7320,22 +7320,22 @@
     105,
     134,
     139,
-    2
+    3
    ],
-   "d": 26,
+   "d": 27,
    "mAvg": 63.5,
    "epAvg": 91,
    "momentum": {
     "score": 55,
     "drivers": [
-     "volume",
-     "adoption"
+     "adoption",
+     "volume"
     ],
-    "volume": 0.76,
+    "volume": 0.77,
     "accel": 0,
-    "adoption": 0.7598425196850394,
-    "eff": 4,
-    "engLift": 0.16810760272321612
+    "adoption": 0.7755905511811023,
+    "eff": 3.9,
+    "engLift": 0.16574317622749613
    },
    "subs": [
     {
@@ -7875,10 +7875,10 @@
      "key": "town-halls",
      "t": {
       "All": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
+       "n": 1,
+       "eng": 1,
+       "m": 1,
+       "a": 1
       },
       "CPC": {
        "n": 0,
@@ -7887,10 +7887,10 @@
        "a": 0
       },
       "NewDem": {
-       "n": 0,
-       "eng": 0,
-       "m": 0,
-       "a": 0
+       "n": 1,
+       "eng": 1,
+       "m": 1,
+       "a": 1
       },
       "CBC": {
        "n": 0,
@@ -7913,8 +7913,8 @@
      },
      "w": {
       "All": {
-       "n": 178,
-       "eng": 2656,
+       "n": 179,
+       "eng": 2657,
        "m": 77,
        "a": 95
       },
@@ -7925,8 +7925,8 @@
        "a": 33
       },
       "NewDem": {
-       "n": 104,
-       "eng": 1202,
+       "n": 105,
+       "eng": 1203,
        "m": 45,
        "a": 55
       },
@@ -7952,8 +7952,11 @@
      "lead": "@ChrisPappasNH",
      "leadPostId": "2110107873774600656",
      "postIds": {
-      "t": [],
+      "t": [
+       "2110626732755841120"
+      ],
       "w": [
+       "2110626732755841120",
        "2110559800991846805",
        "2110555583908598203",
        "2110554596477485082",
@@ -8239,10 +8242,12 @@
    ],
    "postIds": {
     "t": [
+     "2110626732755841120",
      "2110595501330710612",
      "2110592200015040795"
     ],
     "w": [
+     "2110626732755841120",
      "2110595501330710612",
      "2110592200015040795",
      "2110561163620614396",
@@ -20507,73 +20512,71 @@
    "eng": 27502
   },
   {
-   "text": "lower costs",
+   "text": "law enforcement",
    "variants": [],
-   "pillar": "Affordability",
-   "topic": "Prices / inflation",
-   "first": "@USRepKCastor",
+   "pillar": "Corruption",
+   "topic": "Executive overreach",
+   "first": "@RepCohen",
    "firstPostId": null,
    "postIds": [
-    "2108582576889983458",
-    "2108597179141280233",
-    "2108614156576231933",
-    "2108620215235784749",
-    "2108663803634163785",
-    "2108668471567323533",
-    "2108686445091180793",
-    "2108688046745079934",
-    "2108711724429766738",
-    "2108726101862240539",
-    "2108757949489320282",
-    "2108907049727803493",
-    "2108996808785514656",
-    "2109055224002548123",
-    "2109437660959760654",
-    "2109785169016115508",
-    "2110028583380861129",
-    "2110099001320030563",
-    "2110120213656269190",
-    "2110384678159212721",
-    "2110386755807617461",
-    "2110405720839426490",
-    "2110428776765280433",
-    "2110435286467412177",
-    "2110436392052396156",
-    "2110446681183707352",
-    "2110452073624121625",
-    "2110464645534228835",
-    "2110470315511869851",
-    "2110475128387911751",
-    "2110480148378374648",
-    "2110500838884118628",
-    "2110504615087415585",
-    "2110506831877423267",
-    "2110521097166750072",
-    "2110530455959118282"
+    "2108599101675733017",
+    "2108651387122786723",
+    "2108678899202744682",
+    "2108952460626657492",
+    "2109058871469711456",
+    "2109666714715934816",
+    "2109672801720217983",
+    "2109675562344087792",
+    "2109678382707274034",
+    "2109682781227724983",
+    "2109695835294323130",
+    "2109700526518472859",
+    "2109701617607942386",
+    "2109711680301343180",
+    "2109715495436026319",
+    "2109719670206919165",
+    "2109731310424223975",
+    "2109743236025811314",
+    "2109768450398966149",
+    "2109774318095974616",
+    "2109787813549899889",
+    "2109842745833758899",
+    "2109862932708282669",
+    "2110004458277016005",
+    "2110035595175121370",
+    "2110074972848689163",
+    "2110102047219404908",
+    "2110134825227006432",
+    "2110480279534198951",
+    "2110495994869944619",
+    "2110498158417420735",
+    "2110517591823282329",
+    "2110575540675452937",
+    "2110626732755841120"
    ],
-   "firstSeen": "2026-08-20",
+   "firstSeen": "2026-09-02",
    "leadership": false,
-   "spread": 30,
+   "spread": 31,
    "accounts": 32,
    "cm": [
-    9,
-    17,
-    7,
-    4,
-    1
+    18,
+    16,
+    5,
+    8,
+    3
    ],
    "adopt": [
-    86,
-    87,
-    87,
-    87,
-    88,
-    90,
-    90
+    39,
+    41,
+    41,
+    55,
+    60,
+    62,
+    63
    ],
    "exact": 1,
-   "total": 36,
-   "eng": 4349
+   "total": 34,
+   "eng": 224066
   }
  ],
  "clusters": [
@@ -21172,7 +21175,7 @@
     2,
     2,
     2,
-    2,
+    3,
     3,
     3,
     3,
@@ -23098,6 +23101,37 @@
  ],
  "incidentsFiltered": 1,
  "feed": [
+  {
+   "id": "2110626732755841120",
+   "handle": "@RepJoshG",
+   "member": "Josh Gottheimer",
+   "district": "NJ-05",
+   "caucus": [
+    "NewDem"
+   ],
+   "text": "Nothing says Jersey in the fall quite like the Annual Bergen County Fall Harvest Festival. Great to be back with Jersey families, our incredible small business owners, Bergen County 4-H, local officials, and the law enforcement heroes who keep us safe. This is what community is all about!",
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "time": "2026-10-15T07:00:01.000Z",
+   "date": "2026-10-15",
+   "engN": 1,
+   "kind": "original",
+   "quoted": null,
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 533,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T08:31:41.436Z",
+   "isNew": false
+  },
   {
    "id": "2110595501330710612",
    "handle": "@bynum4thewin",
@@ -30586,37 +30620,6 @@
    },
    "metricsObservedAt": "2026-10-15T07:48:07.656Z",
    "isNew": false
-  },
-  {
-   "id": "2110471045266186563",
-   "handle": "@SusieLeeNV",
-   "member": "Susie Lee",
-   "district": "NV-03",
-   "caucus": [
-    "NewDem"
-   ],
-   "text": "Thank you to everyone who joined us in Summerlin for a meaningful conversation about the issues facing our community. \n\nI had the opportunity to speak with neighbors about my record on education, my commitment to supporting our military families, and the work I've done to bring federal funding home to Nevada's 3rd District.",
-   "topics": [
-    "congress-politics/town-halls",
-    "congress-politics"
-   ],
-   "time": "2026-10-14T20:41:22.000Z",
-   "date": "2026-10-14",
-   "engN": 47,
-   "kind": "original",
-   "quoted": null,
-   "classificationStatus": "complete",
-   "needsContext": false,
-   "sourceIncomplete": false,
-   "sourceContextReason": null,
-   "sourceReferenceId": null,
-   "provenance": {
-    "contextVersion": 525,
-    "evidenceSupplied": [],
-    "evidenceUsed": []
-   },
-   "metricsObservedAt": "2026-10-15T07:48:07.656Z",
-   "isNew": false
   }
  ],
  "authorHandles": {
@@ -30791,6 +30794,7 @@
   "3612420317": "@Mike_CA05",
   "3761644334": "@LauraFriedmanCA",
   "3806081652": "@DeborahRossNC",
+  "815310506596691968": "@RepJoshG",
   "965235634053894147": "@bynum4thewin",
   "1871623075822772224": "@RepYassAnsari",
   "814179031956488192": "@CongressmanRaja",
@@ -30834,7 +30838,6 @@
   "816833925456789505": "@RepBarragan",
   "1611441794704674828": "@RepEricSorensen",
   "1072134139560620033": "@RepMikeLevin",
-  "815310506596691968": "@RepJoshG",
   "1608934316779921408": "@RepDeluzio",
   "1064595993222615040": "@RepJoeMorelle",
   "1876279166565515264": "@RepNellie",
@@ -30949,6 +30952,30 @@
   "1276209702322438148": "@RepKweisiMfume"
  },
  "feedAll": [
+  {
+   "id": "2110626732755841120",
+   "authorId": "815310506596691968",
+   "createdAt": "2026-10-15T07:00:01.000Z",
+   "date": "2026-10-15",
+   "type": "tweet",
+   "text": "Nothing says Jersey in the fall quite like the Annual Bergen County Fall Harvest Festival. Great to be back with Jersey families, our incredible small business owners, Bergen County 4-H, local officials, and the law enforcement heroes who keep us safe. This is what community is all about!",
+   "engN": 1,
+   "topics": [
+    "congress-politics/town-halls",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 533,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-15T08:31:41.436Z"
+  },
   {
    "id": "2110595501330710612",
    "authorId": "965235634053894147",
@@ -74086,14 +74113,14 @@
   }
  ],
  "feedAllTruncated": true,
- "feedAllTotal": 2778,
+ "feedAllTotal": 2779,
  "feedAllFiles": [
-  "feed-0-ffc6ee533d083f36.json",
-  "feed-1-ac9cc75a8e33a766.json",
-  "feed-2-33b9e781ce738f64.json",
-  "feed-3-5f33aeacb8afd598.json",
-  "feed-4-69feed2b4a646f67.json",
-  "feed-5-69d4766f3203dd9b.json",
-  "feed-6-0ecd9327747be7db.json"
+  "feed-0-a51baf6a0ef1c8e1.json",
+  "feed-1-192868444523101f.json",
+  "feed-2-7fc89c573e9b7cf0.json",
+  "feed-3-843b8b150b06eb8a.json",
+  "feed-4-e109d5d8e313ebcb.json",
+  "feed-5-9ac2ee8e447c815d.json",
+  "feed-6-55ab31a84e2b7a8b.json"
  ]
 }
