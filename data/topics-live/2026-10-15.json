@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-16T20:02:52.596Z",
+ "classifiedAt": "2026-10-16T23:07:32.739Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -124,6 +124,10 @@
    [
     "economy",
     "prices-inflation"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
    ]
   ],
   "2110718980587758057": [
@@ -1291,16 +1295,16 @@
   ],
   "2110768222853321193": [
    [
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
     "economy",
     "prices-inflation"
    ],
    [
     "economy",
     "tariffs-trade"
-   ],
-   [
-    "foreign-policy",
-    "middle-east"
    ]
   ],
   "2110768645928296464": [
@@ -1411,12 +1415,12 @@
   ],
   "2110773883364315595": [
    [
-    "economy",
-    "prices-inflation"
-   ],
-   [
     "foreign-policy",
     "middle-east"
+   ],
+   [
+    "economy",
+    "prices-inflation"
    ]
   ],
   "2110773936329982107": [
@@ -2003,6 +2007,10 @@
    [
     "budget-appropriations",
     "social-security"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
    ],
    [
     "economy",
@@ -3106,11 +3114,11 @@
   "2110831818023051347": [
    [
     "foreign-policy",
-    "military-veterans"
+    "middle-east"
    ],
    [
     "foreign-policy",
-    "middle-east"
+    "military-veterans"
    ]
   ],
   "2110831892929159627": [
@@ -3141,12 +3149,12 @@
   ],
   "2110833171013198094": [
    [
-    "budget-appropriations",
-    "snap-benefits"
-   ],
-   [
     "economy",
     "prices-inflation"
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
    ],
    [
     "foreign-policy",
@@ -3633,16 +3641,16 @@
     "town-halls"
    ],
    [
-    "foreign-policy",
-    "middle-east"
-   ],
-   [
     "immigration",
     "ice-enforcement"
    ],
    [
-    "healthcare",
-    null
+    "foreign-policy",
+    "middle-east"
+   ],
+   [
+    "economy",
+    "tariffs-trade"
    ]
   ],
   "2110852715006046257": [
@@ -4875,6 +4883,82 @@
     "textHash": "83863f32310f9fa754387a33750941ca38b0e1945c9af72b727034e8e5bfbc85"
    }
   },
+  "2110769071981473963": {
+   "contextVersion": 555,
+   "evidenceSupplied": [
+    {
+     "id": "n_d5e327699d391754",
+     "publisher": "The Hill",
+     "date": "2026-10-16",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6154786-trump-denies-starlink-outage-cause/",
+     "text": "Trump claims neither he nor Musk caused Ukraine Starlink outage",
+     "title": "Trump claims neither he nor Musk caused Ukraine Starlink outage",
+     "publishedAt": "2026-10-16T19:39:12.000Z",
+     "fetchedAt": "2026-10-16T19:56:56.033Z",
+     "version": 555,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_37223b47861c40ea",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/senate/6148831-tillis-presses-musk-starlink/",
+     "text": "GOP Sen. Tillis asks Musk to explain Ukraine losing access to Starlink",
+     "title": "GOP Sen. Tillis asks Musk to explain Ukraine losing access to Starlink",
+     "publishedAt": "2026-10-14T19:22:26.000Z",
+     "fetchedAt": "2026-10-14T20:31:11.254Z",
+     "version": 525,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_37223b47861c40ea"
+   ],
+   "inputHash": "9d74e8ea1ce2dfbecf468e9e4eaf41a3ba86cc66bb25c724904de5ee5f52cba1"
+  },
+  "2110861032025444494": {
+   "contextVersion": 555,
+   "evidenceSupplied": [
+    {
+     "id": "n_8fb0ba12ce7ccf82",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6151005-ossoff-georgia-republicans-do-not-want-the-president-to-come/",
+     "text": "Ossoff: Georgia Republicans ‘do not want the president to come’",
+     "title": "Ossoff: Georgia Republicans ‘do not want the president to come’",
+     "publishedAt": "2026-10-15T15:30:50.000Z",
+     "fetchedAt": "2026-10-15T16:46:45.743Z",
+     "version": 541,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_c425e58b52c5090d",
+     "publisher": "The Hill",
+     "date": "2026-10-16",
+     "kind": "lead",
+     "url": "https://thehill.com/video-clips/6154181-watch-live-donald-trump-georgia-campaign-rally/",
+     "text": "Watch live: Trump takes campaign blitz to Georgia",
+     "title": "Watch live: Trump takes campaign blitz to Georgia",
+     "publishedAt": "2026-10-16T18:36:08.000Z",
+     "fetchedAt": "2026-10-16T19:56:56.033Z",
+     "version": 555,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9d74e8ea1ce2dfbecf468e9e4eaf41a3ba86cc66bb25c724904de5ee5f52cba1"
+  },
   "2110586361384472620": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -5102,46 +5186,6 @@
    "contextVersion": 552,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "22ce3087e51ef9e4a58a7bf4ffa784b0bb1f223830be378c48741b70fd09cc35"
-  },
-  "2110718601296547850": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_3af7725e1de82d5d",
-     "publisher": "NPR",
-     "date": "2026-10-13",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response",
-     "text": "A bipartisan group of senators is calling on President Trump to rescind his recent diesel deal with Russian President Vladimir Putin, calling it a \"betrayal of the people of Ukraine.\"",
-     "title": "Bipartisan group of senators call on Trump to rescind Russian diesel deal",
-     "publishedAt": "2026-10-13T19:52:52.000Z",
-     "fetchedAt": "2026-10-13T20:46:54.011Z",
-     "version": 506,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_c05eaf35181561b6",
-     "publisher": "The New York Times",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/10/14/business/energy-environment/trump-russia-diesel-prices.html",
-     "text": "Why Trump’s Russian Diesel Deal Is Unlikely to Lower Fuel Costs",
-     "title": "Why Trump’s Russian Diesel Deal Is Unlikely to Lower Fuel Costs",
-     "publishedAt": "2026-10-14T21:25:26.000Z",
-     "fetchedAt": "2026-10-15T16:46:45.743Z",
-     "version": 541,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_3af7725e1de82d5d",
-    "n_c05eaf35181561b6"
-   ],
    "inputHash": "22ce3087e51ef9e4a58a7bf4ffa784b0bb1f223830be378c48741b70fd09cc35"
   },
   "2110718980587758057": {
@@ -6216,45 +6260,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "9b1fde1741f4a25f72e0bff955c99c9fb08a49fb185367eff4f252b0de00db95"
-  },
-  "2110746442231140472": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "a5543ecd5ea5ece1c96c32f8e1653f325d7aef516d9ffc083420989284992f89"
   },
   "2110746548250296582": {
    "contextVersion": 552,
@@ -7398,28 +7403,6 @@
    ],
    "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
   },
-  "2110765110348173707": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_7340faeea78dd325",
-     "publisher": "Roll Call",
-     "date": "2026-10-15",
-     "kind": "report",
-     "url": "https://rollcall.com/podcasts/political-theater/how-sha-na-na-could-help-determine-the-house-majority/",
-     "text": "Jason Dick talks with the latest Roll Call on the Road mission crew, Mary Ellen McIntire and Tom Williams, about what they learned on their reporting trip to Pennsylvania, including interacting with candidates from Scranton to Harrisburg, as well as Sha Na Na frontman and Social Security advocate Jon “Bowzer” Bauman, who is trying to fire up voters.",
-     "title": "How Sha Na Na could help determine the House majority",
-     "publishedAt": "2026-10-15T14:37:29.000Z",
-     "fetchedAt": "2026-10-15T19:46:42.461Z",
-     "version": 544,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": true,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
-  },
   "2110765464578142311": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -7492,45 +7475,6 @@
    "evidenceUsed": [],
    "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
   },
-  "2110766914251170047": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_7d23c69e914272fa",
-     "publisher": "The Hill",
-     "date": "2026-10-12",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6143968-bessent-unsure-iran-war-end/",
-     "text": "Bessent on how Iran war ends: ‘I don’t know’",
-     "title": "Bessent on how Iran war ends: ‘I don’t know’",
-     "publishedAt": "2026-10-12T21:29:46.000Z",
-     "fetchedAt": "2026-10-12T22:51:58.836Z",
-     "version": 490,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
-  },
   "2110766938515190267": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -7593,46 +7537,6 @@
    "contextVersion": 552,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
-  },
-  "2110768222853321193": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_1e1fe792b28fae6a",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
-     "text": "Iran war costing US households average of $2K each: Moody’s",
-     "title": "Iran war costing US households average of $2K each: Moody’s",
-     "publishedAt": "2026-10-13T20:38:43.000Z",
-     "fetchedAt": "2026-10-13T22:17:20.862Z",
-     "version": 507,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601",
-    "n_1e1fe792b28fae6a"
-   ],
    "inputHash": "c71b00e352652b2fcd216c313591b4891155efd999bba68a25a68dc89ec70499"
   },
   "2110768645928296464": {
@@ -7899,45 +7803,6 @@
    "contextVersion": 552,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "3f4e03a2bf26b332640d25736f3d90640585d5c659231c60ec30b0ebfc5f22af"
-  },
-  "2110773883364315595": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
    "inputHash": "3f4e03a2bf26b332640d25736f3d90640585d5c659231c60ec30b0ebfc5f22af"
   },
   "2110773936329982107": {
@@ -9256,46 +9121,6 @@
    "evidenceUsed": [],
    "inputHash": "a373a18c26c810c559a2a68e9aa1abeb2324bfede1bd2f7476732cc5ccb70a54"
   },
-  "2110796374451064980": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_82bf5b4cb230565b",
-     "publisher": "Roll Call",
-     "date": "2026-10-14",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
-     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
-     "title": "Social Security benefits set for a boost next year",
-     "publishedAt": "2026-10-14T12:03:34.000Z",
-     "fetchedAt": "2026-10-14T17:31:55.062Z",
-     "version": 522,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_843c63a99b20bc17",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/business/6147842-social-security-cola-increase-2027/",
-     "text": "Social Security COLA set to rise by 3.6 percent in 2027",
-     "title": "Social Security COLA set to rise by 3.6 percent in 2027",
-     "publishedAt": "2026-10-14T14:32:37.000Z",
-     "fetchedAt": "2026-10-14T15:07:44.044Z",
-     "version": 520,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_82bf5b4cb230565b",
-    "n_843c63a99b20bc17"
-   ],
-   "inputHash": "1b2ffddac2d6bf69f7fe87b6022f182d0b400c108e099f406d772b92fde04fc7"
-  },
   "2110796480659304882": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -9736,43 +9561,6 @@
    "evidenceUsed": [],
    "inputHash": "ecfa7120e5b60617280a0049ed3a5b98bc881897a1f60de7713afcb93ee469f5"
   },
-  "2110804746353185181": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_bfb774979eb4db77",
-     "publisher": "NPR",
-     "date": "2026-10-12",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/12/nx-s1-5998073/trump-struggles-to-show-voters-hes-focused-on-the-cost-of-living",
-     "text": "MICHEL MARTIN, HOST: President Trump has been looking for ways to lower gas prices, which are much higher than before he started a war with Iran. On Friday, the Trump administration lifted sanctions against Russian diesel - sanctions that had been in place since the full-scale invasion of Ukraine.",
-     "title": "Trump struggles to show voters he's focused on the cost of living",
-     "publishedAt": "2026-10-12T08:39:21.000Z",
-     "fetchedAt": "2026-10-12T21:22:04.235Z",
-     "version": 489,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "ecfa7120e5b60617280a0049ed3a5b98bc881897a1f60de7713afcb93ee469f5"
-  },
   "2110804765776949440": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -9881,46 +9669,6 @@
    "contextVersion": 552,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "cc5826409f5171603c6390e3a1658e160aec1b41960a4e87ac3c498510a85c53"
-  },
-  "2110805458579579226": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8c1e4d4a574719cd",
-    "n_8ffcabd8a822b601"
-   ],
    "inputHash": "cc5826409f5171603c6390e3a1658e160aec1b41960a4e87ac3c498510a85c53"
   },
   "2110805463277473922": {
@@ -10986,53 +10734,6 @@
    "evidenceUsed": [],
    "inputHash": "98c57cacc7fc71e66bc817b13bc4f03cb7283d95a65a353a43f30e09ef988651"
   },
-  "2110821517961420947": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_1e1fe792b28fae6a",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
-     "text": "Iran war costing US households average of $2K each: Moody’s",
-     "title": "Iran war costing US households average of $2K each: Moody’s",
-     "publishedAt": "2026-10-13T20:38:43.000Z",
-     "fetchedAt": "2026-10-13T22:17:20.862Z",
-     "version": 507,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_1e1fe792b28fae6a"
-   ],
-   "inputHash": "98c57cacc7fc71e66bc817b13bc4f03cb7283d95a65a353a43f30e09ef988651",
-   "quotedContext": {
-    "id": "2110070437971415307",
-    "authorId": "136300373",
-    "handle": "AaronBlake",
-    "createdAt": "2026-10-13T18:09:30.000Z",
-    "textChars": 99,
-    "textHash": "692856484f4bff96fdae04f91f95b0c70116fb77e595c3c58c5617a6a7356ef5"
-   }
-  },
   "2110821525544743258": {
    "contextVersion": 552,
    "evidenceSupplied": [
@@ -11346,45 +11047,6 @@
    "contextVersion": 552,
    "evidenceSupplied": [],
    "evidenceUsed": [],
-   "inputHash": "d9b04156a2a12f98ce3c3c89a08e1f9da4087971bcdb51e9ff5dc25eef4d9e36"
-  },
-  "2110824127770591403": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
    "inputHash": "d9b04156a2a12f98ce3c3c89a08e1f9da4087971bcdb51e9ff5dc25eef4d9e36"
   },
   "2110824164047171639": {
@@ -11829,51 +11491,6 @@
    "evidenceUsed": [],
    "inputHash": "d38fbeaf02cd4cf07b2936550b13bc291eba90d61493da174889a18bccc5749c"
   },
-  "2110830791794258362": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "81f5d656ad428528bb7aa4b2a3f64d1c6b4272e2effef8cc46ce43f0388a0d68",
-   "quotedContext": {
-    "id": "2110588908249682400",
-    "authorId": "16635277",
-    "handle": "Acyn",
-    "createdAt": "2026-10-15T04:29:43.000Z",
-    "textChars": 135,
-    "textHash": "4d8f6dfd113cf774c1b9c8fa56c1b3a24000e795c6b80e67089e4277e5306312"
-   }
-  },
   "2110809367222112670": {
    "contextVersion": 552,
    "evidenceSupplied": [
@@ -11942,43 +11559,6 @@
    "evidenceUsed": [],
    "inputHash": "81f5d656ad428528bb7aa4b2a3f64d1c6b4272e2effef8cc46ce43f0388a0d68"
   },
-  "2110831818023051347": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "81f5d656ad428528bb7aa4b2a3f64d1c6b4272e2effef8cc46ce43f0388a0d68"
-  },
   "2110831892929159627": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -12007,51 +11587,6 @@
     "reason": null,
     "referenceId": "2110719807591186622",
     "fingerprint": "6f1bb52031643647efa48a20afa76c0edf3986cc288b011fde8a39188890a6da"
-   }
-  },
-  "2110833171013198094": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "81f5d656ad428528bb7aa4b2a3f64d1c6b4272e2effef8cc46ce43f0388a0d68",
-   "quotedContext": {
-    "id": "2110505675839447192",
-    "authorId": "1322868572113297410",
-    "handle": "PunchbowlNews",
-    "createdAt": "2026-10-14T22:58:59.000Z",
-    "textChars": 240,
-    "textHash": "1096131ad99b95cd9c91a7e8750b38c0243c6420025ec675d006707da72e6a5b"
    }
   },
   "2110833578195951825": {
@@ -12778,43 +12313,6 @@
    "evidenceUsed": [],
    "inputHash": "e6a6bb5658b4a90fd6d6a117cc6925c3f4a82f1ac6330b75657a9074641165ff"
   },
-  "2110843297488867799": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "e6a6bb5658b4a90fd6d6a117cc6925c3f4a82f1ac6330b75657a9074641165ff"
-  },
   "2110843753506435411": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -13353,45 +12851,6 @@
     "textHash": "eb3fb8fc8a682892f8b8bd0f0db62c501121cac049c8245b2eaa25a1750938ce"
    }
   },
-  "2110852463171367118": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_5ce93d5305ecc41c",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
-     "text": "Boebert: Iran war ‘detrimental on many levels’",
-     "title": "Boebert: Iran war ‘detrimental on many levels’",
-     "publishedAt": "2026-10-13T13:56:06.000Z",
-     "fetchedAt": "2026-10-13T14:35:43.461Z",
-     "version": 501,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601"
-   ],
-   "inputHash": "a35bf44d2753908c6cf703c30cc9415b2ea3d94a5b176f1745b51421b7cf3a8a"
-  },
   "2110852715006046257": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -13847,45 +13306,6 @@
     "textChars": 146,
     "textHash": "c1f0b015c6d5fe2659424f40ca2310cd9977c1946d95b9cb9c37afe6c9693863"
    }
-  },
-  "2110864083516051787": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    },
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8c1e4d4a574719cd"
-   ],
-   "inputHash": "9e7d75ebdb0dbd4aa80f5e920102f47e9d28af73fa4ce2b3fdc03856a0b434a6"
   },
   "2110864641941270788": {
    "contextVersion": 552,
@@ -14558,12 +13978,6 @@
      "truncated": false
     }
    ],
-   "evidenceUsed": [],
-   "inputHash": "9bd5c366e7b53e512e3d8bb09dd86e5e706efea3066c6a534b263a77224fea6a"
-  },
-  "2110882871946723412": {
-   "contextVersion": 552,
-   "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "9bd5c366e7b53e512e3d8bb09dd86e5e706efea3066c6a534b263a77224fea6a"
   },
@@ -15528,46 +14942,6 @@
    "evidenceUsed": [],
    "inputHash": "a8a77bb2427bed1fbaf237c3c154e823cfc65ec4d4339a495491c37ed3520f87"
   },
-  "2110910427832139925": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ffcabd8a822b601",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
-     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
-     "title": "Trump's War in Iran in spotlight ahead of midterms",
-     "publishedAt": "2026-10-09T08:23:40.000Z",
-     "fetchedAt": "2026-10-09T23:19:57.746Z",
-     "version": 439,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_6710ac7228dd26d8",
-     "publisher": "The Hill",
-     "date": "2026-10-11",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
-     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
-     "publishedAt": "2026-10-11T16:07:40.000Z",
-     "fetchedAt": "2026-10-12T00:21:45.637Z",
-     "version": 477,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_8ffcabd8a822b601",
-    "n_6710ac7228dd26d8"
-   ],
-   "inputHash": "a8a77bb2427bed1fbaf237c3c154e823cfc65ec4d4339a495491c37ed3520f87"
-  },
   "2110911753265496329": {
    "contextVersion": 552,
    "evidenceSupplied": [],
@@ -15919,87 +15293,749 @@
     "textHash": "6763885ec883e4cc81c5c61649da3bdb79018fe625a2c88817143d4a05b118ce"
    }
   },
-  "2110769071981473963": {
-   "contextVersion": 555,
+  "2110718601296547850": {
+   "contextVersion": 556,
    "evidenceSupplied": [
     {
-     "id": "n_d5e327699d391754",
-     "publisher": "The Hill",
-     "date": "2026-10-16",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6154786-trump-denies-starlink-outage-cause/",
-     "text": "Trump claims neither he nor Musk caused Ukraine Starlink outage",
-     "title": "Trump claims neither he nor Musk caused Ukraine Starlink outage",
-     "publishedAt": "2026-10-16T19:39:12.000Z",
-     "fetchedAt": "2026-10-16T19:56:56.033Z",
-     "version": 555,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
+     "id": "n_3af7725e1de82d5d",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response",
+     "text": "A bipartisan group of senators is calling on President Trump to rescind his recent diesel deal with Russian President Vladimir Putin, calling it a \"betrayal of the people of Ukraine.\"",
+     "title": "Bipartisan group of senators call on Trump to rescind Russian diesel deal",
+     "publishedAt": "2026-10-13T19:52:52.000Z",
+     "fetchedAt": "2026-10-13T20:46:54.011Z",
+     "version": 506,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
      "truncated": false
     },
     {
-     "id": "n_37223b47861c40ea",
-     "publisher": "The Hill",
+     "id": "n_c05eaf35181561b6",
+     "publisher": "The New York Times",
      "date": "2026-10-14",
      "kind": "lead",
-     "url": "https://thehill.com/homenews/senate/6148831-tillis-presses-musk-starlink/",
-     "text": "GOP Sen. Tillis asks Musk to explain Ukraine losing access to Starlink",
-     "title": "GOP Sen. Tillis asks Musk to explain Ukraine losing access to Starlink",
-     "publishedAt": "2026-10-14T19:22:26.000Z",
-     "fetchedAt": "2026-10-14T20:31:11.254Z",
-     "version": 525,
+     "url": "https://www.nytimes.com/2026/10/14/business/energy-environment/trump-russia-diesel-prices.html",
+     "text": "Why Trump’s Russian Diesel Deal Is Unlikely to Lower Fuel Costs",
+     "title": "Why Trump’s Russian Diesel Deal Is Unlikely to Lower Fuel Costs",
+     "publishedAt": "2026-10-14T21:25:26.000Z",
+     "fetchedAt": "2026-10-15T16:46:45.743Z",
+     "version": 541,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_3af7725e1de82d5d"
+   ],
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
+  },
+  "2110746442231140472": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
     }
    ],
    "evidenceUsed": [
-    "n_37223b47861c40ea"
+    "n_8ffcabd8a822b601"
    ],
-   "inputHash": "9d74e8ea1ce2dfbecf468e9e4eaf41a3ba86cc66bb25c724904de5ee5f52cba1"
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
   },
-  "2110861032025444494": {
-   "contextVersion": 555,
+  "2110765110348173707": {
+   "contextVersion": 556,
    "evidenceSupplied": [
     {
-     "id": "n_8fb0ba12ce7ccf82",
+     "id": "n_3462d29873e93054",
      "publisher": "The Hill",
-     "date": "2026-10-15",
+     "date": "2026-10-16",
      "kind": "lead",
-     "url": "https://thehill.com/homenews/campaign/6151005-ossoff-georgia-republicans-do-not-want-the-president-to-come/",
-     "text": "Ossoff: Georgia Republicans ‘do not want the president to come’",
-     "title": "Ossoff: Georgia Republicans ‘do not want the president to come’",
-     "publishedAt": "2026-10-15T15:30:50.000Z",
-     "fetchedAt": "2026-10-15T16:46:45.743Z",
-     "version": 541,
+     "url": "https://thehill.com/newsletters/healthcare/6155303-senate-democrats-unveil-new-plans-for-strengthening-medicare/",
+     "text": "Senate Democrats unveil new plans for strengthening Medicare",
+     "title": "Senate Democrats unveil new plans for strengthening Medicare",
+     "publishedAt": "2026-10-16T21:57:49.000Z",
+     "fetchedAt": "2026-10-16T22:50:46.045Z",
+     "version": 556,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_7340faeea78dd325",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/podcasts/political-theater/how-sha-na-na-could-help-determine-the-house-majority/",
+     "text": "Jason Dick talks with the latest Roll Call on the Road mission crew, Mary Ellen McIntire and Tom Williams, about what they learned on their reporting trip to Pennsylvania, including interacting with candidates from Scranton to Harrisburg, as well as Sha Na Na frontman and Social Security advocate Jon “Bowzer” Bauman, who is trying to fire up voters.",
+     "title": "How Sha Na Na could help determine the House majority",
+     "publishedAt": "2026-10-15T14:37:29.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
+  },
+  "2110766914251170047": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
      "publishedAfterPost": false,
      "acquiredAfterPost": false,
      "truncated": false
     },
     {
-     "id": "n_c425e58b52c5090d",
+     "id": "n_7d23c69e914272fa",
+     "publisher": "The Hill",
+     "date": "2026-10-12",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6143968-bessent-unsure-iran-war-end/",
+     "text": "Bessent on how Iran war ends: ‘I don’t know’",
+     "title": "Bessent on how Iran war ends: ‘I don’t know’",
+     "publishedAt": "2026-10-12T21:29:46.000Z",
+     "fetchedAt": "2026-10-12T22:51:58.836Z",
+     "version": 490,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
+  },
+  "2110768222853321193": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_1e1fe792b28fae6a",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+     "text": "Iran war costing US households average of $2K each: Moody’s",
+     "title": "Iran war costing US households average of $2K each: Moody’s",
+     "publishedAt": "2026-10-13T20:38:43.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
+  },
+  "2110773883364315595": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "014709090074dcff737965342d9480e0254cd9182cc9b572a8b59da83cb8ce06"
+  },
+  "2110796374451064980": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_82bf5b4cb230565b",
+     "publisher": "Roll Call",
+     "date": "2026-10-14",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/14/social-security-benefits-set-for-a-boost-next-year/",
+     "text": "Social Security benefits will increase by 3.6 percent in 2027, a jump from the 2.8 percent cost-of-living adjustment provided this year, the Social Security Administration announced Wednesday.",
+     "title": "Social Security benefits set for a boost next year",
+     "publishedAt": "2026-10-14T12:03:34.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_843c63a99b20bc17",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/business/6147842-social-security-cola-increase-2027/",
+     "text": "Social Security COLA set to rise by 3.6 percent in 2027",
+     "title": "Social Security COLA set to rise by 3.6 percent in 2027",
+     "publishedAt": "2026-10-14T14:32:37.000Z",
+     "fetchedAt": "2026-10-14T15:07:44.044Z",
+     "version": 520,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_82bf5b4cb230565b",
+    "n_843c63a99b20bc17"
+   ],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037"
+  },
+  "2110804746353185181": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_bfb774979eb4db77",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5998073/trump-struggles-to-show-voters-hes-focused-on-the-cost-of-living",
+     "text": "MICHEL MARTIN, HOST: President Trump has been looking for ways to lower gas prices, which are much higher than before he started a war with Iran. On Friday, the Trump administration lifted sanctions against Russian diesel - sanctions that had been in place since the full-scale invasion of Ukraine.",
+     "title": "Trump struggles to show voters he's focused on the cost of living",
+     "publishedAt": "2026-10-12T08:39:21.000Z",
+     "fetchedAt": "2026-10-12T21:22:04.235Z",
+     "version": 489,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_bfb774979eb4db77"
+   ],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037"
+  },
+  "2110805458579579226": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump said on social media on Friday that he struck the deal with Russian President Vladimir Putin in a phone call in which he was expected to discuss a suspected case of plague in Russia. Instead, Trump announced that Russia will immediately supply more than 300,000 tons of diesel, followed by an additional 500,000 tons in November and 1 million tons \"immediately thereafter.\" Russia will deliver an additional 3 million tons \"within a short period of time\" after that, he wrote.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8c1e4d4a574719cd"
+   ],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037"
+  },
+  "2110821517961420947": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_1e1fe792b28fae6a",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/defense/6146031-iran-war-cost-households/",
+     "text": "Iran war costing US households average of $2K each: Moody’s",
+     "title": "Iran war costing US households average of $2K each: Moody’s",
+     "publishedAt": "2026-10-13T20:38:43.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_1e1fe792b28fae6a"
+   ],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037",
+   "quotedContext": {
+    "id": "2110070437971415307",
+    "authorId": "136300373",
+    "handle": "AaronBlake",
+    "createdAt": "2026-10-13T18:09:30.000Z",
+    "textChars": 99,
+    "textHash": "692856484f4bff96fdae04f91f95b0c70116fb77e595c3c58c5617a6a7356ef5"
+   }
+  },
+  "2110824127770591403": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601"
+   ],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037"
+  },
+  "2110830791794258362": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "46e70d41276076a71209b3b166d19239f27bfd6d51b151fcef23d5d190ca2037",
+   "quotedContext": {
+    "id": "2110588908249682400",
+    "authorId": "16635277",
+    "handle": "Acyn",
+    "createdAt": "2026-10-15T04:29:43.000Z",
+    "textChars": 135,
+    "textHash": "4d8f6dfd113cf774c1b9c8fa56c1b3a24000e795c6b80e67089e4277e5306312"
+   }
+  },
+  "2110831818023051347": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da"
+  },
+  "2110833171013198094": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da",
+   "quotedContext": {
+    "id": "2110505675839447192",
+    "authorId": "1322868572113297410",
+    "handle": "PunchbowlNews",
+    "createdAt": "2026-10-14T22:58:59.000Z",
+    "textChars": 240,
+    "textHash": "1096131ad99b95cd9c91a7e8750b38c0243c6420025ec675d006707da72e6a5b"
+   }
+  },
+  "2110843297488867799": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da"
+  },
+  "2110852463171367118": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "MICHEL MARTIN, HOST: He explicitly linked the unpopular war to the midterm elections. And this is a quote. \"We will not be attacking Iran at any time prior to the midterm elections to be held in the United States on November 3.\" Unquote. OK, why do that? Apparently, to refute reports that the White House is considering airstrikes against Iran before Election Day.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_5ce93d5305ecc41c",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/campaign/6145050-lauren-boebert-iran-war-donald-trump-midterms/",
+     "text": "Boebert: Iran war ‘detrimental on many levels’",
+     "title": "Boebert: Iran war ‘detrimental on many levels’",
+     "publishedAt": "2026-10-13T13:56:06.000Z",
+     "fetchedAt": "2026-10-13T14:35:43.461Z",
+     "version": 501,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da"
+  },
+  "2110864083516051787": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da"
+  },
+  "2110882871946723412": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_3462d29873e93054",
      "publisher": "The Hill",
      "date": "2026-10-16",
      "kind": "lead",
-     "url": "https://thehill.com/video-clips/6154181-watch-live-donald-trump-georgia-campaign-rally/",
-     "text": "Watch live: Trump takes campaign blitz to Georgia",
-     "title": "Watch live: Trump takes campaign blitz to Georgia",
-     "publishedAt": "2026-10-16T18:36:08.000Z",
-     "fetchedAt": "2026-10-16T19:56:56.033Z",
-     "version": 555,
+     "url": "https://thehill.com/newsletters/healthcare/6155303-senate-democrats-unveil-new-plans-for-strengthening-medicare/",
+     "text": "Senate Democrats unveil new plans for strengthening Medicare",
+     "title": "Senate Democrats unveil new plans for strengthening Medicare",
+     "publishedAt": "2026-10-16T21:57:49.000Z",
+     "fetchedAt": "2026-10-16T22:50:46.045Z",
+     "version": 556,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "9d74e8ea1ce2dfbecf468e9e4eaf41a3ba86cc66bb25c724904de5ee5f52cba1"
+   "inputHash": "e584a221700ef300daee17b7654beecbb8114bd9c6d04d5e05728f3691b739da"
+  },
+  "2110910427832139925": {
+   "contextVersion": 556,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6710ac7228dd26d8",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
+     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "publishedAt": "2026-10-11T16:07:40.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601",
+    "n_6710ac7228dd26d8"
+   ],
+   "inputHash": "5e9def81b243733099a0a5f384542a970084f9bdde718199dd8d2988dd294d71"
   }
  },
  "needsContext": {
   "2110696683382472977": false,
   "2110748367865200664": false,
   "2110797684827115855": false,
+  "2110769071981473963": false,
+  "2110861032025444494": false,
   "2110586361384472620": false,
   "2110592200015040795": false,
   "2110592347872673951": true,
@@ -16017,7 +16053,6 @@
   "2110717336403825140": false,
   "2110717586077843789": true,
   "2110717682815246732": false,
-  "2110718601296547850": false,
   "2110718980587758057": false,
   "2110719726418563245": false,
   "2110719880643141717": true,
@@ -16095,7 +16130,6 @@
   "2110746225821499490": false,
   "2110746337079648686": false,
   "2110746362643911044": false,
-  "2110746442231140472": false,
   "2110746548250296582": false,
   "2110746968880292199": false,
   "2110747536013357508": false,
@@ -16160,7 +16194,6 @@
   "2110764195293913198": false,
   "2110764232111427778": false,
   "2110764919331152175": false,
-  "2110765110348173707": false,
   "2110765464578142311": false,
   "2110766089433182629": false,
   "2110766109884621143": false,
@@ -16169,12 +16202,10 @@
   "2110766319021002777": false,
   "2110766334002741686": false,
   "2110766344006431085": false,
-  "2110766914251170047": false,
   "2110766938515190267": false,
   "2110766942084640945": false,
   "2110767686003081466": false,
   "2110767755037216798": false,
-  "2110768222853321193": false,
   "2110768645928296464": false,
   "2110769087156478178": false,
   "2110769581409132594": false,
@@ -16190,7 +16221,6 @@
   "2110773374427222345": true,
   "2110773542941778237": false,
   "2110773797666136453": false,
-  "2110773883364315595": false,
   "2110773936329982107": false,
   "2110773973126664671": false,
   "2110774245911584920": false,
@@ -16273,7 +16303,6 @@
   "2110795465000378479": false,
   "2110795825253437694": false,
   "2110796040899318208": false,
-  "2110796374451064980": false,
   "2110796480659304882": false,
   "2110796531658014738": false,
   "2110797013487087658": false,
@@ -16299,13 +16328,11 @@
   "2110803670090870796": false,
   "2110803813766443213": false,
   "2110804109037306334": false,
-  "2110804746353185181": false,
   "2110804765776949440": false,
   "2110804847671009729": false,
   "2110804941094707698": false,
   "2110804982773506212": false,
   "2110805222968688803": false,
-  "2110805458579579226": false,
   "2110805463277473922": false,
   "2110805527135482196": false,
   "2110805715975639210": false,
@@ -16378,7 +16405,6 @@
   "2110820177252356505": false,
   "2110821027987292610": false,
   "2110821134572666903": false,
-  "2110821517961420947": false,
   "2110821525544743258": false,
   "2110821643622977905": false,
   "2110821712296136868": false,
@@ -16395,7 +16421,6 @@
   "2110823746285994468": false,
   "2110823888221344043": false,
   "2110823920563622313": false,
-  "2110824127770591403": false,
   "2110824164047171639": false,
   "2110824444226928806": false,
   "2110824726792995070": false,
@@ -16419,16 +16444,13 @@
   "2110829490242752804": false,
   "2110829906682945837": false,
   "2110830115496075418": false,
-  "2110830791794258362": false,
   "2110809367222112670": false,
   "2110809438844235832": false,
   "2110830983624724945": false,
   "2110831076838871070": false,
-  "2110831818023051347": false,
   "2110831892929159627": false,
   "2110831917352300587": false,
   "2110832743928279236": false,
-  "2110833171013198094": false,
   "2110833578195951825": false,
   "2110834380423794810": false,
   "2110834815255633968": true,
@@ -16467,7 +16489,6 @@
   "2110842093564502527": false,
   "2110842656062353856": false,
   "2110842943749661089": false,
-  "2110843297488867799": false,
   "2110843753506435411": false,
   "2110843775153218044": false,
   "2110843975942930860": false,
@@ -16492,7 +16513,6 @@
   "2110852301065699508": false,
   "2110852308938682763": false,
   "2110852323467768118": false,
-  "2110852463171367118": false,
   "2110852715006046257": false,
   "2110853231463256411": false,
   "2110853407091175846": false,
@@ -16518,7 +16538,6 @@
   "2110861676153115133": false,
   "2110862293562949659": false,
   "2110863903303549149": false,
-  "2110864083516051787": false,
   "2110864641941270788": false,
   "2110864798279692437": false,
   "2110864921110176040": false,
@@ -16565,7 +16584,6 @@
   "2110881561029616042": false,
   "2110881799748354093": false,
   "2110882528508739824": false,
-  "2110882871946723412": false,
   "2110883003576828185": false,
   "2110883063718707566": false,
   "2110883237866115214": false,
@@ -16621,7 +16639,6 @@
   "2110909143447986685": false,
   "2110909636802953670": false,
   "2110909662803419169": false,
-  "2110910427832139925": false,
   "2110911753265496329": false,
   "2110911825634361482": false,
   "2110911962087371044": false,
@@ -16644,12 +16661,35 @@
   "2110930641701273985": false,
   "2110930985181179912": false,
   "2110931912424317397": false,
-  "2110769071981473963": false,
-  "2110861032025444494": false
+  "2110718601296547850": false,
+  "2110746442231140472": false,
+  "2110765110348173707": false,
+  "2110766914251170047": false,
+  "2110768222853321193": false,
+  "2110773883364315595": false,
+  "2110796374451064980": false,
+  "2110804746353185181": false,
+  "2110805458579579226": false,
+  "2110821517961420947": false,
+  "2110824127770591403": false,
+  "2110830791794258362": false,
+  "2110831818023051347": false,
+  "2110833171013198094": false,
+  "2110843297488867799": false,
+  "2110852463171367118": false,
+  "2110864083516051787": false,
+  "2110882871946723412": false,
+  "2110910427832139925": false
  },
  "inputBlocks": {},
- "contextVersion": 555,
+ "contextVersion": 556,
  "emerging": [
+  {
+   "label": "Ukraine Starlink access cutoff",
+   "ids": [
+    "2110769071981473963"
+   ]
+  },
   {
    "label": "ICE shooting of Wilber Garcés-Pérez / Austin field hearing",
    "ids": [
@@ -17144,9 +17184,24 @@
    ]
   },
   {
-   "label": "Ukraine Starlink access cutoff",
+   "label": "Trump's 2026 Iran war and fuel price spike",
    "ids": [
-    "2110769071981473963"
+    "2110718601296547850",
+    "2110746442231140472",
+    "2110766914251170047",
+    "2110768222853321193",
+    "2110773883364315595"
+   ]
+  },
+  {
+   "label": "Trump's war with Iran and its cost-of-living impact",
+   "ids": [
+    "2110796374451064980",
+    "2110804746353185181",
+    "2110805458579579226",
+    "2110821517961420947",
+    "2110824127770591403",
+    "2110830791794258362"
    ]
   }
  ],
@@ -17161,93 +17216,80 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2110909636802953670",
-    "2110909662803419169"
+    "2110796374451064980",
+    "2110804746353185181",
+    "2110805458579579226",
+    "2110821517961420947",
+    "2110824127770591403",
+    "2110830791794258362"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-16T01:47:38.868Z",
-    "observedAt": "2026-10-16T01:47:45.124Z",
+    "attemptedAt": "2026-10-16T23:07:10.469Z",
+    "observedAt": "2026-10-16T23:07:16.296Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110769071981473963",
-    "2110861032025444494"
+    "2110718601296547850",
+    "2110746442231140472",
+    "2110765110348173707",
+    "2110766914251170047",
+    "2110768222853321193",
+    "2110773883364315595"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-16T20:02:48.239Z",
-    "observedAt": "2026-10-16T20:02:52.517Z",
+    "attemptedAt": "2026-10-16T23:06:55.381Z",
+    "observedAt": "2026-10-16T23:07:10.442Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 2,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2110882528508739824",
-    "2110882871946723412",
-    "2110883003576828185",
-    "2110883063718707566",
-    "2110883237866115214",
-    "2110884213671051576",
-    "2110885250960441715",
-    "2110885324419371425",
-    "2110885813315625370",
-    "2110886069063254421",
-    "2110886754022740455",
-    "2110886825900314671",
-    "2110887072177254592",
-    "2110887075167846443",
-    "2110887281858863524",
-    "2110888018173153639",
-    "2110888528427278553",
-    "2110888949279526956",
-    "2110888956132835590",
-    "2110889017117950107",
-    "2110889422581379492",
-    "2110890359291068455",
-    "2110890981306290229",
-    "2110891857806778511"
+    "2110831818023051347",
+    "2110833171013198094",
+    "2110843297488867799",
+    "2110852463171367118",
+    "2110864083516051787",
+    "2110882871946723412"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-16T00:35:12.756Z",
-    "observedAt": "2026-10-16T00:35:56.773Z",
+    "attemptedAt": "2026-10-16T23:07:16.334Z",
+    "observedAt": "2026-10-16T23:07:31.068Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 24,
+    "acceptedCount": 6,
     "retryCount": 0
    }
   },
   "live_chunk-3": {
    "acceptedIds": [
-    "2110874592264716669",
-    "2110874839317905918",
-    "2110874868837167610",
-    "2110876024980611384"
+    "2110910427832139925"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T23:32:52.298Z",
-    "observedAt": "2026-10-15T23:33:01.173Z",
+    "attemptedAt": "2026-10-16T23:07:31.107Z",
+    "observedAt": "2026-10-16T23:07:32.691Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 4,
+    "acceptedCount": 1,
     "retryCount": 0
    }
   },
@@ -17340,24 +17382,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-16T20:02:48.239Z",
-   "observedAt": "2026-10-16T20:02:52.517Z",
+   "attemptedAt": "2026-10-16T23:07:31.107Z",
+   "observedAt": "2026-10-16T23:07:32.691Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-16T20:02:48.239Z",
-   "observedAt": "2026-10-16T20:02:52.517Z",
+   "attemptedAt": "2026-10-16T23:07:31.107Z",
+   "observedAt": "2026-10-16T23:07:32.691Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 1,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-16T20:02:52.606Z"
+ "updatedAt": "2026-10-16T23:07:32.753Z"
 }
