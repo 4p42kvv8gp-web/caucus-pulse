@@ -181,9 +181,23 @@
   }
  },
  "lastPollAt": "2026-10-16T03:16:44.395Z",
- "lastPollAttemptAt": "2026-10-16T03:16:43.510Z",
- "lastPollOutcome": "complete",
- "pollProgress": null,
+ "lastPollAttemptAt": "2026-10-16T04:52:07.423Z",
+ "lastPollOutcome": "request-failed",
+ "pollProgress": {
+  "listId": "1841177179872243858",
+  "baseSinceId": "2110931912424317397",
+  "newestId": "2110931912424317397",
+  "nextToken": null,
+  "startedAt": "2026-10-16T04:52:07.431Z",
+  "pages": 0,
+  "captured": 0,
+  "recoveryRequired": null,
+  "lastError": {
+   "at": "2026-10-16T04:52:07.635Z",
+   "status": 401,
+   "kind": "request-failed"
+  }
+ },
  "lastPollSuccessAt": "2026-10-16T03:16:44.053Z",
  "repostAcquisitionUsage": {
   "69ce676c7986bb897e4f6043c5f4e8d5fba09b98e8772730fc0d573721bf7a7e": {

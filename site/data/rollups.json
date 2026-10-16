@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-10-16T04:08:03.408Z",
+ "generatedAt": "2026-10-16T04:52:14.299Z",
  "lastPollAt": "2026-10-16T03:16:44.395Z",
- "lastPollAttemptAt": "2026-10-16T03:16:43.510Z",
- "lastPollOutcome": "complete",
- "captureInProgress": false,
+ "lastPollAttemptAt": "2026-10-16T04:52:07.423Z",
+ "lastPollOutcome": "request-failed",
+ "captureInProgress": true,
  "rosterMembers": 214,
  "floor": {
   "schemaVersion": 1,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-16T04:08:02.310Z"
+  "referenceAsOf": "2026-10-16T04:52:12.393Z"
  },
  "news": {
   "version": 551,
-  "items": 1198,
+  "items": 1196,
   "latestPublishedAt": "2026-10-16T03:59:00.000Z",
   "latestFetchedAt": "2026-10-16T04:07:15.763Z",
   "latest": [
@@ -3364,9 +3364,9 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-16T04:08:02.632Z",
+   "asOf": "2026-10-16T04:52:12.961Z",
    "windowDays": 14,
-   "windowStart": "2026-10-02T04:08:02.632Z",
+   "windowStart": "2026-10-02T04:52:12.961Z",
    "eligibleItems": 1550,
    "withExcerpts": 143,
    "headlineOrSummary": 1407,
@@ -3546,9 +3546,9 @@
  },
  "classification": {
   "through": "2026-10-15",
-  "capturedIn24h": 620,
-  "classifiedIn24h": 620,
-  "taggedIn24h": 578,
+  "capturedIn24h": 617,
+  "classifiedIn24h": 617,
+  "taggedIn24h": 576,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
@@ -3557,8 +3557,8 @@
    "hasCurrentFailure": false,
    "lastAttemptAt": "2026-10-16T03:16:51.867Z",
    "lastSuccessAt": "2026-10-16T03:17:30.984Z",
-   "capturedIn24h": 620,
-   "classifiedIn24h": 620,
+   "capturedIn24h": 617,
+   "classifiedIn24h": 617,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,22 +6874,22 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
-    4,
-    20,
-    138,
-    148,
-    142,
-    95,
-    26,
-    6,
+    3,
+    3,
+    53,
+    131,
+    146,
+    150,
+    68,
+    24,
+    3,
     1,
-    12,
-    135,
-    171,
-    162,
-    101,
-    32
+    37,
+    148,
+    177,
+    141,
+    88,
+    22
    ]
   },
   "CPC": {
@@ -6942,22 +6942,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
-    1,
-    10,
-    59,
-    66,
-    59,
-    43,
-    10,
-    2,
     0,
-    2,
-    45,
-    80,
+    1,
+    23,
+    58,
+    63,
     69,
-    48,
-    17
+    26,
+    10,
+    0,
+    0,
+    7,
+    60,
+    81,
+    60,
+    40,
+    13
    ]
   },
   "NewDem": {
@@ -7010,22 +7010,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
     3,
-    12,
-    86,
-    79,
-    84,
-    54,
-    16,
-    4,
+    2,
+    33,
+    78,
+    80,
+    85,
+    43,
+    13,
+    3,
     0,
-    7,
-    97,
+    28,
     99,
-    86,
-    52,
-    18
+    96,
+    79,
+    44,
+    13
    ]
   },
   "CBC": {
@@ -7078,22 +7078,22 @@
     "engDelta": 0
    },
    "curve48": [
-    2,
     3,
-    7,
+    2,
+    13,
     30,
-    32,
-    25,
-    17,
-    7,
+    29,
+    27,
+    14,
+    5,
     2,
     1,
-    6,
-    22,
-    31,
-    41,
+    7,
+    29,
+    35,
+    34,
     20,
-    12
+    7
    ]
   },
   "CHC": {
@@ -7148,20 +7148,20 @@
    "curve48": [
     0,
     1,
+    12,
+    17,
+    29,
+    28,
+    12,
     2,
-    25,
-    25,
-    26,
-    19,
-    3,
     0,
     0,
-    1,
-    18,
-    34,
-    25,
+    5,
     24,
-    5
+    31,
+    26,
+    17,
+    4
    ]
   },
   "CAPAC": {
@@ -7216,19 +7216,19 @@
    "curve48": [
     0,
     0,
-    1,
-    9,
-    15,
+    2,
     11,
-    12,
-    3,
-    1,
-    0,
-    1,
-    11,
+    13,
     14,
-    18,
-    9,
+    8,
+    4,
+    0,
+    0,
+    2,
+    13,
+    15,
+    15,
+    8,
     1
    ]
   }
@@ -7322,7 +7322,7 @@
     119,
     0
    ],
-   "d": 8,
+   "d": 7,
    "mAvg": 64,
    "epAvg": 81,
    "momentum": {
@@ -7331,7 +7331,7 @@
      "volume",
      "caucus spread"
     ],
-    "volume": 0.58,
+    "volume": 0.5700000000000001,
     "accel": 0,
     "adoption": 0.5625,
     "eff": 3.3,
@@ -10922,16 +10922,16 @@
     97,
     0
    ],
-   "d": 25,
+   "d": 24,
    "mAvg": 49,
    "epAvg": 178,
    "momentum": {
-    "score": 51,
+    "score": 50,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 0.75,
+    "volume": 0.74,
     "accel": 0,
     "adoption": 0.7040816326530612,
     "eff": 3.7,
@@ -16520,19 +16520,19 @@
     33,
     0
    ],
-   "d": 50,
+   "d": 45,
    "mAvg": 18.2,
    "epAvg": 65,
    "momentum": {
-    "score": 64,
+    "score": 62,
     "drivers": [
      "volume",
      "adoption"
     ],
-    "volume": 1,
+    "volume": 0.95,
     "accel": 0,
     "adoption": 0.8761467889908257,
-    "eff": 3.6,
+    "eff": 3.7,
     "engLift": 0
    },
    "subs": [
@@ -20799,9 +20799,9 @@
     1,
     1,
     1,
-    1,
     3,
     6,
+    7,
     7,
     7
    ],
@@ -21232,9 +21232,9 @@
    "since": "2026-10-15T22:48:50.000Z",
    "shape": [
     5,
-    8,
-    15,
+    9,
     17,
+    18,
     18,
     18,
     18,
@@ -21415,9 +21415,9 @@
    "since": "2026-10-15T21:07:13.000Z",
    "shape": [
     2,
-    3,
     5,
-    8,
+    5,
+    10,
     10,
     10,
     10,
@@ -21689,8 +21689,8 @@
    "shape": [
     1,
     4,
-    10,
-    15,
+    12,
+    16,
     20,
     24,
     24,
@@ -21847,7 +21847,7 @@
     1,
     1,
     1,
-    6,
+    7,
     7
    ],
    "sample": "Hegseth is unfit.\n\nThe day Congress is back, we will force a vote to pass @RepThomasMassie’s impeachment resolution and remove him. https://t.co/ya3M7tlPJy",
@@ -22583,7 +22583,7 @@
     2,
     2,
     2,
-    2,
+    4,
     4,
     4,
     4
