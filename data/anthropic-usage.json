@@ -23803,9 +23803,17 @@
     "batch": true,
     "customId": "2026-10-15_chunk-0",
     "reservedUsd": 0.21982,
-    "status": "reserved",
+    "status": "settled",
     "createdAt": "2026-10-16T12:35:13.208Z",
-    "batchId": "msgbatch_01MmDicGg4C7jDV8J5XpNwvW"
+    "batchId": "msgbatch_01MmDicGg4C7jDV8J5XpNwvW",
+    "usage": {
+     "calls": 1,
+     "input": 2869,
+     "output": 428,
+     "cacheRead": 0,
+     "cacheWrite": 5294
+    },
+    "completedAt": "2026-10-16T13:53:35.759Z"
    }
   }
  }
