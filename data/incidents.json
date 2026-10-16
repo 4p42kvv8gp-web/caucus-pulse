@@ -1,6 +1,138 @@
 {
- "generatedAt": "2026-10-16T01:47:45.319Z",
+ "generatedAt": "2026-10-16T03:17:31.207Z",
  "incidents": [
+  {
+   "id": "los-angeles-county-ca--wildfire--brysonfire--2026-10-16",
+   "kind": "wildfire",
+   "name": "#BrysonFire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 2,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": true,
+    "repeatedSourceGroups": [],
+    "note": "2 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Los Angeles County, CA · CA-32",
+   "placeRaw": "Los Angeles County, CA",
+   "district": "CA-32",
+   "districtMatch": true,
+   "handle": "@BradSherman",
+   "member": "Brad Sherman",
+   "since": "2026-10-16T03:07:38.000Z",
+   "last": "2026-10-16T03:09:00.000Z",
+   "updates": 2,
+   "engN": 42,
+   "amplifiers": 0,
+   "others": [],
+   "title": "#BrysonFire · Los Angeles County, CA",
+   "evidence": {
+    "span": "RT @NWSLosAngeles: Evacuation orders in effect for the #Brysonfire, stay safe everyone! Winds are forecast to increase overnight with gusts…",
+    "exact": false,
+    "start": 0,
+    "end": 140,
+    "matched": {
+     "kind": true,
+     "place": false
+    },
+    "sourceId": "2110930641701273985",
+    "url": "https://x.com/i/web/status/2110930641701273985"
+   },
+   "timeline": [
+    {
+     "id": "2110930641701273985",
+     "sourceId": "2110930641701273985",
+     "url": "https://x.com/i/web/status/2110930641701273985",
+     "authorId": "30216513",
+     "personId": "member:brad sherman",
+     "referenceIds": [
+      "2110913372036231665"
+     ],
+     "time": "2026-10-16T03:07:38.000Z",
+     "who": "@BradSherman",
+     "tag": "repost",
+     "text": "RT @NWSLosAngeles: Evacuation orders in effect for the #Brysonfire, stay safe everyone! Winds are forecast to increase overnight with gusts…",
+     "engN": 37,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "#BrysonFire"
+     },
+     "evidence": {
+      "span": "RT @NWSLosAngeles: Evacuation orders in effect for the #Brysonfire, stay safe everyone! Winds are forecast to increase overnight with gusts…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2110930641701273985",
+      "url": "https://x.com/i/web/status/2110930641701273985"
+     }
+    },
+    {
+     "id": "2110930985181179912",
+     "sourceId": "2110930985181179912",
+     "url": "https://x.com/i/web/status/2110930985181179912",
+     "authorId": "30216513",
+     "personId": "member:brad sherman",
+     "referenceIds": [
+      "2110900641942163562"
+     ],
+     "time": "2026-10-16T03:09:00.000Z",
+     "who": "@BradSherman",
+     "tag": "repost",
+     "text": "RT @LACoFDPIO: The #BrysonFire is now approximately 80 acres. \n\nThere is an evacuation order for zone KAN-U017\n\nThere are evacuations warni…",
+     "engN": 5,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Los Angeles County, CA",
+      "name": "#BrysonFire"
+     },
+     "evidence": {
+      "span": "RT @LACoFDPIO: The #BrysonFire is now approximately 80 acres. \n\nThere is an evacuation order for zone KAN-U017\n\nThere are evacuations warni…",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2110930985181179912",
+      "url": "https://x.com/i/web/status/2110930985181179912"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2110930641701273985",
+    "2110930985181179912"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2110930641701273985",
+     "2110930985181179912"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "oceanside-ca--wildfire--hendersonfire--2026-10-16",
    "kind": "wildfire",

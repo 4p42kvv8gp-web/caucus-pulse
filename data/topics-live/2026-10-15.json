@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-16T01:47:45.145Z",
+ "classifiedAt": "2026-10-16T03:17:31.012Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -4593,6 +4593,162 @@
     "public-safety",
     "gun-violence"
    ]
+  ],
+  "2110910427832139925": [
+   [
+    "foreign-policy",
+    "ukraine-russia"
+   ],
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2110911753265496329": [
+   [
+    "labor",
+    "unions"
+   ],
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110911825634361482": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ],
+   [
+    "healthcare",
+    "medicaid"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110911962087371044": [],
+  "2110912576531886334": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110912845143838836": [],
+  "2110912945588674576": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2110913733367074879": [
+   [
+    "education",
+    "higher-ed"
+   ]
+  ],
+  "2110914057968468324": [
+   [
+    "constituent-services",
+    null
+   ]
+  ],
+  "2110914277360202080": [
+   [
+    "democracy",
+    "voting-rights"
+   ]
+  ],
+  "2110914713940865448": [
+   [
+    "economy",
+    "taxes"
+   ],
+   [
+    "tech",
+    "big-tech"
+   ]
+  ],
+  "2110915254096183478": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110919753065754628": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ],
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110919851430514941": [
+   [
+    "foreign-policy",
+    "middle-east"
+   ]
+  ],
+  "2110920733631389967": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110921913954410779": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110923675310428179": [
+   [
+    "democracy",
+    "courts-doj"
+   ],
+   [
+    "democracy",
+    "executive-overreach"
+   ]
+  ],
+  "2110926515634622845": [
+   [
+    "economy",
+    "jobs-wages"
+   ]
+  ],
+  "2110926759415742930": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110928815677456783": [
+   [
+    "education",
+    "public-schools"
+   ]
+  ],
+  "2110930641701273985": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2110930985181179912": [
+   [
+    "climate",
+    "disasters"
+   ]
+  ],
+  "2110931912424317397": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
   ]
  },
  "incidents": {
@@ -4615,6 +4771,16 @@
    "kind": "wildfire",
    "place": "Oceanside, CA",
    "name": "Henderson Fire"
+  },
+  "2110930641701273985": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "#BrysonFire"
+  },
+  "2110930985181179912": {
+   "kind": "wildfire",
+   "place": "Los Angeles County, CA",
+   "name": "#BrysonFire"
   }
  },
  "provenance": {
@@ -15008,6 +15174,397 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "e460d7dfcd77eca073f7469a5d5166d803510eaef6c9591528f1f7c94d911aea"
+  },
+  "2110910427832139925": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ffcabd8a822b601",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5995532/trumps-war-in-iran-in-spotlight-ahead-of-midterms",
+     "text": "STEVE INSKEEP, HOST: President Trump made an announcement about the war in Iran on social media.",
+     "title": "Trump's War in Iran in spotlight ahead of midterms",
+     "publishedAt": "2026-10-09T08:23:40.000Z",
+     "fetchedAt": "2026-10-09T23:19:57.746Z",
+     "version": 439,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_6710ac7228dd26d8",
+     "publisher": "The Hill",
+     "date": "2026-10-11",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/",
+     "text": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "title": "Zelensky says critics blaming him for Russia-Ukraine war ‘can’t find a key how to stop Putin’",
+     "publishedAt": "2026-10-11T16:07:40.000Z",
+     "fetchedAt": "2026-10-12T00:21:45.637Z",
+     "version": 477,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_8ffcabd8a822b601",
+    "n_6710ac7228dd26d8"
+   ],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110911753265496329": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110839445360382155",
+    "fingerprint": "a66e0feda1b0876916c29b0e4ce870341ae136c4678de5581905353b0b9646a9"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110839445360382155",
+    "fingerprint": "a66e0feda1b0876916c29b0e4ce870341ae136c4678de5581905353b0b9646a9"
+   }
+  },
+  "2110911825634361482": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110773599594291206",
+    "fingerprint": "318405706ae739ba8f40112754abc00a382d7505dd0454d6392137801968a22c"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110773599594291206",
+    "fingerprint": "318405706ae739ba8f40112754abc00a382d7505dd0454d6392137801968a22c"
+   }
+  },
+  "2110911962087371044": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110881317625774294",
+    "fingerprint": "cac9bcbbba6fc8c802089157eb02c2bb79f05af34d49a6f47e5fe6c4f0ae369b"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110881317625774294",
+    "fingerprint": "cac9bcbbba6fc8c802089157eb02c2bb79f05af34d49a6f47e5fe6c4f0ae369b"
+   }
+  },
+  "2110912576531886334": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110912845143838836": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110912945588674576": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110913733367074879": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110914057968468324": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110914277360202080": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110914713940865448": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110915254096183478": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110919753065754628": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_569962f217afc77d",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149885-palatine-man-charged-in-alleged-mass-shooting-plot-targeting-hindu-place-of-worship/",
+     "text": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "title": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "publishedAt": "2026-10-15T10:46:15.000Z",
+     "fetchedAt": "2026-10-15T13:01:27.905Z",
+     "version": 537,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_569962f217afc77d",
+    "n_67af9d3a74d0366c"
+   ],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "quotedContext": {
+    "id": "2110730618581520749",
+    "authorId": "814179031956488192",
+    "handle": "CongressmanRaja",
+    "createdAt": "2026-10-15T13:52:49.000Z",
+    "textChars": 293,
+    "textHash": "bbb64743954a81aa78589613b07e06da65d2c8eb9e5c30b7fb5764a6d0912168"
+   }
+  },
+  "2110919851430514941": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_9b62d78cd64eba8a",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://rollcall.com/2026/10/15/calling-off-livestream-of-execution-was-right-call-members-say/",
+     "text": "Calling off livestream of execution was right call, members say",
+     "title": "Calling off livestream of execution was right call, members say",
+     "publishedAt": "2026-10-15T15:48:11.000Z",
+     "fetchedAt": "2026-10-15T21:17:33.430Z",
+     "version": 545,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "quotedContext": {
+    "id": "2110873631828164779",
+    "authorId": "15987296",
+    "handle": "AIPAC",
+    "createdAt": "2026-10-15T23:21:06.000Z",
+    "textChars": 77,
+    "textHash": "eaee48d2e6989dfeb692cd4ded4b51377811f7b9cfbe6ac500976542d972940d"
+   }
+  },
+  "2110920733631389967": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_7e4c74ab52d877ac",
+     "publisher": "The Hill",
+     "date": "2026-10-16",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6152592-bend-oregon-elementary-school-shooting/",
+     "text": "5 dead, including suspect, after Oregon elementary school shooting",
+     "title": "5 dead, including suspect, after Oregon elementary school shooting",
+     "publishedAt": "2026-10-16T01:02:04.000Z",
+     "fetchedAt": "2026-10-16T02:32:49.183Z",
+     "version": 550,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7e4c74ab52d877ac"
+   ],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "quotedContext": {
+    "id": "2110857432373117166",
+    "authorId": "14173315",
+    "handle": "NBCNews",
+    "createdAt": "2026-10-15T22:16:44.000Z",
+    "textChars": 187,
+    "textHash": "00c1605169a731d228a608f3e8c6da3c530b9fa54d3bb5531ae51633d4f2835a"
+   }
+  },
+  "2110921913954410779": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_7e4c74ab52d877ac",
+     "publisher": "The Hill",
+     "date": "2026-10-16",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6152592-bend-oregon-elementary-school-shooting/",
+     "text": "5 dead, including suspect, after Oregon elementary school shooting",
+     "title": "5 dead, including suspect, after Oregon elementary school shooting",
+     "publishedAt": "2026-10-16T01:02:04.000Z",
+     "fetchedAt": "2026-10-16T02:32:49.183Z",
+     "version": 550,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7e4c74ab52d877ac"
+   ],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110923675310428179": {
+   "contextVersion": 550,
+   "evidenceSupplied": [
+    {
+     "id": "n_58d142c1636704c9",
+     "publisher": "The New York Times",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/13/us/politics/justice-dept-ilhan-omar-subpoenas.html",
+     "text": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
+     "title": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
+     "publishedAt": "2026-10-14T18:57:28.000Z",
+     "fetchedAt": "2026-10-14T19:22:03.579Z",
+     "version": 524,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_3bfc59fbb13b8a5a",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6003857/suspicious-mailings-election-congressional-offices",
+     "text": "The FBI and U.S. Postal Inspection Service are looking into a series of suspicious mailings sent to state election officials and congressional offices. Officials say some of the mailings contained a powdery white substance.",
+     "title": "Suspicious mailings to election officials, congressional offices under investigation",
+     "publishedAt": "2026-10-15T19:54:15.000Z",
+     "fetchedAt": "2026-10-15T21:17:33.430Z",
+     "version": 545,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_58d142c1636704c9"
+   ],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "quotedContext": {
+    "id": "2110892251534565586",
+    "authorId": "32871086",
+    "handle": "kylegriffin1",
+    "createdAt": "2026-10-16T00:35:05.000Z",
+    "textChars": 237,
+    "textHash": "e08d9ccdad6dd67f33642ccdb6c1338e4eee25f27251aa4817c25d2a6ced1988"
+   }
+  },
+  "2110926515634622845": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110926759415742930": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110928815677456783": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a"
+  },
+  "2110930641701273985": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110913372036231665",
+    "fingerprint": "999b103af5433aafca1ba490489815d1e355a37b1092521db9befe6cd74fe147"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110913372036231665",
+    "fingerprint": "999b103af5433aafca1ba490489815d1e355a37b1092521db9befe6cd74fe147"
+   }
+  },
+  "2110930985181179912": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110900641942163562",
+    "fingerprint": "761320c656d26ca2cd6d0da043d811e1f812187ddb9d50489528e242b1d9f4db"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110900641942163562",
+    "fingerprint": "761320c656d26ca2cd6d0da043d811e1f812187ddb9d50489528e242b1d9f4db"
+   }
+  },
+  "2110931912424317397": {
+   "contextVersion": 550,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "d3f91dd16deeb117f966cd424c3447ccfc2567d0f67917eb4ae17b9529dd2d4a",
+   "quotedContext": {
+    "id": "2110894691730227529",
+    "authorId": "51241574",
+    "handle": "AP",
+    "createdAt": "2026-10-16T00:44:47.000Z",
+    "textChars": 139,
+    "textHash": "6763885ec883e4cc81c5c61649da3bdb79018fe625a2c88817143d4a05b118ce"
+   }
   }
  },
  "needsContext": {
@@ -15636,10 +16193,33 @@
   "2110908902816817580": false,
   "2110909143447986685": false,
   "2110909636802953670": false,
-  "2110909662803419169": false
+  "2110909662803419169": false,
+  "2110910427832139925": false,
+  "2110911753265496329": false,
+  "2110911825634361482": false,
+  "2110911962087371044": false,
+  "2110912576531886334": false,
+  "2110912845143838836": true,
+  "2110912945588674576": false,
+  "2110913733367074879": false,
+  "2110914057968468324": false,
+  "2110914277360202080": false,
+  "2110914713940865448": false,
+  "2110915254096183478": false,
+  "2110919753065754628": false,
+  "2110919851430514941": false,
+  "2110920733631389967": false,
+  "2110921913954410779": false,
+  "2110923675310428179": false,
+  "2110926515634622845": false,
+  "2110926759415742930": false,
+  "2110928815677456783": false,
+  "2110930641701273985": false,
+  "2110930985181179912": false,
+  "2110931912424317397": false
  },
  "inputBlocks": {},
- "contextVersion": 549,
+ "contextVersion": 550,
  "emerging": [
   {
    "label": "ICE shooting of Wilber Garcés-Pérez in Texas",
@@ -16043,7 +16623,8 @@
    "label": "Aurora, IL Hindu temple mass shooting plot",
    "ids": [
     "2110862293562949659",
-    "2110909636802953670"
+    "2110909636802953670",
+    "2110919753065754628"
    ]
   },
   {
@@ -16092,7 +16673,13 @@
    "label": "Bend, Oregon elementary school shooting",
    "ids": [
     "2110878803081802171",
-    "2110880133506822332"
+    "2110880133506822332",
+    "2110912576531886334",
+    "2110915254096183478",
+    "2110920733631389967",
+    "2110921913954410779",
+    "2110926759415742930",
+    "2110931912424317397"
    ]
   },
   {
@@ -16149,6 +16736,19 @@
    "ids": [
     "2110909662803419169"
    ]
+  },
+  {
+   "label": "Bryson Fire (Los Angeles County)",
+   "ids": [
+    "2110930641701273985",
+    "2110930985181179912"
+   ]
+  },
+  {
+   "label": "DOJ investigation of Rep. Ilhan Omar",
+   "ids": [
+    "2110923675310428179"
+   ]
   }
  ],
  "unclassified": [],
@@ -16179,47 +16779,39 @@
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110892516354740715",
-    "2110892605190136174",
-    "2110892608075845768",
-    "2110892696097181841",
-    "2110893129637216334",
-    "2110893194174984407",
-    "2110893199124578655",
-    "2110894051796865159",
-    "2110894233515123173",
-    "2110894594774737291",
-    "2110894826392580524",
-    "2110895297174077876",
-    "2110896691503362435",
-    "2110896763917730082",
-    "2110897077874311323",
-    "2110897090713018648",
-    "2110897438923858379",
-    "2110897571291947036",
-    "2110898320835260649",
-    "2110898540880990502",
-    "2110898810775900279",
-    "2110899171754438883",
-    "2110899443054821747",
-    "2110900203620581631",
-    "2110901103328215139",
-    "2110902344720548347",
-    "2110903855412306164",
-    "2110907674514931818",
-    "2110908865705574822",
-    "2110908902816817580",
-    "2110909143447986685"
+    "2110910427832139925",
+    "2110911753265496329",
+    "2110911825634361482",
+    "2110911962087371044",
+    "2110912576531886334",
+    "2110912845143838836",
+    "2110912945588674576",
+    "2110913733367074879",
+    "2110914057968468324",
+    "2110914277360202080",
+    "2110914713940865448",
+    "2110915254096183478",
+    "2110919753065754628",
+    "2110919851430514941",
+    "2110920733631389967",
+    "2110921913954410779",
+    "2110923675310428179",
+    "2110926515634622845",
+    "2110926759415742930",
+    "2110928815677456783",
+    "2110930641701273985",
+    "2110930985181179912",
+    "2110931912424317397"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-16T01:46:42.873Z",
-    "observedAt": "2026-10-16T01:47:38.849Z",
+    "attemptedAt": "2026-10-16T03:16:51.867Z",
+    "observedAt": "2026-10-16T03:17:30.984Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 31,
+    "acceptedCount": 23,
     "retryCount": 0
    }
   },
@@ -16370,24 +16962,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-16T01:47:38.868Z",
-   "observedAt": "2026-10-16T01:47:45.124Z",
+   "attemptedAt": "2026-10-16T03:16:51.867Z",
+   "observedAt": "2026-10-16T03:17:30.984Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 23,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-16T01:47:38.868Z",
-   "observedAt": "2026-10-16T01:47:45.124Z",
+   "attemptedAt": "2026-10-16T03:16:51.867Z",
+   "observedAt": "2026-10-16T03:17:30.984Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 2,
+   "acceptedCount": 23,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-16T01:47:45.151Z"
+ "updatedAt": "2026-10-16T03:17:31.018Z"
 }
