@@ -1,6 +1,103 @@
 {
- "generatedAt": "2026-10-16T00:35:57.017Z",
+ "generatedAt": "2026-10-16T01:47:45.319Z",
  "incidents": [
+  {
+   "id": "oceanside-ca--wildfire--hendersonfire--2026-10-16",
+   "kind": "wildfire",
+   "name": "Henderson Fire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 1,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": false,
+    "repeatedSourceGroups": [],
+    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Oceanside, CA · CA-49",
+   "placeRaw": "Oceanside, CA",
+   "district": "CA-49",
+   "districtMatch": true,
+   "handle": "@RepMikeLevin",
+   "member": "Mike Levin",
+   "since": "2026-10-16T01:06:41.000Z",
+   "last": "2026-10-16T01:06:41.000Z",
+   "updates": 1,
+   "engN": 15,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Henderson Fire · Oceanside, CA",
+   "evidence": {
+    "span": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY UPDATE | 10/15/26 – 6:00 PM\n\n🔥 HENDERSON FIRE",
+    "exact": true,
+    "start": 0,
+    "end": 85,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2110900203620581631",
+    "url": "https://x.com/i/web/status/2110900203620581631"
+   },
+   "timeline": [
+    {
+     "id": "2110900203620581631",
+     "sourceId": "2110900203620581631",
+     "url": "https://x.com/i/web/status/2110900203620581631",
+     "authorId": "1072134139560620033",
+     "personId": "member:mike levin",
+     "referenceIds": [
+      "2110899380589146145"
+     ],
+     "time": "2026-10-16T01:06:41.000Z",
+     "who": "@RepMikeLevin",
+     "tag": "repost",
+     "text": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY UPDATE | 10/15/26 – 6:00 PM\n\n🔥 HENDERSON FIRE\n\n✅ ALL LANES OF I-5 ARE OPEN IN BOTH DIRECTIONS!\n\n⚠️ Mo…",
+     "engN": 15,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Oceanside, CA",
+      "name": "Henderson Fire"
+     },
+     "evidence": {
+      "span": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY UPDATE | 10/15/26 – 6:00 PM\n\n🔥 HENDERSON FIRE",
+      "exact": true,
+      "start": 0,
+      "end": 85,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2110900203620581631",
+      "url": "https://x.com/i/web/status/2110900203620581631"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2110900203620581631"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2110900203620581631"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "camp-pendleton-ca--wildfire--hendersonfire--2026-10-15",
    "kind": "wildfire",
