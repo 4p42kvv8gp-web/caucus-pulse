@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-16T11:31:45.465Z",
+ "classifiedAt": "2026-10-16T16:59:35.905Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -746,11 +746,11 @@
   "2110748367865200664": [
    [
     "congress-politics",
-    "town-halls"
+    "elections-2026"
    ],
    [
     "congress-politics",
-    "elections-2026"
+    "town-halls"
    ],
    [
     "economy",
@@ -9289,51 +9289,6 @@
    "evidenceUsed": [],
    "inputHash": "1b2ffddac2d6bf69f7fe87b6022f182d0b400c108e099f406d772b92fde04fc7"
   },
-  "2110797684827115855": {
-   "contextVersion": 552,
-   "evidenceSupplied": [
-    {
-     "id": "n_4641a91ce6a48e2d",
-     "publisher": "The Hill",
-     "date": "2026-10-13",
-     "kind": "lead",
-     "url": "https://thehill.com/policy/healthcare/6146555-medicare-all-support-midterm-elections/",
-     "text": "Poll: 43 percent support ‘Medicare for all’",
-     "title": "Poll: 43 percent support ‘Medicare for all’",
-     "publishedAt": "2026-10-13T21:27:07.000Z",
-     "fetchedAt": "2026-10-13T22:17:20.862Z",
-     "version": 507,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_4df050734ccaaa5b",
-     "publisher": "NPR",
-     "date": "2026-10-15",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/15/nx-s1-6002957/aca-fraud-trump-health-insurance",
-     "text": "Not all of those kicked off were fraudulently enrolled, KFF Health News has learned. Insurance industry sources said the Centers for Medicare & Medicaid Services has reinstated a small number of people whose coverage should not have been canceled. More could follow in the coming weeks if enrollees discover they are uninsured when they go to use their coverage.",
-     "title": "After booting 760K off ACA health plans, the Trump administration adds some people back",
-     "publishedAt": "2026-10-15T11:06:21.000Z",
-     "fetchedAt": "2026-10-15T11:31:52.066Z",
-     "version": 536,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "1b2ffddac2d6bf69f7fe87b6022f182d0b400c108e099f406d772b92fde04fc7",
-   "quotedContext": {
-    "id": "2110695788540010526",
-    "authorId": "246939630",
-    "handle": "shannonrwatts",
-    "createdAt": "2026-10-15T11:34:25.000Z",
-    "textChars": 656,
-    "textHash": "83863f32310f9fa754387a33750941ca38b0e1945c9af72b727034e8e5bfbc85"
-   }
-  },
   "2110798104731484405": {
    "contextVersion": 552,
    "evidenceSupplied": [
@@ -13182,6 +13137,43 @@
     "textHash": "bbb64743954a81aa78589613b07e06da65d2c8eb9e5c30b7fb5764a6d0912168"
    }
   },
+  "2110851978893152604": {
+   "contextVersion": 553,
+   "evidenceSupplied": [
+    {
+     "id": "n_14cf610555b1c814",
+     "publisher": "NPR",
+     "date": "2026-10-16",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/16/g-s1-148373/up-first-newsletter-bend-oregon-school-shooting-california-doj-voters-presidential-papers",
+     "text": "The Justice Department is suing California to stop the state from counting ballots that the government claims are from noncitizens. Three weeks before Election Day, the DOJ provided a flash drive containing the names of 20,000 people it suspected of being noncitizens on California's voter rolls to Los Angeles County's top voting official. The DOJ gave him 48 hours to investigate the names or face a lawsuit, which was filed yesterday.",
+     "title": "Teen kills 4 at Oregon school. And, DOJ sues California over alleged noncitizens",
+     "publishedAt": "2026-10-16T11:03:57.000Z",
+     "fetchedAt": "2026-10-16T11:21:35.788Z",
+     "version": 553,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_63f75e3baaff2edf",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/doj-sues-california-alleging-noncitizen-ballots/",
+     "text": "The Trump administration is seeking to stop the counting of some votes in California through a federal lawsuit filed Thursday, arguing that more than 20,000 voters in the state may not be citizens.",
+     "title": "DOJ sues California over mail ballots, alleging they were sent to noncitizens",
+     "publishedAt": "2026-10-15T18:08:35.000Z",
+     "fetchedAt": "2026-10-15T22:47:02.682Z",
+     "version": 547,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "9eab3e930acca2804577e4f4ac1c7b0f00b351f3f1a5cb4a064e75af601aaf4d"
+  },
   "2110852301065699508": {
    "contextVersion": 552,
    "evidenceSupplied": [
@@ -15878,7 +15870,7 @@
    }
   },
   "2110696683382472977": {
-   "contextVersion": 553,
+   "contextVersion": 554,
    "evidenceSupplied": [
     {
      "id": "n_cc06db2e413859e2",
@@ -15912,7 +15904,7 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "9eab3e930acca2804577e4f4ac1c7b0f00b351f3f1a5cb4a064e75af601aaf4d",
+   "inputHash": "9feaf979b5d0472ce2d31ecb1abe76c79d4eaf8b2df413649950eada109e5950",
    "quotedContext": {
     "id": "2110546418117103727",
     "authorId": "1922375842082037760",
@@ -15923,7 +15915,7 @@
    }
   },
   "2110748367865200664": {
-   "contextVersion": 553,
+   "contextVersion": 554,
    "evidenceSupplied": [
     {
      "id": "n_a9a12e1bd2acc381",
@@ -15932,10 +15924,10 @@
      "kind": "report",
      "url": "https://www.npr.org/2026/10/16/nx-s1-5993835/gen-z-trump-voting-support",
      "text": "The conversation was conducted virtually by Navigator Research , a left-leaning polling group. Participants ranged in age from 20 to 29 and spanned five states: Florida, Mississippi, Ohio, Texas and South Carolina — places Trump won by double digits in the last election. Two of those states, Texas and Ohio , are home to competitive races that could be key to control of the Senate .",
-     "title": "Why some Gen Z voters who backed Trump now regret their decision",
+     "title": "'Everything got worse': Gen Z express frustration, regret after Trump vote",
      "publishedAt": "2026-10-16T09:00:00.000Z",
-     "fetchedAt": "2026-10-16T11:21:35.788Z",
-     "version": 553,
+     "fetchedAt": "2026-10-16T16:37:42.911Z",
+     "version": 554,
      "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
@@ -15957,44 +15949,52 @@
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "9eab3e930acca2804577e4f4ac1c7b0f00b351f3f1a5cb4a064e75af601aaf4d"
+   "inputHash": "9feaf979b5d0472ce2d31ecb1abe76c79d4eaf8b2df413649950eada109e5950"
   },
-  "2110851978893152604": {
-   "contextVersion": 553,
+  "2110797684827115855": {
+   "contextVersion": 554,
    "evidenceSupplied": [
     {
-     "id": "n_14cf610555b1c814",
-     "publisher": "NPR",
-     "date": "2026-10-16",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/16/g-s1-148373/up-first-newsletter-bend-oregon-school-shooting-california-doj-voters-presidential-papers",
-     "text": "The Justice Department is suing California to stop the state from counting ballots that the government claims are from noncitizens. Three weeks before Election Day, the DOJ provided a flash drive containing the names of 20,000 people it suspected of being noncitizens on California's voter rolls to Los Angeles County's top voting official. The DOJ gave him 48 hours to investigate the names or face a lawsuit, which was filed yesterday.",
-     "title": "Teen kills 4 at Oregon school. And, DOJ sues California over alleged noncitizens",
-     "publishedAt": "2026-10-16T11:03:57.000Z",
-     "fetchedAt": "2026-10-16T11:21:35.788Z",
-     "version": 553,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
+     "id": "n_4641a91ce6a48e2d",
+     "publisher": "The Hill",
+     "date": "2026-10-13",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/healthcare/6146555-medicare-all-support-midterm-elections/",
+     "text": "Poll: 43 percent support ‘Medicare for all’",
+     "title": "Poll: 43 percent support ‘Medicare for all’",
+     "publishedAt": "2026-10-13T21:27:07.000Z",
+     "fetchedAt": "2026-10-13T22:17:20.862Z",
+     "version": 507,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
      "truncated": false
     },
     {
-     "id": "n_63f75e3baaff2edf",
-     "publisher": "Roll Call",
-     "date": "2026-10-15",
+     "id": "n_3aa553f998bfc1a7",
+     "publisher": "NPR",
+     "date": "2026-10-16",
      "kind": "report",
-     "url": "https://rollcall.com/2026/10/15/doj-sues-california-alleging-noncitizen-ballots/",
-     "text": "The Trump administration is seeking to stop the counting of some votes in California through a federal lawsuit filed Thursday, arguing that more than 20,000 voters in the state may not be citizens.",
-     "title": "DOJ sues California over mail ballots, alleging they were sent to noncitizens",
-     "publishedAt": "2026-10-15T18:08:35.000Z",
-     "fetchedAt": "2026-10-15T22:47:02.682Z",
-     "version": 547,
-     "publishedAfterPost": false,
+     "url": "https://www.npr.org/2026/10/16/nx-s1-6004838/sally-rooney-books-uk-palestinian-action-support",
+     "text": "In a statement this week, her publisher explained: \"Current legislation in the UK has led to circumstances where Faber cannot pass on UK earnings to Sally Rooney for her work. To sell a writer's work and not be able to pass on earnings is an unconscionable situation for a publisher.\"",
+     "title": "Sally Rooney's books will no longer be sold in U.K. after Palestinian Action support",
+     "publishedAt": "2026-10-16T11:30:31.000Z",
+     "fetchedAt": "2026-10-16T16:37:42.911Z",
+     "version": 554,
+     "publishedAfterPost": true,
      "acquiredAfterPost": true,
      "truncated": false
     }
    ],
    "evidenceUsed": [],
-   "inputHash": "9eab3e930acca2804577e4f4ac1c7b0f00b351f3f1a5cb4a064e75af601aaf4d"
+   "inputHash": "9feaf979b5d0472ce2d31ecb1abe76c79d4eaf8b2df413649950eada109e5950",
+   "quotedContext": {
+    "id": "2110695788540010526",
+    "authorId": "246939630",
+    "handle": "shannonrwatts",
+    "createdAt": "2026-10-15T11:34:25.000Z",
+    "textChars": 656,
+    "textHash": "83863f32310f9fa754387a33750941ca38b0e1945c9af72b727034e8e5bfbc85"
+   }
   }
  },
  "needsContext": {
@@ -16278,7 +16278,6 @@
   "2110797013487087658": false,
   "2110797053072961751": false,
   "2110797103547240479": false,
-  "2110797684827115855": false,
   "2110798104731484405": false,
   "2110798868560457879": false,
   "2110799165269705149": false,
@@ -16488,6 +16487,7 @@
   "2110850160922178039": false,
   "2110851458967212484": false,
   "2110851565632520549": false,
+  "2110851978893152604": false,
   "2110852301065699508": false,
   "2110852308938682763": false,
   "2110852323467768118": false,
@@ -16646,10 +16646,10 @@
   "2110931912424317397": false,
   "2110696683382472977": false,
   "2110748367865200664": false,
-  "2110851978893152604": false
+  "2110797684827115855": false
  },
  "inputBlocks": {},
- "contextVersion": 553,
+ "contextVersion": 554,
  "emerging": [
   {
    "label": "ICE shooting of Wilber Garcés-Pérez / Austin field hearing",
@@ -17175,13 +17175,13 @@
    "acceptedIds": [
     "2110696683382472977",
     "2110748367865200664",
-    "2110851978893152604"
+    "2110797684827115855"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-16T11:31:37.967Z",
-    "observedAt": "2026-10-16T11:31:45.431Z",
+    "attemptedAt": "2026-10-16T16:59:27.244Z",
+    "observedAt": "2026-10-16T16:59:35.866Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
@@ -17336,8 +17336,8 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-16T11:31:37.967Z",
-   "observedAt": "2026-10-16T11:31:45.431Z",
+   "attemptedAt": "2026-10-16T16:59:27.244Z",
+   "observedAt": "2026-10-16T16:59:35.866Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -17345,8 +17345,8 @@
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-16T11:31:37.967Z",
-   "observedAt": "2026-10-16T11:31:45.431Z",
+   "attemptedAt": "2026-10-16T16:59:27.244Z",
+   "observedAt": "2026-10-16T16:59:35.866Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
@@ -17355,5 +17355,5 @@
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-16T11:31:45.475Z"
+ "updatedAt": "2026-10-16T16:59:35.917Z"
 }
