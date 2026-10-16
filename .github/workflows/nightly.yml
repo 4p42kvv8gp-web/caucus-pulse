@@ -22,6 +22,10 @@ on:
         description: 'Batch wait in minutes (default 0: one status check). Poll runs resume pending batches every 20 minutes.'
         required: false
         default: ''
+      classify_date:
+        description: 'Optional closed Eastern day (YYYY-MM-DD) for bounded catch-up. Empty = yesterday ET; existing paid batches resume first.'
+        required: false
+        default: ''
       classify_sync:
         description: "'true' uses synchronous requests (full price) when no batch is pending; existing batches are always resumed first."
         required: false
@@ -71,6 +75,7 @@ jobs:
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           NIGHTLY_STAGES: ${{ inputs.stages }}
+          NIGHTLY_CLASSIFY_DATE: ${{ inputs.classify_date }}
           CLASSIFY_MAX_WAIT_MINUTES: ${{ inputs.classify_wait_minutes || '0' }}
           CLASSIFY_SYNC: ${{ inputs.classify_sync }}
         run: .github/scripts/nightly.sh

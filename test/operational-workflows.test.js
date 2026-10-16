@@ -118,11 +118,11 @@ test('nightly defaults preserve core interpretation and opt in to longer taxonom
   fs.chmodSync(path.join(bin, 'npm'), 0o755);
   const run = (stages) => {
     fs.writeFileSync(log, '');
-    const r = spawnSync('bash', ['.github/scripts/nightly.sh'], { cwd: ROOT, env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, NIGHTLY_STAGES: stages, CALL_LOG: log }, encoding: 'utf8' });
+    const r = spawnSync('bash', ['.github/scripts/nightly.sh'], { cwd: ROOT, env: { ...process.env, PATH: `${bin}:${process.env.PATH}`, NIGHTLY_STAGES: stages, NIGHTLY_CLASSIFY_DATE: '2025-01-15', CALL_LOG: log }, encoding: 'utf8' });
     assert.equal(r.status, 0, r.stderr);
     return fs.readFileSync(log, 'utf8').trim().split('\n');
   };
-  assert.deepEqual(run(''), ['run refresh', 'run embed', 'run classify', 'run corrections', 'run syntax', 'run incidents', 'run rollup', 'run report', 'run sitedata']);
+  assert.deepEqual(run(''), ['run refresh', 'run embed', 'run classify -- --date=2025-01-15', 'run corrections', 'run syntax', 'run incidents', 'run rollup', 'run report', 'run sitedata']);
   assert.deepEqual(run('stories,taxonomy-learn'), ['run stories', 'run taxonomy-learn -- --apply']);
   assert.ok(run('all').includes('run stories -- --auto-promote --retire'));
 });

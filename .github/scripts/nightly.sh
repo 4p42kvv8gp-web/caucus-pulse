@@ -1,18 +1,8 @@
 #!/usr/bin/env bash
-# The nightly pipeline, stage by stage, where one broken stage does not cost
-# the night's other work.
-#
-# `npm run nightly` chains every stage with &&, so the first failure stops
-# everything after it. That is wrong here: most stages need no Anthropic
-# credential at all, and on 2026-09-10 the org ran out of credit, which would
-# have taken syntax, incidents, rollups, the report and the dashboard rebuild
-# down with the classifier — none of which touch Claude.
-#
-# So each stage runs regardless of what came before, and the script exits
-# non-zero at the end if any stage failed. The run still goes red; it just
-# stops being all-or-nothing. Order still matters, because each stage reads
-# the previous stage's committed files — a stage whose input is missing does
-# less work, or none, but it gets its turn.
+# Shared scheduled/local nightly runner. Each selected stage runs even if an
+# earlier one fails, preserving reports and site publication. The final exit
+# still reports failures. New classification is scoped to one closed ET day;
+# discovery and taxonomy mutations require explicit stage selection.
 set -uo pipefail
 
 # NIGHTLY_STAGES="classify,rollup,report" (the workflow_dispatch `stages`
@@ -42,13 +32,23 @@ stage() {
   fi
 }
 
+classify_recent() {
+  local target
+  # Never fall back to the unbounded archive if date resolution fails.
+  target="$(node .github/scripts/classify-date.mjs)" || return 1
+  echo "nightly: classification scope=$target; older backlog requires explicit catch-up"
+  npm run classify -- "--date=$target"
+}
+
 stage refresh        npm run refresh
 stage embed          npm run embed
 # The classifier attaches the latest committed, dated public evidence from
 # data/news. Acquisition runs hourly outside this writer lock; an unavailable
 # publisher cannot block capture here. A pending batch returns immediately and
 # is retrieved by a later poll invocation instead of holding this lock waiting.
-stage classify       npm run classify
+# New nightly work is scoped to yesterday ET. The classifier still resumes an
+# existing paid batch first, preserving its original manifest and accounting.
+stage classify       classify_recent
 stage stories        npm run stories
 stage promote        npm run stories -- --auto-promote --retire
 stage taxonomy-learn npm run taxonomy-learn -- --apply

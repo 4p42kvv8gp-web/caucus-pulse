@@ -286,6 +286,17 @@ dashboard labels the lists as measured similarity for that reason.
 
 ## Local development
 
+Scheduled nightlies and `npm run nightly` submit new classification work for
+the previous closed Eastern calendar day. Existing paid batches always resume
+their saved manifest first. To recover an older day, select `classify_date`
+in the nightly workflow's manual inputs, or set `NIGHTLY_CLASSIFY_DATE=YYYY-MM-DD`
+locally. Invalid or unclosed dates fail the classification stage without
+falling back to the full archive; report and dashboard stages still run.
+The daily spend guard remains enforced. A single day can still exceed the
+remaining allowance; date scoping does not clear historical backlog or raise
+the budget. Direct `npm run classify` without `--date` still plans all unfinished
+closed archive dates and should be reserved for deliberate backfill work.
+
 ```bash
 npm install
 npm test                # pure-logic tests, no network
