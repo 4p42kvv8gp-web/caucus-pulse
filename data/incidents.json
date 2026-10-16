@@ -1,6 +1,171 @@
 {
- "generatedAt": "2026-10-15T23:33:01.392Z",
+ "generatedAt": "2026-10-16T00:35:57.017Z",
  "incidents": [
+  {
+   "id": "camp-pendleton-ca--wildfire--hendersonfire--2026-10-15",
+   "kind": "wildfire",
+   "name": "Henderson Fire",
+   "eventIdentity": "named-source-supported",
+   "kinds": [
+    "wildfire"
+   ],
+   "status": "provisional",
+   "lifecycle": "active",
+   "corroboration": {
+    "corroborated": false,
+    "by": null,
+    "independentSourceCount": 0,
+    "statements": 3,
+    "resolvedPeople": 1,
+    "accounts": 1,
+    "unresolvedAccounts": 0,
+    "repeated": true,
+    "repeatedSourceGroups": [],
+    "note": "3 source statement(s) from 1 resolved person(s); independent verification has not been established"
+   },
+   "place": "Camp Pendleton, CA · CA-49",
+   "placeRaw": "Camp Pendleton, CA",
+   "district": "CA-49",
+   "districtMatch": true,
+   "handle": "@RepMikeLevin",
+   "member": "Mike Levin",
+   "since": "2026-10-15T23:37:09.000Z",
+   "last": "2026-10-16T00:21:58.000Z",
+   "updates": 3,
+   "engN": 34,
+   "amplifiers": 0,
+   "others": [],
+   "title": "Henderson Fire · Camp Pendleton, CA",
+   "evidence": {
+    "span": "My office is closely monitoring the Henderson Fire on Camp Pendleton.",
+    "exact": true,
+    "start": 0,
+    "end": 69,
+    "matched": {
+     "kind": true,
+     "place": true
+    },
+    "sourceId": "2110877671379058882",
+    "url": "https://x.com/i/web/status/2110877671379058882"
+   },
+   "timeline": [
+    {
+     "id": "2110877671379058882",
+     "sourceId": "2110877671379058882",
+     "url": "https://x.com/i/web/status/2110877671379058882",
+     "authorId": "1072134139560620033",
+     "personId": "member:mike levin",
+     "referenceIds": [],
+     "time": "2026-10-15T23:37:09.000Z",
+     "who": "@RepMikeLevin",
+     "tag": "member",
+     "text": "My office is closely monitoring the Henderson Fire on Camp Pendleton. We are in contact with local officials and will continue to provide updates as the situation develops. \n\nAn Evacuation warning has been issued for the 41 Area of Camp Pendleton. Las Pulgas Road and the Las Pulgas Gate are closed.\n\nTo the firefighters and first responders on the ground, I join a very grateful community in thanking you for all that you do to keep us safe. \n\nIf you are in the area, please follow all evacuation orders and guidance from local fire authorities and Camp Pendleton.",
+     "engN": 16,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Camp Pendleton, CA",
+      "name": "Henderson Fire"
+     },
+     "evidence": {
+      "span": "My office is closely monitoring the Henderson Fire on Camp Pendleton.",
+      "exact": true,
+      "start": 0,
+      "end": 69,
+      "matched": {
+       "kind": true,
+       "place": true
+      },
+      "sourceId": "2110877671379058882",
+      "url": "https://x.com/i/web/status/2110877671379058882"
+     }
+    },
+    {
+     "id": "2110888528427278553",
+     "sourceId": "2110888528427278553",
+     "url": "https://x.com/i/web/status/2110888528427278553",
+     "authorId": "1072134139560620033",
+     "personId": "member:mike levin",
+     "referenceIds": [
+      "2110885090968666598"
+     ],
+     "time": "2026-10-16T00:20:18.000Z",
+     "who": "@RepMikeLevin",
+     "tag": "repost",
+     "text": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY | 10/15/26 – 5:05 PM\n\n🔥 HENDERSON FIRE\n\n⛔ N/B FULL FREEWAY CLOSURE NOW IN EFFECT on I-5 at Harbor Dri…",
+     "engN": 10,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Camp Pendleton, CA",
+      "name": "Henderson Fire"
+     },
+     "evidence": {
+      "span": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY | 10/15/26 – 5:05 PM\n\n🔥 HENDERSON FIRE\n\n⛔ N/B FULL FREEWAY CLOSURE NOW IN EFFECT on I-5 at Harbor Dr",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2110888528427278553",
+      "url": "https://x.com/i/web/status/2110888528427278553"
+     }
+    },
+    {
+     "id": "2110888949279526956",
+     "sourceId": "2110888949279526956",
+     "url": "https://x.com/i/web/status/2110888949279526956",
+     "authorId": "1072134139560620033",
+     "personId": "member:mike levin",
+     "referenceIds": [
+      "2110887517230969186"
+     ],
+     "time": "2026-10-16T00:21:58.000Z",
+     "who": "@RepMikeLevin",
+     "tag": "repost",
+     "text": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY UPDATE | 10/15/26 – 5:15 PM\n\n🔥 HENDERSON FIRE\n\n⛔ FULL FREEWAY CLOSURE NOW IN EFFECT on I-5 SOUTHBOUND…",
+     "engN": 8,
+     "isNew": false,
+     "flag": {
+      "kind": "wildfire",
+      "place": "Camp Pendleton, CA",
+      "name": "Henderson Fire"
+     },
+     "evidence": {
+      "span": "RT @CHP_Oceanside: 🚨 TRAFFIC ADVISORY UPDATE | 10/15/26 – 5:15 PM\n\n🔥 HENDERSON FIRE\n\n⛔ FULL FREEWAY CLOSURE NOW IN EFFECT on I-5 SOUTHBOUN",
+      "exact": false,
+      "start": 0,
+      "end": 140,
+      "matched": {
+       "kind": true,
+       "place": false
+      },
+      "sourceId": "2110888949279526956",
+      "url": "https://x.com/i/web/status/2110888949279526956"
+     }
+    }
+   ],
+   "tweetIds": [
+    "2110877671379058882",
+    "2110888528427278553",
+    "2110888949279526956"
+   ],
+   "intel": null,
+   "verification": {
+    "status": "unverified",
+    "basis": "source-statements",
+    "independentSourceCount": 0,
+    "sourceIds": [
+     "2110877671379058882",
+     "2110888528427278553",
+     "2110888949279526956"
+    ],
+    "repeatedSourceGroups": [],
+    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
+   }
+  },
   {
    "id": "newport-beach-ca--flooding--source-2109715247204295159",
    "kind": "flooding",

@@ -1,7 +1,7 @@
 {
  "date": "2026-10-15",
  "model": "claude-opus-5",
- "classifiedAt": "2026-10-15T23:33:01.245Z",
+ "classifiedAt": "2026-10-16T00:35:56.838Z",
  "assignments": {
   "2110586361384472620": [
    [
@@ -2140,7 +2140,11 @@
   "2110803120611553562": [
    [
     "healthcare",
-    null
+    "public-health"
+   ],
+   [
+    "congress-politics",
+    "town-halls"
    ]
   ],
   "2110803390137544816": [
@@ -4107,9 +4111,250 @@
     "public-safety",
     "crime-policing"
    ]
+  ],
+  "2110877648469848547": [
+   [
+    "budget-appropriations",
+    "shutdown"
+   ],
+   [
+    "budget-appropriations",
+    "snap-benefits"
+   ]
+  ],
+  "2110877671379058882": [],
+  "2110877801796513951": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2110878409832157513": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110878803081802171": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110878982694674764": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ],
+   [
+    "public-safety",
+    "crime-policing"
+   ]
+  ],
+  "2110879541183066575": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110880133506822332": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110881561029616042": [
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2110881799748354093": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110882528508739824": [
+   [
+    "immigration",
+    null
+   ]
+  ],
+  "2110882871946723412": [
+   [
+    "healthcare",
+    "medicare"
+   ]
+  ],
+  "2110883003576828185": [
+   [
+    "immigration",
+    "ice-enforcement"
+   ]
+  ],
+  "2110883063718707566": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110883237866115214": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110884213671051576": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2110885250960441715": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110885324419371425": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110885813315625370": [
+   [
+    "civil-rights",
+    "racial-justice"
+   ],
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110886069063254421": [
+   [
+    "immigration",
+    "asylum-refugees"
+   ]
+  ],
+  "2110886754022740455": [
+   [
+    "congress-politics",
+    "elections-2026"
+   ]
+  ],
+  "2110886825900314671": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110887072177254592": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110887075167846443": [
+   [
+    "democracy",
+    "corruption-ethics"
+   ],
+   [
+    "economy",
+    "prices-inflation"
+   ]
+  ],
+  "2110887281858863524": [
+   [
+    "democracy",
+    "executive-overreach"
+   ],
+   [
+    "democracy",
+    "press-speech"
+   ]
+  ],
+  "2110888018173153639": [
+   [
+    "foreign-policy",
+    "military-veterans"
+   ]
+  ],
+  "2110888528427278553": [],
+  "2110888949279526956": [],
+  "2110888956132835590": [
+   [
+    "democracy",
+    null
+   ]
+  ],
+  "2110889017117950107": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110889422581379492": [
+   [
+    "public-safety",
+    "gun-violence"
+   ],
+   [
+    "civil-rights",
+    "racial-justice"
+   ]
+  ],
+  "2110890359291068455": [
+   [
+    "public-safety",
+    "gun-violence"
+   ]
+  ],
+  "2110890981306290229": [
+   [
+    "economy",
+    "prices-inflation"
+   ],
+   [
+    "foreign-policy",
+    null
+   ]
+  ],
+  "2110891857806778511": [
+   [
+    "constituent-services",
+    null
+   ]
   ]
  },
- "incidents": {},
+ "incidents": {
+  "2110877671379058882": {
+   "kind": "wildfire",
+   "place": "Camp Pendleton, CA",
+   "name": "Henderson Fire"
+  },
+  "2110888528427278553": {
+   "kind": "wildfire",
+   "place": "Camp Pendleton, CA",
+   "name": "Henderson Fire"
+  },
+  "2110888949279526956": {
+   "kind": "wildfire",
+   "place": "Camp Pendleton, CA",
+   "name": "Henderson Fire"
+  }
+ },
  "provenance": {
   "2110586361384472620": {
    "contextVersion": 531,
@@ -6430,36 +6675,6 @@
    "evidenceUsed": [],
    "inputHash": "0c12b1d68e6c6f7682e7d7113a3ad559555a257e0839268fcb8921f5f2dbd019"
   },
-  "2110764195293913198": {
-   "contextVersion": 541,
-   "evidenceSupplied": [
-    {
-     "id": "n_7962cc899f18c281",
-     "publisher": "NPR",
-     "date": "2026-10-13",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
-     "text": "The U.S. government continues to pay for ads promoting President Trump , even after he announced that his MAGA Inc. super PAC would take over funding. A federal judge ordered the ads to be taken down, yet they remained on air. An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer funds have been spent since the campaign began in late September. Almost $10 million of that was spent after Trump pledged on an Oct. 5 Truth Social post to fund the campaign privately. The White House has called the ads public service announcements, but a lawsuit by Common Cause and others …",
-     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
-     "publishedAt": "2026-10-13T11:08:14.000Z",
-     "fetchedAt": "2026-10-13T11:29:29.088Z",
-     "version": 498,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "0c12b1d68e6c6f7682e7d7113a3ad559555a257e0839268fcb8921f5f2dbd019",
-   "quotedContext": {
-    "id": "2109629994213277717",
-    "authorId": "1427476600744988672",
-    "handle": "IAPolls2022",
-    "createdAt": "2026-10-12T12:59:20.000Z",
-    "textChars": 234,
-    "textHash": "c78a1ec0089a0d2b139e3800c4e469d5b13cc31e9350e2855e8a8438c765696f"
-   }
-  },
   "2110764919331152175": {
    "contextVersion": 541,
    "evidenceSupplied": [
@@ -7667,84 +7882,6 @@
    "evidenceUsed": [],
    "inputHash": "9ed1968a98147cc21118b8b3f493cfe9b94f560670bb5da5880e0c3bc1411706"
   },
-  "2110785514533970379": {
-   "contextVersion": 541,
-   "evidenceSupplied": [
-    {
-     "id": "n_6eaf2eb22b5a01c9",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
-     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "publishedAt": "2026-10-14T17:12:17.000Z",
-     "fetchedAt": "2026-10-14T17:31:55.062Z",
-     "version": 522,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "RASCOE: The president pretty recently signed in new sanctions against Russia. There's a 2022 law against importing any oil or petroleum products until Russia ends its war against Ukraine. So what is the president doing?",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_6eaf2eb22b5a01c9"
-   ],
-   "inputHash": "9ed1968a98147cc21118b8b3f493cfe9b94f560670bb5da5880e0c3bc1411706"
-  },
-  "2110785816582590487": {
-   "contextVersion": 543,
-   "evidenceSupplied": [
-    {
-     "id": "n_6eaf2eb22b5a01c9",
-     "publisher": "The Hill",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
-     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
-     "publishedAt": "2026-10-14T17:12:17.000Z",
-     "fetchedAt": "2026-10-14T17:31:55.062Z",
-     "version": 522,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "RASCOE: The president pretty recently signed in new sanctions against Russia. There's a 2022 law against importing any oil or petroleum products until Russia ends its war against Ukraine. So what is the president doing?",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_6eaf2eb22b5a01c9"
-   ],
-   "inputHash": "5d07ecd980c996a289dc07165551323f41c05a75800d598fc3dc8bca70c26e01"
-  },
   "2110785848752980293": {
    "contextVersion": 543,
    "evidenceSupplied": [],
@@ -8427,12 +8564,6 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "e4a2623049987b1dd5558c3fe3b490dc0f64a6b4a56fd3e93689097fa1560a01"
-  },
-  "2110803120611553562": {
-   "contextVersion": 543,
-   "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "45e1a845be20f6651ede9a63e77879b1bcbe19a8e5b064b91345c85ac69118b6"
   },
   "2110803390137544816": {
    "contextVersion": 543,
@@ -9497,43 +9628,6 @@
   "2110816801387151839": {
    "contextVersion": 544,
    "evidenceSupplied": [],
-   "evidenceUsed": [],
-   "inputHash": "75308c0480bb27d63e123eec55907d4308eaf26300da999be49105f8494acde0"
-  },
-  "2110816837944435080": {
-   "contextVersion": 544,
-   "evidenceSupplied": [
-    {
-     "id": "n_4e5972eee3a865e8",
-     "publisher": "NPR",
-     "date": "2026-10-10",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
-     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
-     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
-     "publishedAt": "2026-10-10T11:40:46.000Z",
-     "fetchedAt": "2026-10-10T19:46:51.813Z",
-     "version": 455,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    },
-    {
-     "id": "n_2b73371cc988b1b9",
-     "publisher": "Roll Call",
-     "date": "2026-10-13",
-     "kind": "report",
-     "url": "https://rollcall.com/2026/10/13/house-republicans-open-seats-problem-midterm-elections/",
-     "text": "While Republican incumbents such as Brian Fitzpatrick of Pennsylvania’s 1st District and Mike Lawler of New York’s 17th have pre-established brands and extensive political networks to potentially withstand a political wave, GOP nominees in open seats don’t have the same profiles and are more at risk of losing, particularly when the storm gets rough.",
-     "title": "House Republicans appear to have an open-seat problem",
-     "publishedAt": "2026-10-13T12:26:36.000Z",
-     "fetchedAt": "2026-10-13T17:42:03.724Z",
-     "version": 503,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
    "evidenceUsed": [],
    "inputHash": "75308c0480bb27d63e123eec55907d4308eaf26300da999be49105f8494acde0"
   },
@@ -10821,45 +10915,6 @@
    ],
    "evidenceUsed": [],
    "inputHash": "122d1a90086523932a2d8f6e2803377b0322cd6a5f3a441fb063c8e28a52a51b"
-  },
-  "2110803665313493029": {
-   "contextVersion": 546,
-   "evidenceSupplied": [
-    {
-     "id": "n_ed18a822acec9d77",
-     "publisher": "The Hill",
-     "date": "2026-10-15",
-     "kind": "lead",
-     "url": "https://thehill.com/homenews/administration/6152301-white-house-ballroom-private-donations/",
-     "text": "Trump ballroom donors revealed in Washington Post report",
-     "title": "Trump ballroom donors revealed in Washington Post report",
-     "publishedAt": "2026-10-15T20:43:31.000Z",
-     "fetchedAt": "2026-10-15T21:17:33.430Z",
-     "version": 545,
-     "publishedAfterPost": true,
-     "acquiredAfterPost": true,
-     "truncated": false
-    },
-    {
-     "id": "n_e93d61558a6900cf",
-     "publisher": "NPR",
-     "date": "2026-10-10",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/10/nx-s1-5996606/u-s-imposes-sweeping-sanctions-on-international-criminal-court",
-     "text": "SCOTT SIMON, HOST: This year's Nobel Peace Prize was meant to bolster international humanitarian law and went to a South African jurist who has worked on the International Criminal Court, among other places. But the Trump administration wants to dismantle that court and accuses it of trying to prosecute Americans. NPR's Michele Kelemen reports on new U.S. sanctions against the world's only standing war crimes tribunal.",
-     "title": "U.S. imposes sweeping sanctions on International Criminal Court",
-     "publishedAt": "2026-10-10T11:40:51.000Z",
-     "fetchedAt": "2026-10-10T19:46:51.813Z",
-     "version": 455,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_ed18a822acec9d77"
-   ],
-   "inputHash": "e1abd8eb79e9ea8cc9b6ad25f0a71ff8040b48e196d40f2c135b31086f81d248"
   },
   "2110810876538475002": {
    "contextVersion": 546,
@@ -12844,75 +12899,6 @@
     "textHash": "093d6f3637520a587034de082d5e7be75e1fc2b3217bc84f53636a81bc63738c"
    }
   },
-  "2110863903303549149": {
-   "contextVersion": 547,
-   "evidenceSupplied": [
-    {
-     "id": "n_ba6524b4ff54d674",
-     "publisher": "The New York Times",
-     "date": "2026-10-15",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/10/15/us/politics/james-talarico-fundraising-texas-senate.html",
-     "text": "James Talarico Raises Quarterly Record of $64 Million in Texas Senate Race Against Ken Paxton",
-     "title": "James Talarico Raises Quarterly Record of $64 Million in Texas Senate Race Against Ken Paxton",
-     "publishedAt": "2026-10-15T15:42:09.000Z",
-     "fetchedAt": "2026-10-15T16:46:45.743Z",
-     "version": 541,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [
-    "n_ba6524b4ff54d674"
-   ],
-   "inputHash": "8fde5ad2be182f22c7eb99379e96f2d0c4d58f1aa45b3433a87269efd54c806f",
-   "quotedContext": {
-    "id": "2110847643375325583",
-    "authorId": "217550862",
-    "handle": "bresreports",
-    "createdAt": "2026-10-15T21:37:50.000Z",
-    "textChars": 146,
-    "textHash": "c1f0b015c6d5fe2659424f40ca2310cd9977c1946d95b9cb9c37afe6c9693863"
-   }
-  },
-  "2110864083516051787": {
-   "contextVersion": 547,
-   "evidenceSupplied": [
-    {
-     "id": "n_8ff3d20cec3e8e38",
-     "publisher": "NPR",
-     "date": "2026-10-11",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
-     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
-     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
-     "publishedAt": "2026-10-11T12:03:56.000Z",
-     "fetchedAt": "2026-10-12T01:51:59.650Z",
-     "version": 478,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": true
-    },
-    {
-     "id": "n_8c1e4d4a574719cd",
-     "publisher": "NPR",
-     "date": "2026-10-09",
-     "kind": "report",
-     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
-     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
-     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
-     "publishedAt": "2026-10-09T21:24:13.000Z",
-     "fetchedAt": "2026-10-09T21:49:27.924Z",
-     "version": 438,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "evidenceUsed": [],
-   "inputHash": "8fde5ad2be182f22c7eb99379e96f2d0c4d58f1aa45b3433a87269efd54c806f"
-  },
   "2110864641941270788": {
    "contextVersion": 547,
    "evidenceSupplied": [],
@@ -13379,6 +13365,818 @@
    "evidenceSupplied": [],
    "evidenceUsed": [],
    "inputHash": "446e783a29e3b455842878d140b79c617e6a5e134d46a08851e4564186d408f9"
+  },
+  "2110764195293913198": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_35d9edd2b351b11c",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
+     "text": "TERRY GROSS, HOST: This is FRESH AIR. I'm Terry Gross. The space race used to be waged between countries like the U.S. and Russia. Now the race to control outer space is being waged between two tech billionaires and their companies, Elon Musk's SpaceX and Jeff Bezos' Blue Origin. Bezos is, of course, famous for creating Amazon, buying The Washington Post and founding the cloud computing company Amazon Web Services. Elon Musk is famous for being the CEO of Tesla, buying Twitter and turning it into X, and founding Starlink, which manufactures and launches satellites. Musk was also appointed by …",
+     "title": "Inside the race between Elon Musk and Jeff Bezos for control of outer space",
+     "publishedAt": "2026-10-15T16:45:02.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_7962cc899f18c281",
+     "publisher": "NPR",
+     "date": "2026-10-13",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/13/g-s1-147822/up-first-newsletter-trump-ads-funding-campaign-rallies-ilhan-omar",
+     "text": "The U.S. government continues to pay for ads promoting President Trump , even after he announced that his MAGA Inc. super PAC would take over funding. A federal judge ordered the ads to be taken down, yet they remained on air. An NPR analysis of data from AdImpact finds that nearly $22 million in taxpayer funds have been spent since the campaign began in late September. Almost $10 million of that was spent after Trump pledged on an Oct. 5 Truth Social post to fund the campaign privately. The White House has called the ads public service announcements, but a lawsuit by Common Cause and others …",
+     "title": "Government spent millions on Trump ads. And, federal agents raid Ilhan Omar's home",
+     "publishedAt": "2026-10-13T11:08:14.000Z",
+     "fetchedAt": "2026-10-13T11:29:29.088Z",
+     "version": 498,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "51c94d046278d66d43f2bbbcd87041fdb86b3aed050a487a99010f87aabbf042",
+   "quotedContext": {
+    "id": "2109629994213277717",
+    "authorId": "1427476600744988672",
+    "handle": "IAPolls2022",
+    "createdAt": "2026-10-12T12:59:20.000Z",
+    "textChars": 234,
+    "textHash": "c78a1ec0089a0d2b139e3800c4e469d5b13cc31e9350e2855e8a8438c765696f"
+   }
+  },
+  "2110785514533970379": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_6eaf2eb22b5a01c9",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
+     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "publishedAt": "2026-10-14T17:12:17.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_596d9d1907209dbf",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6152345-elon-musk-starlink-ukraine-starshield/",
+     "text": "Questions flare over US role in Ukraine’s Starlink shut-off: What to know",
+     "title": "Questions flare over US role in Ukraine’s Starlink shut-off: What to know",
+     "publishedAt": "2026-10-15T22:43:28.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_6eaf2eb22b5a01c9"
+   ],
+   "inputHash": "51c94d046278d66d43f2bbbcd87041fdb86b3aed050a487a99010f87aabbf042"
+  },
+  "2110785816582590487": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_6eaf2eb22b5a01c9",
+     "publisher": "The Hill",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://thehill.com/opinion/robbys-radar/6148450-putin-must-end-war-ukraine/",
+     "text": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "title": "Trump right to share intel with Ukraine; don’t turn off Starlink, Elon Musk!",
+     "publishedAt": "2026-10-14T17:12:17.000Z",
+     "fetchedAt": "2026-10-14T17:31:55.062Z",
+     "version": 522,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_596d9d1907209dbf",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/policy/technology/6152345-elon-musk-starlink-ukraine-starshield/",
+     "text": "Questions flare over US role in Ukraine’s Starlink shut-off: What to know",
+     "title": "Questions flare over US role in Ukraine’s Starlink shut-off: What to know",
+     "publishedAt": "2026-10-15T22:43:28.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_6eaf2eb22b5a01c9"
+   ],
+   "inputHash": "51c94d046278d66d43f2bbbcd87041fdb86b3aed050a487a99010f87aabbf042"
+  },
+  "2110803120611553562": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_35d9edd2b351b11c",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
+     "text": "My guest, journalist Josh Tyrangiel, writes that the two men hope to preserve human life from the specter of climate change and expand mankind's understanding of the universe. Both would also like to dominate a market that, unlike every other market they've previously conquered, has no ceiling and few established rules. Accomplishing the visions of either man would rely on creating giant data centers in space. Tyrangiel is a staff writer at The Atlantic and wrote the November cover story titled \"Choose Your Overlord: Musk Vs. Bezos.\"",
+     "title": "Inside the race between Elon Musk and Jeff Bezos for control of outer space",
+     "publishedAt": "2026-10-15T16:45:02.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110803665313493029": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_ed18a822acec9d77",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/administration/6152301-white-house-ballroom-private-donations/",
+     "text": "Trump ballroom donors revealed in Washington Post report",
+     "title": "Trump ballroom donors revealed in Washington Post report",
+     "publishedAt": "2026-10-15T20:43:31.000Z",
+     "fetchedAt": "2026-10-15T21:17:33.430Z",
+     "version": 545,
+     "publishedAfterPost": true,
+     "acquiredAfterPost": true,
+     "truncated": false
+    },
+    {
+     "id": "n_35d9edd2b351b11c",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
+     "text": "In the piece, he describes their visions for colonizing outer space, the technology they're developing and what it would mean to turn parts of the moon into businesses. The rivalry between Bezos and Musk is so powerful, Tyrangiel says, their only real competition is with each other. Tyrangiel is a former Washington Post columnist, where he covered AI. He also led the global newsrooms at Bloomberg, Vice and Time magazine. His latest book, \"AI For Good,\" is about people finding ways to use AI that are fixing problems, not causing them.",
+     "title": "Inside the race between Elon Musk and Jeff Bezos for control of outer space",
+     "publishedAt": "2026-10-15T16:45:02.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110816837944435080": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_35d9edd2b351b11c",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
+     "text": "TERRY GROSS, HOST: This is FRESH AIR. I'm Terry Gross. The space race used to be waged between countries like the U.S. and Russia. Now the race to control outer space is being waged between two tech billionaires and their companies, Elon Musk's SpaceX and Jeff Bezos' Blue Origin. Bezos is, of course, famous for creating Amazon, buying The Washington Post and founding the cloud computing company Amazon Web Services. Elon Musk is famous for being the CEO of Tesla, buying Twitter and turning it into X, and founding Starlink, which manufactures and launches satellites. Musk was also appointed by …",
+     "title": "Inside the race between Elon Musk and Jeff Bezos for control of outer space",
+     "publishedAt": "2026-10-15T16:45:02.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_4e5972eee3a865e8",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5965798/on-the-ground-in-ohios-9th-district-the-battleground-shaping-next-months-midterms",
+     "text": "SIMON: We begin this hour in Ohio, a critical battleground in next month's midterm elections. We visited the state's 9th Congressional District, including city of Toledo. And when we asked people in diners, machine shops, and on streets what they were most concerned about, one worry kept coming up.",
+     "title": "On the ground in Ohio's 9th District: The battleground shaping next month's midterms",
+     "publishedAt": "2026-10-10T11:40:46.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110863903303549149": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_35d9edd2b351b11c",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6002922/inside-the-race-between-elon-musk-and-jeff-bezos-for-control-of-outer-space",
+     "text": "TERRY GROSS, HOST: This is FRESH AIR. I'm Terry Gross. The space race used to be waged between countries like the U.S. and Russia. Now the race to control outer space is being waged between two tech billionaires and their companies, Elon Musk's SpaceX and Jeff Bezos' Blue Origin. Bezos is, of course, famous for creating Amazon, buying The Washington Post and founding the cloud computing company Amazon Web Services. Elon Musk is famous for being the CEO of Tesla, buying Twitter and turning it into X, and founding Starlink, which manufactures and launches satellites. Musk was also appointed by …",
+     "title": "Inside the race between Elon Musk and Jeff Bezos for control of outer space",
+     "publishedAt": "2026-10-15T16:45:02.000Z",
+     "fetchedAt": "2026-10-16T00:17:50.346Z",
+     "version": 548,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": true,
+     "truncated": true
+    },
+    {
+     "id": "n_ba6524b4ff54d674",
+     "publisher": "The New York Times",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/15/us/politics/james-talarico-fundraising-texas-senate.html",
+     "text": "James Talarico Raises Quarterly Record of $64 Million in Texas Senate Race Against Ken Paxton",
+     "title": "James Talarico Raises Quarterly Record of $64 Million in Texas Senate Race Against Ken Paxton",
+     "publishedAt": "2026-10-15T15:42:09.000Z",
+     "fetchedAt": "2026-10-15T16:46:45.743Z",
+     "version": 541,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_ba6524b4ff54d674"
+   ],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9",
+   "quotedContext": {
+    "id": "2110847643375325583",
+    "authorId": "217550862",
+    "handle": "bresreports",
+    "createdAt": "2026-10-15T21:37:50.000Z",
+    "textChars": 146,
+    "textHash": "c1f0b015c6d5fe2659424f40ca2310cd9977c1946d95b9cb9c37afe6c9693863"
+   }
+  },
+  "2110864083516051787": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_8ff3d20cec3e8e38",
+     "publisher": "NPR",
+     "date": "2026-10-11",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/11/nx-s1-5996550/politics-chat-trump-announces-fuel-deal-with-russia-what-does-it-mean-for-sanctions",
+     "text": "LIASSON: Well, one thing he's doing is struggling, without much success, to bring down diesel and gas prices. He's tried a lot of things. The latest now is removing sanctions on Russia, even though, as you just said, that might not make much of a difference in prices. Then the sanctions that Trump signed off on less than a month ago targeting Russia's energy revenues, which helped Russia fund its war against Ukraine - now the U.S. is going to be adding to those revenues. And Congress, with big bipartisan support, passed a law just a couple of days before that giving Trump expanded tariff powe…",
+     "title": "Politics chat: Trump announces fuel deal with Russia. What does it mean for sanctions?",
+     "publishedAt": "2026-10-11T12:03:56.000Z",
+     "fetchedAt": "2026-10-12T01:51:59.650Z",
+     "version": 478,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": true
+    },
+    {
+     "id": "n_8c1e4d4a574719cd",
+     "publisher": "NPR",
+     "date": "2026-10-09",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/09/nx-s1-5996912/trump-says-u-s-to-get-diesel-from-russia-relaxing-pressure-on-moscow-to-ease-prices-before-midterms",
+     "text": "Trump's shocking announcement comes after he signed a sweeping Russia sanctions law last month that aimed at clamping down on Russia's energy revenues, among other areas, that fuel its war against Ukraine.",
+     "title": "Trump says U.S. to get diesel from Russia, relaxing pressure on Moscow to ease prices before midterms",
+     "publishedAt": "2026-10-09T21:24:13.000Z",
+     "fetchedAt": "2026-10-09T21:49:27.924Z",
+     "version": 438,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110877648469848547": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110877671379058882": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110877801796513951": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110878409832157513": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110878803081802171": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9",
+   "quotedContext": {
+    "id": "2110868722357289308",
+    "authorId": "15012486",
+    "handle": "CBSNews",
+    "createdAt": "2026-10-15T23:01:36.000Z",
+    "textChars": 301,
+    "textHash": "0c20488bf2dfcc59689ba818d01e305a8561c4030ab56223e2e814e71b693d83"
+   }
+  },
+  "2110878982694674764": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_569962f217afc77d",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149885-palatine-man-charged-in-alleged-mass-shooting-plot-targeting-hindu-place-of-worship/",
+     "text": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "title": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "publishedAt": "2026-10-15T10:46:15.000Z",
+     "fetchedAt": "2026-10-15T13:01:27.905Z",
+     "version": 537,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_67af9d3a74d0366c",
+    "n_569962f217afc77d"
+   ],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9",
+   "quotedContext": {
+    "id": "2110575540675452937",
+    "authorId": "814179031956488192",
+    "handle": "CongressmanRaja",
+    "createdAt": "2026-10-15T03:36:36.000Z",
+    "textChars": 512,
+    "textHash": "5563f00cd6c0d68c377026b59c582ab0570935fdedf514fefc2706117ea8827c"
+   }
+  },
+  "2110879541183066575": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110880133506822332": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_1919724d0b5975a1",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/homeland-security-investigative-unit-in-spotlight-in-omar-probe/",
+     "text": "But some Republicans hailed HSI last spring, as they sought to end a shutdown of its parent agency, U.S. Immigration and Customs Enforcement, following the fatal shootings of two U.S. citizens by federal immigration agents in Minnesota.",
+     "title": "Homeland Security investigative unit in spotlight in Omar probe",
+     "publishedAt": "2026-10-15T06:28:25.000Z",
+     "fetchedAt": "2026-10-15T11:31:52.066Z",
+     "version": 536,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9",
+   "quotedContext": {
+    "id": "2110868722357289308",
+    "authorId": "15012486",
+    "handle": "CBSNews",
+    "createdAt": "2026-10-15T23:01:36.000Z",
+    "textChars": 301,
+    "textHash": "0c20488bf2dfcc59689ba818d01e305a8561c4030ab56223e2e814e71b693d83"
+   }
+  },
+  "2110881561029616042": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9",
+   "quotedContext": {
+    "id": "2110869525168312414",
+    "authorId": "1551266822460162051",
+    "handle": "BasedMikeLee",
+    "createdAt": "2026-10-15T23:04:47.000Z",
+    "textChars": 215,
+    "textHash": "1185c8cec73ad6646a1a1bfe9f8b87602658a50dc5b129832104720c1aab275d"
+   }
+  },
+  "2110881799748354093": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "6e25ff01781ed9d3e2263504a8a50f4d264a85de105c15aec9c61e324f394ce9"
+  },
+  "2110882528508739824": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_42c08695c2a03f89",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5996646/republican-strategist-on-how-trumps-personal-grievances-could-affect-the-gop",
+     "text": "SHAH: Well, I think it's really important to see what this really is. The diesel deal and the energy ceasefire announcement, I believe, are less about immediate relief and more about creating a permission structure for Republican candidates. The volumes are really too small to meaningfully move prices before November 3. I think most analysts are saying that plainly, and most of us kind of get that.",
+     "title": "Republican strategist on how Trump's personal grievances could affect the GOP",
+     "publishedAt": "2026-10-12T08:39:36.000Z",
+     "fetchedAt": "2026-10-12T21:22:04.235Z",
+     "version": 489,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_40b83a89b4e9702f",
+     "publisher": "NPR",
+     "date": "2026-10-12",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/12/nx-s1-5996646/political-strategist-on-how-trumps-personal-grievances-could-affect-the-gop",
+     "text": "SHAH: Well, I think it's really important to see what this really is. The diesel deal and the energy ceasefire announcement, I believe, are less about immediate relief and more about creating a permission structure for Republican candidates. The volumes are really too small to meaningfully move prices before November 3. I think most analysts are saying that plainly, and most of us kind of get that.",
+     "title": "Political strategist on how Trump's personal grievances could affect the GOP",
+     "publishedAt": "2026-10-12T08:39:36.000Z",
+     "fetchedAt": "2026-10-13T04:51:14.318Z",
+     "version": 495,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110882871946723412": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110883003576828185": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110883063718707566": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110883237866115214": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110884213671051576": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_569962f217afc77d",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149885-palatine-man-charged-in-alleged-mass-shooting-plot-targeting-hindu-place-of-worship/",
+     "text": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "title": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "publishedAt": "2026-10-15T10:46:15.000Z",
+     "fetchedAt": "2026-10-15T13:01:27.905Z",
+     "version": 537,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_569962f217afc77d",
+    "n_67af9d3a74d0366c"
+   ],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "quotedContext": {
+    "id": "2110730618581520749",
+    "authorId": "814179031956488192",
+    "handle": "CongressmanRaja",
+    "createdAt": "2026-10-15T13:52:49.000Z",
+    "textChars": 293,
+    "textHash": "bbb64743954a81aa78589613b07e06da65d2c8eb9e5c30b7fb5764a6d0912168"
+   }
+  },
+  "2110885250960441715": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110885324419371425": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110885813315625370": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_67af9d3a74d0366c"
+   ],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110886069063254421": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110886754022740455": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110886825900314671": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110887072177254592": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110887075167846443": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "quotedContext": {
+    "id": "2110887072177254592",
+    "authorId": "29501253",
+    "handle": "SenAdamSchiff",
+    "createdAt": "2026-10-16T00:14:31.000Z",
+    "textChars": 297,
+    "textHash": "1d9882928e7b810ef04e94f9db96dd7da970ad7dece43742cd448602c263b20e"
+   }
+  },
+  "2110887281858863524": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110888018173153639": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_7ef3cbfca5d1bdaf",
+     "publisher": "NPR",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/15/nx-s1-6001794/fort-hood-execution-hegseth-christian-nationalist",
+     "text": "The last time the U.S. government conducted a high-profile public execution was 90 years ago. But Hegseth suggested that livestreaming Nidal Hasan's death by firing squad would deter future, similar attacks. Hasan, a former U.S. Army major and violent Islamist extremist, killed 13 people and injured 32 in a 2009 attack at Fort Hood. His execution is set for Dec. 3 .",
+     "title": "Trump cancels public execution, but a line may already have been crossed",
+     "publishedAt": "2026-10-15T09:00:00.000Z",
+     "fetchedAt": "2026-10-15T21:28:37.287Z",
+     "version": 546,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_9038326161eb1db4",
+     "publisher": "NPR",
+     "date": "2026-10-10",
+     "kind": "report",
+     "url": "https://www.npr.org/2026/10/10/nx-s1-5995114/week-in-politics-hegseths-livestream-backlash-greece-ambassador-guilfoyle-scandal",
+     "text": "SCOTT SIMON, HOST: There has been pointed and bipartisan objection to Defense Secretary Pete Hegseth's plan to livestream a military execution. The Pentagon announced this week that Nidal Hasan will face a firing squad in December. He is the former Fort Hood Army psychiatrist who fatally shot 13 people and wounded nearly three dozen others in 2009. NPR senior contributor Ron Elving joins us. Ron, thanks so much for being with us.",
+     "title": "Week in Politics: Hegseth's livestream backlash; Greece ambassador Guilfoyle scandal",
+     "publishedAt": "2026-10-10T11:40:48.000Z",
+     "fetchedAt": "2026-10-10T19:46:51.813Z",
+     "version": 455,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_7ef3cbfca5d1bdaf",
+    "n_9038326161eb1db4"
+   ],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110888528427278553": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110885090968666598",
+    "fingerprint": "46dfa75b9e2c391b6cba157bba5152f4b8a2ed7522f7cd4f72be313e9e4b5e0a"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110885090968666598",
+    "fingerprint": "46dfa75b9e2c391b6cba157bba5152f4b8a2ed7522f7cd4f72be313e9e4b5e0a"
+   }
+  },
+  "2110888949279526956": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "sourceContext": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110887517230969186",
+    "fingerprint": "e19c23a9333300d1d238feaea8681a9ee7e3b01e0fa532c53e2a2cccf2029288"
+   },
+   "sourceContextObserved": {
+    "incomplete": false,
+    "reason": null,
+    "referenceId": "2110887517230969186",
+    "fingerprint": "e19c23a9333300d1d238feaea8681a9ee7e3b01e0fa532c53e2a2cccf2029288"
+   }
+  },
+  "2110888956132835590": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110889017117950107": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110889422581379492": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_569962f217afc77d",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6149885-palatine-man-charged-in-alleged-mass-shooting-plot-targeting-hindu-place-of-worship/",
+     "text": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "title": "Palatine man charged in alleged mass shooting plot targeting Hindu place of worship",
+     "publishedAt": "2026-10-15T10:46:15.000Z",
+     "fetchedAt": "2026-10-15T13:01:27.905Z",
+     "version": 537,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    },
+    {
+     "id": "n_67af9d3a74d0366c",
+     "publisher": "The Hill",
+     "date": "2026-10-15",
+     "kind": "lead",
+     "url": "https://thehill.com/homenews/state-watch/6151659-man-arrested-hindu-temple-shooting-plot/",
+     "text": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "title": "Lawmakers ‘horrified’ by mass shooting plot on Chicago-area Hindu temple",
+     "publishedAt": "2026-10-15T18:50:09.000Z",
+     "fetchedAt": "2026-10-15T19:46:42.461Z",
+     "version": 544,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [
+    "n_569962f217afc77d",
+    "n_67af9d3a74d0366c"
+   ],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "quotedContext": {
+    "id": "2110730618581520749",
+    "authorId": "814179031956488192",
+    "handle": "CongressmanRaja",
+    "createdAt": "2026-10-15T13:52:49.000Z",
+    "textChars": 293,
+    "textHash": "bbb64743954a81aa78589613b07e06da65d2c8eb9e5c30b7fb5764a6d0912168"
+   }
+  },
+  "2110890359291068455": {
+   "contextVersion": 548,
+   "evidenceSupplied": [
+    {
+     "id": "n_9b62d78cd64eba8a",
+     "publisher": "Roll Call",
+     "date": "2026-10-15",
+     "kind": "report",
+     "url": "https://rollcall.com/2026/10/15/calling-off-livestream-of-execution-was-right-call-members-say/",
+     "text": "Members of Congress expressed relief Thursday after President Donald Trump overturned a Pentagon plan to livestream the execution of a man convicted of a deadly 2009 shooting spree at a Texas Army base.",
+     "title": "Calling off livestream of execution was right call, members say",
+     "publishedAt": "2026-10-15T15:48:11.000Z",
+     "fetchedAt": "2026-10-15T21:17:33.430Z",
+     "version": 545,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722",
+   "quotedContext": {
+    "id": "2110868722357289308",
+    "authorId": "15012486",
+    "handle": "CBSNews",
+    "createdAt": "2026-10-15T23:01:36.000Z",
+    "textChars": 301,
+    "textHash": "0c20488bf2dfcc59689ba818d01e305a8561c4030ab56223e2e814e71b693d83"
+   }
+  },
+  "2110890981306290229": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
+  },
+  "2110891857806778511": {
+   "contextVersion": 548,
+   "evidenceSupplied": [],
+   "evidenceUsed": [],
+   "inputHash": "915f788abbae39f5410794eb883cd7afa76c297cc2c2e1d1e3bb685be2cff722"
   }
  },
  "needsContext": {
@@ -13538,7 +14336,6 @@
   "2110763564147626145": false,
   "2110764081544061288": false,
   "2110764162380922955": false,
-  "2110764195293913198": false,
   "2110764919331152175": false,
   "2110765464578142311": false,
   "2110766089433182629": false,
@@ -13618,8 +14415,6 @@
   "2110784250282663959": false,
   "2110785074794778859": false,
   "2110785273055281630": false,
-  "2110785514533970379": false,
-  "2110785816582590487": false,
   "2110785848752980293": false,
   "2110786935610655074": false,
   "2110787176837394575": false,
@@ -13668,7 +14463,6 @@
   "2110801424045285842": false,
   "2110801762357833967": false,
   "2110801817118380042": false,
-  "2110803120611553562": false,
   "2110803390137544816": false,
   "2110803648393748538": false,
   "2110803670090870796": false,
@@ -13736,7 +14530,6 @@
   "2110816143552508328": false,
   "2110816740557172933": false,
   "2110816801387151839": false,
-  "2110816837944435080": false,
   "2110816948174860703": false,
   "2110817121013756387": false,
   "2110817167964803428": false,
@@ -13804,7 +14597,6 @@
   "2110781761898832235": false,
   "2110798104731484405": false,
   "2110802124812497130": false,
-  "2110803665313493029": false,
   "2110810876538475002": false,
   "2110830983624724945": false,
   "2110831076838871070": false,
@@ -13904,8 +14696,6 @@
   "2110861307264082121": false,
   "2110861676153115133": false,
   "2110862293562949659": false,
-  "2110863903303549149": false,
-  "2110864083516051787": false,
   "2110864641941270788": false,
   "2110864798279692437": false,
   "2110864921110176040": false,
@@ -13940,10 +14730,52 @@
   "2110874592264716669": false,
   "2110874839317905918": false,
   "2110874868837167610": false,
-  "2110876024980611384": false
+  "2110876024980611384": false,
+  "2110764195293913198": false,
+  "2110785514533970379": false,
+  "2110785816582590487": false,
+  "2110803120611553562": false,
+  "2110803665313493029": false,
+  "2110816837944435080": false,
+  "2110863903303549149": false,
+  "2110864083516051787": false,
+  "2110877648469848547": false,
+  "2110877671379058882": false,
+  "2110877801796513951": false,
+  "2110878409832157513": false,
+  "2110878803081802171": false,
+  "2110878982694674764": false,
+  "2110879541183066575": false,
+  "2110880133506822332": false,
+  "2110881561029616042": true,
+  "2110881799748354093": false,
+  "2110882528508739824": false,
+  "2110882871946723412": false,
+  "2110883003576828185": false,
+  "2110883063718707566": false,
+  "2110883237866115214": false,
+  "2110884213671051576": false,
+  "2110885250960441715": false,
+  "2110885324419371425": false,
+  "2110885813315625370": false,
+  "2110886069063254421": false,
+  "2110886754022740455": false,
+  "2110886825900314671": false,
+  "2110887072177254592": false,
+  "2110887075167846443": false,
+  "2110887281858863524": false,
+  "2110888018173153639": false,
+  "2110888528427278553": false,
+  "2110888949279526956": false,
+  "2110888956132835590": true,
+  "2110889017117950107": false,
+  "2110889422581379492": false,
+  "2110890359291068455": false,
+  "2110890981306290229": true,
+  "2110891857806778511": false
  },
  "inputBlocks": {},
- "contextVersion": 547,
+ "contextVersion": 548,
  "emerging": [
   {
    "label": "ICE shooting of Wilber Garcés-Pérez in Texas",
@@ -14024,7 +14856,10 @@
     "2110851565632520549",
     "2110852301065699508",
     "2110855240430031337",
-    "2110874592264716669"
+    "2110874592264716669",
+    "2110884213671051576",
+    "2110885813315625370",
+    "2110889422581379492"
    ]
   },
   {
@@ -14309,7 +15144,8 @@
   {
    "label": "ICE killing of Ruben Ray Martinez",
    "ids": [
-    "2110854633123967319"
+    "2110854633123967319",
+    "2110877801796513951"
    ]
   },
   {
@@ -14361,6 +15197,69 @@
     "2110869231671574549",
     "2110870353321079075"
    ]
+  },
+  {
+   "label": "Starlink/Starshield shut-off restricting Ukraine battlefield communications",
+   "ids": [
+    "2110785514533970379",
+    "2110785816582590487"
+   ]
+  },
+  {
+   "label": "Elon Musk's $276M spending in 2026 GOP midterm campaigns",
+   "ids": [
+    "2110764195293913198"
+   ]
+  },
+  {
+   "label": "Bend, Oregon elementary school shooting",
+   "ids": [
+    "2110878803081802171",
+    "2110880133506822332"
+   ]
+  },
+  {
+   "label": "Aurora-area Hindu temple mass shooting plot",
+   "ids": [
+    "2110878982694674764"
+   ]
+  },
+  {
+   "label": "Trump White House ballroom donor list",
+   "ids": [
+    "2110803665313493029"
+   ]
+  },
+  {
+   "label": "Henderson Fire at Camp Pendleton",
+   "ids": [
+    "2110877671379058882",
+    "2110888528427278553",
+    "2110888949279526956"
+   ]
+  },
+  {
+   "label": "People's Vision for Immigration Reform",
+   "ids": [
+    "2110882528508739824"
+   ]
+  },
+  {
+   "label": "Silver Rail Elementary school shooting, Bend OR",
+   "ids": [
+    "2110883237866115214",
+    "2110885250960441715",
+    "2110885324419371425",
+    "2110886825900314671",
+    "2110889017117950107",
+    "2110890359291068455"
+   ]
+  },
+  {
+   "label": "Canceled livestream of Nidal Hasan execution",
+   "ids": [
+    "2110888018173153639"
+   ]
   }
  ],
  "unclassified": [],
@@ -14374,103 +15273,92 @@
  "requestStatus": {
   "live_chunk-1": {
    "acceptedIds": [
-    "2110838044614139990",
-    "2110838046392258888",
-    "2110839404449103975",
-    "2110851978893152604",
-    "2110857418976428367",
-    "2110857436374462714",
-    "2110857752746590650",
-    "2110857772535558259",
-    "2110858248538534309",
-    "2110858389668446486",
-    "2110858463412973840",
-    "2110859417084219512",
-    "2110859885428502965",
-    "2110860748096520592",
-    "2110861032025444494",
-    "2110861307264082121",
-    "2110861676153115133",
-    "2110862293562949659"
+    "2110803120611553562",
+    "2110803665313493029",
+    "2110816837944435080",
+    "2110863903303549149",
+    "2110864083516051787",
+    "2110877648469848547",
+    "2110877671379058882",
+    "2110877801796513951",
+    "2110878409832157513",
+    "2110878803081802171",
+    "2110878982694674764",
+    "2110879541183066575",
+    "2110880133506822332",
+    "2110881561029616042",
+    "2110881799748354093"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T23:31:25.050Z",
-    "observedAt": "2026-10-15T23:32:01.237Z",
+    "attemptedAt": "2026-10-16T00:34:35.962Z",
+    "observedAt": "2026-10-16T00:35:12.713Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 18,
+    "acceptedCount": 15,
     "retryCount": 0
    }
   },
   "live_chunk-0": {
    "acceptedIds": [
-    "2110446976957608145",
-    "2110446980170150286",
-    "2110536252738908662",
-    "2110801866812444734",
-    "2110825332941160723",
-    "2110837845069906421"
+    "2110456641498104054",
+    "2110512901836415432",
+    "2110516206780232139",
+    "2110554813184295148",
+    "2110764195293913198",
+    "2110785514533970379",
+    "2110785816582590487"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T23:31:10.958Z",
-    "observedAt": "2026-10-15T23:31:25.022Z",
+    "attemptedAt": "2026-10-16T00:34:19.453Z",
+    "observedAt": "2026-10-16T00:34:35.926Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 6,
+    "acceptedCount": 7,
     "retryCount": 0
    }
   },
   "live_chunk-2": {
    "acceptedIds": [
-    "2110863903303549149",
-    "2110864083516051787",
-    "2110864641941270788",
-    "2110864798279692437",
-    "2110864921110176040",
-    "2110864974671155665",
-    "2110865029977522183",
-    "2110865354167615902",
-    "2110865511286522346",
-    "2110866614153625676",
-    "2110866778960322973",
-    "2110867325604000135",
-    "2110867327340122486",
-    "2110867410777714970",
-    "2110867819462353295",
-    "2110867969584574975",
-    "2110868193770394053",
-    "2110868269250871466",
-    "2110868367213310091",
-    "2110868888627937603",
-    "2110869231671574549",
-    "2110869575160217975",
-    "2110869578980921387",
-    "2110870353321079075",
-    "2110870404940341272",
-    "2110870547814916159",
-    "2110871344028213566",
-    "2110871438890770830",
-    "2110872177620787307",
-    "2110872299494854676",
-    "2110872539727904891",
-    "2110873002879422612",
-    "2110873361345610230"
+    "2110882528508739824",
+    "2110882871946723412",
+    "2110883003576828185",
+    "2110883063718707566",
+    "2110883237866115214",
+    "2110884213671051576",
+    "2110885250960441715",
+    "2110885324419371425",
+    "2110885813315625370",
+    "2110886069063254421",
+    "2110886754022740455",
+    "2110886825900314671",
+    "2110887072177254592",
+    "2110887075167846443",
+    "2110887281858863524",
+    "2110888018173153639",
+    "2110888528427278553",
+    "2110888949279526956",
+    "2110888956132835590",
+    "2110889017117950107",
+    "2110889422581379492",
+    "2110890359291068455",
+    "2110890981306290229",
+    "2110891857806778511"
    ],
    "retryIds": [],
    "errors": [],
    "inference": {
-    "attemptedAt": "2026-10-15T23:32:01.274Z",
-    "observedAt": "2026-10-15T23:32:52.262Z",
+    "attemptedAt": "2026-10-16T00:35:12.756Z",
+    "observedAt": "2026-10-16T00:35:56.773Z",
     "kind": "sync",
     "status": "complete",
     "reasonCode": null,
-    "acceptedCount": 33,
+    "acceptedCount": 24,
     "retryCount": 0
    }
   },
@@ -14582,24 +15470,24 @@
  "inference": {
   "schemaVersion": 1,
   "lastAttempt": {
-   "attemptedAt": "2026-10-15T23:32:52.298Z",
-   "observedAt": "2026-10-15T23:33:01.173Z",
+   "attemptedAt": "2026-10-16T00:35:12.756Z",
+   "observedAt": "2026-10-16T00:35:56.773Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastSuccess": {
-   "attemptedAt": "2026-10-15T23:32:52.298Z",
-   "observedAt": "2026-10-15T23:33:01.173Z",
+   "attemptedAt": "2026-10-16T00:35:12.756Z",
+   "observedAt": "2026-10-16T00:35:56.773Z",
    "kind": "sync",
    "status": "complete",
    "reasonCode": null,
-   "acceptedCount": 4,
+   "acceptedCount": 24,
    "retryCount": 0
   },
   "lastFailure": null
  },
- "updatedAt": "2026-10-15T23:33:01.250Z"
+ "updatedAt": "2026-10-16T00:35:56.844Z"
 }
