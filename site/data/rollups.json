@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-17T02:09:39.303Z",
+ "generatedAt": "2026-10-17T02:54:48.198Z",
  "lastPollAt": "2026-10-16T03:16:44.395Z",
- "lastPollAttemptAt": "2026-10-17T02:09:33.455Z",
+ "lastPollAttemptAt": "2026-10-17T02:54:40.594Z",
  "lastPollOutcome": "request-failed",
  "captureInProgress": true,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-17T02:09:37.836Z"
+  "referenceAsOf": "2026-10-17T02:54:46.340Z"
  },
  "news": {
   "version": 557,
-  "items": 1157,
+  "items": 1156,
   "latestPublishedAt": "2026-10-17T00:06:58.000Z",
   "latestFetchedAt": "2026-10-17T01:18:40.452Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-17T02:09:38.241Z",
+   "asOf": "2026-10-17T02:54:46.882Z",
    "windowDays": 14,
-   "windowStart": "2026-10-03T02:09:38.241Z",
-   "eligibleItems": 1549,
+   "windowStart": "2026-10-03T02:54:46.882Z",
+   "eligibleItems": 1548,
    "withExcerpts": 145,
-   "headlineOrSummary": 1404,
+   "headlineOrSummary": 1403,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 992,
+     "eligibleItems": 991,
      "withExcerpts": 0,
-     "headlineOrSummary": 992,
+     "headlineOrSummary": 991,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-17T00:06:58.000Z",
      "latestItem": {
@@ -3546,9 +3546,9 @@
  },
  "classification": {
   "through": "2026-10-15",
-  "capturedIn24h": 11,
-  "classifiedIn24h": 11,
-  "taggedIn24h": 9,
+  "capturedIn24h": 4,
+  "classifiedIn24h": 4,
+  "taggedIn24h": 2,
   "pendingIn24h": 0,
   "momentumPaused": false,
   "health": {
@@ -3557,8 +3557,8 @@
    "hasCurrentFailure": false,
    "lastAttemptAt": "2026-10-17T01:24:15.015Z",
    "lastSuccessAt": "2026-10-17T01:24:22.027Z",
-   "capturedIn24h": 11,
-   "classifiedIn24h": 11,
+   "capturedIn24h": 4,
+   "classifiedIn24h": 4,
    "pendingIn24h": 0,
    "coverageComplete": true
   }
@@ -6874,15 +6874,15 @@
     "engDelta": 0
    },
    "curve48": [
-    23,
+    14,
     1,
-    1,
-    50,
-    158,
-    178,
-    133,
-    83,
-    11,
+    5,
+    78,
+    159,
+    179,
+    117,
+    72,
+    4,
     0,
     0,
     0,
@@ -6942,15 +6942,15 @@
     "engDelta": 0
    },
    "curve48": [
-    9,
-    0,
-    0,
-    8,
-    66,
-    82,
-    57,
-    41,
     7,
+    0,
+    0,
+    24,
+    66,
+    80,
+    53,
+    35,
+    3,
     0,
     0,
     0,
@@ -7010,15 +7010,15 @@
     "engDelta": 0
    },
    "curve48": [
-    13,
+    8,
     1,
-    0,
-    40,
+    3,
+    55,
+    100,
     101,
-    98,
-    74,
-    40,
-    6,
+    60,
+    36,
+    4,
     0,
     0,
     0,
@@ -7078,15 +7078,15 @@
     "engDelta": 0
    },
    "curve48": [
-    6,
-    0,
-    1,
-    10,
-    32,
-    33,
-    31,
-    22,
     4,
+    0,
+    4,
+    13,
+    32,
+    34,
+    28,
+    21,
+    1,
     0,
     0,
     0,
@@ -7149,12 +7149,12 @@
     1,
     0,
     0,
-    5,
-    27,
-    32,
+    10,
+    28,
     29,
-    13,
-    1,
+    29,
+    11,
+    0,
     0,
     0,
     0,
@@ -7214,14 +7214,14 @@
     "engDelta": 0
    },
    "curve48": [
-    4,
+    2,
     0,
     0,
-    3,
-    14,
-    15,
-    13,
+    5,
+    16,
+    17,
     9,
+    7,
     0,
     0,
     0,
@@ -7322,7 +7322,7 @@
     127,
     0
    ],
-   "d": -98,
+   "d": -99,
    "mAvg": 65.7,
    "epAvg": 80,
    "momentum": {
@@ -9015,20 +9015,20 @@
     97,
     0
    ],
-   "d": -99,
+   "d": -100,
    "mAvg": 56.8,
    "epAvg": 1354,
    "momentum": {
-    "score": 6,
+    "score": 0,
     "drivers": [
-     "engagement",
-     "caucus spread"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 2,
-    "engLift": 0.3982842994125273
+    "eff": 1,
+    "engLift": 0
    },
    "subs": [
     {
@@ -12474,7 +12474,7 @@
     65,
     0
    ],
-   "d": -98,
+   "d": -100,
    "mAvg": 41,
    "epAvg": 413,
    "momentum": {
@@ -13662,19 +13662,19 @@
     60,
     0
    ],
-   "d": -98,
+   "d": -100,
    "mAvg": 33.7,
    "epAvg": 305,
    "momentum": {
-    "score": 3,
+    "score": 0,
     "drivers": [
-     "caucus spread",
-     "volume"
+     "volume",
+     "acceleration"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 2,
+    "eff": 1,
     "engLift": 0
    },
    "subs": [
@@ -17105,20 +17105,20 @@
     86,
     0
    ],
-   "d": -76,
+   "d": -95,
    "mAvg": 16.3,
    "epAvg": 96,
    "momentum": {
-    "score": 9,
+    "score": 5,
     "drivers": [
      "caucus spread",
-     "engagement"
+     "volume"
     ],
     "volume": 0,
     "accel": 0,
     "adoption": 0,
-    "eff": 3.5,
-    "engLift": 0.31475326593731245
+    "eff": 3,
+    "engLift": 0
    },
    "subs": [
     {
@@ -20722,7 +20722,7 @@
    "label": "Bend, Oregon elementary school shooting",
    "lastSeen": "2026-10-16T03:12:41.000Z",
    "thresholdMet": true,
-   "activeMembers": 4,
+   "activeMembers": 1,
    "provisional": true,
    "discoverySources": [
     "live-or-nightly"
@@ -20863,10 +20863,155 @@
    ]
   },
   {
+   "label": "Bryson Fire evacuations",
+   "lastSeen": "2026-10-16T03:09:00.000Z",
+   "thresholdMet": false,
+   "activeMembers": 1,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 2,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2110930641701273985",
+    "2110930985181179912"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2110930641701273985",
+     "handle": "@BradSherman",
+     "time": "2026-10-16T03:07:38.000Z"
+    },
+    {
+     "id": "2110930985181179912",
+     "handle": "@BradSherman",
+     "time": "2026-10-16T03:09:00.000Z"
+    }
+   ],
+   "sampleId": "2110930641701273985",
+   "sampleHandle": "@BradSherman",
+   "who": [
+    "@BradSherman"
+   ],
+   "cm": [
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "eng": 0,
+   "phrase": "evacuation orders",
+   "coherence": 50,
+   "since": "2026-10-16T03:07:38.000Z",
+   "shape": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "sample": "RT @NWSLosAngeles: Evacuation orders in effect for the #Brysonfire, stay safe everyone! Winds are forecast to increase overnight with gusts…",
+   "suggest": "bryson_fire_evacuations",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [],
+   "related": []
+  },
+  {
+   "label": "DOJ investigation of Rep. Ilhan Omar",
+   "lastSeen": "2026-10-16T02:39:57.000Z",
+   "thresholdMet": false,
+   "activeMembers": 0,
+   "provisional": true,
+   "discoverySources": [
+    "live-or-nightly"
+   ],
+   "posts": 1,
+   "members": 1,
+   "accounts": 1,
+   "postIds": [
+    "2110923675310428179"
+   ],
+   "sourcePosts": [
+    {
+     "id": "2110923675310428179",
+     "handle": "@IlhanMN",
+     "time": "2026-10-16T02:39:57.000Z"
+    }
+   ],
+   "sampleId": "2110923675310428179",
+   "sampleHandle": "@IlhanMN",
+   "who": [
+    "@IlhanMN"
+   ],
+   "cm": [
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "eng": 2432,
+   "phrase": "scary journey",
+   "coherence": 100,
+   "since": "2026-10-16T02:39:57.000Z",
+   "shape": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "sample": "Thank you to everyone who stood with me over the years. It’s been a scary journey but I have always been grounded in my work and ability to provide exemplary…",
+   "suggest": "doj_investigation_of_rep_ilhan_omar",
+   "kind": null,
+   "macro": null,
+   "days": null,
+   "context": [
+    {
+     "id": "n_58d142c1636704c9",
+     "publisher": "The New York Times",
+     "date": "2026-10-14",
+     "kind": "lead",
+     "url": "https://www.nytimes.com/2026/10/13/us/politics/justice-dept-ilhan-omar-subpoenas.html",
+     "text": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
+     "title": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
+     "publishedAt": "2026-10-14T18:57:28.000Z",
+     "fetchedAt": "2026-10-14T19:22:03.579Z",
+     "version": 524,
+     "publishedAfterPost": false,
+     "acquiredAfterPost": false,
+     "truncated": false
+    }
+   ],
+   "related": [
+    {
+     "id": "2108913027403669968",
+     "sim": 0.8092,
+     "handle": "@RepDeborahRoss",
+     "text": "I'm proud to have earned an A from Defend the Vote for my record of protecting voting rights, fighting corruption, and defending election integrity.\n\nVoting is our most fundamental right, and the…",
+     "time": "2026-10-10T13:30:22.000Z",
+     "topics": [
+      "democracy/voting-rights"
+     ]
+    }
+   ]
+  },
+  {
    "label": "Aurora Hindu temple mass shooting plot",
    "lastSeen": "2026-10-16T02:24:22.000Z",
    "thresholdMet": true,
-   "activeMembers": 1,
+   "activeMembers": 0,
    "provisional": true,
    "discoverySources": [
     "live-or-nightly"
@@ -21130,151 +21275,6 @@
      "topics": [
       "civil-rights/racial-justice",
       "public-safety/gun-violence"
-     ]
-    }
-   ]
-  },
-  {
-   "label": "Bryson Fire evacuations",
-   "lastSeen": "2026-10-16T03:09:00.000Z",
-   "thresholdMet": false,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 2,
-   "members": 1,
-   "accounts": 1,
-   "postIds": [
-    "2110930641701273985",
-    "2110930985181179912"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2110930641701273985",
-     "handle": "@BradSherman",
-     "time": "2026-10-16T03:07:38.000Z"
-    },
-    {
-     "id": "2110930985181179912",
-     "handle": "@BradSherman",
-     "time": "2026-10-16T03:09:00.000Z"
-    }
-   ],
-   "sampleId": "2110930641701273985",
-   "sampleHandle": "@BradSherman",
-   "who": [
-    "@BradSherman"
-   ],
-   "cm": [
-    1,
-    1,
-    0,
-    0,
-    0
-   ],
-   "eng": 0,
-   "phrase": "evacuation orders",
-   "coherence": 50,
-   "since": "2026-10-16T03:07:38.000Z",
-   "shape": [
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "sample": "RT @NWSLosAngeles: Evacuation orders in effect for the #Brysonfire, stay safe everyone! Winds are forecast to increase overnight with gusts…",
-   "suggest": "bryson_fire_evacuations",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [],
-   "related": []
-  },
-  {
-   "label": "DOJ investigation of Rep. Ilhan Omar",
-   "lastSeen": "2026-10-16T02:39:57.000Z",
-   "thresholdMet": false,
-   "activeMembers": 1,
-   "provisional": true,
-   "discoverySources": [
-    "live-or-nightly"
-   ],
-   "posts": 1,
-   "members": 1,
-   "accounts": 1,
-   "postIds": [
-    "2110923675310428179"
-   ],
-   "sourcePosts": [
-    {
-     "id": "2110923675310428179",
-     "handle": "@IlhanMN",
-     "time": "2026-10-16T02:39:57.000Z"
-    }
-   ],
-   "sampleId": "2110923675310428179",
-   "sampleHandle": "@IlhanMN",
-   "who": [
-    "@IlhanMN"
-   ],
-   "cm": [
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "eng": 2432,
-   "phrase": "scary journey",
-   "coherence": 100,
-   "since": "2026-10-16T02:39:57.000Z",
-   "shape": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-   ],
-   "sample": "Thank you to everyone who stood with me over the years. It’s been a scary journey but I have always been grounded in my work and ability to provide exemplary…",
-   "suggest": "doj_investigation_of_rep_ilhan_omar",
-   "kind": null,
-   "macro": null,
-   "days": null,
-   "context": [
-    {
-     "id": "n_58d142c1636704c9",
-     "publisher": "The New York Times",
-     "date": "2026-10-14",
-     "kind": "lead",
-     "url": "https://www.nytimes.com/2026/10/13/us/politics/justice-dept-ilhan-omar-subpoenas.html",
-     "text": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
-     "title": "Justice Dept. Issues Subpoenas in Ilhan Omar Investigation",
-     "publishedAt": "2026-10-14T18:57:28.000Z",
-     "fetchedAt": "2026-10-14T19:22:03.579Z",
-     "version": 524,
-     "publishedAfterPost": false,
-     "acquiredAfterPost": false,
-     "truncated": false
-    }
-   ],
-   "related": [
-    {
-     "id": "2108913027403669968",
-     "sim": 0.8092,
-     "handle": "@RepDeborahRoss",
-     "text": "I'm proud to have earned an A from Defend the Vote for my record of protecting voting rights, fighting corruption, and defending election integrity.\n\nVoting is our most fundamental right, and the…",
-     "time": "2026-10-10T13:30:22.000Z",
-     "topics": [
-      "democracy/voting-rights"
      ]
     }
    ]
@@ -22438,7 +22438,7 @@
  "emergingCoverage": {
   "total": 270,
   "displayed": 12,
-  "activeThresholdClusters": 2
+  "activeThresholdClusters": 1
  },
  "incidents": [
   {
