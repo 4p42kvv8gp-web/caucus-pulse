@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-10-19T19:55:56.093Z",
+ "generatedAt": "2026-10-19T21:39:51.587Z",
  "lastPollAt": "2026-10-16T03:16:44.395Z",
- "lastPollAttemptAt": "2026-10-19T17:12:58.327Z",
+ "lastPollAttemptAt": "2026-10-19T21:39:47.790Z",
  "lastPollOutcome": "request-failed",
  "captureInProgress": true,
  "rosterMembers": 214,
@@ -3234,11 +3234,11 @@
   ],
   "referenceMethod": "Exact bill identifiers in captured posts and available referenced originals; references do not establish endorsement or a shared position.",
   "referencesAvailable": false,
-  "referenceAsOf": "2026-10-19T19:55:54.390Z"
+  "referenceAsOf": "2026-10-19T21:39:50.459Z"
  },
  "news": {
   "version": 573,
-  "items": 986,
+  "items": 972,
   "latestPublishedAt": "2026-10-19T19:23:16.000Z",
   "latestFetchedAt": "2026-10-19T19:54:53.315Z",
   "latest": [
@@ -3364,12 +3364,12 @@
    }
   ],
   "coverage": {
-   "asOf": "2026-10-19T19:55:54.818Z",
+   "asOf": "2026-10-19T21:39:50.747Z",
    "windowDays": 14,
-   "windowStart": "2026-10-05T19:55:54.818Z",
-   "eligibleItems": 1536,
+   "windowStart": "2026-10-05T21:39:50.747Z",
+   "eligibleItems": 1526,
    "withExcerpts": 145,
-   "headlineOrSummary": 1391,
+   "headlineOrSummary": 1381,
    "withoutReadableText": 0,
    "sourcesWithRecentItems": 6,
    "sourcesWithoutRecentItems": 2,
@@ -3411,9 +3411,9 @@
      "id": "the-hill",
      "publisher": "The Hill",
      "sourceUrl": "https://thehill.com/feed/",
-     "eligibleItems": 1001,
+     "eligibleItems": 991,
      "withExcerpts": 0,
-     "headlineOrSummary": 1001,
+     "headlineOrSummary": 991,
      "withoutReadableText": 0,
      "latestPublishedAt": "2026-10-19T19:23:16.000Z",
      "latestItem": {
@@ -20307,144 +20307,6 @@
      "2110877671379058882",
      "2110888528427278553",
      "2110888949279526956"
-    ],
-    "repeatedSourceGroups": [],
-    "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
-   }
-  },
-  {
-   "id": "newport-beach-ca--flooding--source-2109715247204295159",
-   "kind": "flooding",
-   "name": null,
-   "eventIdentity": "unresolved-source-specific",
-   "kinds": [
-    "flooding"
-   ],
-   "status": "provisional",
-   "lifecycle": "resolved",
-   "corroboration": {
-    "corroborated": false,
-    "by": null,
-    "independentSourceCount": 0,
-    "statements": 1,
-    "resolvedPeople": 1,
-    "accounts": 1,
-    "unresolvedAccounts": 0,
-    "repeated": false,
-    "repeatedSourceGroups": [],
-    "note": "1 source statement(s) from 1 resolved person(s); independent verification has not been established"
-   },
-   "place": "Newport Beach, CA · CA-47",
-   "placeRaw": "Newport Beach, CA",
-   "district": "CA-47",
-   "districtMatch": true,
-   "handle": "@CongressMin",
-   "member": "Dave Min",
-   "since": "2026-10-12T18:38:06.000Z",
-   "last": "2026-10-12T18:38:06.000Z",
-   "updates": 1,
-   "engN": 8,
-   "amplifiers": 0,
-   "others": [],
-   "title": "Flooding · Newport Beach, CA",
-   "evidence": {
-    "span": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
-    "exact": true,
-    "start": 0,
-    "end": 84,
-    "matched": {
-     "kind": true,
-     "place": true
-    },
-    "sourceId": "2109715247204295159",
-    "url": "https://x.com/i/web/status/2109715247204295159"
-   },
-   "timeline": [
-    {
-     "id": "2109715247204295159",
-     "sourceId": "2109715247204295159",
-     "url": "https://x.com/i/web/status/2109715247204295159",
-     "authorId": "1858680194112065536",
-     "personId": "member:dave min",
-     "referenceIds": [],
-     "time": "2026-10-12T18:38:06.000Z",
-     "who": "@CongressMin",
-     "tag": "member",
-     "text": "A quick update from Newport Beach on the coastal flooding impacting our communities.\n\nThankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.\n\nBut a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.\n\nGovernor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
-     "engN": 8,
-     "isNew": false,
-     "flag": {
-      "kind": "flooding",
-      "place": "Newport Beach, CA",
-      "name": null
-     },
-     "evidence": {
-      "span": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
-      "exact": true,
-      "start": 0,
-      "end": 84,
-      "matched": {
-       "kind": true,
-       "place": true
-      },
-      "sourceId": "2109715247204295159",
-      "url": "https://x.com/i/web/status/2109715247204295159"
-     }
-    }
-   ],
-   "tweetIds": [
-    "2109715247204295159"
-   ],
-   "intel": {
-    "schemaVersion": 2,
-    "verification": "source-statements-only",
-    "confirmed": [],
-    "reported": [
-     {
-      "text": "But a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.",
-      "sourceId": "2109715247204295159",
-      "url": "https://x.com/i/web/status/2109715247204295159",
-      "evidenceQuote": "But a flood advisory remains in effect, and elevated tides continue to pose risks along our coastline. Please exercise caution and follow local safety guidance.",
-      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
-     },
-     {
-      "text": "Governor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
-      "sourceId": "2109715247204295159",
-      "url": "https://x.com/i/web/status/2109715247204295159",
-      "evidenceQuote": "Governor Newsom’s emergency order remains in place, and my office will keep pushing to ensure Orange County receives the state and federal resources our communities need.",
-      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
-     }
-    ],
-    "unverified": [
-     {
-      "text": "Thankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.",
-      "sourceId": "2109715247204295159",
-      "url": "https://x.com/i/web/status/2109715247204295159",
-      "evidenceQuote": "Thankfully, it appears the worst is behind us, thanks in large part to the tireless efforts of our local emergency response crews.",
-      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
-     }
-    ],
-    "updates": [
-     {
-      "text": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
-      "sourceId": "2109715247204295159",
-      "url": "https://x.com/i/web/status/2109715247204295159",
-      "evidenceQuote": "A quick update from Newport Beach on the coastal flooding impacting our communities.",
-      "src": "@CongressMin, 2026-10-12T18:38:06.000Z"
-     }
-    ],
-    "whatsNew": [],
-    "extractedAt": "2026-10-13T07:52:07.028Z",
-    "posts": 1,
-    "inputHash": "8a07b07bef519e8980bf4fe63b14d00b1f8d46d5a30769946612456e5441b3fb",
-    "rejectedItems": 0
-   },
-   "verification": {
-    "status": "unverified",
-    "basis": "source-statements",
-    "independentSourceCount": 0,
-    "sourceIds": [
-     "2109715247204295159"
     ],
     "repeatedSourceGroups": [],
     "note": "These records document statements; repeated statements and generated summaries are not independent confirmation."
@@ -73232,6 +73094,128 @@
    "topics": [
     "democracy/corruption-ethics",
     "democracy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 506,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:46:52.777Z"
+  },
+  {
+   "id": "2110106800049844341",
+   "authorId": "1613637172346642432",
+   "createdAt": "2026-10-13T20:33:59.000Z",
+   "date": "2026-10-13",
+   "type": "tweet",
+   "text": "Thank you to UFCW Local 75 for having us at their annual Steward Seminar.\n\nThe work you do deserves recognition, but more importantly, it deserves fair pay, good benefits, safe working conditions, and the respect every worker has earned. 🙏🏻💙 https://t.co/VgTqdHqscm",
+   "engN": 14,
+   "topics": [
+    "labor/unions",
+    "labor"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 506,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:46:52.777Z"
+  },
+  {
+   "id": "2110106580892963019",
+   "authorId": "912822519136161793",
+   "createdAt": "2026-10-13T20:33:07.000Z",
+   "date": "2026-10-13",
+   "type": "tweet",
+   "text": "NJ!!!!\n\nToday is the last day to register to vote for November’s Election! \n\nGet Registered!!! Encourage Someone to Register to VOTE! \n\nYour vote is your voice!\n\nGo to https://t.co/q440ZLPwFY https://t.co/Fw9ISVFWVj",
+   "engN": 2,
+   "topics": [
+    "democracy/voting-rights",
+    "democracy"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 506,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:46:52.777Z"
+  },
+  {
+   "id": "2110106453444849759",
+   "authorId": "193441812",
+   "createdAt": "2026-10-13T20:32:37.000Z",
+   "date": "2026-10-13",
+   "type": "tweet",
+   "text": "Sam Nelson was 19 when ChatGPT let him die. \n\nLike many college students, Sam was curious about substances, and he turned to ChatGPT for advice on how to use them responsibly. \n\nThe chatbot he confided in lured him in, became his best friend who was available 24/7, fed him false and dangerous medical information, and didn’t alert authorities when he told it he was having trouble breathing. \n\nHe died in his room. \n\nRead more from my op-ed about the regulations I have proposed to rein in dangerous AI: https://t.co/8kxOjpVOdT",
+   "engN": 70,
+   "topics": [
+    "tech/ai-policy",
+    "tech"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 506,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:46:52.777Z"
+  },
+  {
+   "id": "2110106145893298418",
+   "authorId": "1875244261844668416",
+   "createdAt": "2026-10-13T20:31:23.000Z",
+   "date": "2026-10-13",
+   "type": "tweet",
+   "text": "Election Day is coming up, #MD03! Especially as we celebrate the 250th anniversary of our great democratic experiment, it’s never been more important to make a plan and VOTE! 🗳️ Learn more about everything you need to know to make your voice heard in November: \n\n✅ Register to Vote or Check Your Registration Status: https://t.co/BJvgfQWdIZ\n📍Find Your Polling Place: https://t.co/OljgMGZRKp \n📩 Request a Mail-In Ballot: https://t.co/kr7oPCSfne",
+   "engN": 6,
+   "topics": [
+    "democracy/voting-rights",
+    "democracy",
+    "congress-politics/elections-2026",
+    "congress-politics"
+   ],
+   "classificationStatus": "complete",
+   "needsContext": false,
+   "sourceIncomplete": false,
+   "sourceContextReason": null,
+   "sourceReferenceId": null,
+   "provenance": {
+    "contextVersion": 506,
+    "evidenceSupplied": [],
+    "evidenceUsed": []
+   },
+   "metricsObservedAt": "2026-10-14T07:46:52.777Z"
+  },
+  {
+   "id": "2110106135026090125",
+   "authorId": "1611527835742519297",
+   "createdAt": "2026-10-13T20:31:21.000Z",
+   "date": "2026-10-13",
+   "type": "tweet",
+   "text": "More than 137,000 Ohioans, including 60,000 children, have lost SNAP benefits since President Trump’s One Big Beautiful Bill took effect. Families deserve a president focused on lowering costs, not making it harder to eat. https://t.co/hRwwV1empT",
+   "engN": 9,
+   "topics": [
+    "budget-appropriations/snap-benefits",
+    "budget-appropriations"
    ],
    "classificationStatus": "complete",
    "needsContext": false,
