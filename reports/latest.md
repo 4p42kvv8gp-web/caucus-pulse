@@ -1,4 +1,4 @@
-# Caucus Pulse — 2026-10-21
+# Caucus Pulse — 2026-10-22
 
 ## Top topics of the day
 
@@ -28,7 +28,7 @@ _No phrases crossed the member-spread threshold._
 ## Volume & spend
 
 - Tweets captured: **0** (0 originals)
-- X reads on 2026-10-21: 0 / 50,000 budget (~$0.00)
+- X reads on 2026-10-22: 0 / 50,000 budget (~$0.00)
 - Classifier: claude-opus-5
 
 ## Developing stories (not yet in the taxonomy)
@@ -73,5 +73,5 @@ _No phrases crossed the member-spread threshold._
 
 _2 auto-promoted stories in config/taxonomy.yaml with the last 7 days of assignments. Prune here: remove an entry or set `retired: true`; delete `provisional: true` to confirm one. Quiet ones retire on their own after 21 days._
 
-- **Epstein files transparency** (democracy/epstein-files, since 2026-08-31, promoted 2026-09-10) — 4 posts + 3 RTs on 1 of the last 7 days, up to 4 members/day
+- **Epstein files transparency** (democracy/epstein-files, since 2026-08-31, promoted 2026-09-10) — no assignments in the last 7 days
 - **Trump 'Lake America' renaming** (democracy/lake-america-renaming, since 2026-08-25, promoted 2026-09-10) — no assignments in the last 7 days
