@@ -1,4 +1,4 @@
-# Caucus Pulse — 2026-10-27
+# Caucus Pulse — 2026-10-28
 
 ## Top topics of the day
 
@@ -28,7 +28,7 @@ _No phrases crossed the member-spread threshold._
 ## Volume & spend
 
 - Tweets captured: **0** (0 originals)
-- X reads on 2026-10-27: 0 / 50,000 budget (~$0.00)
+- X reads on 2026-10-28: 0 / 50,000 budget (~$0.00)
 - Classifier: claude-opus-5
 
 ## Developing stories (not yet in the taxonomy)
