@@ -1,18 +1,18 @@
 {
- "contextVersion": 649,
- "lastRefreshAt": "2026-11-05T02:26:20.157Z",
+ "contextVersion": 650,
+ "lastRefreshAt": "2026-11-05T10:52:50.036Z",
  "sources": {
   "npr-politics": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 3,
+   "bodies": 10,
    "error": null
   },
   "politico-politics": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -21,7 +21,7 @@
    "error": null
   },
   "the-hill": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
@@ -30,43 +30,43 @@
    "error": null
   },
   "roll-call": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 10,
-   "bodies": 4,
+   "bodies": 10,
    "error": null
   },
   "cnn-politics": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
    "feedItems": 18,
-   "bodies": 6,
+   "bodies": 3,
    "error": null
   },
   "nyt-politics": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
-   "feedItems": 32,
+   "feedItems": 21,
    "bodies": 0,
    "error": null
   },
   "wapo-politics": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": false,
-   "httpStatus": 502,
+   "httpStatus": null,
    "format": null,
    "feedItems": 0,
    "bodies": 0,
-   "error": "feed HTTP 502"
+   "error": "fetch failed"
   },
   "govinfo-crec": {
-   "lastFetchAt": "2026-11-05T02:26:20.157Z",
+   "lastFetchAt": "2026-11-05T10:52:50.036Z",
    "ok": true,
    "httpStatus": 200,
    "format": "rss",
